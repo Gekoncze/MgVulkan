@@ -1,0 +1,40 @@
+package cz.mg.vulkan.jna.structures;
+
+import com.sun.jna.Structure;
+import com.sun.jna.Pointer;
+import java.util.Arrays;
+import java.util.List;
+
+
+/**
+ *  typedef struct VkExtent3D {
+ *      uint32_t    width;
+ *      uint32_t    height;
+ *      uint32_t    depth;
+ *  } VkExtent3D;
+ *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkExtent3D.html">khronos documentation</a>
+ **/
+public class VkExtent3D extends Structure {
+    public int width;
+    public int height;
+    public int depth;
+
+    public VkExtent3D() {
+    }
+
+    public VkExtent3D(Pointer p) {
+        super(p);
+    }
+
+    @Override
+    protected List<String> getFieldOrder() {
+        return Arrays.asList(new String[]{
+                "width",
+                "height",
+                "depth"
+        });
+    }
+
+    public static class ByReference extends VkExtent3D implements Structure.ByReference {}
+    public static class ByValue extends VkExtent3D implements Structure.ByValue {}
+}

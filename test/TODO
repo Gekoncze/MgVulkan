@@ -1,0 +1,16 @@
+### PRO TIPS
+    wrapper classes shall have reference to VkInstance class so it is not garbage collected
+        it will also ensure that objects are cleared in correct order... hopefully ":D
+
+### SOON
+
+
+### NOW
+    replace byte buffer with memory object in array ?
+    replace string array with pointers ?
+    replace some int types with new defined data types ?
+
+    ad simplified create instance
+    make native arrays extend pointer somehow ???
+
+### DONE
