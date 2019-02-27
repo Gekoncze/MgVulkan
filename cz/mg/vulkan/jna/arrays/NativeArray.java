@@ -19,7 +19,7 @@ public abstract class NativeArray<S extends Structure> implements Iterable<S> {
         this.pointer = new Memory(count * elementSize);
         this.values = (S[]) java.lang.reflect.Array.newInstance(structure, count);
         for(int i = 0; i < count; i++){
-            int offset = i* elementSize;
+            int offset = i * elementSize;
             try {
                 this.values[i] = (S)structure.getConstructor(Pointer.class).newInstance(pointer.share(offset));
             } catch (ReflectiveOperationException e) {

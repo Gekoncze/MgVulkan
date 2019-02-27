@@ -47,9 +47,7 @@ public class TestInfo {
     }
 
     private static void printVulkanDeviceProperties(VkPhysicalDevice.ByValue vDevice, boolean details){
-        VkPhysicalDeviceProperties.ByReference deviceProperties = new VkPhysicalDeviceProperties.ByReference();
-        vk.vkGetPhysicalDeviceProperties(vDevice, deviceProperties);
-
+        VkPhysicalDeviceProperties.ByReference deviceProperties = vks.vkGetPhysicalDeviceProperties(vDevice);
         System.out.println("Device: " + textToString(deviceProperties.deviceName));
         System.out.println("    device id: " + deviceProperties.deviceID);
         System.out.println("    vendor id: " + deviceProperties.vendorID + " (" + vendorToString(deviceProperties.vendorID) + ")");
@@ -58,7 +56,6 @@ public class TestInfo {
         System.out.println("    device type: " + constantToString(deviceProperties.deviceType.value, deviceProperties.deviceType.getClass()));
         if(details) System.out.println("    pipeline cache UUID: " + bytesToHexString(deviceProperties.pipelineCacheUUID));
         System.out.println();
-
         if(details) printVulkanDeviceSparseProperties(deviceProperties);
         if(details) printVulkanDeviceLimits(deviceProperties);
     }
@@ -193,8 +190,7 @@ public class TestInfo {
     }
 
     private static void printVulkanDeviceFeatures(VkPhysicalDevice.ByValue vDevice){
-        VkPhysicalDeviceFeatures.ByReference deviceFeatures = new VkPhysicalDeviceFeatures.ByReference();
-        vk.vkGetPhysicalDeviceFeatures(vDevice, deviceFeatures);
+        VkPhysicalDeviceFeatures.ByReference deviceFeatures = vks.vkGetPhysicalDeviceFeatures(vDevice);
         System.out.println("    features:");
         System.out.println("        robustBufferAccess: " + booleanToString(deviceFeatures.robustBufferAccess));
         System.out.println("        fullDrawIndexUint32: " + booleanToString(deviceFeatures.fullDrawIndexUint32));
@@ -255,8 +251,7 @@ public class TestInfo {
     }
 
     private static void printVulkanDeviceMemoryProperties(VkPhysicalDevice.ByValue vDevice){
-        VkPhysicalDeviceMemoryProperties.ByReference deviceMemoryProperties = new VkPhysicalDeviceMemoryProperties.ByReference();
-        vk.vkGetPhysicalDeviceMemoryProperties(vDevice, deviceMemoryProperties);
+        VkPhysicalDeviceMemoryProperties.ByReference deviceMemoryProperties = vks.vkGetPhysicalDeviceMemoryProperties(vDevice);
         System.out.println("    memory properties:");
         System.out.println("        memory type count: " + deviceMemoryProperties.memoryTypeCount); // TODO - print more info
         System.out.println("        memory heap count: " + deviceMemoryProperties.memoryHeapCount); // TODO - print more info

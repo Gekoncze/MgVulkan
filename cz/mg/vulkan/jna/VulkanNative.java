@@ -50,7 +50,7 @@ public interface VulkanNative extends Library {
     }
 
     public static VulkanNative loadLibrary(String name){
-        return Native.loadLibrary(name, VulkanNative.class);
+        return (VulkanNative) Native.loadLibrary(name, VulkanNative.class);
     }
 
     /**
@@ -94,7 +94,6 @@ public interface VulkanNative extends Library {
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceMemoryProperties.html">khronos documentation</a>
      **/
     public void vkGetPhysicalDeviceMemoryProperties(VkPhysicalDevice.ByValue physicalDevice, VkPhysicalDeviceMemoryProperties.ByReference pMemoryProperties);
-//    public void vkGetPhysicalDeviceMemoryProperties(VkPhysicalDevice.ByValue physicalDevice, Pointer pMemoryProperties);
 
     /**
      *  void vkGetPhysicalDeviceQueueFamilyProperties(VkPhysicalDevice physicalDevice, uint32_t* pQueueFamilyPropertyCount, VkQueueFamilyProperties* pQueueFamilyProperties);

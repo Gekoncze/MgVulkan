@@ -4,9 +4,17 @@ import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
 
 
 public class VulkanPhysicalDevice {
-    final VkPhysicalDevice handle;
+    private final Vulkan vulkan;
+    private final VkPhysicalDevice.ByValue handle;
+    private VulkanPhysicalDeviceProperties physicalDeviceProperties = null;
 
-    public VulkanPhysicalDevice(VkPhysicalDevice handle) {
+    public VulkanPhysicalDevice(Vulkan vulkan, VkPhysicalDevice.ByValue handle) {
+        this.vulkan = vulkan;
         this.handle = handle;
+    }
+
+    public VulkanPhysicalDeviceProperties getPhysicalDeviceProperties() {
+        if(physicalDeviceProperties == null) physicalDeviceProperties = new VulkanPhysicalDeviceProperties(vulkan.vks.vkGetPhysicalDeviceProperties(handle));
+        return physicalDeviceProperties;
     }
 }

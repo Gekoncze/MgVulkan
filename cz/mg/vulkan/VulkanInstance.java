@@ -9,12 +9,12 @@ import cz.mg.vulkan.jna.handles.VkInstance;
 
 
 public class VulkanInstance {
-    final Vulkan parent;
+    final Vulkan vulkan;
     final VkInstance.ByValue handle;
     private Array<VulkanPhysicalDevice> physicalDevices = null;
 
     public VulkanInstance(Vulkan vulkan, String applicationName, Version applicationVersion, String engineName, Version engineVersion){
-        this.parent = vulkan;
+        this.vulkan = vulkan;
         this.handle = new VkInstance.ByValue(vulkan.vks.vkCreateInstance(
                 VulkanNative.VK_API_VERSION_1_0,
                 applicationName, applicationVersion.getValue(),
@@ -28,11 +28,16 @@ public class VulkanInstance {
     }
 
     public ReadonlyArray<VulkanPhysicalDevice> getPhysicalDevices() {
-        if(physicalDevices == null){
-            VkPhysicalDeviceArray array = parent.vks.vkEnumeratePhysicalDevices(handle);
-            this.physicalDevices = new Array<>(array.count());
-            for(int i = 0; i < array.count(); i++) this.physicalDevices.set(i, new VulkanPhysicalDevice(array.get(i)));
-        }
+//        if(physicalDevices == null){
+//            VkPhysicalDeviceArray array = vulkan.vks.vkEnumeratePhysicalDevices(handle);
+//            this.physicalDevices = new Array<>(array.count());
+//            for(int i = 0; i < array.count(); i++) this.physicalDevices.set(i, new VulkanPhysicalDevice(array.get(i))); // TODO - make sure to call read() after a cast!
+//        }
         return physicalDevices;
+    }
+
+    @Override
+    protected void finalize() {
+        vulkan.vk.vkDestroyInstance(handle, null);
     }
 }

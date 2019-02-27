@@ -9,6 +9,6 @@
 
 
 ### DONE
-minor improvements and preparations
-    replaced basic types with native types
-    added some OOP vulkan types
+minor improvements
+    added some simplified methods
+    added bunch of oop vulkan classes

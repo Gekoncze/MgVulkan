@@ -1,5 +1,6 @@
 package cz.mg.vulkan.jna;
 
+import com.sun.jna.Pointer;
 import cz.mg.vulkan.VulkanException;
 import cz.mg.vulkan.jna.arrays.*;
 import cz.mg.vulkan.jna.enums.VkResult;
@@ -7,8 +8,7 @@ import cz.mg.vulkan.jna.enums.VkStructureType;
 import cz.mg.vulkan.jna.flags.VkInstanceCreateFlags;
 import cz.mg.vulkan.jna.handles.VkInstance;
 import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
-import cz.mg.vulkan.jna.structures.VkApplicationInfo;
-import cz.mg.vulkan.jna.structures.VkInstanceCreateInfo;
+import cz.mg.vulkan.jna.structures.*;
 import cz.mg.vulkan.jna.types.uint32_t;
 import static cz.mg.vulkan.jna.enums.VkResult.*;
 import static cz.mg.vulkan.jna.enums.VkStructureType.*;
@@ -121,5 +121,39 @@ public class VulkanNativeSimplified {
         vk.vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, queueFamilyCount, familyProperties.getPointer());
         familyProperties.read();
         return familyProperties;
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceProperties.html">khronos documentation</a>
+     **/
+    public VkPhysicalDeviceProperties.ByReference vkGetPhysicalDeviceProperties(VkPhysicalDevice.ByValue physicalDevice){
+        VkPhysicalDeviceProperties.ByReference deviceProperties = new VkPhysicalDeviceProperties.ByReference();
+        vk.vkGetPhysicalDeviceProperties(physicalDevice, deviceProperties);
+        return deviceProperties;
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceFeatures.html">khronos documentation</a>
+     **/
+    public VkPhysicalDeviceFeatures.ByReference vkGetPhysicalDeviceFeatures(VkPhysicalDevice.ByValue physicalDevice){
+        VkPhysicalDeviceFeatures.ByReference deviceFeatures = new VkPhysicalDeviceFeatures.ByReference();
+        vk.vkGetPhysicalDeviceFeatures(physicalDevice, deviceFeatures);
+        return deviceFeatures;
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceMemoryProperties.html">khronos documentation</a>
+     **/
+    public VkPhysicalDeviceMemoryProperties.ByReference vkGetPhysicalDeviceMemoryProperties(VkPhysicalDevice.ByValue physicalDevice){
+        VkPhysicalDeviceMemoryProperties.ByReference deviceMemoryProperties = new VkPhysicalDeviceMemoryProperties.ByReference();
+        vk.vkGetPhysicalDeviceMemoryProperties(physicalDevice, deviceMemoryProperties);
+        return deviceMemoryProperties;
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyInstance.html">khronos documentation</a>
+     **/
+    public void vkDestroyInstance(VkInstance.ByValue instance){
+        vk.vkDestroyInstance(instance, null);
     }
 }

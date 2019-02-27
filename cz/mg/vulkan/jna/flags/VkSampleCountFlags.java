@@ -16,7 +16,6 @@ public class VkSampleCountFlags extends Structure {
     public static final int VK_SAMPLE_COUNT_16_BIT = 0x00000010;
     public static final int VK_SAMPLE_COUNT_32_BIT = 0x00000020;
     public static final int VK_SAMPLE_COUNT_64_BIT = 0x00000040;
-    public static final int VK_SAMPLE_COUNT_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF;
 
     public int value;
 
