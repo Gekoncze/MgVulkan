@@ -3,11 +3,11 @@ package cz.mg.vulkan.jna;
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
-import com.sun.jna.ptr.IntByReference;
 import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
 import cz.mg.vulkan.jna.structures.*;
 import cz.mg.vulkan.jna.handles.VkInstance;
 import cz.mg.vulkan.jna.enums.VkResult;
+import cz.mg.vulkan.jna.types.uint32_t;
 
 
 /**
@@ -26,24 +26,23 @@ public interface VulkanNative extends Library {
     public static final int VK_MAX_EXTENSION_NAME_SIZE = 256;
     public static final int VK_MAX_DESCRIPTION_SIZE = 256;
 
-
     public static final String VK_EXT_DEBUG_REPORT_EXTENSION_NAME = "VK_EXT_debug_report";
 
-    public static final int VK_API_VERSION_1_0 = VK_MAKE_VERSION(1, 0, 0);
+    public static final uint32_t VK_API_VERSION_1_0 = VK_MAKE_VERSION(1, 0, 0);
 
-    public static int VK_MAKE_VERSION(int major, int minor, int patch){
-        return (((major) << 22) | ((minor) << 12) | (patch));
+    public static uint32_t VK_MAKE_VERSION(int major, int minor, int patch){
+        return new uint32_t(((major) << 22) | ((minor) << 12) | (patch));
     }
 
-    public static int VK_VERSION_MAJOR(int version) {
-        return version >> 22;
+    public static int VK_VERSION_MAJOR(uint32_t version) {
+        return version.intValue() >> 22;
     }
 
-    public static int VK_VERSION_MINOR(int version){
-        return (version >> 12) & 0x3ff;
+    public static int VK_VERSION_MINOR(uint32_t version){
+        return (version.intValue() >> 12) & 0x3ff;
     }
-    public static int VK_VERSION_PATCH(int version){
-        return version & 0xfff;
+    public static int VK_VERSION_PATCH(uint32_t version){
+        return version.intValue() & 0xfff;
     }
 
     public static VulkanNative loadLibrary(){
@@ -58,13 +57,13 @@ public interface VulkanNative extends Library {
      *  VkResult vkEnumerateInstanceExtensionProperties(const char* pLayerName, uint32_t* pPropertyCount, VkExtensionProperties* pProperties);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkEnumerateInstanceExtensionProperties.html">khronos documentation</a>
      **/
-    public VkResult.ByValue vkEnumerateInstanceExtensionProperties(String pLayerName, IntByReference pPropertyCount, Pointer pProperties);
+    public VkResult.ByValue vkEnumerateInstanceExtensionProperties(String pLayerName, uint32_t.ByReference pPropertyCount, Pointer pProperties);
 
     /**
      *  VkResult vkEnumerateInstanceLayerProperties(uint32_t* pPropertyCount, VkLayerProperties* pProperties);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkEnumerateInstanceLayerProperties.html">khronos documentation</a>
      **/
-    public VkResult.ByValue vkEnumerateInstanceLayerProperties(IntByReference pPropertyCount, Pointer pProperties);
+    public VkResult.ByValue vkEnumerateInstanceLayerProperties(uint32_t.ByReference pPropertyCount, Pointer pProperties);
 
     /**
      *  VkResult vkCreateInstance(const VkInstanceCreateInfo* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkInstance* pInstance);
@@ -76,7 +75,7 @@ public interface VulkanNative extends Library {
      *  VkResult vkEnumeratePhysicalDevices(VkInstance instance, uint32_t* pPhysicalDeviceCount, VkPhysicalDevice* pPhysicalDevices);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkEnumeratePhysicalDevices.html">khronos documentation</a>
      **/
-    public VkResult.ByValue vkEnumeratePhysicalDevices(VkInstance.ByValue instance, IntByReference pPhysicalDeviceCount, Pointer pPhysicalDevices);
+    public VkResult.ByValue vkEnumeratePhysicalDevices(VkInstance.ByValue instance, uint32_t.ByReference pPhysicalDeviceCount, Pointer pPhysicalDevices);
 
     /**
      *  void vkGetPhysicalDeviceProperties(VkPhysicalDevice physicalDevice, VkPhysicalDeviceProperties* pProperties);
@@ -101,5 +100,11 @@ public interface VulkanNative extends Library {
      *  void vkGetPhysicalDeviceQueueFamilyProperties(VkPhysicalDevice physicalDevice, uint32_t* pQueueFamilyPropertyCount, VkQueueFamilyProperties* pQueueFamilyProperties);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties.html">khronos documentation</a>
      **/
-    public void vkGetPhysicalDeviceQueueFamilyProperties(VkPhysicalDevice.ByValue physicalDevice, IntByReference pQueueFamilyPropertyCount, Pointer pQueueFamilyProperties);
+    public void vkGetPhysicalDeviceQueueFamilyProperties(VkPhysicalDevice.ByValue physicalDevice, uint32_t.ByReference pQueueFamilyPropertyCount, Pointer pQueueFamilyProperties);
+
+    /**
+     *  void vkDestroyInstance(VkInstance instance, const VkAllocationCallbacks* pAllocator);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyInstance.html">khronos documentation</a>
+     **/
+    public void vkDestroyInstance(VkInstance.ByValue instance, VkAllocationCallbacks.ByReference pAllocator);
 }

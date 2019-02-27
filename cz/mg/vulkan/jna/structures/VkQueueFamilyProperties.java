@@ -3,6 +3,7 @@ package cz.mg.vulkan.jna.structures;
 import com.sun.jna.Structure;
 import com.sun.jna.Pointer;
 import cz.mg.vulkan.jna.flags.VkQueueFlags;
+import cz.mg.vulkan.jna.types.uint32_t;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,10 +18,10 @@ import java.util.List;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkQueueFamilyProperties.html">khronos documentation</a>
  **/
 public class VkQueueFamilyProperties extends Structure {
-    public VkQueueFlags.ByValue queueFlags;
-    public int queueCount;
-    public int timestampValidBits;
-    public VkExtent3D.ByValue minImageTransferGranularity;
+    public VkQueueFlags queueFlags;
+    public uint32_t queueCount;
+    public uint32_t timestampValidBits;
+    public VkExtent3D minImageTransferGranularity;
 
     public VkQueueFamilyProperties() {
     }

@@ -1,9 +1,9 @@
 package cz.mg.vulkan.jna.structures;
 
-import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.Pointer;
 import cz.mg.vulkan.jna.flags.VkSampleCountFlags;
-import cz.mg.vulkan.jna.types.size_t;
+import cz.mg.vulkan.jna.types.*;
 import java.util.Arrays;
 import java.util.List;
 
@@ -120,112 +120,112 @@ import java.util.List;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceLimits.html">khronos documentation</a>
  **/
 public class VkPhysicalDeviceLimits extends Structure {
-    public int maxImageDimension1D;
-    public int maxImageDimension2D;
-    public int maxImageDimension3D;
-    public int maxImageDimensionCube;
-    public int maxImageArrayLayers;
-    public int maxTexelBufferElements;
-    public int maxUniformBufferRange;
-    public int maxStorageBufferRange;
-    public int maxPushConstantsSize;
-    public int maxMemoryAllocationCount;
-    public int maxSamplerAllocationCount;
-    public long bufferImageGranularity;
-    public long sparseAddressSpaceSize;
-    public int maxBoundDescriptorSets;
-    public int maxPerStageDescriptorSamplers;
-    public int maxPerStageDescriptorUniformBuffers;
-    public int maxPerStageDescriptorStorageBuffers;
-    public int maxPerStageDescriptorSampledImages;
-    public int maxPerStageDescriptorStorageImages;
-    public int maxPerStageDescriptorInputAttachments;
-    public int maxPerStageResources;
-    public int maxDescriptorSetSamplers;
-    public int maxDescriptorSetUniformBuffers;
-    public int maxDescriptorSetUniformBuffersDynamic;
-    public int maxDescriptorSetStorageBuffers;
-    public int maxDescriptorSetStorageBuffersDynamic;
-    public int maxDescriptorSetSampledImages;
-    public int maxDescriptorSetStorageImages;
-    public int maxDescriptorSetInputAttachments;
-    public int maxVertexInputAttributes;
-    public int maxVertexInputBindings;
-    public int maxVertexInputAttributeOffset;
-    public int maxVertexInputBindingStride;
-    public int maxVertexOutputComponents;
-    public int maxTessellationGenerationLevel;
-    public int maxTessellationPatchSize;
-    public int maxTessellationControlPerVertexInputComponents;
-    public int maxTessellationControlPerVertexOutputComponents;
-    public int maxTessellationControlPerPatchOutputComponents;
-    public int maxTessellationControlTotalOutputComponents;
-    public int maxTessellationEvaluationInputComponents;
-    public int maxTessellationEvaluationOutputComponents;
-    public int maxGeometryShaderInvocations;
-    public int maxGeometryInputComponents;
-    public int maxGeometryOutputComponents;
-    public int maxGeometryOutputVertices;
-    public int maxGeometryTotalOutputComponents;
-    public int maxFragmentInputComponents;
-    public int maxFragmentOutputAttachments;
-    public int maxFragmentDualSrcAttachments;
-    public int maxFragmentCombinedOutputResources;
-    public int maxComputeSharedMemorySize;
-    public int[] maxComputeWorkGroupCount = new int[3];
-    public int maxComputeWorkGroupInvocations;
-    public int[] maxComputeWorkGroupSize = new int[3];
-    public int subPixelPrecisionBits;
-    public int subTexelPrecisionBits;
-    public int mipmapPrecisionBits;
-    public int maxDrawIndexedIndexValue;
-    public int maxDrawIndirectCount;
+    public uint32_t maxImageDimension1D;
+    public uint32_t maxImageDimension2D;
+    public uint32_t maxImageDimension3D;
+    public uint32_t maxImageDimensionCube;
+    public uint32_t maxImageArrayLayers;
+    public uint32_t maxTexelBufferElements;
+    public uint32_t maxUniformBufferRange;
+    public uint32_t maxStorageBufferRange;
+    public uint32_t maxPushConstantsSize;
+    public uint32_t maxMemoryAllocationCount;
+    public uint32_t maxSamplerAllocationCount;
+    public VkDeviceSize bufferImageGranularity;
+    public VkDeviceSize sparseAddressSpaceSize;
+    public uint32_t maxBoundDescriptorSets;
+    public uint32_t maxPerStageDescriptorSamplers;
+    public uint32_t maxPerStageDescriptorUniformBuffers;
+    public uint32_t maxPerStageDescriptorStorageBuffers;
+    public uint32_t maxPerStageDescriptorSampledImages;
+    public uint32_t maxPerStageDescriptorStorageImages;
+    public uint32_t maxPerStageDescriptorInputAttachments;
+    public uint32_t maxPerStageResources;
+    public uint32_t maxDescriptorSetSamplers;
+    public uint32_t maxDescriptorSetUniformBuffers;
+    public uint32_t maxDescriptorSetUniformBuffersDynamic;
+    public uint32_t maxDescriptorSetStorageBuffers;
+    public uint32_t maxDescriptorSetStorageBuffersDynamic;
+    public uint32_t maxDescriptorSetSampledImages;
+    public uint32_t maxDescriptorSetStorageImages;
+    public uint32_t maxDescriptorSetInputAttachments;
+    public uint32_t maxVertexInputAttributes;
+    public uint32_t maxVertexInputBindings;
+    public uint32_t maxVertexInputAttributeOffset;
+    public uint32_t maxVertexInputBindingStride;
+    public uint32_t maxVertexOutputComponents;
+    public uint32_t maxTessellationGenerationLevel;
+    public uint32_t maxTessellationPatchSize;
+    public uint32_t maxTessellationControlPerVertexInputComponents;
+    public uint32_t maxTessellationControlPerVertexOutputComponents;
+    public uint32_t maxTessellationControlPerPatchOutputComponents;
+    public uint32_t maxTessellationControlTotalOutputComponents;
+    public uint32_t maxTessellationEvaluationInputComponents;
+    public uint32_t maxTessellationEvaluationOutputComponents;
+    public uint32_t maxGeometryShaderInvocations;
+    public uint32_t maxGeometryInputComponents;
+    public uint32_t maxGeometryOutputComponents;
+    public uint32_t maxGeometryOutputVertices;
+    public uint32_t maxGeometryTotalOutputComponents;
+    public uint32_t maxFragmentInputComponents;
+    public uint32_t maxFragmentOutputAttachments;
+    public uint32_t maxFragmentDualSrcAttachments;
+    public uint32_t maxFragmentCombinedOutputResources;
+    public uint32_t maxComputeSharedMemorySize;
+    public uint32_t[] maxComputeWorkGroupCount = new uint32_t[3];
+    public uint32_t maxComputeWorkGroupInvocations;
+    public uint32_t[] maxComputeWorkGroupSize = new uint32_t[3];
+    public uint32_t subPixelPrecisionBits;
+    public uint32_t subTexelPrecisionBits;
+    public uint32_t mipmapPrecisionBits;
+    public uint32_t maxDrawIndexedIndexValue;
+    public uint32_t maxDrawIndirectCount;
     public float maxSamplerLodBias;
     public float maxSamplerAnisotropy;
-    public int maxViewports;
-    public int[] maxViewportDimensions = new int[2];
+    public uint32_t maxViewports;
+    public uint32_t[] maxViewportDimensions = new uint32_t[2];
     public float[] viewportBoundsRange = new float[2];
-    public int viewportSubPixelBits;
+    public uint32_t viewportSubPixelBits;
     public size_t minMemoryMapAlignment;
-    public long minTexelBufferOffsetAlignment;
-    public long minUniformBufferOffsetAlignment;
-    public long minStorageBufferOffsetAlignment;
-    public int minTexelOffset;
-    public int maxTexelOffset;
-    public int minTexelGatherOffset;
-    public int maxTexelGatherOffset;
+    public VkDeviceSize minTexelBufferOffsetAlignment;
+    public VkDeviceSize minUniformBufferOffsetAlignment;
+    public VkDeviceSize minStorageBufferOffsetAlignment;
+    public int32_t minTexelOffset;
+    public uint32_t maxTexelOffset;
+    public int32_t minTexelGatherOffset;
+    public uint32_t maxTexelGatherOffset;
     public float minInterpolationOffset;
     public float maxInterpolationOffset;
-    public int subPixelInterpolationOffsetBits;
-    public int maxFramebufferWidth;
-    public int maxFramebufferHeight;
-    public int maxFramebufferLayers;
-    public VkSampleCountFlags.ByValue framebufferColorSampleCounts;
-    public VkSampleCountFlags.ByValue framebufferDepthSampleCounts;
-    public VkSampleCountFlags.ByValue framebufferStencilSampleCounts;
-    public VkSampleCountFlags.ByValue framebufferNoAttachmentsSampleCounts;
-    public int maxColorAttachments;
-    public VkSampleCountFlags.ByValue sampledImageColorSampleCounts;
-    public VkSampleCountFlags.ByValue sampledImageIntegerSampleCounts;
-    public VkSampleCountFlags.ByValue sampledImageDepthSampleCounts;
-    public VkSampleCountFlags.ByValue sampledImageStencilSampleCounts;
-    public VkSampleCountFlags.ByValue storageImageSampleCounts;
-    public int maxSampleMaskWords;
-    public int timestampComputeAndGraphics;
+    public uint32_t subPixelInterpolationOffsetBits;
+    public uint32_t maxFramebufferWidth;
+    public uint32_t maxFramebufferHeight;
+    public uint32_t maxFramebufferLayers;
+    public VkSampleCountFlags framebufferColorSampleCounts;
+    public VkSampleCountFlags framebufferDepthSampleCounts;
+    public VkSampleCountFlags framebufferStencilSampleCounts;
+    public VkSampleCountFlags framebufferNoAttachmentsSampleCounts;
+    public uint32_t maxColorAttachments;
+    public VkSampleCountFlags sampledImageColorSampleCounts;
+    public VkSampleCountFlags sampledImageIntegerSampleCounts;
+    public VkSampleCountFlags sampledImageDepthSampleCounts;
+    public VkSampleCountFlags sampledImageStencilSampleCounts;
+    public VkSampleCountFlags storageImageSampleCounts;
+    public uint32_t maxSampleMaskWords;
+    public VkBool32 timestampComputeAndGraphics;
     public float timestampPeriod;
-    public int maxClipDistances;
-    public int maxCullDistances;
-    public int maxCombinedClipAndCullDistances;
-    public int discreteQueuePriorities;
+    public uint32_t maxClipDistances;
+    public uint32_t maxCullDistances;
+    public uint32_t maxCombinedClipAndCullDistances;
+    public uint32_t discreteQueuePriorities;
     public float[] pointSizeRange = new float[2];
     public float[] lineWidthRange = new float[2];
     public float pointSizeGranularity;
     public float lineWidthGranularity;
-    public int strictLines;
-    public int standardSampleLocations;
-    public long optimalBufferCopyOffsetAlignment;
-    public long optimalBufferCopyRowPitchAlignment;
-    public long nonCoherentAtomSize;
+    public VkBool32 strictLines;
+    public VkBool32 standardSampleLocations;
+    public VkDeviceSize optimalBufferCopyOffsetAlignment;
+    public VkDeviceSize optimalBufferCopyRowPitchAlignment;
+    public VkDeviceSize nonCoherentAtomSize;
 
     public VkPhysicalDeviceLimits() {
     }
@@ -346,6 +346,21 @@ public class VkPhysicalDeviceLimits extends Structure {
         });
     }
 
-    public static class ByReference extends VkPhysicalDeviceLimits implements Structure.ByReference {}
-    public static class ByValue extends VkPhysicalDeviceLimits implements Structure.ByValue {}
+    public static class ByReference extends VkPhysicalDeviceLimits implements Structure.ByReference {
+        public ByReference(){
+        }
+
+        public ByReference(Pointer pointer){
+            super(pointer);
+        }
+    }
+
+    public static class ByValue extends VkPhysicalDeviceLimits implements Structure.ByValue {
+        public ByValue(){
+        }
+
+        public ByValue(Pointer pointer){
+            super(pointer);
+        }
+    }
 }

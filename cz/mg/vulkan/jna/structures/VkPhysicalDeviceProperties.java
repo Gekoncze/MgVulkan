@@ -3,6 +3,8 @@ package cz.mg.vulkan.jna.structures;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
 import cz.mg.vulkan.jna.enums.VkPhysicalDeviceType;
+import cz.mg.vulkan.jna.types.uint32_t;
+import cz.mg.vulkan.jna.types.uint8_t;
 import java.util.Arrays;
 import java.util.List;
 import static cz.mg.vulkan.jna.VulkanNative.*;
@@ -23,15 +25,15 @@ import static cz.mg.vulkan.jna.VulkanNative.*;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceProperties.html">khronos documentation</a>
  **/
 public class VkPhysicalDeviceProperties extends Structure {
-    public int apiVersion;
-    public int driverVersion;
-    public int vendorID;
-    public int deviceID;
-    public VkPhysicalDeviceType.ByValue deviceType;
+    public uint32_t apiVersion;
+    public uint32_t driverVersion;
+    public uint32_t vendorID;
+    public uint32_t deviceID;
+    public VkPhysicalDeviceType deviceType;
     public byte[] deviceName = new byte[VK_MAX_PHYSICAL_DEVICE_NAME_SIZE];
-    public byte[] pipelineCacheUUID = new byte[VK_UUID_SIZE];
-    public VkPhysicalDeviceLimits.ByValue limits;
-    public VkPhysicalDeviceSparseProperties.ByValue sparseProperties;
+    public uint8_t[] pipelineCacheUUID = new uint8_t[VK_UUID_SIZE];
+    public VkPhysicalDeviceLimits limits;
+    public VkPhysicalDeviceSparseProperties sparseProperties;
 
     public VkPhysicalDeviceProperties() {
     }

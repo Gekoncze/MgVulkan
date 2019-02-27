@@ -1,11 +1,10 @@
 package cz.mg.vulkan.jna.structures;
 
 import com.sun.jna.Pointer;
-import com.sun.jna.StringArray;
 import com.sun.jna.Structure;
 import cz.mg.vulkan.jna.enums.VkStructureType;
 import cz.mg.vulkan.jna.flags.VkInstanceCreateFlags;
-
+import cz.mg.vulkan.jna.types.uint32_t;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,13 +23,13 @@ import java.util.List;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkInstanceCreateInfo.html">khronos documentation</a>
  **/
 public class VkInstanceCreateInfo extends Structure {
-    public VkStructureType.ByValue sType;
+    public VkStructureType sType;
     public Pointer pNext;
-    public VkInstanceCreateFlags.ByValue flags;
+    public VkInstanceCreateFlags flags;
     public VkApplicationInfo.ByReference pApplicationInfo;
-    public int enabledLayerCount;
+    public uint32_t enabledLayerCount;
     public Pointer ppEnabledLayerNames;
-    public int enabledExtensionCount;
+    public uint32_t enabledExtensionCount;
     public Pointer ppEnabledExtensionNames;
 
     public VkInstanceCreateInfo() {

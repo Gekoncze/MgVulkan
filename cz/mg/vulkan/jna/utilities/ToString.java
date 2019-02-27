@@ -1,6 +1,10 @@
 package cz.mg.vulkan.jna.utilities;
 
 import com.sun.jna.Native;
+import cz.mg.vulkan.jna.types.VkBool32;
+import cz.mg.vulkan.jna.types.uint32_t;
+import cz.mg.vulkan.jna.types.uint8_t;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import static cz.mg.vulkan.jna.VulkanNative.*;
@@ -44,8 +48,8 @@ public class ToString {
         return s + " (0x" + Integer.toHexString(value) + ")";
     }
 
-    public static String vendorToString(int value){
-        switch(value){
+    public static String vendorToString(uint32_t value){
+        switch(value.intValue()){
             case 0x1002: return "AMD";
             case 0x10DE: return "NVIDIA";
             case 0x13B5: return "ARM";
@@ -55,7 +59,7 @@ public class ToString {
         }
     }
 
-    public static String versionToString(int value){
+    public static String versionToString(uint32_t value){
         return VK_VERSION_MAJOR(value) + "." + VK_VERSION_MINOR(value) + "." + VK_VERSION_PATCH(value);
     }
 
@@ -67,17 +71,17 @@ public class ToString {
         return String.format("%02x", Byte.toUnsignedInt((byte)value));
     }
 
-    public static String bytesToHexString(byte[] values){
+    public static String bytesToHexString(uint8_t[] values){
         String s = "";
         for(int i = 0; i < values.length; i++){
-            s = s + byteToHexString(values[i]);
+            s = s + byteToHexString(values[i].byteValue());
             if(i != values.length - 1) s = s + " ";
         }
         return s;
     }
 
-    public static String booleanToString(int value){
-        switch(value){
+    public static String booleanToString(VkBool32 value){
+        switch(value.intValue()){
             case VK_TRUE: return "true";
             case VK_FALSE: return "false";
             default: return "" + value;

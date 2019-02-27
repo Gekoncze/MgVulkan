@@ -2,6 +2,7 @@ package cz.mg.vulkan.jna.structures;
 
 import com.sun.jna.Structure;
 import com.sun.jna.Pointer;
+import cz.mg.vulkan.jna.types.uint32_t;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,9 +16,9 @@ import java.util.List;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkExtent3D.html">khronos documentation</a>
  **/
 public class VkExtent3D extends Structure {
-    public int width;
-    public int height;
-    public int depth;
+    public uint32_t width;
+    public uint32_t height;
+    public uint32_t depth;
 
     public VkExtent3D() {
     }

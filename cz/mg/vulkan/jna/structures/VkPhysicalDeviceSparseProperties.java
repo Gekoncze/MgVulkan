@@ -2,7 +2,7 @@ package cz.mg.vulkan.jna.structures;
 
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
-
+import cz.mg.vulkan.jna.types.VkBool32;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,11 +18,11 @@ import java.util.List;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceSparseProperties.html">khronos documentation</a>
  **/
 public class VkPhysicalDeviceSparseProperties extends Structure {
-    public int residencyStandard2DBlockShape;
-    public int residencyStandard2DMultisampleBlockShape;
-    public int residencyStandard3DBlockShape;
-    public int residencyAlignedMipSize;
-    public int residencyNonResidentStrict;
+    public VkBool32 residencyStandard2DBlockShape;
+    public VkBool32 residencyStandard2DMultisampleBlockShape;
+    public VkBool32 residencyStandard3DBlockShape;
+    public VkBool32 residencyAlignedMipSize;
+    public VkBool32 residencyNonResidentStrict;
 
     public VkPhysicalDeviceSparseProperties() {
     }

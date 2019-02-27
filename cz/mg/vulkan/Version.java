@@ -1,0 +1,19 @@
+package cz.mg.vulkan;
+
+import cz.mg.vulkan.jna.VulkanNative;
+import cz.mg.vulkan.jna.types.uint32_t;
+
+
+public class Version {
+    private uint32_t value;
+
+    public Version(int major, int minor, int patch) {
+        if(major < 0 || minor < 0 || patch < 0) throw new IllegalArgumentException("Version numbers cannot be negative. Given: " + major + "." + minor + "." + patch);
+        if(major > 255 || minor > 255 || patch > 255) throw new IllegalArgumentException("Version numbers cannot be greater than 255. Given: " + major + "." + minor + "." + patch);
+        this.value = VulkanNative.VK_MAKE_VERSION(major, minor, patch);
+    }
+
+    public uint32_t getValue() {
+        return value;
+    }
+}

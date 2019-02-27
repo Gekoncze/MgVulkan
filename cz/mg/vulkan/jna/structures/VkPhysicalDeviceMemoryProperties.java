@@ -2,6 +2,7 @@ package cz.mg.vulkan.jna.structures;
 
 import com.sun.jna.Structure;
 import com.sun.jna.Pointer;
+import cz.mg.vulkan.jna.types.*;
 import static cz.mg.vulkan.jna.VulkanNative.*;
 import java.util.Arrays;
 import java.util.List;
@@ -17,9 +18,9 @@ import java.util.List;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceMemoryProperties.html">khronos documentation</a>
  **/
 public class VkPhysicalDeviceMemoryProperties extends Structure {
-    public int memoryTypeCount;
+    public uint32_t memoryTypeCount;
     public VkMemoryType[] memoryTypes = new VkMemoryType[VK_MAX_MEMORY_TYPES];
-    public int memoryHeapCount;
+    public uint32_t memoryHeapCount;
     public VkMemoryHeap[] memoryHeaps = new VkMemoryHeap[VK_MAX_MEMORY_HEAPS];
 
     public VkPhysicalDeviceMemoryProperties() {

@@ -1,7 +1,5 @@
 package cz.mg.vulkan.jna;
 
-import com.sun.jna.Pointer;
-import com.sun.jna.ptr.IntByReference;
 import cz.mg.vulkan.VulkanException;
 import cz.mg.vulkan.jna.arrays.*;
 import cz.mg.vulkan.jna.enums.VkResult;
@@ -11,6 +9,7 @@ import cz.mg.vulkan.jna.handles.VkInstance;
 import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
 import cz.mg.vulkan.jna.structures.VkApplicationInfo;
 import cz.mg.vulkan.jna.structures.VkInstanceCreateInfo;
+import cz.mg.vulkan.jna.types.uint32_t;
 import static cz.mg.vulkan.jna.enums.VkResult.*;
 import static cz.mg.vulkan.jna.enums.VkStructureType.*;
 import static com.sun.jna.Pointer.NULL;
@@ -28,7 +27,6 @@ public class VulkanNativeSimplified {
     }
 
     /**
-     *  VkResult vkEnumerateInstanceExtensionProperties(const char* pLayerName, uint32_t* pPropertyCount, VkExtensionProperties* pProperties);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkEnumerateInstanceExtensionProperties.html">khronos documentation</a>
      **/
     public VkExtensionPropertiesArray vkEnumerateInstanceExtensionProperties(){
@@ -36,11 +34,10 @@ public class VulkanNativeSimplified {
     }
 
     /**
-     *  VkResult vkEnumerateInstanceExtensionProperties(const char* pLayerName, uint32_t* pPropertyCount, VkExtensionProperties* pProperties);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkEnumerateInstanceExtensionProperties.html">khronos documentation</a>
      **/
     public VkExtensionPropertiesArray vkEnumerateInstanceExtensionProperties(String pLayerName){
-        IntByReference extensionPropertiesCount = new IntByReference(0);
+        uint32_t.ByReference extensionPropertiesCount = new uint32_t.ByReference(0);
         VkResult result = vk.vkEnumerateInstanceExtensionProperties(pLayerName, extensionPropertiesCount, NULL);
         if(result.value != VkResult.VK_SUCCESS) throw new VulkanException(result, "vkEnumerateInstanceExtensionProperties");
 
@@ -53,11 +50,10 @@ public class VulkanNativeSimplified {
     }
 
     /**
-     *  VkResult vkEnumerateInstanceLayerProperties(uint32_t* pPropertyCount, VkLayerProperties* pProperties);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkEnumerateInstanceLayerProperties.html">khronos documentation</a>
      **/
     public VkLayerPropertiesArray vkEnumerateInstanceLayerProperties(){
-        IntByReference layerPropertiesCount = new IntByReference(0);
+        uint32_t.ByReference layerPropertiesCount = new uint32_t.ByReference(0);
         VkResult result = vk.vkEnumerateInstanceLayerProperties(layerPropertiesCount, NULL);
         if(result.value != VkResult.VK_SUCCESS) throw new VulkanException(result, "vkEnumerateInstanceLayerProperties");
 
@@ -70,10 +66,9 @@ public class VulkanNativeSimplified {
     }
 
     /**
-     *  VkResult vkCreateInstance(const VkInstanceCreateInfo* pCreateInfo, const VkAllocationCallbacks* pAllocator, VkInstance* pInstance);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreateInstance.html">khronos documentation</a>
      **/
-    public VkInstance.ByReference vkCreateInstance(int apiVersion, String applicationName, int applicationVersion, String engineName, int engineVersion, StringArray enabledExtensions, StringArray enabledLayers){
+    public VkInstance.ByReference vkCreateInstance(uint32_t apiVersion, String applicationName, uint32_t applicationVersion, String engineName, uint32_t engineVersion, StringArray enabledExtensions, StringArray enabledLayers){
         VkApplicationInfo.ByReference applicationInfo = new VkApplicationInfo.ByReference();
         applicationInfo.sType = new VkStructureType.ByValue(VK_STRUCTURE_TYPE_APPLICATION_INFO);
         applicationInfo.pNext = NULL;
@@ -88,9 +83,9 @@ public class VulkanNativeSimplified {
         instanceCreateInfo.pNext = NULL;
         instanceCreateInfo.flags = new VkInstanceCreateFlags.ByValue(0);
         instanceCreateInfo.pApplicationInfo = applicationInfo;
-        instanceCreateInfo.enabledExtensionCount = enabledExtensions != null ? enabledExtensions.count() : 0;
+        instanceCreateInfo.enabledExtensionCount = new uint32_t(enabledExtensions != null ? enabledExtensions.count() : 0);
         instanceCreateInfo.ppEnabledExtensionNames = enabledExtensions != null ? enabledExtensions.getPointer() : NULL;
-        instanceCreateInfo.enabledLayerCount = enabledLayers != null ? enabledLayers.count() : 0;
+        instanceCreateInfo.enabledLayerCount = new uint32_t(enabledLayers != null ? enabledLayers.count() : 0);
         instanceCreateInfo.ppEnabledLayerNames = enabledLayers != null ? enabledLayers.getPointer() : NULL;
 
         VkInstance.ByReference instance = new VkInstance.ByReference();
@@ -101,11 +96,10 @@ public class VulkanNativeSimplified {
 
 
     /**
-     *  VkResult vkEnumeratePhysicalDevices(VkInstance instance, uint32_t* pPhysicalDeviceCount, VkPhysicalDevice* pPhysicalDevices);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkEnumeratePhysicalDevices.html">khronos documentation</a>
      **/
     public VkPhysicalDeviceArray vkEnumeratePhysicalDevices(VkInstance.ByValue instance){
-        IntByReference deviceCount = new IntByReference(0);
+        uint32_t.ByReference deviceCount = new uint32_t.ByReference(0);
         VkResult result = vk.vkEnumeratePhysicalDevices(instance, deviceCount, NULL);
         if(result.value != VkResult.VK_SUCCESS) throw new VulkanException(result, "vkEnumeratePhysicalDevices");
 
@@ -118,11 +112,10 @@ public class VulkanNativeSimplified {
     }
 
     /**
-     *  void vkGetPhysicalDeviceQueueFamilyProperties(VkPhysicalDevice physicalDevice, uint32_t* pQueueFamilyPropertyCount, VkQueueFamilyProperties* pQueueFamilyProperties);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceQueueFamilyProperties.html">khronos documentation</a>
      **/
     public VkQueueFamilyPropertiesArray vkGetPhysicalDeviceQueueFamilyProperties(VkPhysicalDevice.ByValue physicalDevice){
-        IntByReference queueFamilyCount = new IntByReference(0);
+        uint32_t.ByReference queueFamilyCount = new uint32_t.ByReference(0);
         vk.vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, queueFamilyCount, NULL);
         VkQueueFamilyPropertiesArray familyProperties = new VkQueueFamilyPropertiesArray(queueFamilyCount.getValue());
         vk.vkGetPhysicalDeviceQueueFamilyProperties(physicalDevice, queueFamilyCount, familyProperties.getPointer());

@@ -3,6 +3,7 @@ package cz.mg.vulkan.jna.structures;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
 import cz.mg.vulkan.jna.flags.VkMemoryPropertyFlags;
+import cz.mg.vulkan.jna.types.uint32_t;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,8 +16,8 @@ import java.util.List;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkMemoryType.html">khronos documentation</a>
  **/
 public class VkMemoryType extends Structure {
-    public VkMemoryPropertyFlags.ByValue propertyFlags;
-    public int heapIndex;
+    public VkMemoryPropertyFlags propertyFlags;
+    public uint32_t heapIndex;
 
     public VkMemoryType() {
     }

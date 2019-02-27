@@ -20,9 +20,9 @@ import java.util.List;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkDebugReportCallbackCreateInfoEXT.html">khronos documentation</a>
  **/
 public class VkDebugReportCallbackCreateInfoEXT extends Structure {
-    public VkStructureType.ByValue sType;
+    public VkStructureType sType;
     public Pointer pNext;
-    public VkDebugReportFlagsEXT.ByValue flags;
+    public VkDebugReportFlagsEXT flags;
     public PFN_vkDebugReportCallbackEXT pfnCallback;
     public Pointer pUserData;
 

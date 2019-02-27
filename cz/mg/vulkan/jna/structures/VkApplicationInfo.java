@@ -3,7 +3,7 @@ package cz.mg.vulkan.jna.structures;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
 import cz.mg.vulkan.jna.enums.VkStructureType;
-
+import cz.mg.vulkan.jna.types.uint32_t;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,13 +21,13 @@ import java.util.List;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkApplicationInfo.html">khronos documentation</a>
  **/
 public class VkApplicationInfo extends Structure {
-    public VkStructureType.ByValue sType;
+    public VkStructureType sType;
     public Pointer pNext;
     public String pApplicationName;
-    public int applicationVersion;
+    public uint32_t applicationVersion;
     public String pEngineName;
-    public int engineVersion;
-    public int apiVersion;
+    public uint32_t engineVersion;
+    public uint32_t apiVersion;
 
     public VkApplicationInfo() {
     }

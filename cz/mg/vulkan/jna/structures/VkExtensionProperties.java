@@ -2,6 +2,7 @@ package cz.mg.vulkan.jna.structures;
 
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import cz.mg.vulkan.jna.types.uint32_t;
 import java.util.Arrays;
 import java.util.List;
 import static cz.mg.vulkan.jna.VulkanNative.*;
@@ -16,7 +17,7 @@ import static cz.mg.vulkan.jna.VulkanNative.*;
  **/
 public class VkExtensionProperties extends Structure {
     public byte[] extensionName = new byte[VK_MAX_EXTENSION_NAME_SIZE];
-    public int specVersion;
+    public uint32_t specVersion;
 
     public VkExtensionProperties() {
     }
