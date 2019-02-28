@@ -346,6 +346,20 @@ public class VkPhysicalDeviceLimits extends Structure {
         });
     }
 
+    public ByReference byReference(boolean write, boolean read){
+        if(write) write();
+        ByReference reference = new ByReference(getPointer());
+        if(read) reference.read();
+        return reference;
+    }
+
+    public ByValue byValue(boolean write, boolean read){
+        if(write) write();
+        ByValue value = new ByValue(getPointer());
+        if(read) value.read();
+        return value;
+    }
+
     public static class ByReference extends VkPhysicalDeviceLimits implements Structure.ByReference {
         public ByReference(){
         }

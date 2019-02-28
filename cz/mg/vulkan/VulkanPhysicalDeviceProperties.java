@@ -28,6 +28,17 @@ public class VulkanPhysicalDeviceProperties {
         return structure.deviceID.intValue();
     }
 
+    public Vendor getVendor(){
+        switch(getVendorID()){
+            case 0x1002: return Vendor.AMD;
+            case 0x10DE: return Vendor.NVIDIA;
+            case 0x13B5: return Vendor.ARM;
+            case 0x5143: return Vendor.QUALCOMM;
+            case 0x8086: return Vendor.INTEL;
+            default: return Vendor.OTHER;
+        }
+    }
+
     public VulkanPhysicalDeviceType getDeviceType(){
         return VulkanPhysicalDeviceType.fromNativeEnum(structure.deviceType);
     }

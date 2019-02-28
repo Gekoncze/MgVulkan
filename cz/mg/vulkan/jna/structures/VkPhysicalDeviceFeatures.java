@@ -192,6 +192,35 @@ public class VkPhysicalDeviceFeatures extends Structure {
         });
     }
 
-    public static class ByReference extends VkPhysicalDeviceFeatures implements Structure.ByReference {}
-    public static class ByValue extends VkPhysicalDeviceFeatures implements Structure.ByValue {}
+    public ByReference byReference(boolean write, boolean read){
+        if(write) write();
+        ByReference reference = new ByReference(getPointer());
+        if(read) reference.read();
+        return reference;
+    }
+
+    public ByValue byValue(boolean write, boolean read){
+        if(write) write();
+        ByValue value = new ByValue(getPointer());
+        if(read) value.read();
+        return value;
+    }
+
+    public static class ByReference extends VkPhysicalDeviceFeatures implements Structure.ByReference {
+        public ByReference() {
+        }
+
+        public ByReference(Pointer p) {
+            super(p);
+        }
+    }
+
+    public static class ByValue extends VkPhysicalDeviceFeatures implements Structure.ByValue {
+        public ByValue() {
+        }
+
+        public ByValue(Pointer p) {
+            super(p);
+        }
+    }
 }

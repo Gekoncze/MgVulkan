@@ -14,7 +14,6 @@ public class VkDebugReportFlagsEXT extends Structure {
     public static final int VK_DEBUG_REPORT_PERFORMANCE_WARNING_BIT_EXT = 0x00000004;
     public static final int VK_DEBUG_REPORT_ERROR_BIT_EXT = 0x00000008;
     public static final int VK_DEBUG_REPORT_DEBUG_BIT_EXT = 0x00000010;
-    public static final int VK_DEBUG_REPORT_FLAG_BITS_MAX_ENUM_EXT = 0x7FFFFFFF;
 
     public int value;
 

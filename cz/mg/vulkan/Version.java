@@ -2,6 +2,7 @@ package cz.mg.vulkan;
 
 import cz.mg.vulkan.jna.VulkanNative;
 import cz.mg.vulkan.jna.types.uint32_t;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class Version {
@@ -31,5 +32,10 @@ public class Version {
 
     public int getPatchVersion(){
         return VulkanNative.VK_VERSION_PATCH(value);
+    }
+
+    @Override
+    public String toString() {
+        return ToString.versionToString(value);
     }
 }

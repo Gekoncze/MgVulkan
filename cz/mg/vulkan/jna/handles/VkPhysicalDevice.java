@@ -22,8 +22,26 @@ public class VkPhysicalDevice extends Structure {
         super(pointer);
     }
 
+    public ByReference byReference(boolean write, boolean read){
+        if(write) write();
+        ByReference reference = new ByReference(getPointer());
+        if(read) reference.read();
+        return reference;
+    }
+
+    public ByValue byValue(boolean write, boolean read){
+        if(write) write();
+        ByValue value = new ByValue(getPointer());
+        if(read) value.read();
+        return value;
+    }
+
     public static class ByReference extends VkPhysicalDevice implements Structure.ByReference {
         public ByReference(){
+        }
+
+        public ByReference(Pointer pointer) {
+            super(pointer);
         }
 
         public ByReference(VkPhysicalDevice object){
@@ -33,6 +51,10 @@ public class VkPhysicalDevice extends Structure {
 
     public static class ByValue extends VkPhysicalDevice implements Structure.ByValue {
         public ByValue(){
+        }
+
+        public ByValue(Pointer pointer) {
+            super(pointer);
         }
 
         public ByValue(VkPhysicalDevice object){

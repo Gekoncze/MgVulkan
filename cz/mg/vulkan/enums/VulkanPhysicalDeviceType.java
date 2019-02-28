@@ -10,14 +10,14 @@ public enum VulkanPhysicalDeviceType {
     VIRTUAL_GPU,
     CPU;
 
-    public static VulkanPhysicalDeviceType fromNativeEnum(VkPhysicalDeviceType type){
-        switch(type.value){
+    public static VulkanPhysicalDeviceType fromNativeEnum(VkPhysicalDeviceType e){
+        switch(e.value){
             case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_OTHER: return OTHER;
             case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU: return INTEGRATED_GPU;
             case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU: return DISCRETE_GPU;
             case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU: return VIRTUAL_GPU;
             case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_CPU: return CPU;
-            default: return OTHER;
+            default: return null;
         }
     }
 }

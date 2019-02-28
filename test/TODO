@@ -1,14 +1,10 @@
-### PRO TIPS
-    wrapper classes shall have reference to VkInstance class so it is not garbage collected
-        it will also ensure that objects are cleared in correct order... hopefully ":D
-
 ### SOON
 
 
 ### NOW
-
+    finish oop test
+    think about cache uuid getter
 
 ### DONE
-minor improvements
-    added some simplified methods
-    added bunch of oop vulkan classes
+added bunch of oop vulkan classes
+    also deleted some unused files
