@@ -1,4 +1,4 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.utilities;
 
 import cz.mg.vulkan.jna.VulkanNative;
 import cz.mg.vulkan.jna.types.uint32_t;

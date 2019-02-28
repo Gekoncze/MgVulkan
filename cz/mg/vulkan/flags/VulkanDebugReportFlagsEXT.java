@@ -1,6 +1,6 @@
 package cz.mg.vulkan.flags;
 
-import cz.mg.vulkan.jna.flags.VkDebugReportFlagsEXT;
+import test.unused.VkDebugReportFlagsEXT;
 import cz.mg.vulkan.jna.utilities.ToString;
 
 

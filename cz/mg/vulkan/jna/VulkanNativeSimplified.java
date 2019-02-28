@@ -1,7 +1,6 @@
 package cz.mg.vulkan.jna;
 
-import com.sun.jna.Pointer;
-import cz.mg.vulkan.VulkanException;
+import cz.mg.vulkan.utilities.VulkanException;
 import cz.mg.vulkan.jna.arrays.*;
 import cz.mg.vulkan.jna.enums.VkResult;
 import cz.mg.vulkan.jna.enums.VkStructureType;

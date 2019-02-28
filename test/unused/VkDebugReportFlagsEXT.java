@@ -1,4 +1,4 @@
-package cz.mg.vulkan.jna.flags;
+package test.unused;
 
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;

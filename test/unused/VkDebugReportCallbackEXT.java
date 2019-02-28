@@ -1,4 +1,4 @@
-package cz.mg.vulkan.jna.handles;
+package test.unused;
 
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;

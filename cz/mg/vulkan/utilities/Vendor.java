@@ -1,4 +1,4 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.utilities;
 
 public enum Vendor {
     AMD,

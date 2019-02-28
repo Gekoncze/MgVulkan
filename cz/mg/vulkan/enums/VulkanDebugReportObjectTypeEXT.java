@@ -1,6 +1,6 @@
 package cz.mg.vulkan.enums;
 
-import cz.mg.vulkan.jna.enums.VkDebugReportObjectTypeEXT;
+import test.unused.VkDebugReportObjectTypeEXT;
 
 
 public enum VulkanDebugReportObjectTypeEXT {

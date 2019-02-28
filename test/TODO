@@ -2,7 +2,9 @@
 
 
 ### NOW
-    finish oop test
+
 
 ### DONE
-finished oop test + bug fixes (wrong size of uint8_t)
+debug layer preparations
+    moved around some classes
+    minor changes

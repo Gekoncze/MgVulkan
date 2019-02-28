@@ -2,6 +2,7 @@ package cz.mg.vulkan;
 
 import cz.mg.vulkan.jna.structures.VkLayerProperties;
 import cz.mg.vulkan.jna.utilities.ToString;
+import cz.mg.vulkan.utilities.Version;
 
 
 public class VulkanLayerProperties {

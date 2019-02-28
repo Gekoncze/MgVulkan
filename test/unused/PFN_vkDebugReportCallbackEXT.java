@@ -1,9 +1,7 @@
-package cz.mg.vulkan.jna.callbacks;
+package test.unused;
 
 import com.sun.jna.Callback;
 import com.sun.jna.Pointer;
-import cz.mg.vulkan.jna.enums.VkDebugReportObjectTypeEXT;
-import cz.mg.vulkan.jna.flags.VkDebugReportFlagsEXT;
 import cz.mg.vulkan.jna.types.size_t;
 
 

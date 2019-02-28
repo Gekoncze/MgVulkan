@@ -3,6 +3,8 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.enums.VulkanPhysicalDeviceType;
 import cz.mg.vulkan.jna.structures.VkPhysicalDeviceProperties;
 import cz.mg.vulkan.jna.utilities.ToString;
+import cz.mg.vulkan.utilities.Vendor;
+import cz.mg.vulkan.utilities.Version;
 
 
 public class VulkanPhysicalDeviceProperties {

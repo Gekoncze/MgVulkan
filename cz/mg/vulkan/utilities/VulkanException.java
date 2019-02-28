@@ -1,4 +1,4 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.utilities;
 
 import cz.mg.vulkan.enums.VulkanResult;
 import cz.mg.vulkan.jna.enums.VkResult;

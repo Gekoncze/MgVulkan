@@ -6,6 +6,7 @@ import cz.mg.vulkan.jna.VulkanNative;
 import cz.mg.vulkan.jna.arrays.StringArray;
 import cz.mg.vulkan.jna.arrays.VkPhysicalDeviceArray;
 import cz.mg.vulkan.jna.handles.VkInstance;
+import cz.mg.vulkan.utilities.Version;
 
 
 public class VulkanInstance {
@@ -13,17 +14,14 @@ public class VulkanInstance {
     private final VkInstance.ByValue handle;
     private Array<VulkanPhysicalDevice> physicalDevices = null;
 
-    public VulkanInstance(Vulkan vulkan, String applicationName, Version applicationVersion, String engineName, Version engineVersion){
+    public VulkanInstance(Vulkan vulkan, String applicationName, Version applicationVersion, String engineName, Version engineVersion, String[] extensions, String[] layers){
         this.parent = vulkan;
         this.handle = new VkInstance.ByValue(vulkan.vks.vkCreateInstance(
                 VulkanNative.VK_API_VERSION_1_0,
                 applicationName, applicationVersion.getValue(),
                 engineName, engineVersion.getValue(),
-                new StringArray(new String[]{
-                        "VK_KHR_surface"
-                }),
-                new StringArray(new String[]{
-                })
+                new StringArray(extensions),
+                new StringArray(layers)
         ));
     }
 

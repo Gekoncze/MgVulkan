@@ -1,10 +1,9 @@
-package cz.mg.vulkan.jna.structures;
+package test.unused;
 
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
-import cz.mg.vulkan.jna.callbacks.PFN_vkDebugReportCallbackEXT;
 import cz.mg.vulkan.jna.enums.VkStructureType;
-import cz.mg.vulkan.jna.flags.VkDebugReportFlagsEXT;
+
 import java.util.Arrays;
 import java.util.List;
 
