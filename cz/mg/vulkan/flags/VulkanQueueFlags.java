@@ -1,6 +1,7 @@
 package cz.mg.vulkan.flags;
 
 import cz.mg.vulkan.jna.flags.VkQueueFlags;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class VulkanQueueFlags {
@@ -24,5 +25,10 @@ public class VulkanQueueFlags {
 
     public boolean isVkQueueSparseBindingBit(){
         return (flags.value & VkQueueFlags.VK_QUEUE_SPARSE_BINDING_BIT) != 0;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.flagsToStringNoLabels(flags.value, VkQueueFlags.class);
     }
 }

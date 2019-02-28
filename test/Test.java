@@ -34,6 +34,6 @@ public class Test {
                 enabledLayers
         );
         VkPhysicalDeviceArray physicalDevices = vks.vkEnumeratePhysicalDevices(new VkInstance.ByValue(instance));
-        TestInfo.printVulkanDevices(physicalDevices, false);
+        TestInfo.printVulkanDevices(physicalDevices, true);
     }
 }

@@ -47,6 +47,12 @@ public class VulkanPhysicalDeviceProperties {
         return ToString.textToString(structure.deviceName);
     }
 
+    public byte[] getPipelineCacheUUID(){
+        byte[] array = new byte[structure.pipelineCacheUUID.length];
+        for(int i = 0; i < array.length; i++) array[i] = structure.pipelineCacheUUID[i].byteValue();
+        return array;
+    }
+
     public VulkanPhysicalDeviceLimits getLimits(){
         return new VulkanPhysicalDeviceLimits(structure.limits);
     }

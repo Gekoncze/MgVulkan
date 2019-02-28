@@ -3,8 +3,6 @@
 
 ### NOW
     finish oop test
-    think about cache uuid getter
 
 ### DONE
-added bunch of oop vulkan classes
-    also deleted some unused files
+finished oop test + bug fixes (wrong size of uint8_t)

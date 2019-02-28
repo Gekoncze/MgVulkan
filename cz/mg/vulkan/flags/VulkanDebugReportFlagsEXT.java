@@ -1,6 +1,7 @@
 package cz.mg.vulkan.flags;
 
 import cz.mg.vulkan.jna.flags.VkDebugReportFlagsEXT;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class VulkanDebugReportFlagsEXT {
@@ -28,5 +29,10 @@ public class VulkanDebugReportFlagsEXT {
 
     public boolean isVkDebugReportDebugBitExt(){
         return (flags.value & VkDebugReportFlagsEXT.VK_DEBUG_REPORT_DEBUG_BIT_EXT) != 0;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.flagsToStringNoLabels(flags.value, VkDebugReportFlagsEXT.class);
     }
 }

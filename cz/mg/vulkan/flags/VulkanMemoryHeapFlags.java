@@ -1,6 +1,7 @@
 package cz.mg.vulkan.flags;
 
 import cz.mg.vulkan.jna.flags.VkMemoryHeapFlags;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class VulkanMemoryHeapFlags {
@@ -16,5 +17,10 @@ public class VulkanMemoryHeapFlags {
 
     public boolean isVkMemoryHeapMultiInstanceBitKhx(){
         return (flags.value & VkMemoryHeapFlags.VK_MEMORY_HEAP_MULTI_INSTANCE_BIT_KHX) != 0;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.flagsToStringNoLabels(flags.value, VkMemoryHeapFlags.class);
     }
 }

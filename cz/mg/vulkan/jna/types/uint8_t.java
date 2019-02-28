@@ -4,7 +4,7 @@ import com.sun.jna.IntegerType;
 
 
 public class uint8_t extends IntegerType {
-    private static final int SIZE = 4;
+    private static final int SIZE = 1;
 
     public uint8_t() {
         this((byte) 0);

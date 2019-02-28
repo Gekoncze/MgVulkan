@@ -2,7 +2,7 @@ package test;
 
 import cz.mg.collections.array.ReadonlyArray;
 import cz.mg.vulkan.*;
-import cz.mg.vulkan.jna.utilities.ToString;
+import static cz.mg.vulkan.jna.utilities.ToString.*;
 
 
 public class TestInfo2 {
@@ -35,9 +35,9 @@ public class TestInfo2 {
 
     private static void printVulkanDevice(VulkanPhysicalDevice device, boolean details){
         printVulkanDeviceProperties(device, details);
-//        if(details) printVulkanDeviceFeatures(vDevice);
-//        if(details) printVulkanDeviceMemoryProperties(vDevice);
-//        printVulkanDeviceQueueFamilyProperties(vDevice);
+        if(details) printVulkanDeviceFeatures(device);
+        if(details) printVulkanDeviceMemoryProperties(device);
+        printVulkanDeviceQueueFamilyProperties(device);
     }
 
     private static void printVulkanDeviceProperties(VulkanPhysicalDevice device, boolean details){
@@ -48,217 +48,217 @@ public class TestInfo2 {
         System.out.println("    api version: " + deviceProperties.getApiVersion());
         System.out.println("    driver version: " + deviceProperties.getDriverVersion());
         System.out.println("    device type: " + deviceProperties.getDeviceType());
-//        if(details) System.out.println("    pipeline cache UUID: " + bytesToHexString(deviceProperties.pipelineCacheUUID));
+        if(details) System.out.println("    pipeline cache UUID: " + bytesToHexString(deviceProperties.getPipelineCacheUUID()));
         System.out.println();
-//        if(details) printVulkanDeviceSparseProperties(deviceProperties);
-//        if(details) printVulkanDeviceLimits(deviceProperties);
+        if(details) printVulkanDeviceSparseProperties(deviceProperties);
+        if(details) printVulkanDeviceLimits(deviceProperties);
     }
 
-//    private static void printVulkanDeviceSparseProperties(VkPhysicalDeviceProperties deviceProperties){
-//        System.out.println("    sparse properties:\n");
-//        System.out.println("        residency aligned mip size: " + deviceProperties.sparseProperties.residencyAlignedMipSize);
-//        System.out.println("        residency non resident strict: " + deviceProperties.sparseProperties.residencyNonResidentStrict);
-//        System.out.println("        residency standard 2D block shape: " + deviceProperties.sparseProperties.residencyStandard2DBlockShape);
-//        System.out.println("        residency standard 2D multisample block shape: " + deviceProperties.sparseProperties.residencyStandard2DMultisampleBlockShape);
-//        System.out.println("        residency standard 3D block shape: " + deviceProperties.sparseProperties.residencyStandard3DBlockShape);
-//        System.out.println();
-//    }
-//
-//    private static void printVulkanDeviceLimits(VkPhysicalDeviceProperties deviceProperties){
-//        System.out.println("    limits:\n");
-//        System.out.println("        maxImageDimension1D: " + deviceProperties.limits.maxImageDimension1D);
-//        System.out.println("        maxImageDimension2D: " + deviceProperties.limits.maxImageDimension2D);
-//        System.out.println("        maxImageDimension3D: " + deviceProperties.limits.maxImageDimension3D);
-//        System.out.println("        maxImageDimensionCube: " + deviceProperties.limits.maxImageDimensionCube);
-//        System.out.println("        maxImageArrayLayers: " + deviceProperties.limits.maxImageArrayLayers);
-//        System.out.println("        maxTexelBufferElements: " + deviceProperties.limits.maxTexelBufferElements);
-//        System.out.println("        maxUniformBufferRange: " + deviceProperties.limits.maxUniformBufferRange);
-//        System.out.println("        maxStorageBufferRange: " + deviceProperties.limits.maxStorageBufferRange);
-//        System.out.println("        maxPushConstantsSize: " + deviceProperties.limits.maxPushConstantsSize);
-//        System.out.println("        maxMemoryAllocationCount: " + deviceProperties.limits.maxMemoryAllocationCount);
-//        System.out.println("        maxSamplerAllocationCount: " + deviceProperties.limits.maxSamplerAllocationCount);
-//        System.out.println("        bufferImageGranularity: " + deviceProperties.limits.bufferImageGranularity);
-//        System.out.println("        sparseAddressSpaceSize: " + deviceProperties.limits.sparseAddressSpaceSize);
-//        System.out.println("        maxBoundDescriptorSets: " + deviceProperties.limits.maxBoundDescriptorSets);
-//        System.out.println("        maxPerStageDescriptorSamplers: " + deviceProperties.limits.maxPerStageDescriptorSamplers);
-//        System.out.println("        maxPerStageDescriptorUniformBuffers: " + deviceProperties.limits.maxPerStageDescriptorUniformBuffers);
-//        System.out.println("        maxPerStageDescriptorStorageBuffers: " + deviceProperties.limits.maxPerStageDescriptorStorageBuffers);
-//        System.out.println("        maxPerStageDescriptorSampledImages: " + deviceProperties.limits.maxPerStageDescriptorSampledImages);
-//        System.out.println("        maxPerStageDescriptorStorageImages: " + deviceProperties.limits.maxPerStageDescriptorStorageImages);
-//        System.out.println("        maxPerStageDescriptorInputAttachments: " + deviceProperties.limits.maxPerStageDescriptorInputAttachments);
-//        System.out.println("        maxPerStageResources: " + deviceProperties.limits.maxPerStageResources);
-//        System.out.println("        maxDescriptorSetSamplers: " + deviceProperties.limits.maxDescriptorSetSamplers);
-//        System.out.println("        maxDescriptorSetUniformBuffers: " + deviceProperties.limits.maxDescriptorSetUniformBuffers);
-//        System.out.println("        maxDescriptorSetUniformBuffersDynamic: " + deviceProperties.limits.maxDescriptorSetUniformBuffersDynamic);
-//        System.out.println("        maxDescriptorSetStorageBuffers: " + deviceProperties.limits.maxDescriptorSetStorageBuffers);
-//        System.out.println("        maxDescriptorSetStorageBuffersDynamic: " + deviceProperties.limits.maxDescriptorSetStorageBuffersDynamic);
-//        System.out.println("        maxDescriptorSetSampledImages: " + deviceProperties.limits.maxDescriptorSetSampledImages);
-//        System.out.println("        maxDescriptorSetStorageImages: " + deviceProperties.limits.maxDescriptorSetStorageImages);
-//        System.out.println("        maxDescriptorSetInputAttachments: " + deviceProperties.limits.maxDescriptorSetInputAttachments);
-//        System.out.println("        maxVertexInputAttributes: " + deviceProperties.limits.maxVertexInputAttributes);
-//        System.out.println("        maxVertexInputBindings: " + deviceProperties.limits.maxVertexInputBindings);
-//        System.out.println("        maxVertexInputAttributeOffset: " + deviceProperties.limits.maxVertexInputAttributeOffset);
-//        System.out.println("        maxVertexInputBindingStride: " + deviceProperties.limits.maxVertexInputBindingStride);
-//        System.out.println("        maxVertexOutputComponents: " + deviceProperties.limits.maxVertexOutputComponents);
-//        System.out.println("        maxTessellationGenerationLevel: " + deviceProperties.limits.maxTessellationGenerationLevel);
-//        System.out.println("        maxTessellationPatchSize: " + deviceProperties.limits.maxTessellationPatchSize);
-//        System.out.println("        maxTessellationControlPerVertexInputComponents: " + deviceProperties.limits.maxTessellationControlPerVertexInputComponents);
-//        System.out.println("        maxTessellationControlPerVertexOutputComponents: " + deviceProperties.limits.maxTessellationControlPerVertexOutputComponents);
-//        System.out.println("        maxTessellationControlPerPatchOutputComponents: " + deviceProperties.limits.maxTessellationControlPerPatchOutputComponents);
-//        System.out.println("        maxTessellationControlTotalOutputComponents: " + deviceProperties.limits.maxTessellationControlTotalOutputComponents);
-//        System.out.println("        maxTessellationEvaluationInputComponents: " + deviceProperties.limits.maxTessellationEvaluationInputComponents);
-//        System.out.println("        maxTessellationEvaluationOutputComponents: " + deviceProperties.limits.maxTessellationEvaluationOutputComponents);
-//        System.out.println("        maxGeometryShaderInvocations: " + deviceProperties.limits.maxGeometryShaderInvocations);
-//        System.out.println("        maxGeometryInputComponents: " + deviceProperties.limits.maxGeometryInputComponents);
-//        System.out.println("        maxGeometryOutputComponents: " + deviceProperties.limits.maxGeometryOutputComponents);
-//        System.out.println("        maxGeometryOutputVertices: " + deviceProperties.limits.maxGeometryOutputVertices);
-//        System.out.println("        maxGeometryTotalOutputComponents: " + deviceProperties.limits.maxGeometryTotalOutputComponents);
-//        System.out.println("        maxFragmentInputComponents: " + deviceProperties.limits.maxFragmentInputComponents);
-//        System.out.println("        maxFragmentOutputAttachments: " + deviceProperties.limits.maxFragmentOutputAttachments);
-//        System.out.println("        maxFragmentDualSrcAttachments: " + deviceProperties.limits.maxFragmentDualSrcAttachments);
-//        System.out.println("        maxFragmentCombinedOutputResources: " + deviceProperties.limits.maxFragmentCombinedOutputResources);
-//        System.out.println("        maxComputeSharedMemorySize: " + deviceProperties.limits.maxComputeSharedMemorySize);
-//        System.out.println("        maxComputeWorkGroupCount[0]: " + deviceProperties.limits.maxComputeWorkGroupCount[0]);
-//        System.out.println("        maxComputeWorkGroupCount[1]: " + deviceProperties.limits.maxComputeWorkGroupCount[1]);
-//        System.out.println("        maxComputeWorkGroupCount[2]: " + deviceProperties.limits.maxComputeWorkGroupCount[2]);
-//        System.out.println("        maxComputeWorkGroupInvocations: " + deviceProperties.limits.maxComputeWorkGroupInvocations);
-//        System.out.println("        maxComputeWorkGroupSize[0]: " + deviceProperties.limits.maxComputeWorkGroupSize[0]);
-//        System.out.println("        maxComputeWorkGroupSize[1]: " + deviceProperties.limits.maxComputeWorkGroupSize[1]);
-//        System.out.println("        maxComputeWorkGroupSize[2]: " + deviceProperties.limits.maxComputeWorkGroupSize[2]);
-//        System.out.println("        subPixelPrecisionBits: " + deviceProperties.limits.subPixelPrecisionBits);
-//        System.out.println("        subTexelPrecisionBits: " + deviceProperties.limits.subTexelPrecisionBits);
-//        System.out.println("        mipmapPrecisionBits: " + deviceProperties.limits.mipmapPrecisionBits);
-//        System.out.println("        maxDrawIndexedIndexValue: " + deviceProperties.limits.maxDrawIndexedIndexValue);
-//        System.out.println("        maxDrawIndirectCount: " + deviceProperties.limits.maxDrawIndirectCount);
-//        System.out.println("        maxSamplerLodBias: " + deviceProperties.limits.maxSamplerLodBias);
-//        System.out.println("        maxSamplerAnisotropy: " + deviceProperties.limits.maxSamplerAnisotropy);
-//        System.out.println("        maxViewports: " + deviceProperties.limits.maxViewports);
-//        System.out.println("        maxViewportDimensions[0]: " + deviceProperties.limits.maxViewportDimensions[0]);
-//        System.out.println("        maxViewportDimensions[1]: " + deviceProperties.limits.maxViewportDimensions[1]);
-//        System.out.println("        viewportBoundsRange[0]: " + deviceProperties.limits.viewportBoundsRange[0]);
-//        System.out.println("        viewportBoundsRange[1]: " + deviceProperties.limits.viewportBoundsRange[1]);
-//        System.out.println("        viewportSubPixelBits: " + deviceProperties.limits.viewportSubPixelBits);
-//        System.out.println("        minMemoryMapAlignment: " + deviceProperties.limits.minMemoryMapAlignment.longValue());
-//        System.out.println("        minTexelBufferOffsetAlignment: " + deviceProperties.limits.minTexelBufferOffsetAlignment);
-//        System.out.println("        minUniformBufferOffsetAlignment: " + deviceProperties.limits.minUniformBufferOffsetAlignment);
-//        System.out.println("        minStorageBufferOffsetAlignment: " + deviceProperties.limits.minStorageBufferOffsetAlignment);
-//        System.out.println("        minTexelOffset: " + deviceProperties.limits.minTexelOffset);
-//        System.out.println("        maxTexelOffset: " + deviceProperties.limits.maxTexelOffset);
-//        System.out.println("        minTexelGatherOffset: " + deviceProperties.limits.minTexelGatherOffset);
-//        System.out.println("        maxTexelGatherOffset: " + deviceProperties.limits.maxTexelGatherOffset);
-//        System.out.println("        minInterpolationOffset: " + deviceProperties.limits.minInterpolationOffset);
-//        System.out.println("        maxInterpolationOffset: " + deviceProperties.limits.maxInterpolationOffset);
-//        System.out.println("        subPixelInterpolationOffsetBits: " + deviceProperties.limits.subPixelInterpolationOffsetBits);
-//        System.out.println("        maxFramebufferWidth: " + deviceProperties.limits.maxFramebufferWidth);
-//        System.out.println("        maxFramebufferHeight: " + deviceProperties.limits.maxFramebufferHeight);
-//        System.out.println("        maxFramebufferLayers: " + deviceProperties.limits.maxFramebufferLayers);
-//        System.out.println("        framebufferColorSampleCounts: " + deviceProperties.limits.framebufferColorSampleCounts.value);
-//        System.out.println("        framebufferDepthSampleCounts: " + deviceProperties.limits.framebufferDepthSampleCounts.value);
-//        System.out.println("        framebufferStencilSampleCounts: " + deviceProperties.limits.framebufferStencilSampleCounts.value);
-//        System.out.println("        framebufferNoAttachmentsSampleCounts: " + deviceProperties.limits.framebufferNoAttachmentsSampleCounts.value);
-//        System.out.println("        maxColorAttachments: " + deviceProperties.limits.maxColorAttachments);
-//        System.out.println("        sampledImageColorSampleCounts: " + deviceProperties.limits.sampledImageColorSampleCounts.value);
-//        System.out.println("        sampledImageIntegerSampleCounts: " + deviceProperties.limits.sampledImageIntegerSampleCounts.value);
-//        System.out.println("        sampledImageDepthSampleCounts: " + deviceProperties.limits.sampledImageDepthSampleCounts.value);
-//        System.out.println("        sampledImageStencilSampleCounts: " + deviceProperties.limits.sampledImageStencilSampleCounts.value);
-//        System.out.println("        storageImageSampleCounts: " + deviceProperties.limits.storageImageSampleCounts.value);
-//        System.out.println("        maxSampleMaskWords: " + deviceProperties.limits.maxSampleMaskWords);
-//        System.out.println("        timestampComputeAndGraphics: " + deviceProperties.limits.timestampComputeAndGraphics);
-//        System.out.println("        timestampPeriod: " + deviceProperties.limits.timestampPeriod);
-//        System.out.println("        maxClipDistances: " + deviceProperties.limits.maxClipDistances);
-//        System.out.println("        maxCullDistances: " + deviceProperties.limits.maxCullDistances);
-//        System.out.println("        maxCombinedClipAndCullDistances: " + deviceProperties.limits.maxCombinedClipAndCullDistances);
-//        System.out.println("        discreteQueuePriorities: " + deviceProperties.limits.discreteQueuePriorities);
-//        System.out.println("        pointSizeRange[0]: " + deviceProperties.limits.pointSizeRange[0]);
-//        System.out.println("        pointSizeRange[1]: " + deviceProperties.limits.pointSizeRange[1]);
-//        System.out.println("        lineWidthRange[0]: " + deviceProperties.limits.lineWidthRange[0]);
-//        System.out.println("        lineWidthRange[1]: " + deviceProperties.limits.lineWidthRange[1]);
-//        System.out.println("        pointSizeGranularity: " + deviceProperties.limits.pointSizeGranularity);
-//        System.out.println("        lineWidthGranularity: " + deviceProperties.limits.lineWidthGranularity);
-//        System.out.println("        strictLines: " + deviceProperties.limits.strictLines);
-//        System.out.println("        standardSampleLocations: " + deviceProperties.limits.standardSampleLocations);
-//        System.out.println("        optimalBufferCopyOffsetAlignment: " + deviceProperties.limits.optimalBufferCopyOffsetAlignment);
-//        System.out.println("        optimalBufferCopyRowPitchAlignment: " + deviceProperties.limits.optimalBufferCopyRowPitchAlignment);
-//        System.out.println("        nonCoherentAtomSize: " + deviceProperties.limits.nonCoherentAtomSize);
-//        System.out.println();
-//    }
-//
-//    private static void printVulkanDeviceFeatures(VkPhysicalDevice.ByValue vDevice){
-//        VkPhysicalDeviceFeatures.ByReference deviceFeatures = vks.vkGetPhysicalDeviceFeatures(vDevice);
-//        System.out.println("    features:");
-//        System.out.println("        robustBufferAccess: " + booleanToString(deviceFeatures.robustBufferAccess));
-//        System.out.println("        fullDrawIndexUint32: " + booleanToString(deviceFeatures.fullDrawIndexUint32));
-//        System.out.println("        imageCubeArray: " + booleanToString(deviceFeatures.imageCubeArray));
-//        System.out.println("        independentBlend: " + booleanToString(deviceFeatures.independentBlend));
-//        System.out.println("        geometryShader: " + booleanToString(deviceFeatures.geometryShader));
-//        System.out.println("        tessellationShader: " + booleanToString(deviceFeatures.tessellationShader));
-//        System.out.println("        sampleRateShading: " + booleanToString(deviceFeatures.sampleRateShading));
-//        System.out.println("        dualSrcBlend: " + booleanToString(deviceFeatures.dualSrcBlend));
-//        System.out.println("        logicOp: " + booleanToString(deviceFeatures.logicOp));
-//        System.out.println("        multiDrawIndirect: " + booleanToString(deviceFeatures.multiDrawIndirect));
-//        System.out.println("        drawIndirectFirstInstance: " + booleanToString(deviceFeatures.drawIndirectFirstInstance));
-//        System.out.println("        depthClamp: " + booleanToString(deviceFeatures.depthClamp));
-//        System.out.println("        depthBiasClamp: " + booleanToString(deviceFeatures.depthBiasClamp));
-//        System.out.println("        fillModeNonSolid: " + booleanToString(deviceFeatures.fillModeNonSolid));
-//        System.out.println("        depthBounds: " + booleanToString(deviceFeatures.depthBounds));
-//        System.out.println("        wideLines: " + booleanToString(deviceFeatures.wideLines));
-//        System.out.println("        largePoints: " + booleanToString(deviceFeatures.largePoints));
-//        System.out.println("        alphaToOne: " + booleanToString(deviceFeatures.alphaToOne));
-//        System.out.println("        multiViewport: " + booleanToString(deviceFeatures.multiViewport));
-//        System.out.println("        samplerAnisotropy: " + booleanToString(deviceFeatures.samplerAnisotropy));
-//        System.out.println("        textureCompressionETC2: " + booleanToString(deviceFeatures.textureCompressionETC2));
-//        System.out.println("        textureCompressionASTC_LDR: " + booleanToString(deviceFeatures.textureCompressionASTC_LDR));
-//        System.out.println("        textureCompressionBC: " + booleanToString(deviceFeatures.textureCompressionBC));
-//        System.out.println("        occlusionQueryPrecise: " + booleanToString(deviceFeatures.occlusionQueryPrecise));
-//        System.out.println("        pipelineStatisticsQuery: " + booleanToString(deviceFeatures.pipelineStatisticsQuery));
-//        System.out.println("        vertexPipelineStoresAndAtomics: " + booleanToString(deviceFeatures.vertexPipelineStoresAndAtomics));
-//        System.out.println("        fragmentStoresAndAtomics: " + booleanToString(deviceFeatures.fragmentStoresAndAtomics));
-//        System.out.println("        shaderTessellationAndGeometryPointSize: " + booleanToString(deviceFeatures.shaderTessellationAndGeometryPointSize));
-//        System.out.println("        shaderImageGatherExtended: " + booleanToString(deviceFeatures.shaderImageGatherExtended));
-//        System.out.println("        shaderStorageImageExtendedFormats: " + booleanToString(deviceFeatures.shaderStorageImageExtendedFormats));
-//        System.out.println("        shaderStorageImageMultisample: " + booleanToString(deviceFeatures.shaderStorageImageMultisample));
-//        System.out.println("        shaderStorageImageReadWithoutFormat: " + booleanToString(deviceFeatures.shaderStorageImageReadWithoutFormat));
-//        System.out.println("        shaderStorageImageWriteWithoutFormat: " + booleanToString(deviceFeatures.shaderStorageImageWriteWithoutFormat));
-//        System.out.println("        shaderUniformBufferArrayDynamicIndexing: " + booleanToString(deviceFeatures.shaderUniformBufferArrayDynamicIndexing));
-//        System.out.println("        shaderSampledImageArrayDynamicIndexing: " + booleanToString(deviceFeatures.shaderSampledImageArrayDynamicIndexing));
-//        System.out.println("        shaderStorageBufferArrayDynamicIndexing: " + booleanToString(deviceFeatures.shaderStorageBufferArrayDynamicIndexing));
-//        System.out.println("        shaderStorageImageArrayDynamicIndexing: " + booleanToString(deviceFeatures.shaderStorageImageArrayDynamicIndexing));
-//        System.out.println("        shaderClipDistance: " + booleanToString(deviceFeatures.shaderClipDistance));
-//        System.out.println("        shaderCullDistance: " + booleanToString(deviceFeatures.shaderCullDistance));
-//        System.out.println("        shaderFloat64: " + booleanToString(deviceFeatures.shaderFloat64));
-//        System.out.println("        shaderInt64: " + booleanToString(deviceFeatures.shaderInt64));
-//        System.out.println("        shaderInt16: " + booleanToString(deviceFeatures.shaderInt16));
-//        System.out.println("        shaderResourceResidency: " + booleanToString(deviceFeatures.shaderResourceResidency));
-//        System.out.println("        shaderResourceMinLod: " + booleanToString(deviceFeatures.shaderResourceMinLod));
-//        System.out.println("        sparseBinding: " + booleanToString(deviceFeatures.sparseBinding));
-//        System.out.println("        sparseResidencyBuffer: " + booleanToString(deviceFeatures.sparseResidencyBuffer));
-//        System.out.println("        sparseResidencyImage2D: " + booleanToString(deviceFeatures.sparseResidencyImage2D));
-//        System.out.println("        sparseResidencyImage3D: " + booleanToString(deviceFeatures.sparseResidencyImage3D));
-//        System.out.println("        sparseResidency2Samples: " + booleanToString(deviceFeatures.sparseResidency2Samples));
-//        System.out.println("        sparseResidency4Samples: " + booleanToString(deviceFeatures.sparseResidency4Samples));
-//        System.out.println("        sparseResidency8Samples: " + booleanToString(deviceFeatures.sparseResidency8Samples));
-//        System.out.println("        sparseResidency16Samples: " + booleanToString(deviceFeatures.sparseResidency16Samples));
-//        System.out.println("        sparseResidencyAliased: " + booleanToString(deviceFeatures.sparseResidencyAliased));
-//        System.out.println("        variableMultisampleRate: " + booleanToString(deviceFeatures.variableMultisampleRate));
-//        System.out.println("        inheritedQueries: " + booleanToString(deviceFeatures.inheritedQueries));
-//        System.out.println();
-//    }
-//
-//    private static void printVulkanDeviceMemoryProperties(VkPhysicalDevice.ByValue vDevice){
-//        VkPhysicalDeviceMemoryProperties.ByReference deviceMemoryProperties = vks.vkGetPhysicalDeviceMemoryProperties(vDevice);
-//        System.out.println("    memory properties:");
-//        System.out.println("        memory type count: " + deviceMemoryProperties.memoryTypeCount); // TODO - print more info
-//        System.out.println("        memory heap count: " + deviceMemoryProperties.memoryHeapCount); // TODO - print more info
-//        System.out.println();
-//    }
-//
-//    private static void printVulkanDeviceQueueFamilyProperties(VkPhysicalDevice.ByValue vDevice){
-//        VkQueueFamilyPropertiesArray queueFamilyProperties = vks.vkGetPhysicalDeviceQueueFamilyProperties(vDevice);
-//        System.out.println("    found " + queueFamilyProperties.count() + " queue families:");
-//        for(VkQueueFamilyProperties p : queueFamilyProperties){ // TODO - print more info
-//            System.out.println("        queue count: " + p.queueCount);
-//            System.out.println("        flags: " + flagsToString(p.queueFlags.value, p.queueFlags.getClass()));
-//        }
-//        System.out.println();
-//    }
+    private static void printVulkanDeviceSparseProperties(VulkanPhysicalDeviceProperties deviceProperties){
+        System.out.println("    sparse properties:");
+        System.out.println("        residency aligned mip size: " + deviceProperties.getSparseProperties().isResidencyAlignedMipSize());
+        System.out.println("        residency non resident strict: " + deviceProperties.getSparseProperties().isResidencyNonResidentStrict());
+        System.out.println("        residency standard 2D block shape: " + deviceProperties.getSparseProperties().isResidencyStandard2DBlockShape());
+        System.out.println("        residency standard 2D multisample block shape: " + deviceProperties.getSparseProperties().isResidencyStandard2DMultisampleBlockShape());
+        System.out.println("        residency standard 3D block shape: " + deviceProperties.getSparseProperties().isResidencyStandard3DBlockShape());
+        System.out.println();
+    }
+
+    private static void printVulkanDeviceLimits(VulkanPhysicalDeviceProperties deviceProperties){
+        System.out.println("    limits:");
+        System.out.println("        maxImageDimension1D: " + deviceProperties.getLimits().getMaxImageDimension1D());
+        System.out.println("        maxImageDimension2D: " + deviceProperties.getLimits().getMaxImageDimension2D());
+        System.out.println("        maxImageDimension3D: " + deviceProperties.getLimits().getMaxImageDimension3D());
+        System.out.println("        maxImageDimensionCube: " + deviceProperties.getLimits().getMaxImageDimensionCube());
+        System.out.println("        maxImageArrayLayers: " + deviceProperties.getLimits().getMaxImageArrayLayers());
+        System.out.println("        maxTexelBufferElements: " + deviceProperties.getLimits().getMaxTexelBufferElements());
+        System.out.println("        maxUniformBufferRange: " + deviceProperties.getLimits().getMaxUniformBufferRange());
+        System.out.println("        maxStorageBufferRange: " + deviceProperties.getLimits().getMaxStorageBufferRange());
+        System.out.println("        maxPushConstantsSize: " + deviceProperties.getLimits().getMaxPushConstantsSize());
+        System.out.println("        maxMemoryAllocationCount: " + deviceProperties.getLimits().getMaxMemoryAllocationCount());
+        System.out.println("        maxSamplerAllocationCount: " + deviceProperties.getLimits().getMaxSamplerAllocationCount());
+        System.out.println("        bufferImageGranularity: " + deviceProperties.getLimits().getBufferImageGranularity());
+        System.out.println("        sparseAddressSpaceSize: " + deviceProperties.getLimits().getSparseAddressSpaceSize());
+        System.out.println("        maxBoundDescriptorSets: " + deviceProperties.getLimits().getMaxBoundDescriptorSets());
+        System.out.println("        maxPerStageDescriptorSamplers: " + deviceProperties.getLimits().getMaxPerStageDescriptorSamplers());
+        System.out.println("        maxPerStageDescriptorUniformBuffers: " + deviceProperties.getLimits().getMaxPerStageDescriptorUniformBuffers());
+        System.out.println("        maxPerStageDescriptorStorageBuffers: " + deviceProperties.getLimits().getMaxPerStageDescriptorStorageBuffers());
+        System.out.println("        maxPerStageDescriptorSampledImages: " + deviceProperties.getLimits().getMaxPerStageDescriptorSampledImages());
+        System.out.println("        maxPerStageDescriptorStorageImages: " + deviceProperties.getLimits().getMaxPerStageDescriptorStorageImages());
+        System.out.println("        maxPerStageDescriptorInputAttachments: " + deviceProperties.getLimits().getMaxPerStageDescriptorInputAttachments());
+        System.out.println("        maxPerStageResources: " + deviceProperties.getLimits().getMaxPerStageResources());
+        System.out.println("        maxDescriptorSetSamplers: " + deviceProperties.getLimits().getMaxDescriptorSetSamplers());
+        System.out.println("        maxDescriptorSetUniformBuffers: " + deviceProperties.getLimits().getMaxDescriptorSetUniformBuffers());
+        System.out.println("        maxDescriptorSetUniformBuffersDynamic: " + deviceProperties.getLimits().getMaxDescriptorSetUniformBuffersDynamic());
+        System.out.println("        maxDescriptorSetStorageBuffers: " + deviceProperties.getLimits().getMaxDescriptorSetStorageBuffers());
+        System.out.println("        maxDescriptorSetStorageBuffersDynamic: " + deviceProperties.getLimits().getMaxDescriptorSetStorageBuffersDynamic());
+        System.out.println("        maxDescriptorSetSampledImages: " + deviceProperties.getLimits().getMaxDescriptorSetSampledImages());
+        System.out.println("        maxDescriptorSetStorageImages: " + deviceProperties.getLimits().getMaxDescriptorSetStorageImages());
+        System.out.println("        maxDescriptorSetInputAttachments: " + deviceProperties.getLimits().getMaxDescriptorSetInputAttachments());
+        System.out.println("        maxVertexInputAttributes: " + deviceProperties.getLimits().getMaxVertexInputAttributes());
+        System.out.println("        maxVertexInputBindings: " + deviceProperties.getLimits().getMaxVertexInputBindings());
+        System.out.println("        maxVertexInputAttributeOffset: " + deviceProperties.getLimits().getMaxVertexInputAttributeOffset());
+        System.out.println("        maxVertexInputBindingStride: " + deviceProperties.getLimits().getMaxVertexInputBindingStride());
+        System.out.println("        maxVertexOutputComponents: " + deviceProperties.getLimits().getMaxVertexOutputComponents());
+        System.out.println("        maxTessellationGenerationLevel: " + deviceProperties.getLimits().getMaxTessellationGenerationLevel());
+        System.out.println("        maxTessellationPatchSize: " + deviceProperties.getLimits().getMaxTessellationPatchSize());
+        System.out.println("        maxTessellationControlPerVertexInputComponents: " + deviceProperties.getLimits().getMaxTessellationControlPerVertexInputComponents());
+        System.out.println("        maxTessellationControlPerVertexOutputComponents: " + deviceProperties.getLimits().getMaxTessellationControlPerVertexOutputComponents());
+        System.out.println("        maxTessellationControlPerPatchOutputComponents: " + deviceProperties.getLimits().getMaxTessellationControlPerPatchOutputComponents());
+        System.out.println("        maxTessellationControlTotalOutputComponents: " + deviceProperties.getLimits().getMaxTessellationControlTotalOutputComponents());
+        System.out.println("        maxTessellationEvaluationInputComponents: " + deviceProperties.getLimits().getMaxTessellationEvaluationInputComponents());
+        System.out.println("        maxTessellationEvaluationOutputComponents: " + deviceProperties.getLimits().getMaxTessellationEvaluationOutputComponents());
+        System.out.println("        maxGeometryShaderInvocations: " + deviceProperties.getLimits().getMaxGeometryShaderInvocations());
+        System.out.println("        maxGeometryInputComponents: " + deviceProperties.getLimits().getMaxGeometryInputComponents());
+        System.out.println("        maxGeometryOutputComponents: " + deviceProperties.getLimits().getMaxGeometryOutputComponents());
+        System.out.println("        maxGeometryOutputVertices: " + deviceProperties.getLimits().getMaxGeometryOutputVertices());
+        System.out.println("        maxGeometryTotalOutputComponents: " + deviceProperties.getLimits().getMaxGeometryTotalOutputComponents());
+        System.out.println("        maxFragmentInputComponents: " + deviceProperties.getLimits().getMaxFragmentInputComponents());
+        System.out.println("        maxFragmentOutputAttachments: " + deviceProperties.getLimits().getMaxFragmentOutputAttachments());
+        System.out.println("        maxFragmentDualSrcAttachments: " + deviceProperties.getLimits().getMaxFragmentDualSrcAttachments());
+        System.out.println("        maxFragmentCombinedOutputResources: " + deviceProperties.getLimits().getMaxFragmentCombinedOutputResources());
+        System.out.println("        maxComputeSharedMemorySize: " + deviceProperties.getLimits().getMaxComputeSharedMemorySize());
+        System.out.println("        maxComputeWorkGroupCount[0]: " + deviceProperties.getLimits().getMaxComputeWorkGroupCount()[0]);
+        System.out.println("        maxComputeWorkGroupCount[1]: " + deviceProperties.getLimits().getMaxComputeWorkGroupCount()[1]);
+        System.out.println("        maxComputeWorkGroupCount[2]: " + deviceProperties.getLimits().getMaxComputeWorkGroupCount()[2]);
+        System.out.println("        maxComputeWorkGroupInvocations: " + deviceProperties.getLimits().getMaxComputeWorkGroupInvocations());
+        System.out.println("        maxComputeWorkGroupSize[0]: " + deviceProperties.getLimits().getMaxComputeWorkGroupSize()[0]);
+        System.out.println("        maxComputeWorkGroupSize[1]: " + deviceProperties.getLimits().getMaxComputeWorkGroupSize()[1]);
+        System.out.println("        maxComputeWorkGroupSize[2]: " + deviceProperties.getLimits().getMaxComputeWorkGroupSize()[2]);
+        System.out.println("        subPixelPrecisionBits: " + deviceProperties.getLimits().getSubPixelPrecisionBits());
+        System.out.println("        subTexelPrecisionBits: " + deviceProperties.getLimits().getSubTexelPrecisionBits());
+        System.out.println("        mipmapPrecisionBits: " + deviceProperties.getLimits().getMipmapPrecisionBits());
+        System.out.println("        maxDrawIndexedIndexValue: " + deviceProperties.getLimits().getMaxDrawIndexedIndexValue());
+        System.out.println("        maxDrawIndirectCount: " + deviceProperties.getLimits().getMaxDrawIndirectCount());
+        System.out.println("        maxSamplerLodBias: " + deviceProperties.getLimits().getMaxSamplerLodBias());
+        System.out.println("        maxSamplerAnisotropy: " + deviceProperties.getLimits().getMaxSamplerAnisotropy());
+        System.out.println("        maxViewports: " + deviceProperties.getLimits().getMaxViewports());
+        System.out.println("        maxViewportDimensions[0]: " + deviceProperties.getLimits().getMaxViewportDimensions()[0]);
+        System.out.println("        maxViewportDimensions[1]: " + deviceProperties.getLimits().getMaxViewportDimensions()[1]);
+        System.out.println("        viewportBoundsRange[0]: " + deviceProperties.getLimits().getViewportBoundsRange()[0]);
+        System.out.println("        viewportBoundsRange[1]: " + deviceProperties.getLimits().getViewportBoundsRange()[1]);
+        System.out.println("        viewportSubPixelBits: " + deviceProperties.getLimits().getViewportSubPixelBits());
+        System.out.println("        minMemoryMapAlignment: " + deviceProperties.getLimits().getMinMemoryMapAlignment());
+        System.out.println("        minTexelBufferOffsetAlignment: " + deviceProperties.getLimits().getMinTexelBufferOffsetAlignment());
+        System.out.println("        minUniformBufferOffsetAlignment: " + deviceProperties.getLimits().getMinUniformBufferOffsetAlignment());
+        System.out.println("        minStorageBufferOffsetAlignment: " + deviceProperties.getLimits().getMinStorageBufferOffsetAlignment());
+        System.out.println("        minTexelOffset: " + deviceProperties.getLimits().getMinTexelOffset());
+        System.out.println("        maxTexelOffset: " + deviceProperties.getLimits().getMaxTexelOffset());
+        System.out.println("        minTexelGatherOffset: " + deviceProperties.getLimits().getMinTexelGatherOffset());
+        System.out.println("        maxTexelGatherOffset: " + deviceProperties.getLimits().getMaxTexelGatherOffset());
+        System.out.println("        minInterpolationOffset: " + deviceProperties.getLimits().getMinInterpolationOffset());
+        System.out.println("        maxInterpolationOffset: " + deviceProperties.getLimits().getMaxInterpolationOffset());
+        System.out.println("        subPixelInterpolationOffsetBits: " + deviceProperties.getLimits().getSubPixelInterpolationOffsetBits());
+        System.out.println("        maxFramebufferWidth: " + deviceProperties.getLimits().getMaxFramebufferWidth());
+        System.out.println("        maxFramebufferHeight: " + deviceProperties.getLimits().getMaxFramebufferHeight());
+        System.out.println("        maxFramebufferLayers: " + deviceProperties.getLimits().getMaxFramebufferLayers());
+        System.out.println("        framebufferColorSampleCounts: " + deviceProperties.getLimits().getFramebufferColorSampleCounts());
+        System.out.println("        framebufferDepthSampleCounts: " + deviceProperties.getLimits().getFramebufferDepthSampleCounts());
+        System.out.println("        framebufferStencilSampleCounts: " + deviceProperties.getLimits().getFramebufferStencilSampleCounts());
+        System.out.println("        framebufferNoAttachmentsSampleCounts: " + deviceProperties.getLimits().getFramebufferNoAttachmentsSampleCounts());
+        System.out.println("        maxColorAttachments: " + deviceProperties.getLimits().getMaxColorAttachments());
+        System.out.println("        sampledImageColorSampleCounts: " + deviceProperties.getLimits().getSampledImageColorSampleCounts());
+        System.out.println("        sampledImageIntegerSampleCounts: " + deviceProperties.getLimits().getSampledImageIntegerSampleCounts());
+        System.out.println("        sampledImageDepthSampleCounts: " + deviceProperties.getLimits().getSampledImageDepthSampleCounts());
+        System.out.println("        sampledImageStencilSampleCounts: " + deviceProperties.getLimits().getSampledImageStencilSampleCounts());
+        System.out.println("        storageImageSampleCounts: " + deviceProperties.getLimits().getStorageImageSampleCounts());
+        System.out.println("        maxSampleMaskWords: " + deviceProperties.getLimits().getMaxSampleMaskWords());
+        System.out.println("        timestampComputeAndGraphics: " + deviceProperties.getLimits().isTimestampComputeAndGraphics());
+        System.out.println("        timestampPeriod: " + deviceProperties.getLimits().getTimestampPeriod());
+        System.out.println("        maxClipDistances: " + deviceProperties.getLimits().getMaxClipDistances());
+        System.out.println("        maxCullDistances: " + deviceProperties.getLimits().getMaxCullDistances());
+        System.out.println("        maxCombinedClipAndCullDistances: " + deviceProperties.getLimits().getMaxCombinedClipAndCullDistances());
+        System.out.println("        discreteQueuePriorities: " + deviceProperties.getLimits().getDiscreteQueuePriorities());
+        System.out.println("        pointSizeRange[0]: " + deviceProperties.getLimits().getPointSizeRange()[0]);
+        System.out.println("        pointSizeRange[1]: " + deviceProperties.getLimits().getPointSizeRange()[1]);
+        System.out.println("        lineWidthRange[0]: " + deviceProperties.getLimits().getLineWidthRange()[0]);
+        System.out.println("        lineWidthRange[1]: " + deviceProperties.getLimits().getLineWidthRange()[1]);
+        System.out.println("        pointSizeGranularity: " + deviceProperties.getLimits().getPointSizeGranularity());
+        System.out.println("        lineWidthGranularity: " + deviceProperties.getLimits().getLineWidthGranularity());
+        System.out.println("        strictLines: " + deviceProperties.getLimits().isStrictLines());
+        System.out.println("        standardSampleLocations: " + deviceProperties.getLimits().isStandardSampleLocations());
+        System.out.println("        optimalBufferCopyOffsetAlignment: " + deviceProperties.getLimits().getOptimalBufferCopyOffsetAlignment());
+        System.out.println("        optimalBufferCopyRowPitchAlignment: " + deviceProperties.getLimits().getOptimalBufferCopyRowPitchAlignment());
+        System.out.println("        nonCoherentAtomSize: " + deviceProperties.getLimits().getNonCoherentAtomSize());
+        System.out.println();
+    }
+
+    private static void printVulkanDeviceFeatures(VulkanPhysicalDevice vDevice){
+        VulkanPhysicalDeviceFeatures features = vDevice.getFeatures();
+        System.out.println("    features:");
+        System.out.println("        robustBufferAccess: " + features.isRobustBufferAccess());
+        System.out.println("        fullDrawIndexUint32: " + features.isFullDrawIndexUint32());
+        System.out.println("        imageCubeArray: " + features.isImageCubeArray());
+        System.out.println("        independentBlend: " + features.isIndependentBlend());
+        System.out.println("        geometryShader: " + features.isGeometryShader());
+        System.out.println("        tessellationShader: " + features.isTessellationShader());
+        System.out.println("        sampleRateShading: " + features.isSampleRateShading());
+        System.out.println("        dualSrcBlend: " + features.isDualSrcBlend());
+        System.out.println("        logicOp: " + features.isLogicOp());
+        System.out.println("        multiDrawIndirect: " + features.isMultiDrawIndirect());
+        System.out.println("        drawIndirectFirstInstance: " + features.isDrawIndirectFirstInstance());
+        System.out.println("        depthClamp: " + features.isDepthClamp());
+        System.out.println("        depthBiasClamp: " + features.isDepthBiasClamp());
+        System.out.println("        fillModeNonSolid: " + features.isFillModeNonSolid());
+        System.out.println("        depthBounds: " + features.isDepthBounds());
+        System.out.println("        wideLines: " + features.isWideLines());
+        System.out.println("        largePoints: " + features.isLargePoints());
+        System.out.println("        alphaToOne: " + features.isAlphaToOne());
+        System.out.println("        multiViewport: " + features.isMultiViewport());
+        System.out.println("        samplerAnisotropy: " + features.isSamplerAnisotropy());
+        System.out.println("        textureCompressionETC2: " + features.isTextureCompressionETC2());
+        System.out.println("        textureCompressionASTC_LDR: " + features.isTextureCompressionASTC_LDR());
+        System.out.println("        textureCompressionBC: " + features.isTextureCompressionBC());
+        System.out.println("        occlusionQueryPrecise: " + features.isOcclusionQueryPrecise());
+        System.out.println("        pipelineStatisticsQuery: " + features.isPipelineStatisticsQuery());
+        System.out.println("        vertexPipelineStoresAndAtomics: " + features.isVertexPipelineStoresAndAtomics());
+        System.out.println("        fragmentStoresAndAtomics: " + features.isFragmentStoresAndAtomics());
+        System.out.println("        shaderTessellationAndGeometryPointSize: " + features.isShaderTessellationAndGeometryPointSize());
+        System.out.println("        shaderImageGatherExtended: " + features.isShaderImageGatherExtended());
+        System.out.println("        shaderStorageImageExtendedFormats: " + features.isShaderStorageImageExtendedFormats());
+        System.out.println("        shaderStorageImageMultisample: " + features.isShaderStorageImageMultisample());
+        System.out.println("        shaderStorageImageReadWithoutFormat: " + features.isShaderStorageImageReadWithoutFormat());
+        System.out.println("        shaderStorageImageWriteWithoutFormat: " + features.isShaderStorageImageWriteWithoutFormat());
+        System.out.println("        shaderUniformBufferArrayDynamicIndexing: " + features.isShaderUniformBufferArrayDynamicIndexing());
+        System.out.println("        shaderSampledImageArrayDynamicIndexing: " + features.isShaderSampledImageArrayDynamicIndexing());
+        System.out.println("        shaderStorageBufferArrayDynamicIndexing: " + features.isShaderStorageBufferArrayDynamicIndexing());
+        System.out.println("        shaderStorageImageArrayDynamicIndexing: " + features.isShaderStorageImageArrayDynamicIndexing());
+        System.out.println("        shaderClipDistance: " + features.isShaderClipDistance());
+        System.out.println("        shaderCullDistance: " + features.isShaderCullDistance());
+        System.out.println("        shaderFloat64: " + features.isShaderFloat64());
+        System.out.println("        shaderInt64: " + features.isShaderInt64());
+        System.out.println("        shaderInt16: " + features.isShaderInt16());
+        System.out.println("        shaderResourceResidency: " + features.isShaderResourceResidency());
+        System.out.println("        shaderResourceMinLod: " + features.isShaderResourceMinLod());
+        System.out.println("        sparseBinding: " + features.isSparseBinding());
+        System.out.println("        sparseResidencyBuffer: " + features.isSparseResidencyBuffer());
+        System.out.println("        sparseResidencyImage2D: " + features.isSparseResidencyImage2D());
+        System.out.println("        sparseResidencyImage3D: " + features.isSparseResidencyImage3D());
+        System.out.println("        sparseResidency2Samples: " + features.isSparseResidency2Samples());
+        System.out.println("        sparseResidency4Samples: " + features.isSparseResidency4Samples());
+        System.out.println("        sparseResidency8Samples: " + features.isSparseResidency8Samples());
+        System.out.println("        sparseResidency16Samples: " + features.isSparseResidency16Samples());
+        System.out.println("        sparseResidencyAliased: " + features.isSparseResidencyAliased());
+        System.out.println("        variableMultisampleRate: " + features.isVariableMultisampleRate());
+        System.out.println("        inheritedQueries: " + features.isInheritedQueries());
+        System.out.println();
+    }
+
+    private static void printVulkanDeviceMemoryProperties(VulkanPhysicalDevice device){
+        VulkanPhysicalDeviceMemoryProperties deviceMemoryProperties = device.getMemoryProperties();
+        System.out.println("    memory properties:");
+        System.out.println("        memory type count: " + deviceMemoryProperties.getMemoryTypeCount()); // TODO - print more info
+        System.out.println("        memory heap count: " + deviceMemoryProperties.getMemoryHeapCount()); // TODO - print more info
+        System.out.println();
+    }
+
+    private static void printVulkanDeviceQueueFamilyProperties(VulkanPhysicalDevice device){
+        ReadonlyArray<VulkanQueueFamilyProperties> queueFamilyProperties = device.getQueueFamilyProperties();
+        System.out.println("    found " + queueFamilyProperties.count() + " queue families:");
+        for(VulkanQueueFamilyProperties p : queueFamilyProperties){ // TODO - print more info
+            System.out.println("        queue count: " + p.getQueueCount());
+            System.out.println("        flags: " + p.getQueueFlags());
+        }
+        System.out.println();
+    }
 }

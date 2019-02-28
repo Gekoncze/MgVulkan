@@ -1,6 +1,7 @@
 package cz.mg.vulkan.flags;
 
 import cz.mg.vulkan.jna.flags.VkSampleCountFlags;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class VulkanSampleCountFlags {
@@ -36,5 +37,10 @@ public class VulkanSampleCountFlags {
 
     public boolean isVkSampleCount64Bit(){
         return (flags.value & VkSampleCountFlags.VK_SAMPLE_COUNT_64_BIT) != 0;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.flagsToStringNoLabels(flags.value, VkSampleCountFlags.class);
     }
 }

@@ -4,7 +4,6 @@ import com.sun.jna.Native;
 import cz.mg.vulkan.jna.types.VkBool32;
 import cz.mg.vulkan.jna.types.uint32_t;
 import cz.mg.vulkan.jna.types.uint8_t;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import static cz.mg.vulkan.jna.VulkanNative.*;
@@ -29,6 +28,21 @@ public class ToString {
 
     public static String flagsToString(int value, Class c){
         if(value == 0) return "(" + value + ")";
+        String s = flagsToStringSimple(value, c);
+        if(s.length() == 0) s = "?";
+        return s + " (0x" + Integer.toHexString(value) + ")";
+    }
+
+    public static String flagsToStringNoLabels(int value, Class c){
+        if(value == 0) return "(" + value + ")";
+        String s = flagsToStringSimple(value, c);
+        if(s.length() == 0) s = "?";
+        ToString.replaceLast(ToString.replaceLast(ToString.replaceFirst(s, "VK_", ""), "_EXT", ""), "_KHR", "");
+        return s + " (0x" + Integer.toHexString(value) + ")";
+    }
+
+    public static String flagsToStringSimple(int value, Class c){
+        if(value == 0) return "";
         if(c.getName().endsWith("$ByValue") || c.getName().endsWith("$ByReference")) c = c.getSuperclass();
         String s = "";
         for(Field field : c.getDeclaredFields()){
@@ -45,7 +59,7 @@ public class ToString {
             }
         }
         if(s.endsWith(", ")) s = replaceLast(s, ", ", "");
-        return s + " (0x" + Integer.toHexString(value) + ")";
+        return s;
     }
 
     public static String vendorToString(uint32_t value){
@@ -80,6 +94,15 @@ public class ToString {
         return s;
     }
 
+    public static String bytesToHexString(byte[] values){
+        String s = "";
+        for(int i = 0; i < values.length; i++){
+            s = s + byteToHexString(values[i]);
+            if(i != values.length - 1) s = s + " ";
+        }
+        return s;
+    }
+
     public static String booleanToString(VkBool32 value){
         switch(value.intValue()){
             case VK_TRUE: return "true";
@@ -88,7 +111,11 @@ public class ToString {
         }
     }
 
-    private static String replaceLast(String s, String what, String with){
+    public static String replaceFirst(String s, String what, String with){
+        return s.replaceFirst(what, with);
+    }
+
+    public static String replaceLast(String s, String what, String with){
         s = reverse(s);
         what = reverse(what);
         with = reverse(with);

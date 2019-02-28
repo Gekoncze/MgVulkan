@@ -1,6 +1,7 @@
 package cz.mg.vulkan.flags;
 
 import cz.mg.vulkan.jna.flags.VkMemoryPropertyFlags;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class VulkanMemoryPropertyFlags {
@@ -28,5 +29,10 @@ public class VulkanMemoryPropertyFlags {
 
     public boolean isVkMemoryPropertyLazilyAllocatedBit(){
         return (flags.value & VkMemoryPropertyFlags.VK_MEMORY_PROPERTY_LAZILY_ALLOCATED_BIT) != 0;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.flagsToStringNoLabels(flags.value, VkMemoryPropertyFlags.class);
     }
 }

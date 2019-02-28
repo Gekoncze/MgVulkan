@@ -7,7 +7,6 @@ import cz.mg.vulkan.jna.arrays.VkQueueFamilyPropertiesArray;
 import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
 import cz.mg.vulkan.jna.structures.*;
 import static cz.mg.vulkan.jna.utilities.ToString.*;
-import static test.Test.vk;
 import static test.Test.vks;
 
 
