@@ -2,7 +2,12 @@
 
 
 ### NOW
-
+    implement debug oop version
 
 ### DONE
-debug layer part #1 - added some classes
+VK_LAYER_LUNARG_standard_validation
+    improved vulkan exception
+        added optional parameter values
+        made all parameters optional
+    improved callbacks
+    implemented all standard validation classes

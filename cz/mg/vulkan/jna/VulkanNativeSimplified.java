@@ -1,5 +1,6 @@
 package cz.mg.vulkan.jna;
 
+import com.sun.jna.Pointer;
 import cz.mg.vulkan.utilities.VulkanException;
 import cz.mg.vulkan.jna.arrays.*;
 import cz.mg.vulkan.jna.enums.VkResult;
@@ -67,7 +68,7 @@ public class VulkanNativeSimplified {
     /**
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreateInstance.html">khronos documentation</a>
      **/
-    public VkInstance.ByReference vkCreateInstance(uint32_t apiVersion, String applicationName, uint32_t applicationVersion, String engineName, uint32_t engineVersion, StringArray enabledExtensions, StringArray enabledLayers){
+    public VkInstance.ByValue vkCreateInstance(uint32_t apiVersion, String applicationName, uint32_t applicationVersion, String engineName, uint32_t engineVersion, StringArray enabledExtensions, StringArray enabledLayers){
         VkApplicationInfo.ByReference applicationInfo = new VkApplicationInfo.ByReference();
         applicationInfo.sType = new VkStructureType.ByValue(VK_STRUCTURE_TYPE_APPLICATION_INFO);
         applicationInfo.pNext = NULL;
@@ -90,7 +91,7 @@ public class VulkanNativeSimplified {
         VkInstance.ByReference instance = new VkInstance.ByReference();
         VkResult result = vk.vkCreateInstance(instanceCreateInfo, null, instance);
         if(result.value != VK_SUCCESS) throw new VulkanException(result, "vkCreateInstance");
-        return instance;
+        return new VkInstance.ByValue(instance);
     }
 
 
@@ -154,5 +155,14 @@ public class VulkanNativeSimplified {
      **/
     public void vkDestroyInstance(VkInstance.ByValue instance){
         vk.vkDestroyInstance(instance, null);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetInstanceProcAddr.html">khronos documentation</a>
+     **/
+    public Pointer vkGetInstanceProcAddr(VkInstance.ByValue instance, String pName){
+        Pointer function = vk.vkGetInstanceProcAddr(instance, pName);
+        if(function == null || function == Pointer.NULL) throw new VulkanException(null, "vkGetInstanceProcAddr", pName);
+        return function;
     }
 }

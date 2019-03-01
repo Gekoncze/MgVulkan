@@ -48,6 +48,10 @@ public class VkResult extends Structure {
     public VkResult() {
     }
 
+    public VkResult(int value) {
+        this.value = value;
+    }
+
     public VkResult(Pointer p) {
         super(p);
     }

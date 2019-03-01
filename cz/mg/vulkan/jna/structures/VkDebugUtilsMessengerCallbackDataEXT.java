@@ -31,15 +31,15 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends Structure {
     public VkStructureType sType;
     public Pointer pNext;
     public VkDebugUtilsMessengerCallbackDataFlagsEXT flags;
-    public byte[] pMessageIdName;
+    public String pMessageIdName;
     public int32_t messageIdNumber;
-    public byte[] pMessage;
+    public String pMessage;
     public uint32_t queueLabelCount;
-    public VkDebugUtilsLabelEXT.ByReference pQueueLabels;
+    public Pointer pQueueLabels;
     public uint32_t cmdBufLabelCount;
-    public VkDebugUtilsLabelEXT.ByReference pCmdBufLabels;
+    public Pointer pCmdBufLabels;
     public uint32_t objectCount;
-    public VkDebugUtilsObjectNameInfoEXT.ByReference pObjects;
+    public Pointer pObjects;
 
     public VkDebugUtilsMessengerCallbackDataEXT() {
     }

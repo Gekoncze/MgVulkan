@@ -30,17 +30,30 @@ public interface VulkanNative extends Library {
 
     public static final uint32_t VK_API_VERSION_1_0 = VK_MAKE_VERSION(1, 0, 0);
 
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_MAKE_VERSION.html">khronos documentation</a>
+     **/
     public static uint32_t VK_MAKE_VERSION(int major, int minor, int patch){
         return new uint32_t(((major) << 22) | ((minor) << 12) | (patch));
     }
 
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_VERSION_MAJOR.html">khronos documentation</a>
+     **/
     public static int VK_VERSION_MAJOR(uint32_t version) {
         return version.intValue() >> 22;
     }
 
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_VERSION_MINOR.html">khronos documentation</a>
+     **/
     public static int VK_VERSION_MINOR(uint32_t version){
         return (version.intValue() >> 12) & 0x3ff;
     }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_VERSION_PATCH.html">khronos documentation</a>
+     **/
     public static int VK_VERSION_PATCH(uint32_t version){
         return version.intValue() & 0xfff;
     }
@@ -50,7 +63,7 @@ public interface VulkanNative extends Library {
     }
 
     public static VulkanNative loadLibrary(String name){
-        return (VulkanNative) Native.loadLibrary(name, VulkanNative.class);
+        return Native.loadLibrary(name, VulkanNative.class);
     }
 
     /**
@@ -106,4 +119,10 @@ public interface VulkanNative extends Library {
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyInstance.html">khronos documentation</a>
      **/
     public void vkDestroyInstance(VkInstance.ByValue instance, VkAllocationCallbacks.ByReference pAllocator);
+
+    /**
+     *  PFN_vkVoidFunction vkGetInstanceProcAddr(VkInstance instance, const char* pName);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetInstanceProcAddr.html">khronos documentation</a>
+     **/
+    public Pointer vkGetInstanceProcAddr(VkInstance.ByValue instance, String pName);
 }
