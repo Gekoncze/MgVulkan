@@ -14,10 +14,6 @@ public class VkPhysicalDevice extends Structure {
     public VkPhysicalDevice() {
     }
 
-    public VkPhysicalDevice(VkPhysicalDevice object) {
-        this.ptr = object.ptr;
-    }
-
     public VkPhysicalDevice(Pointer pointer) {
         super(pointer);
     }
@@ -43,10 +39,6 @@ public class VkPhysicalDevice extends Structure {
         public ByReference(Pointer pointer) {
             super(pointer);
         }
-
-        public ByReference(VkPhysicalDevice object){
-            super(object.ptr);
-        }
     }
 
     public static class ByValue extends VkPhysicalDevice implements Structure.ByValue {
@@ -55,10 +47,6 @@ public class VkPhysicalDevice extends Structure {
 
         public ByValue(Pointer pointer) {
             super(pointer);
-        }
-
-        public ByValue(VkPhysicalDevice object){
-            super(object);
         }
     }
 }

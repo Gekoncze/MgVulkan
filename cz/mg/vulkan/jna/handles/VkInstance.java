@@ -14,20 +14,30 @@ public class VkInstance extends Structure {
     public VkInstance() {
     }
 
-    public VkInstance(VkInstance object) {
-        this.ptr = object.ptr;
-    }
-
     public VkInstance(Pointer pointer) {
         super(pointer);
+    }
+
+    public ByReference byReference(boolean write, boolean read){
+        if(write) write();
+        ByReference reference = new ByReference(getPointer());
+        if(read) reference.read();
+        return reference;
+    }
+
+    public ByValue byValue(boolean write, boolean read){
+        if(write) write();
+        ByValue value = new ByValue(getPointer());
+        if(read) value.read();
+        return value;
     }
 
     public static class ByReference extends VkInstance implements Structure.ByReference {
         public ByReference() {
         }
 
-        public ByReference(VkInstance vkInstance) {
-            super(vkInstance);
+        public ByReference(Pointer pointer) {
+            super(pointer);
         }
     }
 
@@ -35,8 +45,8 @@ public class VkInstance extends Structure {
         public ByValue() {
         }
 
-        public ByValue(VkInstance object) {
-            super(object);
+        public ByValue(Pointer pointer) {
+            super(pointer);
         }
     }
 }

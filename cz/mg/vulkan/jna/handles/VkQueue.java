@@ -14,20 +14,30 @@ public class VkQueue extends Structure {
     public VkQueue() {
     }
 
-    public VkQueue(VkQueue object) {
-        this.ptr = object.ptr;
-    }
-
     public VkQueue(Pointer pointer) {
         super(pointer);
+    }
+
+    public ByReference byReference(boolean write, boolean read){
+        if(write) write();
+        ByReference reference = new ByReference(getPointer());
+        if(read) reference.read();
+        return reference;
+    }
+
+    public ByValue byValue(boolean write, boolean read){
+        if(write) write();
+        ByValue value = new ByValue(getPointer());
+        if(read) value.read();
+        return value;
     }
 
     public static class ByReference extends VkQueue implements Structure.ByReference {
         public ByReference(){
         }
 
-        public ByReference(VkQueue object){
-            super(object);
+        public ByReference(Pointer pointer) {
+            super(pointer);
         }
     }
 
@@ -35,8 +45,8 @@ public class VkQueue extends Structure {
         public ByValue(){
         }
 
-        public ByValue(VkQueue object){
-            super(object);
+        public ByValue(Pointer pointer) {
+            super(pointer);
         }
     }
 }

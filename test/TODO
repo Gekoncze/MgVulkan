@@ -1,15 +1,13 @@
 ### SOON
-
+    command buffer
+    framebuffer
 
 ### NOW
     cleanup
-        replace constructors for handles/enums/flags with byValue and byReference methods
-            + apply to transformator
-
         add (optional) parents to enums, flags, handles and structures
         allow creation of oops with given natives
 
 ### DONE
-cleanup - part #1
-    added blank constructors for oop objects
-    added constructors with native classes for oop objects
+cleanup - part #2
+    replace constructors for handles with byValue and byReference methods
+    adapted affected code

@@ -36,7 +36,7 @@ public class VkDebugUtilsEXTSimplified {
         VkDebugUtilsMessengerEXT.ByReference messenger = new VkDebugUtilsMessengerEXT.ByReference();
         VkResult result = vkdu.vkCreateDebugUtilsMessengerEXT(instance, createInfo, null, messenger);
         if(result.value != VkResult.VK_SUCCESS) throw new VulkanException(result, "vkCreateDebugUtilsMessengerEXT");
-        return new VkDebugUtilsMessengerEXT.ByValue(messenger);
+        return messenger.byValue(true, true);
     }
 
     /**

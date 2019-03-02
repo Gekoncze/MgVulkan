@@ -95,7 +95,7 @@ public class VkSimplified {
         VkInstance.ByReference instance = new VkInstance.ByReference();
         VkResult result = vk.vkCreateInstance(instanceCreateInfo, null, instance);
         if(result.value != VK_SUCCESS) throw new VulkanException(result, "vkCreateInstance");
-        return new VkInstance.ByValue(instance);
+        return instance.byValue(true, true);
     }
 
 
@@ -201,7 +201,7 @@ public class VkSimplified {
         VkDevice.ByReference device = new VkDevice.ByReference();
         VkResult.ByValue result = vk.vkCreateDevice(physicalDevice, deviceCreateInfo, null, device);
         if(result.value != VkResult.VK_SUCCESS) throw new VulkanException(result, "vkCreateDevice");
-        return new VkDevice.ByValue(device);
+        return device.byValue(true, true);
     }
 
     /**
@@ -217,6 +217,6 @@ public class VkSimplified {
     public VkQueue.ByValue vkGetDeviceQueue(VkDevice.ByValue device, int queueFamilyIndex, int queueIndex){
         VkQueue.ByReference queue = new VkQueue.ByReference();
         vk.vkGetDeviceQueue(device, new uint32_t(queueFamilyIndex), new uint32_t(queueIndex), queue);
-        return new VkQueue.ByValue(queue);
+        return queue.byValue(true, true);
     }
 }

@@ -33,16 +33,15 @@ public class TestInfo {
     public static void printVulkanDevices(VkPhysicalDeviceArray physicalDevices, boolean details){
         System.out.println("found " + physicalDevices.count() + " devices:");
         for(VkPhysicalDevice physicalDevice : physicalDevices){
-            printVulkanDevice(physicalDevice, details);
+            printVulkanDevice(physicalDevice.byValue(true, true), details);
         }
     }
 
-    private static void printVulkanDevice(VkPhysicalDevice device, boolean details){
-        VkPhysicalDevice.ByValue vDevice = new VkPhysicalDevice.ByValue(device);
-        printVulkanDeviceProperties(vDevice, details);
-        if(details) printVulkanDeviceFeatures(vDevice);
-        if(details) printVulkanDeviceMemoryProperties(vDevice);
-        printVulkanDeviceQueueFamilyProperties(vDevice);
+    private static void printVulkanDevice(VkPhysicalDevice.ByValue device, boolean details){
+        printVulkanDeviceProperties(device, details);
+        if(details) printVulkanDeviceFeatures(device);
+        if(details) printVulkanDeviceMemoryProperties(device);
+        printVulkanDeviceQueueFamilyProperties(device);
     }
 
     private static void printVulkanDeviceProperties(VkPhysicalDevice.ByValue vDevice, boolean details){
@@ -60,7 +59,7 @@ public class TestInfo {
     }
 
     private static void printVulkanDeviceSparseProperties(VkPhysicalDeviceProperties deviceProperties){
-        System.out.println("    sparse properties:\n");
+        System.out.println("    sparse properties:");
         System.out.println("        residency aligned mip size: " + deviceProperties.sparseProperties.residencyAlignedMipSize);
         System.out.println("        residency non resident strict: " + deviceProperties.sparseProperties.residencyNonResidentStrict);
         System.out.println("        residency standard 2D block shape: " + deviceProperties.sparseProperties.residencyStandard2DBlockShape);
@@ -70,7 +69,7 @@ public class TestInfo {
     }
 
     private static void printVulkanDeviceLimits(VkPhysicalDeviceProperties deviceProperties){
-        System.out.println("    limits:\n");
+        System.out.println("    limits:");
         System.out.println("        maxImageDimension1D: " + deviceProperties.limits.maxImageDimension1D);
         System.out.println("        maxImageDimension2D: " + deviceProperties.limits.maxImageDimension2D);
         System.out.println("        maxImageDimension3D: " + deviceProperties.limits.maxImageDimension3D);

@@ -61,7 +61,7 @@ public class Test {
         vkdu = VkDebugUtilsEXT.load(instance, vks);
         vkdus = new VkDebugUtilsEXTSimplified(vkdu);
 
-        VkPhysicalDeviceArray physicalDevices = vks.vkEnumeratePhysicalDevices(new VkInstance.ByValue(instance));
+        VkPhysicalDeviceArray physicalDevices = vks.vkEnumeratePhysicalDevices(instance.byValue(true, true));
         TestInfo.printVulkanDevices(physicalDevices, true);
 
         VkDebugUtilsMessageSeverityFlagsEXT messageSeverity = new VkDebugUtilsMessageSeverityFlagsEXT(
@@ -79,9 +79,9 @@ public class Test {
 
         VkDebugUtilsMessengerEXT.ByValue messenger = vkdus.vkCreateDebugUtilsMessengerEXT(instance, messageSeverity, messageType, debugCallback, null);
 
-        VkPhysicalDevice.ByValue selectedPhysicalDevice = new VkPhysicalDevice.ByValue(physicalDevices.get(0));
+        VkPhysicalDevice.ByValue selectedPhysicalDevice = physicalDevices.get(0).byValue(true, true);
         VkPhysicalDeviceFeatures.ByReference features = new VkPhysicalDeviceFeatures.ByReference();
-        VkDevice.ByValue device_value = new VkDevice.ByValue(vks.vkCreateDevice(selectedPhysicalDevice, features, 0));
+        VkDevice.ByValue device_value = vks.vkCreateDevice(selectedPhysicalDevice, features, 0).byValue(true, true);
         System.out.println("Logical device created successfully!");
 
         VkQueue.ByValue queue = vks.vkGetDeviceQueue(device_value, 0, 0);
