@@ -2,14 +2,12 @@
 
 
 ### NOW
-
-
+    logical device
+        add simplified methods
+        add oop classes + test
 
 ### DONE
-debug utils oop + improvements
-    renamed native classes - Vk for native classes, Vulkan for oop classes
-        + removed the native word from their name
-    moved some classes around
-    made native "vk" fields public in oop classes
-    oop flags improvement
-    implemented debug oop version
+logical device + queues
+    added int and float array
+    added native classes
+    added first test

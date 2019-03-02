@@ -3,18 +3,29 @@ package test;
 import com.sun.jna.Pointer;
 import cz.mg.vulkan.jna.Vk;
 import cz.mg.vulkan.jna.VkSimplified;
+import cz.mg.vulkan.jna.arrays.FloatArray;
 import cz.mg.vulkan.jna.arrays.StringArray;
+import cz.mg.vulkan.jna.arrays.VkDeviceQueueCreateInfoArray;
 import cz.mg.vulkan.jna.arrays.VkPhysicalDeviceArray;
 import cz.mg.vulkan.jna.callbacks.PFN_vkDebugUtilsMessengerCallbackEXT;
+import cz.mg.vulkan.jna.enums.VkResult;
+import cz.mg.vulkan.jna.enums.VkStructureType;
 import cz.mg.vulkan.jna.extensions.VkDebugUtilsEXT;
 import cz.mg.vulkan.jna.extensions.VkDebugUtilsEXTSimplified;
 import cz.mg.vulkan.jna.flags.VkDebugUtilsMessageSeverityFlagsEXT;
 import cz.mg.vulkan.jna.flags.VkDebugUtilsMessageTypeFlagsEXT;
-import cz.mg.vulkan.jna.handles.VkDebugUtilsMessengerEXT;
-import cz.mg.vulkan.jna.handles.VkInstance;
+import cz.mg.vulkan.jna.flags.VkDeviceCreateFlags;
+import cz.mg.vulkan.jna.flags.VkDeviceQueueCreateFlags;
+import cz.mg.vulkan.jna.handles.*;
 import cz.mg.vulkan.jna.structures.VkDebugUtilsMessengerCallbackDataEXT;
+import cz.mg.vulkan.jna.structures.VkDeviceCreateInfo;
+import cz.mg.vulkan.jna.structures.VkDeviceQueueCreateInfo;
+import cz.mg.vulkan.jna.structures.VkPhysicalDeviceFeatures;
 import cz.mg.vulkan.jna.types.VkBool32;
+import cz.mg.vulkan.jna.types.uint32_t;
+import cz.mg.vulkan.utilities.VulkanException;
 import static cz.mg.vulkan.jna.Vk.*;
+import static cz.mg.vulkan.jna.enums.VkStructureType.*;
 
 
 public class Test {
@@ -67,8 +78,49 @@ public class Test {
         );
 
         VkDebugUtilsMessengerEXT.ByValue messenger = vkdus.vkCreateDebugUtilsMessengerEXT(instance, messageSeverity, messageType, debugCallback, null);
-        vkdus.vkDestroyDebugUtilsMessengerEXT(instance, messenger);
 
+
+        VkPhysicalDeviceFeatures.ByReference features = new VkPhysicalDeviceFeatures.ByReference();
+        FloatArray priorities = new FloatArray(new float[]{1.0f});
+        VkDeviceQueueCreateInfoArray createInfos = new VkDeviceQueueCreateInfoArray(1);
+        VkDeviceQueueCreateInfo queueCreateInfo = createInfos.get(0);
+        queueCreateInfo.sType = new VkStructureType(VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO);
+        queueCreateInfo.pNext = null;
+        queueCreateInfo.flags = new VkDeviceQueueCreateFlags(0);
+        queueCreateInfo.queueFamilyIndex = new uint32_t(0);
+        queueCreateInfo.queueCount = new uint32_t(1);
+        queueCreateInfo.pQueuePriorities = priorities.getPointer();
+        createInfos.write();
+
+        VkDeviceCreateInfo.ByReference deviceCreateInfo = new VkDeviceCreateInfo.ByReference();
+        deviceCreateInfo.sType = new VkStructureType(VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO);
+        deviceCreateInfo.pNext = null;
+        deviceCreateInfo.flags = new VkDeviceCreateFlags(0);
+        deviceCreateInfo.queueCreateInfoCount = new uint32_t(1);
+        deviceCreateInfo.pQueueCreateInfos = createInfos.getPointer();
+        deviceCreateInfo.pEnabledFeatures = features;
+        deviceCreateInfo.enabledExtensionCount = new uint32_t(0);
+        deviceCreateInfo.ppEnabledExtensionNames = null;
+        deviceCreateInfo.enabledLayerCount = new uint32_t(0);
+        deviceCreateInfo.ppEnabledLayerNames = null;
+
+        VkDevice.ByReference device = new VkDevice.ByReference();
+        VkPhysicalDevice.ByValue physicalDevice = new VkPhysicalDevice.ByValue(physicalDevices.get(0));
+        VkResult.ByValue result = vk.vkCreateDevice(physicalDevice, deviceCreateInfo, null, device);
+        if(result.value != VkResult.VK_SUCCESS) throw new VulkanException(result, "vkCreateDevice");
+        VkDevice.ByValue device_value = new VkDevice.ByValue(device);
+
+        System.out.println("Logical device created successfully!");
+
+        VkQueue.ByReference queue = new VkQueue.ByReference();
+        vk.vkGetDeviceQueue(device_value, new uint32_t(0), new uint32_t(0), queue);
+
+        System.out.println("Got 1st queue.");
+
+        // TODO
+
+        vk.vkDestroyDevice(device_value, null);
+        vkdus.vkDestroyDebugUtilsMessengerEXT(instance, messenger);
         vk.vkDestroyInstance(instance, null);
     }
 
