@@ -2,6 +2,9 @@ package test;
 
 import cz.mg.collections.array.ReadonlyArray;
 import cz.mg.vulkan.*;
+import cz.mg.vulkan.handles.VulkanInstance;
+import cz.mg.vulkan.structures.*;
+
 import static cz.mg.vulkan.jna.utilities.ToString.*;
 
 

@@ -2,12 +2,14 @@
 
 
 ### NOW
-    implement debug oop version
+
+
 
 ### DONE
-VK_LAYER_LUNARG_standard_validation
-    improved vulkan exception
-        added optional parameter values
-        made all parameters optional
-    improved callbacks
-    implemented all standard validation classes
+debug utils oop + improvements
+    renamed native classes - Vk for native classes, Vulkan for oop classes
+        + removed the native word from their name
+    moved some classes around
+    made native "vk" fields public in oop classes
+    oop flags improvement
+    implemented debug oop version

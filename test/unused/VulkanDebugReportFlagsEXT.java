@@ -1,4 +1,4 @@
-package cz.mg.vulkan.flags;
+package test.unused;
 
 import test.unused.VkDebugReportFlagsEXT;
 import cz.mg.vulkan.jna.utilities.ToString;

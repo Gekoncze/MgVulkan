@@ -1,13 +1,10 @@
 package cz.mg.vulkan.jna.structures;
 
-import com.sun.jna.Structure;
 import com.sun.jna.Pointer;
+import com.sun.jna.Structure;
+import cz.mg.vulkan.jna.enums.VkStructureType;
 import java.util.Arrays;
 import java.util.List;
-import cz.mg.vulkan.jna.types.*;
-import cz.mg.vulkan.jna.structures.*;
-import cz.mg.vulkan.jna.flags.*;
-import cz.mg.vulkan.jna.enums.*;
 
 
 /**
@@ -22,7 +19,7 @@ import cz.mg.vulkan.jna.enums.*;
 public class VkDebugUtilsLabelEXT extends Structure {
     public VkStructureType sType;
     public Pointer pNext;
-    public byte[] pLabelName;
+    public String pLabelName;
     public float[] color = new float[4];
 
     public VkDebugUtilsLabelEXT() {

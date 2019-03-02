@@ -9,15 +9,14 @@ import cz.mg.vulkan.jna.flags.VkDebugUtilsMessageTypeFlagsEXT;
 import cz.mg.vulkan.jna.flags.VkDebugUtilsMessengerCreateFlagsEXT;
 import cz.mg.vulkan.jna.handles.VkDebugUtilsMessengerEXT;
 import cz.mg.vulkan.jna.handles.VkInstance;
-import cz.mg.vulkan.jna.structures.VkAllocationCallbacks;
 import cz.mg.vulkan.jna.structures.VkDebugUtilsMessengerCreateInfoEXT;
 import cz.mg.vulkan.utilities.VulkanException;
 
 
-public class VulkanNativeDebugUtilsSimplified {
-    private final VulkanNativeDebugUtils vkdu;
+public class VkDebugUtilsEXTSimplified {
+    private final VkDebugUtilsEXT vkdu;
 
-    public VulkanNativeDebugUtilsSimplified(VulkanNativeDebugUtils vkdu) {
+    public VkDebugUtilsEXTSimplified(VkDebugUtilsEXT vkdu) {
         this.vkdu = vkdu;
     }
 
@@ -29,8 +28,8 @@ public class VulkanNativeDebugUtilsSimplified {
         createInfo.sType = new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT);
         createInfo.pNext = null;
         createInfo.flags = new VkDebugUtilsMessengerCreateFlagsEXT(0);
-        createInfo.messageSeverity = messageSeverity;
-        createInfo.messageType = messageType;
+        createInfo.messageSeverity = messageSeverity != null ? messageSeverity : new VkDebugUtilsMessageSeverityFlagsEXT(0);
+        createInfo.messageType = messageType != null ? messageType : new VkDebugUtilsMessageTypeFlagsEXT(0);
         createInfo.pfnUserCallback = debugCallback;
         createInfo.pUserData = userData;
 

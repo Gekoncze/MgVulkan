@@ -14,7 +14,7 @@ import cz.mg.vulkan.jna.types.uint32_t;
  *  @see <a href="https://www.khronos.org/registry/vulkan/">khronos documentation</a>
  *  @see <a href="https://www.khronos.org/files/vulkan11-reference-guide.pdf">quick reference</a>
  **/
-public interface VulkanNative extends Library {
+public interface Vk extends Library {
     public static final int ENUM_SIZE = 4;
 
     public static final int VK_TRUE = 1;
@@ -58,12 +58,12 @@ public interface VulkanNative extends Library {
         return version.intValue() & 0xfff;
     }
 
-    public static VulkanNative loadLibrary(){
+    public static Vk loadLibrary(){
         return loadLibrary("vulkan");
     }
 
-    public static VulkanNative loadLibrary(String name){
-        return Native.loadLibrary(name, VulkanNative.class);
+    public static Vk loadLibrary(String name){
+        return Native.loadLibrary(name, Vk.class);
     }
 
     /**

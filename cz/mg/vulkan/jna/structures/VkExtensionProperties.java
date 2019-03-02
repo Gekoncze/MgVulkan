@@ -5,7 +5,7 @@ import com.sun.jna.Structure;
 import cz.mg.vulkan.jna.types.uint32_t;
 import java.util.Arrays;
 import java.util.List;
-import static cz.mg.vulkan.jna.VulkanNative.*;
+import static cz.mg.vulkan.jna.Vk.*;
 
 
 /**

@@ -5,26 +5,31 @@ import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class VulkanQueueFlags {
+    public static final int GRAPHICS = VkQueueFlags.VK_QUEUE_GRAPHICS_BIT;
+    public static final int COMPUTE = VkQueueFlags.VK_QUEUE_COMPUTE_BIT;
+    public static final int TRANSFER = VkQueueFlags.VK_QUEUE_TRANSFER_BIT;
+    public static final int SPARSE_BINDING = VkQueueFlags.VK_QUEUE_SPARSE_BINDING_BIT;
+
     private final VkQueueFlags flags;
+
+    public VulkanQueueFlags(int flag){
+        this.flags = new VkQueueFlags(flag);
+    }
 
     public VulkanQueueFlags(VkQueueFlags flags) {
         this.flags = flags;
     }
 
-    public boolean isVkQueueGraphicsBit(){
-        return (flags.value & VkQueueFlags.VK_QUEUE_GRAPHICS_BIT) != 0;
+    public VkQueueFlags getFlags() {
+        return flags;
     }
 
-    public boolean isVkQueueComputeBit(){
-        return (flags.value & VkQueueFlags.VK_QUEUE_COMPUTE_BIT) != 0;
+    public boolean isSet(int flag){
+        return (flags.value & flag) != 0;
     }
 
-    public boolean isVkQueueTransferBit(){
-        return (flags.value & VkQueueFlags.VK_QUEUE_TRANSFER_BIT) != 0;
-    }
-
-    public boolean isVkQueueSparseBindingBit(){
-        return (flags.value & VkQueueFlags.VK_QUEUE_SPARSE_BINDING_BIT) != 0;
+    public void set(int flag){
+        flags.value |= flag;
     }
 
     @Override

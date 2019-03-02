@@ -3,7 +3,7 @@ package cz.mg.vulkan.jna.structures;
 import com.sun.jna.Structure;
 import com.sun.jna.Pointer;
 import cz.mg.vulkan.jna.types.*;
-import static cz.mg.vulkan.jna.VulkanNative.*;
+import static cz.mg.vulkan.jna.Vk.*;
 import java.util.Arrays;
 import java.util.List;
 

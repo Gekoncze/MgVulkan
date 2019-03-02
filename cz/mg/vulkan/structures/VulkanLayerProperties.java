@@ -1,4 +1,4 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.structures;
 
 import cz.mg.vulkan.jna.structures.VkLayerProperties;
 import cz.mg.vulkan.jna.utilities.ToString;
@@ -6,7 +6,7 @@ import cz.mg.vulkan.utilities.Version;
 
 
 public class VulkanLayerProperties {
-    private final VkLayerProperties structure;
+    public final VkLayerProperties structure;
 
     public VulkanLayerProperties(VkLayerProperties structure) {
         this.structure = structure;

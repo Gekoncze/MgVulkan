@@ -1,6 +1,6 @@
 package cz.mg.vulkan.jna.extensions;
 
-import cz.mg.vulkan.jna.VulkanNativeSimplified;
+import cz.mg.vulkan.jna.VkSimplified;
 import cz.mg.vulkan.jna.callbacks.PFN_vkCreateDebugUtilsMessengerEXT;
 import cz.mg.vulkan.jna.callbacks.PFN_vkDestroyDebugUtilsMessengerEXT;
 import cz.mg.vulkan.jna.enums.VkResult;
@@ -10,9 +10,9 @@ import cz.mg.vulkan.jna.structures.VkAllocationCallbacks;
 import cz.mg.vulkan.jna.structures.VkDebugUtilsMessengerCreateInfoEXT;
 
 
-public interface VulkanNativeDebugUtils {
-    public static VulkanNativeDebugUtils load(VkInstance.ByValue instance, VulkanNativeSimplified vks){
-        return new VulkanNativeDebugUtils() {
+public interface VkDebugUtilsEXT {
+    public static VkDebugUtilsEXT load(VkInstance.ByValue instance, VkSimplified vks){
+        return new VkDebugUtilsEXT() {
             private final PFN_vkCreateDebugUtilsMessengerEXT vkCreateDebugUtilsMessengerEXT = PFN_vkCreateDebugUtilsMessengerEXT.fromPointer(vks.vkGetInstanceProcAddr(instance, "vkCreateDebugUtilsMessengerEXT"));
             private final PFN_vkDestroyDebugUtilsMessengerEXT vkDestroyDebugUtilsMessengerEXT = PFN_vkDestroyDebugUtilsMessengerEXT.fromPointer(vks.vkGetInstanceProcAddr(instance, "vkDestroyDebugUtilsMessengerEXT"));
 

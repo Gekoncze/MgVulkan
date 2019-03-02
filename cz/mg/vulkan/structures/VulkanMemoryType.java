@@ -1,11 +1,11 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.structures;
 
 import cz.mg.vulkan.flags.VulkanMemoryPropertyFlags;
 import cz.mg.vulkan.jna.structures.VkMemoryType;
 
 
 public class VulkanMemoryType {
-    private final VkMemoryType structure;
+    public final VkMemoryType structure;
 
     public VulkanMemoryType(VkMemoryType structure) {
         this.structure = structure;

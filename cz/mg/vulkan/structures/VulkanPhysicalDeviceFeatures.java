@@ -1,11 +1,11 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.structures;
 
 import cz.mg.vulkan.jna.structures.*;
-import static cz.mg.vulkan.jna.VulkanNative.*;
+import static cz.mg.vulkan.jna.Vk.*;
 
 
 public class VulkanPhysicalDeviceFeatures {
-    private final VkPhysicalDeviceFeatures structure;
+    public final VkPhysicalDeviceFeatures structure;
 
     public VulkanPhysicalDeviceFeatures(VkPhysicalDeviceFeatures structure) {
         this.structure = structure;

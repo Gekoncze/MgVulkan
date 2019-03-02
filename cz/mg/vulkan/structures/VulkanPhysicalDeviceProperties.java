@@ -1,4 +1,4 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.structures;
 
 import cz.mg.vulkan.enums.VulkanPhysicalDeviceType;
 import cz.mg.vulkan.jna.structures.VkPhysicalDeviceProperties;
@@ -8,7 +8,7 @@ import cz.mg.vulkan.utilities.Version;
 
 
 public class VulkanPhysicalDeviceProperties {
-    final VkPhysicalDeviceProperties structure;
+    public final VkPhysicalDeviceProperties structure;
 
     public VulkanPhysicalDeviceProperties(VkPhysicalDeviceProperties structure) {
         this.structure = structure;

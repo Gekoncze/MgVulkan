@@ -19,10 +19,10 @@ import static com.sun.jna.Pointer.NULL;
  *  @see <a href="https://www.khronos.org/registry/vulkan/">khronos documentation</a>
  *  @see <a href="https://www.khronos.org/files/vulkan11-reference-guide.pdf">quick reference</a>
  **/
-public class VulkanNativeSimplified {
-    private final VulkanNative vk;
+public class VkSimplified {
+    private final Vk vk;
 
-    public VulkanNativeSimplified(VulkanNative vk) {
+    public VkSimplified(Vk vk) {
         this.vk = vk;
     }
 

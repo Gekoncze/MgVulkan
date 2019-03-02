@@ -1,8 +1,10 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.handles;
 
 import cz.mg.collections.array.Array;
 import cz.mg.collections.array.ReadonlyArray;
-import cz.mg.vulkan.jna.VulkanNative;
+import cz.mg.vulkan.Vulkan;
+import cz.mg.vulkan.structures.VulkanPhysicalDevice;
+import cz.mg.vulkan.jna.Vk;
 import cz.mg.vulkan.jna.arrays.StringArray;
 import cz.mg.vulkan.jna.arrays.VkPhysicalDeviceArray;
 import cz.mg.vulkan.jna.handles.VkInstance;
@@ -11,13 +13,13 @@ import cz.mg.vulkan.utilities.Version;
 
 public class VulkanInstance {
     private final Vulkan parent;
-    private final VkInstance.ByValue handle;
+    public final VkInstance.ByValue handle;
     private Array<VulkanPhysicalDevice> physicalDevices = null;
 
     public VulkanInstance(Vulkan vulkan, String applicationName, Version applicationVersion, String engineName, Version engineVersion, String[] extensions, String[] layers){
         this.parent = vulkan;
         this.handle = new VkInstance.ByValue(vulkan.vks.vkCreateInstance(
-                VulkanNative.VK_API_VERSION_1_0,
+                Vk.VK_API_VERSION_1_0,
                 applicationName, applicationVersion.getValue(),
                 engineName, engineVersion.getValue(),
                 new StringArray(extensions),

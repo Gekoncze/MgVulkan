@@ -1,14 +1,15 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.structures;
 
 import cz.mg.collections.array.Array;
 import cz.mg.collections.array.ReadonlyArray;
+import cz.mg.vulkan.handles.VulkanInstance;
 import cz.mg.vulkan.jna.arrays.VkQueueFamilyPropertiesArray;
 import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
 
 
 public class VulkanPhysicalDevice {
     private final VulkanInstance parent;
-    private final VkPhysicalDevice.ByValue handle;
+    public final VkPhysicalDevice.ByValue handle;
     private VulkanPhysicalDeviceProperties properties = null;
     private VulkanPhysicalDeviceFeatures features = null;
     private VulkanPhysicalDeviceMemoryProperties memoryProperties = null;

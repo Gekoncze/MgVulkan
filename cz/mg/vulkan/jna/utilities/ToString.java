@@ -6,7 +6,7 @@ import cz.mg.vulkan.jna.types.uint32_t;
 import cz.mg.vulkan.jna.types.uint8_t;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import static cz.mg.vulkan.jna.VulkanNative.*;
+import static cz.mg.vulkan.jna.Vk.*;
 
 
 public class ToString {

@@ -5,38 +5,35 @@ import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class VulkanSampleCountFlags {
+    public static final int B1 = VkSampleCountFlags.VK_SAMPLE_COUNT_1_BIT;
+    public static final int B2 = VkSampleCountFlags.VK_SAMPLE_COUNT_2_BIT;
+    public static final int B4 = VkSampleCountFlags.VK_SAMPLE_COUNT_4_BIT;
+    public static final int B8 = VkSampleCountFlags.VK_SAMPLE_COUNT_8_BIT;
+    public static final int B16 = VkSampleCountFlags.VK_SAMPLE_COUNT_16_BIT;
+    public static final int B32 = VkSampleCountFlags.VK_SAMPLE_COUNT_32_BIT;
+    public static final int B64 = VkSampleCountFlags.VK_SAMPLE_COUNT_64_BIT;
+
+
     private final VkSampleCountFlags flags;
+
+    public VulkanSampleCountFlags(int flag){
+        this.flags = new VkSampleCountFlags(flag);
+    }
 
     public VulkanSampleCountFlags(VkSampleCountFlags flags) {
         this.flags = flags;
     }
 
-    public boolean isVkSampleCount1Bit(){
-        return (flags.value & VkSampleCountFlags.VK_SAMPLE_COUNT_1_BIT) != 0;
+    public VkSampleCountFlags getFlags() {
+        return flags;
     }
 
-    public boolean isVkSampleCount2Bit(){
-        return (flags.value & VkSampleCountFlags.VK_SAMPLE_COUNT_2_BIT) != 0;
+    public boolean isSet(int flag){
+        return (flags.value & flag) != 0;
     }
 
-    public boolean isVkSampleCount4Bit(){
-        return (flags.value & VkSampleCountFlags.VK_SAMPLE_COUNT_4_BIT) != 0;
-    }
-
-    public boolean isVkSampleCount8Bit(){
-        return (flags.value & VkSampleCountFlags.VK_SAMPLE_COUNT_8_BIT) != 0;
-    }
-
-    public boolean isVkSampleCount16Bit(){
-        return (flags.value & VkSampleCountFlags.VK_SAMPLE_COUNT_16_BIT) != 0;
-    }
-
-    public boolean isVkSampleCount32Bit(){
-        return (flags.value & VkSampleCountFlags.VK_SAMPLE_COUNT_32_BIT) != 0;
-    }
-
-    public boolean isVkSampleCount64Bit(){
-        return (flags.value & VkSampleCountFlags.VK_SAMPLE_COUNT_64_BIT) != 0;
+    public void set(int flag){
+        flags.value |= flag;
     }
 
     @Override

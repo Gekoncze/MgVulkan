@@ -1,31 +1,31 @@
 package test;
 
 import com.sun.jna.Pointer;
-import cz.mg.vulkan.jna.VulkanNative;
-import cz.mg.vulkan.jna.VulkanNativeSimplified;
+import cz.mg.vulkan.jna.Vk;
+import cz.mg.vulkan.jna.VkSimplified;
 import cz.mg.vulkan.jna.arrays.StringArray;
 import cz.mg.vulkan.jna.arrays.VkPhysicalDeviceArray;
 import cz.mg.vulkan.jna.callbacks.PFN_vkDebugUtilsMessengerCallbackEXT;
-import cz.mg.vulkan.jna.extensions.VulkanNativeDebugUtils;
-import cz.mg.vulkan.jna.extensions.VulkanNativeDebugUtilsSimplified;
+import cz.mg.vulkan.jna.extensions.VkDebugUtilsEXT;
+import cz.mg.vulkan.jna.extensions.VkDebugUtilsEXTSimplified;
 import cz.mg.vulkan.jna.flags.VkDebugUtilsMessageSeverityFlagsEXT;
 import cz.mg.vulkan.jna.flags.VkDebugUtilsMessageTypeFlagsEXT;
 import cz.mg.vulkan.jna.handles.VkDebugUtilsMessengerEXT;
 import cz.mg.vulkan.jna.handles.VkInstance;
 import cz.mg.vulkan.jna.structures.VkDebugUtilsMessengerCallbackDataEXT;
 import cz.mg.vulkan.jna.types.VkBool32;
-import static cz.mg.vulkan.jna.VulkanNative.*;
+import static cz.mg.vulkan.jna.Vk.*;
 
 
 public class Test {
-    public static VulkanNative vk;
-    public static VulkanNativeSimplified vks;
-    public static VulkanNativeDebugUtils vkdu;
-    public static VulkanNativeDebugUtilsSimplified vkdus;
+    public static Vk vk;
+    public static VkSimplified vks;
+    public static VkDebugUtilsEXT vkdu;
+    public static VkDebugUtilsEXTSimplified vkdus;
 
     public static void main(String[] args) {
-        vk = VulkanNative.loadLibrary();
-        vks = new VulkanNativeSimplified(vk);
+        vk = Vk.loadLibrary();
+        vks = new VkSimplified(vk);
 
         TestInfo.printVulkanSupportedExtensions();
         TestInfo.printVulkanSupportedLayers();
@@ -47,8 +47,8 @@ public class Test {
                 enabledLayers
         );
 
-        vkdu = VulkanNativeDebugUtils.load(instance, vks);
-        vkdus = new VulkanNativeDebugUtilsSimplified(vkdu);
+        vkdu = VkDebugUtilsEXT.load(instance, vks);
+        vkdus = new VkDebugUtilsEXTSimplified(vkdu);
 
         VkPhysicalDeviceArray physicalDevices = vks.vkEnumeratePhysicalDevices(new VkInstance.ByValue(instance));
         TestInfo.printVulkanDevices(physicalDevices, true);

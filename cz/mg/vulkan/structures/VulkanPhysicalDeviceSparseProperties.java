@@ -1,13 +1,11 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.structures;
 
-import cz.mg.vulkan.enums.*;
-import cz.mg.vulkan.flags.*;
 import cz.mg.vulkan.jna.structures.*;
-import static cz.mg.vulkan.jna.VulkanNative.*;
+import static cz.mg.vulkan.jna.Vk.*;
 
 
 public class VulkanPhysicalDeviceSparseProperties {
-    private final VkPhysicalDeviceSparseProperties structure;
+    public final VkPhysicalDeviceSparseProperties structure;
 
     public VulkanPhysicalDeviceSparseProperties(VkPhysicalDeviceSparseProperties structure) {
         this.structure = structure;

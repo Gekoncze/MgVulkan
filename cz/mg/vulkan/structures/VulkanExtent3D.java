@@ -1,10 +1,10 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.structures;
 
 import cz.mg.vulkan.jna.structures.VkExtent3D;
 
 
 public class VulkanExtent3D {
-    private final VkExtent3D structure;
+    public final VkExtent3D structure;
 
     public VulkanExtent3D(VkExtent3D structure) {
         this.structure = structure;

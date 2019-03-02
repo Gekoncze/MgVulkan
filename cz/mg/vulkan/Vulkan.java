@@ -2,29 +2,31 @@ package cz.mg.vulkan;
 
 import cz.mg.collections.array.Array;
 import cz.mg.collections.array.ReadonlyArray;
-import cz.mg.vulkan.jna.VulkanNative;
-import cz.mg.vulkan.jna.VulkanNativeSimplified;
+import cz.mg.vulkan.jna.Vk;
+import cz.mg.vulkan.jna.VkSimplified;
 import cz.mg.vulkan.jna.arrays.VkExtensionPropertiesArray;
 import cz.mg.vulkan.jna.arrays.VkLayerPropertiesArray;
+import cz.mg.vulkan.structures.VulkanExtensionProperties;
+import cz.mg.vulkan.structures.VulkanLayerProperties;
 
 
 public class Vulkan {
-    final VulkanNative vk;
-    final VulkanNativeSimplified vks;
+    public final Vk vk;
+    public final VkSimplified vks;
     private Array<VulkanExtensionProperties> extensionProperties = null;
     private Array<VulkanLayerProperties> layerProperties = null;
 
     public Vulkan() {
-        this(VulkanNative.loadLibrary());
+        this(Vk.loadLibrary());
     }
 
     public Vulkan(String libraryName) {
-        this(VulkanNative.loadLibrary(libraryName));
+        this(Vk.loadLibrary(libraryName));
     }
 
-    public Vulkan(VulkanNative vk) {
+    public Vulkan(Vk vk) {
         this.vk = vk;
-        this.vks = new VulkanNativeSimplified(vk);
+        this.vks = new VkSimplified(vk);
     }
 
     public ReadonlyArray<VulkanExtensionProperties> getExtensionProperties() {
