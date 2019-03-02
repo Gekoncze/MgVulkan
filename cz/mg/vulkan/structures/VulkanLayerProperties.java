@@ -9,10 +9,11 @@ public class VulkanLayerProperties {
     public final VkLayerProperties structure;
 
     public VulkanLayerProperties() {
-        this.structure = new VkLayerProperties();
+        this(new VkLayerProperties());
     }
 
     public VulkanLayerProperties(VkLayerProperties structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 

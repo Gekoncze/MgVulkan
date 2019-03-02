@@ -8,9 +8,16 @@ public class VulkanDevice {
     private final VulkanPhysicalDevice parent;
     public final VkDevice.ByValue handle;
 
-    public VulkanDevice(VulkanPhysicalDevice physicalDevice, VulkanPhysicalDeviceFeatures features, int queueFamilyIndex){
-        this.handle = physicalDevice.getParent().getParent().vks.vkCreateDevice(physicalDevice.handle, features.structure.byReference(true, true), queueFamilyIndex);
-        this.parent = physicalDevice;
+    public VulkanDevice(VulkanPhysicalDevice parent, VkDevice.ByValue handle) {
+        if(parent == null || handle == null) throw new IllegalArgumentException();
+        this.parent = parent;
+        this.handle = handle;
+    }
+
+    public VulkanDevice(VulkanPhysicalDevice parent, VulkanPhysicalDeviceFeatures features, int queueFamilyIndex){
+        if(parent == null || features == null || queueFamilyIndex < 0 || queueFamilyIndex >= parent.getQueueFamilyProperties().count()) throw new IllegalArgumentException();
+        this.parent = parent;
+        this.handle = parent.getParent().getParent().vks.vkCreateDevice(parent.handle, features.structure.byReference(true, true), queueFamilyIndex);
     }
 
     public VulkanPhysicalDevice getParent() {

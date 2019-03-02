@@ -8,10 +8,11 @@ public class VulkanQueueFamilyProperties {
     public final VkQueueFamilyProperties structure;
 
     public VulkanQueueFamilyProperties() {
-        this.structure = new VkQueueFamilyProperties();
+        this(new VkQueueFamilyProperties());
     }
 
     public VulkanQueueFamilyProperties(VkQueueFamilyProperties structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 

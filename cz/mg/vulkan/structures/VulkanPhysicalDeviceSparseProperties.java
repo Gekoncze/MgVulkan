@@ -8,10 +8,11 @@ public class VulkanPhysicalDeviceSparseProperties {
     public final VkPhysicalDeviceSparseProperties structure;
 
     public VulkanPhysicalDeviceSparseProperties() {
-        this.structure = new VkPhysicalDeviceSparseProperties();
+        this(new VkPhysicalDeviceSparseProperties());
     }
 
     public VulkanPhysicalDeviceSparseProperties(VkPhysicalDeviceSparseProperties structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 

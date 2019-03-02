@@ -9,10 +9,11 @@ public class VulkanExtensionProperties {
     public final VkExtensionProperties structure;
 
     public VulkanExtensionProperties() {
-        this.structure = new VkExtensionProperties();
+        this(new VkExtensionProperties());
     }
 
     public VulkanExtensionProperties(VkExtensionProperties structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 

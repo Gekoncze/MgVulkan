@@ -8,22 +8,30 @@ import cz.mg.vulkan.jna.handles.VkDebugUtilsMessengerEXT;
 
 
 public class VulkanDebugUtilsMessengerEXT {
-    private final VulkanDebugUtilsEXT debugUtils;
-    private final VulkanDebugUtilsMessengerCallbackEXT callback;
+    private final VulkanDebugUtilsEXT parent;
     public final VkDebugUtilsMessengerEXT.ByValue handle;
+    private final VulkanDebugUtilsMessengerCallbackEXT callback;
 
-    public VulkanDebugUtilsMessengerEXT(VulkanDebugUtilsEXT debugUtils, VulkanDebugUtilsMessageSeverityFlagsEXT messageSeverity, VulkanDebugUtilsMessageTypeFlagsEXT messageTypes, VulkanDebugUtilsMessengerCallbackEXT callback) {
-        this.debugUtils = debugUtils;
+    public VulkanDebugUtilsMessengerEXT(VulkanDebugUtilsEXT parent, VkDebugUtilsMessengerEXT.ByValue handle, VulkanDebugUtilsMessengerCallbackEXT callback) {
+        if(parent == null || handle == null || callback == null) throw new IllegalArgumentException();
+        this.parent = parent;
+        this.handle = handle;
         this.callback = callback;
-        this.handle = this.debugUtils.vkdus.vkCreateDebugUtilsMessengerEXT(this.debugUtils.getInstance().handle, messageSeverity.flags, messageTypes.flags, callback.getCallback(), null);
     }
 
-    public VulkanDebugUtilsEXT getDebugUtils() {
-        return debugUtils;
+    public VulkanDebugUtilsMessengerEXT(VulkanDebugUtilsEXT parent, VulkanDebugUtilsMessageSeverityFlagsEXT messageSeverity, VulkanDebugUtilsMessageTypeFlagsEXT messageTypes, VulkanDebugUtilsMessengerCallbackEXT callback) {
+        if(parent == null || messageSeverity == null || messageTypes == null || callback == null) throw new IllegalArgumentException();
+        this.parent = parent;
+        this.callback = callback;
+        this.handle = this.parent.vkdus.vkCreateDebugUtilsMessengerEXT(this.parent.getInstance().handle, messageSeverity.flags, messageTypes.flags, callback.getCallback(), null);
+    }
+
+    public VulkanDebugUtilsEXT getParent() {
+        return parent;
     }
 
     @Override
     protected void finalize() {
-        debugUtils.vkdus.vkDestroyDebugUtilsMessengerEXT(debugUtils.getInstance().handle, handle);
+        parent.vkdus.vkDestroyDebugUtilsMessengerEXT(parent.getInstance().handle, handle);
     }
 }

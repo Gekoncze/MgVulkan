@@ -9,10 +9,11 @@ public class VulkanDebugUtilsLabelEXT {
     public final VkDebugUtilsLabelEXT structure;
 
     public VulkanDebugUtilsLabelEXT() {
-        this.structure = new VkDebugUtilsLabelEXT();
+        this(new VkDebugUtilsLabelEXT());
     }
 
     public VulkanDebugUtilsLabelEXT(VkDebugUtilsLabelEXT structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 

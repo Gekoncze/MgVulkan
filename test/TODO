@@ -4,12 +4,9 @@
     render pass
 
 ### NOW
-    cleanup
-        add (optional) parents to oop handles and structures
-        allow creation of oops with given natives and parents only
+
 
 ### DONE
-cleanup - part #3
-    removed some unused classes
-    added to native enum methods to oop enums
-    added no parameter constructors to oop flags + minor improvements + made flags public
+cleanup - part #4
+    added checks for input parameters for oop handles and structures
+    allowed creation of oops with given natives and parents only

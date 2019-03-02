@@ -10,10 +10,11 @@ public class VulkanDebugUtilsMessengerCallbackDataEXT {
     public final VkDebugUtilsMessengerCallbackDataEXT structure;
 
     public VulkanDebugUtilsMessengerCallbackDataEXT() {
-        this.structure = new VkDebugUtilsMessengerCallbackDataEXT();
+        this(new VkDebugUtilsMessengerCallbackDataEXT());
     }
 
     public VulkanDebugUtilsMessengerCallbackDataEXT(VkDebugUtilsMessengerCallbackDataEXT structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 

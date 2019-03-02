@@ -8,10 +8,11 @@ public class VulkanPhysicalDeviceFeatures {
     public final VkPhysicalDeviceFeatures structure;
 
     public VulkanPhysicalDeviceFeatures() {
-        structure = new VkPhysicalDeviceFeatures();
+        this(new VkPhysicalDeviceFeatures());
     }
 
     public VulkanPhysicalDeviceFeatures(VkPhysicalDeviceFeatures structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 

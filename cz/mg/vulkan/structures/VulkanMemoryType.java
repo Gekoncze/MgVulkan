@@ -8,10 +8,11 @@ public class VulkanMemoryType {
     public final VkMemoryType structure;
 
     public VulkanMemoryType() {
-        this.structure = new VkMemoryType();
+        this(new VkMemoryType());
     }
 
     public VulkanMemoryType(VkMemoryType structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 

@@ -15,14 +15,21 @@ public class VulkanInstance {
     public final VkInstance.ByValue handle;
     private Array<VulkanPhysicalDevice> physicalDevices = null;
 
+    public VulkanInstance(Vulkan parent, VkInstance.ByValue handle) {
+        if(parent == null || handle == null) throw new IllegalArgumentException();
+        this.parent = parent;
+        this.handle = handle;
+    }
+
     public VulkanInstance(Vulkan vulkan, String applicationName, Version applicationVersion, String engineName, Version engineVersion, String[] extensions, String[] layers){
+        if(vulkan == null || applicationName == null || applicationVersion == null || engineName == null || engineVersion == null) throw new IllegalArgumentException();
         this.parent = vulkan;
         this.handle = vulkan.vks.vkCreateInstance(
                 Vk.VK_API_VERSION_1_0,
                 applicationName, applicationVersion.getValue(),
                 engineName, engineVersion.getValue(),
-                new StringArray(extensions),
-                new StringArray(layers)
+                extensions != null ? new StringArray(extensions) : null,
+                layers != null ? new StringArray(layers) : null
         );
     }
 

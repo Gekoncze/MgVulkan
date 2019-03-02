@@ -8,10 +8,11 @@ public class VulkanMemoryHeap {
     public final VkMemoryHeap structure;
 
     public VulkanMemoryHeap() {
-        this.structure = new VkMemoryHeap();
+        this(new VkMemoryHeap());
     }
 
     public VulkanMemoryHeap(VkMemoryHeap structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 

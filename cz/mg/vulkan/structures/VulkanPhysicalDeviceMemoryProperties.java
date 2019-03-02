@@ -7,10 +7,11 @@ public class VulkanPhysicalDeviceMemoryProperties {
     public final VkPhysicalDeviceMemoryProperties structure;
 
     public VulkanPhysicalDeviceMemoryProperties() {
-        this.structure = new VkPhysicalDeviceMemoryProperties();
+        this(new VkPhysicalDeviceMemoryProperties());
     }
 
     public VulkanPhysicalDeviceMemoryProperties(VkPhysicalDeviceMemoryProperties structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 

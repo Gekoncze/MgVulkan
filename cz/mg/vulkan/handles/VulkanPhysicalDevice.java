@@ -19,8 +19,9 @@ public class VulkanPhysicalDevice {
     private VulkanPhysicalDeviceMemoryProperties memoryProperties = null;
     private Array<VulkanQueueFamilyProperties> queueFamilyProperties = null;
 
-    public VulkanPhysicalDevice(VulkanInstance vulkanInstance, VkPhysicalDevice.ByValue handle) {
-        this.parent = vulkanInstance;
+    public VulkanPhysicalDevice(VulkanInstance parent, VkPhysicalDevice.ByValue handle) {
+        if(parent == null || handle == null) throw new IllegalArgumentException();
+        this.parent = parent;
         this.handle = handle;
     }
 

@@ -9,10 +9,11 @@ public class VulkanPhysicalDeviceLimits {
     public final VkPhysicalDeviceLimits structure;
 
     public VulkanPhysicalDeviceLimits() {
-        this.structure = new VkPhysicalDeviceLimits();
+        this(new VkPhysicalDeviceLimits());
     }
 
     public VulkanPhysicalDeviceLimits(VkPhysicalDeviceLimits structure) {
+        if(structure == null) throw new IllegalArgumentException();
         this.structure = structure;
     }
 
