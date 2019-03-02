@@ -20,4 +20,15 @@ public enum VulkanPhysicalDeviceType {
             default: return null;
         }
     }
+
+    public VkPhysicalDeviceType toNativeEnum(){
+        switch(this){
+            case OTHER: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_OTHER);
+            case INTEGRATED_GPU: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU);
+            case DISCRETE_GPU: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU);
+            case VIRTUAL_GPU: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU);
+            case CPU: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_CPU);
+            default: throw new RuntimeException();
+        }
+    }
 }

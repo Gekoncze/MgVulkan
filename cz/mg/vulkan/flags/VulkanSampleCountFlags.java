@@ -13,19 +13,18 @@ public class VulkanSampleCountFlags {
     public static final int B32 = VkSampleCountFlags.VK_SAMPLE_COUNT_32_BIT;
     public static final int B64 = VkSampleCountFlags.VK_SAMPLE_COUNT_64_BIT;
 
+    public final VkSampleCountFlags flags;
 
-    private final VkSampleCountFlags flags;
+    public VulkanSampleCountFlags() {
+        this(0);
+    }
 
     public VulkanSampleCountFlags(int flag){
-        this.flags = new VkSampleCountFlags(flag);
+        this(new VkSampleCountFlags(flag));
     }
 
     public VulkanSampleCountFlags(VkSampleCountFlags flags) {
         this.flags = flags;
-    }
-
-    public VkSampleCountFlags getFlags() {
-        return flags;
     }
 
     public boolean isSet(int flag){

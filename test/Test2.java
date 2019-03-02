@@ -2,6 +2,7 @@ package test;
 
 import cz.mg.vulkan.*;
 import cz.mg.vulkan.callbacks.VulkanDebugUtilsMessengerCallbackEXT;
+import cz.mg.vulkan.extensions.VulkanDebugUtilsEXT;
 import cz.mg.vulkan.flags.VulkanDebugUtilsMessageSeverityFlagsEXT;
 import cz.mg.vulkan.flags.VulkanDebugUtilsMessageTypeFlagsEXT;
 import cz.mg.vulkan.handles.*;

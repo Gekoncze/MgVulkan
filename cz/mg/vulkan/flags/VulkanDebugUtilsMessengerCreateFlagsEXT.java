@@ -5,18 +5,18 @@ import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class VulkanDebugUtilsMessengerCreateFlagsEXT {
-    private final VkDebugUtilsMessengerCreateFlagsEXT flags;
+    public final VkDebugUtilsMessengerCreateFlagsEXT flags;
+
+    public VulkanDebugUtilsMessengerCreateFlagsEXT() {
+        this(0);
+    }
 
     public VulkanDebugUtilsMessengerCreateFlagsEXT(int flag){
-        this.flags = new VkDebugUtilsMessengerCreateFlagsEXT(flag);
+        this(new VkDebugUtilsMessengerCreateFlagsEXT(flag));
     }
 
     public VulkanDebugUtilsMessengerCreateFlagsEXT(VkDebugUtilsMessengerCreateFlagsEXT flags) {
         this.flags = flags;
-    }
-
-    public VkDebugUtilsMessengerCreateFlagsEXT getFlags() {
-        return flags;
     }
 
     public boolean isSet(int flag){

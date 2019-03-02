@@ -1,4 +1,4 @@
-package cz.mg.vulkan;
+package cz.mg.vulkan.extensions;
 
 import cz.mg.vulkan.handles.VulkanInstance;
 import cz.mg.vulkan.jna.extensions.VkDebugUtilsEXT;

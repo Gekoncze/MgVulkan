@@ -12,4 +12,11 @@ public enum VulkanInternalAllocationType {
             default: return null;
         }
     }
+
+    public VkInternalAllocationType toNativeEnum(){
+        switch(this){
+            case EXECUTABLE: return new VkInternalAllocationType(VkInternalAllocationType.VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE);
+            default: throw new RuntimeException();
+        }
+    }
 }

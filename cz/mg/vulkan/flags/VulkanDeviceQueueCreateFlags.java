@@ -7,18 +7,18 @@ import cz.mg.vulkan.jna.utilities.ToString;
 public class VulkanDeviceQueueCreateFlags {
     public static final int PROTECTED = VkDeviceQueueCreateFlags.VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT;
 
-    private final VkDeviceQueueCreateFlags flags;
+    public final VkDeviceQueueCreateFlags flags;
+
+    public VulkanDeviceQueueCreateFlags() {
+        this(0);
+    }
 
     public VulkanDeviceQueueCreateFlags(int flag){
-        this.flags = new VkDeviceQueueCreateFlags(flag);
+        this(new VkDeviceQueueCreateFlags(flag));
     }
 
     public VulkanDeviceQueueCreateFlags(VkDeviceQueueCreateFlags flags) {
         this.flags = flags;
-    }
-
-    public VkDeviceQueueCreateFlags getFlags() {
-        return flags;
     }
 
     public boolean isSet(int flag){

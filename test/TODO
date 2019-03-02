@@ -1,13 +1,15 @@
 ### SOON
     command buffer
     framebuffer
+    render pass
 
 ### NOW
     cleanup
-        add (optional) parents to enums, flags, handles and structures
-        allow creation of oops with given natives
+        add (optional) parents to oop handles and structures
+        allow creation of oops with given natives and parents only
 
 ### DONE
-cleanup - part #2
-    replace constructors for handles with byValue and byReference methods
-    adapted affected code
+cleanup - part #3
+    removed some unused classes
+    added to native enum methods to oop enums
+    added no parameter constructors to oop flags + minor improvements + made flags public

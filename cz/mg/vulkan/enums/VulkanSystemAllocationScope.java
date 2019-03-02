@@ -20,4 +20,15 @@ public enum VulkanSystemAllocationScope {
             default: return null;
         }
     }
+
+    public VkSystemAllocationScope toNativeEnum(){
+        switch(this){
+            case COMMAND: return new VkSystemAllocationScope(VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_COMMAND);
+            case OBJECT: return new VkSystemAllocationScope(VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_OBJECT);
+            case CACHE: return new VkSystemAllocationScope(VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_CACHE);
+            case DEVICE: return new VkSystemAllocationScope(VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_DEVICE);
+            case INSTANCE: return new VkSystemAllocationScope(VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_INSTANCE);
+            default: throw new RuntimeException();
+        }
+    }
 }

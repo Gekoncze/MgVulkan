@@ -10,18 +10,18 @@ public class VulkanDebugUtilsMessageSeverityFlagsEXT {
     public static final int WARNING = VkDebugUtilsMessageSeverityFlagsEXT.VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT;
     public static final int ERROR = VkDebugUtilsMessageSeverityFlagsEXT.VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT;
 
-    private final VkDebugUtilsMessageSeverityFlagsEXT flags;
+    public final VkDebugUtilsMessageSeverityFlagsEXT flags;
+
+    public VulkanDebugUtilsMessageSeverityFlagsEXT() {
+        this(0);
+    }
 
     public VulkanDebugUtilsMessageSeverityFlagsEXT(int flag){
-        this.flags = new VkDebugUtilsMessageSeverityFlagsEXT(flag);
+        this(new VkDebugUtilsMessageSeverityFlagsEXT(flag));
     }
 
     public VulkanDebugUtilsMessageSeverityFlagsEXT(VkDebugUtilsMessageSeverityFlagsEXT flags) {
         this.flags = flags;
-    }
-
-    public VkDebugUtilsMessageSeverityFlagsEXT getFlags() {
-        return flags;
     }
 
     public boolean isSet(int flag){

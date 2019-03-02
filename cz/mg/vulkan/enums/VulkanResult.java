@@ -72,4 +72,41 @@ public enum VulkanResult {
             default: return null;
         }
     }
+
+    public VkResult toNativeEnum(){
+        switch(this){
+            case SUCCESS: return new VkResult(VkResult.VK_SUCCESS);
+            case NOT_READY: return new VkResult(VkResult.VK_NOT_READY);
+            case TIMEOUT: return new VkResult(VkResult.VK_TIMEOUT);
+            case EVENT_SET: return new VkResult(VkResult.VK_EVENT_SET);
+            case EVENT_RESET: return new VkResult(VkResult.VK_EVENT_RESET);
+            case INCOMPLETE: return new VkResult(VkResult.VK_INCOMPLETE);
+            case ERROR_OUT_OF_HOST_MEMORY: return new VkResult(VkResult.VK_ERROR_OUT_OF_HOST_MEMORY);
+            case ERROR_OUT_OF_DEVICE_MEMORY: return new VkResult(VkResult.VK_ERROR_OUT_OF_DEVICE_MEMORY);
+            case ERROR_INITIALIZATION_FAILED: return new VkResult(VkResult.VK_ERROR_INITIALIZATION_FAILED);
+            case ERROR_DEVICE_LOST: return new VkResult(VkResult.VK_ERROR_DEVICE_LOST);
+            case ERROR_MEMORY_MAP_FAILED: return new VkResult(VkResult.VK_ERROR_MEMORY_MAP_FAILED);
+            case ERROR_LAYER_NOT_PRESENT: return new VkResult(VkResult.VK_ERROR_LAYER_NOT_PRESENT);
+            case ERROR_EXTENSION_NOT_PRESENT: return new VkResult(VkResult.VK_ERROR_EXTENSION_NOT_PRESENT);
+            case ERROR_FEATURE_NOT_PRESENT: return new VkResult(VkResult.VK_ERROR_FEATURE_NOT_PRESENT);
+            case ERROR_INCOMPATIBLE_DRIVER: return new VkResult(VkResult.VK_ERROR_INCOMPATIBLE_DRIVER);
+            case ERROR_TOO_MANY_OBJECTS: return new VkResult(VkResult.VK_ERROR_TOO_MANY_OBJECTS);
+            case ERROR_FORMAT_NOT_SUPPORTED: return new VkResult(VkResult.VK_ERROR_FORMAT_NOT_SUPPORTED);
+            case ERROR_FRAGMENTED_POOL: return new VkResult(VkResult.VK_ERROR_FRAGMENTED_POOL);
+            case ERROR_OUT_OF_POOL_MEMORY: return new VkResult(VkResult.VK_ERROR_OUT_OF_POOL_MEMORY);
+            case ERROR_INVALID_EXTERNAL_HANDLE: return new VkResult(VkResult.VK_ERROR_INVALID_EXTERNAL_HANDLE);
+            case ERROR_SURFACE_LOST: return new VkResult(VkResult.VK_ERROR_SURFACE_LOST_KHR);
+            case ERROR_NATIVE_WINDOW_IN_USE: return new VkResult(VkResult.VK_ERROR_NATIVE_WINDOW_IN_USE_KHR);
+            case SUBOPTIMAL: return new VkResult(VkResult.VK_SUBOPTIMAL_KHR);
+            case ERROR_OUT_OF_DATE: return new VkResult(VkResult.VK_ERROR_OUT_OF_DATE_KHR);
+            case ERROR_INCOMPATIBLE_DISPLAY: return new VkResult(VkResult.VK_ERROR_INCOMPATIBLE_DISPLAY_KHR);
+            case ERROR_VALIDATION_FAILED: return new VkResult(VkResult.VK_ERROR_VALIDATION_FAILED_EXT);
+            case ERROR_INVALID_SHADER_NV: return new VkResult(VkResult.VK_ERROR_INVALID_SHADER_NV);
+            case ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT: return new VkResult(VkResult.VK_ERROR_INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT_EXT);
+            case ERROR_FRAGMENTATION: return new VkResult(VkResult.VK_ERROR_FRAGMENTATION_EXT);
+            case ERROR_NOT_PERMITTED: return new VkResult(VkResult.VK_ERROR_NOT_PERMITTED_EXT);
+            case ERROR_INVALID_DEVICE_ADDRESS: return new VkResult(VkResult.VK_ERROR_INVALID_DEVICE_ADDRESS_EXT);
+            default: throw new RuntimeException();
+        }
+    }
 }

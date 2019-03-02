@@ -11,18 +11,18 @@ public class VulkanMemoryPropertyFlags {
     public static final int HOST_CACHED = VkMemoryPropertyFlags.VK_MEMORY_PROPERTY_HOST_CACHED_BIT;
     public static final int LAZILY_ALLOCATED = VkMemoryPropertyFlags.VK_MEMORY_PROPERTY_LAZILY_ALLOCATED_BIT;
 
-    private final VkMemoryPropertyFlags flags;
+    public final VkMemoryPropertyFlags flags;
+
+    public VulkanMemoryPropertyFlags() {
+        this(0);
+    }
 
     public VulkanMemoryPropertyFlags(int flag){
-        this.flags = new VkMemoryPropertyFlags(flag);
+        this(new VkMemoryPropertyFlags(flag));
     }
 
     public VulkanMemoryPropertyFlags(VkMemoryPropertyFlags flags) {
         this.flags = flags;
-    }
-
-    public VkMemoryPropertyFlags getFlags() {
-        return flags;
     }
 
     public boolean isSet(int flag){

@@ -9,18 +9,18 @@ public class VulkanDebugUtilsMessageTypeFlagsEXT {
     public static final int VALIDATION = VkDebugUtilsMessageTypeFlagsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT;
     public static final int PERFORMANCE = VkDebugUtilsMessageTypeFlagsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT;
 
-    private final VkDebugUtilsMessageTypeFlagsEXT flags;
+    public final VkDebugUtilsMessageTypeFlagsEXT flags;
+
+    public VulkanDebugUtilsMessageTypeFlagsEXT() {
+        this(0);
+    }
 
     public VulkanDebugUtilsMessageTypeFlagsEXT(int flag){
-        this.flags = new VkDebugUtilsMessageTypeFlagsEXT(flag);
+        this(new VkDebugUtilsMessageTypeFlagsEXT(flag));
     }
 
     public VulkanDebugUtilsMessageTypeFlagsEXT(VkDebugUtilsMessageTypeFlagsEXT flags) {
         this.flags = flags;
-    }
-
-    public VkDebugUtilsMessageTypeFlagsEXT getFlags() {
-        return flags;
     }
 
     public boolean isSet(int flag){

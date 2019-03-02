@@ -1,6 +1,6 @@
 package cz.mg.vulkan.handles;
 
-import cz.mg.vulkan.VulkanDebugUtilsEXT;
+import cz.mg.vulkan.extensions.VulkanDebugUtilsEXT;
 import cz.mg.vulkan.callbacks.VulkanDebugUtilsMessengerCallbackEXT;
 import cz.mg.vulkan.flags.VulkanDebugUtilsMessageSeverityFlagsEXT;
 import cz.mg.vulkan.flags.VulkanDebugUtilsMessageTypeFlagsEXT;
@@ -15,7 +15,7 @@ public class VulkanDebugUtilsMessengerEXT {
     public VulkanDebugUtilsMessengerEXT(VulkanDebugUtilsEXT debugUtils, VulkanDebugUtilsMessageSeverityFlagsEXT messageSeverity, VulkanDebugUtilsMessageTypeFlagsEXT messageTypes, VulkanDebugUtilsMessengerCallbackEXT callback) {
         this.debugUtils = debugUtils;
         this.callback = callback;
-        this.handle = this.debugUtils.vkdus.vkCreateDebugUtilsMessengerEXT(this.debugUtils.getInstance().handle, messageSeverity.getFlags(), messageTypes.getFlags(), callback.getCallback(), null);
+        this.handle = this.debugUtils.vkdus.vkCreateDebugUtilsMessengerEXT(this.debugUtils.getInstance().handle, messageSeverity.flags, messageTypes.flags, callback.getCallback(), null);
     }
 
     public VulkanDebugUtilsEXT getDebugUtils() {

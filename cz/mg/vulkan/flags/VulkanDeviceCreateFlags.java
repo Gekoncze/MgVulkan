@@ -5,18 +5,18 @@ import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class VulkanDeviceCreateFlags {
-    private final VkDeviceCreateFlags flags;
+    public final VkDeviceCreateFlags flags;
+
+    public VulkanDeviceCreateFlags() {
+        this(0);
+    }
 
     public VulkanDeviceCreateFlags(int flag){
-        this.flags = new VkDeviceCreateFlags(flag);
+        this(new VkDeviceCreateFlags(flag));
     }
 
     public VulkanDeviceCreateFlags(VkDeviceCreateFlags flags) {
         this.flags = flags;
-    }
-
-    public VkDeviceCreateFlags getFlags() {
-        return flags;
     }
 
     public boolean isSet(int flag){
