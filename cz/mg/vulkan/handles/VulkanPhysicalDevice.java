@@ -1,10 +1,14 @@
-package cz.mg.vulkan.structures;
+package cz.mg.vulkan.handles;
 
 import cz.mg.collections.array.Array;
 import cz.mg.collections.array.ReadonlyArray;
 import cz.mg.vulkan.handles.VulkanInstance;
 import cz.mg.vulkan.jna.arrays.VkQueueFamilyPropertiesArray;
 import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
+import cz.mg.vulkan.structures.VulkanPhysicalDeviceFeatures;
+import cz.mg.vulkan.structures.VulkanPhysicalDeviceMemoryProperties;
+import cz.mg.vulkan.structures.VulkanPhysicalDeviceProperties;
+import cz.mg.vulkan.structures.VulkanQueueFamilyProperties;
 
 
 public class VulkanPhysicalDevice {

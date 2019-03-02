@@ -79,49 +79,19 @@ public class Test {
 
         VkDebugUtilsMessengerEXT.ByValue messenger = vkdus.vkCreateDebugUtilsMessengerEXT(instance, messageSeverity, messageType, debugCallback, null);
 
-
+        VkPhysicalDevice.ByValue selectedPhysicalDevice = new VkPhysicalDevice.ByValue(physicalDevices.get(0));
         VkPhysicalDeviceFeatures.ByReference features = new VkPhysicalDeviceFeatures.ByReference();
-        FloatArray priorities = new FloatArray(new float[]{1.0f});
-        VkDeviceQueueCreateInfoArray createInfos = new VkDeviceQueueCreateInfoArray(1);
-        VkDeviceQueueCreateInfo queueCreateInfo = createInfos.get(0);
-        queueCreateInfo.sType = new VkStructureType(VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO);
-        queueCreateInfo.pNext = null;
-        queueCreateInfo.flags = new VkDeviceQueueCreateFlags(0);
-        queueCreateInfo.queueFamilyIndex = new uint32_t(0);
-        queueCreateInfo.queueCount = new uint32_t(1);
-        queueCreateInfo.pQueuePriorities = priorities.getPointer();
-        createInfos.write();
-
-        VkDeviceCreateInfo.ByReference deviceCreateInfo = new VkDeviceCreateInfo.ByReference();
-        deviceCreateInfo.sType = new VkStructureType(VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO);
-        deviceCreateInfo.pNext = null;
-        deviceCreateInfo.flags = new VkDeviceCreateFlags(0);
-        deviceCreateInfo.queueCreateInfoCount = new uint32_t(1);
-        deviceCreateInfo.pQueueCreateInfos = createInfos.getPointer();
-        deviceCreateInfo.pEnabledFeatures = features;
-        deviceCreateInfo.enabledExtensionCount = new uint32_t(0);
-        deviceCreateInfo.ppEnabledExtensionNames = null;
-        deviceCreateInfo.enabledLayerCount = new uint32_t(0);
-        deviceCreateInfo.ppEnabledLayerNames = null;
-
-        VkDevice.ByReference device = new VkDevice.ByReference();
-        VkPhysicalDevice.ByValue physicalDevice = new VkPhysicalDevice.ByValue(physicalDevices.get(0));
-        VkResult.ByValue result = vk.vkCreateDevice(physicalDevice, deviceCreateInfo, null, device);
-        if(result.value != VkResult.VK_SUCCESS) throw new VulkanException(result, "vkCreateDevice");
-        VkDevice.ByValue device_value = new VkDevice.ByValue(device);
-
+        VkDevice.ByValue device_value = new VkDevice.ByValue(vks.vkCreateDevice(selectedPhysicalDevice, features, 0));
         System.out.println("Logical device created successfully!");
 
-        VkQueue.ByReference queue = new VkQueue.ByReference();
-        vk.vkGetDeviceQueue(device_value, new uint32_t(0), new uint32_t(0), queue);
-
+        VkQueue.ByValue queue = vks.vkGetDeviceQueue(device_value, 0, 0);
         System.out.println("Got 1st queue.");
 
         // TODO
 
-        vk.vkDestroyDevice(device_value, null);
+        vks.vkDestroyDevice(device_value);
         vkdus.vkDestroyDebugUtilsMessengerEXT(instance, messenger);
-        vk.vkDestroyInstance(instance, null);
+        vks.vkDestroyInstance(instance);
     }
 
     private static final PFN_vkDebugUtilsMessengerCallbackEXT debugCallback = new PFN_vkDebugUtilsMessengerCallbackEXT() {

@@ -1,6 +1,10 @@
 package cz.mg.vulkan.jna;
 
 import com.sun.jna.Pointer;
+import cz.mg.vulkan.jna.flags.VkDeviceCreateFlags;
+import cz.mg.vulkan.jna.flags.VkDeviceQueueCreateFlags;
+import cz.mg.vulkan.jna.handles.VkDevice;
+import cz.mg.vulkan.jna.handles.VkQueue;
 import cz.mg.vulkan.utilities.VulkanException;
 import cz.mg.vulkan.jna.arrays.*;
 import cz.mg.vulkan.jna.enums.VkResult;
@@ -164,5 +168,55 @@ public class VkSimplified {
         Pointer function = vk.vkGetInstanceProcAddr(instance, pName);
         if(function == null || function == Pointer.NULL) throw new VulkanException(null, "vkGetInstanceProcAddr", pName);
         return function;
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreateDevice.html">khronos documentation</a>
+     **/
+    public VkDevice.ByValue vkCreateDevice(VkPhysicalDevice.ByValue physicalDevice, VkPhysicalDeviceFeatures.ByReference features, int queueFamilyIndex){
+        FloatArray priorities = new FloatArray(new float[]{1.0f});
+
+        VkDeviceQueueCreateInfoArray createInfos = new VkDeviceQueueCreateInfoArray(1);
+        VkDeviceQueueCreateInfo queueCreateInfo = createInfos.get(0);
+        queueCreateInfo.sType = new VkStructureType(VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO);
+        queueCreateInfo.pNext = null;
+        queueCreateInfo.flags = new VkDeviceQueueCreateFlags(0);
+        queueCreateInfo.queueFamilyIndex = new uint32_t(queueFamilyIndex);
+        queueCreateInfo.queueCount = new uint32_t(1);
+        queueCreateInfo.pQueuePriorities = priorities.getPointer();
+        createInfos.write();
+
+        VkDeviceCreateInfo.ByReference deviceCreateInfo = new VkDeviceCreateInfo.ByReference();
+        deviceCreateInfo.sType = new VkStructureType(VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO);
+        deviceCreateInfo.pNext = null;
+        deviceCreateInfo.flags = new VkDeviceCreateFlags(0);
+        deviceCreateInfo.queueCreateInfoCount = new uint32_t(1);
+        deviceCreateInfo.pQueueCreateInfos = createInfos.getPointer();
+        deviceCreateInfo.pEnabledFeatures = features;
+        deviceCreateInfo.enabledExtensionCount = new uint32_t(0);
+        deviceCreateInfo.ppEnabledExtensionNames = null;
+        deviceCreateInfo.enabledLayerCount = new uint32_t(0);
+        deviceCreateInfo.ppEnabledLayerNames = null;
+
+        VkDevice.ByReference device = new VkDevice.ByReference();
+        VkResult.ByValue result = vk.vkCreateDevice(physicalDevice, deviceCreateInfo, null, device);
+        if(result.value != VkResult.VK_SUCCESS) throw new VulkanException(result, "vkCreateDevice");
+        return new VkDevice.ByValue(device);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyDevice.html">khronos documentation</a>
+     **/
+    public void vkDestroyDevice(VkDevice.ByValue device){
+        vk.vkDestroyDevice(device, null);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetDeviceQueue.html">khronos documentation</a>
+     **/
+    public VkQueue.ByValue vkGetDeviceQueue(VkDevice.ByValue device, int queueFamilyIndex, int queueIndex){
+        VkQueue.ByReference queue = new VkQueue.ByReference();
+        vk.vkGetDeviceQueue(device, new uint32_t(queueFamilyIndex), new uint32_t(queueIndex), queue);
+        return new VkQueue.ByValue(queue);
     }
 }

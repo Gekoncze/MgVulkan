@@ -7,6 +7,10 @@ import static cz.mg.vulkan.jna.Vk.*;
 public class VulkanPhysicalDeviceFeatures {
     public final VkPhysicalDeviceFeatures structure;
 
+    public VulkanPhysicalDeviceFeatures() {
+        structure = new VkPhysicalDeviceFeatures();
+    }
+
     public VulkanPhysicalDeviceFeatures(VkPhysicalDeviceFeatures structure) {
         this.structure = structure;
     }

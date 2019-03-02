@@ -4,9 +4,9 @@ import cz.mg.vulkan.*;
 import cz.mg.vulkan.callbacks.VulkanDebugUtilsMessengerCallbackEXT;
 import cz.mg.vulkan.flags.VulkanDebugUtilsMessageSeverityFlagsEXT;
 import cz.mg.vulkan.flags.VulkanDebugUtilsMessageTypeFlagsEXT;
-import cz.mg.vulkan.handles.VulkanDebugUtilsMessengerEXT;
-import cz.mg.vulkan.handles.VulkanInstance;
+import cz.mg.vulkan.handles.*;
 import cz.mg.vulkan.structures.VulkanDebugUtilsMessengerCallbackDataEXT;
+import cz.mg.vulkan.structures.VulkanPhysicalDeviceFeatures;
 import cz.mg.vulkan.utilities.Version;
 import static test.TestInfo2.*;
 
@@ -52,5 +52,14 @@ public class Test2 {
                 return false;
             }
         });
+
+
+        VulkanPhysicalDevice selectedPhysicalDevice = instance.getPhysicalDevices().get(0);
+        VulkanPhysicalDeviceFeatures features = new VulkanPhysicalDeviceFeatures();
+        VulkanDevice device = new VulkanDevice(selectedPhysicalDevice, features, 0);
+        System.out.println("Logical device created successfully!");
+
+        VulkanQueue queue = new VulkanQueue(device, 0, 0);
+        System.out.println("Got 1st queue.");
     }
 }

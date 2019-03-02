@@ -3,7 +3,6 @@ package cz.mg.vulkan.handles;
 import cz.mg.collections.array.Array;
 import cz.mg.collections.array.ReadonlyArray;
 import cz.mg.vulkan.Vulkan;
-import cz.mg.vulkan.structures.VulkanPhysicalDevice;
 import cz.mg.vulkan.jna.Vk;
 import cz.mg.vulkan.jna.arrays.StringArray;
 import cz.mg.vulkan.jna.arrays.VkPhysicalDeviceArray;

@@ -2,12 +2,13 @@
 
 
 ### NOW
-    logical device
-        add simplified methods
-        add oop classes + test
+    cleanup
+        maybe allow creation of oop objects with given natives
+
+    replace constructors for handles/enums/flags with byValue and byReference methods
+        + apply to transformator
 
 ### DONE
 logical device + queues
-    added int and float array
-    added native classes
-    added first test
+    added simplified methods
+    added oop classes + test
