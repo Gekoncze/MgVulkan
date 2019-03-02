@@ -7,6 +7,10 @@ import cz.mg.vulkan.jna.structures.VkMemoryHeap;
 public class VulkanMemoryHeap {
     public final VkMemoryHeap structure;
 
+    public VulkanMemoryHeap() {
+        this.structure = new VkMemoryHeap();
+    }
+
     public VulkanMemoryHeap(VkMemoryHeap structure) {
         this.structure = structure;
     }

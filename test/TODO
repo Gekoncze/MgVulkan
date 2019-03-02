@@ -3,12 +3,13 @@
 
 ### NOW
     cleanup
-        maybe allow creation of oop objects with given natives
+        replace constructors for handles/enums/flags with byValue and byReference methods
+            + apply to transformator
 
-    replace constructors for handles/enums/flags with byValue and byReference methods
-        + apply to transformator
+        add (optional) parents to enums, flags, handles and structures
+        allow creation of oops with given natives
 
 ### DONE
-logical device + queues
-    added simplified methods
-    added oop classes + test
+cleanup - part #1
+    added blank constructors for oop objects
+    added constructors with native classes for oop objects

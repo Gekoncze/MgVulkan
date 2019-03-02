@@ -2,11 +2,14 @@ package cz.mg.vulkan.structures;
 
 import cz.mg.vulkan.flags.VulkanQueueFlags;
 import cz.mg.vulkan.jna.structures.VkQueueFamilyProperties;
-import cz.mg.vulkan.structures.VulkanExtent3D;
 
 
 public class VulkanQueueFamilyProperties {
     public final VkQueueFamilyProperties structure;
+
+    public VulkanQueueFamilyProperties() {
+        this.structure = new VkQueueFamilyProperties();
+    }
 
     public VulkanQueueFamilyProperties(VkQueueFamilyProperties structure) {
         this.structure = structure;

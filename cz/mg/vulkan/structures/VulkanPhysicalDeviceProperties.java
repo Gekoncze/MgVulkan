@@ -10,6 +10,10 @@ import cz.mg.vulkan.utilities.Version;
 public class VulkanPhysicalDeviceProperties {
     public final VkPhysicalDeviceProperties structure;
 
+    public VulkanPhysicalDeviceProperties() {
+        this.structure = new VkPhysicalDeviceProperties();
+    }
+
     public VulkanPhysicalDeviceProperties(VkPhysicalDeviceProperties structure) {
         this.structure = structure;
     }

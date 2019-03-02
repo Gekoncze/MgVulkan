@@ -8,6 +8,10 @@ import cz.mg.vulkan.jna.structures.*;
 public class VulkanDebugUtilsLabelEXT {
     public final VkDebugUtilsLabelEXT structure;
 
+    public VulkanDebugUtilsLabelEXT() {
+        this.structure = new VkDebugUtilsLabelEXT();
+    }
+
     public VulkanDebugUtilsLabelEXT(VkDebugUtilsLabelEXT structure) {
         this.structure = structure;
     }

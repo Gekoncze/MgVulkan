@@ -9,6 +9,10 @@ import cz.mg.vulkan.jna.structures.*;
 public class VulkanDebugUtilsMessengerCallbackDataEXT {
     public final VkDebugUtilsMessengerCallbackDataEXT structure;
 
+    public VulkanDebugUtilsMessengerCallbackDataEXT() {
+        this.structure = new VkDebugUtilsMessengerCallbackDataEXT();
+    }
+
     public VulkanDebugUtilsMessengerCallbackDataEXT(VkDebugUtilsMessengerCallbackDataEXT structure) {
         this.structure = structure;
     }

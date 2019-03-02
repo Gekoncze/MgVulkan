@@ -1,12 +1,14 @@
 package cz.mg.vulkan.structures;
 
 import cz.mg.vulkan.jna.structures.VkPhysicalDeviceMemoryProperties;
-import cz.mg.vulkan.structures.VulkanMemoryHeap;
-import cz.mg.vulkan.structures.VulkanMemoryType;
 
 
 public class VulkanPhysicalDeviceMemoryProperties {
     public final VkPhysicalDeviceMemoryProperties structure;
+
+    public VulkanPhysicalDeviceMemoryProperties() {
+        this.structure = new VkPhysicalDeviceMemoryProperties();
+    }
 
     public VulkanPhysicalDeviceMemoryProperties(VkPhysicalDeviceMemoryProperties structure) {
         this.structure = structure;

@@ -8,6 +8,10 @@ import cz.mg.vulkan.utilities.Version;
 public class VulkanLayerProperties {
     public final VkLayerProperties structure;
 
+    public VulkanLayerProperties() {
+        this.structure = new VkLayerProperties();
+    }
+
     public VulkanLayerProperties(VkLayerProperties structure) {
         this.structure = structure;
     }

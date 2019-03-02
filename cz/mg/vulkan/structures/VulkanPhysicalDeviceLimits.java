@@ -8,6 +8,10 @@ import static cz.mg.vulkan.jna.Vk.*;
 public class VulkanPhysicalDeviceLimits {
     public final VkPhysicalDeviceLimits structure;
 
+    public VulkanPhysicalDeviceLimits() {
+        this.structure = new VkPhysicalDeviceLimits();
+    }
+
     public VulkanPhysicalDeviceLimits(VkPhysicalDeviceLimits structure) {
         this.structure = structure;
     }

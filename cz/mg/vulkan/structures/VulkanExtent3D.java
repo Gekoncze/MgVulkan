@@ -6,6 +6,10 @@ import cz.mg.vulkan.jna.structures.VkExtent3D;
 public class VulkanExtent3D {
     public final VkExtent3D structure;
 
+    public VulkanExtent3D() {
+        this.structure = new VkExtent3D();
+    }
+
     public VulkanExtent3D(VkExtent3D structure) {
         this.structure = structure;
     }

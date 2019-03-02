@@ -8,6 +8,10 @@ import cz.mg.vulkan.utilities.Version;
 public class VulkanExtensionProperties {
     public final VkExtensionProperties structure;
 
+    public VulkanExtensionProperties() {
+        this.structure = new VkExtensionProperties();
+    }
+
     public VulkanExtensionProperties(VkExtensionProperties structure) {
         this.structure = structure;
     }
