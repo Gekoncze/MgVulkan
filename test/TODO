@@ -4,9 +4,9 @@
     render pass
 
 ### NOW
-
+    method to get a list of all available formats for given image requirements + priorities
+        maybe put in utilities
 
 ### DONE
-cleanup - part #4
-    added checks for input parameters for oop handles and structures
-    allowed creation of oops with given natives and parents only
+image and image view
+    implemented all oop and native classes + test

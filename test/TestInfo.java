@@ -4,8 +4,17 @@ import cz.mg.vulkan.jna.arrays.VkExtensionPropertiesArray;
 import cz.mg.vulkan.jna.arrays.VkLayerPropertiesArray;
 import cz.mg.vulkan.jna.arrays.VkPhysicalDeviceArray;
 import cz.mg.vulkan.jna.arrays.VkQueueFamilyPropertiesArray;
+import cz.mg.vulkan.jna.enums.VkFormat;
+import cz.mg.vulkan.jna.enums.VkImageTiling;
+import cz.mg.vulkan.jna.enums.VkImageType;
+import cz.mg.vulkan.jna.flags.VkImageCreateFlags;
+import cz.mg.vulkan.jna.flags.VkImageUsageFlags;
 import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
 import cz.mg.vulkan.jna.structures.*;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+
 import static cz.mg.vulkan.jna.utilities.ToString.*;
 import static test.Test.vks;
 
@@ -44,8 +53,8 @@ public class TestInfo {
         printVulkanDeviceQueueFamilyProperties(device);
     }
 
-    private static void printVulkanDeviceProperties(VkPhysicalDevice.ByValue vDevice, boolean details){
-        VkPhysicalDeviceProperties.ByReference deviceProperties = vks.vkGetPhysicalDeviceProperties(vDevice);
+    private static void printVulkanDeviceProperties(VkPhysicalDevice.ByValue device, boolean details){
+        VkPhysicalDeviceProperties.ByReference deviceProperties = vks.vkGetPhysicalDeviceProperties(device);
         System.out.println("Device: " + textToString(deviceProperties.deviceName));
         System.out.println("    device id: " + deviceProperties.deviceID);
         System.out.println("    vendor id: " + deviceProperties.vendorID + " (" + vendorToString(deviceProperties.vendorID) + ")");
@@ -56,6 +65,7 @@ public class TestInfo {
         System.out.println();
         if(details) printVulkanDeviceSparseProperties(deviceProperties);
         if(details) printVulkanDeviceLimits(deviceProperties);
+        printVulkanDeviceImageProperties(device);
     }
 
     private static void printVulkanDeviceSparseProperties(VkPhysicalDeviceProperties deviceProperties){
@@ -264,5 +274,28 @@ public class TestInfo {
             System.out.println("        flags: " + flagsToString(p.queueFlags.value, p.queueFlags.getClass()));
         }
         System.out.println();
+    }
+
+    private static void printVulkanDeviceImageProperties(VkPhysicalDevice.ByValue device){
+//        System.out.println("    supported formats:");
+//        Class c = VkFormat.class;
+//        for(Field field : c.getFields()){
+//            if(Modifier.isStatic(field.getModifiers())){
+//                if(field.getType() == int.class){
+//                    try {
+//                        VkFormat.ByValue format = new VkFormat.ByValue(field.getInt(null));
+//                        VkImageFormatProperties properties = vks.vkGetPhysicalDeviceImageFormatProperties(
+//                                device, format,
+//                                new VkImageType.ByValue(VkImageType.VK_IMAGE_TYPE_2D),
+//                                new VkImageTiling.ByValue(VkImageTiling.VK_IMAGE_TILING_OPTIMAL),
+//                                new VkImageUsageFlags.ByValue(VkImageUsageFlags.VK_IMAGE_USAGE_TRANSFER_DST_BIT | VkImageUsageFlags.VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT),
+//                                new VkImageCreateFlags.ByValue(0)
+//                        );
+//                        System.out.println("        " + field.getName());
+//                    } catch (Exception e){}
+//                }
+//            }
+//        }
+//        System.out.println();
     }
 }

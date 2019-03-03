@@ -23,6 +23,12 @@ public class VkExtent3D extends Structure {
     public VkExtent3D() {
     }
 
+    public VkExtent3D(int width, int height, int depth) {
+        this.width = new uint32_t(width);
+        this.height = new uint32_t(height);
+        this.depth = new uint32_t(depth);
+    }
+
     public VkExtent3D(Pointer p) {
         super(p);
     }

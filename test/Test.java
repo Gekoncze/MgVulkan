@@ -8,19 +8,12 @@ import cz.mg.vulkan.jna.arrays.StringArray;
 import cz.mg.vulkan.jna.arrays.VkDeviceQueueCreateInfoArray;
 import cz.mg.vulkan.jna.arrays.VkPhysicalDeviceArray;
 import cz.mg.vulkan.jna.callbacks.PFN_vkDebugUtilsMessengerCallbackEXT;
-import cz.mg.vulkan.jna.enums.VkResult;
-import cz.mg.vulkan.jna.enums.VkStructureType;
+import cz.mg.vulkan.jna.enums.*;
 import cz.mg.vulkan.jna.extensions.VkDebugUtilsEXT;
 import cz.mg.vulkan.jna.extensions.VkDebugUtilsEXTSimplified;
-import cz.mg.vulkan.jna.flags.VkDebugUtilsMessageSeverityFlagsEXT;
-import cz.mg.vulkan.jna.flags.VkDebugUtilsMessageTypeFlagsEXT;
-import cz.mg.vulkan.jna.flags.VkDeviceCreateFlags;
-import cz.mg.vulkan.jna.flags.VkDeviceQueueCreateFlags;
+import cz.mg.vulkan.jna.flags.*;
 import cz.mg.vulkan.jna.handles.*;
-import cz.mg.vulkan.jna.structures.VkDebugUtilsMessengerCallbackDataEXT;
-import cz.mg.vulkan.jna.structures.VkDeviceCreateInfo;
-import cz.mg.vulkan.jna.structures.VkDeviceQueueCreateInfo;
-import cz.mg.vulkan.jna.structures.VkPhysicalDeviceFeatures;
+import cz.mg.vulkan.jna.structures.*;
 import cz.mg.vulkan.jna.types.VkBool32;
 import cz.mg.vulkan.jna.types.uint32_t;
 import cz.mg.vulkan.utilities.VulkanException;
@@ -35,14 +28,19 @@ public class Test {
     public static VkDebugUtilsEXTSimplified vkdus;
 
     public static void main(String[] args) {
+        ///////////////
+        /// LIBRARY ///
+        ///////////////
         vk = Vk.loadLibrary();
         vks = new VkSimplified(vk);
 
         TestInfo.printVulkanSupportedExtensions();
         TestInfo.printVulkanSupportedLayers();
 
+        ////////////////
+        /// INSTANCE ///
+        ////////////////
         StringArray enabledExtensions = new StringArray(new String[]{
-                "VK_KHR_surface",
                 "VK_EXT_debug_utils"
         });
 
@@ -58,12 +56,21 @@ public class Test {
                 enabledLayers
         );
 
+        ///////////////////////
+        /// PHYSICAL DEVICE ///
+        ///////////////////////
+        VkPhysicalDeviceArray physicalDevices = vks.vkEnumeratePhysicalDevices(instance.byValue(true, true));
+        TestInfo.printVulkanDevices(physicalDevices, false);
+
+        ///////////////////////
+        /// DEBUG EXTENSION ///
+        ///////////////////////
         vkdu = VkDebugUtilsEXT.load(instance, vks);
         vkdus = new VkDebugUtilsEXTSimplified(vkdu);
 
-        VkPhysicalDeviceArray physicalDevices = vks.vkEnumeratePhysicalDevices(instance.byValue(true, true));
-        TestInfo.printVulkanDevices(physicalDevices, true);
-
+        ///////////////////////
+        /// DEBUG MESSENGER ///
+        ///////////////////////
         VkDebugUtilsMessageSeverityFlagsEXT messageSeverity = new VkDebugUtilsMessageSeverityFlagsEXT(
                 VkDebugUtilsMessageSeverityFlagsEXT.VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT |
                 VkDebugUtilsMessageSeverityFlagsEXT.VK_DEBUG_UTILS_MESSAGE_SEVERITY_WARNING_BIT_EXT
@@ -79,17 +86,41 @@ public class Test {
 
         VkDebugUtilsMessengerEXT.ByValue messenger = vkdus.vkCreateDebugUtilsMessengerEXT(instance, messageSeverity, messageType, debugCallback, null);
 
+        //////////////////////
+        /// LOGICAL DEVICE ///
+        //////////////////////
         VkPhysicalDevice.ByValue selectedPhysicalDevice = physicalDevices.get(0).byValue(true, true);
         VkPhysicalDeviceFeatures.ByReference features = new VkPhysicalDeviceFeatures.ByReference();
-        VkDevice.ByValue device_value = vks.vkCreateDevice(selectedPhysicalDevice, features, 0).byValue(true, true);
+        VkDevice.ByValue logicalDevice = vks.vkCreateDevice(selectedPhysicalDevice, features, 0).byValue(true, true);
         System.out.println("Logical device created successfully!");
 
-        VkQueue.ByValue queue = vks.vkGetDeviceQueue(device_value, 0, 0);
+        /////////////
+        /// QUEUE ///
+        /////////////
+        VkQueue.ByValue queue = vks.vkGetDeviceQueue(logicalDevice, 0, 0);
         System.out.println("Got 1st queue.");
 
-        // TODO
+        /////////////
+        /// IMAGE ///
+        /////////////
+        VkImage.ByValue image = vks.vkCreateImage(
+                logicalDevice,
+                new VkImageType(VkImageType.VK_IMAGE_TYPE_2D),
+                640, 480, 1,
+                new VkFormat(VkFormat.VK_FORMAT_R8G8B8A8_UNORM),
+                new VkSampleCountFlags(VkSampleCountFlags.VK_SAMPLE_COUNT_1_BIT),
+                new VkImageTiling(VkImageTiling.VK_IMAGE_TILING_OPTIMAL),
+                new VkImageUsageFlags(VkImageUsageFlags.VK_IMAGE_USAGE_TRANSFER_SRC_BIT | VkImageUsageFlags.VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT),
+                new VkSharingMode(VkSharingMode.VK_SHARING_MODE_EXCLUSIVE),
+                new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_UNDEFINED)
+        );
+        System.out.println("Image created successfully!");
 
-        vks.vkDestroyDevice(device_value);
+        ///////////////
+        /// CLEANUP ///
+        ///////////////
+        vks.vkDestroyImage(logicalDevice, image);
+        vks.vkDestroyDevice(logicalDevice);
         vkdus.vkDestroyDebugUtilsMessengerEXT(instance, messenger);
         vks.vkDestroyInstance(instance);
     }

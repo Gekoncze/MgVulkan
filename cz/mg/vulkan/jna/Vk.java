@@ -3,13 +3,11 @@ package cz.mg.vulkan.jna;
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
-import cz.mg.vulkan.jna.handles.VkDevice;
-import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
-import cz.mg.vulkan.jna.handles.VkQueue;
+import cz.mg.vulkan.jna.enums.*;
+import cz.mg.vulkan.jna.handles.*;
 import cz.mg.vulkan.jna.structures.*;
-import cz.mg.vulkan.jna.handles.VkInstance;
-import cz.mg.vulkan.jna.enums.VkResult;
-import cz.mg.vulkan.jna.types.uint32_t;
+import cz.mg.vulkan.jna.types.*;
+import cz.mg.vulkan.jna.flags.*;
 
 
 /**
@@ -145,4 +143,34 @@ public interface Vk extends Library {
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetDeviceQueue.html">khronos documentation</a>
      **/
     public void vkGetDeviceQueue(VkDevice.ByValue device, uint32_t queueFamilyIndex, uint32_t queueIndex, VkQueue.ByReference pQueue);
+
+    /**
+     *  VkResult.ByValue vkCreateImage(VkDevice.ByValue device, VkImageCreateInfo.ByReference pCreateInfo, VkAllocationCallbacks.ByReference pAllocator, VkImage.ByReference pImage);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreateImage.html">khronos documentation</a>
+     **/
+    public VkResult.ByValue vkCreateImage(VkDevice.ByValue device, VkImageCreateInfo.ByReference pCreateInfo, VkAllocationCallbacks.ByReference pAllocator, VkImage.ByReference pImage);
+
+    /**
+     *  void vkDestroyImage(VkDevice.ByValue device, VkImage.ByValue image, VkAllocationCallbacks.ByReference pAllocator);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyImage.html">khronos documentation</a>
+     **/
+    public void vkDestroyImage(VkDevice.ByValue device, VkImage.ByValue image, VkAllocationCallbacks.ByReference pAllocator);
+
+    /**
+     *  VkResult.ByValue vkCreateImageView(VkDevice.ByValue device, VkImageViewCreateInfo.ByReference pCreateInfo, VkAllocationCallbacks.ByReference pAllocator, VkImageView.ByReference pView);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreateImageView.html">khronos documentation</a>
+     **/
+    public VkResult.ByValue vkCreateImageView(VkDevice.ByValue device, VkImageViewCreateInfo.ByReference pCreateInfo, VkAllocationCallbacks.ByReference pAllocator, VkImageView.ByReference pView);
+
+    /**
+     *  void vkDestroyImageView(VkDevice.ByValue device, VkImageView.ByValue imageView, VkAllocationCallbacks.ByReference pAllocator);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyImageView.html">khronos documentation</a>
+     **/
+    public void vkDestroyImageView(VkDevice.ByValue device, VkImageView.ByValue imageView, VkAllocationCallbacks.ByReference pAllocator);
+
+    /**
+     *  VkResult.ByValue vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice.ByValue physicalDevice, VkFormat.ByValue format, VkImageType.ByValue type, VkImageTiling.ByValue tiling, VkImageUsageFlags.ByValue usage, VkImageCreateFlags.ByValue flags, VkImageFormatProperties.ByReference pImageFormatProperties);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties.html">khronos documentation</a>
+     **/
+    public VkResult.ByValue vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice.ByValue physicalDevice, VkFormat.ByValue format, VkImageType.ByValue type, VkImageTiling.ByValue tiling, VkImageUsageFlags.ByValue usage, VkImageCreateFlags.ByValue flags, VkImageFormatProperties.ByReference pImageFormatProperties);
 }

@@ -1,19 +1,13 @@
 package cz.mg.vulkan.jna;
 
 import com.sun.jna.Pointer;
-import cz.mg.vulkan.jna.flags.VkDeviceCreateFlags;
-import cz.mg.vulkan.jna.flags.VkDeviceQueueCreateFlags;
-import cz.mg.vulkan.jna.handles.VkDevice;
-import cz.mg.vulkan.jna.handles.VkQueue;
+import cz.mg.vulkan.jna.handles.*;
 import cz.mg.vulkan.utilities.VulkanException;
 import cz.mg.vulkan.jna.arrays.*;
-import cz.mg.vulkan.jna.enums.VkResult;
-import cz.mg.vulkan.jna.enums.VkStructureType;
-import cz.mg.vulkan.jna.flags.VkInstanceCreateFlags;
-import cz.mg.vulkan.jna.handles.VkInstance;
-import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
+import cz.mg.vulkan.jna.enums.*;
 import cz.mg.vulkan.jna.structures.*;
-import cz.mg.vulkan.jna.types.uint32_t;
+import cz.mg.vulkan.jna.types.*;
+import cz.mg.vulkan.jna.flags.*;
 import static cz.mg.vulkan.jna.enums.VkResult.*;
 import static cz.mg.vulkan.jna.enums.VkStructureType.*;
 import static com.sun.jna.Pointer.NULL;
@@ -218,5 +212,77 @@ public class VkSimplified {
         VkQueue.ByReference queue = new VkQueue.ByReference();
         vk.vkGetDeviceQueue(device, new uint32_t(queueFamilyIndex), new uint32_t(queueIndex), queue);
         return queue.byValue(true, true);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreateImage.html">khronos documentation</a>
+     **/
+    public VkImage.ByValue vkCreateImage(VkDevice.ByValue device, VkImageType imageType, int width, int height, int depth, VkFormat format, VkSampleCountFlags sampleCountFlags, VkImageTiling imageTiling, VkImageUsageFlags imageUsage, VkSharingMode sharingMode, VkImageLayout imageLayout){
+        VkImageCreateInfo.ByReference imageCreateInfo = new VkImageCreateInfo.ByReference();
+        imageCreateInfo.sType = new VkStructureType(VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO);
+        imageCreateInfo.pNext = null;
+        imageCreateInfo.flags = new VkImageCreateFlags(0);
+        imageCreateInfo.imageType = imageType;
+        imageCreateInfo.format = format;
+        imageCreateInfo.extent = new VkExtent3D(width, height, depth);
+        imageCreateInfo.mipLevels = new uint32_t(1);
+        imageCreateInfo.arrayLayers = new uint32_t(1);
+        imageCreateInfo.samples = sampleCountFlags;
+        imageCreateInfo.tiling = imageTiling;
+        imageCreateInfo.usage = imageUsage;
+        imageCreateInfo.sharingMode = sharingMode;
+        imageCreateInfo.queueFamilyIndexCount = new uint32_t(0);
+        imageCreateInfo.pQueueFamilyIndices = null;
+        imageCreateInfo.initialLayout = imageLayout;
+
+        VkImage.ByReference pimage = new VkImage.ByReference();
+        VkResult result = vk.vkCreateImage(device, imageCreateInfo, null, pimage);
+        if(result.value != VkResult.VK_SUCCESS) throw new VulkanException(result, "vkCreateImage");
+        return pimage.byValue(true, true);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyImage.html">khronos documentation</a>
+     **/
+    public void vkDestroyImage(VkDevice.ByValue device, VkImage.ByValue image){
+        vk.vkDestroyImage(device, image, null);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreateImageView.html">khronos documentation</a>
+     **/
+    public VkImageView.ByValue vkCreateImageView(VkDevice.ByValue device, VkImage.ByValue image, VkImageViewType viewType, VkFormat format, VkComponentMapping componentMapping, VkImageSubresourceRange subresourceRange){
+        VkImageViewCreateInfo.ByReference pCreateInfo = new VkImageViewCreateInfo.ByReference();
+        pCreateInfo.sType = new VkStructureType(VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO);
+        pCreateInfo.pNext = null;
+        pCreateInfo.flags = new VkImageViewCreateFlags(0);
+        pCreateInfo.image = image;
+        pCreateInfo.viewType = viewType;
+        pCreateInfo.format = format;
+        pCreateInfo.components = componentMapping;
+        pCreateInfo.subresourceRange = subresourceRange;
+
+        VkImageView.ByReference view = new VkImageView.ByReference();
+        VkResult.ByValue result = vk.vkCreateImageView(device, pCreateInfo, null, view);
+        if(result.value != VK_SUCCESS) throw new VulkanException(result, "vkCreateImageView");
+        return view.byValue(true, true);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyImageView.html">khronos documentation</a>
+     **/
+    public void vkDestroyImageView(VkDevice.ByValue device, VkImageView.ByValue imageView){
+        vk.vkDestroyImageView(device, imageView, null);
+    }
+
+    /**
+     *  VkResult.ByValue vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice.ByValue physicalDevice, VkFormat.ByValue format, VkImageType.ByValue type, VkImageTiling.ByValue tiling, VkImageUsageFlags.ByValue usage, VkImageCreateFlags.ByValue flags, VkImageFormatProperties.ByReference pImageFormatProperties);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties.html">khronos documentation</a>
+     **/
+    public VkImageFormatProperties.ByValue vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice.ByValue physicalDevice, VkFormat.ByValue format, VkImageType.ByValue type, VkImageTiling.ByValue tiling, VkImageUsageFlags.ByValue usage, VkImageCreateFlags.ByValue flags){
+        VkImageFormatProperties.ByReference properties = new VkImageFormatProperties.ByReference();
+        VkResult result = vk.vkGetPhysicalDeviceImageFormatProperties(physicalDevice, format, type, tiling, usage, flags, properties);
+        if(result.value != VK_SUCCESS) throw new VulkanException(result, "vkGetPhysicalDeviceImageFormatProperties");
+        return properties.byValue(true, true);
     }
 }
