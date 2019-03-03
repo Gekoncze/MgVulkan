@@ -1,0 +1,21 @@
+package cz.mg.vulkan.structures;
+
+import cz.mg.vulkan.enums.*;
+import cz.mg.vulkan.flags.*;
+import cz.mg.vulkan.jna.structures.*;
+import static cz.mg.vulkan.jna.Vk.*;
+
+
+public class NEW_NAME {
+    public final OLD_NAME structure;
+
+    public NEW_NAME() {
+        this.structure = new OLD_NAME();
+    }
+
+    public NEW_NAME(OLD_NAME structure) {
+        this.structure = structure;
+    }
+
+GETTERS
+}

@@ -1,0 +1,22 @@
+package cz.mg.vulkan.enums;
+
+import cz.mg.vulkan.jna.enums.OLD_NAME;
+
+
+public enum NEW_NAME {
+VALUES
+
+    public static NEW_NAME fromNativeEnum(OLD_NAME e){
+        switch(e.value){
+FROM_CASES
+            default: return null;
+        }
+    }
+
+    public OLD_NAME toNativeEnum(){
+        switch(this){
+TO_CASES
+            default: throw new RuntimeException();
+        }
+    }
+}

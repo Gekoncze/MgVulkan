@@ -8,5 +8,7 @@
         maybe put in utilities
 
 ### DONE
-image and image view
-    implemented all oop and native classes + test
+transformator
+    added helper classes for automated code transformations
+        from c types to native classes
+        from native classes to oop classes

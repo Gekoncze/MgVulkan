@@ -1,0 +1,44 @@
+package cz.mg.vulkan.jna.enums;
+
+import com.sun.jna.Pointer;
+import com.sun.jna.Structure;
+
+
+/**
+ *  typedef enum NAME
+ *  @see <a href = "https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/NAME.html">khronos documentation</a>
+ **/
+public class NAME extends Structure {
+PROPERTIES
+
+    public int value;
+
+    public NAME() {
+    }
+
+    public NAME(int value) {
+        this.value = value;
+    }
+
+    public NAME(Pointer p) {
+        super(p);
+    }
+
+    public static class ByReference extends NAME implements Structure.ByReference {
+        public ByReference() {
+        }
+
+        public ByReference(int value) {
+            super(value);
+        }
+    }
+
+    public static class ByValue extends NAME implements Structure.ByValue {
+        public ByValue() {
+        }
+
+        public ByValue(int value) {
+            super(value);
+        }
+    }
+}
