@@ -2,13 +2,10 @@
     command buffer
     framebuffer
     render pass
+    pipeline
 
 ### NOW
-    method to get a list of all available formats for given image requirements + priorities
-        maybe put in utilities
+
 
 ### DONE
-transformator
-    added helper classes for automated code transformations
-        from c types to native classes
-        from native classes to oop classes
+added method to get a list of available formats for image creation
