@@ -1,4 +1,4 @@
-package test;
+package test.vulkan;
 
 import cz.mg.vulkan.*;
 import cz.mg.vulkan.callbacks.VulkanDebugUtilsMessengerCallbackEXT;
@@ -8,7 +8,7 @@ import cz.mg.vulkan.flags.*;
 import cz.mg.vulkan.handles.*;
 import cz.mg.vulkan.structures.*;
 import cz.mg.vulkan.utilities.Version;
-import static test.TestInfo2.*;
+import static test.vulkan.TestInfo2.*;
 
 
 public class Test2 {

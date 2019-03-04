@@ -1,22 +1,14 @@
-package test;
+package test.vk;
 
 import cz.mg.vulkan.jna.arrays.VkExtensionPropertiesArray;
 import cz.mg.vulkan.jna.arrays.VkLayerPropertiesArray;
 import cz.mg.vulkan.jna.arrays.VkPhysicalDeviceArray;
 import cz.mg.vulkan.jna.arrays.VkQueueFamilyPropertiesArray;
-import cz.mg.vulkan.jna.enums.VkFormat;
-import cz.mg.vulkan.jna.enums.VkImageTiling;
-import cz.mg.vulkan.jna.enums.VkImageType;
-import cz.mg.vulkan.jna.flags.VkImageCreateFlags;
-import cz.mg.vulkan.jna.flags.VkImageUsageFlags;
 import cz.mg.vulkan.jna.handles.VkPhysicalDevice;
 import cz.mg.vulkan.jna.structures.*;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-
 import static cz.mg.vulkan.jna.utilities.ToString.*;
-import static test.Test.vks;
+import static test.vk.Test.vks;
 
 
 public class TestInfo {

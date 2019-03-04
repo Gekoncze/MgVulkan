@@ -1,11 +1,9 @@
-package test;
+package test.vk;
 
 import com.sun.jna.Pointer;
 import cz.mg.vulkan.jna.Vk;
 import cz.mg.vulkan.jna.VkSimplified;
-import cz.mg.vulkan.jna.arrays.FloatArray;
 import cz.mg.vulkan.jna.arrays.StringArray;
-import cz.mg.vulkan.jna.arrays.VkDeviceQueueCreateInfoArray;
 import cz.mg.vulkan.jna.arrays.VkPhysicalDeviceArray;
 import cz.mg.vulkan.jna.callbacks.PFN_vkDebugUtilsMessengerCallbackEXT;
 import cz.mg.vulkan.jna.enums.*;
@@ -15,10 +13,8 @@ import cz.mg.vulkan.jna.flags.*;
 import cz.mg.vulkan.jna.handles.*;
 import cz.mg.vulkan.jna.structures.*;
 import cz.mg.vulkan.jna.types.VkBool32;
-import cz.mg.vulkan.jna.types.uint32_t;
-import cz.mg.vulkan.utilities.VulkanException;
+
 import static cz.mg.vulkan.jna.Vk.*;
-import static cz.mg.vulkan.jna.enums.VkStructureType.*;
 
 
 public class Test {
@@ -115,6 +111,8 @@ public class Test {
                 new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_UNDEFINED)
         );
         System.out.println("Image created successfully!");
+
+
 
         ///////////////
         /// CLEANUP ///

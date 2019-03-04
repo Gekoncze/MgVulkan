@@ -3,9 +3,14 @@
     framebuffer
     render pass
     pipeline
+    shaders
 
 ### NOW
 
 
 ### DONE
-added method to get a list of available formats for image creation
+shader preparations
+    deleted some unused files
+    moved some test files around in new packages
+    added fragment and vertex shader files
+    added compiled shader files in spir-v format

@@ -1,4 +1,4 @@
-package test;
+package test.vulkan;
 
 import cz.mg.collections.array.ReadonlyArray;
 import cz.mg.vulkan.*;
