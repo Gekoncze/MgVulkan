@@ -276,7 +276,6 @@ public class VkSimplified {
     }
 
     /**
-     *  VkResult.ByValue vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice.ByValue physicalDevice, VkFormat.ByValue format, VkImageType.ByValue type, VkImageTiling.ByValue tiling, VkImageUsageFlags.ByValue usage, VkImageCreateFlags.ByValue flags, VkImageFormatProperties.ByReference pImageFormatProperties);
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties.html">khronos documentation</a>
      **/
     public VkImageFormatProperties.ByValue vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice.ByValue physicalDevice, VkFormat.ByValue format, VkImageType.ByValue type, VkImageTiling.ByValue tiling, VkImageUsageFlags.ByValue usage, VkImageCreateFlags.ByValue flags){
@@ -284,5 +283,53 @@ public class VkSimplified {
         VkResult result = vk.vkGetPhysicalDeviceImageFormatProperties(physicalDevice, format, type, tiling, usage, flags, properties);
         if(result.value != VK_SUCCESS) throw new VulkanException(result, "vkGetPhysicalDeviceImageFormatProperties");
         return properties.byValue(true, true);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreateShaderModule.html">khronos documentation</a>
+     **/
+    public VkShaderModule.ByValue vkCreateShaderModule(VkDevice.ByValue device, int codeSize, Pointer code){
+        VkShaderModule.ByReference shaderModule = new VkShaderModule.ByReference();
+        VkShaderModuleCreateInfo.ByReference pCreateInfo = new VkShaderModuleCreateInfo.ByReference();
+        pCreateInfo.sType = new VkStructureType(VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO);
+        pCreateInfo.pNext = null;
+        pCreateInfo.flags = new VkShaderModuleCreateFlags();
+        pCreateInfo.codeSize = new size_t(codeSize);
+        pCreateInfo.pCode = code;
+        VkResult result = vk.vkCreateShaderModule(device, pCreateInfo, null, shaderModule);
+        if(result.value != VK_SUCCESS) throw new VulkanException(result, "vkCreateShaderModule");
+        return shaderModule.byValue(true, true);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyShaderModule.html">khronos documentation</a>
+     **/
+    public void vkDestroyShaderModule(VkDevice.ByValue device, VkShaderModule.ByValue shaderModule){
+        vk.vkDestroyShaderModule(device, shaderModule, null);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreatePipelineLayout.html">khronos documentation</a>
+     **/
+    public VkPipelineLayout.ByValue vkCreatePipelineLayout(VkDevice.ByValue device){
+        VkPipelineLayout.ByReference pipelineLayout = new VkPipelineLayout.ByReference();
+        VkPipelineLayoutCreateInfo.ByReference pCreateInfo = new VkPipelineLayoutCreateInfo.ByReference();
+        pCreateInfo.sType = new VkStructureType(VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO);
+        pCreateInfo.pNext = null;
+        pCreateInfo.flags = new VkPipelineLayoutCreateFlags();
+        pCreateInfo.setLayoutCount = new uint32_t(0);
+        pCreateInfo.pSetLayouts = null;
+        pCreateInfo.pushConstantRangeCount = new uint32_t(0);
+        pCreateInfo.pPushConstantRanges = null;
+        VkResult result = vk.vkCreatePipelineLayout(device, pCreateInfo, null, pipelineLayout);
+        if(result.value != VK_SUCCESS) throw new VulkanException(result, "vkCreatePipelineLayout");
+        return pipelineLayout.byValue(true, true);
+    }
+
+    /**
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyPipelineLayout.html">khronos documentation</a>
+     **/
+    public void vkDestroyPipelineLayout(VkDevice.ByValue device, VkPipelineLayout.ByValue pipelineLayout){
+        vk.vkDestroyPipelineLayout(device, pipelineLayout, null);
     }
 }

@@ -8,9 +8,9 @@ import java.io.InputStreamReader;
 
 
 public class FlagsGenerator extends javax.swing.JFrame {
-
     public FlagsGenerator() {
         initComponents();
+        setTitle(getClass().getSimpleName());
     }
 
     private void generateSimple(){
@@ -82,21 +82,18 @@ public class FlagsGenerator extends javax.swing.JFrame {
 //    }
 
     /*
-        VK_PHYSICAL_DEVICE_TYPE_OTHER    <- old property name
-        VkPhysicalDeviceType             <- old structure name
-        Vk Physical Device Type *****    <- old structure name + spaces => cut size
-                                OTHER    <- result
+        VK_PHYSICAL_DEVICE_TYPE_OTHER_EXT    <- old property name
+        VkPhysicalDeviceTypeEXT              <- old structure name
+        Vk Physical Device Type *****        <- old structure name + spaces => cut size
+                                OTHER        <- result
     */
     private static String genNewPropertyName(String oldPropertyName, String oldStructureName){
         oldStructureName = replaceLast(oldStructureName, "Flags", "");
-        boolean ext = oldStructureName.endsWith("EXT");
-        if(ext) oldStructureName = oldStructureName.replace("EXT", "");
+        oldStructureName = replaceLast(oldStructureName, "EXT", "");
         int cutSize = capitalCount(oldStructureName) + oldStructureName.length();
         String result = oldPropertyName.substring(cutSize);
-        if(result.endsWith("_EXT")) result = replaceLast(result, "_EXT", "");
-        if(result.endsWith("_KHR")) result = replaceLast(result, "_KHR", "");
-        if(result.endsWith("_KHX")) result = replaceLast(result, "_KHX", "");
-        if(result.endsWith("_BIT")) result = replaceLast(result, "_BIT", "");
+        result = replaceLast(result, "_BIT", "");
+        result = replaceLast(result, "_BIT_EXT", "_EXT");
         return result;
     }
 

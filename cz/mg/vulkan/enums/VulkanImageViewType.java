@@ -1,40 +1,42 @@
 package cz.mg.vulkan.enums;
 
 import cz.mg.vulkan.jna.enums.VkImageViewType;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
-public enum VulkanImageViewType {
-    D1,
-    D2,
-    D3,
-    CUBE,
-    D1_ARRAY,
-    D2_ARRAY,
-    CUBE_ARRAY;
+public class VulkanImageViewType {
+    public static final int D1 = VkImageViewType.VK_IMAGE_VIEW_TYPE_1D;
+    public static final int D2 = VkImageViewType.VK_IMAGE_VIEW_TYPE_2D;
+    public static final int D3 = VkImageViewType.VK_IMAGE_VIEW_TYPE_3D;
+    public static final int CUBE = VkImageViewType.VK_IMAGE_VIEW_TYPE_CUBE;
+    public static final int D1_ARRAY = VkImageViewType.VK_IMAGE_VIEW_TYPE_1D_ARRAY;
+    public static final int D2_ARRAY = VkImageViewType.VK_IMAGE_VIEW_TYPE_2D_ARRAY;
+    public static final int CUBE_ARRAY = VkImageViewType.VK_IMAGE_VIEW_TYPE_CUBE_ARRAY;
 
-    public static VulkanImageViewType fromNativeEnum(VkImageViewType e){
-        switch(e.value){
-            case VkImageViewType.VK_IMAGE_VIEW_TYPE_1D: return D1;
-            case VkImageViewType.VK_IMAGE_VIEW_TYPE_2D: return D2;
-            case VkImageViewType.VK_IMAGE_VIEW_TYPE_3D: return D3;
-            case VkImageViewType.VK_IMAGE_VIEW_TYPE_CUBE: return CUBE;
-            case VkImageViewType.VK_IMAGE_VIEW_TYPE_1D_ARRAY: return D1_ARRAY;
-            case VkImageViewType.VK_IMAGE_VIEW_TYPE_2D_ARRAY: return D2_ARRAY;
-            case VkImageViewType.VK_IMAGE_VIEW_TYPE_CUBE_ARRAY: return CUBE_ARRAY;
-            default: return null;
-        }
+    public final VkImageViewType enums;
+
+    public VulkanImageViewType() {
+        this(0);
     }
 
-    public VkImageViewType toNativeEnum(){
-        switch(this){
-            case D1: return new VkImageViewType(VkImageViewType.VK_IMAGE_VIEW_TYPE_1D);
-            case D2: return new VkImageViewType(VkImageViewType.VK_IMAGE_VIEW_TYPE_2D);
-            case D3: return new VkImageViewType(VkImageViewType.VK_IMAGE_VIEW_TYPE_3D);
-            case CUBE: return new VkImageViewType(VkImageViewType.VK_IMAGE_VIEW_TYPE_CUBE);
-            case D1_ARRAY: return new VkImageViewType(VkImageViewType.VK_IMAGE_VIEW_TYPE_1D_ARRAY);
-            case D2_ARRAY: return new VkImageViewType(VkImageViewType.VK_IMAGE_VIEW_TYPE_2D_ARRAY);
-            case CUBE_ARRAY: return new VkImageViewType(VkImageViewType.VK_IMAGE_VIEW_TYPE_CUBE_ARRAY);
-            default: throw new RuntimeException();
-        }
+    public VulkanImageViewType(int value) {
+        this(new VkImageViewType(value));
+    }
+
+    public VulkanImageViewType(VkImageViewType enums) {
+        this.enums = enums;
+    }
+
+    public boolean is(int value){
+        return this.enums.value == value;
+    }
+
+    public void set(int value){
+        this.enums.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.constantToString(enums.value, VkImageViewType.class);
     }
 }

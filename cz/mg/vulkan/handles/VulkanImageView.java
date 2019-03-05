@@ -23,8 +23,8 @@ public class VulkanImageView {
         this.handle = parent.getParent().getParent().getParent().getParent().vks.vkCreateImageView(
                 parent.getParent().handle,
                 parent.handle,
-                viewType.toNativeEnum(),
-                format.toNativeEnum(),
+                viewType.enums,
+                format.enums,
                 componentMapping.structure,
                 subresourceRange.structure
         );

@@ -8,9 +8,9 @@ import java.io.InputStreamReader;
 
 
 public class FlagGenerator extends javax.swing.JFrame {
-
     public FlagGenerator() {
         initComponents();
+        setTitle(getClass().getSimpleName());
     }
     
     private void generateSimple(){

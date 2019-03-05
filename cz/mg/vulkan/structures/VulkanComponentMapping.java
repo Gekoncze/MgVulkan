@@ -16,18 +16,18 @@ public class VulkanComponentMapping {
     }
 
     public VulkanComponentSwizzle getR(){
-        return VulkanComponentSwizzle.fromNativeEnum(structure.r);
+        return new VulkanComponentSwizzle(structure.r);
     }
 
     public VulkanComponentSwizzle getG(){
-        return VulkanComponentSwizzle.fromNativeEnum(structure.g);
+        return new VulkanComponentSwizzle(structure.g);
     }
 
     public VulkanComponentSwizzle getB(){
-        return VulkanComponentSwizzle.fromNativeEnum(structure.b);
+        return new VulkanComponentSwizzle(structure.b);
     }
 
     public VulkanComponentSwizzle getA(){
-        return VulkanComponentSwizzle.fromNativeEnum(structure.a);
+        return new VulkanComponentSwizzle(structure.a);
     }
 }

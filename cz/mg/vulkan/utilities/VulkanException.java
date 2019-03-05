@@ -23,7 +23,7 @@ public class VulkanException extends RuntimeException {
         super(genMessage(result, functionName, parameters));
         this.functionName = functionName;
         this.parameters = parameters;
-        this.result = VulkanResult.fromNativeEnum(result);
+        this.result = new VulkanResult(result);
     }
 
     private static String genMessage(VkResult result, String functionName, String[] parameters){

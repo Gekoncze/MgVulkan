@@ -47,7 +47,7 @@ public class VulkanPhysicalDeviceProperties {
     }
 
     public VulkanPhysicalDeviceType getDeviceType(){
-        return VulkanPhysicalDeviceType.fromNativeEnum(structure.deviceType);
+        return new VulkanPhysicalDeviceType(structure.deviceType);
     }
 
     public String getDeviceName(){

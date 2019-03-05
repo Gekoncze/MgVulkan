@@ -8,19 +8,18 @@ import java.io.InputStreamReader;
 
 
 public class HandleGenerator extends javax.swing.JFrame {
-
     public HandleGenerator() {
         initComponents();
+        setTitle(getClass().getSimpleName());
     }
-    
-    /*
-        VK_DEFINE_HANDLE(VkPhysicalDevice)
-    */
     
     private void generateSimple(){
         throw new UnsupportedOperationException();
     }
-    
+
+    /*
+        VK_DEFINE_HANDLE(VkPhysicalDevice)
+    */
     private void generateComplex(){
         String input = jTextAreaInput.getText();
         String output = readAll();

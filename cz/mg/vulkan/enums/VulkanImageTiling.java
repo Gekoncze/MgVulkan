@@ -1,25 +1,37 @@
 package cz.mg.vulkan.enums;
 
 import cz.mg.vulkan.jna.enums.VkImageTiling;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
-public enum VulkanImageTiling {
-    OPTIMAL,
-    LINEAR;
+public class VulkanImageTiling {
+    public static final int OPTIMAL = VkImageTiling.VK_IMAGE_TILING_OPTIMAL;
+    public static final int LINEAR = VkImageTiling.VK_IMAGE_TILING_LINEAR;
 
-    public static VulkanImageTiling fromNativeEnum(VkImageTiling e){
-        switch(e.value){
-            case VkImageTiling.VK_IMAGE_TILING_OPTIMAL: return OPTIMAL;
-            case VkImageTiling.VK_IMAGE_TILING_LINEAR: return LINEAR;
-            default: return null;
-        }
+    public final VkImageTiling enums;
+
+    public VulkanImageTiling() {
+        this(0);
     }
 
-    public VkImageTiling toNativeEnum(){
-        switch(this){
-            case OPTIMAL: return new VkImageTiling(VkImageTiling.VK_IMAGE_TILING_OPTIMAL);
-            case LINEAR: return new VkImageTiling(VkImageTiling.VK_IMAGE_TILING_LINEAR);
-            default: throw new RuntimeException();
-        }
+    public VulkanImageTiling(int value) {
+        this(new VkImageTiling(value));
+    }
+
+    public VulkanImageTiling(VkImageTiling enums) {
+        this.enums = enums;
+    }
+
+    public boolean is(int value){
+        return this.enums.value == value;
+    }
+
+    public void set(int value){
+        this.enums.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.constantToString(enums.value, VkImageTiling.class);
     }
 }

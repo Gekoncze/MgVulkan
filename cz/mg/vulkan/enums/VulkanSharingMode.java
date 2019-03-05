@@ -1,25 +1,37 @@
 package cz.mg.vulkan.enums;
 
 import cz.mg.vulkan.jna.enums.VkSharingMode;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
-public enum VulkanSharingMode {
-    EXCLUSIVE,
-    CONCURRENT;
+public class VulkanSharingMode {
+    public static final int EXCLUSIVE = VkSharingMode.VK_SHARING_MODE_EXCLUSIVE;
+    public static final int CONCURRENT = VkSharingMode.VK_SHARING_MODE_CONCURRENT;
 
-    public static VulkanSharingMode fromNativeEnum(VkSharingMode e){
-        switch(e.value){
-            case VkSharingMode.VK_SHARING_MODE_EXCLUSIVE: return EXCLUSIVE;
-            case VkSharingMode.VK_SHARING_MODE_CONCURRENT: return CONCURRENT;
-            default: return null;
-        }
+    public final VkSharingMode enums;
+
+    public VulkanSharingMode() {
+        this(0);
     }
 
-    public VkSharingMode toNativeEnum(){
-        switch(this){
-            case EXCLUSIVE: return new VkSharingMode(VkSharingMode.VK_SHARING_MODE_EXCLUSIVE);
-            case CONCURRENT: return new VkSharingMode(VkSharingMode.VK_SHARING_MODE_CONCURRENT);
-            default: throw new RuntimeException();
-        }
+    public VulkanSharingMode(int value) {
+        this(new VkSharingMode(value));
+    }
+
+    public VulkanSharingMode(VkSharingMode enums) {
+        this.enums = enums;
+    }
+
+    public boolean is(int value){
+        return this.enums.value == value;
+    }
+
+    public void set(int value){
+        this.enums.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.constantToString(enums.value, VkSharingMode.class);
     }
 }

@@ -8,9 +8,9 @@ import java.io.InputStreamReader;
 
 
 public class HandleGenerator extends javax.swing.JFrame {
-
     public HandleGenerator() {
         initComponents();
+        setTitle(getClass().getSimpleName());
     }
 
     private void generateSimple(){

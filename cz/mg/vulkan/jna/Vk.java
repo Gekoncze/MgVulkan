@@ -173,4 +173,28 @@ public interface Vk extends Library {
      *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkGetPhysicalDeviceImageFormatProperties.html">khronos documentation</a>
      **/
     public VkResult.ByValue vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice.ByValue physicalDevice, VkFormat.ByValue format, VkImageType.ByValue type, VkImageTiling.ByValue tiling, VkImageUsageFlags.ByValue usage, VkImageCreateFlags.ByValue flags, VkImageFormatProperties.ByReference pImageFormatProperties);
+
+    /**
+     *  VkResult.ByValue vkCreateShaderModule(VkDevice.ByValue device, VkShaderModuleCreateInfo.ByReference pCreateInfo, VkAllocationCallbacks.ByReference pAllocator, VkShaderModule.ByReference pShaderModule);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreateShaderModule.html">khronos documentation</a>
+     **/
+    public VkResult.ByValue vkCreateShaderModule(VkDevice.ByValue device, VkShaderModuleCreateInfo.ByReference pCreateInfo, VkAllocationCallbacks.ByReference pAllocator, VkShaderModule.ByReference pShaderModule);
+
+    /**
+     *  void vkDestroyShaderModule(VkDevice.ByValue device, VkShaderModule.ByValue shaderModule, VkAllocationCallbacks.ByReference pAllocator);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyShaderModule.html">khronos documentation</a>
+     **/
+    public void vkDestroyShaderModule(VkDevice.ByValue device, VkShaderModule.ByValue shaderModule, VkAllocationCallbacks.ByReference pAllocator);
+
+    /**
+     *  VkResult.ByValue vkCreatePipelineLayout(VkDevice.ByValue device, VkPipelineLayoutCreateInfo.ByReference pCreateInfo, VkAllocationCallbacks.ByReference pAllocator, VkPipelineLayout.ByReference pPipelineLayout);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkCreatePipelineLayout.html">khronos documentation</a>
+     **/
+    public VkResult.ByValue vkCreatePipelineLayout(VkDevice.ByValue device, VkPipelineLayoutCreateInfo.ByReference pCreateInfo, VkAllocationCallbacks.ByReference pAllocator, VkPipelineLayout.ByReference pPipelineLayout);
+
+    /**
+     *  void vkDestroyPipelineLayout(VkDevice.ByValue device, VkPipelineLayout.ByValue pipelineLayout, VkAllocationCallbacks.ByReference pAllocator);
+     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/vkDestroyPipelineLayout.html">khronos documentation</a>
+     **/
+    public void vkDestroyPipelineLayout(VkDevice.ByValue device, VkPipelineLayout.ByValue pipelineLayout, VkAllocationCallbacks.ByReference pAllocator);
 }

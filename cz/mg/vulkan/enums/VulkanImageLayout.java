@@ -1,58 +1,50 @@
 package cz.mg.vulkan.enums;
 
 import cz.mg.vulkan.jna.enums.VkImageLayout;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
-public enum VulkanImageLayout {
-    UNDEFINED,
-    GENERAL,
-    COLOR_ATTACHMENT_OPTIMAL,
-    DEPTH_STENCIL_ATTACHMENT_OPTIMAL,
-    DEPTH_STENCIL_READ_ONLY_OPTIMAL,
-    SHADER_READ_ONLY_OPTIMAL,
-    TRANSFER_SRC_OPTIMAL,
-    TRANSFER_DST_OPTIMAL,
-    PREINITIALIZED,
-    DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL,
-    DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL,
-    PRESENT_SRC,
-    SHARED_PRESENT;
+public class VulkanImageLayout {
+    public static final int UNDEFINED = VkImageLayout.VK_IMAGE_LAYOUT_UNDEFINED;
+    public static final int GENERAL = VkImageLayout.VK_IMAGE_LAYOUT_GENERAL;
+    public static final int COLOR_ATTACHMENT_OPTIMAL = VkImageLayout.VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL;
+    public static final int DEPTH_STENCIL_ATTACHMENT_OPTIMAL = VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL;
+    public static final int DEPTH_STENCIL_READ_ONLY_OPTIMAL = VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_STENCIL_READ_ONLY_OPTIMAL;
+    public static final int SHADER_READ_ONLY_OPTIMAL = VkImageLayout.VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+    public static final int TRANSFER_SRC_OPTIMAL = VkImageLayout.VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL;
+    public static final int TRANSFER_DST_OPTIMAL = VkImageLayout.VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL;
+    public static final int PREINITIALIZED = VkImageLayout.VK_IMAGE_LAYOUT_PREINITIALIZED;
+    public static final int DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL = VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL;
+    public static final int DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL = VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL;
+    public static final int PRESENT_SRC_KHR = VkImageLayout.VK_IMAGE_LAYOUT_PRESENT_SRC_KHR;
+    public static final int SHARED_PRESENT_KHR = VkImageLayout.VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR;
+    public static final int DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL_KHR = VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL_KHR;
+    public static final int DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR = VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR;
 
-    public static VulkanImageLayout fromNativeEnum(VkImageLayout e){
-        switch(e.value){
-            case VkImageLayout.VK_IMAGE_LAYOUT_UNDEFINED: return UNDEFINED;
-            case VkImageLayout.VK_IMAGE_LAYOUT_GENERAL: return GENERAL;
-            case VkImageLayout.VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL: return COLOR_ATTACHMENT_OPTIMAL;
-            case VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL: return DEPTH_STENCIL_ATTACHMENT_OPTIMAL;
-            case VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_STENCIL_READ_ONLY_OPTIMAL: return DEPTH_STENCIL_READ_ONLY_OPTIMAL;
-            case VkImageLayout.VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL: return SHADER_READ_ONLY_OPTIMAL;
-            case VkImageLayout.VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL: return TRANSFER_SRC_OPTIMAL;
-            case VkImageLayout.VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL: return TRANSFER_DST_OPTIMAL;
-            case VkImageLayout.VK_IMAGE_LAYOUT_PREINITIALIZED: return PREINITIALIZED;
-            case VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL: return DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL;
-            case VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL: return DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL;
-            case VkImageLayout.VK_IMAGE_LAYOUT_PRESENT_SRC_KHR: return PRESENT_SRC;
-            case VkImageLayout.VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR: return SHARED_PRESENT;
-            default: return null;
-        }
+    public final VkImageLayout enums;
+
+    public VulkanImageLayout() {
+        this(0);
     }
 
-    public VkImageLayout toNativeEnum(){
-        switch(this){
-            case UNDEFINED: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_UNDEFINED);
-            case GENERAL: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_GENERAL);
-            case COLOR_ATTACHMENT_OPTIMAL: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL);
-            case DEPTH_STENCIL_ATTACHMENT_OPTIMAL: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL);
-            case DEPTH_STENCIL_READ_ONLY_OPTIMAL: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_STENCIL_READ_ONLY_OPTIMAL);
-            case SHADER_READ_ONLY_OPTIMAL: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
-            case TRANSFER_SRC_OPTIMAL: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL);
-            case TRANSFER_DST_OPTIMAL: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
-            case PREINITIALIZED: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_PREINITIALIZED);
-            case DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL);
-            case DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL);
-            case PRESENT_SRC: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_PRESENT_SRC_KHR);
-            case SHARED_PRESENT: return new VkImageLayout(VkImageLayout.VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR);
-            default: throw new RuntimeException();
-        }
+    public VulkanImageLayout(int value) {
+        this(new VkImageLayout(value));
+    }
+
+    public VulkanImageLayout(VkImageLayout enums) {
+        this.enums = enums;
+    }
+
+    public boolean is(int value){
+        return this.enums.value == value;
+    }
+
+    public void set(int value){
+        this.enums.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.constantToString(enums.value, VkImageLayout.class);
     }
 }

@@ -5,134 +5,69 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 
 
 public class EnumGenerator extends javax.swing.JFrame {
+    private HashMap<String, Boolean> duplicateDetection;
+
     public EnumGenerator() {
         initComponents();
+        setTitle(getClass().getSimpleName());
     }
 
     private void generateSimple(){
         throw new UnsupportedOperationException();
     }
-    
+
     /*
-        public class VkPhysicalDeviceType extends Structure {
-            public static final int VK_PHYSICAL_DEVICE_TYPE_OTHER = 0;
-            public static final int VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU = 1;
-            public static final int VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU = 2;
-            public static final int VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU = 3;
-            public static final int VK_PHYSICAL_DEVICE_TYPE_CPU = 4;
+        public class VkCompareOp extends Structure {
+            public static final int VK_COMPARE_OP_NEVER = 0;
+            public static final int VK_COMPARE_OP_LESS = 1;
+            public static final int VK_COMPARE_OP_EQUAL = 2;
+            public static final int VK_COMPARE_OP_LESS_OR_EQUAL = 3;
+            public static final int VK_COMPARE_OP_GREATER = 4;
+            public static final int VK_COMPARE_OP_NOT_EQUAL = 5;
+            public static final int VK_COMPARE_OP_GREATER_OR_EQUAL = 6;
+            public static final int VK_COMPARE_OP_ALWAYS = 7;
     */
     private void generateComplex(){
         String input = jTextAreaInput.getText();
         String output = readAll();
         output = output.replace("OLD_NAME", genOldName(input));
         output = output.replace("NEW_NAME", genNewName(input));
-        output = output.replace("VALUES", genValues(input));
-        output = output.replace("FROM_CASES", genFromCases(input));
-        output = output.replace("TO_CASES", genToCases(input));
+        output = output.replace("PROPERTIES", genProperties(input));
         jTextAreaOutput.setText(output);
     }
-    
+
     private String genOldName(String input){
         String[] lines = input.split("\\n");
         return lines[0].trim().split(" ")[2];
     }
-    
+
     private String genNewName(String input){
         return genOldName(input).replace("Vk", "Vulkan");
     }
-    
-    /*
-        public static final int VK_PHYSICAL_DEVICE_TYPE_OTHER = 0;
-    
-        OTHER,
-    */
-    private String genValues(String input){
-        String oldStructureName = genOldName(input);
-        String[] lines = input.split("\\n");
-        String values = "";
-        for(int i = 1; i < lines.length; i++){
-            String[] parts = lines[i].trim().split(" ");
-            String oldPropertyName = parts[4];
-            String newPropertyName = genNewPropertyName(oldPropertyName, oldStructureName);
-            values = values + "    " + newPropertyName + ",\n";
-        }
-        values = replaceLast(values, ",", ";");
-        values = replaceLast(values, "\n", "");
-        return values;
-    }
-    
-    /*
-        public static final int VK_PHYSICAL_DEVICE_TYPE_OTHER = 0;
-    
-        case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_OTHER: return OTHER;
-    */
-    private String genFromCases(String input){
-        String oldStructureName = genOldName(input);
-        String[] lines = input.split("\\n");
-        String values = "";
-        for(int i = 1; i < lines.length; i++){
-            String[] parts = lines[i].trim().split(" ");
-            String oldPropertyName = parts[4];
-            String newPropertyName = genNewPropertyName(oldPropertyName, oldStructureName);
-            values = values + "            case " + oldStructureName + "." + oldPropertyName + ": return " + newPropertyName + ";\n";
-        }
-        values = replaceLast(values, "\n", "");
-        return values;
-    }
 
     /*
-        public static final int VK_PHYSICAL_DEVICE_TYPE_OTHER = 0;
+        public static final int VK_COMPARE_OP_NEVER = 0;
 
-        case OTHER: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_OTHER);
+        public static final int NEVER = VkCompareOp.VK_COMPARE_OP_NEVER;
     */
-    private String genToCases(String input){
+    private String genProperties(String input){
         String oldStructureName = genOldName(input);
         String[] lines = input.split("\\n");
-        String values = "";
+        String properties = "";
         for(int i = 1; i < lines.length; i++){
             String[] parts = lines[i].trim().split(" ");
             String oldPropertyName = parts[4];
             String newPropertyName = genNewPropertyName(oldPropertyName, oldStructureName);
-            values = values + "            case " + newPropertyName + ": return new " + oldStructureName + "(" + oldStructureName + "." + oldPropertyName + ");\n";
+            String property = "    public static final int " + newPropertyName + " = " + oldStructureName + "." + oldPropertyName + ";";
+            properties += property + "\n";
         }
-        values = replaceLast(values, "\n", "");
-        return values;
+        return properties;
     }
-    
-    /*
-        VK_PHYSICAL_DEVICE_TYPE_OTHER    <- old name
-        VkPhysicalDeviceType             <- old
-        Vk Physical Device Type *****    <- *cut size
-    
-                                OTHER    <- result
-    */
-    private static String genNewPropertyName(String oldName, String old){
-        int cutSize;
-        if(old.equals("VkResult")){
-            cutSize = 3;
-        } else {
-            boolean ext = old.endsWith("EXT");
-            if(ext) old = old.replace("EXT", "");
-            cutSize = capitalCount(old) + old.length();
-        }
-        String result = oldName.substring(cutSize);
-        if(result.endsWith("_EXT")) result = replaceLast(result, "_EXT", "");
-        if(result.endsWith("_KHR")) result = replaceLast(result, "_KHR", "");
-        return result;
-    }
-    
-    private static int capitalCount(String s){
-        int count = 0;
-        for(int i = 0; i < s.length(); i++){
-            char ch = s.charAt(i);
-            if(Character.isUpperCase(ch)) count++;
-        }
-        return count;
-    }
-    
+
     private String readAll(){
         InputStream stream = getClass().getResourceAsStream("EnumSample.txt");
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(stream))){
@@ -146,28 +81,44 @@ public class EnumGenerator extends javax.swing.JFrame {
             throw new RuntimeException();
         }
     }
-    
+
+//    private String capitalFirst(String name){
+//        return name.substring(0, 1).toUpperCase() + name.substring(1);
+//    }
+//
+//    private String capitalFirstOnly(String name){
+//        return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
+//    }
+
     /*
-        VK_SAMPLE_COUNT_1_BIT
-    
-        isSampleCount1Bit
+        VK_PHYSICAL_DEVICE_TYPE_OTHER    <- old property name
+        VkPhysicalDeviceType             <- old structure name
+        Vk Physical Device Type *****    <- old structure name + spaces => cut size
+                                OTHER    <- result
     */
-    
-    private String sanitizeName(String name){
-        String[] parts = name.split("_");
-        String s = "";
-        for(String part : parts) s += capitalFirstOnly(part);
-        return s;
+    private static String genNewPropertyName(String oldPropertyName, String oldStructureName){
+        oldStructureName = replaceLast(oldStructureName, "Flags", "");
+//        boolean ext = oldStructureName.endsWith("EXT");
+//        if(ext) oldStructureName = oldStructureName.replace("EXT", "");
+        int cutSize = capitalCount(oldStructureName) + oldStructureName.length();
+        if(oldStructureName.equals("VkResult")) cutSize = 3;
+        String result = oldPropertyName.substring(cutSize);
+//        if(result.endsWith("_EXT")) result = replaceLast(result, "_EXT", "");
+//        if(result.endsWith("_KHR")) result = replaceLast(result, "_KHR", "");
+//        if(result.endsWith("_KHX")) result = replaceLast(result, "_KHX", "");
+        if(result.endsWith("_BIT")) result = replaceLast(result, "_BIT", "");
+        return result;
     }
-    
-    private String capitalFirst(String name){
-        return name.substring(0, 1).toUpperCase() + name.substring(1);
+
+    private static int capitalCount(String s){
+        int count = 0;
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            if(Character.isUpperCase(ch)) count++;
+        }
+        return count;
     }
-    
-    private String capitalFirstOnly(String name){
-        return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
-    }
-    
+
     private static String replaceLast(String s, String what, String with){
         s = reverse(s);
         what = reverse(what);
@@ -175,7 +126,7 @@ public class EnumGenerator extends javax.swing.JFrame {
         s = s.replaceFirst(what, with);
         return reverse(s);
     }
-    
+
     private static String reverse(String s){
         return new StringBuilder(s).reverse().toString();
     }

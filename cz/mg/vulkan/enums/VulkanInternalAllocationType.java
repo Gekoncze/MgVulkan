@@ -1,22 +1,36 @@
 package cz.mg.vulkan.enums;
 
 import cz.mg.vulkan.jna.enums.VkInternalAllocationType;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
-public enum VulkanInternalAllocationType {
-    EXECUTABLE;
+public class VulkanInternalAllocationType {
+    public static final int EXECUTABLE = VkInternalAllocationType.VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE;
 
-    public static VulkanInternalAllocationType fromNativeEnum(VkInternalAllocationType e){
-        switch(e.value){
-            case VkInternalAllocationType.VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE: return EXECUTABLE;
-            default: return null;
-        }
+    public final VkInternalAllocationType enums;
+
+    public VulkanInternalAllocationType() {
+        this(0);
     }
 
-    public VkInternalAllocationType toNativeEnum(){
-        switch(this){
-            case EXECUTABLE: return new VkInternalAllocationType(VkInternalAllocationType.VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE);
-            default: throw new RuntimeException();
-        }
+    public VulkanInternalAllocationType(int value) {
+        this(new VkInternalAllocationType(value));
+    }
+
+    public VulkanInternalAllocationType(VkInternalAllocationType enums) {
+        this.enums = enums;
+    }
+
+    public boolean is(int value){
+        return this.enums.value == value;
+    }
+
+    public void set(int value){
+        this.enums.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.constantToString(enums.value, VkInternalAllocationType.class);
     }
 }

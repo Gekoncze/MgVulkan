@@ -3,6 +3,7 @@ package test;
 import cz.mg.collections.list.chainlist.ChainList;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.ByteBuffer;
 
 
 public class Utilities {
@@ -13,11 +14,11 @@ public class Utilities {
             ChainList<byte[]> buffers = new ChainList<>();
             byte[] buffer = new byte[bufferSize];
             int lastSize;
-            while((lastSize = stream.read(buffer)) == bufferSize){
+            do {
+                lastSize = stream.read(buffer);
                 buffers.addLast(buffer);
                 buffer = new byte[bufferSize];
-            }
-            buffers.addLast(buffer);
+            } while(lastSize == bufferSize);
 
             int totalSize = buffers.count()*bufferSize;
             totalSize -= bufferSize - lastSize;
@@ -36,5 +37,11 @@ public class Utilities {
         } catch(IOException e){
             throw new RuntimeException();
         }
+    }
+
+    public static ByteBuffer createBuffer(byte[] bytes){
+        ByteBuffer buffer = ByteBuffer.allocateDirect(bytes.length);
+        buffer.put(bytes);
+        return buffer;
     }
 }

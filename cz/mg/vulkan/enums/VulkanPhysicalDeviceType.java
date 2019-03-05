@@ -1,34 +1,40 @@
 package cz.mg.vulkan.enums;
 
 import cz.mg.vulkan.jna.enums.VkPhysicalDeviceType;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
-public enum VulkanPhysicalDeviceType {
-    OTHER,
-    INTEGRATED_GPU,
-    DISCRETE_GPU,
-    VIRTUAL_GPU,
-    CPU;
+public class VulkanPhysicalDeviceType {
+    public static final int OTHER = VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_OTHER;
+    public static final int INTEGRATED_GPU = VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU;
+    public static final int DISCRETE_GPU = VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU;
+    public static final int VIRTUAL_GPU = VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU;
+    public static final int CPU = VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_CPU;
 
-    public static VulkanPhysicalDeviceType fromNativeEnum(VkPhysicalDeviceType e){
-        switch(e.value){
-            case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_OTHER: return OTHER;
-            case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU: return INTEGRATED_GPU;
-            case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU: return DISCRETE_GPU;
-            case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU: return VIRTUAL_GPU;
-            case VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_CPU: return CPU;
-            default: return null;
-        }
+    public final VkPhysicalDeviceType enums;
+
+    public VulkanPhysicalDeviceType() {
+        this(0);
     }
 
-    public VkPhysicalDeviceType toNativeEnum(){
-        switch(this){
-            case OTHER: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_OTHER);
-            case INTEGRATED_GPU: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU);
-            case DISCRETE_GPU: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU);
-            case VIRTUAL_GPU: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU);
-            case CPU: return new VkPhysicalDeviceType(VkPhysicalDeviceType.VK_PHYSICAL_DEVICE_TYPE_CPU);
-            default: throw new RuntimeException();
-        }
+    public VulkanPhysicalDeviceType(int value) {
+        this(new VkPhysicalDeviceType(value));
+    }
+
+    public VulkanPhysicalDeviceType(VkPhysicalDeviceType enums) {
+        this.enums = enums;
+    }
+
+    public boolean is(int value){
+        return this.enums.value == value;
+    }
+
+    public void set(int value){
+        this.enums.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.constantToString(enums.value, VkPhysicalDeviceType.class);
     }
 }

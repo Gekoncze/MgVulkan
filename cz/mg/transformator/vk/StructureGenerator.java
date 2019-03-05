@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
 
 
 public class StructureGenerator extends javax.swing.JFrame {
-
     public StructureGenerator() {
         initComponents();
+        setTitle(getClass().getSimpleName());
     }
     
     private void generateSimple(){

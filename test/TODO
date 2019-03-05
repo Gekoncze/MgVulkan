@@ -2,15 +2,16 @@
     command buffer
     framebuffer
     render pass
-    pipeline
-    shaders
 
 ### NOW
+    shaders
+    pipeline
 
+    add parametric constructors to vulkan structures and create infos + move to separate packages
 
 ### DONE
-shader preparations
-    deleted some unused files
-    moved some test files around in new packages
-    added fragment and vertex shader files
-    added compiled shader files in spir-v format
+shaders and pipeline + improvements
+    rewritten enums and flags to keep _EXT, _KHR and _KHX suffix
+    rewritten enums for better compatibility
+    added bunch of vk and vulkan classes
+    TODO: add parametric constructors to vulkan structures

@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
 
 
 public class EnumGenerator extends javax.swing.JFrame {
-
     public EnumGenerator() {
         initComponents();
+        setTitle(getClass().getSimpleName());
     }
     
     private void generateSimple(){
@@ -26,7 +26,6 @@ public class EnumGenerator extends javax.swing.JFrame {
             VK_OBJECT_TYPE_MAX_ENUM = 0x7FFFFFFF
         } VkObjectType;
     */
-    
     private void generateComplex(){
         String input = jTextAreaInput.getText();
         String output = readAll();

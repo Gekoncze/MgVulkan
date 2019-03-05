@@ -21,14 +21,14 @@ public class VulkanImage {
         this.parent = parent;
         this.handle = parent.getParent().getParent().getParent().vks.vkCreateImage(
                 parent.handle,
-                imageType.toNativeEnum(),
+                imageType.enums,
                 width, height, depth,
-                format.toNativeEnum(),
+                format.enums,
                 sampleCount.flags,
-                tiling.toNativeEnum(),
+                tiling.enums,
                 usage.flags,
-                sharing.toNativeEnum(),
-                layout.toNativeEnum()
+                sharing.enums,
+                layout.enums
         );
     }
 

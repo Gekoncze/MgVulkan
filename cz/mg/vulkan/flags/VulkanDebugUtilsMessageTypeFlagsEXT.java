@@ -5,13 +5,13 @@ import cz.mg.vulkan.jna.utilities.ToString;
 
 
 public class VulkanDebugUtilsMessageTypeFlagsEXT {
-    public static final int GENERAL = VkDebugUtilsMessageTypeFlagsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT;
-    public static final int VALIDATION = VkDebugUtilsMessageTypeFlagsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT;
-    public static final int PERFORMANCE = VkDebugUtilsMessageTypeFlagsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT;
+    public static final int GENERAL_EXT = VkDebugUtilsMessageTypeFlagsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT;
+    public static final int VALIDATION_EXT = VkDebugUtilsMessageTypeFlagsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT;
+    public static final int PERFORMANCE_EXT = VkDebugUtilsMessageTypeFlagsEXT.VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT;
 
     public final VkDebugUtilsMessageTypeFlagsEXT flags;
 
-    public VulkanDebugUtilsMessageTypeFlagsEXT() {
+    public VulkanDebugUtilsMessageTypeFlagsEXT(){
         this(0);
     }
 

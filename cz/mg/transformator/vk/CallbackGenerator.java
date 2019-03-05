@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
 
 
 public class CallbackGenerator extends javax.swing.JFrame {
-
     public CallbackGenerator() {
         initComponents();
+        setTitle(getClass().getSimpleName());
     }
     
     private void generateSimple(){
@@ -23,7 +23,6 @@ public class CallbackGenerator extends javax.swing.JFrame {
             size_t                     alignment,
             VkSystemAllocationScope    allocationScope);
     */
-    
     private void generateComplex(){
         String input = jTextAreaInput.getText();
         String output = readAll();

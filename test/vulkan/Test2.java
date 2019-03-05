@@ -52,14 +52,14 @@ public class Test2 {
         /// DEBUG MESSENGER ///
         ///////////////////////
         VulkanDebugUtilsMessageSeverityFlagsEXT severityFlags = new VulkanDebugUtilsMessageSeverityFlagsEXT(
-                VulkanDebugUtilsMessageSeverityFlagsEXT.ERROR |
-                VulkanDebugUtilsMessageSeverityFlagsEXT.WARNING
+                VulkanDebugUtilsMessageSeverityFlagsEXT.ERROR_EXT |
+                VulkanDebugUtilsMessageSeverityFlagsEXT.WARNING_EXT
         );
 
         VulkanDebugUtilsMessageTypeFlagsEXT typeFlags = new VulkanDebugUtilsMessageTypeFlagsEXT(
-                VulkanDebugUtilsMessageTypeFlagsEXT.GENERAL |
-                VulkanDebugUtilsMessageTypeFlagsEXT.VALIDATION |
-                VulkanDebugUtilsMessageTypeFlagsEXT.PERFORMANCE
+                VulkanDebugUtilsMessageTypeFlagsEXT.GENERAL_EXT |
+                VulkanDebugUtilsMessageTypeFlagsEXT.VALIDATION_EXT |
+                VulkanDebugUtilsMessageTypeFlagsEXT.PERFORMANCE_EXT
         );
 
         VulkanDebugUtilsMessengerEXT messenger = new VulkanDebugUtilsMessengerEXT(debugUtils, severityFlags, typeFlags, new VulkanDebugUtilsMessengerCallbackEXT() {
@@ -89,14 +89,14 @@ public class Test2 {
         /////////////
         VulkanImage image = new VulkanImage(
                 device,
-                VulkanImageType.D2,
+                new VulkanImageType(VulkanImageType.D2),
                 640, 480, 1,
-                VulkanFormat.R8G8B8A8_UNORM,
+                new VulkanFormat(VulkanFormat.R8G8B8A8_UNORM),
                 new VulkanSampleCountFlags(VulkanSampleCountFlags.B1),
-                VulkanImageTiling.OPTIMAL,
+                new VulkanImageTiling(VulkanImageTiling.OPTIMAL),
                 new VulkanImageUsageFlags(VulkanImageUsageFlags.TRANSFER_SRC | VulkanImageUsageFlags.COLOR_ATTACHMENT),
-                VulkanSharingMode.EXCLUSIVE,
-                VulkanImageLayout.UNDEFINED
+                new VulkanSharingMode(VulkanSharingMode.EXCLUSIVE),
+                new VulkanImageLayout(VulkanImageLayout.UNDEFINED)
         );
         System.out.println("Image created successfully!");
     }

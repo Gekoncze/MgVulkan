@@ -8,9 +8,9 @@ import java.io.InputStreamReader;
 
 
 public class FunctionGenerator extends javax.swing.JFrame {
-
     public FunctionGenerator() {
         initComponents();
+        setTitle(getClass().getSimpleName());
     }
 
     private void generateSimple(){

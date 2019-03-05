@@ -1,5 +1,6 @@
 package test.vk;
 
+import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import cz.mg.vulkan.jna.Vk;
 import cz.mg.vulkan.jna.VkSimplified;
@@ -13,6 +14,10 @@ import cz.mg.vulkan.jna.flags.*;
 import cz.mg.vulkan.jna.handles.*;
 import cz.mg.vulkan.jna.structures.*;
 import cz.mg.vulkan.jna.types.VkBool32;
+import test.Utilities;
+import test.shaders.ShadersLocation;
+
+import java.nio.ByteBuffer;
 
 import static cz.mg.vulkan.jna.Vk.*;
 
@@ -87,20 +92,20 @@ public class Test {
         //////////////////////
         VkPhysicalDevice.ByValue selectedPhysicalDevice = physicalDevices.get(0).byValue(true, true);
         VkPhysicalDeviceFeatures.ByReference features = new VkPhysicalDeviceFeatures.ByReference();
-        VkDevice.ByValue logicalDevice = vks.vkCreateDevice(selectedPhysicalDevice, features, 0).byValue(true, true);
+        VkDevice.ByValue device = vks.vkCreateDevice(selectedPhysicalDevice, features, 0).byValue(true, true);
         System.out.println("Logical device created successfully!");
 
         /////////////
         /// QUEUE ///
         /////////////
-        VkQueue.ByValue queue = vks.vkGetDeviceQueue(logicalDevice, 0, 0);
+        VkQueue.ByValue queue = vks.vkGetDeviceQueue(device, 0, 0);
         System.out.println("Got 1st queue.");
 
         /////////////
         /// IMAGE ///
         /////////////
         VkImage.ByValue image = vks.vkCreateImage(
-                logicalDevice,
+                device,
                 new VkImageType(VkImageType.VK_IMAGE_TYPE_2D),
                 640, 480, 1,
                 new VkFormat(VkFormat.VK_FORMAT_R8G8B8A8_UNORM),
@@ -112,13 +117,24 @@ public class Test {
         );
         System.out.println("Image created successfully!");
 
-
+        ///////////////
+        /// SHADERS ///
+        ///////////////
+        byte[] vertexShaderCode = Utilities.load(ShadersLocation.class, "testVert.spv");
+        byte[] fragmentShaderCode = Utilities.load(ShadersLocation.class, "testFrag.spv");
+        ByteBuffer vertexShaderBuffer = Utilities.createBuffer(vertexShaderCode);
+        ByteBuffer fragmentShaderBuffer = Utilities.createBuffer(fragmentShaderCode);
+        VkShaderModule.ByValue vertexShader = vks.vkCreateShaderModule(device, vertexShaderCode.length, Native.getDirectBufferPointer(vertexShaderBuffer));
+        VkShaderModule.ByValue fragmentShader = vks.vkCreateShaderModule(device, fragmentShaderCode.length, Native.getDirectBufferPointer(fragmentShaderBuffer));
+        System.out.println("Shader modules created successfully!");
 
         ///////////////
         /// CLEANUP ///
         ///////////////
-        vks.vkDestroyImage(logicalDevice, image);
-        vks.vkDestroyDevice(logicalDevice);
+        vks.vkDestroyShaderModule(device, fragmentShader);
+        vks.vkDestroyShaderModule(device, vertexShader);
+        vks.vkDestroyImage(device, image);
+        vks.vkDestroyDevice(device);
         vkdus.vkDestroyDebugUtilsMessengerEXT(instance, messenger);
         vks.vkDestroyInstance(instance);
     }

@@ -1,34 +1,40 @@
 package cz.mg.vulkan.enums;
 
 import cz.mg.vulkan.jna.enums.VkSystemAllocationScope;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
-public enum VulkanSystemAllocationScope {
-    COMMAND,
-    OBJECT,
-    CACHE,
-    DEVICE,
-    INSTANCE;
+public class VulkanSystemAllocationScope {
+    public static final int COMMAND = VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_COMMAND;
+    public static final int OBJECT = VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_OBJECT;
+    public static final int CACHE = VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_CACHE;
+    public static final int DEVICE = VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_DEVICE;
+    public static final int INSTANCE = VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_INSTANCE;
 
-    public static VulkanSystemAllocationScope fromNativeEnum(VkSystemAllocationScope e){
-        switch(e.value){
-            case VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_COMMAND: return COMMAND;
-            case VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_OBJECT: return OBJECT;
-            case VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_CACHE: return CACHE;
-            case VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_DEVICE: return DEVICE;
-            case VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_INSTANCE: return INSTANCE;
-            default: return null;
-        }
+    public final VkSystemAllocationScope enums;
+
+    public VulkanSystemAllocationScope() {
+        this(0);
     }
 
-    public VkSystemAllocationScope toNativeEnum(){
-        switch(this){
-            case COMMAND: return new VkSystemAllocationScope(VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_COMMAND);
-            case OBJECT: return new VkSystemAllocationScope(VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_OBJECT);
-            case CACHE: return new VkSystemAllocationScope(VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_CACHE);
-            case DEVICE: return new VkSystemAllocationScope(VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_DEVICE);
-            case INSTANCE: return new VkSystemAllocationScope(VkSystemAllocationScope.VK_SYSTEM_ALLOCATION_SCOPE_INSTANCE);
-            default: throw new RuntimeException();
-        }
+    public VulkanSystemAllocationScope(int value) {
+        this(new VkSystemAllocationScope(value));
+    }
+
+    public VulkanSystemAllocationScope(VkSystemAllocationScope enums) {
+        this.enums = enums;
+    }
+
+    public boolean is(int value){
+        return this.enums.value == value;
+    }
+
+    public void set(int value){
+        this.enums.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.constantToString(enums.value, VkSystemAllocationScope.class);
     }
 }

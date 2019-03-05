@@ -1,40 +1,42 @@
 package cz.mg.vulkan.enums;
 
 import cz.mg.vulkan.jna.enums.VkComponentSwizzle;
+import cz.mg.vulkan.jna.utilities.ToString;
 
 
-public enum VulkanComponentSwizzle {
-    IDENTITY,
-    ZERO,
-    ONE,
-    R,
-    G,
-    B,
-    A;
+public class VulkanComponentSwizzle {
+    public static final int IDENTITY = VkComponentSwizzle.VK_COMPONENT_SWIZZLE_IDENTITY;
+    public static final int ZERO = VkComponentSwizzle.VK_COMPONENT_SWIZZLE_ZERO;
+    public static final int ONE = VkComponentSwizzle.VK_COMPONENT_SWIZZLE_ONE;
+    public static final int R = VkComponentSwizzle.VK_COMPONENT_SWIZZLE_R;
+    public static final int G = VkComponentSwizzle.VK_COMPONENT_SWIZZLE_G;
+    public static final int B = VkComponentSwizzle.VK_COMPONENT_SWIZZLE_B;
+    public static final int A = VkComponentSwizzle.VK_COMPONENT_SWIZZLE_A;
 
-    public static VulkanComponentSwizzle fromNativeEnum(VkComponentSwizzle e){
-        switch(e.value){
-            case VkComponentSwizzle.VK_COMPONENT_SWIZZLE_IDENTITY: return IDENTITY;
-            case VkComponentSwizzle.VK_COMPONENT_SWIZZLE_ZERO: return ZERO;
-            case VkComponentSwizzle.VK_COMPONENT_SWIZZLE_ONE: return ONE;
-            case VkComponentSwizzle.VK_COMPONENT_SWIZZLE_R: return R;
-            case VkComponentSwizzle.VK_COMPONENT_SWIZZLE_G: return G;
-            case VkComponentSwizzle.VK_COMPONENT_SWIZZLE_B: return B;
-            case VkComponentSwizzle.VK_COMPONENT_SWIZZLE_A: return A;
-            default: return null;
-        }
+    public final VkComponentSwizzle enums;
+
+    public VulkanComponentSwizzle() {
+        this(0);
     }
 
-    public VkComponentSwizzle toNativeEnum(){
-        switch(this){
-            case IDENTITY: return new VkComponentSwizzle(VkComponentSwizzle.VK_COMPONENT_SWIZZLE_IDENTITY);
-            case ZERO: return new VkComponentSwizzle(VkComponentSwizzle.VK_COMPONENT_SWIZZLE_ZERO);
-            case ONE: return new VkComponentSwizzle(VkComponentSwizzle.VK_COMPONENT_SWIZZLE_ONE);
-            case R: return new VkComponentSwizzle(VkComponentSwizzle.VK_COMPONENT_SWIZZLE_R);
-            case G: return new VkComponentSwizzle(VkComponentSwizzle.VK_COMPONENT_SWIZZLE_G);
-            case B: return new VkComponentSwizzle(VkComponentSwizzle.VK_COMPONENT_SWIZZLE_B);
-            case A: return new VkComponentSwizzle(VkComponentSwizzle.VK_COMPONENT_SWIZZLE_A);
-            default: throw new RuntimeException();
-        }
+    public VulkanComponentSwizzle(int value) {
+        this(new VkComponentSwizzle(value));
+    }
+
+    public VulkanComponentSwizzle(VkComponentSwizzle enums) {
+        this.enums = enums;
+    }
+
+    public boolean is(int value){
+        return this.enums.value == value;
+    }
+
+    public void set(int value){
+        this.enums.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return ToString.constantToString(enums.value, VkComponentSwizzle.class);
     }
 }

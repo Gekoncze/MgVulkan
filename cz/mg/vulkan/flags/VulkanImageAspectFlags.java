@@ -12,6 +12,9 @@ public class VulkanImageAspectFlags {
     public static final int PLANE_0 = VkImageAspectFlags.VK_IMAGE_ASPECT_PLANE_0_BIT;
     public static final int PLANE_1 = VkImageAspectFlags.VK_IMAGE_ASPECT_PLANE_1_BIT;
     public static final int PLANE_2 = VkImageAspectFlags.VK_IMAGE_ASPECT_PLANE_2_BIT;
+    public static final int PLANE_0_KHR = VkImageAspectFlags.VK_IMAGE_ASPECT_PLANE_0_BIT_KHR;
+    public static final int PLANE_1_KHR = VkImageAspectFlags.VK_IMAGE_ASPECT_PLANE_1_BIT_KHR;
+    public static final int PLANE_2_KHR = VkImageAspectFlags.VK_IMAGE_ASPECT_PLANE_2_BIT_KHR;
 
     public final VkImageAspectFlags flags;
 

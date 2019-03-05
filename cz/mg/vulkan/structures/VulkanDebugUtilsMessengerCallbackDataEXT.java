@@ -19,7 +19,7 @@ public class VulkanDebugUtilsMessengerCallbackDataEXT {
     }
 
     public VulkanStructureType getSType(){
-        return VulkanStructureType.fromNativeEnum(structure.sType);
+        return new VulkanStructureType(structure.sType);
     }
 
     public Pointer getPNext(){
