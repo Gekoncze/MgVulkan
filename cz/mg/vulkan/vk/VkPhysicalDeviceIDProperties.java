@@ -1,0 +1,190 @@
+package cz.mg.vulkan.vk;
+
+/**
+ *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceIDProperties.html">khronos documentation</a>
+ **/
+public class VkPhysicalDeviceIDProperties extends VkObject {
+    public VkPhysicalDeviceIDProperties() {
+        super(sizeof());
+    }
+
+    public VkPhysicalDeviceIDProperties(VkMemory vkmemory) {
+        super(sizeof(), vkmemory);
+    }
+
+    public VkPhysicalDeviceIDProperties(VkMemory vkmemory, long vkaddress) {
+        super(sizeof(), vkmemory, vkaddress);
+    }
+
+
+    public VkPhysicalDeviceIDProperties(VkStructureType sType, VkObject pNext, VkUInt8 deviceUUID, VkUInt8 driverUUID, VkUInt8 deviceLUID, VkUInt32 deviceNodeMask, VkBool32 deviceLUIDValid) {
+        super(sizeof());
+        setSType(sType);
+        setPNext(pNext);
+        setDeviceUUID(deviceUUID);
+        setDriverUUID(driverUUID);
+        setDeviceLUID(deviceLUID);
+        setDeviceNodeMask(deviceNodeMask);
+        setDeviceLUIDValid(deviceLUIDValid);
+    }
+
+    public VkStructureType getSType() {
+        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+    }
+
+    public void setSType(VkStructureType sType) {
+        setSType(getVkAddress(), sType.getVkAddress());
+    }
+
+    private static native long getSType(long address);
+    private static native void setSType(long address, long sType);
+
+    public VkObject getPNext() {
+        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+    }
+
+    public void setPNext(VkObject pNext) {
+        setPNext(getVkAddress(), pNext.getVkAddress());
+    }
+
+    private static native long getPNext(long address);
+    private static native void setPNext(long address, long pNext);
+
+    public VkUInt8 getDeviceUUID() {
+        return new VkUInt8(getVkMemory(), getDeviceUUID(getVkAddress()));
+    }
+
+    public void setDeviceUUID(VkUInt8 deviceUUID) {
+        setDeviceUUID(getVkAddress(), deviceUUID.getVkAddress());
+    }
+
+    private static native long getDeviceUUID(long address);
+    private static native void setDeviceUUID(long address, long deviceUUID);
+
+    public VkUInt8 getDriverUUID() {
+        return new VkUInt8(getVkMemory(), getDriverUUID(getVkAddress()));
+    }
+
+    public void setDriverUUID(VkUInt8 driverUUID) {
+        setDriverUUID(getVkAddress(), driverUUID.getVkAddress());
+    }
+
+    private static native long getDriverUUID(long address);
+    private static native void setDriverUUID(long address, long driverUUID);
+
+    public VkUInt8 getDeviceLUID() {
+        return new VkUInt8(getVkMemory(), getDeviceLUID(getVkAddress()));
+    }
+
+    public void setDeviceLUID(VkUInt8 deviceLUID) {
+        setDeviceLUID(getVkAddress(), deviceLUID.getVkAddress());
+    }
+
+    private static native long getDeviceLUID(long address);
+    private static native void setDeviceLUID(long address, long deviceLUID);
+
+    public VkUInt32 getDeviceNodeMask() {
+        return new VkUInt32(getVkMemory(), getDeviceNodeMask(getVkAddress()));
+    }
+
+    public void setDeviceNodeMask(VkUInt32 deviceNodeMask) {
+        setDeviceNodeMask(getVkAddress(), deviceNodeMask.getVkAddress());
+    }
+
+    private static native long getDeviceNodeMask(long address);
+    private static native void setDeviceNodeMask(long address, long deviceNodeMask);
+
+    public VkBool32 getDeviceLUIDValid() {
+        return new VkBool32(getVkMemory(), getDeviceLUIDValid(getVkAddress()));
+    }
+
+    public void setDeviceLUIDValid(VkBool32 deviceLUIDValid) {
+        setDeviceLUIDValid(getVkAddress(), deviceLUIDValid.getVkAddress());
+    }
+
+    private static native long getDeviceLUIDValid(long address);
+    private static native void setDeviceLUIDValid(long address, long deviceLUIDValid);
+
+
+    public static native long sizeof();
+
+    public static class Array extends VkPhysicalDeviceIDProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceIDProperties> {
+        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*sizeof()));
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkPhysicalDeviceIDProperties get(int i){
+            return new VkPhysicalDeviceIDProperties(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
+        }
+
+        public Pointer(long value) {
+            setValue(value);
+        }
+
+        public Pointer(VkMemory vkmemory) {
+            super(vkmemory);
+        }
+
+        public Pointer(VkMemory vkmemory, long vkaddress) {
+            super(vkmemory, vkaddress);
+        }
+
+        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+            private final int count;
+
+            public Array(int count) {
+                super(new VkMemory(count*sizeof()));
+                this.count = count;
+            }
+
+            public Array(VkMemory vkmemory, int count) {
+                super(vkmemory);
+                this.count = count;
+            }
+
+            public Array(VkMemory vkmemory, long vkaddress, int count) {
+                super(vkmemory, vkaddress);
+                this.count = count;
+            }
+
+            public Array(VkPhysicalDeviceIDProperties[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
+            }
+
+            @Override
+            public int count(){
+                return count;
+            }
+
+            @Override
+            public Pointer get(int i){
+                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+        }
+    }
+}

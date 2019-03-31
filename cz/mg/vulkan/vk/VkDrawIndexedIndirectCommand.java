@@ -1,0 +1,166 @@
+package cz.mg.vulkan.vk;
+
+/**
+ *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkDrawIndexedIndirectCommand.html">khronos documentation</a>
+ **/
+public class VkDrawIndexedIndirectCommand extends VkObject {
+    public VkDrawIndexedIndirectCommand() {
+        super(sizeof());
+    }
+
+    public VkDrawIndexedIndirectCommand(VkMemory vkmemory) {
+        super(sizeof(), vkmemory);
+    }
+
+    public VkDrawIndexedIndirectCommand(VkMemory vkmemory, long vkaddress) {
+        super(sizeof(), vkmemory, vkaddress);
+    }
+
+
+    public VkDrawIndexedIndirectCommand(VkUInt32 indexCount, VkUInt32 instanceCount, VkUInt32 firstIndex, VkInt32 vertexOffset, VkUInt32 firstInstance) {
+        super(sizeof());
+        setIndexCount(indexCount);
+        setInstanceCount(instanceCount);
+        setFirstIndex(firstIndex);
+        setVertexOffset(vertexOffset);
+        setFirstInstance(firstInstance);
+    }
+
+    public VkUInt32 getIndexCount() {
+        return new VkUInt32(getVkMemory(), getIndexCount(getVkAddress()));
+    }
+
+    public void setIndexCount(VkUInt32 indexCount) {
+        setIndexCount(getVkAddress(), indexCount.getVkAddress());
+    }
+
+    private static native long getIndexCount(long address);
+    private static native void setIndexCount(long address, long indexCount);
+
+    public VkUInt32.Array getInstanceCount() {
+        return new VkUInt32.Array(getVkMemory(), getInstanceCount(getVkAddress()), getIndexCount().getValue());
+    }
+
+    public void setInstanceCount(VkUInt32 instanceCount) {
+        setInstanceCount(getVkAddress(), instanceCount.getVkAddress());
+    }
+
+    private static native long getInstanceCount(long address);
+    private static native void setInstanceCount(long address, long instanceCount);
+
+    public VkUInt32.Array getFirstIndex() {
+        return new VkUInt32.Array(getVkMemory(), getFirstIndex(getVkAddress()), getInstanceCount().getValue());
+    }
+
+    public void setFirstIndex(VkUInt32 firstIndex) {
+        setFirstIndex(getVkAddress(), firstIndex.getVkAddress());
+    }
+
+    private static native long getFirstIndex(long address);
+    private static native void setFirstIndex(long address, long firstIndex);
+
+    public VkInt32 getVertexOffset() {
+        return new VkInt32(getVkMemory(), getVertexOffset(getVkAddress()));
+    }
+
+    public void setVertexOffset(VkInt32 vertexOffset) {
+        setVertexOffset(getVkAddress(), vertexOffset.getVkAddress());
+    }
+
+    private static native long getVertexOffset(long address);
+    private static native void setVertexOffset(long address, long vertexOffset);
+
+    public VkUInt32 getFirstInstance() {
+        return new VkUInt32(getVkMemory(), getFirstInstance(getVkAddress()));
+    }
+
+    public void setFirstInstance(VkUInt32 firstInstance) {
+        setFirstInstance(getVkAddress(), firstInstance.getVkAddress());
+    }
+
+    private static native long getFirstInstance(long address);
+    private static native void setFirstInstance(long address, long firstInstance);
+
+
+    public static native long sizeof();
+
+    public static class Array extends VkDrawIndexedIndirectCommand implements cz.mg.collections.array.ReadonlyArray<VkDrawIndexedIndirectCommand> {
+        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*sizeof()));
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkDrawIndexedIndirectCommand get(int i){
+            return new VkDrawIndexedIndirectCommand(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
+        }
+
+        public Pointer(long value) {
+            setValue(value);
+        }
+
+        public Pointer(VkMemory vkmemory) {
+            super(vkmemory);
+        }
+
+        public Pointer(VkMemory vkmemory, long vkaddress) {
+            super(vkmemory, vkaddress);
+        }
+
+        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+            private final int count;
+
+            public Array(int count) {
+                super(new VkMemory(count*sizeof()));
+                this.count = count;
+            }
+
+            public Array(VkMemory vkmemory, int count) {
+                super(vkmemory);
+                this.count = count;
+            }
+
+            public Array(VkMemory vkmemory, long vkaddress, int count) {
+                super(vkmemory, vkaddress);
+                this.count = count;
+            }
+
+            public Array(VkDrawIndexedIndirectCommand[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
+            }
+
+            @Override
+            public int count(){
+                return count;
+            }
+
+            @Override
+            public Pointer get(int i){
+                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+        }
+    }
+}

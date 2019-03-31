@@ -1,0 +1,32 @@
+package cz.mg.vulkan.vk;
+
+/**
+ *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdProcessCommandsNVX.html">khronos documentation</a>
+ **/
+public class PFNvkCmdProcessCommandsNVX extends VkFunctionPointer {
+    public PFNvkCmdProcessCommandsNVX() {
+    }
+
+    public PFNvkCmdProcessCommandsNVX(VkMemory vkmemory) {
+        super(vkmemory);
+    }
+
+    public PFNvkCmdProcessCommandsNVX(VkMemory vkmemory, long vkaddress) {
+        super(vkmemory, vkaddress);
+    }
+
+
+    public PFNvkCmdProcessCommandsNVX(long value) {
+        setValue(value);
+    }
+
+    public PFNvkCmdProcessCommandsNVX(VkInstance instance) {
+        super(instance, new VkString("vkCmdProcessCommandsNVX"));
+    }
+
+    public void call(VkCommandBuffer commandBuffer, VkCmdProcessCommandsInfoNVX pProcessCommandsInfo){
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkCommandBuffer.NULL.getVkAddress(), pProcessCommandsInfo != null ? pProcessCommandsInfo.getVkAddress() : VkPointer.NULL);
+    }
+
+    private static native void call(long vkaddress, long commandBuffer, long pProcessCommandsInfo);
+}

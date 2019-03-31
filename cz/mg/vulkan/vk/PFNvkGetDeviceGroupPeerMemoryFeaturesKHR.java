@@ -1,0 +1,32 @@
+package cz.mg.vulkan.vk;
+
+/**
+ *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR.html">khronos documentation</a>
+ **/
+public class PFNvkGetDeviceGroupPeerMemoryFeaturesKHR extends VkFunctionPointer {
+    public PFNvkGetDeviceGroupPeerMemoryFeaturesKHR() {
+    }
+
+    public PFNvkGetDeviceGroupPeerMemoryFeaturesKHR(VkMemory vkmemory) {
+        super(vkmemory);
+    }
+
+    public PFNvkGetDeviceGroupPeerMemoryFeaturesKHR(VkMemory vkmemory, long vkaddress) {
+        super(vkmemory, vkaddress);
+    }
+
+
+    public PFNvkGetDeviceGroupPeerMemoryFeaturesKHR(long value) {
+        setValue(value);
+    }
+
+    public PFNvkGetDeviceGroupPeerMemoryFeaturesKHR(VkInstance instance) {
+        super(instance, new VkString("vkGetDeviceGroupPeerMemoryFeaturesKHR"));
+    }
+
+    public void call(VkDevice device, VkUInt32 heapIndex, VkUInt32 localDeviceIndex, VkUInt32 remoteDeviceIndex, VkPeerMemoryFeatureFlags pPeerMemoryFeatures){
+        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), heapIndex != null ? heapIndex.getVkAddress() : VkPointer.NULL, localDeviceIndex != null ? localDeviceIndex.getVkAddress() : VkPointer.NULL, remoteDeviceIndex != null ? remoteDeviceIndex.getVkAddress() : VkPointer.NULL, pPeerMemoryFeatures != null ? pPeerMemoryFeatures.getVkAddress() : VkPointer.NULL);
+    }
+
+    private static native void call(long vkaddress, long device, long heapIndex, long localDeviceIndex, long remoteDeviceIndex, long pPeerMemoryFeatures);
+}

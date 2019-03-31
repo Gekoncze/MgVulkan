@@ -1,3 +1,0 @@
-    public static NAME fromPointer(Pointer p){
-        return (NAME) CallbackReference.getCallback(NAME.class, p);
-    }

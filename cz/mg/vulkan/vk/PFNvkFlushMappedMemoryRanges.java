@@ -1,0 +1,32 @@
+package cz.mg.vulkan.vk;
+
+/**
+ *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkFlushMappedMemoryRanges.html">khronos documentation</a>
+ **/
+public class PFNvkFlushMappedMemoryRanges extends VkFunctionPointer {
+    public PFNvkFlushMappedMemoryRanges() {
+    }
+
+    public PFNvkFlushMappedMemoryRanges(VkMemory vkmemory) {
+        super(vkmemory);
+    }
+
+    public PFNvkFlushMappedMemoryRanges(VkMemory vkmemory, long vkaddress) {
+        super(vkmemory, vkaddress);
+    }
+
+
+    public PFNvkFlushMappedMemoryRanges(long value) {
+        setValue(value);
+    }
+
+    public PFNvkFlushMappedMemoryRanges(VkInstance instance) {
+        super(instance, new VkString("vkFlushMappedMemoryRanges"));
+    }
+
+    public void call(VkDevice device, VkUInt32 memoryRangeCount, VkMappedMemoryRange pMemoryRanges, VkResult rval){
+        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), memoryRangeCount != null ? memoryRangeCount.getVkAddress() : VkPointer.NULL, pMemoryRanges != null ? pMemoryRanges.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL);
+    }
+
+    private static native void call(long vkaddress, long device, long memoryRangeCount, long pMemoryRanges, long rval);
+}

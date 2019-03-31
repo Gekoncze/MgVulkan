@@ -1,0 +1,140 @@
+package cz.mg.vulkan.vk;
+
+/**
+ *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkLogicOp.html">khronos documentation</a>
+ **/
+public class VkLogicOp extends VkEnum {
+    public static final int VK_LOGIC_OP_CLEAR = 0;
+    public static final int VK_LOGIC_OP_AND = 1;
+    public static final int VK_LOGIC_OP_AND_REVERSE = 2;
+    public static final int VK_LOGIC_OP_COPY = 3;
+    public static final int VK_LOGIC_OP_AND_INVERTED = 4;
+    public static final int VK_LOGIC_OP_NO_OP = 5;
+    public static final int VK_LOGIC_OP_XOR = 6;
+    public static final int VK_LOGIC_OP_OR = 7;
+    public static final int VK_LOGIC_OP_NOR = 8;
+    public static final int VK_LOGIC_OP_EQUIVALENT = 9;
+    public static final int VK_LOGIC_OP_INVERT = 10;
+    public static final int VK_LOGIC_OP_OR_REVERSE = 11;
+    public static final int VK_LOGIC_OP_COPY_INVERTED = 12;
+    public static final int VK_LOGIC_OP_OR_INVERTED = 13;
+    public static final int VK_LOGIC_OP_NAND = 14;
+    public static final int VK_LOGIC_OP_SET = 15;
+
+    public VkLogicOp() {
+    }
+
+    public VkLogicOp(VkMemory vkmemory) {
+        super(vkmemory);
+    }
+
+    public VkLogicOp(VkMemory vkmemory, long vkaddress) {
+        super(vkmemory, vkaddress);
+    }
+
+
+    public VkLogicOp(int value) {
+        setValue(value);
+    }
+
+    @Override
+    public String toString() {
+        if(getValue() == VK_LOGIC_OP_CLEAR) return "VK_LOGIC_OP_CLEAR";
+        if(getValue() == VK_LOGIC_OP_AND) return "VK_LOGIC_OP_AND";
+        if(getValue() == VK_LOGIC_OP_AND_REVERSE) return "VK_LOGIC_OP_AND_REVERSE";
+        if(getValue() == VK_LOGIC_OP_COPY) return "VK_LOGIC_OP_COPY";
+        if(getValue() == VK_LOGIC_OP_AND_INVERTED) return "VK_LOGIC_OP_AND_INVERTED";
+        if(getValue() == VK_LOGIC_OP_NO_OP) return "VK_LOGIC_OP_NO_OP";
+        if(getValue() == VK_LOGIC_OP_XOR) return "VK_LOGIC_OP_XOR";
+        if(getValue() == VK_LOGIC_OP_OR) return "VK_LOGIC_OP_OR";
+        if(getValue() == VK_LOGIC_OP_NOR) return "VK_LOGIC_OP_NOR";
+        if(getValue() == VK_LOGIC_OP_EQUIVALENT) return "VK_LOGIC_OP_EQUIVALENT";
+        if(getValue() == VK_LOGIC_OP_INVERT) return "VK_LOGIC_OP_INVERT";
+        if(getValue() == VK_LOGIC_OP_OR_REVERSE) return "VK_LOGIC_OP_OR_REVERSE";
+        if(getValue() == VK_LOGIC_OP_COPY_INVERTED) return "VK_LOGIC_OP_COPY_INVERTED";
+        if(getValue() == VK_LOGIC_OP_OR_INVERTED) return "VK_LOGIC_OP_OR_INVERTED";
+        if(getValue() == VK_LOGIC_OP_NAND) return "VK_LOGIC_OP_NAND";
+        if(getValue() == VK_LOGIC_OP_SET) return "VK_LOGIC_OP_SET";
+        return "UNKNOWN";
+    }
+
+    public static class Array extends VkLogicOp implements cz.mg.collections.array.ReadonlyArray<VkLogicOp> {
+        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*sizeof()));
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkLogicOp get(int i){
+            return new VkLogicOp(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
+        }
+
+        public Pointer(long value) {
+            setValue(value);
+        }
+
+        public Pointer(VkMemory vkmemory) {
+            super(vkmemory);
+        }
+
+        public Pointer(VkMemory vkmemory, long vkaddress) {
+            super(vkmemory, vkaddress);
+        }
+
+        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+            private final int count;
+
+            public Array(int count) {
+                super(new VkMemory(count*sizeof()));
+                this.count = count;
+            }
+
+            public Array(VkMemory vkmemory, int count) {
+                super(vkmemory);
+                this.count = count;
+            }
+
+            public Array(VkMemory vkmemory, long vkaddress, int count) {
+                super(vkmemory, vkaddress);
+                this.count = count;
+            }
+
+            public Array(VkLogicOp[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
+            }
+
+            @Override
+            public int count(){
+                return count;
+            }
+
+            @Override
+            public Pointer get(int i){
+                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+        }
+    }
+}

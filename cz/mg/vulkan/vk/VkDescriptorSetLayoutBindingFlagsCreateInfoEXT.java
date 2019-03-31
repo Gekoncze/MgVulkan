@@ -1,0 +1,154 @@
+package cz.mg.vulkan.vk;
+
+/**
+ *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkDescriptorSetLayoutBindingFlagsCreateInfoEXT.html">khronos documentation</a>
+ **/
+public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
+    public VkDescriptorSetLayoutBindingFlagsCreateInfoEXT() {
+        super(sizeof());
+    }
+
+    public VkDescriptorSetLayoutBindingFlagsCreateInfoEXT(VkMemory vkmemory) {
+        super(sizeof(), vkmemory);
+    }
+
+    public VkDescriptorSetLayoutBindingFlagsCreateInfoEXT(VkMemory vkmemory, long vkaddress) {
+        super(sizeof(), vkmemory, vkaddress);
+    }
+
+
+    public VkDescriptorSetLayoutBindingFlagsCreateInfoEXT(VkObject pNext, VkUInt32 bindingCount, VkDescriptorBindingFlagsEXT pBindingFlags) {
+        super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO_EXT));
+        setPNext(pNext);
+        setBindingCount(bindingCount);
+        setPBindingFlags(pBindingFlags);
+    }
+
+    public VkStructureType getSType() {
+        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+    }
+
+    public void setSType(VkStructureType sType) {
+        setSType(getVkAddress(), sType.getVkAddress());
+    }
+
+    private static native long getSType(long address);
+    private static native void setSType(long address, long sType);
+
+    public VkObject getPNext() {
+        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+    }
+
+    public void setPNext(VkObject pNext) {
+        setPNext(getVkAddress(), pNext.getVkAddress());
+    }
+
+    private static native long getPNext(long address);
+    private static native void setPNext(long address, long pNext);
+
+    public VkUInt32 getBindingCount() {
+        return new VkUInt32(getVkMemory(), getBindingCount(getVkAddress()));
+    }
+
+    public void setBindingCount(VkUInt32 bindingCount) {
+        setBindingCount(getVkAddress(), bindingCount.getVkAddress());
+    }
+
+    private static native long getBindingCount(long address);
+    private static native void setBindingCount(long address, long bindingCount);
+
+    public VkDescriptorBindingFlagsEXT.Array getPBindingFlags() {
+        return new VkDescriptorBindingFlagsEXT.Array(getVkMemory(), getPBindingFlags(getVkAddress()), getBindingCount().getValue());
+    }
+
+    public void setPBindingFlags(VkDescriptorBindingFlagsEXT pBindingFlags) {
+        setPBindingFlags(getVkAddress(), pBindingFlags.getVkAddress());
+    }
+
+    private static native long getPBindingFlags(long address);
+    private static native void setPBindingFlags(long address, long pBindingFlags);
+
+
+    public static native long sizeof();
+
+    public static class Array extends VkDescriptorSetLayoutBindingFlagsCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetLayoutBindingFlagsCreateInfoEXT> {
+        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*sizeof()));
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkDescriptorSetLayoutBindingFlagsCreateInfoEXT get(int i){
+            return new VkDescriptorSetLayoutBindingFlagsCreateInfoEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
+        }
+
+        public Pointer(long value) {
+            setValue(value);
+        }
+
+        public Pointer(VkMemory vkmemory) {
+            super(vkmemory);
+        }
+
+        public Pointer(VkMemory vkmemory, long vkaddress) {
+            super(vkmemory, vkaddress);
+        }
+
+        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+            private final int count;
+
+            public Array(int count) {
+                super(new VkMemory(count*sizeof()));
+                this.count = count;
+            }
+
+            public Array(VkMemory vkmemory, int count) {
+                super(vkmemory);
+                this.count = count;
+            }
+
+            public Array(VkMemory vkmemory, long vkaddress, int count) {
+                super(vkmemory, vkaddress);
+                this.count = count;
+            }
+
+            public Array(VkDescriptorSetLayoutBindingFlagsCreateInfoEXT[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
+            }
+
+            @Override
+            public int count(){
+                return count;
+            }
+
+            @Override
+            public Pointer get(int i){
+                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+        }
+    }
+}

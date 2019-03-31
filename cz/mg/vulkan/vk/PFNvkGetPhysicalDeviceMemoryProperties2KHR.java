@@ -1,0 +1,32 @@
+package cz.mg.vulkan.vk;
+
+/**
+ *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceMemoryProperties2KHR.html">khronos documentation</a>
+ **/
+public class PFNvkGetPhysicalDeviceMemoryProperties2KHR extends VkFunctionPointer {
+    public PFNvkGetPhysicalDeviceMemoryProperties2KHR() {
+    }
+
+    public PFNvkGetPhysicalDeviceMemoryProperties2KHR(VkMemory vkmemory) {
+        super(vkmemory);
+    }
+
+    public PFNvkGetPhysicalDeviceMemoryProperties2KHR(VkMemory vkmemory, long vkaddress) {
+        super(vkmemory, vkaddress);
+    }
+
+
+    public PFNvkGetPhysicalDeviceMemoryProperties2KHR(long value) {
+        setValue(value);
+    }
+
+    public PFNvkGetPhysicalDeviceMemoryProperties2KHR(VkInstance instance) {
+        super(instance, new VkString("vkGetPhysicalDeviceMemoryProperties2KHR"));
+    }
+
+    public void call(VkPhysicalDevice physicalDevice, VkPhysicalDeviceMemoryProperties2 pMemoryProperties){
+        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPhysicalDevice.NULL.getVkAddress(), pMemoryProperties != null ? pMemoryProperties.getVkAddress() : VkPointer.NULL);
+    }
+
+    private static native void call(long vkaddress, long physicalDevice, long pMemoryProperties);
+}
