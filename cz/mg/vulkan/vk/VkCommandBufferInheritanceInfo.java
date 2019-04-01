@@ -9,11 +9,11 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
     }
 
     public VkCommandBufferInheritanceInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkCommandBufferInheritanceInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -33,8 +33,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -44,8 +46,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -55,8 +59,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         return new VkRenderPass(getVkMemory(), getRenderPass(getVkAddress()));
     }
 
+    
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass.getVkAddress());
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRenderPass(long address);
@@ -66,8 +72,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getSubpass(getVkAddress()));
     }
 
+    
     public void setSubpass(VkUInt32 subpass) {
-        setSubpass(getVkAddress(), subpass.getVkAddress());
+        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSubpass(long address);
@@ -77,8 +85,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         return new VkFramebuffer(getVkMemory(), getFramebuffer(getVkAddress()));
     }
 
+    
     public void setFramebuffer(VkFramebuffer framebuffer) {
-        setFramebuffer(getVkAddress(), framebuffer.getVkAddress());
+        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFramebuffer(long address);
@@ -88,8 +98,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         return new VkBool32(getVkMemory(), getOcclusionQueryEnable(getVkAddress()));
     }
 
+    
     public void setOcclusionQueryEnable(VkBool32 occlusionQueryEnable) {
-        setOcclusionQueryEnable(getVkAddress(), occlusionQueryEnable.getVkAddress());
+        setOcclusionQueryEnable(getVkAddress(), occlusionQueryEnable != null ? occlusionQueryEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOcclusionQueryEnable(long address);
@@ -99,8 +111,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         return new VkQueryControlFlags(getVkMemory(), getQueryFlags(getVkAddress()));
     }
 
+    
     public void setQueryFlags(VkQueryControlFlags queryFlags) {
-        setQueryFlags(getVkAddress(), queryFlags.getVkAddress());
+        setQueryFlags(getVkAddress(), queryFlags != null ? queryFlags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQueryFlags(long address);
@@ -110,8 +124,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         return new VkQueryPipelineStatisticFlags(getVkMemory(), getPipelineStatistics(getVkAddress()));
     }
 
+    
     public void setPipelineStatistics(VkQueryPipelineStatisticFlags pipelineStatistics) {
-        setPipelineStatistics(getVkAddress(), pipelineStatistics.getVkAddress());
+        setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPipelineStatistics(long address);
@@ -124,7 +140,12 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkCommandBufferInheritanceInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkCommandBufferInheritanceInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -165,11 +186,11 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCommandBufferInheritanceInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

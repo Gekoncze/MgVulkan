@@ -9,11 +9,11 @@ public class VkSpecializationMapEntry extends VkObject {
     }
 
     public VkSpecializationMapEntry(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSpecializationMapEntry(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkSpecializationMapEntry extends VkObject {
         return new VkUInt32(getVkMemory(), getConstantID(getVkAddress()));
     }
 
+    
     public void setConstantID(VkUInt32 constantID) {
-        setConstantID(getVkAddress(), constantID.getVkAddress());
+        setConstantID(getVkAddress(), constantID != null ? constantID.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getConstantID(long address);
@@ -39,8 +41,10 @@ public class VkSpecializationMapEntry extends VkObject {
         return new VkUInt32(getVkMemory(), getOffset(getVkAddress()));
     }
 
+    
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset.getVkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOffset(long address);
@@ -50,8 +54,10 @@ public class VkSpecializationMapEntry extends VkObject {
         return new VkSize(getVkMemory(), getSize(getVkAddress()));
     }
 
+    
     public void setSize(VkSize size) {
-        setSize(getVkAddress(), size.getVkAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSize(long address);
@@ -64,7 +70,12 @@ public class VkSpecializationMapEntry extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSpecializationMapEntry.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSpecializationMapEntry o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkSpecializationMapEntry extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSpecializationMapEntry.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

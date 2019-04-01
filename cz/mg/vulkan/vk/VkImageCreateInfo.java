@@ -9,11 +9,11 @@ public class VkImageCreateInfo extends VkObject {
     }
 
     public VkImageCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkImageCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -40,8 +40,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -51,8 +53,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -62,8 +66,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkImageCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkImageCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -73,8 +79,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkImageType(getVkMemory(), getImageType(getVkAddress()));
     }
 
+    
     public void setImageType(VkImageType imageType) {
-        setImageType(getVkAddress(), imageType.getVkAddress());
+        setImageType(getVkAddress(), imageType != null ? imageType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageType(long address);
@@ -84,8 +92,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
     }
 
+    
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format.getVkAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFormat(long address);
@@ -95,8 +105,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkExtent3D(getVkMemory(), getExtent(getVkAddress()));
     }
 
+    
     public void setExtent(VkExtent3D extent) {
-        setExtent(getVkAddress(), extent.getVkAddress());
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExtent(long address);
@@ -106,8 +118,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getMipLevels(getVkAddress()));
     }
 
+    
     public void setMipLevels(VkUInt32 mipLevels) {
-        setMipLevels(getVkAddress(), mipLevels.getVkAddress());
+        setMipLevels(getVkAddress(), mipLevels != null ? mipLevels.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMipLevels(long address);
@@ -117,8 +131,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getArrayLayers(getVkAddress()));
     }
 
+    
     public void setArrayLayers(VkUInt32 arrayLayers) {
-        setArrayLayers(getVkAddress(), arrayLayers.getVkAddress());
+        setArrayLayers(getVkAddress(), arrayLayers != null ? arrayLayers.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getArrayLayers(long address);
@@ -128,8 +144,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkSampleCountFlagBits(getVkMemory(), getSamples(getVkAddress()));
     }
 
+    
     public void setSamples(VkSampleCountFlagBits samples) {
-        setSamples(getVkAddress(), samples.getVkAddress());
+        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSamples(long address);
@@ -139,8 +157,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkImageTiling(getVkMemory(), getTiling(getVkAddress()));
     }
 
+    
     public void setTiling(VkImageTiling tiling) {
-        setTiling(getVkAddress(), tiling.getVkAddress());
+        setTiling(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTiling(long address);
@@ -150,8 +170,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkImageUsageFlags(getVkMemory(), getUsage(getVkAddress()));
     }
 
+    
     public void setUsage(VkImageUsageFlags usage) {
-        setUsage(getVkAddress(), usage.getVkAddress());
+        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getUsage(long address);
@@ -161,8 +183,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkSharingMode(getVkMemory(), getSharingMode(getVkAddress()));
     }
 
+    
     public void setSharingMode(VkSharingMode sharingMode) {
-        setSharingMode(getVkAddress(), sharingMode.getVkAddress());
+        setSharingMode(getVkAddress(), sharingMode != null ? sharingMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSharingMode(long address);
@@ -172,19 +196,23 @@ public class VkImageCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getQueueFamilyIndexCount(getVkAddress()));
     }
 
+    
     public void setQueueFamilyIndexCount(VkUInt32 queueFamilyIndexCount) {
-        setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount.getVkAddress());
+        setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount != null ? queueFamilyIndexCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQueueFamilyIndexCount(long address);
     private static native void setQueueFamilyIndexCount(long address, long queueFamilyIndexCount);
 
-    public VkUInt32.Array getPQueueFamilyIndices() {
-        return new VkUInt32.Array(getVkMemory(), getPQueueFamilyIndices(getVkAddress()), getQueueFamilyIndexCount().getValue());
+    public VkUInt32 getPQueueFamilyIndices() {
+        return new VkUInt32(getVkMemory(), getPQueueFamilyIndices(getVkAddress()));
     }
 
+    private VkObject pQueueFamilyIndices = null;
     public void setPQueueFamilyIndices(VkUInt32 pQueueFamilyIndices) {
-        setPQueueFamilyIndices(getVkAddress(), pQueueFamilyIndices.getVkAddress());
+        setPQueueFamilyIndices(getVkAddress(), pQueueFamilyIndices != null ? pQueueFamilyIndices.getVkAddress() : VkPointer.NULL);
+        this.pQueueFamilyIndices = pQueueFamilyIndices;
     }
 
     private static native long getPQueueFamilyIndices(long address);
@@ -194,8 +222,10 @@ public class VkImageCreateInfo extends VkObject {
         return new VkImageLayout(getVkMemory(), getInitialLayout(getVkAddress()));
     }
 
+    
     public void setInitialLayout(VkImageLayout initialLayout) {
-        setInitialLayout(getVkAddress(), initialLayout.getVkAddress());
+        setInitialLayout(getVkAddress(), initialLayout != null ? initialLayout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getInitialLayout(long address);
@@ -208,7 +238,12 @@ public class VkImageCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkImageCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkImageCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -249,11 +284,11 @@ public class VkImageCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImageCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

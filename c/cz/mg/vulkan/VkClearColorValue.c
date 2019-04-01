@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkClearColorValue_getFloat32(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkClearColorValue* o = (VkClearColorValue*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->float32));
+    return jniPointerToLong(o->float32);
 }
 
 void Java_cz_mg_vulkan_vk_VkClearColorValue_setFloat32(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkClearColorValue_setFloat32(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkClearColorValue* o = (VkClearColorValue*)jniLongToPointer(address);
-    memcpy(o->float32, jniLongToPointer(valueAddress), sizeof(o->float32));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->float32, valuePointer, sizeof(o->float32));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkClearColorValue_getInt32(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkClearColorValue* o = (VkClearColorValue*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->int32));
+    return jniPointerToLong(o->int32);
 }
 
 void Java_cz_mg_vulkan_vk_VkClearColorValue_setInt32(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkClearColorValue_setInt32(JNIEnv* env, jclass jc, jlo
     (void)env;
     (void)jc;
     VkClearColorValue* o = (VkClearColorValue*)jniLongToPointer(address);
-    memcpy(o->int32, jniLongToPointer(valueAddress), sizeof(o->int32));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->int32, valuePointer, sizeof(o->int32));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkClearColorValue_getUint32(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkClearColorValue* o = (VkClearColorValue*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->uint32));
+    return jniPointerToLong(o->uint32);
 }
 
 void Java_cz_mg_vulkan_vk_VkClearColorValue_setUint32(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkClearColorValue_setUint32(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkClearColorValue* o = (VkClearColorValue*)jniLongToPointer(address);
-    memcpy(o->uint32, jniLongToPointer(valueAddress), sizeof(o->uint32));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->uint32, valuePointer, sizeof(o->uint32));
 }
+
 

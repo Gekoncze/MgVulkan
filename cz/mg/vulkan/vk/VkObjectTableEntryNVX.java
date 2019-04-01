@@ -9,11 +9,11 @@ public class VkObjectTableEntryNVX extends VkObject {
     }
 
     public VkObjectTableEntryNVX(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkObjectTableEntryNVX(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkObjectTableEntryNVX extends VkObject {
         return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));
     }
 
+    
     public void setType(VkObjectEntryTypeNVX type) {
-        setType(getVkAddress(), type.getVkAddress());
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getType(long address);
@@ -38,8 +40,10 @@ public class VkObjectTableEntryNVX extends VkObject {
         return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -52,7 +56,12 @@ public class VkObjectTableEntryNVX extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkObjectTableEntryNVX.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkObjectTableEntryNVX o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkObjectTableEntryNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectTableEntryNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

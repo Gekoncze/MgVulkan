@@ -9,11 +9,11 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
     }
 
     public VkPhysicalDeviceGroupProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPhysicalDeviceGroupProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,19 +56,23 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getPhysicalDeviceCount(getVkAddress()));
     }
 
+    
     public void setPhysicalDeviceCount(VkUInt32 physicalDeviceCount) {
-        setPhysicalDeviceCount(getVkAddress(), physicalDeviceCount.getVkAddress());
+        setPhysicalDeviceCount(getVkAddress(), physicalDeviceCount != null ? physicalDeviceCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPhysicalDeviceCount(long address);
     private static native void setPhysicalDeviceCount(long address, long physicalDeviceCount);
 
-    public VkPhysicalDevice.Array getPhysicalDevices() {
-        return new VkPhysicalDevice.Array(getVkMemory(), getPhysicalDevices(getVkAddress()), getPhysicalDeviceCount().getValue());
+    public VkPhysicalDevice getPhysicalDevices() {
+        return new VkPhysicalDevice(getVkMemory(), getPhysicalDevices(getVkAddress()));
     }
 
+    
     public void setPhysicalDevices(VkPhysicalDevice physicalDevices) {
-        setPhysicalDevices(getVkAddress(), physicalDevices.getVkAddress());
+        setPhysicalDevices(getVkAddress(), physicalDevices != null ? physicalDevices.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getPhysicalDevices(long address);
@@ -74,8 +82,10 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
         return new VkBool32(getVkMemory(), getSubsetAllocation(getVkAddress()));
     }
 
+    
     public void setSubsetAllocation(VkBool32 subsetAllocation) {
-        setSubsetAllocation(getVkAddress(), subsetAllocation.getVkAddress());
+        setSubsetAllocation(getVkAddress(), subsetAllocation != null ? subsetAllocation.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSubsetAllocation(long address);
@@ -88,7 +98,12 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDeviceGroupProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceGroupProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceGroupProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

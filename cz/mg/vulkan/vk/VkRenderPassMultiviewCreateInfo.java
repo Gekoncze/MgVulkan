@@ -9,11 +9,11 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
     }
 
     public VkRenderPassMultiviewCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkRenderPassMultiviewCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -33,8 +33,10 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -44,8 +46,10 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -55,19 +59,23 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getSubpassCount(getVkAddress()));
     }
 
+    
     public void setSubpassCount(VkUInt32 subpassCount) {
-        setSubpassCount(getVkAddress(), subpassCount.getVkAddress());
+        setSubpassCount(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSubpassCount(long address);
     private static native void setSubpassCount(long address, long subpassCount);
 
-    public VkUInt32.Array getPViewMasks() {
-        return new VkUInt32.Array(getVkMemory(), getPViewMasks(getVkAddress()), getSubpassCount().getValue());
+    public VkUInt32 getPViewMasks() {
+        return new VkUInt32(getVkMemory(), getPViewMasks(getVkAddress()));
     }
 
+    private VkObject pViewMasks = null;
     public void setPViewMasks(VkUInt32 pViewMasks) {
-        setPViewMasks(getVkAddress(), pViewMasks.getVkAddress());
+        setPViewMasks(getVkAddress(), pViewMasks != null ? pViewMasks.getVkAddress() : VkPointer.NULL);
+        this.pViewMasks = pViewMasks;
     }
 
     private static native long getPViewMasks(long address);
@@ -77,19 +85,23 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getDependencyCount(getVkAddress()));
     }
 
+    
     public void setDependencyCount(VkUInt32 dependencyCount) {
-        setDependencyCount(getVkAddress(), dependencyCount.getVkAddress());
+        setDependencyCount(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDependencyCount(long address);
     private static native void setDependencyCount(long address, long dependencyCount);
 
-    public VkInt32.Array getPViewOffsets() {
-        return new VkInt32.Array(getVkMemory(), getPViewOffsets(getVkAddress()), getDependencyCount().getValue());
+    public VkInt32 getPViewOffsets() {
+        return new VkInt32(getVkMemory(), getPViewOffsets(getVkAddress()));
     }
 
+    private VkObject pViewOffsets = null;
     public void setPViewOffsets(VkInt32 pViewOffsets) {
-        setPViewOffsets(getVkAddress(), pViewOffsets.getVkAddress());
+        setPViewOffsets(getVkAddress(), pViewOffsets != null ? pViewOffsets.getVkAddress() : VkPointer.NULL);
+        this.pViewOffsets = pViewOffsets;
     }
 
     private static native long getPViewOffsets(long address);
@@ -99,19 +111,23 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getCorrelationMaskCount(getVkAddress()));
     }
 
+    
     public void setCorrelationMaskCount(VkUInt32 correlationMaskCount) {
-        setCorrelationMaskCount(getVkAddress(), correlationMaskCount.getVkAddress());
+        setCorrelationMaskCount(getVkAddress(), correlationMaskCount != null ? correlationMaskCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCorrelationMaskCount(long address);
     private static native void setCorrelationMaskCount(long address, long correlationMaskCount);
 
-    public VkUInt32.Array getPCorrelationMasks() {
-        return new VkUInt32.Array(getVkMemory(), getPCorrelationMasks(getVkAddress()), getCorrelationMaskCount().getValue());
+    public VkUInt32 getPCorrelationMasks() {
+        return new VkUInt32(getVkMemory(), getPCorrelationMasks(getVkAddress()));
     }
 
+    private VkObject pCorrelationMasks = null;
     public void setPCorrelationMasks(VkUInt32 pCorrelationMasks) {
-        setPCorrelationMasks(getVkAddress(), pCorrelationMasks.getVkAddress());
+        setPCorrelationMasks(getVkAddress(), pCorrelationMasks != null ? pCorrelationMasks.getVkAddress() : VkPointer.NULL);
+        this.pCorrelationMasks = pCorrelationMasks;
     }
 
     private static native long getPCorrelationMasks(long address);
@@ -124,7 +140,12 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkRenderPassMultiviewCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkRenderPassMultiviewCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -165,11 +186,11 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkRenderPassMultiviewCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

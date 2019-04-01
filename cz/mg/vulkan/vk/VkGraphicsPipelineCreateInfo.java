@@ -9,11 +9,11 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
     }
 
     public VkGraphicsPipelineCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkGraphicsPipelineCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -44,8 +44,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -55,8 +57,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -66,8 +70,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -77,19 +83,23 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getStageCount(getVkAddress()));
     }
 
+    
     public void setStageCount(VkUInt32 stageCount) {
-        setStageCount(getVkAddress(), stageCount.getVkAddress());
+        setStageCount(getVkAddress(), stageCount != null ? stageCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getStageCount(long address);
     private static native void setStageCount(long address, long stageCount);
 
-    public VkPipelineShaderStageCreateInfo.Array getPStages() {
-        return new VkPipelineShaderStageCreateInfo.Array(getVkMemory(), getPStages(getVkAddress()), getStageCount().getValue());
+    public VkPipelineShaderStageCreateInfo getPStages() {
+        return new VkPipelineShaderStageCreateInfo(getVkMemory(), getPStages(getVkAddress()));
     }
 
+    private VkObject pStages = null;
     public void setPStages(VkPipelineShaderStageCreateInfo pStages) {
-        setPStages(getVkAddress(), pStages.getVkAddress());
+        setPStages(getVkAddress(), pStages != null ? pStages.getVkAddress() : VkPointer.NULL);
+        this.pStages = pStages;
     }
 
     private static native long getPStages(long address);
@@ -99,8 +109,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineVertexInputStateCreateInfo(getVkMemory(), getPVertexInputState(getVkAddress()));
     }
 
+    private VkObject pVertexInputState = null;
     public void setPVertexInputState(VkPipelineVertexInputStateCreateInfo pVertexInputState) {
-        setPVertexInputState(getVkAddress(), pVertexInputState.getVkAddress());
+        setPVertexInputState(getVkAddress(), pVertexInputState != null ? pVertexInputState.getVkAddress() : VkPointer.NULL);
+        this.pVertexInputState = pVertexInputState;
     }
 
     private static native long getPVertexInputState(long address);
@@ -110,8 +122,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineInputAssemblyStateCreateInfo(getVkMemory(), getPInputAssemblyState(getVkAddress()));
     }
 
+    private VkObject pInputAssemblyState = null;
     public void setPInputAssemblyState(VkPipelineInputAssemblyStateCreateInfo pInputAssemblyState) {
-        setPInputAssemblyState(getVkAddress(), pInputAssemblyState.getVkAddress());
+        setPInputAssemblyState(getVkAddress(), pInputAssemblyState != null ? pInputAssemblyState.getVkAddress() : VkPointer.NULL);
+        this.pInputAssemblyState = pInputAssemblyState;
     }
 
     private static native long getPInputAssemblyState(long address);
@@ -121,8 +135,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineTessellationStateCreateInfo(getVkMemory(), getPTessellationState(getVkAddress()));
     }
 
+    private VkObject pTessellationState = null;
     public void setPTessellationState(VkPipelineTessellationStateCreateInfo pTessellationState) {
-        setPTessellationState(getVkAddress(), pTessellationState.getVkAddress());
+        setPTessellationState(getVkAddress(), pTessellationState != null ? pTessellationState.getVkAddress() : VkPointer.NULL);
+        this.pTessellationState = pTessellationState;
     }
 
     private static native long getPTessellationState(long address);
@@ -132,8 +148,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineViewportStateCreateInfo(getVkMemory(), getPViewportState(getVkAddress()));
     }
 
+    private VkObject pViewportState = null;
     public void setPViewportState(VkPipelineViewportStateCreateInfo pViewportState) {
-        setPViewportState(getVkAddress(), pViewportState.getVkAddress());
+        setPViewportState(getVkAddress(), pViewportState != null ? pViewportState.getVkAddress() : VkPointer.NULL);
+        this.pViewportState = pViewportState;
     }
 
     private static native long getPViewportState(long address);
@@ -143,8 +161,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineRasterizationStateCreateInfo(getVkMemory(), getPRasterizationState(getVkAddress()));
     }
 
+    private VkObject pRasterizationState = null;
     public void setPRasterizationState(VkPipelineRasterizationStateCreateInfo pRasterizationState) {
-        setPRasterizationState(getVkAddress(), pRasterizationState.getVkAddress());
+        setPRasterizationState(getVkAddress(), pRasterizationState != null ? pRasterizationState.getVkAddress() : VkPointer.NULL);
+        this.pRasterizationState = pRasterizationState;
     }
 
     private static native long getPRasterizationState(long address);
@@ -154,8 +174,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineMultisampleStateCreateInfo(getVkMemory(), getPMultisampleState(getVkAddress()));
     }
 
+    private VkObject pMultisampleState = null;
     public void setPMultisampleState(VkPipelineMultisampleStateCreateInfo pMultisampleState) {
-        setPMultisampleState(getVkAddress(), pMultisampleState.getVkAddress());
+        setPMultisampleState(getVkAddress(), pMultisampleState != null ? pMultisampleState.getVkAddress() : VkPointer.NULL);
+        this.pMultisampleState = pMultisampleState;
     }
 
     private static native long getPMultisampleState(long address);
@@ -165,8 +187,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineDepthStencilStateCreateInfo(getVkMemory(), getPDepthStencilState(getVkAddress()));
     }
 
+    private VkObject pDepthStencilState = null;
     public void setPDepthStencilState(VkPipelineDepthStencilStateCreateInfo pDepthStencilState) {
-        setPDepthStencilState(getVkAddress(), pDepthStencilState.getVkAddress());
+        setPDepthStencilState(getVkAddress(), pDepthStencilState != null ? pDepthStencilState.getVkAddress() : VkPointer.NULL);
+        this.pDepthStencilState = pDepthStencilState;
     }
 
     private static native long getPDepthStencilState(long address);
@@ -176,8 +200,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineColorBlendStateCreateInfo(getVkMemory(), getPColorBlendState(getVkAddress()));
     }
 
+    private VkObject pColorBlendState = null;
     public void setPColorBlendState(VkPipelineColorBlendStateCreateInfo pColorBlendState) {
-        setPColorBlendState(getVkAddress(), pColorBlendState.getVkAddress());
+        setPColorBlendState(getVkAddress(), pColorBlendState != null ? pColorBlendState.getVkAddress() : VkPointer.NULL);
+        this.pColorBlendState = pColorBlendState;
     }
 
     private static native long getPColorBlendState(long address);
@@ -187,8 +213,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineDynamicStateCreateInfo(getVkMemory(), getPDynamicState(getVkAddress()));
     }
 
+    private VkObject pDynamicState = null;
     public void setPDynamicState(VkPipelineDynamicStateCreateInfo pDynamicState) {
-        setPDynamicState(getVkAddress(), pDynamicState.getVkAddress());
+        setPDynamicState(getVkAddress(), pDynamicState != null ? pDynamicState.getVkAddress() : VkPointer.NULL);
+        this.pDynamicState = pDynamicState;
     }
 
     private static native long getPDynamicState(long address);
@@ -198,8 +226,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipelineLayout(getVkMemory(), getLayout(getVkAddress()));
     }
 
+    
     public void setLayout(VkPipelineLayout layout) {
-        setLayout(getVkAddress(), layout.getVkAddress());
+        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLayout(long address);
@@ -209,8 +239,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkRenderPass(getVkMemory(), getRenderPass(getVkAddress()));
     }
 
+    
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass.getVkAddress());
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRenderPass(long address);
@@ -220,8 +252,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getSubpass(getVkAddress()));
     }
 
+    
     public void setSubpass(VkUInt32 subpass) {
-        setSubpass(getVkAddress(), subpass.getVkAddress());
+        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSubpass(long address);
@@ -231,8 +265,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkPipeline(getVkMemory(), getBasePipelineHandle(getVkAddress()));
     }
 
+    
     public void setBasePipelineHandle(VkPipeline basePipelineHandle) {
-        setBasePipelineHandle(getVkAddress(), basePipelineHandle.getVkAddress());
+        setBasePipelineHandle(getVkAddress(), basePipelineHandle != null ? basePipelineHandle.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBasePipelineHandle(long address);
@@ -242,8 +278,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         return new VkInt32(getVkMemory(), getBasePipelineIndex(getVkAddress()));
     }
 
+    
     public void setBasePipelineIndex(VkInt32 basePipelineIndex) {
-        setBasePipelineIndex(getVkAddress(), basePipelineIndex.getVkAddress());
+        setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBasePipelineIndex(long address);
@@ -256,7 +294,12 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkGraphicsPipelineCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkGraphicsPipelineCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -297,11 +340,11 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkGraphicsPipelineCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

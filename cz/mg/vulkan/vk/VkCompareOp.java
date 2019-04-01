@@ -46,7 +46,12 @@ public class VkCompareOp extends VkEnum {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkCompareOp.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkCompareOp o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -87,11 +92,11 @@ public class VkCompareOp extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCompareOp.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

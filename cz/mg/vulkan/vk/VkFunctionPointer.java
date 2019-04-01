@@ -13,17 +13,17 @@ public class VkFunctionPointer extends VkObject {
     }
 
     public VkFunctionPointer(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkFunctionPointer(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
     public VkFunctionPointer(VkInstance instance, VkString name) {
         super(sizeof());
-        load(getVkAddress(), instance == null ? VkInstance.NULL.getVkAddress() : instance.getVkAddress(), name.getVkAddress());
-        if(getValue() == NULL) throw new RuntimeException("Could not load vulkan function " + name.getString());
+        load(getVkAddress(), instance != null ? instance.getVkAddress() : VkPointer.NULL_ADDRESS, name.getVkAddress());
+        if(getValue() == NULL) throw new RuntimeException("Could not load vulkan function " + name);
     }
 
     public long getValue() {
@@ -48,7 +48,12 @@ public class VkFunctionPointer extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkFunctionPointer.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkFunctionPointer o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 

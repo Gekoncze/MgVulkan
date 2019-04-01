@@ -9,11 +9,11 @@ public class VkApplicationInfo extends VkObject {
     }
 
     public VkApplicationInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkApplicationInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkApplicationInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkApplicationInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,8 +58,10 @@ public class VkApplicationInfo extends VkObject {
         return new VkChar(getVkMemory(), getPApplicationName(getVkAddress()));
     }
 
+    private VkObject pApplicationName = null;
     public void setPApplicationName(VkChar pApplicationName) {
-        setPApplicationName(getVkAddress(), pApplicationName.getVkAddress());
+        setPApplicationName(getVkAddress(), pApplicationName != null ? pApplicationName.getVkAddress() : VkPointer.NULL);
+        this.pApplicationName = pApplicationName;
     }
 
     private static native long getPApplicationName(long address);
@@ -65,8 +71,10 @@ public class VkApplicationInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getApplicationVersion(getVkAddress()));
     }
 
+    
     public void setApplicationVersion(VkUInt32 applicationVersion) {
-        setApplicationVersion(getVkAddress(), applicationVersion.getVkAddress());
+        setApplicationVersion(getVkAddress(), applicationVersion != null ? applicationVersion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getApplicationVersion(long address);
@@ -76,8 +84,10 @@ public class VkApplicationInfo extends VkObject {
         return new VkChar(getVkMemory(), getPEngineName(getVkAddress()));
     }
 
+    private VkObject pEngineName = null;
     public void setPEngineName(VkChar pEngineName) {
-        setPEngineName(getVkAddress(), pEngineName.getVkAddress());
+        setPEngineName(getVkAddress(), pEngineName != null ? pEngineName.getVkAddress() : VkPointer.NULL);
+        this.pEngineName = pEngineName;
     }
 
     private static native long getPEngineName(long address);
@@ -87,8 +97,10 @@ public class VkApplicationInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getEngineVersion(getVkAddress()));
     }
 
+    
     public void setEngineVersion(VkUInt32 engineVersion) {
-        setEngineVersion(getVkAddress(), engineVersion.getVkAddress());
+        setEngineVersion(getVkAddress(), engineVersion != null ? engineVersion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getEngineVersion(long address);
@@ -98,8 +110,10 @@ public class VkApplicationInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getApiVersion(getVkAddress()));
     }
 
+    
     public void setApiVersion(VkUInt32 apiVersion) {
-        setApiVersion(getVkAddress(), apiVersion.getVkAddress());
+        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getApiVersion(long address);
@@ -112,7 +126,12 @@ public class VkApplicationInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkApplicationInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkApplicationInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkApplicationInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkApplicationInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

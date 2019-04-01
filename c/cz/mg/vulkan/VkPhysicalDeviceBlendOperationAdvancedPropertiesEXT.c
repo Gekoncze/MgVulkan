@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_g
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_se
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_se
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_getAdvancedBlendMaxColorAttachments(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->advancedBlendMaxColorAttachments));
+    return jniPointerToLong(&o->advancedBlendMaxColorAttachments);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_setAdvancedBlendMaxColorAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_se
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->advancedBlendMaxColorAttachments, jniLongToPointer(valueAddress), sizeof(o->advancedBlendMaxColorAttachments));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->advancedBlendMaxColorAttachments, valuePointer, sizeof(o->advancedBlendMaxColorAttachments));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_getAdvancedBlendIndependentBlend(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->advancedBlendIndependentBlend));
+    return jniPointerToLong(&o->advancedBlendIndependentBlend);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_setAdvancedBlendIndependentBlend(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_se
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->advancedBlendIndependentBlend, jniLongToPointer(valueAddress), sizeof(o->advancedBlendIndependentBlend));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->advancedBlendIndependentBlend, valuePointer, sizeof(o->advancedBlendIndependentBlend));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_getAdvancedBlendNonPremultipliedSrcColor(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->advancedBlendNonPremultipliedSrcColor));
+    return jniPointerToLong(&o->advancedBlendNonPremultipliedSrcColor);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_setAdvancedBlendNonPremultipliedSrcColor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_se
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->advancedBlendNonPremultipliedSrcColor, jniLongToPointer(valueAddress), sizeof(o->advancedBlendNonPremultipliedSrcColor));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->advancedBlendNonPremultipliedSrcColor, valuePointer, sizeof(o->advancedBlendNonPremultipliedSrcColor));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_getAdvancedBlendNonPremultipliedDstColor(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->advancedBlendNonPremultipliedDstColor));
+    return jniPointerToLong(&o->advancedBlendNonPremultipliedDstColor);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_setAdvancedBlendNonPremultipliedDstColor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_se
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->advancedBlendNonPremultipliedDstColor, jniLongToPointer(valueAddress), sizeof(o->advancedBlendNonPremultipliedDstColor));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->advancedBlendNonPremultipliedDstColor, valuePointer, sizeof(o->advancedBlendNonPremultipliedDstColor));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_getAdvancedBlendCorrelatedOverlap(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->advancedBlendCorrelatedOverlap));
+    return jniPointerToLong(&o->advancedBlendCorrelatedOverlap);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_setAdvancedBlendCorrelatedOverlap(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_se
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->advancedBlendCorrelatedOverlap, jniLongToPointer(valueAddress), sizeof(o->advancedBlendCorrelatedOverlap));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->advancedBlendCorrelatedOverlap, valuePointer, sizeof(o->advancedBlendCorrelatedOverlap));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_getAdvancedBlendAllOperations(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->advancedBlendAllOperations));
+    return jniPointerToLong(&o->advancedBlendAllOperations);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_setAdvancedBlendAllOperations(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,6 +148,8 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT_se
     (void)env;
     (void)jc;
     VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT* o = (VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->advancedBlendAllOperations, jniLongToPointer(valueAddress), sizeof(o->advancedBlendAllOperations));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->advancedBlendAllOperations, valuePointer, sizeof(o->advancedBlendAllOperations));
 }
+
 

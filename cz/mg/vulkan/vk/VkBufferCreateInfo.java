@@ -9,11 +9,11 @@ public class VkBufferCreateInfo extends VkObject {
     }
 
     public VkBufferCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkBufferCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -33,8 +33,10 @@ public class VkBufferCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -44,8 +46,10 @@ public class VkBufferCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -55,8 +59,10 @@ public class VkBufferCreateInfo extends VkObject {
         return new VkBufferCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkBufferCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -66,8 +72,10 @@ public class VkBufferCreateInfo extends VkObject {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
     }
 
+    
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size.getVkAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSize(long address);
@@ -77,8 +85,10 @@ public class VkBufferCreateInfo extends VkObject {
         return new VkBufferUsageFlags(getVkMemory(), getUsage(getVkAddress()));
     }
 
+    
     public void setUsage(VkBufferUsageFlags usage) {
-        setUsage(getVkAddress(), usage.getVkAddress());
+        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getUsage(long address);
@@ -88,8 +98,10 @@ public class VkBufferCreateInfo extends VkObject {
         return new VkSharingMode(getVkMemory(), getSharingMode(getVkAddress()));
     }
 
+    
     public void setSharingMode(VkSharingMode sharingMode) {
-        setSharingMode(getVkAddress(), sharingMode.getVkAddress());
+        setSharingMode(getVkAddress(), sharingMode != null ? sharingMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSharingMode(long address);
@@ -99,19 +111,23 @@ public class VkBufferCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getQueueFamilyIndexCount(getVkAddress()));
     }
 
+    
     public void setQueueFamilyIndexCount(VkUInt32 queueFamilyIndexCount) {
-        setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount.getVkAddress());
+        setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount != null ? queueFamilyIndexCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQueueFamilyIndexCount(long address);
     private static native void setQueueFamilyIndexCount(long address, long queueFamilyIndexCount);
 
-    public VkUInt32.Array getPQueueFamilyIndices() {
-        return new VkUInt32.Array(getVkMemory(), getPQueueFamilyIndices(getVkAddress()), getQueueFamilyIndexCount().getValue());
+    public VkUInt32 getPQueueFamilyIndices() {
+        return new VkUInt32(getVkMemory(), getPQueueFamilyIndices(getVkAddress()));
     }
 
+    private VkObject pQueueFamilyIndices = null;
     public void setPQueueFamilyIndices(VkUInt32 pQueueFamilyIndices) {
-        setPQueueFamilyIndices(getVkAddress(), pQueueFamilyIndices.getVkAddress());
+        setPQueueFamilyIndices(getVkAddress(), pQueueFamilyIndices != null ? pQueueFamilyIndices.getVkAddress() : VkPointer.NULL);
+        this.pQueueFamilyIndices = pQueueFamilyIndices;
     }
 
     private static native long getPQueueFamilyIndices(long address);
@@ -124,7 +140,12 @@ public class VkBufferCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkBufferCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkBufferCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -165,11 +186,11 @@ public class VkBufferCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBufferCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

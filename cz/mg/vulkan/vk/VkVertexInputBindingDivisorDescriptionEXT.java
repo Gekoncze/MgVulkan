@@ -9,11 +9,11 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
     }
 
     public VkVertexInputBindingDivisorDescriptionEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkVertexInputBindingDivisorDescriptionEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
         return new VkUInt32(getVkMemory(), getBinding(getVkAddress()));
     }
 
+    
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding.getVkAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBinding(long address);
@@ -38,8 +40,10 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
         return new VkUInt32(getVkMemory(), getDivisor(getVkAddress()));
     }
 
+    
     public void setDivisor(VkUInt32 divisor) {
-        setDivisor(getVkAddress(), divisor.getVkAddress());
+        setDivisor(getVkAddress(), divisor != null ? divisor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDivisor(long address);
@@ -52,7 +56,12 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkVertexInputBindingDivisorDescriptionEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkVertexInputBindingDivisorDescriptionEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkVertexInputBindingDivisorDescriptionEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

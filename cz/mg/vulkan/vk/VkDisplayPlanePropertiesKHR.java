@@ -9,11 +9,11 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
     }
 
     public VkDisplayPlanePropertiesKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDisplayPlanePropertiesKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
         return new VkDisplayKHR(getVkMemory(), getCurrentDisplay(getVkAddress()));
     }
 
+    
     public void setCurrentDisplay(VkDisplayKHR currentDisplay) {
-        setCurrentDisplay(getVkAddress(), currentDisplay.getVkAddress());
+        setCurrentDisplay(getVkAddress(), currentDisplay != null ? currentDisplay.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCurrentDisplay(long address);
@@ -38,8 +40,10 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
         return new VkUInt32(getVkMemory(), getCurrentStackIndex(getVkAddress()));
     }
 
+    
     public void setCurrentStackIndex(VkUInt32 currentStackIndex) {
-        setCurrentStackIndex(getVkAddress(), currentStackIndex.getVkAddress());
+        setCurrentStackIndex(getVkAddress(), currentStackIndex != null ? currentStackIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCurrentStackIndex(long address);
@@ -52,7 +56,12 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDisplayPlanePropertiesKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDisplayPlanePropertiesKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDisplayPlanePropertiesKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

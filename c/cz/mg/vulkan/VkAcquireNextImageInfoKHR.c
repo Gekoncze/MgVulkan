@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getSType(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSType(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setPNext(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getSwapchain(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->swapchain));
+    return jniPointerToLong(&o->swapchain);
 }
 
 void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSwapchain(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSwapchain(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->swapchain, jniLongToPointer(valueAddress), sizeof(o->swapchain));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->swapchain, valuePointer, sizeof(o->swapchain));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getTimeout(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->timeout));
+    return jniPointerToLong(&o->timeout);
 }
 
 void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setTimeout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setTimeout(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->timeout, jniLongToPointer(valueAddress), sizeof(o->timeout));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->timeout, valuePointer, sizeof(o->timeout));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getSemaphore(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->semaphore));
+    return jniPointerToLong(&o->semaphore);
 }
 
 void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSemaphore(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSemaphore(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->semaphore, jniLongToPointer(valueAddress), sizeof(o->semaphore));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->semaphore, valuePointer, sizeof(o->semaphore));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getFence(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->fence));
+    return jniPointerToLong(&o->fence);
 }
 
 void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setFence(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setFence(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->fence, jniLongToPointer(valueAddress), sizeof(o->fence));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->fence, valuePointer, sizeof(o->fence));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getDeviceMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->deviceMask));
+    return jniPointerToLong(&o->deviceMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setDeviceMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,6 +131,8 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setDeviceMask(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkAcquireNextImageInfoKHR* o = (VkAcquireNextImageInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->deviceMask, jniLongToPointer(valueAddress), sizeof(o->deviceMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->deviceMask, valuePointer, sizeof(o->deviceMask));
 }
+
 

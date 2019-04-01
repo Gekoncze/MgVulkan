@@ -25,7 +25,7 @@ public class PFNvkGetPhysicalDeviceFormatProperties2 extends VkFunctionPointer {
     }
 
     public void call(VkPhysicalDevice physicalDevice, VkFormat format, VkFormatProperties2 pFormatProperties){
-        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPhysicalDevice.NULL.getVkAddress(), format != null ? format.getVkAddress() : VkPointer.NULL, pFormatProperties != null ? pFormatProperties.getVkAddress() : VkPointer.NULL);
+        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.NULL_ADDRESS, format != null ? format.getVkAddress() : VkPointer.NULL_ADDRESS, pFormatProperties != null ? pFormatProperties.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long physicalDevice, long format, long pFormatProperties);

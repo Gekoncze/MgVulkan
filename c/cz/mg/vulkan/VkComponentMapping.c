@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkComponentMapping_getR(JNIEnv* env, jclass jc, jlong
     (void)env;
     (void)jc;
     VkComponentMapping* o = (VkComponentMapping*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->r));
+    return jniPointerToLong(&o->r);
 }
 
 void Java_cz_mg_vulkan_vk_VkComponentMapping_setR(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkComponentMapping_setR(JNIEnv* env, jclass jc, jlong 
     (void)env;
     (void)jc;
     VkComponentMapping* o = (VkComponentMapping*)jniLongToPointer(address);
-    memcpy(&o->r, jniLongToPointer(valueAddress), sizeof(o->r));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->r, valuePointer, sizeof(o->r));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkComponentMapping_getG(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkComponentMapping* o = (VkComponentMapping*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->g));
+    return jniPointerToLong(&o->g);
 }
 
 void Java_cz_mg_vulkan_vk_VkComponentMapping_setG(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkComponentMapping_setG(JNIEnv* env, jclass jc, jlong 
     (void)env;
     (void)jc;
     VkComponentMapping* o = (VkComponentMapping*)jniLongToPointer(address);
-    memcpy(&o->g, jniLongToPointer(valueAddress), sizeof(o->g));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->g, valuePointer, sizeof(o->g));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkComponentMapping_getB(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkComponentMapping* o = (VkComponentMapping*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->b));
+    return jniPointerToLong(&o->b);
 }
 
 void Java_cz_mg_vulkan_vk_VkComponentMapping_setB(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkComponentMapping_setB(JNIEnv* env, jclass jc, jlong 
     (void)env;
     (void)jc;
     VkComponentMapping* o = (VkComponentMapping*)jniLongToPointer(address);
-    memcpy(&o->b, jniLongToPointer(valueAddress), sizeof(o->b));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->b, valuePointer, sizeof(o->b));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkComponentMapping_getA(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkComponentMapping* o = (VkComponentMapping*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->a));
+    return jniPointerToLong(&o->a);
 }
 
 void Java_cz_mg_vulkan_vk_VkComponentMapping_setA(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkComponentMapping_setA(JNIEnv* env, jclass jc, jlong 
     (void)env;
     (void)jc;
     VkComponentMapping* o = (VkComponentMapping*)jniLongToPointer(address);
-    memcpy(&o->a, jniLongToPointer(valueAddress), sizeof(o->a));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->a, valuePointer, sizeof(o->a));
 }
+
 

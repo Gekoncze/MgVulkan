@@ -9,11 +9,11 @@ public class VkAllocationCallbacks extends VkObject {
     }
 
     public VkAllocationCallbacks(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkAllocationCallbacks(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkAllocationCallbacks extends VkObject {
         return new VkObject(getVkMemory(), getPUserData(getVkAddress()));
     }
 
+    private VkObject pUserData = null;
     public void setPUserData(VkObject pUserData) {
-        setPUserData(getVkAddress(), pUserData.getVkAddress());
+        setPUserData(getVkAddress(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL);
+        this.pUserData = pUserData;
     }
 
     private static native long getPUserData(long address);
@@ -42,8 +44,10 @@ public class VkAllocationCallbacks extends VkObject {
         return new PFNvkAllocationFunction(getVkMemory(), getPfnAllocation(getVkAddress()));
     }
 
+    
     public void setPfnAllocation(PFNvkAllocationFunction pfnAllocation) {
-        setPfnAllocation(getVkAddress(), pfnAllocation.getVkAddress());
+        setPfnAllocation(getVkAddress(), pfnAllocation != null ? pfnAllocation.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPfnAllocation(long address);
@@ -53,8 +57,10 @@ public class VkAllocationCallbacks extends VkObject {
         return new PFNvkReallocationFunction(getVkMemory(), getPfnReallocation(getVkAddress()));
     }
 
+    
     public void setPfnReallocation(PFNvkReallocationFunction pfnReallocation) {
-        setPfnReallocation(getVkAddress(), pfnReallocation.getVkAddress());
+        setPfnReallocation(getVkAddress(), pfnReallocation != null ? pfnReallocation.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPfnReallocation(long address);
@@ -64,8 +70,10 @@ public class VkAllocationCallbacks extends VkObject {
         return new PFNvkFreeFunction(getVkMemory(), getPfnFree(getVkAddress()));
     }
 
+    
     public void setPfnFree(PFNvkFreeFunction pfnFree) {
-        setPfnFree(getVkAddress(), pfnFree.getVkAddress());
+        setPfnFree(getVkAddress(), pfnFree != null ? pfnFree.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPfnFree(long address);
@@ -75,8 +83,10 @@ public class VkAllocationCallbacks extends VkObject {
         return new PFNvkInternalAllocationNotification(getVkMemory(), getPfnInternalAllocation(getVkAddress()));
     }
 
+    
     public void setPfnInternalAllocation(PFNvkInternalAllocationNotification pfnInternalAllocation) {
-        setPfnInternalAllocation(getVkAddress(), pfnInternalAllocation.getVkAddress());
+        setPfnInternalAllocation(getVkAddress(), pfnInternalAllocation != null ? pfnInternalAllocation.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPfnInternalAllocation(long address);
@@ -86,8 +96,10 @@ public class VkAllocationCallbacks extends VkObject {
         return new PFNvkInternalFreeNotification(getVkMemory(), getPfnInternalFree(getVkAddress()));
     }
 
+    
     public void setPfnInternalFree(PFNvkInternalFreeNotification pfnInternalFree) {
-        setPfnInternalFree(getVkAddress(), pfnInternalFree.getVkAddress());
+        setPfnInternalFree(getVkAddress(), pfnInternalFree != null ? pfnInternalFree.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPfnInternalFree(long address);
@@ -100,7 +112,12 @@ public class VkAllocationCallbacks extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkAllocationCallbacks.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkAllocationCallbacks o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkAllocationCallbacks extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkAllocationCallbacks.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

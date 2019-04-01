@@ -9,11 +9,11 @@ public class VkDisplayModeParametersKHR extends VkObject {
     }
 
     public VkDisplayModeParametersKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDisplayModeParametersKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkDisplayModeParametersKHR extends VkObject {
         return new VkExtent2D(getVkMemory(), getVisibleRegion(getVkAddress()));
     }
 
+    
     public void setVisibleRegion(VkExtent2D visibleRegion) {
-        setVisibleRegion(getVkAddress(), visibleRegion.getVkAddress());
+        setVisibleRegion(getVkAddress(), visibleRegion != null ? visibleRegion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getVisibleRegion(long address);
@@ -38,8 +40,10 @@ public class VkDisplayModeParametersKHR extends VkObject {
         return new VkUInt32(getVkMemory(), getRefreshRate(getVkAddress()));
     }
 
+    
     public void setRefreshRate(VkUInt32 refreshRate) {
-        setRefreshRate(getVkAddress(), refreshRate.getVkAddress());
+        setRefreshRate(getVkAddress(), refreshRate != null ? refreshRate.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRefreshRate(long address);
@@ -52,7 +56,12 @@ public class VkDisplayModeParametersKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDisplayModeParametersKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDisplayModeParametersKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkDisplayModeParametersKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDisplayModeParametersKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

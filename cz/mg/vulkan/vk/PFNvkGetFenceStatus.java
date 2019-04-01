@@ -25,7 +25,7 @@ public class PFNvkGetFenceStatus extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkFence fence, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), fence != null ? fence.getVkAddress() : VkFence.NULL.getVkAddress(), rval != null ? rval.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, fence != null ? fence.getVkAddress() : VkPointer.NULL_ADDRESS, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
     }
 
     private static native void call(long vkaddress, long device, long fence, long rval);

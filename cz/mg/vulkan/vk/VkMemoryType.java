@@ -9,11 +9,11 @@ public class VkMemoryType extends VkObject {
     }
 
     public VkMemoryType(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkMemoryType(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkMemoryType extends VkObject {
         return new VkMemoryPropertyFlags(getVkMemory(), getPropertyFlags(getVkAddress()));
     }
 
+    
     public void setPropertyFlags(VkMemoryPropertyFlags propertyFlags) {
-        setPropertyFlags(getVkAddress(), propertyFlags.getVkAddress());
+        setPropertyFlags(getVkAddress(), propertyFlags != null ? propertyFlags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPropertyFlags(long address);
@@ -38,8 +40,10 @@ public class VkMemoryType extends VkObject {
         return new VkUInt32(getVkMemory(), getHeapIndex(getVkAddress()));
     }
 
+    
     public void setHeapIndex(VkUInt32 heapIndex) {
-        setHeapIndex(getVkAddress(), heapIndex.getVkAddress());
+        setHeapIndex(getVkAddress(), heapIndex != null ? heapIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getHeapIndex(long address);
@@ -52,7 +56,12 @@ public class VkMemoryType extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkMemoryType.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkMemoryType o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkMemoryType extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkMemoryType.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

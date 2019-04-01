@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkBufferCopy_getSrcOffset(JNIEnv* env, jclass jc, jlo
     (void)env;
     (void)jc;
     VkBufferCopy* o = (VkBufferCopy*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->srcOffset));
+    return jniPointerToLong(&o->srcOffset);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCopy_setSrcOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkBufferCopy_setSrcOffset(JNIEnv* env, jclass jc, jlon
     (void)env;
     (void)jc;
     VkBufferCopy* o = (VkBufferCopy*)jniLongToPointer(address);
-    memcpy(&o->srcOffset, jniLongToPointer(valueAddress), sizeof(o->srcOffset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->srcOffset, valuePointer, sizeof(o->srcOffset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferCopy_getDstOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferCopy* o = (VkBufferCopy*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dstOffset));
+    return jniPointerToLong(&o->dstOffset);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCopy_setDstOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkBufferCopy_setDstOffset(JNIEnv* env, jclass jc, jlon
     (void)env;
     (void)jc;
     VkBufferCopy* o = (VkBufferCopy*)jniLongToPointer(address);
-    memcpy(&o->dstOffset, jniLongToPointer(valueAddress), sizeof(o->dstOffset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dstOffset, valuePointer, sizeof(o->dstOffset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferCopy_getSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferCopy* o = (VkBufferCopy*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->size));
+    return jniPointerToLong(&o->size);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCopy_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkBufferCopy_setSize(JNIEnv* env, jclass jc, jlong add
     (void)env;
     (void)jc;
     VkBufferCopy* o = (VkBufferCopy*)jniLongToPointer(address);
-    memcpy(&o->size, jniLongToPointer(valueAddress), sizeof(o->size));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->size, valuePointer, sizeof(o->size));
 }
+
 

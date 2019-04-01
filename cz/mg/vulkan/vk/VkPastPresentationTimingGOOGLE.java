@@ -9,11 +9,11 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
     }
 
     public VkPastPresentationTimingGOOGLE(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPastPresentationTimingGOOGLE(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
         return new VkUInt32(getVkMemory(), getPresentID(getVkAddress()));
     }
 
+    
     public void setPresentID(VkUInt32 presentID) {
-        setPresentID(getVkAddress(), presentID.getVkAddress());
+        setPresentID(getVkAddress(), presentID != null ? presentID.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPresentID(long address);
@@ -41,8 +43,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
         return new VkUInt64(getVkMemory(), getDesiredPresentTime(getVkAddress()));
     }
 
+    
     public void setDesiredPresentTime(VkUInt64 desiredPresentTime) {
-        setDesiredPresentTime(getVkAddress(), desiredPresentTime.getVkAddress());
+        setDesiredPresentTime(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDesiredPresentTime(long address);
@@ -52,8 +56,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
         return new VkUInt64(getVkMemory(), getActualPresentTime(getVkAddress()));
     }
 
+    
     public void setActualPresentTime(VkUInt64 actualPresentTime) {
-        setActualPresentTime(getVkAddress(), actualPresentTime.getVkAddress());
+        setActualPresentTime(getVkAddress(), actualPresentTime != null ? actualPresentTime.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getActualPresentTime(long address);
@@ -63,8 +69,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
         return new VkUInt64(getVkMemory(), getEarliestPresentTime(getVkAddress()));
     }
 
+    
     public void setEarliestPresentTime(VkUInt64 earliestPresentTime) {
-        setEarliestPresentTime(getVkAddress(), earliestPresentTime.getVkAddress());
+        setEarliestPresentTime(getVkAddress(), earliestPresentTime != null ? earliestPresentTime.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getEarliestPresentTime(long address);
@@ -74,8 +82,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
         return new VkUInt64(getVkMemory(), getPresentMargin(getVkAddress()));
     }
 
+    
     public void setPresentMargin(VkUInt64 presentMargin) {
-        setPresentMargin(getVkAddress(), presentMargin.getVkAddress());
+        setPresentMargin(getVkAddress(), presentMargin != null ? presentMargin.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPresentMargin(long address);
@@ -88,7 +98,12 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPastPresentationTimingGOOGLE.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPastPresentationTimingGOOGLE o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPastPresentationTimingGOOGLE.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

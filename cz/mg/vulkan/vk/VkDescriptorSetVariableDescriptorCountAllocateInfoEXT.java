@@ -9,11 +9,11 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
     }
 
     public VkDescriptorSetVariableDescriptorCountAllocateInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDescriptorSetVariableDescriptorCountAllocateInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,19 +55,23 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         return new VkUInt32(getVkMemory(), getDescriptorSetCount(getVkAddress()));
     }
 
+    
     public void setDescriptorSetCount(VkUInt32 descriptorSetCount) {
-        setDescriptorSetCount(getVkAddress(), descriptorSetCount.getVkAddress());
+        setDescriptorSetCount(getVkAddress(), descriptorSetCount != null ? descriptorSetCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDescriptorSetCount(long address);
     private static native void setDescriptorSetCount(long address, long descriptorSetCount);
 
-    public VkUInt32.Array getPDescriptorCounts() {
-        return new VkUInt32.Array(getVkMemory(), getPDescriptorCounts(getVkAddress()), getDescriptorSetCount().getValue());
+    public VkUInt32 getPDescriptorCounts() {
+        return new VkUInt32(getVkMemory(), getPDescriptorCounts(getVkAddress()));
     }
 
+    private VkObject pDescriptorCounts = null;
     public void setPDescriptorCounts(VkUInt32 pDescriptorCounts) {
-        setPDescriptorCounts(getVkAddress(), pDescriptorCounts.getVkAddress());
+        setPDescriptorCounts(getVkAddress(), pDescriptorCounts != null ? pDescriptorCounts.getVkAddress() : VkPointer.NULL);
+        this.pDescriptorCounts = pDescriptorCounts;
     }
 
     private static native long getPDescriptorCounts(long address);
@@ -76,7 +84,12 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDescriptorSetVariableDescriptorCountAllocateInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorSetVariableDescriptorCountAllocateInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorSetVariableDescriptorCountAllocateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

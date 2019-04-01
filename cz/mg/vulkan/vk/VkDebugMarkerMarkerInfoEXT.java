@@ -9,11 +9,11 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
     }
 
     public VkDebugMarkerMarkerInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDebugMarkerMarkerInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,8 +55,10 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
         return new VkChar(getVkMemory(), getPMarkerName(getVkAddress()));
     }
 
+    private VkObject pMarkerName = null;
     public void setPMarkerName(VkChar pMarkerName) {
-        setPMarkerName(getVkAddress(), pMarkerName.getVkAddress());
+        setPMarkerName(getVkAddress(), pMarkerName != null ? pMarkerName.getVkAddress() : VkPointer.NULL);
+        this.pMarkerName = pMarkerName;
     }
 
     private static native long getPMarkerName(long address);
@@ -62,8 +68,10 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
         return new VkFloat(getVkMemory(), getColor(getVkAddress()));
     }
 
+    
     public void setColor(VkFloat color) {
-        setColor(getVkAddress(), color.getVkAddress());
+        setColor(getVkAddress(), color != null ? color.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getColor(long address);
@@ -76,7 +84,12 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDebugMarkerMarkerInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDebugMarkerMarkerInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugMarkerMarkerInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

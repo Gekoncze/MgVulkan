@@ -9,11 +9,11 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
     }
 
     public VkPipelineViewportSwizzleStateCreateInfoNV(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineViewportSwizzleStateCreateInfoNV(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
         return new VkPipelineViewportSwizzleStateCreateFlagsNV(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineViewportSwizzleStateCreateFlagsNV flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -63,19 +69,23 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
         return new VkUInt32(getVkMemory(), getViewportCount(getVkAddress()));
     }
 
+    
     public void setViewportCount(VkUInt32 viewportCount) {
-        setViewportCount(getVkAddress(), viewportCount.getVkAddress());
+        setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getViewportCount(long address);
     private static native void setViewportCount(long address, long viewportCount);
 
-    public VkViewportSwizzleNV.Array getPViewportSwizzles() {
-        return new VkViewportSwizzleNV.Array(getVkMemory(), getPViewportSwizzles(getVkAddress()), getViewportCount().getValue());
+    public VkViewportSwizzleNV getPViewportSwizzles() {
+        return new VkViewportSwizzleNV(getVkMemory(), getPViewportSwizzles(getVkAddress()));
     }
 
+    private VkObject pViewportSwizzles = null;
     public void setPViewportSwizzles(VkViewportSwizzleNV pViewportSwizzles) {
-        setPViewportSwizzles(getVkAddress(), pViewportSwizzles.getVkAddress());
+        setPViewportSwizzles(getVkAddress(), pViewportSwizzles != null ? pViewportSwizzles.getVkAddress() : VkPointer.NULL);
+        this.pViewportSwizzles = pViewportSwizzles;
     }
 
     private static native long getPViewportSwizzles(long address);
@@ -88,7 +98,12 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineViewportSwizzleStateCreateInfoNV.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineViewportSwizzleStateCreateInfoNV o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineViewportSwizzleStateCreateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

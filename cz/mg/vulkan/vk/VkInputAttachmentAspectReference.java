@@ -9,11 +9,11 @@ public class VkInputAttachmentAspectReference extends VkObject {
     }
 
     public VkInputAttachmentAspectReference(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkInputAttachmentAspectReference(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkInputAttachmentAspectReference extends VkObject {
         return new VkUInt32(getVkMemory(), getSubpass(getVkAddress()));
     }
 
+    
     public void setSubpass(VkUInt32 subpass) {
-        setSubpass(getVkAddress(), subpass.getVkAddress());
+        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSubpass(long address);
@@ -39,8 +41,10 @@ public class VkInputAttachmentAspectReference extends VkObject {
         return new VkUInt32(getVkMemory(), getInputAttachmentIndex(getVkAddress()));
     }
 
+    
     public void setInputAttachmentIndex(VkUInt32 inputAttachmentIndex) {
-        setInputAttachmentIndex(getVkAddress(), inputAttachmentIndex.getVkAddress());
+        setInputAttachmentIndex(getVkAddress(), inputAttachmentIndex != null ? inputAttachmentIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getInputAttachmentIndex(long address);
@@ -50,8 +54,10 @@ public class VkInputAttachmentAspectReference extends VkObject {
         return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));
     }
 
+    
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask.getVkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAspectMask(long address);
@@ -64,7 +70,12 @@ public class VkInputAttachmentAspectReference extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkInputAttachmentAspectReference.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkInputAttachmentAspectReference o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkInputAttachmentAspectReference extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkInputAttachmentAspectReference.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

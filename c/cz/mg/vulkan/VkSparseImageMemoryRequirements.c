@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_getFormatProperties(J
     (void)env;
     (void)jc;
     VkSparseImageMemoryRequirements* o = (VkSparseImageMemoryRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->formatProperties));
+    return jniPointerToLong(&o->formatProperties);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_setFormatProperties(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_setFormatProperties(JN
     (void)env;
     (void)jc;
     VkSparseImageMemoryRequirements* o = (VkSparseImageMemoryRequirements*)jniLongToPointer(address);
-    memcpy(&o->formatProperties, jniLongToPointer(valueAddress), sizeof(o->formatProperties));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->formatProperties, valuePointer, sizeof(o->formatProperties));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_getImageMipTailFirstLod(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseImageMemoryRequirements* o = (VkSparseImageMemoryRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageMipTailFirstLod));
+    return jniPointerToLong(&o->imageMipTailFirstLod);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_setImageMipTailFirstLod(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_setImageMipTailFirstLo
     (void)env;
     (void)jc;
     VkSparseImageMemoryRequirements* o = (VkSparseImageMemoryRequirements*)jniLongToPointer(address);
-    memcpy(&o->imageMipTailFirstLod, jniLongToPointer(valueAddress), sizeof(o->imageMipTailFirstLod));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageMipTailFirstLod, valuePointer, sizeof(o->imageMipTailFirstLod));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_getImageMipTailSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseImageMemoryRequirements* o = (VkSparseImageMemoryRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageMipTailSize));
+    return jniPointerToLong(&o->imageMipTailSize);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_setImageMipTailSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_setImageMipTailSize(JN
     (void)env;
     (void)jc;
     VkSparseImageMemoryRequirements* o = (VkSparseImageMemoryRequirements*)jniLongToPointer(address);
-    memcpy(&o->imageMipTailSize, jniLongToPointer(valueAddress), sizeof(o->imageMipTailSize));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageMipTailSize, valuePointer, sizeof(o->imageMipTailSize));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_getImageMipTailOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseImageMemoryRequirements* o = (VkSparseImageMemoryRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageMipTailOffset));
+    return jniPointerToLong(&o->imageMipTailOffset);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_setImageMipTailOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_setImageMipTailOffset(
     (void)env;
     (void)jc;
     VkSparseImageMemoryRequirements* o = (VkSparseImageMemoryRequirements*)jniLongToPointer(address);
-    memcpy(&o->imageMipTailOffset, jniLongToPointer(valueAddress), sizeof(o->imageMipTailOffset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageMipTailOffset, valuePointer, sizeof(o->imageMipTailOffset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_getImageMipTailStride(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseImageMemoryRequirements* o = (VkSparseImageMemoryRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageMipTailStride));
+    return jniPointerToLong(&o->imageMipTailStride);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_setImageMipTailStride(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkSparseImageMemoryRequirements_setImageMipTailStride(
     (void)env;
     (void)jc;
     VkSparseImageMemoryRequirements* o = (VkSparseImageMemoryRequirements*)jniLongToPointer(address);
-    memcpy(&o->imageMipTailStride, jniLongToPointer(valueAddress), sizeof(o->imageMipTailStride));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageMipTailStride, valuePointer, sizeof(o->imageMipTailStride));
 }
+
 

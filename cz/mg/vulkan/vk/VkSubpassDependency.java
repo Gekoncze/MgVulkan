@@ -9,11 +9,11 @@ public class VkSubpassDependency extends VkObject {
     }
 
     public VkSubpassDependency(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSubpassDependency(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkSubpassDependency extends VkObject {
         return new VkUInt32(getVkMemory(), getSrcSubpass(getVkAddress()));
     }
 
+    
     public void setSrcSubpass(VkUInt32 srcSubpass) {
-        setSrcSubpass(getVkAddress(), srcSubpass.getVkAddress());
+        setSrcSubpass(getVkAddress(), srcSubpass != null ? srcSubpass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSrcSubpass(long address);
@@ -43,8 +45,10 @@ public class VkSubpassDependency extends VkObject {
         return new VkUInt32(getVkMemory(), getDstSubpass(getVkAddress()));
     }
 
+    
     public void setDstSubpass(VkUInt32 dstSubpass) {
-        setDstSubpass(getVkAddress(), dstSubpass.getVkAddress());
+        setDstSubpass(getVkAddress(), dstSubpass != null ? dstSubpass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstSubpass(long address);
@@ -54,8 +58,10 @@ public class VkSubpassDependency extends VkObject {
         return new VkPipelineStageFlags(getVkMemory(), getSrcStageMask(getVkAddress()));
     }
 
+    
     public void setSrcStageMask(VkPipelineStageFlags srcStageMask) {
-        setSrcStageMask(getVkAddress(), srcStageMask.getVkAddress());
+        setSrcStageMask(getVkAddress(), srcStageMask != null ? srcStageMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSrcStageMask(long address);
@@ -65,8 +71,10 @@ public class VkSubpassDependency extends VkObject {
         return new VkPipelineStageFlags(getVkMemory(), getDstStageMask(getVkAddress()));
     }
 
+    
     public void setDstStageMask(VkPipelineStageFlags dstStageMask) {
-        setDstStageMask(getVkAddress(), dstStageMask.getVkAddress());
+        setDstStageMask(getVkAddress(), dstStageMask != null ? dstStageMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstStageMask(long address);
@@ -76,8 +84,10 @@ public class VkSubpassDependency extends VkObject {
         return new VkAccessFlags(getVkMemory(), getSrcAccessMask(getVkAddress()));
     }
 
+    
     public void setSrcAccessMask(VkAccessFlags srcAccessMask) {
-        setSrcAccessMask(getVkAddress(), srcAccessMask.getVkAddress());
+        setSrcAccessMask(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSrcAccessMask(long address);
@@ -87,8 +97,10 @@ public class VkSubpassDependency extends VkObject {
         return new VkAccessFlags(getVkMemory(), getDstAccessMask(getVkAddress()));
     }
 
+    
     public void setDstAccessMask(VkAccessFlags dstAccessMask) {
-        setDstAccessMask(getVkAddress(), dstAccessMask.getVkAddress());
+        setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstAccessMask(long address);
@@ -98,8 +110,10 @@ public class VkSubpassDependency extends VkObject {
         return new VkDependencyFlags(getVkMemory(), getDependencyFlags(getVkAddress()));
     }
 
+    
     public void setDependencyFlags(VkDependencyFlags dependencyFlags) {
-        setDependencyFlags(getVkAddress(), dependencyFlags.getVkAddress());
+        setDependencyFlags(getVkAddress(), dependencyFlags != null ? dependencyFlags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDependencyFlags(long address);
@@ -112,7 +126,12 @@ public class VkSubpassDependency extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSubpassDependency.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSubpassDependency o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkSubpassDependency extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSubpassDependency.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -9,11 +9,11 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
     }
 
     public VkPipelineRasterizationStateCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineRasterizationStateCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -38,8 +38,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -49,8 +51,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -60,8 +64,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkPipelineRasterizationStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineRasterizationStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -71,8 +77,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkBool32(getVkMemory(), getDepthClampEnable(getVkAddress()));
     }
 
+    
     public void setDepthClampEnable(VkBool32 depthClampEnable) {
-        setDepthClampEnable(getVkAddress(), depthClampEnable.getVkAddress());
+        setDepthClampEnable(getVkAddress(), depthClampEnable != null ? depthClampEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthClampEnable(long address);
@@ -82,8 +90,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkBool32(getVkMemory(), getRasterizerDiscardEnable(getVkAddress()));
     }
 
+    
     public void setRasterizerDiscardEnable(VkBool32 rasterizerDiscardEnable) {
-        setRasterizerDiscardEnable(getVkAddress(), rasterizerDiscardEnable.getVkAddress());
+        setRasterizerDiscardEnable(getVkAddress(), rasterizerDiscardEnable != null ? rasterizerDiscardEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRasterizerDiscardEnable(long address);
@@ -93,8 +103,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkPolygonMode(getVkMemory(), getPolygonMode(getVkAddress()));
     }
 
+    
     public void setPolygonMode(VkPolygonMode polygonMode) {
-        setPolygonMode(getVkAddress(), polygonMode.getVkAddress());
+        setPolygonMode(getVkAddress(), polygonMode != null ? polygonMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPolygonMode(long address);
@@ -104,8 +116,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkCullModeFlags(getVkMemory(), getCullMode(getVkAddress()));
     }
 
+    
     public void setCullMode(VkCullModeFlags cullMode) {
-        setCullMode(getVkAddress(), cullMode.getVkAddress());
+        setCullMode(getVkAddress(), cullMode != null ? cullMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCullMode(long address);
@@ -115,8 +129,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkFrontFace(getVkMemory(), getFrontFace(getVkAddress()));
     }
 
+    
     public void setFrontFace(VkFrontFace frontFace) {
-        setFrontFace(getVkAddress(), frontFace.getVkAddress());
+        setFrontFace(getVkAddress(), frontFace != null ? frontFace.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFrontFace(long address);
@@ -126,8 +142,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkBool32(getVkMemory(), getDepthBiasEnable(getVkAddress()));
     }
 
+    
     public void setDepthBiasEnable(VkBool32 depthBiasEnable) {
-        setDepthBiasEnable(getVkAddress(), depthBiasEnable.getVkAddress());
+        setDepthBiasEnable(getVkAddress(), depthBiasEnable != null ? depthBiasEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthBiasEnable(long address);
@@ -137,8 +155,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkFloat(getVkMemory(), getDepthBiasConstantFactor(getVkAddress()));
     }
 
+    
     public void setDepthBiasConstantFactor(VkFloat depthBiasConstantFactor) {
-        setDepthBiasConstantFactor(getVkAddress(), depthBiasConstantFactor.getVkAddress());
+        setDepthBiasConstantFactor(getVkAddress(), depthBiasConstantFactor != null ? depthBiasConstantFactor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthBiasConstantFactor(long address);
@@ -148,8 +168,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkFloat(getVkMemory(), getDepthBiasClamp(getVkAddress()));
     }
 
+    
     public void setDepthBiasClamp(VkFloat depthBiasClamp) {
-        setDepthBiasClamp(getVkAddress(), depthBiasClamp.getVkAddress());
+        setDepthBiasClamp(getVkAddress(), depthBiasClamp != null ? depthBiasClamp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthBiasClamp(long address);
@@ -159,8 +181,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkFloat(getVkMemory(), getDepthBiasSlopeFactor(getVkAddress()));
     }
 
+    
     public void setDepthBiasSlopeFactor(VkFloat depthBiasSlopeFactor) {
-        setDepthBiasSlopeFactor(getVkAddress(), depthBiasSlopeFactor.getVkAddress());
+        setDepthBiasSlopeFactor(getVkAddress(), depthBiasSlopeFactor != null ? depthBiasSlopeFactor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthBiasSlopeFactor(long address);
@@ -170,8 +194,10 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         return new VkFloat(getVkMemory(), getLineWidth(getVkAddress()));
     }
 
+    
     public void setLineWidth(VkFloat lineWidth) {
-        setLineWidth(getVkAddress(), lineWidth.getVkAddress());
+        setLineWidth(getVkAddress(), lineWidth != null ? lineWidth.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLineWidth(long address);
@@ -184,7 +210,12 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineRasterizationStateCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineRasterizationStateCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -225,11 +256,11 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineRasterizationStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

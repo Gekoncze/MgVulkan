@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_getSType(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setSType(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setPNext(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_getDeviceUUID(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->deviceUUID));
+    return jniPointerToLong(o->deviceUUID);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setDeviceUUID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setDeviceUUID(JNIEnv* env
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    memcpy(o->deviceUUID, jniLongToPointer(valueAddress), sizeof(o->deviceUUID));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->deviceUUID, valuePointer, sizeof(o->deviceUUID));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_getDriverUUID(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->driverUUID));
+    return jniPointerToLong(o->driverUUID);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setDriverUUID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setDriverUUID(JNIEnv* env
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    memcpy(o->driverUUID, jniLongToPointer(valueAddress), sizeof(o->driverUUID));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->driverUUID, valuePointer, sizeof(o->driverUUID));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_getDeviceLUID(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->deviceLUID));
+    return jniPointerToLong(o->deviceLUID);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setDeviceLUID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setDeviceLUID(JNIEnv* env
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    memcpy(o->deviceLUID, jniLongToPointer(valueAddress), sizeof(o->deviceLUID));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->deviceLUID, valuePointer, sizeof(o->deviceLUID));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_getDeviceNodeMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->deviceNodeMask));
+    return jniPointerToLong(&o->deviceNodeMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setDeviceNodeMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setDeviceNodeMask(JNIEnv*
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    memcpy(&o->deviceNodeMask, jniLongToPointer(valueAddress), sizeof(o->deviceNodeMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->deviceNodeMask, valuePointer, sizeof(o->deviceNodeMask));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_getDeviceLUIDValid(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->deviceLUIDValid));
+    return jniPointerToLong(&o->deviceLUIDValid);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setDeviceLUIDValid(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,6 +131,8 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceIDProperties_setDeviceLUIDValid(JNIEnv
     (void)env;
     (void)jc;
     VkPhysicalDeviceIDProperties* o = (VkPhysicalDeviceIDProperties*)jniLongToPointer(address);
-    memcpy(&o->deviceLUIDValid, jniLongToPointer(valueAddress), sizeof(o->deviceLUIDValid));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->deviceLUIDValid, valuePointer, sizeof(o->deviceLUIDValid));
 }
+
 

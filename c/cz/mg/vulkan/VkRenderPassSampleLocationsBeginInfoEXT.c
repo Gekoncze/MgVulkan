@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_getSType(JNIE
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setSType(JNIEn
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setPNext(JNIEn
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_getAttachmentInitialSampleLocationsCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->attachmentInitialSampleLocationsCount));
+    return jniPointerToLong(&o->attachmentInitialSampleLocationsCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setAttachmentInitialSampleLocationsCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setAttachmentI
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->attachmentInitialSampleLocationsCount, jniLongToPointer(valueAddress), sizeof(o->attachmentInitialSampleLocationsCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->attachmentInitialSampleLocationsCount, valuePointer, sizeof(o->attachmentInitialSampleLocationsCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_getPAttachmentInitialSampleLocations(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pAttachmentInitialSampleLocations));
+    return jniPointerToLong(o->pAttachmentInitialSampleLocations);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setPAttachmentInitialSampleLocations(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setPAttachment
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pAttachmentInitialSampleLocations, jniLongToPointer(valueAddress), sizeof(o->pAttachmentInitialSampleLocations));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pAttachmentInitialSampleLocations, &valuePointer, sizeof(o->pAttachmentInitialSampleLocations));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_getPostSubpassSampleLocationsCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->postSubpassSampleLocationsCount));
+    return jniPointerToLong(&o->postSubpassSampleLocationsCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setPostSubpassSampleLocationsCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setPostSubpass
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->postSubpassSampleLocationsCount, jniLongToPointer(valueAddress), sizeof(o->postSubpassSampleLocationsCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->postSubpassSampleLocationsCount, valuePointer, sizeof(o->postSubpassSampleLocationsCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_getPPostSubpassSampleLocations(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pPostSubpassSampleLocations));
+    return jniPointerToLong(o->pPostSubpassSampleLocations);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setPPostSubpassSampleLocations(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkRenderPassSampleLocationsBeginInfoEXT_setPPostSubpas
     (void)env;
     (void)jc;
     VkRenderPassSampleLocationsBeginInfoEXT* o = (VkRenderPassSampleLocationsBeginInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pPostSubpassSampleLocations, jniLongToPointer(valueAddress), sizeof(o->pPostSubpassSampleLocations));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pPostSubpassSampleLocations, &valuePointer, sizeof(o->pPostSubpassSampleLocations));
 }
+
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkBufferCreateInfo_getSType(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setSType(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setPNext(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setFlags(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferCreateInfo_getSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->size));
+    return jniPointerToLong(&o->size);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setSize(JNIEnv* env, jclass jc, jlo
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->size, jniLongToPointer(valueAddress), sizeof(o->size));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->size, valuePointer, sizeof(o->size));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferCreateInfo_getUsage(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->usage));
+    return jniPointerToLong(&o->usage);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setUsage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setUsage(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->usage, jniLongToPointer(valueAddress), sizeof(o->usage));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->usage, valuePointer, sizeof(o->usage));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferCreateInfo_getSharingMode(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sharingMode));
+    return jniPointerToLong(&o->sharingMode);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setSharingMode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setSharingMode(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sharingMode, jniLongToPointer(valueAddress), sizeof(o->sharingMode));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sharingMode, valuePointer, sizeof(o->sharingMode));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferCreateInfo_getQueueFamilyIndexCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->queueFamilyIndexCount));
+    return jniPointerToLong(&o->queueFamilyIndexCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setQueueFamilyIndexCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setQueueFamilyIndexCount(JNIEnv* en
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->queueFamilyIndexCount, jniLongToPointer(valueAddress), sizeof(o->queueFamilyIndexCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->queueFamilyIndexCount, valuePointer, sizeof(o->queueFamilyIndexCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferCreateInfo_getPQueueFamilyIndices(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pQueueFamilyIndices));
+    return jniPointerToLong(o->pQueueFamilyIndices);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setPQueueFamilyIndices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,6 +148,8 @@ void Java_cz_mg_vulkan_vk_VkBufferCreateInfo_setPQueueFamilyIndices(JNIEnv* env,
     (void)env;
     (void)jc;
     VkBufferCreateInfo* o = (VkBufferCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pQueueFamilyIndices, jniLongToPointer(valueAddress), sizeof(o->pQueueFamilyIndices));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pQueueFamilyIndices, &valuePointer, sizeof(o->pQueueFamilyIndices));
 }
+
 

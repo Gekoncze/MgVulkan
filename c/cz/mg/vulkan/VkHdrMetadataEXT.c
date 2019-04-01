@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_getSType(JNIEnv* env, jclass jc, jlo
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setSType(JNIEnv* env, jclass jc, jlon
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setPNext(JNIEnv* env, jclass jc, jlon
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_getDisplayPrimaryRed(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->displayPrimaryRed));
+    return jniPointerToLong(&o->displayPrimaryRed);
 }
 
 void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setDisplayPrimaryRed(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setDisplayPrimaryRed(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    memcpy(&o->displayPrimaryRed, jniLongToPointer(valueAddress), sizeof(o->displayPrimaryRed));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->displayPrimaryRed, valuePointer, sizeof(o->displayPrimaryRed));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_getDisplayPrimaryGreen(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->displayPrimaryGreen));
+    return jniPointerToLong(&o->displayPrimaryGreen);
 }
 
 void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setDisplayPrimaryGreen(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setDisplayPrimaryGreen(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    memcpy(&o->displayPrimaryGreen, jniLongToPointer(valueAddress), sizeof(o->displayPrimaryGreen));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->displayPrimaryGreen, valuePointer, sizeof(o->displayPrimaryGreen));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_getDisplayPrimaryBlue(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->displayPrimaryBlue));
+    return jniPointerToLong(&o->displayPrimaryBlue);
 }
 
 void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setDisplayPrimaryBlue(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setDisplayPrimaryBlue(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    memcpy(&o->displayPrimaryBlue, jniLongToPointer(valueAddress), sizeof(o->displayPrimaryBlue));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->displayPrimaryBlue, valuePointer, sizeof(o->displayPrimaryBlue));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_getWhitePoint(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->whitePoint));
+    return jniPointerToLong(&o->whitePoint);
 }
 
 void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setWhitePoint(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setWhitePoint(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    memcpy(&o->whitePoint, jniLongToPointer(valueAddress), sizeof(o->whitePoint));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->whitePoint, valuePointer, sizeof(o->whitePoint));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_getMaxLuminance(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxLuminance));
+    return jniPointerToLong(&o->maxLuminance);
 }
 
 void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setMaxLuminance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setMaxLuminance(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    memcpy(&o->maxLuminance, jniLongToPointer(valueAddress), sizeof(o->maxLuminance));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxLuminance, valuePointer, sizeof(o->maxLuminance));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_getMinLuminance(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->minLuminance));
+    return jniPointerToLong(&o->minLuminance);
 }
 
 void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setMinLuminance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,14 +148,16 @@ void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setMinLuminance(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    memcpy(&o->minLuminance, jniLongToPointer(valueAddress), sizeof(o->minLuminance));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->minLuminance, valuePointer, sizeof(o->minLuminance));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_getMaxContentLightLevel(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxContentLightLevel));
+    return jniPointerToLong(&o->maxContentLightLevel);
 }
 
 void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setMaxContentLightLevel(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -149,14 +165,16 @@ void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setMaxContentLightLevel(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    memcpy(&o->maxContentLightLevel, jniLongToPointer(valueAddress), sizeof(o->maxContentLightLevel));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxContentLightLevel, valuePointer, sizeof(o->maxContentLightLevel));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_getMaxFrameAverageLightLevel(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxFrameAverageLightLevel));
+    return jniPointerToLong(&o->maxFrameAverageLightLevel);
 }
 
 void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setMaxFrameAverageLightLevel(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -164,6 +182,8 @@ void Java_cz_mg_vulkan_vk_VkHdrMetadataEXT_setMaxFrameAverageLightLevel(JNIEnv* 
     (void)env;
     (void)jc;
     VkHdrMetadataEXT* o = (VkHdrMetadataEXT*)jniLongToPointer(address);
-    memcpy(&o->maxFrameAverageLightLevel, jniLongToPointer(valueAddress), sizeof(o->maxFrameAverageLightLevel));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxFrameAverageLightLevel, valuePointer, sizeof(o->maxFrameAverageLightLevel));
 }
+
 

@@ -9,11 +9,11 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
     }
 
     public VkDescriptorPoolCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDescriptorPoolCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -42,8 +44,10 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -53,8 +57,10 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         return new VkDescriptorPoolCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkDescriptorPoolCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -64,8 +70,10 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxSets(getVkAddress()));
     }
 
+    
     public void setMaxSets(VkUInt32 maxSets) {
-        setMaxSets(getVkAddress(), maxSets.getVkAddress());
+        setMaxSets(getVkAddress(), maxSets != null ? maxSets.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxSets(long address);
@@ -75,19 +83,23 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getPoolSizeCount(getVkAddress()));
     }
 
+    
     public void setPoolSizeCount(VkUInt32 poolSizeCount) {
-        setPoolSizeCount(getVkAddress(), poolSizeCount.getVkAddress());
+        setPoolSizeCount(getVkAddress(), poolSizeCount != null ? poolSizeCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPoolSizeCount(long address);
     private static native void setPoolSizeCount(long address, long poolSizeCount);
 
-    public VkDescriptorPoolSize.Array getPPoolSizes() {
-        return new VkDescriptorPoolSize.Array(getVkMemory(), getPPoolSizes(getVkAddress()), getPoolSizeCount().getValue());
+    public VkDescriptorPoolSize getPPoolSizes() {
+        return new VkDescriptorPoolSize(getVkMemory(), getPPoolSizes(getVkAddress()));
     }
 
+    private VkObject pPoolSizes = null;
     public void setPPoolSizes(VkDescriptorPoolSize pPoolSizes) {
-        setPPoolSizes(getVkAddress(), pPoolSizes.getVkAddress());
+        setPPoolSizes(getVkAddress(), pPoolSizes != null ? pPoolSizes.getVkAddress() : VkPointer.NULL);
+        this.pPoolSizes = pPoolSizes;
     }
 
     private static native long getPPoolSizes(long address);
@@ -100,7 +112,12 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDescriptorPoolCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorPoolCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorPoolCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

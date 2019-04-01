@@ -9,11 +9,11 @@ public class VkSampleLocationEXT extends VkObject {
     }
 
     public VkSampleLocationEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSampleLocationEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkSampleLocationEXT extends VkObject {
         return new VkFloat(getVkMemory(), getX(getVkAddress()));
     }
 
+    
     public void setX(VkFloat x) {
-        setX(getVkAddress(), x.getVkAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getX(long address);
@@ -38,8 +40,10 @@ public class VkSampleLocationEXT extends VkObject {
         return new VkFloat(getVkMemory(), getY(getVkAddress()));
     }
 
+    
     public void setY(VkFloat y) {
-        setY(getVkAddress(), y.getVkAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getY(long address);
@@ -52,7 +56,12 @@ public class VkSampleLocationEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSampleLocationEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSampleLocationEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkSampleLocationEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSampleLocationEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

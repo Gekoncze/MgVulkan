@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_getSType(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setSType(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setPNext(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_getRenderPass(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->renderPass));
+    return jniPointerToLong(&o->renderPass);
 }
 
 void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setRenderPass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setRenderPass(JNIEnv* e
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    memcpy(&o->renderPass, jniLongToPointer(valueAddress), sizeof(o->renderPass));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->renderPass, valuePointer, sizeof(o->renderPass));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_getSubpass(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->subpass));
+    return jniPointerToLong(&o->subpass);
 }
 
 void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setSubpass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setSubpass(JNIEnv* env,
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    memcpy(&o->subpass, jniLongToPointer(valueAddress), sizeof(o->subpass));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->subpass, valuePointer, sizeof(o->subpass));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_getFramebuffer(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->framebuffer));
+    return jniPointerToLong(&o->framebuffer);
 }
 
 void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setFramebuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setFramebuffer(JNIEnv* 
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    memcpy(&o->framebuffer, jniLongToPointer(valueAddress), sizeof(o->framebuffer));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->framebuffer, valuePointer, sizeof(o->framebuffer));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_getOcclusionQueryEnable(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->occlusionQueryEnable));
+    return jniPointerToLong(&o->occlusionQueryEnable);
 }
 
 void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setOcclusionQueryEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setOcclusionQueryEnable
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    memcpy(&o->occlusionQueryEnable, jniLongToPointer(valueAddress), sizeof(o->occlusionQueryEnable));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->occlusionQueryEnable, valuePointer, sizeof(o->occlusionQueryEnable));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_getQueryFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->queryFlags));
+    return jniPointerToLong(&o->queryFlags);
 }
 
 void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setQueryFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setQueryFlags(JNIEnv* e
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    memcpy(&o->queryFlags, jniLongToPointer(valueAddress), sizeof(o->queryFlags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->queryFlags, valuePointer, sizeof(o->queryFlags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_getPipelineStatistics(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pipelineStatistics));
+    return jniPointerToLong(&o->pipelineStatistics);
 }
 
 void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setPipelineStatistics(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,6 +148,8 @@ void Java_cz_mg_vulkan_vk_VkCommandBufferInheritanceInfo_setPipelineStatistics(J
     (void)env;
     (void)jc;
     VkCommandBufferInheritanceInfo* o = (VkCommandBufferInheritanceInfo*)jniLongToPointer(address);
-    memcpy(&o->pipelineStatistics, jniLongToPointer(valueAddress), sizeof(o->pipelineStatistics));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pipelineStatistics, valuePointer, sizeof(o->pipelineStatistics));
 }
+
 

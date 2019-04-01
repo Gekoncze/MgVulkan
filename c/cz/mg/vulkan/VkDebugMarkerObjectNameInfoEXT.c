@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_getSType(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkDebugMarkerObjectNameInfoEXT* o = (VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_setSType(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkDebugMarkerObjectNameInfoEXT* o = (VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDebugMarkerObjectNameInfoEXT* o = (VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_setPNext(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkDebugMarkerObjectNameInfoEXT* o = (VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_getObjectType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDebugMarkerObjectNameInfoEXT* o = (VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->objectType));
+    return jniPointerToLong(&o->objectType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_setObjectType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_setObjectType(JNIEnv* e
     (void)env;
     (void)jc;
     VkDebugMarkerObjectNameInfoEXT* o = (VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->objectType, jniLongToPointer(valueAddress), sizeof(o->objectType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->objectType, valuePointer, sizeof(o->objectType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_getObject(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDebugMarkerObjectNameInfoEXT* o = (VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->object));
+    return jniPointerToLong(&o->object);
 }
 
 void Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_setObject(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_setObject(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkDebugMarkerObjectNameInfoEXT* o = (VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->object, jniLongToPointer(valueAddress), sizeof(o->object));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->object, valuePointer, sizeof(o->object));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_getPObjectName(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDebugMarkerObjectNameInfoEXT* o = (VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pObjectName));
+    return jniPointerToLong(o->pObjectName);
 }
 
 void Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_setPObjectName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkDebugMarkerObjectNameInfoEXT_setPObjectName(JNIEnv* 
     (void)env;
     (void)jc;
     VkDebugMarkerObjectNameInfoEXT* o = (VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pObjectName, jniLongToPointer(valueAddress), sizeof(o->pObjectName));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pObjectName, &valuePointer, sizeof(o->pObjectName));
 }
+
 

@@ -15,7 +15,12 @@ public class VkString extends VkChar {
         super(vkmemory, vkaddress);
     }
 
-    public String getString() {
+    public VkString(VkChar ch){
+        this(ch.getVkMemory(), ch.getVkAddress());
+    }
+
+    @Override
+    public String toString() {
         StringBuilder sb = new StringBuilder();
         int c = count(getVkAddress());
         for(int i = 0; i < c; i++) sb.append((char)VkChar.getValue(getVkAddress()+i*VkChar.sizeof()));
@@ -24,7 +29,7 @@ public class VkString extends VkChar {
 
     private static native int count(long vkaddress);
 
-    public static class Array extends VkPointer.Array {
+    public static class Array extends VkChar.Pointer.Array {
         private final VkString[] array;
 
         public Array(String[] strings) {

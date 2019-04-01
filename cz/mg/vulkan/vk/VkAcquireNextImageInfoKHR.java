@@ -9,11 +9,11 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
     }
 
     public VkAcquireNextImageInfoKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkAcquireNextImageInfoKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,8 +58,10 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         return new VkSwapchainKHR(getVkMemory(), getSwapchain(getVkAddress()));
     }
 
+    
     public void setSwapchain(VkSwapchainKHR swapchain) {
-        setSwapchain(getVkAddress(), swapchain.getVkAddress());
+        setSwapchain(getVkAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSwapchain(long address);
@@ -65,8 +71,10 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         return new VkUInt64(getVkMemory(), getTimeout(getVkAddress()));
     }
 
+    
     public void setTimeout(VkUInt64 timeout) {
-        setTimeout(getVkAddress(), timeout.getVkAddress());
+        setTimeout(getVkAddress(), timeout != null ? timeout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTimeout(long address);
@@ -76,8 +84,10 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         return new VkSemaphore(getVkMemory(), getSemaphore(getVkAddress()));
     }
 
+    
     public void setSemaphore(VkSemaphore semaphore) {
-        setSemaphore(getVkAddress(), semaphore.getVkAddress());
+        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSemaphore(long address);
@@ -87,8 +97,10 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         return new VkFence(getVkMemory(), getFence(getVkAddress()));
     }
 
+    
     public void setFence(VkFence fence) {
-        setFence(getVkAddress(), fence.getVkAddress());
+        setFence(getVkAddress(), fence != null ? fence.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFence(long address);
@@ -98,8 +110,10 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         return new VkUInt32(getVkMemory(), getDeviceMask(getVkAddress()));
     }
 
+    
     public void setDeviceMask(VkUInt32 deviceMask) {
-        setDeviceMask(getVkAddress(), deviceMask.getVkAddress());
+        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDeviceMask(long address);
@@ -112,7 +126,12 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkAcquireNextImageInfoKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkAcquireNextImageInfoKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkAcquireNextImageInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

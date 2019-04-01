@@ -9,11 +9,11 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
     }
 
     public VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -39,8 +41,10 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -50,8 +54,10 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
         return new VkBool32(getVkMemory(), getPerViewPositionAllComponents(getVkAddress()));
     }
 
+    
     public void setPerViewPositionAllComponents(VkBool32 perViewPositionAllComponents) {
-        setPerViewPositionAllComponents(getVkAddress(), perViewPositionAllComponents.getVkAddress());
+        setPerViewPositionAllComponents(getVkAddress(), perViewPositionAllComponents != null ? perViewPositionAllComponents.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPerViewPositionAllComponents(long address);
@@ -64,7 +70,12 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

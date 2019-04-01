@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDisplayModeParametersKHR_getVisibleRegion(JNIEnv* e
     (void)env;
     (void)jc;
     VkDisplayModeParametersKHR* o = (VkDisplayModeParametersKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->visibleRegion));
+    return jniPointerToLong(&o->visibleRegion);
 }
 
 void Java_cz_mg_vulkan_vk_VkDisplayModeParametersKHR_setVisibleRegion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDisplayModeParametersKHR_setVisibleRegion(JNIEnv* en
     (void)env;
     (void)jc;
     VkDisplayModeParametersKHR* o = (VkDisplayModeParametersKHR*)jniLongToPointer(address);
-    memcpy(&o->visibleRegion, jniLongToPointer(valueAddress), sizeof(o->visibleRegion));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->visibleRegion, valuePointer, sizeof(o->visibleRegion));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDisplayModeParametersKHR_getRefreshRate(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDisplayModeParametersKHR* o = (VkDisplayModeParametersKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->refreshRate));
+    return jniPointerToLong(&o->refreshRate);
 }
 
 void Java_cz_mg_vulkan_vk_VkDisplayModeParametersKHR_setRefreshRate(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkDisplayModeParametersKHR_setRefreshRate(JNIEnv* env,
     (void)env;
     (void)jc;
     VkDisplayModeParametersKHR* o = (VkDisplayModeParametersKHR*)jniLongToPointer(address);
-    memcpy(&o->refreshRate, jniLongToPointer(valueAddress), sizeof(o->refreshRate));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->refreshRate, valuePointer, sizeof(o->refreshRate));
 }
+
 

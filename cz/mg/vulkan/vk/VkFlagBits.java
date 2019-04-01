@@ -24,7 +24,12 @@ public class VkFlagBits extends VkInt32 {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkFlagBits.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkFlagBits o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -65,11 +70,11 @@ public class VkFlagBits extends VkInt32 {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

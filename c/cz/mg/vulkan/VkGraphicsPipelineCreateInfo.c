@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getSType(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setSType(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPNext(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setFlags(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getStageCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->stageCount));
+    return jniPointerToLong(&o->stageCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setStageCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setStageCount(JNIEnv* env
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->stageCount, jniLongToPointer(valueAddress), sizeof(o->stageCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->stageCount, valuePointer, sizeof(o->stageCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPStages(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pStages));
+    return jniPointerToLong(o->pStages);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPStages(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPStages(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pStages, jniLongToPointer(valueAddress), sizeof(o->pStages));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pStages, &valuePointer, sizeof(o->pStages));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPVertexInputState(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pVertexInputState));
+    return jniPointerToLong(o->pVertexInputState);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPVertexInputState(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPVertexInputState(JNIE
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pVertexInputState, jniLongToPointer(valueAddress), sizeof(o->pVertexInputState));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pVertexInputState, &valuePointer, sizeof(o->pVertexInputState));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPInputAssemblyState(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pInputAssemblyState));
+    return jniPointerToLong(o->pInputAssemblyState);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPInputAssemblyState(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPInputAssemblyState(JN
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pInputAssemblyState, jniLongToPointer(valueAddress), sizeof(o->pInputAssemblyState));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pInputAssemblyState, &valuePointer, sizeof(o->pInputAssemblyState));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPTessellationState(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pTessellationState));
+    return jniPointerToLong(o->pTessellationState);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPTessellationState(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,14 +148,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPTessellationState(JNI
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pTessellationState, jniLongToPointer(valueAddress), sizeof(o->pTessellationState));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pTessellationState, &valuePointer, sizeof(o->pTessellationState));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPViewportState(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pViewportState));
+    return jniPointerToLong(o->pViewportState);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPViewportState(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -149,14 +165,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPViewportState(JNIEnv*
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pViewportState, jniLongToPointer(valueAddress), sizeof(o->pViewportState));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pViewportState, &valuePointer, sizeof(o->pViewportState));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPRasterizationState(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pRasterizationState));
+    return jniPointerToLong(o->pRasterizationState);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPRasterizationState(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -164,14 +182,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPRasterizationState(JN
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pRasterizationState, jniLongToPointer(valueAddress), sizeof(o->pRasterizationState));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pRasterizationState, &valuePointer, sizeof(o->pRasterizationState));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPMultisampleState(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pMultisampleState));
+    return jniPointerToLong(o->pMultisampleState);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPMultisampleState(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -179,14 +199,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPMultisampleState(JNIE
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pMultisampleState, jniLongToPointer(valueAddress), sizeof(o->pMultisampleState));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pMultisampleState, &valuePointer, sizeof(o->pMultisampleState));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPDepthStencilState(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pDepthStencilState));
+    return jniPointerToLong(o->pDepthStencilState);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPDepthStencilState(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -194,14 +216,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPDepthStencilState(JNI
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pDepthStencilState, jniLongToPointer(valueAddress), sizeof(o->pDepthStencilState));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pDepthStencilState, &valuePointer, sizeof(o->pDepthStencilState));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPColorBlendState(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pColorBlendState));
+    return jniPointerToLong(o->pColorBlendState);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPColorBlendState(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -209,14 +233,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPColorBlendState(JNIEn
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pColorBlendState, jniLongToPointer(valueAddress), sizeof(o->pColorBlendState));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pColorBlendState, &valuePointer, sizeof(o->pColorBlendState));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getPDynamicState(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pDynamicState));
+    return jniPointerToLong(o->pDynamicState);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPDynamicState(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -224,14 +250,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setPDynamicState(JNIEnv* 
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pDynamicState, jniLongToPointer(valueAddress), sizeof(o->pDynamicState));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pDynamicState, &valuePointer, sizeof(o->pDynamicState));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getLayout(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->layout));
+    return jniPointerToLong(&o->layout);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -239,14 +267,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setLayout(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->layout, jniLongToPointer(valueAddress), sizeof(o->layout));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->layout, valuePointer, sizeof(o->layout));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getRenderPass(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->renderPass));
+    return jniPointerToLong(&o->renderPass);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setRenderPass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -254,14 +284,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setRenderPass(JNIEnv* env
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->renderPass, jniLongToPointer(valueAddress), sizeof(o->renderPass));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->renderPass, valuePointer, sizeof(o->renderPass));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getSubpass(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->subpass));
+    return jniPointerToLong(&o->subpass);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setSubpass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -269,14 +301,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setSubpass(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->subpass, jniLongToPointer(valueAddress), sizeof(o->subpass));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->subpass, valuePointer, sizeof(o->subpass));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getBasePipelineHandle(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->basePipelineHandle));
+    return jniPointerToLong(&o->basePipelineHandle);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setBasePipelineHandle(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -284,14 +318,16 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setBasePipelineHandle(JNI
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->basePipelineHandle, jniLongToPointer(valueAddress), sizeof(o->basePipelineHandle));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->basePipelineHandle, valuePointer, sizeof(o->basePipelineHandle));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_getBasePipelineIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->basePipelineIndex));
+    return jniPointerToLong(&o->basePipelineIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setBasePipelineIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -299,6 +335,8 @@ void Java_cz_mg_vulkan_vk_VkGraphicsPipelineCreateInfo_setBasePipelineIndex(JNIE
     (void)env;
     (void)jc;
     VkGraphicsPipelineCreateInfo* o = (VkGraphicsPipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->basePipelineIndex, jniLongToPointer(valueAddress), sizeof(o->basePipelineIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->basePipelineIndex, valuePointer, sizeof(o->basePipelineIndex));
 }
+
 

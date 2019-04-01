@@ -24,7 +24,12 @@ public class VkExternalMemoryFeatureFlagsNV extends VkFlags {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkExternalMemoryFeatureFlagsNV.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkExternalMemoryFeatureFlagsNV o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -65,11 +70,11 @@ public class VkExternalMemoryFeatureFlagsNV extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExternalMemoryFeatureFlagsNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

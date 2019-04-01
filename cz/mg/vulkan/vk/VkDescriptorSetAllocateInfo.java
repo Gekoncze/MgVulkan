@@ -9,11 +9,11 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
     }
 
     public VkDescriptorSetAllocateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDescriptorSetAllocateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         return new VkDescriptorPool(getVkMemory(), getDescriptorPool(getVkAddress()));
     }
 
+    
     public void setDescriptorPool(VkDescriptorPool descriptorPool) {
-        setDescriptorPool(getVkAddress(), descriptorPool.getVkAddress());
+        setDescriptorPool(getVkAddress(), descriptorPool != null ? descriptorPool.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDescriptorPool(long address);
@@ -63,19 +69,23 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getDescriptorSetCount(getVkAddress()));
     }
 
+    
     public void setDescriptorSetCount(VkUInt32 descriptorSetCount) {
-        setDescriptorSetCount(getVkAddress(), descriptorSetCount.getVkAddress());
+        setDescriptorSetCount(getVkAddress(), descriptorSetCount != null ? descriptorSetCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDescriptorSetCount(long address);
     private static native void setDescriptorSetCount(long address, long descriptorSetCount);
 
-    public VkDescriptorSetLayout.Array getPSetLayouts() {
-        return new VkDescriptorSetLayout.Array(getVkMemory(), getPSetLayouts(getVkAddress()), getDescriptorSetCount().getValue());
+    public VkDescriptorSetLayout getPSetLayouts() {
+        return new VkDescriptorSetLayout(getVkMemory(), getPSetLayouts(getVkAddress()));
     }
 
+    private VkObject pSetLayouts = null;
     public void setPSetLayouts(VkDescriptorSetLayout pSetLayouts) {
-        setPSetLayouts(getVkAddress(), pSetLayouts.getVkAddress());
+        setPSetLayouts(getVkAddress(), pSetLayouts != null ? pSetLayouts.getVkAddress() : VkPointer.NULL);
+        this.pSetLayouts = pSetLayouts;
     }
 
     private static native long getPSetLayouts(long address);
@@ -88,7 +98,12 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDescriptorSetAllocateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorSetAllocateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorSetAllocateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

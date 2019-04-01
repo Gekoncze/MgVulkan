@@ -25,7 +25,7 @@ public class PFNvkWaitForFences extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkUInt32 fenceCount, VkFence pFences, VkBool32 waitAll, VkUInt64 timeout, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), fenceCount != null ? fenceCount.getVkAddress() : VkPointer.NULL, pFences != null ? pFences.getVkAddress() : VkFence.NULL.getVkAddress(), waitAll != null ? waitAll.getVkAddress() : VkPointer.NULL, timeout != null ? timeout.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, fenceCount != null ? fenceCount.getVkAddress() : VkPointer.NULL_ADDRESS, pFences != null ? pFences.getVkAddress() : VkPointer.NULL, waitAll != null ? waitAll.getVkAddress() : VkPointer.NULL_ADDRESS, timeout != null ? timeout.getVkAddress() : VkPointer.NULL_ADDRESS, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
     }
 
     private static native void call(long vkaddress, long device, long fenceCount, long pFences, long waitAll, long timeout, long rval);

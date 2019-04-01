@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getSType(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkDescriptorSetAllocateInfo* o = (VkDescriptorSetAllocateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setSType(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkDescriptorSetAllocateInfo* o = (VkDescriptorSetAllocateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorSetAllocateInfo* o = (VkDescriptorSetAllocateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setPNext(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkDescriptorSetAllocateInfo* o = (VkDescriptorSetAllocateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getDescriptorPool(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorSetAllocateInfo* o = (VkDescriptorSetAllocateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->descriptorPool));
+    return jniPointerToLong(&o->descriptorPool);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setDescriptorPool(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setDescriptorPool(JNIEnv* 
     (void)env;
     (void)jc;
     VkDescriptorSetAllocateInfo* o = (VkDescriptorSetAllocateInfo*)jniLongToPointer(address);
-    memcpy(&o->descriptorPool, jniLongToPointer(valueAddress), sizeof(o->descriptorPool));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->descriptorPool, valuePointer, sizeof(o->descriptorPool));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getDescriptorSetCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorSetAllocateInfo* o = (VkDescriptorSetAllocateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->descriptorSetCount));
+    return jniPointerToLong(&o->descriptorSetCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setDescriptorSetCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setDescriptorSetCount(JNIE
     (void)env;
     (void)jc;
     VkDescriptorSetAllocateInfo* o = (VkDescriptorSetAllocateInfo*)jniLongToPointer(address);
-    memcpy(&o->descriptorSetCount, jniLongToPointer(valueAddress), sizeof(o->descriptorSetCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->descriptorSetCount, valuePointer, sizeof(o->descriptorSetCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getPSetLayouts(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorSetAllocateInfo* o = (VkDescriptorSetAllocateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pSetLayouts));
+    return jniPointerToLong(o->pSetLayouts);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setPSetLayouts(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setPSetLayouts(JNIEnv* env
     (void)env;
     (void)jc;
     VkDescriptorSetAllocateInfo* o = (VkDescriptorSetAllocateInfo*)jniLongToPointer(address);
-    memcpy(&o->pSetLayouts, jniLongToPointer(valueAddress), sizeof(o->pSetLayouts));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pSetLayouts, &valuePointer, sizeof(o->pSetLayouts));
 }
+
 

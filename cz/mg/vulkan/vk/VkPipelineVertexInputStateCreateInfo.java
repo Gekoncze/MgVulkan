@@ -9,11 +9,11 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
     }
 
     public VkPipelineVertexInputStateCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineVertexInputStateCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,8 +58,10 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         return new VkPipelineVertexInputStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineVertexInputStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -65,19 +71,23 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getVertexBindingDescriptionCount(getVkAddress()));
     }
 
+    
     public void setVertexBindingDescriptionCount(VkUInt32 vertexBindingDescriptionCount) {
-        setVertexBindingDescriptionCount(getVkAddress(), vertexBindingDescriptionCount.getVkAddress());
+        setVertexBindingDescriptionCount(getVkAddress(), vertexBindingDescriptionCount != null ? vertexBindingDescriptionCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getVertexBindingDescriptionCount(long address);
     private static native void setVertexBindingDescriptionCount(long address, long vertexBindingDescriptionCount);
 
-    public VkVertexInputBindingDescription.Array getPVertexBindingDescriptions() {
-        return new VkVertexInputBindingDescription.Array(getVkMemory(), getPVertexBindingDescriptions(getVkAddress()), getVertexBindingDescriptionCount().getValue());
+    public VkVertexInputBindingDescription getPVertexBindingDescriptions() {
+        return new VkVertexInputBindingDescription(getVkMemory(), getPVertexBindingDescriptions(getVkAddress()));
     }
 
+    private VkObject pVertexBindingDescriptions = null;
     public void setPVertexBindingDescriptions(VkVertexInputBindingDescription pVertexBindingDescriptions) {
-        setPVertexBindingDescriptions(getVkAddress(), pVertexBindingDescriptions.getVkAddress());
+        setPVertexBindingDescriptions(getVkAddress(), pVertexBindingDescriptions != null ? pVertexBindingDescriptions.getVkAddress() : VkPointer.NULL);
+        this.pVertexBindingDescriptions = pVertexBindingDescriptions;
     }
 
     private static native long getPVertexBindingDescriptions(long address);
@@ -87,19 +97,23 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getVertexAttributeDescriptionCount(getVkAddress()));
     }
 
+    
     public void setVertexAttributeDescriptionCount(VkUInt32 vertexAttributeDescriptionCount) {
-        setVertexAttributeDescriptionCount(getVkAddress(), vertexAttributeDescriptionCount.getVkAddress());
+        setVertexAttributeDescriptionCount(getVkAddress(), vertexAttributeDescriptionCount != null ? vertexAttributeDescriptionCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getVertexAttributeDescriptionCount(long address);
     private static native void setVertexAttributeDescriptionCount(long address, long vertexAttributeDescriptionCount);
 
-    public VkVertexInputAttributeDescription.Array getPVertexAttributeDescriptions() {
-        return new VkVertexInputAttributeDescription.Array(getVkMemory(), getPVertexAttributeDescriptions(getVkAddress()), getVertexAttributeDescriptionCount().getValue());
+    public VkVertexInputAttributeDescription getPVertexAttributeDescriptions() {
+        return new VkVertexInputAttributeDescription(getVkMemory(), getPVertexAttributeDescriptions(getVkAddress()));
     }
 
+    private VkObject pVertexAttributeDescriptions = null;
     public void setPVertexAttributeDescriptions(VkVertexInputAttributeDescription pVertexAttributeDescriptions) {
-        setPVertexAttributeDescriptions(getVkAddress(), pVertexAttributeDescriptions.getVkAddress());
+        setPVertexAttributeDescriptions(getVkAddress(), pVertexAttributeDescriptions != null ? pVertexAttributeDescriptions.getVkAddress() : VkPointer.NULL);
+        this.pVertexAttributeDescriptions = pVertexAttributeDescriptions;
     }
 
     private static native long getPVertexAttributeDescriptions(long address);
@@ -112,7 +126,12 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineVertexInputStateCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineVertexInputStateCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineVertexInputStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

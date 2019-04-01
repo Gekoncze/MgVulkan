@@ -9,11 +9,11 @@ public class VkClearDepthStencilValue extends VkObject {
     }
 
     public VkClearDepthStencilValue(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkClearDepthStencilValue(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkClearDepthStencilValue extends VkObject {
         return new VkFloat(getVkMemory(), getDepth(getVkAddress()));
     }
 
+    
     public void setDepth(VkFloat depth) {
-        setDepth(getVkAddress(), depth.getVkAddress());
+        setDepth(getVkAddress(), depth != null ? depth.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepth(long address);
@@ -38,8 +40,10 @@ public class VkClearDepthStencilValue extends VkObject {
         return new VkUInt32(getVkMemory(), getStencil(getVkAddress()));
     }
 
+    
     public void setStencil(VkUInt32 stencil) {
-        setStencil(getVkAddress(), stencil.getVkAddress());
+        setStencil(getVkAddress(), stencil != null ? stencil.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getStencil(long address);
@@ -52,7 +56,12 @@ public class VkClearDepthStencilValue extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkClearDepthStencilValue.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkClearDepthStencilValue o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkClearDepthStencilValue extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkClearDepthStencilValue.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

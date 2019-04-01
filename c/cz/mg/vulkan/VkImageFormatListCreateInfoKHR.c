@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_getSType(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkImageFormatListCreateInfoKHR* o = (VkImageFormatListCreateInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_setSType(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkImageFormatListCreateInfoKHR* o = (VkImageFormatListCreateInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImageFormatListCreateInfoKHR* o = (VkImageFormatListCreateInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_setPNext(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkImageFormatListCreateInfoKHR* o = (VkImageFormatListCreateInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_getViewFormatCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImageFormatListCreateInfoKHR* o = (VkImageFormatListCreateInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->viewFormatCount));
+    return jniPointerToLong(&o->viewFormatCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_setViewFormatCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_setViewFormatCount(JNIE
     (void)env;
     (void)jc;
     VkImageFormatListCreateInfoKHR* o = (VkImageFormatListCreateInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->viewFormatCount, jniLongToPointer(valueAddress), sizeof(o->viewFormatCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->viewFormatCount, valuePointer, sizeof(o->viewFormatCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_getPViewFormats(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImageFormatListCreateInfoKHR* o = (VkImageFormatListCreateInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pViewFormats));
+    return jniPointerToLong(o->pViewFormats);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_setPViewFormats(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkImageFormatListCreateInfoKHR_setPViewFormats(JNIEnv*
     (void)env;
     (void)jc;
     VkImageFormatListCreateInfoKHR* o = (VkImageFormatListCreateInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->pViewFormats, jniLongToPointer(valueAddress), sizeof(o->pViewFormats));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pViewFormats, &valuePointer, sizeof(o->pViewFormats));
 }
+
 

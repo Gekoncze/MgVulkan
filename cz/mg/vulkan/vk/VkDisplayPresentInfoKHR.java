@@ -9,11 +9,11 @@ public class VkDisplayPresentInfoKHR extends VkObject {
     }
 
     public VkDisplayPresentInfoKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDisplayPresentInfoKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         return new VkRect2D(getVkMemory(), getSrcRect(getVkAddress()));
     }
 
+    
     public void setSrcRect(VkRect2D srcRect) {
-        setSrcRect(getVkAddress(), srcRect.getVkAddress());
+        setSrcRect(getVkAddress(), srcRect != null ? srcRect.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSrcRect(long address);
@@ -63,8 +69,10 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         return new VkRect2D(getVkMemory(), getDstRect(getVkAddress()));
     }
 
+    
     public void setDstRect(VkRect2D dstRect) {
-        setDstRect(getVkAddress(), dstRect.getVkAddress());
+        setDstRect(getVkAddress(), dstRect != null ? dstRect.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstRect(long address);
@@ -74,8 +82,10 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         return new VkBool32(getVkMemory(), getPersistent(getVkAddress()));
     }
 
+    
     public void setPersistent(VkBool32 persistent) {
-        setPersistent(getVkAddress(), persistent.getVkAddress());
+        setPersistent(getVkAddress(), persistent != null ? persistent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPersistent(long address);
@@ -88,7 +98,12 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDisplayPresentInfoKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDisplayPresentInfoKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkDisplayPresentInfoKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDisplayPresentInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

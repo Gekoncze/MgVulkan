@@ -9,11 +9,11 @@ public class VkQueryPoolCreateInfo extends VkObject {
     }
 
     public VkQueryPoolCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkQueryPoolCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkQueryPoolCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -42,8 +44,10 @@ public class VkQueryPoolCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -53,8 +57,10 @@ public class VkQueryPoolCreateInfo extends VkObject {
         return new VkQueryPoolCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkQueryPoolCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -64,8 +70,10 @@ public class VkQueryPoolCreateInfo extends VkObject {
         return new VkQueryType(getVkMemory(), getQueryType(getVkAddress()));
     }
 
+    
     public void setQueryType(VkQueryType queryType) {
-        setQueryType(getVkAddress(), queryType.getVkAddress());
+        setQueryType(getVkAddress(), queryType != null ? queryType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQueryType(long address);
@@ -75,19 +83,23 @@ public class VkQueryPoolCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getQueryCount(getVkAddress()));
     }
 
+    
     public void setQueryCount(VkUInt32 queryCount) {
-        setQueryCount(getVkAddress(), queryCount.getVkAddress());
+        setQueryCount(getVkAddress(), queryCount != null ? queryCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQueryCount(long address);
     private static native void setQueryCount(long address, long queryCount);
 
-    public VkQueryPipelineStatisticFlags.Array getPipelineStatistics() {
-        return new VkQueryPipelineStatisticFlags.Array(getVkMemory(), getPipelineStatistics(getVkAddress()), getQueryCount().getValue());
+    public VkQueryPipelineStatisticFlags getPipelineStatistics() {
+        return new VkQueryPipelineStatisticFlags(getVkMemory(), getPipelineStatistics(getVkAddress()));
     }
 
+    
     public void setPipelineStatistics(VkQueryPipelineStatisticFlags pipelineStatistics) {
-        setPipelineStatistics(getVkAddress(), pipelineStatistics.getVkAddress());
+        setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPipelineStatistics(long address);
@@ -100,7 +112,12 @@ public class VkQueryPoolCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkQueryPoolCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkQueryPoolCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkQueryPoolCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkQueryPoolCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

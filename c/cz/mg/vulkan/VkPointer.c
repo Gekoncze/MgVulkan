@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -30,4 +30,21 @@ void Java_cz_mg_vulkan_vk_VkPointer_setValue(JNIEnv* env, jclass jc, jlong addre
     (void)jc;
     void** pointerAddress = (void**)jniLongToPointer(address);
     *pointerAddress = jniLongToPointer(value);
+}
+
+jlong Java_cz_mg_vulkan_vk_VkPointer_getNullValue(JNIEnv* env, jclass jc)
+{
+    (void)env;
+    (void)jc;
+    return jniPointerToLong(NULL);
+}
+
+void* null;
+
+jlong Java_cz_mg_vulkan_vk_VkPointer_getNullAddress(JNIEnv* env, jclass jc)
+{
+    (void)env;
+    (void)jc;
+    null = NULL;
+    return jniPointerToLong(&null);
 }

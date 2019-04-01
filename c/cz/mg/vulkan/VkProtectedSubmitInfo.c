@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkProtectedSubmitInfo_getSType(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkProtectedSubmitInfo* o = (VkProtectedSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkProtectedSubmitInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkProtectedSubmitInfo_setSType(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkProtectedSubmitInfo* o = (VkProtectedSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkProtectedSubmitInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkProtectedSubmitInfo* o = (VkProtectedSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkProtectedSubmitInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkProtectedSubmitInfo_setPNext(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkProtectedSubmitInfo* o = (VkProtectedSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkProtectedSubmitInfo_getProtectedSubmit(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkProtectedSubmitInfo* o = (VkProtectedSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->protectedSubmit));
+    return jniPointerToLong(&o->protectedSubmit);
 }
 
 void Java_cz_mg_vulkan_vk_VkProtectedSubmitInfo_setProtectedSubmit(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkProtectedSubmitInfo_setProtectedSubmit(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkProtectedSubmitInfo* o = (VkProtectedSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->protectedSubmit, jniLongToPointer(valueAddress), sizeof(o->protectedSubmit));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->protectedSubmit, valuePointer, sizeof(o->protectedSubmit));
 }
+
 

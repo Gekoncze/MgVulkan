@@ -9,11 +9,11 @@ public class VkSurfaceFormatKHR extends VkObject {
     }
 
     public VkSurfaceFormatKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSurfaceFormatKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkSurfaceFormatKHR extends VkObject {
         return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
     }
 
+    
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format.getVkAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFormat(long address);
@@ -38,8 +40,10 @@ public class VkSurfaceFormatKHR extends VkObject {
         return new VkColorSpaceKHR(getVkMemory(), getColorSpace(getVkAddress()));
     }
 
+    
     public void setColorSpace(VkColorSpaceKHR colorSpace) {
-        setColorSpace(getVkAddress(), colorSpace.getVkAddress());
+        setColorSpace(getVkAddress(), colorSpace != null ? colorSpace.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getColorSpace(long address);
@@ -52,7 +56,12 @@ public class VkSurfaceFormatKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSurfaceFormatKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSurfaceFormatKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkSurfaceFormatKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSurfaceFormatKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

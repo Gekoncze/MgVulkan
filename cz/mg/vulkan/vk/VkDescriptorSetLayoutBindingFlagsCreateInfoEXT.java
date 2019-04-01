@@ -9,11 +9,11 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
     }
 
     public VkDescriptorSetLayoutBindingFlagsCreateInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDescriptorSetLayoutBindingFlagsCreateInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,19 +55,23 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
         return new VkUInt32(getVkMemory(), getBindingCount(getVkAddress()));
     }
 
+    
     public void setBindingCount(VkUInt32 bindingCount) {
-        setBindingCount(getVkAddress(), bindingCount.getVkAddress());
+        setBindingCount(getVkAddress(), bindingCount != null ? bindingCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBindingCount(long address);
     private static native void setBindingCount(long address, long bindingCount);
 
-    public VkDescriptorBindingFlagsEXT.Array getPBindingFlags() {
-        return new VkDescriptorBindingFlagsEXT.Array(getVkMemory(), getPBindingFlags(getVkAddress()), getBindingCount().getValue());
+    public VkDescriptorBindingFlagsEXT getPBindingFlags() {
+        return new VkDescriptorBindingFlagsEXT(getVkMemory(), getPBindingFlags(getVkAddress()));
     }
 
+    private VkObject pBindingFlags = null;
     public void setPBindingFlags(VkDescriptorBindingFlagsEXT pBindingFlags) {
-        setPBindingFlags(getVkAddress(), pBindingFlags.getVkAddress());
+        setPBindingFlags(getVkAddress(), pBindingFlags != null ? pBindingFlags.getVkAddress() : VkPointer.NULL);
+        this.pBindingFlags = pBindingFlags;
     }
 
     private static native long getPBindingFlags(long address);
@@ -76,7 +84,12 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDescriptorSetLayoutBindingFlagsCreateInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorSetLayoutBindingFlagsCreateInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorSetLayoutBindingFlagsCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

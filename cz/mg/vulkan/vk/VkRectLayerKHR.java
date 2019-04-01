@@ -9,11 +9,11 @@ public class VkRectLayerKHR extends VkObject {
     }
 
     public VkRectLayerKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkRectLayerKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkRectLayerKHR extends VkObject {
         return new VkOffset2D(getVkMemory(), getOffset(getVkAddress()));
     }
 
+    
     public void setOffset(VkOffset2D offset) {
-        setOffset(getVkAddress(), offset.getVkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOffset(long address);
@@ -39,8 +41,10 @@ public class VkRectLayerKHR extends VkObject {
         return new VkExtent2D(getVkMemory(), getExtent(getVkAddress()));
     }
 
+    
     public void setExtent(VkExtent2D extent) {
-        setExtent(getVkAddress(), extent.getVkAddress());
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExtent(long address);
@@ -50,8 +54,10 @@ public class VkRectLayerKHR extends VkObject {
         return new VkUInt32(getVkMemory(), getLayer(getVkAddress()));
     }
 
+    
     public void setLayer(VkUInt32 layer) {
-        setLayer(getVkAddress(), layer.getVkAddress());
+        setLayer(getVkAddress(), layer != null ? layer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLayer(long address);
@@ -64,7 +70,12 @@ public class VkRectLayerKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkRectLayerKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkRectLayerKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkRectLayerKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkRectLayerKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

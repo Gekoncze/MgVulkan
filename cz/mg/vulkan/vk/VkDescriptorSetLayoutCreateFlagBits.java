@@ -35,7 +35,12 @@ public class VkDescriptorSetLayoutCreateFlagBits extends VkFlagBits {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDescriptorSetLayoutCreateFlagBits.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorSetLayoutCreateFlagBits o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -76,11 +81,11 @@ public class VkDescriptorSetLayoutCreateFlagBits extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorSetLayoutCreateFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

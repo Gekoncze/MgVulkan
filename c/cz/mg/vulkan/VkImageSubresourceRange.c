@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkImageSubresourceRange_getAspectMask(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkImageSubresourceRange* o = (VkImageSubresourceRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->aspectMask));
+    return jniPointerToLong(&o->aspectMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageSubresourceRange_setAspectMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkImageSubresourceRange_setAspectMask(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkImageSubresourceRange* o = (VkImageSubresourceRange*)jniLongToPointer(address);
-    memcpy(&o->aspectMask, jniLongToPointer(valueAddress), sizeof(o->aspectMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->aspectMask, valuePointer, sizeof(o->aspectMask));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImageSubresourceRange_getBaseMipLevel(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImageSubresourceRange* o = (VkImageSubresourceRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->baseMipLevel));
+    return jniPointerToLong(&o->baseMipLevel);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageSubresourceRange_setBaseMipLevel(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkImageSubresourceRange_setBaseMipLevel(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkImageSubresourceRange* o = (VkImageSubresourceRange*)jniLongToPointer(address);
-    memcpy(&o->baseMipLevel, jniLongToPointer(valueAddress), sizeof(o->baseMipLevel));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->baseMipLevel, valuePointer, sizeof(o->baseMipLevel));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImageSubresourceRange_getLevelCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImageSubresourceRange* o = (VkImageSubresourceRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->levelCount));
+    return jniPointerToLong(&o->levelCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageSubresourceRange_setLevelCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkImageSubresourceRange_setLevelCount(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkImageSubresourceRange* o = (VkImageSubresourceRange*)jniLongToPointer(address);
-    memcpy(&o->levelCount, jniLongToPointer(valueAddress), sizeof(o->levelCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->levelCount, valuePointer, sizeof(o->levelCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImageSubresourceRange_getBaseArrayLayer(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImageSubresourceRange* o = (VkImageSubresourceRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->baseArrayLayer));
+    return jniPointerToLong(&o->baseArrayLayer);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageSubresourceRange_setBaseArrayLayer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkImageSubresourceRange_setBaseArrayLayer(JNIEnv* env,
     (void)env;
     (void)jc;
     VkImageSubresourceRange* o = (VkImageSubresourceRange*)jniLongToPointer(address);
-    memcpy(&o->baseArrayLayer, jniLongToPointer(valueAddress), sizeof(o->baseArrayLayer));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->baseArrayLayer, valuePointer, sizeof(o->baseArrayLayer));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImageSubresourceRange_getLayerCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImageSubresourceRange* o = (VkImageSubresourceRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->layerCount));
+    return jniPointerToLong(&o->layerCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageSubresourceRange_setLayerCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkImageSubresourceRange_setLayerCount(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkImageSubresourceRange* o = (VkImageSubresourceRange*)jniLongToPointer(address);
-    memcpy(&o->layerCount, jniLongToPointer(valueAddress), sizeof(o->layerCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->layerCount, valuePointer, sizeof(o->layerCount));
 }
+
 

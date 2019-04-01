@@ -9,11 +9,11 @@ public class VkRenderPassCreateInfo extends VkObject {
     }
 
     public VkRenderPassCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkRenderPassCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -34,8 +34,10 @@ public class VkRenderPassCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -45,8 +47,10 @@ public class VkRenderPassCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -56,8 +60,10 @@ public class VkRenderPassCreateInfo extends VkObject {
         return new VkRenderPassCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkRenderPassCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -67,19 +73,23 @@ public class VkRenderPassCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getAttachmentCount(getVkAddress()));
     }
 
+    
     public void setAttachmentCount(VkUInt32 attachmentCount) {
-        setAttachmentCount(getVkAddress(), attachmentCount.getVkAddress());
+        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAttachmentCount(long address);
     private static native void setAttachmentCount(long address, long attachmentCount);
 
-    public VkAttachmentDescription.Array getPAttachments() {
-        return new VkAttachmentDescription.Array(getVkMemory(), getPAttachments(getVkAddress()), getAttachmentCount().getValue());
+    public VkAttachmentDescription getPAttachments() {
+        return new VkAttachmentDescription(getVkMemory(), getPAttachments(getVkAddress()));
     }
 
+    private VkObject pAttachments = null;
     public void setPAttachments(VkAttachmentDescription pAttachments) {
-        setPAttachments(getVkAddress(), pAttachments.getVkAddress());
+        setPAttachments(getVkAddress(), pAttachments != null ? pAttachments.getVkAddress() : VkPointer.NULL);
+        this.pAttachments = pAttachments;
     }
 
     private static native long getPAttachments(long address);
@@ -89,19 +99,23 @@ public class VkRenderPassCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getSubpassCount(getVkAddress()));
     }
 
+    
     public void setSubpassCount(VkUInt32 subpassCount) {
-        setSubpassCount(getVkAddress(), subpassCount.getVkAddress());
+        setSubpassCount(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSubpassCount(long address);
     private static native void setSubpassCount(long address, long subpassCount);
 
-    public VkSubpassDescription.Array getPSubpasses() {
-        return new VkSubpassDescription.Array(getVkMemory(), getPSubpasses(getVkAddress()), getSubpassCount().getValue());
+    public VkSubpassDescription getPSubpasses() {
+        return new VkSubpassDescription(getVkMemory(), getPSubpasses(getVkAddress()));
     }
 
+    private VkObject pSubpasses = null;
     public void setPSubpasses(VkSubpassDescription pSubpasses) {
-        setPSubpasses(getVkAddress(), pSubpasses.getVkAddress());
+        setPSubpasses(getVkAddress(), pSubpasses != null ? pSubpasses.getVkAddress() : VkPointer.NULL);
+        this.pSubpasses = pSubpasses;
     }
 
     private static native long getPSubpasses(long address);
@@ -111,19 +125,23 @@ public class VkRenderPassCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getDependencyCount(getVkAddress()));
     }
 
+    
     public void setDependencyCount(VkUInt32 dependencyCount) {
-        setDependencyCount(getVkAddress(), dependencyCount.getVkAddress());
+        setDependencyCount(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDependencyCount(long address);
     private static native void setDependencyCount(long address, long dependencyCount);
 
-    public VkSubpassDependency.Array getPDependencies() {
-        return new VkSubpassDependency.Array(getVkMemory(), getPDependencies(getVkAddress()), getDependencyCount().getValue());
+    public VkSubpassDependency getPDependencies() {
+        return new VkSubpassDependency(getVkMemory(), getPDependencies(getVkAddress()));
     }
 
+    private VkObject pDependencies = null;
     public void setPDependencies(VkSubpassDependency pDependencies) {
-        setPDependencies(getVkAddress(), pDependencies.getVkAddress());
+        setPDependencies(getVkAddress(), pDependencies != null ? pDependencies.getVkAddress() : VkPointer.NULL);
+        this.pDependencies = pDependencies;
     }
 
     private static native long getPDependencies(long address);
@@ -136,7 +154,12 @@ public class VkRenderPassCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkRenderPassCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkRenderPassCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -177,11 +200,11 @@ public class VkRenderPassCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkRenderPassCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

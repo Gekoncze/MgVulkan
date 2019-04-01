@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkExternalFenceProperties_getSType(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkExternalFenceProperties* o = (VkExternalFenceProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalFenceProperties_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkExternalFenceProperties_setSType(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkExternalFenceProperties* o = (VkExternalFenceProperties*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkExternalFenceProperties_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkExternalFenceProperties* o = (VkExternalFenceProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalFenceProperties_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkExternalFenceProperties_setPNext(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkExternalFenceProperties* o = (VkExternalFenceProperties*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkExternalFenceProperties_getExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkExternalFenceProperties* o = (VkExternalFenceProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->exportFromImportedHandleTypes));
+    return jniPointerToLong(&o->exportFromImportedHandleTypes);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalFenceProperties_setExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkExternalFenceProperties_setExportFromImportedHandleT
     (void)env;
     (void)jc;
     VkExternalFenceProperties* o = (VkExternalFenceProperties*)jniLongToPointer(address);
-    memcpy(&o->exportFromImportedHandleTypes, jniLongToPointer(valueAddress), sizeof(o->exportFromImportedHandleTypes));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->exportFromImportedHandleTypes, valuePointer, sizeof(o->exportFromImportedHandleTypes));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkExternalFenceProperties_getCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkExternalFenceProperties* o = (VkExternalFenceProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->compatibleHandleTypes));
+    return jniPointerToLong(&o->compatibleHandleTypes);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalFenceProperties_setCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkExternalFenceProperties_setCompatibleHandleTypes(JNI
     (void)env;
     (void)jc;
     VkExternalFenceProperties* o = (VkExternalFenceProperties*)jniLongToPointer(address);
-    memcpy(&o->compatibleHandleTypes, jniLongToPointer(valueAddress), sizeof(o->compatibleHandleTypes));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->compatibleHandleTypes, valuePointer, sizeof(o->compatibleHandleTypes));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkExternalFenceProperties_getExternalFenceFeatures(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkExternalFenceProperties* o = (VkExternalFenceProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->externalFenceFeatures));
+    return jniPointerToLong(&o->externalFenceFeatures);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalFenceProperties_setExternalFenceFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkExternalFenceProperties_setExternalFenceFeatures(JNI
     (void)env;
     (void)jc;
     VkExternalFenceProperties* o = (VkExternalFenceProperties*)jniLongToPointer(address);
-    memcpy(&o->externalFenceFeatures, jniLongToPointer(valueAddress), sizeof(o->externalFenceFeatures));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->externalFenceFeatures, valuePointer, sizeof(o->externalFenceFeatures));
 }
+
 

@@ -9,11 +9,11 @@ public class VkComputePipelineCreateInfo extends VkObject {
     }
 
     public VkComputePipelineCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkComputePipelineCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,8 +58,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
         return new VkPipelineCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -65,8 +71,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
         return new VkPipelineShaderStageCreateInfo(getVkMemory(), getStage(getVkAddress()));
     }
 
+    
     public void setStage(VkPipelineShaderStageCreateInfo stage) {
-        setStage(getVkAddress(), stage.getVkAddress());
+        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getStage(long address);
@@ -76,8 +84,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
         return new VkPipelineLayout(getVkMemory(), getLayout(getVkAddress()));
     }
 
+    
     public void setLayout(VkPipelineLayout layout) {
-        setLayout(getVkAddress(), layout.getVkAddress());
+        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLayout(long address);
@@ -87,8 +97,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
         return new VkPipeline(getVkMemory(), getBasePipelineHandle(getVkAddress()));
     }
 
+    
     public void setBasePipelineHandle(VkPipeline basePipelineHandle) {
-        setBasePipelineHandle(getVkAddress(), basePipelineHandle.getVkAddress());
+        setBasePipelineHandle(getVkAddress(), basePipelineHandle != null ? basePipelineHandle.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBasePipelineHandle(long address);
@@ -98,8 +110,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
         return new VkInt32(getVkMemory(), getBasePipelineIndex(getVkAddress()));
     }
 
+    
     public void setBasePipelineIndex(VkInt32 basePipelineIndex) {
-        setBasePipelineIndex(getVkAddress(), basePipelineIndex.getVkAddress());
+        setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBasePipelineIndex(long address);
@@ -112,7 +126,12 @@ public class VkComputePipelineCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkComputePipelineCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkComputePipelineCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkComputePipelineCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkComputePipelineCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

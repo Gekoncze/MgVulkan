@@ -9,11 +9,11 @@ public class VkDescriptorBufferInfo extends VkObject {
     }
 
     public VkDescriptorBufferInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDescriptorBufferInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkDescriptorBufferInfo extends VkObject {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
     }
 
+    
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer.getVkAddress());
+        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBuffer(long address);
@@ -39,8 +41,10 @@ public class VkDescriptorBufferInfo extends VkObject {
         return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
     }
 
+    
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset.getVkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOffset(long address);
@@ -50,8 +54,10 @@ public class VkDescriptorBufferInfo extends VkObject {
         return new VkDeviceSize(getVkMemory(), getRange(getVkAddress()));
     }
 
+    
     public void setRange(VkDeviceSize range) {
-        setRange(getVkAddress(), range.getVkAddress());
+        setRange(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRange(long address);
@@ -64,7 +70,12 @@ public class VkDescriptorBufferInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDescriptorBufferInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorBufferInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkDescriptorBufferInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorBufferInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

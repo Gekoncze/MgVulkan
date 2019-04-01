@@ -9,11 +9,11 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
     }
 
     public VkDisplayPlaneCapabilitiesKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDisplayPlaneCapabilitiesKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -34,8 +34,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         return new VkDisplayPlaneAlphaFlagsKHR(getVkMemory(), getSupportedAlpha(getVkAddress()));
     }
 
+    
     public void setSupportedAlpha(VkDisplayPlaneAlphaFlagsKHR supportedAlpha) {
-        setSupportedAlpha(getVkAddress(), supportedAlpha.getVkAddress());
+        setSupportedAlpha(getVkAddress(), supportedAlpha != null ? supportedAlpha.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSupportedAlpha(long address);
@@ -45,8 +47,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         return new VkOffset2D(getVkMemory(), getMinSrcPosition(getVkAddress()));
     }
 
+    
     public void setMinSrcPosition(VkOffset2D minSrcPosition) {
-        setMinSrcPosition(getVkAddress(), minSrcPosition.getVkAddress());
+        setMinSrcPosition(getVkAddress(), minSrcPosition != null ? minSrcPosition.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMinSrcPosition(long address);
@@ -56,8 +60,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         return new VkOffset2D(getVkMemory(), getMaxSrcPosition(getVkAddress()));
     }
 
+    
     public void setMaxSrcPosition(VkOffset2D maxSrcPosition) {
-        setMaxSrcPosition(getVkAddress(), maxSrcPosition.getVkAddress());
+        setMaxSrcPosition(getVkAddress(), maxSrcPosition != null ? maxSrcPosition.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxSrcPosition(long address);
@@ -67,8 +73,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         return new VkExtent2D(getVkMemory(), getMinSrcExtent(getVkAddress()));
     }
 
+    
     public void setMinSrcExtent(VkExtent2D minSrcExtent) {
-        setMinSrcExtent(getVkAddress(), minSrcExtent.getVkAddress());
+        setMinSrcExtent(getVkAddress(), minSrcExtent != null ? minSrcExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMinSrcExtent(long address);
@@ -78,8 +86,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         return new VkExtent2D(getVkMemory(), getMaxSrcExtent(getVkAddress()));
     }
 
+    
     public void setMaxSrcExtent(VkExtent2D maxSrcExtent) {
-        setMaxSrcExtent(getVkAddress(), maxSrcExtent.getVkAddress());
+        setMaxSrcExtent(getVkAddress(), maxSrcExtent != null ? maxSrcExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxSrcExtent(long address);
@@ -89,8 +99,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         return new VkOffset2D(getVkMemory(), getMinDstPosition(getVkAddress()));
     }
 
+    
     public void setMinDstPosition(VkOffset2D minDstPosition) {
-        setMinDstPosition(getVkAddress(), minDstPosition.getVkAddress());
+        setMinDstPosition(getVkAddress(), minDstPosition != null ? minDstPosition.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMinDstPosition(long address);
@@ -100,8 +112,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         return new VkOffset2D(getVkMemory(), getMaxDstPosition(getVkAddress()));
     }
 
+    
     public void setMaxDstPosition(VkOffset2D maxDstPosition) {
-        setMaxDstPosition(getVkAddress(), maxDstPosition.getVkAddress());
+        setMaxDstPosition(getVkAddress(), maxDstPosition != null ? maxDstPosition.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxDstPosition(long address);
@@ -111,8 +125,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         return new VkExtent2D(getVkMemory(), getMinDstExtent(getVkAddress()));
     }
 
+    
     public void setMinDstExtent(VkExtent2D minDstExtent) {
-        setMinDstExtent(getVkAddress(), minDstExtent.getVkAddress());
+        setMinDstExtent(getVkAddress(), minDstExtent != null ? minDstExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMinDstExtent(long address);
@@ -122,8 +138,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         return new VkExtent2D(getVkMemory(), getMaxDstExtent(getVkAddress()));
     }
 
+    
     public void setMaxDstExtent(VkExtent2D maxDstExtent) {
-        setMaxDstExtent(getVkAddress(), maxDstExtent.getVkAddress());
+        setMaxDstExtent(getVkAddress(), maxDstExtent != null ? maxDstExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxDstExtent(long address);
@@ -136,7 +154,12 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDisplayPlaneCapabilitiesKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDisplayPlaneCapabilitiesKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -177,11 +200,11 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDisplayPlaneCapabilitiesKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

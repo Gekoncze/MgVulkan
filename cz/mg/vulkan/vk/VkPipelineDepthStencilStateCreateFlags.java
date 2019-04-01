@@ -24,7 +24,12 @@ public class VkPipelineDepthStencilStateCreateFlags extends VkFlags {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineDepthStencilStateCreateFlags.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineDepthStencilStateCreateFlags o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -65,11 +70,11 @@ public class VkPipelineDepthStencilStateCreateFlags extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineDepthStencilStateCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPresentTimeGOOGLE_getPresentID(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkPresentTimeGOOGLE* o = (VkPresentTimeGOOGLE*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->presentID));
+    return jniPointerToLong(&o->presentID);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentTimeGOOGLE_setPresentID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPresentTimeGOOGLE_setPresentID(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkPresentTimeGOOGLE* o = (VkPresentTimeGOOGLE*)jniLongToPointer(address);
-    memcpy(&o->presentID, jniLongToPointer(valueAddress), sizeof(o->presentID));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->presentID, valuePointer, sizeof(o->presentID));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPresentTimeGOOGLE_getDesiredPresentTime(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPresentTimeGOOGLE* o = (VkPresentTimeGOOGLE*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->desiredPresentTime));
+    return jniPointerToLong(&o->desiredPresentTime);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentTimeGOOGLE_setDesiredPresentTime(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkPresentTimeGOOGLE_setDesiredPresentTime(JNIEnv* env,
     (void)env;
     (void)jc;
     VkPresentTimeGOOGLE* o = (VkPresentTimeGOOGLE*)jniLongToPointer(address);
-    memcpy(&o->desiredPresentTime, jniLongToPointer(valueAddress), sizeof(o->desiredPresentTime));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->desiredPresentTime, valuePointer, sizeof(o->desiredPresentTime));
 }
+
 

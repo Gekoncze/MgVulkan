@@ -9,11 +9,11 @@ public class VkExternalMemoryProperties extends VkObject {
     }
 
     public VkExternalMemoryProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkExternalMemoryProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkExternalMemoryProperties extends VkObject {
         return new VkExternalMemoryFeatureFlags(getVkMemory(), getExternalMemoryFeatures(getVkAddress()));
     }
 
+    
     public void setExternalMemoryFeatures(VkExternalMemoryFeatureFlags externalMemoryFeatures) {
-        setExternalMemoryFeatures(getVkAddress(), externalMemoryFeatures.getVkAddress());
+        setExternalMemoryFeatures(getVkAddress(), externalMemoryFeatures != null ? externalMemoryFeatures.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExternalMemoryFeatures(long address);
@@ -39,8 +41,10 @@ public class VkExternalMemoryProperties extends VkObject {
         return new VkExternalMemoryHandleTypeFlags(getVkMemory(), getExportFromImportedHandleTypes(getVkAddress()));
     }
 
+    
     public void setExportFromImportedHandleTypes(VkExternalMemoryHandleTypeFlags exportFromImportedHandleTypes) {
-        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes.getVkAddress());
+        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExportFromImportedHandleTypes(long address);
@@ -50,8 +54,10 @@ public class VkExternalMemoryProperties extends VkObject {
         return new VkExternalMemoryHandleTypeFlags(getVkMemory(), getCompatibleHandleTypes(getVkAddress()));
     }
 
+    
     public void setCompatibleHandleTypes(VkExternalMemoryHandleTypeFlags compatibleHandleTypes) {
-        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes.getVkAddress());
+        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCompatibleHandleTypes(long address);
@@ -64,7 +70,12 @@ public class VkExternalMemoryProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkExternalMemoryProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkExternalMemoryProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkExternalMemoryProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExternalMemoryProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

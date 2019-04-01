@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getSType(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setSType(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setPNext(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setFlags(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getQueryType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->queryType));
+    return jniPointerToLong(&o->queryType);
 }
 
 void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setQueryType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setQueryType(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->queryType, jniLongToPointer(valueAddress), sizeof(o->queryType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->queryType, valuePointer, sizeof(o->queryType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getQueryCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->queryCount));
+    return jniPointerToLong(&o->queryCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setQueryCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setQueryCount(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->queryCount, jniLongToPointer(valueAddress), sizeof(o->queryCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->queryCount, valuePointer, sizeof(o->queryCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getPipelineStatistics(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pipelineStatistics));
+    return jniPointerToLong(&o->pipelineStatistics);
 }
 
 void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setPipelineStatistics(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setPipelineStatistics(JNIEnv* en
     (void)env;
     (void)jc;
     VkQueryPoolCreateInfo* o = (VkQueryPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pipelineStatistics, jniLongToPointer(valueAddress), sizeof(o->pipelineStatistics));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pipelineStatistics, valuePointer, sizeof(o->pipelineStatistics));
 }
+
 

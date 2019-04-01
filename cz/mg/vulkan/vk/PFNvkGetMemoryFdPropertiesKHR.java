@@ -25,7 +25,7 @@ public class PFNvkGetMemoryFdPropertiesKHR extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkExternalMemoryHandleTypeFlagBits handleType, VkInt fd, VkMemoryFdPropertiesKHR pMemoryFdProperties, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.NULL, fd != null ? fd.getVkAddress() : VkPointer.NULL, pMemoryFdProperties != null ? pMemoryFdProperties.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, handleType != null ? handleType.getVkAddress() : VkPointer.NULL_ADDRESS, fd != null ? fd.getVkAddress() : VkPointer.NULL_ADDRESS, pMemoryFdProperties != null ? pMemoryFdProperties.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
     }
 
     private static native void call(long vkaddress, long device, long handleType, long fd, long pMemoryFdProperties, long rval);

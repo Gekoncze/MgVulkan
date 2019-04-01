@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_getSType(JNIE
     (void)env;
     (void)jc;
     VkPhysicalDeviceVariablePointerFeatures* o = (VkPhysicalDeviceVariablePointerFeatures*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_setSType(JNIEn
     (void)env;
     (void)jc;
     VkPhysicalDeviceVariablePointerFeatures* o = (VkPhysicalDeviceVariablePointerFeatures*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceVariablePointerFeatures* o = (VkPhysicalDeviceVariablePointerFeatures*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_setPNext(JNIEn
     (void)env;
     (void)jc;
     VkPhysicalDeviceVariablePointerFeatures* o = (VkPhysicalDeviceVariablePointerFeatures*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_getVariablePointersStorageBuffer(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceVariablePointerFeatures* o = (VkPhysicalDeviceVariablePointerFeatures*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->variablePointersStorageBuffer));
+    return jniPointerToLong(&o->variablePointersStorageBuffer);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_setVariablePointersStorageBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_setVariablePoi
     (void)env;
     (void)jc;
     VkPhysicalDeviceVariablePointerFeatures* o = (VkPhysicalDeviceVariablePointerFeatures*)jniLongToPointer(address);
-    memcpy(&o->variablePointersStorageBuffer, jniLongToPointer(valueAddress), sizeof(o->variablePointersStorageBuffer));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->variablePointersStorageBuffer, valuePointer, sizeof(o->variablePointersStorageBuffer));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_getVariablePointers(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceVariablePointerFeatures* o = (VkPhysicalDeviceVariablePointerFeatures*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->variablePointers));
+    return jniPointerToLong(&o->variablePointers);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_setVariablePointers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceVariablePointerFeatures_setVariablePoi
     (void)env;
     (void)jc;
     VkPhysicalDeviceVariablePointerFeatures* o = (VkPhysicalDeviceVariablePointerFeatures*)jniLongToPointer(address);
-    memcpy(&o->variablePointers, jniLongToPointer(valueAddress), sizeof(o->variablePointers));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->variablePointers, valuePointer, sizeof(o->variablePointers));
 }
+
 

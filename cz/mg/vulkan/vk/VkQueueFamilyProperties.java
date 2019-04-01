@@ -9,11 +9,11 @@ public class VkQueueFamilyProperties extends VkObject {
     }
 
     public VkQueueFamilyProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkQueueFamilyProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkQueueFamilyProperties extends VkObject {
         return new VkQueueFlags(getVkMemory(), getQueueFlags(getVkAddress()));
     }
 
+    
     public void setQueueFlags(VkQueueFlags queueFlags) {
-        setQueueFlags(getVkAddress(), queueFlags.getVkAddress());
+        setQueueFlags(getVkAddress(), queueFlags != null ? queueFlags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQueueFlags(long address);
@@ -40,19 +42,23 @@ public class VkQueueFamilyProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getQueueCount(getVkAddress()));
     }
 
+    
     public void setQueueCount(VkUInt32 queueCount) {
-        setQueueCount(getVkAddress(), queueCount.getVkAddress());
+        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQueueCount(long address);
     private static native void setQueueCount(long address, long queueCount);
 
-    public VkUInt32.Array getTimestampValidBits() {
-        return new VkUInt32.Array(getVkMemory(), getTimestampValidBits(getVkAddress()), getQueueCount().getValue());
+    public VkUInt32 getTimestampValidBits() {
+        return new VkUInt32(getVkMemory(), getTimestampValidBits(getVkAddress()));
     }
 
+    
     public void setTimestampValidBits(VkUInt32 timestampValidBits) {
-        setTimestampValidBits(getVkAddress(), timestampValidBits.getVkAddress());
+        setTimestampValidBits(getVkAddress(), timestampValidBits != null ? timestampValidBits.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTimestampValidBits(long address);
@@ -62,8 +68,10 @@ public class VkQueueFamilyProperties extends VkObject {
         return new VkExtent3D(getVkMemory(), getMinImageTransferGranularity(getVkAddress()));
     }
 
+    
     public void setMinImageTransferGranularity(VkExtent3D minImageTransferGranularity) {
-        setMinImageTransferGranularity(getVkAddress(), minImageTransferGranularity.getVkAddress());
+        setMinImageTransferGranularity(getVkAddress(), minImageTransferGranularity != null ? minImageTransferGranularity.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMinImageTransferGranularity(long address);
@@ -76,7 +84,12 @@ public class VkQueueFamilyProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkQueueFamilyProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkQueueFamilyProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkQueueFamilyProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkQueueFamilyProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

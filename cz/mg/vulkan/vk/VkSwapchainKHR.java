@@ -4,8 +4,6 @@ package cz.mg.vulkan.vk;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkSwapchainKHR.html">khronos documentation</a>
  **/
 public class VkSwapchainKHR extends VkNonDispatchableHandle {
-    public static final VkSwapchainKHR NULL = new VkSwapchainKHR(VkPointer.NULL);
-
     public VkSwapchainKHR() {
     }
 
@@ -26,7 +24,12 @@ public class VkSwapchainKHR extends VkNonDispatchableHandle {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSwapchainKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSwapchainKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -67,11 +70,11 @@ public class VkSwapchainKHR extends VkNonDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSwapchainKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

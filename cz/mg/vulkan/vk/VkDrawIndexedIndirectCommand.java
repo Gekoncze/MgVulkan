@@ -9,11 +9,11 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
     }
 
     public VkDrawIndexedIndirectCommand(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDrawIndexedIndirectCommand(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,30 +30,36 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
         return new VkUInt32(getVkMemory(), getIndexCount(getVkAddress()));
     }
 
+    
     public void setIndexCount(VkUInt32 indexCount) {
-        setIndexCount(getVkAddress(), indexCount.getVkAddress());
+        setIndexCount(getVkAddress(), indexCount != null ? indexCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getIndexCount(long address);
     private static native void setIndexCount(long address, long indexCount);
 
-    public VkUInt32.Array getInstanceCount() {
-        return new VkUInt32.Array(getVkMemory(), getInstanceCount(getVkAddress()), getIndexCount().getValue());
+    public VkUInt32 getInstanceCount() {
+        return new VkUInt32(getVkMemory(), getInstanceCount(getVkAddress()));
     }
 
+    
     public void setInstanceCount(VkUInt32 instanceCount) {
-        setInstanceCount(getVkAddress(), instanceCount.getVkAddress());
+        setInstanceCount(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getInstanceCount(long address);
     private static native void setInstanceCount(long address, long instanceCount);
 
-    public VkUInt32.Array getFirstIndex() {
-        return new VkUInt32.Array(getVkMemory(), getFirstIndex(getVkAddress()), getInstanceCount().getValue());
+    public VkUInt32 getFirstIndex() {
+        return new VkUInt32(getVkMemory(), getFirstIndex(getVkAddress()));
     }
 
+    
     public void setFirstIndex(VkUInt32 firstIndex) {
-        setFirstIndex(getVkAddress(), firstIndex.getVkAddress());
+        setFirstIndex(getVkAddress(), firstIndex != null ? firstIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFirstIndex(long address);
@@ -63,8 +69,10 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
         return new VkInt32(getVkMemory(), getVertexOffset(getVkAddress()));
     }
 
+    
     public void setVertexOffset(VkInt32 vertexOffset) {
-        setVertexOffset(getVkAddress(), vertexOffset.getVkAddress());
+        setVertexOffset(getVkAddress(), vertexOffset != null ? vertexOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getVertexOffset(long address);
@@ -74,8 +82,10 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
         return new VkUInt32(getVkMemory(), getFirstInstance(getVkAddress()));
     }
 
+    
     public void setFirstInstance(VkUInt32 firstInstance) {
-        setFirstInstance(getVkAddress(), firstInstance.getVkAddress());
+        setFirstInstance(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFirstInstance(long address);
@@ -88,7 +98,12 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDrawIndexedIndirectCommand.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDrawIndexedIndirectCommand o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDrawIndexedIndirectCommand.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkXYColorEXT_getX(JNIEnv* env, jclass jc, jlong addre
     (void)env;
     (void)jc;
     VkXYColorEXT* o = (VkXYColorEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->x));
+    return jniPointerToLong(&o->x);
 }
 
 void Java_cz_mg_vulkan_vk_VkXYColorEXT_setX(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkXYColorEXT_setX(JNIEnv* env, jclass jc, jlong addres
     (void)env;
     (void)jc;
     VkXYColorEXT* o = (VkXYColorEXT*)jniLongToPointer(address);
-    memcpy(&o->x, jniLongToPointer(valueAddress), sizeof(o->x));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->x, valuePointer, sizeof(o->x));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkXYColorEXT_getY(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkXYColorEXT* o = (VkXYColorEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->y));
+    return jniPointerToLong(&o->y);
 }
 
 void Java_cz_mg_vulkan_vk_VkXYColorEXT_setY(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkXYColorEXT_setY(JNIEnv* env, jclass jc, jlong addres
     (void)env;
     (void)jc;
     VkXYColorEXT* o = (VkXYColorEXT*)jniLongToPointer(address);
-    memcpy(&o->y, jniLongToPointer(valueAddress), sizeof(o->y));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->y, valuePointer, sizeof(o->y));
 }
+
 

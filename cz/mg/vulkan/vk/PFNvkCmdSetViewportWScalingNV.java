@@ -25,7 +25,7 @@ public class PFNvkCmdSetViewportWScalingNV extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkUInt32 firstViewport, VkUInt32 viewportCount, VkViewportWScalingNV pViewportWScalings){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkCommandBuffer.NULL.getVkAddress(), firstViewport != null ? firstViewport.getVkAddress() : VkPointer.NULL, viewportCount != null ? viewportCount.getVkAddress() : VkPointer.NULL, pViewportWScalings != null ? pViewportWScalings.getVkAddress() : VkPointer.NULL);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.NULL_ADDRESS, firstViewport != null ? firstViewport.getVkAddress() : VkPointer.NULL_ADDRESS, viewportCount != null ? viewportCount.getVkAddress() : VkPointer.NULL_ADDRESS, pViewportWScalings != null ? pViewportWScalings.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long commandBuffer, long firstViewport, long viewportCount, long pViewportWScalings);

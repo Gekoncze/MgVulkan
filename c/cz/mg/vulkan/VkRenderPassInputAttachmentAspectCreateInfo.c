@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_getSType(
     (void)env;
     (void)jc;
     VkRenderPassInputAttachmentAspectCreateInfo* o = (VkRenderPassInputAttachmentAspectCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_setSType(J
     (void)env;
     (void)jc;
     VkRenderPassInputAttachmentAspectCreateInfo* o = (VkRenderPassInputAttachmentAspectCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassInputAttachmentAspectCreateInfo* o = (VkRenderPassInputAttachmentAspectCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_setPNext(J
     (void)env;
     (void)jc;
     VkRenderPassInputAttachmentAspectCreateInfo* o = (VkRenderPassInputAttachmentAspectCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_getAspectReferenceCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassInputAttachmentAspectCreateInfo* o = (VkRenderPassInputAttachmentAspectCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->aspectReferenceCount));
+    return jniPointerToLong(&o->aspectReferenceCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_setAspectReferenceCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_setAspectR
     (void)env;
     (void)jc;
     VkRenderPassInputAttachmentAspectCreateInfo* o = (VkRenderPassInputAttachmentAspectCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->aspectReferenceCount, jniLongToPointer(valueAddress), sizeof(o->aspectReferenceCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->aspectReferenceCount, valuePointer, sizeof(o->aspectReferenceCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_getPAspectReferences(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassInputAttachmentAspectCreateInfo* o = (VkRenderPassInputAttachmentAspectCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pAspectReferences));
+    return jniPointerToLong(o->pAspectReferences);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_setPAspectReferences(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkRenderPassInputAttachmentAspectCreateInfo_setPAspect
     (void)env;
     (void)jc;
     VkRenderPassInputAttachmentAspectCreateInfo* o = (VkRenderPassInputAttachmentAspectCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pAspectReferences, jniLongToPointer(valueAddress), sizeof(o->pAspectReferences));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pAspectReferences, &valuePointer, sizeof(o->pAspectReferences));
 }
+
 

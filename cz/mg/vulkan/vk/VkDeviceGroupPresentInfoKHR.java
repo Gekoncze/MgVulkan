@@ -9,11 +9,11 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
     }
 
     public VkDeviceGroupPresentInfoKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDeviceGroupPresentInfoKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,19 +56,23 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         return new VkUInt32(getVkMemory(), getSwapchainCount(getVkAddress()));
     }
 
+    
     public void setSwapchainCount(VkUInt32 swapchainCount) {
-        setSwapchainCount(getVkAddress(), swapchainCount.getVkAddress());
+        setSwapchainCount(getVkAddress(), swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSwapchainCount(long address);
     private static native void setSwapchainCount(long address, long swapchainCount);
 
-    public VkUInt32.Array getPDeviceMasks() {
-        return new VkUInt32.Array(getVkMemory(), getPDeviceMasks(getVkAddress()), getSwapchainCount().getValue());
+    public VkUInt32 getPDeviceMasks() {
+        return new VkUInt32(getVkMemory(), getPDeviceMasks(getVkAddress()));
     }
 
+    private VkObject pDeviceMasks = null;
     public void setPDeviceMasks(VkUInt32 pDeviceMasks) {
-        setPDeviceMasks(getVkAddress(), pDeviceMasks.getVkAddress());
+        setPDeviceMasks(getVkAddress(), pDeviceMasks != null ? pDeviceMasks.getVkAddress() : VkPointer.NULL);
+        this.pDeviceMasks = pDeviceMasks;
     }
 
     private static native long getPDeviceMasks(long address);
@@ -74,8 +82,10 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         return new VkDeviceGroupPresentModeFlagBitsKHR(getVkMemory(), getMode(getVkAddress()));
     }
 
+    
     public void setMode(VkDeviceGroupPresentModeFlagBitsKHR mode) {
-        setMode(getVkAddress(), mode.getVkAddress());
+        setMode(getVkAddress(), mode != null ? mode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMode(long address);
@@ -88,7 +98,12 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDeviceGroupPresentInfoKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDeviceGroupPresentInfoKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGroupPresentInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -9,11 +9,11 @@ public class VkFenceGetFdInfoKHR extends VkObject {
     }
 
     public VkFenceGetFdInfoKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkFenceGetFdInfoKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkFenceGetFdInfoKHR extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkFenceGetFdInfoKHR extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,8 +55,10 @@ public class VkFenceGetFdInfoKHR extends VkObject {
         return new VkFence(getVkMemory(), getFence(getVkAddress()));
     }
 
+    
     public void setFence(VkFence fence) {
-        setFence(getVkAddress(), fence.getVkAddress());
+        setFence(getVkAddress(), fence != null ? fence.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFence(long address);
@@ -62,8 +68,10 @@ public class VkFenceGetFdInfoKHR extends VkObject {
         return new VkExternalFenceHandleTypeFlagBits(getVkMemory(), getHandleType(getVkAddress()));
     }
 
+    
     public void setHandleType(VkExternalFenceHandleTypeFlagBits handleType) {
-        setHandleType(getVkAddress(), handleType.getVkAddress());
+        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getHandleType(long address);
@@ -76,7 +84,12 @@ public class VkFenceGetFdInfoKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkFenceGetFdInfoKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkFenceGetFdInfoKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkFenceGetFdInfoKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkFenceGetFdInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

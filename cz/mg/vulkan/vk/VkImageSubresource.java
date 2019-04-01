@@ -9,11 +9,11 @@ public class VkImageSubresource extends VkObject {
     }
 
     public VkImageSubresource(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkImageSubresource(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkImageSubresource extends VkObject {
         return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));
     }
 
+    
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask.getVkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAspectMask(long address);
@@ -39,8 +41,10 @@ public class VkImageSubresource extends VkObject {
         return new VkUInt32(getVkMemory(), getMipLevel(getVkAddress()));
     }
 
+    
     public void setMipLevel(VkUInt32 mipLevel) {
-        setMipLevel(getVkAddress(), mipLevel.getVkAddress());
+        setMipLevel(getVkAddress(), mipLevel != null ? mipLevel.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMipLevel(long address);
@@ -50,8 +54,10 @@ public class VkImageSubresource extends VkObject {
         return new VkUInt32(getVkMemory(), getArrayLayer(getVkAddress()));
     }
 
+    
     public void setArrayLayer(VkUInt32 arrayLayer) {
-        setArrayLayer(getVkAddress(), arrayLayer.getVkAddress());
+        setArrayLayer(getVkAddress(), arrayLayer != null ? arrayLayer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getArrayLayer(long address);
@@ -64,7 +70,12 @@ public class VkImageSubresource extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkImageSubresource.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkImageSubresource o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkImageSubresource extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImageSubresource.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

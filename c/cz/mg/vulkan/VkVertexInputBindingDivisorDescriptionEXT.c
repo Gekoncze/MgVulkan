@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_getBinding(
     (void)env;
     (void)jc;
     VkVertexInputBindingDivisorDescriptionEXT* o = (VkVertexInputBindingDivisorDescriptionEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->binding));
+    return jniPointerToLong(&o->binding);
 }
 
 void Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_setBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_setBinding(J
     (void)env;
     (void)jc;
     VkVertexInputBindingDivisorDescriptionEXT* o = (VkVertexInputBindingDivisorDescriptionEXT*)jniLongToPointer(address);
-    memcpy(&o->binding, jniLongToPointer(valueAddress), sizeof(o->binding));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->binding, valuePointer, sizeof(o->binding));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_getDivisor(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkVertexInputBindingDivisorDescriptionEXT* o = (VkVertexInputBindingDivisorDescriptionEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->divisor));
+    return jniPointerToLong(&o->divisor);
 }
 
 void Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_setDivisor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_setDivisor(J
     (void)env;
     (void)jc;
     VkVertexInputBindingDivisorDescriptionEXT* o = (VkVertexInputBindingDivisorDescriptionEXT*)jniLongToPointer(address);
-    memcpy(&o->divisor, jniLongToPointer(valueAddress), sizeof(o->divisor));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->divisor, valuePointer, sizeof(o->divisor));
 }
+
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_getSType(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkDebugMarkerMarkerInfoEXT* o = (VkDebugMarkerMarkerInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_setSType(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkDebugMarkerMarkerInfoEXT* o = (VkDebugMarkerMarkerInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDebugMarkerMarkerInfoEXT* o = (VkDebugMarkerMarkerInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_setPNext(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkDebugMarkerMarkerInfoEXT* o = (VkDebugMarkerMarkerInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_getPMarkerName(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDebugMarkerMarkerInfoEXT* o = (VkDebugMarkerMarkerInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pMarkerName));
+    return jniPointerToLong(o->pMarkerName);
 }
 
 void Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_setPMarkerName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_setPMarkerName(JNIEnv* env,
     (void)env;
     (void)jc;
     VkDebugMarkerMarkerInfoEXT* o = (VkDebugMarkerMarkerInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pMarkerName, jniLongToPointer(valueAddress), sizeof(o->pMarkerName));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pMarkerName, &valuePointer, sizeof(o->pMarkerName));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_getColor(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDebugMarkerMarkerInfoEXT* o = (VkDebugMarkerMarkerInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->color));
+    return jniPointerToLong(o->color);
 }
 
 void Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_setColor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkDebugMarkerMarkerInfoEXT_setColor(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkDebugMarkerMarkerInfoEXT* o = (VkDebugMarkerMarkerInfoEXT*)jniLongToPointer(address);
-    memcpy(o->color, jniLongToPointer(valueAddress), sizeof(o->color));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->color, valuePointer, sizeof(o->color));
 }
+
 

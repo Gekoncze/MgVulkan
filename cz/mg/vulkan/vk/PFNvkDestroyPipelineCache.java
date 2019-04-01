@@ -25,7 +25,7 @@ public class PFNvkDestroyPipelineCache extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkPipelineCache pipelineCache, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), pipelineCache != null ? pipelineCache.getVkAddress() : VkPipelineCache.NULL.getVkAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, pipelineCache != null ? pipelineCache.getVkAddress() : VkPointer.NULL_ADDRESS, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long pipelineCache, long pAllocator);

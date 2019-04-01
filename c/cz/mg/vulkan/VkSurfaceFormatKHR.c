@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSurfaceFormatKHR_getFormat(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkSurfaceFormatKHR* o = (VkSurfaceFormatKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->format));
+    return jniPointerToLong(&o->format);
 }
 
 void Java_cz_mg_vulkan_vk_VkSurfaceFormatKHR_setFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSurfaceFormatKHR_setFormat(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkSurfaceFormatKHR* o = (VkSurfaceFormatKHR*)jniLongToPointer(address);
-    memcpy(&o->format, jniLongToPointer(valueAddress), sizeof(o->format));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->format, valuePointer, sizeof(o->format));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSurfaceFormatKHR_getColorSpace(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSurfaceFormatKHR* o = (VkSurfaceFormatKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->colorSpace));
+    return jniPointerToLong(&o->colorSpace);
 }
 
 void Java_cz_mg_vulkan_vk_VkSurfaceFormatKHR_setColorSpace(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkSurfaceFormatKHR_setColorSpace(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkSurfaceFormatKHR* o = (VkSurfaceFormatKHR*)jniLongToPointer(address);
-    memcpy(&o->colorSpace, jniLongToPointer(valueAddress), sizeof(o->colorSpace));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->colorSpace, valuePointer, sizeof(o->colorSpace));
 }
+
 

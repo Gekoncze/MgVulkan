@@ -9,11 +9,11 @@ public class VkAttachmentReference extends VkObject {
     }
 
     public VkAttachmentReference(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkAttachmentReference(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkAttachmentReference extends VkObject {
         return new VkUInt32(getVkMemory(), getAttachment(getVkAddress()));
     }
 
+    
     public void setAttachment(VkUInt32 attachment) {
-        setAttachment(getVkAddress(), attachment.getVkAddress());
+        setAttachment(getVkAddress(), attachment != null ? attachment.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAttachment(long address);
@@ -38,8 +40,10 @@ public class VkAttachmentReference extends VkObject {
         return new VkImageLayout(getVkMemory(), getLayout(getVkAddress()));
     }
 
+    
     public void setLayout(VkImageLayout layout) {
-        setLayout(getVkAddress(), layout.getVkAddress());
+        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLayout(long address);
@@ -52,7 +56,12 @@ public class VkAttachmentReference extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkAttachmentReference.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkAttachmentReference o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkAttachmentReference extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkAttachmentReference.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

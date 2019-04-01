@@ -9,11 +9,11 @@ public class VkSparseImageFormatProperties extends VkObject {
     }
 
     public VkSparseImageFormatProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSparseImageFormatProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkSparseImageFormatProperties extends VkObject {
         return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));
     }
 
+    
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask.getVkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAspectMask(long address);
@@ -39,8 +41,10 @@ public class VkSparseImageFormatProperties extends VkObject {
         return new VkExtent3D(getVkMemory(), getImageGranularity(getVkAddress()));
     }
 
+    
     public void setImageGranularity(VkExtent3D imageGranularity) {
-        setImageGranularity(getVkAddress(), imageGranularity.getVkAddress());
+        setImageGranularity(getVkAddress(), imageGranularity != null ? imageGranularity.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageGranularity(long address);
@@ -50,8 +54,10 @@ public class VkSparseImageFormatProperties extends VkObject {
         return new VkSparseImageFormatFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkSparseImageFormatFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -64,7 +70,12 @@ public class VkSparseImageFormatProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSparseImageFormatProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSparseImageFormatProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkSparseImageFormatProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSparseImageFormatProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

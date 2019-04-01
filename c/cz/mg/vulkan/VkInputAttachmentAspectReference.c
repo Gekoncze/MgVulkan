@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkInputAttachmentAspectReference_getSubpass(JNIEnv* e
     (void)env;
     (void)jc;
     VkInputAttachmentAspectReference* o = (VkInputAttachmentAspectReference*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->subpass));
+    return jniPointerToLong(&o->subpass);
 }
 
 void Java_cz_mg_vulkan_vk_VkInputAttachmentAspectReference_setSubpass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkInputAttachmentAspectReference_setSubpass(JNIEnv* en
     (void)env;
     (void)jc;
     VkInputAttachmentAspectReference* o = (VkInputAttachmentAspectReference*)jniLongToPointer(address);
-    memcpy(&o->subpass, jniLongToPointer(valueAddress), sizeof(o->subpass));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->subpass, valuePointer, sizeof(o->subpass));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkInputAttachmentAspectReference_getInputAttachmentIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkInputAttachmentAspectReference* o = (VkInputAttachmentAspectReference*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->inputAttachmentIndex));
+    return jniPointerToLong(&o->inputAttachmentIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkInputAttachmentAspectReference_setInputAttachmentIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkInputAttachmentAspectReference_setInputAttachmentInd
     (void)env;
     (void)jc;
     VkInputAttachmentAspectReference* o = (VkInputAttachmentAspectReference*)jniLongToPointer(address);
-    memcpy(&o->inputAttachmentIndex, jniLongToPointer(valueAddress), sizeof(o->inputAttachmentIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->inputAttachmentIndex, valuePointer, sizeof(o->inputAttachmentIndex));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkInputAttachmentAspectReference_getAspectMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkInputAttachmentAspectReference* o = (VkInputAttachmentAspectReference*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->aspectMask));
+    return jniPointerToLong(&o->aspectMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkInputAttachmentAspectReference_setAspectMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkInputAttachmentAspectReference_setAspectMask(JNIEnv*
     (void)env;
     (void)jc;
     VkInputAttachmentAspectReference* o = (VkInputAttachmentAspectReference*)jniLongToPointer(address);
-    memcpy(&o->aspectMask, jniLongToPointer(valueAddress), sizeof(o->aspectMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->aspectMask, valuePointer, sizeof(o->aspectMask));
 }
+
 

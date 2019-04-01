@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPresentRegionKHR_getRectangleCount(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkPresentRegionKHR* o = (VkPresentRegionKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->rectangleCount));
+    return jniPointerToLong(&o->rectangleCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentRegionKHR_setRectangleCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPresentRegionKHR_setRectangleCount(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkPresentRegionKHR* o = (VkPresentRegionKHR*)jniLongToPointer(address);
-    memcpy(&o->rectangleCount, jniLongToPointer(valueAddress), sizeof(o->rectangleCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->rectangleCount, valuePointer, sizeof(o->rectangleCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPresentRegionKHR_getPRectangles(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPresentRegionKHR* o = (VkPresentRegionKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pRectangles));
+    return jniPointerToLong(o->pRectangles);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentRegionKHR_setPRectangles(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkPresentRegionKHR_setPRectangles(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkPresentRegionKHR* o = (VkPresentRegionKHR*)jniLongToPointer(address);
-    memcpy(&o->pRectangles, jniLongToPointer(valueAddress), sizeof(o->pRectangles));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pRectangles, &valuePointer, sizeof(o->pRectangles));
 }
+
 

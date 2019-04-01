@@ -9,11 +9,11 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
     }
 
     public VkDeviceGroupBindSparseInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDeviceGroupBindSparseInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,8 +55,10 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getResourceDeviceIndex(getVkAddress()));
     }
 
+    
     public void setResourceDeviceIndex(VkUInt32 resourceDeviceIndex) {
-        setResourceDeviceIndex(getVkAddress(), resourceDeviceIndex.getVkAddress());
+        setResourceDeviceIndex(getVkAddress(), resourceDeviceIndex != null ? resourceDeviceIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getResourceDeviceIndex(long address);
@@ -62,8 +68,10 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getMemoryDeviceIndex(getVkAddress()));
     }
 
+    
     public void setMemoryDeviceIndex(VkUInt32 memoryDeviceIndex) {
-        setMemoryDeviceIndex(getVkAddress(), memoryDeviceIndex.getVkAddress());
+        setMemoryDeviceIndex(getVkAddress(), memoryDeviceIndex != null ? memoryDeviceIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMemoryDeviceIndex(long address);
@@ -76,7 +84,12 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDeviceGroupBindSparseInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDeviceGroupBindSparseInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGroupBindSparseInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

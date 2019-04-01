@@ -9,11 +9,11 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
     }
 
     public VkObjectTablePushConstantEntryNVX(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkObjectTablePushConstantEntryNVX(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
         return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));
     }
 
+    
     public void setType(VkObjectEntryTypeNVX type) {
-        setType(getVkAddress(), type.getVkAddress());
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getType(long address);
@@ -40,8 +42,10 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
         return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -51,8 +55,10 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
         return new VkPipelineLayout(getVkMemory(), getPipelineLayout(getVkAddress()));
     }
 
+    
     public void setPipelineLayout(VkPipelineLayout pipelineLayout) {
-        setPipelineLayout(getVkAddress(), pipelineLayout.getVkAddress());
+        setPipelineLayout(getVkAddress(), pipelineLayout != null ? pipelineLayout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPipelineLayout(long address);
@@ -62,8 +68,10 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
         return new VkShaderStageFlags(getVkMemory(), getStageFlags(getVkAddress()));
     }
 
+    
     public void setStageFlags(VkShaderStageFlags stageFlags) {
-        setStageFlags(getVkAddress(), stageFlags.getVkAddress());
+        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getStageFlags(long address);
@@ -76,7 +84,12 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkObjectTablePushConstantEntryNVX.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkObjectTablePushConstantEntryNVX o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectTablePushConstantEntryNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

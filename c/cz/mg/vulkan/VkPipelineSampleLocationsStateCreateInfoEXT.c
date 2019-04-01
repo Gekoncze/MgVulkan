@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_getSType(
     (void)env;
     (void)jc;
     VkPipelineSampleLocationsStateCreateInfoEXT* o = (VkPipelineSampleLocationsStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_setSType(J
     (void)env;
     (void)jc;
     VkPipelineSampleLocationsStateCreateInfoEXT* o = (VkPipelineSampleLocationsStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineSampleLocationsStateCreateInfoEXT* o = (VkPipelineSampleLocationsStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_setPNext(J
     (void)env;
     (void)jc;
     VkPipelineSampleLocationsStateCreateInfoEXT* o = (VkPipelineSampleLocationsStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_getSampleLocationsEnable(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineSampleLocationsStateCreateInfoEXT* o = (VkPipelineSampleLocationsStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sampleLocationsEnable));
+    return jniPointerToLong(&o->sampleLocationsEnable);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_setSampleLocationsEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_setSampleL
     (void)env;
     (void)jc;
     VkPipelineSampleLocationsStateCreateInfoEXT* o = (VkPipelineSampleLocationsStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sampleLocationsEnable, jniLongToPointer(valueAddress), sizeof(o->sampleLocationsEnable));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sampleLocationsEnable, valuePointer, sizeof(o->sampleLocationsEnable));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_getSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineSampleLocationsStateCreateInfoEXT* o = (VkPipelineSampleLocationsStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sampleLocationsInfo));
+    return jniPointerToLong(&o->sampleLocationsInfo);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_setSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkPipelineSampleLocationsStateCreateInfoEXT_setSampleL
     (void)env;
     (void)jc;
     VkPipelineSampleLocationsStateCreateInfoEXT* o = (VkPipelineSampleLocationsStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sampleLocationsInfo, jniLongToPointer(valueAddress), sizeof(o->sampleLocationsInfo));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sampleLocationsInfo, valuePointer, sizeof(o->sampleLocationsInfo));
 }
+
 

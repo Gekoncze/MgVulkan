@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDisplayPlanePropertiesKHR_getCurrentDisplay(JNIEnv*
     (void)env;
     (void)jc;
     VkDisplayPlanePropertiesKHR* o = (VkDisplayPlanePropertiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->currentDisplay));
+    return jniPointerToLong(&o->currentDisplay);
 }
 
 void Java_cz_mg_vulkan_vk_VkDisplayPlanePropertiesKHR_setCurrentDisplay(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDisplayPlanePropertiesKHR_setCurrentDisplay(JNIEnv* 
     (void)env;
     (void)jc;
     VkDisplayPlanePropertiesKHR* o = (VkDisplayPlanePropertiesKHR*)jniLongToPointer(address);
-    memcpy(&o->currentDisplay, jniLongToPointer(valueAddress), sizeof(o->currentDisplay));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->currentDisplay, valuePointer, sizeof(o->currentDisplay));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDisplayPlanePropertiesKHR_getCurrentStackIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDisplayPlanePropertiesKHR* o = (VkDisplayPlanePropertiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->currentStackIndex));
+    return jniPointerToLong(&o->currentStackIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkDisplayPlanePropertiesKHR_setCurrentStackIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkDisplayPlanePropertiesKHR_setCurrentStackIndex(JNIEn
     (void)env;
     (void)jc;
     VkDisplayPlanePropertiesKHR* o = (VkDisplayPlanePropertiesKHR*)jniLongToPointer(address);
-    memcpy(&o->currentStackIndex, jniLongToPointer(valueAddress), sizeof(o->currentStackIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->currentStackIndex, valuePointer, sizeof(o->currentStackIndex));
 }
+
 

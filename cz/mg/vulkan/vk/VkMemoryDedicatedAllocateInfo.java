@@ -9,11 +9,11 @@ public class VkMemoryDedicatedAllocateInfo extends VkObject {
     }
 
     public VkMemoryDedicatedAllocateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkMemoryDedicatedAllocateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkMemoryDedicatedAllocateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkMemoryDedicatedAllocateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,8 +55,10 @@ public class VkMemoryDedicatedAllocateInfo extends VkObject {
         return new VkImage(getVkMemory(), getImage(getVkAddress()));
     }
 
+    
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image.getVkAddress());
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImage(long address);
@@ -62,8 +68,10 @@ public class VkMemoryDedicatedAllocateInfo extends VkObject {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
     }
 
+    
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer.getVkAddress());
+        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBuffer(long address);
@@ -76,7 +84,12 @@ public class VkMemoryDedicatedAllocateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkMemoryDedicatedAllocateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkMemoryDedicatedAllocateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkMemoryDedicatedAllocateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkMemoryDedicatedAllocateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

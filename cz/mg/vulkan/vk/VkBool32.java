@@ -24,7 +24,12 @@ public class VkBool32 extends VkUInt32 {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkBool32.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkBool32 o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -65,11 +70,11 @@ public class VkBool32 extends VkUInt32 {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBool32.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

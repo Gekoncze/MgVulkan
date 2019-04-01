@@ -9,11 +9,11 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
     }
 
     public VkObjectTableIndexBufferEntryNVX(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkObjectTableIndexBufferEntryNVX(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));
     }
 
+    
     public void setType(VkObjectEntryTypeNVX type) {
-        setType(getVkAddress(), type.getVkAddress());
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getType(long address);
@@ -40,8 +42,10 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -51,8 +55,10 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
     }
 
+    
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer.getVkAddress());
+        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBuffer(long address);
@@ -62,8 +68,10 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         return new VkIndexType(getVkMemory(), getIndexType(getVkAddress()));
     }
 
+    
     public void setIndexType(VkIndexType indexType) {
-        setIndexType(getVkAddress(), indexType.getVkAddress());
+        setIndexType(getVkAddress(), indexType != null ? indexType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getIndexType(long address);
@@ -76,7 +84,12 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkObjectTableIndexBufferEntryNVX.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkObjectTableIndexBufferEntryNVX o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectTableIndexBufferEntryNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

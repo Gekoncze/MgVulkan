@@ -9,11 +9,11 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
     }
 
     public VkRenderPassInputAttachmentAspectCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkRenderPassInputAttachmentAspectCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,19 +55,23 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getAspectReferenceCount(getVkAddress()));
     }
 
+    
     public void setAspectReferenceCount(VkUInt32 aspectReferenceCount) {
-        setAspectReferenceCount(getVkAddress(), aspectReferenceCount.getVkAddress());
+        setAspectReferenceCount(getVkAddress(), aspectReferenceCount != null ? aspectReferenceCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAspectReferenceCount(long address);
     private static native void setAspectReferenceCount(long address, long aspectReferenceCount);
 
-    public VkInputAttachmentAspectReference.Array getPAspectReferences() {
-        return new VkInputAttachmentAspectReference.Array(getVkMemory(), getPAspectReferences(getVkAddress()), getAspectReferenceCount().getValue());
+    public VkInputAttachmentAspectReference getPAspectReferences() {
+        return new VkInputAttachmentAspectReference(getVkMemory(), getPAspectReferences(getVkAddress()));
     }
 
+    private VkObject pAspectReferences = null;
     public void setPAspectReferences(VkInputAttachmentAspectReference pAspectReferences) {
-        setPAspectReferences(getVkAddress(), pAspectReferences.getVkAddress());
+        setPAspectReferences(getVkAddress(), pAspectReferences != null ? pAspectReferences.getVkAddress() : VkPointer.NULL);
+        this.pAspectReferences = pAspectReferences;
     }
 
     private static native long getPAspectReferences(long address);
@@ -76,7 +84,12 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkRenderPassInputAttachmentAspectCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkRenderPassInputAttachmentAspectCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkRenderPassInputAttachmentAspectCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

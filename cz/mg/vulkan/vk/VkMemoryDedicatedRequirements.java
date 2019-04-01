@@ -9,11 +9,11 @@ public class VkMemoryDedicatedRequirements extends VkObject {
     }
 
     public VkMemoryDedicatedRequirements(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkMemoryDedicatedRequirements(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,8 +55,10 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         return new VkBool32(getVkMemory(), getPrefersDedicatedAllocation(getVkAddress()));
     }
 
+    
     public void setPrefersDedicatedAllocation(VkBool32 prefersDedicatedAllocation) {
-        setPrefersDedicatedAllocation(getVkAddress(), prefersDedicatedAllocation.getVkAddress());
+        setPrefersDedicatedAllocation(getVkAddress(), prefersDedicatedAllocation != null ? prefersDedicatedAllocation.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPrefersDedicatedAllocation(long address);
@@ -62,8 +68,10 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         return new VkBool32(getVkMemory(), getRequiresDedicatedAllocation(getVkAddress()));
     }
 
+    
     public void setRequiresDedicatedAllocation(VkBool32 requiresDedicatedAllocation) {
-        setRequiresDedicatedAllocation(getVkAddress(), requiresDedicatedAllocation.getVkAddress());
+        setRequiresDedicatedAllocation(getVkAddress(), requiresDedicatedAllocation != null ? requiresDedicatedAllocation.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRequiresDedicatedAllocation(long address);
@@ -76,7 +84,12 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkMemoryDedicatedRequirements.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkMemoryDedicatedRequirements o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkMemoryDedicatedRequirements extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkMemoryDedicatedRequirements.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

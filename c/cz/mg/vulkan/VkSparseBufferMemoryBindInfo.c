@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSparseBufferMemoryBindInfo_getBuffer(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkSparseBufferMemoryBindInfo* o = (VkSparseBufferMemoryBindInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->buffer));
+    return jniPointerToLong(&o->buffer);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseBufferMemoryBindInfo_setBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSparseBufferMemoryBindInfo_setBuffer(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkSparseBufferMemoryBindInfo* o = (VkSparseBufferMemoryBindInfo*)jniLongToPointer(address);
-    memcpy(&o->buffer, jniLongToPointer(valueAddress), sizeof(o->buffer));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->buffer, valuePointer, sizeof(o->buffer));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseBufferMemoryBindInfo_getBindCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseBufferMemoryBindInfo* o = (VkSparseBufferMemoryBindInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->bindCount));
+    return jniPointerToLong(&o->bindCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseBufferMemoryBindInfo_setBindCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkSparseBufferMemoryBindInfo_setBindCount(JNIEnv* env,
     (void)env;
     (void)jc;
     VkSparseBufferMemoryBindInfo* o = (VkSparseBufferMemoryBindInfo*)jniLongToPointer(address);
-    memcpy(&o->bindCount, jniLongToPointer(valueAddress), sizeof(o->bindCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->bindCount, valuePointer, sizeof(o->bindCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseBufferMemoryBindInfo_getPBinds(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseBufferMemoryBindInfo* o = (VkSparseBufferMemoryBindInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pBinds));
+    return jniPointerToLong(o->pBinds);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseBufferMemoryBindInfo_setPBinds(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkSparseBufferMemoryBindInfo_setPBinds(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkSparseBufferMemoryBindInfo* o = (VkSparseBufferMemoryBindInfo*)jniLongToPointer(address);
-    memcpy(&o->pBinds, jniLongToPointer(valueAddress), sizeof(o->pBinds));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pBinds, &valuePointer, sizeof(o->pBinds));
 }
+
 

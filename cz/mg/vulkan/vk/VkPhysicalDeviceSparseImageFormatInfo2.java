@@ -9,11 +9,11 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
     }
 
     public VkPhysicalDeviceSparseImageFormatInfo2(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPhysicalDeviceSparseImageFormatInfo2(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,8 +58,10 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
         return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
     }
 
+    
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format.getVkAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFormat(long address);
@@ -65,8 +71,10 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
         return new VkImageType(getVkMemory(), getType(getVkAddress()));
     }
 
+    
     public void setType(VkImageType type) {
-        setType(getVkAddress(), type.getVkAddress());
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getType(long address);
@@ -76,8 +84,10 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
         return new VkSampleCountFlagBits(getVkMemory(), getSamples(getVkAddress()));
     }
 
+    
     public void setSamples(VkSampleCountFlagBits samples) {
-        setSamples(getVkAddress(), samples.getVkAddress());
+        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSamples(long address);
@@ -87,8 +97,10 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
         return new VkImageUsageFlags(getVkMemory(), getUsage(getVkAddress()));
     }
 
+    
     public void setUsage(VkImageUsageFlags usage) {
-        setUsage(getVkAddress(), usage.getVkAddress());
+        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getUsage(long address);
@@ -98,8 +110,10 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
         return new VkImageTiling(getVkMemory(), getTiling(getVkAddress()));
     }
 
+    
     public void setTiling(VkImageTiling tiling) {
-        setTiling(getVkAddress(), tiling.getVkAddress());
+        setTiling(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTiling(long address);
@@ -112,7 +126,12 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDeviceSparseImageFormatInfo2.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceSparseImageFormatInfo2 o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceSparseImageFormatInfo2.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

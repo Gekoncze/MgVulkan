@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_getSType(JNIEnv* env
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setSType(JNIEnv* env,
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setPNext(JNIEnv* env,
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_getFormat(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->format));
+    return jniPointerToLong(&o->format);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setFormat(JNIEnv* env
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    memcpy(&o->format, jniLongToPointer(valueAddress), sizeof(o->format));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->format, valuePointer, sizeof(o->format));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_getType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->type));
+    return jniPointerToLong(&o->type);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setType(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    memcpy(&o->type, jniLongToPointer(valueAddress), sizeof(o->type));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->type, valuePointer, sizeof(o->type));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_getTiling(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->tiling));
+    return jniPointerToLong(&o->tiling);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setTiling(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setTiling(JNIEnv* env
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    memcpy(&o->tiling, jniLongToPointer(valueAddress), sizeof(o->tiling));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->tiling, valuePointer, sizeof(o->tiling));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_getUsage(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->usage));
+    return jniPointerToLong(&o->usage);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setUsage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setUsage(JNIEnv* env,
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    memcpy(&o->usage, jniLongToPointer(valueAddress), sizeof(o->usage));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->usage, valuePointer, sizeof(o->usage));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,6 +131,8 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceImageFormatInfo2_setFlags(JNIEnv* env,
     (void)env;
     (void)jc;
     VkPhysicalDeviceImageFormatInfo2* o = (VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 

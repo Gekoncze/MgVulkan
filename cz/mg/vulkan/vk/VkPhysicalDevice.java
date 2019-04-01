@@ -4,8 +4,6 @@ package cz.mg.vulkan.vk;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDevice.html">khronos documentation</a>
  **/
 public class VkPhysicalDevice extends VkDispatchableHandle {
-    public static final VkPhysicalDevice NULL = new VkPhysicalDevice(VkPointer.NULL);
-
     public VkPhysicalDevice() {
     }
 
@@ -26,7 +24,12 @@ public class VkPhysicalDevice extends VkDispatchableHandle {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDevice.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDevice o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -67,11 +70,11 @@ public class VkPhysicalDevice extends VkDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDevice.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

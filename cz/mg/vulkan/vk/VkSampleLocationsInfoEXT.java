@@ -9,11 +9,11 @@ public class VkSampleLocationsInfoEXT extends VkObject {
     }
 
     public VkSampleLocationsInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSampleLocationsInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -42,8 +44,10 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -53,8 +57,10 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         return new VkSampleCountFlagBits(getVkMemory(), getSampleLocationsPerPixel(getVkAddress()));
     }
 
+    
     public void setSampleLocationsPerPixel(VkSampleCountFlagBits sampleLocationsPerPixel) {
-        setSampleLocationsPerPixel(getVkAddress(), sampleLocationsPerPixel.getVkAddress());
+        setSampleLocationsPerPixel(getVkAddress(), sampleLocationsPerPixel != null ? sampleLocationsPerPixel.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSampleLocationsPerPixel(long address);
@@ -64,8 +70,10 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         return new VkExtent2D(getVkMemory(), getSampleLocationGridSize(getVkAddress()));
     }
 
+    
     public void setSampleLocationGridSize(VkExtent2D sampleLocationGridSize) {
-        setSampleLocationGridSize(getVkAddress(), sampleLocationGridSize.getVkAddress());
+        setSampleLocationGridSize(getVkAddress(), sampleLocationGridSize != null ? sampleLocationGridSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSampleLocationGridSize(long address);
@@ -75,19 +83,23 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         return new VkUInt32(getVkMemory(), getSampleLocationsCount(getVkAddress()));
     }
 
+    
     public void setSampleLocationsCount(VkUInt32 sampleLocationsCount) {
-        setSampleLocationsCount(getVkAddress(), sampleLocationsCount.getVkAddress());
+        setSampleLocationsCount(getVkAddress(), sampleLocationsCount != null ? sampleLocationsCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSampleLocationsCount(long address);
     private static native void setSampleLocationsCount(long address, long sampleLocationsCount);
 
-    public VkSampleLocationEXT.Array getPSampleLocations() {
-        return new VkSampleLocationEXT.Array(getVkMemory(), getPSampleLocations(getVkAddress()), getSampleLocationsCount().getValue());
+    public VkSampleLocationEXT getPSampleLocations() {
+        return new VkSampleLocationEXT(getVkMemory(), getPSampleLocations(getVkAddress()));
     }
 
+    private VkObject pSampleLocations = null;
     public void setPSampleLocations(VkSampleLocationEXT pSampleLocations) {
-        setPSampleLocations(getVkAddress(), pSampleLocations.getVkAddress());
+        setPSampleLocations(getVkAddress(), pSampleLocations != null ? pSampleLocations.getVkAddress() : VkPointer.NULL);
+        this.pSampleLocations = pSampleLocations;
     }
 
     private static native long getPSampleLocations(long address);
@@ -100,7 +112,12 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSampleLocationsInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSampleLocationsInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkSampleLocationsInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSampleLocationsInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

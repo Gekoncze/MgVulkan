@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSparseMemoryBind_getResourceOffset(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkSparseMemoryBind* o = (VkSparseMemoryBind*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->resourceOffset));
+    return jniPointerToLong(&o->resourceOffset);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseMemoryBind_setResourceOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSparseMemoryBind_setResourceOffset(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkSparseMemoryBind* o = (VkSparseMemoryBind*)jniLongToPointer(address);
-    memcpy(&o->resourceOffset, jniLongToPointer(valueAddress), sizeof(o->resourceOffset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->resourceOffset, valuePointer, sizeof(o->resourceOffset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseMemoryBind_getSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseMemoryBind* o = (VkSparseMemoryBind*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->size));
+    return jniPointerToLong(&o->size);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseMemoryBind_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkSparseMemoryBind_setSize(JNIEnv* env, jclass jc, jlo
     (void)env;
     (void)jc;
     VkSparseMemoryBind* o = (VkSparseMemoryBind*)jniLongToPointer(address);
-    memcpy(&o->size, jniLongToPointer(valueAddress), sizeof(o->size));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->size, valuePointer, sizeof(o->size));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseMemoryBind_getMemory(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseMemoryBind* o = (VkSparseMemoryBind*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->memory));
+    return jniPointerToLong(&o->memory);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseMemoryBind_setMemory(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkSparseMemoryBind_setMemory(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkSparseMemoryBind* o = (VkSparseMemoryBind*)jniLongToPointer(address);
-    memcpy(&o->memory, jniLongToPointer(valueAddress), sizeof(o->memory));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->memory, valuePointer, sizeof(o->memory));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseMemoryBind_getMemoryOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseMemoryBind* o = (VkSparseMemoryBind*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->memoryOffset));
+    return jniPointerToLong(&o->memoryOffset);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseMemoryBind_setMemoryOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkSparseMemoryBind_setMemoryOffset(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkSparseMemoryBind* o = (VkSparseMemoryBind*)jniLongToPointer(address);
-    memcpy(&o->memoryOffset, jniLongToPointer(valueAddress), sizeof(o->memoryOffset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->memoryOffset, valuePointer, sizeof(o->memoryOffset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseMemoryBind_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseMemoryBind* o = (VkSparseMemoryBind*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseMemoryBind_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkSparseMemoryBind_setFlags(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkSparseMemoryBind* o = (VkSparseMemoryBind*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 

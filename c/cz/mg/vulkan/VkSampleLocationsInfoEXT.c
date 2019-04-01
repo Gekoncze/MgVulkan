@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_getSType(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setSType(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setPNext(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_getSampleLocationsPerPixel(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sampleLocationsPerPixel));
+    return jniPointerToLong(&o->sampleLocationsPerPixel);
 }
 
 void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setSampleLocationsPerPixel(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setSampleLocationsPerPixel(JN
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sampleLocationsPerPixel, jniLongToPointer(valueAddress), sizeof(o->sampleLocationsPerPixel));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sampleLocationsPerPixel, valuePointer, sizeof(o->sampleLocationsPerPixel));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_getSampleLocationGridSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sampleLocationGridSize));
+    return jniPointerToLong(&o->sampleLocationGridSize);
 }
 
 void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setSampleLocationGridSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setSampleLocationGridSize(JNI
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sampleLocationGridSize, jniLongToPointer(valueAddress), sizeof(o->sampleLocationGridSize));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sampleLocationGridSize, valuePointer, sizeof(o->sampleLocationGridSize));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_getSampleLocationsCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sampleLocationsCount));
+    return jniPointerToLong(&o->sampleLocationsCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setSampleLocationsCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setSampleLocationsCount(JNIEn
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sampleLocationsCount, jniLongToPointer(valueAddress), sizeof(o->sampleLocationsCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sampleLocationsCount, valuePointer, sizeof(o->sampleLocationsCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_getPSampleLocations(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pSampleLocations));
+    return jniPointerToLong(o->pSampleLocations);
 }
 
 void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setPSampleLocations(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkSampleLocationsInfoEXT_setPSampleLocations(JNIEnv* e
     (void)env;
     (void)jc;
     VkSampleLocationsInfoEXT* o = (VkSampleLocationsInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pSampleLocations, jniLongToPointer(valueAddress), sizeof(o->pSampleLocations));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pSampleLocations, &valuePointer, sizeof(o->pSampleLocations));
 }
+
 

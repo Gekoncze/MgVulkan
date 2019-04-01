@@ -11,11 +11,11 @@ public class VkNonDispatchableHandle extends VkObject {
     }
 
     public VkNonDispatchableHandle(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkNonDispatchableHandle(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
     public long getValue(){
@@ -39,7 +39,12 @@ public class VkNonDispatchableHandle extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkNonDispatchableHandle.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkNonDispatchableHandle o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 

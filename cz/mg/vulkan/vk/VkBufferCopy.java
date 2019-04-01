@@ -9,11 +9,11 @@ public class VkBufferCopy extends VkObject {
     }
 
     public VkBufferCopy(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkBufferCopy(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkBufferCopy extends VkObject {
         return new VkDeviceSize(getVkMemory(), getSrcOffset(getVkAddress()));
     }
 
+    
     public void setSrcOffset(VkDeviceSize srcOffset) {
-        setSrcOffset(getVkAddress(), srcOffset.getVkAddress());
+        setSrcOffset(getVkAddress(), srcOffset != null ? srcOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSrcOffset(long address);
@@ -39,8 +41,10 @@ public class VkBufferCopy extends VkObject {
         return new VkDeviceSize(getVkMemory(), getDstOffset(getVkAddress()));
     }
 
+    
     public void setDstOffset(VkDeviceSize dstOffset) {
-        setDstOffset(getVkAddress(), dstOffset.getVkAddress());
+        setDstOffset(getVkAddress(), dstOffset != null ? dstOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstOffset(long address);
@@ -50,8 +54,10 @@ public class VkBufferCopy extends VkObject {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
     }
 
+    
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size.getVkAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSize(long address);
@@ -64,7 +70,12 @@ public class VkBufferCopy extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkBufferCopy.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkBufferCopy o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkBufferCopy extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBufferCopy.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

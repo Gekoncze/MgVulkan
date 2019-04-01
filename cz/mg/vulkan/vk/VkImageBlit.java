@@ -9,11 +9,11 @@ public class VkImageBlit extends VkObject {
     }
 
     public VkImageBlit(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkImageBlit(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkImageBlit extends VkObject {
         return new VkImageSubresourceLayers(getVkMemory(), getSrcSubresource(getVkAddress()));
     }
 
+    
     public void setSrcSubresource(VkImageSubresourceLayers srcSubresource) {
-        setSrcSubresource(getVkAddress(), srcSubresource.getVkAddress());
+        setSrcSubresource(getVkAddress(), srcSubresource != null ? srcSubresource.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSrcSubresource(long address);
@@ -40,8 +42,10 @@ public class VkImageBlit extends VkObject {
         return new VkOffset3D(getVkMemory(), getSrcOffsets(getVkAddress()));
     }
 
+    
     public void setSrcOffsets(VkOffset3D srcOffsets) {
-        setSrcOffsets(getVkAddress(), srcOffsets.getVkAddress());
+        setSrcOffsets(getVkAddress(), srcOffsets != null ? srcOffsets.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getSrcOffsets(long address);
@@ -51,8 +55,10 @@ public class VkImageBlit extends VkObject {
         return new VkImageSubresourceLayers(getVkMemory(), getDstSubresource(getVkAddress()));
     }
 
+    
     public void setDstSubresource(VkImageSubresourceLayers dstSubresource) {
-        setDstSubresource(getVkAddress(), dstSubresource.getVkAddress());
+        setDstSubresource(getVkAddress(), dstSubresource != null ? dstSubresource.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstSubresource(long address);
@@ -62,8 +68,10 @@ public class VkImageBlit extends VkObject {
         return new VkOffset3D(getVkMemory(), getDstOffsets(getVkAddress()));
     }
 
+    
     public void setDstOffsets(VkOffset3D dstOffsets) {
-        setDstOffsets(getVkAddress(), dstOffsets.getVkAddress());
+        setDstOffsets(getVkAddress(), dstOffsets != null ? dstOffsets.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getDstOffsets(long address);
@@ -76,7 +84,12 @@ public class VkImageBlit extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkImageBlit.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkImageBlit o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkImageBlit extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImageBlit.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -9,11 +9,11 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
     }
 
     public VkSubpassSampleLocationsEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSubpassSampleLocationsEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
         return new VkUInt32(getVkMemory(), getSubpassIndex(getVkAddress()));
     }
 
+    
     public void setSubpassIndex(VkUInt32 subpassIndex) {
-        setSubpassIndex(getVkAddress(), subpassIndex.getVkAddress());
+        setSubpassIndex(getVkAddress(), subpassIndex != null ? subpassIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSubpassIndex(long address);
@@ -38,8 +40,10 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
         return new VkSampleLocationsInfoEXT(getVkMemory(), getSampleLocationsInfo(getVkAddress()));
     }
 
+    
     public void setSampleLocationsInfo(VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo.getVkAddress());
+        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSampleLocationsInfo(long address);
@@ -52,7 +56,12 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSubpassSampleLocationsEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSubpassSampleLocationsEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSubpassSampleLocationsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -9,11 +9,11 @@ public class VkDispatchIndirectCommand extends VkObject {
     }
 
     public VkDispatchIndirectCommand(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDispatchIndirectCommand(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkDispatchIndirectCommand extends VkObject {
         return new VkUInt32(getVkMemory(), getX(getVkAddress()));
     }
 
+    
     public void setX(VkUInt32 x) {
-        setX(getVkAddress(), x.getVkAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getX(long address);
@@ -39,8 +41,10 @@ public class VkDispatchIndirectCommand extends VkObject {
         return new VkUInt32(getVkMemory(), getY(getVkAddress()));
     }
 
+    
     public void setY(VkUInt32 y) {
-        setY(getVkAddress(), y.getVkAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getY(long address);
@@ -50,8 +54,10 @@ public class VkDispatchIndirectCommand extends VkObject {
         return new VkUInt32(getVkMemory(), getZ(getVkAddress()));
     }
 
+    
     public void setZ(VkUInt32 z) {
-        setZ(getVkAddress(), z.getVkAddress());
+        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getZ(long address);
@@ -64,7 +70,12 @@ public class VkDispatchIndirectCommand extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDispatchIndirectCommand.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDispatchIndirectCommand o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkDispatchIndirectCommand extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDispatchIndirectCommand.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

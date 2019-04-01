@@ -9,11 +9,11 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
     }
 
     public VkImportSemaphoreFdInfoKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkImportSemaphoreFdInfoKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -42,8 +44,10 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -53,8 +57,10 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         return new VkSemaphore(getVkMemory(), getSemaphore(getVkAddress()));
     }
 
+    
     public void setSemaphore(VkSemaphore semaphore) {
-        setSemaphore(getVkAddress(), semaphore.getVkAddress());
+        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSemaphore(long address);
@@ -64,8 +70,10 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         return new VkSemaphoreImportFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkSemaphoreImportFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -75,8 +83,10 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         return new VkExternalSemaphoreHandleTypeFlagBits(getVkMemory(), getHandleType(getVkAddress()));
     }
 
+    
     public void setHandleType(VkExternalSemaphoreHandleTypeFlagBits handleType) {
-        setHandleType(getVkAddress(), handleType.getVkAddress());
+        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getHandleType(long address);
@@ -86,8 +96,10 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         return new VkInt(getVkMemory(), getFd(getVkAddress()));
     }
 
+    
     public void setFd(VkInt fd) {
-        setFd(getVkAddress(), fd.getVkAddress());
+        setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFd(long address);
@@ -100,7 +112,12 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkImportSemaphoreFdInfoKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkImportSemaphoreFdInfoKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImportSemaphoreFdInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

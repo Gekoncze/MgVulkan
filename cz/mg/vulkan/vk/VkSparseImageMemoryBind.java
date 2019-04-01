@@ -9,11 +9,11 @@ public class VkSparseImageMemoryBind extends VkObject {
     }
 
     public VkSparseImageMemoryBind(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSparseImageMemoryBind(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkSparseImageMemoryBind extends VkObject {
         return new VkImageSubresource(getVkMemory(), getSubresource(getVkAddress()));
     }
 
+    
     public void setSubresource(VkImageSubresource subresource) {
-        setSubresource(getVkAddress(), subresource.getVkAddress());
+        setSubresource(getVkAddress(), subresource != null ? subresource.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSubresource(long address);
@@ -42,8 +44,10 @@ public class VkSparseImageMemoryBind extends VkObject {
         return new VkOffset3D(getVkMemory(), getOffset(getVkAddress()));
     }
 
+    
     public void setOffset(VkOffset3D offset) {
-        setOffset(getVkAddress(), offset.getVkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOffset(long address);
@@ -53,8 +57,10 @@ public class VkSparseImageMemoryBind extends VkObject {
         return new VkExtent3D(getVkMemory(), getExtent(getVkAddress()));
     }
 
+    
     public void setExtent(VkExtent3D extent) {
-        setExtent(getVkAddress(), extent.getVkAddress());
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExtent(long address);
@@ -64,8 +70,10 @@ public class VkSparseImageMemoryBind extends VkObject {
         return new VkDeviceMemory(getVkMemory(), getMemory(getVkAddress()));
     }
 
+    
     public void setMemory(VkDeviceMemory memory) {
-        setMemory(getVkAddress(), memory.getVkAddress());
+        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMemory(long address);
@@ -75,8 +83,10 @@ public class VkSparseImageMemoryBind extends VkObject {
         return new VkDeviceSize(getVkMemory(), getMemoryOffset(getVkAddress()));
     }
 
+    
     public void setMemoryOffset(VkDeviceSize memoryOffset) {
-        setMemoryOffset(getVkAddress(), memoryOffset.getVkAddress());
+        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMemoryOffset(long address);
@@ -86,8 +96,10 @@ public class VkSparseImageMemoryBind extends VkObject {
         return new VkSparseMemoryBindFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkSparseMemoryBindFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -100,7 +112,12 @@ public class VkSparseImageMemoryBind extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSparseImageMemoryBind.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSparseImageMemoryBind o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkSparseImageMemoryBind extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSparseImageMemoryBind.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

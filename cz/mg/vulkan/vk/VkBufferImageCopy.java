@@ -9,11 +9,11 @@ public class VkBufferImageCopy extends VkObject {
     }
 
     public VkBufferImageCopy(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkBufferImageCopy(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkBufferImageCopy extends VkObject {
         return new VkDeviceSize(getVkMemory(), getBufferOffset(getVkAddress()));
     }
 
+    
     public void setBufferOffset(VkDeviceSize bufferOffset) {
-        setBufferOffset(getVkAddress(), bufferOffset.getVkAddress());
+        setBufferOffset(getVkAddress(), bufferOffset != null ? bufferOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBufferOffset(long address);
@@ -42,8 +44,10 @@ public class VkBufferImageCopy extends VkObject {
         return new VkUInt32(getVkMemory(), getBufferRowLength(getVkAddress()));
     }
 
+    
     public void setBufferRowLength(VkUInt32 bufferRowLength) {
-        setBufferRowLength(getVkAddress(), bufferRowLength.getVkAddress());
+        setBufferRowLength(getVkAddress(), bufferRowLength != null ? bufferRowLength.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBufferRowLength(long address);
@@ -53,8 +57,10 @@ public class VkBufferImageCopy extends VkObject {
         return new VkUInt32(getVkMemory(), getBufferImageHeight(getVkAddress()));
     }
 
+    
     public void setBufferImageHeight(VkUInt32 bufferImageHeight) {
-        setBufferImageHeight(getVkAddress(), bufferImageHeight.getVkAddress());
+        setBufferImageHeight(getVkAddress(), bufferImageHeight != null ? bufferImageHeight.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBufferImageHeight(long address);
@@ -64,8 +70,10 @@ public class VkBufferImageCopy extends VkObject {
         return new VkImageSubresourceLayers(getVkMemory(), getImageSubresource(getVkAddress()));
     }
 
+    
     public void setImageSubresource(VkImageSubresourceLayers imageSubresource) {
-        setImageSubresource(getVkAddress(), imageSubresource.getVkAddress());
+        setImageSubresource(getVkAddress(), imageSubresource != null ? imageSubresource.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageSubresource(long address);
@@ -75,8 +83,10 @@ public class VkBufferImageCopy extends VkObject {
         return new VkOffset3D(getVkMemory(), getImageOffset(getVkAddress()));
     }
 
+    
     public void setImageOffset(VkOffset3D imageOffset) {
-        setImageOffset(getVkAddress(), imageOffset.getVkAddress());
+        setImageOffset(getVkAddress(), imageOffset != null ? imageOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageOffset(long address);
@@ -86,8 +96,10 @@ public class VkBufferImageCopy extends VkObject {
         return new VkExtent3D(getVkMemory(), getImageExtent(getVkAddress()));
     }
 
+    
     public void setImageExtent(VkExtent3D imageExtent) {
-        setImageExtent(getVkAddress(), imageExtent.getVkAddress());
+        setImageExtent(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageExtent(long address);
@@ -100,7 +112,12 @@ public class VkBufferImageCopy extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkBufferImageCopy.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkBufferImageCopy o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkBufferImageCopy extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBufferImageCopy.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

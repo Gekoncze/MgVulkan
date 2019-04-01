@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkViewport_getX(JNIEnv* env, jclass jc, jlong address
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->x));
+    return jniPointerToLong(&o->x);
 }
 
 void Java_cz_mg_vulkan_vk_VkViewport_setX(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkViewport_setX(JNIEnv* env, jclass jc, jlong address,
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    memcpy(&o->x, jniLongToPointer(valueAddress), sizeof(o->x));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->x, valuePointer, sizeof(o->x));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkViewport_getY(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->y));
+    return jniPointerToLong(&o->y);
 }
 
 void Java_cz_mg_vulkan_vk_VkViewport_setY(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkViewport_setY(JNIEnv* env, jclass jc, jlong address,
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    memcpy(&o->y, jniLongToPointer(valueAddress), sizeof(o->y));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->y, valuePointer, sizeof(o->y));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkViewport_getWidth(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->width));
+    return jniPointerToLong(&o->width);
 }
 
 void Java_cz_mg_vulkan_vk_VkViewport_setWidth(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkViewport_setWidth(JNIEnv* env, jclass jc, jlong addr
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    memcpy(&o->width, jniLongToPointer(valueAddress), sizeof(o->width));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->width, valuePointer, sizeof(o->width));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkViewport_getHeight(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->height));
+    return jniPointerToLong(&o->height);
 }
 
 void Java_cz_mg_vulkan_vk_VkViewport_setHeight(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkViewport_setHeight(JNIEnv* env, jclass jc, jlong add
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    memcpy(&o->height, jniLongToPointer(valueAddress), sizeof(o->height));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->height, valuePointer, sizeof(o->height));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkViewport_getMinDepth(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->minDepth));
+    return jniPointerToLong(&o->minDepth);
 }
 
 void Java_cz_mg_vulkan_vk_VkViewport_setMinDepth(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkViewport_setMinDepth(JNIEnv* env, jclass jc, jlong a
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    memcpy(&o->minDepth, jniLongToPointer(valueAddress), sizeof(o->minDepth));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->minDepth, valuePointer, sizeof(o->minDepth));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkViewport_getMaxDepth(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxDepth));
+    return jniPointerToLong(&o->maxDepth);
 }
 
 void Java_cz_mg_vulkan_vk_VkViewport_setMaxDepth(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkViewport_setMaxDepth(JNIEnv* env, jclass jc, jlong a
     (void)env;
     (void)jc;
     VkViewport* o = (VkViewport*)jniLongToPointer(address);
-    memcpy(&o->maxDepth, jniLongToPointer(valueAddress), sizeof(o->maxDepth));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxDepth, valuePointer, sizeof(o->maxDepth));
 }
+
 

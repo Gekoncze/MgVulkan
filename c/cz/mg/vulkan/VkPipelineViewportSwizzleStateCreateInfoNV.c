@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_getSType(J
     (void)env;
     (void)jc;
     VkPipelineViewportSwizzleStateCreateInfoNV* o = (VkPipelineViewportSwizzleStateCreateInfoNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_setSType(JN
     (void)env;
     (void)jc;
     VkPipelineViewportSwizzleStateCreateInfoNV* o = (VkPipelineViewportSwizzleStateCreateInfoNV*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineViewportSwizzleStateCreateInfoNV* o = (VkPipelineViewportSwizzleStateCreateInfoNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_setPNext(JN
     (void)env;
     (void)jc;
     VkPipelineViewportSwizzleStateCreateInfoNV* o = (VkPipelineViewportSwizzleStateCreateInfoNV*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineViewportSwizzleStateCreateInfoNV* o = (VkPipelineViewportSwizzleStateCreateInfoNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_setFlags(JN
     (void)env;
     (void)jc;
     VkPipelineViewportSwizzleStateCreateInfoNV* o = (VkPipelineViewportSwizzleStateCreateInfoNV*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_getViewportCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineViewportSwizzleStateCreateInfoNV* o = (VkPipelineViewportSwizzleStateCreateInfoNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->viewportCount));
+    return jniPointerToLong(&o->viewportCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_setViewportCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_setViewport
     (void)env;
     (void)jc;
     VkPipelineViewportSwizzleStateCreateInfoNV* o = (VkPipelineViewportSwizzleStateCreateInfoNV*)jniLongToPointer(address);
-    memcpy(&o->viewportCount, jniLongToPointer(valueAddress), sizeof(o->viewportCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->viewportCount, valuePointer, sizeof(o->viewportCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_getPViewportSwizzles(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineViewportSwizzleStateCreateInfoNV* o = (VkPipelineViewportSwizzleStateCreateInfoNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pViewportSwizzles));
+    return jniPointerToLong(o->pViewportSwizzles);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_setPViewportSwizzles(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkPipelineViewportSwizzleStateCreateInfoNV_setPViewpor
     (void)env;
     (void)jc;
     VkPipelineViewportSwizzleStateCreateInfoNV* o = (VkPipelineViewportSwizzleStateCreateInfoNV*)jniLongToPointer(address);
-    memcpy(&o->pViewportSwizzles, jniLongToPointer(valueAddress), sizeof(o->pViewportSwizzles));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pViewportSwizzles, &valuePointer, sizeof(o->pViewportSwizzles));
 }
+
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_getSType(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkShaderModuleCreateInfo* o = (VkShaderModuleCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_setSType(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkShaderModuleCreateInfo* o = (VkShaderModuleCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkShaderModuleCreateInfo* o = (VkShaderModuleCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_setPNext(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkShaderModuleCreateInfo* o = (VkShaderModuleCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkShaderModuleCreateInfo* o = (VkShaderModuleCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_setFlags(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkShaderModuleCreateInfo* o = (VkShaderModuleCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_getCodeSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkShaderModuleCreateInfo* o = (VkShaderModuleCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->codeSize));
+    return jniPointerToLong(&o->codeSize);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_setCodeSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_setCodeSize(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkShaderModuleCreateInfo* o = (VkShaderModuleCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->codeSize, jniLongToPointer(valueAddress), sizeof(o->codeSize));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->codeSize, valuePointer, sizeof(o->codeSize));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_getPCode(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkShaderModuleCreateInfo* o = (VkShaderModuleCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pCode));
+    return jniPointerToLong(o->pCode);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_setPCode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkShaderModuleCreateInfo_setPCode(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkShaderModuleCreateInfo* o = (VkShaderModuleCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pCode, jniLongToPointer(valueAddress), sizeof(o->pCode));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pCode, &valuePointer, sizeof(o->pCode));
 }
+
 

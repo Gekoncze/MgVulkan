@@ -9,11 +9,11 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
     }
 
     public VkPipelineViewportStateCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineViewportStateCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,8 +58,10 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         return new VkPipelineViewportStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineViewportStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -65,19 +71,23 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getViewportCount(getVkAddress()));
     }
 
+    
     public void setViewportCount(VkUInt32 viewportCount) {
-        setViewportCount(getVkAddress(), viewportCount.getVkAddress());
+        setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getViewportCount(long address);
     private static native void setViewportCount(long address, long viewportCount);
 
-    public VkViewport.Array getPViewports() {
-        return new VkViewport.Array(getVkMemory(), getPViewports(getVkAddress()), getViewportCount().getValue());
+    public VkViewport getPViewports() {
+        return new VkViewport(getVkMemory(), getPViewports(getVkAddress()));
     }
 
+    private VkObject pViewports = null;
     public void setPViewports(VkViewport pViewports) {
-        setPViewports(getVkAddress(), pViewports.getVkAddress());
+        setPViewports(getVkAddress(), pViewports != null ? pViewports.getVkAddress() : VkPointer.NULL);
+        this.pViewports = pViewports;
     }
 
     private static native long getPViewports(long address);
@@ -87,19 +97,23 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getScissorCount(getVkAddress()));
     }
 
+    
     public void setScissorCount(VkUInt32 scissorCount) {
-        setScissorCount(getVkAddress(), scissorCount.getVkAddress());
+        setScissorCount(getVkAddress(), scissorCount != null ? scissorCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getScissorCount(long address);
     private static native void setScissorCount(long address, long scissorCount);
 
-    public VkRect2D.Array getPScissors() {
-        return new VkRect2D.Array(getVkMemory(), getPScissors(getVkAddress()), getScissorCount().getValue());
+    public VkRect2D getPScissors() {
+        return new VkRect2D(getVkMemory(), getPScissors(getVkAddress()));
     }
 
+    private VkObject pScissors = null;
     public void setPScissors(VkRect2D pScissors) {
-        setPScissors(getVkAddress(), pScissors.getVkAddress());
+        setPScissors(getVkAddress(), pScissors != null ? pScissors.getVkAddress() : VkPointer.NULL);
+        this.pScissors = pScissors;
     }
 
     private static native long getPScissors(long address);
@@ -112,7 +126,12 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineViewportStateCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineViewportStateCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineViewportStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

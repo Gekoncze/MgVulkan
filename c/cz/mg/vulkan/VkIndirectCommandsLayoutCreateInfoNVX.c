@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_getSType(JNIEnv
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setSType(JNIEnv*
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setPNext(JNIEnv*
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_getPipelineBindPoint(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pipelineBindPoint));
+    return jniPointerToLong(&o->pipelineBindPoint);
 }
 
 void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setPipelineBindPoint(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setPipelineBindP
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    memcpy(&o->pipelineBindPoint, jniLongToPointer(valueAddress), sizeof(o->pipelineBindPoint));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pipelineBindPoint, valuePointer, sizeof(o->pipelineBindPoint));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setFlags(JNIEnv*
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_getTokenCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->tokenCount));
+    return jniPointerToLong(&o->tokenCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setTokenCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setTokenCount(JN
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    memcpy(&o->tokenCount, jniLongToPointer(valueAddress), sizeof(o->tokenCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->tokenCount, valuePointer, sizeof(o->tokenCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_getPTokens(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pTokens));
+    return jniPointerToLong(o->pTokens);
 }
 
 void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setPTokens(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkIndirectCommandsLayoutCreateInfoNVX_setPTokens(JNIEn
     (void)env;
     (void)jc;
     VkIndirectCommandsLayoutCreateInfoNVX* o = (VkIndirectCommandsLayoutCreateInfoNVX*)jniLongToPointer(address);
-    memcpy(&o->pTokens, jniLongToPointer(valueAddress), sizeof(o->pTokens));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pTokens, &valuePointer, sizeof(o->pTokens));
 }
+
 

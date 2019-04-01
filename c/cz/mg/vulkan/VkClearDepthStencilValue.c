@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkClearDepthStencilValue_getDepth(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkClearDepthStencilValue* o = (VkClearDepthStencilValue*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->depth));
+    return jniPointerToLong(&o->depth);
 }
 
 void Java_cz_mg_vulkan_vk_VkClearDepthStencilValue_setDepth(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkClearDepthStencilValue_setDepth(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkClearDepthStencilValue* o = (VkClearDepthStencilValue*)jniLongToPointer(address);
-    memcpy(&o->depth, jniLongToPointer(valueAddress), sizeof(o->depth));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->depth, valuePointer, sizeof(o->depth));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkClearDepthStencilValue_getStencil(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkClearDepthStencilValue* o = (VkClearDepthStencilValue*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->stencil));
+    return jniPointerToLong(&o->stencil);
 }
 
 void Java_cz_mg_vulkan_vk_VkClearDepthStencilValue_setStencil(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkClearDepthStencilValue_setStencil(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkClearDepthStencilValue* o = (VkClearDepthStencilValue*)jniLongToPointer(address);
-    memcpy(&o->stencil, jniLongToPointer(valueAddress), sizeof(o->stencil));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->stencil, valuePointer, sizeof(o->stencil));
 }
+
 

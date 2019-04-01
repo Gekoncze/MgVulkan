@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_getSType(JNIEnv* env,
     (void)env;
     (void)jc;
     VkDescriptorSetLayoutCreateInfo* o = (VkDescriptorSetLayoutCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_setSType(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkDescriptorSetLayoutCreateInfo* o = (VkDescriptorSetLayoutCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorSetLayoutCreateInfo* o = (VkDescriptorSetLayoutCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_setPNext(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkDescriptorSetLayoutCreateInfo* o = (VkDescriptorSetLayoutCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorSetLayoutCreateInfo* o = (VkDescriptorSetLayoutCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_setFlags(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkDescriptorSetLayoutCreateInfo* o = (VkDescriptorSetLayoutCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_getBindingCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorSetLayoutCreateInfo* o = (VkDescriptorSetLayoutCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->bindingCount));
+    return jniPointerToLong(&o->bindingCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_setBindingCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_setBindingCount(JNIEnv
     (void)env;
     (void)jc;
     VkDescriptorSetLayoutCreateInfo* o = (VkDescriptorSetLayoutCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->bindingCount, jniLongToPointer(valueAddress), sizeof(o->bindingCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->bindingCount, valuePointer, sizeof(o->bindingCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_getPBindings(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorSetLayoutCreateInfo* o = (VkDescriptorSetLayoutCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pBindings));
+    return jniPointerToLong(o->pBindings);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_setPBindings(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetLayoutCreateInfo_setPBindings(JNIEnv* e
     (void)env;
     (void)jc;
     VkDescriptorSetLayoutCreateInfo* o = (VkDescriptorSetLayoutCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pBindings, jniLongToPointer(valueAddress), sizeof(o->pBindings));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pBindings, &valuePointer, sizeof(o->pBindings));
 }
+
 

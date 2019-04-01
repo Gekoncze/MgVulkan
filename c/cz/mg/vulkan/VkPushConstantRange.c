@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPushConstantRange_getStageFlags(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkPushConstantRange* o = (VkPushConstantRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->stageFlags));
+    return jniPointerToLong(&o->stageFlags);
 }
 
 void Java_cz_mg_vulkan_vk_VkPushConstantRange_setStageFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPushConstantRange_setStageFlags(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkPushConstantRange* o = (VkPushConstantRange*)jniLongToPointer(address);
-    memcpy(&o->stageFlags, jniLongToPointer(valueAddress), sizeof(o->stageFlags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->stageFlags, valuePointer, sizeof(o->stageFlags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPushConstantRange_getOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPushConstantRange* o = (VkPushConstantRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->offset));
+    return jniPointerToLong(&o->offset);
 }
 
 void Java_cz_mg_vulkan_vk_VkPushConstantRange_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPushConstantRange_setOffset(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkPushConstantRange* o = (VkPushConstantRange*)jniLongToPointer(address);
-    memcpy(&o->offset, jniLongToPointer(valueAddress), sizeof(o->offset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPushConstantRange_getSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPushConstantRange* o = (VkPushConstantRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->size));
+    return jniPointerToLong(&o->size);
 }
 
 void Java_cz_mg_vulkan_vk_VkPushConstantRange_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkPushConstantRange_setSize(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkPushConstantRange* o = (VkPushConstantRange*)jniLongToPointer(address);
-    memcpy(&o->size, jniLongToPointer(valueAddress), sizeof(o->size));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->size, valuePointer, sizeof(o->size));
 }
+
 

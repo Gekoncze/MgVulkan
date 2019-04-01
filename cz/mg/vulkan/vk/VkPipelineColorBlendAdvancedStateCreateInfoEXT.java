@@ -9,11 +9,11 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
     }
 
     public VkPipelineColorBlendAdvancedStateCreateInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineColorBlendAdvancedStateCreateInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         return new VkBool32(getVkMemory(), getSrcPremultiplied(getVkAddress()));
     }
 
+    
     public void setSrcPremultiplied(VkBool32 srcPremultiplied) {
-        setSrcPremultiplied(getVkAddress(), srcPremultiplied.getVkAddress());
+        setSrcPremultiplied(getVkAddress(), srcPremultiplied != null ? srcPremultiplied.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSrcPremultiplied(long address);
@@ -63,8 +69,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         return new VkBool32(getVkMemory(), getDstPremultiplied(getVkAddress()));
     }
 
+    
     public void setDstPremultiplied(VkBool32 dstPremultiplied) {
-        setDstPremultiplied(getVkAddress(), dstPremultiplied.getVkAddress());
+        setDstPremultiplied(getVkAddress(), dstPremultiplied != null ? dstPremultiplied.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstPremultiplied(long address);
@@ -74,8 +82,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         return new VkBlendOverlapEXT(getVkMemory(), getBlendOverlap(getVkAddress()));
     }
 
+    
     public void setBlendOverlap(VkBlendOverlapEXT blendOverlap) {
-        setBlendOverlap(getVkAddress(), blendOverlap.getVkAddress());
+        setBlendOverlap(getVkAddress(), blendOverlap != null ? blendOverlap.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBlendOverlap(long address);
@@ -88,7 +98,12 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineColorBlendAdvancedStateCreateInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineColorBlendAdvancedStateCreateInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineColorBlendAdvancedStateCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

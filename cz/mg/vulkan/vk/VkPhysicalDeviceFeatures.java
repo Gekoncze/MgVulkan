@@ -9,11 +9,11 @@ public class VkPhysicalDeviceFeatures extends VkObject {
     }
 
     public VkPhysicalDeviceFeatures(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPhysicalDeviceFeatures(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -80,8 +80,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getRobustBufferAccess(getVkAddress()));
     }
 
+    
     public void setRobustBufferAccess(VkBool32 robustBufferAccess) {
-        setRobustBufferAccess(getVkAddress(), robustBufferAccess.getVkAddress());
+        setRobustBufferAccess(getVkAddress(), robustBufferAccess != null ? robustBufferAccess.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRobustBufferAccess(long address);
@@ -91,8 +93,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getFullDrawIndexUint32(getVkAddress()));
     }
 
+    
     public void setFullDrawIndexUint32(VkBool32 fullDrawIndexUint32) {
-        setFullDrawIndexUint32(getVkAddress(), fullDrawIndexUint32.getVkAddress());
+        setFullDrawIndexUint32(getVkAddress(), fullDrawIndexUint32 != null ? fullDrawIndexUint32.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFullDrawIndexUint32(long address);
@@ -102,8 +106,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getImageCubeArray(getVkAddress()));
     }
 
+    
     public void setImageCubeArray(VkBool32 imageCubeArray) {
-        setImageCubeArray(getVkAddress(), imageCubeArray.getVkAddress());
+        setImageCubeArray(getVkAddress(), imageCubeArray != null ? imageCubeArray.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageCubeArray(long address);
@@ -113,8 +119,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getIndependentBlend(getVkAddress()));
     }
 
+    
     public void setIndependentBlend(VkBool32 independentBlend) {
-        setIndependentBlend(getVkAddress(), independentBlend.getVkAddress());
+        setIndependentBlend(getVkAddress(), independentBlend != null ? independentBlend.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getIndependentBlend(long address);
@@ -124,8 +132,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getGeometryShader(getVkAddress()));
     }
 
+    
     public void setGeometryShader(VkBool32 geometryShader) {
-        setGeometryShader(getVkAddress(), geometryShader.getVkAddress());
+        setGeometryShader(getVkAddress(), geometryShader != null ? geometryShader.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getGeometryShader(long address);
@@ -135,8 +145,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getTessellationShader(getVkAddress()));
     }
 
+    
     public void setTessellationShader(VkBool32 tessellationShader) {
-        setTessellationShader(getVkAddress(), tessellationShader.getVkAddress());
+        setTessellationShader(getVkAddress(), tessellationShader != null ? tessellationShader.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTessellationShader(long address);
@@ -146,8 +158,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSampleRateShading(getVkAddress()));
     }
 
+    
     public void setSampleRateShading(VkBool32 sampleRateShading) {
-        setSampleRateShading(getVkAddress(), sampleRateShading.getVkAddress());
+        setSampleRateShading(getVkAddress(), sampleRateShading != null ? sampleRateShading.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSampleRateShading(long address);
@@ -157,8 +171,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getDualSrcBlend(getVkAddress()));
     }
 
+    
     public void setDualSrcBlend(VkBool32 dualSrcBlend) {
-        setDualSrcBlend(getVkAddress(), dualSrcBlend.getVkAddress());
+        setDualSrcBlend(getVkAddress(), dualSrcBlend != null ? dualSrcBlend.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDualSrcBlend(long address);
@@ -168,8 +184,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getLogicOp(getVkAddress()));
     }
 
+    
     public void setLogicOp(VkBool32 logicOp) {
-        setLogicOp(getVkAddress(), logicOp.getVkAddress());
+        setLogicOp(getVkAddress(), logicOp != null ? logicOp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLogicOp(long address);
@@ -179,8 +197,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getMultiDrawIndirect(getVkAddress()));
     }
 
+    
     public void setMultiDrawIndirect(VkBool32 multiDrawIndirect) {
-        setMultiDrawIndirect(getVkAddress(), multiDrawIndirect.getVkAddress());
+        setMultiDrawIndirect(getVkAddress(), multiDrawIndirect != null ? multiDrawIndirect.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMultiDrawIndirect(long address);
@@ -190,8 +210,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getDrawIndirectFirstInstance(getVkAddress()));
     }
 
+    
     public void setDrawIndirectFirstInstance(VkBool32 drawIndirectFirstInstance) {
-        setDrawIndirectFirstInstance(getVkAddress(), drawIndirectFirstInstance.getVkAddress());
+        setDrawIndirectFirstInstance(getVkAddress(), drawIndirectFirstInstance != null ? drawIndirectFirstInstance.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDrawIndirectFirstInstance(long address);
@@ -201,8 +223,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getDepthClamp(getVkAddress()));
     }
 
+    
     public void setDepthClamp(VkBool32 depthClamp) {
-        setDepthClamp(getVkAddress(), depthClamp.getVkAddress());
+        setDepthClamp(getVkAddress(), depthClamp != null ? depthClamp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthClamp(long address);
@@ -212,8 +236,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getDepthBiasClamp(getVkAddress()));
     }
 
+    
     public void setDepthBiasClamp(VkBool32 depthBiasClamp) {
-        setDepthBiasClamp(getVkAddress(), depthBiasClamp.getVkAddress());
+        setDepthBiasClamp(getVkAddress(), depthBiasClamp != null ? depthBiasClamp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthBiasClamp(long address);
@@ -223,8 +249,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getFillModeNonSolid(getVkAddress()));
     }
 
+    
     public void setFillModeNonSolid(VkBool32 fillModeNonSolid) {
-        setFillModeNonSolid(getVkAddress(), fillModeNonSolid.getVkAddress());
+        setFillModeNonSolid(getVkAddress(), fillModeNonSolid != null ? fillModeNonSolid.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFillModeNonSolid(long address);
@@ -234,8 +262,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getDepthBounds(getVkAddress()));
     }
 
+    
     public void setDepthBounds(VkBool32 depthBounds) {
-        setDepthBounds(getVkAddress(), depthBounds.getVkAddress());
+        setDepthBounds(getVkAddress(), depthBounds != null ? depthBounds.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthBounds(long address);
@@ -245,8 +275,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getWideLines(getVkAddress()));
     }
 
+    
     public void setWideLines(VkBool32 wideLines) {
-        setWideLines(getVkAddress(), wideLines.getVkAddress());
+        setWideLines(getVkAddress(), wideLines != null ? wideLines.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getWideLines(long address);
@@ -256,8 +288,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getLargePoints(getVkAddress()));
     }
 
+    
     public void setLargePoints(VkBool32 largePoints) {
-        setLargePoints(getVkAddress(), largePoints.getVkAddress());
+        setLargePoints(getVkAddress(), largePoints != null ? largePoints.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLargePoints(long address);
@@ -267,8 +301,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getAlphaToOne(getVkAddress()));
     }
 
+    
     public void setAlphaToOne(VkBool32 alphaToOne) {
-        setAlphaToOne(getVkAddress(), alphaToOne.getVkAddress());
+        setAlphaToOne(getVkAddress(), alphaToOne != null ? alphaToOne.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAlphaToOne(long address);
@@ -278,8 +314,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getMultiViewport(getVkAddress()));
     }
 
+    
     public void setMultiViewport(VkBool32 multiViewport) {
-        setMultiViewport(getVkAddress(), multiViewport.getVkAddress());
+        setMultiViewport(getVkAddress(), multiViewport != null ? multiViewport.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMultiViewport(long address);
@@ -289,8 +327,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSamplerAnisotropy(getVkAddress()));
     }
 
+    
     public void setSamplerAnisotropy(VkBool32 samplerAnisotropy) {
-        setSamplerAnisotropy(getVkAddress(), samplerAnisotropy.getVkAddress());
+        setSamplerAnisotropy(getVkAddress(), samplerAnisotropy != null ? samplerAnisotropy.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSamplerAnisotropy(long address);
@@ -300,8 +340,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getTextureCompressionETC2(getVkAddress()));
     }
 
+    
     public void setTextureCompressionETC2(VkBool32 textureCompressionETC2) {
-        setTextureCompressionETC2(getVkAddress(), textureCompressionETC2.getVkAddress());
+        setTextureCompressionETC2(getVkAddress(), textureCompressionETC2 != null ? textureCompressionETC2.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTextureCompressionETC2(long address);
@@ -311,8 +353,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getTextureCompressionASTC_LDR(getVkAddress()));
     }
 
+    
     public void setTextureCompressionASTC_LDR(VkBool32 textureCompressionASTC_LDR) {
-        setTextureCompressionASTC_LDR(getVkAddress(), textureCompressionASTC_LDR.getVkAddress());
+        setTextureCompressionASTC_LDR(getVkAddress(), textureCompressionASTC_LDR != null ? textureCompressionASTC_LDR.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTextureCompressionASTC_LDR(long address);
@@ -322,8 +366,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getTextureCompressionBC(getVkAddress()));
     }
 
+    
     public void setTextureCompressionBC(VkBool32 textureCompressionBC) {
-        setTextureCompressionBC(getVkAddress(), textureCompressionBC.getVkAddress());
+        setTextureCompressionBC(getVkAddress(), textureCompressionBC != null ? textureCompressionBC.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTextureCompressionBC(long address);
@@ -333,8 +379,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getOcclusionQueryPrecise(getVkAddress()));
     }
 
+    
     public void setOcclusionQueryPrecise(VkBool32 occlusionQueryPrecise) {
-        setOcclusionQueryPrecise(getVkAddress(), occlusionQueryPrecise.getVkAddress());
+        setOcclusionQueryPrecise(getVkAddress(), occlusionQueryPrecise != null ? occlusionQueryPrecise.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOcclusionQueryPrecise(long address);
@@ -344,8 +392,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getPipelineStatisticsQuery(getVkAddress()));
     }
 
+    
     public void setPipelineStatisticsQuery(VkBool32 pipelineStatisticsQuery) {
-        setPipelineStatisticsQuery(getVkAddress(), pipelineStatisticsQuery.getVkAddress());
+        setPipelineStatisticsQuery(getVkAddress(), pipelineStatisticsQuery != null ? pipelineStatisticsQuery.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPipelineStatisticsQuery(long address);
@@ -355,8 +405,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getVertexPipelineStoresAndAtomics(getVkAddress()));
     }
 
+    
     public void setVertexPipelineStoresAndAtomics(VkBool32 vertexPipelineStoresAndAtomics) {
-        setVertexPipelineStoresAndAtomics(getVkAddress(), vertexPipelineStoresAndAtomics.getVkAddress());
+        setVertexPipelineStoresAndAtomics(getVkAddress(), vertexPipelineStoresAndAtomics != null ? vertexPipelineStoresAndAtomics.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getVertexPipelineStoresAndAtomics(long address);
@@ -366,8 +418,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getFragmentStoresAndAtomics(getVkAddress()));
     }
 
+    
     public void setFragmentStoresAndAtomics(VkBool32 fragmentStoresAndAtomics) {
-        setFragmentStoresAndAtomics(getVkAddress(), fragmentStoresAndAtomics.getVkAddress());
+        setFragmentStoresAndAtomics(getVkAddress(), fragmentStoresAndAtomics != null ? fragmentStoresAndAtomics.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFragmentStoresAndAtomics(long address);
@@ -377,8 +431,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderTessellationAndGeometryPointSize(getVkAddress()));
     }
 
+    
     public void setShaderTessellationAndGeometryPointSize(VkBool32 shaderTessellationAndGeometryPointSize) {
-        setShaderTessellationAndGeometryPointSize(getVkAddress(), shaderTessellationAndGeometryPointSize.getVkAddress());
+        setShaderTessellationAndGeometryPointSize(getVkAddress(), shaderTessellationAndGeometryPointSize != null ? shaderTessellationAndGeometryPointSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderTessellationAndGeometryPointSize(long address);
@@ -388,8 +444,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderImageGatherExtended(getVkAddress()));
     }
 
+    
     public void setShaderImageGatherExtended(VkBool32 shaderImageGatherExtended) {
-        setShaderImageGatherExtended(getVkAddress(), shaderImageGatherExtended.getVkAddress());
+        setShaderImageGatherExtended(getVkAddress(), shaderImageGatherExtended != null ? shaderImageGatherExtended.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderImageGatherExtended(long address);
@@ -399,8 +457,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderStorageImageExtendedFormats(getVkAddress()));
     }
 
+    
     public void setShaderStorageImageExtendedFormats(VkBool32 shaderStorageImageExtendedFormats) {
-        setShaderStorageImageExtendedFormats(getVkAddress(), shaderStorageImageExtendedFormats.getVkAddress());
+        setShaderStorageImageExtendedFormats(getVkAddress(), shaderStorageImageExtendedFormats != null ? shaderStorageImageExtendedFormats.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderStorageImageExtendedFormats(long address);
@@ -410,8 +470,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderStorageImageMultisample(getVkAddress()));
     }
 
+    
     public void setShaderStorageImageMultisample(VkBool32 shaderStorageImageMultisample) {
-        setShaderStorageImageMultisample(getVkAddress(), shaderStorageImageMultisample.getVkAddress());
+        setShaderStorageImageMultisample(getVkAddress(), shaderStorageImageMultisample != null ? shaderStorageImageMultisample.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderStorageImageMultisample(long address);
@@ -421,8 +483,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderStorageImageReadWithoutFormat(getVkAddress()));
     }
 
+    
     public void setShaderStorageImageReadWithoutFormat(VkBool32 shaderStorageImageReadWithoutFormat) {
-        setShaderStorageImageReadWithoutFormat(getVkAddress(), shaderStorageImageReadWithoutFormat.getVkAddress());
+        setShaderStorageImageReadWithoutFormat(getVkAddress(), shaderStorageImageReadWithoutFormat != null ? shaderStorageImageReadWithoutFormat.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderStorageImageReadWithoutFormat(long address);
@@ -432,8 +496,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderStorageImageWriteWithoutFormat(getVkAddress()));
     }
 
+    
     public void setShaderStorageImageWriteWithoutFormat(VkBool32 shaderStorageImageWriteWithoutFormat) {
-        setShaderStorageImageWriteWithoutFormat(getVkAddress(), shaderStorageImageWriteWithoutFormat.getVkAddress());
+        setShaderStorageImageWriteWithoutFormat(getVkAddress(), shaderStorageImageWriteWithoutFormat != null ? shaderStorageImageWriteWithoutFormat.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderStorageImageWriteWithoutFormat(long address);
@@ -443,8 +509,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderUniformBufferArrayDynamicIndexing(getVkAddress()));
     }
 
+    
     public void setShaderUniformBufferArrayDynamicIndexing(VkBool32 shaderUniformBufferArrayDynamicIndexing) {
-        setShaderUniformBufferArrayDynamicIndexing(getVkAddress(), shaderUniformBufferArrayDynamicIndexing.getVkAddress());
+        setShaderUniformBufferArrayDynamicIndexing(getVkAddress(), shaderUniformBufferArrayDynamicIndexing != null ? shaderUniformBufferArrayDynamicIndexing.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderUniformBufferArrayDynamicIndexing(long address);
@@ -454,8 +522,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderSampledImageArrayDynamicIndexing(getVkAddress()));
     }
 
+    
     public void setShaderSampledImageArrayDynamicIndexing(VkBool32 shaderSampledImageArrayDynamicIndexing) {
-        setShaderSampledImageArrayDynamicIndexing(getVkAddress(), shaderSampledImageArrayDynamicIndexing.getVkAddress());
+        setShaderSampledImageArrayDynamicIndexing(getVkAddress(), shaderSampledImageArrayDynamicIndexing != null ? shaderSampledImageArrayDynamicIndexing.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderSampledImageArrayDynamicIndexing(long address);
@@ -465,8 +535,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderStorageBufferArrayDynamicIndexing(getVkAddress()));
     }
 
+    
     public void setShaderStorageBufferArrayDynamicIndexing(VkBool32 shaderStorageBufferArrayDynamicIndexing) {
-        setShaderStorageBufferArrayDynamicIndexing(getVkAddress(), shaderStorageBufferArrayDynamicIndexing.getVkAddress());
+        setShaderStorageBufferArrayDynamicIndexing(getVkAddress(), shaderStorageBufferArrayDynamicIndexing != null ? shaderStorageBufferArrayDynamicIndexing.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderStorageBufferArrayDynamicIndexing(long address);
@@ -476,8 +548,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderStorageImageArrayDynamicIndexing(getVkAddress()));
     }
 
+    
     public void setShaderStorageImageArrayDynamicIndexing(VkBool32 shaderStorageImageArrayDynamicIndexing) {
-        setShaderStorageImageArrayDynamicIndexing(getVkAddress(), shaderStorageImageArrayDynamicIndexing.getVkAddress());
+        setShaderStorageImageArrayDynamicIndexing(getVkAddress(), shaderStorageImageArrayDynamicIndexing != null ? shaderStorageImageArrayDynamicIndexing.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderStorageImageArrayDynamicIndexing(long address);
@@ -487,8 +561,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderClipDistance(getVkAddress()));
     }
 
+    
     public void setShaderClipDistance(VkBool32 shaderClipDistance) {
-        setShaderClipDistance(getVkAddress(), shaderClipDistance.getVkAddress());
+        setShaderClipDistance(getVkAddress(), shaderClipDistance != null ? shaderClipDistance.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderClipDistance(long address);
@@ -498,8 +574,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderCullDistance(getVkAddress()));
     }
 
+    
     public void setShaderCullDistance(VkBool32 shaderCullDistance) {
-        setShaderCullDistance(getVkAddress(), shaderCullDistance.getVkAddress());
+        setShaderCullDistance(getVkAddress(), shaderCullDistance != null ? shaderCullDistance.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderCullDistance(long address);
@@ -509,8 +587,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderFloat64(getVkAddress()));
     }
 
+    
     public void setShaderFloat64(VkBool32 shaderFloat64) {
-        setShaderFloat64(getVkAddress(), shaderFloat64.getVkAddress());
+        setShaderFloat64(getVkAddress(), shaderFloat64 != null ? shaderFloat64.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderFloat64(long address);
@@ -520,8 +600,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderInt64(getVkAddress()));
     }
 
+    
     public void setShaderInt64(VkBool32 shaderInt64) {
-        setShaderInt64(getVkAddress(), shaderInt64.getVkAddress());
+        setShaderInt64(getVkAddress(), shaderInt64 != null ? shaderInt64.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderInt64(long address);
@@ -531,8 +613,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderInt16(getVkAddress()));
     }
 
+    
     public void setShaderInt16(VkBool32 shaderInt16) {
-        setShaderInt16(getVkAddress(), shaderInt16.getVkAddress());
+        setShaderInt16(getVkAddress(), shaderInt16 != null ? shaderInt16.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderInt16(long address);
@@ -542,8 +626,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderResourceResidency(getVkAddress()));
     }
 
+    
     public void setShaderResourceResidency(VkBool32 shaderResourceResidency) {
-        setShaderResourceResidency(getVkAddress(), shaderResourceResidency.getVkAddress());
+        setShaderResourceResidency(getVkAddress(), shaderResourceResidency != null ? shaderResourceResidency.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderResourceResidency(long address);
@@ -553,8 +639,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getShaderResourceMinLod(getVkAddress()));
     }
 
+    
     public void setShaderResourceMinLod(VkBool32 shaderResourceMinLod) {
-        setShaderResourceMinLod(getVkAddress(), shaderResourceMinLod.getVkAddress());
+        setShaderResourceMinLod(getVkAddress(), shaderResourceMinLod != null ? shaderResourceMinLod.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderResourceMinLod(long address);
@@ -564,8 +652,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSparseBinding(getVkAddress()));
     }
 
+    
     public void setSparseBinding(VkBool32 sparseBinding) {
-        setSparseBinding(getVkAddress(), sparseBinding.getVkAddress());
+        setSparseBinding(getVkAddress(), sparseBinding != null ? sparseBinding.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSparseBinding(long address);
@@ -575,8 +665,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSparseResidencyBuffer(getVkAddress()));
     }
 
+    
     public void setSparseResidencyBuffer(VkBool32 sparseResidencyBuffer) {
-        setSparseResidencyBuffer(getVkAddress(), sparseResidencyBuffer.getVkAddress());
+        setSparseResidencyBuffer(getVkAddress(), sparseResidencyBuffer != null ? sparseResidencyBuffer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSparseResidencyBuffer(long address);
@@ -586,8 +678,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSparseResidencyImage2D(getVkAddress()));
     }
 
+    
     public void setSparseResidencyImage2D(VkBool32 sparseResidencyImage2D) {
-        setSparseResidencyImage2D(getVkAddress(), sparseResidencyImage2D.getVkAddress());
+        setSparseResidencyImage2D(getVkAddress(), sparseResidencyImage2D != null ? sparseResidencyImage2D.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSparseResidencyImage2D(long address);
@@ -597,8 +691,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSparseResidencyImage3D(getVkAddress()));
     }
 
+    
     public void setSparseResidencyImage3D(VkBool32 sparseResidencyImage3D) {
-        setSparseResidencyImage3D(getVkAddress(), sparseResidencyImage3D.getVkAddress());
+        setSparseResidencyImage3D(getVkAddress(), sparseResidencyImage3D != null ? sparseResidencyImage3D.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSparseResidencyImage3D(long address);
@@ -608,8 +704,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSparseResidency2Samples(getVkAddress()));
     }
 
+    
     public void setSparseResidency2Samples(VkBool32 sparseResidency2Samples) {
-        setSparseResidency2Samples(getVkAddress(), sparseResidency2Samples.getVkAddress());
+        setSparseResidency2Samples(getVkAddress(), sparseResidency2Samples != null ? sparseResidency2Samples.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSparseResidency2Samples(long address);
@@ -619,8 +717,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSparseResidency4Samples(getVkAddress()));
     }
 
+    
     public void setSparseResidency4Samples(VkBool32 sparseResidency4Samples) {
-        setSparseResidency4Samples(getVkAddress(), sparseResidency4Samples.getVkAddress());
+        setSparseResidency4Samples(getVkAddress(), sparseResidency4Samples != null ? sparseResidency4Samples.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSparseResidency4Samples(long address);
@@ -630,8 +730,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSparseResidency8Samples(getVkAddress()));
     }
 
+    
     public void setSparseResidency8Samples(VkBool32 sparseResidency8Samples) {
-        setSparseResidency8Samples(getVkAddress(), sparseResidency8Samples.getVkAddress());
+        setSparseResidency8Samples(getVkAddress(), sparseResidency8Samples != null ? sparseResidency8Samples.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSparseResidency8Samples(long address);
@@ -641,8 +743,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSparseResidency16Samples(getVkAddress()));
     }
 
+    
     public void setSparseResidency16Samples(VkBool32 sparseResidency16Samples) {
-        setSparseResidency16Samples(getVkAddress(), sparseResidency16Samples.getVkAddress());
+        setSparseResidency16Samples(getVkAddress(), sparseResidency16Samples != null ? sparseResidency16Samples.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSparseResidency16Samples(long address);
@@ -652,8 +756,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getSparseResidencyAliased(getVkAddress()));
     }
 
+    
     public void setSparseResidencyAliased(VkBool32 sparseResidencyAliased) {
-        setSparseResidencyAliased(getVkAddress(), sparseResidencyAliased.getVkAddress());
+        setSparseResidencyAliased(getVkAddress(), sparseResidencyAliased != null ? sparseResidencyAliased.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSparseResidencyAliased(long address);
@@ -663,8 +769,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getVariableMultisampleRate(getVkAddress()));
     }
 
+    
     public void setVariableMultisampleRate(VkBool32 variableMultisampleRate) {
-        setVariableMultisampleRate(getVkAddress(), variableMultisampleRate.getVkAddress());
+        setVariableMultisampleRate(getVkAddress(), variableMultisampleRate != null ? variableMultisampleRate.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getVariableMultisampleRate(long address);
@@ -674,8 +782,10 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getInheritedQueries(getVkAddress()));
     }
 
+    
     public void setInheritedQueries(VkBool32 inheritedQueries) {
-        setInheritedQueries(getVkAddress(), inheritedQueries.getVkAddress());
+        setInheritedQueries(getVkAddress(), inheritedQueries != null ? inheritedQueries.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getInheritedQueries(long address);
@@ -688,7 +798,12 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDeviceFeatures.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceFeatures o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -729,11 +844,11 @@ public class VkPhysicalDeviceFeatures extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceFeatures.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

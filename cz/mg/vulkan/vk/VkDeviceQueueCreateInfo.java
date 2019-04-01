@@ -9,11 +9,11 @@ public class VkDeviceQueueCreateInfo extends VkObject {
     }
 
     public VkDeviceQueueCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDeviceQueueCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -42,8 +44,10 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -53,8 +57,10 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         return new VkDeviceQueueCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkDeviceQueueCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -64,8 +70,10 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getQueueFamilyIndex(getVkAddress()));
     }
 
+    
     public void setQueueFamilyIndex(VkUInt32 queueFamilyIndex) {
-        setQueueFamilyIndex(getVkAddress(), queueFamilyIndex.getVkAddress());
+        setQueueFamilyIndex(getVkAddress(), queueFamilyIndex != null ? queueFamilyIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQueueFamilyIndex(long address);
@@ -75,19 +83,23 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getQueueCount(getVkAddress()));
     }
 
+    
     public void setQueueCount(VkUInt32 queueCount) {
-        setQueueCount(getVkAddress(), queueCount.getVkAddress());
+        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQueueCount(long address);
     private static native void setQueueCount(long address, long queueCount);
 
-    public VkFloat.Array getPQueuePriorities() {
-        return new VkFloat.Array(getVkMemory(), getPQueuePriorities(getVkAddress()), getQueueCount().getValue());
+    public VkFloat getPQueuePriorities() {
+        return new VkFloat(getVkMemory(), getPQueuePriorities(getVkAddress()));
     }
 
+    private VkObject pQueuePriorities = null;
     public void setPQueuePriorities(VkFloat pQueuePriorities) {
-        setPQueuePriorities(getVkAddress(), pQueuePriorities.getVkAddress());
+        setPQueuePriorities(getVkAddress(), pQueuePriorities != null ? pQueuePriorities.getVkAddress() : VkPointer.NULL);
+        this.pQueuePriorities = pQueuePriorities;
     }
 
     private static native long getPQueuePriorities(long address);
@@ -100,7 +112,12 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDeviceQueueCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDeviceQueueCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkDeviceQueueCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceQueueCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

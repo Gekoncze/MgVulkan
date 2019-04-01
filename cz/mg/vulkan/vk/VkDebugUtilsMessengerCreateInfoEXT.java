@@ -9,11 +9,11 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
     }
 
     public VkDebugUtilsMessengerCreateInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDebugUtilsMessengerCreateInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,8 +58,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         return new VkDebugUtilsMessengerCreateFlagsEXT(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkDebugUtilsMessengerCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -65,8 +71,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         return new VkDebugUtilsMessageSeverityFlagsEXT(getVkMemory(), getMessageSeverity(getVkAddress()));
     }
 
+    
     public void setMessageSeverity(VkDebugUtilsMessageSeverityFlagsEXT messageSeverity) {
-        setMessageSeverity(getVkAddress(), messageSeverity.getVkAddress());
+        setMessageSeverity(getVkAddress(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMessageSeverity(long address);
@@ -76,8 +84,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         return new VkDebugUtilsMessageTypeFlagsEXT(getVkMemory(), getMessageType(getVkAddress()));
     }
 
+    
     public void setMessageType(VkDebugUtilsMessageTypeFlagsEXT messageType) {
-        setMessageType(getVkAddress(), messageType.getVkAddress());
+        setMessageType(getVkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMessageType(long address);
@@ -87,8 +97,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         return new PFNvkDebugUtilsMessengerCallbackEXT(getVkMemory(), getPfnUserCallback(getVkAddress()));
     }
 
+    
     public void setPfnUserCallback(PFNvkDebugUtilsMessengerCallbackEXT pfnUserCallback) {
-        setPfnUserCallback(getVkAddress(), pfnUserCallback.getVkAddress());
+        setPfnUserCallback(getVkAddress(), pfnUserCallback != null ? pfnUserCallback.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPfnUserCallback(long address);
@@ -98,8 +110,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPUserData(getVkAddress()));
     }
 
+    private VkObject pUserData = null;
     public void setPUserData(VkObject pUserData) {
-        setPUserData(getVkAddress(), pUserData.getVkAddress());
+        setPUserData(getVkAddress(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL);
+        this.pUserData = pUserData;
     }
 
     private static native long getPUserData(long address);
@@ -112,7 +126,12 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDebugUtilsMessengerCreateInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDebugUtilsMessengerCreateInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugUtilsMessengerCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

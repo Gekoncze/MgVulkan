@@ -1,44 +1,28 @@
 package cz.mg.vulkan.vk;
 
 public class VkObject {
-    private final long sizeof;
     private final VkMemory vkmemory;
     private final long vkaddress;
 
     public VkObject(long size) {
-        this.sizeof = size;
         this.vkmemory = new VkMemory(size);
         this.vkaddress = vkmemory.getAddress();
-        if(vkmemory != null) vkmemory.check(vkaddress, size);
+        if(vkmemory != null) vkmemory.check(vkaddress, 1);
         if(vkmemory != null) VkResourceManager.getInstance().add(this, vkmemory);
     }
 
-    public VkObject(long size, VkMemory vkmemory){
-        this.sizeof = size;
+    public VkObject(VkMemory vkmemory){
         this.vkmemory = vkmemory;
         this.vkaddress = vkmemory.getAddress();
-        if(vkmemory != null) vkmemory.check(vkaddress, size);
-        if(vkmemory != null) VkResourceManager.getInstance().add(this, vkmemory);
-    }
-
-    public VkObject(long size, VkMemory vkmemory, long vkaddress){
-        this.sizeof = size;
-        this.vkmemory = vkmemory;
-        this.vkaddress = vkaddress;
-        if(vkmemory != null) vkmemory.check(vkaddress, size);
+        if(vkmemory != null) vkmemory.check(vkaddress, 1);
         if(vkmemory != null) VkResourceManager.getInstance().add(this, vkmemory);
     }
 
     public VkObject(VkMemory vkmemory, long vkaddress){
-        this.sizeof = 0;
         this.vkmemory = vkmemory;
         this.vkaddress = vkaddress;
-        if(vkmemory != null) vkmemory.check(vkaddress, 0);
+        if(vkmemory != null) vkmemory.check(vkaddress, 1);
         if(vkmemory != null) VkResourceManager.getInstance().add(this, vkmemory);
-    }
-
-    public long getSizeof() {
-        return sizeof;
     }
 
     public VkMemory getVkMemory() {
@@ -65,11 +49,11 @@ public class VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObject.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

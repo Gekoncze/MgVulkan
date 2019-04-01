@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_getSType(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkBindBufferMemoryInfo* o = (VkBindBufferMemoryInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_setSType(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkBindBufferMemoryInfo* o = (VkBindBufferMemoryInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindBufferMemoryInfo* o = (VkBindBufferMemoryInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_setPNext(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkBindBufferMemoryInfo* o = (VkBindBufferMemoryInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_getBuffer(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindBufferMemoryInfo* o = (VkBindBufferMemoryInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->buffer));
+    return jniPointerToLong(&o->buffer);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_setBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_setBuffer(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkBindBufferMemoryInfo* o = (VkBindBufferMemoryInfo*)jniLongToPointer(address);
-    memcpy(&o->buffer, jniLongToPointer(valueAddress), sizeof(o->buffer));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->buffer, valuePointer, sizeof(o->buffer));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_getMemory(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindBufferMemoryInfo* o = (VkBindBufferMemoryInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->memory));
+    return jniPointerToLong(&o->memory);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_setMemory(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_setMemory(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkBindBufferMemoryInfo* o = (VkBindBufferMemoryInfo*)jniLongToPointer(address);
-    memcpy(&o->memory, jniLongToPointer(valueAddress), sizeof(o->memory));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->memory, valuePointer, sizeof(o->memory));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_getMemoryOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindBufferMemoryInfo* o = (VkBindBufferMemoryInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->memoryOffset));
+    return jniPointerToLong(&o->memoryOffset);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_setMemoryOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkBindBufferMemoryInfo_setMemoryOffset(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkBindBufferMemoryInfo* o = (VkBindBufferMemoryInfo*)jniLongToPointer(address);
-    memcpy(&o->memoryOffset, jniLongToPointer(valueAddress), sizeof(o->memoryOffset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->memoryOffset, valuePointer, sizeof(o->memoryOffset));
 }
+
 

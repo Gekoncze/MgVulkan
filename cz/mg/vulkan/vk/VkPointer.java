@@ -1,7 +1,8 @@
 package cz.mg.vulkan.vk;
 
 public class VkPointer extends VkObject {
-    public static final long NULL = 0;
+    public static final long NULL = getNullValue();
+    public static final long NULL_ADDRESS = getNullAddress();
 
     public VkPointer() {
         super(sizeof());
@@ -13,11 +14,11 @@ public class VkPointer extends VkObject {
     }
 
     public VkPointer(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPointer(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
     public long getValue() {
@@ -31,6 +32,8 @@ public class VkPointer extends VkObject {
     public static native long sizeof();
     private static native long getValue(long vkaddress);
     private static native void setValue(long vkaddress, long value);
+    private static native long getNullValue();
+    private static native long getNullAddress();
 
     @Override
     public String toString() {
@@ -41,7 +44,12 @@ public class VkPointer extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPointer.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPointer o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 

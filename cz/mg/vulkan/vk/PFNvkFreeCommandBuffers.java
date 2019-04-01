@@ -25,7 +25,7 @@ public class PFNvkFreeCommandBuffers extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkCommandPool commandPool, VkUInt32 commandBufferCount, VkCommandBuffer pCommandBuffers){
-        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), commandPool != null ? commandPool.getVkAddress() : VkCommandPool.NULL.getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.NULL, pCommandBuffers != null ? pCommandBuffers.getVkAddress() : VkCommandBuffer.NULL.getVkAddress());
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, commandPool != null ? commandPool.getVkAddress() : VkPointer.NULL_ADDRESS, commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.NULL_ADDRESS, pCommandBuffers != null ? pCommandBuffers.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long commandPool, long commandBufferCount, long pCommandBuffers);

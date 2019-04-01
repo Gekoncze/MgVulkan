@@ -9,11 +9,11 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
     }
 
     public VkSamplerYcbcrConversionCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSamplerYcbcrConversionCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -35,8 +35,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -46,8 +48,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -57,8 +61,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
     }
 
+    
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format.getVkAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFormat(long address);
@@ -68,8 +74,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         return new VkSamplerYcbcrModelConversion(getVkMemory(), getYcbcrModel(getVkAddress()));
     }
 
+    
     public void setYcbcrModel(VkSamplerYcbcrModelConversion ycbcrModel) {
-        setYcbcrModel(getVkAddress(), ycbcrModel.getVkAddress());
+        setYcbcrModel(getVkAddress(), ycbcrModel != null ? ycbcrModel.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getYcbcrModel(long address);
@@ -79,8 +87,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         return new VkSamplerYcbcrRange(getVkMemory(), getYcbcrRange(getVkAddress()));
     }
 
+    
     public void setYcbcrRange(VkSamplerYcbcrRange ycbcrRange) {
-        setYcbcrRange(getVkAddress(), ycbcrRange.getVkAddress());
+        setYcbcrRange(getVkAddress(), ycbcrRange != null ? ycbcrRange.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getYcbcrRange(long address);
@@ -90,8 +100,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         return new VkComponentMapping(getVkMemory(), getComponents(getVkAddress()));
     }
 
+    
     public void setComponents(VkComponentMapping components) {
-        setComponents(getVkAddress(), components.getVkAddress());
+        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getComponents(long address);
@@ -101,8 +113,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         return new VkChromaLocation(getVkMemory(), getXChromaOffset(getVkAddress()));
     }
 
+    
     public void setXChromaOffset(VkChromaLocation xChromaOffset) {
-        setXChromaOffset(getVkAddress(), xChromaOffset.getVkAddress());
+        setXChromaOffset(getVkAddress(), xChromaOffset != null ? xChromaOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getXChromaOffset(long address);
@@ -112,8 +126,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         return new VkChromaLocation(getVkMemory(), getYChromaOffset(getVkAddress()));
     }
 
+    
     public void setYChromaOffset(VkChromaLocation yChromaOffset) {
-        setYChromaOffset(getVkAddress(), yChromaOffset.getVkAddress());
+        setYChromaOffset(getVkAddress(), yChromaOffset != null ? yChromaOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getYChromaOffset(long address);
@@ -123,8 +139,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         return new VkFilter(getVkMemory(), getChromaFilter(getVkAddress()));
     }
 
+    
     public void setChromaFilter(VkFilter chromaFilter) {
-        setChromaFilter(getVkAddress(), chromaFilter.getVkAddress());
+        setChromaFilter(getVkAddress(), chromaFilter != null ? chromaFilter.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getChromaFilter(long address);
@@ -134,8 +152,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         return new VkBool32(getVkMemory(), getForceExplicitReconstruction(getVkAddress()));
     }
 
+    
     public void setForceExplicitReconstruction(VkBool32 forceExplicitReconstruction) {
-        setForceExplicitReconstruction(getVkAddress(), forceExplicitReconstruction.getVkAddress());
+        setForceExplicitReconstruction(getVkAddress(), forceExplicitReconstruction != null ? forceExplicitReconstruction.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getForceExplicitReconstruction(long address);
@@ -148,7 +168,12 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSamplerYcbcrConversionCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSamplerYcbcrConversionCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -189,11 +214,11 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSamplerYcbcrConversionCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

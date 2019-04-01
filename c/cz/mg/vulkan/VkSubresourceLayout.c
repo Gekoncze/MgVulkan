@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getOffset(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkSubresourceLayout* o = (VkSubresourceLayout*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->offset));
+    return jniPointerToLong(&o->offset);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setOffset(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkSubresourceLayout* o = (VkSubresourceLayout*)jniLongToPointer(address);
-    memcpy(&o->offset, jniLongToPointer(valueAddress), sizeof(o->offset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubresourceLayout* o = (VkSubresourceLayout*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->size));
+    return jniPointerToLong(&o->size);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setSize(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkSubresourceLayout* o = (VkSubresourceLayout*)jniLongToPointer(address);
-    memcpy(&o->size, jniLongToPointer(valueAddress), sizeof(o->size));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->size, valuePointer, sizeof(o->size));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getRowPitch(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubresourceLayout* o = (VkSubresourceLayout*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->rowPitch));
+    return jniPointerToLong(&o->rowPitch);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setRowPitch(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setRowPitch(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkSubresourceLayout* o = (VkSubresourceLayout*)jniLongToPointer(address);
-    memcpy(&o->rowPitch, jniLongToPointer(valueAddress), sizeof(o->rowPitch));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->rowPitch, valuePointer, sizeof(o->rowPitch));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getArrayPitch(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubresourceLayout* o = (VkSubresourceLayout*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->arrayPitch));
+    return jniPointerToLong(&o->arrayPitch);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setArrayPitch(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setArrayPitch(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkSubresourceLayout* o = (VkSubresourceLayout*)jniLongToPointer(address);
-    memcpy(&o->arrayPitch, jniLongToPointer(valueAddress), sizeof(o->arrayPitch));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->arrayPitch, valuePointer, sizeof(o->arrayPitch));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getDepthPitch(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubresourceLayout* o = (VkSubresourceLayout*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->depthPitch));
+    return jniPointerToLong(&o->depthPitch);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setDepthPitch(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setDepthPitch(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkSubresourceLayout* o = (VkSubresourceLayout*)jniLongToPointer(address);
-    memcpy(&o->depthPitch, jniLongToPointer(valueAddress), sizeof(o->depthPitch));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->depthPitch, valuePointer, sizeof(o->depthPitch));
 }
+
 

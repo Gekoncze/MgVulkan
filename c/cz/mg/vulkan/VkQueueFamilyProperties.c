@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_getQueueFlags(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkQueueFamilyProperties* o = (VkQueueFamilyProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->queueFlags));
+    return jniPointerToLong(&o->queueFlags);
 }
 
 void Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_setQueueFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_setQueueFlags(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkQueueFamilyProperties* o = (VkQueueFamilyProperties*)jniLongToPointer(address);
-    memcpy(&o->queueFlags, jniLongToPointer(valueAddress), sizeof(o->queueFlags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->queueFlags, valuePointer, sizeof(o->queueFlags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_getQueueCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkQueueFamilyProperties* o = (VkQueueFamilyProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->queueCount));
+    return jniPointerToLong(&o->queueCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_setQueueCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_setQueueCount(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkQueueFamilyProperties* o = (VkQueueFamilyProperties*)jniLongToPointer(address);
-    memcpy(&o->queueCount, jniLongToPointer(valueAddress), sizeof(o->queueCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->queueCount, valuePointer, sizeof(o->queueCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_getTimestampValidBits(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkQueueFamilyProperties* o = (VkQueueFamilyProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->timestampValidBits));
+    return jniPointerToLong(&o->timestampValidBits);
 }
 
 void Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_setTimestampValidBits(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_setTimestampValidBits(JNIEnv* 
     (void)env;
     (void)jc;
     VkQueueFamilyProperties* o = (VkQueueFamilyProperties*)jniLongToPointer(address);
-    memcpy(&o->timestampValidBits, jniLongToPointer(valueAddress), sizeof(o->timestampValidBits));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->timestampValidBits, valuePointer, sizeof(o->timestampValidBits));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_getMinImageTransferGranularity(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkQueueFamilyProperties* o = (VkQueueFamilyProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->minImageTransferGranularity));
+    return jniPointerToLong(&o->minImageTransferGranularity);
 }
 
 void Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_setMinImageTransferGranularity(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkQueueFamilyProperties_setMinImageTransferGranularity
     (void)env;
     (void)jc;
     VkQueueFamilyProperties* o = (VkQueueFamilyProperties*)jniLongToPointer(address);
-    memcpy(&o->minImageTransferGranularity, jniLongToPointer(valueAddress), sizeof(o->minImageTransferGranularity));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->minImageTransferGranularity, valuePointer, sizeof(o->minImageTransferGranularity));
 }
+
 

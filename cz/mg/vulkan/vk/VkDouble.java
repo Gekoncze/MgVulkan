@@ -6,11 +6,11 @@ public class VkDouble extends VkObject {
     }
 
     public VkDouble(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDouble(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -40,7 +40,12 @@ public class VkDouble extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDouble.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDouble o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -81,11 +86,11 @@ public class VkDouble extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDouble.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

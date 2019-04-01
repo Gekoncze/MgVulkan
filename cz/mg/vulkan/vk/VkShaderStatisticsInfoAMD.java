@@ -9,11 +9,11 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
     }
 
     public VkShaderStatisticsInfoAMD(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkShaderStatisticsInfoAMD(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         return new VkShaderStageFlags(getVkMemory(), getShaderStageMask(getVkAddress()));
     }
 
+    
     public void setShaderStageMask(VkShaderStageFlags shaderStageMask) {
-        setShaderStageMask(getVkAddress(), shaderStageMask.getVkAddress());
+        setShaderStageMask(getVkAddress(), shaderStageMask != null ? shaderStageMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getShaderStageMask(long address);
@@ -43,8 +45,10 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         return new VkShaderResourceUsageAMD(getVkMemory(), getResourceUsage(getVkAddress()));
     }
 
+    
     public void setResourceUsage(VkShaderResourceUsageAMD resourceUsage) {
-        setResourceUsage(getVkAddress(), resourceUsage.getVkAddress());
+        setResourceUsage(getVkAddress(), resourceUsage != null ? resourceUsage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getResourceUsage(long address);
@@ -54,8 +58,10 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         return new VkUInt32(getVkMemory(), getNumPhysicalVgprs(getVkAddress()));
     }
 
+    
     public void setNumPhysicalVgprs(VkUInt32 numPhysicalVgprs) {
-        setNumPhysicalVgprs(getVkAddress(), numPhysicalVgprs.getVkAddress());
+        setNumPhysicalVgprs(getVkAddress(), numPhysicalVgprs != null ? numPhysicalVgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getNumPhysicalVgprs(long address);
@@ -65,8 +71,10 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         return new VkUInt32(getVkMemory(), getNumPhysicalSgprs(getVkAddress()));
     }
 
+    
     public void setNumPhysicalSgprs(VkUInt32 numPhysicalSgprs) {
-        setNumPhysicalSgprs(getVkAddress(), numPhysicalSgprs.getVkAddress());
+        setNumPhysicalSgprs(getVkAddress(), numPhysicalSgprs != null ? numPhysicalSgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getNumPhysicalSgprs(long address);
@@ -76,8 +84,10 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         return new VkUInt32(getVkMemory(), getNumAvailableVgprs(getVkAddress()));
     }
 
+    
     public void setNumAvailableVgprs(VkUInt32 numAvailableVgprs) {
-        setNumAvailableVgprs(getVkAddress(), numAvailableVgprs.getVkAddress());
+        setNumAvailableVgprs(getVkAddress(), numAvailableVgprs != null ? numAvailableVgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getNumAvailableVgprs(long address);
@@ -87,8 +97,10 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         return new VkUInt32(getVkMemory(), getNumAvailableSgprs(getVkAddress()));
     }
 
+    
     public void setNumAvailableSgprs(VkUInt32 numAvailableSgprs) {
-        setNumAvailableSgprs(getVkAddress(), numAvailableSgprs.getVkAddress());
+        setNumAvailableSgprs(getVkAddress(), numAvailableSgprs != null ? numAvailableSgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getNumAvailableSgprs(long address);
@@ -98,8 +110,10 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         return new VkUInt32(getVkMemory(), getComputeWorkGroupSize(getVkAddress()));
     }
 
+    
     public void setComputeWorkGroupSize(VkUInt32 computeWorkGroupSize) {
-        setComputeWorkGroupSize(getVkAddress(), computeWorkGroupSize.getVkAddress());
+        setComputeWorkGroupSize(getVkAddress(), computeWorkGroupSize != null ? computeWorkGroupSize.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getComputeWorkGroupSize(long address);
@@ -112,7 +126,12 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkShaderStatisticsInfoAMD.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkShaderStatisticsInfoAMD o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkShaderStatisticsInfoAMD.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

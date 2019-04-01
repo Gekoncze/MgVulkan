@@ -9,11 +9,11 @@ public class VkVertexInputBindingDescription extends VkObject {
     }
 
     public VkVertexInputBindingDescription(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkVertexInputBindingDescription(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkVertexInputBindingDescription extends VkObject {
         return new VkUInt32(getVkMemory(), getBinding(getVkAddress()));
     }
 
+    
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding.getVkAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBinding(long address);
@@ -39,8 +41,10 @@ public class VkVertexInputBindingDescription extends VkObject {
         return new VkUInt32(getVkMemory(), getStride(getVkAddress()));
     }
 
+    
     public void setStride(VkUInt32 stride) {
-        setStride(getVkAddress(), stride.getVkAddress());
+        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getStride(long address);
@@ -50,8 +54,10 @@ public class VkVertexInputBindingDescription extends VkObject {
         return new VkVertexInputRate(getVkMemory(), getInputRate(getVkAddress()));
     }
 
+    
     public void setInputRate(VkVertexInputRate inputRate) {
-        setInputRate(getVkAddress(), inputRate.getVkAddress());
+        setInputRate(getVkAddress(), inputRate != null ? inputRate.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getInputRate(long address);
@@ -64,7 +70,12 @@ public class VkVertexInputBindingDescription extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkVertexInputBindingDescription.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkVertexInputBindingDescription o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkVertexInputBindingDescription extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkVertexInputBindingDescription.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

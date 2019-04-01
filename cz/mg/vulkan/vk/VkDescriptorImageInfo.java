@@ -9,11 +9,11 @@ public class VkDescriptorImageInfo extends VkObject {
     }
 
     public VkDescriptorImageInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDescriptorImageInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkDescriptorImageInfo extends VkObject {
         return new VkSampler(getVkMemory(), getSampler(getVkAddress()));
     }
 
+    
     public void setSampler(VkSampler sampler) {
-        setSampler(getVkAddress(), sampler.getVkAddress());
+        setSampler(getVkAddress(), sampler != null ? sampler.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSampler(long address);
@@ -39,8 +41,10 @@ public class VkDescriptorImageInfo extends VkObject {
         return new VkImageView(getVkMemory(), getImageView(getVkAddress()));
     }
 
+    
     public void setImageView(VkImageView imageView) {
-        setImageView(getVkAddress(), imageView.getVkAddress());
+        setImageView(getVkAddress(), imageView != null ? imageView.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageView(long address);
@@ -50,8 +54,10 @@ public class VkDescriptorImageInfo extends VkObject {
         return new VkImageLayout(getVkMemory(), getImageLayout(getVkAddress()));
     }
 
+    
     public void setImageLayout(VkImageLayout imageLayout) {
-        setImageLayout(getVkAddress(), imageLayout.getVkAddress());
+        setImageLayout(getVkAddress(), imageLayout != null ? imageLayout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageLayout(long address);
@@ -64,7 +70,12 @@ public class VkDescriptorImageInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDescriptorImageInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorImageInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkDescriptorImageInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorImageInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

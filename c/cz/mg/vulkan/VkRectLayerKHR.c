@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkRectLayerKHR_getOffset(JNIEnv* env, jclass jc, jlon
     (void)env;
     (void)jc;
     VkRectLayerKHR* o = (VkRectLayerKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->offset));
+    return jniPointerToLong(&o->offset);
 }
 
 void Java_cz_mg_vulkan_vk_VkRectLayerKHR_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkRectLayerKHR_setOffset(JNIEnv* env, jclass jc, jlong
     (void)env;
     (void)jc;
     VkRectLayerKHR* o = (VkRectLayerKHR*)jniLongToPointer(address);
-    memcpy(&o->offset, jniLongToPointer(valueAddress), sizeof(o->offset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRectLayerKHR_getExtent(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRectLayerKHR* o = (VkRectLayerKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->extent));
+    return jniPointerToLong(&o->extent);
 }
 
 void Java_cz_mg_vulkan_vk_VkRectLayerKHR_setExtent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkRectLayerKHR_setExtent(JNIEnv* env, jclass jc, jlong
     (void)env;
     (void)jc;
     VkRectLayerKHR* o = (VkRectLayerKHR*)jniLongToPointer(address);
-    memcpy(&o->extent, jniLongToPointer(valueAddress), sizeof(o->extent));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->extent, valuePointer, sizeof(o->extent));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRectLayerKHR_getLayer(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRectLayerKHR* o = (VkRectLayerKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->layer));
+    return jniPointerToLong(&o->layer);
 }
 
 void Java_cz_mg_vulkan_vk_VkRectLayerKHR_setLayer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkRectLayerKHR_setLayer(JNIEnv* env, jclass jc, jlong 
     (void)env;
     (void)jc;
     VkRectLayerKHR* o = (VkRectLayerKHR*)jniLongToPointer(address);
-    memcpy(&o->layer, jniLongToPointer(valueAddress), sizeof(o->layer));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->layer, valuePointer, sizeof(o->layer));
 }
+
 

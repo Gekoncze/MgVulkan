@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_getPresentID(JNIEnv* e
     (void)env;
     (void)jc;
     VkPastPresentationTimingGOOGLE* o = (VkPastPresentationTimingGOOGLE*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->presentID));
+    return jniPointerToLong(&o->presentID);
 }
 
 void Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_setPresentID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_setPresentID(JNIEnv* en
     (void)env;
     (void)jc;
     VkPastPresentationTimingGOOGLE* o = (VkPastPresentationTimingGOOGLE*)jniLongToPointer(address);
-    memcpy(&o->presentID, jniLongToPointer(valueAddress), sizeof(o->presentID));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->presentID, valuePointer, sizeof(o->presentID));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_getDesiredPresentTime(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPastPresentationTimingGOOGLE* o = (VkPastPresentationTimingGOOGLE*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->desiredPresentTime));
+    return jniPointerToLong(&o->desiredPresentTime);
 }
 
 void Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_setDesiredPresentTime(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_setDesiredPresentTime(J
     (void)env;
     (void)jc;
     VkPastPresentationTimingGOOGLE* o = (VkPastPresentationTimingGOOGLE*)jniLongToPointer(address);
-    memcpy(&o->desiredPresentTime, jniLongToPointer(valueAddress), sizeof(o->desiredPresentTime));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->desiredPresentTime, valuePointer, sizeof(o->desiredPresentTime));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_getActualPresentTime(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPastPresentationTimingGOOGLE* o = (VkPastPresentationTimingGOOGLE*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->actualPresentTime));
+    return jniPointerToLong(&o->actualPresentTime);
 }
 
 void Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_setActualPresentTime(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_setActualPresentTime(JN
     (void)env;
     (void)jc;
     VkPastPresentationTimingGOOGLE* o = (VkPastPresentationTimingGOOGLE*)jniLongToPointer(address);
-    memcpy(&o->actualPresentTime, jniLongToPointer(valueAddress), sizeof(o->actualPresentTime));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->actualPresentTime, valuePointer, sizeof(o->actualPresentTime));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_getEarliestPresentTime(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPastPresentationTimingGOOGLE* o = (VkPastPresentationTimingGOOGLE*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->earliestPresentTime));
+    return jniPointerToLong(&o->earliestPresentTime);
 }
 
 void Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_setEarliestPresentTime(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_setEarliestPresentTime(
     (void)env;
     (void)jc;
     VkPastPresentationTimingGOOGLE* o = (VkPastPresentationTimingGOOGLE*)jniLongToPointer(address);
-    memcpy(&o->earliestPresentTime, jniLongToPointer(valueAddress), sizeof(o->earliestPresentTime));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->earliestPresentTime, valuePointer, sizeof(o->earliestPresentTime));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_getPresentMargin(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPastPresentationTimingGOOGLE* o = (VkPastPresentationTimingGOOGLE*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->presentMargin));
+    return jniPointerToLong(&o->presentMargin);
 }
 
 void Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_setPresentMargin(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkPastPresentationTimingGOOGLE_setPresentMargin(JNIEnv
     (void)env;
     (void)jc;
     VkPastPresentationTimingGOOGLE* o = (VkPastPresentationTimingGOOGLE*)jniLongToPointer(address);
-    memcpy(&o->presentMargin, jniLongToPointer(valueAddress), sizeof(o->presentMargin));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->presentMargin, valuePointer, sizeof(o->presentMargin));
 }
+
 

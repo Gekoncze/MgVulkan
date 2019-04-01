@@ -25,7 +25,7 @@ public class PFNvkFreeMemory extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkDeviceMemory memory, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), memory != null ? memory.getVkAddress() : VkDeviceMemory.NULL.getVkAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, memory != null ? memory.getVkAddress() : VkPointer.NULL_ADDRESS, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long memory, long pAllocator);

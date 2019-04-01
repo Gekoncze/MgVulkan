@@ -9,11 +9,11 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
     }
 
     public VkPipelineRasterizationConservativeStateCreateInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineRasterizationConservativeStateCreateInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         return new VkPipelineRasterizationConservativeStateCreateFlagsEXT(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineRasterizationConservativeStateCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -63,8 +69,10 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         return new VkConservativeRasterizationModeEXT(getVkMemory(), getConservativeRasterizationMode(getVkAddress()));
     }
 
+    
     public void setConservativeRasterizationMode(VkConservativeRasterizationModeEXT conservativeRasterizationMode) {
-        setConservativeRasterizationMode(getVkAddress(), conservativeRasterizationMode.getVkAddress());
+        setConservativeRasterizationMode(getVkAddress(), conservativeRasterizationMode != null ? conservativeRasterizationMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getConservativeRasterizationMode(long address);
@@ -74,8 +82,10 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         return new VkFloat(getVkMemory(), getExtraPrimitiveOverestimationSize(getVkAddress()));
     }
 
+    
     public void setExtraPrimitiveOverestimationSize(VkFloat extraPrimitiveOverestimationSize) {
-        setExtraPrimitiveOverestimationSize(getVkAddress(), extraPrimitiveOverestimationSize.getVkAddress());
+        setExtraPrimitiveOverestimationSize(getVkAddress(), extraPrimitiveOverestimationSize != null ? extraPrimitiveOverestimationSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExtraPrimitiveOverestimationSize(long address);
@@ -88,7 +98,12 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineRasterizationConservativeStateCreateInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineRasterizationConservativeStateCreateInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineRasterizationConservativeStateCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

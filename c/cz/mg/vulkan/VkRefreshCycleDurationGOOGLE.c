@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkRefreshCycleDurationGOOGLE_getRefreshDuration(JNIEn
     (void)env;
     (void)jc;
     VkRefreshCycleDurationGOOGLE* o = (VkRefreshCycleDurationGOOGLE*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->refreshDuration));
+    return jniPointerToLong(&o->refreshDuration);
 }
 
 void Java_cz_mg_vulkan_vk_VkRefreshCycleDurationGOOGLE_setRefreshDuration(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,6 +29,8 @@ void Java_cz_mg_vulkan_vk_VkRefreshCycleDurationGOOGLE_setRefreshDuration(JNIEnv
     (void)env;
     (void)jc;
     VkRefreshCycleDurationGOOGLE* o = (VkRefreshCycleDurationGOOGLE*)jniLongToPointer(address);
-    memcpy(&o->refreshDuration, jniLongToPointer(valueAddress), sizeof(o->refreshDuration));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->refreshDuration, valuePointer, sizeof(o->refreshDuration));
 }
+
 

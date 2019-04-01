@@ -9,11 +9,11 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
     }
 
     public VkDescriptorSetLayoutBinding(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDescriptorSetLayoutBinding(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         return new VkUInt32(getVkMemory(), getBinding(getVkAddress()));
     }
 
+    
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding.getVkAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBinding(long address);
@@ -41,8 +43,10 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         return new VkDescriptorType(getVkMemory(), getDescriptorType(getVkAddress()));
     }
 
+    
     public void setDescriptorType(VkDescriptorType descriptorType) {
-        setDescriptorType(getVkAddress(), descriptorType.getVkAddress());
+        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDescriptorType(long address);
@@ -52,19 +56,23 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         return new VkUInt32(getVkMemory(), getDescriptorCount(getVkAddress()));
     }
 
+    
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount.getVkAddress());
+        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDescriptorCount(long address);
     private static native void setDescriptorCount(long address, long descriptorCount);
 
-    public VkShaderStageFlags.Array getStageFlags() {
-        return new VkShaderStageFlags.Array(getVkMemory(), getStageFlags(getVkAddress()), getDescriptorCount().getValue());
+    public VkShaderStageFlags getStageFlags() {
+        return new VkShaderStageFlags(getVkMemory(), getStageFlags(getVkAddress()));
     }
 
+    
     public void setStageFlags(VkShaderStageFlags stageFlags) {
-        setStageFlags(getVkAddress(), stageFlags.getVkAddress());
+        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getStageFlags(long address);
@@ -74,8 +82,10 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         return new VkSampler(getVkMemory(), getPImmutableSamplers(getVkAddress()));
     }
 
+    private VkObject pImmutableSamplers = null;
     public void setPImmutableSamplers(VkSampler pImmutableSamplers) {
-        setPImmutableSamplers(getVkAddress(), pImmutableSamplers.getVkAddress());
+        setPImmutableSamplers(getVkAddress(), pImmutableSamplers != null ? pImmutableSamplers.getVkAddress() : VkPointer.NULL);
+        this.pImmutableSamplers = pImmutableSamplers;
     }
 
     private static native long getPImmutableSamplers(long address);
@@ -88,7 +98,12 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDescriptorSetLayoutBinding.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorSetLayoutBinding o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorSetLayoutBinding.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

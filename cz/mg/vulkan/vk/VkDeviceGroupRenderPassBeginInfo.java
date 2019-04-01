@@ -9,11 +9,11 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
     }
 
     public VkDeviceGroupRenderPassBeginInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDeviceGroupRenderPassBeginInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getDeviceMask(getVkAddress()));
     }
 
+    
     public void setDeviceMask(VkUInt32 deviceMask) {
-        setDeviceMask(getVkAddress(), deviceMask.getVkAddress());
+        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDeviceMask(long address);
@@ -63,19 +69,23 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getDeviceRenderAreaCount(getVkAddress()));
     }
 
+    
     public void setDeviceRenderAreaCount(VkUInt32 deviceRenderAreaCount) {
-        setDeviceRenderAreaCount(getVkAddress(), deviceRenderAreaCount.getVkAddress());
+        setDeviceRenderAreaCount(getVkAddress(), deviceRenderAreaCount != null ? deviceRenderAreaCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDeviceRenderAreaCount(long address);
     private static native void setDeviceRenderAreaCount(long address, long deviceRenderAreaCount);
 
-    public VkRect2D.Array getPDeviceRenderAreas() {
-        return new VkRect2D.Array(getVkMemory(), getPDeviceRenderAreas(getVkAddress()), getDeviceRenderAreaCount().getValue());
+    public VkRect2D getPDeviceRenderAreas() {
+        return new VkRect2D(getVkMemory(), getPDeviceRenderAreas(getVkAddress()));
     }
 
+    private VkObject pDeviceRenderAreas = null;
     public void setPDeviceRenderAreas(VkRect2D pDeviceRenderAreas) {
-        setPDeviceRenderAreas(getVkAddress(), pDeviceRenderAreas.getVkAddress());
+        setPDeviceRenderAreas(getVkAddress(), pDeviceRenderAreas != null ? pDeviceRenderAreas.getVkAddress() : VkPointer.NULL);
+        this.pDeviceRenderAreas = pDeviceRenderAreas;
     }
 
     private static native long getPDeviceRenderAreas(long address);
@@ -88,7 +98,12 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDeviceGroupRenderPassBeginInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDeviceGroupRenderPassBeginInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGroupRenderPassBeginInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -9,11 +9,11 @@ public class VkLayerProperties extends VkObject {
     }
 
     public VkLayerProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkLayerProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkLayerProperties extends VkObject {
         return new VkChar(getVkMemory(), getLayerName(getVkAddress()));
     }
 
+    
     public void setLayerName(VkChar layerName) {
-        setLayerName(getVkAddress(), layerName.getVkAddress());
+        setLayerName(getVkAddress(), layerName != null ? layerName.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getLayerName(long address);
@@ -40,8 +42,10 @@ public class VkLayerProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getSpecVersion(getVkAddress()));
     }
 
+    
     public void setSpecVersion(VkUInt32 specVersion) {
-        setSpecVersion(getVkAddress(), specVersion.getVkAddress());
+        setSpecVersion(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSpecVersion(long address);
@@ -51,8 +55,10 @@ public class VkLayerProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getImplementationVersion(getVkAddress()));
     }
 
+    
     public void setImplementationVersion(VkUInt32 implementationVersion) {
-        setImplementationVersion(getVkAddress(), implementationVersion.getVkAddress());
+        setImplementationVersion(getVkAddress(), implementationVersion != null ? implementationVersion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImplementationVersion(long address);
@@ -62,8 +68,10 @@ public class VkLayerProperties extends VkObject {
         return new VkChar(getVkMemory(), getDescription(getVkAddress()));
     }
 
+    
     public void setDescription(VkChar description) {
-        setDescription(getVkAddress(), description.getVkAddress());
+        setDescription(getVkAddress(), description != null ? description.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getDescription(long address);
@@ -76,7 +84,12 @@ public class VkLayerProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkLayerProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkLayerProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkLayerProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkLayerProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

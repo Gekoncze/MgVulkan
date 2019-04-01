@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkImageViewUsageCreateInfo_getSType(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkImageViewUsageCreateInfo* o = (VkImageViewUsageCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageViewUsageCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkImageViewUsageCreateInfo_setSType(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkImageViewUsageCreateInfo* o = (VkImageViewUsageCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImageViewUsageCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImageViewUsageCreateInfo* o = (VkImageViewUsageCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageViewUsageCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkImageViewUsageCreateInfo_setPNext(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkImageViewUsageCreateInfo* o = (VkImageViewUsageCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImageViewUsageCreateInfo_getUsage(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImageViewUsageCreateInfo* o = (VkImageViewUsageCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->usage));
+    return jniPointerToLong(&o->usage);
 }
 
 void Java_cz_mg_vulkan_vk_VkImageViewUsageCreateInfo_setUsage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkImageViewUsageCreateInfo_setUsage(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkImageViewUsageCreateInfo* o = (VkImageViewUsageCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->usage, jniLongToPointer(valueAddress), sizeof(o->usage));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->usage, valuePointer, sizeof(o->usage));
 }
+
 

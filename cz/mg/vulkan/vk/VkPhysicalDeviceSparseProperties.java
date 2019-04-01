@@ -9,11 +9,11 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
     }
 
     public VkPhysicalDeviceSparseProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPhysicalDeviceSparseProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         return new VkBool32(getVkMemory(), getResidencyStandard2DBlockShape(getVkAddress()));
     }
 
+    
     public void setResidencyStandard2DBlockShape(VkBool32 residencyStandard2DBlockShape) {
-        setResidencyStandard2DBlockShape(getVkAddress(), residencyStandard2DBlockShape.getVkAddress());
+        setResidencyStandard2DBlockShape(getVkAddress(), residencyStandard2DBlockShape != null ? residencyStandard2DBlockShape.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getResidencyStandard2DBlockShape(long address);
@@ -41,8 +43,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         return new VkBool32(getVkMemory(), getResidencyStandard2DMultisampleBlockShape(getVkAddress()));
     }
 
+    
     public void setResidencyStandard2DMultisampleBlockShape(VkBool32 residencyStandard2DMultisampleBlockShape) {
-        setResidencyStandard2DMultisampleBlockShape(getVkAddress(), residencyStandard2DMultisampleBlockShape.getVkAddress());
+        setResidencyStandard2DMultisampleBlockShape(getVkAddress(), residencyStandard2DMultisampleBlockShape != null ? residencyStandard2DMultisampleBlockShape.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getResidencyStandard2DMultisampleBlockShape(long address);
@@ -52,8 +56,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         return new VkBool32(getVkMemory(), getResidencyStandard3DBlockShape(getVkAddress()));
     }
 
+    
     public void setResidencyStandard3DBlockShape(VkBool32 residencyStandard3DBlockShape) {
-        setResidencyStandard3DBlockShape(getVkAddress(), residencyStandard3DBlockShape.getVkAddress());
+        setResidencyStandard3DBlockShape(getVkAddress(), residencyStandard3DBlockShape != null ? residencyStandard3DBlockShape.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getResidencyStandard3DBlockShape(long address);
@@ -63,8 +69,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         return new VkBool32(getVkMemory(), getResidencyAlignedMipSize(getVkAddress()));
     }
 
+    
     public void setResidencyAlignedMipSize(VkBool32 residencyAlignedMipSize) {
-        setResidencyAlignedMipSize(getVkAddress(), residencyAlignedMipSize.getVkAddress());
+        setResidencyAlignedMipSize(getVkAddress(), residencyAlignedMipSize != null ? residencyAlignedMipSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getResidencyAlignedMipSize(long address);
@@ -74,8 +82,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         return new VkBool32(getVkMemory(), getResidencyNonResidentStrict(getVkAddress()));
     }
 
+    
     public void setResidencyNonResidentStrict(VkBool32 residencyNonResidentStrict) {
-        setResidencyNonResidentStrict(getVkAddress(), residencyNonResidentStrict.getVkAddress());
+        setResidencyNonResidentStrict(getVkAddress(), residencyNonResidentStrict != null ? residencyNonResidentStrict.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getResidencyNonResidentStrict(long address);
@@ -88,7 +98,12 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDeviceSparseProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceSparseProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceSparseProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

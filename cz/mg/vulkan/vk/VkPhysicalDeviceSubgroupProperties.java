@@ -9,11 +9,11 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
     }
 
     public VkPhysicalDeviceSubgroupProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPhysicalDeviceSubgroupProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -42,8 +44,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -53,8 +57,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getSubgroupSize(getVkAddress()));
     }
 
+    
     public void setSubgroupSize(VkUInt32 subgroupSize) {
-        setSubgroupSize(getVkAddress(), subgroupSize.getVkAddress());
+        setSubgroupSize(getVkAddress(), subgroupSize != null ? subgroupSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSubgroupSize(long address);
@@ -64,8 +70,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         return new VkShaderStageFlags(getVkMemory(), getSupportedStages(getVkAddress()));
     }
 
+    
     public void setSupportedStages(VkShaderStageFlags supportedStages) {
-        setSupportedStages(getVkAddress(), supportedStages.getVkAddress());
+        setSupportedStages(getVkAddress(), supportedStages != null ? supportedStages.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSupportedStages(long address);
@@ -75,8 +83,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         return new VkSubgroupFeatureFlags(getVkMemory(), getSupportedOperations(getVkAddress()));
     }
 
+    
     public void setSupportedOperations(VkSubgroupFeatureFlags supportedOperations) {
-        setSupportedOperations(getVkAddress(), supportedOperations.getVkAddress());
+        setSupportedOperations(getVkAddress(), supportedOperations != null ? supportedOperations.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSupportedOperations(long address);
@@ -86,8 +96,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         return new VkBool32(getVkMemory(), getQuadOperationsInAllStages(getVkAddress()));
     }
 
+    
     public void setQuadOperationsInAllStages(VkBool32 quadOperationsInAllStages) {
-        setQuadOperationsInAllStages(getVkAddress(), quadOperationsInAllStages.getVkAddress());
+        setQuadOperationsInAllStages(getVkAddress(), quadOperationsInAllStages != null ? quadOperationsInAllStages.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQuadOperationsInAllStages(long address);
@@ -100,7 +112,12 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDeviceSubgroupProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceSubgroupProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceSubgroupProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

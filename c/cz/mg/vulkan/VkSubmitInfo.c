@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSubmitInfo_getSType(JNIEnv* env, jclass jc, jlong a
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubmitInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSubmitInfo_setSType(JNIEnv* env, jclass jc, jlong ad
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubmitInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubmitInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkSubmitInfo_setPNext(JNIEnv* env, jclass jc, jlong ad
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubmitInfo_getWaitSemaphoreCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->waitSemaphoreCount));
+    return jniPointerToLong(&o->waitSemaphoreCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubmitInfo_setWaitSemaphoreCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkSubmitInfo_setWaitSemaphoreCount(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->waitSemaphoreCount, jniLongToPointer(valueAddress), sizeof(o->waitSemaphoreCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->waitSemaphoreCount, valuePointer, sizeof(o->waitSemaphoreCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubmitInfo_getPWaitSemaphores(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pWaitSemaphores));
+    return jniPointerToLong(o->pWaitSemaphores);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubmitInfo_setPWaitSemaphores(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkSubmitInfo_setPWaitSemaphores(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->pWaitSemaphores, jniLongToPointer(valueAddress), sizeof(o->pWaitSemaphores));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pWaitSemaphores, &valuePointer, sizeof(o->pWaitSemaphores));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubmitInfo_getPWaitDstStageMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pWaitDstStageMask));
+    return jniPointerToLong(o->pWaitDstStageMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubmitInfo_setPWaitDstStageMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkSubmitInfo_setPWaitDstStageMask(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->pWaitDstStageMask, jniLongToPointer(valueAddress), sizeof(o->pWaitDstStageMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pWaitDstStageMask, &valuePointer, sizeof(o->pWaitDstStageMask));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubmitInfo_getCommandBufferCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->commandBufferCount));
+    return jniPointerToLong(&o->commandBufferCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubmitInfo_setCommandBufferCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkSubmitInfo_setCommandBufferCount(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->commandBufferCount, jniLongToPointer(valueAddress), sizeof(o->commandBufferCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->commandBufferCount, valuePointer, sizeof(o->commandBufferCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubmitInfo_getPCommandBuffers(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pCommandBuffers));
+    return jniPointerToLong(o->pCommandBuffers);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubmitInfo_setPCommandBuffers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkSubmitInfo_setPCommandBuffers(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->pCommandBuffers, jniLongToPointer(valueAddress), sizeof(o->pCommandBuffers));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pCommandBuffers, &valuePointer, sizeof(o->pCommandBuffers));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubmitInfo_getSignalSemaphoreCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->signalSemaphoreCount));
+    return jniPointerToLong(&o->signalSemaphoreCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubmitInfo_setSignalSemaphoreCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,14 +148,16 @@ void Java_cz_mg_vulkan_vk_VkSubmitInfo_setSignalSemaphoreCount(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->signalSemaphoreCount, jniLongToPointer(valueAddress), sizeof(o->signalSemaphoreCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->signalSemaphoreCount, valuePointer, sizeof(o->signalSemaphoreCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubmitInfo_getPSignalSemaphores(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pSignalSemaphores));
+    return jniPointerToLong(o->pSignalSemaphores);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubmitInfo_setPSignalSemaphores(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -149,6 +165,8 @@ void Java_cz_mg_vulkan_vk_VkSubmitInfo_setPSignalSemaphores(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkSubmitInfo* o = (VkSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->pSignalSemaphores, jniLongToPointer(valueAddress), sizeof(o->pSignalSemaphores));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pSignalSemaphores, &valuePointer, sizeof(o->pSignalSemaphores));
 }
+
 

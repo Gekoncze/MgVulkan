@@ -9,11 +9,11 @@ public class VkDescriptorPoolSize extends VkObject {
     }
 
     public VkDescriptorPoolSize(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDescriptorPoolSize(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkDescriptorPoolSize extends VkObject {
         return new VkDescriptorType(getVkMemory(), getType(getVkAddress()));
     }
 
+    
     public void setType(VkDescriptorType type) {
-        setType(getVkAddress(), type.getVkAddress());
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getType(long address);
@@ -38,8 +40,10 @@ public class VkDescriptorPoolSize extends VkObject {
         return new VkUInt32(getVkMemory(), getDescriptorCount(getVkAddress()));
     }
 
+    
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount.getVkAddress());
+        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDescriptorCount(long address);
@@ -52,7 +56,12 @@ public class VkDescriptorPoolSize extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDescriptorPoolSize.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorPoolSize o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkDescriptorPoolSize extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorPoolSize.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

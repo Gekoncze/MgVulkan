@@ -9,11 +9,11 @@ public class VkViewport extends VkObject {
     }
 
     public VkViewport(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkViewport(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkViewport extends VkObject {
         return new VkFloat(getVkMemory(), getX(getVkAddress()));
     }
 
+    
     public void setX(VkFloat x) {
-        setX(getVkAddress(), x.getVkAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getX(long address);
@@ -42,8 +44,10 @@ public class VkViewport extends VkObject {
         return new VkFloat(getVkMemory(), getY(getVkAddress()));
     }
 
+    
     public void setY(VkFloat y) {
-        setY(getVkAddress(), y.getVkAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getY(long address);
@@ -53,8 +57,10 @@ public class VkViewport extends VkObject {
         return new VkFloat(getVkMemory(), getWidth(getVkAddress()));
     }
 
+    
     public void setWidth(VkFloat width) {
-        setWidth(getVkAddress(), width.getVkAddress());
+        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getWidth(long address);
@@ -64,8 +70,10 @@ public class VkViewport extends VkObject {
         return new VkFloat(getVkMemory(), getHeight(getVkAddress()));
     }
 
+    
     public void setHeight(VkFloat height) {
-        setHeight(getVkAddress(), height.getVkAddress());
+        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getHeight(long address);
@@ -75,8 +83,10 @@ public class VkViewport extends VkObject {
         return new VkFloat(getVkMemory(), getMinDepth(getVkAddress()));
     }
 
+    
     public void setMinDepth(VkFloat minDepth) {
-        setMinDepth(getVkAddress(), minDepth.getVkAddress());
+        setMinDepth(getVkAddress(), minDepth != null ? minDepth.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMinDepth(long address);
@@ -86,8 +96,10 @@ public class VkViewport extends VkObject {
         return new VkFloat(getVkMemory(), getMaxDepth(getVkAddress()));
     }
 
+    
     public void setMaxDepth(VkFloat maxDepth) {
-        setMaxDepth(getVkAddress(), maxDepth.getVkAddress());
+        setMaxDepth(getVkAddress(), maxDepth != null ? maxDepth.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxDepth(long address);
@@ -100,7 +112,12 @@ public class VkViewport extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkViewport.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkViewport o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkViewport extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkViewport.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_getSType(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkMemoryDedicatedRequirements* o = (VkMemoryDedicatedRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_setSType(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkMemoryDedicatedRequirements* o = (VkMemoryDedicatedRequirements*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkMemoryDedicatedRequirements* o = (VkMemoryDedicatedRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_setPNext(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkMemoryDedicatedRequirements* o = (VkMemoryDedicatedRequirements*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_getPrefersDedicatedAllocation(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkMemoryDedicatedRequirements* o = (VkMemoryDedicatedRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->prefersDedicatedAllocation));
+    return jniPointerToLong(&o->prefersDedicatedAllocation);
 }
 
 void Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_setPrefersDedicatedAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_setPrefersDedicatedAlloc
     (void)env;
     (void)jc;
     VkMemoryDedicatedRequirements* o = (VkMemoryDedicatedRequirements*)jniLongToPointer(address);
-    memcpy(&o->prefersDedicatedAllocation, jniLongToPointer(valueAddress), sizeof(o->prefersDedicatedAllocation));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->prefersDedicatedAllocation, valuePointer, sizeof(o->prefersDedicatedAllocation));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_getRequiresDedicatedAllocation(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkMemoryDedicatedRequirements* o = (VkMemoryDedicatedRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->requiresDedicatedAllocation));
+    return jniPointerToLong(&o->requiresDedicatedAllocation);
 }
 
 void Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_setRequiresDedicatedAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkMemoryDedicatedRequirements_setRequiresDedicatedAllo
     (void)env;
     (void)jc;
     VkMemoryDedicatedRequirements* o = (VkMemoryDedicatedRequirements*)jniLongToPointer(address);
-    memcpy(&o->requiresDedicatedAllocation, jniLongToPointer(valueAddress), sizeof(o->requiresDedicatedAllocation));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->requiresDedicatedAllocation, valuePointer, sizeof(o->requiresDedicatedAllocation));
 }
+
 

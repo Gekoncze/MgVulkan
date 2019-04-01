@@ -9,11 +9,11 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
     }
 
     public VkSparseBufferMemoryBindInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSparseBufferMemoryBindInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
     }
 
+    
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer.getVkAddress());
+        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBuffer(long address);
@@ -39,19 +41,23 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getBindCount(getVkAddress()));
     }
 
+    
     public void setBindCount(VkUInt32 bindCount) {
-        setBindCount(getVkAddress(), bindCount.getVkAddress());
+        setBindCount(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBindCount(long address);
     private static native void setBindCount(long address, long bindCount);
 
-    public VkSparseMemoryBind.Array getPBinds() {
-        return new VkSparseMemoryBind.Array(getVkMemory(), getPBinds(getVkAddress()), getBindCount().getValue());
+    public VkSparseMemoryBind getPBinds() {
+        return new VkSparseMemoryBind(getVkMemory(), getPBinds(getVkAddress()));
     }
 
+    private VkObject pBinds = null;
     public void setPBinds(VkSparseMemoryBind pBinds) {
-        setPBinds(getVkAddress(), pBinds.getVkAddress());
+        setPBinds(getVkAddress(), pBinds != null ? pBinds.getVkAddress() : VkPointer.NULL);
+        this.pBinds = pBinds;
     }
 
     private static native long getPBinds(long address);
@@ -64,7 +70,12 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSparseBufferMemoryBindInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSparseBufferMemoryBindInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSparseBufferMemoryBindInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

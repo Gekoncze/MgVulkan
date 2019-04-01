@@ -9,11 +9,11 @@ public class VkViewportSwizzleNV extends VkObject {
     }
 
     public VkViewportSwizzleNV(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkViewportSwizzleNV(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkViewportSwizzleNV extends VkObject {
         return new VkViewportCoordinateSwizzleNV(getVkMemory(), getX(getVkAddress()));
     }
 
+    
     public void setX(VkViewportCoordinateSwizzleNV x) {
-        setX(getVkAddress(), x.getVkAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getX(long address);
@@ -40,8 +42,10 @@ public class VkViewportSwizzleNV extends VkObject {
         return new VkViewportCoordinateSwizzleNV(getVkMemory(), getY(getVkAddress()));
     }
 
+    
     public void setY(VkViewportCoordinateSwizzleNV y) {
-        setY(getVkAddress(), y.getVkAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getY(long address);
@@ -51,8 +55,10 @@ public class VkViewportSwizzleNV extends VkObject {
         return new VkViewportCoordinateSwizzleNV(getVkMemory(), getZ(getVkAddress()));
     }
 
+    
     public void setZ(VkViewportCoordinateSwizzleNV z) {
-        setZ(getVkAddress(), z.getVkAddress());
+        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getZ(long address);
@@ -62,8 +68,10 @@ public class VkViewportSwizzleNV extends VkObject {
         return new VkViewportCoordinateSwizzleNV(getVkMemory(), getW(getVkAddress()));
     }
 
+    
     public void setW(VkViewportCoordinateSwizzleNV w) {
-        setW(getVkAddress(), w.getVkAddress());
+        setW(getVkAddress(), w != null ? w.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getW(long address);
@@ -76,7 +84,12 @@ public class VkViewportSwizzleNV extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkViewportSwizzleNV.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkViewportSwizzleNV o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkViewportSwizzleNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkViewportSwizzleNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

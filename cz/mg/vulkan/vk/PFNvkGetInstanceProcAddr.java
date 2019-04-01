@@ -25,7 +25,7 @@ public class PFNvkGetInstanceProcAddr extends VkFunctionPointer {
     }
 
     public void call(VkInstance instance, VkChar pName, PFNvkVoidFunction rval){
-        call(getValue(), instance != null ? instance.getVkAddress() : VkInstance.NULL.getVkAddress(), pName != null ? pName.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL);
+        call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.NULL_ADDRESS, pName != null ? pName.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
     }
 
     private static native void call(long vkaddress, long instance, long pName, long rval);

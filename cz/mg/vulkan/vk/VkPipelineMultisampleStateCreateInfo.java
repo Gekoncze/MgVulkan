@@ -9,11 +9,11 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
     }
 
     public VkPipelineMultisampleStateCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineMultisampleStateCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -34,8 +34,10 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -45,8 +47,10 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -56,8 +60,10 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         return new VkPipelineMultisampleStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineMultisampleStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -67,8 +73,10 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         return new VkSampleCountFlagBits(getVkMemory(), getRasterizationSamples(getVkAddress()));
     }
 
+    
     public void setRasterizationSamples(VkSampleCountFlagBits rasterizationSamples) {
-        setRasterizationSamples(getVkAddress(), rasterizationSamples.getVkAddress());
+        setRasterizationSamples(getVkAddress(), rasterizationSamples != null ? rasterizationSamples.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRasterizationSamples(long address);
@@ -78,8 +86,10 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         return new VkBool32(getVkMemory(), getSampleShadingEnable(getVkAddress()));
     }
 
+    
     public void setSampleShadingEnable(VkBool32 sampleShadingEnable) {
-        setSampleShadingEnable(getVkAddress(), sampleShadingEnable.getVkAddress());
+        setSampleShadingEnable(getVkAddress(), sampleShadingEnable != null ? sampleShadingEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSampleShadingEnable(long address);
@@ -89,8 +99,10 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         return new VkFloat(getVkMemory(), getMinSampleShading(getVkAddress()));
     }
 
+    
     public void setMinSampleShading(VkFloat minSampleShading) {
-        setMinSampleShading(getVkAddress(), minSampleShading.getVkAddress());
+        setMinSampleShading(getVkAddress(), minSampleShading != null ? minSampleShading.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMinSampleShading(long address);
@@ -100,8 +112,10 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         return new VkSampleMask(getVkMemory(), getPSampleMask(getVkAddress()));
     }
 
+    private VkObject pSampleMask = null;
     public void setPSampleMask(VkSampleMask pSampleMask) {
-        setPSampleMask(getVkAddress(), pSampleMask.getVkAddress());
+        setPSampleMask(getVkAddress(), pSampleMask != null ? pSampleMask.getVkAddress() : VkPointer.NULL);
+        this.pSampleMask = pSampleMask;
     }
 
     private static native long getPSampleMask(long address);
@@ -111,8 +125,10 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         return new VkBool32(getVkMemory(), getAlphaToCoverageEnable(getVkAddress()));
     }
 
+    
     public void setAlphaToCoverageEnable(VkBool32 alphaToCoverageEnable) {
-        setAlphaToCoverageEnable(getVkAddress(), alphaToCoverageEnable.getVkAddress());
+        setAlphaToCoverageEnable(getVkAddress(), alphaToCoverageEnable != null ? alphaToCoverageEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAlphaToCoverageEnable(long address);
@@ -122,8 +138,10 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         return new VkBool32(getVkMemory(), getAlphaToOneEnable(getVkAddress()));
     }
 
+    
     public void setAlphaToOneEnable(VkBool32 alphaToOneEnable) {
-        setAlphaToOneEnable(getVkAddress(), alphaToOneEnable.getVkAddress());
+        setAlphaToOneEnable(getVkAddress(), alphaToOneEnable != null ? alphaToOneEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAlphaToOneEnable(long address);
@@ -136,7 +154,12 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineMultisampleStateCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineMultisampleStateCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -177,11 +200,11 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineMultisampleStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

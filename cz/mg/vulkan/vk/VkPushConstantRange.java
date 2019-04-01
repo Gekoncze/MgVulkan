@@ -9,11 +9,11 @@ public class VkPushConstantRange extends VkObject {
     }
 
     public VkPushConstantRange(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPushConstantRange(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkPushConstantRange extends VkObject {
         return new VkShaderStageFlags(getVkMemory(), getStageFlags(getVkAddress()));
     }
 
+    
     public void setStageFlags(VkShaderStageFlags stageFlags) {
-        setStageFlags(getVkAddress(), stageFlags.getVkAddress());
+        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getStageFlags(long address);
@@ -39,8 +41,10 @@ public class VkPushConstantRange extends VkObject {
         return new VkUInt32(getVkMemory(), getOffset(getVkAddress()));
     }
 
+    
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset.getVkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOffset(long address);
@@ -50,8 +54,10 @@ public class VkPushConstantRange extends VkObject {
         return new VkUInt32(getVkMemory(), getSize(getVkAddress()));
     }
 
+    
     public void setSize(VkUInt32 size) {
-        setSize(getVkAddress(), size.getVkAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSize(long address);
@@ -64,7 +70,12 @@ public class VkPushConstantRange extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPushConstantRange.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPushConstantRange o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkPushConstantRange extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPushConstantRange.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

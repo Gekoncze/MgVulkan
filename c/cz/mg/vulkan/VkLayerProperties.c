@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkLayerProperties_getLayerName(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkLayerProperties* o = (VkLayerProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->layerName));
+    return jniPointerToLong(o->layerName);
 }
 
 void Java_cz_mg_vulkan_vk_VkLayerProperties_setLayerName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkLayerProperties_setLayerName(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkLayerProperties* o = (VkLayerProperties*)jniLongToPointer(address);
-    memcpy(o->layerName, jniLongToPointer(valueAddress), sizeof(o->layerName));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->layerName, valuePointer, sizeof(o->layerName));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkLayerProperties_getSpecVersion(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkLayerProperties* o = (VkLayerProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->specVersion));
+    return jniPointerToLong(&o->specVersion);
 }
 
 void Java_cz_mg_vulkan_vk_VkLayerProperties_setSpecVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkLayerProperties_setSpecVersion(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkLayerProperties* o = (VkLayerProperties*)jniLongToPointer(address);
-    memcpy(&o->specVersion, jniLongToPointer(valueAddress), sizeof(o->specVersion));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->specVersion, valuePointer, sizeof(o->specVersion));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkLayerProperties_getImplementationVersion(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkLayerProperties* o = (VkLayerProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->implementationVersion));
+    return jniPointerToLong(&o->implementationVersion);
 }
 
 void Java_cz_mg_vulkan_vk_VkLayerProperties_setImplementationVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkLayerProperties_setImplementationVersion(JNIEnv* env
     (void)env;
     (void)jc;
     VkLayerProperties* o = (VkLayerProperties*)jniLongToPointer(address);
-    memcpy(&o->implementationVersion, jniLongToPointer(valueAddress), sizeof(o->implementationVersion));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->implementationVersion, valuePointer, sizeof(o->implementationVersion));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkLayerProperties_getDescription(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkLayerProperties* o = (VkLayerProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->description));
+    return jniPointerToLong(o->description);
 }
 
 void Java_cz_mg_vulkan_vk_VkLayerProperties_setDescription(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkLayerProperties_setDescription(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkLayerProperties* o = (VkLayerProperties*)jniLongToPointer(address);
-    memcpy(o->description, jniLongToPointer(valueAddress), sizeof(o->description));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->description, valuePointer, sizeof(o->description));
 }
+
 

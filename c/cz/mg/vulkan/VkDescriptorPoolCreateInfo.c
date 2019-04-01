@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_getSType(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setSType(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setPNext(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setFlags(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_getMaxSets(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxSets));
+    return jniPointerToLong(&o->maxSets);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setMaxSets(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setMaxSets(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->maxSets, jniLongToPointer(valueAddress), sizeof(o->maxSets));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxSets, valuePointer, sizeof(o->maxSets));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_getPoolSizeCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->poolSizeCount));
+    return jniPointerToLong(&o->poolSizeCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setPoolSizeCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setPoolSizeCount(JNIEnv* en
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->poolSizeCount, jniLongToPointer(valueAddress), sizeof(o->poolSizeCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->poolSizeCount, valuePointer, sizeof(o->poolSizeCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_getPPoolSizes(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pPoolSizes));
+    return jniPointerToLong(o->pPoolSizes);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setPPoolSizes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkDescriptorPoolCreateInfo_setPPoolSizes(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkDescriptorPoolCreateInfo* o = (VkDescriptorPoolCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pPoolSizes, jniLongToPointer(valueAddress), sizeof(o->pPoolSizes));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pPoolSizes, &valuePointer, sizeof(o->pPoolSizes));
 }
+
 

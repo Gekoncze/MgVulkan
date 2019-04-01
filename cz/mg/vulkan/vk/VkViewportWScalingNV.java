@@ -9,11 +9,11 @@ public class VkViewportWScalingNV extends VkObject {
     }
 
     public VkViewportWScalingNV(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkViewportWScalingNV(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkViewportWScalingNV extends VkObject {
         return new VkFloat(getVkMemory(), getXcoeff(getVkAddress()));
     }
 
+    
     public void setXcoeff(VkFloat xcoeff) {
-        setXcoeff(getVkAddress(), xcoeff.getVkAddress());
+        setXcoeff(getVkAddress(), xcoeff != null ? xcoeff.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getXcoeff(long address);
@@ -38,8 +40,10 @@ public class VkViewportWScalingNV extends VkObject {
         return new VkFloat(getVkMemory(), getYcoeff(getVkAddress()));
     }
 
+    
     public void setYcoeff(VkFloat ycoeff) {
-        setYcoeff(getVkAddress(), ycoeff.getVkAddress());
+        setYcoeff(getVkAddress(), ycoeff != null ? ycoeff.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getYcoeff(long address);
@@ -52,7 +56,12 @@ public class VkViewportWScalingNV extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkViewportWScalingNV.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkViewportWScalingNV o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkViewportWScalingNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkViewportWScalingNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -9,11 +9,11 @@ public class VkBindSparseInfo extends VkObject {
     }
 
     public VkBindSparseInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkBindSparseInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -37,8 +37,10 @@ public class VkBindSparseInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -48,8 +50,10 @@ public class VkBindSparseInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -59,19 +63,23 @@ public class VkBindSparseInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getWaitSemaphoreCount(getVkAddress()));
     }
 
+    
     public void setWaitSemaphoreCount(VkUInt32 waitSemaphoreCount) {
-        setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount.getVkAddress());
+        setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount != null ? waitSemaphoreCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getWaitSemaphoreCount(long address);
     private static native void setWaitSemaphoreCount(long address, long waitSemaphoreCount);
 
-    public VkSemaphore.Array getPWaitSemaphores() {
-        return new VkSemaphore.Array(getVkMemory(), getPWaitSemaphores(getVkAddress()), getWaitSemaphoreCount().getValue());
+    public VkSemaphore getPWaitSemaphores() {
+        return new VkSemaphore(getVkMemory(), getPWaitSemaphores(getVkAddress()));
     }
 
+    private VkObject pWaitSemaphores = null;
     public void setPWaitSemaphores(VkSemaphore pWaitSemaphores) {
-        setPWaitSemaphores(getVkAddress(), pWaitSemaphores.getVkAddress());
+        setPWaitSemaphores(getVkAddress(), pWaitSemaphores != null ? pWaitSemaphores.getVkAddress() : VkPointer.NULL);
+        this.pWaitSemaphores = pWaitSemaphores;
     }
 
     private static native long getPWaitSemaphores(long address);
@@ -81,19 +89,23 @@ public class VkBindSparseInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getBufferBindCount(getVkAddress()));
     }
 
+    
     public void setBufferBindCount(VkUInt32 bufferBindCount) {
-        setBufferBindCount(getVkAddress(), bufferBindCount.getVkAddress());
+        setBufferBindCount(getVkAddress(), bufferBindCount != null ? bufferBindCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBufferBindCount(long address);
     private static native void setBufferBindCount(long address, long bufferBindCount);
 
-    public VkSparseBufferMemoryBindInfo.Array getPBufferBinds() {
-        return new VkSparseBufferMemoryBindInfo.Array(getVkMemory(), getPBufferBinds(getVkAddress()), getBufferBindCount().getValue());
+    public VkSparseBufferMemoryBindInfo getPBufferBinds() {
+        return new VkSparseBufferMemoryBindInfo(getVkMemory(), getPBufferBinds(getVkAddress()));
     }
 
+    private VkObject pBufferBinds = null;
     public void setPBufferBinds(VkSparseBufferMemoryBindInfo pBufferBinds) {
-        setPBufferBinds(getVkAddress(), pBufferBinds.getVkAddress());
+        setPBufferBinds(getVkAddress(), pBufferBinds != null ? pBufferBinds.getVkAddress() : VkPointer.NULL);
+        this.pBufferBinds = pBufferBinds;
     }
 
     private static native long getPBufferBinds(long address);
@@ -103,19 +115,23 @@ public class VkBindSparseInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getImageOpaqueBindCount(getVkAddress()));
     }
 
+    
     public void setImageOpaqueBindCount(VkUInt32 imageOpaqueBindCount) {
-        setImageOpaqueBindCount(getVkAddress(), imageOpaqueBindCount.getVkAddress());
+        setImageOpaqueBindCount(getVkAddress(), imageOpaqueBindCount != null ? imageOpaqueBindCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageOpaqueBindCount(long address);
     private static native void setImageOpaqueBindCount(long address, long imageOpaqueBindCount);
 
-    public VkSparseImageOpaqueMemoryBindInfo.Array getPImageOpaqueBinds() {
-        return new VkSparseImageOpaqueMemoryBindInfo.Array(getVkMemory(), getPImageOpaqueBinds(getVkAddress()), getImageOpaqueBindCount().getValue());
+    public VkSparseImageOpaqueMemoryBindInfo getPImageOpaqueBinds() {
+        return new VkSparseImageOpaqueMemoryBindInfo(getVkMemory(), getPImageOpaqueBinds(getVkAddress()));
     }
 
+    private VkObject pImageOpaqueBinds = null;
     public void setPImageOpaqueBinds(VkSparseImageOpaqueMemoryBindInfo pImageOpaqueBinds) {
-        setPImageOpaqueBinds(getVkAddress(), pImageOpaqueBinds.getVkAddress());
+        setPImageOpaqueBinds(getVkAddress(), pImageOpaqueBinds != null ? pImageOpaqueBinds.getVkAddress() : VkPointer.NULL);
+        this.pImageOpaqueBinds = pImageOpaqueBinds;
     }
 
     private static native long getPImageOpaqueBinds(long address);
@@ -125,19 +141,23 @@ public class VkBindSparseInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getImageBindCount(getVkAddress()));
     }
 
+    
     public void setImageBindCount(VkUInt32 imageBindCount) {
-        setImageBindCount(getVkAddress(), imageBindCount.getVkAddress());
+        setImageBindCount(getVkAddress(), imageBindCount != null ? imageBindCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageBindCount(long address);
     private static native void setImageBindCount(long address, long imageBindCount);
 
-    public VkSparseImageMemoryBindInfo.Array getPImageBinds() {
-        return new VkSparseImageMemoryBindInfo.Array(getVkMemory(), getPImageBinds(getVkAddress()), getImageBindCount().getValue());
+    public VkSparseImageMemoryBindInfo getPImageBinds() {
+        return new VkSparseImageMemoryBindInfo(getVkMemory(), getPImageBinds(getVkAddress()));
     }
 
+    private VkObject pImageBinds = null;
     public void setPImageBinds(VkSparseImageMemoryBindInfo pImageBinds) {
-        setPImageBinds(getVkAddress(), pImageBinds.getVkAddress());
+        setPImageBinds(getVkAddress(), pImageBinds != null ? pImageBinds.getVkAddress() : VkPointer.NULL);
+        this.pImageBinds = pImageBinds;
     }
 
     private static native long getPImageBinds(long address);
@@ -147,19 +167,23 @@ public class VkBindSparseInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getSignalSemaphoreCount(getVkAddress()));
     }
 
+    
     public void setSignalSemaphoreCount(VkUInt32 signalSemaphoreCount) {
-        setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount.getVkAddress());
+        setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount != null ? signalSemaphoreCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSignalSemaphoreCount(long address);
     private static native void setSignalSemaphoreCount(long address, long signalSemaphoreCount);
 
-    public VkSemaphore.Array getPSignalSemaphores() {
-        return new VkSemaphore.Array(getVkMemory(), getPSignalSemaphores(getVkAddress()), getSignalSemaphoreCount().getValue());
+    public VkSemaphore getPSignalSemaphores() {
+        return new VkSemaphore(getVkMemory(), getPSignalSemaphores(getVkAddress()));
     }
 
+    private VkObject pSignalSemaphores = null;
     public void setPSignalSemaphores(VkSemaphore pSignalSemaphores) {
-        setPSignalSemaphores(getVkAddress(), pSignalSemaphores.getVkAddress());
+        setPSignalSemaphores(getVkAddress(), pSignalSemaphores != null ? pSignalSemaphores.getVkAddress() : VkPointer.NULL);
+        this.pSignalSemaphores = pSignalSemaphores;
     }
 
     private static native long getPSignalSemaphores(long address);
@@ -172,7 +196,12 @@ public class VkBindSparseInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkBindSparseInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkBindSparseInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -213,11 +242,11 @@ public class VkBindSparseInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBindSparseInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

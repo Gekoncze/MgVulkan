@@ -9,11 +9,11 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
     }
 
     public VkDescriptorUpdateTemplateEntry(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDescriptorUpdateTemplateEntry(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         return new VkUInt32(getVkMemory(), getDstBinding(getVkAddress()));
     }
 
+    
     public void setDstBinding(VkUInt32 dstBinding) {
-        setDstBinding(getVkAddress(), dstBinding.getVkAddress());
+        setDstBinding(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstBinding(long address);
@@ -42,8 +44,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         return new VkUInt32(getVkMemory(), getDstArrayElement(getVkAddress()));
     }
 
+    
     public void setDstArrayElement(VkUInt32 dstArrayElement) {
-        setDstArrayElement(getVkAddress(), dstArrayElement.getVkAddress());
+        setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstArrayElement(long address);
@@ -53,19 +57,23 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         return new VkUInt32(getVkMemory(), getDescriptorCount(getVkAddress()));
     }
 
+    
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount.getVkAddress());
+        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDescriptorCount(long address);
     private static native void setDescriptorCount(long address, long descriptorCount);
 
-    public VkDescriptorType.Array getDescriptorType() {
-        return new VkDescriptorType.Array(getVkMemory(), getDescriptorType(getVkAddress()), getDescriptorCount().getValue());
+    public VkDescriptorType getDescriptorType() {
+        return new VkDescriptorType(getVkMemory(), getDescriptorType(getVkAddress()));
     }
 
+    
     public void setDescriptorType(VkDescriptorType descriptorType) {
-        setDescriptorType(getVkAddress(), descriptorType.getVkAddress());
+        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDescriptorType(long address);
@@ -75,8 +83,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         return new VkSize(getVkMemory(), getOffset(getVkAddress()));
     }
 
+    
     public void setOffset(VkSize offset) {
-        setOffset(getVkAddress(), offset.getVkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOffset(long address);
@@ -86,8 +96,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         return new VkSize(getVkMemory(), getStride(getVkAddress()));
     }
 
+    
     public void setStride(VkSize stride) {
-        setStride(getVkAddress(), stride.getVkAddress());
+        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getStride(long address);
@@ -100,7 +112,12 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDescriptorUpdateTemplateEntry.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorUpdateTemplateEntry o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorUpdateTemplateEntry.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

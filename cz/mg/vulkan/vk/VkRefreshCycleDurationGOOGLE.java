@@ -9,11 +9,11 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
     }
 
     public VkRefreshCycleDurationGOOGLE(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkRefreshCycleDurationGOOGLE(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -26,8 +26,10 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
         return new VkUInt64(getVkMemory(), getRefreshDuration(getVkAddress()));
     }
 
+    
     public void setRefreshDuration(VkUInt64 refreshDuration) {
-        setRefreshDuration(getVkAddress(), refreshDuration.getVkAddress());
+        setRefreshDuration(getVkAddress(), refreshDuration != null ? refreshDuration.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRefreshDuration(long address);
@@ -40,7 +42,12 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkRefreshCycleDurationGOOGLE.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkRefreshCycleDurationGOOGLE o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -81,11 +88,11 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkRefreshCycleDurationGOOGLE.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

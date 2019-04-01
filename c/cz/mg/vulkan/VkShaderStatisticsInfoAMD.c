@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_getShaderStageMask(JNIEnv* 
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->shaderStageMask));
+    return jniPointerToLong(&o->shaderStageMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setShaderStageMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setShaderStageMask(JNIEnv* e
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    memcpy(&o->shaderStageMask, jniLongToPointer(valueAddress), sizeof(o->shaderStageMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->shaderStageMask, valuePointer, sizeof(o->shaderStageMask));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_getResourceUsage(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->resourceUsage));
+    return jniPointerToLong(&o->resourceUsage);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setResourceUsage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setResourceUsage(JNIEnv* env
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    memcpy(&o->resourceUsage, jniLongToPointer(valueAddress), sizeof(o->resourceUsage));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->resourceUsage, valuePointer, sizeof(o->resourceUsage));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_getNumPhysicalVgprs(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->numPhysicalVgprs));
+    return jniPointerToLong(&o->numPhysicalVgprs);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setNumPhysicalVgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setNumPhysicalVgprs(JNIEnv* 
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    memcpy(&o->numPhysicalVgprs, jniLongToPointer(valueAddress), sizeof(o->numPhysicalVgprs));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->numPhysicalVgprs, valuePointer, sizeof(o->numPhysicalVgprs));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_getNumPhysicalSgprs(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->numPhysicalSgprs));
+    return jniPointerToLong(&o->numPhysicalSgprs);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setNumPhysicalSgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setNumPhysicalSgprs(JNIEnv* 
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    memcpy(&o->numPhysicalSgprs, jniLongToPointer(valueAddress), sizeof(o->numPhysicalSgprs));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->numPhysicalSgprs, valuePointer, sizeof(o->numPhysicalSgprs));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_getNumAvailableVgprs(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->numAvailableVgprs));
+    return jniPointerToLong(&o->numAvailableVgprs);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setNumAvailableVgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setNumAvailableVgprs(JNIEnv*
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    memcpy(&o->numAvailableVgprs, jniLongToPointer(valueAddress), sizeof(o->numAvailableVgprs));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->numAvailableVgprs, valuePointer, sizeof(o->numAvailableVgprs));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_getNumAvailableSgprs(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->numAvailableSgprs));
+    return jniPointerToLong(&o->numAvailableSgprs);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setNumAvailableSgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setNumAvailableSgprs(JNIEnv*
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    memcpy(&o->numAvailableSgprs, jniLongToPointer(valueAddress), sizeof(o->numAvailableSgprs));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->numAvailableSgprs, valuePointer, sizeof(o->numAvailableSgprs));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_getComputeWorkGroupSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->computeWorkGroupSize));
+    return jniPointerToLong(o->computeWorkGroupSize);
 }
 
 void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setComputeWorkGroupSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,6 +131,8 @@ void Java_cz_mg_vulkan_vk_VkShaderStatisticsInfoAMD_setComputeWorkGroupSize(JNIE
     (void)env;
     (void)jc;
     VkShaderStatisticsInfoAMD* o = (VkShaderStatisticsInfoAMD*)jniLongToPointer(address);
-    memcpy(o->computeWorkGroupSize, jniLongToPointer(valueAddress), sizeof(o->computeWorkGroupSize));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->computeWorkGroupSize, valuePointer, sizeof(o->computeWorkGroupSize));
 }
+
 

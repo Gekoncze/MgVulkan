@@ -9,11 +9,11 @@ public class VkSubresourceLayout extends VkObject {
     }
 
     public VkSubresourceLayout(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSubresourceLayout(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkSubresourceLayout extends VkObject {
         return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
     }
 
+    
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset.getVkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOffset(long address);
@@ -41,8 +43,10 @@ public class VkSubresourceLayout extends VkObject {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
     }
 
+    
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size.getVkAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSize(long address);
@@ -52,8 +56,10 @@ public class VkSubresourceLayout extends VkObject {
         return new VkDeviceSize(getVkMemory(), getRowPitch(getVkAddress()));
     }
 
+    
     public void setRowPitch(VkDeviceSize rowPitch) {
-        setRowPitch(getVkAddress(), rowPitch.getVkAddress());
+        setRowPitch(getVkAddress(), rowPitch != null ? rowPitch.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRowPitch(long address);
@@ -63,8 +69,10 @@ public class VkSubresourceLayout extends VkObject {
         return new VkDeviceSize(getVkMemory(), getArrayPitch(getVkAddress()));
     }
 
+    
     public void setArrayPitch(VkDeviceSize arrayPitch) {
-        setArrayPitch(getVkAddress(), arrayPitch.getVkAddress());
+        setArrayPitch(getVkAddress(), arrayPitch != null ? arrayPitch.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getArrayPitch(long address);
@@ -74,8 +82,10 @@ public class VkSubresourceLayout extends VkObject {
         return new VkDeviceSize(getVkMemory(), getDepthPitch(getVkAddress()));
     }
 
+    
     public void setDepthPitch(VkDeviceSize depthPitch) {
-        setDepthPitch(getVkAddress(), depthPitch.getVkAddress());
+        setDepthPitch(getVkAddress(), depthPitch != null ? depthPitch.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthPitch(long address);
@@ -88,7 +98,12 @@ public class VkSubresourceLayout extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSubresourceLayout.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSubresourceLayout o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkSubresourceLayout extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSubresourceLayout.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

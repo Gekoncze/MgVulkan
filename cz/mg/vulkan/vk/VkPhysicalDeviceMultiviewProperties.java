@@ -9,11 +9,11 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
     }
 
     public VkPhysicalDeviceMultiviewProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPhysicalDeviceMultiviewProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,19 +55,23 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxMultiviewViewCount(getVkAddress()));
     }
 
+    
     public void setMaxMultiviewViewCount(VkUInt32 maxMultiviewViewCount) {
-        setMaxMultiviewViewCount(getVkAddress(), maxMultiviewViewCount.getVkAddress());
+        setMaxMultiviewViewCount(getVkAddress(), maxMultiviewViewCount != null ? maxMultiviewViewCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxMultiviewViewCount(long address);
     private static native void setMaxMultiviewViewCount(long address, long maxMultiviewViewCount);
 
-    public VkUInt32.Array getMaxMultiviewInstanceIndex() {
-        return new VkUInt32.Array(getVkMemory(), getMaxMultiviewInstanceIndex(getVkAddress()), getMaxMultiviewViewCount().getValue());
+    public VkUInt32 getMaxMultiviewInstanceIndex() {
+        return new VkUInt32(getVkMemory(), getMaxMultiviewInstanceIndex(getVkAddress()));
     }
 
+    
     public void setMaxMultiviewInstanceIndex(VkUInt32 maxMultiviewInstanceIndex) {
-        setMaxMultiviewInstanceIndex(getVkAddress(), maxMultiviewInstanceIndex.getVkAddress());
+        setMaxMultiviewInstanceIndex(getVkAddress(), maxMultiviewInstanceIndex != null ? maxMultiviewInstanceIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxMultiviewInstanceIndex(long address);
@@ -76,7 +84,12 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDeviceMultiviewProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceMultiviewProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceMultiviewProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

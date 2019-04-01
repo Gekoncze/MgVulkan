@@ -9,11 +9,11 @@ public class VkImageSubresourceRange extends VkObject {
     }
 
     public VkImageSubresourceRange(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkImageSubresourceRange(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkImageSubresourceRange extends VkObject {
         return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));
     }
 
+    
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask.getVkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAspectMask(long address);
@@ -41,8 +43,10 @@ public class VkImageSubresourceRange extends VkObject {
         return new VkUInt32(getVkMemory(), getBaseMipLevel(getVkAddress()));
     }
 
+    
     public void setBaseMipLevel(VkUInt32 baseMipLevel) {
-        setBaseMipLevel(getVkAddress(), baseMipLevel.getVkAddress());
+        setBaseMipLevel(getVkAddress(), baseMipLevel != null ? baseMipLevel.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBaseMipLevel(long address);
@@ -52,19 +56,23 @@ public class VkImageSubresourceRange extends VkObject {
         return new VkUInt32(getVkMemory(), getLevelCount(getVkAddress()));
     }
 
+    
     public void setLevelCount(VkUInt32 levelCount) {
-        setLevelCount(getVkAddress(), levelCount.getVkAddress());
+        setLevelCount(getVkAddress(), levelCount != null ? levelCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLevelCount(long address);
     private static native void setLevelCount(long address, long levelCount);
 
-    public VkUInt32.Array getBaseArrayLayer() {
-        return new VkUInt32.Array(getVkMemory(), getBaseArrayLayer(getVkAddress()), getLevelCount().getValue());
+    public VkUInt32 getBaseArrayLayer() {
+        return new VkUInt32(getVkMemory(), getBaseArrayLayer(getVkAddress()));
     }
 
+    
     public void setBaseArrayLayer(VkUInt32 baseArrayLayer) {
-        setBaseArrayLayer(getVkAddress(), baseArrayLayer.getVkAddress());
+        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBaseArrayLayer(long address);
@@ -74,8 +82,10 @@ public class VkImageSubresourceRange extends VkObject {
         return new VkUInt32(getVkMemory(), getLayerCount(getVkAddress()));
     }
 
+    
     public void setLayerCount(VkUInt32 layerCount) {
-        setLayerCount(getVkAddress(), layerCount.getVkAddress());
+        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLayerCount(long address);
@@ -88,7 +98,12 @@ public class VkImageSubresourceRange extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkImageSubresourceRange.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkImageSubresourceRange o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkImageSubresourceRange extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImageSubresourceRange.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

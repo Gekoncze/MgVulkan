@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_getSType(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setSType(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setPNext(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_getWaitSemaphoreCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->waitSemaphoreCount));
+    return jniPointerToLong(&o->waitSemaphoreCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setWaitSemaphoreCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setWaitSemaphoreCount(JNIEnv* 
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->waitSemaphoreCount, jniLongToPointer(valueAddress), sizeof(o->waitSemaphoreCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->waitSemaphoreCount, valuePointer, sizeof(o->waitSemaphoreCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_getPWaitSemaphoreDeviceIndices(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pWaitSemaphoreDeviceIndices));
+    return jniPointerToLong(o->pWaitSemaphoreDeviceIndices);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setPWaitSemaphoreDeviceIndices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setPWaitSemaphoreDeviceIndices
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->pWaitSemaphoreDeviceIndices, jniLongToPointer(valueAddress), sizeof(o->pWaitSemaphoreDeviceIndices));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pWaitSemaphoreDeviceIndices, &valuePointer, sizeof(o->pWaitSemaphoreDeviceIndices));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_getCommandBufferCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->commandBufferCount));
+    return jniPointerToLong(&o->commandBufferCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setCommandBufferCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setCommandBufferCount(JNIEnv* 
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->commandBufferCount, jniLongToPointer(valueAddress), sizeof(o->commandBufferCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->commandBufferCount, valuePointer, sizeof(o->commandBufferCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_getPCommandBufferDeviceMasks(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pCommandBufferDeviceMasks));
+    return jniPointerToLong(o->pCommandBufferDeviceMasks);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setPCommandBufferDeviceMasks(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setPCommandBufferDeviceMasks(J
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->pCommandBufferDeviceMasks, jniLongToPointer(valueAddress), sizeof(o->pCommandBufferDeviceMasks));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pCommandBufferDeviceMasks, &valuePointer, sizeof(o->pCommandBufferDeviceMasks));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_getSignalSemaphoreCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->signalSemaphoreCount));
+    return jniPointerToLong(&o->signalSemaphoreCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setSignalSemaphoreCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setSignalSemaphoreCount(JNIEnv
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->signalSemaphoreCount, jniLongToPointer(valueAddress), sizeof(o->signalSemaphoreCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->signalSemaphoreCount, valuePointer, sizeof(o->signalSemaphoreCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_getPSignalSemaphoreDeviceIndices(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pSignalSemaphoreDeviceIndices));
+    return jniPointerToLong(o->pSignalSemaphoreDeviceIndices);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setPSignalSemaphoreDeviceIndices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,6 +148,8 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupSubmitInfo_setPSignalSemaphoreDeviceIndic
     (void)env;
     (void)jc;
     VkDeviceGroupSubmitInfo* o = (VkDeviceGroupSubmitInfo*)jniLongToPointer(address);
-    memcpy(&o->pSignalSemaphoreDeviceIndices, jniLongToPointer(valueAddress), sizeof(o->pSignalSemaphoreDeviceIndices));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pSignalSemaphoreDeviceIndices, &valuePointer, sizeof(o->pSignalSemaphoreDeviceIndices));
 }
+
 

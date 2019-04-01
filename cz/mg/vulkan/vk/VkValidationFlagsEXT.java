@@ -9,11 +9,11 @@ public class VkValidationFlagsEXT extends VkObject {
     }
 
     public VkValidationFlagsEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkValidationFlagsEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkValidationFlagsEXT extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkValidationFlagsEXT extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,19 +55,23 @@ public class VkValidationFlagsEXT extends VkObject {
         return new VkUInt32(getVkMemory(), getDisabledValidationCheckCount(getVkAddress()));
     }
 
+    
     public void setDisabledValidationCheckCount(VkUInt32 disabledValidationCheckCount) {
-        setDisabledValidationCheckCount(getVkAddress(), disabledValidationCheckCount.getVkAddress());
+        setDisabledValidationCheckCount(getVkAddress(), disabledValidationCheckCount != null ? disabledValidationCheckCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDisabledValidationCheckCount(long address);
     private static native void setDisabledValidationCheckCount(long address, long disabledValidationCheckCount);
 
-    public VkValidationCheckEXT.Array getPDisabledValidationChecks() {
-        return new VkValidationCheckEXT.Array(getVkMemory(), getPDisabledValidationChecks(getVkAddress()), getDisabledValidationCheckCount().getValue());
+    public VkValidationCheckEXT getPDisabledValidationChecks() {
+        return new VkValidationCheckEXT(getVkMemory(), getPDisabledValidationChecks(getVkAddress()));
     }
 
+    private VkObject pDisabledValidationChecks = null;
     public void setPDisabledValidationChecks(VkValidationCheckEXT pDisabledValidationChecks) {
-        setPDisabledValidationChecks(getVkAddress(), pDisabledValidationChecks.getVkAddress());
+        setPDisabledValidationChecks(getVkAddress(), pDisabledValidationChecks != null ? pDisabledValidationChecks.getVkAddress() : VkPointer.NULL);
+        this.pDisabledValidationChecks = pDisabledValidationChecks;
     }
 
     private static native long getPDisabledValidationChecks(long address);
@@ -76,7 +84,12 @@ public class VkValidationFlagsEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkValidationFlagsEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkValidationFlagsEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkValidationFlagsEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkValidationFlagsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

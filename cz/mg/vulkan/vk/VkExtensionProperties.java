@@ -9,11 +9,11 @@ public class VkExtensionProperties extends VkObject {
     }
 
     public VkExtensionProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkExtensionProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkExtensionProperties extends VkObject {
         return new VkChar(getVkMemory(), getExtensionName(getVkAddress()));
     }
 
+    
     public void setExtensionName(VkChar extensionName) {
-        setExtensionName(getVkAddress(), extensionName.getVkAddress());
+        setExtensionName(getVkAddress(), extensionName != null ? extensionName.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getExtensionName(long address);
@@ -38,8 +40,10 @@ public class VkExtensionProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getSpecVersion(getVkAddress()));
     }
 
+    
     public void setSpecVersion(VkUInt32 specVersion) {
-        setSpecVersion(getVkAddress(), specVersion.getVkAddress());
+        setSpecVersion(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSpecVersion(long address);
@@ -52,7 +56,12 @@ public class VkExtensionProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkExtensionProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkExtensionProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkExtensionProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExtensionProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

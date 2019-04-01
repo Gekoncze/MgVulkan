@@ -9,11 +9,11 @@ public class VkClearColorValue extends VkObject {
     }
 
     public VkClearColorValue(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkClearColorValue(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -37,8 +37,10 @@ public class VkClearColorValue extends VkObject {
         return new VkFloat(getVkMemory(), getFloat32(getVkAddress()));
     }
 
+    
     public void setFloat32(VkFloat float32) {
-        setFloat32(getVkAddress(), float32.getVkAddress());
+        setFloat32(getVkAddress(), float32 != null ? float32.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getFloat32(long address);
@@ -48,8 +50,10 @@ public class VkClearColorValue extends VkObject {
         return new VkInt32(getVkMemory(), getInt32(getVkAddress()));
     }
 
+    
     public void setInt32(VkInt32 int32) {
-        setInt32(getVkAddress(), int32.getVkAddress());
+        setInt32(getVkAddress(), int32 != null ? int32.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getInt32(long address);
@@ -59,8 +63,10 @@ public class VkClearColorValue extends VkObject {
         return new VkUInt32(getVkMemory(), getUint32(getVkAddress()));
     }
 
+    
     public void setUint32(VkUInt32 uint32) {
-        setUint32(getVkAddress(), uint32.getVkAddress());
+        setUint32(getVkAddress(), uint32 != null ? uint32.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getUint32(long address);
@@ -73,7 +79,12 @@ public class VkClearColorValue extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkClearColorValue.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkClearColorValue o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -114,11 +125,11 @@ public class VkClearColorValue extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkClearColorValue.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

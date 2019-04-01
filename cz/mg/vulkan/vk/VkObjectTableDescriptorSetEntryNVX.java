@@ -9,11 +9,11 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
     }
 
     public VkObjectTableDescriptorSetEntryNVX(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkObjectTableDescriptorSetEntryNVX(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
         return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));
     }
 
+    
     public void setType(VkObjectEntryTypeNVX type) {
-        setType(getVkAddress(), type.getVkAddress());
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getType(long address);
@@ -40,8 +42,10 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
         return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -51,8 +55,10 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
         return new VkPipelineLayout(getVkMemory(), getPipelineLayout(getVkAddress()));
     }
 
+    
     public void setPipelineLayout(VkPipelineLayout pipelineLayout) {
-        setPipelineLayout(getVkAddress(), pipelineLayout.getVkAddress());
+        setPipelineLayout(getVkAddress(), pipelineLayout != null ? pipelineLayout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPipelineLayout(long address);
@@ -62,8 +68,10 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
         return new VkDescriptorSet(getVkMemory(), getDescriptorSet(getVkAddress()));
     }
 
+    
     public void setDescriptorSet(VkDescriptorSet descriptorSet) {
-        setDescriptorSet(getVkAddress(), descriptorSet.getVkAddress());
+        setDescriptorSet(getVkAddress(), descriptorSet != null ? descriptorSet.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDescriptorSet(long address);
@@ -76,7 +84,12 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkObjectTableDescriptorSetEntryNVX.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkObjectTableDescriptorSetEntryNVX o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectTableDescriptorSetEntryNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

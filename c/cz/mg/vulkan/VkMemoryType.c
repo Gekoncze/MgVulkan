@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkMemoryType_getPropertyFlags(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkMemoryType* o = (VkMemoryType*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->propertyFlags));
+    return jniPointerToLong(&o->propertyFlags);
 }
 
 void Java_cz_mg_vulkan_vk_VkMemoryType_setPropertyFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkMemoryType_setPropertyFlags(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkMemoryType* o = (VkMemoryType*)jniLongToPointer(address);
-    memcpy(&o->propertyFlags, jniLongToPointer(valueAddress), sizeof(o->propertyFlags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->propertyFlags, valuePointer, sizeof(o->propertyFlags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkMemoryType_getHeapIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkMemoryType* o = (VkMemoryType*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->heapIndex));
+    return jniPointerToLong(&o->heapIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkMemoryType_setHeapIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkMemoryType_setHeapIndex(JNIEnv* env, jclass jc, jlon
     (void)env;
     (void)jc;
     VkMemoryType* o = (VkMemoryType*)jniLongToPointer(address);
-    memcpy(&o->heapIndex, jniLongToPointer(valueAddress), sizeof(o->heapIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->heapIndex, valuePointer, sizeof(o->heapIndex));
 }
+
 

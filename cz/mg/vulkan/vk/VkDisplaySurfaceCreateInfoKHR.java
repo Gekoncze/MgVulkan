@@ -9,11 +9,11 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
     }
 
     public VkDisplaySurfaceCreateInfoKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDisplaySurfaceCreateInfoKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -35,8 +35,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -46,8 +48,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -57,8 +61,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         return new VkDisplaySurfaceCreateFlagsKHR(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkDisplaySurfaceCreateFlagsKHR flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -68,8 +74,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         return new VkDisplayModeKHR(getVkMemory(), getDisplayMode(getVkAddress()));
     }
 
+    
     public void setDisplayMode(VkDisplayModeKHR displayMode) {
-        setDisplayMode(getVkAddress(), displayMode.getVkAddress());
+        setDisplayMode(getVkAddress(), displayMode != null ? displayMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDisplayMode(long address);
@@ -79,8 +87,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         return new VkUInt32(getVkMemory(), getPlaneIndex(getVkAddress()));
     }
 
+    
     public void setPlaneIndex(VkUInt32 planeIndex) {
-        setPlaneIndex(getVkAddress(), planeIndex.getVkAddress());
+        setPlaneIndex(getVkAddress(), planeIndex != null ? planeIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPlaneIndex(long address);
@@ -90,8 +100,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         return new VkUInt32(getVkMemory(), getPlaneStackIndex(getVkAddress()));
     }
 
+    
     public void setPlaneStackIndex(VkUInt32 planeStackIndex) {
-        setPlaneStackIndex(getVkAddress(), planeStackIndex.getVkAddress());
+        setPlaneStackIndex(getVkAddress(), planeStackIndex != null ? planeStackIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPlaneStackIndex(long address);
@@ -101,8 +113,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         return new VkSurfaceTransformFlagBitsKHR(getVkMemory(), getTransform(getVkAddress()));
     }
 
+    
     public void setTransform(VkSurfaceTransformFlagBitsKHR transform) {
-        setTransform(getVkAddress(), transform.getVkAddress());
+        setTransform(getVkAddress(), transform != null ? transform.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTransform(long address);
@@ -112,8 +126,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         return new VkFloat(getVkMemory(), getGlobalAlpha(getVkAddress()));
     }
 
+    
     public void setGlobalAlpha(VkFloat globalAlpha) {
-        setGlobalAlpha(getVkAddress(), globalAlpha.getVkAddress());
+        setGlobalAlpha(getVkAddress(), globalAlpha != null ? globalAlpha.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getGlobalAlpha(long address);
@@ -123,8 +139,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         return new VkDisplayPlaneAlphaFlagBitsKHR(getVkMemory(), getAlphaMode(getVkAddress()));
     }
 
+    
     public void setAlphaMode(VkDisplayPlaneAlphaFlagBitsKHR alphaMode) {
-        setAlphaMode(getVkAddress(), alphaMode.getVkAddress());
+        setAlphaMode(getVkAddress(), alphaMode != null ? alphaMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAlphaMode(long address);
@@ -134,8 +152,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         return new VkExtent2D(getVkMemory(), getImageExtent(getVkAddress()));
     }
 
+    
     public void setImageExtent(VkExtent2D imageExtent) {
-        setImageExtent(getVkAddress(), imageExtent.getVkAddress());
+        setImageExtent(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageExtent(long address);
@@ -148,7 +168,12 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDisplaySurfaceCreateInfoKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDisplaySurfaceCreateInfoKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -189,11 +214,11 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDisplaySurfaceCreateInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

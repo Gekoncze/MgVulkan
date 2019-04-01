@@ -9,11 +9,11 @@ public class VkExtent3D extends VkObject {
     }
 
     public VkExtent3D(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkExtent3D(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkExtent3D extends VkObject {
         return new VkUInt32(getVkMemory(), getWidth(getVkAddress()));
     }
 
+    
     public void setWidth(VkUInt32 width) {
-        setWidth(getVkAddress(), width.getVkAddress());
+        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getWidth(long address);
@@ -39,8 +41,10 @@ public class VkExtent3D extends VkObject {
         return new VkUInt32(getVkMemory(), getHeight(getVkAddress()));
     }
 
+    
     public void setHeight(VkUInt32 height) {
-        setHeight(getVkAddress(), height.getVkAddress());
+        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getHeight(long address);
@@ -50,8 +54,10 @@ public class VkExtent3D extends VkObject {
         return new VkUInt32(getVkMemory(), getDepth(getVkAddress()));
     }
 
+    
     public void setDepth(VkUInt32 depth) {
-        setDepth(getVkAddress(), depth.getVkAddress());
+        setDepth(getVkAddress(), depth != null ? depth.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepth(long address);
@@ -64,7 +70,12 @@ public class VkExtent3D extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkExtent3D.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkExtent3D o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkExtent3D extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExtent3D.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

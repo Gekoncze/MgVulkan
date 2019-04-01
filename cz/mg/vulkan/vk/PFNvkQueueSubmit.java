@@ -25,7 +25,7 @@ public class PFNvkQueueSubmit extends VkFunctionPointer {
     }
 
     public void call(VkQueue queue, VkUInt32 submitCount, VkSubmitInfo pSubmits, VkFence fence, VkResult rval){
-        call(getValue(), queue != null ? queue.getVkAddress() : VkQueue.NULL.getVkAddress(), submitCount != null ? submitCount.getVkAddress() : VkPointer.NULL, pSubmits != null ? pSubmits.getVkAddress() : VkPointer.NULL, fence != null ? fence.getVkAddress() : VkFence.NULL.getVkAddress(), rval != null ? rval.getVkAddress() : VkPointer.NULL);
+        call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.NULL_ADDRESS, submitCount != null ? submitCount.getVkAddress() : VkPointer.NULL_ADDRESS, pSubmits != null ? pSubmits.getVkAddress() : VkPointer.NULL, fence != null ? fence.getVkAddress() : VkPointer.NULL_ADDRESS, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
     }
 
     private static native void call(long vkaddress, long queue, long submitCount, long pSubmits, long fence, long rval);

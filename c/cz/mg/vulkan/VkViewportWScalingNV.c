@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkViewportWScalingNV_getXcoeff(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkViewportWScalingNV* o = (VkViewportWScalingNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->xcoeff));
+    return jniPointerToLong(&o->xcoeff);
 }
 
 void Java_cz_mg_vulkan_vk_VkViewportWScalingNV_setXcoeff(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkViewportWScalingNV_setXcoeff(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkViewportWScalingNV* o = (VkViewportWScalingNV*)jniLongToPointer(address);
-    memcpy(&o->xcoeff, jniLongToPointer(valueAddress), sizeof(o->xcoeff));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->xcoeff, valuePointer, sizeof(o->xcoeff));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkViewportWScalingNV_getYcoeff(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkViewportWScalingNV* o = (VkViewportWScalingNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->ycoeff));
+    return jniPointerToLong(&o->ycoeff);
 }
 
 void Java_cz_mg_vulkan_vk_VkViewportWScalingNV_setYcoeff(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkViewportWScalingNV_setYcoeff(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkViewportWScalingNV* o = (VkViewportWScalingNV*)jniLongToPointer(address);
-    memcpy(&o->ycoeff, jniLongToPointer(valueAddress), sizeof(o->ycoeff));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->ycoeff, valuePointer, sizeof(o->ycoeff));
 }
+
 

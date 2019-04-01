@@ -9,11 +9,11 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
     }
 
     public VkPipelineColorBlendStateCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineColorBlendStateCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -33,8 +33,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -44,8 +46,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -55,8 +59,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         return new VkPipelineColorBlendStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineColorBlendStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -66,8 +72,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         return new VkBool32(getVkMemory(), getLogicOpEnable(getVkAddress()));
     }
 
+    
     public void setLogicOpEnable(VkBool32 logicOpEnable) {
-        setLogicOpEnable(getVkAddress(), logicOpEnable.getVkAddress());
+        setLogicOpEnable(getVkAddress(), logicOpEnable != null ? logicOpEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLogicOpEnable(long address);
@@ -77,8 +85,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         return new VkLogicOp(getVkMemory(), getLogicOp(getVkAddress()));
     }
 
+    
     public void setLogicOp(VkLogicOp logicOp) {
-        setLogicOp(getVkAddress(), logicOp.getVkAddress());
+        setLogicOp(getVkAddress(), logicOp != null ? logicOp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLogicOp(long address);
@@ -88,19 +98,23 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getAttachmentCount(getVkAddress()));
     }
 
+    
     public void setAttachmentCount(VkUInt32 attachmentCount) {
-        setAttachmentCount(getVkAddress(), attachmentCount.getVkAddress());
+        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAttachmentCount(long address);
     private static native void setAttachmentCount(long address, long attachmentCount);
 
-    public VkPipelineColorBlendAttachmentState.Array getPAttachments() {
-        return new VkPipelineColorBlendAttachmentState.Array(getVkMemory(), getPAttachments(getVkAddress()), getAttachmentCount().getValue());
+    public VkPipelineColorBlendAttachmentState getPAttachments() {
+        return new VkPipelineColorBlendAttachmentState(getVkMemory(), getPAttachments(getVkAddress()));
     }
 
+    private VkObject pAttachments = null;
     public void setPAttachments(VkPipelineColorBlendAttachmentState pAttachments) {
-        setPAttachments(getVkAddress(), pAttachments.getVkAddress());
+        setPAttachments(getVkAddress(), pAttachments != null ? pAttachments.getVkAddress() : VkPointer.NULL);
+        this.pAttachments = pAttachments;
     }
 
     private static native long getPAttachments(long address);
@@ -110,8 +124,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         return new VkFloat(getVkMemory(), getBlendConstants(getVkAddress()));
     }
 
+    
     public void setBlendConstants(VkFloat blendConstants) {
-        setBlendConstants(getVkAddress(), blendConstants.getVkAddress());
+        setBlendConstants(getVkAddress(), blendConstants != null ? blendConstants.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getBlendConstants(long address);
@@ -124,7 +140,12 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineColorBlendStateCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineColorBlendStateCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -165,11 +186,11 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineColorBlendStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

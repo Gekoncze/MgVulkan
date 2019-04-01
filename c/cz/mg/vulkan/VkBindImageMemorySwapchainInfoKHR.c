@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_getSType(JNIEnv* en
     (void)env;
     (void)jc;
     VkBindImageMemorySwapchainInfoKHR* o = (VkBindImageMemorySwapchainInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_setSType(JNIEnv* env
     (void)env;
     (void)jc;
     VkBindImageMemorySwapchainInfoKHR* o = (VkBindImageMemorySwapchainInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindImageMemorySwapchainInfoKHR* o = (VkBindImageMemorySwapchainInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_setPNext(JNIEnv* env
     (void)env;
     (void)jc;
     VkBindImageMemorySwapchainInfoKHR* o = (VkBindImageMemorySwapchainInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_getSwapchain(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindImageMemorySwapchainInfoKHR* o = (VkBindImageMemorySwapchainInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->swapchain));
+    return jniPointerToLong(&o->swapchain);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_setSwapchain(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_setSwapchain(JNIEnv*
     (void)env;
     (void)jc;
     VkBindImageMemorySwapchainInfoKHR* o = (VkBindImageMemorySwapchainInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->swapchain, jniLongToPointer(valueAddress), sizeof(o->swapchain));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->swapchain, valuePointer, sizeof(o->swapchain));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_getImageIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindImageMemorySwapchainInfoKHR* o = (VkBindImageMemorySwapchainInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageIndex));
+    return jniPointerToLong(&o->imageIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_setImageIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemorySwapchainInfoKHR_setImageIndex(JNIEnv
     (void)env;
     (void)jc;
     VkBindImageMemorySwapchainInfoKHR* o = (VkBindImageMemorySwapchainInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->imageIndex, jniLongToPointer(valueAddress), sizeof(o->imageIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageIndex, valuePointer, sizeof(o->imageIndex));
 }
+
 

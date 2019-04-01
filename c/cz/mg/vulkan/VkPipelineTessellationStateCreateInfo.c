@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_getSType(JNIEnv
     (void)env;
     (void)jc;
     VkPipelineTessellationStateCreateInfo* o = (VkPipelineTessellationStateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_setSType(JNIEnv*
     (void)env;
     (void)jc;
     VkPipelineTessellationStateCreateInfo* o = (VkPipelineTessellationStateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineTessellationStateCreateInfo* o = (VkPipelineTessellationStateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_setPNext(JNIEnv*
     (void)env;
     (void)jc;
     VkPipelineTessellationStateCreateInfo* o = (VkPipelineTessellationStateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineTessellationStateCreateInfo* o = (VkPipelineTessellationStateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_setFlags(JNIEnv*
     (void)env;
     (void)jc;
     VkPipelineTessellationStateCreateInfo* o = (VkPipelineTessellationStateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_getPatchControlPoints(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineTessellationStateCreateInfo* o = (VkPipelineTessellationStateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->patchControlPoints));
+    return jniPointerToLong(&o->patchControlPoints);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_setPatchControlPoints(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkPipelineTessellationStateCreateInfo_setPatchControlP
     (void)env;
     (void)jc;
     VkPipelineTessellationStateCreateInfo* o = (VkPipelineTessellationStateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->patchControlPoints, jniLongToPointer(valueAddress), sizeof(o->patchControlPoints));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->patchControlPoints, valuePointer, sizeof(o->patchControlPoints));
 }
+
 

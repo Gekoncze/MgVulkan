@@ -9,11 +9,11 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
     }
 
     public VkPipelineViewportWScalingStateCreateInfoNV(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineViewportWScalingStateCreateInfoNV(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         return new VkBool32(getVkMemory(), getViewportWScalingEnable(getVkAddress()));
     }
 
+    
     public void setViewportWScalingEnable(VkBool32 viewportWScalingEnable) {
-        setViewportWScalingEnable(getVkAddress(), viewportWScalingEnable.getVkAddress());
+        setViewportWScalingEnable(getVkAddress(), viewportWScalingEnable != null ? viewportWScalingEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getViewportWScalingEnable(long address);
@@ -63,19 +69,23 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         return new VkUInt32(getVkMemory(), getViewportCount(getVkAddress()));
     }
 
+    
     public void setViewportCount(VkUInt32 viewportCount) {
-        setViewportCount(getVkAddress(), viewportCount.getVkAddress());
+        setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getViewportCount(long address);
     private static native void setViewportCount(long address, long viewportCount);
 
-    public VkViewportWScalingNV.Array getPViewportWScalings() {
-        return new VkViewportWScalingNV.Array(getVkMemory(), getPViewportWScalings(getVkAddress()), getViewportCount().getValue());
+    public VkViewportWScalingNV getPViewportWScalings() {
+        return new VkViewportWScalingNV(getVkMemory(), getPViewportWScalings(getVkAddress()));
     }
 
+    private VkObject pViewportWScalings = null;
     public void setPViewportWScalings(VkViewportWScalingNV pViewportWScalings) {
-        setPViewportWScalings(getVkAddress(), pViewportWScalings.getVkAddress());
+        setPViewportWScalings(getVkAddress(), pViewportWScalings != null ? pViewportWScalings.getVkAddress() : VkPointer.NULL);
+        this.pViewportWScalings = pViewportWScalings;
     }
 
     private static native long getPViewportWScalings(long address);
@@ -88,7 +98,12 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineViewportWScalingStateCreateInfoNV.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineViewportWScalingStateCreateInfoNV o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineViewportWScalingStateCreateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -9,11 +9,11 @@ public class VkMemoryAllocateInfo extends VkObject {
     }
 
     public VkMemoryAllocateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkMemoryAllocateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkMemoryAllocateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkMemoryAllocateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,8 +55,10 @@ public class VkMemoryAllocateInfo extends VkObject {
         return new VkDeviceSize(getVkMemory(), getAllocationSize(getVkAddress()));
     }
 
+    
     public void setAllocationSize(VkDeviceSize allocationSize) {
-        setAllocationSize(getVkAddress(), allocationSize.getVkAddress());
+        setAllocationSize(getVkAddress(), allocationSize != null ? allocationSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAllocationSize(long address);
@@ -62,8 +68,10 @@ public class VkMemoryAllocateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getMemoryTypeIndex(getVkAddress()));
     }
 
+    
     public void setMemoryTypeIndex(VkUInt32 memoryTypeIndex) {
-        setMemoryTypeIndex(getVkAddress(), memoryTypeIndex.getVkAddress());
+        setMemoryTypeIndex(getVkAddress(), memoryTypeIndex != null ? memoryTypeIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMemoryTypeIndex(long address);
@@ -76,7 +84,12 @@ public class VkMemoryAllocateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkMemoryAllocateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkMemoryAllocateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkMemoryAllocateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkMemoryAllocateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

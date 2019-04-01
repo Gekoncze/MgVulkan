@@ -9,11 +9,11 @@ public class VkClearValue extends VkObject {
     }
 
     public VkClearValue(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkClearValue(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkClearValue extends VkObject {
         return new VkClearColorValue(getVkMemory(), getColor(getVkAddress()));
     }
 
+    
     public void setColor(VkClearColorValue color) {
-        setColor(getVkAddress(), color.getVkAddress());
+        setColor(getVkAddress(), color != null ? color.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getColor(long address);
@@ -43,8 +45,10 @@ public class VkClearValue extends VkObject {
         return new VkClearDepthStencilValue(getVkMemory(), getDepthStencil(getVkAddress()));
     }
 
+    
     public void setDepthStencil(VkClearDepthStencilValue depthStencil) {
-        setDepthStencil(getVkAddress(), depthStencil.getVkAddress());
+        setDepthStencil(getVkAddress(), depthStencil != null ? depthStencil.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthStencil(long address);
@@ -57,7 +61,12 @@ public class VkClearValue extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkClearValue.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkClearValue o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -98,11 +107,11 @@ public class VkClearValue extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkClearValue.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

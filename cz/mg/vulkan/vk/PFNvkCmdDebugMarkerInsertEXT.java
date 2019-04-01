@@ -25,7 +25,7 @@ public class PFNvkCmdDebugMarkerInsertEXT extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkDebugMarkerMarkerInfoEXT pMarkerInfo){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkCommandBuffer.NULL.getVkAddress(), pMarkerInfo != null ? pMarkerInfo.getVkAddress() : VkPointer.NULL);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.NULL_ADDRESS, pMarkerInfo != null ? pMarkerInfo.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long commandBuffer, long pMarkerInfo);

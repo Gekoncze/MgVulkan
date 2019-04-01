@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkAllocationCallbacks_getPUserData(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pUserData));
+    return jniPointerToLong(o->pUserData);
 }
 
 void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPUserData(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPUserData(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    memcpy(&o->pUserData, jniLongToPointer(valueAddress), sizeof(o->pUserData));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pUserData, &valuePointer, sizeof(o->pUserData));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAllocationCallbacks_getPfnAllocation(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pfnAllocation));
+    return jniPointerToLong(&o->pfnAllocation);
 }
 
 void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPfnAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPfnAllocation(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    memcpy(&o->pfnAllocation, jniLongToPointer(valueAddress), sizeof(o->pfnAllocation));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pfnAllocation, valuePointer, sizeof(o->pfnAllocation));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAllocationCallbacks_getPfnReallocation(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pfnReallocation));
+    return jniPointerToLong(&o->pfnReallocation);
 }
 
 void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPfnReallocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPfnReallocation(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    memcpy(&o->pfnReallocation, jniLongToPointer(valueAddress), sizeof(o->pfnReallocation));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pfnReallocation, valuePointer, sizeof(o->pfnReallocation));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAllocationCallbacks_getPfnFree(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pfnFree));
+    return jniPointerToLong(&o->pfnFree);
 }
 
 void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPfnFree(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPfnFree(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    memcpy(&o->pfnFree, jniLongToPointer(valueAddress), sizeof(o->pfnFree));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pfnFree, valuePointer, sizeof(o->pfnFree));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAllocationCallbacks_getPfnInternalAllocation(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pfnInternalAllocation));
+    return jniPointerToLong(&o->pfnInternalAllocation);
 }
 
 void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPfnInternalAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPfnInternalAllocation(JNIEnv*
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    memcpy(&o->pfnInternalAllocation, jniLongToPointer(valueAddress), sizeof(o->pfnInternalAllocation));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pfnInternalAllocation, valuePointer, sizeof(o->pfnInternalAllocation));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAllocationCallbacks_getPfnInternalFree(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pfnInternalFree));
+    return jniPointerToLong(&o->pfnInternalFree);
 }
 
 void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPfnInternalFree(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkAllocationCallbacks_setPfnInternalFree(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkAllocationCallbacks* o = (VkAllocationCallbacks*)jniLongToPointer(address);
-    memcpy(&o->pfnInternalFree, jniLongToPointer(valueAddress), sizeof(o->pfnInternalFree));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pfnInternalFree, valuePointer, sizeof(o->pfnInternalFree));
 }
+
 

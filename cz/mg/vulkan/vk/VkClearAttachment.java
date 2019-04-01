@@ -9,11 +9,11 @@ public class VkClearAttachment extends VkObject {
     }
 
     public VkClearAttachment(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkClearAttachment(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkClearAttachment extends VkObject {
         return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));
     }
 
+    
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask.getVkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAspectMask(long address);
@@ -39,8 +41,10 @@ public class VkClearAttachment extends VkObject {
         return new VkUInt32(getVkMemory(), getColorAttachment(getVkAddress()));
     }
 
+    
     public void setColorAttachment(VkUInt32 colorAttachment) {
-        setColorAttachment(getVkAddress(), colorAttachment.getVkAddress());
+        setColorAttachment(getVkAddress(), colorAttachment != null ? colorAttachment.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getColorAttachment(long address);
@@ -50,8 +54,10 @@ public class VkClearAttachment extends VkObject {
         return new VkClearValue(getVkMemory(), getClearValue(getVkAddress()));
     }
 
+    
     public void setClearValue(VkClearValue clearValue) {
-        setClearValue(getVkAddress(), clearValue.getVkAddress());
+        setClearValue(getVkAddress(), clearValue != null ? clearValue.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getClearValue(long address);
@@ -64,7 +70,12 @@ public class VkClearAttachment extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkClearAttachment.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkClearAttachment o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkClearAttachment extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkClearAttachment.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

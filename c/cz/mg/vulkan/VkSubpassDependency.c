@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSubpassDependency_getSrcSubpass(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->srcSubpass));
+    return jniPointerToLong(&o->srcSubpass);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDependency_setSrcSubpass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDependency_setSrcSubpass(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    memcpy(&o->srcSubpass, jniLongToPointer(valueAddress), sizeof(o->srcSubpass));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->srcSubpass, valuePointer, sizeof(o->srcSubpass));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDependency_getDstSubpass(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dstSubpass));
+    return jniPointerToLong(&o->dstSubpass);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDependency_setDstSubpass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDependency_setDstSubpass(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    memcpy(&o->dstSubpass, jniLongToPointer(valueAddress), sizeof(o->dstSubpass));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dstSubpass, valuePointer, sizeof(o->dstSubpass));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDependency_getSrcStageMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->srcStageMask));
+    return jniPointerToLong(&o->srcStageMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDependency_setSrcStageMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDependency_setSrcStageMask(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    memcpy(&o->srcStageMask, jniLongToPointer(valueAddress), sizeof(o->srcStageMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->srcStageMask, valuePointer, sizeof(o->srcStageMask));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDependency_getDstStageMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dstStageMask));
+    return jniPointerToLong(&o->dstStageMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDependency_setDstStageMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDependency_setDstStageMask(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    memcpy(&o->dstStageMask, jniLongToPointer(valueAddress), sizeof(o->dstStageMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dstStageMask, valuePointer, sizeof(o->dstStageMask));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDependency_getSrcAccessMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->srcAccessMask));
+    return jniPointerToLong(&o->srcAccessMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDependency_setSrcAccessMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDependency_setSrcAccessMask(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    memcpy(&o->srcAccessMask, jniLongToPointer(valueAddress), sizeof(o->srcAccessMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->srcAccessMask, valuePointer, sizeof(o->srcAccessMask));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDependency_getDstAccessMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dstAccessMask));
+    return jniPointerToLong(&o->dstAccessMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDependency_setDstAccessMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDependency_setDstAccessMask(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    memcpy(&o->dstAccessMask, jniLongToPointer(valueAddress), sizeof(o->dstAccessMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dstAccessMask, valuePointer, sizeof(o->dstAccessMask));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDependency_getDependencyFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dependencyFlags));
+    return jniPointerToLong(&o->dependencyFlags);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDependency_setDependencyFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,6 +131,8 @@ void Java_cz_mg_vulkan_vk_VkSubpassDependency_setDependencyFlags(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkSubpassDependency* o = (VkSubpassDependency*)jniLongToPointer(address);
-    memcpy(&o->dependencyFlags, jniLongToPointer(valueAddress), sizeof(o->dependencyFlags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dependencyFlags, valuePointer, sizeof(o->dependencyFlags));
 }
+
 

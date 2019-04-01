@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSparseImageOpaqueMemoryBindInfo_getImage(JNIEnv* en
     (void)env;
     (void)jc;
     VkSparseImageOpaqueMemoryBindInfo* o = (VkSparseImageOpaqueMemoryBindInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->image));
+    return jniPointerToLong(&o->image);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseImageOpaqueMemoryBindInfo_setImage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSparseImageOpaqueMemoryBindInfo_setImage(JNIEnv* env
     (void)env;
     (void)jc;
     VkSparseImageOpaqueMemoryBindInfo* o = (VkSparseImageOpaqueMemoryBindInfo*)jniLongToPointer(address);
-    memcpy(&o->image, jniLongToPointer(valueAddress), sizeof(o->image));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->image, valuePointer, sizeof(o->image));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseImageOpaqueMemoryBindInfo_getBindCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseImageOpaqueMemoryBindInfo* o = (VkSparseImageOpaqueMemoryBindInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->bindCount));
+    return jniPointerToLong(&o->bindCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseImageOpaqueMemoryBindInfo_setBindCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkSparseImageOpaqueMemoryBindInfo_setBindCount(JNIEnv*
     (void)env;
     (void)jc;
     VkSparseImageOpaqueMemoryBindInfo* o = (VkSparseImageOpaqueMemoryBindInfo*)jniLongToPointer(address);
-    memcpy(&o->bindCount, jniLongToPointer(valueAddress), sizeof(o->bindCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->bindCount, valuePointer, sizeof(o->bindCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSparseImageOpaqueMemoryBindInfo_getPBinds(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSparseImageOpaqueMemoryBindInfo* o = (VkSparseImageOpaqueMemoryBindInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pBinds));
+    return jniPointerToLong(o->pBinds);
 }
 
 void Java_cz_mg_vulkan_vk_VkSparseImageOpaqueMemoryBindInfo_setPBinds(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkSparseImageOpaqueMemoryBindInfo_setPBinds(JNIEnv* en
     (void)env;
     (void)jc;
     VkSparseImageOpaqueMemoryBindInfo* o = (VkSparseImageOpaqueMemoryBindInfo*)jniLongToPointer(address);
-    memcpy(&o->pBinds, jniLongToPointer(valueAddress), sizeof(o->pBinds));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pBinds, &valuePointer, sizeof(o->pBinds));
 }
+
 

@@ -9,11 +9,11 @@ public class VkMemoryRequirements extends VkObject {
     }
 
     public VkMemoryRequirements(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkMemoryRequirements(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkMemoryRequirements extends VkObject {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
     }
 
+    
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size.getVkAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSize(long address);
@@ -39,8 +41,10 @@ public class VkMemoryRequirements extends VkObject {
         return new VkDeviceSize(getVkMemory(), getAlignment(getVkAddress()));
     }
 
+    
     public void setAlignment(VkDeviceSize alignment) {
-        setAlignment(getVkAddress(), alignment.getVkAddress());
+        setAlignment(getVkAddress(), alignment != null ? alignment.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAlignment(long address);
@@ -50,8 +54,10 @@ public class VkMemoryRequirements extends VkObject {
         return new VkUInt32(getVkMemory(), getMemoryTypeBits(getVkAddress()));
     }
 
+    
     public void setMemoryTypeBits(VkUInt32 memoryTypeBits) {
-        setMemoryTypeBits(getVkAddress(), memoryTypeBits.getVkAddress());
+        setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMemoryTypeBits(long address);
@@ -64,7 +70,12 @@ public class VkMemoryRequirements extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkMemoryRequirements.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkMemoryRequirements o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkMemoryRequirements extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkMemoryRequirements.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

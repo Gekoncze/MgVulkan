@@ -9,15 +9,15 @@ public class VkDeviceCreateInfo extends VkObject {
     }
 
     public VkDeviceCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDeviceCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
-    public VkDeviceCreateInfo(VkObject pNext, VkDeviceCreateFlags flags, VkUInt32 queueCreateInfoCount, VkDeviceQueueCreateInfo pQueueCreateInfos, VkUInt32 enabledLayerCount, VkChar ppEnabledLayerNames, VkUInt32 enabledExtensionCount, VkChar ppEnabledExtensionNames, VkPhysicalDeviceFeatures pEnabledFeatures) {
+    public VkDeviceCreateInfo(VkObject pNext, VkDeviceCreateFlags flags, VkUInt32 queueCreateInfoCount, VkDeviceQueueCreateInfo pQueueCreateInfos, VkUInt32 enabledLayerCount, VkChar.Pointer ppEnabledLayerNames, VkUInt32 enabledExtensionCount, VkChar.Pointer ppEnabledExtensionNames, VkPhysicalDeviceFeatures pEnabledFeatures) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO));
         setPNext(pNext);
@@ -35,8 +35,10 @@ public class VkDeviceCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -46,8 +48,10 @@ public class VkDeviceCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -57,8 +61,10 @@ public class VkDeviceCreateInfo extends VkObject {
         return new VkDeviceCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkDeviceCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -68,19 +74,23 @@ public class VkDeviceCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getQueueCreateInfoCount(getVkAddress()));
     }
 
+    
     public void setQueueCreateInfoCount(VkUInt32 queueCreateInfoCount) {
-        setQueueCreateInfoCount(getVkAddress(), queueCreateInfoCount.getVkAddress());
+        setQueueCreateInfoCount(getVkAddress(), queueCreateInfoCount != null ? queueCreateInfoCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getQueueCreateInfoCount(long address);
     private static native void setQueueCreateInfoCount(long address, long queueCreateInfoCount);
 
-    public VkDeviceQueueCreateInfo.Array getPQueueCreateInfos() {
-        return new VkDeviceQueueCreateInfo.Array(getVkMemory(), getPQueueCreateInfos(getVkAddress()), getQueueCreateInfoCount().getValue());
+    public VkDeviceQueueCreateInfo getPQueueCreateInfos() {
+        return new VkDeviceQueueCreateInfo(getVkMemory(), getPQueueCreateInfos(getVkAddress()));
     }
 
+    private VkObject pQueueCreateInfos = null;
     public void setPQueueCreateInfos(VkDeviceQueueCreateInfo pQueueCreateInfos) {
-        setPQueueCreateInfos(getVkAddress(), pQueueCreateInfos.getVkAddress());
+        setPQueueCreateInfos(getVkAddress(), pQueueCreateInfos != null ? pQueueCreateInfos.getVkAddress() : VkPointer.NULL);
+        this.pQueueCreateInfos = pQueueCreateInfos;
     }
 
     private static native long getPQueueCreateInfos(long address);
@@ -90,19 +100,23 @@ public class VkDeviceCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getEnabledLayerCount(getVkAddress()));
     }
 
+    
     public void setEnabledLayerCount(VkUInt32 enabledLayerCount) {
-        setEnabledLayerCount(getVkAddress(), enabledLayerCount.getVkAddress());
+        setEnabledLayerCount(getVkAddress(), enabledLayerCount != null ? enabledLayerCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getEnabledLayerCount(long address);
     private static native void setEnabledLayerCount(long address, long enabledLayerCount);
 
-    public VkChar.Array getPpEnabledLayerNames() {
-        return new VkChar.Array(getVkMemory(), getPpEnabledLayerNames(getVkAddress()), getEnabledLayerCount().getValue());
+    public VkChar.Pointer getPpEnabledLayerNames() {
+        return new VkChar.Pointer(getVkMemory(), getPpEnabledLayerNames(getVkAddress()));
     }
 
-    public void setPpEnabledLayerNames(VkChar ppEnabledLayerNames) {
-        setPpEnabledLayerNames(getVkAddress(), ppEnabledLayerNames.getVkAddress());
+    private VkObject ppEnabledLayerNames = null;
+    public void setPpEnabledLayerNames(VkChar.Pointer ppEnabledLayerNames) {
+        setPpEnabledLayerNames(getVkAddress(), ppEnabledLayerNames != null ? ppEnabledLayerNames.getVkAddress() : VkPointer.NULL);
+        this.ppEnabledLayerNames = ppEnabledLayerNames;
     }
 
     private static native long getPpEnabledLayerNames(long address);
@@ -112,19 +126,23 @@ public class VkDeviceCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getEnabledExtensionCount(getVkAddress()));
     }
 
+    
     public void setEnabledExtensionCount(VkUInt32 enabledExtensionCount) {
-        setEnabledExtensionCount(getVkAddress(), enabledExtensionCount.getVkAddress());
+        setEnabledExtensionCount(getVkAddress(), enabledExtensionCount != null ? enabledExtensionCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getEnabledExtensionCount(long address);
     private static native void setEnabledExtensionCount(long address, long enabledExtensionCount);
 
-    public VkChar.Array getPpEnabledExtensionNames() {
-        return new VkChar.Array(getVkMemory(), getPpEnabledExtensionNames(getVkAddress()), getEnabledExtensionCount().getValue());
+    public VkChar.Pointer getPpEnabledExtensionNames() {
+        return new VkChar.Pointer(getVkMemory(), getPpEnabledExtensionNames(getVkAddress()));
     }
 
-    public void setPpEnabledExtensionNames(VkChar ppEnabledExtensionNames) {
-        setPpEnabledExtensionNames(getVkAddress(), ppEnabledExtensionNames.getVkAddress());
+    private VkObject ppEnabledExtensionNames = null;
+    public void setPpEnabledExtensionNames(VkChar.Pointer ppEnabledExtensionNames) {
+        setPpEnabledExtensionNames(getVkAddress(), ppEnabledExtensionNames != null ? ppEnabledExtensionNames.getVkAddress() : VkPointer.NULL);
+        this.ppEnabledExtensionNames = ppEnabledExtensionNames;
     }
 
     private static native long getPpEnabledExtensionNames(long address);
@@ -134,8 +152,10 @@ public class VkDeviceCreateInfo extends VkObject {
         return new VkPhysicalDeviceFeatures(getVkMemory(), getPEnabledFeatures(getVkAddress()));
     }
 
+    private VkObject pEnabledFeatures = null;
     public void setPEnabledFeatures(VkPhysicalDeviceFeatures pEnabledFeatures) {
-        setPEnabledFeatures(getVkAddress(), pEnabledFeatures.getVkAddress());
+        setPEnabledFeatures(getVkAddress(), pEnabledFeatures != null ? pEnabledFeatures.getVkAddress() : VkPointer.NULL);
+        this.pEnabledFeatures = pEnabledFeatures;
     }
 
     private static native long getPEnabledFeatures(long address);
@@ -148,7 +168,12 @@ public class VkDeviceCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDeviceCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDeviceCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -189,11 +214,11 @@ public class VkDeviceCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkMappedMemoryRange_getSType(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkMappedMemoryRange* o = (VkMappedMemoryRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkMappedMemoryRange_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkMappedMemoryRange_setSType(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkMappedMemoryRange* o = (VkMappedMemoryRange*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkMappedMemoryRange_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkMappedMemoryRange* o = (VkMappedMemoryRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkMappedMemoryRange_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkMappedMemoryRange_setPNext(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkMappedMemoryRange* o = (VkMappedMemoryRange*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkMappedMemoryRange_getMemory(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkMappedMemoryRange* o = (VkMappedMemoryRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->memory));
+    return jniPointerToLong(&o->memory);
 }
 
 void Java_cz_mg_vulkan_vk_VkMappedMemoryRange_setMemory(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkMappedMemoryRange_setMemory(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkMappedMemoryRange* o = (VkMappedMemoryRange*)jniLongToPointer(address);
-    memcpy(&o->memory, jniLongToPointer(valueAddress), sizeof(o->memory));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->memory, valuePointer, sizeof(o->memory));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkMappedMemoryRange_getOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkMappedMemoryRange* o = (VkMappedMemoryRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->offset));
+    return jniPointerToLong(&o->offset);
 }
 
 void Java_cz_mg_vulkan_vk_VkMappedMemoryRange_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkMappedMemoryRange_setOffset(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkMappedMemoryRange* o = (VkMappedMemoryRange*)jniLongToPointer(address);
-    memcpy(&o->offset, jniLongToPointer(valueAddress), sizeof(o->offset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkMappedMemoryRange_getSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkMappedMemoryRange* o = (VkMappedMemoryRange*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->size));
+    return jniPointerToLong(&o->size);
 }
 
 void Java_cz_mg_vulkan_vk_VkMappedMemoryRange_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkMappedMemoryRange_setSize(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkMappedMemoryRange* o = (VkMappedMemoryRange*)jniLongToPointer(address);
-    memcpy(&o->size, jniLongToPointer(valueAddress), sizeof(o->size));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->size, valuePointer, sizeof(o->size));
 }
+
 

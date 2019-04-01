@@ -9,11 +9,11 @@ public class VkVertexInputAttributeDescription extends VkObject {
     }
 
     public VkVertexInputAttributeDescription(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkVertexInputAttributeDescription(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkVertexInputAttributeDescription extends VkObject {
         return new VkUInt32(getVkMemory(), getLocation(getVkAddress()));
     }
 
+    
     public void setLocation(VkUInt32 location) {
-        setLocation(getVkAddress(), location.getVkAddress());
+        setLocation(getVkAddress(), location != null ? location.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLocation(long address);
@@ -40,8 +42,10 @@ public class VkVertexInputAttributeDescription extends VkObject {
         return new VkUInt32(getVkMemory(), getBinding(getVkAddress()));
     }
 
+    
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding.getVkAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBinding(long address);
@@ -51,8 +55,10 @@ public class VkVertexInputAttributeDescription extends VkObject {
         return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
     }
 
+    
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format.getVkAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFormat(long address);
@@ -62,8 +68,10 @@ public class VkVertexInputAttributeDescription extends VkObject {
         return new VkUInt32(getVkMemory(), getOffset(getVkAddress()));
     }
 
+    
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset.getVkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOffset(long address);
@@ -76,7 +84,12 @@ public class VkVertexInputAttributeDescription extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkVertexInputAttributeDescription.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkVertexInputAttributeDescription o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkVertexInputAttributeDescription extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkVertexInputAttributeDescription.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_getSType(JNIEnv* env,
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setSType(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setPNext(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setFlags(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_getStage(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->stage));
+    return jniPointerToLong(&o->stage);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setStage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setStage(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->stage, jniLongToPointer(valueAddress), sizeof(o->stage));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->stage, valuePointer, sizeof(o->stage));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_getModule(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->module));
+    return jniPointerToLong(&o->module);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setModule(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setModule(JNIEnv* env,
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->module, jniLongToPointer(valueAddress), sizeof(o->module));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->module, valuePointer, sizeof(o->module));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_getPName(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pName));
+    return jniPointerToLong(o->pName);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setPName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setPName(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pName, jniLongToPointer(valueAddress), sizeof(o->pName));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pName, &valuePointer, sizeof(o->pName));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_getPSpecializationInfo(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pSpecializationInfo));
+    return jniPointerToLong(o->pSpecializationInfo);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setPSpecializationInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,6 +131,8 @@ void Java_cz_mg_vulkan_vk_VkPipelineShaderStageCreateInfo_setPSpecializationInfo
     (void)env;
     (void)jc;
     VkPipelineShaderStageCreateInfo* o = (VkPipelineShaderStageCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pSpecializationInfo, jniLongToPointer(valueAddress), sizeof(o->pSpecializationInfo));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pSpecializationInfo, &valuePointer, sizeof(o->pSpecializationInfo));
 }
+
 

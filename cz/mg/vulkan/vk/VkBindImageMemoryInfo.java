@@ -9,11 +9,11 @@ public class VkBindImageMemoryInfo extends VkObject {
     }
 
     public VkBindImageMemoryInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkBindImageMemoryInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkBindImageMemoryInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkBindImageMemoryInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkBindImageMemoryInfo extends VkObject {
         return new VkImage(getVkMemory(), getImage(getVkAddress()));
     }
 
+    
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image.getVkAddress());
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImage(long address);
@@ -63,8 +69,10 @@ public class VkBindImageMemoryInfo extends VkObject {
         return new VkDeviceMemory(getVkMemory(), getMemory(getVkAddress()));
     }
 
+    
     public void setMemory(VkDeviceMemory memory) {
-        setMemory(getVkAddress(), memory.getVkAddress());
+        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMemory(long address);
@@ -74,8 +82,10 @@ public class VkBindImageMemoryInfo extends VkObject {
         return new VkDeviceSize(getVkMemory(), getMemoryOffset(getVkAddress()));
     }
 
+    
     public void setMemoryOffset(VkDeviceSize memoryOffset) {
-        setMemoryOffset(getVkAddress(), memoryOffset.getVkAddress());
+        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMemoryOffset(long address);
@@ -88,7 +98,12 @@ public class VkBindImageMemoryInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkBindImageMemoryInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkBindImageMemoryInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkBindImageMemoryInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBindImageMemoryInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

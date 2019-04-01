@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_getSampler(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkDescriptorImageInfo* o = (VkDescriptorImageInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sampler));
+    return jniPointerToLong(&o->sampler);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setSampler(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setSampler(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkDescriptorImageInfo* o = (VkDescriptorImageInfo*)jniLongToPointer(address);
-    memcpy(&o->sampler, jniLongToPointer(valueAddress), sizeof(o->sampler));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sampler, valuePointer, sizeof(o->sampler));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_getImageView(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorImageInfo* o = (VkDescriptorImageInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageView));
+    return jniPointerToLong(&o->imageView);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setImageView(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setImageView(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkDescriptorImageInfo* o = (VkDescriptorImageInfo*)jniLongToPointer(address);
-    memcpy(&o->imageView, jniLongToPointer(valueAddress), sizeof(o->imageView));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageView, valuePointer, sizeof(o->imageView));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_getImageLayout(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorImageInfo* o = (VkDescriptorImageInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageLayout));
+    return jniPointerToLong(&o->imageLayout);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setImageLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setImageLayout(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkDescriptorImageInfo* o = (VkDescriptorImageInfo*)jniLongToPointer(address);
-    memcpy(&o->imageLayout, jniLongToPointer(valueAddress), sizeof(o->imageLayout));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageLayout, valuePointer, sizeof(o->imageLayout));
 }
+
 

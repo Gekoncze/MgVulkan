@@ -9,11 +9,11 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
     }
 
     public VkPipelineDynamicStateCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineDynamicStateCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         return new VkPipelineDynamicStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineDynamicStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -63,19 +69,23 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getDynamicStateCount(getVkAddress()));
     }
 
+    
     public void setDynamicStateCount(VkUInt32 dynamicStateCount) {
-        setDynamicStateCount(getVkAddress(), dynamicStateCount.getVkAddress());
+        setDynamicStateCount(getVkAddress(), dynamicStateCount != null ? dynamicStateCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDynamicStateCount(long address);
     private static native void setDynamicStateCount(long address, long dynamicStateCount);
 
-    public VkDynamicState.Array getPDynamicStates() {
-        return new VkDynamicState.Array(getVkMemory(), getPDynamicStates(getVkAddress()), getDynamicStateCount().getValue());
+    public VkDynamicState getPDynamicStates() {
+        return new VkDynamicState(getVkMemory(), getPDynamicStates(getVkAddress()));
     }
 
+    private VkObject pDynamicStates = null;
     public void setPDynamicStates(VkDynamicState pDynamicStates) {
-        setPDynamicStates(getVkAddress(), pDynamicStates.getVkAddress());
+        setPDynamicStates(getVkAddress(), pDynamicStates != null ? pDynamicStates.getVkAddress() : VkPointer.NULL);
+        this.pDynamicStates = pDynamicStates;
     }
 
     private static native long getPDynamicStates(long address);
@@ -88,7 +98,12 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineDynamicStateCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineDynamicStateCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineDynamicStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_getSType(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setSType(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setPNext(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setFlags(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_getStage(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->stage));
+    return jniPointerToLong(&o->stage);
 }
 
 void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setStage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setStage(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->stage, jniLongToPointer(valueAddress), sizeof(o->stage));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->stage, valuePointer, sizeof(o->stage));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_getLayout(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->layout));
+    return jniPointerToLong(&o->layout);
 }
 
 void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setLayout(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->layout, jniLongToPointer(valueAddress), sizeof(o->layout));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->layout, valuePointer, sizeof(o->layout));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_getBasePipelineHandle(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->basePipelineHandle));
+    return jniPointerToLong(&o->basePipelineHandle);
 }
 
 void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setBasePipelineHandle(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setBasePipelineHandle(JNIE
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->basePipelineHandle, jniLongToPointer(valueAddress), sizeof(o->basePipelineHandle));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->basePipelineHandle, valuePointer, sizeof(o->basePipelineHandle));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_getBasePipelineIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->basePipelineIndex));
+    return jniPointerToLong(&o->basePipelineIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setBasePipelineIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,6 +131,8 @@ void Java_cz_mg_vulkan_vk_VkComputePipelineCreateInfo_setBasePipelineIndex(JNIEn
     (void)env;
     (void)jc;
     VkComputePipelineCreateInfo* o = (VkComputePipelineCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->basePipelineIndex, jniLongToPointer(valueAddress), sizeof(o->basePipelineIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->basePipelineIndex, valuePointer, sizeof(o->basePipelineIndex));
 }
+
 

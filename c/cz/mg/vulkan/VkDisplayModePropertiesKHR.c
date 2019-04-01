@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_getDisplayMode(JNIEnv* env
     (void)env;
     (void)jc;
     VkDisplayModePropertiesKHR* o = (VkDisplayModePropertiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->displayMode));
+    return jniPointerToLong(&o->displayMode);
 }
 
 void Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_setDisplayMode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_setDisplayMode(JNIEnv* env,
     (void)env;
     (void)jc;
     VkDisplayModePropertiesKHR* o = (VkDisplayModePropertiesKHR*)jniLongToPointer(address);
-    memcpy(&o->displayMode, jniLongToPointer(valueAddress), sizeof(o->displayMode));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->displayMode, valuePointer, sizeof(o->displayMode));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_getParameters(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDisplayModePropertiesKHR* o = (VkDisplayModePropertiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->parameters));
+    return jniPointerToLong(&o->parameters);
 }
 
 void Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_setParameters(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_setParameters(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkDisplayModePropertiesKHR* o = (VkDisplayModePropertiesKHR*)jniLongToPointer(address);
-    memcpy(&o->parameters, jniLongToPointer(valueAddress), sizeof(o->parameters));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->parameters, valuePointer, sizeof(o->parameters));
 }
+
 

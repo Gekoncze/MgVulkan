@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_getSType(JNIEnv* env, 
     (void)env;
     (void)jc;
     VkValidationCacheCreateInfoEXT* o = (VkValidationCacheCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_setSType(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkValidationCacheCreateInfoEXT* o = (VkValidationCacheCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkValidationCacheCreateInfoEXT* o = (VkValidationCacheCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_setPNext(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkValidationCacheCreateInfoEXT* o = (VkValidationCacheCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkValidationCacheCreateInfoEXT* o = (VkValidationCacheCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_setFlags(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkValidationCacheCreateInfoEXT* o = (VkValidationCacheCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_getInitialDataSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkValidationCacheCreateInfoEXT* o = (VkValidationCacheCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->initialDataSize));
+    return jniPointerToLong(&o->initialDataSize);
 }
 
 void Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_setInitialDataSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_setInitialDataSize(JNIE
     (void)env;
     (void)jc;
     VkValidationCacheCreateInfoEXT* o = (VkValidationCacheCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->initialDataSize, jniLongToPointer(valueAddress), sizeof(o->initialDataSize));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->initialDataSize, valuePointer, sizeof(o->initialDataSize));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_getPInitialData(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkValidationCacheCreateInfoEXT* o = (VkValidationCacheCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pInitialData));
+    return jniPointerToLong(o->pInitialData);
 }
 
 void Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_setPInitialData(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkValidationCacheCreateInfoEXT_setPInitialData(JNIEnv*
     (void)env;
     (void)jc;
     VkValidationCacheCreateInfoEXT* o = (VkValidationCacheCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pInitialData, jniLongToPointer(valueAddress), sizeof(o->pInitialData));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pInitialData, &valuePointer, sizeof(o->pInitialData));
 }
+
 

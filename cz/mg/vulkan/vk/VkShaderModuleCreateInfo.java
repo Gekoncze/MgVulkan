@@ -9,11 +9,11 @@ public class VkShaderModuleCreateInfo extends VkObject {
     }
 
     public VkShaderModuleCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkShaderModuleCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkShaderModuleCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkShaderModuleCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkShaderModuleCreateInfo extends VkObject {
         return new VkShaderModuleCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkShaderModuleCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -63,8 +69,10 @@ public class VkShaderModuleCreateInfo extends VkObject {
         return new VkSize(getVkMemory(), getCodeSize(getVkAddress()));
     }
 
+    
     public void setCodeSize(VkSize codeSize) {
-        setCodeSize(getVkAddress(), codeSize.getVkAddress());
+        setCodeSize(getVkAddress(), codeSize != null ? codeSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCodeSize(long address);
@@ -74,8 +82,10 @@ public class VkShaderModuleCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getPCode(getVkAddress()));
     }
 
+    private VkObject pCode = null;
     public void setPCode(VkUInt32 pCode) {
-        setPCode(getVkAddress(), pCode.getVkAddress());
+        setPCode(getVkAddress(), pCode != null ? pCode.getVkAddress() : VkPointer.NULL);
+        this.pCode = pCode;
     }
 
     private static native long getPCode(long address);
@@ -88,7 +98,12 @@ public class VkShaderModuleCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkShaderModuleCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkShaderModuleCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkShaderModuleCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkShaderModuleCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

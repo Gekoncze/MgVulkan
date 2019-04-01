@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_getST
     (void)env;
     (void)jc;
     VkPhysicalDeviceExternalMemoryHostPropertiesEXT* o = (VkPhysicalDeviceExternalMemoryHostPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_setSTy
     (void)env;
     (void)jc;
     VkPhysicalDeviceExternalMemoryHostPropertiesEXT* o = (VkPhysicalDeviceExternalMemoryHostPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceExternalMemoryHostPropertiesEXT* o = (VkPhysicalDeviceExternalMemoryHostPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_setPNe
     (void)env;
     (void)jc;
     VkPhysicalDeviceExternalMemoryHostPropertiesEXT* o = (VkPhysicalDeviceExternalMemoryHostPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_getMinImportedHostPointerAlignment(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceExternalMemoryHostPropertiesEXT* o = (VkPhysicalDeviceExternalMemoryHostPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->minImportedHostPointerAlignment));
+    return jniPointerToLong(&o->minImportedHostPointerAlignment);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_setMinImportedHostPointerAlignment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_setMin
     (void)env;
     (void)jc;
     VkPhysicalDeviceExternalMemoryHostPropertiesEXT* o = (VkPhysicalDeviceExternalMemoryHostPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->minImportedHostPointerAlignment, jniLongToPointer(valueAddress), sizeof(o->minImportedHostPointerAlignment));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->minImportedHostPointerAlignment, valuePointer, sizeof(o->minImportedHostPointerAlignment));
 }
+
 

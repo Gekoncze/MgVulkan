@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getST
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setSTy
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setPNe
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxUpdateAfterBindDescriptorsInAllPools(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxUpdateAfterBindDescriptorsInAllPools));
+    return jniPointerToLong(&o->maxUpdateAfterBindDescriptorsInAllPools);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxUpdateAfterBindDescriptorsInAllPools(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxUpdateAfterBindDescriptorsInAllPools, jniLongToPointer(valueAddress), sizeof(o->maxUpdateAfterBindDescriptorsInAllPools));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxUpdateAfterBindDescriptorsInAllPools, valuePointer, sizeof(o->maxUpdateAfterBindDescriptorsInAllPools));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getShaderUniformBufferArrayNonUniformIndexingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->shaderUniformBufferArrayNonUniformIndexingNative));
+    return jniPointerToLong(&o->shaderUniformBufferArrayNonUniformIndexingNative);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setShaderUniformBufferArrayNonUniformIndexingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setSha
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->shaderUniformBufferArrayNonUniformIndexingNative, jniLongToPointer(valueAddress), sizeof(o->shaderUniformBufferArrayNonUniformIndexingNative));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->shaderUniformBufferArrayNonUniformIndexingNative, valuePointer, sizeof(o->shaderUniformBufferArrayNonUniformIndexingNative));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getShaderSampledImageArrayNonUniformIndexingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->shaderSampledImageArrayNonUniformIndexingNative));
+    return jniPointerToLong(&o->shaderSampledImageArrayNonUniformIndexingNative);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setShaderSampledImageArrayNonUniformIndexingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setSha
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->shaderSampledImageArrayNonUniformIndexingNative, jniLongToPointer(valueAddress), sizeof(o->shaderSampledImageArrayNonUniformIndexingNative));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->shaderSampledImageArrayNonUniformIndexingNative, valuePointer, sizeof(o->shaderSampledImageArrayNonUniformIndexingNative));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getShaderStorageBufferArrayNonUniformIndexingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->shaderStorageBufferArrayNonUniformIndexingNative));
+    return jniPointerToLong(&o->shaderStorageBufferArrayNonUniformIndexingNative);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setShaderStorageBufferArrayNonUniformIndexingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setSha
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->shaderStorageBufferArrayNonUniformIndexingNative, jniLongToPointer(valueAddress), sizeof(o->shaderStorageBufferArrayNonUniformIndexingNative));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->shaderStorageBufferArrayNonUniformIndexingNative, valuePointer, sizeof(o->shaderStorageBufferArrayNonUniformIndexingNative));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getShaderStorageImageArrayNonUniformIndexingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->shaderStorageImageArrayNonUniformIndexingNative));
+    return jniPointerToLong(&o->shaderStorageImageArrayNonUniformIndexingNative);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setShaderStorageImageArrayNonUniformIndexingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setSha
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->shaderStorageImageArrayNonUniformIndexingNative, jniLongToPointer(valueAddress), sizeof(o->shaderStorageImageArrayNonUniformIndexingNative));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->shaderStorageImageArrayNonUniformIndexingNative, valuePointer, sizeof(o->shaderStorageImageArrayNonUniformIndexingNative));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getShaderInputAttachmentArrayNonUniformIndexingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->shaderInputAttachmentArrayNonUniformIndexingNative));
+    return jniPointerToLong(&o->shaderInputAttachmentArrayNonUniformIndexingNative);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setShaderInputAttachmentArrayNonUniformIndexingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,14 +148,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setSha
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->shaderInputAttachmentArrayNonUniformIndexingNative, jniLongToPointer(valueAddress), sizeof(o->shaderInputAttachmentArrayNonUniformIndexingNative));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->shaderInputAttachmentArrayNonUniformIndexingNative, valuePointer, sizeof(o->shaderInputAttachmentArrayNonUniformIndexingNative));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getRobustBufferAccessUpdateAfterBind(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->robustBufferAccessUpdateAfterBind));
+    return jniPointerToLong(&o->robustBufferAccessUpdateAfterBind);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setRobustBufferAccessUpdateAfterBind(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -149,14 +165,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setRob
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->robustBufferAccessUpdateAfterBind, jniLongToPointer(valueAddress), sizeof(o->robustBufferAccessUpdateAfterBind));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->robustBufferAccessUpdateAfterBind, valuePointer, sizeof(o->robustBufferAccessUpdateAfterBind));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getQuadDivergentImplicitLod(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->quadDivergentImplicitLod));
+    return jniPointerToLong(&o->quadDivergentImplicitLod);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setQuadDivergentImplicitLod(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -164,14 +182,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setQua
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->quadDivergentImplicitLod, jniLongToPointer(valueAddress), sizeof(o->quadDivergentImplicitLod));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->quadDivergentImplicitLod, valuePointer, sizeof(o->quadDivergentImplicitLod));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxPerStageDescriptorUpdateAfterBindSamplers(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxPerStageDescriptorUpdateAfterBindSamplers));
+    return jniPointerToLong(&o->maxPerStageDescriptorUpdateAfterBindSamplers);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxPerStageDescriptorUpdateAfterBindSamplers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -179,14 +199,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxPerStageDescriptorUpdateAfterBindSamplers, jniLongToPointer(valueAddress), sizeof(o->maxPerStageDescriptorUpdateAfterBindSamplers));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxPerStageDescriptorUpdateAfterBindSamplers, valuePointer, sizeof(o->maxPerStageDescriptorUpdateAfterBindSamplers));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxPerStageDescriptorUpdateAfterBindUniformBuffers(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxPerStageDescriptorUpdateAfterBindUniformBuffers));
+    return jniPointerToLong(&o->maxPerStageDescriptorUpdateAfterBindUniformBuffers);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxPerStageDescriptorUpdateAfterBindUniformBuffers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -194,14 +216,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxPerStageDescriptorUpdateAfterBindUniformBuffers, jniLongToPointer(valueAddress), sizeof(o->maxPerStageDescriptorUpdateAfterBindUniformBuffers));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxPerStageDescriptorUpdateAfterBindUniformBuffers, valuePointer, sizeof(o->maxPerStageDescriptorUpdateAfterBindUniformBuffers));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxPerStageDescriptorUpdateAfterBindStorageBuffers(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxPerStageDescriptorUpdateAfterBindStorageBuffers));
+    return jniPointerToLong(&o->maxPerStageDescriptorUpdateAfterBindStorageBuffers);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxPerStageDescriptorUpdateAfterBindStorageBuffers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -209,14 +233,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxPerStageDescriptorUpdateAfterBindStorageBuffers, jniLongToPointer(valueAddress), sizeof(o->maxPerStageDescriptorUpdateAfterBindStorageBuffers));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxPerStageDescriptorUpdateAfterBindStorageBuffers, valuePointer, sizeof(o->maxPerStageDescriptorUpdateAfterBindStorageBuffers));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxPerStageDescriptorUpdateAfterBindSampledImages(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxPerStageDescriptorUpdateAfterBindSampledImages));
+    return jniPointerToLong(&o->maxPerStageDescriptorUpdateAfterBindSampledImages);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxPerStageDescriptorUpdateAfterBindSampledImages(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -224,14 +250,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxPerStageDescriptorUpdateAfterBindSampledImages, jniLongToPointer(valueAddress), sizeof(o->maxPerStageDescriptorUpdateAfterBindSampledImages));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxPerStageDescriptorUpdateAfterBindSampledImages, valuePointer, sizeof(o->maxPerStageDescriptorUpdateAfterBindSampledImages));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxPerStageDescriptorUpdateAfterBindStorageImages(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxPerStageDescriptorUpdateAfterBindStorageImages));
+    return jniPointerToLong(&o->maxPerStageDescriptorUpdateAfterBindStorageImages);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxPerStageDescriptorUpdateAfterBindStorageImages(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -239,14 +267,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxPerStageDescriptorUpdateAfterBindStorageImages, jniLongToPointer(valueAddress), sizeof(o->maxPerStageDescriptorUpdateAfterBindStorageImages));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxPerStageDescriptorUpdateAfterBindStorageImages, valuePointer, sizeof(o->maxPerStageDescriptorUpdateAfterBindStorageImages));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxPerStageDescriptorUpdateAfterBindInputAttachments(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxPerStageDescriptorUpdateAfterBindInputAttachments));
+    return jniPointerToLong(&o->maxPerStageDescriptorUpdateAfterBindInputAttachments);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxPerStageDescriptorUpdateAfterBindInputAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -254,14 +284,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxPerStageDescriptorUpdateAfterBindInputAttachments, jniLongToPointer(valueAddress), sizeof(o->maxPerStageDescriptorUpdateAfterBindInputAttachments));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxPerStageDescriptorUpdateAfterBindInputAttachments, valuePointer, sizeof(o->maxPerStageDescriptorUpdateAfterBindInputAttachments));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxPerStageUpdateAfterBindResources(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxPerStageUpdateAfterBindResources));
+    return jniPointerToLong(&o->maxPerStageUpdateAfterBindResources);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxPerStageUpdateAfterBindResources(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -269,14 +301,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxPerStageUpdateAfterBindResources, jniLongToPointer(valueAddress), sizeof(o->maxPerStageUpdateAfterBindResources));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxPerStageUpdateAfterBindResources, valuePointer, sizeof(o->maxPerStageUpdateAfterBindResources));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxDescriptorSetUpdateAfterBindSamplers(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxDescriptorSetUpdateAfterBindSamplers));
+    return jniPointerToLong(&o->maxDescriptorSetUpdateAfterBindSamplers);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxDescriptorSetUpdateAfterBindSamplers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -284,14 +318,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxDescriptorSetUpdateAfterBindSamplers, jniLongToPointer(valueAddress), sizeof(o->maxDescriptorSetUpdateAfterBindSamplers));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxDescriptorSetUpdateAfterBindSamplers, valuePointer, sizeof(o->maxDescriptorSetUpdateAfterBindSamplers));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxDescriptorSetUpdateAfterBindUniformBuffers(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxDescriptorSetUpdateAfterBindUniformBuffers));
+    return jniPointerToLong(&o->maxDescriptorSetUpdateAfterBindUniformBuffers);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxDescriptorSetUpdateAfterBindUniformBuffers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -299,14 +335,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxDescriptorSetUpdateAfterBindUniformBuffers, jniLongToPointer(valueAddress), sizeof(o->maxDescriptorSetUpdateAfterBindUniformBuffers));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxDescriptorSetUpdateAfterBindUniformBuffers, valuePointer, sizeof(o->maxDescriptorSetUpdateAfterBindUniformBuffers));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxDescriptorSetUpdateAfterBindUniformBuffersDynamic));
+    return jniPointerToLong(&o->maxDescriptorSetUpdateAfterBindUniformBuffersDynamic);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -314,14 +352,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxDescriptorSetUpdateAfterBindUniformBuffersDynamic, jniLongToPointer(valueAddress), sizeof(o->maxDescriptorSetUpdateAfterBindUniformBuffersDynamic));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxDescriptorSetUpdateAfterBindUniformBuffersDynamic, valuePointer, sizeof(o->maxDescriptorSetUpdateAfterBindUniformBuffersDynamic));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxDescriptorSetUpdateAfterBindStorageBuffers(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxDescriptorSetUpdateAfterBindStorageBuffers));
+    return jniPointerToLong(&o->maxDescriptorSetUpdateAfterBindStorageBuffers);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxDescriptorSetUpdateAfterBindStorageBuffers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -329,14 +369,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxDescriptorSetUpdateAfterBindStorageBuffers, jniLongToPointer(valueAddress), sizeof(o->maxDescriptorSetUpdateAfterBindStorageBuffers));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxDescriptorSetUpdateAfterBindStorageBuffers, valuePointer, sizeof(o->maxDescriptorSetUpdateAfterBindStorageBuffers));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxDescriptorSetUpdateAfterBindStorageBuffersDynamic));
+    return jniPointerToLong(&o->maxDescriptorSetUpdateAfterBindStorageBuffersDynamic);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -344,14 +386,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxDescriptorSetUpdateAfterBindStorageBuffersDynamic, jniLongToPointer(valueAddress), sizeof(o->maxDescriptorSetUpdateAfterBindStorageBuffersDynamic));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxDescriptorSetUpdateAfterBindStorageBuffersDynamic, valuePointer, sizeof(o->maxDescriptorSetUpdateAfterBindStorageBuffersDynamic));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxDescriptorSetUpdateAfterBindSampledImages(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxDescriptorSetUpdateAfterBindSampledImages));
+    return jniPointerToLong(&o->maxDescriptorSetUpdateAfterBindSampledImages);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxDescriptorSetUpdateAfterBindSampledImages(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -359,14 +403,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxDescriptorSetUpdateAfterBindSampledImages, jniLongToPointer(valueAddress), sizeof(o->maxDescriptorSetUpdateAfterBindSampledImages));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxDescriptorSetUpdateAfterBindSampledImages, valuePointer, sizeof(o->maxDescriptorSetUpdateAfterBindSampledImages));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxDescriptorSetUpdateAfterBindStorageImages(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxDescriptorSetUpdateAfterBindStorageImages));
+    return jniPointerToLong(&o->maxDescriptorSetUpdateAfterBindStorageImages);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxDescriptorSetUpdateAfterBindStorageImages(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -374,14 +420,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxDescriptorSetUpdateAfterBindStorageImages, jniLongToPointer(valueAddress), sizeof(o->maxDescriptorSetUpdateAfterBindStorageImages));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxDescriptorSetUpdateAfterBindStorageImages, valuePointer, sizeof(o->maxDescriptorSetUpdateAfterBindStorageImages));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_getMaxDescriptorSetUpdateAfterBindInputAttachments(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxDescriptorSetUpdateAfterBindInputAttachments));
+    return jniPointerToLong(&o->maxDescriptorSetUpdateAfterBindInputAttachments);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMaxDescriptorSetUpdateAfterBindInputAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -389,6 +437,8 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceDescriptorIndexingPropertiesEXT_setMax
     (void)env;
     (void)jc;
     VkPhysicalDeviceDescriptorIndexingPropertiesEXT* o = (VkPhysicalDeviceDescriptorIndexingPropertiesEXT*)jniLongToPointer(address);
-    memcpy(&o->maxDescriptorSetUpdateAfterBindInputAttachments, jniLongToPointer(valueAddress), sizeof(o->maxDescriptorSetUpdateAfterBindInputAttachments));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxDescriptorSetUpdateAfterBindInputAttachments, valuePointer, sizeof(o->maxDescriptorSetUpdateAfterBindInputAttachments));
 }
+
 

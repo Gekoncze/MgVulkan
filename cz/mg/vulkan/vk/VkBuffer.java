@@ -4,8 +4,6 @@ package cz.mg.vulkan.vk;
  *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkBuffer.html">khronos documentation</a>
  **/
 public class VkBuffer extends VkNonDispatchableHandle {
-    public static final VkBuffer NULL = new VkBuffer(VkPointer.NULL);
-
     public VkBuffer() {
     }
 
@@ -26,7 +24,12 @@ public class VkBuffer extends VkNonDispatchableHandle {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkBuffer.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkBuffer o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -67,11 +70,11 @@ public class VkBuffer extends VkNonDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBuffer.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

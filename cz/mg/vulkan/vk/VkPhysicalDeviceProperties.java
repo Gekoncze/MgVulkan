@@ -9,11 +9,11 @@ public class VkPhysicalDeviceProperties extends VkObject {
     }
 
     public VkPhysicalDeviceProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPhysicalDeviceProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -34,8 +34,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getApiVersion(getVkAddress()));
     }
 
+    
     public void setApiVersion(VkUInt32 apiVersion) {
-        setApiVersion(getVkAddress(), apiVersion.getVkAddress());
+        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getApiVersion(long address);
@@ -45,8 +47,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getDriverVersion(getVkAddress()));
     }
 
+    
     public void setDriverVersion(VkUInt32 driverVersion) {
-        setDriverVersion(getVkAddress(), driverVersion.getVkAddress());
+        setDriverVersion(getVkAddress(), driverVersion != null ? driverVersion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDriverVersion(long address);
@@ -56,8 +60,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getVendorID(getVkAddress()));
     }
 
+    
     public void setVendorID(VkUInt32 vendorID) {
-        setVendorID(getVkAddress(), vendorID.getVkAddress());
+        setVendorID(getVkAddress(), vendorID != null ? vendorID.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getVendorID(long address);
@@ -67,8 +73,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getDeviceID(getVkAddress()));
     }
 
+    
     public void setDeviceID(VkUInt32 deviceID) {
-        setDeviceID(getVkAddress(), deviceID.getVkAddress());
+        setDeviceID(getVkAddress(), deviceID != null ? deviceID.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDeviceID(long address);
@@ -78,8 +86,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         return new VkPhysicalDeviceType(getVkMemory(), getDeviceType(getVkAddress()));
     }
 
+    
     public void setDeviceType(VkPhysicalDeviceType deviceType) {
-        setDeviceType(getVkAddress(), deviceType.getVkAddress());
+        setDeviceType(getVkAddress(), deviceType != null ? deviceType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDeviceType(long address);
@@ -89,8 +99,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         return new VkChar(getVkMemory(), getDeviceName(getVkAddress()));
     }
 
+    
     public void setDeviceName(VkChar deviceName) {
-        setDeviceName(getVkAddress(), deviceName.getVkAddress());
+        setDeviceName(getVkAddress(), deviceName != null ? deviceName.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getDeviceName(long address);
@@ -100,8 +112,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         return new VkUInt8(getVkMemory(), getPipelineCacheUUID(getVkAddress()));
     }
 
+    
     public void setPipelineCacheUUID(VkUInt8 pipelineCacheUUID) {
-        setPipelineCacheUUID(getVkAddress(), pipelineCacheUUID.getVkAddress());
+        setPipelineCacheUUID(getVkAddress(), pipelineCacheUUID != null ? pipelineCacheUUID.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getPipelineCacheUUID(long address);
@@ -111,8 +125,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         return new VkPhysicalDeviceLimits(getVkMemory(), getLimits(getVkAddress()));
     }
 
+    
     public void setLimits(VkPhysicalDeviceLimits limits) {
-        setLimits(getVkAddress(), limits.getVkAddress());
+        setLimits(getVkAddress(), limits != null ? limits.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLimits(long address);
@@ -122,8 +138,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         return new VkPhysicalDeviceSparseProperties(getVkMemory(), getSparseProperties(getVkAddress()));
     }
 
+    
     public void setSparseProperties(VkPhysicalDeviceSparseProperties sparseProperties) {
-        setSparseProperties(getVkAddress(), sparseProperties.getVkAddress());
+        setSparseProperties(getVkAddress(), sparseProperties != null ? sparseProperties.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSparseProperties(long address);
@@ -136,7 +154,12 @@ public class VkPhysicalDeviceProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDeviceProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -177,11 +200,11 @@ public class VkPhysicalDeviceProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

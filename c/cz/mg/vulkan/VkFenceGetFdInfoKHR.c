@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_getSType(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkFenceGetFdInfoKHR* o = (VkFenceGetFdInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_setSType(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkFenceGetFdInfoKHR* o = (VkFenceGetFdInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkFenceGetFdInfoKHR* o = (VkFenceGetFdInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_setPNext(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkFenceGetFdInfoKHR* o = (VkFenceGetFdInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_getFence(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkFenceGetFdInfoKHR* o = (VkFenceGetFdInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->fence));
+    return jniPointerToLong(&o->fence);
 }
 
 void Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_setFence(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_setFence(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkFenceGetFdInfoKHR* o = (VkFenceGetFdInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->fence, jniLongToPointer(valueAddress), sizeof(o->fence));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->fence, valuePointer, sizeof(o->fence));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_getHandleType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkFenceGetFdInfoKHR* o = (VkFenceGetFdInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->handleType));
+    return jniPointerToLong(&o->handleType);
 }
 
 void Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_setHandleType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkFenceGetFdInfoKHR_setHandleType(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkFenceGetFdInfoKHR* o = (VkFenceGetFdInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->handleType, jniLongToPointer(valueAddress), sizeof(o->handleType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->handleType, valuePointer, sizeof(o->handleType));
 }
+
 

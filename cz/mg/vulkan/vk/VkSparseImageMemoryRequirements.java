@@ -9,11 +9,11 @@ public class VkSparseImageMemoryRequirements extends VkObject {
     }
 
     public VkSparseImageMemoryRequirements(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSparseImageMemoryRequirements(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         return new VkSparseImageFormatProperties(getVkMemory(), getFormatProperties(getVkAddress()));
     }
 
+    
     public void setFormatProperties(VkSparseImageFormatProperties formatProperties) {
-        setFormatProperties(getVkAddress(), formatProperties.getVkAddress());
+        setFormatProperties(getVkAddress(), formatProperties != null ? formatProperties.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFormatProperties(long address);
@@ -41,8 +43,10 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         return new VkUInt32(getVkMemory(), getImageMipTailFirstLod(getVkAddress()));
     }
 
+    
     public void setImageMipTailFirstLod(VkUInt32 imageMipTailFirstLod) {
-        setImageMipTailFirstLod(getVkAddress(), imageMipTailFirstLod.getVkAddress());
+        setImageMipTailFirstLod(getVkAddress(), imageMipTailFirstLod != null ? imageMipTailFirstLod.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageMipTailFirstLod(long address);
@@ -52,8 +56,10 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         return new VkDeviceSize(getVkMemory(), getImageMipTailSize(getVkAddress()));
     }
 
+    
     public void setImageMipTailSize(VkDeviceSize imageMipTailSize) {
-        setImageMipTailSize(getVkAddress(), imageMipTailSize.getVkAddress());
+        setImageMipTailSize(getVkAddress(), imageMipTailSize != null ? imageMipTailSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageMipTailSize(long address);
@@ -63,8 +69,10 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         return new VkDeviceSize(getVkMemory(), getImageMipTailOffset(getVkAddress()));
     }
 
+    
     public void setImageMipTailOffset(VkDeviceSize imageMipTailOffset) {
-        setImageMipTailOffset(getVkAddress(), imageMipTailOffset.getVkAddress());
+        setImageMipTailOffset(getVkAddress(), imageMipTailOffset != null ? imageMipTailOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageMipTailOffset(long address);
@@ -74,8 +82,10 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         return new VkDeviceSize(getVkMemory(), getImageMipTailStride(getVkAddress()));
     }
 
+    
     public void setImageMipTailStride(VkDeviceSize imageMipTailStride) {
-        setImageMipTailStride(getVkAddress(), imageMipTailStride.getVkAddress());
+        setImageMipTailStride(getVkAddress(), imageMipTailStride != null ? imageMipTailStride.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageMipTailStride(long address);
@@ -88,7 +98,12 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSparseImageMemoryRequirements.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSparseImageMemoryRequirements o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkSparseImageMemoryRequirements extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSparseImageMemoryRequirements.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

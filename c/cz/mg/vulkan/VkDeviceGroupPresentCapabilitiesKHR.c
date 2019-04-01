@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_getSType(JNIEnv* 
     (void)env;
     (void)jc;
     VkDeviceGroupPresentCapabilitiesKHR* o = (VkDeviceGroupPresentCapabilitiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_setSType(JNIEnv* e
     (void)env;
     (void)jc;
     VkDeviceGroupPresentCapabilitiesKHR* o = (VkDeviceGroupPresentCapabilitiesKHR*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupPresentCapabilitiesKHR* o = (VkDeviceGroupPresentCapabilitiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_setPNext(JNIEnv* e
     (void)env;
     (void)jc;
     VkDeviceGroupPresentCapabilitiesKHR* o = (VkDeviceGroupPresentCapabilitiesKHR*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_getPresentMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupPresentCapabilitiesKHR* o = (VkDeviceGroupPresentCapabilitiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->presentMask));
+    return jniPointerToLong(o->presentMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_setPresentMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_setPresentMask(JNI
     (void)env;
     (void)jc;
     VkDeviceGroupPresentCapabilitiesKHR* o = (VkDeviceGroupPresentCapabilitiesKHR*)jniLongToPointer(address);
-    memcpy(o->presentMask, jniLongToPointer(valueAddress), sizeof(o->presentMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(o->presentMask, valuePointer, sizeof(o->presentMask));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_getModes(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupPresentCapabilitiesKHR* o = (VkDeviceGroupPresentCapabilitiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->modes));
+    return jniPointerToLong(&o->modes);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_setModes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupPresentCapabilitiesKHR_setModes(JNIEnv* e
     (void)env;
     (void)jc;
     VkDeviceGroupPresentCapabilitiesKHR* o = (VkDeviceGroupPresentCapabilitiesKHR*)jniLongToPointer(address);
-    memcpy(&o->modes, jniLongToPointer(valueAddress), sizeof(o->modes));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->modes, valuePointer, sizeof(o->modes));
 }
+
 

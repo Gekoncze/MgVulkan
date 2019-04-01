@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSubpassSampleLocationsEXT_getSubpassIndex(JNIEnv* e
     (void)env;
     (void)jc;
     VkSubpassSampleLocationsEXT* o = (VkSubpassSampleLocationsEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->subpassIndex));
+    return jniPointerToLong(&o->subpassIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassSampleLocationsEXT_setSubpassIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassSampleLocationsEXT_setSubpassIndex(JNIEnv* en
     (void)env;
     (void)jc;
     VkSubpassSampleLocationsEXT* o = (VkSubpassSampleLocationsEXT*)jniLongToPointer(address);
-    memcpy(&o->subpassIndex, jniLongToPointer(valueAddress), sizeof(o->subpassIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->subpassIndex, valuePointer, sizeof(o->subpassIndex));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassSampleLocationsEXT_getSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassSampleLocationsEXT* o = (VkSubpassSampleLocationsEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sampleLocationsInfo));
+    return jniPointerToLong(&o->sampleLocationsInfo);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassSampleLocationsEXT_setSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkSubpassSampleLocationsEXT_setSampleLocationsInfo(JNI
     (void)env;
     (void)jc;
     VkSubpassSampleLocationsEXT* o = (VkSubpassSampleLocationsEXT*)jniLongToPointer(address);
-    memcpy(&o->sampleLocationsInfo, jniLongToPointer(valueAddress), sizeof(o->sampleLocationsInfo));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sampleLocationsInfo, valuePointer, sizeof(o->sampleLocationsInfo));
 }
+
 

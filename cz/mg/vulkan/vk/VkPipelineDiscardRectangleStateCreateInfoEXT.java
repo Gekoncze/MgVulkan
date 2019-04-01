@@ -9,11 +9,11 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
     }
 
     public VkPipelineDiscardRectangleStateCreateInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineDiscardRectangleStateCreateInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -42,8 +44,10 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -53,8 +57,10 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         return new VkPipelineDiscardRectangleStateCreateFlagsEXT(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineDiscardRectangleStateCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -64,8 +70,10 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         return new VkDiscardRectangleModeEXT(getVkMemory(), getDiscardRectangleMode(getVkAddress()));
     }
 
+    
     public void setDiscardRectangleMode(VkDiscardRectangleModeEXT discardRectangleMode) {
-        setDiscardRectangleMode(getVkAddress(), discardRectangleMode.getVkAddress());
+        setDiscardRectangleMode(getVkAddress(), discardRectangleMode != null ? discardRectangleMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDiscardRectangleMode(long address);
@@ -75,19 +83,23 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         return new VkUInt32(getVkMemory(), getDiscardRectangleCount(getVkAddress()));
     }
 
+    
     public void setDiscardRectangleCount(VkUInt32 discardRectangleCount) {
-        setDiscardRectangleCount(getVkAddress(), discardRectangleCount.getVkAddress());
+        setDiscardRectangleCount(getVkAddress(), discardRectangleCount != null ? discardRectangleCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDiscardRectangleCount(long address);
     private static native void setDiscardRectangleCount(long address, long discardRectangleCount);
 
-    public VkRect2D.Array getPDiscardRectangles() {
-        return new VkRect2D.Array(getVkMemory(), getPDiscardRectangles(getVkAddress()), getDiscardRectangleCount().getValue());
+    public VkRect2D getPDiscardRectangles() {
+        return new VkRect2D(getVkMemory(), getPDiscardRectangles(getVkAddress()));
     }
 
+    private VkObject pDiscardRectangles = null;
     public void setPDiscardRectangles(VkRect2D pDiscardRectangles) {
-        setPDiscardRectangles(getVkAddress(), pDiscardRectangles.getVkAddress());
+        setPDiscardRectangles(getVkAddress(), pDiscardRectangles != null ? pDiscardRectangles.getVkAddress() : VkPointer.NULL);
+        this.pDiscardRectangles = pDiscardRectangles;
     }
 
     private static native long getPDiscardRectangles(long address);
@@ -100,7 +112,12 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineDiscardRectangleStateCreateInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineDiscardRectangleStateCreateInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineDiscardRectangleStateCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

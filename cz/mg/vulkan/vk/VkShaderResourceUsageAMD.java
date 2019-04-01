@@ -9,11 +9,11 @@ public class VkShaderResourceUsageAMD extends VkObject {
     }
 
     public VkShaderResourceUsageAMD(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkShaderResourceUsageAMD(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
         return new VkUInt32(getVkMemory(), getNumUsedVgprs(getVkAddress()));
     }
 
+    
     public void setNumUsedVgprs(VkUInt32 numUsedVgprs) {
-        setNumUsedVgprs(getVkAddress(), numUsedVgprs.getVkAddress());
+        setNumUsedVgprs(getVkAddress(), numUsedVgprs != null ? numUsedVgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getNumUsedVgprs(long address);
@@ -41,8 +43,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
         return new VkUInt32(getVkMemory(), getNumUsedSgprs(getVkAddress()));
     }
 
+    
     public void setNumUsedSgprs(VkUInt32 numUsedSgprs) {
-        setNumUsedSgprs(getVkAddress(), numUsedSgprs.getVkAddress());
+        setNumUsedSgprs(getVkAddress(), numUsedSgprs != null ? numUsedSgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getNumUsedSgprs(long address);
@@ -52,8 +56,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
         return new VkUInt32(getVkMemory(), getLdsSizePerLocalWorkGroup(getVkAddress()));
     }
 
+    
     public void setLdsSizePerLocalWorkGroup(VkUInt32 ldsSizePerLocalWorkGroup) {
-        setLdsSizePerLocalWorkGroup(getVkAddress(), ldsSizePerLocalWorkGroup.getVkAddress());
+        setLdsSizePerLocalWorkGroup(getVkAddress(), ldsSizePerLocalWorkGroup != null ? ldsSizePerLocalWorkGroup.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLdsSizePerLocalWorkGroup(long address);
@@ -63,8 +69,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
         return new VkSize(getVkMemory(), getLdsUsageSizeInBytes(getVkAddress()));
     }
 
+    
     public void setLdsUsageSizeInBytes(VkSize ldsUsageSizeInBytes) {
-        setLdsUsageSizeInBytes(getVkAddress(), ldsUsageSizeInBytes.getVkAddress());
+        setLdsUsageSizeInBytes(getVkAddress(), ldsUsageSizeInBytes != null ? ldsUsageSizeInBytes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLdsUsageSizeInBytes(long address);
@@ -74,8 +82,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
         return new VkSize(getVkMemory(), getScratchMemUsageInBytes(getVkAddress()));
     }
 
+    
     public void setScratchMemUsageInBytes(VkSize scratchMemUsageInBytes) {
-        setScratchMemUsageInBytes(getVkAddress(), scratchMemUsageInBytes.getVkAddress());
+        setScratchMemUsageInBytes(getVkAddress(), scratchMemUsageInBytes != null ? scratchMemUsageInBytes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getScratchMemUsageInBytes(long address);
@@ -88,7 +98,12 @@ public class VkShaderResourceUsageAMD extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkShaderResourceUsageAMD.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkShaderResourceUsageAMD o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkShaderResourceUsageAMD extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkShaderResourceUsageAMD.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

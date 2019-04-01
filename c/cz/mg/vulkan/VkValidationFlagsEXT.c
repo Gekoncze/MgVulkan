@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_getSType(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkValidationFlagsEXT* o = (VkValidationFlagsEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_setSType(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkValidationFlagsEXT* o = (VkValidationFlagsEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkValidationFlagsEXT* o = (VkValidationFlagsEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_setPNext(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkValidationFlagsEXT* o = (VkValidationFlagsEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_getDisabledValidationCheckCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkValidationFlagsEXT* o = (VkValidationFlagsEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->disabledValidationCheckCount));
+    return jniPointerToLong(&o->disabledValidationCheckCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_setDisabledValidationCheckCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_setDisabledValidationCheckCount(J
     (void)env;
     (void)jc;
     VkValidationFlagsEXT* o = (VkValidationFlagsEXT*)jniLongToPointer(address);
-    memcpy(&o->disabledValidationCheckCount, jniLongToPointer(valueAddress), sizeof(o->disabledValidationCheckCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->disabledValidationCheckCount, valuePointer, sizeof(o->disabledValidationCheckCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_getPDisabledValidationChecks(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkValidationFlagsEXT* o = (VkValidationFlagsEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pDisabledValidationChecks));
+    return jniPointerToLong(o->pDisabledValidationChecks);
 }
 
 void Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_setPDisabledValidationChecks(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkValidationFlagsEXT_setPDisabledValidationChecks(JNIE
     (void)env;
     (void)jc;
     VkValidationFlagsEXT* o = (VkValidationFlagsEXT*)jniLongToPointer(address);
-    memcpy(&o->pDisabledValidationChecks, jniLongToPointer(valueAddress), sizeof(o->pDisabledValidationChecks));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pDisabledValidationChecks, &valuePointer, sizeof(o->pDisabledValidationChecks));
 }
+
 

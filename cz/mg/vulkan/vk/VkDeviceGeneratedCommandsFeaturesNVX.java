@@ -9,11 +9,11 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
     }
 
     public VkDeviceGeneratedCommandsFeaturesNVX(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDeviceGeneratedCommandsFeaturesNVX(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -39,8 +41,10 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -50,8 +54,10 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
         return new VkBool32(getVkMemory(), getComputeBindingPointSupport(getVkAddress()));
     }
 
+    
     public void setComputeBindingPointSupport(VkBool32 computeBindingPointSupport) {
-        setComputeBindingPointSupport(getVkAddress(), computeBindingPointSupport.getVkAddress());
+        setComputeBindingPointSupport(getVkAddress(), computeBindingPointSupport != null ? computeBindingPointSupport.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getComputeBindingPointSupport(long address);
@@ -64,7 +70,12 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDeviceGeneratedCommandsFeaturesNVX.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDeviceGeneratedCommandsFeaturesNVX o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGeneratedCommandsFeaturesNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

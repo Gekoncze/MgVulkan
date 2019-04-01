@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSubpassDescription_getFlags(JNIEnv* env, jclass jc,
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDescription_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDescription_setFlags(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDescription_getPipelineBindPoint(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pipelineBindPoint));
+    return jniPointerToLong(&o->pipelineBindPoint);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPipelineBindPoint(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPipelineBindPoint(JNIEnv* env,
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    memcpy(&o->pipelineBindPoint, jniLongToPointer(valueAddress), sizeof(o->pipelineBindPoint));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pipelineBindPoint, valuePointer, sizeof(o->pipelineBindPoint));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDescription_getInputAttachmentCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->inputAttachmentCount));
+    return jniPointerToLong(&o->inputAttachmentCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDescription_setInputAttachmentCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDescription_setInputAttachmentCount(JNIEnv* e
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    memcpy(&o->inputAttachmentCount, jniLongToPointer(valueAddress), sizeof(o->inputAttachmentCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->inputAttachmentCount, valuePointer, sizeof(o->inputAttachmentCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDescription_getPInputAttachments(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pInputAttachments));
+    return jniPointerToLong(o->pInputAttachments);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPInputAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPInputAttachments(JNIEnv* env,
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    memcpy(&o->pInputAttachments, jniLongToPointer(valueAddress), sizeof(o->pInputAttachments));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pInputAttachments, &valuePointer, sizeof(o->pInputAttachments));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDescription_getColorAttachmentCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->colorAttachmentCount));
+    return jniPointerToLong(&o->colorAttachmentCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDescription_setColorAttachmentCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDescription_setColorAttachmentCount(JNIEnv* e
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    memcpy(&o->colorAttachmentCount, jniLongToPointer(valueAddress), sizeof(o->colorAttachmentCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->colorAttachmentCount, valuePointer, sizeof(o->colorAttachmentCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDescription_getPColorAttachments(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pColorAttachments));
+    return jniPointerToLong(o->pColorAttachments);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPColorAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPColorAttachments(JNIEnv* env,
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    memcpy(&o->pColorAttachments, jniLongToPointer(valueAddress), sizeof(o->pColorAttachments));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pColorAttachments, &valuePointer, sizeof(o->pColorAttachments));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDescription_getPResolveAttachments(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pResolveAttachments));
+    return jniPointerToLong(o->pResolveAttachments);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPResolveAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPResolveAttachments(JNIEnv* en
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    memcpy(&o->pResolveAttachments, jniLongToPointer(valueAddress), sizeof(o->pResolveAttachments));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pResolveAttachments, &valuePointer, sizeof(o->pResolveAttachments));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDescription_getPDepthStencilAttachment(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pDepthStencilAttachment));
+    return jniPointerToLong(o->pDepthStencilAttachment);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPDepthStencilAttachment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,14 +148,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPDepthStencilAttachment(JNIEnv
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    memcpy(&o->pDepthStencilAttachment, jniLongToPointer(valueAddress), sizeof(o->pDepthStencilAttachment));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pDepthStencilAttachment, &valuePointer, sizeof(o->pDepthStencilAttachment));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDescription_getPreserveAttachmentCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->preserveAttachmentCount));
+    return jniPointerToLong(&o->preserveAttachmentCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPreserveAttachmentCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -149,14 +165,16 @@ void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPreserveAttachmentCount(JNIEnv
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    memcpy(&o->preserveAttachmentCount, jniLongToPointer(valueAddress), sizeof(o->preserveAttachmentCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->preserveAttachmentCount, valuePointer, sizeof(o->preserveAttachmentCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSubpassDescription_getPPreserveAttachments(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pPreserveAttachments));
+    return jniPointerToLong(o->pPreserveAttachments);
 }
 
 void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPPreserveAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -164,6 +182,8 @@ void Java_cz_mg_vulkan_vk_VkSubpassDescription_setPPreserveAttachments(JNIEnv* e
     (void)env;
     (void)jc;
     VkSubpassDescription* o = (VkSubpassDescription*)jniLongToPointer(address);
-    memcpy(&o->pPreserveAttachments, jniLongToPointer(valueAddress), sizeof(o->pPreserveAttachments));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pPreserveAttachments, &valuePointer, sizeof(o->pPreserveAttachments));
 }
+
 

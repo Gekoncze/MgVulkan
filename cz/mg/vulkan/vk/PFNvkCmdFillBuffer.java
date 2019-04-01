@@ -25,7 +25,7 @@ public class PFNvkCmdFillBuffer extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkBuffer dstBuffer, VkDeviceSize dstOffset, VkDeviceSize size, VkUInt32 data){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkCommandBuffer.NULL.getVkAddress(), dstBuffer != null ? dstBuffer.getVkAddress() : VkBuffer.NULL.getVkAddress(), dstOffset != null ? dstOffset.getVkAddress() : VkPointer.NULL, size != null ? size.getVkAddress() : VkPointer.NULL, data != null ? data.getVkAddress() : VkPointer.NULL);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.NULL_ADDRESS, dstBuffer != null ? dstBuffer.getVkAddress() : VkPointer.NULL_ADDRESS, dstOffset != null ? dstOffset.getVkAddress() : VkPointer.NULL_ADDRESS, size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS, data != null ? data.getVkAddress() : VkPointer.NULL_ADDRESS);
     }
 
     private static native void call(long vkaddress, long commandBuffer, long dstBuffer, long dstOffset, long size, long data);

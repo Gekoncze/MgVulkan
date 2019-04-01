@@ -9,11 +9,11 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
     }
 
     public VkDebugUtilsObjectTagInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDebugUtilsObjectTagInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,8 +58,10 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
         return new VkObjectType(getVkMemory(), getObjectType(getVkAddress()));
     }
 
+    
     public void setObjectType(VkObjectType objectType) {
-        setObjectType(getVkAddress(), objectType.getVkAddress());
+        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getObjectType(long address);
@@ -65,8 +71,10 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
         return new VkUInt64(getVkMemory(), getObjectHandle(getVkAddress()));
     }
 
+    
     public void setObjectHandle(VkUInt64 objectHandle) {
-        setObjectHandle(getVkAddress(), objectHandle.getVkAddress());
+        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getObjectHandle(long address);
@@ -76,8 +84,10 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
         return new VkUInt64(getVkMemory(), getTagName(getVkAddress()));
     }
 
+    
     public void setTagName(VkUInt64 tagName) {
-        setTagName(getVkAddress(), tagName.getVkAddress());
+        setTagName(getVkAddress(), tagName != null ? tagName.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTagName(long address);
@@ -87,8 +97,10 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
         return new VkSize(getVkMemory(), getTagSize(getVkAddress()));
     }
 
+    
     public void setTagSize(VkSize tagSize) {
-        setTagSize(getVkAddress(), tagSize.getVkAddress());
+        setTagSize(getVkAddress(), tagSize != null ? tagSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getTagSize(long address);
@@ -98,8 +110,10 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPTag(getVkAddress()));
     }
 
+    private VkObject pTag = null;
     public void setPTag(VkObject pTag) {
-        setPTag(getVkAddress(), pTag.getVkAddress());
+        setPTag(getVkAddress(), pTag != null ? pTag.getVkAddress() : VkPointer.NULL);
+        this.pTag = pTag;
     }
 
     private static native long getPTag(long address);
@@ -112,7 +126,12 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDebugUtilsObjectTagInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDebugUtilsObjectTagInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugUtilsObjectTagInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

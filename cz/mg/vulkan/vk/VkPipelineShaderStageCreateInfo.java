@@ -9,11 +9,11 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
     }
 
     public VkPipelineShaderStageCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineShaderStageCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,8 +58,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         return new VkPipelineShaderStageCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineShaderStageCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -65,8 +71,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         return new VkShaderStageFlagBits(getVkMemory(), getStage(getVkAddress()));
     }
 
+    
     public void setStage(VkShaderStageFlagBits stage) {
-        setStage(getVkAddress(), stage.getVkAddress());
+        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getStage(long address);
@@ -76,8 +84,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         return new VkShaderModule(getVkMemory(), getModule(getVkAddress()));
     }
 
+    
     public void setModule(VkShaderModule module) {
-        setModule(getVkAddress(), module.getVkAddress());
+        setModule(getVkAddress(), module != null ? module.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getModule(long address);
@@ -87,8 +97,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         return new VkChar(getVkMemory(), getPName(getVkAddress()));
     }
 
+    private VkObject pName = null;
     public void setPName(VkChar pName) {
-        setPName(getVkAddress(), pName.getVkAddress());
+        setPName(getVkAddress(), pName != null ? pName.getVkAddress() : VkPointer.NULL);
+        this.pName = pName;
     }
 
     private static native long getPName(long address);
@@ -98,8 +110,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         return new VkSpecializationInfo(getVkMemory(), getPSpecializationInfo(getVkAddress()));
     }
 
+    private VkObject pSpecializationInfo = null;
     public void setPSpecializationInfo(VkSpecializationInfo pSpecializationInfo) {
-        setPSpecializationInfo(getVkAddress(), pSpecializationInfo.getVkAddress());
+        setPSpecializationInfo(getVkAddress(), pSpecializationInfo != null ? pSpecializationInfo.getVkAddress() : VkPointer.NULL);
+        this.pSpecializationInfo = pSpecializationInfo;
     }
 
     private static native long getPSpecializationInfo(long address);
@@ -112,7 +126,12 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineShaderStageCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineShaderStageCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineShaderStageCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

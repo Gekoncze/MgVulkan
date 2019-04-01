@@ -9,11 +9,11 @@ public class VkImageFormatProperties extends VkObject {
     }
 
     public VkImageFormatProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkImageFormatProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkImageFormatProperties extends VkObject {
         return new VkExtent3D(getVkMemory(), getMaxExtent(getVkAddress()));
     }
 
+    
     public void setMaxExtent(VkExtent3D maxExtent) {
-        setMaxExtent(getVkAddress(), maxExtent.getVkAddress());
+        setMaxExtent(getVkAddress(), maxExtent != null ? maxExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxExtent(long address);
@@ -41,8 +43,10 @@ public class VkImageFormatProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxMipLevels(getVkAddress()));
     }
 
+    
     public void setMaxMipLevels(VkUInt32 maxMipLevels) {
-        setMaxMipLevels(getVkAddress(), maxMipLevels.getVkAddress());
+        setMaxMipLevels(getVkAddress(), maxMipLevels != null ? maxMipLevels.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxMipLevels(long address);
@@ -52,8 +56,10 @@ public class VkImageFormatProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxArrayLayers(getVkAddress()));
     }
 
+    
     public void setMaxArrayLayers(VkUInt32 maxArrayLayers) {
-        setMaxArrayLayers(getVkAddress(), maxArrayLayers.getVkAddress());
+        setMaxArrayLayers(getVkAddress(), maxArrayLayers != null ? maxArrayLayers.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxArrayLayers(long address);
@@ -63,8 +69,10 @@ public class VkImageFormatProperties extends VkObject {
         return new VkSampleCountFlags(getVkMemory(), getSampleCounts(getVkAddress()));
     }
 
+    
     public void setSampleCounts(VkSampleCountFlags sampleCounts) {
-        setSampleCounts(getVkAddress(), sampleCounts.getVkAddress());
+        setSampleCounts(getVkAddress(), sampleCounts != null ? sampleCounts.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSampleCounts(long address);
@@ -74,8 +82,10 @@ public class VkImageFormatProperties extends VkObject {
         return new VkDeviceSize(getVkMemory(), getMaxResourceSize(getVkAddress()));
     }
 
+    
     public void setMaxResourceSize(VkDeviceSize maxResourceSize) {
-        setMaxResourceSize(getVkAddress(), maxResourceSize.getVkAddress());
+        setMaxResourceSize(getVkAddress(), maxResourceSize != null ? maxResourceSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxResourceSize(long address);
@@ -88,7 +98,12 @@ public class VkImageFormatProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkImageFormatProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkImageFormatProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkImageFormatProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImageFormatProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

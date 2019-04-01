@@ -9,11 +9,11 @@ public class VkFramebufferCreateInfo extends VkObject {
     }
 
     public VkFramebufferCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkFramebufferCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -34,8 +34,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -45,8 +47,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -56,8 +60,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         return new VkFramebufferCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkFramebufferCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -67,8 +73,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         return new VkRenderPass(getVkMemory(), getRenderPass(getVkAddress()));
     }
 
+    
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass.getVkAddress());
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRenderPass(long address);
@@ -78,19 +86,23 @@ public class VkFramebufferCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getAttachmentCount(getVkAddress()));
     }
 
+    
     public void setAttachmentCount(VkUInt32 attachmentCount) {
-        setAttachmentCount(getVkAddress(), attachmentCount.getVkAddress());
+        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAttachmentCount(long address);
     private static native void setAttachmentCount(long address, long attachmentCount);
 
-    public VkImageView.Array getPAttachments() {
-        return new VkImageView.Array(getVkMemory(), getPAttachments(getVkAddress()), getAttachmentCount().getValue());
+    public VkImageView getPAttachments() {
+        return new VkImageView(getVkMemory(), getPAttachments(getVkAddress()));
     }
 
+    private VkObject pAttachments = null;
     public void setPAttachments(VkImageView pAttachments) {
-        setPAttachments(getVkAddress(), pAttachments.getVkAddress());
+        setPAttachments(getVkAddress(), pAttachments != null ? pAttachments.getVkAddress() : VkPointer.NULL);
+        this.pAttachments = pAttachments;
     }
 
     private static native long getPAttachments(long address);
@@ -100,8 +112,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getWidth(getVkAddress()));
     }
 
+    
     public void setWidth(VkUInt32 width) {
-        setWidth(getVkAddress(), width.getVkAddress());
+        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getWidth(long address);
@@ -111,8 +125,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getHeight(getVkAddress()));
     }
 
+    
     public void setHeight(VkUInt32 height) {
-        setHeight(getVkAddress(), height.getVkAddress());
+        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getHeight(long address);
@@ -122,8 +138,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getLayers(getVkAddress()));
     }
 
+    
     public void setLayers(VkUInt32 layers) {
-        setLayers(getVkAddress(), layers.getVkAddress());
+        setLayers(getVkAddress(), layers != null ? layers.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLayers(long address);
@@ -136,7 +154,12 @@ public class VkFramebufferCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkFramebufferCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkFramebufferCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -177,11 +200,11 @@ public class VkFramebufferCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkFramebufferCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

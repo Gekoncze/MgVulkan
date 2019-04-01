@@ -9,11 +9,11 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
     }
 
     public VkRenderPassSampleLocationsBeginInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkRenderPassSampleLocationsBeginInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -31,8 +31,10 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -42,8 +44,10 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -53,19 +57,23 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         return new VkUInt32(getVkMemory(), getAttachmentInitialSampleLocationsCount(getVkAddress()));
     }
 
+    
     public void setAttachmentInitialSampleLocationsCount(VkUInt32 attachmentInitialSampleLocationsCount) {
-        setAttachmentInitialSampleLocationsCount(getVkAddress(), attachmentInitialSampleLocationsCount.getVkAddress());
+        setAttachmentInitialSampleLocationsCount(getVkAddress(), attachmentInitialSampleLocationsCount != null ? attachmentInitialSampleLocationsCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getAttachmentInitialSampleLocationsCount(long address);
     private static native void setAttachmentInitialSampleLocationsCount(long address, long attachmentInitialSampleLocationsCount);
 
-    public VkAttachmentSampleLocationsEXT.Array getPAttachmentInitialSampleLocations() {
-        return new VkAttachmentSampleLocationsEXT.Array(getVkMemory(), getPAttachmentInitialSampleLocations(getVkAddress()), getAttachmentInitialSampleLocationsCount().getValue());
+    public VkAttachmentSampleLocationsEXT getPAttachmentInitialSampleLocations() {
+        return new VkAttachmentSampleLocationsEXT(getVkMemory(), getPAttachmentInitialSampleLocations(getVkAddress()));
     }
 
+    private VkObject pAttachmentInitialSampleLocations = null;
     public void setPAttachmentInitialSampleLocations(VkAttachmentSampleLocationsEXT pAttachmentInitialSampleLocations) {
-        setPAttachmentInitialSampleLocations(getVkAddress(), pAttachmentInitialSampleLocations.getVkAddress());
+        setPAttachmentInitialSampleLocations(getVkAddress(), pAttachmentInitialSampleLocations != null ? pAttachmentInitialSampleLocations.getVkAddress() : VkPointer.NULL);
+        this.pAttachmentInitialSampleLocations = pAttachmentInitialSampleLocations;
     }
 
     private static native long getPAttachmentInitialSampleLocations(long address);
@@ -75,19 +83,23 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         return new VkUInt32(getVkMemory(), getPostSubpassSampleLocationsCount(getVkAddress()));
     }
 
+    
     public void setPostSubpassSampleLocationsCount(VkUInt32 postSubpassSampleLocationsCount) {
-        setPostSubpassSampleLocationsCount(getVkAddress(), postSubpassSampleLocationsCount.getVkAddress());
+        setPostSubpassSampleLocationsCount(getVkAddress(), postSubpassSampleLocationsCount != null ? postSubpassSampleLocationsCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPostSubpassSampleLocationsCount(long address);
     private static native void setPostSubpassSampleLocationsCount(long address, long postSubpassSampleLocationsCount);
 
-    public VkSubpassSampleLocationsEXT.Array getPPostSubpassSampleLocations() {
-        return new VkSubpassSampleLocationsEXT.Array(getVkMemory(), getPPostSubpassSampleLocations(getVkAddress()), getPostSubpassSampleLocationsCount().getValue());
+    public VkSubpassSampleLocationsEXT getPPostSubpassSampleLocations() {
+        return new VkSubpassSampleLocationsEXT(getVkMemory(), getPPostSubpassSampleLocations(getVkAddress()));
     }
 
+    private VkObject pPostSubpassSampleLocations = null;
     public void setPPostSubpassSampleLocations(VkSubpassSampleLocationsEXT pPostSubpassSampleLocations) {
-        setPPostSubpassSampleLocations(getVkAddress(), pPostSubpassSampleLocations.getVkAddress());
+        setPPostSubpassSampleLocations(getVkAddress(), pPostSubpassSampleLocations != null ? pPostSubpassSampleLocations.getVkAddress() : VkPointer.NULL);
+        this.pPostSubpassSampleLocations = pPostSubpassSampleLocations;
     }
 
     private static native long getPPostSubpassSampleLocations(long address);
@@ -100,7 +112,12 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkRenderPassSampleLocationsBeginInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkRenderPassSampleLocationsBeginInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -141,11 +158,11 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkRenderPassSampleLocationsBeginInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

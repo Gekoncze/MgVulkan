@@ -9,11 +9,11 @@ public class VkDisplayPropertiesKHR extends VkObject {
     }
 
     public VkDisplayPropertiesKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDisplayPropertiesKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
         return new VkDisplayKHR(getVkMemory(), getDisplay(getVkAddress()));
     }
 
+    
     public void setDisplay(VkDisplayKHR display) {
-        setDisplay(getVkAddress(), display.getVkAddress());
+        setDisplay(getVkAddress(), display != null ? display.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDisplay(long address);
@@ -43,8 +45,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
         return new VkChar(getVkMemory(), getDisplayName(getVkAddress()));
     }
 
+    private VkObject displayName = null;
     public void setDisplayName(VkChar displayName) {
-        setDisplayName(getVkAddress(), displayName.getVkAddress());
+        setDisplayName(getVkAddress(), displayName != null ? displayName.getVkAddress() : VkPointer.NULL);
+        this.displayName = displayName;
     }
 
     private static native long getDisplayName(long address);
@@ -54,8 +58,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
         return new VkExtent2D(getVkMemory(), getPhysicalDimensions(getVkAddress()));
     }
 
+    
     public void setPhysicalDimensions(VkExtent2D physicalDimensions) {
-        setPhysicalDimensions(getVkAddress(), physicalDimensions.getVkAddress());
+        setPhysicalDimensions(getVkAddress(), physicalDimensions != null ? physicalDimensions.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPhysicalDimensions(long address);
@@ -65,8 +71,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
         return new VkExtent2D(getVkMemory(), getPhysicalResolution(getVkAddress()));
     }
 
+    
     public void setPhysicalResolution(VkExtent2D physicalResolution) {
-        setPhysicalResolution(getVkAddress(), physicalResolution.getVkAddress());
+        setPhysicalResolution(getVkAddress(), physicalResolution != null ? physicalResolution.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPhysicalResolution(long address);
@@ -76,8 +84,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
         return new VkSurfaceTransformFlagsKHR(getVkMemory(), getSupportedTransforms(getVkAddress()));
     }
 
+    
     public void setSupportedTransforms(VkSurfaceTransformFlagsKHR supportedTransforms) {
-        setSupportedTransforms(getVkAddress(), supportedTransforms.getVkAddress());
+        setSupportedTransforms(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSupportedTransforms(long address);
@@ -87,8 +97,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
         return new VkBool32(getVkMemory(), getPlaneReorderPossible(getVkAddress()));
     }
 
+    
     public void setPlaneReorderPossible(VkBool32 planeReorderPossible) {
-        setPlaneReorderPossible(getVkAddress(), planeReorderPossible.getVkAddress());
+        setPlaneReorderPossible(getVkAddress(), planeReorderPossible != null ? planeReorderPossible.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPlaneReorderPossible(long address);
@@ -98,8 +110,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
         return new VkBool32(getVkMemory(), getPersistentContent(getVkAddress()));
     }
 
+    
     public void setPersistentContent(VkBool32 persistentContent) {
-        setPersistentContent(getVkAddress(), persistentContent.getVkAddress());
+        setPersistentContent(getVkAddress(), persistentContent != null ? persistentContent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPersistentContent(long address);
@@ -112,7 +126,12 @@ public class VkDisplayPropertiesKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDisplayPropertiesKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDisplayPropertiesKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkDisplayPropertiesKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDisplayPropertiesKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

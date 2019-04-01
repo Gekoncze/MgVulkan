@@ -9,11 +9,11 @@ public class VkImageCopy extends VkObject {
     }
 
     public VkImageCopy(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkImageCopy(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkImageCopy extends VkObject {
         return new VkImageSubresourceLayers(getVkMemory(), getSrcSubresource(getVkAddress()));
     }
 
+    
     public void setSrcSubresource(VkImageSubresourceLayers srcSubresource) {
-        setSrcSubresource(getVkAddress(), srcSubresource.getVkAddress());
+        setSrcSubresource(getVkAddress(), srcSubresource != null ? srcSubresource.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSrcSubresource(long address);
@@ -41,8 +43,10 @@ public class VkImageCopy extends VkObject {
         return new VkOffset3D(getVkMemory(), getSrcOffset(getVkAddress()));
     }
 
+    
     public void setSrcOffset(VkOffset3D srcOffset) {
-        setSrcOffset(getVkAddress(), srcOffset.getVkAddress());
+        setSrcOffset(getVkAddress(), srcOffset != null ? srcOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSrcOffset(long address);
@@ -52,8 +56,10 @@ public class VkImageCopy extends VkObject {
         return new VkImageSubresourceLayers(getVkMemory(), getDstSubresource(getVkAddress()));
     }
 
+    
     public void setDstSubresource(VkImageSubresourceLayers dstSubresource) {
-        setDstSubresource(getVkAddress(), dstSubresource.getVkAddress());
+        setDstSubresource(getVkAddress(), dstSubresource != null ? dstSubresource.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstSubresource(long address);
@@ -63,8 +69,10 @@ public class VkImageCopy extends VkObject {
         return new VkOffset3D(getVkMemory(), getDstOffset(getVkAddress()));
     }
 
+    
     public void setDstOffset(VkOffset3D dstOffset) {
-        setDstOffset(getVkAddress(), dstOffset.getVkAddress());
+        setDstOffset(getVkAddress(), dstOffset != null ? dstOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDstOffset(long address);
@@ -74,8 +82,10 @@ public class VkImageCopy extends VkObject {
         return new VkExtent3D(getVkMemory(), getExtent(getVkAddress()));
     }
 
+    
     public void setExtent(VkExtent3D extent) {
-        setExtent(getVkAddress(), extent.getVkAddress());
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExtent(long address);
@@ -88,7 +98,12 @@ public class VkImageCopy extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkImageCopy.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkImageCopy o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkImageCopy extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImageCopy.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -9,11 +9,11 @@ public class VkSubpassDescription extends VkObject {
     }
 
     public VkSubpassDescription(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkSubpassDescription(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -35,8 +35,10 @@ public class VkSubpassDescription extends VkObject {
         return new VkSubpassDescriptionFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkSubpassDescriptionFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -46,8 +48,10 @@ public class VkSubpassDescription extends VkObject {
         return new VkPipelineBindPoint(getVkMemory(), getPipelineBindPoint(getVkAddress()));
     }
 
+    
     public void setPipelineBindPoint(VkPipelineBindPoint pipelineBindPoint) {
-        setPipelineBindPoint(getVkAddress(), pipelineBindPoint.getVkAddress());
+        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPipelineBindPoint(long address);
@@ -57,19 +61,23 @@ public class VkSubpassDescription extends VkObject {
         return new VkUInt32(getVkMemory(), getInputAttachmentCount(getVkAddress()));
     }
 
+    
     public void setInputAttachmentCount(VkUInt32 inputAttachmentCount) {
-        setInputAttachmentCount(getVkAddress(), inputAttachmentCount.getVkAddress());
+        setInputAttachmentCount(getVkAddress(), inputAttachmentCount != null ? inputAttachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getInputAttachmentCount(long address);
     private static native void setInputAttachmentCount(long address, long inputAttachmentCount);
 
-    public VkAttachmentReference.Array getPInputAttachments() {
-        return new VkAttachmentReference.Array(getVkMemory(), getPInputAttachments(getVkAddress()), getInputAttachmentCount().getValue());
+    public VkAttachmentReference getPInputAttachments() {
+        return new VkAttachmentReference(getVkMemory(), getPInputAttachments(getVkAddress()));
     }
 
+    private VkObject pInputAttachments = null;
     public void setPInputAttachments(VkAttachmentReference pInputAttachments) {
-        setPInputAttachments(getVkAddress(), pInputAttachments.getVkAddress());
+        setPInputAttachments(getVkAddress(), pInputAttachments != null ? pInputAttachments.getVkAddress() : VkPointer.NULL);
+        this.pInputAttachments = pInputAttachments;
     }
 
     private static native long getPInputAttachments(long address);
@@ -79,19 +87,23 @@ public class VkSubpassDescription extends VkObject {
         return new VkUInt32(getVkMemory(), getColorAttachmentCount(getVkAddress()));
     }
 
+    
     public void setColorAttachmentCount(VkUInt32 colorAttachmentCount) {
-        setColorAttachmentCount(getVkAddress(), colorAttachmentCount.getVkAddress());
+        setColorAttachmentCount(getVkAddress(), colorAttachmentCount != null ? colorAttachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getColorAttachmentCount(long address);
     private static native void setColorAttachmentCount(long address, long colorAttachmentCount);
 
-    public VkAttachmentReference.Array getPColorAttachments() {
-        return new VkAttachmentReference.Array(getVkMemory(), getPColorAttachments(getVkAddress()), getColorAttachmentCount().getValue());
+    public VkAttachmentReference getPColorAttachments() {
+        return new VkAttachmentReference(getVkMemory(), getPColorAttachments(getVkAddress()));
     }
 
+    private VkObject pColorAttachments = null;
     public void setPColorAttachments(VkAttachmentReference pColorAttachments) {
-        setPColorAttachments(getVkAddress(), pColorAttachments.getVkAddress());
+        setPColorAttachments(getVkAddress(), pColorAttachments != null ? pColorAttachments.getVkAddress() : VkPointer.NULL);
+        this.pColorAttachments = pColorAttachments;
     }
 
     private static native long getPColorAttachments(long address);
@@ -101,8 +113,10 @@ public class VkSubpassDescription extends VkObject {
         return new VkAttachmentReference(getVkMemory(), getPResolveAttachments(getVkAddress()));
     }
 
+    private VkObject pResolveAttachments = null;
     public void setPResolveAttachments(VkAttachmentReference pResolveAttachments) {
-        setPResolveAttachments(getVkAddress(), pResolveAttachments.getVkAddress());
+        setPResolveAttachments(getVkAddress(), pResolveAttachments != null ? pResolveAttachments.getVkAddress() : VkPointer.NULL);
+        this.pResolveAttachments = pResolveAttachments;
     }
 
     private static native long getPResolveAttachments(long address);
@@ -112,8 +126,10 @@ public class VkSubpassDescription extends VkObject {
         return new VkAttachmentReference(getVkMemory(), getPDepthStencilAttachment(getVkAddress()));
     }
 
+    private VkObject pDepthStencilAttachment = null;
     public void setPDepthStencilAttachment(VkAttachmentReference pDepthStencilAttachment) {
-        setPDepthStencilAttachment(getVkAddress(), pDepthStencilAttachment.getVkAddress());
+        setPDepthStencilAttachment(getVkAddress(), pDepthStencilAttachment != null ? pDepthStencilAttachment.getVkAddress() : VkPointer.NULL);
+        this.pDepthStencilAttachment = pDepthStencilAttachment;
     }
 
     private static native long getPDepthStencilAttachment(long address);
@@ -123,19 +139,23 @@ public class VkSubpassDescription extends VkObject {
         return new VkUInt32(getVkMemory(), getPreserveAttachmentCount(getVkAddress()));
     }
 
+    
     public void setPreserveAttachmentCount(VkUInt32 preserveAttachmentCount) {
-        setPreserveAttachmentCount(getVkAddress(), preserveAttachmentCount.getVkAddress());
+        setPreserveAttachmentCount(getVkAddress(), preserveAttachmentCount != null ? preserveAttachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPreserveAttachmentCount(long address);
     private static native void setPreserveAttachmentCount(long address, long preserveAttachmentCount);
 
-    public VkUInt32.Array getPPreserveAttachments() {
-        return new VkUInt32.Array(getVkMemory(), getPPreserveAttachments(getVkAddress()), getPreserveAttachmentCount().getValue());
+    public VkUInt32 getPPreserveAttachments() {
+        return new VkUInt32(getVkMemory(), getPPreserveAttachments(getVkAddress()));
     }
 
+    private VkObject pPreserveAttachments = null;
     public void setPPreserveAttachments(VkUInt32 pPreserveAttachments) {
-        setPPreserveAttachments(getVkAddress(), pPreserveAttachments.getVkAddress());
+        setPPreserveAttachments(getVkAddress(), pPreserveAttachments != null ? pPreserveAttachments.getVkAddress() : VkPointer.NULL);
+        this.pPreserveAttachments = pPreserveAttachments;
     }
 
     private static native long getPPreserveAttachments(long address);
@@ -148,7 +168,12 @@ public class VkSubpassDescription extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkSubpassDescription.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSubpassDescription o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -189,11 +214,11 @@ public class VkSubpassDescription extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSubpassDescription.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

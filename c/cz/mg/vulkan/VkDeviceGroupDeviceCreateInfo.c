@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_getSType(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkDeviceGroupDeviceCreateInfo* o = (VkDeviceGroupDeviceCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_setSType(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkDeviceGroupDeviceCreateInfo* o = (VkDeviceGroupDeviceCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupDeviceCreateInfo* o = (VkDeviceGroupDeviceCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_setPNext(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkDeviceGroupDeviceCreateInfo* o = (VkDeviceGroupDeviceCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_getPhysicalDeviceCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupDeviceCreateInfo* o = (VkDeviceGroupDeviceCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->physicalDeviceCount));
+    return jniPointerToLong(&o->physicalDeviceCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_setPhysicalDeviceCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_setPhysicalDeviceCount(J
     (void)env;
     (void)jc;
     VkDeviceGroupDeviceCreateInfo* o = (VkDeviceGroupDeviceCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->physicalDeviceCount, jniLongToPointer(valueAddress), sizeof(o->physicalDeviceCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->physicalDeviceCount, valuePointer, sizeof(o->physicalDeviceCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_getPPhysicalDevices(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupDeviceCreateInfo* o = (VkDeviceGroupDeviceCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pPhysicalDevices));
+    return jniPointerToLong(o->pPhysicalDevices);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_setPPhysicalDevices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupDeviceCreateInfo_setPPhysicalDevices(JNIE
     (void)env;
     (void)jc;
     VkDeviceGroupDeviceCreateInfo* o = (VkDeviceGroupDeviceCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pPhysicalDevices, jniLongToPointer(valueAddress), sizeof(o->pPhysicalDevices));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pPhysicalDevices, &valuePointer, sizeof(o->pPhysicalDevices));
 }
+
 

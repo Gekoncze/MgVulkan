@@ -9,15 +9,15 @@ public class VkInstanceCreateInfo extends VkObject {
     }
 
     public VkInstanceCreateInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkInstanceCreateInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
-    public VkInstanceCreateInfo(VkObject pNext, VkInstanceCreateFlags flags, VkApplicationInfo pApplicationInfo, VkUInt32 enabledLayerCount, VkChar ppEnabledLayerNames, VkUInt32 enabledExtensionCount, VkChar ppEnabledExtensionNames) {
+    public VkInstanceCreateInfo(VkObject pNext, VkInstanceCreateFlags flags, VkApplicationInfo pApplicationInfo, VkUInt32 enabledLayerCount, VkChar.Pointer ppEnabledLayerNames, VkUInt32 enabledExtensionCount, VkChar.Pointer ppEnabledExtensionNames) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO));
         setPNext(pNext);
@@ -33,8 +33,10 @@ public class VkInstanceCreateInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -44,8 +46,10 @@ public class VkInstanceCreateInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -55,8 +59,10 @@ public class VkInstanceCreateInfo extends VkObject {
         return new VkInstanceCreateFlags(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkInstanceCreateFlags flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -66,8 +72,10 @@ public class VkInstanceCreateInfo extends VkObject {
         return new VkApplicationInfo(getVkMemory(), getPApplicationInfo(getVkAddress()));
     }
 
+    private VkObject pApplicationInfo = null;
     public void setPApplicationInfo(VkApplicationInfo pApplicationInfo) {
-        setPApplicationInfo(getVkAddress(), pApplicationInfo.getVkAddress());
+        setPApplicationInfo(getVkAddress(), pApplicationInfo != null ? pApplicationInfo.getVkAddress() : VkPointer.NULL);
+        this.pApplicationInfo = pApplicationInfo;
     }
 
     private static native long getPApplicationInfo(long address);
@@ -77,19 +85,23 @@ public class VkInstanceCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getEnabledLayerCount(getVkAddress()));
     }
 
+    
     public void setEnabledLayerCount(VkUInt32 enabledLayerCount) {
-        setEnabledLayerCount(getVkAddress(), enabledLayerCount.getVkAddress());
+        setEnabledLayerCount(getVkAddress(), enabledLayerCount != null ? enabledLayerCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getEnabledLayerCount(long address);
     private static native void setEnabledLayerCount(long address, long enabledLayerCount);
 
-    public VkChar.Array getPpEnabledLayerNames() {
-        return new VkChar.Array(getVkMemory(), getPpEnabledLayerNames(getVkAddress()), getEnabledLayerCount().getValue());
+    public VkChar.Pointer getPpEnabledLayerNames() {
+        return new VkChar.Pointer(getVkMemory(), getPpEnabledLayerNames(getVkAddress()));
     }
 
-    public void setPpEnabledLayerNames(VkChar ppEnabledLayerNames) {
-        setPpEnabledLayerNames(getVkAddress(), ppEnabledLayerNames.getVkAddress());
+    private VkObject ppEnabledLayerNames = null;
+    public void setPpEnabledLayerNames(VkChar.Pointer ppEnabledLayerNames) {
+        setPpEnabledLayerNames(getVkAddress(), ppEnabledLayerNames != null ? ppEnabledLayerNames.getVkAddress() : VkPointer.NULL);
+        this.ppEnabledLayerNames = ppEnabledLayerNames;
     }
 
     private static native long getPpEnabledLayerNames(long address);
@@ -99,19 +111,23 @@ public class VkInstanceCreateInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getEnabledExtensionCount(getVkAddress()));
     }
 
+    
     public void setEnabledExtensionCount(VkUInt32 enabledExtensionCount) {
-        setEnabledExtensionCount(getVkAddress(), enabledExtensionCount.getVkAddress());
+        setEnabledExtensionCount(getVkAddress(), enabledExtensionCount != null ? enabledExtensionCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getEnabledExtensionCount(long address);
     private static native void setEnabledExtensionCount(long address, long enabledExtensionCount);
 
-    public VkChar.Array getPpEnabledExtensionNames() {
-        return new VkChar.Array(getVkMemory(), getPpEnabledExtensionNames(getVkAddress()), getEnabledExtensionCount().getValue());
+    public VkChar.Pointer getPpEnabledExtensionNames() {
+        return new VkChar.Pointer(getVkMemory(), getPpEnabledExtensionNames(getVkAddress()));
     }
 
-    public void setPpEnabledExtensionNames(VkChar ppEnabledExtensionNames) {
-        setPpEnabledExtensionNames(getVkAddress(), ppEnabledExtensionNames.getVkAddress());
+    private VkObject ppEnabledExtensionNames = null;
+    public void setPpEnabledExtensionNames(VkChar.Pointer ppEnabledExtensionNames) {
+        setPpEnabledExtensionNames(getVkAddress(), ppEnabledExtensionNames != null ? ppEnabledExtensionNames.getVkAddress() : VkPointer.NULL);
+        this.ppEnabledExtensionNames = ppEnabledExtensionNames;
     }
 
     private static native long getPpEnabledExtensionNames(long address);
@@ -124,7 +140,12 @@ public class VkInstanceCreateInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkInstanceCreateInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkInstanceCreateInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -165,11 +186,11 @@ public class VkInstanceCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkInstanceCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

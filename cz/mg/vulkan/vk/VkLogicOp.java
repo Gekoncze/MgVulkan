@@ -62,7 +62,12 @@ public class VkLogicOp extends VkEnum {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkLogicOp.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkLogicOp o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -103,11 +108,11 @@ public class VkLogicOp extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkLogicOp.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

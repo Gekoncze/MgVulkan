@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures2_getSType(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkPhysicalDeviceFeatures2* o = (VkPhysicalDeviceFeatures2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures2_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures2_setSType(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkPhysicalDeviceFeatures2* o = (VkPhysicalDeviceFeatures2*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures2_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceFeatures2* o = (VkPhysicalDeviceFeatures2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures2_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures2_setPNext(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkPhysicalDeviceFeatures2* o = (VkPhysicalDeviceFeatures2*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures2_getFeatures(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDeviceFeatures2* o = (VkPhysicalDeviceFeatures2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->features));
+    return jniPointerToLong(&o->features);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures2_setFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures2_setFeatures(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkPhysicalDeviceFeatures2* o = (VkPhysicalDeviceFeatures2*)jniLongToPointer(address);
-    memcpy(&o->features, jniLongToPointer(valueAddress), sizeof(o->features));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->features, valuePointer, sizeof(o->features));
 }
+
 

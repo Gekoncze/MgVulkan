@@ -9,11 +9,11 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
     }
 
     public VkDedicatedAllocationImageCreateInfoNV(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDedicatedAllocationImageCreateInfoNV(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -39,8 +41,10 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -50,8 +54,10 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
         return new VkBool32(getVkMemory(), getDedicatedAllocation(getVkAddress()));
     }
 
+    
     public void setDedicatedAllocation(VkBool32 dedicatedAllocation) {
-        setDedicatedAllocation(getVkAddress(), dedicatedAllocation.getVkAddress());
+        setDedicatedAllocation(getVkAddress(), dedicatedAllocation != null ? dedicatedAllocation.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDedicatedAllocation(long address);
@@ -64,7 +70,12 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDedicatedAllocationImageCreateInfoNV.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDedicatedAllocationImageCreateInfoNV o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDedicatedAllocationImageCreateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

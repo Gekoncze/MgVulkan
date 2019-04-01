@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_getSType(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkDeviceGroupBindSparseInfo* o = (VkDeviceGroupBindSparseInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_setSType(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkDeviceGroupBindSparseInfo* o = (VkDeviceGroupBindSparseInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupBindSparseInfo* o = (VkDeviceGroupBindSparseInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_setPNext(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkDeviceGroupBindSparseInfo* o = (VkDeviceGroupBindSparseInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_getResourceDeviceIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupBindSparseInfo* o = (VkDeviceGroupBindSparseInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->resourceDeviceIndex));
+    return jniPointerToLong(&o->resourceDeviceIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_setResourceDeviceIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_setResourceDeviceIndex(JNI
     (void)env;
     (void)jc;
     VkDeviceGroupBindSparseInfo* o = (VkDeviceGroupBindSparseInfo*)jniLongToPointer(address);
-    memcpy(&o->resourceDeviceIndex, jniLongToPointer(valueAddress), sizeof(o->resourceDeviceIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->resourceDeviceIndex, valuePointer, sizeof(o->resourceDeviceIndex));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_getMemoryDeviceIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceGroupBindSparseInfo* o = (VkDeviceGroupBindSparseInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->memoryDeviceIndex));
+    return jniPointerToLong(&o->memoryDeviceIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_setMemoryDeviceIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupBindSparseInfo_setMemoryDeviceIndex(JNIEn
     (void)env;
     (void)jc;
     VkDeviceGroupBindSparseInfo* o = (VkDeviceGroupBindSparseInfo*)jniLongToPointer(address);
-    memcpy(&o->memoryDeviceIndex, jniLongToPointer(valueAddress), sizeof(o->memoryDeviceIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->memoryDeviceIndex, valuePointer, sizeof(o->memoryDeviceIndex));
 }
+
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkExternalMemoryProperties_getExternalMemoryFeatures(
     (void)env;
     (void)jc;
     VkExternalMemoryProperties* o = (VkExternalMemoryProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->externalMemoryFeatures));
+    return jniPointerToLong(&o->externalMemoryFeatures);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalMemoryProperties_setExternalMemoryFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkExternalMemoryProperties_setExternalMemoryFeatures(J
     (void)env;
     (void)jc;
     VkExternalMemoryProperties* o = (VkExternalMemoryProperties*)jniLongToPointer(address);
-    memcpy(&o->externalMemoryFeatures, jniLongToPointer(valueAddress), sizeof(o->externalMemoryFeatures));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->externalMemoryFeatures, valuePointer, sizeof(o->externalMemoryFeatures));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkExternalMemoryProperties_getExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkExternalMemoryProperties* o = (VkExternalMemoryProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->exportFromImportedHandleTypes));
+    return jniPointerToLong(&o->exportFromImportedHandleTypes);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalMemoryProperties_setExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkExternalMemoryProperties_setExportFromImportedHandle
     (void)env;
     (void)jc;
     VkExternalMemoryProperties* o = (VkExternalMemoryProperties*)jniLongToPointer(address);
-    memcpy(&o->exportFromImportedHandleTypes, jniLongToPointer(valueAddress), sizeof(o->exportFromImportedHandleTypes));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->exportFromImportedHandleTypes, valuePointer, sizeof(o->exportFromImportedHandleTypes));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkExternalMemoryProperties_getCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkExternalMemoryProperties* o = (VkExternalMemoryProperties*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->compatibleHandleTypes));
+    return jniPointerToLong(&o->compatibleHandleTypes);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalMemoryProperties_setCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkExternalMemoryProperties_setCompatibleHandleTypes(JN
     (void)env;
     (void)jc;
     VkExternalMemoryProperties* o = (VkExternalMemoryProperties*)jniLongToPointer(address);
-    memcpy(&o->compatibleHandleTypes, jniLongToPointer(valueAddress), sizeof(o->compatibleHandleTypes));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->compatibleHandleTypes, valuePointer, sizeof(o->compatibleHandleTypes));
 }
+
 

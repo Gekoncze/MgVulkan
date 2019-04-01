@@ -9,11 +9,11 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
     }
 
     public VkPhysicalDeviceMemoryProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPhysicalDeviceMemoryProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,19 +29,23 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getMemoryTypeCount(getVkAddress()));
     }
 
+    
     public void setMemoryTypeCount(VkUInt32 memoryTypeCount) {
-        setMemoryTypeCount(getVkAddress(), memoryTypeCount.getVkAddress());
+        setMemoryTypeCount(getVkAddress(), memoryTypeCount != null ? memoryTypeCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMemoryTypeCount(long address);
     private static native void setMemoryTypeCount(long address, long memoryTypeCount);
 
-    public VkMemoryType.Array getMemoryTypes() {
-        return new VkMemoryType.Array(getVkMemory(), getMemoryTypes(getVkAddress()), getMemoryTypeCount().getValue());
+    public VkMemoryType getMemoryTypes() {
+        return new VkMemoryType(getVkMemory(), getMemoryTypes(getVkAddress()));
     }
 
+    
     public void setMemoryTypes(VkMemoryType memoryTypes) {
-        setMemoryTypes(getVkAddress(), memoryTypes.getVkAddress());
+        setMemoryTypes(getVkAddress(), memoryTypes != null ? memoryTypes.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getMemoryTypes(long address);
@@ -51,19 +55,23 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         return new VkUInt32(getVkMemory(), getMemoryHeapCount(getVkAddress()));
     }
 
+    
     public void setMemoryHeapCount(VkUInt32 memoryHeapCount) {
-        setMemoryHeapCount(getVkAddress(), memoryHeapCount.getVkAddress());
+        setMemoryHeapCount(getVkAddress(), memoryHeapCount != null ? memoryHeapCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMemoryHeapCount(long address);
     private static native void setMemoryHeapCount(long address, long memoryHeapCount);
 
-    public VkMemoryHeap.Array getMemoryHeaps() {
-        return new VkMemoryHeap.Array(getVkMemory(), getMemoryHeaps(getVkAddress()), getMemoryHeapCount().getValue());
+    public VkMemoryHeap getMemoryHeaps() {
+        return new VkMemoryHeap(getVkMemory(), getMemoryHeaps(getVkAddress()));
     }
 
+    
     public void setMemoryHeaps(VkMemoryHeap memoryHeaps) {
-        setMemoryHeaps(getVkAddress(), memoryHeaps.getVkAddress());
+        setMemoryHeaps(getVkAddress(), memoryHeaps != null ? memoryHeaps.getVkAddress() : VkPointer.NULL);
+        
     }
 
     private static native long getMemoryHeaps(long address);
@@ -76,7 +84,12 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDeviceMemoryProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceMemoryProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceMemoryProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -9,11 +9,11 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
     }
 
     public VkPipelineCoverageModulationStateCreateInfoNV(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPipelineCoverageModulationStateCreateInfoNV(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,8 +58,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         return new VkPipelineCoverageModulationStateCreateFlagsNV(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkPipelineCoverageModulationStateCreateFlagsNV flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -65,8 +71,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         return new VkCoverageModulationModeNV(getVkMemory(), getCoverageModulationMode(getVkAddress()));
     }
 
+    
     public void setCoverageModulationMode(VkCoverageModulationModeNV coverageModulationMode) {
-        setCoverageModulationMode(getVkAddress(), coverageModulationMode.getVkAddress());
+        setCoverageModulationMode(getVkAddress(), coverageModulationMode != null ? coverageModulationMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCoverageModulationMode(long address);
@@ -76,8 +84,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         return new VkBool32(getVkMemory(), getCoverageModulationTableEnable(getVkAddress()));
     }
 
+    
     public void setCoverageModulationTableEnable(VkBool32 coverageModulationTableEnable) {
-        setCoverageModulationTableEnable(getVkAddress(), coverageModulationTableEnable.getVkAddress());
+        setCoverageModulationTableEnable(getVkAddress(), coverageModulationTableEnable != null ? coverageModulationTableEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCoverageModulationTableEnable(long address);
@@ -87,19 +97,23 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         return new VkUInt32(getVkMemory(), getCoverageModulationTableCount(getVkAddress()));
     }
 
+    
     public void setCoverageModulationTableCount(VkUInt32 coverageModulationTableCount) {
-        setCoverageModulationTableCount(getVkAddress(), coverageModulationTableCount.getVkAddress());
+        setCoverageModulationTableCount(getVkAddress(), coverageModulationTableCount != null ? coverageModulationTableCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCoverageModulationTableCount(long address);
     private static native void setCoverageModulationTableCount(long address, long coverageModulationTableCount);
 
-    public VkFloat.Array getPCoverageModulationTable() {
-        return new VkFloat.Array(getVkMemory(), getPCoverageModulationTable(getVkAddress()), getCoverageModulationTableCount().getValue());
+    public VkFloat getPCoverageModulationTable() {
+        return new VkFloat(getVkMemory(), getPCoverageModulationTable(getVkAddress()));
     }
 
+    private VkObject pCoverageModulationTable = null;
     public void setPCoverageModulationTable(VkFloat pCoverageModulationTable) {
-        setPCoverageModulationTable(getVkAddress(), pCoverageModulationTable.getVkAddress());
+        setPCoverageModulationTable(getVkAddress(), pCoverageModulationTable != null ? pCoverageModulationTable.getVkAddress() : VkPointer.NULL);
+        this.pCoverageModulationTable = pCoverageModulationTable;
     }
 
     private static native long getPCoverageModulationTable(long address);
@@ -112,7 +126,12 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineCoverageModulationStateCreateInfoNV.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineCoverageModulationStateCreateInfoNV o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineCoverageModulationStateCreateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

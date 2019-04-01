@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_getSType(JNIEnv*
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setSType(JNIEnv* 
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setPNext(JNIEnv* 
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setFlags(JNIEnv* 
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_getDescriptorUpdateEntryCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->descriptorUpdateEntryCount));
+    return jniPointerToLong(&o->descriptorUpdateEntryCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setDescriptorUpdateEntryCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setDescriptorUpda
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->descriptorUpdateEntryCount, jniLongToPointer(valueAddress), sizeof(o->descriptorUpdateEntryCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->descriptorUpdateEntryCount, valuePointer, sizeof(o->descriptorUpdateEntryCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_getPDescriptorUpdateEntries(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pDescriptorUpdateEntries));
+    return jniPointerToLong(o->pDescriptorUpdateEntries);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setPDescriptorUpdateEntries(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setPDescriptorUpd
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pDescriptorUpdateEntries, jniLongToPointer(valueAddress), sizeof(o->pDescriptorUpdateEntries));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pDescriptorUpdateEntries, &valuePointer, sizeof(o->pDescriptorUpdateEntries));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_getTemplateType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->templateType));
+    return jniPointerToLong(&o->templateType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setTemplateType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setTemplateType(J
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->templateType, jniLongToPointer(valueAddress), sizeof(o->templateType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->templateType, valuePointer, sizeof(o->templateType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_getDescriptorSetLayout(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->descriptorSetLayout));
+    return jniPointerToLong(&o->descriptorSetLayout);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setDescriptorSetLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setDescriptorSetL
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->descriptorSetLayout, jniLongToPointer(valueAddress), sizeof(o->descriptorSetLayout));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->descriptorSetLayout, valuePointer, sizeof(o->descriptorSetLayout));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_getPipelineBindPoint(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pipelineBindPoint));
+    return jniPointerToLong(&o->pipelineBindPoint);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setPipelineBindPoint(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,14 +148,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setPipelineBindPo
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pipelineBindPoint, jniLongToPointer(valueAddress), sizeof(o->pipelineBindPoint));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pipelineBindPoint, valuePointer, sizeof(o->pipelineBindPoint));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_getPipelineLayout(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pipelineLayout));
+    return jniPointerToLong(&o->pipelineLayout);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setPipelineLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -149,14 +165,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setPipelineLayout
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pipelineLayout, jniLongToPointer(valueAddress), sizeof(o->pipelineLayout));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pipelineLayout, valuePointer, sizeof(o->pipelineLayout));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_getSet(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->set));
+    return jniPointerToLong(&o->set);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setSet(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -164,6 +182,8 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateCreateInfo_setSet(JNIEnv* en
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateCreateInfo* o = (VkDescriptorUpdateTemplateCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->set, jniLongToPointer(valueAddress), sizeof(o->set));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->set, valuePointer, sizeof(o->set));
 }
+
 

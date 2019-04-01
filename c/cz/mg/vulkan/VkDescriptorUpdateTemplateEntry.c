@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_getDstBinding(JNIEnv*
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dstBinding));
+    return jniPointerToLong(&o->dstBinding);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setDstBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setDstBinding(JNIEnv* 
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    memcpy(&o->dstBinding, jniLongToPointer(valueAddress), sizeof(o->dstBinding));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dstBinding, valuePointer, sizeof(o->dstBinding));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_getDstArrayElement(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dstArrayElement));
+    return jniPointerToLong(&o->dstArrayElement);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setDstArrayElement(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setDstArrayElement(JNI
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    memcpy(&o->dstArrayElement, jniLongToPointer(valueAddress), sizeof(o->dstArrayElement));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dstArrayElement, valuePointer, sizeof(o->dstArrayElement));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_getDescriptorCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->descriptorCount));
+    return jniPointerToLong(&o->descriptorCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setDescriptorCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setDescriptorCount(JNI
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    memcpy(&o->descriptorCount, jniLongToPointer(valueAddress), sizeof(o->descriptorCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->descriptorCount, valuePointer, sizeof(o->descriptorCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_getDescriptorType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->descriptorType));
+    return jniPointerToLong(&o->descriptorType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setDescriptorType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setDescriptorType(JNIE
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    memcpy(&o->descriptorType, jniLongToPointer(valueAddress), sizeof(o->descriptorType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->descriptorType, valuePointer, sizeof(o->descriptorType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_getOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->offset));
+    return jniPointerToLong(&o->offset);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setOffset(JNIEnv* env,
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    memcpy(&o->offset, jniLongToPointer(valueAddress), sizeof(o->offset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_getStride(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->stride));
+    return jniPointerToLong(&o->stride);
 }
 
 void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setStride(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkDescriptorUpdateTemplateEntry_setStride(JNIEnv* env,
     (void)env;
     (void)jc;
     VkDescriptorUpdateTemplateEntry* o = (VkDescriptorUpdateTemplateEntry*)jniLongToPointer(address);
-    memcpy(&o->stride, jniLongToPointer(valueAddress), sizeof(o->stride));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->stride, valuePointer, sizeof(o->stride));
 }
+
 

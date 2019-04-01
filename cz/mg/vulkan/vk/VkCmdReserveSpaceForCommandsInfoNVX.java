@@ -9,11 +9,11 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
     }
 
     public VkCmdReserveSpaceForCommandsInfoNVX(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkCmdReserveSpaceForCommandsInfoNVX(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         return new VkObjectTableNVX(getVkMemory(), getObjectTable(getVkAddress()));
     }
 
+    
     public void setObjectTable(VkObjectTableNVX objectTable) {
-        setObjectTable(getVkAddress(), objectTable.getVkAddress());
+        setObjectTable(getVkAddress(), objectTable != null ? objectTable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getObjectTable(long address);
@@ -63,8 +69,10 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         return new VkIndirectCommandsLayoutNVX(getVkMemory(), getIndirectCommandsLayout(getVkAddress()));
     }
 
+    
     public void setIndirectCommandsLayout(VkIndirectCommandsLayoutNVX indirectCommandsLayout) {
-        setIndirectCommandsLayout(getVkAddress(), indirectCommandsLayout.getVkAddress());
+        setIndirectCommandsLayout(getVkAddress(), indirectCommandsLayout != null ? indirectCommandsLayout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getIndirectCommandsLayout(long address);
@@ -74,8 +82,10 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxSequencesCount(getVkAddress()));
     }
 
+    
     public void setMaxSequencesCount(VkUInt32 maxSequencesCount) {
-        setMaxSequencesCount(getVkAddress(), maxSequencesCount.getVkAddress());
+        setMaxSequencesCount(getVkAddress(), maxSequencesCount != null ? maxSequencesCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxSequencesCount(long address);
@@ -88,7 +98,12 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkCmdReserveSpaceForCommandsInfoNVX.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkCmdReserveSpaceForCommandsInfoNVX o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCmdReserveSpaceForCommandsInfoNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

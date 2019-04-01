@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkMemoryRequirements_getSize(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkMemoryRequirements* o = (VkMemoryRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->size));
+    return jniPointerToLong(&o->size);
 }
 
 void Java_cz_mg_vulkan_vk_VkMemoryRequirements_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkMemoryRequirements_setSize(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkMemoryRequirements* o = (VkMemoryRequirements*)jniLongToPointer(address);
-    memcpy(&o->size, jniLongToPointer(valueAddress), sizeof(o->size));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->size, valuePointer, sizeof(o->size));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkMemoryRequirements_getAlignment(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkMemoryRequirements* o = (VkMemoryRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->alignment));
+    return jniPointerToLong(&o->alignment);
 }
 
 void Java_cz_mg_vulkan_vk_VkMemoryRequirements_setAlignment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkMemoryRequirements_setAlignment(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkMemoryRequirements* o = (VkMemoryRequirements*)jniLongToPointer(address);
-    memcpy(&o->alignment, jniLongToPointer(valueAddress), sizeof(o->alignment));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->alignment, valuePointer, sizeof(o->alignment));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkMemoryRequirements_getMemoryTypeBits(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkMemoryRequirements* o = (VkMemoryRequirements*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->memoryTypeBits));
+    return jniPointerToLong(&o->memoryTypeBits);
 }
 
 void Java_cz_mg_vulkan_vk_VkMemoryRequirements_setMemoryTypeBits(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkMemoryRequirements_setMemoryTypeBits(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkMemoryRequirements* o = (VkMemoryRequirements*)jniLongToPointer(address);
-    memcpy(&o->memoryTypeBits, jniLongToPointer(valueAddress), sizeof(o->memoryTypeBits));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->memoryTypeBits, valuePointer, sizeof(o->memoryTypeBits));
 }
+
 

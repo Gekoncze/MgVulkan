@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_getSType(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkDeviceQueueInfo2* o = (VkDeviceQueueInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_setSType(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkDeviceQueueInfo2* o = (VkDeviceQueueInfo2*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceQueueInfo2* o = (VkDeviceQueueInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_setPNext(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkDeviceQueueInfo2* o = (VkDeviceQueueInfo2*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceQueueInfo2* o = (VkDeviceQueueInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_setFlags(JNIEnv* env, jclass jc, jl
     (void)env;
     (void)jc;
     VkDeviceQueueInfo2* o = (VkDeviceQueueInfo2*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_getQueueFamilyIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceQueueInfo2* o = (VkDeviceQueueInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->queueFamilyIndex));
+    return jniPointerToLong(&o->queueFamilyIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_setQueueFamilyIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_setQueueFamilyIndex(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkDeviceQueueInfo2* o = (VkDeviceQueueInfo2*)jniLongToPointer(address);
-    memcpy(&o->queueFamilyIndex, jniLongToPointer(valueAddress), sizeof(o->queueFamilyIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->queueFamilyIndex, valuePointer, sizeof(o->queueFamilyIndex));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_getQueueIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkDeviceQueueInfo2* o = (VkDeviceQueueInfo2*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->queueIndex));
+    return jniPointerToLong(&o->queueIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_setQueueIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkDeviceQueueInfo2_setQueueIndex(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkDeviceQueueInfo2* o = (VkDeviceQueueInfo2*)jniLongToPointer(address);
-    memcpy(&o->queueIndex, jniLongToPointer(valueAddress), sizeof(o->queueIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->queueIndex, valuePointer, sizeof(o->queueIndex));
 }
+
 

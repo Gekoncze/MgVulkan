@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_getImageFormatPrope
     (void)env;
     (void)jc;
     VkExternalImageFormatPropertiesNV* o = (VkExternalImageFormatPropertiesNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageFormatProperties));
+    return jniPointerToLong(&o->imageFormatProperties);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_setImageFormatProperties(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_setImageFormatProper
     (void)env;
     (void)jc;
     VkExternalImageFormatPropertiesNV* o = (VkExternalImageFormatPropertiesNV*)jniLongToPointer(address);
-    memcpy(&o->imageFormatProperties, jniLongToPointer(valueAddress), sizeof(o->imageFormatProperties));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageFormatProperties, valuePointer, sizeof(o->imageFormatProperties));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_getExternalMemoryFeatures(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkExternalImageFormatPropertiesNV* o = (VkExternalImageFormatPropertiesNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->externalMemoryFeatures));
+    return jniPointerToLong(&o->externalMemoryFeatures);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_setExternalMemoryFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_setExternalMemoryFea
     (void)env;
     (void)jc;
     VkExternalImageFormatPropertiesNV* o = (VkExternalImageFormatPropertiesNV*)jniLongToPointer(address);
-    memcpy(&o->externalMemoryFeatures, jniLongToPointer(valueAddress), sizeof(o->externalMemoryFeatures));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->externalMemoryFeatures, valuePointer, sizeof(o->externalMemoryFeatures));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_getExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkExternalImageFormatPropertiesNV* o = (VkExternalImageFormatPropertiesNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->exportFromImportedHandleTypes));
+    return jniPointerToLong(&o->exportFromImportedHandleTypes);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_setExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_setExportFromImporte
     (void)env;
     (void)jc;
     VkExternalImageFormatPropertiesNV* o = (VkExternalImageFormatPropertiesNV*)jniLongToPointer(address);
-    memcpy(&o->exportFromImportedHandleTypes, jniLongToPointer(valueAddress), sizeof(o->exportFromImportedHandleTypes));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->exportFromImportedHandleTypes, valuePointer, sizeof(o->exportFromImportedHandleTypes));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_getCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkExternalImageFormatPropertiesNV* o = (VkExternalImageFormatPropertiesNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->compatibleHandleTypes));
+    return jniPointerToLong(&o->compatibleHandleTypes);
 }
 
 void Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_setCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkExternalImageFormatPropertiesNV_setCompatibleHandleT
     (void)env;
     (void)jc;
     VkExternalImageFormatPropertiesNV* o = (VkExternalImageFormatPropertiesNV*)jniLongToPointer(address);
-    memcpy(&o->compatibleHandleTypes, jniLongToPointer(valueAddress), sizeof(o->compatibleHandleTypes));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->compatibleHandleTypes, valuePointer, sizeof(o->compatibleHandleTypes));
 }
+
 

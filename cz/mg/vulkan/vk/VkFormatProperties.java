@@ -9,11 +9,11 @@ public class VkFormatProperties extends VkObject {
     }
 
     public VkFormatProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkFormatProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -28,8 +28,10 @@ public class VkFormatProperties extends VkObject {
         return new VkFormatFeatureFlags(getVkMemory(), getLinearTilingFeatures(getVkAddress()));
     }
 
+    
     public void setLinearTilingFeatures(VkFormatFeatureFlags linearTilingFeatures) {
-        setLinearTilingFeatures(getVkAddress(), linearTilingFeatures.getVkAddress());
+        setLinearTilingFeatures(getVkAddress(), linearTilingFeatures != null ? linearTilingFeatures.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getLinearTilingFeatures(long address);
@@ -39,8 +41,10 @@ public class VkFormatProperties extends VkObject {
         return new VkFormatFeatureFlags(getVkMemory(), getOptimalTilingFeatures(getVkAddress()));
     }
 
+    
     public void setOptimalTilingFeatures(VkFormatFeatureFlags optimalTilingFeatures) {
-        setOptimalTilingFeatures(getVkAddress(), optimalTilingFeatures.getVkAddress());
+        setOptimalTilingFeatures(getVkAddress(), optimalTilingFeatures != null ? optimalTilingFeatures.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getOptimalTilingFeatures(long address);
@@ -50,8 +54,10 @@ public class VkFormatProperties extends VkObject {
         return new VkFormatFeatureFlags(getVkMemory(), getBufferFeatures(getVkAddress()));
     }
 
+    
     public void setBufferFeatures(VkFormatFeatureFlags bufferFeatures) {
-        setBufferFeatures(getVkAddress(), bufferFeatures.getVkAddress());
+        setBufferFeatures(getVkAddress(), bufferFeatures != null ? bufferFeatures.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getBufferFeatures(long address);
@@ -64,7 +70,12 @@ public class VkFormatProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkFormatProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkFormatProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -105,11 +116,11 @@ public class VkFormatProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkFormatProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

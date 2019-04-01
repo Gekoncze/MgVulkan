@@ -9,11 +9,11 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
     }
 
     public VkObjectTableCreateInfoNVX(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkObjectTableCreateInfoNVX(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -36,8 +36,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -47,8 +49,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -58,19 +62,23 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getObjectCount(getVkAddress()));
     }
 
+    
     public void setObjectCount(VkUInt32 objectCount) {
-        setObjectCount(getVkAddress(), objectCount.getVkAddress());
+        setObjectCount(getVkAddress(), objectCount != null ? objectCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getObjectCount(long address);
     private static native void setObjectCount(long address, long objectCount);
 
-    public VkObjectEntryTypeNVX.Array getPObjectEntryTypes() {
-        return new VkObjectEntryTypeNVX.Array(getVkMemory(), getPObjectEntryTypes(getVkAddress()), getObjectCount().getValue());
+    public VkObjectEntryTypeNVX getPObjectEntryTypes() {
+        return new VkObjectEntryTypeNVX(getVkMemory(), getPObjectEntryTypes(getVkAddress()));
     }
 
+    private VkObject pObjectEntryTypes = null;
     public void setPObjectEntryTypes(VkObjectEntryTypeNVX pObjectEntryTypes) {
-        setPObjectEntryTypes(getVkAddress(), pObjectEntryTypes.getVkAddress());
+        setPObjectEntryTypes(getVkAddress(), pObjectEntryTypes != null ? pObjectEntryTypes.getVkAddress() : VkPointer.NULL);
+        this.pObjectEntryTypes = pObjectEntryTypes;
     }
 
     private static native long getPObjectEntryTypes(long address);
@@ -80,8 +88,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getPObjectEntryCounts(getVkAddress()));
     }
 
+    private VkObject pObjectEntryCounts = null;
     public void setPObjectEntryCounts(VkUInt32 pObjectEntryCounts) {
-        setPObjectEntryCounts(getVkAddress(), pObjectEntryCounts.getVkAddress());
+        setPObjectEntryCounts(getVkAddress(), pObjectEntryCounts != null ? pObjectEntryCounts.getVkAddress() : VkPointer.NULL);
+        this.pObjectEntryCounts = pObjectEntryCounts;
     }
 
     private static native long getPObjectEntryCounts(long address);
@@ -91,8 +101,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getPObjectEntryUsageFlags(getVkAddress()));
     }
 
+    private VkObject pObjectEntryUsageFlags = null;
     public void setPObjectEntryUsageFlags(VkObjectEntryUsageFlagsNVX pObjectEntryUsageFlags) {
-        setPObjectEntryUsageFlags(getVkAddress(), pObjectEntryUsageFlags.getVkAddress());
+        setPObjectEntryUsageFlags(getVkAddress(), pObjectEntryUsageFlags != null ? pObjectEntryUsageFlags.getVkAddress() : VkPointer.NULL);
+        this.pObjectEntryUsageFlags = pObjectEntryUsageFlags;
     }
 
     private static native long getPObjectEntryUsageFlags(long address);
@@ -102,8 +114,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxUniformBuffersPerDescriptor(getVkAddress()));
     }
 
+    
     public void setMaxUniformBuffersPerDescriptor(VkUInt32 maxUniformBuffersPerDescriptor) {
-        setMaxUniformBuffersPerDescriptor(getVkAddress(), maxUniformBuffersPerDescriptor.getVkAddress());
+        setMaxUniformBuffersPerDescriptor(getVkAddress(), maxUniformBuffersPerDescriptor != null ? maxUniformBuffersPerDescriptor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxUniformBuffersPerDescriptor(long address);
@@ -113,8 +127,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxStorageBuffersPerDescriptor(getVkAddress()));
     }
 
+    
     public void setMaxStorageBuffersPerDescriptor(VkUInt32 maxStorageBuffersPerDescriptor) {
-        setMaxStorageBuffersPerDescriptor(getVkAddress(), maxStorageBuffersPerDescriptor.getVkAddress());
+        setMaxStorageBuffersPerDescriptor(getVkAddress(), maxStorageBuffersPerDescriptor != null ? maxStorageBuffersPerDescriptor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxStorageBuffersPerDescriptor(long address);
@@ -124,8 +140,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxStorageImagesPerDescriptor(getVkAddress()));
     }
 
+    
     public void setMaxStorageImagesPerDescriptor(VkUInt32 maxStorageImagesPerDescriptor) {
-        setMaxStorageImagesPerDescriptor(getVkAddress(), maxStorageImagesPerDescriptor.getVkAddress());
+        setMaxStorageImagesPerDescriptor(getVkAddress(), maxStorageImagesPerDescriptor != null ? maxStorageImagesPerDescriptor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxStorageImagesPerDescriptor(long address);
@@ -135,8 +153,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxSampledImagesPerDescriptor(getVkAddress()));
     }
 
+    
     public void setMaxSampledImagesPerDescriptor(VkUInt32 maxSampledImagesPerDescriptor) {
-        setMaxSampledImagesPerDescriptor(getVkAddress(), maxSampledImagesPerDescriptor.getVkAddress());
+        setMaxSampledImagesPerDescriptor(getVkAddress(), maxSampledImagesPerDescriptor != null ? maxSampledImagesPerDescriptor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxSampledImagesPerDescriptor(long address);
@@ -146,8 +166,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxPipelineLayouts(getVkAddress()));
     }
 
+    
     public void setMaxPipelineLayouts(VkUInt32 maxPipelineLayouts) {
-        setMaxPipelineLayouts(getVkAddress(), maxPipelineLayouts.getVkAddress());
+        setMaxPipelineLayouts(getVkAddress(), maxPipelineLayouts != null ? maxPipelineLayouts.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxPipelineLayouts(long address);
@@ -160,7 +182,12 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkObjectTableCreateInfoNVX.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkObjectTableCreateInfoNVX o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -201,11 +228,11 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectTableCreateInfoNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

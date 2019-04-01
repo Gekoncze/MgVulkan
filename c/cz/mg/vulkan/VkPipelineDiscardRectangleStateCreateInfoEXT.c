@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_getSType
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setSType(
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setPNext(
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setFlags(
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_getDiscardRectangleMode(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->discardRectangleMode));
+    return jniPointerToLong(&o->discardRectangleMode);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setDiscardRectangleMode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setDiscar
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->discardRectangleMode, jniLongToPointer(valueAddress), sizeof(o->discardRectangleMode));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->discardRectangleMode, valuePointer, sizeof(o->discardRectangleMode));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_getDiscardRectangleCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->discardRectangleCount));
+    return jniPointerToLong(&o->discardRectangleCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setDiscardRectangleCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setDiscar
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->discardRectangleCount, jniLongToPointer(valueAddress), sizeof(o->discardRectangleCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->discardRectangleCount, valuePointer, sizeof(o->discardRectangleCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_getPDiscardRectangles(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pDiscardRectangles));
+    return jniPointerToLong(o->pDiscardRectangles);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setPDiscardRectangles(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkPipelineDiscardRectangleStateCreateInfoEXT_setPDisca
     (void)env;
     (void)jc;
     VkPipelineDiscardRectangleStateCreateInfoEXT* o = (VkPipelineDiscardRectangleStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pDiscardRectangles, jniLongToPointer(valueAddress), sizeof(o->pDiscardRectangles));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pDiscardRectangles, &valuePointer, sizeof(o->pDiscardRectangles));
 }
+
 

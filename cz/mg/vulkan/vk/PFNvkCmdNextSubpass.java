@@ -25,7 +25,7 @@ public class PFNvkCmdNextSubpass extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkSubpassContents contents){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkCommandBuffer.NULL.getVkAddress(), contents != null ? contents.getVkAddress() : VkPointer.NULL);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.NULL_ADDRESS, contents != null ? contents.getVkAddress() : VkPointer.NULL_ADDRESS);
     }
 
     private static native void call(long vkaddress, long commandBuffer, long contents);

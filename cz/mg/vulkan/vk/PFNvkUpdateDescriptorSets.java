@@ -25,7 +25,7 @@ public class PFNvkUpdateDescriptorSets extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkUInt32 descriptorWriteCount, VkWriteDescriptorSet pDescriptorWrites, VkUInt32 descriptorCopyCount, VkCopyDescriptorSet pDescriptorCopies){
-        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), descriptorWriteCount != null ? descriptorWriteCount.getVkAddress() : VkPointer.NULL, pDescriptorWrites != null ? pDescriptorWrites.getVkAddress() : VkPointer.NULL, descriptorCopyCount != null ? descriptorCopyCount.getVkAddress() : VkPointer.NULL, pDescriptorCopies != null ? pDescriptorCopies.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, descriptorWriteCount != null ? descriptorWriteCount.getVkAddress() : VkPointer.NULL_ADDRESS, pDescriptorWrites != null ? pDescriptorWrites.getVkAddress() : VkPointer.NULL, descriptorCopyCount != null ? descriptorCopyCount.getVkAddress() : VkPointer.NULL_ADDRESS, pDescriptorCopies != null ? pDescriptorCopies.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long descriptorWriteCount, long pDescriptorWrites, long descriptorCopyCount, long pDescriptorCopies);

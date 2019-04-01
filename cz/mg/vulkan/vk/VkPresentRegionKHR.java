@@ -9,11 +9,11 @@ public class VkPresentRegionKHR extends VkObject {
     }
 
     public VkPresentRegionKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPresentRegionKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,19 +27,23 @@ public class VkPresentRegionKHR extends VkObject {
         return new VkUInt32(getVkMemory(), getRectangleCount(getVkAddress()));
     }
 
+    
     public void setRectangleCount(VkUInt32 rectangleCount) {
-        setRectangleCount(getVkAddress(), rectangleCount.getVkAddress());
+        setRectangleCount(getVkAddress(), rectangleCount != null ? rectangleCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getRectangleCount(long address);
     private static native void setRectangleCount(long address, long rectangleCount);
 
-    public VkRectLayerKHR.Array getPRectangles() {
-        return new VkRectLayerKHR.Array(getVkMemory(), getPRectangles(getVkAddress()), getRectangleCount().getValue());
+    public VkRectLayerKHR getPRectangles() {
+        return new VkRectLayerKHR(getVkMemory(), getPRectangles(getVkAddress()));
     }
 
+    private VkObject pRectangles = null;
     public void setPRectangles(VkRectLayerKHR pRectangles) {
-        setPRectangles(getVkAddress(), pRectangles.getVkAddress());
+        setPRectangles(getVkAddress(), pRectangles != null ? pRectangles.getVkAddress() : VkPointer.NULL);
+        this.pRectangles = pRectangles;
     }
 
     private static native long getPRectangles(long address);
@@ -52,7 +56,12 @@ public class VkPresentRegionKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPresentRegionKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPresentRegionKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkPresentRegionKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPresentRegionKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

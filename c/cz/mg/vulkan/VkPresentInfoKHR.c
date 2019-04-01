@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPresentInfoKHR_getSType(JNIEnv* env, jclass jc, jlo
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setSType(JNIEnv* env, jclass jc, jlon
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPresentInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setPNext(JNIEnv* env, jclass jc, jlon
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPresentInfoKHR_getWaitSemaphoreCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->waitSemaphoreCount));
+    return jniPointerToLong(&o->waitSemaphoreCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setWaitSemaphoreCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setWaitSemaphoreCount(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->waitSemaphoreCount, jniLongToPointer(valueAddress), sizeof(o->waitSemaphoreCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->waitSemaphoreCount, valuePointer, sizeof(o->waitSemaphoreCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPresentInfoKHR_getPWaitSemaphores(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pWaitSemaphores));
+    return jniPointerToLong(o->pWaitSemaphores);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setPWaitSemaphores(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setPWaitSemaphores(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->pWaitSemaphores, jniLongToPointer(valueAddress), sizeof(o->pWaitSemaphores));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pWaitSemaphores, &valuePointer, sizeof(o->pWaitSemaphores));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPresentInfoKHR_getSwapchainCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->swapchainCount));
+    return jniPointerToLong(&o->swapchainCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setSwapchainCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setSwapchainCount(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->swapchainCount, jniLongToPointer(valueAddress), sizeof(o->swapchainCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->swapchainCount, valuePointer, sizeof(o->swapchainCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPresentInfoKHR_getPSwapchains(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pSwapchains));
+    return jniPointerToLong(o->pSwapchains);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setPSwapchains(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setPSwapchains(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->pSwapchains, jniLongToPointer(valueAddress), sizeof(o->pSwapchains));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pSwapchains, &valuePointer, sizeof(o->pSwapchains));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPresentInfoKHR_getPImageIndices(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pImageIndices));
+    return jniPointerToLong(o->pImageIndices);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setPImageIndices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setPImageIndices(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->pImageIndices, jniLongToPointer(valueAddress), sizeof(o->pImageIndices));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pImageIndices, &valuePointer, sizeof(o->pImageIndices));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPresentInfoKHR_getPResults(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pResults));
+    return jniPointerToLong(o->pResults);
 }
 
 void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setPResults(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,6 +148,8 @@ void Java_cz_mg_vulkan_vk_VkPresentInfoKHR_setPResults(JNIEnv* env, jclass jc, j
     (void)env;
     (void)jc;
     VkPresentInfoKHR* o = (VkPresentInfoKHR*)jniLongToPointer(address);
-    memcpy(&o->pResults, jniLongToPointer(valueAddress), sizeof(o->pResults));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pResults, &valuePointer, sizeof(o->pResults));
 }
+
 

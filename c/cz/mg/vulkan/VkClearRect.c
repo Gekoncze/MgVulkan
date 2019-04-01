@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkClearRect_getRect(JNIEnv* env, jclass jc, jlong add
     (void)env;
     (void)jc;
     VkClearRect* o = (VkClearRect*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->rect));
+    return jniPointerToLong(&o->rect);
 }
 
 void Java_cz_mg_vulkan_vk_VkClearRect_setRect(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkClearRect_setRect(JNIEnv* env, jclass jc, jlong addr
     (void)env;
     (void)jc;
     VkClearRect* o = (VkClearRect*)jniLongToPointer(address);
-    memcpy(&o->rect, jniLongToPointer(valueAddress), sizeof(o->rect));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->rect, valuePointer, sizeof(o->rect));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkClearRect_getBaseArrayLayer(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkClearRect* o = (VkClearRect*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->baseArrayLayer));
+    return jniPointerToLong(&o->baseArrayLayer);
 }
 
 void Java_cz_mg_vulkan_vk_VkClearRect_setBaseArrayLayer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkClearRect_setBaseArrayLayer(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkClearRect* o = (VkClearRect*)jniLongToPointer(address);
-    memcpy(&o->baseArrayLayer, jniLongToPointer(valueAddress), sizeof(o->baseArrayLayer));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->baseArrayLayer, valuePointer, sizeof(o->baseArrayLayer));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkClearRect_getLayerCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkClearRect* o = (VkClearRect*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->layerCount));
+    return jniPointerToLong(&o->layerCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkClearRect_setLayerCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkClearRect_setLayerCount(JNIEnv* env, jclass jc, jlon
     (void)env;
     (void)jc;
     VkClearRect* o = (VkClearRect*)jniLongToPointer(address);
-    memcpy(&o->layerCount, jniLongToPointer(valueAddress), sizeof(o->layerCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->layerCount, valuePointer, sizeof(o->layerCount));
 }
+
 

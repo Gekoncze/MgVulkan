@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_getBlendEnable(JN
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->blendEnable));
+    return jniPointerToLong(&o->blendEnable);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setBlendEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setBlendEnable(JNI
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    memcpy(&o->blendEnable, jniLongToPointer(valueAddress), sizeof(o->blendEnable));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->blendEnable, valuePointer, sizeof(o->blendEnable));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_getSrcColorBlendFactor(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->srcColorBlendFactor));
+    return jniPointerToLong(&o->srcColorBlendFactor);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setSrcColorBlendFactor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setSrcColorBlendFa
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    memcpy(&o->srcColorBlendFactor, jniLongToPointer(valueAddress), sizeof(o->srcColorBlendFactor));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->srcColorBlendFactor, valuePointer, sizeof(o->srcColorBlendFactor));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_getDstColorBlendFactor(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dstColorBlendFactor));
+    return jniPointerToLong(&o->dstColorBlendFactor);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setDstColorBlendFactor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setDstColorBlendFa
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    memcpy(&o->dstColorBlendFactor, jniLongToPointer(valueAddress), sizeof(o->dstColorBlendFactor));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dstColorBlendFactor, valuePointer, sizeof(o->dstColorBlendFactor));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_getColorBlendOp(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->colorBlendOp));
+    return jniPointerToLong(&o->colorBlendOp);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setColorBlendOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setColorBlendOp(JN
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    memcpy(&o->colorBlendOp, jniLongToPointer(valueAddress), sizeof(o->colorBlendOp));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->colorBlendOp, valuePointer, sizeof(o->colorBlendOp));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_getSrcAlphaBlendFactor(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->srcAlphaBlendFactor));
+    return jniPointerToLong(&o->srcAlphaBlendFactor);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setSrcAlphaBlendFactor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setSrcAlphaBlendFa
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    memcpy(&o->srcAlphaBlendFactor, jniLongToPointer(valueAddress), sizeof(o->srcAlphaBlendFactor));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->srcAlphaBlendFactor, valuePointer, sizeof(o->srcAlphaBlendFactor));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_getDstAlphaBlendFactor(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dstAlphaBlendFactor));
+    return jniPointerToLong(&o->dstAlphaBlendFactor);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setDstAlphaBlendFactor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setDstAlphaBlendFa
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    memcpy(&o->dstAlphaBlendFactor, jniLongToPointer(valueAddress), sizeof(o->dstAlphaBlendFactor));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dstAlphaBlendFactor, valuePointer, sizeof(o->dstAlphaBlendFactor));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_getAlphaBlendOp(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->alphaBlendOp));
+    return jniPointerToLong(&o->alphaBlendOp);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setAlphaBlendOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setAlphaBlendOp(JN
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    memcpy(&o->alphaBlendOp, jniLongToPointer(valueAddress), sizeof(o->alphaBlendOp));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->alphaBlendOp, valuePointer, sizeof(o->alphaBlendOp));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_getColorWriteMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->colorWriteMask));
+    return jniPointerToLong(&o->colorWriteMask);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setColorWriteMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,6 +148,8 @@ void Java_cz_mg_vulkan_vk_VkPipelineColorBlendAttachmentState_setColorWriteMask(
     (void)env;
     (void)jc;
     VkPipelineColorBlendAttachmentState* o = (VkPipelineColorBlendAttachmentState*)jniLongToPointer(address);
-    memcpy(&o->colorWriteMask, jniLongToPointer(valueAddress), sizeof(o->colorWriteMask));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->colorWriteMask, valuePointer, sizeof(o->colorWriteMask));
 }
+
 

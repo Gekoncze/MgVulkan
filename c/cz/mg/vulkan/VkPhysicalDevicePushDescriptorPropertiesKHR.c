@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDevicePushDescriptorPropertiesKHR_getSType(
     (void)env;
     (void)jc;
     VkPhysicalDevicePushDescriptorPropertiesKHR* o = (VkPhysicalDevicePushDescriptorPropertiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDevicePushDescriptorPropertiesKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDevicePushDescriptorPropertiesKHR_setSType(J
     (void)env;
     (void)jc;
     VkPhysicalDevicePushDescriptorPropertiesKHR* o = (VkPhysicalDevicePushDescriptorPropertiesKHR*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDevicePushDescriptorPropertiesKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDevicePushDescriptorPropertiesKHR* o = (VkPhysicalDevicePushDescriptorPropertiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDevicePushDescriptorPropertiesKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDevicePushDescriptorPropertiesKHR_setPNext(J
     (void)env;
     (void)jc;
     VkPhysicalDevicePushDescriptorPropertiesKHR* o = (VkPhysicalDevicePushDescriptorPropertiesKHR*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDevicePushDescriptorPropertiesKHR_getMaxPushDescriptors(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDevicePushDescriptorPropertiesKHR* o = (VkPhysicalDevicePushDescriptorPropertiesKHR*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->maxPushDescriptors));
+    return jniPointerToLong(&o->maxPushDescriptors);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDevicePushDescriptorPropertiesKHR_setMaxPushDescriptors(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,6 +63,8 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDevicePushDescriptorPropertiesKHR_setMaxPush
     (void)env;
     (void)jc;
     VkPhysicalDevicePushDescriptorPropertiesKHR* o = (VkPhysicalDevicePushDescriptorPropertiesKHR*)jniLongToPointer(address);
-    memcpy(&o->maxPushDescriptors, jniLongToPointer(valueAddress), sizeof(o->maxPushDescriptors));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->maxPushDescriptors, valuePointer, sizeof(o->maxPushDescriptors));
 }
+
 

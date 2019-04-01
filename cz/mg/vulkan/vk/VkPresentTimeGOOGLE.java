@@ -9,11 +9,11 @@ public class VkPresentTimeGOOGLE extends VkObject {
     }
 
     public VkPresentTimeGOOGLE(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPresentTimeGOOGLE(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -27,8 +27,10 @@ public class VkPresentTimeGOOGLE extends VkObject {
         return new VkUInt32(getVkMemory(), getPresentID(getVkAddress()));
     }
 
+    
     public void setPresentID(VkUInt32 presentID) {
-        setPresentID(getVkAddress(), presentID.getVkAddress());
+        setPresentID(getVkAddress(), presentID != null ? presentID.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPresentID(long address);
@@ -38,8 +40,10 @@ public class VkPresentTimeGOOGLE extends VkObject {
         return new VkUInt64(getVkMemory(), getDesiredPresentTime(getVkAddress()));
     }
 
+    
     public void setDesiredPresentTime(VkUInt64 desiredPresentTime) {
-        setDesiredPresentTime(getVkAddress(), desiredPresentTime.getVkAddress());
+        setDesiredPresentTime(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDesiredPresentTime(long address);
@@ -52,7 +56,12 @@ public class VkPresentTimeGOOGLE extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPresentTimeGOOGLE.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPresentTimeGOOGLE o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -93,11 +102,11 @@ public class VkPresentTimeGOOGLE extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPresentTimeGOOGLE.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

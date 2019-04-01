@@ -25,7 +25,7 @@ public class PFNvkSetHdrMetadataEXT extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkUInt32 swapchainCount, VkSwapchainKHR pSwapchains, VkHdrMetadataEXT pMetadata){
-        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.NULL, pSwapchains != null ? pSwapchains.getVkAddress() : VkSwapchainKHR.NULL.getVkAddress(), pMetadata != null ? pMetadata.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.NULL_ADDRESS, pSwapchains != null ? pSwapchains.getVkAddress() : VkPointer.NULL, pMetadata != null ? pMetadata.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long swapchainCount, long pSwapchains, long pMetadata);

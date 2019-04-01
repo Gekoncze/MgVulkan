@@ -9,11 +9,11 @@ public class VkExternalFenceProperties extends VkObject {
     }
 
     public VkExternalFenceProperties(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkExternalFenceProperties(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkExternalFenceProperties extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkExternalFenceProperties extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkExternalFenceProperties extends VkObject {
         return new VkExternalFenceHandleTypeFlags(getVkMemory(), getExportFromImportedHandleTypes(getVkAddress()));
     }
 
+    
     public void setExportFromImportedHandleTypes(VkExternalFenceHandleTypeFlags exportFromImportedHandleTypes) {
-        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes.getVkAddress());
+        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExportFromImportedHandleTypes(long address);
@@ -63,8 +69,10 @@ public class VkExternalFenceProperties extends VkObject {
         return new VkExternalFenceHandleTypeFlags(getVkMemory(), getCompatibleHandleTypes(getVkAddress()));
     }
 
+    
     public void setCompatibleHandleTypes(VkExternalFenceHandleTypeFlags compatibleHandleTypes) {
-        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes.getVkAddress());
+        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCompatibleHandleTypes(long address);
@@ -74,8 +82,10 @@ public class VkExternalFenceProperties extends VkObject {
         return new VkExternalFenceFeatureFlags(getVkMemory(), getExternalFenceFeatures(getVkAddress()));
     }
 
+    
     public void setExternalFenceFeatures(VkExternalFenceFeatureFlags externalFenceFeatures) {
-        setExternalFenceFeatures(getVkAddress(), externalFenceFeatures.getVkAddress());
+        setExternalFenceFeatures(getVkAddress(), externalFenceFeatures != null ? externalFenceFeatures.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExternalFenceFeatures(long address);
@@ -88,7 +98,12 @@ public class VkExternalFenceProperties extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkExternalFenceProperties.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkExternalFenceProperties o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkExternalFenceProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExternalFenceProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

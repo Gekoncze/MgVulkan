@@ -25,7 +25,7 @@ public class PFNvkCmdWriteTimestamp extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkPipelineStageFlagBits pipelineStage, VkQueryPool queryPool, VkUInt32 query){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkCommandBuffer.NULL.getVkAddress(), pipelineStage != null ? pipelineStage.getVkAddress() : VkPointer.NULL, queryPool != null ? queryPool.getVkAddress() : VkQueryPool.NULL.getVkAddress(), query != null ? query.getVkAddress() : VkPointer.NULL);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.NULL_ADDRESS, pipelineStage != null ? pipelineStage.getVkAddress() : VkPointer.NULL_ADDRESS, queryPool != null ? queryPool.getVkAddress() : VkPointer.NULL_ADDRESS, query != null ? query.getVkAddress() : VkPointer.NULL_ADDRESS);
     }
 
     private static native void call(long vkaddress, long commandBuffer, long pipelineStage, long queryPool, long query);

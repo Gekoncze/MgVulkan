@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getSType(JNIEnv* env
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setSType(JNIEnv* env,
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPNext(JNIEnv* env,
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getDeviceIndexCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->deviceIndexCount));
+    return jniPointerToLong(&o->deviceIndexCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setDeviceIndexCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setDeviceIndexCount(J
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    memcpy(&o->deviceIndexCount, jniLongToPointer(valueAddress), sizeof(o->deviceIndexCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->deviceIndexCount, valuePointer, sizeof(o->deviceIndexCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getPDeviceIndices(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pDeviceIndices));
+    return jniPointerToLong(o->pDeviceIndices);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPDeviceIndices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPDeviceIndices(JNI
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    memcpy(&o->pDeviceIndices, jniLongToPointer(valueAddress), sizeof(o->pDeviceIndices));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pDeviceIndices, &valuePointer, sizeof(o->pDeviceIndices));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getSplitInstanceBindRegionCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->splitInstanceBindRegionCount));
+    return jniPointerToLong(&o->splitInstanceBindRegionCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setSplitInstanceBindRegionCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setSplitInstanceBindR
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    memcpy(&o->splitInstanceBindRegionCount, jniLongToPointer(valueAddress), sizeof(o->splitInstanceBindRegionCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->splitInstanceBindRegionCount, valuePointer, sizeof(o->splitInstanceBindRegionCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getPSplitInstanceBindRegions(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pSplitInstanceBindRegions));
+    return jniPointerToLong(o->pSplitInstanceBindRegions);
 }
 
 void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPSplitInstanceBindRegions(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPSplitInstanceBind
     (void)env;
     (void)jc;
     VkBindImageMemoryDeviceGroupInfo* o = (VkBindImageMemoryDeviceGroupInfo*)jniLongToPointer(address);
-    memcpy(&o->pSplitInstanceBindRegions, jniLongToPointer(valueAddress), sizeof(o->pSplitInstanceBindRegions));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pSplitInstanceBindRegions, &valuePointer, sizeof(o->pSplitInstanceBindRegions));
 }
+
 

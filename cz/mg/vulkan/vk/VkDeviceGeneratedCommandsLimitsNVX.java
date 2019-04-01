@@ -9,11 +9,11 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
     }
 
     public VkDeviceGeneratedCommandsLimitsNVX(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDeviceGeneratedCommandsLimitsNVX(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -43,8 +45,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -54,19 +58,23 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getMaxIndirectCommandsLayoutTokenCount(getVkAddress()));
     }
 
+    
     public void setMaxIndirectCommandsLayoutTokenCount(VkUInt32 maxIndirectCommandsLayoutTokenCount) {
-        setMaxIndirectCommandsLayoutTokenCount(getVkAddress(), maxIndirectCommandsLayoutTokenCount.getVkAddress());
+        setMaxIndirectCommandsLayoutTokenCount(getVkAddress(), maxIndirectCommandsLayoutTokenCount != null ? maxIndirectCommandsLayoutTokenCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxIndirectCommandsLayoutTokenCount(long address);
     private static native void setMaxIndirectCommandsLayoutTokenCount(long address, long maxIndirectCommandsLayoutTokenCount);
 
-    public VkUInt32.Array getMaxObjectEntryCounts() {
-        return new VkUInt32.Array(getVkMemory(), getMaxObjectEntryCounts(getVkAddress()), getMaxIndirectCommandsLayoutTokenCount().getValue());
+    public VkUInt32 getMaxObjectEntryCounts() {
+        return new VkUInt32(getVkMemory(), getMaxObjectEntryCounts(getVkAddress()));
     }
 
+    
     public void setMaxObjectEntryCounts(VkUInt32 maxObjectEntryCounts) {
-        setMaxObjectEntryCounts(getVkAddress(), maxObjectEntryCounts.getVkAddress());
+        setMaxObjectEntryCounts(getVkAddress(), maxObjectEntryCounts != null ? maxObjectEntryCounts.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMaxObjectEntryCounts(long address);
@@ -76,8 +84,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getMinSequenceCountBufferOffsetAlignment(getVkAddress()));
     }
 
+    
     public void setMinSequenceCountBufferOffsetAlignment(VkUInt32 minSequenceCountBufferOffsetAlignment) {
-        setMinSequenceCountBufferOffsetAlignment(getVkAddress(), minSequenceCountBufferOffsetAlignment.getVkAddress());
+        setMinSequenceCountBufferOffsetAlignment(getVkAddress(), minSequenceCountBufferOffsetAlignment != null ? minSequenceCountBufferOffsetAlignment.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMinSequenceCountBufferOffsetAlignment(long address);
@@ -87,8 +97,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getMinSequenceIndexBufferOffsetAlignment(getVkAddress()));
     }
 
+    
     public void setMinSequenceIndexBufferOffsetAlignment(VkUInt32 minSequenceIndexBufferOffsetAlignment) {
-        setMinSequenceIndexBufferOffsetAlignment(getVkAddress(), minSequenceIndexBufferOffsetAlignment.getVkAddress());
+        setMinSequenceIndexBufferOffsetAlignment(getVkAddress(), minSequenceIndexBufferOffsetAlignment != null ? minSequenceIndexBufferOffsetAlignment.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMinSequenceIndexBufferOffsetAlignment(long address);
@@ -98,8 +110,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         return new VkUInt32(getVkMemory(), getMinCommandsTokenBufferOffsetAlignment(getVkAddress()));
     }
 
+    
     public void setMinCommandsTokenBufferOffsetAlignment(VkUInt32 minCommandsTokenBufferOffsetAlignment) {
-        setMinCommandsTokenBufferOffsetAlignment(getVkAddress(), minCommandsTokenBufferOffsetAlignment.getVkAddress());
+        setMinCommandsTokenBufferOffsetAlignment(getVkAddress(), minCommandsTokenBufferOffsetAlignment != null ? minCommandsTokenBufferOffsetAlignment.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMinCommandsTokenBufferOffsetAlignment(long address);
@@ -112,7 +126,12 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDeviceGeneratedCommandsLimitsNVX.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDeviceGeneratedCommandsLimitsNVX o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGeneratedCommandsLimitsNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

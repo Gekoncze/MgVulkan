@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_getSType(JNIEnv* env
     (void)env;
     (void)jc;
     VkImportMemoryHostPointerInfoEXT* o = (VkImportMemoryHostPointerInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_setSType(JNIEnv* env,
     (void)env;
     (void)jc;
     VkImportMemoryHostPointerInfoEXT* o = (VkImportMemoryHostPointerInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImportMemoryHostPointerInfoEXT* o = (VkImportMemoryHostPointerInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_setPNext(JNIEnv* env,
     (void)env;
     (void)jc;
     VkImportMemoryHostPointerInfoEXT* o = (VkImportMemoryHostPointerInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_getHandleType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImportMemoryHostPointerInfoEXT* o = (VkImportMemoryHostPointerInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->handleType));
+    return jniPointerToLong(&o->handleType);
 }
 
 void Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_setHandleType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_setHandleType(JNIEnv*
     (void)env;
     (void)jc;
     VkImportMemoryHostPointerInfoEXT* o = (VkImportMemoryHostPointerInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->handleType, jniLongToPointer(valueAddress), sizeof(o->handleType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->handleType, valuePointer, sizeof(o->handleType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_getPHostPointer(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkImportMemoryHostPointerInfoEXT* o = (VkImportMemoryHostPointerInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pHostPointer));
+    return jniPointerToLong(o->pHostPointer);
 }
 
 void Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_setPHostPointer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkImportMemoryHostPointerInfoEXT_setPHostPointer(JNIEn
     (void)env;
     (void)jc;
     VkImportMemoryHostPointerInfoEXT* o = (VkImportMemoryHostPointerInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pHostPointer, jniLongToPointer(valueAddress), sizeof(o->pHostPointer));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pHostPointer, &valuePointer, sizeof(o->pHostPointer));
 }
+
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_getSType(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setSType(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setPNext(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setFlags(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_getAttachmentCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->attachmentCount));
+    return jniPointerToLong(&o->attachmentCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setAttachmentCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setAttachmentCount(JNIEnv* env,
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->attachmentCount, jniLongToPointer(valueAddress), sizeof(o->attachmentCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->attachmentCount, valuePointer, sizeof(o->attachmentCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_getPAttachments(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pAttachments));
+    return jniPointerToLong(o->pAttachments);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setPAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setPAttachments(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pAttachments, jniLongToPointer(valueAddress), sizeof(o->pAttachments));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pAttachments, &valuePointer, sizeof(o->pAttachments));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_getSubpassCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->subpassCount));
+    return jniPointerToLong(&o->subpassCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setSubpassCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,14 +114,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setSubpassCount(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->subpassCount, jniLongToPointer(valueAddress), sizeof(o->subpassCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->subpassCount, valuePointer, sizeof(o->subpassCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_getPSubpasses(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pSubpasses));
+    return jniPointerToLong(o->pSubpasses);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setPSubpasses(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -119,14 +131,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setPSubpasses(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pSubpasses, jniLongToPointer(valueAddress), sizeof(o->pSubpasses));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pSubpasses, &valuePointer, sizeof(o->pSubpasses));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_getDependencyCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dependencyCount));
+    return jniPointerToLong(&o->dependencyCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setDependencyCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -134,14 +148,16 @@ void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setDependencyCount(JNIEnv* env,
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->dependencyCount, jniLongToPointer(valueAddress), sizeof(o->dependencyCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dependencyCount, valuePointer, sizeof(o->dependencyCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_getPDependencies(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pDependencies));
+    return jniPointerToLong(o->pDependencies);
 }
 
 void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setPDependencies(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -149,6 +165,8 @@ void Java_cz_mg_vulkan_vk_VkRenderPassCreateInfo_setPDependencies(JNIEnv* env, j
     (void)env;
     (void)jc;
     VkRenderPassCreateInfo* o = (VkRenderPassCreateInfo*)jniLongToPointer(address);
-    memcpy(&o->pDependencies, jniLongToPointer(valueAddress), sizeof(o->pDependencies));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pDependencies, &valuePointer, sizeof(o->pDependencies));
 }
+
 

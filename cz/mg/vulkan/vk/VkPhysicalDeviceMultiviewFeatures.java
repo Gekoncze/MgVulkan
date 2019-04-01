@@ -9,11 +9,11 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
     }
 
     public VkPhysicalDeviceMultiviewFeatures(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPhysicalDeviceMultiviewFeatures(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getMultiview(getVkAddress()));
     }
 
+    
     public void setMultiview(VkBool32 multiview) {
-        setMultiview(getVkAddress(), multiview.getVkAddress());
+        setMultiview(getVkAddress(), multiview != null ? multiview.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMultiview(long address);
@@ -63,8 +69,10 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getMultiviewGeometryShader(getVkAddress()));
     }
 
+    
     public void setMultiviewGeometryShader(VkBool32 multiviewGeometryShader) {
-        setMultiviewGeometryShader(getVkAddress(), multiviewGeometryShader.getVkAddress());
+        setMultiviewGeometryShader(getVkAddress(), multiviewGeometryShader != null ? multiviewGeometryShader.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMultiviewGeometryShader(long address);
@@ -74,8 +82,10 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         return new VkBool32(getVkMemory(), getMultiviewTessellationShader(getVkAddress()));
     }
 
+    
     public void setMultiviewTessellationShader(VkBool32 multiviewTessellationShader) {
-        setMultiviewTessellationShader(getVkAddress(), multiviewTessellationShader.getVkAddress());
+        setMultiviewTessellationShader(getVkAddress(), multiviewTessellationShader != null ? multiviewTessellationShader.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getMultiviewTessellationShader(long address);
@@ -88,7 +98,12 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPhysicalDeviceMultiviewFeatures.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceMultiviewFeatures o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceMultiviewFeatures.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_getAttachmentIndex(JNI
     (void)env;
     (void)jc;
     VkAttachmentSampleLocationsEXT* o = (VkAttachmentSampleLocationsEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->attachmentIndex));
+    return jniPointerToLong(&o->attachmentIndex);
 }
 
 void Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_setAttachmentIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_setAttachmentIndex(JNIE
     (void)env;
     (void)jc;
     VkAttachmentSampleLocationsEXT* o = (VkAttachmentSampleLocationsEXT*)jniLongToPointer(address);
-    memcpy(&o->attachmentIndex, jniLongToPointer(valueAddress), sizeof(o->attachmentIndex));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->attachmentIndex, valuePointer, sizeof(o->attachmentIndex));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_getSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAttachmentSampleLocationsEXT* o = (VkAttachmentSampleLocationsEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sampleLocationsInfo));
+    return jniPointerToLong(&o->sampleLocationsInfo);
 }
 
 void Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_setSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_setSampleLocationsInfo(
     (void)env;
     (void)jc;
     VkAttachmentSampleLocationsEXT* o = (VkAttachmentSampleLocationsEXT*)jniLongToPointer(address);
-    memcpy(&o->sampleLocationsInfo, jniLongToPointer(valueAddress), sizeof(o->sampleLocationsInfo));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sampleLocationsInfo, valuePointer, sizeof(o->sampleLocationsInfo));
 }
+
 

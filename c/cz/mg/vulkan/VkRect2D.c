@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkRect2D_getOffset(JNIEnv* env, jclass jc, jlong addr
     (void)env;
     (void)jc;
     VkRect2D* o = (VkRect2D*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->offset));
+    return jniPointerToLong(&o->offset);
 }
 
 void Java_cz_mg_vulkan_vk_VkRect2D_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkRect2D_setOffset(JNIEnv* env, jclass jc, jlong addre
     (void)env;
     (void)jc;
     VkRect2D* o = (VkRect2D*)jniLongToPointer(address);
-    memcpy(&o->offset, jniLongToPointer(valueAddress), sizeof(o->offset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkRect2D_getExtent(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkRect2D* o = (VkRect2D*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->extent));
+    return jniPointerToLong(&o->extent);
 }
 
 void Java_cz_mg_vulkan_vk_VkRect2D_setExtent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkRect2D_setExtent(JNIEnv* env, jclass jc, jlong addre
     (void)env;
     (void)jc;
     VkRect2D* o = (VkRect2D*)jniLongToPointer(address);
-    memcpy(&o->extent, jniLongToPointer(valueAddress), sizeof(o->extent));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->extent, valuePointer, sizeof(o->extent));
 }
+
 

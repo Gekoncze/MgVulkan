@@ -9,11 +9,11 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
     }
 
     public VkValidationCacheCreateInfoEXT(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkValidationCacheCreateInfoEXT(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -30,8 +30,10 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -41,8 +43,10 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -52,8 +56,10 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         return new VkValidationCacheCreateFlagsEXT(getVkMemory(), getFlags(getVkAddress()));
     }
 
+    
     public void setFlags(VkValidationCacheCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags.getVkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFlags(long address);
@@ -63,8 +69,10 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         return new VkSize(getVkMemory(), getInitialDataSize(getVkAddress()));
     }
 
+    
     public void setInitialDataSize(VkSize initialDataSize) {
-        setInitialDataSize(getVkAddress(), initialDataSize.getVkAddress());
+        setInitialDataSize(getVkAddress(), initialDataSize != null ? initialDataSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getInitialDataSize(long address);
@@ -74,8 +82,10 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         return new VkObject(getVkMemory(), getPInitialData(getVkAddress()));
     }
 
+    private VkObject pInitialData = null;
     public void setPInitialData(VkObject pInitialData) {
-        setPInitialData(getVkAddress(), pInitialData.getVkAddress());
+        setPInitialData(getVkAddress(), pInitialData != null ? pInitialData.getVkAddress() : VkPointer.NULL);
+        this.pInitialData = pInitialData;
     }
 
     private static native long getPInitialData(long address);
@@ -88,7 +98,12 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkValidationCacheCreateInfoEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkValidationCacheCreateInfoEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -129,11 +144,11 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkValidationCacheCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

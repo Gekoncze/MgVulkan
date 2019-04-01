@@ -24,7 +24,12 @@ public class VkPipelineViewportStateCreateFlags extends VkFlags {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPipelineViewportStateCreateFlags.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPipelineViewportStateCreateFlags o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -65,11 +70,11 @@ public class VkPipelineViewportStateCreateFlags extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineViewportStateCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

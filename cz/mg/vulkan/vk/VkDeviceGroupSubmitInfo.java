@@ -9,11 +9,11 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
     }
 
     public VkDeviceGroupSubmitInfo(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkDeviceGroupSubmitInfo(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -33,8 +33,10 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -44,8 +46,10 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -55,19 +59,23 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getWaitSemaphoreCount(getVkAddress()));
     }
 
+    
     public void setWaitSemaphoreCount(VkUInt32 waitSemaphoreCount) {
-        setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount.getVkAddress());
+        setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount != null ? waitSemaphoreCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getWaitSemaphoreCount(long address);
     private static native void setWaitSemaphoreCount(long address, long waitSemaphoreCount);
 
-    public VkUInt32.Array getPWaitSemaphoreDeviceIndices() {
-        return new VkUInt32.Array(getVkMemory(), getPWaitSemaphoreDeviceIndices(getVkAddress()), getWaitSemaphoreCount().getValue());
+    public VkUInt32 getPWaitSemaphoreDeviceIndices() {
+        return new VkUInt32(getVkMemory(), getPWaitSemaphoreDeviceIndices(getVkAddress()));
     }
 
+    private VkObject pWaitSemaphoreDeviceIndices = null;
     public void setPWaitSemaphoreDeviceIndices(VkUInt32 pWaitSemaphoreDeviceIndices) {
-        setPWaitSemaphoreDeviceIndices(getVkAddress(), pWaitSemaphoreDeviceIndices.getVkAddress());
+        setPWaitSemaphoreDeviceIndices(getVkAddress(), pWaitSemaphoreDeviceIndices != null ? pWaitSemaphoreDeviceIndices.getVkAddress() : VkPointer.NULL);
+        this.pWaitSemaphoreDeviceIndices = pWaitSemaphoreDeviceIndices;
     }
 
     private static native long getPWaitSemaphoreDeviceIndices(long address);
@@ -77,19 +85,23 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getCommandBufferCount(getVkAddress()));
     }
 
+    
     public void setCommandBufferCount(VkUInt32 commandBufferCount) {
-        setCommandBufferCount(getVkAddress(), commandBufferCount.getVkAddress());
+        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCommandBufferCount(long address);
     private static native void setCommandBufferCount(long address, long commandBufferCount);
 
-    public VkUInt32.Array getPCommandBufferDeviceMasks() {
-        return new VkUInt32.Array(getVkMemory(), getPCommandBufferDeviceMasks(getVkAddress()), getCommandBufferCount().getValue());
+    public VkUInt32 getPCommandBufferDeviceMasks() {
+        return new VkUInt32(getVkMemory(), getPCommandBufferDeviceMasks(getVkAddress()));
     }
 
+    private VkObject pCommandBufferDeviceMasks = null;
     public void setPCommandBufferDeviceMasks(VkUInt32 pCommandBufferDeviceMasks) {
-        setPCommandBufferDeviceMasks(getVkAddress(), pCommandBufferDeviceMasks.getVkAddress());
+        setPCommandBufferDeviceMasks(getVkAddress(), pCommandBufferDeviceMasks != null ? pCommandBufferDeviceMasks.getVkAddress() : VkPointer.NULL);
+        this.pCommandBufferDeviceMasks = pCommandBufferDeviceMasks;
     }
 
     private static native long getPCommandBufferDeviceMasks(long address);
@@ -99,19 +111,23 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         return new VkUInt32(getVkMemory(), getSignalSemaphoreCount(getVkAddress()));
     }
 
+    
     public void setSignalSemaphoreCount(VkUInt32 signalSemaphoreCount) {
-        setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount.getVkAddress());
+        setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount != null ? signalSemaphoreCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSignalSemaphoreCount(long address);
     private static native void setSignalSemaphoreCount(long address, long signalSemaphoreCount);
 
-    public VkUInt32.Array getPSignalSemaphoreDeviceIndices() {
-        return new VkUInt32.Array(getVkMemory(), getPSignalSemaphoreDeviceIndices(getVkAddress()), getSignalSemaphoreCount().getValue());
+    public VkUInt32 getPSignalSemaphoreDeviceIndices() {
+        return new VkUInt32(getVkMemory(), getPSignalSemaphoreDeviceIndices(getVkAddress()));
     }
 
+    private VkObject pSignalSemaphoreDeviceIndices = null;
     public void setPSignalSemaphoreDeviceIndices(VkUInt32 pSignalSemaphoreDeviceIndices) {
-        setPSignalSemaphoreDeviceIndices(getVkAddress(), pSignalSemaphoreDeviceIndices.getVkAddress());
+        setPSignalSemaphoreDeviceIndices(getVkAddress(), pSignalSemaphoreDeviceIndices != null ? pSignalSemaphoreDeviceIndices.getVkAddress() : VkPointer.NULL);
+        this.pSignalSemaphoreDeviceIndices = pSignalSemaphoreDeviceIndices;
     }
 
     private static native long getPSignalSemaphoreDeviceIndices(long address);
@@ -124,7 +140,12 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkDeviceGroupSubmitInfo.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDeviceGroupSubmitInfo o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -165,11 +186,11 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGroupSubmitInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

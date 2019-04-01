@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT
     (void)env;
     (void)jc;
     VkPipelineRasterizationConservativeStateCreateInfoEXT* o = (VkPipelineRasterizationConservativeStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_
     (void)env;
     (void)jc;
     VkPipelineRasterizationConservativeStateCreateInfoEXT* o = (VkPipelineRasterizationConservativeStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineRasterizationConservativeStateCreateInfoEXT* o = (VkPipelineRasterizationConservativeStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_
     (void)env;
     (void)jc;
     VkPipelineRasterizationConservativeStateCreateInfoEXT* o = (VkPipelineRasterizationConservativeStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineRasterizationConservativeStateCreateInfoEXT* o = (VkPipelineRasterizationConservativeStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->flags));
+    return jniPointerToLong(&o->flags);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_
     (void)env;
     (void)jc;
     VkPipelineRasterizationConservativeStateCreateInfoEXT* o = (VkPipelineRasterizationConservativeStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->flags, jniLongToPointer(valueAddress), sizeof(o->flags));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_getConservativeRasterizationMode(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineRasterizationConservativeStateCreateInfoEXT* o = (VkPipelineRasterizationConservativeStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->conservativeRasterizationMode));
+    return jniPointerToLong(&o->conservativeRasterizationMode);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_setConservativeRasterizationMode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_
     (void)env;
     (void)jc;
     VkPipelineRasterizationConservativeStateCreateInfoEXT* o = (VkPipelineRasterizationConservativeStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->conservativeRasterizationMode, jniLongToPointer(valueAddress), sizeof(o->conservativeRasterizationMode));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->conservativeRasterizationMode, valuePointer, sizeof(o->conservativeRasterizationMode));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_getExtraPrimitiveOverestimationSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineRasterizationConservativeStateCreateInfoEXT* o = (VkPipelineRasterizationConservativeStateCreateInfoEXT*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->extraPrimitiveOverestimationSize));
+    return jniPointerToLong(&o->extraPrimitiveOverestimationSize);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_setExtraPrimitiveOverestimationSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkPipelineRasterizationConservativeStateCreateInfoEXT_
     (void)env;
     (void)jc;
     VkPipelineRasterizationConservativeStateCreateInfoEXT* o = (VkPipelineRasterizationConservativeStateCreateInfoEXT*)jniLongToPointer(address);
-    memcpy(&o->extraPrimitiveOverestimationSize, jniLongToPointer(valueAddress), sizeof(o->extraPrimitiveOverestimationSize));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->extraPrimitiveOverestimationSize, valuePointer, sizeof(o->extraPrimitiveOverestimationSize));
 }
+
 

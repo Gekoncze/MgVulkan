@@ -9,11 +9,11 @@ public class VkStencilOpState extends VkObject {
     }
 
     public VkStencilOpState(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkStencilOpState(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -32,8 +32,10 @@ public class VkStencilOpState extends VkObject {
         return new VkStencilOp(getVkMemory(), getFailOp(getVkAddress()));
     }
 
+    
     public void setFailOp(VkStencilOp failOp) {
-        setFailOp(getVkAddress(), failOp.getVkAddress());
+        setFailOp(getVkAddress(), failOp != null ? failOp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getFailOp(long address);
@@ -43,8 +45,10 @@ public class VkStencilOpState extends VkObject {
         return new VkStencilOp(getVkMemory(), getPassOp(getVkAddress()));
     }
 
+    
     public void setPassOp(VkStencilOp passOp) {
-        setPassOp(getVkAddress(), passOp.getVkAddress());
+        setPassOp(getVkAddress(), passOp != null ? passOp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getPassOp(long address);
@@ -54,8 +58,10 @@ public class VkStencilOpState extends VkObject {
         return new VkStencilOp(getVkMemory(), getDepthFailOp(getVkAddress()));
     }
 
+    
     public void setDepthFailOp(VkStencilOp depthFailOp) {
-        setDepthFailOp(getVkAddress(), depthFailOp.getVkAddress());
+        setDepthFailOp(getVkAddress(), depthFailOp != null ? depthFailOp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getDepthFailOp(long address);
@@ -65,8 +71,10 @@ public class VkStencilOpState extends VkObject {
         return new VkCompareOp(getVkMemory(), getCompareOp(getVkAddress()));
     }
 
+    
     public void setCompareOp(VkCompareOp compareOp) {
-        setCompareOp(getVkAddress(), compareOp.getVkAddress());
+        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCompareOp(long address);
@@ -76,8 +84,10 @@ public class VkStencilOpState extends VkObject {
         return new VkUInt32(getVkMemory(), getCompareMask(getVkAddress()));
     }
 
+    
     public void setCompareMask(VkUInt32 compareMask) {
-        setCompareMask(getVkAddress(), compareMask.getVkAddress());
+        setCompareMask(getVkAddress(), compareMask != null ? compareMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCompareMask(long address);
@@ -87,8 +97,10 @@ public class VkStencilOpState extends VkObject {
         return new VkUInt32(getVkMemory(), getWriteMask(getVkAddress()));
     }
 
+    
     public void setWriteMask(VkUInt32 writeMask) {
-        setWriteMask(getVkAddress(), writeMask.getVkAddress());
+        setWriteMask(getVkAddress(), writeMask != null ? writeMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getWriteMask(long address);
@@ -98,8 +110,10 @@ public class VkStencilOpState extends VkObject {
         return new VkUInt32(getVkMemory(), getReference(getVkAddress()));
     }
 
+    
     public void setReference(VkUInt32 reference) {
-        setReference(getVkAddress(), reference.getVkAddress());
+        setReference(getVkAddress(), reference != null ? reference.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getReference(long address);
@@ -112,7 +126,12 @@ public class VkStencilOpState extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkStencilOpState.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkStencilOpState o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -153,11 +172,11 @@ public class VkStencilOpState extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkStencilOpState.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

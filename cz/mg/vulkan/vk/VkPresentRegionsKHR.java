@@ -9,11 +9,11 @@ public class VkPresentRegionsKHR extends VkObject {
     }
 
     public VkPresentRegionsKHR(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkPresentRegionsKHR(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkPresentRegionsKHR extends VkObject {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
     }
 
+    
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType.getVkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSType(long address);
@@ -40,8 +42,10 @@ public class VkPresentRegionsKHR extends VkObject {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
     }
 
+    private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext.getVkAddress());
+        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        this.pNext = pNext;
     }
 
     private static native long getPNext(long address);
@@ -51,19 +55,23 @@ public class VkPresentRegionsKHR extends VkObject {
         return new VkUInt32(getVkMemory(), getSwapchainCount(getVkAddress()));
     }
 
+    
     public void setSwapchainCount(VkUInt32 swapchainCount) {
-        setSwapchainCount(getVkAddress(), swapchainCount.getVkAddress());
+        setSwapchainCount(getVkAddress(), swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getSwapchainCount(long address);
     private static native void setSwapchainCount(long address, long swapchainCount);
 
-    public VkPresentRegionKHR.Array getPRegions() {
-        return new VkPresentRegionKHR.Array(getVkMemory(), getPRegions(getVkAddress()), getSwapchainCount().getValue());
+    public VkPresentRegionKHR getPRegions() {
+        return new VkPresentRegionKHR(getVkMemory(), getPRegions(getVkAddress()));
     }
 
+    private VkObject pRegions = null;
     public void setPRegions(VkPresentRegionKHR pRegions) {
-        setPRegions(getVkAddress(), pRegions.getVkAddress());
+        setPRegions(getVkAddress(), pRegions != null ? pRegions.getVkAddress() : VkPointer.NULL);
+        this.pRegions = pRegions;
     }
 
     private static native long getPRegions(long address);
@@ -76,7 +84,12 @@ public class VkPresentRegionsKHR extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkPresentRegionsKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPresentRegionsKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkPresentRegionsKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPresentRegionsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

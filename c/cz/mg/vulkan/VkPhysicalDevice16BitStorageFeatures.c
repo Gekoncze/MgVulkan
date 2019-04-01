@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_getSType(JNIEnv*
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setSType(JNIEnv* 
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setPNext(JNIEnv* 
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_getStorageBuffer16BitAccess(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->storageBuffer16BitAccess));
+    return jniPointerToLong(&o->storageBuffer16BitAccess);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setStorageBuffer16BitAccess(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setStorageBuffer1
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    memcpy(&o->storageBuffer16BitAccess, jniLongToPointer(valueAddress), sizeof(o->storageBuffer16BitAccess));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->storageBuffer16BitAccess, valuePointer, sizeof(o->storageBuffer16BitAccess));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_getUniformAndStorageBuffer16BitAccess(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->uniformAndStorageBuffer16BitAccess));
+    return jniPointerToLong(&o->uniformAndStorageBuffer16BitAccess);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setUniformAndStorageBuffer16BitAccess(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setUniformAndStor
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    memcpy(&o->uniformAndStorageBuffer16BitAccess, jniLongToPointer(valueAddress), sizeof(o->uniformAndStorageBuffer16BitAccess));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->uniformAndStorageBuffer16BitAccess, valuePointer, sizeof(o->uniformAndStorageBuffer16BitAccess));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_getStoragePushConstant16(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->storagePushConstant16));
+    return jniPointerToLong(&o->storagePushConstant16);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setStoragePushConstant16(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setStoragePushCon
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    memcpy(&o->storagePushConstant16, jniLongToPointer(valueAddress), sizeof(o->storagePushConstant16));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->storagePushConstant16, valuePointer, sizeof(o->storagePushConstant16));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_getStorageInputOutput16(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->storageInputOutput16));
+    return jniPointerToLong(&o->storageInputOutput16);
 }
 
 void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setStorageInputOutput16(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDevice16BitStorageFeatures_setStorageInputOu
     (void)env;
     (void)jc;
     VkPhysicalDevice16BitStorageFeatures* o = (VkPhysicalDevice16BitStorageFeatures*)jniLongToPointer(address);
-    memcpy(&o->storageInputOutput16, jniLongToPointer(valueAddress), sizeof(o->storageInputOutput16));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->storageInputOutput16, valuePointer, sizeof(o->storageInputOutput16));
 }
+
 

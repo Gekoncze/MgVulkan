@@ -9,11 +9,11 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
     }
 
     public VkExternalImageFormatPropertiesNV(VkMemory vkmemory) {
-        super(sizeof(), vkmemory);
+        super(vkmemory);
     }
 
     public VkExternalImageFormatPropertiesNV(VkMemory vkmemory, long vkaddress) {
-        super(sizeof(), vkmemory, vkaddress);
+        super(vkmemory, vkaddress);
     }
 
 
@@ -29,8 +29,10 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         return new VkImageFormatProperties(getVkMemory(), getImageFormatProperties(getVkAddress()));
     }
 
+    
     public void setImageFormatProperties(VkImageFormatProperties imageFormatProperties) {
-        setImageFormatProperties(getVkAddress(), imageFormatProperties.getVkAddress());
+        setImageFormatProperties(getVkAddress(), imageFormatProperties != null ? imageFormatProperties.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getImageFormatProperties(long address);
@@ -40,8 +42,10 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         return new VkExternalMemoryFeatureFlagsNV(getVkMemory(), getExternalMemoryFeatures(getVkAddress()));
     }
 
+    
     public void setExternalMemoryFeatures(VkExternalMemoryFeatureFlagsNV externalMemoryFeatures) {
-        setExternalMemoryFeatures(getVkAddress(), externalMemoryFeatures.getVkAddress());
+        setExternalMemoryFeatures(getVkAddress(), externalMemoryFeatures != null ? externalMemoryFeatures.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExternalMemoryFeatures(long address);
@@ -51,8 +55,10 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         return new VkExternalMemoryHandleTypeFlagsNV(getVkMemory(), getExportFromImportedHandleTypes(getVkAddress()));
     }
 
+    
     public void setExportFromImportedHandleTypes(VkExternalMemoryHandleTypeFlagsNV exportFromImportedHandleTypes) {
-        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes.getVkAddress());
+        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getExportFromImportedHandleTypes(long address);
@@ -62,8 +68,10 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         return new VkExternalMemoryHandleTypeFlagsNV(getVkMemory(), getCompatibleHandleTypes(getVkAddress()));
     }
 
+    
     public void setCompatibleHandleTypes(VkExternalMemoryHandleTypeFlagsNV compatibleHandleTypes) {
-        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes.getVkAddress());
+        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        
     }
 
     private static native long getCompatibleHandleTypes(long address);
@@ -76,7 +84,12 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkExternalImageFormatPropertiesNV.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkExternalImageFormatPropertiesNV o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -117,11 +130,11 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExternalImageFormatPropertiesNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

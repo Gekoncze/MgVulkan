@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_getSType(
     (void)env;
     (void)jc;
     VkPipelineViewportWScalingStateCreateInfoNV* o = (VkPipelineViewportWScalingStateCreateInfoNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->sType));
+    return jniPointerToLong(&o->sType);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_setSType(J
     (void)env;
     (void)jc;
     VkPipelineViewportWScalingStateCreateInfoNV* o = (VkPipelineViewportWScalingStateCreateInfoNV*)jniLongToPointer(address);
-    memcpy(&o->sType, jniLongToPointer(valueAddress), sizeof(o->sType));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineViewportWScalingStateCreateInfoNV* o = (VkPipelineViewportWScalingStateCreateInfoNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pNext));
+    return jniPointerToLong(o->pNext);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_setPNext(J
     (void)env;
     (void)jc;
     VkPipelineViewportWScalingStateCreateInfoNV* o = (VkPipelineViewportWScalingStateCreateInfoNV*)jniLongToPointer(address);
-    memcpy(&o->pNext, jniLongToPointer(valueAddress), sizeof(o->pNext));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_getViewportWScalingEnable(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineViewportWScalingStateCreateInfoNV* o = (VkPipelineViewportWScalingStateCreateInfoNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->viewportWScalingEnable));
+    return jniPointerToLong(&o->viewportWScalingEnable);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_setViewportWScalingEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_setViewpor
     (void)env;
     (void)jc;
     VkPipelineViewportWScalingStateCreateInfoNV* o = (VkPipelineViewportWScalingStateCreateInfoNV*)jniLongToPointer(address);
-    memcpy(&o->viewportWScalingEnable, jniLongToPointer(valueAddress), sizeof(o->viewportWScalingEnable));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->viewportWScalingEnable, valuePointer, sizeof(o->viewportWScalingEnable));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_getViewportCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineViewportWScalingStateCreateInfoNV* o = (VkPipelineViewportWScalingStateCreateInfoNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->viewportCount));
+    return jniPointerToLong(&o->viewportCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_setViewportCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_setViewpor
     (void)env;
     (void)jc;
     VkPipelineViewportWScalingStateCreateInfoNV* o = (VkPipelineViewportWScalingStateCreateInfoNV*)jniLongToPointer(address);
-    memcpy(&o->viewportCount, jniLongToPointer(valueAddress), sizeof(o->viewportCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->viewportCount, valuePointer, sizeof(o->viewportCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_getPViewportWScalings(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkPipelineViewportWScalingStateCreateInfoNV* o = (VkPipelineViewportWScalingStateCreateInfoNV*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pViewportWScalings));
+    return jniPointerToLong(o->pViewportWScalings);
 }
 
 void Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_setPViewportWScalings(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,6 +97,8 @@ void Java_cz_mg_vulkan_vk_VkPipelineViewportWScalingStateCreateInfoNV_setPViewpo
     (void)env;
     (void)jc;
     VkPipelineViewportWScalingStateCreateInfoNV* o = (VkPipelineViewportWScalingStateCreateInfoNV*)jniLongToPointer(address);
-    memcpy(&o->pViewportWScalings, jniLongToPointer(valueAddress), sizeof(o->pViewportWScalings));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pViewportWScalings, &valuePointer, sizeof(o->pViewportWScalings));
 }
+
 

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_getLocation(JNIEnv*
     (void)env;
     (void)jc;
     VkVertexInputAttributeDescription* o = (VkVertexInputAttributeDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->location));
+    return jniPointerToLong(&o->location);
 }
 
 void Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_setLocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_setLocation(JNIEnv* 
     (void)env;
     (void)jc;
     VkVertexInputAttributeDescription* o = (VkVertexInputAttributeDescription*)jniLongToPointer(address);
-    memcpy(&o->location, jniLongToPointer(valueAddress), sizeof(o->location));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->location, valuePointer, sizeof(o->location));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_getBinding(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkVertexInputAttributeDescription* o = (VkVertexInputAttributeDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->binding));
+    return jniPointerToLong(&o->binding);
 }
 
 void Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_setBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_setBinding(JNIEnv* e
     (void)env;
     (void)jc;
     VkVertexInputAttributeDescription* o = (VkVertexInputAttributeDescription*)jniLongToPointer(address);
-    memcpy(&o->binding, jniLongToPointer(valueAddress), sizeof(o->binding));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->binding, valuePointer, sizeof(o->binding));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_getFormat(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkVertexInputAttributeDescription* o = (VkVertexInputAttributeDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->format));
+    return jniPointerToLong(&o->format);
 }
 
 void Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_setFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_setFormat(JNIEnv* en
     (void)env;
     (void)jc;
     VkVertexInputAttributeDescription* o = (VkVertexInputAttributeDescription*)jniLongToPointer(address);
-    memcpy(&o->format, jniLongToPointer(valueAddress), sizeof(o->format));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->format, valuePointer, sizeof(o->format));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_getOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkVertexInputAttributeDescription* o = (VkVertexInputAttributeDescription*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->offset));
+    return jniPointerToLong(&o->offset);
 }
 
 void Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkVertexInputAttributeDescription_setOffset(JNIEnv* en
     (void)env;
     (void)jc;
     VkVertexInputAttributeDescription* o = (VkVertexInputAttributeDescription*)jniLongToPointer(address);
-    memcpy(&o->offset, jniLongToPointer(valueAddress), sizeof(o->offset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
+
 

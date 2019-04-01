@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkAttachmentReference_getAttachment(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkAttachmentReference* o = (VkAttachmentReference*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->attachment));
+    return jniPointerToLong(&o->attachment);
 }
 
 void Java_cz_mg_vulkan_vk_VkAttachmentReference_setAttachment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkAttachmentReference_setAttachment(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkAttachmentReference* o = (VkAttachmentReference*)jniLongToPointer(address);
-    memcpy(&o->attachment, jniLongToPointer(valueAddress), sizeof(o->attachment));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->attachment, valuePointer, sizeof(o->attachment));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkAttachmentReference_getLayout(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkAttachmentReference* o = (VkAttachmentReference*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->layout));
+    return jniPointerToLong(&o->layout);
 }
 
 void Java_cz_mg_vulkan_vk_VkAttachmentReference_setLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,6 +46,8 @@ void Java_cz_mg_vulkan_vk_VkAttachmentReference_setLayout(JNIEnv* env, jclass jc
     (void)env;
     (void)jc;
     VkAttachmentReference* o = (VkAttachmentReference*)jniLongToPointer(address);
-    memcpy(&o->layout, jniLongToPointer(valueAddress), sizeof(o->layout));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->layout, valuePointer, sizeof(o->layout));
 }
+
 

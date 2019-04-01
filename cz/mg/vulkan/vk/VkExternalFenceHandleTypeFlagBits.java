@@ -47,7 +47,12 @@ public class VkExternalFenceHandleTypeFlagBits extends VkFlagBits {
         private final int count;
 
         public Array(int count) {
-            super(new VkMemory(count*sizeof()));
+            super(new VkMemory(count*VkExternalFenceHandleTypeFlagBits.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkExternalFenceHandleTypeFlagBits o){
+            super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
@@ -88,11 +93,11 @@ public class VkExternalFenceHandleTypeFlagBits extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExternalFenceHandleTypeFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
             private final int count;
 
             public Array(int count) {
-                super(new VkMemory(count*sizeof()));
+                super(new VkMemory(count*VkPointer.sizeof()));
                 this.count = count;
             }
 

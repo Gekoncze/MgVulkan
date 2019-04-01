@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkSpecializationInfo_getMapEntryCount(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkSpecializationInfo* o = (VkSpecializationInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->mapEntryCount));
+    return jniPointerToLong(&o->mapEntryCount);
 }
 
 void Java_cz_mg_vulkan_vk_VkSpecializationInfo_setMapEntryCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkSpecializationInfo_setMapEntryCount(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkSpecializationInfo* o = (VkSpecializationInfo*)jniLongToPointer(address);
-    memcpy(&o->mapEntryCount, jniLongToPointer(valueAddress), sizeof(o->mapEntryCount));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->mapEntryCount, valuePointer, sizeof(o->mapEntryCount));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSpecializationInfo_getPMapEntries(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSpecializationInfo* o = (VkSpecializationInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pMapEntries));
+    return jniPointerToLong(o->pMapEntries);
 }
 
 void Java_cz_mg_vulkan_vk_VkSpecializationInfo_setPMapEntries(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkSpecializationInfo_setPMapEntries(JNIEnv* env, jclas
     (void)env;
     (void)jc;
     VkSpecializationInfo* o = (VkSpecializationInfo*)jniLongToPointer(address);
-    memcpy(&o->pMapEntries, jniLongToPointer(valueAddress), sizeof(o->pMapEntries));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pMapEntries, &valuePointer, sizeof(o->pMapEntries));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSpecializationInfo_getDataSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSpecializationInfo* o = (VkSpecializationInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->dataSize));
+    return jniPointerToLong(&o->dataSize);
 }
 
 void Java_cz_mg_vulkan_vk_VkSpecializationInfo_setDataSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkSpecializationInfo_setDataSize(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkSpecializationInfo* o = (VkSpecializationInfo*)jniLongToPointer(address);
-    memcpy(&o->dataSize, jniLongToPointer(valueAddress), sizeof(o->dataSize));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->dataSize, valuePointer, sizeof(o->dataSize));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkSpecializationInfo_getPData(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkSpecializationInfo* o = (VkSpecializationInfo*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->pData));
+    return jniPointerToLong(o->pData);
 }
 
 void Java_cz_mg_vulkan_vk_VkSpecializationInfo_setPData(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,6 +80,8 @@ void Java_cz_mg_vulkan_vk_VkSpecializationInfo_setPData(JNIEnv* env, jclass jc, 
     (void)env;
     (void)jc;
     VkSpecializationInfo* o = (VkSpecializationInfo*)jniLongToPointer(address);
-    memcpy(&o->pData, jniLongToPointer(valueAddress), sizeof(o->pData));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pData, &valuePointer, sizeof(o->pData));
 }
+
 

@@ -25,7 +25,7 @@ public class PFNvkGetImageSubresourceLayout extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkImage image, VkImageSubresource pSubresource, VkSubresourceLayout pLayout){
-        call(getValue(), device != null ? device.getVkAddress() : VkDevice.NULL.getVkAddress(), image != null ? image.getVkAddress() : VkImage.NULL.getVkAddress(), pSubresource != null ? pSubresource.getVkAddress() : VkPointer.NULL, pLayout != null ? pLayout.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, image != null ? image.getVkAddress() : VkPointer.NULL_ADDRESS, pSubresource != null ? pSubresource.getVkAddress() : VkPointer.NULL, pLayout != null ? pLayout.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long image, long pSubresource, long pLayout);

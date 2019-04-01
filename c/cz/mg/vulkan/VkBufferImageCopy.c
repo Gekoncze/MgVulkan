@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-jlong jniPointerToLong(void* p);
+jlong jniPointerToLong(const void* p);
 void* jniLongToPointer(jlong l);
 jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
@@ -21,7 +21,7 @@ jlong Java_cz_mg_vulkan_vk_VkBufferImageCopy_getBufferOffset(JNIEnv* env, jclass
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->bufferOffset));
+    return jniPointerToLong(&o->bufferOffset);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setBufferOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -29,14 +29,16 @@ void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setBufferOffset(JNIEnv* env, jclass 
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    memcpy(&o->bufferOffset, jniLongToPointer(valueAddress), sizeof(o->bufferOffset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->bufferOffset, valuePointer, sizeof(o->bufferOffset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferImageCopy_getBufferRowLength(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->bufferRowLength));
+    return jniPointerToLong(&o->bufferRowLength);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setBufferRowLength(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -44,14 +46,16 @@ void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setBufferRowLength(JNIEnv* env, jcla
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    memcpy(&o->bufferRowLength, jniLongToPointer(valueAddress), sizeof(o->bufferRowLength));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->bufferRowLength, valuePointer, sizeof(o->bufferRowLength));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferImageCopy_getBufferImageHeight(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->bufferImageHeight));
+    return jniPointerToLong(&o->bufferImageHeight);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setBufferImageHeight(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -59,14 +63,16 @@ void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setBufferImageHeight(JNIEnv* env, jc
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    memcpy(&o->bufferImageHeight, jniLongToPointer(valueAddress), sizeof(o->bufferImageHeight));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->bufferImageHeight, valuePointer, sizeof(o->bufferImageHeight));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferImageCopy_getImageSubresource(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageSubresource));
+    return jniPointerToLong(&o->imageSubresource);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setImageSubresource(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -74,14 +80,16 @@ void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setImageSubresource(JNIEnv* env, jcl
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    memcpy(&o->imageSubresource, jniLongToPointer(valueAddress), sizeof(o->imageSubresource));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageSubresource, valuePointer, sizeof(o->imageSubresource));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferImageCopy_getImageOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageOffset));
+    return jniPointerToLong(&o->imageOffset);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setImageOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -89,14 +97,16 @@ void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setImageOffset(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    memcpy(&o->imageOffset, jniLongToPointer(valueAddress), sizeof(o->imageOffset));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageOffset, valuePointer, sizeof(o->imageOffset));
 }
+
 jlong Java_cz_mg_vulkan_vk_VkBufferImageCopy_getImageExtent(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    return jniPointerToLong(&(o->imageExtent));
+    return jniPointerToLong(&o->imageExtent);
 }
 
 void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setImageExtent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
@@ -104,6 +114,8 @@ void Java_cz_mg_vulkan_vk_VkBufferImageCopy_setImageExtent(JNIEnv* env, jclass j
     (void)env;
     (void)jc;
     VkBufferImageCopy* o = (VkBufferImageCopy*)jniLongToPointer(address);
-    memcpy(&o->imageExtent, jniLongToPointer(valueAddress), sizeof(o->imageExtent));
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->imageExtent, valuePointer, sizeof(o->imageExtent));
 }
+
 
