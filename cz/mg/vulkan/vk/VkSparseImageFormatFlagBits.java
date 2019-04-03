@@ -27,9 +27,9 @@ public class VkSparseImageFormatFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT) s += "VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT ";
-        if(getValue() == VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT) s += "VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT ";
-        if(getValue() == VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT) s += "VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT ";
+        if(getValue() == VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT) s += "VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT";
+        if(getValue() == VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT) s += "VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT";
+        if(getValue() == VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT) s += "VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

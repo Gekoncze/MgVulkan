@@ -25,7 +25,7 @@ public class VkQueryControlFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_QUERY_CONTROL_PRECISE_BIT) s += "VK_QUERY_CONTROL_PRECISE_BIT ";
+        if(getValue() == VK_QUERY_CONTROL_PRECISE_BIT) s += "VK_QUERY_CONTROL_PRECISE_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

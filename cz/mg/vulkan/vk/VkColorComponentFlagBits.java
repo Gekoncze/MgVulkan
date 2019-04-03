@@ -28,10 +28,10 @@ public class VkColorComponentFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_COLOR_COMPONENT_R_BIT) s += "VK_COLOR_COMPONENT_R_BIT ";
-        if(getValue() == VK_COLOR_COMPONENT_G_BIT) s += "VK_COLOR_COMPONENT_G_BIT ";
-        if(getValue() == VK_COLOR_COMPONENT_B_BIT) s += "VK_COLOR_COMPONENT_B_BIT ";
-        if(getValue() == VK_COLOR_COMPONENT_A_BIT) s += "VK_COLOR_COMPONENT_A_BIT ";
+        if(getValue() == VK_COLOR_COMPONENT_R_BIT) s += "VK_COLOR_COMPONENT_R_BIT";
+        if(getValue() == VK_COLOR_COMPONENT_G_BIT) s += "VK_COLOR_COMPONENT_G_BIT";
+        if(getValue() == VK_COLOR_COMPONENT_B_BIT) s += "VK_COLOR_COMPONENT_B_BIT";
+        if(getValue() == VK_COLOR_COMPONENT_A_BIT) s += "VK_COLOR_COMPONENT_A_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

@@ -26,8 +26,8 @@ public class VkSemaphoreImportFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_SEMAPHORE_IMPORT_TEMPORARY_BIT) s += "VK_SEMAPHORE_IMPORT_TEMPORARY_BIT ";
-        if(getValue() == VK_SEMAPHORE_IMPORT_TEMPORARY_BIT_KHR) s += "VK_SEMAPHORE_IMPORT_TEMPORARY_BIT_KHR ";
+        if(getValue() == VK_SEMAPHORE_IMPORT_TEMPORARY_BIT) s += "VK_SEMAPHORE_IMPORT_TEMPORARY_BIT";
+        if(getValue() == VK_SEMAPHORE_IMPORT_TEMPORARY_BIT_KHR) s += "VK_SEMAPHORE_IMPORT_TEMPORARY_BIT_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

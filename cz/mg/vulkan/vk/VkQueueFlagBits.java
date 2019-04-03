@@ -29,11 +29,11 @@ public class VkQueueFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_QUEUE_GRAPHICS_BIT) s += "VK_QUEUE_GRAPHICS_BIT ";
-        if(getValue() == VK_QUEUE_COMPUTE_BIT) s += "VK_QUEUE_COMPUTE_BIT ";
-        if(getValue() == VK_QUEUE_TRANSFER_BIT) s += "VK_QUEUE_TRANSFER_BIT ";
-        if(getValue() == VK_QUEUE_SPARSE_BINDING_BIT) s += "VK_QUEUE_SPARSE_BINDING_BIT ";
-        if(getValue() == VK_QUEUE_PROTECTED_BIT) s += "VK_QUEUE_PROTECTED_BIT ";
+        if(getValue() == VK_QUEUE_GRAPHICS_BIT) s += "VK_QUEUE_GRAPHICS_BIT";
+        if(getValue() == VK_QUEUE_COMPUTE_BIT) s += "VK_QUEUE_COMPUTE_BIT";
+        if(getValue() == VK_QUEUE_TRANSFER_BIT) s += "VK_QUEUE_TRANSFER_BIT";
+        if(getValue() == VK_QUEUE_SPARSE_BINDING_BIT) s += "VK_QUEUE_SPARSE_BINDING_BIT";
+        if(getValue() == VK_QUEUE_PROTECTED_BIT) s += "VK_QUEUE_PROTECTED_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

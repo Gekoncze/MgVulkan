@@ -25,7 +25,7 @@ public class VkAttachmentDescriptionFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT) s += "VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT ";
+        if(getValue() == VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT) s += "VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

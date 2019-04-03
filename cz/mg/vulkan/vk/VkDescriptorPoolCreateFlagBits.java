@@ -26,8 +26,8 @@ public class VkDescriptorPoolCreateFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_DESCRIPTOR_POOL_CREATE_FREE_DESCRIPTOR_SET_BIT) s += "VK_DESCRIPTOR_POOL_CREATE_FREE_DESCRIPTOR_SET_BIT ";
-        if(getValue() == VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT_EXT) s += "VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT_EXT ";
+        if(getValue() == VK_DESCRIPTOR_POOL_CREATE_FREE_DESCRIPTOR_SET_BIT) s += "VK_DESCRIPTOR_POOL_CREATE_FREE_DESCRIPTOR_SET_BIT";
+        if(getValue() == VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT_EXT) s += "VK_DESCRIPTOR_POOL_CREATE_UPDATE_AFTER_BIND_BIT_EXT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

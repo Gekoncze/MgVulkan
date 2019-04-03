@@ -27,9 +27,9 @@ public class VkCommandBufferUsageFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT) s += "VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT ";
-        if(getValue() == VK_COMMAND_BUFFER_USAGE_RENDER_PASS_CONTINUE_BIT) s += "VK_COMMAND_BUFFER_USAGE_RENDER_PASS_CONTINUE_BIT ";
-        if(getValue() == VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT) s += "VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT ";
+        if(getValue() == VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT) s += "VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT";
+        if(getValue() == VK_COMMAND_BUFFER_USAGE_RENDER_PASS_CONTINUE_BIT) s += "VK_COMMAND_BUFFER_USAGE_RENDER_PASS_CONTINUE_BIT";
+        if(getValue() == VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT) s += "VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

@@ -26,8 +26,8 @@ public class VkSwapchainCreateFlagBitsKHR extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR) s += "VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR ";
-        if(getValue() == VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR) s += "VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR ";
+        if(getValue() == VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR) s += "VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR";
+        if(getValue() == VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR) s += "VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

@@ -26,8 +26,8 @@ public class VkObjectEntryUsageFlagBitsNVX extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_OBJECT_ENTRY_USAGE_GRAPHICS_BIT_NVX) s += "VK_OBJECT_ENTRY_USAGE_GRAPHICS_BIT_NVX ";
-        if(getValue() == VK_OBJECT_ENTRY_USAGE_COMPUTE_BIT_NVX) s += "VK_OBJECT_ENTRY_USAGE_COMPUTE_BIT_NVX ";
+        if(getValue() == VK_OBJECT_ENTRY_USAGE_GRAPHICS_BIT_NVX) s += "VK_OBJECT_ENTRY_USAGE_GRAPHICS_BIT_NVX";
+        if(getValue() == VK_OBJECT_ENTRY_USAGE_COMPUTE_BIT_NVX) s += "VK_OBJECT_ENTRY_USAGE_COMPUTE_BIT_NVX";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

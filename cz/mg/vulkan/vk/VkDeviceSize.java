@@ -16,7 +16,7 @@ public class VkDeviceSize extends VkUInt64 {
     }
 
 
-    public VkDeviceSize(int value) {
+    public VkDeviceSize(long value) {
         setValue(value);
     }
 

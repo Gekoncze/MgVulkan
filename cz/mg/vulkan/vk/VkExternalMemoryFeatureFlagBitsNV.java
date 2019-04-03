@@ -27,9 +27,9 @@ public class VkExternalMemoryFeatureFlagBitsNV extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT_NV) s += "VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT_NV ";
-        if(getValue() == VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT_NV) s += "VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT_NV ";
-        if(getValue() == VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT_NV) s += "VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT_NV ";
+        if(getValue() == VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT_NV) s += "VK_EXTERNAL_MEMORY_FEATURE_DEDICATED_ONLY_BIT_NV";
+        if(getValue() == VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT_NV) s += "VK_EXTERNAL_MEMORY_FEATURE_EXPORTABLE_BIT_NV";
+        if(getValue() == VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT_NV) s += "VK_EXTERNAL_MEMORY_FEATURE_IMPORTABLE_BIT_NV";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

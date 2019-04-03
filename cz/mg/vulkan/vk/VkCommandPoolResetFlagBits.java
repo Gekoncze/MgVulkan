@@ -25,7 +25,7 @@ public class VkCommandPoolResetFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT) s += "VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT ";
+        if(getValue() == VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT) s += "VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

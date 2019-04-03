@@ -28,10 +28,10 @@ public class VkQueryResultFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_QUERY_RESULT_64_BIT) s += "VK_QUERY_RESULT_64_BIT ";
-        if(getValue() == VK_QUERY_RESULT_WAIT_BIT) s += "VK_QUERY_RESULT_WAIT_BIT ";
-        if(getValue() == VK_QUERY_RESULT_WITH_AVAILABILITY_BIT) s += "VK_QUERY_RESULT_WITH_AVAILABILITY_BIT ";
-        if(getValue() == VK_QUERY_RESULT_PARTIAL_BIT) s += "VK_QUERY_RESULT_PARTIAL_BIT ";
+        if(getValue() == VK_QUERY_RESULT_64_BIT) s += "VK_QUERY_RESULT_64_BIT";
+        if(getValue() == VK_QUERY_RESULT_WAIT_BIT) s += "VK_QUERY_RESULT_WAIT_BIT";
+        if(getValue() == VK_QUERY_RESULT_WITH_AVAILABILITY_BIT) s += "VK_QUERY_RESULT_WITH_AVAILABILITY_BIT";
+        if(getValue() == VK_QUERY_RESULT_PARTIAL_BIT) s += "VK_QUERY_RESULT_PARTIAL_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

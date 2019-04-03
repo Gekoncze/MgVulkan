@@ -27,9 +27,9 @@ public class VkDebugUtilsMessageTypeFlagBitsEXT extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT) s += "VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT ";
-        if(getValue() == VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT) s += "VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT ";
-        if(getValue() == VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT) s += "VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT ";
+        if(getValue() == VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT) s += "VK_DEBUG_UTILS_MESSAGE_TYPE_GENERAL_BIT_EXT";
+        if(getValue() == VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT) s += "VK_DEBUG_UTILS_MESSAGE_TYPE_VALIDATION_BIT_EXT";
+        if(getValue() == VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT) s += "VK_DEBUG_UTILS_MESSAGE_TYPE_PERFORMANCE_BIT_EXT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

@@ -25,7 +25,7 @@ public class VkSurfaceCounterFlagBitsEXT extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_SURFACE_COUNTER_VBLANK_EXT) s += "VK_SURFACE_COUNTER_VBLANK_EXT ";
+        if(getValue() == VK_SURFACE_COUNTER_VBLANK_EXT) s += "VK_SURFACE_COUNTER_VBLANK_EXT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

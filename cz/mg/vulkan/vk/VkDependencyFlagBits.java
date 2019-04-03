@@ -29,11 +29,11 @@ public class VkDependencyFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_DEPENDENCY_BY_REGION_BIT) s += "VK_DEPENDENCY_BY_REGION_BIT ";
-        if(getValue() == VK_DEPENDENCY_DEVICE_GROUP_BIT) s += "VK_DEPENDENCY_DEVICE_GROUP_BIT ";
-        if(getValue() == VK_DEPENDENCY_VIEW_LOCAL_BIT) s += "VK_DEPENDENCY_VIEW_LOCAL_BIT ";
-        if(getValue() == VK_DEPENDENCY_VIEW_LOCAL_BIT_KHR) s += "VK_DEPENDENCY_VIEW_LOCAL_BIT_KHR ";
-        if(getValue() == VK_DEPENDENCY_DEVICE_GROUP_BIT_KHR) s += "VK_DEPENDENCY_DEVICE_GROUP_BIT_KHR ";
+        if(getValue() == VK_DEPENDENCY_BY_REGION_BIT) s += "VK_DEPENDENCY_BY_REGION_BIT";
+        if(getValue() == VK_DEPENDENCY_DEVICE_GROUP_BIT) s += "VK_DEPENDENCY_DEVICE_GROUP_BIT";
+        if(getValue() == VK_DEPENDENCY_VIEW_LOCAL_BIT) s += "VK_DEPENDENCY_VIEW_LOCAL_BIT";
+        if(getValue() == VK_DEPENDENCY_VIEW_LOCAL_BIT_KHR) s += "VK_DEPENDENCY_VIEW_LOCAL_BIT_KHR";
+        if(getValue() == VK_DEPENDENCY_DEVICE_GROUP_BIT_KHR) s += "VK_DEPENDENCY_DEVICE_GROUP_BIT_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

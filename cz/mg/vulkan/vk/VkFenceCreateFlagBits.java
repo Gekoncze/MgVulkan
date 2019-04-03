@@ -25,7 +25,7 @@ public class VkFenceCreateFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_FENCE_CREATE_SIGNALED_BIT) s += "VK_FENCE_CREATE_SIGNALED_BIT ";
+        if(getValue() == VK_FENCE_CREATE_SIGNALED_BIT) s += "VK_FENCE_CREATE_SIGNALED_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

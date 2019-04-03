@@ -28,10 +28,10 @@ public class VkDisplayPlaneAlphaFlagBitsKHR extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_DISPLAY_PLANE_ALPHA_OPAQUE_BIT_KHR) s += "VK_DISPLAY_PLANE_ALPHA_OPAQUE_BIT_KHR ";
-        if(getValue() == VK_DISPLAY_PLANE_ALPHA_GLOBAL_BIT_KHR) s += "VK_DISPLAY_PLANE_ALPHA_GLOBAL_BIT_KHR ";
-        if(getValue() == VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_BIT_KHR) s += "VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_BIT_KHR ";
-        if(getValue() == VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_PREMULTIPLIED_BIT_KHR) s += "VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_PREMULTIPLIED_BIT_KHR ";
+        if(getValue() == VK_DISPLAY_PLANE_ALPHA_OPAQUE_BIT_KHR) s += "VK_DISPLAY_PLANE_ALPHA_OPAQUE_BIT_KHR";
+        if(getValue() == VK_DISPLAY_PLANE_ALPHA_GLOBAL_BIT_KHR) s += "VK_DISPLAY_PLANE_ALPHA_GLOBAL_BIT_KHR";
+        if(getValue() == VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_BIT_KHR) s += "VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_BIT_KHR";
+        if(getValue() == VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_PREMULTIPLIED_BIT_KHR) s += "VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_PREMULTIPLIED_BIT_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

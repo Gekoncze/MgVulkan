@@ -1,6 +1,6 @@
 package cz.mg.vulkan.vk;
 
-public class VkNonDispatchableHandle extends VkObject {
+public class VkNonDispatchableHandle extends VkHandle {
     public VkNonDispatchableHandle() {
         super(sizeof());
     }
@@ -18,10 +18,12 @@ public class VkNonDispatchableHandle extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    @Override
     public long getValue(){
         return (long) getValue(getVkAddress());
     }
 
+    @Override
     public void setValue(long value){
         setValue(getVkAddress(), value);
     }

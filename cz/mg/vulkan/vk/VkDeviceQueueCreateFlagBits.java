@@ -25,7 +25,7 @@ public class VkDeviceQueueCreateFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT) s += "VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT ";
+        if(getValue() == VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT) s += "VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

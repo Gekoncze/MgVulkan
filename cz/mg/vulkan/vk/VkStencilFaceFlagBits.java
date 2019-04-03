@@ -27,9 +27,9 @@ public class VkStencilFaceFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_STENCIL_FACE_FRONT_BIT) s += "VK_STENCIL_FACE_FRONT_BIT ";
-        if(getValue() == VK_STENCIL_FACE_BACK_BIT) s += "VK_STENCIL_FACE_BACK_BIT ";
-        if(getValue() == VK_STENCIL_FRONT_AND_BACK) s += "VK_STENCIL_FRONT_AND_BACK ";
+        if(getValue() == VK_STENCIL_FACE_FRONT_BIT) s += "VK_STENCIL_FACE_FRONT_BIT";
+        if(getValue() == VK_STENCIL_FACE_BACK_BIT) s += "VK_STENCIL_FACE_BACK_BIT";
+        if(getValue() == VK_STENCIL_FRONT_AND_BACK) s += "VK_STENCIL_FRONT_AND_BACK";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

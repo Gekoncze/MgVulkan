@@ -32,14 +32,14 @@ public class VkShaderStageFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_SHADER_STAGE_VERTEX_BIT) s += "VK_SHADER_STAGE_VERTEX_BIT ";
-        if(getValue() == VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT) s += "VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT ";
-        if(getValue() == VK_SHADER_STAGE_TESSELLATION_EVALUATION_BIT) s += "VK_SHADER_STAGE_TESSELLATION_EVALUATION_BIT ";
-        if(getValue() == VK_SHADER_STAGE_GEOMETRY_BIT) s += "VK_SHADER_STAGE_GEOMETRY_BIT ";
-        if(getValue() == VK_SHADER_STAGE_FRAGMENT_BIT) s += "VK_SHADER_STAGE_FRAGMENT_BIT ";
-        if(getValue() == VK_SHADER_STAGE_COMPUTE_BIT) s += "VK_SHADER_STAGE_COMPUTE_BIT ";
-        if(getValue() == VK_SHADER_STAGE_ALL_GRAPHICS) s += "VK_SHADER_STAGE_ALL_GRAPHICS ";
-        if(getValue() == VK_SHADER_STAGE_ALL) s += "VK_SHADER_STAGE_ALL ";
+        if(getValue() == VK_SHADER_STAGE_VERTEX_BIT) s += "VK_SHADER_STAGE_VERTEX_BIT";
+        if(getValue() == VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT) s += "VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT";
+        if(getValue() == VK_SHADER_STAGE_TESSELLATION_EVALUATION_BIT) s += "VK_SHADER_STAGE_TESSELLATION_EVALUATION_BIT";
+        if(getValue() == VK_SHADER_STAGE_GEOMETRY_BIT) s += "VK_SHADER_STAGE_GEOMETRY_BIT";
+        if(getValue() == VK_SHADER_STAGE_FRAGMENT_BIT) s += "VK_SHADER_STAGE_FRAGMENT_BIT";
+        if(getValue() == VK_SHADER_STAGE_COMPUTE_BIT) s += "VK_SHADER_STAGE_COMPUTE_BIT";
+        if(getValue() == VK_SHADER_STAGE_ALL_GRAPHICS) s += "VK_SHADER_STAGE_ALL_GRAPHICS";
+        if(getValue() == VK_SHADER_STAGE_ALL) s += "VK_SHADER_STAGE_ALL";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

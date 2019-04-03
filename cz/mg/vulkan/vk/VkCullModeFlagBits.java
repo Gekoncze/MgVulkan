@@ -28,10 +28,10 @@ public class VkCullModeFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_CULL_MODE_NONE) s += "VK_CULL_MODE_NONE ";
-        if(getValue() == VK_CULL_MODE_FRONT_BIT) s += "VK_CULL_MODE_FRONT_BIT ";
-        if(getValue() == VK_CULL_MODE_BACK_BIT) s += "VK_CULL_MODE_BACK_BIT ";
-        if(getValue() == VK_CULL_MODE_FRONT_AND_BACK) s += "VK_CULL_MODE_FRONT_AND_BACK ";
+        if(getValue() == VK_CULL_MODE_NONE) s += "VK_CULL_MODE_NONE";
+        if(getValue() == VK_CULL_MODE_FRONT_BIT) s += "VK_CULL_MODE_FRONT_BIT";
+        if(getValue() == VK_CULL_MODE_BACK_BIT) s += "VK_CULL_MODE_BACK_BIT";
+        if(getValue() == VK_CULL_MODE_FRONT_AND_BACK) s += "VK_CULL_MODE_FRONT_AND_BACK";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

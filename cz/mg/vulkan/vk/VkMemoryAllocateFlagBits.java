@@ -26,8 +26,8 @@ public class VkMemoryAllocateFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT) s += "VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT ";
-        if(getValue() == VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR) s += "VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR ";
+        if(getValue() == VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT) s += "VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT";
+        if(getValue() == VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR) s += "VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

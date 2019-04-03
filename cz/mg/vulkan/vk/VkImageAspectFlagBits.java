@@ -34,16 +34,16 @@ public class VkImageAspectFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_IMAGE_ASPECT_COLOR_BIT) s += "VK_IMAGE_ASPECT_COLOR_BIT ";
-        if(getValue() == VK_IMAGE_ASPECT_DEPTH_BIT) s += "VK_IMAGE_ASPECT_DEPTH_BIT ";
-        if(getValue() == VK_IMAGE_ASPECT_STENCIL_BIT) s += "VK_IMAGE_ASPECT_STENCIL_BIT ";
-        if(getValue() == VK_IMAGE_ASPECT_METADATA_BIT) s += "VK_IMAGE_ASPECT_METADATA_BIT ";
-        if(getValue() == VK_IMAGE_ASPECT_PLANE_0_BIT) s += "VK_IMAGE_ASPECT_PLANE_0_BIT ";
-        if(getValue() == VK_IMAGE_ASPECT_PLANE_1_BIT) s += "VK_IMAGE_ASPECT_PLANE_1_BIT ";
-        if(getValue() == VK_IMAGE_ASPECT_PLANE_2_BIT) s += "VK_IMAGE_ASPECT_PLANE_2_BIT ";
-        if(getValue() == VK_IMAGE_ASPECT_PLANE_0_BIT_KHR) s += "VK_IMAGE_ASPECT_PLANE_0_BIT_KHR ";
-        if(getValue() == VK_IMAGE_ASPECT_PLANE_1_BIT_KHR) s += "VK_IMAGE_ASPECT_PLANE_1_BIT_KHR ";
-        if(getValue() == VK_IMAGE_ASPECT_PLANE_2_BIT_KHR) s += "VK_IMAGE_ASPECT_PLANE_2_BIT_KHR ";
+        if(getValue() == VK_IMAGE_ASPECT_COLOR_BIT) s += "VK_IMAGE_ASPECT_COLOR_BIT";
+        if(getValue() == VK_IMAGE_ASPECT_DEPTH_BIT) s += "VK_IMAGE_ASPECT_DEPTH_BIT";
+        if(getValue() == VK_IMAGE_ASPECT_STENCIL_BIT) s += "VK_IMAGE_ASPECT_STENCIL_BIT";
+        if(getValue() == VK_IMAGE_ASPECT_METADATA_BIT) s += "VK_IMAGE_ASPECT_METADATA_BIT";
+        if(getValue() == VK_IMAGE_ASPECT_PLANE_0_BIT) s += "VK_IMAGE_ASPECT_PLANE_0_BIT";
+        if(getValue() == VK_IMAGE_ASPECT_PLANE_1_BIT) s += "VK_IMAGE_ASPECT_PLANE_1_BIT";
+        if(getValue() == VK_IMAGE_ASPECT_PLANE_2_BIT) s += "VK_IMAGE_ASPECT_PLANE_2_BIT";
+        if(getValue() == VK_IMAGE_ASPECT_PLANE_0_BIT_KHR) s += "VK_IMAGE_ASPECT_PLANE_0_BIT_KHR";
+        if(getValue() == VK_IMAGE_ASPECT_PLANE_1_BIT_KHR) s += "VK_IMAGE_ASPECT_PLANE_1_BIT_KHR";
+        if(getValue() == VK_IMAGE_ASPECT_PLANE_2_BIT_KHR) s += "VK_IMAGE_ASPECT_PLANE_2_BIT_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

@@ -25,7 +25,7 @@ public class VkSparseMemoryBindFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_SPARSE_MEMORY_BIND_METADATA_BIT) s += "VK_SPARSE_MEMORY_BIND_METADATA_BIT ";
+        if(getValue() == VK_SPARSE_MEMORY_BIND_METADATA_BIT) s += "VK_SPARSE_MEMORY_BIND_METADATA_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

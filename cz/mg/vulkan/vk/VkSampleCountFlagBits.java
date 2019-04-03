@@ -31,13 +31,13 @@ public class VkSampleCountFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_SAMPLE_COUNT_1_BIT) s += "VK_SAMPLE_COUNT_1_BIT ";
-        if(getValue() == VK_SAMPLE_COUNT_2_BIT) s += "VK_SAMPLE_COUNT_2_BIT ";
-        if(getValue() == VK_SAMPLE_COUNT_4_BIT) s += "VK_SAMPLE_COUNT_4_BIT ";
-        if(getValue() == VK_SAMPLE_COUNT_8_BIT) s += "VK_SAMPLE_COUNT_8_BIT ";
-        if(getValue() == VK_SAMPLE_COUNT_16_BIT) s += "VK_SAMPLE_COUNT_16_BIT ";
-        if(getValue() == VK_SAMPLE_COUNT_32_BIT) s += "VK_SAMPLE_COUNT_32_BIT ";
-        if(getValue() == VK_SAMPLE_COUNT_64_BIT) s += "VK_SAMPLE_COUNT_64_BIT ";
+        if(getValue() == VK_SAMPLE_COUNT_1_BIT) s += "VK_SAMPLE_COUNT_1_BIT";
+        if(getValue() == VK_SAMPLE_COUNT_2_BIT) s += "VK_SAMPLE_COUNT_2_BIT";
+        if(getValue() == VK_SAMPLE_COUNT_4_BIT) s += "VK_SAMPLE_COUNT_4_BIT";
+        if(getValue() == VK_SAMPLE_COUNT_8_BIT) s += "VK_SAMPLE_COUNT_8_BIT";
+        if(getValue() == VK_SAMPLE_COUNT_16_BIT) s += "VK_SAMPLE_COUNT_16_BIT";
+        if(getValue() == VK_SAMPLE_COUNT_32_BIT) s += "VK_SAMPLE_COUNT_32_BIT";
+        if(getValue() == VK_SAMPLE_COUNT_64_BIT) s += "VK_SAMPLE_COUNT_64_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

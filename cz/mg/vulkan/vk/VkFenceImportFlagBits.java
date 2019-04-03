@@ -26,8 +26,8 @@ public class VkFenceImportFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_FENCE_IMPORT_TEMPORARY_BIT) s += "VK_FENCE_IMPORT_TEMPORARY_BIT ";
-        if(getValue() == VK_FENCE_IMPORT_TEMPORARY_BIT_KHR) s += "VK_FENCE_IMPORT_TEMPORARY_BIT_KHR ";
+        if(getValue() == VK_FENCE_IMPORT_TEMPORARY_BIT) s += "VK_FENCE_IMPORT_TEMPORARY_BIT";
+        if(getValue() == VK_FENCE_IMPORT_TEMPORARY_BIT_KHR) s += "VK_FENCE_IMPORT_TEMPORARY_BIT_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

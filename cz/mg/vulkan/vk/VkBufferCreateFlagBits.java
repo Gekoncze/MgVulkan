@@ -28,10 +28,10 @@ public class VkBufferCreateFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_BUFFER_CREATE_SPARSE_BINDING_BIT) s += "VK_BUFFER_CREATE_SPARSE_BINDING_BIT ";
-        if(getValue() == VK_BUFFER_CREATE_SPARSE_RESIDENCY_BIT) s += "VK_BUFFER_CREATE_SPARSE_RESIDENCY_BIT ";
-        if(getValue() == VK_BUFFER_CREATE_SPARSE_ALIASED_BIT) s += "VK_BUFFER_CREATE_SPARSE_ALIASED_BIT ";
-        if(getValue() == VK_BUFFER_CREATE_PROTECTED_BIT) s += "VK_BUFFER_CREATE_PROTECTED_BIT ";
+        if(getValue() == VK_BUFFER_CREATE_SPARSE_BINDING_BIT) s += "VK_BUFFER_CREATE_SPARSE_BINDING_BIT";
+        if(getValue() == VK_BUFFER_CREATE_SPARSE_RESIDENCY_BIT) s += "VK_BUFFER_CREATE_SPARSE_RESIDENCY_BIT";
+        if(getValue() == VK_BUFFER_CREATE_SPARSE_ALIASED_BIT) s += "VK_BUFFER_CREATE_SPARSE_ALIASED_BIT";
+        if(getValue() == VK_BUFFER_CREATE_PROTECTED_BIT) s += "VK_BUFFER_CREATE_PROTECTED_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

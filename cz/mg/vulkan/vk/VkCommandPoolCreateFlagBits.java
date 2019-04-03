@@ -27,9 +27,9 @@ public class VkCommandPoolCreateFlagBits extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_COMMAND_POOL_CREATE_TRANSIENT_BIT) s += "VK_COMMAND_POOL_CREATE_TRANSIENT_BIT ";
-        if(getValue() == VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT) s += "VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT ";
-        if(getValue() == VK_COMMAND_POOL_CREATE_PROTECTED_BIT) s += "VK_COMMAND_POOL_CREATE_PROTECTED_BIT ";
+        if(getValue() == VK_COMMAND_POOL_CREATE_TRANSIENT_BIT) s += "VK_COMMAND_POOL_CREATE_TRANSIENT_BIT";
+        if(getValue() == VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT) s += "VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT";
+        if(getValue() == VK_COMMAND_POOL_CREATE_PROTECTED_BIT) s += "VK_COMMAND_POOL_CREATE_PROTECTED_BIT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 

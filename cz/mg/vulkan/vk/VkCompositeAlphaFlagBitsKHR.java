@@ -28,10 +28,10 @@ public class VkCompositeAlphaFlagBitsKHR extends VkFlagBits {
     @Override
     public String toString() {
         String s = "";
-        if(getValue() == VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR) s += "VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR ";
-        if(getValue() == VK_COMPOSITE_ALPHA_PRE_MULTIPLIED_BIT_KHR) s += "VK_COMPOSITE_ALPHA_PRE_MULTIPLIED_BIT_KHR ";
-        if(getValue() == VK_COMPOSITE_ALPHA_POST_MULTIPLIED_BIT_KHR) s += "VK_COMPOSITE_ALPHA_POST_MULTIPLIED_BIT_KHR ";
-        if(getValue() == VK_COMPOSITE_ALPHA_INHERIT_BIT_KHR) s += "VK_COMPOSITE_ALPHA_INHERIT_BIT_KHR ";
+        if(getValue() == VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR) s += "VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR";
+        if(getValue() == VK_COMPOSITE_ALPHA_PRE_MULTIPLIED_BIT_KHR) s += "VK_COMPOSITE_ALPHA_PRE_MULTIPLIED_BIT_KHR";
+        if(getValue() == VK_COMPOSITE_ALPHA_POST_MULTIPLIED_BIT_KHR) s += "VK_COMPOSITE_ALPHA_POST_MULTIPLIED_BIT_KHR";
+        if(getValue() == VK_COMPOSITE_ALPHA_INHERIT_BIT_KHR) s += "VK_COMPOSITE_ALPHA_INHERIT_BIT_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 
