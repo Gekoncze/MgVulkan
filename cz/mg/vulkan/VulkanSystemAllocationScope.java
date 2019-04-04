@@ -39,4 +39,78 @@ public class VulkanSystemAllocationScope extends VulkanEnum {
         if(getValue() == INSTANCE) return "INSTANCE";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanSystemAllocationScope implements cz.mg.collections.array.ReadonlyArray<VulkanSystemAllocationScope> {
+        public Array(VkSystemAllocationScope.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkSystemAllocationScope.Array(count));
+        }
+
+        public Array(int count, VulkanSystemAllocationScope o){
+            this(new VkSystemAllocationScope.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkSystemAllocationScope.Array getVk(){
+            return (VkSystemAllocationScope.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanSystemAllocationScope get(int i){
+            return new VulkanSystemAllocationScope(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkSystemAllocationScope.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkSystemAllocationScope.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkSystemAllocationScope.Pointer(value));
+        }
+
+        @Override
+        public VkSystemAllocationScope.Pointer getVk(){
+            return (VkSystemAllocationScope.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanSystemAllocationScope.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanSystemAllocationScope.Pointer> {
+            public Array(int count) {
+                super(new VkSystemAllocationScope.Pointer.Array(count));
+            }
+
+            public Array(VulkanSystemAllocationScope[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkSystemAllocationScope.Pointer.Array getVk(){
+                return (VkSystemAllocationScope.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanSystemAllocationScope.Pointer get(int i){
+                return new VulkanSystemAllocationScope.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

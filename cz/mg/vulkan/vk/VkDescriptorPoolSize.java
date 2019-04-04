@@ -102,7 +102,7 @@ public class VkDescriptorPoolSize extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorPoolSize.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorPoolSize.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorPoolSize.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -131,8 +131,8 @@ public class VkDescriptorPoolSize extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorPoolSize.Pointer get(int i){
+                return new VkDescriptorPoolSize.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

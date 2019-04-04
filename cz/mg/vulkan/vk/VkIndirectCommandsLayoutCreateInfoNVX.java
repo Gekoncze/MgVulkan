@@ -158,7 +158,7 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkIndirectCommandsLayoutCreateInfoNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkIndirectCommandsLayoutCreateInfoNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsLayoutCreateInfoNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -187,8 +187,8 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkIndirectCommandsLayoutCreateInfoNVX.Pointer get(int i){
+                return new VkIndirectCommandsLayoutCreateInfoNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

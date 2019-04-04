@@ -70,7 +70,7 @@ public class VkObjectTableNVX extends VkNonDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkObjectTableNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectTableNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkObjectTableNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkObjectTableNVX extends VkNonDispatchableHandle {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkObjectTableNVX.Pointer get(int i){
+                return new VkObjectTableNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

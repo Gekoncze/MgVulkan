@@ -130,7 +130,7 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkExternalImageFormatPropertiesNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExternalImageFormatPropertiesNV.Pointer implements cz.mg.collections.array.ReadonlyArray<VkExternalImageFormatPropertiesNV.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkExternalImageFormatPropertiesNV.Pointer get(int i){
+                return new VkExternalImageFormatPropertiesNV.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

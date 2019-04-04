@@ -107,7 +107,7 @@ public class VkClearValue extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkClearValue.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkClearValue.Pointer implements cz.mg.collections.array.ReadonlyArray<VkClearValue.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -136,8 +136,8 @@ public class VkClearValue extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkClearValue.Pointer get(int i){
+                return new VkClearValue.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

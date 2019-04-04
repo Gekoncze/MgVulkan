@@ -70,7 +70,7 @@ public class VkPipelineLayout extends VkNonDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineLayout.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineLayout.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineLayout.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkPipelineLayout extends VkNonDispatchableHandle {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineLayout.Pointer get(int i){
+                return new VkPipelineLayout.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

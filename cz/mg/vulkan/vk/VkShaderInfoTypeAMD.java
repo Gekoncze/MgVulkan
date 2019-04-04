@@ -82,7 +82,7 @@ public class VkShaderInfoTypeAMD extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkShaderInfoTypeAMD.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkShaderInfoTypeAMD.Pointer implements cz.mg.collections.array.ReadonlyArray<VkShaderInfoTypeAMD.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -111,8 +111,8 @@ public class VkShaderInfoTypeAMD extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkShaderInfoTypeAMD.Pointer get(int i){
+                return new VkShaderInfoTypeAMD.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

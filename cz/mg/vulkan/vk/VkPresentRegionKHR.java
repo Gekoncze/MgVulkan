@@ -102,7 +102,7 @@ public class VkPresentRegionKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPresentRegionKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPresentRegionKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPresentRegionKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -131,8 +131,8 @@ public class VkPresentRegionKHR extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPresentRegionKHR.Pointer get(int i){
+                return new VkPresentRegionKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

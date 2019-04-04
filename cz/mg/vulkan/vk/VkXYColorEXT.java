@@ -102,7 +102,7 @@ public class VkXYColorEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkXYColorEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkXYColorEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkXYColorEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -131,8 +131,8 @@ public class VkXYColorEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkXYColorEXT.Pointer get(int i){
+                return new VkXYColorEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

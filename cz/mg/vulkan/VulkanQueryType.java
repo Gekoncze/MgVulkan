@@ -35,4 +35,78 @@ public class VulkanQueryType extends VulkanEnum {
         if(getValue() == TIMESTAMP) return "TIMESTAMP";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanQueryType implements cz.mg.collections.array.ReadonlyArray<VulkanQueryType> {
+        public Array(VkQueryType.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkQueryType.Array(count));
+        }
+
+        public Array(int count, VulkanQueryType o){
+            this(new VkQueryType.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkQueryType.Array getVk(){
+            return (VkQueryType.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanQueryType get(int i){
+            return new VulkanQueryType(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkQueryType.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkQueryType.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkQueryType.Pointer(value));
+        }
+
+        @Override
+        public VkQueryType.Pointer getVk(){
+            return (VkQueryType.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanQueryType.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanQueryType.Pointer> {
+            public Array(int count) {
+                super(new VkQueryType.Pointer.Array(count));
+            }
+
+            public Array(VulkanQueryType[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkQueryType.Pointer.Array getVk(){
+                return (VkQueryType.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanQueryType.Pointer get(int i){
+                return new VulkanQueryType.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

@@ -130,7 +130,7 @@ public class VkCommandBufferBeginInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkCommandBufferBeginInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCommandBufferBeginInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkCommandBufferBeginInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkCommandBufferBeginInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkCommandBufferBeginInfo.Pointer get(int i){
+                return new VkCommandBufferBeginInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

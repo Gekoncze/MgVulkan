@@ -70,7 +70,7 @@ public class VkSamplerYcbcrConversion extends VkNonDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSamplerYcbcrConversion.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSamplerYcbcrConversion.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSamplerYcbcrConversion.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkSamplerYcbcrConversion extends VkNonDispatchableHandle {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSamplerYcbcrConversion.Pointer get(int i){
+                return new VkSamplerYcbcrConversion.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

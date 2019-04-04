@@ -80,7 +80,7 @@ public class VkIndexType extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkIndexType.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkIndexType.Pointer implements cz.mg.collections.array.ReadonlyArray<VkIndexType.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -109,8 +109,8 @@ public class VkIndexType extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkIndexType.Pointer get(int i){
+                return new VkIndexType.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

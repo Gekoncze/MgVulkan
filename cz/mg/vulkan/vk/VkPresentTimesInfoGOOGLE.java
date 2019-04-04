@@ -130,7 +130,7 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPresentTimesInfoGOOGLE.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPresentTimesInfoGOOGLE.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPresentTimesInfoGOOGLE.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPresentTimesInfoGOOGLE.Pointer get(int i){
+                return new VkPresentTimesInfoGOOGLE.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -172,7 +172,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPhysicalDeviceSparseImageFormatInfo2.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceSparseImageFormatInfo2.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSparseImageFormatInfo2.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -201,8 +201,8 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPhysicalDeviceSparseImageFormatInfo2.Pointer get(int i){
+                return new VkPhysicalDeviceSparseImageFormatInfo2.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

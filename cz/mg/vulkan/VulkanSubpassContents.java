@@ -33,4 +33,78 @@ public class VulkanSubpassContents extends VulkanEnum {
         if(getValue() == SECONDARY_COMMAND_BUFFERS) return "SECONDARY_COMMAND_BUFFERS";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanSubpassContents implements cz.mg.collections.array.ReadonlyArray<VulkanSubpassContents> {
+        public Array(VkSubpassContents.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkSubpassContents.Array(count));
+        }
+
+        public Array(int count, VulkanSubpassContents o){
+            this(new VkSubpassContents.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkSubpassContents.Array getVk(){
+            return (VkSubpassContents.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanSubpassContents get(int i){
+            return new VulkanSubpassContents(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkSubpassContents.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkSubpassContents.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkSubpassContents.Pointer(value));
+        }
+
+        @Override
+        public VkSubpassContents.Pointer getVk(){
+            return (VkSubpassContents.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanSubpassContents.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanSubpassContents.Pointer> {
+            public Array(int count) {
+                super(new VkSubpassContents.Pointer.Array(count));
+            }
+
+            public Array(VulkanSubpassContents[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkSubpassContents.Pointer.Array getVk(){
+                return (VkSubpassContents.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanSubpassContents.Pointer get(int i){
+                return new VulkanSubpassContents.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

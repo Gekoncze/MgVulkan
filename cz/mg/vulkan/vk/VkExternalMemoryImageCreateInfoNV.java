@@ -116,7 +116,7 @@ public class VkExternalMemoryImageCreateInfoNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkExternalMemoryImageCreateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExternalMemoryImageCreateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<VkExternalMemoryImageCreateInfoNV.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkExternalMemoryImageCreateInfoNV extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkExternalMemoryImageCreateInfoNV.Pointer get(int i){
+                return new VkExternalMemoryImageCreateInfoNV.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

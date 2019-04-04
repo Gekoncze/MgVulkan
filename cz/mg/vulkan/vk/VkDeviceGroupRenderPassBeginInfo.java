@@ -144,7 +144,7 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDeviceGroupRenderPassBeginInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGroupRenderPassBeginInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupRenderPassBeginInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDeviceGroupRenderPassBeginInfo.Pointer get(int i){
+                return new VkDeviceGroupRenderPassBeginInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

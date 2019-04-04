@@ -81,7 +81,7 @@ public class VkSubpassDescriptionFlagBits extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSubpassDescriptionFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSubpassDescriptionFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSubpassDescriptionFlagBits.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -110,8 +110,8 @@ public class VkSubpassDescriptionFlagBits extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSubpassDescriptionFlagBits.Pointer get(int i){
+                return new VkSubpassDescriptionFlagBits.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

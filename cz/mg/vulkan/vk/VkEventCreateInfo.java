@@ -116,7 +116,7 @@ public class VkEventCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkEventCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkEventCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkEventCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkEventCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkEventCreateInfo.Pointer get(int i){
+                return new VkEventCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

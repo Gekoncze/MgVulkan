@@ -172,7 +172,7 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDeviceGeneratedCommandsLimitsNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGeneratedCommandsLimitsNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDeviceGeneratedCommandsLimitsNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -201,8 +201,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDeviceGeneratedCommandsLimitsNVX.Pointer get(int i){
+                return new VkDeviceGeneratedCommandsLimitsNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

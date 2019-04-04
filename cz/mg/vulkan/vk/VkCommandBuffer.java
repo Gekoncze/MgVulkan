@@ -70,7 +70,7 @@ public class VkCommandBuffer extends VkDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkCommandBuffer.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCommandBuffer.Pointer implements cz.mg.collections.array.ReadonlyArray<VkCommandBuffer.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkCommandBuffer extends VkDispatchableHandle {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkCommandBuffer.Pointer get(int i){
+                return new VkCommandBuffer.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

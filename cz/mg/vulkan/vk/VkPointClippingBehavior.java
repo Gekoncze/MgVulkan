@@ -84,7 +84,7 @@ public class VkPointClippingBehavior extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPointClippingBehavior.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPointClippingBehavior.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPointClippingBehavior.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -113,8 +113,8 @@ public class VkPointClippingBehavior extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPointClippingBehavior.Pointer get(int i){
+                return new VkPointClippingBehavior.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

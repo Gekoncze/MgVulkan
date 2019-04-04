@@ -70,7 +70,7 @@ public class VkDescriptorUpdateTemplateCreateFlags extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorUpdateTemplateCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorUpdateTemplateCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorUpdateTemplateCreateFlags.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkDescriptorUpdateTemplateCreateFlags extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorUpdateTemplateCreateFlags.Pointer get(int i){
+                return new VkDescriptorUpdateTemplateCreateFlags.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

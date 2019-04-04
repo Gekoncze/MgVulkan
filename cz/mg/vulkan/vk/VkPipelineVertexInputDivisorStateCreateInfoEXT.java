@@ -130,7 +130,7 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineVertexInputDivisorStateCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineVertexInputDivisorStateCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineVertexInputDivisorStateCreateInfoEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineVertexInputDivisorStateCreateInfoEXT.Pointer get(int i){
+                return new VkPipelineVertexInputDivisorStateCreateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -172,7 +172,7 @@ public class VkSubpassDependency extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSubpassDependency.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSubpassDependency.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSubpassDependency.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -201,8 +201,8 @@ public class VkSubpassDependency extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSubpassDependency.Pointer get(int i){
+                return new VkSubpassDependency.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

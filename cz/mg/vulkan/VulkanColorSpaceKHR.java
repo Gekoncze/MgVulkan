@@ -59,4 +59,78 @@ public class VulkanColorSpaceKHR extends VulkanEnum {
         if(getValue() == COLOR_SPACE_EXTENDED_SRGB_NONLINEAR_EXT) return "COLOR_SPACE_EXTENDED_SRGB_NONLINEAR_EXT";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanColorSpaceKHR implements cz.mg.collections.array.ReadonlyArray<VulkanColorSpaceKHR> {
+        public Array(VkColorSpaceKHR.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkColorSpaceKHR.Array(count));
+        }
+
+        public Array(int count, VulkanColorSpaceKHR o){
+            this(new VkColorSpaceKHR.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkColorSpaceKHR.Array getVk(){
+            return (VkColorSpaceKHR.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanColorSpaceKHR get(int i){
+            return new VulkanColorSpaceKHR(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkColorSpaceKHR.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkColorSpaceKHR.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkColorSpaceKHR.Pointer(value));
+        }
+
+        @Override
+        public VkColorSpaceKHR.Pointer getVk(){
+            return (VkColorSpaceKHR.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanColorSpaceKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanColorSpaceKHR.Pointer> {
+            public Array(int count) {
+                super(new VkColorSpaceKHR.Pointer.Array(count));
+            }
+
+            public Array(VulkanColorSpaceKHR[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkColorSpaceKHR.Pointer.Array getVk(){
+                return (VkColorSpaceKHR.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanColorSpaceKHR.Pointer get(int i){
+                return new VulkanColorSpaceKHR.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

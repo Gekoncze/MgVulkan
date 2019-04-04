@@ -172,7 +172,7 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineCoverageModulationStateCreateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineCoverageModulationStateCreateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineCoverageModulationStateCreateInfoNV.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -201,8 +201,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineCoverageModulationStateCreateInfoNV.Pointer get(int i){
+                return new VkPipelineCoverageModulationStateCreateInfoNV.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

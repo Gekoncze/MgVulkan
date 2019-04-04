@@ -144,7 +144,7 @@ public class VkPipelineCacheCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineCacheCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineCacheCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineCacheCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkPipelineCacheCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineCacheCreateInfo.Pointer get(int i){
+                return new VkPipelineCacheCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -130,7 +130,7 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPhysicalDeviceMultiviewProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceMultiviewProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMultiviewProperties.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPhysicalDeviceMultiviewProperties.Pointer get(int i){
+                return new VkPhysicalDeviceMultiviewProperties.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

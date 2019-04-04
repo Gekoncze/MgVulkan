@@ -91,4 +91,78 @@ public class VulkanResult extends VulkanEnum {
         if(getValue() == ERROR_INVALID_EXTERNAL_HANDLE_KHR) return "ERROR_INVALID_EXTERNAL_HANDLE_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanResult implements cz.mg.collections.array.ReadonlyArray<VulkanResult> {
+        public Array(VkResult.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkResult.Array(count));
+        }
+
+        public Array(int count, VulkanResult o){
+            this(new VkResult.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkResult.Array getVk(){
+            return (VkResult.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanResult get(int i){
+            return new VulkanResult(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkResult.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkResult.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkResult.Pointer(value));
+        }
+
+        @Override
+        public VkResult.Pointer getVk(){
+            return (VkResult.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanResult.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanResult.Pointer> {
+            public Array(int count) {
+                super(new VkResult.Pointer.Array(count));
+            }
+
+            public Array(VulkanResult[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkResult.Pointer.Array getVk(){
+                return (VkResult.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanResult.Pointer get(int i){
+                return new VulkanResult.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

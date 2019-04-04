@@ -70,7 +70,7 @@ public class VkPipelineShaderStageCreateFlags extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineShaderStageCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineShaderStageCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineShaderStageCreateFlags.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkPipelineShaderStageCreateFlags extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineShaderStageCreateFlags.Pointer get(int i){
+                return new VkPipelineShaderStageCreateFlags.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

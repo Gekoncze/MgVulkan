@@ -116,7 +116,7 @@ public class VkPhysicalDevicePushDescriptorPropertiesKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPhysicalDevicePushDescriptorPropertiesKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDevicePushDescriptorPropertiesKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDevicePushDescriptorPropertiesKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkPhysicalDevicePushDescriptorPropertiesKHR extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPhysicalDevicePushDescriptorPropertiesKHR.Pointer get(int i){
+                return new VkPhysicalDevicePushDescriptorPropertiesKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

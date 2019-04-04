@@ -130,7 +130,7 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkRenderPassInputAttachmentAspectCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkRenderPassInputAttachmentAspectCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkRenderPassInputAttachmentAspectCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkRenderPassInputAttachmentAspectCreateInfo.Pointer get(int i){
+                return new VkRenderPassInputAttachmentAspectCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

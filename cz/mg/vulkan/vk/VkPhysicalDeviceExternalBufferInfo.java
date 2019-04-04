@@ -144,7 +144,7 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPhysicalDeviceExternalBufferInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceExternalBufferInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceExternalBufferInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPhysicalDeviceExternalBufferInfo.Pointer get(int i){
+                return new VkPhysicalDeviceExternalBufferInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

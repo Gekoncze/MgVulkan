@@ -99,7 +99,7 @@ public class VkQueryPipelineStatisticFlagBits extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkQueryPipelineStatisticFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkQueryPipelineStatisticFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VkQueryPipelineStatisticFlagBits.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -128,8 +128,8 @@ public class VkQueryPipelineStatisticFlagBits extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkQueryPipelineStatisticFlagBits.Pointer get(int i){
+                return new VkQueryPipelineStatisticFlagBits.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

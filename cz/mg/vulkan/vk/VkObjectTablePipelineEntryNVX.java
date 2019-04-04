@@ -116,7 +116,7 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkObjectTablePipelineEntryNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectTablePipelineEntryNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkObjectTablePipelineEntryNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkObjectTablePipelineEntryNVX.Pointer get(int i){
+                return new VkObjectTablePipelineEntryNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

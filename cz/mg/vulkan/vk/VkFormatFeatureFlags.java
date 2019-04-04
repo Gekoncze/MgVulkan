@@ -70,7 +70,7 @@ public class VkFormatFeatureFlags extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkFormatFeatureFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkFormatFeatureFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<VkFormatFeatureFlags.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkFormatFeatureFlags extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkFormatFeatureFlags.Pointer get(int i){
+                return new VkFormatFeatureFlags.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

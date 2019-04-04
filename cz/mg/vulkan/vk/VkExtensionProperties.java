@@ -102,7 +102,7 @@ public class VkExtensionProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkExtensionProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExtensionProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<VkExtensionProperties.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -131,8 +131,8 @@ public class VkExtensionProperties extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkExtensionProperties.Pointer get(int i){
+                return new VkExtensionProperties.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -116,7 +116,7 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.Pointer get(int i){
+                return new VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -70,7 +70,7 @@ public class VkPipelineDynamicStateCreateFlags extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineDynamicStateCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineDynamicStateCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineDynamicStateCreateFlags.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkPipelineDynamicStateCreateFlags extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineDynamicStateCreateFlags.Pointer get(int i){
+                return new VkPipelineDynamicStateCreateFlags.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

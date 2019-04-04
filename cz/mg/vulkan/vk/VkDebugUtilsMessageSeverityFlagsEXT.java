@@ -70,7 +70,7 @@ public class VkDebugUtilsMessageSeverityFlagsEXT extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDebugUtilsMessageSeverityFlagsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugUtilsMessageSeverityFlagsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsMessageSeverityFlagsEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkDebugUtilsMessageSeverityFlagsEXT extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDebugUtilsMessageSeverityFlagsEXT.Pointer get(int i){
+                return new VkDebugUtilsMessageSeverityFlagsEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

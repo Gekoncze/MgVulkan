@@ -144,7 +144,7 @@ public class VkMappedMemoryRange extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkMappedMemoryRange.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkMappedMemoryRange.Pointer implements cz.mg.collections.array.ReadonlyArray<VkMappedMemoryRange.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkMappedMemoryRange extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkMappedMemoryRange.Pointer get(int i){
+                return new VkMappedMemoryRange.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

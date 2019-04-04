@@ -32,4 +32,78 @@ public class VulkanFenceCreateFlagBits extends VulkanFlagBits {
         if(getValue() == SIGNALED) s += "SIGNALED";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanFenceCreateFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanFenceCreateFlagBits> {
+        public Array(VkFenceCreateFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkFenceCreateFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanFenceCreateFlagBits o){
+            this(new VkFenceCreateFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkFenceCreateFlagBits.Array getVk(){
+            return (VkFenceCreateFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanFenceCreateFlagBits get(int i){
+            return new VulkanFenceCreateFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkFenceCreateFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkFenceCreateFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkFenceCreateFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkFenceCreateFlagBits.Pointer getVk(){
+            return (VkFenceCreateFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanFenceCreateFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanFenceCreateFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkFenceCreateFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanFenceCreateFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkFenceCreateFlagBits.Pointer.Array getVk(){
+                return (VkFenceCreateFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanFenceCreateFlagBits.Pointer get(int i){
+                return new VulkanFenceCreateFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

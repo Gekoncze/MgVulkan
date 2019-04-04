@@ -32,4 +32,78 @@ public class VulkanCommandPoolResetFlagBits extends VulkanFlagBits {
         if(getValue() == RELEASE_RESOURCES) s += "RELEASE_RESOURCES";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanCommandPoolResetFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanCommandPoolResetFlagBits> {
+        public Array(VkCommandPoolResetFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkCommandPoolResetFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanCommandPoolResetFlagBits o){
+            this(new VkCommandPoolResetFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkCommandPoolResetFlagBits.Array getVk(){
+            return (VkCommandPoolResetFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanCommandPoolResetFlagBits get(int i){
+            return new VulkanCommandPoolResetFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkCommandPoolResetFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkCommandPoolResetFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkCommandPoolResetFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkCommandPoolResetFlagBits.Pointer getVk(){
+            return (VkCommandPoolResetFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanCommandPoolResetFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanCommandPoolResetFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkCommandPoolResetFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanCommandPoolResetFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkCommandPoolResetFlagBits.Pointer.Array getVk(){
+                return (VkCommandPoolResetFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanCommandPoolResetFlagBits.Pointer get(int i){
+                return new VulkanCommandPoolResetFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

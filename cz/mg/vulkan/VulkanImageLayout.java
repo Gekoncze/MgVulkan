@@ -59,4 +59,78 @@ public class VulkanImageLayout extends VulkanEnum {
         if(getValue() == DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR) return "DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanImageLayout implements cz.mg.collections.array.ReadonlyArray<VulkanImageLayout> {
+        public Array(VkImageLayout.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkImageLayout.Array(count));
+        }
+
+        public Array(int count, VulkanImageLayout o){
+            this(new VkImageLayout.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkImageLayout.Array getVk(){
+            return (VkImageLayout.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanImageLayout get(int i){
+            return new VulkanImageLayout(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkImageLayout.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkImageLayout.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkImageLayout.Pointer(value));
+        }
+
+        @Override
+        public VkImageLayout.Pointer getVk(){
+            return (VkImageLayout.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanImageLayout.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanImageLayout.Pointer> {
+            public Array(int count) {
+                super(new VkImageLayout.Pointer.Array(count));
+            }
+
+            public Array(VulkanImageLayout[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkImageLayout.Pointer.Array getVk(){
+                return (VkImageLayout.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanImageLayout.Pointer get(int i){
+                return new VulkanImageLayout.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

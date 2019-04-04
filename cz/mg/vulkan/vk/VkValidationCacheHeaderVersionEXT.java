@@ -78,7 +78,7 @@ public class VkValidationCacheHeaderVersionEXT extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkValidationCacheHeaderVersionEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkValidationCacheHeaderVersionEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkValidationCacheHeaderVersionEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -107,8 +107,8 @@ public class VkValidationCacheHeaderVersionEXT extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkValidationCacheHeaderVersionEXT.Pointer get(int i){
+                return new VkValidationCacheHeaderVersionEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

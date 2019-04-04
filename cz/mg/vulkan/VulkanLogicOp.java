@@ -61,4 +61,78 @@ public class VulkanLogicOp extends VulkanEnum {
         if(getValue() == SET) return "SET";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanLogicOp implements cz.mg.collections.array.ReadonlyArray<VulkanLogicOp> {
+        public Array(VkLogicOp.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkLogicOp.Array(count));
+        }
+
+        public Array(int count, VulkanLogicOp o){
+            this(new VkLogicOp.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkLogicOp.Array getVk(){
+            return (VkLogicOp.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanLogicOp get(int i){
+            return new VulkanLogicOp(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkLogicOp.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkLogicOp.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkLogicOp.Pointer(value));
+        }
+
+        @Override
+        public VkLogicOp.Pointer getVk(){
+            return (VkLogicOp.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanLogicOp.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanLogicOp.Pointer> {
+            public Array(int count) {
+                super(new VkLogicOp.Pointer.Array(count));
+            }
+
+            public Array(VulkanLogicOp[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkLogicOp.Pointer.Array getVk(){
+                return (VkLogicOp.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanLogicOp.Pointer get(int i){
+                return new VulkanLogicOp.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

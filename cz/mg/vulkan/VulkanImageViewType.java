@@ -43,4 +43,78 @@ public class VulkanImageViewType extends VulkanEnum {
         if(getValue() == CUBE_ARRAY) return "CUBE_ARRAY";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanImageViewType implements cz.mg.collections.array.ReadonlyArray<VulkanImageViewType> {
+        public Array(VkImageViewType.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkImageViewType.Array(count));
+        }
+
+        public Array(int count, VulkanImageViewType o){
+            this(new VkImageViewType.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkImageViewType.Array getVk(){
+            return (VkImageViewType.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanImageViewType get(int i){
+            return new VulkanImageViewType(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkImageViewType.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkImageViewType.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkImageViewType.Pointer(value));
+        }
+
+        @Override
+        public VkImageViewType.Pointer getVk(){
+            return (VkImageViewType.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanImageViewType.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanImageViewType.Pointer> {
+            public Array(int count) {
+                super(new VkImageViewType.Pointer.Array(count));
+            }
+
+            public Array(VulkanImageViewType[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkImageViewType.Pointer.Array getVk(){
+                return (VkImageViewType.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanImageViewType.Pointer get(int i){
+                return new VulkanImageViewType.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

@@ -70,7 +70,7 @@ public class VkDescriptorPoolResetFlags extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorPoolResetFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorPoolResetFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorPoolResetFlags.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkDescriptorPoolResetFlags extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorPoolResetFlags.Pointer get(int i){
+                return new VkDescriptorPoolResetFlags.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

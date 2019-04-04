@@ -144,7 +144,7 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDrawIndexedIndirectCommand.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDrawIndexedIndirectCommand.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDrawIndexedIndirectCommand.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDrawIndexedIndirectCommand.Pointer get(int i){
+                return new VkDrawIndexedIndirectCommand.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

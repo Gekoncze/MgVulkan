@@ -85,7 +85,7 @@ public class VkExternalSemaphoreFeatureFlagBits extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkExternalSemaphoreFeatureFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExternalSemaphoreFeatureFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VkExternalSemaphoreFeatureFlagBits.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -114,8 +114,8 @@ public class VkExternalSemaphoreFeatureFlagBits extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkExternalSemaphoreFeatureFlagBits.Pointer get(int i){
+                return new VkExternalSemaphoreFeatureFlagBits.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

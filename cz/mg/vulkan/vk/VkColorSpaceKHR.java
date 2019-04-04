@@ -106,7 +106,7 @@ public class VkColorSpaceKHR extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkColorSpaceKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkColorSpaceKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkColorSpaceKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -135,8 +135,8 @@ public class VkColorSpaceKHR extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkColorSpaceKHR.Pointer get(int i){
+                return new VkColorSpaceKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -144,7 +144,7 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorSetAllocateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorSetAllocateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetAllocateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorSetAllocateInfo.Pointer get(int i){
+                return new VkDescriptorSetAllocateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

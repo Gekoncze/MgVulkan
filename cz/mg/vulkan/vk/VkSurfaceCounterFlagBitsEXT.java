@@ -79,7 +79,7 @@ public class VkSurfaceCounterFlagBitsEXT extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSurfaceCounterFlagBitsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSurfaceCounterFlagBitsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSurfaceCounterFlagBitsEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -108,8 +108,8 @@ public class VkSurfaceCounterFlagBitsEXT extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSurfaceCounterFlagBitsEXT.Pointer get(int i){
+                return new VkSurfaceCounterFlagBitsEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

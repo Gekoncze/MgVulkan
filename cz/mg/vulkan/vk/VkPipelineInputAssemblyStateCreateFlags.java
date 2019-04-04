@@ -70,7 +70,7 @@ public class VkPipelineInputAssemblyStateCreateFlags extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineInputAssemblyStateCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineInputAssemblyStateCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineInputAssemblyStateCreateFlags.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkPipelineInputAssemblyStateCreateFlags extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineInputAssemblyStateCreateFlags.Pointer get(int i){
+                return new VkPipelineInputAssemblyStateCreateFlags.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

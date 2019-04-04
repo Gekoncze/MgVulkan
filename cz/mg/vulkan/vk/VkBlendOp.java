@@ -178,7 +178,7 @@ public class VkBlendOp extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkBlendOp.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBlendOp.Pointer implements cz.mg.collections.array.ReadonlyArray<VkBlendOp.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -207,8 +207,8 @@ public class VkBlendOp extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkBlendOp.Pointer get(int i){
+                return new VkBlendOp.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

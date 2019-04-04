@@ -38,4 +38,78 @@ public class VulkanDisplayPlaneAlphaFlagBitsKHR extends VulkanFlagBits {
         if(getValue() == DISPLAY_PLANE_ALPHA_PER_PIXEL_PREMULTIPLIED_KHR) s += "DISPLAY_PLANE_ALPHA_PER_PIXEL_PREMULTIPLIED_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanDisplayPlaneAlphaFlagBitsKHR implements cz.mg.collections.array.ReadonlyArray<VulkanDisplayPlaneAlphaFlagBitsKHR> {
+        public Array(VkDisplayPlaneAlphaFlagBitsKHR.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkDisplayPlaneAlphaFlagBitsKHR.Array(count));
+        }
+
+        public Array(int count, VulkanDisplayPlaneAlphaFlagBitsKHR o){
+            this(new VkDisplayPlaneAlphaFlagBitsKHR.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkDisplayPlaneAlphaFlagBitsKHR.Array getVk(){
+            return (VkDisplayPlaneAlphaFlagBitsKHR.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanDisplayPlaneAlphaFlagBitsKHR get(int i){
+            return new VulkanDisplayPlaneAlphaFlagBitsKHR(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkDisplayPlaneAlphaFlagBitsKHR.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkDisplayPlaneAlphaFlagBitsKHR.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkDisplayPlaneAlphaFlagBitsKHR.Pointer(value));
+        }
+
+        @Override
+        public VkDisplayPlaneAlphaFlagBitsKHR.Pointer getVk(){
+            return (VkDisplayPlaneAlphaFlagBitsKHR.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanDisplayPlaneAlphaFlagBitsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanDisplayPlaneAlphaFlagBitsKHR.Pointer> {
+            public Array(int count) {
+                super(new VkDisplayPlaneAlphaFlagBitsKHR.Pointer.Array(count));
+            }
+
+            public Array(VulkanDisplayPlaneAlphaFlagBitsKHR[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkDisplayPlaneAlphaFlagBitsKHR.Pointer.Array getVk(){
+                return (VkDisplayPlaneAlphaFlagBitsKHR.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanDisplayPlaneAlphaFlagBitsKHR.Pointer get(int i){
+                return new VulkanDisplayPlaneAlphaFlagBitsKHR.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

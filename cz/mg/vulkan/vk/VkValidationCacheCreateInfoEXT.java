@@ -144,7 +144,7 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkValidationCacheCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkValidationCacheCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkValidationCacheCreateInfoEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkValidationCacheCreateInfoEXT.Pointer get(int i){
+                return new VkValidationCacheCreateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

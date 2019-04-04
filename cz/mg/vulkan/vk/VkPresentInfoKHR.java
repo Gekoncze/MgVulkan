@@ -186,7 +186,7 @@ public class VkPresentInfoKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPresentInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPresentInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPresentInfoKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -215,8 +215,8 @@ public class VkPresentInfoKHR extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPresentInfoKHR.Pointer get(int i){
+                return new VkPresentInfoKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

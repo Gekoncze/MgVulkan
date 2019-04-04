@@ -70,7 +70,7 @@ public class VkCompositeAlphaFlagsKHR extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkCompositeAlphaFlagsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCompositeAlphaFlagsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkCompositeAlphaFlagsKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkCompositeAlphaFlagsKHR extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkCompositeAlphaFlagsKHR.Pointer get(int i){
+                return new VkCompositeAlphaFlagsKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

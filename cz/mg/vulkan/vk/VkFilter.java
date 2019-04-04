@@ -82,7 +82,7 @@ public class VkFilter extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkFilter.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkFilter.Pointer implements cz.mg.collections.array.ReadonlyArray<VkFilter.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -111,8 +111,8 @@ public class VkFilter extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkFilter.Pointer get(int i){
+                return new VkFilter.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

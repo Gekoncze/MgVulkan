@@ -93,7 +93,7 @@ public class VkShaderStageFlagBits extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkShaderStageFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkShaderStageFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VkShaderStageFlagBits.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -122,8 +122,8 @@ public class VkShaderStageFlagBits extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkShaderStageFlagBits.Pointer get(int i){
+                return new VkShaderStageFlagBits.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

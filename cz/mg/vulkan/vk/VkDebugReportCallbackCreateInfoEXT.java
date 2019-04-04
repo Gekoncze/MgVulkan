@@ -144,7 +144,7 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDebugReportCallbackCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugReportCallbackCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDebugReportCallbackCreateInfoEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDebugReportCallbackCreateInfoEXT.Pointer get(int i){
+                return new VkDebugReportCallbackCreateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

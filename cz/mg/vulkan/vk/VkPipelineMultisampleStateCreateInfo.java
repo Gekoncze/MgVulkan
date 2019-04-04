@@ -200,7 +200,7 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineMultisampleStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineMultisampleStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineMultisampleStateCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -229,8 +229,8 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineMultisampleStateCreateInfo.Pointer get(int i){
+                return new VkPipelineMultisampleStateCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

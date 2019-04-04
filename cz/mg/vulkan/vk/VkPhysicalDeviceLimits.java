@@ -1558,7 +1558,7 @@ public class VkPhysicalDeviceLimits extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPhysicalDeviceLimits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceLimits.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceLimits.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -1587,8 +1587,8 @@ public class VkPhysicalDeviceLimits extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPhysicalDeviceLimits.Pointer get(int i){
+                return new VkPhysicalDeviceLimits.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

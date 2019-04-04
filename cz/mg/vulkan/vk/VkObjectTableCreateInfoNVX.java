@@ -228,7 +228,7 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkObjectTableCreateInfoNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectTableCreateInfoNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkObjectTableCreateInfoNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -257,8 +257,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkObjectTableCreateInfoNVX.Pointer get(int i){
+                return new VkObjectTableCreateInfoNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

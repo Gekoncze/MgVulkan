@@ -200,7 +200,7 @@ public class VkSubmitInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSubmitInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSubmitInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSubmitInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -229,8 +229,8 @@ public class VkSubmitInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSubmitInfo.Pointer get(int i){
+                return new VkSubmitInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

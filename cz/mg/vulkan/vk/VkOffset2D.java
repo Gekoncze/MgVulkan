@@ -102,7 +102,7 @@ public class VkOffset2D extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkOffset2D.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkOffset2D.Pointer implements cz.mg.collections.array.ReadonlyArray<VkOffset2D.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -131,8 +131,8 @@ public class VkOffset2D extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkOffset2D.Pointer get(int i){
+                return new VkOffset2D.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

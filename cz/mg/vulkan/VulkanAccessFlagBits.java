@@ -70,4 +70,78 @@ public class VulkanAccessFlagBits extends VulkanFlagBits {
         if(getValue() == COLOR_ATTACHMENT_READ_NONCOHERENT_EXT) s += "COLOR_ATTACHMENT_READ_NONCOHERENT_EXT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanAccessFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanAccessFlagBits> {
+        public Array(VkAccessFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkAccessFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanAccessFlagBits o){
+            this(new VkAccessFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkAccessFlagBits.Array getVk(){
+            return (VkAccessFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanAccessFlagBits get(int i){
+            return new VulkanAccessFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkAccessFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkAccessFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkAccessFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkAccessFlagBits.Pointer getVk(){
+            return (VkAccessFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanAccessFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanAccessFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkAccessFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanAccessFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkAccessFlagBits.Pointer.Array getVk(){
+                return (VkAccessFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanAccessFlagBits.Pointer get(int i){
+                return new VulkanAccessFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

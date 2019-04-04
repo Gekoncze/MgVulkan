@@ -144,7 +144,7 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineDynamicStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineDynamicStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineDynamicStateCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineDynamicStateCreateInfo.Pointer get(int i){
+                return new VkPipelineDynamicStateCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -116,7 +116,7 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDeviceQueueGlobalPriorityCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceQueueGlobalPriorityCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDeviceQueueGlobalPriorityCreateInfoEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDeviceQueueGlobalPriorityCreateInfoEXT.Pointer get(int i){
+                return new VkDeviceQueueGlobalPriorityCreateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

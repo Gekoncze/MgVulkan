@@ -88,7 +88,7 @@ public class VkBorderColor extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkBorderColor.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBorderColor.Pointer implements cz.mg.collections.array.ReadonlyArray<VkBorderColor.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -117,8 +117,8 @@ public class VkBorderColor extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkBorderColor.Pointer get(int i){
+                return new VkBorderColor.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -116,7 +116,7 @@ public class VkPhysicalDeviceDiscardRectanglePropertiesEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPhysicalDeviceDiscardRectanglePropertiesEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceDiscardRectanglePropertiesEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceDiscardRectanglePropertiesEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkPhysicalDeviceDiscardRectanglePropertiesEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPhysicalDeviceDiscardRectanglePropertiesEXT.Pointer get(int i){
+                return new VkPhysicalDeviceDiscardRectanglePropertiesEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -130,7 +130,7 @@ public class VkValidationFlagsEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkValidationFlagsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkValidationFlagsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkValidationFlagsEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkValidationFlagsEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkValidationFlagsEXT.Pointer get(int i){
+                return new VkValidationFlagsEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

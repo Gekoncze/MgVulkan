@@ -116,7 +116,7 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkIndirectCommandsTokenNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkIndirectCommandsTokenNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsTokenNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkIndirectCommandsTokenNVX.Pointer get(int i){
+                return new VkIndirectCommandsTokenNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

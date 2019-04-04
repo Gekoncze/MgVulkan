@@ -130,7 +130,7 @@ public class VkBindImageMemorySwapchainInfoKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkBindImageMemorySwapchainInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBindImageMemorySwapchainInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkBindImageMemorySwapchainInfoKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkBindImageMemorySwapchainInfoKHR extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkBindImageMemorySwapchainInfoKHR.Pointer get(int i){
+                return new VkBindImageMemorySwapchainInfoKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

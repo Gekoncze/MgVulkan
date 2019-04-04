@@ -214,7 +214,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorUpdateTemplateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorUpdateTemplateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorUpdateTemplateCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -243,8 +243,8 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorUpdateTemplateCreateInfo.Pointer get(int i){
+                return new VkDescriptorUpdateTemplateCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -83,7 +83,7 @@ public class VkDebugUtilsMessageTypeFlagBitsEXT extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDebugUtilsMessageTypeFlagBitsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugUtilsMessageTypeFlagBitsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsMessageTypeFlagBitsEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -112,8 +112,8 @@ public class VkDebugUtilsMessageTypeFlagBitsEXT extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDebugUtilsMessageTypeFlagBitsEXT.Pointer get(int i){
+                return new VkDebugUtilsMessageTypeFlagBitsEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

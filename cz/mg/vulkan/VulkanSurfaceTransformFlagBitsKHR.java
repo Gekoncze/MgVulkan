@@ -48,4 +48,78 @@ public class VulkanSurfaceTransformFlagBitsKHR extends VulkanFlagBits {
         if(getValue() == SURFACE_TRANSFORM_INHERIT_KHR) s += "SURFACE_TRANSFORM_INHERIT_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanSurfaceTransformFlagBitsKHR implements cz.mg.collections.array.ReadonlyArray<VulkanSurfaceTransformFlagBitsKHR> {
+        public Array(VkSurfaceTransformFlagBitsKHR.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkSurfaceTransformFlagBitsKHR.Array(count));
+        }
+
+        public Array(int count, VulkanSurfaceTransformFlagBitsKHR o){
+            this(new VkSurfaceTransformFlagBitsKHR.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkSurfaceTransformFlagBitsKHR.Array getVk(){
+            return (VkSurfaceTransformFlagBitsKHR.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanSurfaceTransformFlagBitsKHR get(int i){
+            return new VulkanSurfaceTransformFlagBitsKHR(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkSurfaceTransformFlagBitsKHR.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkSurfaceTransformFlagBitsKHR.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkSurfaceTransformFlagBitsKHR.Pointer(value));
+        }
+
+        @Override
+        public VkSurfaceTransformFlagBitsKHR.Pointer getVk(){
+            return (VkSurfaceTransformFlagBitsKHR.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanSurfaceTransformFlagBitsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanSurfaceTransformFlagBitsKHR.Pointer> {
+            public Array(int count) {
+                super(new VkSurfaceTransformFlagBitsKHR.Pointer.Array(count));
+            }
+
+            public Array(VulkanSurfaceTransformFlagBitsKHR[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkSurfaceTransformFlagBitsKHR.Pointer.Array getVk(){
+                return (VkSurfaceTransformFlagBitsKHR.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanSurfaceTransformFlagBitsKHR.Pointer get(int i){
+                return new VulkanSurfaceTransformFlagBitsKHR.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

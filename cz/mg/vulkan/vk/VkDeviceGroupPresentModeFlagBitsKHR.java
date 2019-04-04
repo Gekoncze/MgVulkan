@@ -85,7 +85,7 @@ public class VkDeviceGroupPresentModeFlagBitsKHR extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDeviceGroupPresentModeFlagBitsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGroupPresentModeFlagBitsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupPresentModeFlagBitsKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -114,8 +114,8 @@ public class VkDeviceGroupPresentModeFlagBitsKHR extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDeviceGroupPresentModeFlagBitsKHR.Pointer get(int i){
+                return new VkDeviceGroupPresentModeFlagBitsKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

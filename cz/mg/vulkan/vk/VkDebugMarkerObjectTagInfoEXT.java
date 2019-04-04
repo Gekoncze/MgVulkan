@@ -172,7 +172,7 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDebugMarkerObjectTagInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugMarkerObjectTagInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDebugMarkerObjectTagInfoEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -201,8 +201,8 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDebugMarkerObjectTagInfoEXT.Pointer get(int i){
+                return new VkDebugMarkerObjectTagInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

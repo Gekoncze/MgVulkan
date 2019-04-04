@@ -78,7 +78,7 @@ public class VkPipelineCacheHeaderVersion extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineCacheHeaderVersion.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineCacheHeaderVersion.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineCacheHeaderVersion.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -107,8 +107,8 @@ public class VkPipelineCacheHeaderVersion extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineCacheHeaderVersion.Pointer get(int i){
+                return new VkPipelineCacheHeaderVersion.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

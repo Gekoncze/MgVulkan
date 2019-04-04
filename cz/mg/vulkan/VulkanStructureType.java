@@ -611,4 +611,78 @@ public class VulkanStructureType extends VulkanEnum {
         if(getValue() == DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR) return "DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanStructureType implements cz.mg.collections.array.ReadonlyArray<VulkanStructureType> {
+        public Array(VkStructureType.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkStructureType.Array(count));
+        }
+
+        public Array(int count, VulkanStructureType o){
+            this(new VkStructureType.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkStructureType.Array getVk(){
+            return (VkStructureType.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanStructureType get(int i){
+            return new VulkanStructureType(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkStructureType.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkStructureType.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkStructureType.Pointer(value));
+        }
+
+        @Override
+        public VkStructureType.Pointer getVk(){
+            return (VkStructureType.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanStructureType.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanStructureType.Pointer> {
+            public Array(int count) {
+                super(new VkStructureType.Pointer.Array(count));
+            }
+
+            public Array(VulkanStructureType[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkStructureType.Pointer.Array getVk(){
+                return (VkStructureType.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanStructureType.Pointer get(int i){
+                return new VulkanStructureType.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

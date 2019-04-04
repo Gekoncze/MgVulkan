@@ -80,7 +80,7 @@ public class VkCommandBufferLevel extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkCommandBufferLevel.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCommandBufferLevel.Pointer implements cz.mg.collections.array.ReadonlyArray<VkCommandBufferLevel.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -109,8 +109,8 @@ public class VkCommandBufferLevel extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkCommandBufferLevel.Pointer get(int i){
+                return new VkCommandBufferLevel.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

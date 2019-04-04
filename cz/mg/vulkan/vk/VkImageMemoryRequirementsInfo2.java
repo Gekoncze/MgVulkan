@@ -116,7 +116,7 @@ public class VkImageMemoryRequirementsInfo2 extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkImageMemoryRequirementsInfo2.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImageMemoryRequirementsInfo2.Pointer implements cz.mg.collections.array.ReadonlyArray<VkImageMemoryRequirementsInfo2.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkImageMemoryRequirementsInfo2 extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkImageMemoryRequirementsInfo2.Pointer get(int i){
+                return new VkImageMemoryRequirementsInfo2.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

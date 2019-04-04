@@ -116,7 +116,7 @@ public class VkDescriptorImageInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorImageInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorImageInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorImageInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkDescriptorImageInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorImageInfo.Pointer get(int i){
+                return new VkDescriptorImageInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

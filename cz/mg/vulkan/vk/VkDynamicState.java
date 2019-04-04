@@ -100,7 +100,7 @@ public class VkDynamicState extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDynamicState.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDynamicState.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDynamicState.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -129,8 +129,8 @@ public class VkDynamicState extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDynamicState.Pointer get(int i){
+                return new VkDynamicState.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

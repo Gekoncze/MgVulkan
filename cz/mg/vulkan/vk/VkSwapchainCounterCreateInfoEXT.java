@@ -116,7 +116,7 @@ public class VkSwapchainCounterCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSwapchainCounterCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSwapchainCounterCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSwapchainCounterCreateInfoEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkSwapchainCounterCreateInfoEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSwapchainCounterCreateInfoEXT.Pointer get(int i){
+                return new VkSwapchainCounterCreateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

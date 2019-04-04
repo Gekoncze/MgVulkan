@@ -86,7 +86,7 @@ public class VkUInt16 extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkUInt16.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkUInt16.Pointer implements cz.mg.collections.array.ReadonlyArray<VkUInt16.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -115,8 +115,8 @@ public class VkUInt16 extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkUInt16.Pointer get(int i){
+                return new VkUInt16.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

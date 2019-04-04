@@ -70,7 +70,7 @@ public class VkDebugReportFlagsEXT extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDebugReportFlagsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugReportFlagsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDebugReportFlagsEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkDebugReportFlagsEXT extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDebugReportFlagsEXT.Pointer get(int i){
+                return new VkDebugReportFlagsEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

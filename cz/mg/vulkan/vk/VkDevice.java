@@ -70,7 +70,7 @@ public class VkDevice extends VkDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDevice.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDevice.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDevice.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkDevice extends VkDispatchableHandle {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDevice.Pointer get(int i){
+                return new VkDevice.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

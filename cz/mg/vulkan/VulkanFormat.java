@@ -551,4 +551,78 @@ public class VulkanFormat extends VulkanEnum {
         if(getValue() == G16_B16_R16_3PLANE_444_UNORM_KHR) return "G16_B16_R16_3PLANE_444_UNORM_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanFormat implements cz.mg.collections.array.ReadonlyArray<VulkanFormat> {
+        public Array(VkFormat.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkFormat.Array(count));
+        }
+
+        public Array(int count, VulkanFormat o){
+            this(new VkFormat.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkFormat.Array getVk(){
+            return (VkFormat.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanFormat get(int i){
+            return new VulkanFormat(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkFormat.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkFormat.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkFormat.Pointer(value));
+        }
+
+        @Override
+        public VkFormat.Pointer getVk(){
+            return (VkFormat.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanFormat.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanFormat.Pointer> {
+            public Array(int count) {
+                super(new VkFormat.Pointer.Array(count));
+            }
+
+            public Array(VulkanFormat[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkFormat.Pointer.Array getVk(){
+                return (VkFormat.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanFormat.Pointer get(int i){
+                return new VulkanFormat.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

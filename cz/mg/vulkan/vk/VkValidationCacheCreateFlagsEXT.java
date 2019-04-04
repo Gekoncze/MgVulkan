@@ -70,7 +70,7 @@ public class VkValidationCacheCreateFlagsEXT extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkValidationCacheCreateFlagsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkValidationCacheCreateFlagsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkValidationCacheCreateFlagsEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkValidationCacheCreateFlagsEXT extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkValidationCacheCreateFlagsEXT.Pointer get(int i){
+                return new VkValidationCacheCreateFlagsEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

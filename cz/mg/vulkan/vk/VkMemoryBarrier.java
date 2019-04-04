@@ -130,7 +130,7 @@ public class VkMemoryBarrier extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkMemoryBarrier.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkMemoryBarrier.Pointer implements cz.mg.collections.array.ReadonlyArray<VkMemoryBarrier.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkMemoryBarrier extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkMemoryBarrier.Pointer get(int i){
+                return new VkMemoryBarrier.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

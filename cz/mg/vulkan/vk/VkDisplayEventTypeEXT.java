@@ -78,7 +78,7 @@ public class VkDisplayEventTypeEXT extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDisplayEventTypeEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDisplayEventTypeEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDisplayEventTypeEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -107,8 +107,8 @@ public class VkDisplayEventTypeEXT extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDisplayEventTypeEXT.Pointer get(int i){
+                return new VkDisplayEventTypeEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

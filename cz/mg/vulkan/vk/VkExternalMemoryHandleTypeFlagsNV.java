@@ -70,7 +70,7 @@ public class VkExternalMemoryHandleTypeFlagsNV extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkExternalMemoryHandleTypeFlagsNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExternalMemoryHandleTypeFlagsNV.Pointer implements cz.mg.collections.array.ReadonlyArray<VkExternalMemoryHandleTypeFlagsNV.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkExternalMemoryHandleTypeFlagsNV extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkExternalMemoryHandleTypeFlagsNV.Pointer get(int i){
+                return new VkExternalMemoryHandleTypeFlagsNV.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

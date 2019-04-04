@@ -92,7 +92,7 @@ public class VkCompareOp extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkCompareOp.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCompareOp.Pointer implements cz.mg.collections.array.ReadonlyArray<VkCompareOp.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -121,8 +121,8 @@ public class VkCompareOp extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkCompareOp.Pointer get(int i){
+                return new VkCompareOp.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

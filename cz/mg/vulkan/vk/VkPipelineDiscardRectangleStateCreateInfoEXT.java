@@ -158,7 +158,7 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineDiscardRectangleStateCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineDiscardRectangleStateCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineDiscardRectangleStateCreateInfoEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -187,8 +187,8 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineDiscardRectangleStateCreateInfoEXT.Pointer get(int i){
+                return new VkPipelineDiscardRectangleStateCreateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -102,7 +102,7 @@ public class VkSampleLocationEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSampleLocationEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSampleLocationEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSampleLocationEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -131,8 +131,8 @@ public class VkSampleLocationEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSampleLocationEXT.Pointer get(int i){
+                return new VkSampleLocationEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

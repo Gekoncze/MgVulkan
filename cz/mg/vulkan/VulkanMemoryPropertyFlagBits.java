@@ -42,4 +42,78 @@ public class VulkanMemoryPropertyFlagBits extends VulkanFlagBits {
         if(getValue() == PROTECTED) s += "PROTECTED";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanMemoryPropertyFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanMemoryPropertyFlagBits> {
+        public Array(VkMemoryPropertyFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkMemoryPropertyFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanMemoryPropertyFlagBits o){
+            this(new VkMemoryPropertyFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkMemoryPropertyFlagBits.Array getVk(){
+            return (VkMemoryPropertyFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanMemoryPropertyFlagBits get(int i){
+            return new VulkanMemoryPropertyFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkMemoryPropertyFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkMemoryPropertyFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkMemoryPropertyFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkMemoryPropertyFlagBits.Pointer getVk(){
+            return (VkMemoryPropertyFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanMemoryPropertyFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanMemoryPropertyFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkMemoryPropertyFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanMemoryPropertyFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkMemoryPropertyFlagBits.Pointer.Array getVk(){
+                return (VkMemoryPropertyFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanMemoryPropertyFlagBits.Pointer get(int i){
+                return new VulkanMemoryPropertyFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

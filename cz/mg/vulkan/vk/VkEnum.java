@@ -70,7 +70,7 @@ public class VkEnum extends VkInt32 {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkEnum.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkEnum.Pointer implements cz.mg.collections.array.ReadonlyArray<VkEnum.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkEnum extends VkInt32 {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkEnum.Pointer get(int i){
+                return new VkEnum.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -116,7 +116,7 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSparseBufferMemoryBindInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSparseBufferMemoryBindInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSparseBufferMemoryBindInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSparseBufferMemoryBindInfo.Pointer get(int i){
+                return new VkSparseBufferMemoryBindInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

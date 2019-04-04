@@ -242,7 +242,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkCmdProcessCommandsInfoNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCmdProcessCommandsInfoNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkCmdProcessCommandsInfoNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -271,8 +271,8 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkCmdProcessCommandsInfoNVX.Pointer get(int i){
+                return new VkCmdProcessCommandsInfoNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

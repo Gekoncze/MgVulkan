@@ -144,7 +144,7 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorSetLayoutBinding.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorSetLayoutBinding.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetLayoutBinding.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorSetLayoutBinding.Pointer get(int i){
+                return new VkDescriptorSetLayoutBinding.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

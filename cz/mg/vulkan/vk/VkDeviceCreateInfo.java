@@ -214,7 +214,7 @@ public class VkDeviceCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDeviceCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDeviceCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -243,8 +243,8 @@ public class VkDeviceCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDeviceCreateInfo.Pointer get(int i){
+                return new VkDeviceCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

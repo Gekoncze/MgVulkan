@@ -130,7 +130,7 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineSampleLocationsStateCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineSampleLocationsStateCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineSampleLocationsStateCreateInfoEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineSampleLocationsStateCreateInfoEXT.Pointer get(int i){
+                return new VkPipelineSampleLocationsStateCreateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -70,7 +70,7 @@ public class VkSparseMemoryBindFlags extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSparseMemoryBindFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSparseMemoryBindFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSparseMemoryBindFlags.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkSparseMemoryBindFlags extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSparseMemoryBindFlags.Pointer get(int i){
+                return new VkSparseMemoryBindFlags.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

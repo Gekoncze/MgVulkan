@@ -40,4 +40,78 @@ public class VulkanQueueFlagBits extends VulkanFlagBits {
         if(getValue() == PROTECTED) s += "PROTECTED";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanQueueFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanQueueFlagBits> {
+        public Array(VkQueueFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkQueueFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanQueueFlagBits o){
+            this(new VkQueueFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkQueueFlagBits.Array getVk(){
+            return (VkQueueFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanQueueFlagBits get(int i){
+            return new VulkanQueueFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkQueueFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkQueueFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkQueueFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkQueueFlagBits.Pointer getVk(){
+            return (VkQueueFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanQueueFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanQueueFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkQueueFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanQueueFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkQueueFlagBits.Pointer.Array getVk(){
+                return (VkQueueFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanQueueFlagBits.Pointer get(int i){
+                return new VulkanQueueFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

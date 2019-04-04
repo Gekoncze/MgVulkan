@@ -144,7 +144,7 @@ public class VkShaderResourceUsageAMD extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkShaderResourceUsageAMD.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkShaderResourceUsageAMD.Pointer implements cz.mg.collections.array.ReadonlyArray<VkShaderResourceUsageAMD.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkShaderResourceUsageAMD extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkShaderResourceUsageAMD.Pointer get(int i){
+                return new VkShaderResourceUsageAMD.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

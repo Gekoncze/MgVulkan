@@ -144,7 +144,7 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPhysicalDeviceGroupProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceGroupProperties.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceGroupProperties.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPhysicalDeviceGroupProperties.Pointer get(int i){
+                return new VkPhysicalDeviceGroupProperties.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

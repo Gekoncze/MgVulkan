@@ -144,7 +144,7 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineInputAssemblyStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineInputAssemblyStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineInputAssemblyStateCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineInputAssemblyStateCreateInfo.Pointer get(int i){
+                return new VkPipelineInputAssemblyStateCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

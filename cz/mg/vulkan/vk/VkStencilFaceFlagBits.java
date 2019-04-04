@@ -83,7 +83,7 @@ public class VkStencilFaceFlagBits extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkStencilFaceFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkStencilFaceFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VkStencilFaceFlagBits.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -112,8 +112,8 @@ public class VkStencilFaceFlagBits extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkStencilFaceFlagBits.Pointer get(int i){
+                return new VkStencilFaceFlagBits.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -116,7 +116,7 @@ public class VkInputAttachmentAspectReference extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkInputAttachmentAspectReference.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkInputAttachmentAspectReference.Pointer implements cz.mg.collections.array.ReadonlyArray<VkInputAttachmentAspectReference.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkInputAttachmentAspectReference extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkInputAttachmentAspectReference.Pointer get(int i){
+                return new VkInputAttachmentAspectReference.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

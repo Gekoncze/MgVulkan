@@ -200,7 +200,7 @@ public class VkCopyDescriptorSet extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkCopyDescriptorSet.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCopyDescriptorSet.Pointer implements cz.mg.collections.array.ReadonlyArray<VkCopyDescriptorSet.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -229,8 +229,8 @@ public class VkCopyDescriptorSet extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkCopyDescriptorSet.Pointer get(int i){
+                return new VkCopyDescriptorSet.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

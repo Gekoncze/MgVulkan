@@ -70,7 +70,7 @@ public class VkDescriptorUpdateTemplate extends VkNonDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorUpdateTemplate.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorUpdateTemplate.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorUpdateTemplate.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkDescriptorUpdateTemplate extends VkNonDispatchableHandle {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorUpdateTemplate.Pointer get(int i){
+                return new VkDescriptorUpdateTemplate.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

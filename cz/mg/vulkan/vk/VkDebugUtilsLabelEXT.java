@@ -130,7 +130,7 @@ public class VkDebugUtilsLabelEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDebugUtilsLabelEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugUtilsLabelEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsLabelEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkDebugUtilsLabelEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDebugUtilsLabelEXT.Pointer get(int i){
+                return new VkDebugUtilsLabelEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -93,7 +93,7 @@ public class VkExternalFenceHandleTypeFlagBits extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkExternalFenceHandleTypeFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkExternalFenceHandleTypeFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VkExternalFenceHandleTypeFlagBits.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -122,8 +122,8 @@ public class VkExternalFenceHandleTypeFlagBits extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkExternalFenceHandleTypeFlagBits.Pointer get(int i){
+                return new VkExternalFenceHandleTypeFlagBits.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

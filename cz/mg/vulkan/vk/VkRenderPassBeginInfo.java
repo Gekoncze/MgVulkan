@@ -172,7 +172,7 @@ public class VkRenderPassBeginInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkRenderPassBeginInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkRenderPassBeginInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkRenderPassBeginInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -201,8 +201,8 @@ public class VkRenderPassBeginInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkRenderPassBeginInfo.Pointer get(int i){
+                return new VkRenderPassBeginInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

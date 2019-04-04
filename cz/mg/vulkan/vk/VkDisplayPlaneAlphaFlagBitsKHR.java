@@ -85,7 +85,7 @@ public class VkDisplayPlaneAlphaFlagBitsKHR extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDisplayPlaneAlphaFlagBitsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDisplayPlaneAlphaFlagBitsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDisplayPlaneAlphaFlagBitsKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -114,8 +114,8 @@ public class VkDisplayPlaneAlphaFlagBitsKHR extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDisplayPlaneAlphaFlagBitsKHR.Pointer get(int i){
+                return new VkDisplayPlaneAlphaFlagBitsKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

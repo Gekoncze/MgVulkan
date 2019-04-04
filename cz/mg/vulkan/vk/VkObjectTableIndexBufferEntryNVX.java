@@ -130,7 +130,7 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkObjectTableIndexBufferEntryNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectTableIndexBufferEntryNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkObjectTableIndexBufferEntryNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkObjectTableIndexBufferEntryNVX.Pointer get(int i){
+                return new VkObjectTableIndexBufferEntryNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

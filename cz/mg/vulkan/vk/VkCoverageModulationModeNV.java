@@ -84,7 +84,7 @@ public class VkCoverageModulationModeNV extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkCoverageModulationModeNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkCoverageModulationModeNV.Pointer implements cz.mg.collections.array.ReadonlyArray<VkCoverageModulationModeNV.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -113,8 +113,8 @@ public class VkCoverageModulationModeNV extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkCoverageModulationModeNV.Pointer get(int i){
+                return new VkCoverageModulationModeNV.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

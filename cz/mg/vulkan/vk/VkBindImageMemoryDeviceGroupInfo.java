@@ -158,7 +158,7 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkBindImageMemoryDeviceGroupInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBindImageMemoryDeviceGroupInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkBindImageMemoryDeviceGroupInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -187,8 +187,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkBindImageMemoryDeviceGroupInfo.Pointer get(int i){
+                return new VkBindImageMemoryDeviceGroupInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

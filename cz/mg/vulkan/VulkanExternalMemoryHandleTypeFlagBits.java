@@ -66,4 +66,78 @@ public class VulkanExternalMemoryHandleTypeFlagBits extends VulkanFlagBits {
         if(getValue() == D3D12_RESOURCE_KHR) s += "D3D12_RESOURCE_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanExternalMemoryHandleTypeFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanExternalMemoryHandleTypeFlagBits> {
+        public Array(VkExternalMemoryHandleTypeFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkExternalMemoryHandleTypeFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanExternalMemoryHandleTypeFlagBits o){
+            this(new VkExternalMemoryHandleTypeFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkExternalMemoryHandleTypeFlagBits.Array getVk(){
+            return (VkExternalMemoryHandleTypeFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanExternalMemoryHandleTypeFlagBits get(int i){
+            return new VulkanExternalMemoryHandleTypeFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkExternalMemoryHandleTypeFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkExternalMemoryHandleTypeFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkExternalMemoryHandleTypeFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkExternalMemoryHandleTypeFlagBits.Pointer getVk(){
+            return (VkExternalMemoryHandleTypeFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanExternalMemoryHandleTypeFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanExternalMemoryHandleTypeFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkExternalMemoryHandleTypeFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanExternalMemoryHandleTypeFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkExternalMemoryHandleTypeFlagBits.Pointer.Array getVk(){
+                return (VkExternalMemoryHandleTypeFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanExternalMemoryHandleTypeFlagBits.Pointer get(int i){
+                return new VulkanExternalMemoryHandleTypeFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

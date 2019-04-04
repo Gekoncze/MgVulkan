@@ -116,7 +116,7 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorSetVariableDescriptorCountLayoutSupportEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorSetVariableDescriptorCountLayoutSupportEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetVariableDescriptorCountLayoutSupportEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorSetVariableDescriptorCountLayoutSupportEXT.Pointer get(int i){
+                return new VkDescriptorSetVariableDescriptorCountLayoutSupportEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

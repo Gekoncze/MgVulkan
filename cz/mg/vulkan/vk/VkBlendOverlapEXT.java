@@ -82,7 +82,7 @@ public class VkBlendOverlapEXT extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkBlendOverlapEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBlendOverlapEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkBlendOverlapEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -111,8 +111,8 @@ public class VkBlendOverlapEXT extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkBlendOverlapEXT.Pointer get(int i){
+                return new VkBlendOverlapEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -80,7 +80,7 @@ public class VkSamplerMipmapMode extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSamplerMipmapMode.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSamplerMipmapMode.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSamplerMipmapMode.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -109,8 +109,8 @@ public class VkSamplerMipmapMode extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSamplerMipmapMode.Pointer get(int i){
+                return new VkSamplerMipmapMode.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

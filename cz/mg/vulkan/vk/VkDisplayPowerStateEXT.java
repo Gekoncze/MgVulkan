@@ -82,7 +82,7 @@ public class VkDisplayPowerStateEXT extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDisplayPowerStateEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDisplayPowerStateEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDisplayPowerStateEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -111,8 +111,8 @@ public class VkDisplayPowerStateEXT extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDisplayPowerStateEXT.Pointer get(int i){
+                return new VkDisplayPowerStateEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -96,4 +96,78 @@ public class VulkanFormatFeatureFlagBits extends VulkanFlagBits {
         if(getValue() == COSITED_CHROMA_SAMPLES_KHR) s += "COSITED_CHROMA_SAMPLES_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanFormatFeatureFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanFormatFeatureFlagBits> {
+        public Array(VkFormatFeatureFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkFormatFeatureFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanFormatFeatureFlagBits o){
+            this(new VkFormatFeatureFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkFormatFeatureFlagBits.Array getVk(){
+            return (VkFormatFeatureFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanFormatFeatureFlagBits get(int i){
+            return new VulkanFormatFeatureFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkFormatFeatureFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkFormatFeatureFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkFormatFeatureFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkFormatFeatureFlagBits.Pointer getVk(){
+            return (VkFormatFeatureFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanFormatFeatureFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanFormatFeatureFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkFormatFeatureFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanFormatFeatureFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkFormatFeatureFlagBits.Pointer.Array getVk(){
+                return (VkFormatFeatureFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanFormatFeatureFlagBits.Pointer get(int i){
+                return new VulkanFormatFeatureFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

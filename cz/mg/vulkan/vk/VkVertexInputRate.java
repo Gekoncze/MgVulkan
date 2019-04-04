@@ -80,7 +80,7 @@ public class VkVertexInputRate extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkVertexInputRate.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkVertexInputRate.Pointer implements cz.mg.collections.array.ReadonlyArray<VkVertexInputRate.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -109,8 +109,8 @@ public class VkVertexInputRate extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkVertexInputRate.Pointer get(int i){
+                return new VkVertexInputRate.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

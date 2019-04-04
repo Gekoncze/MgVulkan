@@ -158,7 +158,7 @@ public class VkImportFenceFdInfoKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkImportFenceFdInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImportFenceFdInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkImportFenceFdInfoKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -187,8 +187,8 @@ public class VkImportFenceFdInfoKHR extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkImportFenceFdInfoKHR.Pointer get(int i){
+                return new VkImportFenceFdInfoKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

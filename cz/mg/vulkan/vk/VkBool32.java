@@ -70,7 +70,7 @@ public class VkBool32 extends VkUInt32 {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkBool32.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBool32.Pointer implements cz.mg.collections.array.ReadonlyArray<VkBool32.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkBool32 extends VkUInt32 {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkBool32.Pointer get(int i){
+                return new VkBool32.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

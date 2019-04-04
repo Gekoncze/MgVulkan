@@ -53,4 +53,78 @@ public class VulkanDynamicState extends VulkanEnum {
         if(getValue() == SAMPLE_LOCATIONS_EXT) return "SAMPLE_LOCATIONS_EXT";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanDynamicState implements cz.mg.collections.array.ReadonlyArray<VulkanDynamicState> {
+        public Array(VkDynamicState.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkDynamicState.Array(count));
+        }
+
+        public Array(int count, VulkanDynamicState o){
+            this(new VkDynamicState.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkDynamicState.Array getVk(){
+            return (VkDynamicState.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanDynamicState get(int i){
+            return new VulkanDynamicState(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkDynamicState.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkDynamicState.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkDynamicState.Pointer(value));
+        }
+
+        @Override
+        public VkDynamicState.Pointer getVk(){
+            return (VkDynamicState.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanDynamicState.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanDynamicState.Pointer> {
+            public Array(int count) {
+                super(new VkDynamicState.Pointer.Array(count));
+            }
+
+            public Array(VulkanDynamicState[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkDynamicState.Pointer.Array getVk(){
+                return (VkDynamicState.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanDynamicState.Pointer get(int i){
+                return new VulkanDynamicState.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

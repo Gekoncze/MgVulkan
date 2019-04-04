@@ -116,7 +116,7 @@ public class VkBufferCopy extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkBufferCopy.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBufferCopy.Pointer implements cz.mg.collections.array.ReadonlyArray<VkBufferCopy.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkBufferCopy extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkBufferCopy.Pointer get(int i){
+                return new VkBufferCopy.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

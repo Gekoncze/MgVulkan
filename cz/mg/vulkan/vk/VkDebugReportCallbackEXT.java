@@ -70,7 +70,7 @@ public class VkDebugReportCallbackEXT extends VkNonDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDebugReportCallbackEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugReportCallbackEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDebugReportCallbackEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkDebugReportCallbackEXT extends VkNonDispatchableHandle {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDebugReportCallbackEXT.Pointer get(int i){
+                return new VkDebugReportCallbackEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

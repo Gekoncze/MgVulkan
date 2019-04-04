@@ -186,7 +186,7 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDeviceGroupSubmitInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGroupSubmitInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupSubmitInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -215,8 +215,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDeviceGroupSubmitInfo.Pointer get(int i){
+                return new VkDeviceGroupSubmitInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

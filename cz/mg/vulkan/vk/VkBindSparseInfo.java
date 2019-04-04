@@ -242,7 +242,7 @@ public class VkBindSparseInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkBindSparseInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkBindSparseInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkBindSparseInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -271,8 +271,8 @@ public class VkBindSparseInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkBindSparseInfo.Pointer get(int i){
+                return new VkBindSparseInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -130,7 +130,7 @@ public class VkDeviceGroupPresentCapabilitiesKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDeviceGroupPresentCapabilitiesKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceGroupPresentCapabilitiesKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupPresentCapabilitiesKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkDeviceGroupPresentCapabilitiesKHR extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDeviceGroupPresentCapabilitiesKHR.Pointer get(int i){
+                return new VkDeviceGroupPresentCapabilitiesKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

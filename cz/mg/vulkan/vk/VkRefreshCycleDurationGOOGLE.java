@@ -88,7 +88,7 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkRefreshCycleDurationGOOGLE.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkRefreshCycleDurationGOOGLE.Pointer implements cz.mg.collections.array.ReadonlyArray<VkRefreshCycleDurationGOOGLE.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -117,8 +117,8 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkRefreshCycleDurationGOOGLE.Pointer get(int i){
+                return new VkRefreshCycleDurationGOOGLE.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

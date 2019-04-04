@@ -80,7 +80,7 @@ public class VkPipelineBindPoint extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineBindPoint.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineBindPoint.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineBindPoint.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -109,8 +109,8 @@ public class VkPipelineBindPoint extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineBindPoint.Pointer get(int i){
+                return new VkPipelineBindPoint.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

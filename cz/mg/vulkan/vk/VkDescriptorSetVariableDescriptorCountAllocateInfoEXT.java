@@ -130,7 +130,7 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorSetVariableDescriptorCountAllocateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorSetVariableDescriptorCountAllocateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetVariableDescriptorCountAllocateInfoEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorSetVariableDescriptorCountAllocateInfoEXT.Pointer get(int i){
+                return new VkDescriptorSetVariableDescriptorCountAllocateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -70,7 +70,7 @@ public class VkIndirectCommandsLayoutNVX extends VkNonDispatchableHandle {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkIndirectCommandsLayoutNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkIndirectCommandsLayoutNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsLayoutNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkIndirectCommandsLayoutNVX extends VkNonDispatchableHandle {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkIndirectCommandsLayoutNVX.Pointer get(int i){
+                return new VkIndirectCommandsLayoutNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

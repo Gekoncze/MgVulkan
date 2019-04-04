@@ -116,7 +116,7 @@ public class VkSamplerReductionModeCreateInfoEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSamplerReductionModeCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSamplerReductionModeCreateInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSamplerReductionModeCreateInfoEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkSamplerReductionModeCreateInfoEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSamplerReductionModeCreateInfoEXT.Pointer get(int i){
+                return new VkSamplerReductionModeCreateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

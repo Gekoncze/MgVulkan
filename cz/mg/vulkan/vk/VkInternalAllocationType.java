@@ -78,7 +78,7 @@ public class VkInternalAllocationType extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkInternalAllocationType.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkInternalAllocationType.Pointer implements cz.mg.collections.array.ReadonlyArray<VkInternalAllocationType.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -107,8 +107,8 @@ public class VkInternalAllocationType extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkInternalAllocationType.Pointer get(int i){
+                return new VkInternalAllocationType.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

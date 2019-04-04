@@ -144,7 +144,7 @@ public class VkImageSubresourceRange extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkImageSubresourceRange.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImageSubresourceRange.Pointer implements cz.mg.collections.array.ReadonlyArray<VkImageSubresourceRange.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkImageSubresourceRange extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkImageSubresourceRange.Pointer get(int i){
+                return new VkImageSubresourceRange.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

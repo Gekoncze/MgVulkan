@@ -228,7 +228,7 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPhysicalDeviceConservativeRasterizationPropertiesEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPhysicalDeviceConservativeRasterizationPropertiesEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceConservativeRasterizationPropertiesEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -257,8 +257,8 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPhysicalDeviceConservativeRasterizationPropertiesEXT.Pointer get(int i){
+                return new VkPhysicalDeviceConservativeRasterizationPropertiesEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

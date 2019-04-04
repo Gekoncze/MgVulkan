@@ -102,7 +102,7 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDisplayPlanePropertiesKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDisplayPlanePropertiesKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDisplayPlanePropertiesKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -131,8 +131,8 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDisplayPlanePropertiesKHR.Pointer get(int i){
+                return new VkDisplayPlanePropertiesKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

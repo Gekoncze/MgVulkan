@@ -49,4 +49,78 @@ public class VulkanSamplerYcbcrModelConversion extends VulkanEnum {
         if(getValue() == YCBCR_2020_KHR) return "YCBCR_2020_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanSamplerYcbcrModelConversion implements cz.mg.collections.array.ReadonlyArray<VulkanSamplerYcbcrModelConversion> {
+        public Array(VkSamplerYcbcrModelConversion.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkSamplerYcbcrModelConversion.Array(count));
+        }
+
+        public Array(int count, VulkanSamplerYcbcrModelConversion o){
+            this(new VkSamplerYcbcrModelConversion.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkSamplerYcbcrModelConversion.Array getVk(){
+            return (VkSamplerYcbcrModelConversion.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanSamplerYcbcrModelConversion get(int i){
+            return new VulkanSamplerYcbcrModelConversion(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkSamplerYcbcrModelConversion.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkSamplerYcbcrModelConversion.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkSamplerYcbcrModelConversion.Pointer(value));
+        }
+
+        @Override
+        public VkSamplerYcbcrModelConversion.Pointer getVk(){
+            return (VkSamplerYcbcrModelConversion.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanSamplerYcbcrModelConversion.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanSamplerYcbcrModelConversion.Pointer> {
+            public Array(int count) {
+                super(new VkSamplerYcbcrModelConversion.Pointer.Array(count));
+            }
+
+            public Array(VulkanSamplerYcbcrModelConversion[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkSamplerYcbcrModelConversion.Pointer.Array getVk(){
+                return (VkSamplerYcbcrModelConversion.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanSamplerYcbcrModelConversion.Pointer get(int i){
+                return new VulkanSamplerYcbcrModelConversion.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

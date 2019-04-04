@@ -81,7 +81,7 @@ public class VkDescriptorPoolCreateFlagBits extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDescriptorPoolCreateFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDescriptorPoolCreateFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDescriptorPoolCreateFlagBits.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -110,8 +110,8 @@ public class VkDescriptorPoolCreateFlagBits extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDescriptorPoolCreateFlagBits.Pointer get(int i){
+                return new VkDescriptorPoolCreateFlagBits.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

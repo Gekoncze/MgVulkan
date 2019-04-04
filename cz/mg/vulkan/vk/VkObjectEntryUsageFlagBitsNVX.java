@@ -81,7 +81,7 @@ public class VkObjectEntryUsageFlagBitsNVX extends VkFlagBits {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkObjectEntryUsageFlagBitsNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectEntryUsageFlagBitsNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkObjectEntryUsageFlagBitsNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -110,8 +110,8 @@ public class VkObjectEntryUsageFlagBitsNVX extends VkFlagBits {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkObjectEntryUsageFlagBitsNVX.Pointer get(int i){
+                return new VkObjectEntryUsageFlagBitsNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

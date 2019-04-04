@@ -152,7 +152,7 @@ public class VkDebugReportObjectTypeEXT extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDebugReportObjectTypeEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugReportObjectTypeEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDebugReportObjectTypeEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -181,8 +181,8 @@ public class VkDebugReportObjectTypeEXT extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDebugReportObjectTypeEXT.Pointer get(int i){
+                return new VkDebugReportObjectTypeEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

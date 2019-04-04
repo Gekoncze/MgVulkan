@@ -130,7 +130,7 @@ public class VkDedicatedAllocationMemoryAllocateInfoNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDedicatedAllocationMemoryAllocateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDedicatedAllocationMemoryAllocateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDedicatedAllocationMemoryAllocateInfoNV.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkDedicatedAllocationMemoryAllocateInfoNV extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDedicatedAllocationMemoryAllocateInfoNV.Pointer get(int i){
+                return new VkDedicatedAllocationMemoryAllocateInfoNV.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -70,7 +70,7 @@ public class VkSampleMask extends VkUInt32 {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSampleMask.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSampleMask.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSampleMask.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkSampleMask extends VkUInt32 {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSampleMask.Pointer get(int i){
+                return new VkSampleMask.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

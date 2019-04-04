@@ -37,4 +37,78 @@ public class VulkanPolygonMode extends VulkanEnum {
         if(getValue() == FILL_RECTANGLE_NV) return "FILL_RECTANGLE_NV";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanPolygonMode implements cz.mg.collections.array.ReadonlyArray<VulkanPolygonMode> {
+        public Array(VkPolygonMode.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkPolygonMode.Array(count));
+        }
+
+        public Array(int count, VulkanPolygonMode o){
+            this(new VkPolygonMode.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkPolygonMode.Array getVk(){
+            return (VkPolygonMode.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanPolygonMode get(int i){
+            return new VulkanPolygonMode(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkPolygonMode.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkPolygonMode.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkPolygonMode.Pointer(value));
+        }
+
+        @Override
+        public VkPolygonMode.Pointer getVk(){
+            return (VkPolygonMode.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanPolygonMode.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanPolygonMode.Pointer> {
+            public Array(int count) {
+                super(new VkPolygonMode.Pointer.Array(count));
+            }
+
+            public Array(VulkanPolygonMode[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkPolygonMode.Pointer.Array getVk(){
+                return (VkPolygonMode.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanPolygonMode.Pointer get(int i){
+                return new VulkanPolygonMode.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

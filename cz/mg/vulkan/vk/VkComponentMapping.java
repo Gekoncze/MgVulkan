@@ -130,7 +130,7 @@ public class VkComponentMapping extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkComponentMapping.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkComponentMapping.Pointer implements cz.mg.collections.array.ReadonlyArray<VkComponentMapping.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkComponentMapping extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkComponentMapping.Pointer get(int i){
+                return new VkComponentMapping.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

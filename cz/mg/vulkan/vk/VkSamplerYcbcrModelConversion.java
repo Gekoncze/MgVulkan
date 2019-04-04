@@ -96,7 +96,7 @@ public class VkSamplerYcbcrModelConversion extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSamplerYcbcrModelConversion.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSamplerYcbcrModelConversion.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSamplerYcbcrModelConversion.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -125,8 +125,8 @@ public class VkSamplerYcbcrModelConversion extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSamplerYcbcrModelConversion.Pointer get(int i){
+                return new VkSamplerYcbcrModelConversion.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

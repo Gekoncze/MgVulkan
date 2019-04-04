@@ -186,7 +186,7 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkRenderPassMultiviewCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkRenderPassMultiviewCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkRenderPassMultiviewCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -215,8 +215,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkRenderPassMultiviewCreateInfo.Pointer get(int i){
+                return new VkRenderPassMultiviewCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

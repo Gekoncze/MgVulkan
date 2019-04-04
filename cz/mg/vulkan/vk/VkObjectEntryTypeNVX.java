@@ -86,7 +86,7 @@ public class VkObjectEntryTypeNVX extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkObjectEntryTypeNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkObjectEntryTypeNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VkObjectEntryTypeNVX.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -115,8 +115,8 @@ public class VkObjectEntryTypeNVX extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkObjectEntryTypeNVX.Pointer get(int i){
+                return new VkObjectEntryTypeNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

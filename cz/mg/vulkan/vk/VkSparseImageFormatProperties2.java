@@ -116,7 +116,7 @@ public class VkSparseImageFormatProperties2 extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSparseImageFormatProperties2.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSparseImageFormatProperties2.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSparseImageFormatProperties2.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkSparseImageFormatProperties2 extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSparseImageFormatProperties2.Pointer get(int i){
+                return new VkSparseImageFormatProperties2.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

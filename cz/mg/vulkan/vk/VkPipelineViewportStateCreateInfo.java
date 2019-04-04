@@ -172,7 +172,7 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineViewportStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineViewportStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineViewportStateCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -201,8 +201,8 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineViewportStateCreateInfo.Pointer get(int i){
+                return new VkPipelineViewportStateCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

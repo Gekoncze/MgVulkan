@@ -130,7 +130,7 @@ public class VkMemoryDedicatedRequirements extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkMemoryDedicatedRequirements.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkMemoryDedicatedRequirements.Pointer implements cz.mg.collections.array.ReadonlyArray<VkMemoryDedicatedRequirements.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkMemoryDedicatedRequirements extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkMemoryDedicatedRequirements.Pointer get(int i){
+                return new VkMemoryDedicatedRequirements.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

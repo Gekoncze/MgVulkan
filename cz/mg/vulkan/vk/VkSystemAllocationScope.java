@@ -86,7 +86,7 @@ public class VkSystemAllocationScope extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSystemAllocationScope.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSystemAllocationScope.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSystemAllocationScope.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -115,8 +115,8 @@ public class VkSystemAllocationScope extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSystemAllocationScope.Pointer get(int i){
+                return new VkSystemAllocationScope.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

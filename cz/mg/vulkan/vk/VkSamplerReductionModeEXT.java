@@ -82,7 +82,7 @@ public class VkSamplerReductionModeEXT extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSamplerReductionModeEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSamplerReductionModeEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSamplerReductionModeEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -111,8 +111,8 @@ public class VkSamplerReductionModeEXT extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSamplerReductionModeEXT.Pointer get(int i){
+                return new VkSamplerReductionModeEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

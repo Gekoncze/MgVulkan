@@ -144,7 +144,7 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineViewportSwizzleStateCreateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineViewportSwizzleStateCreateInfoNV.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineViewportSwizzleStateCreateInfoNV.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineViewportSwizzleStateCreateInfoNV.Pointer get(int i){
+                return new VkPipelineViewportSwizzleStateCreateInfoNV.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

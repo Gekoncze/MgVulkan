@@ -70,7 +70,7 @@ public class VkPipelineColorBlendStateCreateFlags extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineColorBlendStateCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineColorBlendStateCreateFlags.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineColorBlendStateCreateFlags.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkPipelineColorBlendStateCreateFlags extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineColorBlendStateCreateFlags.Pointer get(int i){
+                return new VkPipelineColorBlendStateCreateFlags.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

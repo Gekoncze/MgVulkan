@@ -284,7 +284,7 @@ public class VkImageCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkImageCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImageCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkImageCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -313,8 +313,8 @@ public class VkImageCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkImageCreateInfo.Pointer get(int i){
+                return new VkImageCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -242,7 +242,7 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDebugUtilsMessengerCallbackDataEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDebugUtilsMessengerCallbackDataEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsMessengerCallbackDataEXT.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -271,8 +271,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDebugUtilsMessengerCallbackDataEXT.Pointer get(int i){
+                return new VkDebugUtilsMessengerCallbackDataEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -36,4 +36,78 @@ public class VulkanStencilFaceFlagBits extends VulkanFlagBits {
         if(getValue() == STENCIL_FRONT_AND_BACK) s += "STENCIL_FRONT_AND_BACK";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanStencilFaceFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanStencilFaceFlagBits> {
+        public Array(VkStencilFaceFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkStencilFaceFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanStencilFaceFlagBits o){
+            this(new VkStencilFaceFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkStencilFaceFlagBits.Array getVk(){
+            return (VkStencilFaceFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanStencilFaceFlagBits get(int i){
+            return new VulkanStencilFaceFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkStencilFaceFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkStencilFaceFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkStencilFaceFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkStencilFaceFlagBits.Pointer getVk(){
+            return (VkStencilFaceFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanStencilFaceFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanStencilFaceFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkStencilFaceFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanStencilFaceFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkStencilFaceFlagBits.Pointer.Array getVk(){
+                return (VkStencilFaceFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanStencilFaceFlagBits.Pointer get(int i){
+                return new VulkanStencilFaceFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

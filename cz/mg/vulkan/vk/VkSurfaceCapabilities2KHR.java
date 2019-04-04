@@ -116,7 +116,7 @@ public class VkSurfaceCapabilities2KHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSurfaceCapabilities2KHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSurfaceCapabilities2KHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSurfaceCapabilities2KHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -145,8 +145,8 @@ public class VkSurfaceCapabilities2KHR extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSurfaceCapabilities2KHR.Pointer get(int i){
+                return new VkSurfaceCapabilities2KHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

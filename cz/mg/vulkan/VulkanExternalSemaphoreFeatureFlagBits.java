@@ -38,4 +38,78 @@ public class VulkanExternalSemaphoreFeatureFlagBits extends VulkanFlagBits {
         if(getValue() == IMPORTABLE_KHR) s += "IMPORTABLE_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanExternalSemaphoreFeatureFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanExternalSemaphoreFeatureFlagBits> {
+        public Array(VkExternalSemaphoreFeatureFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkExternalSemaphoreFeatureFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanExternalSemaphoreFeatureFlagBits o){
+            this(new VkExternalSemaphoreFeatureFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkExternalSemaphoreFeatureFlagBits.Array getVk(){
+            return (VkExternalSemaphoreFeatureFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanExternalSemaphoreFeatureFlagBits get(int i){
+            return new VulkanExternalSemaphoreFeatureFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkExternalSemaphoreFeatureFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkExternalSemaphoreFeatureFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkExternalSemaphoreFeatureFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkExternalSemaphoreFeatureFlagBits.Pointer getVk(){
+            return (VkExternalSemaphoreFeatureFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanExternalSemaphoreFeatureFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanExternalSemaphoreFeatureFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkExternalSemaphoreFeatureFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanExternalSemaphoreFeatureFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkExternalSemaphoreFeatureFlagBits.Pointer.Array getVk(){
+                return (VkExternalSemaphoreFeatureFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanExternalSemaphoreFeatureFlagBits.Pointer get(int i){
+                return new VulkanExternalSemaphoreFeatureFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

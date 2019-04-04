@@ -80,7 +80,7 @@ public class VkSubpassContents extends VkEnum {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSubpassContents.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSubpassContents.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSubpassContents.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -109,8 +109,8 @@ public class VkSubpassContents extends VkEnum {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSubpassContents.Pointer get(int i){
+                return new VkSubpassContents.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -38,4 +38,78 @@ public class VulkanDescriptorBindingFlagBitsEXT extends VulkanFlagBits {
         if(getValue() == DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_EXT) s += "DESCRIPTOR_BINDING_VARIABLE_DESCRIPTOR_COUNT_EXT";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanDescriptorBindingFlagBitsEXT implements cz.mg.collections.array.ReadonlyArray<VulkanDescriptorBindingFlagBitsEXT> {
+        public Array(VkDescriptorBindingFlagBitsEXT.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkDescriptorBindingFlagBitsEXT.Array(count));
+        }
+
+        public Array(int count, VulkanDescriptorBindingFlagBitsEXT o){
+            this(new VkDescriptorBindingFlagBitsEXT.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkDescriptorBindingFlagBitsEXT.Array getVk(){
+            return (VkDescriptorBindingFlagBitsEXT.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanDescriptorBindingFlagBitsEXT get(int i){
+            return new VulkanDescriptorBindingFlagBitsEXT(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkDescriptorBindingFlagBitsEXT.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkDescriptorBindingFlagBitsEXT.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkDescriptorBindingFlagBitsEXT.Pointer(value));
+        }
+
+        @Override
+        public VkDescriptorBindingFlagBitsEXT.Pointer getVk(){
+            return (VkDescriptorBindingFlagBitsEXT.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanDescriptorBindingFlagBitsEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanDescriptorBindingFlagBitsEXT.Pointer> {
+            public Array(int count) {
+                super(new VkDescriptorBindingFlagBitsEXT.Pointer.Array(count));
+            }
+
+            public Array(VulkanDescriptorBindingFlagBitsEXT[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkDescriptorBindingFlagBitsEXT.Pointer.Array getVk(){
+                return (VkDescriptorBindingFlagBitsEXT.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanDescriptorBindingFlagBitsEXT.Pointer get(int i){
+                return new VulkanDescriptorBindingFlagBitsEXT.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

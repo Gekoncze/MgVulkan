@@ -39,4 +39,78 @@ public class VulkanObjectEntryTypeNVX extends VulkanEnum {
         if(getValue() == OBJECT_ENTRY_TYPE_PUSH_CONSTANT_NVX) return "OBJECT_ENTRY_TYPE_PUSH_CONSTANT_NVX";
         return "UNKNOWN";
     }
+
+    public static class Array extends VulkanObjectEntryTypeNVX implements cz.mg.collections.array.ReadonlyArray<VulkanObjectEntryTypeNVX> {
+        public Array(VkObjectEntryTypeNVX.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkObjectEntryTypeNVX.Array(count));
+        }
+
+        public Array(int count, VulkanObjectEntryTypeNVX o){
+            this(new VkObjectEntryTypeNVX.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkObjectEntryTypeNVX.Array getVk(){
+            return (VkObjectEntryTypeNVX.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanObjectEntryTypeNVX get(int i){
+            return new VulkanObjectEntryTypeNVX(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkObjectEntryTypeNVX.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkObjectEntryTypeNVX.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkObjectEntryTypeNVX.Pointer(value));
+        }
+
+        @Override
+        public VkObjectEntryTypeNVX.Pointer getVk(){
+            return (VkObjectEntryTypeNVX.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanObjectEntryTypeNVX.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanObjectEntryTypeNVX.Pointer> {
+            public Array(int count) {
+                super(new VkObjectEntryTypeNVX.Pointer.Array(count));
+            }
+
+            public Array(VulkanObjectEntryTypeNVX[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkObjectEntryTypeNVX.Pointer.Array getVk(){
+                return (VkObjectEntryTypeNVX.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanObjectEntryTypeNVX.Pointer get(int i){
+                return new VulkanObjectEntryTypeNVX.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

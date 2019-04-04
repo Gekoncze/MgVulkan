@@ -144,7 +144,7 @@ public class VkDeviceQueueInfo2 extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkDeviceQueueInfo2.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkDeviceQueueInfo2.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDeviceQueueInfo2.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -173,8 +173,8 @@ public class VkDeviceQueueInfo2 extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkDeviceQueueInfo2.Pointer get(int i){
+                return new VkDeviceQueueInfo2.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

@@ -66,4 +66,78 @@ public class VulkanPipelineStageFlagBits extends VulkanFlagBits {
         if(getValue() == COMMAND_PROCESS_NVX) s += "COMMAND_PROCESS_NVX";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanPipelineStageFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanPipelineStageFlagBits> {
+        public Array(VkPipelineStageFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkPipelineStageFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanPipelineStageFlagBits o){
+            this(new VkPipelineStageFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkPipelineStageFlagBits.Array getVk(){
+            return (VkPipelineStageFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanPipelineStageFlagBits get(int i){
+            return new VulkanPipelineStageFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkPipelineStageFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkPipelineStageFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkPipelineStageFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkPipelineStageFlagBits.Pointer getVk(){
+            return (VkPipelineStageFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanPipelineStageFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanPipelineStageFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkPipelineStageFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanPipelineStageFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkPipelineStageFlagBits.Pointer.Array getVk(){
+                return (VkPipelineStageFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanPipelineStageFlagBits.Pointer get(int i){
+                return new VulkanPipelineStageFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

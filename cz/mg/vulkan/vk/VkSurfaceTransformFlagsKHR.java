@@ -70,7 +70,7 @@ public class VkSurfaceTransformFlagsKHR extends VkFlags {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSurfaceTransformFlagsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSurfaceTransformFlagsKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSurfaceTransformFlagsKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -99,8 +99,8 @@ public class VkSurfaceTransformFlagsKHR extends VkFlags {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSurfaceTransformFlagsKHR.Pointer get(int i){
+                return new VkSurfaceTransformFlagsKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

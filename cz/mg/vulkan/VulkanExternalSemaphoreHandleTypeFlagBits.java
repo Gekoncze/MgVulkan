@@ -50,4 +50,78 @@ public class VulkanExternalSemaphoreHandleTypeFlagBits extends VulkanFlagBits {
         if(getValue() == SYNC_FD_KHR) s += "SYNC_FD_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
     }
+
+    public static class Array extends VulkanExternalSemaphoreHandleTypeFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanExternalSemaphoreHandleTypeFlagBits> {
+        public Array(VkExternalSemaphoreHandleTypeFlagBits.Array a) {
+            super(a);
+        }
+
+        public Array(int count) {
+            this(new VkExternalSemaphoreHandleTypeFlagBits.Array(count));
+        }
+
+        public Array(int count, VulkanExternalSemaphoreHandleTypeFlagBits o){
+            this(new VkExternalSemaphoreHandleTypeFlagBits.Array(count, o.getVk()));
+        }
+
+        @Override
+        public VkExternalSemaphoreHandleTypeFlagBits.Array getVk(){
+            return (VkExternalSemaphoreHandleTypeFlagBits.Array) super.getVk();
+        }
+
+        @Override
+        public int count(){
+            return getVk().count();
+        }
+
+        @Override
+        public VulkanExternalSemaphoreHandleTypeFlagBits get(int i){
+            return new VulkanExternalSemaphoreHandleTypeFlagBits(getVk().get(i));
+        }
+    }
+
+    public static class Pointer extends VulkanObject.Pointer {
+        public Pointer(VkExternalSemaphoreHandleTypeFlagBits.Pointer p) {
+            super(p);
+        }
+
+        public Pointer(){
+            this(new VkExternalSemaphoreHandleTypeFlagBits.Pointer());
+        }
+
+        public Pointer(long value) {
+            this(new VkExternalSemaphoreHandleTypeFlagBits.Pointer(value));
+        }
+
+        @Override
+        public VkExternalSemaphoreHandleTypeFlagBits.Pointer getVk(){
+            return (VkExternalSemaphoreHandleTypeFlagBits.Pointer) super.getVk();
+        }
+
+        public static class Array extends VulkanExternalSemaphoreHandleTypeFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanExternalSemaphoreHandleTypeFlagBits.Pointer> {
+            public Array(int count) {
+                super(new VkExternalSemaphoreHandleTypeFlagBits.Pointer.Array(count));
+            }
+
+            public Array(VulkanExternalSemaphoreHandleTypeFlagBits[] a) {
+                this(a.length);
+                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
+            }
+
+            @Override
+            public VkExternalSemaphoreHandleTypeFlagBits.Pointer.Array getVk(){
+                return (VkExternalSemaphoreHandleTypeFlagBits.Pointer.Array) super.getVk();
+            }
+
+            @Override
+            public int count(){
+                return getVk().count();
+            }
+
+            @Override
+            public VulkanExternalSemaphoreHandleTypeFlagBits.Pointer get(int i){
+                return new VulkanExternalSemaphoreHandleTypeFlagBits.Pointer(getVk().get(i));
+            }
+        }
+    }
 }

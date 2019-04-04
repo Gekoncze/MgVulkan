@@ -130,7 +130,7 @@ public class VkSpecializationInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkSpecializationInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkSpecializationInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkSpecializationInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -159,8 +159,8 @@ public class VkSpecializationInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkSpecializationInfo.Pointer get(int i){
+                return new VkSpecializationInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

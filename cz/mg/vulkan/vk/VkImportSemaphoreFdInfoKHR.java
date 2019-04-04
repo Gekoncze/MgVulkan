@@ -158,7 +158,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkImportSemaphoreFdInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkImportSemaphoreFdInfoKHR.Pointer implements cz.mg.collections.array.ReadonlyArray<VkImportSemaphoreFdInfoKHR.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -187,8 +187,8 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkImportSemaphoreFdInfoKHR.Pointer get(int i){
+                return new VkImportSemaphoreFdInfoKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

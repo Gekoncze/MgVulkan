@@ -214,7 +214,7 @@ public class VkWriteDescriptorSet extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkWriteDescriptorSet.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkWriteDescriptorSet.Pointer implements cz.mg.collections.array.ReadonlyArray<VkWriteDescriptorSet.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -243,8 +243,8 @@ public class VkWriteDescriptorSet extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkWriteDescriptorSet.Pointer get(int i){
+                return new VkWriteDescriptorSet.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }

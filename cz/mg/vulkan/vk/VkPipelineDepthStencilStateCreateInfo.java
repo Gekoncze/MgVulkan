@@ -242,7 +242,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
             super(vkmemory, vkaddress);
         }
 
-        public static class Array extends VkPipelineDepthStencilStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<Pointer> {
+        public static class Array extends VkPipelineDepthStencilStateCreateInfo.Pointer implements cz.mg.collections.array.ReadonlyArray<VkPipelineDepthStencilStateCreateInfo.Pointer> {
             private final int count;
 
             public Array(int count) {
@@ -271,8 +271,8 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
             }
 
             @Override
-            public Pointer get(int i){
-                return new Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            public VkPipelineDepthStencilStateCreateInfo.Pointer get(int i){
+                return new VkPipelineDepthStencilStateCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
             }
         }
     }
