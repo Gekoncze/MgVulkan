@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkRect2D.html">khronos documentation</a>
- **/
 public class VkRect2D extends VkObject {
     public VkRect2D() {
         super(sizeof());

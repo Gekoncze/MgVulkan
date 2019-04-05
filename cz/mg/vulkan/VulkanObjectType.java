@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkObjectType.html">khronos documentation</a>
- **/
 public class VulkanObjectType extends VulkanEnum {
     public static final int UNKNOWN = VkObjectType.VK_OBJECT_TYPE_UNKNOWN;
     public static final int INSTANCE = VkObjectType.VK_OBJECT_TYPE_INSTANCE;
@@ -106,79 +103,5 @@ public class VulkanObjectType extends VulkanEnum {
         if(getValue() == DESCRIPTOR_UPDATE_TEMPLATE_KHR) return "DESCRIPTOR_UPDATE_TEMPLATE_KHR";
         if(getValue() == SAMPLER_YCBCR_CONVERSION_KHR) return "SAMPLER_YCBCR_CONVERSION_KHR";
         return "UNKNOWN";
-    }
-
-    public static class Array extends VulkanObjectType implements cz.mg.collections.array.ReadonlyArray<VulkanObjectType> {
-        public Array(VkObjectType.Array a) {
-            super(a);
-        }
-
-        public Array(int count) {
-            this(new VkObjectType.Array(count));
-        }
-
-        public Array(int count, VulkanObjectType o){
-            this(new VkObjectType.Array(count, o.getVk()));
-        }
-
-        @Override
-        public VkObjectType.Array getVk(){
-            return (VkObjectType.Array) super.getVk();
-        }
-
-        @Override
-        public int count(){
-            return getVk().count();
-        }
-
-        @Override
-        public VulkanObjectType get(int i){
-            return new VulkanObjectType(getVk().get(i));
-        }
-    }
-
-    public static class Pointer extends VulkanObject.Pointer {
-        public Pointer(VkObjectType.Pointer p) {
-            super(p);
-        }
-
-        public Pointer(){
-            this(new VkObjectType.Pointer());
-        }
-
-        public Pointer(long value) {
-            this(new VkObjectType.Pointer(value));
-        }
-
-        @Override
-        public VkObjectType.Pointer getVk(){
-            return (VkObjectType.Pointer) super.getVk();
-        }
-
-        public static class Array extends VulkanObjectType.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanObjectType.Pointer> {
-            public Array(int count) {
-                super(new VkObjectType.Pointer.Array(count));
-            }
-
-            public Array(VulkanObjectType[] a) {
-                this(a.length);
-                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
-            }
-
-            @Override
-            public VkObjectType.Pointer.Array getVk(){
-                return (VkObjectType.Pointer.Array) super.getVk();
-            }
-
-            @Override
-            public int count(){
-                return getVk().count();
-            }
-
-            @Override
-            public VulkanObjectType.Pointer get(int i){
-                return new VulkanObjectType.Pointer(getVk().get(i));
-            }
-        }
     }
 }

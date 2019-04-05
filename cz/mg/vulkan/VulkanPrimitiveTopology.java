@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPrimitiveTopology.html">khronos documentation</a>
- **/
 public class VulkanPrimitiveTopology extends VulkanEnum {
     public static final int POINT_LIST = VkPrimitiveTopology.VK_PRIMITIVE_TOPOLOGY_POINT_LIST;
     public static final int LINE_LIST = VkPrimitiveTopology.VK_PRIMITIVE_TOPOLOGY_LINE_LIST;
@@ -50,79 +47,5 @@ public class VulkanPrimitiveTopology extends VulkanEnum {
         if(getValue() == TRIANGLE_STRIP_WITH_ADJACENCY) return "TRIANGLE_STRIP_WITH_ADJACENCY";
         if(getValue() == PATCH_LIST) return "PATCH_LIST";
         return "UNKNOWN";
-    }
-
-    public static class Array extends VulkanPrimitiveTopology implements cz.mg.collections.array.ReadonlyArray<VulkanPrimitiveTopology> {
-        public Array(VkPrimitiveTopology.Array a) {
-            super(a);
-        }
-
-        public Array(int count) {
-            this(new VkPrimitiveTopology.Array(count));
-        }
-
-        public Array(int count, VulkanPrimitiveTopology o){
-            this(new VkPrimitiveTopology.Array(count, o.getVk()));
-        }
-
-        @Override
-        public VkPrimitiveTopology.Array getVk(){
-            return (VkPrimitiveTopology.Array) super.getVk();
-        }
-
-        @Override
-        public int count(){
-            return getVk().count();
-        }
-
-        @Override
-        public VulkanPrimitiveTopology get(int i){
-            return new VulkanPrimitiveTopology(getVk().get(i));
-        }
-    }
-
-    public static class Pointer extends VulkanObject.Pointer {
-        public Pointer(VkPrimitiveTopology.Pointer p) {
-            super(p);
-        }
-
-        public Pointer(){
-            this(new VkPrimitiveTopology.Pointer());
-        }
-
-        public Pointer(long value) {
-            this(new VkPrimitiveTopology.Pointer(value));
-        }
-
-        @Override
-        public VkPrimitiveTopology.Pointer getVk(){
-            return (VkPrimitiveTopology.Pointer) super.getVk();
-        }
-
-        public static class Array extends VulkanPrimitiveTopology.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanPrimitiveTopology.Pointer> {
-            public Array(int count) {
-                super(new VkPrimitiveTopology.Pointer.Array(count));
-            }
-
-            public Array(VulkanPrimitiveTopology[] a) {
-                this(a.length);
-                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
-            }
-
-            @Override
-            public VkPrimitiveTopology.Pointer.Array getVk(){
-                return (VkPrimitiveTopology.Pointer.Array) super.getVk();
-            }
-
-            @Override
-            public int count(){
-                return getVk().count();
-            }
-
-            @Override
-            public VulkanPrimitiveTopology.Pointer get(int i){
-                return new VulkanPrimitiveTopology.Pointer(getVk().get(i));
-            }
-        }
     }
 }

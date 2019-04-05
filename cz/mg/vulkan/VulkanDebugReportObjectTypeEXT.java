@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkDebugReportObjectTypeEXT.html">khronos documentation</a>
- **/
 public class VulkanDebugReportObjectTypeEXT extends VulkanEnum {
     public static final int DEBUG_REPORT_OBJECT_TYPE_UNKNOWN_EXT = VkDebugReportObjectTypeEXT.VK_DEBUG_REPORT_OBJECT_TYPE_UNKNOWN_EXT;
     public static final int DEBUG_REPORT_OBJECT_TYPE_INSTANCE_EXT = VkDebugReportObjectTypeEXT.VK_DEBUG_REPORT_OBJECT_TYPE_INSTANCE_EXT;
@@ -104,79 +101,5 @@ public class VulkanDebugReportObjectTypeEXT extends VulkanEnum {
         if(getValue() == DEBUG_REPORT_OBJECT_TYPE_DESCRIPTOR_UPDATE_TEMPLATE_KHR_EXT) return "DEBUG_REPORT_OBJECT_TYPE_DESCRIPTOR_UPDATE_TEMPLATE_KHR_EXT";
         if(getValue() == DEBUG_REPORT_OBJECT_TYPE_SAMPLER_YCBCR_CONVERSION_KHR_EXT) return "DEBUG_REPORT_OBJECT_TYPE_SAMPLER_YCBCR_CONVERSION_KHR_EXT";
         return "UNKNOWN";
-    }
-
-    public static class Array extends VulkanDebugReportObjectTypeEXT implements cz.mg.collections.array.ReadonlyArray<VulkanDebugReportObjectTypeEXT> {
-        public Array(VkDebugReportObjectTypeEXT.Array a) {
-            super(a);
-        }
-
-        public Array(int count) {
-            this(new VkDebugReportObjectTypeEXT.Array(count));
-        }
-
-        public Array(int count, VulkanDebugReportObjectTypeEXT o){
-            this(new VkDebugReportObjectTypeEXT.Array(count, o.getVk()));
-        }
-
-        @Override
-        public VkDebugReportObjectTypeEXT.Array getVk(){
-            return (VkDebugReportObjectTypeEXT.Array) super.getVk();
-        }
-
-        @Override
-        public int count(){
-            return getVk().count();
-        }
-
-        @Override
-        public VulkanDebugReportObjectTypeEXT get(int i){
-            return new VulkanDebugReportObjectTypeEXT(getVk().get(i));
-        }
-    }
-
-    public static class Pointer extends VulkanObject.Pointer {
-        public Pointer(VkDebugReportObjectTypeEXT.Pointer p) {
-            super(p);
-        }
-
-        public Pointer(){
-            this(new VkDebugReportObjectTypeEXT.Pointer());
-        }
-
-        public Pointer(long value) {
-            this(new VkDebugReportObjectTypeEXT.Pointer(value));
-        }
-
-        @Override
-        public VkDebugReportObjectTypeEXT.Pointer getVk(){
-            return (VkDebugReportObjectTypeEXT.Pointer) super.getVk();
-        }
-
-        public static class Array extends VulkanDebugReportObjectTypeEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanDebugReportObjectTypeEXT.Pointer> {
-            public Array(int count) {
-                super(new VkDebugReportObjectTypeEXT.Pointer.Array(count));
-            }
-
-            public Array(VulkanDebugReportObjectTypeEXT[] a) {
-                this(a.length);
-                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
-            }
-
-            @Override
-            public VkDebugReportObjectTypeEXT.Pointer.Array getVk(){
-                return (VkDebugReportObjectTypeEXT.Pointer.Array) super.getVk();
-            }
-
-            @Override
-            public int count(){
-                return getVk().count();
-            }
-
-            @Override
-            public VulkanDebugReportObjectTypeEXT.Pointer get(int i){
-                return new VulkanDebugReportObjectTypeEXT.Pointer(getVk().get(i));
-            }
-        }
     }
 }

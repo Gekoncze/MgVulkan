@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceMemoryProperties2.html">khronos documentation</a>
- **/
 public class VkPhysicalDeviceMemoryProperties2 extends VkObject {
     public VkPhysicalDeviceMemoryProperties2() {
         super(sizeof());

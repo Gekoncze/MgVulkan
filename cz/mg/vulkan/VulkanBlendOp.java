@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkBlendOp.html">khronos documentation</a>
- **/
 public class VulkanBlendOp extends VulkanEnum {
     public static final int ADD = VkBlendOp.VK_BLEND_OP_ADD;
     public static final int SUBTRACT = VkBlendOp.VK_BLEND_OP_SUBTRACT;
@@ -130,79 +127,5 @@ public class VulkanBlendOp extends VulkanEnum {
         if(getValue() == GREEN_EXT) return "GREEN_EXT";
         if(getValue() == BLUE_EXT) return "BLUE_EXT";
         return "UNKNOWN";
-    }
-
-    public static class Array extends VulkanBlendOp implements cz.mg.collections.array.ReadonlyArray<VulkanBlendOp> {
-        public Array(VkBlendOp.Array a) {
-            super(a);
-        }
-
-        public Array(int count) {
-            this(new VkBlendOp.Array(count));
-        }
-
-        public Array(int count, VulkanBlendOp o){
-            this(new VkBlendOp.Array(count, o.getVk()));
-        }
-
-        @Override
-        public VkBlendOp.Array getVk(){
-            return (VkBlendOp.Array) super.getVk();
-        }
-
-        @Override
-        public int count(){
-            return getVk().count();
-        }
-
-        @Override
-        public VulkanBlendOp get(int i){
-            return new VulkanBlendOp(getVk().get(i));
-        }
-    }
-
-    public static class Pointer extends VulkanObject.Pointer {
-        public Pointer(VkBlendOp.Pointer p) {
-            super(p);
-        }
-
-        public Pointer(){
-            this(new VkBlendOp.Pointer());
-        }
-
-        public Pointer(long value) {
-            this(new VkBlendOp.Pointer(value));
-        }
-
-        @Override
-        public VkBlendOp.Pointer getVk(){
-            return (VkBlendOp.Pointer) super.getVk();
-        }
-
-        public static class Array extends VulkanBlendOp.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanBlendOp.Pointer> {
-            public Array(int count) {
-                super(new VkBlendOp.Pointer.Array(count));
-            }
-
-            public Array(VulkanBlendOp[] a) {
-                this(a.length);
-                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
-            }
-
-            @Override
-            public VkBlendOp.Pointer.Array getVk(){
-                return (VkBlendOp.Pointer.Array) super.getVk();
-            }
-
-            @Override
-            public int count(){
-                return getVk().count();
-            }
-
-            @Override
-            public VulkanBlendOp.Pointer get(int i){
-                return new VulkanBlendOp.Pointer(getVk().get(i));
-            }
-        }
     }
 }

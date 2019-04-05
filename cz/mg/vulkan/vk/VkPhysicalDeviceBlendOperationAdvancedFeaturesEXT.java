@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT.html">khronos documentation</a>
- **/
 public class VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT extends VkObject {
     public VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT() {
         super(sizeof());

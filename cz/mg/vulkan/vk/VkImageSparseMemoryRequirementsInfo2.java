@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkImageSparseMemoryRequirementsInfo2.html">khronos documentation</a>
- **/
 public class VkImageSparseMemoryRequirementsInfo2 extends VkObject {
     public VkImageSparseMemoryRequirementsInfo2() {
         super(sizeof());

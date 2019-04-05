@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkDescriptorSetAllocateInfo.html">khronos documentation</a>
- **/
 public class VkDescriptorSetAllocateInfo extends VkObject {
     public VkDescriptorSetAllocateInfo() {
         super(sizeof());

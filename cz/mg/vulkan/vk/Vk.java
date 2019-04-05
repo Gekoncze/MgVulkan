@@ -36,1857 +36,877 @@ public class Vk {
     public static int VK_API_VERSION_1_0 = VK_MAKE_VERSION(1, 0, 0);
     public static int VK_API_VERSION_1_1 = VK_MAKE_VERSION(1, 1, 0);
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_VERSION_1_0.html">khronos documentation</a>
-     **/
     public static final long VK_VERSION_1_0 = getVkVersion10();
     private static native long getVkVersion10();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_HEADER_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_HEADER_VERSION = getVkHeaderVersion();
     private static native long getVkHeaderVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NULL_HANDLE.html">khronos documentation</a>
-     **/
     public static final long VK_NULL_HANDLE = getVkNullHandle();
     private static native long getVkNullHandle();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_LOD_CLAMP_NONE.html">khronos documentation</a>
-     **/
     public static final long VK_LOD_CLAMP_NONE = getVkLodClampNone();
     private static native long getVkLodClampNone();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_REMAINING_MIP_LEVELS.html">khronos documentation</a>
-     **/
     public static final long VK_REMAINING_MIP_LEVELS = getVkRemainingMipLevels();
     private static native long getVkRemainingMipLevels();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_REMAINING_ARRAY_LAYERS.html">khronos documentation</a>
-     **/
     public static final long VK_REMAINING_ARRAY_LAYERS = getVkRemainingArrayLayers();
     private static native long getVkRemainingArrayLayers();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_WHOLE_SIZE.html">khronos documentation</a>
-     **/
     public static final long VK_WHOLE_SIZE = getVkWholeSize();
     private static native long getVkWholeSize();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_ATTACHMENT_UNUSED.html">khronos documentation</a>
-     **/
     public static final long VK_ATTACHMENT_UNUSED = getVkAttachmentUnused();
     private static native long getVkAttachmentUnused();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_TRUE.html">khronos documentation</a>
-     **/
     public static final long VK_TRUE = getVkTrue();
     private static native long getVkTrue();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_FALSE.html">khronos documentation</a>
-     **/
     public static final long VK_FALSE = getVkFalse();
     private static native long getVkFalse();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_QUEUE_FAMILY_IGNORED.html">khronos documentation</a>
-     **/
     public static final long VK_QUEUE_FAMILY_IGNORED = getVkQueueFamilyIgnored();
     private static native long getVkQueueFamilyIgnored();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_SUBPASS_EXTERNAL.html">khronos documentation</a>
-     **/
     public static final long VK_SUBPASS_EXTERNAL = getVkSubpassExternal();
     private static native long getVkSubpassExternal();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_MAX_PHYSICAL_DEVICE_NAME_SIZE.html">khronos documentation</a>
-     **/
     public static final long VK_MAX_PHYSICAL_DEVICE_NAME_SIZE = getVkMaxPhysicalDeviceNameSize();
     private static native long getVkMaxPhysicalDeviceNameSize();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_UUID_SIZE.html">khronos documentation</a>
-     **/
     public static final long VK_UUID_SIZE = getVkUuidSize();
     private static native long getVkUuidSize();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_MAX_MEMORY_TYPES.html">khronos documentation</a>
-     **/
     public static final long VK_MAX_MEMORY_TYPES = getVkMaxMemoryTypes();
     private static native long getVkMaxMemoryTypes();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_MAX_MEMORY_HEAPS.html">khronos documentation</a>
-     **/
     public static final long VK_MAX_MEMORY_HEAPS = getVkMaxMemoryHeaps();
     private static native long getVkMaxMemoryHeaps();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_MAX_EXTENSION_NAME_SIZE.html">khronos documentation</a>
-     **/
     public static final long VK_MAX_EXTENSION_NAME_SIZE = getVkMaxExtensionNameSize();
     private static native long getVkMaxExtensionNameSize();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_MAX_DESCRIPTION_SIZE.html">khronos documentation</a>
-     **/
     public static final long VK_MAX_DESCRIPTION_SIZE = getVkMaxDescriptionSize();
     private static native long getVkMaxDescriptionSize();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_VERSION_1_1.html">khronos documentation</a>
-     **/
     public static final long VK_VERSION_1_1 = getVkVersion11();
     private static native long getVkVersion11();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_MAX_DEVICE_GROUP_SIZE.html">khronos documentation</a>
-     **/
     public static final long VK_MAX_DEVICE_GROUP_SIZE = getVkMaxDeviceGroupSize();
     private static native long getVkMaxDeviceGroupSize();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_LUID_SIZE.html">khronos documentation</a>
-     **/
     public static final long VK_LUID_SIZE = getVkLuidSize();
     private static native long getVkLuidSize();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_QUEUE_FAMILY_EXTERNAL.html">khronos documentation</a>
-     **/
     public static final long VK_QUEUE_FAMILY_EXTERNAL = getVkQueueFamilyExternal();
     private static native long getVkQueueFamilyExternal();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_surface.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_surface = getVkKhrSurface();
     private static native long getVkKhrSurface();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SURFACE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_SURFACE_SPEC_VERSION = getVkKhrSurfaceSpecVersion();
     private static native long getVkKhrSurfaceSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SURFACE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_SURFACE_EXTENSION_NAME = "VK_KHR_surface";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_COLORSPACE_SRGB_NONLINEAR_KHR.html">khronos documentation</a>
-     **/
     public static final long VK_COLORSPACE_SRGB_NONLINEAR_KHR = getVkColorspaceSrgbNonlinearKhr();
     private static native long getVkColorspaceSrgbNonlinearKhr();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_swapchain.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_swapchain = getVkKhrSwapchain();
     private static native long getVkKhrSwapchain();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SWAPCHAIN_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_SWAPCHAIN_SPEC_VERSION = getVkKhrSwapchainSpecVersion();
     private static native long getVkKhrSwapchainSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SWAPCHAIN_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_SWAPCHAIN_EXTENSION_NAME = "VK_KHR_swapchain";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_display.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_display = getVkKhrDisplay();
     private static native long getVkKhrDisplay();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DISPLAY_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_DISPLAY_SPEC_VERSION = getVkKhrDisplaySpecVersion();
     private static native long getVkKhrDisplaySpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DISPLAY_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_DISPLAY_EXTENSION_NAME = "VK_KHR_display";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_display_swapchain.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_display_swapchain = getVkKhrDisplaySwapchain();
     private static native long getVkKhrDisplaySwapchain();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DISPLAY_SWAPCHAIN_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_DISPLAY_SWAPCHAIN_SPEC_VERSION = getVkKhrDisplaySwapchainSpecVersion();
     private static native long getVkKhrDisplaySwapchainSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME = "VK_KHR_display_swapchain";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_sampler_mirror_clamp_to_edge.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_sampler_mirror_clamp_to_edge = getVkKhrSamplerMirrorClampToEdge();
     private static native long getVkKhrSamplerMirrorClampToEdge();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_SPEC_VERSION = getVkKhrSamplerMirrorClampToEdgeSpecVersion();
     private static native long getVkKhrSamplerMirrorClampToEdgeSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_EXTENSION_NAME = "VK_KHR_sampler_mirror_clamp_to_edge";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_multiview.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_multiview = getVkKhrMultiview();
     private static native long getVkKhrMultiview();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_MULTIVIEW_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_MULTIVIEW_SPEC_VERSION = getVkKhrMultiviewSpecVersion();
     private static native long getVkKhrMultiviewSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_MULTIVIEW_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_MULTIVIEW_EXTENSION_NAME = "VK_KHR_multiview";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_get_physical_device_properties2.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_get_physical_device_properties2 = getVkKhrGetPhysicalDeviceProperties2();
     private static native long getVkKhrGetPhysicalDeviceProperties2();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_SPEC_VERSION = getVkKhrGetPhysicalDeviceProperties2SpecVersion();
     private static native long getVkKhrGetPhysicalDeviceProperties2SpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME = "VK_KHR_get_physical_device_properties2";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_device_group.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_device_group = getVkKhrDeviceGroup();
     private static native long getVkKhrDeviceGroup();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DEVICE_GROUP_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_DEVICE_GROUP_SPEC_VERSION = getVkKhrDeviceGroupSpecVersion();
     private static native long getVkKhrDeviceGroupSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DEVICE_GROUP_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_DEVICE_GROUP_EXTENSION_NAME = "VK_KHR_device_group";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_shader_draw_parameters.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_shader_draw_parameters = getVkKhrShaderDrawParameters();
     private static native long getVkKhrShaderDrawParameters();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SHADER_DRAW_PARAMETERS_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_SHADER_DRAW_PARAMETERS_SPEC_VERSION = getVkKhrShaderDrawParametersSpecVersion();
     private static native long getVkKhrShaderDrawParametersSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SHADER_DRAW_PARAMETERS_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_SHADER_DRAW_PARAMETERS_EXTENSION_NAME = "VK_KHR_shader_draw_parameters";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_maintenance1.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_maintenance1 = getVkKhrMaintenance1();
     private static native long getVkKhrMaintenance1();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_MAINTENANCE1_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_MAINTENANCE1_SPEC_VERSION = getVkKhrMaintenance1SpecVersion();
     private static native long getVkKhrMaintenance1SpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_MAINTENANCE1_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_MAINTENANCE1_EXTENSION_NAME = "VK_KHR_maintenance1";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_device_group_creation.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_device_group_creation = getVkKhrDeviceGroupCreation();
     private static native long getVkKhrDeviceGroupCreation();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DEVICE_GROUP_CREATION_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_DEVICE_GROUP_CREATION_SPEC_VERSION = getVkKhrDeviceGroupCreationSpecVersion();
     private static native long getVkKhrDeviceGroupCreationSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME = "VK_KHR_device_group_creation";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_MAX_DEVICE_GROUP_SIZE_KHR.html">khronos documentation</a>
-     **/
     public static final long VK_MAX_DEVICE_GROUP_SIZE_KHR = getVkMaxDeviceGroupSizeKhr();
     private static native long getVkMaxDeviceGroupSizeKhr();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_external_memory_capabilities.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_external_memory_capabilities = getVkKhrExternalMemoryCapabilities();
     private static native long getVkKhrExternalMemoryCapabilities();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION = getVkKhrExternalMemoryCapabilitiesSpecVersion();
     private static native long getVkKhrExternalMemoryCapabilitiesSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME = "VK_KHR_external_memory_capabilities";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_LUID_SIZE_KHR.html">khronos documentation</a>
-     **/
     public static final long VK_LUID_SIZE_KHR = getVkLuidSizeKhr();
     private static native long getVkLuidSizeKhr();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_external_memory.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_external_memory = getVkKhrExternalMemory();
     private static native long getVkKhrExternalMemory();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_MEMORY_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_EXTERNAL_MEMORY_SPEC_VERSION = getVkKhrExternalMemorySpecVersion();
     private static native long getVkKhrExternalMemorySpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_MEMORY_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_EXTERNAL_MEMORY_EXTENSION_NAME = "VK_KHR_external_memory";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_QUEUE_FAMILY_EXTERNAL_KHR.html">khronos documentation</a>
-     **/
     public static final long VK_QUEUE_FAMILY_EXTERNAL_KHR = getVkQueueFamilyExternalKhr();
     private static native long getVkQueueFamilyExternalKhr();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_external_memory_fd.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_external_memory_fd = getVkKhrExternalMemoryFd();
     private static native long getVkKhrExternalMemoryFd();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_MEMORY_FD_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_EXTERNAL_MEMORY_FD_SPEC_VERSION = getVkKhrExternalMemoryFdSpecVersion();
     private static native long getVkKhrExternalMemoryFdSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME = "VK_KHR_external_memory_fd";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_external_semaphore_capabilities.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_external_semaphore_capabilities = getVkKhrExternalSemaphoreCapabilities();
     private static native long getVkKhrExternalSemaphoreCapabilities();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_SPEC_VERSION = getVkKhrExternalSemaphoreCapabilitiesSpecVersion();
     private static native long getVkKhrExternalSemaphoreCapabilitiesSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME = "VK_KHR_external_semaphore_capabilities";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_external_semaphore.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_external_semaphore = getVkKhrExternalSemaphore();
     private static native long getVkKhrExternalSemaphore();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_SEMAPHORE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_EXTERNAL_SEMAPHORE_SPEC_VERSION = getVkKhrExternalSemaphoreSpecVersion();
     private static native long getVkKhrExternalSemaphoreSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_SEMAPHORE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_EXTERNAL_SEMAPHORE_EXTENSION_NAME = "VK_KHR_external_semaphore";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_external_semaphore_fd.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_external_semaphore_fd = getVkKhrExternalSemaphoreFd();
     private static native long getVkKhrExternalSemaphoreFd();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_SEMAPHORE_FD_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_EXTERNAL_SEMAPHORE_FD_SPEC_VERSION = getVkKhrExternalSemaphoreFdSpecVersion();
     private static native long getVkKhrExternalSemaphoreFdSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME = "VK_KHR_external_semaphore_fd";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_push_descriptor.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_push_descriptor = getVkKhrPushDescriptor();
     private static native long getVkKhrPushDescriptor();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_PUSH_DESCRIPTOR_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_PUSH_DESCRIPTOR_SPEC_VERSION = getVkKhrPushDescriptorSpecVersion();
     private static native long getVkKhrPushDescriptorSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME = "VK_KHR_push_descriptor";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_16bit_storage.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_16bit_storage = getVkKhr16bitStorage();
     private static native long getVkKhr16bitStorage();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_16BIT_STORAGE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_16BIT_STORAGE_SPEC_VERSION = getVkKhr16bitStorageSpecVersion();
     private static native long getVkKhr16bitStorageSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_16BIT_STORAGE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_16BIT_STORAGE_EXTENSION_NAME = "VK_KHR_16bit_storage";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_incremental_present.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_incremental_present = getVkKhrIncrementalPresent();
     private static native long getVkKhrIncrementalPresent();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_INCREMENTAL_PRESENT_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_INCREMENTAL_PRESENT_SPEC_VERSION = getVkKhrIncrementalPresentSpecVersion();
     private static native long getVkKhrIncrementalPresentSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME = "VK_KHR_incremental_present";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_descriptor_update_template.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_descriptor_update_template = getVkKhrDescriptorUpdateTemplate();
     private static native long getVkKhrDescriptorUpdateTemplate();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_SPEC_VERSION = getVkKhrDescriptorUpdateTemplateSpecVersion();
     private static native long getVkKhrDescriptorUpdateTemplateSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_EXTENSION_NAME = "VK_KHR_descriptor_update_template";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_shared_presentable_image.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_shared_presentable_image = getVkKhrSharedPresentableImage();
     private static native long getVkKhrSharedPresentableImage();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SHARED_PRESENTABLE_IMAGE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_SHARED_PRESENTABLE_IMAGE_SPEC_VERSION = getVkKhrSharedPresentableImageSpecVersion();
     private static native long getVkKhrSharedPresentableImageSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME = "VK_KHR_shared_presentable_image";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_external_fence_capabilities.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_external_fence_capabilities = getVkKhrExternalFenceCapabilities();
     private static native long getVkKhrExternalFenceCapabilities();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_FENCE_CAPABILITIES_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_EXTERNAL_FENCE_CAPABILITIES_SPEC_VERSION = getVkKhrExternalFenceCapabilitiesSpecVersion();
     private static native long getVkKhrExternalFenceCapabilitiesSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_FENCE_CAPABILITIES_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_EXTERNAL_FENCE_CAPABILITIES_EXTENSION_NAME = "VK_KHR_external_fence_capabilities";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_external_fence.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_external_fence = getVkKhrExternalFence();
     private static native long getVkKhrExternalFence();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_FENCE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_EXTERNAL_FENCE_SPEC_VERSION = getVkKhrExternalFenceSpecVersion();
     private static native long getVkKhrExternalFenceSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_FENCE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_EXTERNAL_FENCE_EXTENSION_NAME = "VK_KHR_external_fence";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_external_fence_fd.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_external_fence_fd = getVkKhrExternalFenceFd();
     private static native long getVkKhrExternalFenceFd();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_FENCE_FD_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_EXTERNAL_FENCE_FD_SPEC_VERSION = getVkKhrExternalFenceFdSpecVersion();
     private static native long getVkKhrExternalFenceFdSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME = "VK_KHR_external_fence_fd";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_maintenance2.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_maintenance2 = getVkKhrMaintenance2();
     private static native long getVkKhrMaintenance2();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_MAINTENANCE2_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_MAINTENANCE2_SPEC_VERSION = getVkKhrMaintenance2SpecVersion();
     private static native long getVkKhrMaintenance2SpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_MAINTENANCE2_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_MAINTENANCE2_EXTENSION_NAME = "VK_KHR_maintenance2";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_get_surface_capabilities2.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_get_surface_capabilities2 = getVkKhrGetSurfaceCapabilities2();
     private static native long getVkKhrGetSurfaceCapabilities2();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_GET_SURFACE_CAPABILITIES_2_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_GET_SURFACE_CAPABILITIES_2_SPEC_VERSION = getVkKhrGetSurfaceCapabilities2SpecVersion();
     private static native long getVkKhrGetSurfaceCapabilities2SpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME = "VK_KHR_get_surface_capabilities2";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_variable_pointers.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_variable_pointers = getVkKhrVariablePointers();
     private static native long getVkKhrVariablePointers();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_VARIABLE_POINTERS_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_VARIABLE_POINTERS_SPEC_VERSION = getVkKhrVariablePointersSpecVersion();
     private static native long getVkKhrVariablePointersSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_VARIABLE_POINTERS_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_VARIABLE_POINTERS_EXTENSION_NAME = "VK_KHR_variable_pointers";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_dedicated_allocation.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_dedicated_allocation = getVkKhrDedicatedAllocation();
     private static native long getVkKhrDedicatedAllocation();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DEDICATED_ALLOCATION_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_DEDICATED_ALLOCATION_SPEC_VERSION = getVkKhrDedicatedAllocationSpecVersion();
     private static native long getVkKhrDedicatedAllocationSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME = "VK_KHR_dedicated_allocation";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_storage_buffer_storage_class.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_storage_buffer_storage_class = getVkKhrStorageBufferStorageClass();
     private static native long getVkKhrStorageBufferStorageClass();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_STORAGE_BUFFER_STORAGE_CLASS_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_STORAGE_BUFFER_STORAGE_CLASS_SPEC_VERSION = getVkKhrStorageBufferStorageClassSpecVersion();
     private static native long getVkKhrStorageBufferStorageClassSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_STORAGE_BUFFER_STORAGE_CLASS_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_STORAGE_BUFFER_STORAGE_CLASS_EXTENSION_NAME = "VK_KHR_storage_buffer_storage_class";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_relaxed_block_layout.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_relaxed_block_layout = getVkKhrRelaxedBlockLayout();
     private static native long getVkKhrRelaxedBlockLayout();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_RELAXED_BLOCK_LAYOUT_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_RELAXED_BLOCK_LAYOUT_SPEC_VERSION = getVkKhrRelaxedBlockLayoutSpecVersion();
     private static native long getVkKhrRelaxedBlockLayoutSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_RELAXED_BLOCK_LAYOUT_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_RELAXED_BLOCK_LAYOUT_EXTENSION_NAME = "VK_KHR_relaxed_block_layout";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_get_memory_requirements2.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_get_memory_requirements2 = getVkKhrGetMemoryRequirements2();
     private static native long getVkKhrGetMemoryRequirements2();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_GET_MEMORY_REQUIREMENTS_2_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_GET_MEMORY_REQUIREMENTS_2_SPEC_VERSION = getVkKhrGetMemoryRequirements2SpecVersion();
     private static native long getVkKhrGetMemoryRequirements2SpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME = "VK_KHR_get_memory_requirements2";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_image_format_list.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_image_format_list = getVkKhrImageFormatList();
     private static native long getVkKhrImageFormatList();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_IMAGE_FORMAT_LIST_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_IMAGE_FORMAT_LIST_SPEC_VERSION = getVkKhrImageFormatListSpecVersion();
     private static native long getVkKhrImageFormatListSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME = "VK_KHR_image_format_list";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_sampler_ycbcr_conversion.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_sampler_ycbcr_conversion = getVkKhrSamplerYcbcrConversion();
     private static native long getVkKhrSamplerYcbcrConversion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SAMPLER_YCBCR_CONVERSION_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_SAMPLER_YCBCR_CONVERSION_SPEC_VERSION = getVkKhrSamplerYcbcrConversionSpecVersion();
     private static native long getVkKhrSamplerYcbcrConversionSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME = "VK_KHR_sampler_ycbcr_conversion";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_bind_memory2.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_bind_memory2 = getVkKhrBindMemory2();
     private static native long getVkKhrBindMemory2();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_BIND_MEMORY_2_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_BIND_MEMORY_2_SPEC_VERSION = getVkKhrBindMemory2SpecVersion();
     private static native long getVkKhrBindMemory2SpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_BIND_MEMORY_2_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_BIND_MEMORY_2_EXTENSION_NAME = "VK_KHR_bind_memory2";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_maintenance3.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_maintenance3 = getVkKhrMaintenance3();
     private static native long getVkKhrMaintenance3();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_MAINTENANCE3_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_KHR_MAINTENANCE3_SPEC_VERSION = getVkKhrMaintenance3SpecVersion();
     private static native long getVkKhrMaintenance3SpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_KHR_MAINTENANCE3_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_KHR_MAINTENANCE3_EXTENSION_NAME = "VK_KHR_maintenance3";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_debug_report.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_debug_report = getVkExtDebugReport();
     private static native long getVkExtDebugReport();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DEBUG_REPORT_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_DEBUG_REPORT_SPEC_VERSION = getVkExtDebugReportSpecVersion();
     private static native long getVkExtDebugReportSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DEBUG_REPORT_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_DEBUG_REPORT_EXTENSION_NAME = "VK_EXT_debug_report";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_STRUCTURE_TYPE_DEBUG_REPORT_CREATE_INFO_EXT.html">khronos documentation</a>
-     **/
     public static final long VK_STRUCTURE_TYPE_DEBUG_REPORT_CREATE_INFO_EXT = getVkStructureTypeDebugReportCreateInfoExt();
     private static native long getVkStructureTypeDebugReportCreateInfoExt();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_DEBUG_REPORT_OBJECT_TYPE_DEBUG_REPORT_EXT.html">khronos documentation</a>
-     **/
     public static final long VK_DEBUG_REPORT_OBJECT_TYPE_DEBUG_REPORT_EXT = getVkDebugReportObjectTypeDebugReportExt();
     private static native long getVkDebugReportObjectTypeDebugReportExt();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_glsl_shader.html">khronos documentation</a>
-     **/
     public static final long VK_NV_glsl_shader = getVkNvGlslShader();
     private static native long getVkNvGlslShader();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_GLSL_SHADER_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_GLSL_SHADER_SPEC_VERSION = getVkNvGlslShaderSpecVersion();
     private static native long getVkNvGlslShaderSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_GLSL_SHADER_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_GLSL_SHADER_EXTENSION_NAME = "VK_NV_glsl_shader";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_depth_range_unrestricted.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_depth_range_unrestricted = getVkExtDepthRangeUnrestricted();
     private static native long getVkExtDepthRangeUnrestricted();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DEPTH_RANGE_UNRESTRICTED_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_DEPTH_RANGE_UNRESTRICTED_SPEC_VERSION = getVkExtDepthRangeUnrestrictedSpecVersion();
     private static native long getVkExtDepthRangeUnrestrictedSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DEPTH_RANGE_UNRESTRICTED_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_DEPTH_RANGE_UNRESTRICTED_EXTENSION_NAME = "VK_EXT_depth_range_unrestricted";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_IMG_filter_cubic.html">khronos documentation</a>
-     **/
     public static final long VK_IMG_filter_cubic = getVkImgFilterCubic();
     private static native long getVkImgFilterCubic();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_IMG_FILTER_CUBIC_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_IMG_FILTER_CUBIC_SPEC_VERSION = getVkImgFilterCubicSpecVersion();
     private static native long getVkImgFilterCubicSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_IMG_FILTER_CUBIC_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_IMG_FILTER_CUBIC_EXTENSION_NAME = "VK_IMG_filter_cubic";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_rasterization_order.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_rasterization_order = getVkAmdRasterizationOrder();
     private static native long getVkAmdRasterizationOrder();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_RASTERIZATION_ORDER_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_RASTERIZATION_ORDER_SPEC_VERSION = getVkAmdRasterizationOrderSpecVersion();
     private static native long getVkAmdRasterizationOrderSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_RASTERIZATION_ORDER_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_RASTERIZATION_ORDER_EXTENSION_NAME = "VK_AMD_rasterization_order";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_shader_trinary_minmax.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_shader_trinary_minmax = getVkAmdShaderTrinaryMinmax();
     private static native long getVkAmdShaderTrinaryMinmax();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_TRINARY_MINMAX_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_SHADER_TRINARY_MINMAX_SPEC_VERSION = getVkAmdShaderTrinaryMinmaxSpecVersion();
     private static native long getVkAmdShaderTrinaryMinmaxSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_TRINARY_MINMAX_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_SHADER_TRINARY_MINMAX_EXTENSION_NAME = "VK_AMD_shader_trinary_minmax";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_shader_explicit_vertex_parameter.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_shader_explicit_vertex_parameter = getVkAmdShaderExplicitVertexParameter();
     private static native long getVkAmdShaderExplicitVertexParameter();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_SPEC_VERSION = getVkAmdShaderExplicitVertexParameterSpecVersion();
     private static native long getVkAmdShaderExplicitVertexParameterSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_EXTENSION_NAME = "VK_AMD_shader_explicit_vertex_parameter";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_debug_marker.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_debug_marker = getVkExtDebugMarker();
     private static native long getVkExtDebugMarker();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DEBUG_MARKER_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_DEBUG_MARKER_SPEC_VERSION = getVkExtDebugMarkerSpecVersion();
     private static native long getVkExtDebugMarkerSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DEBUG_MARKER_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_DEBUG_MARKER_EXTENSION_NAME = "VK_EXT_debug_marker";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_gcn_shader.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_gcn_shader = getVkAmdGcnShader();
     private static native long getVkAmdGcnShader();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_GCN_SHADER_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_GCN_SHADER_SPEC_VERSION = getVkAmdGcnShaderSpecVersion();
     private static native long getVkAmdGcnShaderSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_GCN_SHADER_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_GCN_SHADER_EXTENSION_NAME = "VK_AMD_gcn_shader";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_dedicated_allocation.html">khronos documentation</a>
-     **/
     public static final long VK_NV_dedicated_allocation = getVkNvDedicatedAllocation();
     private static native long getVkNvDedicatedAllocation();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_DEDICATED_ALLOCATION_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_DEDICATED_ALLOCATION_SPEC_VERSION = getVkNvDedicatedAllocationSpecVersion();
     private static native long getVkNvDedicatedAllocationSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_DEDICATED_ALLOCATION_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_DEDICATED_ALLOCATION_EXTENSION_NAME = "VK_NV_dedicated_allocation";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_draw_indirect_count.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_draw_indirect_count = getVkAmdDrawIndirectCount();
     private static native long getVkAmdDrawIndirectCount();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_DRAW_INDIRECT_COUNT_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_DRAW_INDIRECT_COUNT_SPEC_VERSION = getVkAmdDrawIndirectCountSpecVersion();
     private static native long getVkAmdDrawIndirectCountSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_DRAW_INDIRECT_COUNT_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_DRAW_INDIRECT_COUNT_EXTENSION_NAME = "VK_AMD_draw_indirect_count";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_negative_viewport_height.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_negative_viewport_height = getVkAmdNegativeViewportHeight();
     private static native long getVkAmdNegativeViewportHeight();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_SPEC_VERSION = getVkAmdNegativeViewportHeightSpecVersion();
     private static native long getVkAmdNegativeViewportHeightSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_EXTENSION_NAME = "VK_AMD_negative_viewport_height";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_gpu_shader_half_float.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_gpu_shader_half_float = getVkAmdGpuShaderHalfFloat();
     private static native long getVkAmdGpuShaderHalfFloat();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_GPU_SHADER_HALF_FLOAT_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_GPU_SHADER_HALF_FLOAT_SPEC_VERSION = getVkAmdGpuShaderHalfFloatSpecVersion();
     private static native long getVkAmdGpuShaderHalfFloatSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_GPU_SHADER_HALF_FLOAT_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_GPU_SHADER_HALF_FLOAT_EXTENSION_NAME = "VK_AMD_gpu_shader_half_float";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_shader_ballot.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_shader_ballot = getVkAmdShaderBallot();
     private static native long getVkAmdShaderBallot();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_BALLOT_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_SHADER_BALLOT_SPEC_VERSION = getVkAmdShaderBallotSpecVersion();
     private static native long getVkAmdShaderBallotSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_BALLOT_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_SHADER_BALLOT_EXTENSION_NAME = "VK_AMD_shader_ballot";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_texture_gather_bias_lod.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_texture_gather_bias_lod = getVkAmdTextureGatherBiasLod();
     private static native long getVkAmdTextureGatherBiasLod();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_TEXTURE_GATHER_BIAS_LOD_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_TEXTURE_GATHER_BIAS_LOD_SPEC_VERSION = getVkAmdTextureGatherBiasLodSpecVersion();
     private static native long getVkAmdTextureGatherBiasLodSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_TEXTURE_GATHER_BIAS_LOD_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_TEXTURE_GATHER_BIAS_LOD_EXTENSION_NAME = "VK_AMD_texture_gather_bias_lod";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_shader_info.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_shader_info = getVkAmdShaderInfo();
     private static native long getVkAmdShaderInfo();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_INFO_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_SHADER_INFO_SPEC_VERSION = getVkAmdShaderInfoSpecVersion();
     private static native long getVkAmdShaderInfoSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_INFO_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_SHADER_INFO_EXTENSION_NAME = "VK_AMD_shader_info";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_shader_image_load_store_lod.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_shader_image_load_store_lod = getVkAmdShaderImageLoadStoreLod();
     private static native long getVkAmdShaderImageLoadStoreLod();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_SPEC_VERSION = getVkAmdShaderImageLoadStoreLodSpecVersion();
     private static native long getVkAmdShaderImageLoadStoreLodSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_EXTENSION_NAME = "VK_AMD_shader_image_load_store_lod";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_IMG_format_pvrtc.html">khronos documentation</a>
-     **/
     public static final long VK_IMG_format_pvrtc = getVkImgFormatPvrtc();
     private static native long getVkImgFormatPvrtc();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_IMG_FORMAT_PVRTC_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_IMG_FORMAT_PVRTC_SPEC_VERSION = getVkImgFormatPvrtcSpecVersion();
     private static native long getVkImgFormatPvrtcSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_IMG_FORMAT_PVRTC_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_IMG_FORMAT_PVRTC_EXTENSION_NAME = "VK_IMG_format_pvrtc";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_external_memory_capabilities.html">khronos documentation</a>
-     **/
     public static final long VK_NV_external_memory_capabilities = getVkNvExternalMemoryCapabilities();
     private static native long getVkNvExternalMemoryCapabilities();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION = getVkNvExternalMemoryCapabilitiesSpecVersion();
     private static native long getVkNvExternalMemoryCapabilitiesSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME = "VK_NV_external_memory_capabilities";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_external_memory.html">khronos documentation</a>
-     **/
     public static final long VK_NV_external_memory = getVkNvExternalMemory();
     private static native long getVkNvExternalMemory();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_EXTERNAL_MEMORY_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_EXTERNAL_MEMORY_SPEC_VERSION = getVkNvExternalMemorySpecVersion();
     private static native long getVkNvExternalMemorySpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME = "VK_NV_external_memory";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_validation_flags.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_validation_flags = getVkExtValidationFlags();
     private static native long getVkExtValidationFlags();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_VALIDATION_FLAGS_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_VALIDATION_FLAGS_SPEC_VERSION = getVkExtValidationFlagsSpecVersion();
     private static native long getVkExtValidationFlagsSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_VALIDATION_FLAGS_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_VALIDATION_FLAGS_EXTENSION_NAME = "VK_EXT_validation_flags";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_shader_subgroup_ballot.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_shader_subgroup_ballot = getVkExtShaderSubgroupBallot();
     private static native long getVkExtShaderSubgroupBallot();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SHADER_SUBGROUP_BALLOT_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_SHADER_SUBGROUP_BALLOT_SPEC_VERSION = getVkExtShaderSubgroupBallotSpecVersion();
     private static native long getVkExtShaderSubgroupBallotSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME = "VK_EXT_shader_subgroup_ballot";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_shader_subgroup_vote.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_shader_subgroup_vote = getVkExtShaderSubgroupVote();
     private static native long getVkExtShaderSubgroupVote();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SHADER_SUBGROUP_VOTE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_SHADER_SUBGROUP_VOTE_SPEC_VERSION = getVkExtShaderSubgroupVoteSpecVersion();
     private static native long getVkExtShaderSubgroupVoteSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SHADER_SUBGROUP_VOTE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_SHADER_SUBGROUP_VOTE_EXTENSION_NAME = "VK_EXT_shader_subgroup_vote";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NVX_device_generated_commands.html">khronos documentation</a>
-     **/
     public static final long VK_NVX_device_generated_commands = getVkNvxDeviceGeneratedCommands();
     private static native long getVkNvxDeviceGeneratedCommands();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NVX_DEVICE_GENERATED_COMMANDS_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NVX_DEVICE_GENERATED_COMMANDS_SPEC_VERSION = getVkNvxDeviceGeneratedCommandsSpecVersion();
     private static native long getVkNvxDeviceGeneratedCommandsSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NVX_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NVX_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME = "VK_NVX_device_generated_commands";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_clip_space_w_scaling.html">khronos documentation</a>
-     **/
     public static final long VK_NV_clip_space_w_scaling = getVkNvClipSpaceWScaling();
     private static native long getVkNvClipSpaceWScaling();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_CLIP_SPACE_W_SCALING_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_CLIP_SPACE_W_SCALING_SPEC_VERSION = getVkNvClipSpaceWScalingSpecVersion();
     private static native long getVkNvClipSpaceWScalingSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME = "VK_NV_clip_space_w_scaling";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_direct_mode_display.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_direct_mode_display = getVkExtDirectModeDisplay();
     private static native long getVkExtDirectModeDisplay();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DIRECT_MODE_DISPLAY_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_DIRECT_MODE_DISPLAY_SPEC_VERSION = getVkExtDirectModeDisplaySpecVersion();
     private static native long getVkExtDirectModeDisplaySpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME = "VK_EXT_direct_mode_display";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_display_surface_counter.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_display_surface_counter = getVkExtDisplaySurfaceCounter();
     private static native long getVkExtDisplaySurfaceCounter();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DISPLAY_SURFACE_COUNTER_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_DISPLAY_SURFACE_COUNTER_SPEC_VERSION = getVkExtDisplaySurfaceCounterSpecVersion();
     private static native long getVkExtDisplaySurfaceCounterSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME = "VK_EXT_display_surface_counter";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_STRUCTURE_TYPE_SURFACE_CAPABILITIES2_EXT.html">khronos documentation</a>
-     **/
     public static final long VK_STRUCTURE_TYPE_SURFACE_CAPABILITIES2_EXT = getVkStructureTypeSurfaceCapabilities2Ext();
     private static native long getVkStructureTypeSurfaceCapabilities2Ext();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_display_control.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_display_control = getVkExtDisplayControl();
     private static native long getVkExtDisplayControl();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DISPLAY_CONTROL_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_DISPLAY_CONTROL_SPEC_VERSION = getVkExtDisplayControlSpecVersion();
     private static native long getVkExtDisplayControlSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DISPLAY_CONTROL_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_DISPLAY_CONTROL_EXTENSION_NAME = "VK_EXT_display_control";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_GOOGLE_display_timing.html">khronos documentation</a>
-     **/
     public static final long VK_GOOGLE_display_timing = getVkGoogleDisplayTiming();
     private static native long getVkGoogleDisplayTiming();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_GOOGLE_DISPLAY_TIMING_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_GOOGLE_DISPLAY_TIMING_SPEC_VERSION = getVkGoogleDisplayTimingSpecVersion();
     private static native long getVkGoogleDisplayTimingSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME = "VK_GOOGLE_display_timing";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_sample_mask_override_coverage.html">khronos documentation</a>
-     **/
     public static final long VK_NV_sample_mask_override_coverage = getVkNvSampleMaskOverrideCoverage();
     private static native long getVkNvSampleMaskOverrideCoverage();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_SPEC_VERSION = getVkNvSampleMaskOverrideCoverageSpecVersion();
     private static native long getVkNvSampleMaskOverrideCoverageSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_EXTENSION_NAME = "VK_NV_sample_mask_override_coverage";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_geometry_shader_passthrough.html">khronos documentation</a>
-     **/
     public static final long VK_NV_geometry_shader_passthrough = getVkNvGeometryShaderPassthrough();
     private static native long getVkNvGeometryShaderPassthrough();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_GEOMETRY_SHADER_PASSTHROUGH_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_GEOMETRY_SHADER_PASSTHROUGH_SPEC_VERSION = getVkNvGeometryShaderPassthroughSpecVersion();
     private static native long getVkNvGeometryShaderPassthroughSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_GEOMETRY_SHADER_PASSTHROUGH_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_GEOMETRY_SHADER_PASSTHROUGH_EXTENSION_NAME = "VK_NV_geometry_shader_passthrough";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_viewport_array2.html">khronos documentation</a>
-     **/
     public static final long VK_NV_viewport_array2 = getVkNvViewportArray2();
     private static native long getVkNvViewportArray2();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_VIEWPORT_ARRAY2_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_VIEWPORT_ARRAY2_SPEC_VERSION = getVkNvViewportArray2SpecVersion();
     private static native long getVkNvViewportArray2SpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_VIEWPORT_ARRAY2_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_VIEWPORT_ARRAY2_EXTENSION_NAME = "VK_NV_viewport_array2";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NVX_multiview_per_view_attributes.html">khronos documentation</a>
-     **/
     public static final long VK_NVX_multiview_per_view_attributes = getVkNvxMultiviewPerViewAttributes();
     private static native long getVkNvxMultiviewPerViewAttributes();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_SPEC_VERSION = getVkNvxMultiviewPerViewAttributesSpecVersion();
     private static native long getVkNvxMultiviewPerViewAttributesSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME = "VK_NVX_multiview_per_view_attributes";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_viewport_swizzle.html">khronos documentation</a>
-     **/
     public static final long VK_NV_viewport_swizzle = getVkNvViewportSwizzle();
     private static native long getVkNvViewportSwizzle();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_VIEWPORT_SWIZZLE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_VIEWPORT_SWIZZLE_SPEC_VERSION = getVkNvViewportSwizzleSpecVersion();
     private static native long getVkNvViewportSwizzleSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_VIEWPORT_SWIZZLE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_VIEWPORT_SWIZZLE_EXTENSION_NAME = "VK_NV_viewport_swizzle";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_discard_rectangles.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_discard_rectangles = getVkExtDiscardRectangles();
     private static native long getVkExtDiscardRectangles();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION = getVkExtDiscardRectanglesSpecVersion();
     private static native long getVkExtDiscardRectanglesSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME = "VK_EXT_discard_rectangles";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_conservative_rasterization.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_conservative_rasterization = getVkExtConservativeRasterization();
     private static native long getVkExtConservativeRasterization();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_CONSERVATIVE_RASTERIZATION_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_CONSERVATIVE_RASTERIZATION_SPEC_VERSION = getVkExtConservativeRasterizationSpecVersion();
     private static native long getVkExtConservativeRasterizationSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_CONSERVATIVE_RASTERIZATION_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_CONSERVATIVE_RASTERIZATION_EXTENSION_NAME = "VK_EXT_conservative_rasterization";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_swapchain_colorspace.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_swapchain_colorspace = getVkExtSwapchainColorspace();
     private static native long getVkExtSwapchainColorspace();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SWAPCHAIN_COLOR_SPACE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_SWAPCHAIN_COLOR_SPACE_SPEC_VERSION = getVkExtSwapchainColorSpaceSpecVersion();
     private static native long getVkExtSwapchainColorSpaceSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SWAPCHAIN_COLOR_SPACE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_SWAPCHAIN_COLOR_SPACE_EXTENSION_NAME = "VK_EXT_swapchain_colorspace";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_hdr_metadata.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_hdr_metadata = getVkExtHdrMetadata();
     private static native long getVkExtHdrMetadata();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_HDR_METADATA_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_HDR_METADATA_SPEC_VERSION = getVkExtHdrMetadataSpecVersion();
     private static native long getVkExtHdrMetadataSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_HDR_METADATA_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_HDR_METADATA_EXTENSION_NAME = "VK_EXT_hdr_metadata";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_external_memory_dma_buf.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_external_memory_dma_buf = getVkExtExternalMemoryDmaBuf();
     private static native long getVkExtExternalMemoryDmaBuf();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_EXTERNAL_MEMORY_DMA_BUF_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_EXTERNAL_MEMORY_DMA_BUF_SPEC_VERSION = getVkExtExternalMemoryDmaBufSpecVersion();
     private static native long getVkExtExternalMemoryDmaBufSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_EXTERNAL_MEMORY_DMA_BUF_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_EXTERNAL_MEMORY_DMA_BUF_EXTENSION_NAME = "VK_EXT_external_memory_dma_buf";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_queue_family_foreign.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_queue_family_foreign = getVkExtQueueFamilyForeign();
     private static native long getVkExtQueueFamilyForeign();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_QUEUE_FAMILY_FOREIGN_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_QUEUE_FAMILY_FOREIGN_SPEC_VERSION = getVkExtQueueFamilyForeignSpecVersion();
     private static native long getVkExtQueueFamilyForeignSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME = "VK_EXT_queue_family_foreign";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_QUEUE_FAMILY_FOREIGN_EXT.html">khronos documentation</a>
-     **/
     public static final long VK_QUEUE_FAMILY_FOREIGN_EXT = getVkQueueFamilyForeignExt();
     private static native long getVkQueueFamilyForeignExt();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_debug_utils.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_debug_utils = getVkExtDebugUtils();
     private static native long getVkExtDebugUtils();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DEBUG_UTILS_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_DEBUG_UTILS_SPEC_VERSION = getVkExtDebugUtilsSpecVersion();
     private static native long getVkExtDebugUtilsSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DEBUG_UTILS_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_DEBUG_UTILS_EXTENSION_NAME = "VK_EXT_debug_utils";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_sampler_filter_minmax.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_sampler_filter_minmax = getVkExtSamplerFilterMinmax();
     private static native long getVkExtSamplerFilterMinmax();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SAMPLER_FILTER_MINMAX_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_SAMPLER_FILTER_MINMAX_SPEC_VERSION = getVkExtSamplerFilterMinmaxSpecVersion();
     private static native long getVkExtSamplerFilterMinmaxSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SAMPLER_FILTER_MINMAX_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_SAMPLER_FILTER_MINMAX_EXTENSION_NAME = "VK_EXT_sampler_filter_minmax";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_gpu_shader_int16.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_gpu_shader_int16 = getVkAmdGpuShaderInt16();
     private static native long getVkAmdGpuShaderInt16();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_GPU_SHADER_INT16_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_GPU_SHADER_INT16_SPEC_VERSION = getVkAmdGpuShaderInt16SpecVersion();
     private static native long getVkAmdGpuShaderInt16SpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_GPU_SHADER_INT16_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_GPU_SHADER_INT16_EXTENSION_NAME = "VK_AMD_gpu_shader_int16";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_mixed_attachment_samples.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_mixed_attachment_samples = getVkAmdMixedAttachmentSamples();
     private static native long getVkAmdMixedAttachmentSamples();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_MIXED_ATTACHMENT_SAMPLES_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_MIXED_ATTACHMENT_SAMPLES_SPEC_VERSION = getVkAmdMixedAttachmentSamplesSpecVersion();
     private static native long getVkAmdMixedAttachmentSamplesSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_MIXED_ATTACHMENT_SAMPLES_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_MIXED_ATTACHMENT_SAMPLES_EXTENSION_NAME = "VK_AMD_mixed_attachment_samples";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_shader_fragment_mask.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_shader_fragment_mask = getVkAmdShaderFragmentMask();
     private static native long getVkAmdShaderFragmentMask();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_FRAGMENT_MASK_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_SHADER_FRAGMENT_MASK_SPEC_VERSION = getVkAmdShaderFragmentMaskSpecVersion();
     private static native long getVkAmdShaderFragmentMaskSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_FRAGMENT_MASK_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_SHADER_FRAGMENT_MASK_EXTENSION_NAME = "VK_AMD_shader_fragment_mask";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_shader_stencil_export.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_shader_stencil_export = getVkExtShaderStencilExport();
     private static native long getVkExtShaderStencilExport();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SHADER_STENCIL_EXPORT_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_SHADER_STENCIL_EXPORT_SPEC_VERSION = getVkExtShaderStencilExportSpecVersion();
     private static native long getVkExtShaderStencilExportSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SHADER_STENCIL_EXPORT_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_SHADER_STENCIL_EXPORT_EXTENSION_NAME = "VK_EXT_shader_stencil_export";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_sample_locations.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_sample_locations = getVkExtSampleLocations();
     private static native long getVkExtSampleLocations();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SAMPLE_LOCATIONS_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_SAMPLE_LOCATIONS_SPEC_VERSION = getVkExtSampleLocationsSpecVersion();
     private static native long getVkExtSampleLocationsSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME = "VK_EXT_sample_locations";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_blend_operation_advanced.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_blend_operation_advanced = getVkExtBlendOperationAdvanced();
     private static native long getVkExtBlendOperationAdvanced();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_BLEND_OPERATION_ADVANCED_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_BLEND_OPERATION_ADVANCED_SPEC_VERSION = getVkExtBlendOperationAdvancedSpecVersion();
     private static native long getVkExtBlendOperationAdvancedSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME = "VK_EXT_blend_operation_advanced";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_fragment_coverage_to_color.html">khronos documentation</a>
-     **/
     public static final long VK_NV_fragment_coverage_to_color = getVkNvFragmentCoverageToColor();
     private static native long getVkNvFragmentCoverageToColor();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_FRAGMENT_COVERAGE_TO_COLOR_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_FRAGMENT_COVERAGE_TO_COLOR_SPEC_VERSION = getVkNvFragmentCoverageToColorSpecVersion();
     private static native long getVkNvFragmentCoverageToColorSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME = "VK_NV_fragment_coverage_to_color";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_framebuffer_mixed_samples.html">khronos documentation</a>
-     **/
     public static final long VK_NV_framebuffer_mixed_samples = getVkNvFramebufferMixedSamples();
     private static native long getVkNvFramebufferMixedSamples();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_FRAMEBUFFER_MIXED_SAMPLES_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_FRAMEBUFFER_MIXED_SAMPLES_SPEC_VERSION = getVkNvFramebufferMixedSamplesSpecVersion();
     private static native long getVkNvFramebufferMixedSamplesSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_FRAMEBUFFER_MIXED_SAMPLES_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_FRAMEBUFFER_MIXED_SAMPLES_EXTENSION_NAME = "VK_NV_framebuffer_mixed_samples";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_fill_rectangle.html">khronos documentation</a>
-     **/
     public static final long VK_NV_fill_rectangle = getVkNvFillRectangle();
     private static native long getVkNvFillRectangle();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_FILL_RECTANGLE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_FILL_RECTANGLE_SPEC_VERSION = getVkNvFillRectangleSpecVersion();
     private static native long getVkNvFillRectangleSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_FILL_RECTANGLE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_FILL_RECTANGLE_EXTENSION_NAME = "VK_NV_fill_rectangle";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_post_depth_coverage.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_post_depth_coverage = getVkExtPostDepthCoverage();
     private static native long getVkExtPostDepthCoverage();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_POST_DEPTH_COVERAGE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_POST_DEPTH_COVERAGE_SPEC_VERSION = getVkExtPostDepthCoverageSpecVersion();
     private static native long getVkExtPostDepthCoverageSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_POST_DEPTH_COVERAGE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_POST_DEPTH_COVERAGE_EXTENSION_NAME = "VK_EXT_post_depth_coverage";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_validation_cache.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_validation_cache = getVkExtValidationCache();
     private static native long getVkExtValidationCache();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_VALIDATION_CACHE_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_VALIDATION_CACHE_SPEC_VERSION = getVkExtValidationCacheSpecVersion();
     private static native long getVkExtValidationCacheSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_VALIDATION_CACHE_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_VALIDATION_CACHE_EXTENSION_NAME = "VK_EXT_validation_cache";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_DEBUG_REPORT_OBJECT_TYPE_VALIDATION_CACHE_EXT.html">khronos documentation</a>
-     **/
     public static final long VK_DEBUG_REPORT_OBJECT_TYPE_VALIDATION_CACHE_EXT = getVkDebugReportObjectTypeValidationCacheExt();
     private static native long getVkDebugReportObjectTypeValidationCacheExt();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_descriptor_indexing.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_descriptor_indexing = getVkExtDescriptorIndexing();
     private static native long getVkExtDescriptorIndexing();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DESCRIPTOR_INDEXING_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_DESCRIPTOR_INDEXING_SPEC_VERSION = getVkExtDescriptorIndexingSpecVersion();
     private static native long getVkExtDescriptorIndexingSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_DESCRIPTOR_INDEXING_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_DESCRIPTOR_INDEXING_EXTENSION_NAME = "VK_EXT_descriptor_indexing";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_shader_viewport_index_layer.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_shader_viewport_index_layer = getVkExtShaderViewportIndexLayer();
     private static native long getVkExtShaderViewportIndexLayer();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_SPEC_VERSION = getVkExtShaderViewportIndexLayerSpecVersion();
     private static native long getVkExtShaderViewportIndexLayerSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_EXTENSION_NAME = "VK_EXT_shader_viewport_index_layer";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_global_priority.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_global_priority = getVkExtGlobalPriority();
     private static native long getVkExtGlobalPriority();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_GLOBAL_PRIORITY_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_GLOBAL_PRIORITY_SPEC_VERSION = getVkExtGlobalPrioritySpecVersion();
     private static native long getVkExtGlobalPrioritySpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_GLOBAL_PRIORITY_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_GLOBAL_PRIORITY_EXTENSION_NAME = "VK_EXT_global_priority";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_external_memory_host.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_external_memory_host = getVkExtExternalMemoryHost();
     private static native long getVkExtExternalMemoryHost();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_EXTERNAL_MEMORY_HOST_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_EXTERNAL_MEMORY_HOST_SPEC_VERSION = getVkExtExternalMemoryHostSpecVersion();
     private static native long getVkExtExternalMemoryHostSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME = "VK_EXT_external_memory_host";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_buffer_marker.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_buffer_marker = getVkAmdBufferMarker();
     private static native long getVkAmdBufferMarker();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_BUFFER_MARKER_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_BUFFER_MARKER_SPEC_VERSION = getVkAmdBufferMarkerSpecVersion();
     private static native long getVkAmdBufferMarkerSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_BUFFER_MARKER_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_BUFFER_MARKER_EXTENSION_NAME = "VK_AMD_buffer_marker";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_shader_core_properties.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_shader_core_properties = getVkAmdShaderCoreProperties();
     private static native long getVkAmdShaderCoreProperties();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_CORE_PROPERTIES_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_AMD_SHADER_CORE_PROPERTIES_SPEC_VERSION = getVkAmdShaderCorePropertiesSpecVersion();
     private static native long getVkAmdShaderCorePropertiesSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME = "VK_AMD_shader_core_properties";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_vertex_attribute_divisor.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_vertex_attribute_divisor = getVkExtVertexAttributeDivisor();
     private static native long getVkExtVertexAttributeDivisor();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_SPEC_VERSION = getVkExtVertexAttributeDivisorSpecVersion();
     private static native long getVkExtVertexAttributeDivisorSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME = "VK_EXT_vertex_attribute_divisor";
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_shader_subgroup_partitioned.html">khronos documentation</a>
-     **/
     public static final long VK_NV_shader_subgroup_partitioned = getVkNvShaderSubgroupPartitioned();
     private static native long getVkNvShaderSubgroupPartitioned();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_SHADER_SUBGROUP_PARTITIONED_SPEC_VERSION.html">khronos documentation</a>
-     **/
     public static final long VK_NV_SHADER_SUBGROUP_PARTITIONED_SPEC_VERSION = getVkNvShaderSubgroupPartitionedSpecVersion();
     private static native long getVkNvShaderSubgroupPartitionedSpecVersion();
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VK_NV_SHADER_SUBGROUP_PARTITIONED_EXTENSION_NAME.html">khronos documentation</a>
-     **/
     public static final String VK_NV_SHADER_SUBGROUP_PARTITIONED_EXTENSION_NAME = "VK_NV_shader_subgroup_partitioned";
-
-    private PFNvkVoidFunction PFN_vkVoidFunction_p = null;
-
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkVoidFunction.html">khronos documentation</a>
-     **/
-    public void vkVoidFunction(){
-        if(PFN_vkVoidFunction_p == null) PFN_vkVoidFunction_p = new PFNvkVoidFunction(instance);
-        PFN_vkVoidFunction_p.call();
-    }
-
 
     private PFNvkCreateInstance PFN_vkCreateInstance_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateInstance.html">khronos documentation</a>
-     **/
     public void vkCreateInstance(VkInstanceCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkInstance pInstance, VkResult rval){
         if(PFN_vkCreateInstance_p == null) PFN_vkCreateInstance_p = new PFNvkCreateInstance(instance);
         PFN_vkCreateInstance_p.call(pCreateInfo, pAllocator, pInstance, rval);
@@ -1895,9 +915,6 @@ public class Vk {
 
     private PFNvkDestroyInstance PFN_vkDestroyInstance_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyInstance.html">khronos documentation</a>
-     **/
     public void vkDestroyInstance(VkInstance instance, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyInstance_p == null) PFN_vkDestroyInstance_p = new PFNvkDestroyInstance(instance);
         PFN_vkDestroyInstance_p.call(instance, pAllocator);
@@ -1906,9 +923,6 @@ public class Vk {
 
     private PFNvkEnumeratePhysicalDevices PFN_vkEnumeratePhysicalDevices_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkEnumeratePhysicalDevices.html">khronos documentation</a>
-     **/
     public void vkEnumeratePhysicalDevices(VkInstance instance, VkUInt32 pPhysicalDeviceCount, VkPhysicalDevice pPhysicalDevices, VkResult rval){
         if(PFN_vkEnumeratePhysicalDevices_p == null) PFN_vkEnumeratePhysicalDevices_p = new PFNvkEnumeratePhysicalDevices(instance);
         PFN_vkEnumeratePhysicalDevices_p.call(instance, pPhysicalDeviceCount, pPhysicalDevices, rval);
@@ -1917,9 +931,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceFeatures PFN_vkGetPhysicalDeviceFeatures_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceFeatures.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceFeatures(VkPhysicalDevice physicalDevice, VkPhysicalDeviceFeatures pFeatures){
         if(PFN_vkGetPhysicalDeviceFeatures_p == null) PFN_vkGetPhysicalDeviceFeatures_p = new PFNvkGetPhysicalDeviceFeatures(instance);
         PFN_vkGetPhysicalDeviceFeatures_p.call(physicalDevice, pFeatures);
@@ -1928,9 +939,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceFormatProperties PFN_vkGetPhysicalDeviceFormatProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceFormatProperties.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceFormatProperties(VkPhysicalDevice physicalDevice, VkFormat format, VkFormatProperties pFormatProperties){
         if(PFN_vkGetPhysicalDeviceFormatProperties_p == null) PFN_vkGetPhysicalDeviceFormatProperties_p = new PFNvkGetPhysicalDeviceFormatProperties(instance);
         PFN_vkGetPhysicalDeviceFormatProperties_p.call(physicalDevice, format, pFormatProperties);
@@ -1939,9 +947,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceImageFormatProperties PFN_vkGetPhysicalDeviceImageFormatProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceImageFormatProperties.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags, VkImageFormatProperties pImageFormatProperties, VkResult rval){
         if(PFN_vkGetPhysicalDeviceImageFormatProperties_p == null) PFN_vkGetPhysicalDeviceImageFormatProperties_p = new PFNvkGetPhysicalDeviceImageFormatProperties(instance);
         PFN_vkGetPhysicalDeviceImageFormatProperties_p.call(physicalDevice, format, type, tiling, usage, flags, pImageFormatProperties, rval);
@@ -1950,9 +955,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceProperties PFN_vkGetPhysicalDeviceProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceProperties.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceProperties(VkPhysicalDevice physicalDevice, VkPhysicalDeviceProperties pProperties){
         if(PFN_vkGetPhysicalDeviceProperties_p == null) PFN_vkGetPhysicalDeviceProperties_p = new PFNvkGetPhysicalDeviceProperties(instance);
         PFN_vkGetPhysicalDeviceProperties_p.call(physicalDevice, pProperties);
@@ -1961,9 +963,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceQueueFamilyProperties PFN_vkGetPhysicalDeviceQueueFamilyProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceQueueFamilyProperties.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceQueueFamilyProperties(VkPhysicalDevice physicalDevice, VkUInt32 pQueueFamilyPropertyCount, VkQueueFamilyProperties pQueueFamilyProperties){
         if(PFN_vkGetPhysicalDeviceQueueFamilyProperties_p == null) PFN_vkGetPhysicalDeviceQueueFamilyProperties_p = new PFNvkGetPhysicalDeviceQueueFamilyProperties(instance);
         PFN_vkGetPhysicalDeviceQueueFamilyProperties_p.call(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties);
@@ -1972,9 +971,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceMemoryProperties PFN_vkGetPhysicalDeviceMemoryProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceMemoryProperties.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceMemoryProperties(VkPhysicalDevice physicalDevice, VkPhysicalDeviceMemoryProperties pMemoryProperties){
         if(PFN_vkGetPhysicalDeviceMemoryProperties_p == null) PFN_vkGetPhysicalDeviceMemoryProperties_p = new PFNvkGetPhysicalDeviceMemoryProperties(instance);
         PFN_vkGetPhysicalDeviceMemoryProperties_p.call(physicalDevice, pMemoryProperties);
@@ -1983,9 +979,6 @@ public class Vk {
 
     private PFNvkGetInstanceProcAddr PFN_vkGetInstanceProcAddr_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetInstanceProcAddr.html">khronos documentation</a>
-     **/
     public void vkGetInstanceProcAddr(VkInstance instance, VkChar pName, PFNvkVoidFunction rval){
         if(PFN_vkGetInstanceProcAddr_p == null) PFN_vkGetInstanceProcAddr_p = new PFNvkGetInstanceProcAddr(instance);
         PFN_vkGetInstanceProcAddr_p.call(instance, pName, rval);
@@ -1994,9 +987,6 @@ public class Vk {
 
     private PFNvkGetDeviceProcAddr PFN_vkGetDeviceProcAddr_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDeviceProcAddr.html">khronos documentation</a>
-     **/
     public void vkGetDeviceProcAddr(VkDevice device, VkChar pName, PFNvkVoidFunction rval){
         if(PFN_vkGetDeviceProcAddr_p == null) PFN_vkGetDeviceProcAddr_p = new PFNvkGetDeviceProcAddr(instance);
         PFN_vkGetDeviceProcAddr_p.call(device, pName, rval);
@@ -2005,9 +995,6 @@ public class Vk {
 
     private PFNvkCreateDevice PFN_vkCreateDevice_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateDevice.html">khronos documentation</a>
-     **/
     public void vkCreateDevice(VkPhysicalDevice physicalDevice, VkDeviceCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDevice pDevice, VkResult rval){
         if(PFN_vkCreateDevice_p == null) PFN_vkCreateDevice_p = new PFNvkCreateDevice(instance);
         PFN_vkCreateDevice_p.call(physicalDevice, pCreateInfo, pAllocator, pDevice, rval);
@@ -2016,9 +1003,6 @@ public class Vk {
 
     private PFNvkDestroyDevice PFN_vkDestroyDevice_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyDevice.html">khronos documentation</a>
-     **/
     public void vkDestroyDevice(VkDevice device, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyDevice_p == null) PFN_vkDestroyDevice_p = new PFNvkDestroyDevice(instance);
         PFN_vkDestroyDevice_p.call(device, pAllocator);
@@ -2027,9 +1011,6 @@ public class Vk {
 
     private PFNvkEnumerateInstanceExtensionProperties PFN_vkEnumerateInstanceExtensionProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkEnumerateInstanceExtensionProperties.html">khronos documentation</a>
-     **/
     public void vkEnumerateInstanceExtensionProperties(VkChar pLayerName, VkUInt32 pPropertyCount, VkExtensionProperties pProperties, VkResult rval){
         if(PFN_vkEnumerateInstanceExtensionProperties_p == null) PFN_vkEnumerateInstanceExtensionProperties_p = new PFNvkEnumerateInstanceExtensionProperties(instance);
         PFN_vkEnumerateInstanceExtensionProperties_p.call(pLayerName, pPropertyCount, pProperties, rval);
@@ -2038,9 +1019,6 @@ public class Vk {
 
     private PFNvkEnumerateDeviceExtensionProperties PFN_vkEnumerateDeviceExtensionProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkEnumerateDeviceExtensionProperties.html">khronos documentation</a>
-     **/
     public void vkEnumerateDeviceExtensionProperties(VkPhysicalDevice physicalDevice, VkChar pLayerName, VkUInt32 pPropertyCount, VkExtensionProperties pProperties, VkResult rval){
         if(PFN_vkEnumerateDeviceExtensionProperties_p == null) PFN_vkEnumerateDeviceExtensionProperties_p = new PFNvkEnumerateDeviceExtensionProperties(instance);
         PFN_vkEnumerateDeviceExtensionProperties_p.call(physicalDevice, pLayerName, pPropertyCount, pProperties, rval);
@@ -2049,9 +1027,6 @@ public class Vk {
 
     private PFNvkEnumerateInstanceLayerProperties PFN_vkEnumerateInstanceLayerProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkEnumerateInstanceLayerProperties.html">khronos documentation</a>
-     **/
     public void vkEnumerateInstanceLayerProperties(VkUInt32 pPropertyCount, VkLayerProperties pProperties, VkResult rval){
         if(PFN_vkEnumerateInstanceLayerProperties_p == null) PFN_vkEnumerateInstanceLayerProperties_p = new PFNvkEnumerateInstanceLayerProperties(instance);
         PFN_vkEnumerateInstanceLayerProperties_p.call(pPropertyCount, pProperties, rval);
@@ -2060,9 +1035,6 @@ public class Vk {
 
     private PFNvkEnumerateDeviceLayerProperties PFN_vkEnumerateDeviceLayerProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkEnumerateDeviceLayerProperties.html">khronos documentation</a>
-     **/
     public void vkEnumerateDeviceLayerProperties(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkLayerProperties pProperties, VkResult rval){
         if(PFN_vkEnumerateDeviceLayerProperties_p == null) PFN_vkEnumerateDeviceLayerProperties_p = new PFNvkEnumerateDeviceLayerProperties(instance);
         PFN_vkEnumerateDeviceLayerProperties_p.call(physicalDevice, pPropertyCount, pProperties, rval);
@@ -2071,9 +1043,6 @@ public class Vk {
 
     private PFNvkGetDeviceQueue PFN_vkGetDeviceQueue_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDeviceQueue.html">khronos documentation</a>
-     **/
     public void vkGetDeviceQueue(VkDevice device, VkUInt32 queueFamilyIndex, VkUInt32 queueIndex, VkQueue pQueue){
         if(PFN_vkGetDeviceQueue_p == null) PFN_vkGetDeviceQueue_p = new PFNvkGetDeviceQueue(instance);
         PFN_vkGetDeviceQueue_p.call(device, queueFamilyIndex, queueIndex, pQueue);
@@ -2082,9 +1051,6 @@ public class Vk {
 
     private PFNvkQueueSubmit PFN_vkQueueSubmit_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkQueueSubmit.html">khronos documentation</a>
-     **/
     public void vkQueueSubmit(VkQueue queue, VkUInt32 submitCount, VkSubmitInfo pSubmits, VkFence fence, VkResult rval){
         if(PFN_vkQueueSubmit_p == null) PFN_vkQueueSubmit_p = new PFNvkQueueSubmit(instance);
         PFN_vkQueueSubmit_p.call(queue, submitCount, pSubmits, fence, rval);
@@ -2093,9 +1059,6 @@ public class Vk {
 
     private PFNvkQueueWaitIdle PFN_vkQueueWaitIdle_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkQueueWaitIdle.html">khronos documentation</a>
-     **/
     public void vkQueueWaitIdle(VkQueue queue, VkResult rval){
         if(PFN_vkQueueWaitIdle_p == null) PFN_vkQueueWaitIdle_p = new PFNvkQueueWaitIdle(instance);
         PFN_vkQueueWaitIdle_p.call(queue, rval);
@@ -2104,9 +1067,6 @@ public class Vk {
 
     private PFNvkDeviceWaitIdle PFN_vkDeviceWaitIdle_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDeviceWaitIdle.html">khronos documentation</a>
-     **/
     public void vkDeviceWaitIdle(VkDevice device, VkResult rval){
         if(PFN_vkDeviceWaitIdle_p == null) PFN_vkDeviceWaitIdle_p = new PFNvkDeviceWaitIdle(instance);
         PFN_vkDeviceWaitIdle_p.call(device, rval);
@@ -2115,9 +1075,6 @@ public class Vk {
 
     private PFNvkAllocateMemory PFN_vkAllocateMemory_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkAllocateMemory.html">khronos documentation</a>
-     **/
     public void vkAllocateMemory(VkDevice device, VkMemoryAllocateInfo pAllocateInfo, VkAllocationCallbacks pAllocator, VkDeviceMemory pMemory, VkResult rval){
         if(PFN_vkAllocateMemory_p == null) PFN_vkAllocateMemory_p = new PFNvkAllocateMemory(instance);
         PFN_vkAllocateMemory_p.call(device, pAllocateInfo, pAllocator, pMemory, rval);
@@ -2126,9 +1083,6 @@ public class Vk {
 
     private PFNvkFreeMemory PFN_vkFreeMemory_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkFreeMemory.html">khronos documentation</a>
-     **/
     public void vkFreeMemory(VkDevice device, VkDeviceMemory memory, VkAllocationCallbacks pAllocator){
         if(PFN_vkFreeMemory_p == null) PFN_vkFreeMemory_p = new PFNvkFreeMemory(instance);
         PFN_vkFreeMemory_p.call(device, memory, pAllocator);
@@ -2137,9 +1091,6 @@ public class Vk {
 
     private PFNvkMapMemory PFN_vkMapMemory_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkMapMemory.html">khronos documentation</a>
-     **/
     public void vkMapMemory(VkDevice device, VkDeviceMemory memory, VkDeviceSize offset, VkDeviceSize size, VkMemoryMapFlags flags, VkObject.Pointer ppData, VkResult rval){
         if(PFN_vkMapMemory_p == null) PFN_vkMapMemory_p = new PFNvkMapMemory(instance);
         PFN_vkMapMemory_p.call(device, memory, offset, size, flags, ppData, rval);
@@ -2148,9 +1099,6 @@ public class Vk {
 
     private PFNvkUnmapMemory PFN_vkUnmapMemory_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkUnmapMemory.html">khronos documentation</a>
-     **/
     public void vkUnmapMemory(VkDevice device, VkDeviceMemory memory){
         if(PFN_vkUnmapMemory_p == null) PFN_vkUnmapMemory_p = new PFNvkUnmapMemory(instance);
         PFN_vkUnmapMemory_p.call(device, memory);
@@ -2159,9 +1107,6 @@ public class Vk {
 
     private PFNvkFlushMappedMemoryRanges PFN_vkFlushMappedMemoryRanges_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkFlushMappedMemoryRanges.html">khronos documentation</a>
-     **/
     public void vkFlushMappedMemoryRanges(VkDevice device, VkUInt32 memoryRangeCount, VkMappedMemoryRange pMemoryRanges, VkResult rval){
         if(PFN_vkFlushMappedMemoryRanges_p == null) PFN_vkFlushMappedMemoryRanges_p = new PFNvkFlushMappedMemoryRanges(instance);
         PFN_vkFlushMappedMemoryRanges_p.call(device, memoryRangeCount, pMemoryRanges, rval);
@@ -2170,9 +1115,6 @@ public class Vk {
 
     private PFNvkInvalidateMappedMemoryRanges PFN_vkInvalidateMappedMemoryRanges_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkInvalidateMappedMemoryRanges.html">khronos documentation</a>
-     **/
     public void vkInvalidateMappedMemoryRanges(VkDevice device, VkUInt32 memoryRangeCount, VkMappedMemoryRange pMemoryRanges, VkResult rval){
         if(PFN_vkInvalidateMappedMemoryRanges_p == null) PFN_vkInvalidateMappedMemoryRanges_p = new PFNvkInvalidateMappedMemoryRanges(instance);
         PFN_vkInvalidateMappedMemoryRanges_p.call(device, memoryRangeCount, pMemoryRanges, rval);
@@ -2181,9 +1123,6 @@ public class Vk {
 
     private PFNvkGetDeviceMemoryCommitment PFN_vkGetDeviceMemoryCommitment_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDeviceMemoryCommitment.html">khronos documentation</a>
-     **/
     public void vkGetDeviceMemoryCommitment(VkDevice device, VkDeviceMemory memory, VkDeviceSize pCommittedMemoryInBytes){
         if(PFN_vkGetDeviceMemoryCommitment_p == null) PFN_vkGetDeviceMemoryCommitment_p = new PFNvkGetDeviceMemoryCommitment(instance);
         PFN_vkGetDeviceMemoryCommitment_p.call(device, memory, pCommittedMemoryInBytes);
@@ -2192,9 +1131,6 @@ public class Vk {
 
     private PFNvkBindBufferMemory PFN_vkBindBufferMemory_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkBindBufferMemory.html">khronos documentation</a>
-     **/
     public void vkBindBufferMemory(VkDevice device, VkBuffer buffer, VkDeviceMemory memory, VkDeviceSize memoryOffset, VkResult rval){
         if(PFN_vkBindBufferMemory_p == null) PFN_vkBindBufferMemory_p = new PFNvkBindBufferMemory(instance);
         PFN_vkBindBufferMemory_p.call(device, buffer, memory, memoryOffset, rval);
@@ -2203,9 +1139,6 @@ public class Vk {
 
     private PFNvkBindImageMemory PFN_vkBindImageMemory_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkBindImageMemory.html">khronos documentation</a>
-     **/
     public void vkBindImageMemory(VkDevice device, VkImage image, VkDeviceMemory memory, VkDeviceSize memoryOffset, VkResult rval){
         if(PFN_vkBindImageMemory_p == null) PFN_vkBindImageMemory_p = new PFNvkBindImageMemory(instance);
         PFN_vkBindImageMemory_p.call(device, image, memory, memoryOffset, rval);
@@ -2214,9 +1147,6 @@ public class Vk {
 
     private PFNvkGetBufferMemoryRequirements PFN_vkGetBufferMemoryRequirements_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetBufferMemoryRequirements.html">khronos documentation</a>
-     **/
     public void vkGetBufferMemoryRequirements(VkDevice device, VkBuffer buffer, VkMemoryRequirements pMemoryRequirements){
         if(PFN_vkGetBufferMemoryRequirements_p == null) PFN_vkGetBufferMemoryRequirements_p = new PFNvkGetBufferMemoryRequirements(instance);
         PFN_vkGetBufferMemoryRequirements_p.call(device, buffer, pMemoryRequirements);
@@ -2225,9 +1155,6 @@ public class Vk {
 
     private PFNvkGetImageMemoryRequirements PFN_vkGetImageMemoryRequirements_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetImageMemoryRequirements.html">khronos documentation</a>
-     **/
     public void vkGetImageMemoryRequirements(VkDevice device, VkImage image, VkMemoryRequirements pMemoryRequirements){
         if(PFN_vkGetImageMemoryRequirements_p == null) PFN_vkGetImageMemoryRequirements_p = new PFNvkGetImageMemoryRequirements(instance);
         PFN_vkGetImageMemoryRequirements_p.call(device, image, pMemoryRequirements);
@@ -2236,9 +1163,6 @@ public class Vk {
 
     private PFNvkGetImageSparseMemoryRequirements PFN_vkGetImageSparseMemoryRequirements_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetImageSparseMemoryRequirements.html">khronos documentation</a>
-     **/
     public void vkGetImageSparseMemoryRequirements(VkDevice device, VkImage image, VkUInt32 pSparseMemoryRequirementCount, VkSparseImageMemoryRequirements pSparseMemoryRequirements){
         if(PFN_vkGetImageSparseMemoryRequirements_p == null) PFN_vkGetImageSparseMemoryRequirements_p = new PFNvkGetImageSparseMemoryRequirements(instance);
         PFN_vkGetImageSparseMemoryRequirements_p.call(device, image, pSparseMemoryRequirementCount, pSparseMemoryRequirements);
@@ -2247,9 +1171,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceSparseImageFormatProperties PFN_vkGetPhysicalDeviceSparseImageFormatProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceSparseImageFormatProperties.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceSparseImageFormatProperties(VkPhysicalDevice physicalDevice, VkFormat format, VkImageType type, VkSampleCountFlagBits samples, VkImageUsageFlags usage, VkImageTiling tiling, VkUInt32 pPropertyCount, VkSparseImageFormatProperties pProperties){
         if(PFN_vkGetPhysicalDeviceSparseImageFormatProperties_p == null) PFN_vkGetPhysicalDeviceSparseImageFormatProperties_p = new PFNvkGetPhysicalDeviceSparseImageFormatProperties(instance);
         PFN_vkGetPhysicalDeviceSparseImageFormatProperties_p.call(physicalDevice, format, type, samples, usage, tiling, pPropertyCount, pProperties);
@@ -2258,9 +1179,6 @@ public class Vk {
 
     private PFNvkQueueBindSparse PFN_vkQueueBindSparse_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkQueueBindSparse.html">khronos documentation</a>
-     **/
     public void vkQueueBindSparse(VkQueue queue, VkUInt32 bindInfoCount, VkBindSparseInfo pBindInfo, VkFence fence, VkResult rval){
         if(PFN_vkQueueBindSparse_p == null) PFN_vkQueueBindSparse_p = new PFNvkQueueBindSparse(instance);
         PFN_vkQueueBindSparse_p.call(queue, bindInfoCount, pBindInfo, fence, rval);
@@ -2269,9 +1187,6 @@ public class Vk {
 
     private PFNvkCreateFence PFN_vkCreateFence_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateFence.html">khronos documentation</a>
-     **/
     public void vkCreateFence(VkDevice device, VkFenceCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkFence pFence, VkResult rval){
         if(PFN_vkCreateFence_p == null) PFN_vkCreateFence_p = new PFNvkCreateFence(instance);
         PFN_vkCreateFence_p.call(device, pCreateInfo, pAllocator, pFence, rval);
@@ -2280,9 +1195,6 @@ public class Vk {
 
     private PFNvkDestroyFence PFN_vkDestroyFence_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyFence.html">khronos documentation</a>
-     **/
     public void vkDestroyFence(VkDevice device, VkFence fence, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyFence_p == null) PFN_vkDestroyFence_p = new PFNvkDestroyFence(instance);
         PFN_vkDestroyFence_p.call(device, fence, pAllocator);
@@ -2291,9 +1203,6 @@ public class Vk {
 
     private PFNvkResetFences PFN_vkResetFences_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkResetFences.html">khronos documentation</a>
-     **/
     public void vkResetFences(VkDevice device, VkUInt32 fenceCount, VkFence pFences, VkResult rval){
         if(PFN_vkResetFences_p == null) PFN_vkResetFences_p = new PFNvkResetFences(instance);
         PFN_vkResetFences_p.call(device, fenceCount, pFences, rval);
@@ -2302,9 +1211,6 @@ public class Vk {
 
     private PFNvkGetFenceStatus PFN_vkGetFenceStatus_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetFenceStatus.html">khronos documentation</a>
-     **/
     public void vkGetFenceStatus(VkDevice device, VkFence fence, VkResult rval){
         if(PFN_vkGetFenceStatus_p == null) PFN_vkGetFenceStatus_p = new PFNvkGetFenceStatus(instance);
         PFN_vkGetFenceStatus_p.call(device, fence, rval);
@@ -2313,9 +1219,6 @@ public class Vk {
 
     private PFNvkWaitForFences PFN_vkWaitForFences_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkWaitForFences.html">khronos documentation</a>
-     **/
     public void vkWaitForFences(VkDevice device, VkUInt32 fenceCount, VkFence pFences, VkBool32 waitAll, VkUInt64 timeout, VkResult rval){
         if(PFN_vkWaitForFences_p == null) PFN_vkWaitForFences_p = new PFNvkWaitForFences(instance);
         PFN_vkWaitForFences_p.call(device, fenceCount, pFences, waitAll, timeout, rval);
@@ -2324,9 +1227,6 @@ public class Vk {
 
     private PFNvkCreateSemaphore PFN_vkCreateSemaphore_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateSemaphore.html">khronos documentation</a>
-     **/
     public void vkCreateSemaphore(VkDevice device, VkSemaphoreCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSemaphore pSemaphore, VkResult rval){
         if(PFN_vkCreateSemaphore_p == null) PFN_vkCreateSemaphore_p = new PFNvkCreateSemaphore(instance);
         PFN_vkCreateSemaphore_p.call(device, pCreateInfo, pAllocator, pSemaphore, rval);
@@ -2335,9 +1235,6 @@ public class Vk {
 
     private PFNvkDestroySemaphore PFN_vkDestroySemaphore_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroySemaphore.html">khronos documentation</a>
-     **/
     public void vkDestroySemaphore(VkDevice device, VkSemaphore semaphore, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroySemaphore_p == null) PFN_vkDestroySemaphore_p = new PFNvkDestroySemaphore(instance);
         PFN_vkDestroySemaphore_p.call(device, semaphore, pAllocator);
@@ -2346,9 +1243,6 @@ public class Vk {
 
     private PFNvkCreateEvent PFN_vkCreateEvent_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateEvent.html">khronos documentation</a>
-     **/
     public void vkCreateEvent(VkDevice device, VkEventCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkEvent pEvent, VkResult rval){
         if(PFN_vkCreateEvent_p == null) PFN_vkCreateEvent_p = new PFNvkCreateEvent(instance);
         PFN_vkCreateEvent_p.call(device, pCreateInfo, pAllocator, pEvent, rval);
@@ -2357,9 +1251,6 @@ public class Vk {
 
     private PFNvkDestroyEvent PFN_vkDestroyEvent_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyEvent.html">khronos documentation</a>
-     **/
     public void vkDestroyEvent(VkDevice device, VkEvent event, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyEvent_p == null) PFN_vkDestroyEvent_p = new PFNvkDestroyEvent(instance);
         PFN_vkDestroyEvent_p.call(device, event, pAllocator);
@@ -2368,9 +1259,6 @@ public class Vk {
 
     private PFNvkGetEventStatus PFN_vkGetEventStatus_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetEventStatus.html">khronos documentation</a>
-     **/
     public void vkGetEventStatus(VkDevice device, VkEvent event, VkResult rval){
         if(PFN_vkGetEventStatus_p == null) PFN_vkGetEventStatus_p = new PFNvkGetEventStatus(instance);
         PFN_vkGetEventStatus_p.call(device, event, rval);
@@ -2379,9 +1267,6 @@ public class Vk {
 
     private PFNvkSetEvent PFN_vkSetEvent_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkSetEvent.html">khronos documentation</a>
-     **/
     public void vkSetEvent(VkDevice device, VkEvent event, VkResult rval){
         if(PFN_vkSetEvent_p == null) PFN_vkSetEvent_p = new PFNvkSetEvent(instance);
         PFN_vkSetEvent_p.call(device, event, rval);
@@ -2390,9 +1275,6 @@ public class Vk {
 
     private PFNvkResetEvent PFN_vkResetEvent_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkResetEvent.html">khronos documentation</a>
-     **/
     public void vkResetEvent(VkDevice device, VkEvent event, VkResult rval){
         if(PFN_vkResetEvent_p == null) PFN_vkResetEvent_p = new PFNvkResetEvent(instance);
         PFN_vkResetEvent_p.call(device, event, rval);
@@ -2401,9 +1283,6 @@ public class Vk {
 
     private PFNvkCreateQueryPool PFN_vkCreateQueryPool_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateQueryPool.html">khronos documentation</a>
-     **/
     public void vkCreateQueryPool(VkDevice device, VkQueryPoolCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkQueryPool pQueryPool, VkResult rval){
         if(PFN_vkCreateQueryPool_p == null) PFN_vkCreateQueryPool_p = new PFNvkCreateQueryPool(instance);
         PFN_vkCreateQueryPool_p.call(device, pCreateInfo, pAllocator, pQueryPool, rval);
@@ -2412,9 +1291,6 @@ public class Vk {
 
     private PFNvkDestroyQueryPool PFN_vkDestroyQueryPool_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyQueryPool.html">khronos documentation</a>
-     **/
     public void vkDestroyQueryPool(VkDevice device, VkQueryPool queryPool, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyQueryPool_p == null) PFN_vkDestroyQueryPool_p = new PFNvkDestroyQueryPool(instance);
         PFN_vkDestroyQueryPool_p.call(device, queryPool, pAllocator);
@@ -2423,9 +1299,6 @@ public class Vk {
 
     private PFNvkGetQueryPoolResults PFN_vkGetQueryPoolResults_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetQueryPoolResults.html">khronos documentation</a>
-     **/
     public void vkGetQueryPoolResults(VkDevice device, VkQueryPool queryPool, VkUInt32 firstQuery, VkUInt32 queryCount, VkSize dataSize, VkObject pData, VkDeviceSize stride, VkQueryResultFlags flags, VkResult rval){
         if(PFN_vkGetQueryPoolResults_p == null) PFN_vkGetQueryPoolResults_p = new PFNvkGetQueryPoolResults(instance);
         PFN_vkGetQueryPoolResults_p.call(device, queryPool, firstQuery, queryCount, dataSize, pData, stride, flags, rval);
@@ -2434,9 +1307,6 @@ public class Vk {
 
     private PFNvkCreateBuffer PFN_vkCreateBuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateBuffer.html">khronos documentation</a>
-     **/
     public void vkCreateBuffer(VkDevice device, VkBufferCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkBuffer pBuffer, VkResult rval){
         if(PFN_vkCreateBuffer_p == null) PFN_vkCreateBuffer_p = new PFNvkCreateBuffer(instance);
         PFN_vkCreateBuffer_p.call(device, pCreateInfo, pAllocator, pBuffer, rval);
@@ -2445,9 +1315,6 @@ public class Vk {
 
     private PFNvkDestroyBuffer PFN_vkDestroyBuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyBuffer.html">khronos documentation</a>
-     **/
     public void vkDestroyBuffer(VkDevice device, VkBuffer buffer, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyBuffer_p == null) PFN_vkDestroyBuffer_p = new PFNvkDestroyBuffer(instance);
         PFN_vkDestroyBuffer_p.call(device, buffer, pAllocator);
@@ -2456,9 +1323,6 @@ public class Vk {
 
     private PFNvkCreateBufferView PFN_vkCreateBufferView_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateBufferView.html">khronos documentation</a>
-     **/
     public void vkCreateBufferView(VkDevice device, VkBufferViewCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkBufferView pView, VkResult rval){
         if(PFN_vkCreateBufferView_p == null) PFN_vkCreateBufferView_p = new PFNvkCreateBufferView(instance);
         PFN_vkCreateBufferView_p.call(device, pCreateInfo, pAllocator, pView, rval);
@@ -2467,9 +1331,6 @@ public class Vk {
 
     private PFNvkDestroyBufferView PFN_vkDestroyBufferView_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyBufferView.html">khronos documentation</a>
-     **/
     public void vkDestroyBufferView(VkDevice device, VkBufferView bufferView, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyBufferView_p == null) PFN_vkDestroyBufferView_p = new PFNvkDestroyBufferView(instance);
         PFN_vkDestroyBufferView_p.call(device, bufferView, pAllocator);
@@ -2478,9 +1339,6 @@ public class Vk {
 
     private PFNvkCreateImage PFN_vkCreateImage_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateImage.html">khronos documentation</a>
-     **/
     public void vkCreateImage(VkDevice device, VkImageCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkImage pImage, VkResult rval){
         if(PFN_vkCreateImage_p == null) PFN_vkCreateImage_p = new PFNvkCreateImage(instance);
         PFN_vkCreateImage_p.call(device, pCreateInfo, pAllocator, pImage, rval);
@@ -2489,9 +1347,6 @@ public class Vk {
 
     private PFNvkDestroyImage PFN_vkDestroyImage_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyImage.html">khronos documentation</a>
-     **/
     public void vkDestroyImage(VkDevice device, VkImage image, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyImage_p == null) PFN_vkDestroyImage_p = new PFNvkDestroyImage(instance);
         PFN_vkDestroyImage_p.call(device, image, pAllocator);
@@ -2500,9 +1355,6 @@ public class Vk {
 
     private PFNvkGetImageSubresourceLayout PFN_vkGetImageSubresourceLayout_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetImageSubresourceLayout.html">khronos documentation</a>
-     **/
     public void vkGetImageSubresourceLayout(VkDevice device, VkImage image, VkImageSubresource pSubresource, VkSubresourceLayout pLayout){
         if(PFN_vkGetImageSubresourceLayout_p == null) PFN_vkGetImageSubresourceLayout_p = new PFNvkGetImageSubresourceLayout(instance);
         PFN_vkGetImageSubresourceLayout_p.call(device, image, pSubresource, pLayout);
@@ -2511,9 +1363,6 @@ public class Vk {
 
     private PFNvkCreateImageView PFN_vkCreateImageView_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateImageView.html">khronos documentation</a>
-     **/
     public void vkCreateImageView(VkDevice device, VkImageViewCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkImageView pView, VkResult rval){
         if(PFN_vkCreateImageView_p == null) PFN_vkCreateImageView_p = new PFNvkCreateImageView(instance);
         PFN_vkCreateImageView_p.call(device, pCreateInfo, pAllocator, pView, rval);
@@ -2522,9 +1371,6 @@ public class Vk {
 
     private PFNvkDestroyImageView PFN_vkDestroyImageView_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyImageView.html">khronos documentation</a>
-     **/
     public void vkDestroyImageView(VkDevice device, VkImageView imageView, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyImageView_p == null) PFN_vkDestroyImageView_p = new PFNvkDestroyImageView(instance);
         PFN_vkDestroyImageView_p.call(device, imageView, pAllocator);
@@ -2533,9 +1379,6 @@ public class Vk {
 
     private PFNvkCreateShaderModule PFN_vkCreateShaderModule_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateShaderModule.html">khronos documentation</a>
-     **/
     public void vkCreateShaderModule(VkDevice device, VkShaderModuleCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkShaderModule pShaderModule, VkResult rval){
         if(PFN_vkCreateShaderModule_p == null) PFN_vkCreateShaderModule_p = new PFNvkCreateShaderModule(instance);
         PFN_vkCreateShaderModule_p.call(device, pCreateInfo, pAllocator, pShaderModule, rval);
@@ -2544,9 +1387,6 @@ public class Vk {
 
     private PFNvkDestroyShaderModule PFN_vkDestroyShaderModule_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyShaderModule.html">khronos documentation</a>
-     **/
     public void vkDestroyShaderModule(VkDevice device, VkShaderModule shaderModule, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyShaderModule_p == null) PFN_vkDestroyShaderModule_p = new PFNvkDestroyShaderModule(instance);
         PFN_vkDestroyShaderModule_p.call(device, shaderModule, pAllocator);
@@ -2555,9 +1395,6 @@ public class Vk {
 
     private PFNvkCreatePipelineCache PFN_vkCreatePipelineCache_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreatePipelineCache.html">khronos documentation</a>
-     **/
     public void vkCreatePipelineCache(VkDevice device, VkPipelineCacheCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkPipelineCache pPipelineCache, VkResult rval){
         if(PFN_vkCreatePipelineCache_p == null) PFN_vkCreatePipelineCache_p = new PFNvkCreatePipelineCache(instance);
         PFN_vkCreatePipelineCache_p.call(device, pCreateInfo, pAllocator, pPipelineCache, rval);
@@ -2566,9 +1403,6 @@ public class Vk {
 
     private PFNvkDestroyPipelineCache PFN_vkDestroyPipelineCache_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyPipelineCache.html">khronos documentation</a>
-     **/
     public void vkDestroyPipelineCache(VkDevice device, VkPipelineCache pipelineCache, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyPipelineCache_p == null) PFN_vkDestroyPipelineCache_p = new PFNvkDestroyPipelineCache(instance);
         PFN_vkDestroyPipelineCache_p.call(device, pipelineCache, pAllocator);
@@ -2577,9 +1411,6 @@ public class Vk {
 
     private PFNvkGetPipelineCacheData PFN_vkGetPipelineCacheData_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPipelineCacheData.html">khronos documentation</a>
-     **/
     public void vkGetPipelineCacheData(VkDevice device, VkPipelineCache pipelineCache, VkSize pDataSize, VkObject pData, VkResult rval){
         if(PFN_vkGetPipelineCacheData_p == null) PFN_vkGetPipelineCacheData_p = new PFNvkGetPipelineCacheData(instance);
         PFN_vkGetPipelineCacheData_p.call(device, pipelineCache, pDataSize, pData, rval);
@@ -2588,9 +1419,6 @@ public class Vk {
 
     private PFNvkMergePipelineCaches PFN_vkMergePipelineCaches_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkMergePipelineCaches.html">khronos documentation</a>
-     **/
     public void vkMergePipelineCaches(VkDevice device, VkPipelineCache dstCache, VkUInt32 srcCacheCount, VkPipelineCache pSrcCaches, VkResult rval){
         if(PFN_vkMergePipelineCaches_p == null) PFN_vkMergePipelineCaches_p = new PFNvkMergePipelineCaches(instance);
         PFN_vkMergePipelineCaches_p.call(device, dstCache, srcCacheCount, pSrcCaches, rval);
@@ -2599,9 +1427,6 @@ public class Vk {
 
     private PFNvkCreateGraphicsPipelines PFN_vkCreateGraphicsPipelines_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateGraphicsPipelines.html">khronos documentation</a>
-     **/
     public void vkCreateGraphicsPipelines(VkDevice device, VkPipelineCache pipelineCache, VkUInt32 createInfoCount, VkGraphicsPipelineCreateInfo pCreateInfos, VkAllocationCallbacks pAllocator, VkPipeline pPipelines, VkResult rval){
         if(PFN_vkCreateGraphicsPipelines_p == null) PFN_vkCreateGraphicsPipelines_p = new PFNvkCreateGraphicsPipelines(instance);
         PFN_vkCreateGraphicsPipelines_p.call(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, pPipelines, rval);
@@ -2610,9 +1435,6 @@ public class Vk {
 
     private PFNvkCreateComputePipelines PFN_vkCreateComputePipelines_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateComputePipelines.html">khronos documentation</a>
-     **/
     public void vkCreateComputePipelines(VkDevice device, VkPipelineCache pipelineCache, VkUInt32 createInfoCount, VkComputePipelineCreateInfo pCreateInfos, VkAllocationCallbacks pAllocator, VkPipeline pPipelines, VkResult rval){
         if(PFN_vkCreateComputePipelines_p == null) PFN_vkCreateComputePipelines_p = new PFNvkCreateComputePipelines(instance);
         PFN_vkCreateComputePipelines_p.call(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, pPipelines, rval);
@@ -2621,9 +1443,6 @@ public class Vk {
 
     private PFNvkDestroyPipeline PFN_vkDestroyPipeline_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyPipeline.html">khronos documentation</a>
-     **/
     public void vkDestroyPipeline(VkDevice device, VkPipeline pipeline, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyPipeline_p == null) PFN_vkDestroyPipeline_p = new PFNvkDestroyPipeline(instance);
         PFN_vkDestroyPipeline_p.call(device, pipeline, pAllocator);
@@ -2632,9 +1451,6 @@ public class Vk {
 
     private PFNvkCreatePipelineLayout PFN_vkCreatePipelineLayout_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreatePipelineLayout.html">khronos documentation</a>
-     **/
     public void vkCreatePipelineLayout(VkDevice device, VkPipelineLayoutCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkPipelineLayout pPipelineLayout, VkResult rval){
         if(PFN_vkCreatePipelineLayout_p == null) PFN_vkCreatePipelineLayout_p = new PFNvkCreatePipelineLayout(instance);
         PFN_vkCreatePipelineLayout_p.call(device, pCreateInfo, pAllocator, pPipelineLayout, rval);
@@ -2643,9 +1459,6 @@ public class Vk {
 
     private PFNvkDestroyPipelineLayout PFN_vkDestroyPipelineLayout_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyPipelineLayout.html">khronos documentation</a>
-     **/
     public void vkDestroyPipelineLayout(VkDevice device, VkPipelineLayout pipelineLayout, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyPipelineLayout_p == null) PFN_vkDestroyPipelineLayout_p = new PFNvkDestroyPipelineLayout(instance);
         PFN_vkDestroyPipelineLayout_p.call(device, pipelineLayout, pAllocator);
@@ -2654,9 +1467,6 @@ public class Vk {
 
     private PFNvkCreateSampler PFN_vkCreateSampler_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateSampler.html">khronos documentation</a>
-     **/
     public void vkCreateSampler(VkDevice device, VkSamplerCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSampler pSampler, VkResult rval){
         if(PFN_vkCreateSampler_p == null) PFN_vkCreateSampler_p = new PFNvkCreateSampler(instance);
         PFN_vkCreateSampler_p.call(device, pCreateInfo, pAllocator, pSampler, rval);
@@ -2665,9 +1475,6 @@ public class Vk {
 
     private PFNvkDestroySampler PFN_vkDestroySampler_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroySampler.html">khronos documentation</a>
-     **/
     public void vkDestroySampler(VkDevice device, VkSampler sampler, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroySampler_p == null) PFN_vkDestroySampler_p = new PFNvkDestroySampler(instance);
         PFN_vkDestroySampler_p.call(device, sampler, pAllocator);
@@ -2676,9 +1483,6 @@ public class Vk {
 
     private PFNvkCreateDescriptorSetLayout PFN_vkCreateDescriptorSetLayout_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateDescriptorSetLayout.html">khronos documentation</a>
-     **/
     public void vkCreateDescriptorSetLayout(VkDevice device, VkDescriptorSetLayoutCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorSetLayout pSetLayout, VkResult rval){
         if(PFN_vkCreateDescriptorSetLayout_p == null) PFN_vkCreateDescriptorSetLayout_p = new PFNvkCreateDescriptorSetLayout(instance);
         PFN_vkCreateDescriptorSetLayout_p.call(device, pCreateInfo, pAllocator, pSetLayout, rval);
@@ -2687,9 +1491,6 @@ public class Vk {
 
     private PFNvkDestroyDescriptorSetLayout PFN_vkDestroyDescriptorSetLayout_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyDescriptorSetLayout.html">khronos documentation</a>
-     **/
     public void vkDestroyDescriptorSetLayout(VkDevice device, VkDescriptorSetLayout descriptorSetLayout, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyDescriptorSetLayout_p == null) PFN_vkDestroyDescriptorSetLayout_p = new PFNvkDestroyDescriptorSetLayout(instance);
         PFN_vkDestroyDescriptorSetLayout_p.call(device, descriptorSetLayout, pAllocator);
@@ -2698,9 +1499,6 @@ public class Vk {
 
     private PFNvkCreateDescriptorPool PFN_vkCreateDescriptorPool_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateDescriptorPool.html">khronos documentation</a>
-     **/
     public void vkCreateDescriptorPool(VkDevice device, VkDescriptorPoolCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorPool pDescriptorPool, VkResult rval){
         if(PFN_vkCreateDescriptorPool_p == null) PFN_vkCreateDescriptorPool_p = new PFNvkCreateDescriptorPool(instance);
         PFN_vkCreateDescriptorPool_p.call(device, pCreateInfo, pAllocator, pDescriptorPool, rval);
@@ -2709,9 +1507,6 @@ public class Vk {
 
     private PFNvkDestroyDescriptorPool PFN_vkDestroyDescriptorPool_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyDescriptorPool.html">khronos documentation</a>
-     **/
     public void vkDestroyDescriptorPool(VkDevice device, VkDescriptorPool descriptorPool, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyDescriptorPool_p == null) PFN_vkDestroyDescriptorPool_p = new PFNvkDestroyDescriptorPool(instance);
         PFN_vkDestroyDescriptorPool_p.call(device, descriptorPool, pAllocator);
@@ -2720,9 +1515,6 @@ public class Vk {
 
     private PFNvkResetDescriptorPool PFN_vkResetDescriptorPool_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkResetDescriptorPool.html">khronos documentation</a>
-     **/
     public void vkResetDescriptorPool(VkDevice device, VkDescriptorPool descriptorPool, VkDescriptorPoolResetFlags flags, VkResult rval){
         if(PFN_vkResetDescriptorPool_p == null) PFN_vkResetDescriptorPool_p = new PFNvkResetDescriptorPool(instance);
         PFN_vkResetDescriptorPool_p.call(device, descriptorPool, flags, rval);
@@ -2731,9 +1523,6 @@ public class Vk {
 
     private PFNvkAllocateDescriptorSets PFN_vkAllocateDescriptorSets_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkAllocateDescriptorSets.html">khronos documentation</a>
-     **/
     public void vkAllocateDescriptorSets(VkDevice device, VkDescriptorSetAllocateInfo pAllocateInfo, VkDescriptorSet pDescriptorSets, VkResult rval){
         if(PFN_vkAllocateDescriptorSets_p == null) PFN_vkAllocateDescriptorSets_p = new PFNvkAllocateDescriptorSets(instance);
         PFN_vkAllocateDescriptorSets_p.call(device, pAllocateInfo, pDescriptorSets, rval);
@@ -2742,9 +1531,6 @@ public class Vk {
 
     private PFNvkFreeDescriptorSets PFN_vkFreeDescriptorSets_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkFreeDescriptorSets.html">khronos documentation</a>
-     **/
     public void vkFreeDescriptorSets(VkDevice device, VkDescriptorPool descriptorPool, VkUInt32 descriptorSetCount, VkDescriptorSet pDescriptorSets, VkResult rval){
         if(PFN_vkFreeDescriptorSets_p == null) PFN_vkFreeDescriptorSets_p = new PFNvkFreeDescriptorSets(instance);
         PFN_vkFreeDescriptorSets_p.call(device, descriptorPool, descriptorSetCount, pDescriptorSets, rval);
@@ -2753,9 +1539,6 @@ public class Vk {
 
     private PFNvkUpdateDescriptorSets PFN_vkUpdateDescriptorSets_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkUpdateDescriptorSets.html">khronos documentation</a>
-     **/
     public void vkUpdateDescriptorSets(VkDevice device, VkUInt32 descriptorWriteCount, VkWriteDescriptorSet pDescriptorWrites, VkUInt32 descriptorCopyCount, VkCopyDescriptorSet pDescriptorCopies){
         if(PFN_vkUpdateDescriptorSets_p == null) PFN_vkUpdateDescriptorSets_p = new PFNvkUpdateDescriptorSets(instance);
         PFN_vkUpdateDescriptorSets_p.call(device, descriptorWriteCount, pDescriptorWrites, descriptorCopyCount, pDescriptorCopies);
@@ -2764,9 +1547,6 @@ public class Vk {
 
     private PFNvkCreateFramebuffer PFN_vkCreateFramebuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateFramebuffer.html">khronos documentation</a>
-     **/
     public void vkCreateFramebuffer(VkDevice device, VkFramebufferCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkFramebuffer pFramebuffer, VkResult rval){
         if(PFN_vkCreateFramebuffer_p == null) PFN_vkCreateFramebuffer_p = new PFNvkCreateFramebuffer(instance);
         PFN_vkCreateFramebuffer_p.call(device, pCreateInfo, pAllocator, pFramebuffer, rval);
@@ -2775,9 +1555,6 @@ public class Vk {
 
     private PFNvkDestroyFramebuffer PFN_vkDestroyFramebuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyFramebuffer.html">khronos documentation</a>
-     **/
     public void vkDestroyFramebuffer(VkDevice device, VkFramebuffer framebuffer, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyFramebuffer_p == null) PFN_vkDestroyFramebuffer_p = new PFNvkDestroyFramebuffer(instance);
         PFN_vkDestroyFramebuffer_p.call(device, framebuffer, pAllocator);
@@ -2786,9 +1563,6 @@ public class Vk {
 
     private PFNvkCreateRenderPass PFN_vkCreateRenderPass_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateRenderPass.html">khronos documentation</a>
-     **/
     public void vkCreateRenderPass(VkDevice device, VkRenderPassCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkRenderPass pRenderPass, VkResult rval){
         if(PFN_vkCreateRenderPass_p == null) PFN_vkCreateRenderPass_p = new PFNvkCreateRenderPass(instance);
         PFN_vkCreateRenderPass_p.call(device, pCreateInfo, pAllocator, pRenderPass, rval);
@@ -2797,9 +1571,6 @@ public class Vk {
 
     private PFNvkDestroyRenderPass PFN_vkDestroyRenderPass_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyRenderPass.html">khronos documentation</a>
-     **/
     public void vkDestroyRenderPass(VkDevice device, VkRenderPass renderPass, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyRenderPass_p == null) PFN_vkDestroyRenderPass_p = new PFNvkDestroyRenderPass(instance);
         PFN_vkDestroyRenderPass_p.call(device, renderPass, pAllocator);
@@ -2808,9 +1579,6 @@ public class Vk {
 
     private PFNvkGetRenderAreaGranularity PFN_vkGetRenderAreaGranularity_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetRenderAreaGranularity.html">khronos documentation</a>
-     **/
     public void vkGetRenderAreaGranularity(VkDevice device, VkRenderPass renderPass, VkExtent2D pGranularity){
         if(PFN_vkGetRenderAreaGranularity_p == null) PFN_vkGetRenderAreaGranularity_p = new PFNvkGetRenderAreaGranularity(instance);
         PFN_vkGetRenderAreaGranularity_p.call(device, renderPass, pGranularity);
@@ -2819,9 +1587,6 @@ public class Vk {
 
     private PFNvkCreateCommandPool PFN_vkCreateCommandPool_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateCommandPool.html">khronos documentation</a>
-     **/
     public void vkCreateCommandPool(VkDevice device, VkCommandPoolCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkCommandPool pCommandPool, VkResult rval){
         if(PFN_vkCreateCommandPool_p == null) PFN_vkCreateCommandPool_p = new PFNvkCreateCommandPool(instance);
         PFN_vkCreateCommandPool_p.call(device, pCreateInfo, pAllocator, pCommandPool, rval);
@@ -2830,9 +1595,6 @@ public class Vk {
 
     private PFNvkDestroyCommandPool PFN_vkDestroyCommandPool_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyCommandPool.html">khronos documentation</a>
-     **/
     public void vkDestroyCommandPool(VkDevice device, VkCommandPool commandPool, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyCommandPool_p == null) PFN_vkDestroyCommandPool_p = new PFNvkDestroyCommandPool(instance);
         PFN_vkDestroyCommandPool_p.call(device, commandPool, pAllocator);
@@ -2841,9 +1603,6 @@ public class Vk {
 
     private PFNvkResetCommandPool PFN_vkResetCommandPool_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkResetCommandPool.html">khronos documentation</a>
-     **/
     public void vkResetCommandPool(VkDevice device, VkCommandPool commandPool, VkCommandPoolResetFlags flags, VkResult rval){
         if(PFN_vkResetCommandPool_p == null) PFN_vkResetCommandPool_p = new PFNvkResetCommandPool(instance);
         PFN_vkResetCommandPool_p.call(device, commandPool, flags, rval);
@@ -2852,9 +1611,6 @@ public class Vk {
 
     private PFNvkAllocateCommandBuffers PFN_vkAllocateCommandBuffers_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkAllocateCommandBuffers.html">khronos documentation</a>
-     **/
     public void vkAllocateCommandBuffers(VkDevice device, VkCommandBufferAllocateInfo pAllocateInfo, VkCommandBuffer pCommandBuffers, VkResult rval){
         if(PFN_vkAllocateCommandBuffers_p == null) PFN_vkAllocateCommandBuffers_p = new PFNvkAllocateCommandBuffers(instance);
         PFN_vkAllocateCommandBuffers_p.call(device, pAllocateInfo, pCommandBuffers, rval);
@@ -2863,9 +1619,6 @@ public class Vk {
 
     private PFNvkFreeCommandBuffers PFN_vkFreeCommandBuffers_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkFreeCommandBuffers.html">khronos documentation</a>
-     **/
     public void vkFreeCommandBuffers(VkDevice device, VkCommandPool commandPool, VkUInt32 commandBufferCount, VkCommandBuffer pCommandBuffers){
         if(PFN_vkFreeCommandBuffers_p == null) PFN_vkFreeCommandBuffers_p = new PFNvkFreeCommandBuffers(instance);
         PFN_vkFreeCommandBuffers_p.call(device, commandPool, commandBufferCount, pCommandBuffers);
@@ -2874,9 +1627,6 @@ public class Vk {
 
     private PFNvkBeginCommandBuffer PFN_vkBeginCommandBuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkBeginCommandBuffer.html">khronos documentation</a>
-     **/
     public void vkBeginCommandBuffer(VkCommandBuffer commandBuffer, VkCommandBufferBeginInfo pBeginInfo, VkResult rval){
         if(PFN_vkBeginCommandBuffer_p == null) PFN_vkBeginCommandBuffer_p = new PFNvkBeginCommandBuffer(instance);
         PFN_vkBeginCommandBuffer_p.call(commandBuffer, pBeginInfo, rval);
@@ -2885,9 +1635,6 @@ public class Vk {
 
     private PFNvkEndCommandBuffer PFN_vkEndCommandBuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkEndCommandBuffer.html">khronos documentation</a>
-     **/
     public void vkEndCommandBuffer(VkCommandBuffer commandBuffer, VkResult rval){
         if(PFN_vkEndCommandBuffer_p == null) PFN_vkEndCommandBuffer_p = new PFNvkEndCommandBuffer(instance);
         PFN_vkEndCommandBuffer_p.call(commandBuffer, rval);
@@ -2896,9 +1643,6 @@ public class Vk {
 
     private PFNvkResetCommandBuffer PFN_vkResetCommandBuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkResetCommandBuffer.html">khronos documentation</a>
-     **/
     public void vkResetCommandBuffer(VkCommandBuffer commandBuffer, VkCommandBufferResetFlags flags, VkResult rval){
         if(PFN_vkResetCommandBuffer_p == null) PFN_vkResetCommandBuffer_p = new PFNvkResetCommandBuffer(instance);
         PFN_vkResetCommandBuffer_p.call(commandBuffer, flags, rval);
@@ -2907,9 +1651,6 @@ public class Vk {
 
     private PFNvkCmdBindPipeline PFN_vkCmdBindPipeline_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdBindPipeline.html">khronos documentation</a>
-     **/
     public void vkCmdBindPipeline(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipeline pipeline){
         if(PFN_vkCmdBindPipeline_p == null) PFN_vkCmdBindPipeline_p = new PFNvkCmdBindPipeline(instance);
         PFN_vkCmdBindPipeline_p.call(commandBuffer, pipelineBindPoint, pipeline);
@@ -2918,9 +1659,6 @@ public class Vk {
 
     private PFNvkCmdSetViewport PFN_vkCmdSetViewport_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetViewport.html">khronos documentation</a>
-     **/
     public void vkCmdSetViewport(VkCommandBuffer commandBuffer, VkUInt32 firstViewport, VkUInt32 viewportCount, VkViewport pViewports){
         if(PFN_vkCmdSetViewport_p == null) PFN_vkCmdSetViewport_p = new PFNvkCmdSetViewport(instance);
         PFN_vkCmdSetViewport_p.call(commandBuffer, firstViewport, viewportCount, pViewports);
@@ -2929,9 +1667,6 @@ public class Vk {
 
     private PFNvkCmdSetScissor PFN_vkCmdSetScissor_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetScissor.html">khronos documentation</a>
-     **/
     public void vkCmdSetScissor(VkCommandBuffer commandBuffer, VkUInt32 firstScissor, VkUInt32 scissorCount, VkRect2D pScissors){
         if(PFN_vkCmdSetScissor_p == null) PFN_vkCmdSetScissor_p = new PFNvkCmdSetScissor(instance);
         PFN_vkCmdSetScissor_p.call(commandBuffer, firstScissor, scissorCount, pScissors);
@@ -2940,9 +1675,6 @@ public class Vk {
 
     private PFNvkCmdSetLineWidth PFN_vkCmdSetLineWidth_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetLineWidth.html">khronos documentation</a>
-     **/
     public void vkCmdSetLineWidth(VkCommandBuffer commandBuffer, VkFloat lineWidth){
         if(PFN_vkCmdSetLineWidth_p == null) PFN_vkCmdSetLineWidth_p = new PFNvkCmdSetLineWidth(instance);
         PFN_vkCmdSetLineWidth_p.call(commandBuffer, lineWidth);
@@ -2951,9 +1683,6 @@ public class Vk {
 
     private PFNvkCmdSetDepthBias PFN_vkCmdSetDepthBias_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetDepthBias.html">khronos documentation</a>
-     **/
     public void vkCmdSetDepthBias(VkCommandBuffer commandBuffer, VkFloat depthBiasConstantFactor, VkFloat depthBiasClamp, VkFloat depthBiasSlopeFactor){
         if(PFN_vkCmdSetDepthBias_p == null) PFN_vkCmdSetDepthBias_p = new PFNvkCmdSetDepthBias(instance);
         PFN_vkCmdSetDepthBias_p.call(commandBuffer, depthBiasConstantFactor, depthBiasClamp, depthBiasSlopeFactor);
@@ -2962,9 +1691,6 @@ public class Vk {
 
     private PFNvkCmdSetBlendConstants PFN_vkCmdSetBlendConstants_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetBlendConstants.html">khronos documentation</a>
-     **/
     public void vkCmdSetBlendConstants(VkCommandBuffer commandBuffer, VkFloat blendConstants){
         if(PFN_vkCmdSetBlendConstants_p == null) PFN_vkCmdSetBlendConstants_p = new PFNvkCmdSetBlendConstants(instance);
         PFN_vkCmdSetBlendConstants_p.call(commandBuffer, blendConstants);
@@ -2973,9 +1699,6 @@ public class Vk {
 
     private PFNvkCmdSetDepthBounds PFN_vkCmdSetDepthBounds_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetDepthBounds.html">khronos documentation</a>
-     **/
     public void vkCmdSetDepthBounds(VkCommandBuffer commandBuffer, VkFloat minDepthBounds, VkFloat maxDepthBounds){
         if(PFN_vkCmdSetDepthBounds_p == null) PFN_vkCmdSetDepthBounds_p = new PFNvkCmdSetDepthBounds(instance);
         PFN_vkCmdSetDepthBounds_p.call(commandBuffer, minDepthBounds, maxDepthBounds);
@@ -2984,9 +1707,6 @@ public class Vk {
 
     private PFNvkCmdSetStencilCompareMask PFN_vkCmdSetStencilCompareMask_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetStencilCompareMask.html">khronos documentation</a>
-     **/
     public void vkCmdSetStencilCompareMask(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, VkUInt32 compareMask){
         if(PFN_vkCmdSetStencilCompareMask_p == null) PFN_vkCmdSetStencilCompareMask_p = new PFNvkCmdSetStencilCompareMask(instance);
         PFN_vkCmdSetStencilCompareMask_p.call(commandBuffer, faceMask, compareMask);
@@ -2995,9 +1715,6 @@ public class Vk {
 
     private PFNvkCmdSetStencilWriteMask PFN_vkCmdSetStencilWriteMask_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetStencilWriteMask.html">khronos documentation</a>
-     **/
     public void vkCmdSetStencilWriteMask(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, VkUInt32 writeMask){
         if(PFN_vkCmdSetStencilWriteMask_p == null) PFN_vkCmdSetStencilWriteMask_p = new PFNvkCmdSetStencilWriteMask(instance);
         PFN_vkCmdSetStencilWriteMask_p.call(commandBuffer, faceMask, writeMask);
@@ -3006,9 +1723,6 @@ public class Vk {
 
     private PFNvkCmdSetStencilReference PFN_vkCmdSetStencilReference_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetStencilReference.html">khronos documentation</a>
-     **/
     public void vkCmdSetStencilReference(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, VkUInt32 reference){
         if(PFN_vkCmdSetStencilReference_p == null) PFN_vkCmdSetStencilReference_p = new PFNvkCmdSetStencilReference(instance);
         PFN_vkCmdSetStencilReference_p.call(commandBuffer, faceMask, reference);
@@ -3017,9 +1731,6 @@ public class Vk {
 
     private PFNvkCmdBindDescriptorSets PFN_vkCmdBindDescriptorSets_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdBindDescriptorSets.html">khronos documentation</a>
-     **/
     public void vkCmdBindDescriptorSets(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipelineLayout layout, VkUInt32 firstSet, VkUInt32 descriptorSetCount, VkDescriptorSet pDescriptorSets, VkUInt32 dynamicOffsetCount, VkUInt32 pDynamicOffsets){
         if(PFN_vkCmdBindDescriptorSets_p == null) PFN_vkCmdBindDescriptorSets_p = new PFNvkCmdBindDescriptorSets(instance);
         PFN_vkCmdBindDescriptorSets_p.call(commandBuffer, pipelineBindPoint, layout, firstSet, descriptorSetCount, pDescriptorSets, dynamicOffsetCount, pDynamicOffsets);
@@ -3028,9 +1739,6 @@ public class Vk {
 
     private PFNvkCmdBindIndexBuffer PFN_vkCmdBindIndexBuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdBindIndexBuffer.html">khronos documentation</a>
-     **/
     public void vkCmdBindIndexBuffer(VkCommandBuffer commandBuffer, VkBuffer buffer, VkDeviceSize offset, VkIndexType indexType){
         if(PFN_vkCmdBindIndexBuffer_p == null) PFN_vkCmdBindIndexBuffer_p = new PFNvkCmdBindIndexBuffer(instance);
         PFN_vkCmdBindIndexBuffer_p.call(commandBuffer, buffer, offset, indexType);
@@ -3039,9 +1747,6 @@ public class Vk {
 
     private PFNvkCmdBindVertexBuffers PFN_vkCmdBindVertexBuffers_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdBindVertexBuffers.html">khronos documentation</a>
-     **/
     public void vkCmdBindVertexBuffers(VkCommandBuffer commandBuffer, VkUInt32 firstBinding, VkUInt32 bindingCount, VkBuffer pBuffers, VkDeviceSize pOffsets){
         if(PFN_vkCmdBindVertexBuffers_p == null) PFN_vkCmdBindVertexBuffers_p = new PFNvkCmdBindVertexBuffers(instance);
         PFN_vkCmdBindVertexBuffers_p.call(commandBuffer, firstBinding, bindingCount, pBuffers, pOffsets);
@@ -3050,9 +1755,6 @@ public class Vk {
 
     private PFNvkCmdDraw PFN_vkCmdDraw_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDraw.html">khronos documentation</a>
-     **/
     public void vkCmdDraw(VkCommandBuffer commandBuffer, VkUInt32 vertexCount, VkUInt32 instanceCount, VkUInt32 firstVertex, VkUInt32 firstInstance){
         if(PFN_vkCmdDraw_p == null) PFN_vkCmdDraw_p = new PFNvkCmdDraw(instance);
         PFN_vkCmdDraw_p.call(commandBuffer, vertexCount, instanceCount, firstVertex, firstInstance);
@@ -3061,9 +1763,6 @@ public class Vk {
 
     private PFNvkCmdDrawIndexed PFN_vkCmdDrawIndexed_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDrawIndexed.html">khronos documentation</a>
-     **/
     public void vkCmdDrawIndexed(VkCommandBuffer commandBuffer, VkUInt32 indexCount, VkUInt32 instanceCount, VkUInt32 firstIndex, VkInt32 vertexOffset, VkUInt32 firstInstance){
         if(PFN_vkCmdDrawIndexed_p == null) PFN_vkCmdDrawIndexed_p = new PFNvkCmdDrawIndexed(instance);
         PFN_vkCmdDrawIndexed_p.call(commandBuffer, indexCount, instanceCount, firstIndex, vertexOffset, firstInstance);
@@ -3072,9 +1771,6 @@ public class Vk {
 
     private PFNvkCmdDrawIndirect PFN_vkCmdDrawIndirect_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDrawIndirect.html">khronos documentation</a>
-     **/
     public void vkCmdDrawIndirect(VkCommandBuffer commandBuffer, VkBuffer buffer, VkDeviceSize offset, VkUInt32 drawCount, VkUInt32 stride){
         if(PFN_vkCmdDrawIndirect_p == null) PFN_vkCmdDrawIndirect_p = new PFNvkCmdDrawIndirect(instance);
         PFN_vkCmdDrawIndirect_p.call(commandBuffer, buffer, offset, drawCount, stride);
@@ -3083,9 +1779,6 @@ public class Vk {
 
     private PFNvkCmdDrawIndexedIndirect PFN_vkCmdDrawIndexedIndirect_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDrawIndexedIndirect.html">khronos documentation</a>
-     **/
     public void vkCmdDrawIndexedIndirect(VkCommandBuffer commandBuffer, VkBuffer buffer, VkDeviceSize offset, VkUInt32 drawCount, VkUInt32 stride){
         if(PFN_vkCmdDrawIndexedIndirect_p == null) PFN_vkCmdDrawIndexedIndirect_p = new PFNvkCmdDrawIndexedIndirect(instance);
         PFN_vkCmdDrawIndexedIndirect_p.call(commandBuffer, buffer, offset, drawCount, stride);
@@ -3094,9 +1787,6 @@ public class Vk {
 
     private PFNvkCmdDispatch PFN_vkCmdDispatch_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDispatch.html">khronos documentation</a>
-     **/
     public void vkCmdDispatch(VkCommandBuffer commandBuffer, VkUInt32 groupCountX, VkUInt32 groupCountY, VkUInt32 groupCountZ){
         if(PFN_vkCmdDispatch_p == null) PFN_vkCmdDispatch_p = new PFNvkCmdDispatch(instance);
         PFN_vkCmdDispatch_p.call(commandBuffer, groupCountX, groupCountY, groupCountZ);
@@ -3105,9 +1795,6 @@ public class Vk {
 
     private PFNvkCmdDispatchIndirect PFN_vkCmdDispatchIndirect_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDispatchIndirect.html">khronos documentation</a>
-     **/
     public void vkCmdDispatchIndirect(VkCommandBuffer commandBuffer, VkBuffer buffer, VkDeviceSize offset){
         if(PFN_vkCmdDispatchIndirect_p == null) PFN_vkCmdDispatchIndirect_p = new PFNvkCmdDispatchIndirect(instance);
         PFN_vkCmdDispatchIndirect_p.call(commandBuffer, buffer, offset);
@@ -3116,9 +1803,6 @@ public class Vk {
 
     private PFNvkCmdCopyBuffer PFN_vkCmdCopyBuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdCopyBuffer.html">khronos documentation</a>
-     **/
     public void vkCmdCopyBuffer(VkCommandBuffer commandBuffer, VkBuffer srcBuffer, VkBuffer dstBuffer, VkUInt32 regionCount, VkBufferCopy pRegions){
         if(PFN_vkCmdCopyBuffer_p == null) PFN_vkCmdCopyBuffer_p = new PFNvkCmdCopyBuffer(instance);
         PFN_vkCmdCopyBuffer_p.call(commandBuffer, srcBuffer, dstBuffer, regionCount, pRegions);
@@ -3127,9 +1811,6 @@ public class Vk {
 
     private PFNvkCmdCopyImage PFN_vkCmdCopyImage_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdCopyImage.html">khronos documentation</a>
-     **/
     public void vkCmdCopyImage(VkCommandBuffer commandBuffer, VkImage srcImage, VkImageLayout srcImageLayout, VkImage dstImage, VkImageLayout dstImageLayout, VkUInt32 regionCount, VkImageCopy pRegions){
         if(PFN_vkCmdCopyImage_p == null) PFN_vkCmdCopyImage_p = new PFNvkCmdCopyImage(instance);
         PFN_vkCmdCopyImage_p.call(commandBuffer, srcImage, srcImageLayout, dstImage, dstImageLayout, regionCount, pRegions);
@@ -3138,9 +1819,6 @@ public class Vk {
 
     private PFNvkCmdBlitImage PFN_vkCmdBlitImage_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdBlitImage.html">khronos documentation</a>
-     **/
     public void vkCmdBlitImage(VkCommandBuffer commandBuffer, VkImage srcImage, VkImageLayout srcImageLayout, VkImage dstImage, VkImageLayout dstImageLayout, VkUInt32 regionCount, VkImageBlit pRegions, VkFilter filter){
         if(PFN_vkCmdBlitImage_p == null) PFN_vkCmdBlitImage_p = new PFNvkCmdBlitImage(instance);
         PFN_vkCmdBlitImage_p.call(commandBuffer, srcImage, srcImageLayout, dstImage, dstImageLayout, regionCount, pRegions, filter);
@@ -3149,9 +1827,6 @@ public class Vk {
 
     private PFNvkCmdCopyBufferToImage PFN_vkCmdCopyBufferToImage_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdCopyBufferToImage.html">khronos documentation</a>
-     **/
     public void vkCmdCopyBufferToImage(VkCommandBuffer commandBuffer, VkBuffer srcBuffer, VkImage dstImage, VkImageLayout dstImageLayout, VkUInt32 regionCount, VkBufferImageCopy pRegions){
         if(PFN_vkCmdCopyBufferToImage_p == null) PFN_vkCmdCopyBufferToImage_p = new PFNvkCmdCopyBufferToImage(instance);
         PFN_vkCmdCopyBufferToImage_p.call(commandBuffer, srcBuffer, dstImage, dstImageLayout, regionCount, pRegions);
@@ -3160,9 +1835,6 @@ public class Vk {
 
     private PFNvkCmdCopyImageToBuffer PFN_vkCmdCopyImageToBuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdCopyImageToBuffer.html">khronos documentation</a>
-     **/
     public void vkCmdCopyImageToBuffer(VkCommandBuffer commandBuffer, VkImage srcImage, VkImageLayout srcImageLayout, VkBuffer dstBuffer, VkUInt32 regionCount, VkBufferImageCopy pRegions){
         if(PFN_vkCmdCopyImageToBuffer_p == null) PFN_vkCmdCopyImageToBuffer_p = new PFNvkCmdCopyImageToBuffer(instance);
         PFN_vkCmdCopyImageToBuffer_p.call(commandBuffer, srcImage, srcImageLayout, dstBuffer, regionCount, pRegions);
@@ -3171,9 +1843,6 @@ public class Vk {
 
     private PFNvkCmdUpdateBuffer PFN_vkCmdUpdateBuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdUpdateBuffer.html">khronos documentation</a>
-     **/
     public void vkCmdUpdateBuffer(VkCommandBuffer commandBuffer, VkBuffer dstBuffer, VkDeviceSize dstOffset, VkDeviceSize dataSize, VkObject pData){
         if(PFN_vkCmdUpdateBuffer_p == null) PFN_vkCmdUpdateBuffer_p = new PFNvkCmdUpdateBuffer(instance);
         PFN_vkCmdUpdateBuffer_p.call(commandBuffer, dstBuffer, dstOffset, dataSize, pData);
@@ -3182,9 +1851,6 @@ public class Vk {
 
     private PFNvkCmdFillBuffer PFN_vkCmdFillBuffer_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdFillBuffer.html">khronos documentation</a>
-     **/
     public void vkCmdFillBuffer(VkCommandBuffer commandBuffer, VkBuffer dstBuffer, VkDeviceSize dstOffset, VkDeviceSize size, VkUInt32 data){
         if(PFN_vkCmdFillBuffer_p == null) PFN_vkCmdFillBuffer_p = new PFNvkCmdFillBuffer(instance);
         PFN_vkCmdFillBuffer_p.call(commandBuffer, dstBuffer, dstOffset, size, data);
@@ -3193,9 +1859,6 @@ public class Vk {
 
     private PFNvkCmdClearColorImage PFN_vkCmdClearColorImage_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdClearColorImage.html">khronos documentation</a>
-     **/
     public void vkCmdClearColorImage(VkCommandBuffer commandBuffer, VkImage image, VkImageLayout imageLayout, VkClearColorValue pColor, VkUInt32 rangeCount, VkImageSubresourceRange pRanges){
         if(PFN_vkCmdClearColorImage_p == null) PFN_vkCmdClearColorImage_p = new PFNvkCmdClearColorImage(instance);
         PFN_vkCmdClearColorImage_p.call(commandBuffer, image, imageLayout, pColor, rangeCount, pRanges);
@@ -3204,9 +1867,6 @@ public class Vk {
 
     private PFNvkCmdClearDepthStencilImage PFN_vkCmdClearDepthStencilImage_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdClearDepthStencilImage.html">khronos documentation</a>
-     **/
     public void vkCmdClearDepthStencilImage(VkCommandBuffer commandBuffer, VkImage image, VkImageLayout imageLayout, VkClearDepthStencilValue pDepthStencil, VkUInt32 rangeCount, VkImageSubresourceRange pRanges){
         if(PFN_vkCmdClearDepthStencilImage_p == null) PFN_vkCmdClearDepthStencilImage_p = new PFNvkCmdClearDepthStencilImage(instance);
         PFN_vkCmdClearDepthStencilImage_p.call(commandBuffer, image, imageLayout, pDepthStencil, rangeCount, pRanges);
@@ -3215,9 +1875,6 @@ public class Vk {
 
     private PFNvkCmdClearAttachments PFN_vkCmdClearAttachments_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdClearAttachments.html">khronos documentation</a>
-     **/
     public void vkCmdClearAttachments(VkCommandBuffer commandBuffer, VkUInt32 attachmentCount, VkClearAttachment pAttachments, VkUInt32 rectCount, VkClearRect pRects){
         if(PFN_vkCmdClearAttachments_p == null) PFN_vkCmdClearAttachments_p = new PFNvkCmdClearAttachments(instance);
         PFN_vkCmdClearAttachments_p.call(commandBuffer, attachmentCount, pAttachments, rectCount, pRects);
@@ -3226,9 +1883,6 @@ public class Vk {
 
     private PFNvkCmdResolveImage PFN_vkCmdResolveImage_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdResolveImage.html">khronos documentation</a>
-     **/
     public void vkCmdResolveImage(VkCommandBuffer commandBuffer, VkImage srcImage, VkImageLayout srcImageLayout, VkImage dstImage, VkImageLayout dstImageLayout, VkUInt32 regionCount, VkImageResolve pRegions){
         if(PFN_vkCmdResolveImage_p == null) PFN_vkCmdResolveImage_p = new PFNvkCmdResolveImage(instance);
         PFN_vkCmdResolveImage_p.call(commandBuffer, srcImage, srcImageLayout, dstImage, dstImageLayout, regionCount, pRegions);
@@ -3237,9 +1891,6 @@ public class Vk {
 
     private PFNvkCmdSetEvent PFN_vkCmdSetEvent_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetEvent.html">khronos documentation</a>
-     **/
     public void vkCmdSetEvent(VkCommandBuffer commandBuffer, VkEvent event, VkPipelineStageFlags stageMask){
         if(PFN_vkCmdSetEvent_p == null) PFN_vkCmdSetEvent_p = new PFNvkCmdSetEvent(instance);
         PFN_vkCmdSetEvent_p.call(commandBuffer, event, stageMask);
@@ -3248,9 +1899,6 @@ public class Vk {
 
     private PFNvkCmdResetEvent PFN_vkCmdResetEvent_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdResetEvent.html">khronos documentation</a>
-     **/
     public void vkCmdResetEvent(VkCommandBuffer commandBuffer, VkEvent event, VkPipelineStageFlags stageMask){
         if(PFN_vkCmdResetEvent_p == null) PFN_vkCmdResetEvent_p = new PFNvkCmdResetEvent(instance);
         PFN_vkCmdResetEvent_p.call(commandBuffer, event, stageMask);
@@ -3259,9 +1907,6 @@ public class Vk {
 
     private PFNvkCmdWaitEvents PFN_vkCmdWaitEvents_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdWaitEvents.html">khronos documentation</a>
-     **/
     public void vkCmdWaitEvents(VkCommandBuffer commandBuffer, VkUInt32 eventCount, VkEvent pEvents, VkPipelineStageFlags srcStageMask, VkPipelineStageFlags dstStageMask, VkUInt32 memoryBarrierCount, VkMemoryBarrier pMemoryBarriers, VkUInt32 bufferMemoryBarrierCount, VkBufferMemoryBarrier pBufferMemoryBarriers, VkUInt32 imageMemoryBarrierCount, VkImageMemoryBarrier pImageMemoryBarriers){
         if(PFN_vkCmdWaitEvents_p == null) PFN_vkCmdWaitEvents_p = new PFNvkCmdWaitEvents(instance);
         PFN_vkCmdWaitEvents_p.call(commandBuffer, eventCount, pEvents, srcStageMask, dstStageMask, memoryBarrierCount, pMemoryBarriers, bufferMemoryBarrierCount, pBufferMemoryBarriers, imageMemoryBarrierCount, pImageMemoryBarriers);
@@ -3270,9 +1915,6 @@ public class Vk {
 
     private PFNvkCmdPipelineBarrier PFN_vkCmdPipelineBarrier_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdPipelineBarrier.html">khronos documentation</a>
-     **/
     public void vkCmdPipelineBarrier(VkCommandBuffer commandBuffer, VkPipelineStageFlags srcStageMask, VkPipelineStageFlags dstStageMask, VkDependencyFlags dependencyFlags, VkUInt32 memoryBarrierCount, VkMemoryBarrier pMemoryBarriers, VkUInt32 bufferMemoryBarrierCount, VkBufferMemoryBarrier pBufferMemoryBarriers, VkUInt32 imageMemoryBarrierCount, VkImageMemoryBarrier pImageMemoryBarriers){
         if(PFN_vkCmdPipelineBarrier_p == null) PFN_vkCmdPipelineBarrier_p = new PFNvkCmdPipelineBarrier(instance);
         PFN_vkCmdPipelineBarrier_p.call(commandBuffer, srcStageMask, dstStageMask, dependencyFlags, memoryBarrierCount, pMemoryBarriers, bufferMemoryBarrierCount, pBufferMemoryBarriers, imageMemoryBarrierCount, pImageMemoryBarriers);
@@ -3281,9 +1923,6 @@ public class Vk {
 
     private PFNvkCmdBeginQuery PFN_vkCmdBeginQuery_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdBeginQuery.html">khronos documentation</a>
-     **/
     public void vkCmdBeginQuery(VkCommandBuffer commandBuffer, VkQueryPool queryPool, VkUInt32 query, VkQueryControlFlags flags){
         if(PFN_vkCmdBeginQuery_p == null) PFN_vkCmdBeginQuery_p = new PFNvkCmdBeginQuery(instance);
         PFN_vkCmdBeginQuery_p.call(commandBuffer, queryPool, query, flags);
@@ -3292,9 +1931,6 @@ public class Vk {
 
     private PFNvkCmdEndQuery PFN_vkCmdEndQuery_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdEndQuery.html">khronos documentation</a>
-     **/
     public void vkCmdEndQuery(VkCommandBuffer commandBuffer, VkQueryPool queryPool, VkUInt32 query){
         if(PFN_vkCmdEndQuery_p == null) PFN_vkCmdEndQuery_p = new PFNvkCmdEndQuery(instance);
         PFN_vkCmdEndQuery_p.call(commandBuffer, queryPool, query);
@@ -3303,9 +1939,6 @@ public class Vk {
 
     private PFNvkCmdResetQueryPool PFN_vkCmdResetQueryPool_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdResetQueryPool.html">khronos documentation</a>
-     **/
     public void vkCmdResetQueryPool(VkCommandBuffer commandBuffer, VkQueryPool queryPool, VkUInt32 firstQuery, VkUInt32 queryCount){
         if(PFN_vkCmdResetQueryPool_p == null) PFN_vkCmdResetQueryPool_p = new PFNvkCmdResetQueryPool(instance);
         PFN_vkCmdResetQueryPool_p.call(commandBuffer, queryPool, firstQuery, queryCount);
@@ -3314,9 +1947,6 @@ public class Vk {
 
     private PFNvkCmdWriteTimestamp PFN_vkCmdWriteTimestamp_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdWriteTimestamp.html">khronos documentation</a>
-     **/
     public void vkCmdWriteTimestamp(VkCommandBuffer commandBuffer, VkPipelineStageFlagBits pipelineStage, VkQueryPool queryPool, VkUInt32 query){
         if(PFN_vkCmdWriteTimestamp_p == null) PFN_vkCmdWriteTimestamp_p = new PFNvkCmdWriteTimestamp(instance);
         PFN_vkCmdWriteTimestamp_p.call(commandBuffer, pipelineStage, queryPool, query);
@@ -3325,9 +1955,6 @@ public class Vk {
 
     private PFNvkCmdCopyQueryPoolResults PFN_vkCmdCopyQueryPoolResults_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdCopyQueryPoolResults.html">khronos documentation</a>
-     **/
     public void vkCmdCopyQueryPoolResults(VkCommandBuffer commandBuffer, VkQueryPool queryPool, VkUInt32 firstQuery, VkUInt32 queryCount, VkBuffer dstBuffer, VkDeviceSize dstOffset, VkDeviceSize stride, VkQueryResultFlags flags){
         if(PFN_vkCmdCopyQueryPoolResults_p == null) PFN_vkCmdCopyQueryPoolResults_p = new PFNvkCmdCopyQueryPoolResults(instance);
         PFN_vkCmdCopyQueryPoolResults_p.call(commandBuffer, queryPool, firstQuery, queryCount, dstBuffer, dstOffset, stride, flags);
@@ -3336,9 +1963,6 @@ public class Vk {
 
     private PFNvkCmdPushConstants PFN_vkCmdPushConstants_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdPushConstants.html">khronos documentation</a>
-     **/
     public void vkCmdPushConstants(VkCommandBuffer commandBuffer, VkPipelineLayout layout, VkShaderStageFlags stageFlags, VkUInt32 offset, VkUInt32 size, VkObject pValues){
         if(PFN_vkCmdPushConstants_p == null) PFN_vkCmdPushConstants_p = new PFNvkCmdPushConstants(instance);
         PFN_vkCmdPushConstants_p.call(commandBuffer, layout, stageFlags, offset, size, pValues);
@@ -3347,9 +1971,6 @@ public class Vk {
 
     private PFNvkCmdBeginRenderPass PFN_vkCmdBeginRenderPass_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdBeginRenderPass.html">khronos documentation</a>
-     **/
     public void vkCmdBeginRenderPass(VkCommandBuffer commandBuffer, VkRenderPassBeginInfo pRenderPassBegin, VkSubpassContents contents){
         if(PFN_vkCmdBeginRenderPass_p == null) PFN_vkCmdBeginRenderPass_p = new PFNvkCmdBeginRenderPass(instance);
         PFN_vkCmdBeginRenderPass_p.call(commandBuffer, pRenderPassBegin, contents);
@@ -3358,9 +1979,6 @@ public class Vk {
 
     private PFNvkCmdNextSubpass PFN_vkCmdNextSubpass_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdNextSubpass.html">khronos documentation</a>
-     **/
     public void vkCmdNextSubpass(VkCommandBuffer commandBuffer, VkSubpassContents contents){
         if(PFN_vkCmdNextSubpass_p == null) PFN_vkCmdNextSubpass_p = new PFNvkCmdNextSubpass(instance);
         PFN_vkCmdNextSubpass_p.call(commandBuffer, contents);
@@ -3369,9 +1987,6 @@ public class Vk {
 
     private PFNvkCmdEndRenderPass PFN_vkCmdEndRenderPass_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdEndRenderPass.html">khronos documentation</a>
-     **/
     public void vkCmdEndRenderPass(VkCommandBuffer commandBuffer){
         if(PFN_vkCmdEndRenderPass_p == null) PFN_vkCmdEndRenderPass_p = new PFNvkCmdEndRenderPass(instance);
         PFN_vkCmdEndRenderPass_p.call(commandBuffer);
@@ -3380,9 +1995,6 @@ public class Vk {
 
     private PFNvkCmdExecuteCommands PFN_vkCmdExecuteCommands_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdExecuteCommands.html">khronos documentation</a>
-     **/
     public void vkCmdExecuteCommands(VkCommandBuffer commandBuffer, VkUInt32 commandBufferCount, VkCommandBuffer pCommandBuffers){
         if(PFN_vkCmdExecuteCommands_p == null) PFN_vkCmdExecuteCommands_p = new PFNvkCmdExecuteCommands(instance);
         PFN_vkCmdExecuteCommands_p.call(commandBuffer, commandBufferCount, pCommandBuffers);
@@ -3391,9 +2003,6 @@ public class Vk {
 
     private PFNvkEnumerateInstanceVersion PFN_vkEnumerateInstanceVersion_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkEnumerateInstanceVersion.html">khronos documentation</a>
-     **/
     public void vkEnumerateInstanceVersion(VkUInt32 pApiVersion, VkResult rval){
         if(PFN_vkEnumerateInstanceVersion_p == null) PFN_vkEnumerateInstanceVersion_p = new PFNvkEnumerateInstanceVersion(instance);
         PFN_vkEnumerateInstanceVersion_p.call(pApiVersion, rval);
@@ -3402,9 +2011,6 @@ public class Vk {
 
     private PFNvkBindBufferMemory2 PFN_vkBindBufferMemory2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkBindBufferMemory2.html">khronos documentation</a>
-     **/
     public void vkBindBufferMemory2(VkDevice device, VkUInt32 bindInfoCount, VkBindBufferMemoryInfo pBindInfos, VkResult rval){
         if(PFN_vkBindBufferMemory2_p == null) PFN_vkBindBufferMemory2_p = new PFNvkBindBufferMemory2(instance);
         PFN_vkBindBufferMemory2_p.call(device, bindInfoCount, pBindInfos, rval);
@@ -3413,9 +2019,6 @@ public class Vk {
 
     private PFNvkBindImageMemory2 PFN_vkBindImageMemory2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkBindImageMemory2.html">khronos documentation</a>
-     **/
     public void vkBindImageMemory2(VkDevice device, VkUInt32 bindInfoCount, VkBindImageMemoryInfo pBindInfos, VkResult rval){
         if(PFN_vkBindImageMemory2_p == null) PFN_vkBindImageMemory2_p = new PFNvkBindImageMemory2(instance);
         PFN_vkBindImageMemory2_p.call(device, bindInfoCount, pBindInfos, rval);
@@ -3424,9 +2027,6 @@ public class Vk {
 
     private PFNvkGetDeviceGroupPeerMemoryFeatures PFN_vkGetDeviceGroupPeerMemoryFeatures_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDeviceGroupPeerMemoryFeatures.html">khronos documentation</a>
-     **/
     public void vkGetDeviceGroupPeerMemoryFeatures(VkDevice device, VkUInt32 heapIndex, VkUInt32 localDeviceIndex, VkUInt32 remoteDeviceIndex, VkPeerMemoryFeatureFlags pPeerMemoryFeatures){
         if(PFN_vkGetDeviceGroupPeerMemoryFeatures_p == null) PFN_vkGetDeviceGroupPeerMemoryFeatures_p = new PFNvkGetDeviceGroupPeerMemoryFeatures(instance);
         PFN_vkGetDeviceGroupPeerMemoryFeatures_p.call(device, heapIndex, localDeviceIndex, remoteDeviceIndex, pPeerMemoryFeatures);
@@ -3435,9 +2035,6 @@ public class Vk {
 
     private PFNvkCmdSetDeviceMask PFN_vkCmdSetDeviceMask_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetDeviceMask.html">khronos documentation</a>
-     **/
     public void vkCmdSetDeviceMask(VkCommandBuffer commandBuffer, VkUInt32 deviceMask){
         if(PFN_vkCmdSetDeviceMask_p == null) PFN_vkCmdSetDeviceMask_p = new PFNvkCmdSetDeviceMask(instance);
         PFN_vkCmdSetDeviceMask_p.call(commandBuffer, deviceMask);
@@ -3446,9 +2043,6 @@ public class Vk {
 
     private PFNvkCmdDispatchBase PFN_vkCmdDispatchBase_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDispatchBase.html">khronos documentation</a>
-     **/
     public void vkCmdDispatchBase(VkCommandBuffer commandBuffer, VkUInt32 baseGroupX, VkUInt32 baseGroupY, VkUInt32 baseGroupZ, VkUInt32 groupCountX, VkUInt32 groupCountY, VkUInt32 groupCountZ){
         if(PFN_vkCmdDispatchBase_p == null) PFN_vkCmdDispatchBase_p = new PFNvkCmdDispatchBase(instance);
         PFN_vkCmdDispatchBase_p.call(commandBuffer, baseGroupX, baseGroupY, baseGroupZ, groupCountX, groupCountY, groupCountZ);
@@ -3457,9 +2051,6 @@ public class Vk {
 
     private PFNvkEnumeratePhysicalDeviceGroups PFN_vkEnumeratePhysicalDeviceGroups_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkEnumeratePhysicalDeviceGroups.html">khronos documentation</a>
-     **/
     public void vkEnumeratePhysicalDeviceGroups(VkInstance instance, VkUInt32 pPhysicalDeviceGroupCount, VkPhysicalDeviceGroupProperties pPhysicalDeviceGroupProperties, VkResult rval){
         if(PFN_vkEnumeratePhysicalDeviceGroups_p == null) PFN_vkEnumeratePhysicalDeviceGroups_p = new PFNvkEnumeratePhysicalDeviceGroups(instance);
         PFN_vkEnumeratePhysicalDeviceGroups_p.call(instance, pPhysicalDeviceGroupCount, pPhysicalDeviceGroupProperties, rval);
@@ -3468,9 +2059,6 @@ public class Vk {
 
     private PFNvkGetImageMemoryRequirements2 PFN_vkGetImageMemoryRequirements2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetImageMemoryRequirements2.html">khronos documentation</a>
-     **/
     public void vkGetImageMemoryRequirements2(VkDevice device, VkImageMemoryRequirementsInfo2 pInfo, VkMemoryRequirements2 pMemoryRequirements){
         if(PFN_vkGetImageMemoryRequirements2_p == null) PFN_vkGetImageMemoryRequirements2_p = new PFNvkGetImageMemoryRequirements2(instance);
         PFN_vkGetImageMemoryRequirements2_p.call(device, pInfo, pMemoryRequirements);
@@ -3479,9 +2067,6 @@ public class Vk {
 
     private PFNvkGetBufferMemoryRequirements2 PFN_vkGetBufferMemoryRequirements2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetBufferMemoryRequirements2.html">khronos documentation</a>
-     **/
     public void vkGetBufferMemoryRequirements2(VkDevice device, VkBufferMemoryRequirementsInfo2 pInfo, VkMemoryRequirements2 pMemoryRequirements){
         if(PFN_vkGetBufferMemoryRequirements2_p == null) PFN_vkGetBufferMemoryRequirements2_p = new PFNvkGetBufferMemoryRequirements2(instance);
         PFN_vkGetBufferMemoryRequirements2_p.call(device, pInfo, pMemoryRequirements);
@@ -3490,9 +2075,6 @@ public class Vk {
 
     private PFNvkGetImageSparseMemoryRequirements2 PFN_vkGetImageSparseMemoryRequirements2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetImageSparseMemoryRequirements2.html">khronos documentation</a>
-     **/
     public void vkGetImageSparseMemoryRequirements2(VkDevice device, VkImageSparseMemoryRequirementsInfo2 pInfo, VkUInt32 pSparseMemoryRequirementCount, VkSparseImageMemoryRequirements2 pSparseMemoryRequirements){
         if(PFN_vkGetImageSparseMemoryRequirements2_p == null) PFN_vkGetImageSparseMemoryRequirements2_p = new PFNvkGetImageSparseMemoryRequirements2(instance);
         PFN_vkGetImageSparseMemoryRequirements2_p.call(device, pInfo, pSparseMemoryRequirementCount, pSparseMemoryRequirements);
@@ -3501,9 +2083,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceFeatures2 PFN_vkGetPhysicalDeviceFeatures2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceFeatures2.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceFeatures2(VkPhysicalDevice physicalDevice, VkPhysicalDeviceFeatures2 pFeatures){
         if(PFN_vkGetPhysicalDeviceFeatures2_p == null) PFN_vkGetPhysicalDeviceFeatures2_p = new PFNvkGetPhysicalDeviceFeatures2(instance);
         PFN_vkGetPhysicalDeviceFeatures2_p.call(physicalDevice, pFeatures);
@@ -3512,9 +2091,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceProperties2 PFN_vkGetPhysicalDeviceProperties2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceProperties2.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceProperties2(VkPhysicalDevice physicalDevice, VkPhysicalDeviceProperties2 pProperties){
         if(PFN_vkGetPhysicalDeviceProperties2_p == null) PFN_vkGetPhysicalDeviceProperties2_p = new PFNvkGetPhysicalDeviceProperties2(instance);
         PFN_vkGetPhysicalDeviceProperties2_p.call(physicalDevice, pProperties);
@@ -3523,9 +2099,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceFormatProperties2 PFN_vkGetPhysicalDeviceFormatProperties2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceFormatProperties2.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceFormatProperties2(VkPhysicalDevice physicalDevice, VkFormat format, VkFormatProperties2 pFormatProperties){
         if(PFN_vkGetPhysicalDeviceFormatProperties2_p == null) PFN_vkGetPhysicalDeviceFormatProperties2_p = new PFNvkGetPhysicalDeviceFormatProperties2(instance);
         PFN_vkGetPhysicalDeviceFormatProperties2_p.call(physicalDevice, format, pFormatProperties);
@@ -3534,9 +2107,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceImageFormatProperties2 PFN_vkGetPhysicalDeviceImageFormatProperties2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceImageFormatProperties2.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceImageFormatProperties2(VkPhysicalDevice physicalDevice, VkPhysicalDeviceImageFormatInfo2 pImageFormatInfo, VkImageFormatProperties2 pImageFormatProperties, VkResult rval){
         if(PFN_vkGetPhysicalDeviceImageFormatProperties2_p == null) PFN_vkGetPhysicalDeviceImageFormatProperties2_p = new PFNvkGetPhysicalDeviceImageFormatProperties2(instance);
         PFN_vkGetPhysicalDeviceImageFormatProperties2_p.call(physicalDevice, pImageFormatInfo, pImageFormatProperties, rval);
@@ -3545,9 +2115,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceQueueFamilyProperties2 PFN_vkGetPhysicalDeviceQueueFamilyProperties2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceQueueFamilyProperties2.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceQueueFamilyProperties2(VkPhysicalDevice physicalDevice, VkUInt32 pQueueFamilyPropertyCount, VkQueueFamilyProperties2 pQueueFamilyProperties){
         if(PFN_vkGetPhysicalDeviceQueueFamilyProperties2_p == null) PFN_vkGetPhysicalDeviceQueueFamilyProperties2_p = new PFNvkGetPhysicalDeviceQueueFamilyProperties2(instance);
         PFN_vkGetPhysicalDeviceQueueFamilyProperties2_p.call(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties);
@@ -3556,9 +2123,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceMemoryProperties2 PFN_vkGetPhysicalDeviceMemoryProperties2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceMemoryProperties2.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceMemoryProperties2(VkPhysicalDevice physicalDevice, VkPhysicalDeviceMemoryProperties2 pMemoryProperties){
         if(PFN_vkGetPhysicalDeviceMemoryProperties2_p == null) PFN_vkGetPhysicalDeviceMemoryProperties2_p = new PFNvkGetPhysicalDeviceMemoryProperties2(instance);
         PFN_vkGetPhysicalDeviceMemoryProperties2_p.call(physicalDevice, pMemoryProperties);
@@ -3567,9 +2131,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceSparseImageFormatProperties2 PFN_vkGetPhysicalDeviceSparseImageFormatProperties2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceSparseImageFormatProperties2.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceSparseImageFormatProperties2(VkPhysicalDevice physicalDevice, VkPhysicalDeviceSparseImageFormatInfo2 pFormatInfo, VkUInt32 pPropertyCount, VkSparseImageFormatProperties2 pProperties){
         if(PFN_vkGetPhysicalDeviceSparseImageFormatProperties2_p == null) PFN_vkGetPhysicalDeviceSparseImageFormatProperties2_p = new PFNvkGetPhysicalDeviceSparseImageFormatProperties2(instance);
         PFN_vkGetPhysicalDeviceSparseImageFormatProperties2_p.call(physicalDevice, pFormatInfo, pPropertyCount, pProperties);
@@ -3578,9 +2139,6 @@ public class Vk {
 
     private PFNvkTrimCommandPool PFN_vkTrimCommandPool_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkTrimCommandPool.html">khronos documentation</a>
-     **/
     public void vkTrimCommandPool(VkDevice device, VkCommandPool commandPool, VkCommandPoolTrimFlags flags){
         if(PFN_vkTrimCommandPool_p == null) PFN_vkTrimCommandPool_p = new PFNvkTrimCommandPool(instance);
         PFN_vkTrimCommandPool_p.call(device, commandPool, flags);
@@ -3589,9 +2147,6 @@ public class Vk {
 
     private PFNvkGetDeviceQueue2 PFN_vkGetDeviceQueue2_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDeviceQueue2.html">khronos documentation</a>
-     **/
     public void vkGetDeviceQueue2(VkDevice device, VkDeviceQueueInfo2 pQueueInfo, VkQueue pQueue){
         if(PFN_vkGetDeviceQueue2_p == null) PFN_vkGetDeviceQueue2_p = new PFNvkGetDeviceQueue2(instance);
         PFN_vkGetDeviceQueue2_p.call(device, pQueueInfo, pQueue);
@@ -3600,9 +2155,6 @@ public class Vk {
 
     private PFNvkCreateSamplerYcbcrConversion PFN_vkCreateSamplerYcbcrConversion_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateSamplerYcbcrConversion.html">khronos documentation</a>
-     **/
     public void vkCreateSamplerYcbcrConversion(VkDevice device, VkSamplerYcbcrConversionCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSamplerYcbcrConversion pYcbcrConversion, VkResult rval){
         if(PFN_vkCreateSamplerYcbcrConversion_p == null) PFN_vkCreateSamplerYcbcrConversion_p = new PFNvkCreateSamplerYcbcrConversion(instance);
         PFN_vkCreateSamplerYcbcrConversion_p.call(device, pCreateInfo, pAllocator, pYcbcrConversion, rval);
@@ -3611,9 +2163,6 @@ public class Vk {
 
     private PFNvkDestroySamplerYcbcrConversion PFN_vkDestroySamplerYcbcrConversion_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroySamplerYcbcrConversion.html">khronos documentation</a>
-     **/
     public void vkDestroySamplerYcbcrConversion(VkDevice device, VkSamplerYcbcrConversion ycbcrConversion, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroySamplerYcbcrConversion_p == null) PFN_vkDestroySamplerYcbcrConversion_p = new PFNvkDestroySamplerYcbcrConversion(instance);
         PFN_vkDestroySamplerYcbcrConversion_p.call(device, ycbcrConversion, pAllocator);
@@ -3622,9 +2171,6 @@ public class Vk {
 
     private PFNvkCreateDescriptorUpdateTemplate PFN_vkCreateDescriptorUpdateTemplate_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateDescriptorUpdateTemplate.html">khronos documentation</a>
-     **/
     public void vkCreateDescriptorUpdateTemplate(VkDevice device, VkDescriptorUpdateTemplateCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorUpdateTemplate pDescriptorUpdateTemplate, VkResult rval){
         if(PFN_vkCreateDescriptorUpdateTemplate_p == null) PFN_vkCreateDescriptorUpdateTemplate_p = new PFNvkCreateDescriptorUpdateTemplate(instance);
         PFN_vkCreateDescriptorUpdateTemplate_p.call(device, pCreateInfo, pAllocator, pDescriptorUpdateTemplate, rval);
@@ -3633,9 +2179,6 @@ public class Vk {
 
     private PFNvkDestroyDescriptorUpdateTemplate PFN_vkDestroyDescriptorUpdateTemplate_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyDescriptorUpdateTemplate.html">khronos documentation</a>
-     **/
     public void vkDestroyDescriptorUpdateTemplate(VkDevice device, VkDescriptorUpdateTemplate descriptorUpdateTemplate, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyDescriptorUpdateTemplate_p == null) PFN_vkDestroyDescriptorUpdateTemplate_p = new PFNvkDestroyDescriptorUpdateTemplate(instance);
         PFN_vkDestroyDescriptorUpdateTemplate_p.call(device, descriptorUpdateTemplate, pAllocator);
@@ -3644,9 +2187,6 @@ public class Vk {
 
     private PFNvkUpdateDescriptorSetWithTemplate PFN_vkUpdateDescriptorSetWithTemplate_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkUpdateDescriptorSetWithTemplate.html">khronos documentation</a>
-     **/
     public void vkUpdateDescriptorSetWithTemplate(VkDevice device, VkDescriptorSet descriptorSet, VkDescriptorUpdateTemplate descriptorUpdateTemplate, VkObject pData){
         if(PFN_vkUpdateDescriptorSetWithTemplate_p == null) PFN_vkUpdateDescriptorSetWithTemplate_p = new PFNvkUpdateDescriptorSetWithTemplate(instance);
         PFN_vkUpdateDescriptorSetWithTemplate_p.call(device, descriptorSet, descriptorUpdateTemplate, pData);
@@ -3655,9 +2195,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceExternalBufferProperties PFN_vkGetPhysicalDeviceExternalBufferProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceExternalBufferProperties.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceExternalBufferProperties(VkPhysicalDevice physicalDevice, VkPhysicalDeviceExternalBufferInfo pExternalBufferInfo, VkExternalBufferProperties pExternalBufferProperties){
         if(PFN_vkGetPhysicalDeviceExternalBufferProperties_p == null) PFN_vkGetPhysicalDeviceExternalBufferProperties_p = new PFNvkGetPhysicalDeviceExternalBufferProperties(instance);
         PFN_vkGetPhysicalDeviceExternalBufferProperties_p.call(physicalDevice, pExternalBufferInfo, pExternalBufferProperties);
@@ -3666,9 +2203,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceExternalFenceProperties PFN_vkGetPhysicalDeviceExternalFenceProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceExternalFenceProperties.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceExternalFenceProperties(VkPhysicalDevice physicalDevice, VkPhysicalDeviceExternalFenceInfo pExternalFenceInfo, VkExternalFenceProperties pExternalFenceProperties){
         if(PFN_vkGetPhysicalDeviceExternalFenceProperties_p == null) PFN_vkGetPhysicalDeviceExternalFenceProperties_p = new PFNvkGetPhysicalDeviceExternalFenceProperties(instance);
         PFN_vkGetPhysicalDeviceExternalFenceProperties_p.call(physicalDevice, pExternalFenceInfo, pExternalFenceProperties);
@@ -3677,9 +2211,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceExternalSemaphoreProperties PFN_vkGetPhysicalDeviceExternalSemaphoreProperties_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceExternalSemaphoreProperties.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceExternalSemaphoreProperties(VkPhysicalDevice physicalDevice, VkPhysicalDeviceExternalSemaphoreInfo pExternalSemaphoreInfo, VkExternalSemaphoreProperties pExternalSemaphoreProperties){
         if(PFN_vkGetPhysicalDeviceExternalSemaphoreProperties_p == null) PFN_vkGetPhysicalDeviceExternalSemaphoreProperties_p = new PFNvkGetPhysicalDeviceExternalSemaphoreProperties(instance);
         PFN_vkGetPhysicalDeviceExternalSemaphoreProperties_p.call(physicalDevice, pExternalSemaphoreInfo, pExternalSemaphoreProperties);
@@ -3688,9 +2219,6 @@ public class Vk {
 
     private PFNvkGetDescriptorSetLayoutSupport PFN_vkGetDescriptorSetLayoutSupport_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDescriptorSetLayoutSupport.html">khronos documentation</a>
-     **/
     public void vkGetDescriptorSetLayoutSupport(VkDevice device, VkDescriptorSetLayoutCreateInfo pCreateInfo, VkDescriptorSetLayoutSupport pSupport){
         if(PFN_vkGetDescriptorSetLayoutSupport_p == null) PFN_vkGetDescriptorSetLayoutSupport_p = new PFNvkGetDescriptorSetLayoutSupport(instance);
         PFN_vkGetDescriptorSetLayoutSupport_p.call(device, pCreateInfo, pSupport);
@@ -3699,9 +2227,6 @@ public class Vk {
 
     private PFNvkDestroySurfaceKHR PFN_vkDestroySurfaceKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroySurfaceKHR.html">khronos documentation</a>
-     **/
     public void vkDestroySurfaceKHR(VkInstance instance, VkSurfaceKHR surface, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroySurfaceKHR_p == null) PFN_vkDestroySurfaceKHR_p = new PFNvkDestroySurfaceKHR(instance);
         PFN_vkDestroySurfaceKHR_p.call(instance, surface, pAllocator);
@@ -3710,9 +2235,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceSurfaceSupportKHR PFN_vkGetPhysicalDeviceSurfaceSupportKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceSurfaceSupportKHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceSurfaceSupportKHR(VkPhysicalDevice physicalDevice, VkUInt32 queueFamilyIndex, VkSurfaceKHR surface, VkBool32 pSupported, VkResult rval){
         if(PFN_vkGetPhysicalDeviceSurfaceSupportKHR_p == null) PFN_vkGetPhysicalDeviceSurfaceSupportKHR_p = new PFNvkGetPhysicalDeviceSurfaceSupportKHR(instance);
         PFN_vkGetPhysicalDeviceSurfaceSupportKHR_p.call(physicalDevice, queueFamilyIndex, surface, pSupported, rval);
@@ -3721,9 +2243,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceSurfaceCapabilitiesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkSurfaceCapabilitiesKHR pSurfaceCapabilities, VkResult rval){
         if(PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR_p == null) PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR_p = new PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR(instance);
         PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR_p.call(physicalDevice, surface, pSurfaceCapabilities, rval);
@@ -3732,9 +2251,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceSurfaceFormatsKHR PFN_vkGetPhysicalDeviceSurfaceFormatsKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceSurfaceFormatsKHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceSurfaceFormatsKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkUInt32 pSurfaceFormatCount, VkSurfaceFormatKHR pSurfaceFormats, VkResult rval){
         if(PFN_vkGetPhysicalDeviceSurfaceFormatsKHR_p == null) PFN_vkGetPhysicalDeviceSurfaceFormatsKHR_p = new PFNvkGetPhysicalDeviceSurfaceFormatsKHR(instance);
         PFN_vkGetPhysicalDeviceSurfaceFormatsKHR_p.call(physicalDevice, surface, pSurfaceFormatCount, pSurfaceFormats, rval);
@@ -3743,9 +2259,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceSurfacePresentModesKHR PFN_vkGetPhysicalDeviceSurfacePresentModesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceSurfacePresentModesKHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceSurfacePresentModesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkUInt32 pPresentModeCount, VkPresentModeKHR pPresentModes, VkResult rval){
         if(PFN_vkGetPhysicalDeviceSurfacePresentModesKHR_p == null) PFN_vkGetPhysicalDeviceSurfacePresentModesKHR_p = new PFNvkGetPhysicalDeviceSurfacePresentModesKHR(instance);
         PFN_vkGetPhysicalDeviceSurfacePresentModesKHR_p.call(physicalDevice, surface, pPresentModeCount, pPresentModes, rval);
@@ -3754,9 +2267,6 @@ public class Vk {
 
     private PFNvkCreateSwapchainKHR PFN_vkCreateSwapchainKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateSwapchainKHR.html">khronos documentation</a>
-     **/
     public void vkCreateSwapchainKHR(VkDevice device, VkSwapchainCreateInfoKHR pCreateInfo, VkAllocationCallbacks pAllocator, VkSwapchainKHR pSwapchain, VkResult rval){
         if(PFN_vkCreateSwapchainKHR_p == null) PFN_vkCreateSwapchainKHR_p = new PFNvkCreateSwapchainKHR(instance);
         PFN_vkCreateSwapchainKHR_p.call(device, pCreateInfo, pAllocator, pSwapchain, rval);
@@ -3765,9 +2275,6 @@ public class Vk {
 
     private PFNvkDestroySwapchainKHR PFN_vkDestroySwapchainKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroySwapchainKHR.html">khronos documentation</a>
-     **/
     public void vkDestroySwapchainKHR(VkDevice device, VkSwapchainKHR swapchain, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroySwapchainKHR_p == null) PFN_vkDestroySwapchainKHR_p = new PFNvkDestroySwapchainKHR(instance);
         PFN_vkDestroySwapchainKHR_p.call(device, swapchain, pAllocator);
@@ -3776,9 +2283,6 @@ public class Vk {
 
     private PFNvkGetSwapchainImagesKHR PFN_vkGetSwapchainImagesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetSwapchainImagesKHR.html">khronos documentation</a>
-     **/
     public void vkGetSwapchainImagesKHR(VkDevice device, VkSwapchainKHR swapchain, VkUInt32 pSwapchainImageCount, VkImage pSwapchainImages, VkResult rval){
         if(PFN_vkGetSwapchainImagesKHR_p == null) PFN_vkGetSwapchainImagesKHR_p = new PFNvkGetSwapchainImagesKHR(instance);
         PFN_vkGetSwapchainImagesKHR_p.call(device, swapchain, pSwapchainImageCount, pSwapchainImages, rval);
@@ -3787,9 +2291,6 @@ public class Vk {
 
     private PFNvkAcquireNextImageKHR PFN_vkAcquireNextImageKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkAcquireNextImageKHR.html">khronos documentation</a>
-     **/
     public void vkAcquireNextImageKHR(VkDevice device, VkSwapchainKHR swapchain, VkUInt64 timeout, VkSemaphore semaphore, VkFence fence, VkUInt32 pImageIndex, VkResult rval){
         if(PFN_vkAcquireNextImageKHR_p == null) PFN_vkAcquireNextImageKHR_p = new PFNvkAcquireNextImageKHR(instance);
         PFN_vkAcquireNextImageKHR_p.call(device, swapchain, timeout, semaphore, fence, pImageIndex, rval);
@@ -3798,9 +2299,6 @@ public class Vk {
 
     private PFNvkQueuePresentKHR PFN_vkQueuePresentKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkQueuePresentKHR.html">khronos documentation</a>
-     **/
     public void vkQueuePresentKHR(VkQueue queue, VkPresentInfoKHR pPresentInfo, VkResult rval){
         if(PFN_vkQueuePresentKHR_p == null) PFN_vkQueuePresentKHR_p = new PFNvkQueuePresentKHR(instance);
         PFN_vkQueuePresentKHR_p.call(queue, pPresentInfo, rval);
@@ -3809,9 +2307,6 @@ public class Vk {
 
     private PFNvkGetDeviceGroupPresentCapabilitiesKHR PFN_vkGetDeviceGroupPresentCapabilitiesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDeviceGroupPresentCapabilitiesKHR.html">khronos documentation</a>
-     **/
     public void vkGetDeviceGroupPresentCapabilitiesKHR(VkDevice device, VkDeviceGroupPresentCapabilitiesKHR pDeviceGroupPresentCapabilities, VkResult rval){
         if(PFN_vkGetDeviceGroupPresentCapabilitiesKHR_p == null) PFN_vkGetDeviceGroupPresentCapabilitiesKHR_p = new PFNvkGetDeviceGroupPresentCapabilitiesKHR(instance);
         PFN_vkGetDeviceGroupPresentCapabilitiesKHR_p.call(device, pDeviceGroupPresentCapabilities, rval);
@@ -3820,9 +2315,6 @@ public class Vk {
 
     private PFNvkGetDeviceGroupSurfacePresentModesKHR PFN_vkGetDeviceGroupSurfacePresentModesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDeviceGroupSurfacePresentModesKHR.html">khronos documentation</a>
-     **/
     public void vkGetDeviceGroupSurfacePresentModesKHR(VkDevice device, VkSurfaceKHR surface, VkDeviceGroupPresentModeFlagsKHR pModes, VkResult rval){
         if(PFN_vkGetDeviceGroupSurfacePresentModesKHR_p == null) PFN_vkGetDeviceGroupSurfacePresentModesKHR_p = new PFNvkGetDeviceGroupSurfacePresentModesKHR(instance);
         PFN_vkGetDeviceGroupSurfacePresentModesKHR_p.call(device, surface, pModes, rval);
@@ -3831,9 +2323,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDevicePresentRectanglesKHR PFN_vkGetPhysicalDevicePresentRectanglesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDevicePresentRectanglesKHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDevicePresentRectanglesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkUInt32 pRectCount, VkRect2D pRects, VkResult rval){
         if(PFN_vkGetPhysicalDevicePresentRectanglesKHR_p == null) PFN_vkGetPhysicalDevicePresentRectanglesKHR_p = new PFNvkGetPhysicalDevicePresentRectanglesKHR(instance);
         PFN_vkGetPhysicalDevicePresentRectanglesKHR_p.call(physicalDevice, surface, pRectCount, pRects, rval);
@@ -3842,9 +2331,6 @@ public class Vk {
 
     private PFNvkAcquireNextImage2KHR PFN_vkAcquireNextImage2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkAcquireNextImage2KHR.html">khronos documentation</a>
-     **/
     public void vkAcquireNextImage2KHR(VkDevice device, VkAcquireNextImageInfoKHR pAcquireInfo, VkUInt32 pImageIndex, VkResult rval){
         if(PFN_vkAcquireNextImage2KHR_p == null) PFN_vkAcquireNextImage2KHR_p = new PFNvkAcquireNextImage2KHR(instance);
         PFN_vkAcquireNextImage2KHR_p.call(device, pAcquireInfo, pImageIndex, rval);
@@ -3853,9 +2339,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceDisplayPropertiesKHR PFN_vkGetPhysicalDeviceDisplayPropertiesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceDisplayPropertiesKHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceDisplayPropertiesKHR(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkDisplayPropertiesKHR pProperties, VkResult rval){
         if(PFN_vkGetPhysicalDeviceDisplayPropertiesKHR_p == null) PFN_vkGetPhysicalDeviceDisplayPropertiesKHR_p = new PFNvkGetPhysicalDeviceDisplayPropertiesKHR(instance);
         PFN_vkGetPhysicalDeviceDisplayPropertiesKHR_p.call(physicalDevice, pPropertyCount, pProperties, rval);
@@ -3864,9 +2347,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceDisplayPlanePropertiesKHR(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkDisplayPlanePropertiesKHR pProperties, VkResult rval){
         if(PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR_p == null) PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR_p = new PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR(instance);
         PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR_p.call(physicalDevice, pPropertyCount, pProperties, rval);
@@ -3875,9 +2355,6 @@ public class Vk {
 
     private PFNvkGetDisplayPlaneSupportedDisplaysKHR PFN_vkGetDisplayPlaneSupportedDisplaysKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDisplayPlaneSupportedDisplaysKHR.html">khronos documentation</a>
-     **/
     public void vkGetDisplayPlaneSupportedDisplaysKHR(VkPhysicalDevice physicalDevice, VkUInt32 planeIndex, VkUInt32 pDisplayCount, VkDisplayKHR pDisplays, VkResult rval){
         if(PFN_vkGetDisplayPlaneSupportedDisplaysKHR_p == null) PFN_vkGetDisplayPlaneSupportedDisplaysKHR_p = new PFNvkGetDisplayPlaneSupportedDisplaysKHR(instance);
         PFN_vkGetDisplayPlaneSupportedDisplaysKHR_p.call(physicalDevice, planeIndex, pDisplayCount, pDisplays, rval);
@@ -3886,9 +2363,6 @@ public class Vk {
 
     private PFNvkGetDisplayModePropertiesKHR PFN_vkGetDisplayModePropertiesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDisplayModePropertiesKHR.html">khronos documentation</a>
-     **/
     public void vkGetDisplayModePropertiesKHR(VkPhysicalDevice physicalDevice, VkDisplayKHR display, VkUInt32 pPropertyCount, VkDisplayModePropertiesKHR pProperties, VkResult rval){
         if(PFN_vkGetDisplayModePropertiesKHR_p == null) PFN_vkGetDisplayModePropertiesKHR_p = new PFNvkGetDisplayModePropertiesKHR(instance);
         PFN_vkGetDisplayModePropertiesKHR_p.call(physicalDevice, display, pPropertyCount, pProperties, rval);
@@ -3897,9 +2371,6 @@ public class Vk {
 
     private PFNvkCreateDisplayModeKHR PFN_vkCreateDisplayModeKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateDisplayModeKHR.html">khronos documentation</a>
-     **/
     public void vkCreateDisplayModeKHR(VkPhysicalDevice physicalDevice, VkDisplayKHR display, VkDisplayModeCreateInfoKHR pCreateInfo, VkAllocationCallbacks pAllocator, VkDisplayModeKHR pMode, VkResult rval){
         if(PFN_vkCreateDisplayModeKHR_p == null) PFN_vkCreateDisplayModeKHR_p = new PFNvkCreateDisplayModeKHR(instance);
         PFN_vkCreateDisplayModeKHR_p.call(physicalDevice, display, pCreateInfo, pAllocator, pMode, rval);
@@ -3908,9 +2379,6 @@ public class Vk {
 
     private PFNvkGetDisplayPlaneCapabilitiesKHR PFN_vkGetDisplayPlaneCapabilitiesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDisplayPlaneCapabilitiesKHR.html">khronos documentation</a>
-     **/
     public void vkGetDisplayPlaneCapabilitiesKHR(VkPhysicalDevice physicalDevice, VkDisplayModeKHR mode, VkUInt32 planeIndex, VkDisplayPlaneCapabilitiesKHR pCapabilities, VkResult rval){
         if(PFN_vkGetDisplayPlaneCapabilitiesKHR_p == null) PFN_vkGetDisplayPlaneCapabilitiesKHR_p = new PFNvkGetDisplayPlaneCapabilitiesKHR(instance);
         PFN_vkGetDisplayPlaneCapabilitiesKHR_p.call(physicalDevice, mode, planeIndex, pCapabilities, rval);
@@ -3919,9 +2387,6 @@ public class Vk {
 
     private PFNvkCreateDisplayPlaneSurfaceKHR PFN_vkCreateDisplayPlaneSurfaceKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateDisplayPlaneSurfaceKHR.html">khronos documentation</a>
-     **/
     public void vkCreateDisplayPlaneSurfaceKHR(VkInstance instance, VkDisplaySurfaceCreateInfoKHR pCreateInfo, VkAllocationCallbacks pAllocator, VkSurfaceKHR pSurface, VkResult rval){
         if(PFN_vkCreateDisplayPlaneSurfaceKHR_p == null) PFN_vkCreateDisplayPlaneSurfaceKHR_p = new PFNvkCreateDisplayPlaneSurfaceKHR(instance);
         PFN_vkCreateDisplayPlaneSurfaceKHR_p.call(instance, pCreateInfo, pAllocator, pSurface, rval);
@@ -3930,9 +2395,6 @@ public class Vk {
 
     private PFNvkCreateSharedSwapchainsKHR PFN_vkCreateSharedSwapchainsKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateSharedSwapchainsKHR.html">khronos documentation</a>
-     **/
     public void vkCreateSharedSwapchainsKHR(VkDevice device, VkUInt32 swapchainCount, VkSwapchainCreateInfoKHR pCreateInfos, VkAllocationCallbacks pAllocator, VkSwapchainKHR pSwapchains, VkResult rval){
         if(PFN_vkCreateSharedSwapchainsKHR_p == null) PFN_vkCreateSharedSwapchainsKHR_p = new PFNvkCreateSharedSwapchainsKHR(instance);
         PFN_vkCreateSharedSwapchainsKHR_p.call(device, swapchainCount, pCreateInfos, pAllocator, pSwapchains, rval);
@@ -3941,9 +2403,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceFeatures2KHR PFN_vkGetPhysicalDeviceFeatures2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceFeatures2KHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceFeatures2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceFeatures2 pFeatures){
         if(PFN_vkGetPhysicalDeviceFeatures2KHR_p == null) PFN_vkGetPhysicalDeviceFeatures2KHR_p = new PFNvkGetPhysicalDeviceFeatures2KHR(instance);
         PFN_vkGetPhysicalDeviceFeatures2KHR_p.call(physicalDevice, pFeatures);
@@ -3952,9 +2411,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceProperties2KHR PFN_vkGetPhysicalDeviceProperties2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceProperties2KHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceProperties2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceProperties2 pProperties){
         if(PFN_vkGetPhysicalDeviceProperties2KHR_p == null) PFN_vkGetPhysicalDeviceProperties2KHR_p = new PFNvkGetPhysicalDeviceProperties2KHR(instance);
         PFN_vkGetPhysicalDeviceProperties2KHR_p.call(physicalDevice, pProperties);
@@ -3963,9 +2419,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceFormatProperties2KHR PFN_vkGetPhysicalDeviceFormatProperties2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceFormatProperties2KHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceFormatProperties2KHR(VkPhysicalDevice physicalDevice, VkFormat format, VkFormatProperties2 pFormatProperties){
         if(PFN_vkGetPhysicalDeviceFormatProperties2KHR_p == null) PFN_vkGetPhysicalDeviceFormatProperties2KHR_p = new PFNvkGetPhysicalDeviceFormatProperties2KHR(instance);
         PFN_vkGetPhysicalDeviceFormatProperties2KHR_p.call(physicalDevice, format, pFormatProperties);
@@ -3974,9 +2427,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceImageFormatProperties2KHR PFN_vkGetPhysicalDeviceImageFormatProperties2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceImageFormatProperties2KHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceImageFormatProperties2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceImageFormatInfo2 pImageFormatInfo, VkImageFormatProperties2 pImageFormatProperties, VkResult rval){
         if(PFN_vkGetPhysicalDeviceImageFormatProperties2KHR_p == null) PFN_vkGetPhysicalDeviceImageFormatProperties2KHR_p = new PFNvkGetPhysicalDeviceImageFormatProperties2KHR(instance);
         PFN_vkGetPhysicalDeviceImageFormatProperties2KHR_p.call(physicalDevice, pImageFormatInfo, pImageFormatProperties, rval);
@@ -3985,9 +2435,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceQueueFamilyProperties2KHR PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceQueueFamilyProperties2KHR(VkPhysicalDevice physicalDevice, VkUInt32 pQueueFamilyPropertyCount, VkQueueFamilyProperties2 pQueueFamilyProperties){
         if(PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR_p == null) PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR_p = new PFNvkGetPhysicalDeviceQueueFamilyProperties2KHR(instance);
         PFN_vkGetPhysicalDeviceQueueFamilyProperties2KHR_p.call(physicalDevice, pQueueFamilyPropertyCount, pQueueFamilyProperties);
@@ -3996,9 +2443,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceMemoryProperties2KHR PFN_vkGetPhysicalDeviceMemoryProperties2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceMemoryProperties2KHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceMemoryProperties2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceMemoryProperties2 pMemoryProperties){
         if(PFN_vkGetPhysicalDeviceMemoryProperties2KHR_p == null) PFN_vkGetPhysicalDeviceMemoryProperties2KHR_p = new PFNvkGetPhysicalDeviceMemoryProperties2KHR(instance);
         PFN_vkGetPhysicalDeviceMemoryProperties2KHR_p.call(physicalDevice, pMemoryProperties);
@@ -4007,9 +2451,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceSparseImageFormatProperties2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceSparseImageFormatInfo2 pFormatInfo, VkUInt32 pPropertyCount, VkSparseImageFormatProperties2 pProperties){
         if(PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR_p == null) PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR_p = new PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR(instance);
         PFN_vkGetPhysicalDeviceSparseImageFormatProperties2KHR_p.call(physicalDevice, pFormatInfo, pPropertyCount, pProperties);
@@ -4018,9 +2459,6 @@ public class Vk {
 
     private PFNvkGetDeviceGroupPeerMemoryFeaturesKHR PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR.html">khronos documentation</a>
-     **/
     public void vkGetDeviceGroupPeerMemoryFeaturesKHR(VkDevice device, VkUInt32 heapIndex, VkUInt32 localDeviceIndex, VkUInt32 remoteDeviceIndex, VkPeerMemoryFeatureFlags pPeerMemoryFeatures){
         if(PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR_p == null) PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR_p = new PFNvkGetDeviceGroupPeerMemoryFeaturesKHR(instance);
         PFN_vkGetDeviceGroupPeerMemoryFeaturesKHR_p.call(device, heapIndex, localDeviceIndex, remoteDeviceIndex, pPeerMemoryFeatures);
@@ -4029,9 +2467,6 @@ public class Vk {
 
     private PFNvkCmdSetDeviceMaskKHR PFN_vkCmdSetDeviceMaskKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetDeviceMaskKHR.html">khronos documentation</a>
-     **/
     public void vkCmdSetDeviceMaskKHR(VkCommandBuffer commandBuffer, VkUInt32 deviceMask){
         if(PFN_vkCmdSetDeviceMaskKHR_p == null) PFN_vkCmdSetDeviceMaskKHR_p = new PFNvkCmdSetDeviceMaskKHR(instance);
         PFN_vkCmdSetDeviceMaskKHR_p.call(commandBuffer, deviceMask);
@@ -4040,9 +2475,6 @@ public class Vk {
 
     private PFNvkCmdDispatchBaseKHR PFN_vkCmdDispatchBaseKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDispatchBaseKHR.html">khronos documentation</a>
-     **/
     public void vkCmdDispatchBaseKHR(VkCommandBuffer commandBuffer, VkUInt32 baseGroupX, VkUInt32 baseGroupY, VkUInt32 baseGroupZ, VkUInt32 groupCountX, VkUInt32 groupCountY, VkUInt32 groupCountZ){
         if(PFN_vkCmdDispatchBaseKHR_p == null) PFN_vkCmdDispatchBaseKHR_p = new PFNvkCmdDispatchBaseKHR(instance);
         PFN_vkCmdDispatchBaseKHR_p.call(commandBuffer, baseGroupX, baseGroupY, baseGroupZ, groupCountX, groupCountY, groupCountZ);
@@ -4051,9 +2483,6 @@ public class Vk {
 
     private PFNvkTrimCommandPoolKHR PFN_vkTrimCommandPoolKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkTrimCommandPoolKHR.html">khronos documentation</a>
-     **/
     public void vkTrimCommandPoolKHR(VkDevice device, VkCommandPool commandPool, VkCommandPoolTrimFlags flags){
         if(PFN_vkTrimCommandPoolKHR_p == null) PFN_vkTrimCommandPoolKHR_p = new PFNvkTrimCommandPoolKHR(instance);
         PFN_vkTrimCommandPoolKHR_p.call(device, commandPool, flags);
@@ -4062,9 +2491,6 @@ public class Vk {
 
     private PFNvkEnumeratePhysicalDeviceGroupsKHR PFN_vkEnumeratePhysicalDeviceGroupsKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkEnumeratePhysicalDeviceGroupsKHR.html">khronos documentation</a>
-     **/
     public void vkEnumeratePhysicalDeviceGroupsKHR(VkInstance instance, VkUInt32 pPhysicalDeviceGroupCount, VkPhysicalDeviceGroupProperties pPhysicalDeviceGroupProperties, VkResult rval){
         if(PFN_vkEnumeratePhysicalDeviceGroupsKHR_p == null) PFN_vkEnumeratePhysicalDeviceGroupsKHR_p = new PFNvkEnumeratePhysicalDeviceGroupsKHR(instance);
         PFN_vkEnumeratePhysicalDeviceGroupsKHR_p.call(instance, pPhysicalDeviceGroupCount, pPhysicalDeviceGroupProperties, rval);
@@ -4073,9 +2499,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceExternalBufferPropertiesKHR PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceExternalBufferPropertiesKHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceExternalBufferInfo pExternalBufferInfo, VkExternalBufferProperties pExternalBufferProperties){
         if(PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR_p == null) PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR_p = new PFNvkGetPhysicalDeviceExternalBufferPropertiesKHR(instance);
         PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR_p.call(physicalDevice, pExternalBufferInfo, pExternalBufferProperties);
@@ -4084,9 +2507,6 @@ public class Vk {
 
     private PFNvkGetMemoryFdKHR PFN_vkGetMemoryFdKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetMemoryFdKHR.html">khronos documentation</a>
-     **/
     public void vkGetMemoryFdKHR(VkDevice device, VkMemoryGetFdInfoKHR pGetFdInfo, VkInt pFd, VkResult rval){
         if(PFN_vkGetMemoryFdKHR_p == null) PFN_vkGetMemoryFdKHR_p = new PFNvkGetMemoryFdKHR(instance);
         PFN_vkGetMemoryFdKHR_p.call(device, pGetFdInfo, pFd, rval);
@@ -4095,9 +2515,6 @@ public class Vk {
 
     private PFNvkGetMemoryFdPropertiesKHR PFN_vkGetMemoryFdPropertiesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetMemoryFdPropertiesKHR.html">khronos documentation</a>
-     **/
     public void vkGetMemoryFdPropertiesKHR(VkDevice device, VkExternalMemoryHandleTypeFlagBits handleType, VkInt fd, VkMemoryFdPropertiesKHR pMemoryFdProperties, VkResult rval){
         if(PFN_vkGetMemoryFdPropertiesKHR_p == null) PFN_vkGetMemoryFdPropertiesKHR_p = new PFNvkGetMemoryFdPropertiesKHR(instance);
         PFN_vkGetMemoryFdPropertiesKHR_p.call(device, handleType, fd, pMemoryFdProperties, rval);
@@ -4106,9 +2523,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceExternalSemaphorePropertiesKHR PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceExternalSemaphorePropertiesKHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceExternalSemaphoreInfo pExternalSemaphoreInfo, VkExternalSemaphoreProperties pExternalSemaphoreProperties){
         if(PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR_p == null) PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR_p = new PFNvkGetPhysicalDeviceExternalSemaphorePropertiesKHR(instance);
         PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR_p.call(physicalDevice, pExternalSemaphoreInfo, pExternalSemaphoreProperties);
@@ -4117,9 +2531,6 @@ public class Vk {
 
     private PFNvkImportSemaphoreFdKHR PFN_vkImportSemaphoreFdKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkImportSemaphoreFdKHR.html">khronos documentation</a>
-     **/
     public void vkImportSemaphoreFdKHR(VkDevice device, VkImportSemaphoreFdInfoKHR pImportSemaphoreFdInfo, VkResult rval){
         if(PFN_vkImportSemaphoreFdKHR_p == null) PFN_vkImportSemaphoreFdKHR_p = new PFNvkImportSemaphoreFdKHR(instance);
         PFN_vkImportSemaphoreFdKHR_p.call(device, pImportSemaphoreFdInfo, rval);
@@ -4128,9 +2539,6 @@ public class Vk {
 
     private PFNvkGetSemaphoreFdKHR PFN_vkGetSemaphoreFdKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetSemaphoreFdKHR.html">khronos documentation</a>
-     **/
     public void vkGetSemaphoreFdKHR(VkDevice device, VkSemaphoreGetFdInfoKHR pGetFdInfo, VkInt pFd, VkResult rval){
         if(PFN_vkGetSemaphoreFdKHR_p == null) PFN_vkGetSemaphoreFdKHR_p = new PFNvkGetSemaphoreFdKHR(instance);
         PFN_vkGetSemaphoreFdKHR_p.call(device, pGetFdInfo, pFd, rval);
@@ -4139,9 +2547,6 @@ public class Vk {
 
     private PFNvkCmdPushDescriptorSetKHR PFN_vkCmdPushDescriptorSetKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdPushDescriptorSetKHR.html">khronos documentation</a>
-     **/
     public void vkCmdPushDescriptorSetKHR(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipelineLayout layout, VkUInt32 set, VkUInt32 descriptorWriteCount, VkWriteDescriptorSet pDescriptorWrites){
         if(PFN_vkCmdPushDescriptorSetKHR_p == null) PFN_vkCmdPushDescriptorSetKHR_p = new PFNvkCmdPushDescriptorSetKHR(instance);
         PFN_vkCmdPushDescriptorSetKHR_p.call(commandBuffer, pipelineBindPoint, layout, set, descriptorWriteCount, pDescriptorWrites);
@@ -4150,9 +2555,6 @@ public class Vk {
 
     private PFNvkCmdPushDescriptorSetWithTemplateKHR PFN_vkCmdPushDescriptorSetWithTemplateKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdPushDescriptorSetWithTemplateKHR.html">khronos documentation</a>
-     **/
     public void vkCmdPushDescriptorSetWithTemplateKHR(VkCommandBuffer commandBuffer, VkDescriptorUpdateTemplate descriptorUpdateTemplate, VkPipelineLayout layout, VkUInt32 set, VkObject pData){
         if(PFN_vkCmdPushDescriptorSetWithTemplateKHR_p == null) PFN_vkCmdPushDescriptorSetWithTemplateKHR_p = new PFNvkCmdPushDescriptorSetWithTemplateKHR(instance);
         PFN_vkCmdPushDescriptorSetWithTemplateKHR_p.call(commandBuffer, descriptorUpdateTemplate, layout, set, pData);
@@ -4161,9 +2563,6 @@ public class Vk {
 
     private PFNvkCreateDescriptorUpdateTemplateKHR PFN_vkCreateDescriptorUpdateTemplateKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateDescriptorUpdateTemplateKHR.html">khronos documentation</a>
-     **/
     public void vkCreateDescriptorUpdateTemplateKHR(VkDevice device, VkDescriptorUpdateTemplateCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorUpdateTemplate pDescriptorUpdateTemplate, VkResult rval){
         if(PFN_vkCreateDescriptorUpdateTemplateKHR_p == null) PFN_vkCreateDescriptorUpdateTemplateKHR_p = new PFNvkCreateDescriptorUpdateTemplateKHR(instance);
         PFN_vkCreateDescriptorUpdateTemplateKHR_p.call(device, pCreateInfo, pAllocator, pDescriptorUpdateTemplate, rval);
@@ -4172,9 +2571,6 @@ public class Vk {
 
     private PFNvkDestroyDescriptorUpdateTemplateKHR PFN_vkDestroyDescriptorUpdateTemplateKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyDescriptorUpdateTemplateKHR.html">khronos documentation</a>
-     **/
     public void vkDestroyDescriptorUpdateTemplateKHR(VkDevice device, VkDescriptorUpdateTemplate descriptorUpdateTemplate, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyDescriptorUpdateTemplateKHR_p == null) PFN_vkDestroyDescriptorUpdateTemplateKHR_p = new PFNvkDestroyDescriptorUpdateTemplateKHR(instance);
         PFN_vkDestroyDescriptorUpdateTemplateKHR_p.call(device, descriptorUpdateTemplate, pAllocator);
@@ -4183,9 +2579,6 @@ public class Vk {
 
     private PFNvkUpdateDescriptorSetWithTemplateKHR PFN_vkUpdateDescriptorSetWithTemplateKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkUpdateDescriptorSetWithTemplateKHR.html">khronos documentation</a>
-     **/
     public void vkUpdateDescriptorSetWithTemplateKHR(VkDevice device, VkDescriptorSet descriptorSet, VkDescriptorUpdateTemplate descriptorUpdateTemplate, VkObject pData){
         if(PFN_vkUpdateDescriptorSetWithTemplateKHR_p == null) PFN_vkUpdateDescriptorSetWithTemplateKHR_p = new PFNvkUpdateDescriptorSetWithTemplateKHR(instance);
         PFN_vkUpdateDescriptorSetWithTemplateKHR_p.call(device, descriptorSet, descriptorUpdateTemplate, pData);
@@ -4194,9 +2587,6 @@ public class Vk {
 
     private PFNvkGetSwapchainStatusKHR PFN_vkGetSwapchainStatusKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetSwapchainStatusKHR.html">khronos documentation</a>
-     **/
     public void vkGetSwapchainStatusKHR(VkDevice device, VkSwapchainKHR swapchain, VkResult rval){
         if(PFN_vkGetSwapchainStatusKHR_p == null) PFN_vkGetSwapchainStatusKHR_p = new PFNvkGetSwapchainStatusKHR(instance);
         PFN_vkGetSwapchainStatusKHR_p.call(device, swapchain, rval);
@@ -4205,9 +2595,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceExternalFencePropertiesKHR PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceExternalFencePropertiesKHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceExternalFenceInfo pExternalFenceInfo, VkExternalFenceProperties pExternalFenceProperties){
         if(PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR_p == null) PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR_p = new PFNvkGetPhysicalDeviceExternalFencePropertiesKHR(instance);
         PFN_vkGetPhysicalDeviceExternalFencePropertiesKHR_p.call(physicalDevice, pExternalFenceInfo, pExternalFenceProperties);
@@ -4216,9 +2603,6 @@ public class Vk {
 
     private PFNvkImportFenceFdKHR PFN_vkImportFenceFdKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkImportFenceFdKHR.html">khronos documentation</a>
-     **/
     public void vkImportFenceFdKHR(VkDevice device, VkImportFenceFdInfoKHR pImportFenceFdInfo, VkResult rval){
         if(PFN_vkImportFenceFdKHR_p == null) PFN_vkImportFenceFdKHR_p = new PFNvkImportFenceFdKHR(instance);
         PFN_vkImportFenceFdKHR_p.call(device, pImportFenceFdInfo, rval);
@@ -4227,9 +2611,6 @@ public class Vk {
 
     private PFNvkGetFenceFdKHR PFN_vkGetFenceFdKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetFenceFdKHR.html">khronos documentation</a>
-     **/
     public void vkGetFenceFdKHR(VkDevice device, VkFenceGetFdInfoKHR pGetFdInfo, VkInt pFd, VkResult rval){
         if(PFN_vkGetFenceFdKHR_p == null) PFN_vkGetFenceFdKHR_p = new PFNvkGetFenceFdKHR(instance);
         PFN_vkGetFenceFdKHR_p.call(device, pGetFdInfo, pFd, rval);
@@ -4238,9 +2619,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceSurfaceCapabilities2KHR PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceSurfaceCapabilities2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceSurfaceInfo2KHR pSurfaceInfo, VkSurfaceCapabilities2KHR pSurfaceCapabilities, VkResult rval){
         if(PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR_p == null) PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR_p = new PFNvkGetPhysicalDeviceSurfaceCapabilities2KHR(instance);
         PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR_p.call(physicalDevice, pSurfaceInfo, pSurfaceCapabilities, rval);
@@ -4249,9 +2627,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceSurfaceFormats2KHR PFN_vkGetPhysicalDeviceSurfaceFormats2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceSurfaceFormats2KHR.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceSurfaceFormats2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceSurfaceInfo2KHR pSurfaceInfo, VkUInt32 pSurfaceFormatCount, VkSurfaceFormat2KHR pSurfaceFormats, VkResult rval){
         if(PFN_vkGetPhysicalDeviceSurfaceFormats2KHR_p == null) PFN_vkGetPhysicalDeviceSurfaceFormats2KHR_p = new PFNvkGetPhysicalDeviceSurfaceFormats2KHR(instance);
         PFN_vkGetPhysicalDeviceSurfaceFormats2KHR_p.call(physicalDevice, pSurfaceInfo, pSurfaceFormatCount, pSurfaceFormats, rval);
@@ -4260,9 +2635,6 @@ public class Vk {
 
     private PFNvkGetImageMemoryRequirements2KHR PFN_vkGetImageMemoryRequirements2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetImageMemoryRequirements2KHR.html">khronos documentation</a>
-     **/
     public void vkGetImageMemoryRequirements2KHR(VkDevice device, VkImageMemoryRequirementsInfo2 pInfo, VkMemoryRequirements2 pMemoryRequirements){
         if(PFN_vkGetImageMemoryRequirements2KHR_p == null) PFN_vkGetImageMemoryRequirements2KHR_p = new PFNvkGetImageMemoryRequirements2KHR(instance);
         PFN_vkGetImageMemoryRequirements2KHR_p.call(device, pInfo, pMemoryRequirements);
@@ -4271,9 +2643,6 @@ public class Vk {
 
     private PFNvkGetBufferMemoryRequirements2KHR PFN_vkGetBufferMemoryRequirements2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetBufferMemoryRequirements2KHR.html">khronos documentation</a>
-     **/
     public void vkGetBufferMemoryRequirements2KHR(VkDevice device, VkBufferMemoryRequirementsInfo2 pInfo, VkMemoryRequirements2 pMemoryRequirements){
         if(PFN_vkGetBufferMemoryRequirements2KHR_p == null) PFN_vkGetBufferMemoryRequirements2KHR_p = new PFNvkGetBufferMemoryRequirements2KHR(instance);
         PFN_vkGetBufferMemoryRequirements2KHR_p.call(device, pInfo, pMemoryRequirements);
@@ -4282,9 +2651,6 @@ public class Vk {
 
     private PFNvkGetImageSparseMemoryRequirements2KHR PFN_vkGetImageSparseMemoryRequirements2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetImageSparseMemoryRequirements2KHR.html">khronos documentation</a>
-     **/
     public void vkGetImageSparseMemoryRequirements2KHR(VkDevice device, VkImageSparseMemoryRequirementsInfo2 pInfo, VkUInt32 pSparseMemoryRequirementCount, VkSparseImageMemoryRequirements2 pSparseMemoryRequirements){
         if(PFN_vkGetImageSparseMemoryRequirements2KHR_p == null) PFN_vkGetImageSparseMemoryRequirements2KHR_p = new PFNvkGetImageSparseMemoryRequirements2KHR(instance);
         PFN_vkGetImageSparseMemoryRequirements2KHR_p.call(device, pInfo, pSparseMemoryRequirementCount, pSparseMemoryRequirements);
@@ -4293,9 +2659,6 @@ public class Vk {
 
     private PFNvkCreateSamplerYcbcrConversionKHR PFN_vkCreateSamplerYcbcrConversionKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateSamplerYcbcrConversionKHR.html">khronos documentation</a>
-     **/
     public void vkCreateSamplerYcbcrConversionKHR(VkDevice device, VkSamplerYcbcrConversionCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSamplerYcbcrConversion pYcbcrConversion, VkResult rval){
         if(PFN_vkCreateSamplerYcbcrConversionKHR_p == null) PFN_vkCreateSamplerYcbcrConversionKHR_p = new PFNvkCreateSamplerYcbcrConversionKHR(instance);
         PFN_vkCreateSamplerYcbcrConversionKHR_p.call(device, pCreateInfo, pAllocator, pYcbcrConversion, rval);
@@ -4304,9 +2667,6 @@ public class Vk {
 
     private PFNvkDestroySamplerYcbcrConversionKHR PFN_vkDestroySamplerYcbcrConversionKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroySamplerYcbcrConversionKHR.html">khronos documentation</a>
-     **/
     public void vkDestroySamplerYcbcrConversionKHR(VkDevice device, VkSamplerYcbcrConversion ycbcrConversion, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroySamplerYcbcrConversionKHR_p == null) PFN_vkDestroySamplerYcbcrConversionKHR_p = new PFNvkDestroySamplerYcbcrConversionKHR(instance);
         PFN_vkDestroySamplerYcbcrConversionKHR_p.call(device, ycbcrConversion, pAllocator);
@@ -4315,9 +2675,6 @@ public class Vk {
 
     private PFNvkBindBufferMemory2KHR PFN_vkBindBufferMemory2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkBindBufferMemory2KHR.html">khronos documentation</a>
-     **/
     public void vkBindBufferMemory2KHR(VkDevice device, VkUInt32 bindInfoCount, VkBindBufferMemoryInfo pBindInfos, VkResult rval){
         if(PFN_vkBindBufferMemory2KHR_p == null) PFN_vkBindBufferMemory2KHR_p = new PFNvkBindBufferMemory2KHR(instance);
         PFN_vkBindBufferMemory2KHR_p.call(device, bindInfoCount, pBindInfos, rval);
@@ -4326,9 +2683,6 @@ public class Vk {
 
     private PFNvkBindImageMemory2KHR PFN_vkBindImageMemory2KHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkBindImageMemory2KHR.html">khronos documentation</a>
-     **/
     public void vkBindImageMemory2KHR(VkDevice device, VkUInt32 bindInfoCount, VkBindImageMemoryInfo pBindInfos, VkResult rval){
         if(PFN_vkBindImageMemory2KHR_p == null) PFN_vkBindImageMemory2KHR_p = new PFNvkBindImageMemory2KHR(instance);
         PFN_vkBindImageMemory2KHR_p.call(device, bindInfoCount, pBindInfos, rval);
@@ -4337,9 +2691,6 @@ public class Vk {
 
     private PFNvkGetDescriptorSetLayoutSupportKHR PFN_vkGetDescriptorSetLayoutSupportKHR_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetDescriptorSetLayoutSupportKHR.html">khronos documentation</a>
-     **/
     public void vkGetDescriptorSetLayoutSupportKHR(VkDevice device, VkDescriptorSetLayoutCreateInfo pCreateInfo, VkDescriptorSetLayoutSupport pSupport){
         if(PFN_vkGetDescriptorSetLayoutSupportKHR_p == null) PFN_vkGetDescriptorSetLayoutSupportKHR_p = new PFNvkGetDescriptorSetLayoutSupportKHR(instance);
         PFN_vkGetDescriptorSetLayoutSupportKHR_p.call(device, pCreateInfo, pSupport);
@@ -4348,9 +2699,6 @@ public class Vk {
 
     private PFNvkCreateDebugReportCallbackEXT PFN_vkCreateDebugReportCallbackEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateDebugReportCallbackEXT.html">khronos documentation</a>
-     **/
     public void vkCreateDebugReportCallbackEXT(VkInstance instance, VkDebugReportCallbackCreateInfoEXT pCreateInfo, VkAllocationCallbacks pAllocator, VkDebugReportCallbackEXT pCallback, VkResult rval){
         if(PFN_vkCreateDebugReportCallbackEXT_p == null) PFN_vkCreateDebugReportCallbackEXT_p = new PFNvkCreateDebugReportCallbackEXT(instance);
         PFN_vkCreateDebugReportCallbackEXT_p.call(instance, pCreateInfo, pAllocator, pCallback, rval);
@@ -4359,9 +2707,6 @@ public class Vk {
 
     private PFNvkDestroyDebugReportCallbackEXT PFN_vkDestroyDebugReportCallbackEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyDebugReportCallbackEXT.html">khronos documentation</a>
-     **/
     public void vkDestroyDebugReportCallbackEXT(VkInstance instance, VkDebugReportCallbackEXT callback, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyDebugReportCallbackEXT_p == null) PFN_vkDestroyDebugReportCallbackEXT_p = new PFNvkDestroyDebugReportCallbackEXT(instance);
         PFN_vkDestroyDebugReportCallbackEXT_p.call(instance, callback, pAllocator);
@@ -4370,9 +2715,6 @@ public class Vk {
 
     private PFNvkDebugReportMessageEXT PFN_vkDebugReportMessageEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDebugReportMessageEXT.html">khronos documentation</a>
-     **/
     public void vkDebugReportMessageEXT(VkInstance instance, VkDebugReportFlagsEXT flags, VkDebugReportObjectTypeEXT objectType, VkUInt64 object, VkSize location, VkInt32 messageCode, VkChar pLayerPrefix, VkChar pMessage){
         if(PFN_vkDebugReportMessageEXT_p == null) PFN_vkDebugReportMessageEXT_p = new PFNvkDebugReportMessageEXT(instance);
         PFN_vkDebugReportMessageEXT_p.call(instance, flags, objectType, object, location, messageCode, pLayerPrefix, pMessage);
@@ -4381,9 +2723,6 @@ public class Vk {
 
     private PFNvkDebugMarkerSetObjectTagEXT PFN_vkDebugMarkerSetObjectTagEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDebugMarkerSetObjectTagEXT.html">khronos documentation</a>
-     **/
     public void vkDebugMarkerSetObjectTagEXT(VkDevice device, VkDebugMarkerObjectTagInfoEXT pTagInfo, VkResult rval){
         if(PFN_vkDebugMarkerSetObjectTagEXT_p == null) PFN_vkDebugMarkerSetObjectTagEXT_p = new PFNvkDebugMarkerSetObjectTagEXT(instance);
         PFN_vkDebugMarkerSetObjectTagEXT_p.call(device, pTagInfo, rval);
@@ -4392,9 +2731,6 @@ public class Vk {
 
     private PFNvkDebugMarkerSetObjectNameEXT PFN_vkDebugMarkerSetObjectNameEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDebugMarkerSetObjectNameEXT.html">khronos documentation</a>
-     **/
     public void vkDebugMarkerSetObjectNameEXT(VkDevice device, VkDebugMarkerObjectNameInfoEXT pNameInfo, VkResult rval){
         if(PFN_vkDebugMarkerSetObjectNameEXT_p == null) PFN_vkDebugMarkerSetObjectNameEXT_p = new PFNvkDebugMarkerSetObjectNameEXT(instance);
         PFN_vkDebugMarkerSetObjectNameEXT_p.call(device, pNameInfo, rval);
@@ -4403,9 +2739,6 @@ public class Vk {
 
     private PFNvkCmdDebugMarkerBeginEXT PFN_vkCmdDebugMarkerBeginEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDebugMarkerBeginEXT.html">khronos documentation</a>
-     **/
     public void vkCmdDebugMarkerBeginEXT(VkCommandBuffer commandBuffer, VkDebugMarkerMarkerInfoEXT pMarkerInfo){
         if(PFN_vkCmdDebugMarkerBeginEXT_p == null) PFN_vkCmdDebugMarkerBeginEXT_p = new PFNvkCmdDebugMarkerBeginEXT(instance);
         PFN_vkCmdDebugMarkerBeginEXT_p.call(commandBuffer, pMarkerInfo);
@@ -4414,9 +2747,6 @@ public class Vk {
 
     private PFNvkCmdDebugMarkerEndEXT PFN_vkCmdDebugMarkerEndEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDebugMarkerEndEXT.html">khronos documentation</a>
-     **/
     public void vkCmdDebugMarkerEndEXT(VkCommandBuffer commandBuffer){
         if(PFN_vkCmdDebugMarkerEndEXT_p == null) PFN_vkCmdDebugMarkerEndEXT_p = new PFNvkCmdDebugMarkerEndEXT(instance);
         PFN_vkCmdDebugMarkerEndEXT_p.call(commandBuffer);
@@ -4425,9 +2755,6 @@ public class Vk {
 
     private PFNvkCmdDebugMarkerInsertEXT PFN_vkCmdDebugMarkerInsertEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDebugMarkerInsertEXT.html">khronos documentation</a>
-     **/
     public void vkCmdDebugMarkerInsertEXT(VkCommandBuffer commandBuffer, VkDebugMarkerMarkerInfoEXT pMarkerInfo){
         if(PFN_vkCmdDebugMarkerInsertEXT_p == null) PFN_vkCmdDebugMarkerInsertEXT_p = new PFNvkCmdDebugMarkerInsertEXT(instance);
         PFN_vkCmdDebugMarkerInsertEXT_p.call(commandBuffer, pMarkerInfo);
@@ -4436,9 +2763,6 @@ public class Vk {
 
     private PFNvkCmdDrawIndirectCountAMD PFN_vkCmdDrawIndirectCountAMD_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDrawIndirectCountAMD.html">khronos documentation</a>
-     **/
     public void vkCmdDrawIndirectCountAMD(VkCommandBuffer commandBuffer, VkBuffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, VkUInt32 maxDrawCount, VkUInt32 stride){
         if(PFN_vkCmdDrawIndirectCountAMD_p == null) PFN_vkCmdDrawIndirectCountAMD_p = new PFNvkCmdDrawIndirectCountAMD(instance);
         PFN_vkCmdDrawIndirectCountAMD_p.call(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
@@ -4447,9 +2771,6 @@ public class Vk {
 
     private PFNvkCmdDrawIndexedIndirectCountAMD PFN_vkCmdDrawIndexedIndirectCountAMD_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdDrawIndexedIndirectCountAMD.html">khronos documentation</a>
-     **/
     public void vkCmdDrawIndexedIndirectCountAMD(VkCommandBuffer commandBuffer, VkBuffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, VkUInt32 maxDrawCount, VkUInt32 stride){
         if(PFN_vkCmdDrawIndexedIndirectCountAMD_p == null) PFN_vkCmdDrawIndexedIndirectCountAMD_p = new PFNvkCmdDrawIndexedIndirectCountAMD(instance);
         PFN_vkCmdDrawIndexedIndirectCountAMD_p.call(commandBuffer, buffer, offset, countBuffer, countBufferOffset, maxDrawCount, stride);
@@ -4458,9 +2779,6 @@ public class Vk {
 
     private PFNvkGetShaderInfoAMD PFN_vkGetShaderInfoAMD_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetShaderInfoAMD.html">khronos documentation</a>
-     **/
     public void vkGetShaderInfoAMD(VkDevice device, VkPipeline pipeline, VkShaderStageFlagBits shaderStage, VkShaderInfoTypeAMD infoType, VkSize pInfoSize, VkObject pInfo, VkResult rval){
         if(PFN_vkGetShaderInfoAMD_p == null) PFN_vkGetShaderInfoAMD_p = new PFNvkGetShaderInfoAMD(instance);
         PFN_vkGetShaderInfoAMD_p.call(device, pipeline, shaderStage, infoType, pInfoSize, pInfo, rval);
@@ -4469,9 +2787,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceExternalImageFormatPropertiesNV(VkPhysicalDevice physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags, VkExternalMemoryHandleTypeFlagsNV externalHandleType, VkExternalImageFormatPropertiesNV pExternalImageFormatProperties, VkResult rval){
         if(PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV_p == null) PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV_p = new PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV(instance);
         PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV_p.call(physicalDevice, format, type, tiling, usage, flags, externalHandleType, pExternalImageFormatProperties, rval);
@@ -4480,9 +2795,6 @@ public class Vk {
 
     private PFNvkCmdProcessCommandsNVX PFN_vkCmdProcessCommandsNVX_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdProcessCommandsNVX.html">khronos documentation</a>
-     **/
     public void vkCmdProcessCommandsNVX(VkCommandBuffer commandBuffer, VkCmdProcessCommandsInfoNVX pProcessCommandsInfo){
         if(PFN_vkCmdProcessCommandsNVX_p == null) PFN_vkCmdProcessCommandsNVX_p = new PFNvkCmdProcessCommandsNVX(instance);
         PFN_vkCmdProcessCommandsNVX_p.call(commandBuffer, pProcessCommandsInfo);
@@ -4491,9 +2803,6 @@ public class Vk {
 
     private PFNvkCmdReserveSpaceForCommandsNVX PFN_vkCmdReserveSpaceForCommandsNVX_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdReserveSpaceForCommandsNVX.html">khronos documentation</a>
-     **/
     public void vkCmdReserveSpaceForCommandsNVX(VkCommandBuffer commandBuffer, VkCmdReserveSpaceForCommandsInfoNVX pReserveSpaceInfo){
         if(PFN_vkCmdReserveSpaceForCommandsNVX_p == null) PFN_vkCmdReserveSpaceForCommandsNVX_p = new PFNvkCmdReserveSpaceForCommandsNVX(instance);
         PFN_vkCmdReserveSpaceForCommandsNVX_p.call(commandBuffer, pReserveSpaceInfo);
@@ -4502,9 +2811,6 @@ public class Vk {
 
     private PFNvkCreateIndirectCommandsLayoutNVX PFN_vkCreateIndirectCommandsLayoutNVX_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateIndirectCommandsLayoutNVX.html">khronos documentation</a>
-     **/
     public void vkCreateIndirectCommandsLayoutNVX(VkDevice device, VkIndirectCommandsLayoutCreateInfoNVX pCreateInfo, VkAllocationCallbacks pAllocator, VkIndirectCommandsLayoutNVX pIndirectCommandsLayout, VkResult rval){
         if(PFN_vkCreateIndirectCommandsLayoutNVX_p == null) PFN_vkCreateIndirectCommandsLayoutNVX_p = new PFNvkCreateIndirectCommandsLayoutNVX(instance);
         PFN_vkCreateIndirectCommandsLayoutNVX_p.call(device, pCreateInfo, pAllocator, pIndirectCommandsLayout, rval);
@@ -4513,9 +2819,6 @@ public class Vk {
 
     private PFNvkDestroyIndirectCommandsLayoutNVX PFN_vkDestroyIndirectCommandsLayoutNVX_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyIndirectCommandsLayoutNVX.html">khronos documentation</a>
-     **/
     public void vkDestroyIndirectCommandsLayoutNVX(VkDevice device, VkIndirectCommandsLayoutNVX indirectCommandsLayout, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyIndirectCommandsLayoutNVX_p == null) PFN_vkDestroyIndirectCommandsLayoutNVX_p = new PFNvkDestroyIndirectCommandsLayoutNVX(instance);
         PFN_vkDestroyIndirectCommandsLayoutNVX_p.call(device, indirectCommandsLayout, pAllocator);
@@ -4524,9 +2827,6 @@ public class Vk {
 
     private PFNvkCreateObjectTableNVX PFN_vkCreateObjectTableNVX_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateObjectTableNVX.html">khronos documentation</a>
-     **/
     public void vkCreateObjectTableNVX(VkDevice device, VkObjectTableCreateInfoNVX pCreateInfo, VkAllocationCallbacks pAllocator, VkObjectTableNVX pObjectTable, VkResult rval){
         if(PFN_vkCreateObjectTableNVX_p == null) PFN_vkCreateObjectTableNVX_p = new PFNvkCreateObjectTableNVX(instance);
         PFN_vkCreateObjectTableNVX_p.call(device, pCreateInfo, pAllocator, pObjectTable, rval);
@@ -4535,9 +2835,6 @@ public class Vk {
 
     private PFNvkDestroyObjectTableNVX PFN_vkDestroyObjectTableNVX_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyObjectTableNVX.html">khronos documentation</a>
-     **/
     public void vkDestroyObjectTableNVX(VkDevice device, VkObjectTableNVX objectTable, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyObjectTableNVX_p == null) PFN_vkDestroyObjectTableNVX_p = new PFNvkDestroyObjectTableNVX(instance);
         PFN_vkDestroyObjectTableNVX_p.call(device, objectTable, pAllocator);
@@ -4546,9 +2843,6 @@ public class Vk {
 
     private PFNvkRegisterObjectsNVX PFN_vkRegisterObjectsNVX_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkRegisterObjectsNVX.html">khronos documentation</a>
-     **/
     public void vkRegisterObjectsNVX(VkDevice device, VkObjectTableNVX objectTable, VkUInt32 objectCount, VkObjectTableEntryNVX.Pointer ppObjectTableEntries, VkUInt32 pObjectIndices, VkResult rval){
         if(PFN_vkRegisterObjectsNVX_p == null) PFN_vkRegisterObjectsNVX_p = new PFNvkRegisterObjectsNVX(instance);
         PFN_vkRegisterObjectsNVX_p.call(device, objectTable, objectCount, ppObjectTableEntries, pObjectIndices, rval);
@@ -4557,9 +2851,6 @@ public class Vk {
 
     private PFNvkUnregisterObjectsNVX PFN_vkUnregisterObjectsNVX_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkUnregisterObjectsNVX.html">khronos documentation</a>
-     **/
     public void vkUnregisterObjectsNVX(VkDevice device, VkObjectTableNVX objectTable, VkUInt32 objectCount, VkObjectEntryTypeNVX pObjectEntryTypes, VkUInt32 pObjectIndices, VkResult rval){
         if(PFN_vkUnregisterObjectsNVX_p == null) PFN_vkUnregisterObjectsNVX_p = new PFNvkUnregisterObjectsNVX(instance);
         PFN_vkUnregisterObjectsNVX_p.call(device, objectTable, objectCount, pObjectEntryTypes, pObjectIndices, rval);
@@ -4568,9 +2859,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX PFN_vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(VkPhysicalDevice physicalDevice, VkDeviceGeneratedCommandsFeaturesNVX pFeatures, VkDeviceGeneratedCommandsLimitsNVX pLimits){
         if(PFN_vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX_p == null) PFN_vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX_p = new PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(instance);
         PFN_vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX_p.call(physicalDevice, pFeatures, pLimits);
@@ -4579,9 +2867,6 @@ public class Vk {
 
     private PFNvkCmdSetViewportWScalingNV PFN_vkCmdSetViewportWScalingNV_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetViewportWScalingNV.html">khronos documentation</a>
-     **/
     public void vkCmdSetViewportWScalingNV(VkCommandBuffer commandBuffer, VkUInt32 firstViewport, VkUInt32 viewportCount, VkViewportWScalingNV pViewportWScalings){
         if(PFN_vkCmdSetViewportWScalingNV_p == null) PFN_vkCmdSetViewportWScalingNV_p = new PFNvkCmdSetViewportWScalingNV(instance);
         PFN_vkCmdSetViewportWScalingNV_p.call(commandBuffer, firstViewport, viewportCount, pViewportWScalings);
@@ -4590,9 +2875,6 @@ public class Vk {
 
     private PFNvkReleaseDisplayEXT PFN_vkReleaseDisplayEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkReleaseDisplayEXT.html">khronos documentation</a>
-     **/
     public void vkReleaseDisplayEXT(VkPhysicalDevice physicalDevice, VkDisplayKHR display, VkResult rval){
         if(PFN_vkReleaseDisplayEXT_p == null) PFN_vkReleaseDisplayEXT_p = new PFNvkReleaseDisplayEXT(instance);
         PFN_vkReleaseDisplayEXT_p.call(physicalDevice, display, rval);
@@ -4601,9 +2883,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceSurfaceCapabilities2EXT PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceSurfaceCapabilities2EXT(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkSurfaceCapabilities2EXT pSurfaceCapabilities, VkResult rval){
         if(PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT_p == null) PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT_p = new PFNvkGetPhysicalDeviceSurfaceCapabilities2EXT(instance);
         PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT_p.call(physicalDevice, surface, pSurfaceCapabilities, rval);
@@ -4612,9 +2891,6 @@ public class Vk {
 
     private PFNvkDisplayPowerControlEXT PFN_vkDisplayPowerControlEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDisplayPowerControlEXT.html">khronos documentation</a>
-     **/
     public void vkDisplayPowerControlEXT(VkDevice device, VkDisplayKHR display, VkDisplayPowerInfoEXT pDisplayPowerInfo, VkResult rval){
         if(PFN_vkDisplayPowerControlEXT_p == null) PFN_vkDisplayPowerControlEXT_p = new PFNvkDisplayPowerControlEXT(instance);
         PFN_vkDisplayPowerControlEXT_p.call(device, display, pDisplayPowerInfo, rval);
@@ -4623,9 +2899,6 @@ public class Vk {
 
     private PFNvkRegisterDeviceEventEXT PFN_vkRegisterDeviceEventEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkRegisterDeviceEventEXT.html">khronos documentation</a>
-     **/
     public void vkRegisterDeviceEventEXT(VkDevice device, VkDeviceEventInfoEXT pDeviceEventInfo, VkAllocationCallbacks pAllocator, VkFence pFence, VkResult rval){
         if(PFN_vkRegisterDeviceEventEXT_p == null) PFN_vkRegisterDeviceEventEXT_p = new PFNvkRegisterDeviceEventEXT(instance);
         PFN_vkRegisterDeviceEventEXT_p.call(device, pDeviceEventInfo, pAllocator, pFence, rval);
@@ -4634,9 +2907,6 @@ public class Vk {
 
     private PFNvkRegisterDisplayEventEXT PFN_vkRegisterDisplayEventEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkRegisterDisplayEventEXT.html">khronos documentation</a>
-     **/
     public void vkRegisterDisplayEventEXT(VkDevice device, VkDisplayKHR display, VkDisplayEventInfoEXT pDisplayEventInfo, VkAllocationCallbacks pAllocator, VkFence pFence, VkResult rval){
         if(PFN_vkRegisterDisplayEventEXT_p == null) PFN_vkRegisterDisplayEventEXT_p = new PFNvkRegisterDisplayEventEXT(instance);
         PFN_vkRegisterDisplayEventEXT_p.call(device, display, pDisplayEventInfo, pAllocator, pFence, rval);
@@ -4645,9 +2915,6 @@ public class Vk {
 
     private PFNvkGetSwapchainCounterEXT PFN_vkGetSwapchainCounterEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetSwapchainCounterEXT.html">khronos documentation</a>
-     **/
     public void vkGetSwapchainCounterEXT(VkDevice device, VkSwapchainKHR swapchain, VkSurfaceCounterFlagBitsEXT counter, VkUInt64 pCounterValue, VkResult rval){
         if(PFN_vkGetSwapchainCounterEXT_p == null) PFN_vkGetSwapchainCounterEXT_p = new PFNvkGetSwapchainCounterEXT(instance);
         PFN_vkGetSwapchainCounterEXT_p.call(device, swapchain, counter, pCounterValue, rval);
@@ -4656,9 +2923,6 @@ public class Vk {
 
     private PFNvkGetRefreshCycleDurationGOOGLE PFN_vkGetRefreshCycleDurationGOOGLE_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetRefreshCycleDurationGOOGLE.html">khronos documentation</a>
-     **/
     public void vkGetRefreshCycleDurationGOOGLE(VkDevice device, VkSwapchainKHR swapchain, VkRefreshCycleDurationGOOGLE pDisplayTimingProperties, VkResult rval){
         if(PFN_vkGetRefreshCycleDurationGOOGLE_p == null) PFN_vkGetRefreshCycleDurationGOOGLE_p = new PFNvkGetRefreshCycleDurationGOOGLE(instance);
         PFN_vkGetRefreshCycleDurationGOOGLE_p.call(device, swapchain, pDisplayTimingProperties, rval);
@@ -4667,9 +2931,6 @@ public class Vk {
 
     private PFNvkGetPastPresentationTimingGOOGLE PFN_vkGetPastPresentationTimingGOOGLE_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPastPresentationTimingGOOGLE.html">khronos documentation</a>
-     **/
     public void vkGetPastPresentationTimingGOOGLE(VkDevice device, VkSwapchainKHR swapchain, VkUInt32 pPresentationTimingCount, VkPastPresentationTimingGOOGLE pPresentationTimings, VkResult rval){
         if(PFN_vkGetPastPresentationTimingGOOGLE_p == null) PFN_vkGetPastPresentationTimingGOOGLE_p = new PFNvkGetPastPresentationTimingGOOGLE(instance);
         PFN_vkGetPastPresentationTimingGOOGLE_p.call(device, swapchain, pPresentationTimingCount, pPresentationTimings, rval);
@@ -4678,9 +2939,6 @@ public class Vk {
 
     private PFNvkCmdSetDiscardRectangleEXT PFN_vkCmdSetDiscardRectangleEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetDiscardRectangleEXT.html">khronos documentation</a>
-     **/
     public void vkCmdSetDiscardRectangleEXT(VkCommandBuffer commandBuffer, VkUInt32 firstDiscardRectangle, VkUInt32 discardRectangleCount, VkRect2D pDiscardRectangles){
         if(PFN_vkCmdSetDiscardRectangleEXT_p == null) PFN_vkCmdSetDiscardRectangleEXT_p = new PFNvkCmdSetDiscardRectangleEXT(instance);
         PFN_vkCmdSetDiscardRectangleEXT_p.call(commandBuffer, firstDiscardRectangle, discardRectangleCount, pDiscardRectangles);
@@ -4689,9 +2947,6 @@ public class Vk {
 
     private PFNvkSetHdrMetadataEXT PFN_vkSetHdrMetadataEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkSetHdrMetadataEXT.html">khronos documentation</a>
-     **/
     public void vkSetHdrMetadataEXT(VkDevice device, VkUInt32 swapchainCount, VkSwapchainKHR pSwapchains, VkHdrMetadataEXT pMetadata){
         if(PFN_vkSetHdrMetadataEXT_p == null) PFN_vkSetHdrMetadataEXT_p = new PFNvkSetHdrMetadataEXT(instance);
         PFN_vkSetHdrMetadataEXT_p.call(device, swapchainCount, pSwapchains, pMetadata);
@@ -4700,9 +2955,6 @@ public class Vk {
 
     private PFNvkSetDebugUtilsObjectNameEXT PFN_vkSetDebugUtilsObjectNameEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkSetDebugUtilsObjectNameEXT.html">khronos documentation</a>
-     **/
     public void vkSetDebugUtilsObjectNameEXT(VkDevice device, VkDebugUtilsObjectNameInfoEXT pNameInfo, VkResult rval){
         if(PFN_vkSetDebugUtilsObjectNameEXT_p == null) PFN_vkSetDebugUtilsObjectNameEXT_p = new PFNvkSetDebugUtilsObjectNameEXT(instance);
         PFN_vkSetDebugUtilsObjectNameEXT_p.call(device, pNameInfo, rval);
@@ -4711,9 +2963,6 @@ public class Vk {
 
     private PFNvkSetDebugUtilsObjectTagEXT PFN_vkSetDebugUtilsObjectTagEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkSetDebugUtilsObjectTagEXT.html">khronos documentation</a>
-     **/
     public void vkSetDebugUtilsObjectTagEXT(VkDevice device, VkDebugUtilsObjectTagInfoEXT pTagInfo, VkResult rval){
         if(PFN_vkSetDebugUtilsObjectTagEXT_p == null) PFN_vkSetDebugUtilsObjectTagEXT_p = new PFNvkSetDebugUtilsObjectTagEXT(instance);
         PFN_vkSetDebugUtilsObjectTagEXT_p.call(device, pTagInfo, rval);
@@ -4722,9 +2971,6 @@ public class Vk {
 
     private PFNvkQueueBeginDebugUtilsLabelEXT PFN_vkQueueBeginDebugUtilsLabelEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkQueueBeginDebugUtilsLabelEXT.html">khronos documentation</a>
-     **/
     public void vkQueueBeginDebugUtilsLabelEXT(VkQueue queue, VkDebugUtilsLabelEXT pLabelInfo){
         if(PFN_vkQueueBeginDebugUtilsLabelEXT_p == null) PFN_vkQueueBeginDebugUtilsLabelEXT_p = new PFNvkQueueBeginDebugUtilsLabelEXT(instance);
         PFN_vkQueueBeginDebugUtilsLabelEXT_p.call(queue, pLabelInfo);
@@ -4733,9 +2979,6 @@ public class Vk {
 
     private PFNvkQueueEndDebugUtilsLabelEXT PFN_vkQueueEndDebugUtilsLabelEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkQueueEndDebugUtilsLabelEXT.html">khronos documentation</a>
-     **/
     public void vkQueueEndDebugUtilsLabelEXT(VkQueue queue){
         if(PFN_vkQueueEndDebugUtilsLabelEXT_p == null) PFN_vkQueueEndDebugUtilsLabelEXT_p = new PFNvkQueueEndDebugUtilsLabelEXT(instance);
         PFN_vkQueueEndDebugUtilsLabelEXT_p.call(queue);
@@ -4744,9 +2987,6 @@ public class Vk {
 
     private PFNvkQueueInsertDebugUtilsLabelEXT PFN_vkQueueInsertDebugUtilsLabelEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkQueueInsertDebugUtilsLabelEXT.html">khronos documentation</a>
-     **/
     public void vkQueueInsertDebugUtilsLabelEXT(VkQueue queue, VkDebugUtilsLabelEXT pLabelInfo){
         if(PFN_vkQueueInsertDebugUtilsLabelEXT_p == null) PFN_vkQueueInsertDebugUtilsLabelEXT_p = new PFNvkQueueInsertDebugUtilsLabelEXT(instance);
         PFN_vkQueueInsertDebugUtilsLabelEXT_p.call(queue, pLabelInfo);
@@ -4755,9 +2995,6 @@ public class Vk {
 
     private PFNvkCmdBeginDebugUtilsLabelEXT PFN_vkCmdBeginDebugUtilsLabelEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdBeginDebugUtilsLabelEXT.html">khronos documentation</a>
-     **/
     public void vkCmdBeginDebugUtilsLabelEXT(VkCommandBuffer commandBuffer, VkDebugUtilsLabelEXT pLabelInfo){
         if(PFN_vkCmdBeginDebugUtilsLabelEXT_p == null) PFN_vkCmdBeginDebugUtilsLabelEXT_p = new PFNvkCmdBeginDebugUtilsLabelEXT(instance);
         PFN_vkCmdBeginDebugUtilsLabelEXT_p.call(commandBuffer, pLabelInfo);
@@ -4766,9 +3003,6 @@ public class Vk {
 
     private PFNvkCmdEndDebugUtilsLabelEXT PFN_vkCmdEndDebugUtilsLabelEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdEndDebugUtilsLabelEXT.html">khronos documentation</a>
-     **/
     public void vkCmdEndDebugUtilsLabelEXT(VkCommandBuffer commandBuffer){
         if(PFN_vkCmdEndDebugUtilsLabelEXT_p == null) PFN_vkCmdEndDebugUtilsLabelEXT_p = new PFNvkCmdEndDebugUtilsLabelEXT(instance);
         PFN_vkCmdEndDebugUtilsLabelEXT_p.call(commandBuffer);
@@ -4777,9 +3011,6 @@ public class Vk {
 
     private PFNvkCmdInsertDebugUtilsLabelEXT PFN_vkCmdInsertDebugUtilsLabelEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdInsertDebugUtilsLabelEXT.html">khronos documentation</a>
-     **/
     public void vkCmdInsertDebugUtilsLabelEXT(VkCommandBuffer commandBuffer, VkDebugUtilsLabelEXT pLabelInfo){
         if(PFN_vkCmdInsertDebugUtilsLabelEXT_p == null) PFN_vkCmdInsertDebugUtilsLabelEXT_p = new PFNvkCmdInsertDebugUtilsLabelEXT(instance);
         PFN_vkCmdInsertDebugUtilsLabelEXT_p.call(commandBuffer, pLabelInfo);
@@ -4788,9 +3019,6 @@ public class Vk {
 
     private PFNvkCreateDebugUtilsMessengerEXT PFN_vkCreateDebugUtilsMessengerEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateDebugUtilsMessengerEXT.html">khronos documentation</a>
-     **/
     public void vkCreateDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerCreateInfoEXT pCreateInfo, VkAllocationCallbacks pAllocator, VkDebugUtilsMessengerEXT pMessenger, VkResult rval){
         if(PFN_vkCreateDebugUtilsMessengerEXT_p == null) PFN_vkCreateDebugUtilsMessengerEXT_p = new PFNvkCreateDebugUtilsMessengerEXT(instance);
         PFN_vkCreateDebugUtilsMessengerEXT_p.call(instance, pCreateInfo, pAllocator, pMessenger, rval);
@@ -4799,9 +3027,6 @@ public class Vk {
 
     private PFNvkDestroyDebugUtilsMessengerEXT PFN_vkDestroyDebugUtilsMessengerEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyDebugUtilsMessengerEXT.html">khronos documentation</a>
-     **/
     public void vkDestroyDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerEXT messenger, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyDebugUtilsMessengerEXT_p == null) PFN_vkDestroyDebugUtilsMessengerEXT_p = new PFNvkDestroyDebugUtilsMessengerEXT(instance);
         PFN_vkDestroyDebugUtilsMessengerEXT_p.call(instance, messenger, pAllocator);
@@ -4810,9 +3035,6 @@ public class Vk {
 
     private PFNvkSubmitDebugUtilsMessageEXT PFN_vkSubmitDebugUtilsMessageEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkSubmitDebugUtilsMessageEXT.html">khronos documentation</a>
-     **/
     public void vkSubmitDebugUtilsMessageEXT(VkInstance instance, VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageTypes, VkDebugUtilsMessengerCallbackDataEXT pCallbackData){
         if(PFN_vkSubmitDebugUtilsMessageEXT_p == null) PFN_vkSubmitDebugUtilsMessageEXT_p = new PFNvkSubmitDebugUtilsMessageEXT(instance);
         PFN_vkSubmitDebugUtilsMessageEXT_p.call(instance, messageSeverity, messageTypes, pCallbackData);
@@ -4821,9 +3043,6 @@ public class Vk {
 
     private PFNvkCmdSetSampleLocationsEXT PFN_vkCmdSetSampleLocationsEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdSetSampleLocationsEXT.html">khronos documentation</a>
-     **/
     public void vkCmdSetSampleLocationsEXT(VkCommandBuffer commandBuffer, VkSampleLocationsInfoEXT pSampleLocationsInfo){
         if(PFN_vkCmdSetSampleLocationsEXT_p == null) PFN_vkCmdSetSampleLocationsEXT_p = new PFNvkCmdSetSampleLocationsEXT(instance);
         PFN_vkCmdSetSampleLocationsEXT_p.call(commandBuffer, pSampleLocationsInfo);
@@ -4832,9 +3051,6 @@ public class Vk {
 
     private PFNvkGetPhysicalDeviceMultisamplePropertiesEXT PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT.html">khronos documentation</a>
-     **/
     public void vkGetPhysicalDeviceMultisamplePropertiesEXT(VkPhysicalDevice physicalDevice, VkSampleCountFlagBits samples, VkMultisamplePropertiesEXT pMultisampleProperties){
         if(PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT_p == null) PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT_p = new PFNvkGetPhysicalDeviceMultisamplePropertiesEXT(instance);
         PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT_p.call(physicalDevice, samples, pMultisampleProperties);
@@ -4843,9 +3059,6 @@ public class Vk {
 
     private PFNvkCreateValidationCacheEXT PFN_vkCreateValidationCacheEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCreateValidationCacheEXT.html">khronos documentation</a>
-     **/
     public void vkCreateValidationCacheEXT(VkDevice device, VkValidationCacheCreateInfoEXT pCreateInfo, VkAllocationCallbacks pAllocator, VkValidationCacheEXT pValidationCache, VkResult rval){
         if(PFN_vkCreateValidationCacheEXT_p == null) PFN_vkCreateValidationCacheEXT_p = new PFNvkCreateValidationCacheEXT(instance);
         PFN_vkCreateValidationCacheEXT_p.call(device, pCreateInfo, pAllocator, pValidationCache, rval);
@@ -4854,9 +3067,6 @@ public class Vk {
 
     private PFNvkDestroyValidationCacheEXT PFN_vkDestroyValidationCacheEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkDestroyValidationCacheEXT.html">khronos documentation</a>
-     **/
     public void vkDestroyValidationCacheEXT(VkDevice device, VkValidationCacheEXT validationCache, VkAllocationCallbacks pAllocator){
         if(PFN_vkDestroyValidationCacheEXT_p == null) PFN_vkDestroyValidationCacheEXT_p = new PFNvkDestroyValidationCacheEXT(instance);
         PFN_vkDestroyValidationCacheEXT_p.call(device, validationCache, pAllocator);
@@ -4865,9 +3075,6 @@ public class Vk {
 
     private PFNvkMergeValidationCachesEXT PFN_vkMergeValidationCachesEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkMergeValidationCachesEXT.html">khronos documentation</a>
-     **/
     public void vkMergeValidationCachesEXT(VkDevice device, VkValidationCacheEXT dstCache, VkUInt32 srcCacheCount, VkValidationCacheEXT pSrcCaches, VkResult rval){
         if(PFN_vkMergeValidationCachesEXT_p == null) PFN_vkMergeValidationCachesEXT_p = new PFNvkMergeValidationCachesEXT(instance);
         PFN_vkMergeValidationCachesEXT_p.call(device, dstCache, srcCacheCount, pSrcCaches, rval);
@@ -4876,9 +3083,6 @@ public class Vk {
 
     private PFNvkGetValidationCacheDataEXT PFN_vkGetValidationCacheDataEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetValidationCacheDataEXT.html">khronos documentation</a>
-     **/
     public void vkGetValidationCacheDataEXT(VkDevice device, VkValidationCacheEXT validationCache, VkSize pDataSize, VkObject pData, VkResult rval){
         if(PFN_vkGetValidationCacheDataEXT_p == null) PFN_vkGetValidationCacheDataEXT_p = new PFNvkGetValidationCacheDataEXT(instance);
         PFN_vkGetValidationCacheDataEXT_p.call(device, validationCache, pDataSize, pData, rval);
@@ -4887,9 +3091,6 @@ public class Vk {
 
     private PFNvkGetMemoryHostPointerPropertiesEXT PFN_vkGetMemoryHostPointerPropertiesEXT_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetMemoryHostPointerPropertiesEXT.html">khronos documentation</a>
-     **/
     public void vkGetMemoryHostPointerPropertiesEXT(VkDevice device, VkExternalMemoryHandleTypeFlagBits handleType, VkObject pHostPointer, VkMemoryHostPointerPropertiesEXT pMemoryHostPointerProperties, VkResult rval){
         if(PFN_vkGetMemoryHostPointerPropertiesEXT_p == null) PFN_vkGetMemoryHostPointerPropertiesEXT_p = new PFNvkGetMemoryHostPointerPropertiesEXT(instance);
         PFN_vkGetMemoryHostPointerPropertiesEXT_p.call(device, handleType, pHostPointer, pMemoryHostPointerProperties, rval);
@@ -4898,9 +3099,6 @@ public class Vk {
 
     private PFNvkCmdWriteBufferMarkerAMD PFN_vkCmdWriteBufferMarkerAMD_p = null;
 
-    /**
-     *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkCmdWriteBufferMarkerAMD.html">khronos documentation</a>
-     **/
     public void vkCmdWriteBufferMarkerAMD(VkCommandBuffer commandBuffer, VkPipelineStageFlagBits pipelineStage, VkBuffer dstBuffer, VkDeviceSize dstOffset, VkUInt32 marker){
         if(PFN_vkCmdWriteBufferMarkerAMD_p == null) PFN_vkCmdWriteBufferMarkerAMD_p = new PFNvkCmdWriteBufferMarkerAMD(instance);
         PFN_vkCmdWriteBufferMarkerAMD_p.call(commandBuffer, pipelineStage, dstBuffer, dstOffset, marker);

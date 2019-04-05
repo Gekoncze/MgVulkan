@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkImageFormatListCreateInfoKHR.html">khronos documentation</a>
- **/
 public class VkImageFormatListCreateInfoKHR extends VkObject {
     public VkImageFormatListCreateInfoKHR() {
         super(sizeof());

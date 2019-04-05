@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkVertexInputAttributeDescription.html">khronos documentation</a>
- **/
 public class VulkanVertexInputAttributeDescription extends VulkanObject {
     public VulkanVertexInputAttributeDescription(){
         super(new VkVertexInputAttributeDescription());

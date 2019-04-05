@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkSetEvent.html">khronos documentation</a>
- **/
 public class PFNvkSetEvent extends VkFunctionPointer {
     public PFNvkSetEvent() {
     }

@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkSparseBufferMemoryBindInfo.html">khronos documentation</a>
- **/
 public class VkSparseBufferMemoryBindInfo extends VkObject {
     public VkSparseBufferMemoryBindInfo() {
         super(sizeof());

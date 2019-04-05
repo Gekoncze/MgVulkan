@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkXYColorEXT.html">khronos documentation</a>
- **/
 public class VkXYColorEXT extends VkObject {
     public VkXYColorEXT() {
         super(sizeof());

@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPipelineDepthStencilStateCreateInfo.html">khronos documentation</a>
- **/
 public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
     public VkPipelineDepthStencilStateCreateInfo() {
         super(sizeof());

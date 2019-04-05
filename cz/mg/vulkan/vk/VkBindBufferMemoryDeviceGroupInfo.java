@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkBindBufferMemoryDeviceGroupInfo.html">khronos documentation</a>
- **/
 public class VkBindBufferMemoryDeviceGroupInfo extends VkObject {
     public VkBindBufferMemoryDeviceGroupInfo() {
         super(sizeof());

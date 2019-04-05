@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkSurfaceCapabilities2KHR.html">khronos documentation</a>
- **/
 public class VkSurfaceCapabilities2KHR extends VkObject {
     public VkSurfaceCapabilities2KHR() {
         super(sizeof());

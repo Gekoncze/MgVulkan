@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetInstanceProcAddr.html">khronos documentation</a>
- **/
 public class PFNvkGetInstanceProcAddr extends VkFunctionPointer {
     public PFNvkGetInstanceProcAddr() {
     }

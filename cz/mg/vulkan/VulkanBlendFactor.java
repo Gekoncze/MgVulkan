@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkBlendFactor.html">khronos documentation</a>
- **/
 public class VulkanBlendFactor extends VulkanEnum {
     public static final int ZERO = VkBlendFactor.VK_BLEND_FACTOR_ZERO;
     public static final int ONE = VkBlendFactor.VK_BLEND_FACTOR_ONE;
@@ -66,79 +63,5 @@ public class VulkanBlendFactor extends VulkanEnum {
         if(getValue() == SRC1_ALPHA) return "SRC1_ALPHA";
         if(getValue() == ONE_MINUS_SRC1_ALPHA) return "ONE_MINUS_SRC1_ALPHA";
         return "UNKNOWN";
-    }
-
-    public static class Array extends VulkanBlendFactor implements cz.mg.collections.array.ReadonlyArray<VulkanBlendFactor> {
-        public Array(VkBlendFactor.Array a) {
-            super(a);
-        }
-
-        public Array(int count) {
-            this(new VkBlendFactor.Array(count));
-        }
-
-        public Array(int count, VulkanBlendFactor o){
-            this(new VkBlendFactor.Array(count, o.getVk()));
-        }
-
-        @Override
-        public VkBlendFactor.Array getVk(){
-            return (VkBlendFactor.Array) super.getVk();
-        }
-
-        @Override
-        public int count(){
-            return getVk().count();
-        }
-
-        @Override
-        public VulkanBlendFactor get(int i){
-            return new VulkanBlendFactor(getVk().get(i));
-        }
-    }
-
-    public static class Pointer extends VulkanObject.Pointer {
-        public Pointer(VkBlendFactor.Pointer p) {
-            super(p);
-        }
-
-        public Pointer(){
-            this(new VkBlendFactor.Pointer());
-        }
-
-        public Pointer(long value) {
-            this(new VkBlendFactor.Pointer(value));
-        }
-
-        @Override
-        public VkBlendFactor.Pointer getVk(){
-            return (VkBlendFactor.Pointer) super.getVk();
-        }
-
-        public static class Array extends VulkanBlendFactor.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanBlendFactor.Pointer> {
-            public Array(int count) {
-                super(new VkBlendFactor.Pointer.Array(count));
-            }
-
-            public Array(VulkanBlendFactor[] a) {
-                this(a.length);
-                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
-            }
-
-            @Override
-            public VkBlendFactor.Pointer.Array getVk(){
-                return (VkBlendFactor.Pointer.Array) super.getVk();
-            }
-
-            @Override
-            public int count(){
-                return getVk().count();
-            }
-
-            @Override
-            public VulkanBlendFactor.Pointer get(int i){
-                return new VulkanBlendFactor.Pointer(getVk().get(i));
-            }
-        }
     }
 }

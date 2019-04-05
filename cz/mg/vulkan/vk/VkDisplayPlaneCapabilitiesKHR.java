@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkDisplayPlaneCapabilitiesKHR.html">khronos documentation</a>
- **/
 public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
     public VkDisplayPlaneCapabilitiesKHR() {
         super(sizeof());

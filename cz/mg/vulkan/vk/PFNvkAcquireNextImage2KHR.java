@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkAcquireNextImage2KHR.html">khronos documentation</a>
- **/
 public class PFNvkAcquireNextImage2KHR extends VkFunctionPointer {
     public PFNvkAcquireNextImage2KHR() {
     }

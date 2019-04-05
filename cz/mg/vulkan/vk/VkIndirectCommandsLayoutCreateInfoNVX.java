@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkIndirectCommandsLayoutCreateInfoNVX.html">khronos documentation</a>
- **/
 public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
     public VkIndirectCommandsLayoutCreateInfoNVX() {
         super(sizeof());

@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDevice16BitStorageFeatures.html">khronos documentation</a>
- **/
 public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
     public VkPhysicalDevice16BitStorageFeatures() {
         super(sizeof());

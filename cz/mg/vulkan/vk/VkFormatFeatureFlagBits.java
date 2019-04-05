@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkFormatFeatureFlagBits.html">khronos documentation</a>
- **/
 public class VkFormatFeatureFlagBits extends VkFlagBits {
     public static final int VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT = 0x00000001;
     public static final int VK_FORMAT_FEATURE_STORAGE_IMAGE_BIT = 0x00000002;
@@ -91,90 +88,5 @@ public class VkFormatFeatureFlagBits extends VkFlagBits {
         if(getValue() == VK_FORMAT_FEATURE_DISJOINT_BIT_KHR) s += "VK_FORMAT_FEATURE_DISJOINT_BIT_KHR";
         if(getValue() == VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT_KHR) s += "VK_FORMAT_FEATURE_COSITED_CHROMA_SAMPLES_BIT_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
-    }
-
-    public static class Array extends VkFormatFeatureFlagBits implements cz.mg.collections.array.ReadonlyArray<VkFormatFeatureFlagBits> {
-        private final int count;
-
-        public Array(int count) {
-            super(new VkMemory(count*VkFormatFeatureFlagBits.sizeof()));
-            this.count = count;
-        }
-
-        public Array(int count, VkFormatFeatureFlagBits o){
-            super(o.getVkMemory(), o.getVkAddress());
-            this.count = count;
-        }
-
-        public Array(VkMemory vkmemory, int count) {
-            super(vkmemory);
-            this.count = count;
-        }
-
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
-            super(vkmemory, vkaddress);
-            this.count = count;
-        }
-
-        @Override
-        public int count(){
-            return count;
-        }
-
-        @Override
-        public VkFormatFeatureFlagBits get(int i){
-            return new VkFormatFeatureFlagBits(getVkMemory(), getVkAddress() + sizeof()*i);
-        }
-    }
-
-    public static class Pointer extends VkObject.Pointer {
-        public Pointer() {
-        }
-
-        public Pointer(long value) {
-            setValue(value);
-        }
-
-        public Pointer(VkMemory vkmemory) {
-            super(vkmemory);
-        }
-
-        public Pointer(VkMemory vkmemory, long vkaddress) {
-            super(vkmemory, vkaddress);
-        }
-
-        public static class Array extends VkFormatFeatureFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VkFormatFeatureFlagBits.Pointer> {
-            private final int count;
-
-            public Array(int count) {
-                super(new VkMemory(count*VkPointer.sizeof()));
-                this.count = count;
-            }
-
-            public Array(VkMemory vkmemory, int count) {
-                super(vkmemory);
-                this.count = count;
-            }
-
-            public Array(VkMemory vkmemory, long vkaddress, int count) {
-                super(vkmemory, vkaddress);
-                this.count = count;
-            }
-
-            public Array(VkFormatFeatureFlagBits[] a) {
-                this(a.length);
-                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
-            }
-
-            @Override
-            public int count(){
-                return count;
-            }
-
-            @Override
-            public VkFormatFeatureFlagBits.Pointer get(int i){
-                return new VkFormatFeatureFlagBits.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
-            }
-        }
     }
 }

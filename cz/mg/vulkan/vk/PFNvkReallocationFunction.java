@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkReallocationFunction.html">khronos documentation</a>
- **/
 public class PFNvkReallocationFunction extends VkFunctionPointer {
     public PFNvkReallocationFunction() {
     }

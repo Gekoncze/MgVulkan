@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/uint8_t.html">khronos documentation</a>
- **/
 public class VulkanUInt8 extends VulkanObject {
     public VulkanUInt8(){
         super(new VkUInt8());

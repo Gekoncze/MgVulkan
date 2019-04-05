@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkLogicOp.html">khronos documentation</a>
- **/
 public class VkLogicOp extends VkEnum {
     public static final int VK_LOGIC_OP_CLEAR = 0;
     public static final int VK_LOGIC_OP_AND = 1;
@@ -56,90 +53,5 @@ public class VkLogicOp extends VkEnum {
         if(getValue() == VK_LOGIC_OP_NAND) return "VK_LOGIC_OP_NAND";
         if(getValue() == VK_LOGIC_OP_SET) return "VK_LOGIC_OP_SET";
         return "UNKNOWN";
-    }
-
-    public static class Array extends VkLogicOp implements cz.mg.collections.array.ReadonlyArray<VkLogicOp> {
-        private final int count;
-
-        public Array(int count) {
-            super(new VkMemory(count*VkLogicOp.sizeof()));
-            this.count = count;
-        }
-
-        public Array(int count, VkLogicOp o){
-            super(o.getVkMemory(), o.getVkAddress());
-            this.count = count;
-        }
-
-        public Array(VkMemory vkmemory, int count) {
-            super(vkmemory);
-            this.count = count;
-        }
-
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
-            super(vkmemory, vkaddress);
-            this.count = count;
-        }
-
-        @Override
-        public int count(){
-            return count;
-        }
-
-        @Override
-        public VkLogicOp get(int i){
-            return new VkLogicOp(getVkMemory(), getVkAddress() + sizeof()*i);
-        }
-    }
-
-    public static class Pointer extends VkObject.Pointer {
-        public Pointer() {
-        }
-
-        public Pointer(long value) {
-            setValue(value);
-        }
-
-        public Pointer(VkMemory vkmemory) {
-            super(vkmemory);
-        }
-
-        public Pointer(VkMemory vkmemory, long vkaddress) {
-            super(vkmemory, vkaddress);
-        }
-
-        public static class Array extends VkLogicOp.Pointer implements cz.mg.collections.array.ReadonlyArray<VkLogicOp.Pointer> {
-            private final int count;
-
-            public Array(int count) {
-                super(new VkMemory(count*VkPointer.sizeof()));
-                this.count = count;
-            }
-
-            public Array(VkMemory vkmemory, int count) {
-                super(vkmemory);
-                this.count = count;
-            }
-
-            public Array(VkMemory vkmemory, long vkaddress, int count) {
-                super(vkmemory, vkaddress);
-                this.count = count;
-            }
-
-            public Array(VkLogicOp[] a) {
-                this(a.length);
-                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
-            }
-
-            @Override
-            public int count(){
-                return count;
-            }
-
-            @Override
-            public VkLogicOp.Pointer get(int i){
-                return new VkLogicOp.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
-            }
-        }
     }
 }

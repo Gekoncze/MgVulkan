@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkQueueFamilyProperties2.html">khronos documentation</a>
- **/
 public class VkQueueFamilyProperties2 extends VkObject {
     public VkQueueFamilyProperties2() {
         super(sizeof());

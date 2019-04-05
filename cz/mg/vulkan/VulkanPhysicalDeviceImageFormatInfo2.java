@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceImageFormatInfo2.html">khronos documentation</a>
- **/
 public class VulkanPhysicalDeviceImageFormatInfo2 extends VulkanObject {
     public VulkanPhysicalDeviceImageFormatInfo2(){
         super(new VkPhysicalDeviceImageFormatInfo2());

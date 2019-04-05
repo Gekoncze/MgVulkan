@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkImageCreateFlagBits.html">khronos documentation</a>
- **/
 public class VulkanImageCreateFlagBits extends VulkanFlagBits {
     public static final int SPARSE_BINDING = VkImageCreateFlagBits.VK_IMAGE_CREATE_SPARSE_BINDING_BIT;
     public static final int SPARSE_RESIDENCY = VkImageCreateFlagBits.VK_IMAGE_CREATE_SPARSE_RESIDENCY_BIT;
@@ -67,79 +64,5 @@ public class VulkanImageCreateFlagBits extends VulkanFlagBits {
         if(getValue() == DISJOINT_KHR) s += "DISJOINT_KHR";
         if(getValue() == ALIAS_KHR) s += "ALIAS_KHR";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
-    }
-
-    public static class Array extends VulkanImageCreateFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanImageCreateFlagBits> {
-        public Array(VkImageCreateFlagBits.Array a) {
-            super(a);
-        }
-
-        public Array(int count) {
-            this(new VkImageCreateFlagBits.Array(count));
-        }
-
-        public Array(int count, VulkanImageCreateFlagBits o){
-            this(new VkImageCreateFlagBits.Array(count, o.getVk()));
-        }
-
-        @Override
-        public VkImageCreateFlagBits.Array getVk(){
-            return (VkImageCreateFlagBits.Array) super.getVk();
-        }
-
-        @Override
-        public int count(){
-            return getVk().count();
-        }
-
-        @Override
-        public VulkanImageCreateFlagBits get(int i){
-            return new VulkanImageCreateFlagBits(getVk().get(i));
-        }
-    }
-
-    public static class Pointer extends VulkanObject.Pointer {
-        public Pointer(VkImageCreateFlagBits.Pointer p) {
-            super(p);
-        }
-
-        public Pointer(){
-            this(new VkImageCreateFlagBits.Pointer());
-        }
-
-        public Pointer(long value) {
-            this(new VkImageCreateFlagBits.Pointer(value));
-        }
-
-        @Override
-        public VkImageCreateFlagBits.Pointer getVk(){
-            return (VkImageCreateFlagBits.Pointer) super.getVk();
-        }
-
-        public static class Array extends VulkanImageCreateFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanImageCreateFlagBits.Pointer> {
-            public Array(int count) {
-                super(new VkImageCreateFlagBits.Pointer.Array(count));
-            }
-
-            public Array(VulkanImageCreateFlagBits[] a) {
-                this(a.length);
-                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
-            }
-
-            @Override
-            public VkImageCreateFlagBits.Pointer.Array getVk(){
-                return (VkImageCreateFlagBits.Pointer.Array) super.getVk();
-            }
-
-            @Override
-            public int count(){
-                return getVk().count();
-            }
-
-            @Override
-            public VulkanImageCreateFlagBits.Pointer get(int i){
-                return new VulkanImageCreateFlagBits.Pointer(getVk().get(i));
-            }
-        }
     }
 }

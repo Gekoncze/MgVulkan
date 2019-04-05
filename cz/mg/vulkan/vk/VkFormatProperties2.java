@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkFormatProperties2.html">khronos documentation</a>
- **/
 public class VkFormatProperties2 extends VkObject {
     public VkFormatProperties2() {
         super(sizeof());

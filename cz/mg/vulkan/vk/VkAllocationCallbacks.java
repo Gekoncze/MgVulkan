@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkAllocationCallbacks.html">khronos documentation</a>
- **/
 public class VkAllocationCallbacks extends VkObject {
     public VkAllocationCallbacks() {
         super(sizeof());

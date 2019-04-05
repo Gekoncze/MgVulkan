@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkDebugMarkerObjectNameInfoEXT.html">khronos documentation</a>
- **/
 public class VulkanDebugMarkerObjectNameInfoEXT extends VulkanObject {
     public VulkanDebugMarkerObjectNameInfoEXT(){
         super(new VkDebugMarkerObjectNameInfoEXT());

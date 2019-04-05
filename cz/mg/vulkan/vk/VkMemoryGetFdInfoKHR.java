@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkMemoryGetFdInfoKHR.html">khronos documentation</a>
- **/
 public class VkMemoryGetFdInfoKHR extends VkObject {
     public VkMemoryGetFdInfoKHR() {
         super(sizeof());

@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkSparseImageFormatProperties2.html">khronos documentation</a>
- **/
 public class VulkanSparseImageFormatProperties2 extends VulkanObject {
     public VulkanSparseImageFormatProperties2(){
         super(new VkSparseImageFormatProperties2());

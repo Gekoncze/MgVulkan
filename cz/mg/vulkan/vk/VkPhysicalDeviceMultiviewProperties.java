@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceMultiviewProperties.html">khronos documentation</a>
- **/
 public class VkPhysicalDeviceMultiviewProperties extends VkObject {
     public VkPhysicalDeviceMultiviewProperties() {
         super(sizeof());

@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkBufferMemoryRequirementsInfo2.html">khronos documentation</a>
- **/
 public class VkBufferMemoryRequirementsInfo2 extends VkObject {
     public VkBufferMemoryRequirementsInfo2() {
         super(sizeof());

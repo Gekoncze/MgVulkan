@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetPhysicalDeviceImageFormatProperties2.html">khronos documentation</a>
- **/
 public class PFNvkGetPhysicalDeviceImageFormatProperties2 extends VkFunctionPointer {
     public PFNvkGetPhysicalDeviceImageFormatProperties2() {
     }

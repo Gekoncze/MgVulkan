@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/PFN_vkGetBufferMemoryRequirements.html">khronos documentation</a>
- **/
 public class PFNvkGetBufferMemoryRequirements extends VkFunctionPointer {
     public PFNvkGetBufferMemoryRequirements() {
     }

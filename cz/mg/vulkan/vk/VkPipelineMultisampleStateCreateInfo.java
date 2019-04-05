@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPipelineMultisampleStateCreateInfo.html">khronos documentation</a>
- **/
 public class VkPipelineMultisampleStateCreateInfo extends VkObject {
     public VkPipelineMultisampleStateCreateInfo() {
         super(sizeof());

@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDevice16BitStorageFeatures.html">khronos documentation</a>
- **/
 public class VulkanPhysicalDevice16BitStorageFeatures extends VulkanObject {
     public VulkanPhysicalDevice16BitStorageFeatures(){
         super(new VkPhysicalDevice16BitStorageFeatures());

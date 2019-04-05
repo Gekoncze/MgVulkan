@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceMaintenance3Properties.html">khronos documentation</a>
- **/
 public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
     public VkPhysicalDeviceMaintenance3Properties() {
         super(sizeof());

@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceMaintenance3Properties.html">khronos documentation</a>
- **/
 public class VulkanPhysicalDeviceMaintenance3Properties extends VulkanObject {
     public VulkanPhysicalDeviceMaintenance3Properties(){
         super(new VkPhysicalDeviceMaintenance3Properties());

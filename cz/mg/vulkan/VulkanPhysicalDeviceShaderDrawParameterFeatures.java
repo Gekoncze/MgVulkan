@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkPhysicalDeviceShaderDrawParameterFeatures.html">khronos documentation</a>
- **/
 public class VulkanPhysicalDeviceShaderDrawParameterFeatures extends VulkanObject {
     public VulkanPhysicalDeviceShaderDrawParameterFeatures(){
         super(new VkPhysicalDeviceShaderDrawParameterFeatures());

@@ -3,9 +3,6 @@ package cz.mg.vulkan;
 import cz.mg.vulkan.vk.*;
 import static cz.mg.vulkan.vk.Vk.*;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkSampleCountFlagBits.html">khronos documentation</a>
- **/
 public class VulkanSampleCountFlagBits extends VulkanFlagBits {
     public static final int B1 = VkSampleCountFlagBits.VK_SAMPLE_COUNT_1_BIT;
     public static final int B2 = VkSampleCountFlagBits.VK_SAMPLE_COUNT_2_BIT;
@@ -43,79 +40,5 @@ public class VulkanSampleCountFlagBits extends VulkanFlagBits {
         if(getValue() == B32) s += "B32";
         if(getValue() == B64) s += "B64";
         return s + "(0x" + Integer.toHexString(getValue()) + ")";
-    }
-
-    public static class Array extends VulkanSampleCountFlagBits implements cz.mg.collections.array.ReadonlyArray<VulkanSampleCountFlagBits> {
-        public Array(VkSampleCountFlagBits.Array a) {
-            super(a);
-        }
-
-        public Array(int count) {
-            this(new VkSampleCountFlagBits.Array(count));
-        }
-
-        public Array(int count, VulkanSampleCountFlagBits o){
-            this(new VkSampleCountFlagBits.Array(count, o.getVk()));
-        }
-
-        @Override
-        public VkSampleCountFlagBits.Array getVk(){
-            return (VkSampleCountFlagBits.Array) super.getVk();
-        }
-
-        @Override
-        public int count(){
-            return getVk().count();
-        }
-
-        @Override
-        public VulkanSampleCountFlagBits get(int i){
-            return new VulkanSampleCountFlagBits(getVk().get(i));
-        }
-    }
-
-    public static class Pointer extends VulkanObject.Pointer {
-        public Pointer(VkSampleCountFlagBits.Pointer p) {
-            super(p);
-        }
-
-        public Pointer(){
-            this(new VkSampleCountFlagBits.Pointer());
-        }
-
-        public Pointer(long value) {
-            this(new VkSampleCountFlagBits.Pointer(value));
-        }
-
-        @Override
-        public VkSampleCountFlagBits.Pointer getVk(){
-            return (VkSampleCountFlagBits.Pointer) super.getVk();
-        }
-
-        public static class Array extends VulkanSampleCountFlagBits.Pointer implements cz.mg.collections.array.ReadonlyArray<VulkanSampleCountFlagBits.Pointer> {
-            public Array(int count) {
-                super(new VkSampleCountFlagBits.Pointer.Array(count));
-            }
-
-            public Array(VulkanSampleCountFlagBits[] a) {
-                this(a.length);
-                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVk().getVkAddress());
-            }
-
-            @Override
-            public VkSampleCountFlagBits.Pointer.Array getVk(){
-                return (VkSampleCountFlagBits.Pointer.Array) super.getVk();
-            }
-
-            @Override
-            public int count(){
-                return getVk().count();
-            }
-
-            @Override
-            public VulkanSampleCountFlagBits.Pointer get(int i){
-                return new VulkanSampleCountFlagBits.Pointer(getVk().get(i));
-            }
-        }
     }
 }

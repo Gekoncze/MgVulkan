@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkDispatchIndirectCommand.html">khronos documentation</a>
- **/
 public class VkDispatchIndirectCommand extends VkObject {
     public VkDispatchIndirectCommand() {
         super(sizeof());

@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkExternalImageFormatPropertiesNV.html">khronos documentation</a>
- **/
 public class VkExternalImageFormatPropertiesNV extends VkObject {
     public VkExternalImageFormatPropertiesNV() {
         super(sizeof());

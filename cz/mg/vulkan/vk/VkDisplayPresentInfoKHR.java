@@ -1,8 +1,5 @@
 package cz.mg.vulkan.vk;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/VkDisplayPresentInfoKHR.html">khronos documentation</a>
- **/
 public class VkDisplayPresentInfoKHR extends VkObject {
     public VkDisplayPresentInfoKHR() {
         super(sizeof());
