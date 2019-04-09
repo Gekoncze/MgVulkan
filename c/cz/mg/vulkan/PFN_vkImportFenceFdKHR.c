@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkImportFenceFdKHR_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pImportFenceFdInfo, jlong rval){
+void Java_cz_mg_vulkan_PFNvkImportFenceFdKHR_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pImportFenceFdInfo, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkImportFenceFdKHR f = (PFN_vkImportFenceFdKHR)jniLongToFunctionPointer(address);

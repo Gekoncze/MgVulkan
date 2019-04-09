@@ -12,7 +12,7 @@ void jniThrowException(JNIEnv* env, const char* message);
 #include <stdio.h>
 #include <stdlib.h>
 
-jlong Java_cz_mg_vulkan_vk_VkMemory_malloc(JNIEnv* env, jclass jc, jlong size)
+jlong Java_cz_mg_vulkan_VkMemory_malloc(JNIEnv* env, jclass jc, jlong size)
 {
     (void)env;
     (void)jc;
@@ -23,7 +23,7 @@ jlong Java_cz_mg_vulkan_vk_VkMemory_malloc(JNIEnv* env, jclass jc, jlong size)
     return address;
 }
 
-void Java_cz_mg_vulkan_vk_VkMemory_free(JNIEnv* env, jclass jc, jlong address)
+void Java_cz_mg_vulkan_VkMemory_free(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;

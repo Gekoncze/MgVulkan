@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdBindPipeline_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong pipelineBindPoint, jlong pipeline){
+void Java_cz_mg_vulkan_PFNvkCmdBindPipeline_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong pipelineBindPoint, jlong pipeline){
     (void)env;
     (void)jc;
     PFN_vkCmdBindPipeline f = (PFN_vkCmdBindPipeline)jniLongToFunctionPointer(address);

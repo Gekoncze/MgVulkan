@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkDescriptorSetVariableDescriptorCountAllocateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_getDescriptorSetCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_getDescriptorSetCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT
     return jniPointerToLong(&o->descriptorSetCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_setDescriptorSetCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_setDescriptorSetCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_
     memcpy(&o->descriptorSetCount, valuePointer, sizeof(o->descriptorSetCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_getPDescriptorCounts(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_getPDescriptorCounts(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT
     return jniPointerToLong(o->pDescriptorCounts);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_setPDescriptorCounts(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_setPDescriptorCounts(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

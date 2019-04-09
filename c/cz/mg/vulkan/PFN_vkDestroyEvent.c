@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkDestroyEvent_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong event, jlong pAllocator){
+void Java_cz_mg_vulkan_PFNvkDestroyEvent_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong event, jlong pAllocator){
     (void)env;
     (void)jc;
     PFN_vkDestroyEvent f = (PFN_vkDestroyEvent)jniLongToFunctionPointer(address);

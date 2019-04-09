@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdDrawIndexedIndirectCountAMD_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong buffer, jlong offset, jlong countBuffer, jlong countBufferOffset, jlong maxDrawCount, jlong stride){
+void Java_cz_mg_vulkan_PFNvkCmdDrawIndexedIndirectCountAMD_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong buffer, jlong offset, jlong countBuffer, jlong countBufferOffset, jlong maxDrawCount, jlong stride){
     (void)env;
     (void)jc;
     PFN_vkCmdDrawIndexedIndirectCountAMD f = (PFN_vkCmdDrawIndexedIndirectCountAMD)jniLongToFunctionPointer(address);

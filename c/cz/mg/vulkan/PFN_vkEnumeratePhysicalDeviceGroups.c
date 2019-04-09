@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkEnumeratePhysicalDeviceGroups_call(JNIEnv* env, jclass jc, jlong address, jlong instance, jlong pPhysicalDeviceGroupCount, jlong pPhysicalDeviceGroupProperties, jlong rval){
+void Java_cz_mg_vulkan_PFNvkEnumeratePhysicalDeviceGroups_call(JNIEnv* env, jclass jc, jlong address, jlong instance, jlong pPhysicalDeviceGroupCount, jlong pPhysicalDeviceGroupProperties, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkEnumeratePhysicalDeviceGroups f = (PFN_vkEnumeratePhysicalDeviceGroups)jniLongToFunctionPointer(address);

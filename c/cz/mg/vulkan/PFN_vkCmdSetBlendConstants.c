@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdSetBlendConstants_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong blendConstants){
+void Java_cz_mg_vulkan_PFNvkCmdSetBlendConstants_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong blendConstants){
     (void)env;
     (void)jc;
     PFN_vkCmdSetBlendConstants f = (PFN_vkCmdSetBlendConstants)jniLongToFunctionPointer(address);

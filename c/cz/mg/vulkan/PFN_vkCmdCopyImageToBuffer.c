@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdCopyImageToBuffer_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong srcImage, jlong srcImageLayout, jlong dstBuffer, jlong regionCount, jlong pRegions){
+void Java_cz_mg_vulkan_PFNvkCmdCopyImageToBuffer_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong srcImage, jlong srcImageLayout, jlong dstBuffer, jlong regionCount, jlong pRegions){
     (void)env;
     (void)jc;
     PFN_vkCmdCopyImageToBuffer f = (PFN_vkCmdCopyImageToBuffer)jniLongToFunctionPointer(address);

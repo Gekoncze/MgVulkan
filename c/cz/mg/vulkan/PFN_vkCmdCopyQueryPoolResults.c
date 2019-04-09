@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdCopyQueryPoolResults_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong queryPool, jlong firstQuery, jlong queryCount, jlong dstBuffer, jlong dstOffset, jlong stride, jlong flags){
+void Java_cz_mg_vulkan_PFNvkCmdCopyQueryPoolResults_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong queryPool, jlong firstQuery, jlong queryCount, jlong dstBuffer, jlong dstOffset, jlong stride, jlong flags){
     (void)env;
     (void)jc;
     PFN_vkCmdCopyQueryPoolResults f = (PFN_vkCmdCopyQueryPoolResults)jniLongToFunctionPointer(address);

@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkRegisterDisplayEventEXT_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong display, jlong pDisplayEventInfo, jlong pAllocator, jlong pFence, jlong rval){
+void Java_cz_mg_vulkan_PFNvkRegisterDisplayEventEXT_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong display, jlong pDisplayEventInfo, jlong pAllocator, jlong pFence, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkRegisterDisplayEventEXT f = (PFN_vkRegisterDisplayEventEXT)jniLongToFunctionPointer(address);

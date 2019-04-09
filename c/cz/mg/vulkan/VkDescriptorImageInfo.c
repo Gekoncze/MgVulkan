@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkDescriptorImageInfo);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_getSampler(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getSampler(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_getSampler(JNIEnv* env, jclass 
     return jniPointerToLong(&o->sampler);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setSampler(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorImageInfo_setSampler(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setSampler(JNIEnv* env, jclass j
     memcpy(&o->sampler, valuePointer, sizeof(o->sampler));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_getImageView(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getImageView(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_getImageView(JNIEnv* env, jclas
     return jniPointerToLong(&o->imageView);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setImageView(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorImageInfo_setImageView(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setImageView(JNIEnv* env, jclass
     memcpy(&o->imageView, valuePointer, sizeof(o->imageView));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_getImageLayout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getImageLayout(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_getImageLayout(JNIEnv* env, jcl
     return jniPointerToLong(&o->imageLayout);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorImageInfo_setImageLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorImageInfo_setImageLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

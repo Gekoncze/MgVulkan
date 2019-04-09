@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkExtent2D_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkExtent2D_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkExtent2D);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkExtent2D_getWidth(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExtent2D_getWidth(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkExtent2D_getWidth(JNIEnv* env, jclass jc, jlong add
     return jniPointerToLong(&o->width);
 }
 
-void Java_cz_mg_vulkan_vk_VkExtent2D_setWidth(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExtent2D_setWidth(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkExtent2D_setWidth(JNIEnv* env, jclass jc, jlong addr
     memcpy(&o->width, valuePointer, sizeof(o->width));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkExtent2D_getHeight(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExtent2D_getHeight(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkExtent2D_getHeight(JNIEnv* env, jclass jc, jlong ad
     return jniPointerToLong(&o->height);
 }
 
-void Java_cz_mg_vulkan_vk_VkExtent2D_setHeight(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExtent2D_setHeight(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

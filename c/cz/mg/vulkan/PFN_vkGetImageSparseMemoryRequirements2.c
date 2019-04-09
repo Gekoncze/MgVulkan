@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkGetImageSparseMemoryRequirements2_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pInfo, jlong pSparseMemoryRequirementCount, jlong pSparseMemoryRequirements){
+void Java_cz_mg_vulkan_PFNvkGetImageSparseMemoryRequirements2_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pInfo, jlong pSparseMemoryRequirementCount, jlong pSparseMemoryRequirements){
     (void)env;
     (void)jc;
     PFN_vkGetImageSparseMemoryRequirements2 f = (PFN_vkGetImageSparseMemoryRequirements2)jniLongToFunctionPointer(address);

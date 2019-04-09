@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkSubresourceLayout_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkSubresourceLayout);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubresourceLayout_getOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getOffset(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->offset);
 }
 
-void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubresourceLayout_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setOffset(JNIEnv* env, jclass jc, 
     memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubresourceLayout_getSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getSize(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->size);
 }
 
-void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubresourceLayout_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setSize(JNIEnv* env, jclass jc, jl
     memcpy(&o->size, valuePointer, sizeof(o->size));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getRowPitch(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubresourceLayout_getRowPitch(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getRowPitch(JNIEnv* env, jclass j
     return jniPointerToLong(&o->rowPitch);
 }
 
-void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setRowPitch(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubresourceLayout_setRowPitch(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setRowPitch(JNIEnv* env, jclass jc
     memcpy(&o->rowPitch, valuePointer, sizeof(o->rowPitch));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getArrayPitch(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubresourceLayout_getArrayPitch(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getArrayPitch(JNIEnv* env, jclass
     return jniPointerToLong(&o->arrayPitch);
 }
 
-void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setArrayPitch(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubresourceLayout_setArrayPitch(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setArrayPitch(JNIEnv* env, jclass 
     memcpy(&o->arrayPitch, valuePointer, sizeof(o->arrayPitch));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getDepthPitch(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubresourceLayout_getDepthPitch(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkSubresourceLayout_getDepthPitch(JNIEnv* env, jclass
     return jniPointerToLong(&o->depthPitch);
 }
 
-void Java_cz_mg_vulkan_vk_VkSubresourceLayout_setDepthPitch(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubresourceLayout_setDepthPitch(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

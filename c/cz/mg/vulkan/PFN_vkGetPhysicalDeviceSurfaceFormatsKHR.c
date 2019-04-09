@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkGetPhysicalDeviceSurfaceFormatsKHR_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong surface, jlong pSurfaceFormatCount, jlong pSurfaceFormats, jlong rval){
+void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceSurfaceFormatsKHR_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong surface, jlong pSurfaceFormatCount, jlong pSurfaceFormats, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceSurfaceFormatsKHR f = (PFN_vkGetPhysicalDeviceSurfaceFormatsKHR)jniLongToFunctionPointer(address);

@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkImportSemaphoreFdInfoKHR);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getSType(JNIEnv* env, jcla
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setSType(JNIEnv* env, jclas
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getPNext(JNIEnv* env, jcla
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setPNext(JNIEnv* env, jclas
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getSemaphore(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_getSemaphore(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getSemaphore(JNIEnv* env, 
     return jniPointerToLong(&o->semaphore);
 }
 
-void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setSemaphore(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_setSemaphore(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setSemaphore(JNIEnv* env, j
     memcpy(&o->semaphore, valuePointer, sizeof(o->semaphore));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getFlags(JNIEnv* env, jcla
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setFlags(JNIEnv* env, jclas
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getHandleType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_getHandleType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getHandleType(JNIEnv* env,
     return jniPointerToLong(&o->handleType);
 }
 
-void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setHandleType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_setHandleType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setHandleType(JNIEnv* env, 
     memcpy(&o->handleType, valuePointer, sizeof(o->handleType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getFd(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_getFd(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_getFd(JNIEnv* env, jclass 
     return jniPointerToLong(&o->fd);
 }
 
-void Java_cz_mg_vulkan_vk_VkImportSemaphoreFdInfoKHR_setFd(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportSemaphoreFdInfoKHR_setFd(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

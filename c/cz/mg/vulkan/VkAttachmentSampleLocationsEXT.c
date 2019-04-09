@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkAttachmentSampleLocationsEXT_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkAttachmentSampleLocationsEXT);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_getAttachmentIndex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentSampleLocationsEXT_getAttachmentIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_getAttachmentIndex(JNI
     return jniPointerToLong(&o->attachmentIndex);
 }
 
-void Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_setAttachmentIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentSampleLocationsEXT_setAttachmentIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_setAttachmentIndex(JNIE
     memcpy(&o->attachmentIndex, valuePointer, sizeof(o->attachmentIndex));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_getSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentSampleLocationsEXT_getSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_getSampleLocationsInfo
     return jniPointerToLong(&o->sampleLocationsInfo);
 }
 
-void Java_cz_mg_vulkan_vk_VkAttachmentSampleLocationsEXT_setSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentSampleLocationsEXT_setSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdPushConstants_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong layout, jlong stageFlags, jlong offset, jlong size, jlong pValues){
+void Java_cz_mg_vulkan_PFNvkCmdPushConstants_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong layout, jlong stageFlags, jlong offset, jlong size, jlong pValues){
     (void)env;
     (void)jc;
     PFN_vkCmdPushConstants f = (PFN_vkCmdPushConstants)jniLongToFunctionPointer(address);

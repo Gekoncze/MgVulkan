@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCreateFence_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pFence, jlong rval){
+void Java_cz_mg_vulkan_PFNvkCreateFence_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pFence, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkCreateFence f = (PFN_vkCreateFence)jniLongToFunctionPointer(address);

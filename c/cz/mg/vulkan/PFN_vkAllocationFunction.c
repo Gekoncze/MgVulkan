@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkAllocationFunction_call(JNIEnv* env, jclass jc, jlong address, jlong pUserData, jlong size, jlong alignment, jlong allocationScope){
+void Java_cz_mg_vulkan_PFNvkAllocationFunction_call(JNIEnv* env, jclass jc, jlong address, jlong pUserData, jlong size, jlong alignment, jlong allocationScope){
     (void)env;
     (void)jc;
     PFN_vkAllocationFunction f = (PFN_vkAllocationFunction)jniLongToFunctionPointer(address);

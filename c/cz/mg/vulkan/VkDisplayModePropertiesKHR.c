@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDisplayModePropertiesKHR_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkDisplayModePropertiesKHR);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_getDisplayMode(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayModePropertiesKHR_getDisplayMode(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_getDisplayMode(JNIEnv* env
     return jniPointerToLong(&o->displayMode);
 }
 
-void Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_setDisplayMode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayModePropertiesKHR_setDisplayMode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_setDisplayMode(JNIEnv* env,
     memcpy(&o->displayMode, valuePointer, sizeof(o->displayMode));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_getParameters(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayModePropertiesKHR_getParameters(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_getParameters(JNIEnv* env,
     return jniPointerToLong(&o->parameters);
 }
 
-void Java_cz_mg_vulkan_vk_VkDisplayModePropertiesKHR_setParameters(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayModePropertiesKHR_setParameters(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

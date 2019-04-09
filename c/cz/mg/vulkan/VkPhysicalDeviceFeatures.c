@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkPhysicalDeviceFeatures);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getRobustBufferAccess(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getRobustBufferAccess(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getRobustBufferAccess(JNIEnv
     return jniPointerToLong(&o->robustBufferAccess);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setRobustBufferAccess(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setRobustBufferAccess(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setRobustBufferAccess(JNIEnv*
     memcpy(&o->robustBufferAccess, valuePointer, sizeof(o->robustBufferAccess));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getFullDrawIndexUint32(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getFullDrawIndexUint32(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getFullDrawIndexUint32(JNIEn
     return jniPointerToLong(&o->fullDrawIndexUint32);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setFullDrawIndexUint32(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setFullDrawIndexUint32(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setFullDrawIndexUint32(JNIEnv
     memcpy(&o->fullDrawIndexUint32, valuePointer, sizeof(o->fullDrawIndexUint32));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getImageCubeArray(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getImageCubeArray(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getImageCubeArray(JNIEnv* en
     return jniPointerToLong(&o->imageCubeArray);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setImageCubeArray(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setImageCubeArray(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setImageCubeArray(JNIEnv* env
     memcpy(&o->imageCubeArray, valuePointer, sizeof(o->imageCubeArray));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getIndependentBlend(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getIndependentBlend(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getIndependentBlend(JNIEnv* 
     return jniPointerToLong(&o->independentBlend);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setIndependentBlend(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setIndependentBlend(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setIndependentBlend(JNIEnv* e
     memcpy(&o->independentBlend, valuePointer, sizeof(o->independentBlend));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getGeometryShader(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getGeometryShader(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getGeometryShader(JNIEnv* en
     return jniPointerToLong(&o->geometryShader);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setGeometryShader(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setGeometryShader(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setGeometryShader(JNIEnv* env
     memcpy(&o->geometryShader, valuePointer, sizeof(o->geometryShader));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getTessellationShader(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getTessellationShader(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getTessellationShader(JNIEnv
     return jniPointerToLong(&o->tessellationShader);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setTessellationShader(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setTessellationShader(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setTessellationShader(JNIEnv*
     memcpy(&o->tessellationShader, valuePointer, sizeof(o->tessellationShader));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSampleRateShading(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSampleRateShading(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSampleRateShading(JNIEnv*
     return jniPointerToLong(&o->sampleRateShading);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSampleRateShading(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSampleRateShading(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSampleRateShading(JNIEnv* 
     memcpy(&o->sampleRateShading, valuePointer, sizeof(o->sampleRateShading));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getDualSrcBlend(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getDualSrcBlend(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getDualSrcBlend(JNIEnv* env,
     return jniPointerToLong(&o->dualSrcBlend);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setDualSrcBlend(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setDualSrcBlend(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setDualSrcBlend(JNIEnv* env, 
     memcpy(&o->dualSrcBlend, valuePointer, sizeof(o->dualSrcBlend));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getLogicOp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getLogicOp(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getLogicOp(JNIEnv* env, jcla
     return jniPointerToLong(&o->logicOp);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setLogicOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setLogicOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setLogicOp(JNIEnv* env, jclas
     memcpy(&o->logicOp, valuePointer, sizeof(o->logicOp));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getMultiDrawIndirect(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getMultiDrawIndirect(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getMultiDrawIndirect(JNIEnv*
     return jniPointerToLong(&o->multiDrawIndirect);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setMultiDrawIndirect(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setMultiDrawIndirect(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -186,7 +186,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setMultiDrawIndirect(JNIEnv* 
     memcpy(&o->multiDrawIndirect, valuePointer, sizeof(o->multiDrawIndirect));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getDrawIndirectFirstInstance(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getDrawIndirectFirstInstance(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -194,7 +194,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getDrawIndirectFirstInstance
     return jniPointerToLong(&o->drawIndirectFirstInstance);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setDrawIndirectFirstInstance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setDrawIndirectFirstInstance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -203,7 +203,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setDrawIndirectFirstInstance(
     memcpy(&o->drawIndirectFirstInstance, valuePointer, sizeof(o->drawIndirectFirstInstance));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getDepthClamp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getDepthClamp(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -211,7 +211,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getDepthClamp(JNIEnv* env, j
     return jniPointerToLong(&o->depthClamp);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setDepthClamp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setDepthClamp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -220,7 +220,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setDepthClamp(JNIEnv* env, jc
     memcpy(&o->depthClamp, valuePointer, sizeof(o->depthClamp));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getDepthBiasClamp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getDepthBiasClamp(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -228,7 +228,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getDepthBiasClamp(JNIEnv* en
     return jniPointerToLong(&o->depthBiasClamp);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setDepthBiasClamp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setDepthBiasClamp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -237,7 +237,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setDepthBiasClamp(JNIEnv* env
     memcpy(&o->depthBiasClamp, valuePointer, sizeof(o->depthBiasClamp));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getFillModeNonSolid(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getFillModeNonSolid(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -245,7 +245,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getFillModeNonSolid(JNIEnv* 
     return jniPointerToLong(&o->fillModeNonSolid);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setFillModeNonSolid(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setFillModeNonSolid(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -254,7 +254,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setFillModeNonSolid(JNIEnv* e
     memcpy(&o->fillModeNonSolid, valuePointer, sizeof(o->fillModeNonSolid));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getDepthBounds(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getDepthBounds(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -262,7 +262,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getDepthBounds(JNIEnv* env, 
     return jniPointerToLong(&o->depthBounds);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setDepthBounds(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setDepthBounds(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -271,7 +271,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setDepthBounds(JNIEnv* env, j
     memcpy(&o->depthBounds, valuePointer, sizeof(o->depthBounds));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getWideLines(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getWideLines(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -279,7 +279,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getWideLines(JNIEnv* env, jc
     return jniPointerToLong(&o->wideLines);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setWideLines(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setWideLines(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -288,7 +288,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setWideLines(JNIEnv* env, jcl
     memcpy(&o->wideLines, valuePointer, sizeof(o->wideLines));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getLargePoints(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getLargePoints(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -296,7 +296,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getLargePoints(JNIEnv* env, 
     return jniPointerToLong(&o->largePoints);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setLargePoints(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setLargePoints(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -305,7 +305,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setLargePoints(JNIEnv* env, j
     memcpy(&o->largePoints, valuePointer, sizeof(o->largePoints));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getAlphaToOne(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getAlphaToOne(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -313,7 +313,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getAlphaToOne(JNIEnv* env, j
     return jniPointerToLong(&o->alphaToOne);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setAlphaToOne(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setAlphaToOne(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -322,7 +322,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setAlphaToOne(JNIEnv* env, jc
     memcpy(&o->alphaToOne, valuePointer, sizeof(o->alphaToOne));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getMultiViewport(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getMultiViewport(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -330,7 +330,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getMultiViewport(JNIEnv* env
     return jniPointerToLong(&o->multiViewport);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setMultiViewport(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setMultiViewport(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -339,7 +339,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setMultiViewport(JNIEnv* env,
     memcpy(&o->multiViewport, valuePointer, sizeof(o->multiViewport));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSamplerAnisotropy(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSamplerAnisotropy(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -347,7 +347,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSamplerAnisotropy(JNIEnv*
     return jniPointerToLong(&o->samplerAnisotropy);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSamplerAnisotropy(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSamplerAnisotropy(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -356,7 +356,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSamplerAnisotropy(JNIEnv* 
     memcpy(&o->samplerAnisotropy, valuePointer, sizeof(o->samplerAnisotropy));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getTextureCompressionETC2(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getTextureCompressionETC2(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -364,7 +364,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getTextureCompressionETC2(JN
     return jniPointerToLong(&o->textureCompressionETC2);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setTextureCompressionETC2(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setTextureCompressionETC2(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -373,7 +373,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setTextureCompressionETC2(JNI
     memcpy(&o->textureCompressionETC2, valuePointer, sizeof(o->textureCompressionETC2));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getTextureCompressionASTC_LDR(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getTextureCompressionASTC_LDR(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -381,7 +381,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getTextureCompressionASTC_LD
     return jniPointerToLong(&o->textureCompressionASTC_LDR);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setTextureCompressionASTC_LDR(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setTextureCompressionASTC_LDR(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -390,7 +390,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setTextureCompressionASTC_LDR
     memcpy(&o->textureCompressionASTC_LDR, valuePointer, sizeof(o->textureCompressionASTC_LDR));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getTextureCompressionBC(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getTextureCompressionBC(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -398,7 +398,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getTextureCompressionBC(JNIE
     return jniPointerToLong(&o->textureCompressionBC);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setTextureCompressionBC(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setTextureCompressionBC(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -407,7 +407,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setTextureCompressionBC(JNIEn
     memcpy(&o->textureCompressionBC, valuePointer, sizeof(o->textureCompressionBC));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getOcclusionQueryPrecise(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getOcclusionQueryPrecise(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -415,7 +415,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getOcclusionQueryPrecise(JNI
     return jniPointerToLong(&o->occlusionQueryPrecise);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setOcclusionQueryPrecise(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setOcclusionQueryPrecise(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -424,7 +424,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setOcclusionQueryPrecise(JNIE
     memcpy(&o->occlusionQueryPrecise, valuePointer, sizeof(o->occlusionQueryPrecise));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getPipelineStatisticsQuery(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getPipelineStatisticsQuery(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -432,7 +432,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getPipelineStatisticsQuery(J
     return jniPointerToLong(&o->pipelineStatisticsQuery);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setPipelineStatisticsQuery(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setPipelineStatisticsQuery(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -441,7 +441,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setPipelineStatisticsQuery(JN
     memcpy(&o->pipelineStatisticsQuery, valuePointer, sizeof(o->pipelineStatisticsQuery));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getVertexPipelineStoresAndAtomics(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getVertexPipelineStoresAndAtomics(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -449,7 +449,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getVertexPipelineStoresAndAt
     return jniPointerToLong(&o->vertexPipelineStoresAndAtomics);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setVertexPipelineStoresAndAtomics(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setVertexPipelineStoresAndAtomics(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -458,7 +458,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setVertexPipelineStoresAndAto
     memcpy(&o->vertexPipelineStoresAndAtomics, valuePointer, sizeof(o->vertexPipelineStoresAndAtomics));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getFragmentStoresAndAtomics(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getFragmentStoresAndAtomics(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -466,7 +466,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getFragmentStoresAndAtomics(
     return jniPointerToLong(&o->fragmentStoresAndAtomics);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setFragmentStoresAndAtomics(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setFragmentStoresAndAtomics(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -475,7 +475,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setFragmentStoresAndAtomics(J
     memcpy(&o->fragmentStoresAndAtomics, valuePointer, sizeof(o->fragmentStoresAndAtomics));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderTessellationAndGeometryPointSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderTessellationAndGeometryPointSize(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -483,7 +483,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderTessellationAndGeom
     return jniPointerToLong(&o->shaderTessellationAndGeometryPointSize);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderTessellationAndGeometryPointSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderTessellationAndGeometryPointSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -492,7 +492,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderTessellationAndGeome
     memcpy(&o->shaderTessellationAndGeometryPointSize, valuePointer, sizeof(o->shaderTessellationAndGeometryPointSize));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderImageGatherExtended(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderImageGatherExtended(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -500,7 +500,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderImageGatherExtended
     return jniPointerToLong(&o->shaderImageGatherExtended);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderImageGatherExtended(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderImageGatherExtended(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -509,7 +509,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderImageGatherExtended(
     memcpy(&o->shaderImageGatherExtended, valuePointer, sizeof(o->shaderImageGatherExtended));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageImageExtendedFormats(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderStorageImageExtendedFormats(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -517,7 +517,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageImageExtende
     return jniPointerToLong(&o->shaderStorageImageExtendedFormats);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageImageExtendedFormats(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderStorageImageExtendedFormats(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -526,7 +526,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageImageExtended
     memcpy(&o->shaderStorageImageExtendedFormats, valuePointer, sizeof(o->shaderStorageImageExtendedFormats));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageImageMultisample(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderStorageImageMultisample(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -534,7 +534,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageImageMultisa
     return jniPointerToLong(&o->shaderStorageImageMultisample);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageImageMultisample(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderStorageImageMultisample(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -543,7 +543,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageImageMultisam
     memcpy(&o->shaderStorageImageMultisample, valuePointer, sizeof(o->shaderStorageImageMultisample));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageImageReadWithoutFormat(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderStorageImageReadWithoutFormat(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -551,7 +551,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageImageReadWit
     return jniPointerToLong(&o->shaderStorageImageReadWithoutFormat);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageImageReadWithoutFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderStorageImageReadWithoutFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -560,7 +560,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageImageReadWith
     memcpy(&o->shaderStorageImageReadWithoutFormat, valuePointer, sizeof(o->shaderStorageImageReadWithoutFormat));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageImageWriteWithoutFormat(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderStorageImageWriteWithoutFormat(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -568,7 +568,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageImageWriteWi
     return jniPointerToLong(&o->shaderStorageImageWriteWithoutFormat);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageImageWriteWithoutFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderStorageImageWriteWithoutFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -577,7 +577,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageImageWriteWit
     memcpy(&o->shaderStorageImageWriteWithoutFormat, valuePointer, sizeof(o->shaderStorageImageWriteWithoutFormat));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderUniformBufferArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderUniformBufferArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -585,7 +585,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderUniformBufferArrayD
     return jniPointerToLong(&o->shaderUniformBufferArrayDynamicIndexing);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderUniformBufferArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderUniformBufferArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -594,7 +594,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderUniformBufferArrayDy
     memcpy(&o->shaderUniformBufferArrayDynamicIndexing, valuePointer, sizeof(o->shaderUniformBufferArrayDynamicIndexing));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderSampledImageArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderSampledImageArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -602,7 +602,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderSampledImageArrayDy
     return jniPointerToLong(&o->shaderSampledImageArrayDynamicIndexing);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderSampledImageArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderSampledImageArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -611,7 +611,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderSampledImageArrayDyn
     memcpy(&o->shaderSampledImageArrayDynamicIndexing, valuePointer, sizeof(o->shaderSampledImageArrayDynamicIndexing));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageBufferArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderStorageBufferArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -619,7 +619,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageBufferArrayD
     return jniPointerToLong(&o->shaderStorageBufferArrayDynamicIndexing);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageBufferArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderStorageBufferArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -628,7 +628,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageBufferArrayDy
     memcpy(&o->shaderStorageBufferArrayDynamicIndexing, valuePointer, sizeof(o->shaderStorageBufferArrayDynamicIndexing));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageImageArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderStorageImageArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -636,7 +636,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderStorageImageArrayDy
     return jniPointerToLong(&o->shaderStorageImageArrayDynamicIndexing);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageImageArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderStorageImageArrayDynamicIndexing(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -645,7 +645,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderStorageImageArrayDyn
     memcpy(&o->shaderStorageImageArrayDynamicIndexing, valuePointer, sizeof(o->shaderStorageImageArrayDynamicIndexing));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderClipDistance(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderClipDistance(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -653,7 +653,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderClipDistance(JNIEnv
     return jniPointerToLong(&o->shaderClipDistance);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderClipDistance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderClipDistance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -662,7 +662,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderClipDistance(JNIEnv*
     memcpy(&o->shaderClipDistance, valuePointer, sizeof(o->shaderClipDistance));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderCullDistance(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderCullDistance(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -670,7 +670,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderCullDistance(JNIEnv
     return jniPointerToLong(&o->shaderCullDistance);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderCullDistance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderCullDistance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -679,7 +679,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderCullDistance(JNIEnv*
     memcpy(&o->shaderCullDistance, valuePointer, sizeof(o->shaderCullDistance));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderFloat64(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderFloat64(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -687,7 +687,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderFloat64(JNIEnv* env
     return jniPointerToLong(&o->shaderFloat64);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderFloat64(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderFloat64(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -696,7 +696,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderFloat64(JNIEnv* env,
     memcpy(&o->shaderFloat64, valuePointer, sizeof(o->shaderFloat64));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderInt64(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderInt64(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -704,7 +704,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderInt64(JNIEnv* env, 
     return jniPointerToLong(&o->shaderInt64);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderInt64(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderInt64(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -713,7 +713,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderInt64(JNIEnv* env, j
     memcpy(&o->shaderInt64, valuePointer, sizeof(o->shaderInt64));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderInt16(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderInt16(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -721,7 +721,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderInt16(JNIEnv* env, 
     return jniPointerToLong(&o->shaderInt16);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderInt16(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderInt16(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -730,7 +730,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderInt16(JNIEnv* env, j
     memcpy(&o->shaderInt16, valuePointer, sizeof(o->shaderInt16));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderResourceResidency(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderResourceResidency(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -738,7 +738,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderResourceResidency(J
     return jniPointerToLong(&o->shaderResourceResidency);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderResourceResidency(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderResourceResidency(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -747,7 +747,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderResourceResidency(JN
     memcpy(&o->shaderResourceResidency, valuePointer, sizeof(o->shaderResourceResidency));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderResourceMinLod(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getShaderResourceMinLod(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -755,7 +755,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getShaderResourceMinLod(JNIE
     return jniPointerToLong(&o->shaderResourceMinLod);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderResourceMinLod(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setShaderResourceMinLod(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -764,7 +764,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setShaderResourceMinLod(JNIEn
     memcpy(&o->shaderResourceMinLod, valuePointer, sizeof(o->shaderResourceMinLod));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseBinding(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSparseBinding(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -772,7 +772,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseBinding(JNIEnv* env
     return jniPointerToLong(&o->sparseBinding);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSparseBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -781,7 +781,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseBinding(JNIEnv* env,
     memcpy(&o->sparseBinding, valuePointer, sizeof(o->sparseBinding));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidencyBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSparseResidencyBuffer(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -789,7 +789,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidencyBuffer(JNI
     return jniPointerToLong(&o->sparseResidencyBuffer);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidencyBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSparseResidencyBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -798,7 +798,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidencyBuffer(JNIE
     memcpy(&o->sparseResidencyBuffer, valuePointer, sizeof(o->sparseResidencyBuffer));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidencyImage2D(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSparseResidencyImage2D(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -806,7 +806,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidencyImage2D(JN
     return jniPointerToLong(&o->sparseResidencyImage2D);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidencyImage2D(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSparseResidencyImage2D(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -815,7 +815,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidencyImage2D(JNI
     memcpy(&o->sparseResidencyImage2D, valuePointer, sizeof(o->sparseResidencyImage2D));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidencyImage3D(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSparseResidencyImage3D(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -823,7 +823,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidencyImage3D(JN
     return jniPointerToLong(&o->sparseResidencyImage3D);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidencyImage3D(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSparseResidencyImage3D(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -832,7 +832,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidencyImage3D(JNI
     memcpy(&o->sparseResidencyImage3D, valuePointer, sizeof(o->sparseResidencyImage3D));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidency2Samples(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSparseResidency2Samples(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -840,7 +840,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidency2Samples(J
     return jniPointerToLong(&o->sparseResidency2Samples);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidency2Samples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSparseResidency2Samples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -849,7 +849,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidency2Samples(JN
     memcpy(&o->sparseResidency2Samples, valuePointer, sizeof(o->sparseResidency2Samples));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidency4Samples(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSparseResidency4Samples(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -857,7 +857,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidency4Samples(J
     return jniPointerToLong(&o->sparseResidency4Samples);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidency4Samples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSparseResidency4Samples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -866,7 +866,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidency4Samples(JN
     memcpy(&o->sparseResidency4Samples, valuePointer, sizeof(o->sparseResidency4Samples));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidency8Samples(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSparseResidency8Samples(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -874,7 +874,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidency8Samples(J
     return jniPointerToLong(&o->sparseResidency8Samples);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidency8Samples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSparseResidency8Samples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -883,7 +883,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidency8Samples(JN
     memcpy(&o->sparseResidency8Samples, valuePointer, sizeof(o->sparseResidency8Samples));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidency16Samples(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSparseResidency16Samples(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -891,7 +891,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidency16Samples(
     return jniPointerToLong(&o->sparseResidency16Samples);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidency16Samples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSparseResidency16Samples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -900,7 +900,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidency16Samples(J
     memcpy(&o->sparseResidency16Samples, valuePointer, sizeof(o->sparseResidency16Samples));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidencyAliased(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getSparseResidencyAliased(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -908,7 +908,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getSparseResidencyAliased(JN
     return jniPointerToLong(&o->sparseResidencyAliased);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidencyAliased(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setSparseResidencyAliased(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -917,7 +917,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setSparseResidencyAliased(JNI
     memcpy(&o->sparseResidencyAliased, valuePointer, sizeof(o->sparseResidencyAliased));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getVariableMultisampleRate(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getVariableMultisampleRate(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -925,7 +925,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getVariableMultisampleRate(J
     return jniPointerToLong(&o->variableMultisampleRate);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setVariableMultisampleRate(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setVariableMultisampleRate(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -934,7 +934,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setVariableMultisampleRate(JN
     memcpy(&o->variableMultisampleRate, valuePointer, sizeof(o->variableMultisampleRate));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getInheritedQueries(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_getInheritedQueries(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -942,7 +942,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_getInheritedQueries(JNIEnv* 
     return jniPointerToLong(&o->inheritedQueries);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceFeatures_setInheritedQueries(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceFeatures_setInheritedQueries(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

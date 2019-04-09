@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdDraw_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong vertexCount, jlong instanceCount, jlong firstVertex, jlong firstInstance){
+void Java_cz_mg_vulkan_PFNvkCmdDraw_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong vertexCount, jlong instanceCount, jlong firstVertex, jlong firstInstance){
     (void)env;
     (void)jc;
     PFN_vkCmdDraw f = (PFN_vkCmdDraw)jniLongToFunctionPointer(address);

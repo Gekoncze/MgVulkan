@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkObjectTablePipelineEntryNVX);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_getType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_getType(JNIEnv* env, jc
     return jniPointerToLong(&o->type);
 }
 
-void Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_setType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_setType(JNIEnv* env, jcl
     memcpy(&o->type, valuePointer, sizeof(o->type));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_getFlags(JNIEnv* env, j
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_setFlags(JNIEnv* env, jc
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_getPipeline(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getPipeline(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_getPipeline(JNIEnv* env
     return jniPointerToLong(&o->pipeline);
 }
 
-void Java_cz_mg_vulkan_vk_VkObjectTablePipelineEntryNVX_setPipeline(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setPipeline(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

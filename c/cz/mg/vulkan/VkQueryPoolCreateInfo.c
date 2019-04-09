@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkQueryPoolCreateInfo_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkQueryPoolCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkQueryPoolCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getSType(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkQueryPoolCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setSType(JNIEnv* env, jclass jc,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkQueryPoolCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getPNext(JNIEnv* env, jclass jc
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkQueryPoolCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setPNext(JNIEnv* env, jclass jc,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkQueryPoolCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getFlags(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkQueryPoolCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setFlags(JNIEnv* env, jclass jc,
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getQueryType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkQueryPoolCreateInfo_getQueryType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getQueryType(JNIEnv* env, jclas
     return jniPointerToLong(&o->queryType);
 }
 
-void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setQueryType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkQueryPoolCreateInfo_setQueryType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setQueryType(JNIEnv* env, jclass
     memcpy(&o->queryType, valuePointer, sizeof(o->queryType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getQueryCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkQueryPoolCreateInfo_getQueryCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getQueryCount(JNIEnv* env, jcla
     return jniPointerToLong(&o->queryCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setQueryCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkQueryPoolCreateInfo_setQueryCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setQueryCount(JNIEnv* env, jclas
     memcpy(&o->queryCount, valuePointer, sizeof(o->queryCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getPipelineStatistics(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkQueryPoolCreateInfo_getPipelineStatistics(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_getPipelineStatistics(JNIEnv* e
     return jniPointerToLong(&o->pipelineStatistics);
 }
 
-void Java_cz_mg_vulkan_vk_VkQueryPoolCreateInfo_setPipelineStatistics(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkQueryPoolCreateInfo_setPipelineStatistics(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

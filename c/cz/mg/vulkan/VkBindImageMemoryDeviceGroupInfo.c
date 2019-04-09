@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkBindImageMemoryDeviceGroupInfo);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_getSType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getSType(JNIEnv* env
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setSType(JNIEnv* env,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getPNext(JNIEnv* env
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPNext(JNIEnv* env,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getDeviceIndexCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_getDeviceIndexCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getDeviceIndexCount(
     return jniPointerToLong(&o->deviceIndexCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setDeviceIndexCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_setDeviceIndexCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setDeviceIndexCount(J
     memcpy(&o->deviceIndexCount, valuePointer, sizeof(o->deviceIndexCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getPDeviceIndices(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_getPDeviceIndices(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getPDeviceIndices(JN
     return jniPointerToLong(o->pDeviceIndices);
 }
 
-void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPDeviceIndices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_setPDeviceIndices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPDeviceIndices(JNI
     memcpy(&o->pDeviceIndices, &valuePointer, sizeof(o->pDeviceIndices));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getSplitInstanceBindRegionCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_getSplitInstanceBindRegionCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getSplitInstanceBind
     return jniPointerToLong(&o->splitInstanceBindRegionCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setSplitInstanceBindRegionCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_setSplitInstanceBindRegionCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setSplitInstanceBindR
     memcpy(&o->splitInstanceBindRegionCount, valuePointer, sizeof(o->splitInstanceBindRegionCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getPSplitInstanceBindRegions(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_getPSplitInstanceBindRegions(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_getPSplitInstanceBin
     return jniPointerToLong(o->pSplitInstanceBindRegions);
 }
 
-void Java_cz_mg_vulkan_vk_VkBindImageMemoryDeviceGroupInfo_setPSplitInstanceBindRegions(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryDeviceGroupInfo_setPSplitInstanceBindRegions(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

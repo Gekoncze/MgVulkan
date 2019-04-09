@@ -31,7 +31,7 @@ VkBool32 defaultVkDebugReportCallbackEXT(VkDebugReportFlagsEXT flags, VkDebugRep
     return VK_FALSE;
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDebug_getDefaultVkDebugReportCallbackEXTAddress(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDebug_getDefaultVkDebugReportCallbackEXTAddress(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;

@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkUInt32_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkUInt32_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(uint32_t);
 }
 
-jint Java_cz_mg_vulkan_vk_VkUInt32_getValue(JNIEnv* env, jclass jc, jlong address)
+jint Java_cz_mg_vulkan_VkUInt32_getValue(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -25,7 +25,7 @@ jint Java_cz_mg_vulkan_vk_VkUInt32_getValue(JNIEnv* env, jclass jc, jlong addres
     return value;
 }
 
-void Java_cz_mg_vulkan_vk_VkUInt32_setValue(JNIEnv* env, jclass jc, jlong address, jint value)
+void Java_cz_mg_vulkan_VkUInt32_setValue(JNIEnv* env, jclass jc, jlong address, jint value)
 {
     (void)env;
     (void)jc;

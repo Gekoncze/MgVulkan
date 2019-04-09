@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkPresentRegionKHR_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkPresentRegionKHR_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkPresentRegionKHR);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPresentRegionKHR_getRectangleCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPresentRegionKHR_getRectangleCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkPresentRegionKHR_getRectangleCount(JNIEnv* env, jcl
     return jniPointerToLong(&o->rectangleCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkPresentRegionKHR_setRectangleCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPresentRegionKHR_setRectangleCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkPresentRegionKHR_setRectangleCount(JNIEnv* env, jcla
     memcpy(&o->rectangleCount, valuePointer, sizeof(o->rectangleCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPresentRegionKHR_getPRectangles(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPresentRegionKHR_getPRectangles(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkPresentRegionKHR_getPRectangles(JNIEnv* env, jclass
     return jniPointerToLong(o->pRectangles);
 }
 
-void Java_cz_mg_vulkan_vk_VkPresentRegionKHR_setPRectangles(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPresentRegionKHR_setPRectangles(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

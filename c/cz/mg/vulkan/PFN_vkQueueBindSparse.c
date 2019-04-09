@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkQueueBindSparse_call(JNIEnv* env, jclass jc, jlong address, jlong queue, jlong bindInfoCount, jlong pBindInfo, jlong fence, jlong rval){
+void Java_cz_mg_vulkan_PFNvkQueueBindSparse_call(JNIEnv* env, jclass jc, jlong address, jlong queue, jlong bindInfoCount, jlong pBindInfo, jlong fence, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkQueueBindSparse f = (PFN_vkQueueBindSparse)jniLongToFunctionPointer(address);

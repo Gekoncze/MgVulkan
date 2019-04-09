@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkDeviceGroupRenderPassBeginInfo);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_getSType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_getSType(JNIEnv* env
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_setSType(JNIEnv* env,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_getPNext(JNIEnv* env
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_setPNext(JNIEnv* env,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_getDeviceMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_getDeviceMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_getDeviceMask(JNIEnv
     return jniPointerToLong(&o->deviceMask);
 }
 
-void Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_setDeviceMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_setDeviceMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_setDeviceMask(JNIEnv*
     memcpy(&o->deviceMask, valuePointer, sizeof(o->deviceMask));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_getDeviceRenderAreaCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_getDeviceRenderAreaCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_getDeviceRenderAreaC
     return jniPointerToLong(&o->deviceRenderAreaCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_setDeviceRenderAreaCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_setDeviceRenderAreaCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_setDeviceRenderAreaCo
     memcpy(&o->deviceRenderAreaCount, valuePointer, sizeof(o->deviceRenderAreaCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_getPDeviceRenderAreas(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_getPDeviceRenderAreas(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_getPDeviceRenderArea
     return jniPointerToLong(o->pDeviceRenderAreas);
 }
 
-void Java_cz_mg_vulkan_vk_VkDeviceGroupRenderPassBeginInfo_setPDeviceRenderAreas(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfo_setPDeviceRenderAreas(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

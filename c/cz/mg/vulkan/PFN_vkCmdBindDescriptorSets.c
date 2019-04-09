@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdBindDescriptorSets_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong pipelineBindPoint, jlong layout, jlong firstSet, jlong descriptorSetCount, jlong pDescriptorSets, jlong dynamicOffsetCount, jlong pDynamicOffsets){
+void Java_cz_mg_vulkan_PFNvkCmdBindDescriptorSets_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong pipelineBindPoint, jlong layout, jlong firstSet, jlong descriptorSetCount, jlong pDescriptorSets, jlong dynamicOffsetCount, jlong pDynamicOffsets){
     (void)env;
     (void)jc;
     PFN_vkCmdBindDescriptorSets f = (PFN_vkCmdBindDescriptorSets)jniLongToFunctionPointer(address);

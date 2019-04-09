@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkFunctionPointer_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkFunctionPointer_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(PFN_vkVoidFunction);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkFunctionPointer_getValue(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFunctionPointer_getValue(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkFunctionPointer_getValue(JNIEnv* env, jclass jc, jl
     return jniFunctionPointerToLong(*pointerAddress);
 }
 
-void Java_cz_mg_vulkan_vk_VkFunctionPointer_setValue(JNIEnv* env, jclass jc, jlong address, jlong value)
+void Java_cz_mg_vulkan_VkFunctionPointer_setValue(JNIEnv* env, jclass jc, jlong address, jlong value)
 {
     (void)env;
     (void)jc;
@@ -32,7 +32,7 @@ void Java_cz_mg_vulkan_vk_VkFunctionPointer_setValue(JNIEnv* env, jclass jc, jlo
     *pointerAddress = jniLongToFunctionPointer(value);
 }
 
-void Java_cz_mg_vulkan_vk_VkFunctionPointer_load(JNIEnv* env, jclass jc, jlong address, jlong instance, jlong string)
+void Java_cz_mg_vulkan_VkFunctionPointer_load(JNIEnv* env, jclass jc, jlong address, jlong instance, jlong string)
 {
     (void)env;
     (void)jc;

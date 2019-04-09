@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkGetMemoryHostPointerPropertiesEXT_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong handleType, jlong pHostPointer, jlong pMemoryHostPointerProperties, jlong rval){
+void Java_cz_mg_vulkan_PFNvkGetMemoryHostPointerPropertiesEXT_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong handleType, jlong pHostPointer, jlong pMemoryHostPointerProperties, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkGetMemoryHostPointerPropertiesEXT f = (PFN_vkGetMemoryHostPointerPropertiesEXT)jniLongToFunctionPointer(address);

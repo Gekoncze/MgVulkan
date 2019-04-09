@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkVertexInputBindingDescription_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkVertexInputBindingDescription);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_getBinding(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputBindingDescription_getBinding(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_getBinding(JNIEnv* en
     return jniPointerToLong(&o->binding);
 }
 
-void Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_setBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputBindingDescription_setBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_setBinding(JNIEnv* env
     memcpy(&o->binding, valuePointer, sizeof(o->binding));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_getStride(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputBindingDescription_getStride(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_getStride(JNIEnv* env
     return jniPointerToLong(&o->stride);
 }
 
-void Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_setStride(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputBindingDescription_setStride(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_setStride(JNIEnv* env,
     memcpy(&o->stride, valuePointer, sizeof(o->stride));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_getInputRate(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputBindingDescription_getInputRate(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_getInputRate(JNIEnv* 
     return jniPointerToLong(&o->inputRate);
 }
 
-void Java_cz_mg_vulkan_vk_VkVertexInputBindingDescription_setInputRate(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputBindingDescription_setInputRate(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

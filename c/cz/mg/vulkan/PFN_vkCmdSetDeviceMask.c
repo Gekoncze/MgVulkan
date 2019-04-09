@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdSetDeviceMask_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong deviceMask){
+void Java_cz_mg_vulkan_PFNvkCmdSetDeviceMask_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong deviceMask){
     (void)env;
     (void)jc;
     PFN_vkCmdSetDeviceMask f = (PFN_vkCmdSetDeviceMask)jniLongToFunctionPointer(address);

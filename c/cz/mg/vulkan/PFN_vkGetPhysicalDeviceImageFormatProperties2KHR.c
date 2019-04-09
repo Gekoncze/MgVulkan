@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkGetPhysicalDeviceImageFormatProperties2KHR_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pImageFormatInfo, jlong pImageFormatProperties, jlong rval){
+void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceImageFormatProperties2KHR_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pImageFormatInfo, jlong pImageFormatProperties, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceImageFormatProperties2KHR f = (PFN_vkGetPhysicalDeviceImageFormatProperties2KHR)jniLongToFunctionPointer(address);

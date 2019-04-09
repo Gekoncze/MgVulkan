@@ -11,21 +11,21 @@ void jniThrowException(JNIEnv* env, const char* message);
 
 VK_DEFINE_HANDLE(VkDispatchableHandle)
 
-jlong Java_cz_mg_vulkan_vk_VkDispatchableHandle_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDispatchableHandle_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkDispatchableHandle);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDispatchableHandle_getValue(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDispatchableHandle_getValue(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
     return (jlong) *((VkDispatchableHandle*)jniLongToPointer(address));
 }
 
-void Java_cz_mg_vulkan_vk_VkDispatchableHandle_setValue(JNIEnv* env, jclass jc, jlong address, jlong value)
+void Java_cz_mg_vulkan_VkDispatchableHandle_setValue(JNIEnv* env, jclass jc, jlong address, jlong value)
 {
     (void)env;
     (void)jc;

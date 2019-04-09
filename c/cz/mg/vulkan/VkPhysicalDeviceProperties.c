@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceProperties_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkPhysicalDeviceProperties);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getApiVersion(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceProperties_getApiVersion(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getApiVersion(JNIEnv* env,
     return jniPointerToLong(&o->apiVersion);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setApiVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceProperties_setApiVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setApiVersion(JNIEnv* env, 
     memcpy(&o->apiVersion, valuePointer, sizeof(o->apiVersion));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getDriverVersion(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceProperties_getDriverVersion(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getDriverVersion(JNIEnv* e
     return jniPointerToLong(&o->driverVersion);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setDriverVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceProperties_setDriverVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setDriverVersion(JNIEnv* en
     memcpy(&o->driverVersion, valuePointer, sizeof(o->driverVersion));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getVendorID(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceProperties_getVendorID(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getVendorID(JNIEnv* env, j
     return jniPointerToLong(&o->vendorID);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setVendorID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceProperties_setVendorID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setVendorID(JNIEnv* env, jc
     memcpy(&o->vendorID, valuePointer, sizeof(o->vendorID));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getDeviceID(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceProperties_getDeviceID(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getDeviceID(JNIEnv* env, j
     return jniPointerToLong(&o->deviceID);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setDeviceID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceProperties_setDeviceID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setDeviceID(JNIEnv* env, jc
     memcpy(&o->deviceID, valuePointer, sizeof(o->deviceID));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getDeviceType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceProperties_getDeviceType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getDeviceType(JNIEnv* env,
     return jniPointerToLong(&o->deviceType);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setDeviceType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceProperties_setDeviceType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setDeviceType(JNIEnv* env, 
     memcpy(&o->deviceType, valuePointer, sizeof(o->deviceType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getDeviceName(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceProperties_getDeviceName(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getDeviceName(JNIEnv* env,
     return jniPointerToLong(o->deviceName);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setDeviceName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceProperties_setDeviceName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setDeviceName(JNIEnv* env, 
     memcpy(o->deviceName, valuePointer, sizeof(o->deviceName));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getPipelineCacheUUID(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceProperties_getPipelineCacheUUID(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getPipelineCacheUUID(JNIEn
     return jniPointerToLong(o->pipelineCacheUUID);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setPipelineCacheUUID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceProperties_setPipelineCacheUUID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setPipelineCacheUUID(JNIEnv
     memcpy(o->pipelineCacheUUID, valuePointer, sizeof(o->pipelineCacheUUID));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getLimits(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceProperties_getLimits(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getLimits(JNIEnv* env, jcl
     return jniPointerToLong(&o->limits);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setLimits(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceProperties_setLimits(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setLimits(JNIEnv* env, jcla
     memcpy(&o->limits, valuePointer, sizeof(o->limits));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getSparseProperties(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceProperties_getSparseProperties(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_getSparseProperties(JNIEnv
     return jniPointerToLong(&o->sparseProperties);
 }
 
-void Java_cz_mg_vulkan_vk_VkPhysicalDeviceProperties_setSparseProperties(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceProperties_setSparseProperties(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

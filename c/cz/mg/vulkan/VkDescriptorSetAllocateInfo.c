@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkDescriptorSetAllocateInfo);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getSType(JNIEnv* env, jcl
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setSType(JNIEnv* env, jcla
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getPNext(JNIEnv* env, jcl
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setPNext(JNIEnv* env, jcla
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getDescriptorPool(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_getDescriptorPool(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getDescriptorPool(JNIEnv*
     return jniPointerToLong(&o->descriptorPool);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setDescriptorPool(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_setDescriptorPool(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setDescriptorPool(JNIEnv* 
     memcpy(&o->descriptorPool, valuePointer, sizeof(o->descriptorPool));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getDescriptorSetCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_getDescriptorSetCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getDescriptorSetCount(JNI
     return jniPointerToLong(&o->descriptorSetCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setDescriptorSetCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_setDescriptorSetCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setDescriptorSetCount(JNIE
     memcpy(&o->descriptorSetCount, valuePointer, sizeof(o->descriptorSetCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getPSetLayouts(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_getPSetLayouts(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_getPSetLayouts(JNIEnv* en
     return jniPointerToLong(o->pSetLayouts);
 }
 
-void Java_cz_mg_vulkan_vk_VkDescriptorSetAllocateInfo_setPSetLayouts(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetAllocateInfo_setPSetLayouts(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

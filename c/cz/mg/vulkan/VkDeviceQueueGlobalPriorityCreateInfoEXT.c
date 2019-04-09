@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkDeviceQueueGlobalPriorityCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_getSType(JNI
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_setSType(JNIE
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_getPNext(JNI
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_setPNext(JNIE
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_getGlobalPriority(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getGlobalPriority(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_getGlobalPri
     return jniPointerToLong(&o->globalPriority);
 }
 
-void Java_cz_mg_vulkan_vk_VkDeviceQueueGlobalPriorityCreateInfoEXT_setGlobalPriority(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setGlobalPriority(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkAcquireNextImageInfoKHR);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getSType(JNIEnv* env, jclas
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSType(JNIEnv* env, jclass
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getPNext(JNIEnv* env, jclas
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setPNext(JNIEnv* env, jclass
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getSwapchain(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_getSwapchain(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getSwapchain(JNIEnv* env, j
     return jniPointerToLong(&o->swapchain);
 }
 
-void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSwapchain(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_setSwapchain(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSwapchain(JNIEnv* env, jc
     memcpy(&o->swapchain, valuePointer, sizeof(o->swapchain));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getTimeout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_getTimeout(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getTimeout(JNIEnv* env, jcl
     return jniPointerToLong(&o->timeout);
 }
 
-void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setTimeout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_setTimeout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setTimeout(JNIEnv* env, jcla
     memcpy(&o->timeout, valuePointer, sizeof(o->timeout));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getSemaphore(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_getSemaphore(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getSemaphore(JNIEnv* env, j
     return jniPointerToLong(&o->semaphore);
 }
 
-void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSemaphore(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_setSemaphore(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setSemaphore(JNIEnv* env, jc
     memcpy(&o->semaphore, valuePointer, sizeof(o->semaphore));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getFence(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_getFence(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getFence(JNIEnv* env, jclas
     return jniPointerToLong(&o->fence);
 }
 
-void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setFence(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_setFence(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setFence(JNIEnv* env, jclass
     memcpy(&o->fence, valuePointer, sizeof(o->fence));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getDeviceMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_getDeviceMask(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_getDeviceMask(JNIEnv* env, 
     return jniPointerToLong(&o->deviceMask);
 }
 
-void Java_cz_mg_vulkan_vk_VkAcquireNextImageInfoKHR_setDeviceMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAcquireNextImageInfoKHR_setDeviceMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

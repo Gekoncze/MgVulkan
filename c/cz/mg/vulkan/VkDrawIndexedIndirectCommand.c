@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkDrawIndexedIndirectCommand);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_getIndexCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_getIndexCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_getIndexCount(JNIEnv* en
     return jniPointerToLong(&o->indexCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_setIndexCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_setIndexCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_setIndexCount(JNIEnv* env
     memcpy(&o->indexCount, valuePointer, sizeof(o->indexCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_getInstanceCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_getInstanceCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_getInstanceCount(JNIEnv*
     return jniPointerToLong(&o->instanceCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_setInstanceCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_setInstanceCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_setInstanceCount(JNIEnv* 
     memcpy(&o->instanceCount, valuePointer, sizeof(o->instanceCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_getFirstIndex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_getFirstIndex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_getFirstIndex(JNIEnv* en
     return jniPointerToLong(&o->firstIndex);
 }
 
-void Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_setFirstIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_setFirstIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_setFirstIndex(JNIEnv* env
     memcpy(&o->firstIndex, valuePointer, sizeof(o->firstIndex));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_getVertexOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_getVertexOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_getVertexOffset(JNIEnv* 
     return jniPointerToLong(&o->vertexOffset);
 }
 
-void Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_setVertexOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_setVertexOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_setVertexOffset(JNIEnv* e
     memcpy(&o->vertexOffset, valuePointer, sizeof(o->vertexOffset));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_getFirstInstance(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_getFirstInstance(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_getFirstInstance(JNIEnv*
     return jniPointerToLong(&o->firstInstance);
 }
 
-void Java_cz_mg_vulkan_vk_VkDrawIndexedIndirectCommand_setFirstInstance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDrawIndexedIndirectCommand_setFirstInstance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

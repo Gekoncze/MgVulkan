@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCreateIndirectCommandsLayoutNVX_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pIndirectCommandsLayout, jlong rval){
+void Java_cz_mg_vulkan_PFNvkCreateIndirectCommandsLayoutNVX_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pIndirectCommandsLayout, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkCreateIndirectCommandsLayoutNVX f = (PFN_vkCreateIndirectCommandsLayoutNVX)jniLongToFunctionPointer(address);

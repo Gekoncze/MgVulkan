@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDrawIndirectCommand_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkDrawIndirectCommand);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_getVertexCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDrawIndirectCommand_getVertexCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_getVertexCount(JNIEnv* env, jcl
     return jniPointerToLong(&o->vertexCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_setVertexCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDrawIndirectCommand_setVertexCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_setVertexCount(JNIEnv* env, jcla
     memcpy(&o->vertexCount, valuePointer, sizeof(o->vertexCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_getInstanceCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDrawIndirectCommand_getInstanceCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_getInstanceCount(JNIEnv* env, j
     return jniPointerToLong(&o->instanceCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_setInstanceCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDrawIndirectCommand_setInstanceCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_setInstanceCount(JNIEnv* env, jc
     memcpy(&o->instanceCount, valuePointer, sizeof(o->instanceCount));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_getFirstVertex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDrawIndirectCommand_getFirstVertex(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_getFirstVertex(JNIEnv* env, jcl
     return jniPointerToLong(&o->firstVertex);
 }
 
-void Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_setFirstVertex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDrawIndirectCommand_setFirstVertex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_setFirstVertex(JNIEnv* env, jcla
     memcpy(&o->firstVertex, valuePointer, sizeof(o->firstVertex));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_getFirstInstance(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDrawIndirectCommand_getFirstInstance(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_getFirstInstance(JNIEnv* env, j
     return jniPointerToLong(&o->firstInstance);
 }
 
-void Java_cz_mg_vulkan_vk_VkDrawIndirectCommand_setFirstInstance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDrawIndirectCommand_setFirstInstance(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

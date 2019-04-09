@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCreateDescriptorUpdateTemplateKHR_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pDescriptorUpdateTemplate, jlong rval){
+void Java_cz_mg_vulkan_PFNvkCreateDescriptorUpdateTemplateKHR_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pDescriptorUpdateTemplate, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkCreateDescriptorUpdateTemplateKHR f = (PFN_vkCreateDescriptorUpdateTemplateKHR)jniLongToFunctionPointer(address);

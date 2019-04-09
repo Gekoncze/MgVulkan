@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdSetViewportWScalingNV_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong firstViewport, jlong viewportCount, jlong pViewportWScalings){
+void Java_cz_mg_vulkan_PFNvkCmdSetViewportWScalingNV_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong firstViewport, jlong viewportCount, jlong pViewportWScalings){
     (void)env;
     (void)jc;
     PFN_vkCmdSetViewportWScalingNV f = (PFN_vkCmdSetViewportWScalingNV)jniLongToFunctionPointer(address);

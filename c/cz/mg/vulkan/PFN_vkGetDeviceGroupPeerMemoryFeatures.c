@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkGetDeviceGroupPeerMemoryFeatures_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong heapIndex, jlong localDeviceIndex, jlong remoteDeviceIndex, jlong pPeerMemoryFeatures){
+void Java_cz_mg_vulkan_PFNvkGetDeviceGroupPeerMemoryFeatures_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong heapIndex, jlong localDeviceIndex, jlong remoteDeviceIndex, jlong pPeerMemoryFeatures){
     (void)env;
     (void)jc;
     PFN_vkGetDeviceGroupPeerMemoryFeatures f = (PFN_vkGetDeviceGroupPeerMemoryFeatures)jniLongToFunctionPointer(address);

@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkFloat_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkFloat_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(float);
 }
 
-jfloat Java_cz_mg_vulkan_vk_VkFloat_getValue(JNIEnv* env, jclass jc, jlong address)
+jfloat Java_cz_mg_vulkan_VkFloat_getValue(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -25,7 +25,7 @@ jfloat Java_cz_mg_vulkan_vk_VkFloat_getValue(JNIEnv* env, jclass jc, jlong addre
     return value;
 }
 
-void Java_cz_mg_vulkan_vk_VkFloat_setValue(JNIEnv* env, jclass jc, jlong address, jfloat value)
+void Java_cz_mg_vulkan_VkFloat_setValue(JNIEnv* env, jclass jc, jlong address, jfloat value)
 {
     (void)env;
     (void)jc;

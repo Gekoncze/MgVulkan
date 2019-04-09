@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkGetPhysicalDeviceQueueFamilyProperties2_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pQueueFamilyPropertyCount, jlong pQueueFamilyProperties){
+void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceQueueFamilyProperties2_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pQueueFamilyPropertyCount, jlong pQueueFamilyProperties){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceQueueFamilyProperties2 f = (PFN_vkGetPhysicalDeviceQueueFamilyProperties2)jniLongToFunctionPointer(address);

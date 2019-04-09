@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkVertexInputBindingDivisorDescriptionEXT);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_getBinding(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_getBinding(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_getBinding(
     return jniPointerToLong(&o->binding);
 }
 
-void Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_setBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_setBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_setBinding(J
     memcpy(&o->binding, valuePointer, sizeof(o->binding));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_getDivisor(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_getDivisor(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_getDivisor(
     return jniPointerToLong(&o->divisor);
 }
 
-void Java_cz_mg_vulkan_vk_VkVertexInputBindingDivisorDescriptionEXT_setDivisor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_setDivisor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

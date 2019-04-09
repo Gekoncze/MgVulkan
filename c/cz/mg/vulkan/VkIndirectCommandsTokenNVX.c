@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkIndirectCommandsTokenNVX_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkIndirectCommandsTokenNVX);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_getTokenType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkIndirectCommandsTokenNVX_getTokenType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_getTokenType(JNIEnv* env, 
     return jniPointerToLong(&o->tokenType);
 }
 
-void Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_setTokenType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkIndirectCommandsTokenNVX_setTokenType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_setTokenType(JNIEnv* env, j
     memcpy(&o->tokenType, valuePointer, sizeof(o->tokenType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_getBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkIndirectCommandsTokenNVX_getBuffer(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_getBuffer(JNIEnv* env, jcl
     return jniPointerToLong(&o->buffer);
 }
 
-void Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_setBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkIndirectCommandsTokenNVX_setBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_setBuffer(JNIEnv* env, jcla
     memcpy(&o->buffer, valuePointer, sizeof(o->buffer));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_getOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkIndirectCommandsTokenNVX_getOffset(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_getOffset(JNIEnv* env, jcl
     return jniPointerToLong(&o->offset);
 }
 
-void Java_cz_mg_vulkan_vk_VkIndirectCommandsTokenNVX_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkIndirectCommandsTokenNVX_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

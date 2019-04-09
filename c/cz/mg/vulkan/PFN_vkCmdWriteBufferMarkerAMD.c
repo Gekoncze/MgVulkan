@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkCmdWriteBufferMarkerAMD_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong pipelineStage, jlong dstBuffer, jlong dstOffset, jlong marker){
+void Java_cz_mg_vulkan_PFNvkCmdWriteBufferMarkerAMD_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong pipelineStage, jlong dstBuffer, jlong dstOffset, jlong marker){
     (void)env;
     (void)jc;
     PFN_vkCmdWriteBufferMarkerAMD f = (PFN_vkCmdWriteBufferMarkerAMD)jniLongToFunctionPointer(address);

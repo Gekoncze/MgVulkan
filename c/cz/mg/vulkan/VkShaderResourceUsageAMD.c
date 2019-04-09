@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkShaderResourceUsageAMD_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkShaderResourceUsageAMD);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_getNumUsedVgprs(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderResourceUsageAMD_getNumUsedVgprs(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_getNumUsedVgprs(JNIEnv* env,
     return jniPointerToLong(&o->numUsedVgprs);
 }
 
-void Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_setNumUsedVgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderResourceUsageAMD_setNumUsedVgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_setNumUsedVgprs(JNIEnv* env, 
     memcpy(&o->numUsedVgprs, valuePointer, sizeof(o->numUsedVgprs));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_getNumUsedSgprs(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderResourceUsageAMD_getNumUsedSgprs(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_getNumUsedSgprs(JNIEnv* env,
     return jniPointerToLong(&o->numUsedSgprs);
 }
 
-void Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_setNumUsedSgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderResourceUsageAMD_setNumUsedSgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_setNumUsedSgprs(JNIEnv* env, 
     memcpy(&o->numUsedSgprs, valuePointer, sizeof(o->numUsedSgprs));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_getLdsSizePerLocalWorkGroup(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderResourceUsageAMD_getLdsSizePerLocalWorkGroup(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_getLdsSizePerLocalWorkGroup(
     return jniPointerToLong(&o->ldsSizePerLocalWorkGroup);
 }
 
-void Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_setLdsSizePerLocalWorkGroup(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderResourceUsageAMD_setLdsSizePerLocalWorkGroup(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_setLdsSizePerLocalWorkGroup(J
     memcpy(&o->ldsSizePerLocalWorkGroup, valuePointer, sizeof(o->ldsSizePerLocalWorkGroup));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_getLdsUsageSizeInBytes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderResourceUsageAMD_getLdsUsageSizeInBytes(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_getLdsUsageSizeInBytes(JNIEn
     return jniPointerToLong(&o->ldsUsageSizeInBytes);
 }
 
-void Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_setLdsUsageSizeInBytes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderResourceUsageAMD_setLdsUsageSizeInBytes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_setLdsUsageSizeInBytes(JNIEnv
     memcpy(&o->ldsUsageSizeInBytes, valuePointer, sizeof(o->ldsUsageSizeInBytes));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_getScratchMemUsageInBytes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderResourceUsageAMD_getScratchMemUsageInBytes(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_getScratchMemUsageInBytes(JN
     return jniPointerToLong(&o->scratchMemUsageInBytes);
 }
 
-void Java_cz_mg_vulkan_vk_VkShaderResourceUsageAMD_setScratchMemUsageInBytes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderResourceUsageAMD_setScratchMemUsageInBytes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkDebugUtilsMessengerCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getSType(JNIEnv* e
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setSType(JNIEnv* en
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getPNext(JNIEnv* e
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setPNext(JNIEnv* en
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_getFlags(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getFlags(JNIEnv* e
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setFlags(JNIEnv* en
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getMessageSeverity(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_getMessageSeverity(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getMessageSeverity
     return jniPointerToLong(&o->messageSeverity);
 }
 
-void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setMessageSeverity(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_setMessageSeverity(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setMessageSeverity(
     memcpy(&o->messageSeverity, valuePointer, sizeof(o->messageSeverity));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getMessageType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_getMessageType(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getMessageType(JNI
     return jniPointerToLong(&o->messageType);
 }
 
-void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setMessageType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_setMessageType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setMessageType(JNIE
     memcpy(&o->messageType, valuePointer, sizeof(o->messageType));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getPfnUserCallback(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_getPfnUserCallback(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getPfnUserCallback
     return jniPointerToLong(&o->pfnUserCallback);
 }
 
-void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setPfnUserCallback(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_setPfnUserCallback(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setPfnUserCallback(
     memcpy(&o->pfnUserCallback, valuePointer, sizeof(o->pfnUserCallback));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getPUserData(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_getPUserData(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_getPUserData(JNIEn
     return jniPointerToLong(o->pUserData);
 }
 
-void Java_cz_mg_vulkan_vk_VkDebugUtilsMessengerCreateInfoEXT_setPUserData(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsMessengerCreateInfoEXT_setPUserData(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

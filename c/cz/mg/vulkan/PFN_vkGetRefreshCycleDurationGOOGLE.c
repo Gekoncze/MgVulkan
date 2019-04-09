@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_vk_PFNvkGetRefreshCycleDurationGOOGLE_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong swapchain, jlong pDisplayTimingProperties, jlong rval){
+void Java_cz_mg_vulkan_PFNvkGetRefreshCycleDurationGOOGLE_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong swapchain, jlong pDisplayTimingProperties, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkGetRefreshCycleDurationGOOGLE f = (PFN_vkGetRefreshCycleDurationGOOGLE)jniLongToFunctionPointer(address);

@@ -9,14 +9,14 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jlong Java_cz_mg_vulkan_vk_VkClearRect_sizeof(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkClearRect_sizeof(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
     return sizeof(VkClearRect);
 }
 
-jlong Java_cz_mg_vulkan_vk_VkClearRect_getRect(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearRect_getRect(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_vk_VkClearRect_getRect(JNIEnv* env, jclass jc, jlong add
     return jniPointerToLong(&o->rect);
 }
 
-void Java_cz_mg_vulkan_vk_VkClearRect_setRect(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearRect_setRect(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_vk_VkClearRect_setRect(JNIEnv* env, jclass jc, jlong addr
     memcpy(&o->rect, valuePointer, sizeof(o->rect));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkClearRect_getBaseArrayLayer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearRect_getBaseArrayLayer(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_vk_VkClearRect_getBaseArrayLayer(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->baseArrayLayer);
 }
 
-void Java_cz_mg_vulkan_vk_VkClearRect_setBaseArrayLayer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearRect_setBaseArrayLayer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_vk_VkClearRect_setBaseArrayLayer(JNIEnv* env, jclass jc, 
     memcpy(&o->baseArrayLayer, valuePointer, sizeof(o->baseArrayLayer));
 }
 
-jlong Java_cz_mg_vulkan_vk_VkClearRect_getLayerCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearRect_getLayerCount(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_vk_VkClearRect_getLayerCount(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(&o->layerCount);
 }
 
-void Java_cz_mg_vulkan_vk_VkClearRect_setLayerCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearRect_setLayerCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
