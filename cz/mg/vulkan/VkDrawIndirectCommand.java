@@ -28,7 +28,7 @@ public class VkDrawIndirectCommand extends VkObject {
 
     
     public void setVertexCount(VkUInt32 vertexCount) {
-        setVertexCount(getVkAddress(), vertexCount != null ? vertexCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setVertexCount(getVkAddress(), vertexCount != null ? vertexCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -41,7 +41,7 @@ public class VkDrawIndirectCommand extends VkObject {
 
     
     public void setInstanceCount(VkUInt32 instanceCount) {
-        setInstanceCount(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setInstanceCount(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkDrawIndirectCommand extends VkObject {
 
     
     public void setFirstVertex(VkUInt32 firstVertex) {
-        setFirstVertex(getVkAddress(), firstVertex != null ? firstVertex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFirstVertex(getVkAddress(), firstVertex != null ? firstVertex.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkDrawIndirectCommand extends VkObject {
 
     
     public void setFirstInstance(VkUInt32 firstInstance) {
-        setFirstInstance(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFirstInstance(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

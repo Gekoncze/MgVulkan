@@ -22,7 +22,7 @@ public class VkFunctionPointer extends VkObject {
 
     public VkFunctionPointer(VkInstance instance, VkString name) {
         super(sizeof());
-        load(getVkAddress(), instance != null ? instance.getVkAddress() : VkPointer.NULL_ADDRESS, name.getVkAddress());
+        load(getVkAddress(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddress(), name.getVkAddress());
         if(getValue() == NULL) throw new RuntimeException("Could not load vulkan function " + name);
     }
 

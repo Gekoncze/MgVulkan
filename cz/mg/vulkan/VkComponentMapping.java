@@ -28,7 +28,7 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setR(VkComponentSwizzle r) {
-        setR(getVkAddress(), r != null ? r.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setR(getVkAddress(), r != null ? r.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -41,7 +41,7 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setG(VkComponentSwizzle g) {
-        setG(getVkAddress(), g != null ? g.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setG(getVkAddress(), g != null ? g.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setB(VkComponentSwizzle b) {
-        setB(getVkAddress(), b != null ? b.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setB(getVkAddress(), b != null ? b.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setA(VkComponentSwizzle a) {
-        setA(getVkAddress(), a != null ? a.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setA(getVkAddress(), a != null ? a.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

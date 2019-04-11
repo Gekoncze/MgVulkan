@@ -22,7 +22,7 @@ public class PFNvkGetDeviceGroupSurfacePresentModesKHR extends VkFunctionPointer
     }
 
     public void call(VkDevice device, VkSurfaceKHR surface, VkDeviceGroupPresentModeFlagsKHR pModes, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, surface != null ? surface.getVkAddress() : VkPointer.NULL_ADDRESS, pModes != null ? pModes.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), surface != null ? surface.getVkAddress() : VkPointer.getNullAddress(), pModes != null ? pModes.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long device, long surface, long pModes, long rval);

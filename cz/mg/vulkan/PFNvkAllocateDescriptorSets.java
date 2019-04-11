@@ -22,7 +22,7 @@ public class PFNvkAllocateDescriptorSets extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkDescriptorSetAllocateInfo pAllocateInfo, VkDescriptorSet pDescriptorSets, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, pAllocateInfo != null ? pAllocateInfo.getVkAddress() : VkPointer.NULL, pDescriptorSets != null ? pDescriptorSets.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pAllocateInfo != null ? pAllocateInfo.getVkAddress() : VkPointer.NULL, pDescriptorSets != null ? pDescriptorSets.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long device, long pAllocateInfo, long pDescriptorSets, long rval);

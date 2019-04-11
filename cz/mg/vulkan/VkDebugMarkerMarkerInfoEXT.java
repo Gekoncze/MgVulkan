@@ -28,7 +28,7 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

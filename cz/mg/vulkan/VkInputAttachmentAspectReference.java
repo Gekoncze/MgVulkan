@@ -27,7 +27,7 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
     
     public void setSubpass(VkUInt32 subpass) {
-        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
     
     public void setInputAttachmentIndex(VkUInt32 inputAttachmentIndex) {
-        setInputAttachmentIndex(getVkAddress(), inputAttachmentIndex != null ? inputAttachmentIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setInputAttachmentIndex(getVkAddress(), inputAttachmentIndex != null ? inputAttachmentIndex.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

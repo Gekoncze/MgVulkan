@@ -28,7 +28,7 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
 
     
     public void setTokenType(VkIndirectCommandsTokenTypeNVX tokenType) {
-        setTokenType(getVkAddress(), tokenType != null ? tokenType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setTokenType(getVkAddress(), tokenType != null ? tokenType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -41,7 +41,7 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
 
     
     public void setBindingUnit(VkUInt32 bindingUnit) {
-        setBindingUnit(getVkAddress(), bindingUnit != null ? bindingUnit.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setBindingUnit(getVkAddress(), bindingUnit != null ? bindingUnit.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
 
     
     public void setDynamicCount(VkUInt32 dynamicCount) {
-        setDynamicCount(getVkAddress(), dynamicCount != null ? dynamicCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDynamicCount(getVkAddress(), dynamicCount != null ? dynamicCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
 
     
     public void setDivisor(VkUInt32 divisor) {
-        setDivisor(getVkAddress(), divisor != null ? divisor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDivisor(getVkAddress(), divisor != null ? divisor.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

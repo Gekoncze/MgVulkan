@@ -36,7 +36,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -62,7 +62,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineDepthStencilStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -75,7 +75,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setDepthTestEnable(VkBool32 depthTestEnable) {
-        setDepthTestEnable(getVkAddress(), depthTestEnable != null ? depthTestEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDepthTestEnable(getVkAddress(), depthTestEnable != null ? depthTestEnable.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -88,7 +88,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setDepthWriteEnable(VkBool32 depthWriteEnable) {
-        setDepthWriteEnable(getVkAddress(), depthWriteEnable != null ? depthWriteEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDepthWriteEnable(getVkAddress(), depthWriteEnable != null ? depthWriteEnable.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -101,7 +101,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setDepthCompareOp(VkCompareOp depthCompareOp) {
-        setDepthCompareOp(getVkAddress(), depthCompareOp != null ? depthCompareOp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDepthCompareOp(getVkAddress(), depthCompareOp != null ? depthCompareOp.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -114,7 +114,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setDepthBoundsTestEnable(VkBool32 depthBoundsTestEnable) {
-        setDepthBoundsTestEnable(getVkAddress(), depthBoundsTestEnable != null ? depthBoundsTestEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDepthBoundsTestEnable(getVkAddress(), depthBoundsTestEnable != null ? depthBoundsTestEnable.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -127,7 +127,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setStencilTestEnable(VkBool32 stencilTestEnable) {
-        setStencilTestEnable(getVkAddress(), stencilTestEnable != null ? stencilTestEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setStencilTestEnable(getVkAddress(), stencilTestEnable != null ? stencilTestEnable.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -140,7 +140,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setFront(VkStencilOpState front) {
-        setFront(getVkAddress(), front != null ? front.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFront(getVkAddress(), front != null ? front.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -153,7 +153,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setBack(VkStencilOpState back) {
-        setBack(getVkAddress(), back != null ? back.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setBack(getVkAddress(), back != null ? back.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -166,7 +166,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setMinDepthBounds(VkFloat minDepthBounds) {
-        setMinDepthBounds(getVkAddress(), minDepthBounds != null ? minDepthBounds.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMinDepthBounds(getVkAddress(), minDepthBounds != null ? minDepthBounds.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -179,7 +179,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setMaxDepthBounds(VkFloat maxDepthBounds) {
-        setMaxDepthBounds(getVkAddress(), maxDepthBounds != null ? maxDepthBounds.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxDepthBounds(getVkAddress(), maxDepthBounds != null ? maxDepthBounds.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

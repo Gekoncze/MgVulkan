@@ -27,7 +27,7 @@ public class VkClearRect extends VkObject {
 
     
     public void setRect(VkRect2D rect) {
-        setRect(getVkAddress(), rect != null ? rect.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setRect(getVkAddress(), rect != null ? rect.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkClearRect extends VkObject {
 
     
     public void setBaseArrayLayer(VkUInt32 baseArrayLayer) {
-        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkClearRect extends VkObject {
 
     
     public void setLayerCount(VkUInt32 layerCount) {
-        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

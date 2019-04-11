@@ -33,7 +33,7 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
     
     public void setSupportedAlpha(VkDisplayPlaneAlphaFlagsKHR supportedAlpha) {
-        setSupportedAlpha(getVkAddress(), supportedAlpha != null ? supportedAlpha.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSupportedAlpha(getVkAddress(), supportedAlpha != null ? supportedAlpha.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -46,7 +46,7 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
     
     public void setMinSrcPosition(VkOffset2D minSrcPosition) {
-        setMinSrcPosition(getVkAddress(), minSrcPosition != null ? minSrcPosition.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMinSrcPosition(getVkAddress(), minSrcPosition != null ? minSrcPosition.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -59,7 +59,7 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
     
     public void setMaxSrcPosition(VkOffset2D maxSrcPosition) {
-        setMaxSrcPosition(getVkAddress(), maxSrcPosition != null ? maxSrcPosition.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxSrcPosition(getVkAddress(), maxSrcPosition != null ? maxSrcPosition.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -72,7 +72,7 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
     
     public void setMinSrcExtent(VkExtent2D minSrcExtent) {
-        setMinSrcExtent(getVkAddress(), minSrcExtent != null ? minSrcExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMinSrcExtent(getVkAddress(), minSrcExtent != null ? minSrcExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -85,7 +85,7 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
     
     public void setMaxSrcExtent(VkExtent2D maxSrcExtent) {
-        setMaxSrcExtent(getVkAddress(), maxSrcExtent != null ? maxSrcExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxSrcExtent(getVkAddress(), maxSrcExtent != null ? maxSrcExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -98,7 +98,7 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
     
     public void setMinDstPosition(VkOffset2D minDstPosition) {
-        setMinDstPosition(getVkAddress(), minDstPosition != null ? minDstPosition.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMinDstPosition(getVkAddress(), minDstPosition != null ? minDstPosition.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -111,7 +111,7 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
     
     public void setMaxDstPosition(VkOffset2D maxDstPosition) {
-        setMaxDstPosition(getVkAddress(), maxDstPosition != null ? maxDstPosition.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxDstPosition(getVkAddress(), maxDstPosition != null ? maxDstPosition.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -124,7 +124,7 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
     
     public void setMinDstExtent(VkExtent2D minDstExtent) {
-        setMinDstExtent(getVkAddress(), minDstExtent != null ? minDstExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMinDstExtent(getVkAddress(), minDstExtent != null ? minDstExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -137,7 +137,7 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
     
     public void setMaxDstExtent(VkExtent2D maxDstExtent) {
-        setMaxDstExtent(getVkAddress(), maxDstExtent != null ? maxDstExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxDstExtent(getVkAddress(), maxDstExtent != null ? maxDstExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

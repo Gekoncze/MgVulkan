@@ -27,7 +27,7 @@ public class VkPhysicalDeviceExternalImageFormatInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkPhysicalDeviceExternalImageFormatInfo extends VkObject {
 
     
     public void setHandleType(VkExternalMemoryHandleTypeFlagBits handleType) {
-        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

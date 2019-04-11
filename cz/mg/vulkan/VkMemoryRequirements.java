@@ -27,7 +27,7 @@ public class VkMemoryRequirements extends VkObject {
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkMemoryRequirements extends VkObject {
 
     
     public void setAlignment(VkDeviceSize alignment) {
-        setAlignment(getVkAddress(), alignment != null ? alignment.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAlignment(getVkAddress(), alignment != null ? alignment.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkMemoryRequirements extends VkObject {
 
     
     public void setMemoryTypeBits(VkUInt32 memoryTypeBits) {
-        setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

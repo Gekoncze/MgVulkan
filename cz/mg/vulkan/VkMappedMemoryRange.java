@@ -29,7 +29,7 @@ public class VkMappedMemoryRange extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkMappedMemoryRange extends VkObject {
 
     
     public void setMemory(VkDeviceMemory memory) {
-        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkMappedMemoryRange extends VkObject {
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkMappedMemoryRange extends VkObject {
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

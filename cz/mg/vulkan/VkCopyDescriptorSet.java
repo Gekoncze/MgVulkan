@@ -33,7 +33,7 @@ public class VkCopyDescriptorSet extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -59,7 +59,7 @@ public class VkCopyDescriptorSet extends VkObject {
 
     
     public void setSrcSet(VkDescriptorSet srcSet) {
-        setSrcSet(getVkAddress(), srcSet != null ? srcSet.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSrcSet(getVkAddress(), srcSet != null ? srcSet.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -72,7 +72,7 @@ public class VkCopyDescriptorSet extends VkObject {
 
     
     public void setSrcBinding(VkUInt32 srcBinding) {
-        setSrcBinding(getVkAddress(), srcBinding != null ? srcBinding.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSrcBinding(getVkAddress(), srcBinding != null ? srcBinding.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -85,7 +85,7 @@ public class VkCopyDescriptorSet extends VkObject {
 
     
     public void setSrcArrayElement(VkUInt32 srcArrayElement) {
-        setSrcArrayElement(getVkAddress(), srcArrayElement != null ? srcArrayElement.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSrcArrayElement(getVkAddress(), srcArrayElement != null ? srcArrayElement.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -98,7 +98,7 @@ public class VkCopyDescriptorSet extends VkObject {
 
     
     public void setDstSet(VkDescriptorSet dstSet) {
-        setDstSet(getVkAddress(), dstSet != null ? dstSet.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstSet(getVkAddress(), dstSet != null ? dstSet.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -111,7 +111,7 @@ public class VkCopyDescriptorSet extends VkObject {
 
     
     public void setDstBinding(VkUInt32 dstBinding) {
-        setDstBinding(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstBinding(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -124,7 +124,7 @@ public class VkCopyDescriptorSet extends VkObject {
 
     
     public void setDstArrayElement(VkUInt32 dstArrayElement) {
-        setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -137,7 +137,7 @@ public class VkCopyDescriptorSet extends VkObject {
 
     
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

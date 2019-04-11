@@ -29,7 +29,7 @@ public class VkSparseMemoryBind extends VkObject {
 
     
     public void setResourceOffset(VkDeviceSize resourceOffset) {
-        setResourceOffset(getVkAddress(), resourceOffset != null ? resourceOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setResourceOffset(getVkAddress(), resourceOffset != null ? resourceOffset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -42,7 +42,7 @@ public class VkSparseMemoryBind extends VkObject {
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkSparseMemoryBind extends VkObject {
 
     
     public void setMemory(VkDeviceMemory memory) {
-        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkSparseMemoryBind extends VkObject {
 
     
     public void setMemoryOffset(VkDeviceSize memoryOffset) {
-        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkSparseMemoryBind extends VkObject {
 
     
     public void setFlags(VkSparseMemoryBindFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

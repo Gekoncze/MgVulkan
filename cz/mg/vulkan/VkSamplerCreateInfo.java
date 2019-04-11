@@ -42,7 +42,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setFlags(VkSamplerCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMagFilter(VkFilter magFilter) {
-        setMagFilter(getVkAddress(), magFilter != null ? magFilter.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMagFilter(getVkAddress(), magFilter != null ? magFilter.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -94,7 +94,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMinFilter(VkFilter minFilter) {
-        setMinFilter(getVkAddress(), minFilter != null ? minFilter.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMinFilter(getVkAddress(), minFilter != null ? minFilter.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -107,7 +107,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMipmapMode(VkSamplerMipmapMode mipmapMode) {
-        setMipmapMode(getVkAddress(), mipmapMode != null ? mipmapMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMipmapMode(getVkAddress(), mipmapMode != null ? mipmapMode.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -120,7 +120,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setAddressModeU(VkSamplerAddressMode addressModeU) {
-        setAddressModeU(getVkAddress(), addressModeU != null ? addressModeU.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAddressModeU(getVkAddress(), addressModeU != null ? addressModeU.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -133,7 +133,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setAddressModeV(VkSamplerAddressMode addressModeV) {
-        setAddressModeV(getVkAddress(), addressModeV != null ? addressModeV.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAddressModeV(getVkAddress(), addressModeV != null ? addressModeV.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -146,7 +146,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setAddressModeW(VkSamplerAddressMode addressModeW) {
-        setAddressModeW(getVkAddress(), addressModeW != null ? addressModeW.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAddressModeW(getVkAddress(), addressModeW != null ? addressModeW.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -159,7 +159,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMipLodBias(VkFloat mipLodBias) {
-        setMipLodBias(getVkAddress(), mipLodBias != null ? mipLodBias.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMipLodBias(getVkAddress(), mipLodBias != null ? mipLodBias.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -172,7 +172,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setAnisotropyEnable(VkBool32 anisotropyEnable) {
-        setAnisotropyEnable(getVkAddress(), anisotropyEnable != null ? anisotropyEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAnisotropyEnable(getVkAddress(), anisotropyEnable != null ? anisotropyEnable.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -185,7 +185,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMaxAnisotropy(VkFloat maxAnisotropy) {
-        setMaxAnisotropy(getVkAddress(), maxAnisotropy != null ? maxAnisotropy.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxAnisotropy(getVkAddress(), maxAnisotropy != null ? maxAnisotropy.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -198,7 +198,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setCompareEnable(VkBool32 compareEnable) {
-        setCompareEnable(getVkAddress(), compareEnable != null ? compareEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCompareEnable(getVkAddress(), compareEnable != null ? compareEnable.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -211,7 +211,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setCompareOp(VkCompareOp compareOp) {
-        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -224,7 +224,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMinLod(VkFloat minLod) {
-        setMinLod(getVkAddress(), minLod != null ? minLod.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMinLod(getVkAddress(), minLod != null ? minLod.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -237,7 +237,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMaxLod(VkFloat maxLod) {
-        setMaxLod(getVkAddress(), maxLod != null ? maxLod.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxLod(getVkAddress(), maxLod != null ? maxLod.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -250,7 +250,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setBorderColor(VkBorderColor borderColor) {
-        setBorderColor(getVkAddress(), borderColor != null ? borderColor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setBorderColor(getVkAddress(), borderColor != null ? borderColor.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -263,7 +263,7 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setUnnormalizedCoordinates(VkBool32 unnormalizedCoordinates) {
-        setUnnormalizedCoordinates(getVkAddress(), unnormalizedCoordinates != null ? unnormalizedCoordinates.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setUnnormalizedCoordinates(getVkAddress(), unnormalizedCoordinates != null ? unnormalizedCoordinates.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

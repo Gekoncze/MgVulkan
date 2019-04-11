@@ -27,7 +27,7 @@ public class VkOffset3D extends VkObject {
 
     
     public void setX(VkInt32 x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkOffset3D extends VkObject {
 
     
     public void setY(VkInt32 y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkOffset3D extends VkObject {
 
     
     public void setZ(VkInt32 z) {
-        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

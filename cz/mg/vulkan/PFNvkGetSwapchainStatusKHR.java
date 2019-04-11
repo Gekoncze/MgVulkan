@@ -22,7 +22,7 @@ public class PFNvkGetSwapchainStatusKHR extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkSwapchainKHR swapchain, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, swapchain != null ? swapchain.getVkAddress() : VkPointer.NULL_ADDRESS, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddress(), rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long device, long swapchain, long rval);

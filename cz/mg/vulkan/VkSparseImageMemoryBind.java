@@ -30,7 +30,7 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setSubresource(VkImageSubresource subresource) {
-        setSubresource(getVkAddress(), subresource != null ? subresource.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSubresource(getVkAddress(), subresource != null ? subresource.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -43,7 +43,7 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setOffset(VkOffset3D offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setExtent(VkExtent3D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setMemory(VkDeviceMemory memory) {
-        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setMemoryOffset(VkDeviceSize memoryOffset) {
-        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -95,7 +95,7 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setFlags(VkSparseMemoryBindFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

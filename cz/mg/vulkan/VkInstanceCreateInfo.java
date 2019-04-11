@@ -32,7 +32,7 @@ public class VkInstanceCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -58,7 +58,7 @@ public class VkInstanceCreateInfo extends VkObject {
 
     
     public void setFlags(VkInstanceCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -84,7 +84,7 @@ public class VkInstanceCreateInfo extends VkObject {
 
     
     public void setEnabledLayerCount(VkUInt32 enabledLayerCount) {
-        setEnabledLayerCount(getVkAddress(), enabledLayerCount != null ? enabledLayerCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setEnabledLayerCount(getVkAddress(), enabledLayerCount != null ? enabledLayerCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -110,7 +110,7 @@ public class VkInstanceCreateInfo extends VkObject {
 
     
     public void setEnabledExtensionCount(VkUInt32 enabledExtensionCount) {
-        setEnabledExtensionCount(getVkAddress(), enabledExtensionCount != null ? enabledExtensionCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setEnabledExtensionCount(getVkAddress(), enabledExtensionCount != null ? enabledExtensionCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

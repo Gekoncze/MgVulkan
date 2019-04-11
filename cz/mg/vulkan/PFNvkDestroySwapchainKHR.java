@@ -22,7 +22,7 @@ public class PFNvkDestroySwapchainKHR extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkSwapchainKHR swapchain, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, swapchain != null ? swapchain.getVkAddress() : VkPointer.NULL_ADDRESS, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long swapchain, long pAllocator);

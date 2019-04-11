@@ -26,7 +26,7 @@ public class VkAttachmentReference extends VkObject {
 
     
     public void setAttachment(VkUInt32 attachment) {
-        setAttachment(getVkAddress(), attachment != null ? attachment.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAttachment(getVkAddress(), attachment != null ? attachment.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -39,7 +39,7 @@ public class VkAttachmentReference extends VkObject {
 
     
     public void setLayout(VkImageLayout layout) {
-        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

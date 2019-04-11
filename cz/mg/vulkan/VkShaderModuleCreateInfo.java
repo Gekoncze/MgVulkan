@@ -29,7 +29,7 @@ public class VkShaderModuleCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkShaderModuleCreateInfo extends VkObject {
 
     
     public void setFlags(VkShaderModuleCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkShaderModuleCreateInfo extends VkObject {
 
     
     public void setCodeSize(VkSize codeSize) {
-        setCodeSize(getVkAddress(), codeSize != null ? codeSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCodeSize(getVkAddress(), codeSize != null ? codeSize.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

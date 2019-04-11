@@ -29,7 +29,7 @@ public class VkDeviceQueueInfo2 extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkDeviceQueueInfo2 extends VkObject {
 
     
     public void setFlags(VkDeviceQueueCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkDeviceQueueInfo2 extends VkObject {
 
     
     public void setQueueFamilyIndex(VkUInt32 queueFamilyIndex) {
-        setQueueFamilyIndex(getVkAddress(), queueFamilyIndex != null ? queueFamilyIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setQueueFamilyIndex(getVkAddress(), queueFamilyIndex != null ? queueFamilyIndex.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkDeviceQueueInfo2 extends VkObject {
 
     
     public void setQueueIndex(VkUInt32 queueIndex) {
-        setQueueIndex(getVkAddress(), queueIndex != null ? queueIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setQueueIndex(getVkAddress(), queueIndex != null ? queueIndex.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

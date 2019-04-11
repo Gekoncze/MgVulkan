@@ -27,7 +27,7 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
 
     
     public void setMaxVariableDescriptorCount(VkUInt32 maxVariableDescriptorCount) {
-        setMaxVariableDescriptorCount(getVkAddress(), maxVariableDescriptorCount != null ? maxVariableDescriptorCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxVariableDescriptorCount(getVkAddress(), maxVariableDescriptorCount != null ? maxVariableDescriptorCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

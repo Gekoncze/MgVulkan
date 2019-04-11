@@ -27,7 +27,7 @@ public class VkImageSparseMemoryRequirementsInfo2 extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkImageSparseMemoryRequirementsInfo2 extends VkObject {
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

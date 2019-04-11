@@ -27,7 +27,7 @@ public class VkBindImagePlaneMemoryInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkBindImagePlaneMemoryInfo extends VkObject {
 
     
     public void setPlaneAspect(VkImageAspectFlagBits planeAspect) {
-        setPlaneAspect(getVkAddress(), planeAspect != null ? planeAspect.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPlaneAspect(getVkAddress(), planeAspect != null ? planeAspect.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

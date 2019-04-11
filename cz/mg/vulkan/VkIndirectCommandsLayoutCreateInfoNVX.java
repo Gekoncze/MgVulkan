@@ -30,7 +30,7 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
 
     
     public void setPipelineBindPoint(VkPipelineBindPoint pipelineBindPoint) {
-        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
 
     
     public void setFlags(VkIndirectCommandsLayoutUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
 
     
     public void setTokenCount(VkUInt32 tokenCount) {
-        setTokenCount(getVkAddress(), tokenCount != null ? tokenCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setTokenCount(getVkAddress(), tokenCount != null ? tokenCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

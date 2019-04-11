@@ -22,7 +22,7 @@ public class PFNvkDebugMarkerSetObjectNameEXT extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkDebugMarkerObjectNameInfoEXT pNameInfo, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, pNameInfo != null ? pNameInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pNameInfo != null ? pNameInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long device, long pNameInfo, long rval);

@@ -27,7 +27,7 @@ public class VkClearAttachment extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkClearAttachment extends VkObject {
 
     
     public void setColorAttachment(VkUInt32 colorAttachment) {
-        setColorAttachment(getVkAddress(), colorAttachment != null ? colorAttachment.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setColorAttachment(getVkAddress(), colorAttachment != null ? colorAttachment.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkClearAttachment extends VkObject {
 
     
     public void setClearValue(VkClearValue clearValue) {
-        setClearValue(getVkAddress(), clearValue != null ? clearValue.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setClearValue(getVkAddress(), clearValue != null ? clearValue.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

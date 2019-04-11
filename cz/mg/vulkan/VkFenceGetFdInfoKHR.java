@@ -28,7 +28,7 @@ public class VkFenceGetFdInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkFenceGetFdInfoKHR extends VkObject {
 
     
     public void setFence(VkFence fence) {
-        setFence(getVkAddress(), fence != null ? fence.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFence(getVkAddress(), fence != null ? fence.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkFenceGetFdInfoKHR extends VkObject {
 
     
     public void setHandleType(VkExternalFenceHandleTypeFlagBits handleType) {
-        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

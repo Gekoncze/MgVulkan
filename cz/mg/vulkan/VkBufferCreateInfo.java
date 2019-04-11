@@ -32,7 +32,7 @@ public class VkBufferCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -58,7 +58,7 @@ public class VkBufferCreateInfo extends VkObject {
 
     
     public void setFlags(VkBufferCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -71,7 +71,7 @@ public class VkBufferCreateInfo extends VkObject {
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -84,7 +84,7 @@ public class VkBufferCreateInfo extends VkObject {
 
     
     public void setUsage(VkBufferUsageFlags usage) {
-        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -97,7 +97,7 @@ public class VkBufferCreateInfo extends VkObject {
 
     
     public void setSharingMode(VkSharingMode sharingMode) {
-        setSharingMode(getVkAddress(), sharingMode != null ? sharingMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSharingMode(getVkAddress(), sharingMode != null ? sharingMode.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -110,7 +110,7 @@ public class VkBufferCreateInfo extends VkObject {
 
     
     public void setQueueFamilyIndexCount(VkUInt32 queueFamilyIndexCount) {
-        setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount != null ? queueFamilyIndexCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount != null ? queueFamilyIndexCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

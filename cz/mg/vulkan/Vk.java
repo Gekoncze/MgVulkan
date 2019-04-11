@@ -1,12 +1,14 @@
 package cz.mg.vulkan;
 
-/**
- *  @see <a href="https://www.khronos.org/registry/vulkan/specs/1.1-extensions/man/html/">khronos documentation</a>
- **/
 public class Vk {
     private VkInstance instance = null;
 
     public Vk(){
+        System.loadLibrary("MgVulkanC");
+    }
+
+    public Vk(String mgVulkanLibraryFilename){
+        System.loadLibrary(mgVulkanLibraryFilename);
     }
 
     public VkInstance getInstance(){
@@ -35,875 +37,6 @@ public class Vk {
 
     public static int VK_API_VERSION_1_0 = VK_MAKE_VERSION(1, 0, 0);
     public static int VK_API_VERSION_1_1 = VK_MAKE_VERSION(1, 1, 0);
-
-    public static final long VK_VERSION_1_0 = getVkVersion10();
-    private static native long getVkVersion10();
-
-    public static final long VK_HEADER_VERSION = getVkHeaderVersion();
-    private static native long getVkHeaderVersion();
-
-    public static final long VK_NULL_HANDLE = getVkNullHandle();
-    private static native long getVkNullHandle();
-
-    public static final long VK_LOD_CLAMP_NONE = getVkLodClampNone();
-    private static native long getVkLodClampNone();
-
-    public static final long VK_REMAINING_MIP_LEVELS = getVkRemainingMipLevels();
-    private static native long getVkRemainingMipLevels();
-
-    public static final long VK_REMAINING_ARRAY_LAYERS = getVkRemainingArrayLayers();
-    private static native long getVkRemainingArrayLayers();
-
-    public static final long VK_WHOLE_SIZE = getVkWholeSize();
-    private static native long getVkWholeSize();
-
-    public static final long VK_ATTACHMENT_UNUSED = getVkAttachmentUnused();
-    private static native long getVkAttachmentUnused();
-
-    public static final long VK_TRUE = getVkTrue();
-    private static native long getVkTrue();
-
-    public static final long VK_FALSE = getVkFalse();
-    private static native long getVkFalse();
-
-    public static final long VK_QUEUE_FAMILY_IGNORED = getVkQueueFamilyIgnored();
-    private static native long getVkQueueFamilyIgnored();
-
-    public static final long VK_SUBPASS_EXTERNAL = getVkSubpassExternal();
-    private static native long getVkSubpassExternal();
-
-    public static final long VK_MAX_PHYSICAL_DEVICE_NAME_SIZE = getVkMaxPhysicalDeviceNameSize();
-    private static native long getVkMaxPhysicalDeviceNameSize();
-
-    public static final long VK_UUID_SIZE = getVkUuidSize();
-    private static native long getVkUuidSize();
-
-    public static final long VK_MAX_MEMORY_TYPES = getVkMaxMemoryTypes();
-    private static native long getVkMaxMemoryTypes();
-
-    public static final long VK_MAX_MEMORY_HEAPS = getVkMaxMemoryHeaps();
-    private static native long getVkMaxMemoryHeaps();
-
-    public static final long VK_MAX_EXTENSION_NAME_SIZE = getVkMaxExtensionNameSize();
-    private static native long getVkMaxExtensionNameSize();
-
-    public static final long VK_MAX_DESCRIPTION_SIZE = getVkMaxDescriptionSize();
-    private static native long getVkMaxDescriptionSize();
-
-    public static final long VK_VERSION_1_1 = getVkVersion11();
-    private static native long getVkVersion11();
-
-    public static final long VK_MAX_DEVICE_GROUP_SIZE = getVkMaxDeviceGroupSize();
-    private static native long getVkMaxDeviceGroupSize();
-
-    public static final long VK_LUID_SIZE = getVkLuidSize();
-    private static native long getVkLuidSize();
-
-    public static final long VK_QUEUE_FAMILY_EXTERNAL = getVkQueueFamilyExternal();
-    private static native long getVkQueueFamilyExternal();
-
-    public static final long VK_KHR_surface = getVkKhrSurface();
-    private static native long getVkKhrSurface();
-
-    public static final long VK_KHR_SURFACE_SPEC_VERSION = getVkKhrSurfaceSpecVersion();
-    private static native long getVkKhrSurfaceSpecVersion();
-
-    public static final String VK_KHR_SURFACE_EXTENSION_NAME = "VK_KHR_surface";
-
-    public static final long VK_COLORSPACE_SRGB_NONLINEAR_KHR = getVkColorspaceSrgbNonlinearKhr();
-    private static native long getVkColorspaceSrgbNonlinearKhr();
-
-    public static final long VK_KHR_swapchain = getVkKhrSwapchain();
-    private static native long getVkKhrSwapchain();
-
-    public static final long VK_KHR_SWAPCHAIN_SPEC_VERSION = getVkKhrSwapchainSpecVersion();
-    private static native long getVkKhrSwapchainSpecVersion();
-
-    public static final String VK_KHR_SWAPCHAIN_EXTENSION_NAME = "VK_KHR_swapchain";
-
-    public static final long VK_KHR_display = getVkKhrDisplay();
-    private static native long getVkKhrDisplay();
-
-    public static final long VK_KHR_DISPLAY_SPEC_VERSION = getVkKhrDisplaySpecVersion();
-    private static native long getVkKhrDisplaySpecVersion();
-
-    public static final String VK_KHR_DISPLAY_EXTENSION_NAME = "VK_KHR_display";
-
-    public static final long VK_KHR_display_swapchain = getVkKhrDisplaySwapchain();
-    private static native long getVkKhrDisplaySwapchain();
-
-    public static final long VK_KHR_DISPLAY_SWAPCHAIN_SPEC_VERSION = getVkKhrDisplaySwapchainSpecVersion();
-    private static native long getVkKhrDisplaySwapchainSpecVersion();
-
-    public static final String VK_KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME = "VK_KHR_display_swapchain";
-
-    public static final long VK_KHR_sampler_mirror_clamp_to_edge = getVkKhrSamplerMirrorClampToEdge();
-    private static native long getVkKhrSamplerMirrorClampToEdge();
-
-    public static final long VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_SPEC_VERSION = getVkKhrSamplerMirrorClampToEdgeSpecVersion();
-    private static native long getVkKhrSamplerMirrorClampToEdgeSpecVersion();
-
-    public static final String VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_EXTENSION_NAME = "VK_KHR_sampler_mirror_clamp_to_edge";
-
-    public static final long VK_KHR_multiview = getVkKhrMultiview();
-    private static native long getVkKhrMultiview();
-
-    public static final long VK_KHR_MULTIVIEW_SPEC_VERSION = getVkKhrMultiviewSpecVersion();
-    private static native long getVkKhrMultiviewSpecVersion();
-
-    public static final String VK_KHR_MULTIVIEW_EXTENSION_NAME = "VK_KHR_multiview";
-
-    public static final long VK_KHR_get_physical_device_properties2 = getVkKhrGetPhysicalDeviceProperties2();
-    private static native long getVkKhrGetPhysicalDeviceProperties2();
-
-    public static final long VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_SPEC_VERSION = getVkKhrGetPhysicalDeviceProperties2SpecVersion();
-    private static native long getVkKhrGetPhysicalDeviceProperties2SpecVersion();
-
-    public static final String VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME = "VK_KHR_get_physical_device_properties2";
-
-    public static final long VK_KHR_device_group = getVkKhrDeviceGroup();
-    private static native long getVkKhrDeviceGroup();
-
-    public static final long VK_KHR_DEVICE_GROUP_SPEC_VERSION = getVkKhrDeviceGroupSpecVersion();
-    private static native long getVkKhrDeviceGroupSpecVersion();
-
-    public static final String VK_KHR_DEVICE_GROUP_EXTENSION_NAME = "VK_KHR_device_group";
-
-    public static final long VK_KHR_shader_draw_parameters = getVkKhrShaderDrawParameters();
-    private static native long getVkKhrShaderDrawParameters();
-
-    public static final long VK_KHR_SHADER_DRAW_PARAMETERS_SPEC_VERSION = getVkKhrShaderDrawParametersSpecVersion();
-    private static native long getVkKhrShaderDrawParametersSpecVersion();
-
-    public static final String VK_KHR_SHADER_DRAW_PARAMETERS_EXTENSION_NAME = "VK_KHR_shader_draw_parameters";
-
-    public static final long VK_KHR_maintenance1 = getVkKhrMaintenance1();
-    private static native long getVkKhrMaintenance1();
-
-    public static final long VK_KHR_MAINTENANCE1_SPEC_VERSION = getVkKhrMaintenance1SpecVersion();
-    private static native long getVkKhrMaintenance1SpecVersion();
-
-    public static final String VK_KHR_MAINTENANCE1_EXTENSION_NAME = "VK_KHR_maintenance1";
-
-    public static final long VK_KHR_device_group_creation = getVkKhrDeviceGroupCreation();
-    private static native long getVkKhrDeviceGroupCreation();
-
-    public static final long VK_KHR_DEVICE_GROUP_CREATION_SPEC_VERSION = getVkKhrDeviceGroupCreationSpecVersion();
-    private static native long getVkKhrDeviceGroupCreationSpecVersion();
-
-    public static final String VK_KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME = "VK_KHR_device_group_creation";
-
-    public static final long VK_MAX_DEVICE_GROUP_SIZE_KHR = getVkMaxDeviceGroupSizeKhr();
-    private static native long getVkMaxDeviceGroupSizeKhr();
-
-    public static final long VK_KHR_external_memory_capabilities = getVkKhrExternalMemoryCapabilities();
-    private static native long getVkKhrExternalMemoryCapabilities();
-
-    public static final long VK_KHR_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION = getVkKhrExternalMemoryCapabilitiesSpecVersion();
-    private static native long getVkKhrExternalMemoryCapabilitiesSpecVersion();
-
-    public static final String VK_KHR_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME = "VK_KHR_external_memory_capabilities";
-
-    public static final long VK_LUID_SIZE_KHR = getVkLuidSizeKhr();
-    private static native long getVkLuidSizeKhr();
-
-    public static final long VK_KHR_external_memory = getVkKhrExternalMemory();
-    private static native long getVkKhrExternalMemory();
-
-    public static final long VK_KHR_EXTERNAL_MEMORY_SPEC_VERSION = getVkKhrExternalMemorySpecVersion();
-    private static native long getVkKhrExternalMemorySpecVersion();
-
-    public static final String VK_KHR_EXTERNAL_MEMORY_EXTENSION_NAME = "VK_KHR_external_memory";
-
-    public static final long VK_QUEUE_FAMILY_EXTERNAL_KHR = getVkQueueFamilyExternalKhr();
-    private static native long getVkQueueFamilyExternalKhr();
-
-    public static final long VK_KHR_external_memory_fd = getVkKhrExternalMemoryFd();
-    private static native long getVkKhrExternalMemoryFd();
-
-    public static final long VK_KHR_EXTERNAL_MEMORY_FD_SPEC_VERSION = getVkKhrExternalMemoryFdSpecVersion();
-    private static native long getVkKhrExternalMemoryFdSpecVersion();
-
-    public static final String VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME = "VK_KHR_external_memory_fd";
-
-    public static final long VK_KHR_external_semaphore_capabilities = getVkKhrExternalSemaphoreCapabilities();
-    private static native long getVkKhrExternalSemaphoreCapabilities();
-
-    public static final long VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_SPEC_VERSION = getVkKhrExternalSemaphoreCapabilitiesSpecVersion();
-    private static native long getVkKhrExternalSemaphoreCapabilitiesSpecVersion();
-
-    public static final String VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME = "VK_KHR_external_semaphore_capabilities";
-
-    public static final long VK_KHR_external_semaphore = getVkKhrExternalSemaphore();
-    private static native long getVkKhrExternalSemaphore();
-
-    public static final long VK_KHR_EXTERNAL_SEMAPHORE_SPEC_VERSION = getVkKhrExternalSemaphoreSpecVersion();
-    private static native long getVkKhrExternalSemaphoreSpecVersion();
-
-    public static final String VK_KHR_EXTERNAL_SEMAPHORE_EXTENSION_NAME = "VK_KHR_external_semaphore";
-
-    public static final long VK_KHR_external_semaphore_fd = getVkKhrExternalSemaphoreFd();
-    private static native long getVkKhrExternalSemaphoreFd();
-
-    public static final long VK_KHR_EXTERNAL_SEMAPHORE_FD_SPEC_VERSION = getVkKhrExternalSemaphoreFdSpecVersion();
-    private static native long getVkKhrExternalSemaphoreFdSpecVersion();
-
-    public static final String VK_KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME = "VK_KHR_external_semaphore_fd";
-
-    public static final long VK_KHR_push_descriptor = getVkKhrPushDescriptor();
-    private static native long getVkKhrPushDescriptor();
-
-    public static final long VK_KHR_PUSH_DESCRIPTOR_SPEC_VERSION = getVkKhrPushDescriptorSpecVersion();
-    private static native long getVkKhrPushDescriptorSpecVersion();
-
-    public static final String VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME = "VK_KHR_push_descriptor";
-
-    public static final long VK_KHR_16bit_storage = getVkKhr16bitStorage();
-    private static native long getVkKhr16bitStorage();
-
-    public static final long VK_KHR_16BIT_STORAGE_SPEC_VERSION = getVkKhr16bitStorageSpecVersion();
-    private static native long getVkKhr16bitStorageSpecVersion();
-
-    public static final String VK_KHR_16BIT_STORAGE_EXTENSION_NAME = "VK_KHR_16bit_storage";
-
-    public static final long VK_KHR_incremental_present = getVkKhrIncrementalPresent();
-    private static native long getVkKhrIncrementalPresent();
-
-    public static final long VK_KHR_INCREMENTAL_PRESENT_SPEC_VERSION = getVkKhrIncrementalPresentSpecVersion();
-    private static native long getVkKhrIncrementalPresentSpecVersion();
-
-    public static final String VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME = "VK_KHR_incremental_present";
-
-    public static final long VK_KHR_descriptor_update_template = getVkKhrDescriptorUpdateTemplate();
-    private static native long getVkKhrDescriptorUpdateTemplate();
-
-    public static final long VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_SPEC_VERSION = getVkKhrDescriptorUpdateTemplateSpecVersion();
-    private static native long getVkKhrDescriptorUpdateTemplateSpecVersion();
-
-    public static final String VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_EXTENSION_NAME = "VK_KHR_descriptor_update_template";
-
-    public static final long VK_KHR_shared_presentable_image = getVkKhrSharedPresentableImage();
-    private static native long getVkKhrSharedPresentableImage();
-
-    public static final long VK_KHR_SHARED_PRESENTABLE_IMAGE_SPEC_VERSION = getVkKhrSharedPresentableImageSpecVersion();
-    private static native long getVkKhrSharedPresentableImageSpecVersion();
-
-    public static final String VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME = "VK_KHR_shared_presentable_image";
-
-    public static final long VK_KHR_external_fence_capabilities = getVkKhrExternalFenceCapabilities();
-    private static native long getVkKhrExternalFenceCapabilities();
-
-    public static final long VK_KHR_EXTERNAL_FENCE_CAPABILITIES_SPEC_VERSION = getVkKhrExternalFenceCapabilitiesSpecVersion();
-    private static native long getVkKhrExternalFenceCapabilitiesSpecVersion();
-
-    public static final String VK_KHR_EXTERNAL_FENCE_CAPABILITIES_EXTENSION_NAME = "VK_KHR_external_fence_capabilities";
-
-    public static final long VK_KHR_external_fence = getVkKhrExternalFence();
-    private static native long getVkKhrExternalFence();
-
-    public static final long VK_KHR_EXTERNAL_FENCE_SPEC_VERSION = getVkKhrExternalFenceSpecVersion();
-    private static native long getVkKhrExternalFenceSpecVersion();
-
-    public static final String VK_KHR_EXTERNAL_FENCE_EXTENSION_NAME = "VK_KHR_external_fence";
-
-    public static final long VK_KHR_external_fence_fd = getVkKhrExternalFenceFd();
-    private static native long getVkKhrExternalFenceFd();
-
-    public static final long VK_KHR_EXTERNAL_FENCE_FD_SPEC_VERSION = getVkKhrExternalFenceFdSpecVersion();
-    private static native long getVkKhrExternalFenceFdSpecVersion();
-
-    public static final String VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME = "VK_KHR_external_fence_fd";
-
-    public static final long VK_KHR_maintenance2 = getVkKhrMaintenance2();
-    private static native long getVkKhrMaintenance2();
-
-    public static final long VK_KHR_MAINTENANCE2_SPEC_VERSION = getVkKhrMaintenance2SpecVersion();
-    private static native long getVkKhrMaintenance2SpecVersion();
-
-    public static final String VK_KHR_MAINTENANCE2_EXTENSION_NAME = "VK_KHR_maintenance2";
-
-    public static final long VK_KHR_get_surface_capabilities2 = getVkKhrGetSurfaceCapabilities2();
-    private static native long getVkKhrGetSurfaceCapabilities2();
-
-    public static final long VK_KHR_GET_SURFACE_CAPABILITIES_2_SPEC_VERSION = getVkKhrGetSurfaceCapabilities2SpecVersion();
-    private static native long getVkKhrGetSurfaceCapabilities2SpecVersion();
-
-    public static final String VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME = "VK_KHR_get_surface_capabilities2";
-
-    public static final long VK_KHR_variable_pointers = getVkKhrVariablePointers();
-    private static native long getVkKhrVariablePointers();
-
-    public static final long VK_KHR_VARIABLE_POINTERS_SPEC_VERSION = getVkKhrVariablePointersSpecVersion();
-    private static native long getVkKhrVariablePointersSpecVersion();
-
-    public static final String VK_KHR_VARIABLE_POINTERS_EXTENSION_NAME = "VK_KHR_variable_pointers";
-
-    public static final long VK_KHR_dedicated_allocation = getVkKhrDedicatedAllocation();
-    private static native long getVkKhrDedicatedAllocation();
-
-    public static final long VK_KHR_DEDICATED_ALLOCATION_SPEC_VERSION = getVkKhrDedicatedAllocationSpecVersion();
-    private static native long getVkKhrDedicatedAllocationSpecVersion();
-
-    public static final String VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME = "VK_KHR_dedicated_allocation";
-
-    public static final long VK_KHR_storage_buffer_storage_class = getVkKhrStorageBufferStorageClass();
-    private static native long getVkKhrStorageBufferStorageClass();
-
-    public static final long VK_KHR_STORAGE_BUFFER_STORAGE_CLASS_SPEC_VERSION = getVkKhrStorageBufferStorageClassSpecVersion();
-    private static native long getVkKhrStorageBufferStorageClassSpecVersion();
-
-    public static final String VK_KHR_STORAGE_BUFFER_STORAGE_CLASS_EXTENSION_NAME = "VK_KHR_storage_buffer_storage_class";
-
-    public static final long VK_KHR_relaxed_block_layout = getVkKhrRelaxedBlockLayout();
-    private static native long getVkKhrRelaxedBlockLayout();
-
-    public static final long VK_KHR_RELAXED_BLOCK_LAYOUT_SPEC_VERSION = getVkKhrRelaxedBlockLayoutSpecVersion();
-    private static native long getVkKhrRelaxedBlockLayoutSpecVersion();
-
-    public static final String VK_KHR_RELAXED_BLOCK_LAYOUT_EXTENSION_NAME = "VK_KHR_relaxed_block_layout";
-
-    public static final long VK_KHR_get_memory_requirements2 = getVkKhrGetMemoryRequirements2();
-    private static native long getVkKhrGetMemoryRequirements2();
-
-    public static final long VK_KHR_GET_MEMORY_REQUIREMENTS_2_SPEC_VERSION = getVkKhrGetMemoryRequirements2SpecVersion();
-    private static native long getVkKhrGetMemoryRequirements2SpecVersion();
-
-    public static final String VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME = "VK_KHR_get_memory_requirements2";
-
-    public static final long VK_KHR_image_format_list = getVkKhrImageFormatList();
-    private static native long getVkKhrImageFormatList();
-
-    public static final long VK_KHR_IMAGE_FORMAT_LIST_SPEC_VERSION = getVkKhrImageFormatListSpecVersion();
-    private static native long getVkKhrImageFormatListSpecVersion();
-
-    public static final String VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME = "VK_KHR_image_format_list";
-
-    public static final long VK_KHR_sampler_ycbcr_conversion = getVkKhrSamplerYcbcrConversion();
-    private static native long getVkKhrSamplerYcbcrConversion();
-
-    public static final long VK_KHR_SAMPLER_YCBCR_CONVERSION_SPEC_VERSION = getVkKhrSamplerYcbcrConversionSpecVersion();
-    private static native long getVkKhrSamplerYcbcrConversionSpecVersion();
-
-    public static final String VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME = "VK_KHR_sampler_ycbcr_conversion";
-
-    public static final long VK_KHR_bind_memory2 = getVkKhrBindMemory2();
-    private static native long getVkKhrBindMemory2();
-
-    public static final long VK_KHR_BIND_MEMORY_2_SPEC_VERSION = getVkKhrBindMemory2SpecVersion();
-    private static native long getVkKhrBindMemory2SpecVersion();
-
-    public static final String VK_KHR_BIND_MEMORY_2_EXTENSION_NAME = "VK_KHR_bind_memory2";
-
-    public static final long VK_KHR_maintenance3 = getVkKhrMaintenance3();
-    private static native long getVkKhrMaintenance3();
-
-    public static final long VK_KHR_MAINTENANCE3_SPEC_VERSION = getVkKhrMaintenance3SpecVersion();
-    private static native long getVkKhrMaintenance3SpecVersion();
-
-    public static final String VK_KHR_MAINTENANCE3_EXTENSION_NAME = "VK_KHR_maintenance3";
-
-    public static final long VK_EXT_debug_report = getVkExtDebugReport();
-    private static native long getVkExtDebugReport();
-
-    public static final long VK_EXT_DEBUG_REPORT_SPEC_VERSION = getVkExtDebugReportSpecVersion();
-    private static native long getVkExtDebugReportSpecVersion();
-
-    public static final String VK_EXT_DEBUG_REPORT_EXTENSION_NAME = "VK_EXT_debug_report";
-
-    public static final long VK_STRUCTURE_TYPE_DEBUG_REPORT_CREATE_INFO_EXT = getVkStructureTypeDebugReportCreateInfoExt();
-    private static native long getVkStructureTypeDebugReportCreateInfoExt();
-
-    public static final long VK_DEBUG_REPORT_OBJECT_TYPE_DEBUG_REPORT_EXT = getVkDebugReportObjectTypeDebugReportExt();
-    private static native long getVkDebugReportObjectTypeDebugReportExt();
-
-    public static final long VK_NV_glsl_shader = getVkNvGlslShader();
-    private static native long getVkNvGlslShader();
-
-    public static final long VK_NV_GLSL_SHADER_SPEC_VERSION = getVkNvGlslShaderSpecVersion();
-    private static native long getVkNvGlslShaderSpecVersion();
-
-    public static final String VK_NV_GLSL_SHADER_EXTENSION_NAME = "VK_NV_glsl_shader";
-
-    public static final long VK_EXT_depth_range_unrestricted = getVkExtDepthRangeUnrestricted();
-    private static native long getVkExtDepthRangeUnrestricted();
-
-    public static final long VK_EXT_DEPTH_RANGE_UNRESTRICTED_SPEC_VERSION = getVkExtDepthRangeUnrestrictedSpecVersion();
-    private static native long getVkExtDepthRangeUnrestrictedSpecVersion();
-
-    public static final String VK_EXT_DEPTH_RANGE_UNRESTRICTED_EXTENSION_NAME = "VK_EXT_depth_range_unrestricted";
-
-    public static final long VK_IMG_filter_cubic = getVkImgFilterCubic();
-    private static native long getVkImgFilterCubic();
-
-    public static final long VK_IMG_FILTER_CUBIC_SPEC_VERSION = getVkImgFilterCubicSpecVersion();
-    private static native long getVkImgFilterCubicSpecVersion();
-
-    public static final String VK_IMG_FILTER_CUBIC_EXTENSION_NAME = "VK_IMG_filter_cubic";
-
-    public static final long VK_AMD_rasterization_order = getVkAmdRasterizationOrder();
-    private static native long getVkAmdRasterizationOrder();
-
-    public static final long VK_AMD_RASTERIZATION_ORDER_SPEC_VERSION = getVkAmdRasterizationOrderSpecVersion();
-    private static native long getVkAmdRasterizationOrderSpecVersion();
-
-    public static final String VK_AMD_RASTERIZATION_ORDER_EXTENSION_NAME = "VK_AMD_rasterization_order";
-
-    public static final long VK_AMD_shader_trinary_minmax = getVkAmdShaderTrinaryMinmax();
-    private static native long getVkAmdShaderTrinaryMinmax();
-
-    public static final long VK_AMD_SHADER_TRINARY_MINMAX_SPEC_VERSION = getVkAmdShaderTrinaryMinmaxSpecVersion();
-    private static native long getVkAmdShaderTrinaryMinmaxSpecVersion();
-
-    public static final String VK_AMD_SHADER_TRINARY_MINMAX_EXTENSION_NAME = "VK_AMD_shader_trinary_minmax";
-
-    public static final long VK_AMD_shader_explicit_vertex_parameter = getVkAmdShaderExplicitVertexParameter();
-    private static native long getVkAmdShaderExplicitVertexParameter();
-
-    public static final long VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_SPEC_VERSION = getVkAmdShaderExplicitVertexParameterSpecVersion();
-    private static native long getVkAmdShaderExplicitVertexParameterSpecVersion();
-
-    public static final String VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_EXTENSION_NAME = "VK_AMD_shader_explicit_vertex_parameter";
-
-    public static final long VK_EXT_debug_marker = getVkExtDebugMarker();
-    private static native long getVkExtDebugMarker();
-
-    public static final long VK_EXT_DEBUG_MARKER_SPEC_VERSION = getVkExtDebugMarkerSpecVersion();
-    private static native long getVkExtDebugMarkerSpecVersion();
-
-    public static final String VK_EXT_DEBUG_MARKER_EXTENSION_NAME = "VK_EXT_debug_marker";
-
-    public static final long VK_AMD_gcn_shader = getVkAmdGcnShader();
-    private static native long getVkAmdGcnShader();
-
-    public static final long VK_AMD_GCN_SHADER_SPEC_VERSION = getVkAmdGcnShaderSpecVersion();
-    private static native long getVkAmdGcnShaderSpecVersion();
-
-    public static final String VK_AMD_GCN_SHADER_EXTENSION_NAME = "VK_AMD_gcn_shader";
-
-    public static final long VK_NV_dedicated_allocation = getVkNvDedicatedAllocation();
-    private static native long getVkNvDedicatedAllocation();
-
-    public static final long VK_NV_DEDICATED_ALLOCATION_SPEC_VERSION = getVkNvDedicatedAllocationSpecVersion();
-    private static native long getVkNvDedicatedAllocationSpecVersion();
-
-    public static final String VK_NV_DEDICATED_ALLOCATION_EXTENSION_NAME = "VK_NV_dedicated_allocation";
-
-    public static final long VK_AMD_draw_indirect_count = getVkAmdDrawIndirectCount();
-    private static native long getVkAmdDrawIndirectCount();
-
-    public static final long VK_AMD_DRAW_INDIRECT_COUNT_SPEC_VERSION = getVkAmdDrawIndirectCountSpecVersion();
-    private static native long getVkAmdDrawIndirectCountSpecVersion();
-
-    public static final String VK_AMD_DRAW_INDIRECT_COUNT_EXTENSION_NAME = "VK_AMD_draw_indirect_count";
-
-    public static final long VK_AMD_negative_viewport_height = getVkAmdNegativeViewportHeight();
-    private static native long getVkAmdNegativeViewportHeight();
-
-    public static final long VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_SPEC_VERSION = getVkAmdNegativeViewportHeightSpecVersion();
-    private static native long getVkAmdNegativeViewportHeightSpecVersion();
-
-    public static final String VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_EXTENSION_NAME = "VK_AMD_negative_viewport_height";
-
-    public static final long VK_AMD_gpu_shader_half_float = getVkAmdGpuShaderHalfFloat();
-    private static native long getVkAmdGpuShaderHalfFloat();
-
-    public static final long VK_AMD_GPU_SHADER_HALF_FLOAT_SPEC_VERSION = getVkAmdGpuShaderHalfFloatSpecVersion();
-    private static native long getVkAmdGpuShaderHalfFloatSpecVersion();
-
-    public static final String VK_AMD_GPU_SHADER_HALF_FLOAT_EXTENSION_NAME = "VK_AMD_gpu_shader_half_float";
-
-    public static final long VK_AMD_shader_ballot = getVkAmdShaderBallot();
-    private static native long getVkAmdShaderBallot();
-
-    public static final long VK_AMD_SHADER_BALLOT_SPEC_VERSION = getVkAmdShaderBallotSpecVersion();
-    private static native long getVkAmdShaderBallotSpecVersion();
-
-    public static final String VK_AMD_SHADER_BALLOT_EXTENSION_NAME = "VK_AMD_shader_ballot";
-
-    public static final long VK_AMD_texture_gather_bias_lod = getVkAmdTextureGatherBiasLod();
-    private static native long getVkAmdTextureGatherBiasLod();
-
-    public static final long VK_AMD_TEXTURE_GATHER_BIAS_LOD_SPEC_VERSION = getVkAmdTextureGatherBiasLodSpecVersion();
-    private static native long getVkAmdTextureGatherBiasLodSpecVersion();
-
-    public static final String VK_AMD_TEXTURE_GATHER_BIAS_LOD_EXTENSION_NAME = "VK_AMD_texture_gather_bias_lod";
-
-    public static final long VK_AMD_shader_info = getVkAmdShaderInfo();
-    private static native long getVkAmdShaderInfo();
-
-    public static final long VK_AMD_SHADER_INFO_SPEC_VERSION = getVkAmdShaderInfoSpecVersion();
-    private static native long getVkAmdShaderInfoSpecVersion();
-
-    public static final String VK_AMD_SHADER_INFO_EXTENSION_NAME = "VK_AMD_shader_info";
-
-    public static final long VK_AMD_shader_image_load_store_lod = getVkAmdShaderImageLoadStoreLod();
-    private static native long getVkAmdShaderImageLoadStoreLod();
-
-    public static final long VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_SPEC_VERSION = getVkAmdShaderImageLoadStoreLodSpecVersion();
-    private static native long getVkAmdShaderImageLoadStoreLodSpecVersion();
-
-    public static final String VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_EXTENSION_NAME = "VK_AMD_shader_image_load_store_lod";
-
-    public static final long VK_IMG_format_pvrtc = getVkImgFormatPvrtc();
-    private static native long getVkImgFormatPvrtc();
-
-    public static final long VK_IMG_FORMAT_PVRTC_SPEC_VERSION = getVkImgFormatPvrtcSpecVersion();
-    private static native long getVkImgFormatPvrtcSpecVersion();
-
-    public static final String VK_IMG_FORMAT_PVRTC_EXTENSION_NAME = "VK_IMG_format_pvrtc";
-
-    public static final long VK_NV_external_memory_capabilities = getVkNvExternalMemoryCapabilities();
-    private static native long getVkNvExternalMemoryCapabilities();
-
-    public static final long VK_NV_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION = getVkNvExternalMemoryCapabilitiesSpecVersion();
-    private static native long getVkNvExternalMemoryCapabilitiesSpecVersion();
-
-    public static final String VK_NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME = "VK_NV_external_memory_capabilities";
-
-    public static final long VK_NV_external_memory = getVkNvExternalMemory();
-    private static native long getVkNvExternalMemory();
-
-    public static final long VK_NV_EXTERNAL_MEMORY_SPEC_VERSION = getVkNvExternalMemorySpecVersion();
-    private static native long getVkNvExternalMemorySpecVersion();
-
-    public static final String VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME = "VK_NV_external_memory";
-
-    public static final long VK_EXT_validation_flags = getVkExtValidationFlags();
-    private static native long getVkExtValidationFlags();
-
-    public static final long VK_EXT_VALIDATION_FLAGS_SPEC_VERSION = getVkExtValidationFlagsSpecVersion();
-    private static native long getVkExtValidationFlagsSpecVersion();
-
-    public static final String VK_EXT_VALIDATION_FLAGS_EXTENSION_NAME = "VK_EXT_validation_flags";
-
-    public static final long VK_EXT_shader_subgroup_ballot = getVkExtShaderSubgroupBallot();
-    private static native long getVkExtShaderSubgroupBallot();
-
-    public static final long VK_EXT_SHADER_SUBGROUP_BALLOT_SPEC_VERSION = getVkExtShaderSubgroupBallotSpecVersion();
-    private static native long getVkExtShaderSubgroupBallotSpecVersion();
-
-    public static final String VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME = "VK_EXT_shader_subgroup_ballot";
-
-    public static final long VK_EXT_shader_subgroup_vote = getVkExtShaderSubgroupVote();
-    private static native long getVkExtShaderSubgroupVote();
-
-    public static final long VK_EXT_SHADER_SUBGROUP_VOTE_SPEC_VERSION = getVkExtShaderSubgroupVoteSpecVersion();
-    private static native long getVkExtShaderSubgroupVoteSpecVersion();
-
-    public static final String VK_EXT_SHADER_SUBGROUP_VOTE_EXTENSION_NAME = "VK_EXT_shader_subgroup_vote";
-
-    public static final long VK_NVX_device_generated_commands = getVkNvxDeviceGeneratedCommands();
-    private static native long getVkNvxDeviceGeneratedCommands();
-
-    public static final long VK_NVX_DEVICE_GENERATED_COMMANDS_SPEC_VERSION = getVkNvxDeviceGeneratedCommandsSpecVersion();
-    private static native long getVkNvxDeviceGeneratedCommandsSpecVersion();
-
-    public static final String VK_NVX_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME = "VK_NVX_device_generated_commands";
-
-    public static final long VK_NV_clip_space_w_scaling = getVkNvClipSpaceWScaling();
-    private static native long getVkNvClipSpaceWScaling();
-
-    public static final long VK_NV_CLIP_SPACE_W_SCALING_SPEC_VERSION = getVkNvClipSpaceWScalingSpecVersion();
-    private static native long getVkNvClipSpaceWScalingSpecVersion();
-
-    public static final String VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME = "VK_NV_clip_space_w_scaling";
-
-    public static final long VK_EXT_direct_mode_display = getVkExtDirectModeDisplay();
-    private static native long getVkExtDirectModeDisplay();
-
-    public static final long VK_EXT_DIRECT_MODE_DISPLAY_SPEC_VERSION = getVkExtDirectModeDisplaySpecVersion();
-    private static native long getVkExtDirectModeDisplaySpecVersion();
-
-    public static final String VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME = "VK_EXT_direct_mode_display";
-
-    public static final long VK_EXT_display_surface_counter = getVkExtDisplaySurfaceCounter();
-    private static native long getVkExtDisplaySurfaceCounter();
-
-    public static final long VK_EXT_DISPLAY_SURFACE_COUNTER_SPEC_VERSION = getVkExtDisplaySurfaceCounterSpecVersion();
-    private static native long getVkExtDisplaySurfaceCounterSpecVersion();
-
-    public static final String VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME = "VK_EXT_display_surface_counter";
-
-    public static final long VK_STRUCTURE_TYPE_SURFACE_CAPABILITIES2_EXT = getVkStructureTypeSurfaceCapabilities2Ext();
-    private static native long getVkStructureTypeSurfaceCapabilities2Ext();
-
-    public static final long VK_EXT_display_control = getVkExtDisplayControl();
-    private static native long getVkExtDisplayControl();
-
-    public static final long VK_EXT_DISPLAY_CONTROL_SPEC_VERSION = getVkExtDisplayControlSpecVersion();
-    private static native long getVkExtDisplayControlSpecVersion();
-
-    public static final String VK_EXT_DISPLAY_CONTROL_EXTENSION_NAME = "VK_EXT_display_control";
-
-    public static final long VK_GOOGLE_display_timing = getVkGoogleDisplayTiming();
-    private static native long getVkGoogleDisplayTiming();
-
-    public static final long VK_GOOGLE_DISPLAY_TIMING_SPEC_VERSION = getVkGoogleDisplayTimingSpecVersion();
-    private static native long getVkGoogleDisplayTimingSpecVersion();
-
-    public static final String VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME = "VK_GOOGLE_display_timing";
-
-    public static final long VK_NV_sample_mask_override_coverage = getVkNvSampleMaskOverrideCoverage();
-    private static native long getVkNvSampleMaskOverrideCoverage();
-
-    public static final long VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_SPEC_VERSION = getVkNvSampleMaskOverrideCoverageSpecVersion();
-    private static native long getVkNvSampleMaskOverrideCoverageSpecVersion();
-
-    public static final String VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_EXTENSION_NAME = "VK_NV_sample_mask_override_coverage";
-
-    public static final long VK_NV_geometry_shader_passthrough = getVkNvGeometryShaderPassthrough();
-    private static native long getVkNvGeometryShaderPassthrough();
-
-    public static final long VK_NV_GEOMETRY_SHADER_PASSTHROUGH_SPEC_VERSION = getVkNvGeometryShaderPassthroughSpecVersion();
-    private static native long getVkNvGeometryShaderPassthroughSpecVersion();
-
-    public static final String VK_NV_GEOMETRY_SHADER_PASSTHROUGH_EXTENSION_NAME = "VK_NV_geometry_shader_passthrough";
-
-    public static final long VK_NV_viewport_array2 = getVkNvViewportArray2();
-    private static native long getVkNvViewportArray2();
-
-    public static final long VK_NV_VIEWPORT_ARRAY2_SPEC_VERSION = getVkNvViewportArray2SpecVersion();
-    private static native long getVkNvViewportArray2SpecVersion();
-
-    public static final String VK_NV_VIEWPORT_ARRAY2_EXTENSION_NAME = "VK_NV_viewport_array2";
-
-    public static final long VK_NVX_multiview_per_view_attributes = getVkNvxMultiviewPerViewAttributes();
-    private static native long getVkNvxMultiviewPerViewAttributes();
-
-    public static final long VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_SPEC_VERSION = getVkNvxMultiviewPerViewAttributesSpecVersion();
-    private static native long getVkNvxMultiviewPerViewAttributesSpecVersion();
-
-    public static final String VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME = "VK_NVX_multiview_per_view_attributes";
-
-    public static final long VK_NV_viewport_swizzle = getVkNvViewportSwizzle();
-    private static native long getVkNvViewportSwizzle();
-
-    public static final long VK_NV_VIEWPORT_SWIZZLE_SPEC_VERSION = getVkNvViewportSwizzleSpecVersion();
-    private static native long getVkNvViewportSwizzleSpecVersion();
-
-    public static final String VK_NV_VIEWPORT_SWIZZLE_EXTENSION_NAME = "VK_NV_viewport_swizzle";
-
-    public static final long VK_EXT_discard_rectangles = getVkExtDiscardRectangles();
-    private static native long getVkExtDiscardRectangles();
-
-    public static final long VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION = getVkExtDiscardRectanglesSpecVersion();
-    private static native long getVkExtDiscardRectanglesSpecVersion();
-
-    public static final String VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME = "VK_EXT_discard_rectangles";
-
-    public static final long VK_EXT_conservative_rasterization = getVkExtConservativeRasterization();
-    private static native long getVkExtConservativeRasterization();
-
-    public static final long VK_EXT_CONSERVATIVE_RASTERIZATION_SPEC_VERSION = getVkExtConservativeRasterizationSpecVersion();
-    private static native long getVkExtConservativeRasterizationSpecVersion();
-
-    public static final String VK_EXT_CONSERVATIVE_RASTERIZATION_EXTENSION_NAME = "VK_EXT_conservative_rasterization";
-
-    public static final long VK_EXT_swapchain_colorspace = getVkExtSwapchainColorspace();
-    private static native long getVkExtSwapchainColorspace();
-
-    public static final long VK_EXT_SWAPCHAIN_COLOR_SPACE_SPEC_VERSION = getVkExtSwapchainColorSpaceSpecVersion();
-    private static native long getVkExtSwapchainColorSpaceSpecVersion();
-
-    public static final String VK_EXT_SWAPCHAIN_COLOR_SPACE_EXTENSION_NAME = "VK_EXT_swapchain_colorspace";
-
-    public static final long VK_EXT_hdr_metadata = getVkExtHdrMetadata();
-    private static native long getVkExtHdrMetadata();
-
-    public static final long VK_EXT_HDR_METADATA_SPEC_VERSION = getVkExtHdrMetadataSpecVersion();
-    private static native long getVkExtHdrMetadataSpecVersion();
-
-    public static final String VK_EXT_HDR_METADATA_EXTENSION_NAME = "VK_EXT_hdr_metadata";
-
-    public static final long VK_EXT_external_memory_dma_buf = getVkExtExternalMemoryDmaBuf();
-    private static native long getVkExtExternalMemoryDmaBuf();
-
-    public static final long VK_EXT_EXTERNAL_MEMORY_DMA_BUF_SPEC_VERSION = getVkExtExternalMemoryDmaBufSpecVersion();
-    private static native long getVkExtExternalMemoryDmaBufSpecVersion();
-
-    public static final String VK_EXT_EXTERNAL_MEMORY_DMA_BUF_EXTENSION_NAME = "VK_EXT_external_memory_dma_buf";
-
-    public static final long VK_EXT_queue_family_foreign = getVkExtQueueFamilyForeign();
-    private static native long getVkExtQueueFamilyForeign();
-
-    public static final long VK_EXT_QUEUE_FAMILY_FOREIGN_SPEC_VERSION = getVkExtQueueFamilyForeignSpecVersion();
-    private static native long getVkExtQueueFamilyForeignSpecVersion();
-
-    public static final String VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME = "VK_EXT_queue_family_foreign";
-
-    public static final long VK_QUEUE_FAMILY_FOREIGN_EXT = getVkQueueFamilyForeignExt();
-    private static native long getVkQueueFamilyForeignExt();
-
-    public static final long VK_EXT_debug_utils = getVkExtDebugUtils();
-    private static native long getVkExtDebugUtils();
-
-    public static final long VK_EXT_DEBUG_UTILS_SPEC_VERSION = getVkExtDebugUtilsSpecVersion();
-    private static native long getVkExtDebugUtilsSpecVersion();
-
-    public static final String VK_EXT_DEBUG_UTILS_EXTENSION_NAME = "VK_EXT_debug_utils";
-
-    public static final long VK_EXT_sampler_filter_minmax = getVkExtSamplerFilterMinmax();
-    private static native long getVkExtSamplerFilterMinmax();
-
-    public static final long VK_EXT_SAMPLER_FILTER_MINMAX_SPEC_VERSION = getVkExtSamplerFilterMinmaxSpecVersion();
-    private static native long getVkExtSamplerFilterMinmaxSpecVersion();
-
-    public static final String VK_EXT_SAMPLER_FILTER_MINMAX_EXTENSION_NAME = "VK_EXT_sampler_filter_minmax";
-
-    public static final long VK_AMD_gpu_shader_int16 = getVkAmdGpuShaderInt16();
-    private static native long getVkAmdGpuShaderInt16();
-
-    public static final long VK_AMD_GPU_SHADER_INT16_SPEC_VERSION = getVkAmdGpuShaderInt16SpecVersion();
-    private static native long getVkAmdGpuShaderInt16SpecVersion();
-
-    public static final String VK_AMD_GPU_SHADER_INT16_EXTENSION_NAME = "VK_AMD_gpu_shader_int16";
-
-    public static final long VK_AMD_mixed_attachment_samples = getVkAmdMixedAttachmentSamples();
-    private static native long getVkAmdMixedAttachmentSamples();
-
-    public static final long VK_AMD_MIXED_ATTACHMENT_SAMPLES_SPEC_VERSION = getVkAmdMixedAttachmentSamplesSpecVersion();
-    private static native long getVkAmdMixedAttachmentSamplesSpecVersion();
-
-    public static final String VK_AMD_MIXED_ATTACHMENT_SAMPLES_EXTENSION_NAME = "VK_AMD_mixed_attachment_samples";
-
-    public static final long VK_AMD_shader_fragment_mask = getVkAmdShaderFragmentMask();
-    private static native long getVkAmdShaderFragmentMask();
-
-    public static final long VK_AMD_SHADER_FRAGMENT_MASK_SPEC_VERSION = getVkAmdShaderFragmentMaskSpecVersion();
-    private static native long getVkAmdShaderFragmentMaskSpecVersion();
-
-    public static final String VK_AMD_SHADER_FRAGMENT_MASK_EXTENSION_NAME = "VK_AMD_shader_fragment_mask";
-
-    public static final long VK_EXT_shader_stencil_export = getVkExtShaderStencilExport();
-    private static native long getVkExtShaderStencilExport();
-
-    public static final long VK_EXT_SHADER_STENCIL_EXPORT_SPEC_VERSION = getVkExtShaderStencilExportSpecVersion();
-    private static native long getVkExtShaderStencilExportSpecVersion();
-
-    public static final String VK_EXT_SHADER_STENCIL_EXPORT_EXTENSION_NAME = "VK_EXT_shader_stencil_export";
-
-    public static final long VK_EXT_sample_locations = getVkExtSampleLocations();
-    private static native long getVkExtSampleLocations();
-
-    public static final long VK_EXT_SAMPLE_LOCATIONS_SPEC_VERSION = getVkExtSampleLocationsSpecVersion();
-    private static native long getVkExtSampleLocationsSpecVersion();
-
-    public static final String VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME = "VK_EXT_sample_locations";
-
-    public static final long VK_EXT_blend_operation_advanced = getVkExtBlendOperationAdvanced();
-    private static native long getVkExtBlendOperationAdvanced();
-
-    public static final long VK_EXT_BLEND_OPERATION_ADVANCED_SPEC_VERSION = getVkExtBlendOperationAdvancedSpecVersion();
-    private static native long getVkExtBlendOperationAdvancedSpecVersion();
-
-    public static final String VK_EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME = "VK_EXT_blend_operation_advanced";
-
-    public static final long VK_NV_fragment_coverage_to_color = getVkNvFragmentCoverageToColor();
-    private static native long getVkNvFragmentCoverageToColor();
-
-    public static final long VK_NV_FRAGMENT_COVERAGE_TO_COLOR_SPEC_VERSION = getVkNvFragmentCoverageToColorSpecVersion();
-    private static native long getVkNvFragmentCoverageToColorSpecVersion();
-
-    public static final String VK_NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME = "VK_NV_fragment_coverage_to_color";
-
-    public static final long VK_NV_framebuffer_mixed_samples = getVkNvFramebufferMixedSamples();
-    private static native long getVkNvFramebufferMixedSamples();
-
-    public static final long VK_NV_FRAMEBUFFER_MIXED_SAMPLES_SPEC_VERSION = getVkNvFramebufferMixedSamplesSpecVersion();
-    private static native long getVkNvFramebufferMixedSamplesSpecVersion();
-
-    public static final String VK_NV_FRAMEBUFFER_MIXED_SAMPLES_EXTENSION_NAME = "VK_NV_framebuffer_mixed_samples";
-
-    public static final long VK_NV_fill_rectangle = getVkNvFillRectangle();
-    private static native long getVkNvFillRectangle();
-
-    public static final long VK_NV_FILL_RECTANGLE_SPEC_VERSION = getVkNvFillRectangleSpecVersion();
-    private static native long getVkNvFillRectangleSpecVersion();
-
-    public static final String VK_NV_FILL_RECTANGLE_EXTENSION_NAME = "VK_NV_fill_rectangle";
-
-    public static final long VK_EXT_post_depth_coverage = getVkExtPostDepthCoverage();
-    private static native long getVkExtPostDepthCoverage();
-
-    public static final long VK_EXT_POST_DEPTH_COVERAGE_SPEC_VERSION = getVkExtPostDepthCoverageSpecVersion();
-    private static native long getVkExtPostDepthCoverageSpecVersion();
-
-    public static final String VK_EXT_POST_DEPTH_COVERAGE_EXTENSION_NAME = "VK_EXT_post_depth_coverage";
-
-    public static final long VK_EXT_validation_cache = getVkExtValidationCache();
-    private static native long getVkExtValidationCache();
-
-    public static final long VK_EXT_VALIDATION_CACHE_SPEC_VERSION = getVkExtValidationCacheSpecVersion();
-    private static native long getVkExtValidationCacheSpecVersion();
-
-    public static final String VK_EXT_VALIDATION_CACHE_EXTENSION_NAME = "VK_EXT_validation_cache";
-
-    public static final long VK_DEBUG_REPORT_OBJECT_TYPE_VALIDATION_CACHE_EXT = getVkDebugReportObjectTypeValidationCacheExt();
-    private static native long getVkDebugReportObjectTypeValidationCacheExt();
-
-    public static final long VK_EXT_descriptor_indexing = getVkExtDescriptorIndexing();
-    private static native long getVkExtDescriptorIndexing();
-
-    public static final long VK_EXT_DESCRIPTOR_INDEXING_SPEC_VERSION = getVkExtDescriptorIndexingSpecVersion();
-    private static native long getVkExtDescriptorIndexingSpecVersion();
-
-    public static final String VK_EXT_DESCRIPTOR_INDEXING_EXTENSION_NAME = "VK_EXT_descriptor_indexing";
-
-    public static final long VK_EXT_shader_viewport_index_layer = getVkExtShaderViewportIndexLayer();
-    private static native long getVkExtShaderViewportIndexLayer();
-
-    public static final long VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_SPEC_VERSION = getVkExtShaderViewportIndexLayerSpecVersion();
-    private static native long getVkExtShaderViewportIndexLayerSpecVersion();
-
-    public static final String VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_EXTENSION_NAME = "VK_EXT_shader_viewport_index_layer";
-
-    public static final long VK_EXT_global_priority = getVkExtGlobalPriority();
-    private static native long getVkExtGlobalPriority();
-
-    public static final long VK_EXT_GLOBAL_PRIORITY_SPEC_VERSION = getVkExtGlobalPrioritySpecVersion();
-    private static native long getVkExtGlobalPrioritySpecVersion();
-
-    public static final String VK_EXT_GLOBAL_PRIORITY_EXTENSION_NAME = "VK_EXT_global_priority";
-
-    public static final long VK_EXT_external_memory_host = getVkExtExternalMemoryHost();
-    private static native long getVkExtExternalMemoryHost();
-
-    public static final long VK_EXT_EXTERNAL_MEMORY_HOST_SPEC_VERSION = getVkExtExternalMemoryHostSpecVersion();
-    private static native long getVkExtExternalMemoryHostSpecVersion();
-
-    public static final String VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME = "VK_EXT_external_memory_host";
-
-    public static final long VK_AMD_buffer_marker = getVkAmdBufferMarker();
-    private static native long getVkAmdBufferMarker();
-
-    public static final long VK_AMD_BUFFER_MARKER_SPEC_VERSION = getVkAmdBufferMarkerSpecVersion();
-    private static native long getVkAmdBufferMarkerSpecVersion();
-
-    public static final String VK_AMD_BUFFER_MARKER_EXTENSION_NAME = "VK_AMD_buffer_marker";
-
-    public static final long VK_AMD_shader_core_properties = getVkAmdShaderCoreProperties();
-    private static native long getVkAmdShaderCoreProperties();
-
-    public static final long VK_AMD_SHADER_CORE_PROPERTIES_SPEC_VERSION = getVkAmdShaderCorePropertiesSpecVersion();
-    private static native long getVkAmdShaderCorePropertiesSpecVersion();
-
-    public static final String VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME = "VK_AMD_shader_core_properties";
-
-    public static final long VK_EXT_vertex_attribute_divisor = getVkExtVertexAttributeDivisor();
-    private static native long getVkExtVertexAttributeDivisor();
-
-    public static final long VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_SPEC_VERSION = getVkExtVertexAttributeDivisorSpecVersion();
-    private static native long getVkExtVertexAttributeDivisorSpecVersion();
-
-    public static final String VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME = "VK_EXT_vertex_attribute_divisor";
-
-    public static final long VK_NV_shader_subgroup_partitioned = getVkNvShaderSubgroupPartitioned();
-    private static native long getVkNvShaderSubgroupPartitioned();
-
-    public static final long VK_NV_SHADER_SUBGROUP_PARTITIONED_SPEC_VERSION = getVkNvShaderSubgroupPartitionedSpecVersion();
-    private static native long getVkNvShaderSubgroupPartitionedSpecVersion();
-
-    public static final String VK_NV_SHADER_SUBGROUP_PARTITIONED_EXTENSION_NAME = "VK_NV_shader_subgroup_partitioned";
 
     private PFNvkCreateInstance PFN_vkCreateInstance_p = null;
 
@@ -4428,4 +3561,327 @@ public class Vk {
     public static final int VK_QUEUE_GLOBAL_PRIORITY_MEDIUM_EXT = VkQueueGlobalPriorityEXT.VK_QUEUE_GLOBAL_PRIORITY_MEDIUM_EXT;
     public static final int VK_QUEUE_GLOBAL_PRIORITY_HIGH_EXT = VkQueueGlobalPriorityEXT.VK_QUEUE_GLOBAL_PRIORITY_HIGH_EXT;
     public static final int VK_QUEUE_GLOBAL_PRIORITY_REALTIME_EXT = VkQueueGlobalPriorityEXT.VK_QUEUE_GLOBAL_PRIORITY_REALTIME_EXT;
+
+    public static final long VK_VERSION_1_0 = 1;
+    public static final long VK_HEADER_VERSION = 73;
+    public static final long VK_NULL_HANDLE = 0;
+    public static final float VK_LOD_CLAMP_NONE = 1000.0f;
+    public static final long VK_REMAINING_MIP_LEVELS = 4294967295L;
+    public static final long VK_REMAINING_ARRAY_LAYERS = 4294967295L;
+    public static final long VK_WHOLE_SIZE = -1L;
+    public static final long VK_ATTACHMENT_UNUSED = 4294967295L;
+    public static final long VK_TRUE = 1;
+    public static final long VK_FALSE = 0;
+    public static final long VK_QUEUE_FAMILY_IGNORED = 4294967295L;
+    public static final long VK_SUBPASS_EXTERNAL = 4294967295L;
+    public static final long VK_MAX_PHYSICAL_DEVICE_NAME_SIZE = 256;
+    public static final long VK_UUID_SIZE = 16;
+    public static final long VK_MAX_MEMORY_TYPES = 32;
+    public static final long VK_MAX_MEMORY_HEAPS = 16;
+    public static final long VK_MAX_EXTENSION_NAME_SIZE = 256;
+    public static final long VK_MAX_DESCRIPTION_SIZE = 256;
+    public static final long VK_VERSION_1_1 = 1;
+    public static final long VK_MAX_DEVICE_GROUP_SIZE = 32;
+    public static final long VK_LUID_SIZE = 8;
+    public static final long VK_QUEUE_FAMILY_EXTERNAL = 4294967294L;
+    public static final long VK_KHR_surface = 1;
+    public static final long VK_KHR_SURFACE_SPEC_VERSION = 25;
+    public static final String VK_KHR_SURFACE_EXTENSION_NAME = "VK_KHR_surface";
+    public static final long VK_COLORSPACE_SRGB_NONLINEAR_KHR = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR;
+    public static final long VK_KHR_swapchain = 1;
+    public static final long VK_KHR_SWAPCHAIN_SPEC_VERSION = 70;
+    public static final String VK_KHR_SWAPCHAIN_EXTENSION_NAME = "VK_KHR_swapchain";
+    public static final long VK_KHR_display = 1;
+    public static final long VK_KHR_DISPLAY_SPEC_VERSION = 21;
+    public static final String VK_KHR_DISPLAY_EXTENSION_NAME = "VK_KHR_display";
+    public static final long VK_KHR_display_swapchain = 1;
+    public static final long VK_KHR_DISPLAY_SWAPCHAIN_SPEC_VERSION = 9;
+    public static final String VK_KHR_DISPLAY_SWAPCHAIN_EXTENSION_NAME = "VK_KHR_display_swapchain";
+    public static final long VK_KHR_sampler_mirror_clamp_to_edge = 1;
+    public static final long VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_SPEC_VERSION = 1;
+    public static final String VK_KHR_SAMPLER_MIRROR_CLAMP_TO_EDGE_EXTENSION_NAME = "VK_KHR_sampler_mirror_clamp_to_edge";
+    public static final long VK_KHR_multiview = 1;
+    public static final long VK_KHR_MULTIVIEW_SPEC_VERSION = 1;
+    public static final String VK_KHR_MULTIVIEW_EXTENSION_NAME = "VK_KHR_multiview";
+    public static final long VK_KHR_get_physical_device_properties2 = 1;
+    public static final long VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_SPEC_VERSION = 1;
+    public static final String VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME = "VK_KHR_get_physical_device_properties2";
+    public static final long VK_KHR_device_group = 1;
+    public static final long VK_KHR_DEVICE_GROUP_SPEC_VERSION = 3;
+    public static final String VK_KHR_DEVICE_GROUP_EXTENSION_NAME = "VK_KHR_device_group";
+    public static final long VK_KHR_shader_draw_parameters = 1;
+    public static final long VK_KHR_SHADER_DRAW_PARAMETERS_SPEC_VERSION = 1;
+    public static final String VK_KHR_SHADER_DRAW_PARAMETERS_EXTENSION_NAME = "VK_KHR_shader_draw_parameters";
+    public static final long VK_KHR_maintenance1 = 1;
+    public static final long VK_KHR_MAINTENANCE1_SPEC_VERSION = 2;
+    public static final String VK_KHR_MAINTENANCE1_EXTENSION_NAME = "VK_KHR_maintenance1";
+    public static final long VK_KHR_device_group_creation = 1;
+    public static final long VK_KHR_DEVICE_GROUP_CREATION_SPEC_VERSION = 1;
+    public static final String VK_KHR_DEVICE_GROUP_CREATION_EXTENSION_NAME = "VK_KHR_device_group_creation";
+    public static final long VK_MAX_DEVICE_GROUP_SIZE_KHR = VK_MAX_DEVICE_GROUP_SIZE;
+    public static final long VK_KHR_external_memory_capabilities = 1;
+    public static final long VK_KHR_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION = 1;
+    public static final String VK_KHR_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME = "VK_KHR_external_memory_capabilities";
+    public static final long VK_LUID_SIZE_KHR = VK_LUID_SIZE;
+    public static final long VK_KHR_external_memory = 1;
+    public static final long VK_KHR_EXTERNAL_MEMORY_SPEC_VERSION = 1;
+    public static final String VK_KHR_EXTERNAL_MEMORY_EXTENSION_NAME = "VK_KHR_external_memory";
+    public static final long VK_QUEUE_FAMILY_EXTERNAL_KHR = VK_QUEUE_FAMILY_EXTERNAL;
+    public static final long VK_KHR_external_memory_fd = 1;
+    public static final long VK_KHR_EXTERNAL_MEMORY_FD_SPEC_VERSION = 1;
+    public static final String VK_KHR_EXTERNAL_MEMORY_FD_EXTENSION_NAME = "VK_KHR_external_memory_fd";
+    public static final long VK_KHR_external_semaphore_capabilities = 1;
+    public static final long VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_SPEC_VERSION = 1;
+    public static final String VK_KHR_EXTERNAL_SEMAPHORE_CAPABILITIES_EXTENSION_NAME = "VK_KHR_external_semaphore_capabilities";
+    public static final long VK_KHR_external_semaphore = 1;
+    public static final long VK_KHR_EXTERNAL_SEMAPHORE_SPEC_VERSION = 1;
+    public static final String VK_KHR_EXTERNAL_SEMAPHORE_EXTENSION_NAME = "VK_KHR_external_semaphore";
+    public static final long VK_KHR_external_semaphore_fd = 1;
+    public static final long VK_KHR_EXTERNAL_SEMAPHORE_FD_SPEC_VERSION = 1;
+    public static final String VK_KHR_EXTERNAL_SEMAPHORE_FD_EXTENSION_NAME = "VK_KHR_external_semaphore_fd";
+    public static final long VK_KHR_push_descriptor = 1;
+    public static final long VK_KHR_PUSH_DESCRIPTOR_SPEC_VERSION = 2;
+    public static final String VK_KHR_PUSH_DESCRIPTOR_EXTENSION_NAME = "VK_KHR_push_descriptor";
+    public static final long VK_KHR_16bit_storage = 1;
+    public static final long VK_KHR_16BIT_STORAGE_SPEC_VERSION = 1;
+    public static final String VK_KHR_16BIT_STORAGE_EXTENSION_NAME = "VK_KHR_16bit_storage";
+    public static final long VK_KHR_incremental_present = 1;
+    public static final long VK_KHR_INCREMENTAL_PRESENT_SPEC_VERSION = 1;
+    public static final String VK_KHR_INCREMENTAL_PRESENT_EXTENSION_NAME = "VK_KHR_incremental_present";
+    public static final long VK_KHR_descriptor_update_template = 1;
+    public static final long VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_SPEC_VERSION = 1;
+    public static final String VK_KHR_DESCRIPTOR_UPDATE_TEMPLATE_EXTENSION_NAME = "VK_KHR_descriptor_update_template";
+    public static final long VK_KHR_shared_presentable_image = 1;
+    public static final long VK_KHR_SHARED_PRESENTABLE_IMAGE_SPEC_VERSION = 1;
+    public static final String VK_KHR_SHARED_PRESENTABLE_IMAGE_EXTENSION_NAME = "VK_KHR_shared_presentable_image";
+    public static final long VK_KHR_external_fence_capabilities = 1;
+    public static final long VK_KHR_EXTERNAL_FENCE_CAPABILITIES_SPEC_VERSION = 1;
+    public static final String VK_KHR_EXTERNAL_FENCE_CAPABILITIES_EXTENSION_NAME = "VK_KHR_external_fence_capabilities";
+    public static final long VK_KHR_external_fence = 1;
+    public static final long VK_KHR_EXTERNAL_FENCE_SPEC_VERSION = 1;
+    public static final String VK_KHR_EXTERNAL_FENCE_EXTENSION_NAME = "VK_KHR_external_fence";
+    public static final long VK_KHR_external_fence_fd = 1;
+    public static final long VK_KHR_EXTERNAL_FENCE_FD_SPEC_VERSION = 1;
+    public static final String VK_KHR_EXTERNAL_FENCE_FD_EXTENSION_NAME = "VK_KHR_external_fence_fd";
+    public static final long VK_KHR_maintenance2 = 1;
+    public static final long VK_KHR_MAINTENANCE2_SPEC_VERSION = 1;
+    public static final String VK_KHR_MAINTENANCE2_EXTENSION_NAME = "VK_KHR_maintenance2";
+    public static final long VK_KHR_get_surface_capabilities2 = 1;
+    public static final long VK_KHR_GET_SURFACE_CAPABILITIES_2_SPEC_VERSION = 1;
+    public static final String VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME = "VK_KHR_get_surface_capabilities2";
+    public static final long VK_KHR_variable_pointers = 1;
+    public static final long VK_KHR_VARIABLE_POINTERS_SPEC_VERSION = 1;
+    public static final String VK_KHR_VARIABLE_POINTERS_EXTENSION_NAME = "VK_KHR_variable_pointers";
+    public static final long VK_KHR_dedicated_allocation = 1;
+    public static final long VK_KHR_DEDICATED_ALLOCATION_SPEC_VERSION = 3;
+    public static final String VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME = "VK_KHR_dedicated_allocation";
+    public static final long VK_KHR_storage_buffer_storage_class = 1;
+    public static final long VK_KHR_STORAGE_BUFFER_STORAGE_CLASS_SPEC_VERSION = 1;
+    public static final String VK_KHR_STORAGE_BUFFER_STORAGE_CLASS_EXTENSION_NAME = "VK_KHR_storage_buffer_storage_class";
+    public static final long VK_KHR_relaxed_block_layout = 1;
+    public static final long VK_KHR_RELAXED_BLOCK_LAYOUT_SPEC_VERSION = 1;
+    public static final String VK_KHR_RELAXED_BLOCK_LAYOUT_EXTENSION_NAME = "VK_KHR_relaxed_block_layout";
+    public static final long VK_KHR_get_memory_requirements2 = 1;
+    public static final long VK_KHR_GET_MEMORY_REQUIREMENTS_2_SPEC_VERSION = 1;
+    public static final String VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME = "VK_KHR_get_memory_requirements2";
+    public static final long VK_KHR_image_format_list = 1;
+    public static final long VK_KHR_IMAGE_FORMAT_LIST_SPEC_VERSION = 1;
+    public static final String VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME = "VK_KHR_image_format_list";
+    public static final long VK_KHR_sampler_ycbcr_conversion = 1;
+    public static final long VK_KHR_SAMPLER_YCBCR_CONVERSION_SPEC_VERSION = 1;
+    public static final String VK_KHR_SAMPLER_YCBCR_CONVERSION_EXTENSION_NAME = "VK_KHR_sampler_ycbcr_conversion";
+    public static final long VK_KHR_bind_memory2 = 1;
+    public static final long VK_KHR_BIND_MEMORY_2_SPEC_VERSION = 1;
+    public static final String VK_KHR_BIND_MEMORY_2_EXTENSION_NAME = "VK_KHR_bind_memory2";
+    public static final long VK_KHR_maintenance3 = 1;
+    public static final long VK_KHR_MAINTENANCE3_SPEC_VERSION = 1;
+    public static final String VK_KHR_MAINTENANCE3_EXTENSION_NAME = "VK_KHR_maintenance3";
+    public static final long VK_EXT_debug_report = 1;
+    public static final long VK_EXT_DEBUG_REPORT_SPEC_VERSION = 9;
+    public static final String VK_EXT_DEBUG_REPORT_EXTENSION_NAME = "VK_EXT_debug_report";
+    public static final long VK_STRUCTURE_TYPE_DEBUG_REPORT_CREATE_INFO_EXT = VK_STRUCTURE_TYPE_DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT;
+    public static final long VK_DEBUG_REPORT_OBJECT_TYPE_DEBUG_REPORT_EXT = VK_DEBUG_REPORT_OBJECT_TYPE_DEBUG_REPORT_CALLBACK_EXT_EXT;
+    public static final long VK_NV_glsl_shader = 1;
+    public static final long VK_NV_GLSL_SHADER_SPEC_VERSION = 1;
+    public static final String VK_NV_GLSL_SHADER_EXTENSION_NAME = "VK_NV_glsl_shader";
+    public static final long VK_EXT_depth_range_unrestricted = 1;
+    public static final long VK_EXT_DEPTH_RANGE_UNRESTRICTED_SPEC_VERSION = 1;
+    public static final String VK_EXT_DEPTH_RANGE_UNRESTRICTED_EXTENSION_NAME = "VK_EXT_depth_range_unrestricted";
+    public static final long VK_IMG_filter_cubic = 1;
+    public static final long VK_IMG_FILTER_CUBIC_SPEC_VERSION = 1;
+    public static final String VK_IMG_FILTER_CUBIC_EXTENSION_NAME = "VK_IMG_filter_cubic";
+    public static final long VK_AMD_rasterization_order = 1;
+    public static final long VK_AMD_RASTERIZATION_ORDER_SPEC_VERSION = 1;
+    public static final String VK_AMD_RASTERIZATION_ORDER_EXTENSION_NAME = "VK_AMD_rasterization_order";
+    public static final long VK_AMD_shader_trinary_minmax = 1;
+    public static final long VK_AMD_SHADER_TRINARY_MINMAX_SPEC_VERSION = 1;
+    public static final String VK_AMD_SHADER_TRINARY_MINMAX_EXTENSION_NAME = "VK_AMD_shader_trinary_minmax";
+    public static final long VK_AMD_shader_explicit_vertex_parameter = 1;
+    public static final long VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_SPEC_VERSION = 1;
+    public static final String VK_AMD_SHADER_EXPLICIT_VERTEX_PARAMETER_EXTENSION_NAME = "VK_AMD_shader_explicit_vertex_parameter";
+    public static final long VK_EXT_debug_marker = 1;
+    public static final long VK_EXT_DEBUG_MARKER_SPEC_VERSION = 4;
+    public static final String VK_EXT_DEBUG_MARKER_EXTENSION_NAME = "VK_EXT_debug_marker";
+    public static final long VK_AMD_gcn_shader = 1;
+    public static final long VK_AMD_GCN_SHADER_SPEC_VERSION = 1;
+    public static final String VK_AMD_GCN_SHADER_EXTENSION_NAME = "VK_AMD_gcn_shader";
+    public static final long VK_NV_dedicated_allocation = 1;
+    public static final long VK_NV_DEDICATED_ALLOCATION_SPEC_VERSION = 1;
+    public static final String VK_NV_DEDICATED_ALLOCATION_EXTENSION_NAME = "VK_NV_dedicated_allocation";
+    public static final long VK_AMD_draw_indirect_count = 1;
+    public static final long VK_AMD_DRAW_INDIRECT_COUNT_SPEC_VERSION = 1;
+    public static final String VK_AMD_DRAW_INDIRECT_COUNT_EXTENSION_NAME = "VK_AMD_draw_indirect_count";
+    public static final long VK_AMD_negative_viewport_height = 1;
+    public static final long VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_SPEC_VERSION = 1;
+    public static final String VK_AMD_NEGATIVE_VIEWPORT_HEIGHT_EXTENSION_NAME = "VK_AMD_negative_viewport_height";
+    public static final long VK_AMD_gpu_shader_half_float = 1;
+    public static final long VK_AMD_GPU_SHADER_HALF_FLOAT_SPEC_VERSION = 1;
+    public static final String VK_AMD_GPU_SHADER_HALF_FLOAT_EXTENSION_NAME = "VK_AMD_gpu_shader_half_float";
+    public static final long VK_AMD_shader_ballot = 1;
+    public static final long VK_AMD_SHADER_BALLOT_SPEC_VERSION = 1;
+    public static final String VK_AMD_SHADER_BALLOT_EXTENSION_NAME = "VK_AMD_shader_ballot";
+    public static final long VK_AMD_texture_gather_bias_lod = 1;
+    public static final long VK_AMD_TEXTURE_GATHER_BIAS_LOD_SPEC_VERSION = 1;
+    public static final String VK_AMD_TEXTURE_GATHER_BIAS_LOD_EXTENSION_NAME = "VK_AMD_texture_gather_bias_lod";
+    public static final long VK_AMD_shader_info = 1;
+    public static final long VK_AMD_SHADER_INFO_SPEC_VERSION = 1;
+    public static final String VK_AMD_SHADER_INFO_EXTENSION_NAME = "VK_AMD_shader_info";
+    public static final long VK_AMD_shader_image_load_store_lod = 1;
+    public static final long VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_SPEC_VERSION = 1;
+    public static final String VK_AMD_SHADER_IMAGE_LOAD_STORE_LOD_EXTENSION_NAME = "VK_AMD_shader_image_load_store_lod";
+    public static final long VK_IMG_format_pvrtc = 1;
+    public static final long VK_IMG_FORMAT_PVRTC_SPEC_VERSION = 1;
+    public static final String VK_IMG_FORMAT_PVRTC_EXTENSION_NAME = "VK_IMG_format_pvrtc";
+    public static final long VK_NV_external_memory_capabilities = 1;
+    public static final long VK_NV_EXTERNAL_MEMORY_CAPABILITIES_SPEC_VERSION = 1;
+    public static final String VK_NV_EXTERNAL_MEMORY_CAPABILITIES_EXTENSION_NAME = "VK_NV_external_memory_capabilities";
+    public static final long VK_NV_external_memory = 1;
+    public static final long VK_NV_EXTERNAL_MEMORY_SPEC_VERSION = 1;
+    public static final String VK_NV_EXTERNAL_MEMORY_EXTENSION_NAME = "VK_NV_external_memory";
+    public static final long VK_EXT_validation_flags = 1;
+    public static final long VK_EXT_VALIDATION_FLAGS_SPEC_VERSION = 1;
+    public static final String VK_EXT_VALIDATION_FLAGS_EXTENSION_NAME = "VK_EXT_validation_flags";
+    public static final long VK_EXT_shader_subgroup_ballot = 1;
+    public static final long VK_EXT_SHADER_SUBGROUP_BALLOT_SPEC_VERSION = 1;
+    public static final String VK_EXT_SHADER_SUBGROUP_BALLOT_EXTENSION_NAME = "VK_EXT_shader_subgroup_ballot";
+    public static final long VK_EXT_shader_subgroup_vote = 1;
+    public static final long VK_EXT_SHADER_SUBGROUP_VOTE_SPEC_VERSION = 1;
+    public static final String VK_EXT_SHADER_SUBGROUP_VOTE_EXTENSION_NAME = "VK_EXT_shader_subgroup_vote";
+    public static final long VK_NVX_device_generated_commands = 1;
+    public static final long VK_NVX_DEVICE_GENERATED_COMMANDS_SPEC_VERSION = 3;
+    public static final String VK_NVX_DEVICE_GENERATED_COMMANDS_EXTENSION_NAME = "VK_NVX_device_generated_commands";
+    public static final long VK_NV_clip_space_w_scaling = 1;
+    public static final long VK_NV_CLIP_SPACE_W_SCALING_SPEC_VERSION = 1;
+    public static final String VK_NV_CLIP_SPACE_W_SCALING_EXTENSION_NAME = "VK_NV_clip_space_w_scaling";
+    public static final long VK_EXT_direct_mode_display = 1;
+    public static final long VK_EXT_DIRECT_MODE_DISPLAY_SPEC_VERSION = 1;
+    public static final String VK_EXT_DIRECT_MODE_DISPLAY_EXTENSION_NAME = "VK_EXT_direct_mode_display";
+    public static final long VK_EXT_display_surface_counter = 1;
+    public static final long VK_EXT_DISPLAY_SURFACE_COUNTER_SPEC_VERSION = 1;
+    public static final String VK_EXT_DISPLAY_SURFACE_COUNTER_EXTENSION_NAME = "VK_EXT_display_surface_counter";
+    public static final long VK_STRUCTURE_TYPE_SURFACE_CAPABILITIES2_EXT = VK_STRUCTURE_TYPE_SURFACE_CAPABILITIES_2_EXT;
+    public static final long VK_EXT_display_control = 1;
+    public static final long VK_EXT_DISPLAY_CONTROL_SPEC_VERSION = 1;
+    public static final String VK_EXT_DISPLAY_CONTROL_EXTENSION_NAME = "VK_EXT_display_control";
+    public static final long VK_GOOGLE_display_timing = 1;
+    public static final long VK_GOOGLE_DISPLAY_TIMING_SPEC_VERSION = 1;
+    public static final String VK_GOOGLE_DISPLAY_TIMING_EXTENSION_NAME = "VK_GOOGLE_display_timing";
+    public static final long VK_NV_sample_mask_override_coverage = 1;
+    public static final long VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_SPEC_VERSION = 1;
+    public static final String VK_NV_SAMPLE_MASK_OVERRIDE_COVERAGE_EXTENSION_NAME = "VK_NV_sample_mask_override_coverage";
+    public static final long VK_NV_geometry_shader_passthrough = 1;
+    public static final long VK_NV_GEOMETRY_SHADER_PASSTHROUGH_SPEC_VERSION = 1;
+    public static final String VK_NV_GEOMETRY_SHADER_PASSTHROUGH_EXTENSION_NAME = "VK_NV_geometry_shader_passthrough";
+    public static final long VK_NV_viewport_array2 = 1;
+    public static final long VK_NV_VIEWPORT_ARRAY2_SPEC_VERSION = 1;
+    public static final String VK_NV_VIEWPORT_ARRAY2_EXTENSION_NAME = "VK_NV_viewport_array2";
+    public static final long VK_NVX_multiview_per_view_attributes = 1;
+    public static final long VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_SPEC_VERSION = 1;
+    public static final String VK_NVX_MULTIVIEW_PER_VIEW_ATTRIBUTES_EXTENSION_NAME = "VK_NVX_multiview_per_view_attributes";
+    public static final long VK_NV_viewport_swizzle = 1;
+    public static final long VK_NV_VIEWPORT_SWIZZLE_SPEC_VERSION = 1;
+    public static final String VK_NV_VIEWPORT_SWIZZLE_EXTENSION_NAME = "VK_NV_viewport_swizzle";
+    public static final long VK_EXT_discard_rectangles = 1;
+    public static final long VK_EXT_DISCARD_RECTANGLES_SPEC_VERSION = 1;
+    public static final String VK_EXT_DISCARD_RECTANGLES_EXTENSION_NAME = "VK_EXT_discard_rectangles";
+    public static final long VK_EXT_conservative_rasterization = 1;
+    public static final long VK_EXT_CONSERVATIVE_RASTERIZATION_SPEC_VERSION = 1;
+    public static final String VK_EXT_CONSERVATIVE_RASTERIZATION_EXTENSION_NAME = "VK_EXT_conservative_rasterization";
+    public static final long VK_EXT_swapchain_colorspace = 1;
+    public static final long VK_EXT_SWAPCHAIN_COLOR_SPACE_SPEC_VERSION = 3;
+    public static final String VK_EXT_SWAPCHAIN_COLOR_SPACE_EXTENSION_NAME = "VK_EXT_swapchain_colorspace";
+    public static final long VK_EXT_hdr_metadata = 1;
+    public static final long VK_EXT_HDR_METADATA_SPEC_VERSION = 1;
+    public static final String VK_EXT_HDR_METADATA_EXTENSION_NAME = "VK_EXT_hdr_metadata";
+    public static final long VK_EXT_external_memory_dma_buf = 1;
+    public static final long VK_EXT_EXTERNAL_MEMORY_DMA_BUF_SPEC_VERSION = 1;
+    public static final String VK_EXT_EXTERNAL_MEMORY_DMA_BUF_EXTENSION_NAME = "VK_EXT_external_memory_dma_buf";
+    public static final long VK_EXT_queue_family_foreign = 1;
+    public static final long VK_EXT_QUEUE_FAMILY_FOREIGN_SPEC_VERSION = 1;
+    public static final String VK_EXT_QUEUE_FAMILY_FOREIGN_EXTENSION_NAME = "VK_EXT_queue_family_foreign";
+    public static final long VK_QUEUE_FAMILY_FOREIGN_EXT = 4294967293L;
+    public static final long VK_EXT_debug_utils = 1;
+    public static final long VK_EXT_DEBUG_UTILS_SPEC_VERSION = 1;
+    public static final String VK_EXT_DEBUG_UTILS_EXTENSION_NAME = "VK_EXT_debug_utils";
+    public static final long VK_EXT_sampler_filter_minmax = 1;
+    public static final long VK_EXT_SAMPLER_FILTER_MINMAX_SPEC_VERSION = 1;
+    public static final String VK_EXT_SAMPLER_FILTER_MINMAX_EXTENSION_NAME = "VK_EXT_sampler_filter_minmax";
+    public static final long VK_AMD_gpu_shader_int16 = 1;
+    public static final long VK_AMD_GPU_SHADER_INT16_SPEC_VERSION = 1;
+    public static final String VK_AMD_GPU_SHADER_INT16_EXTENSION_NAME = "VK_AMD_gpu_shader_int16";
+    public static final long VK_AMD_mixed_attachment_samples = 1;
+    public static final long VK_AMD_MIXED_ATTACHMENT_SAMPLES_SPEC_VERSION = 1;
+    public static final String VK_AMD_MIXED_ATTACHMENT_SAMPLES_EXTENSION_NAME = "VK_AMD_mixed_attachment_samples";
+    public static final long VK_AMD_shader_fragment_mask = 1;
+    public static final long VK_AMD_SHADER_FRAGMENT_MASK_SPEC_VERSION = 1;
+    public static final String VK_AMD_SHADER_FRAGMENT_MASK_EXTENSION_NAME = "VK_AMD_shader_fragment_mask";
+    public static final long VK_EXT_shader_stencil_export = 1;
+    public static final long VK_EXT_SHADER_STENCIL_EXPORT_SPEC_VERSION = 1;
+    public static final String VK_EXT_SHADER_STENCIL_EXPORT_EXTENSION_NAME = "VK_EXT_shader_stencil_export";
+    public static final long VK_EXT_sample_locations = 1;
+    public static final long VK_EXT_SAMPLE_LOCATIONS_SPEC_VERSION = 1;
+    public static final String VK_EXT_SAMPLE_LOCATIONS_EXTENSION_NAME = "VK_EXT_sample_locations";
+    public static final long VK_EXT_blend_operation_advanced = 1;
+    public static final long VK_EXT_BLEND_OPERATION_ADVANCED_SPEC_VERSION = 2;
+    public static final String VK_EXT_BLEND_OPERATION_ADVANCED_EXTENSION_NAME = "VK_EXT_blend_operation_advanced";
+    public static final long VK_NV_fragment_coverage_to_color = 1;
+    public static final long VK_NV_FRAGMENT_COVERAGE_TO_COLOR_SPEC_VERSION = 1;
+    public static final String VK_NV_FRAGMENT_COVERAGE_TO_COLOR_EXTENSION_NAME = "VK_NV_fragment_coverage_to_color";
+    public static final long VK_NV_framebuffer_mixed_samples = 1;
+    public static final long VK_NV_FRAMEBUFFER_MIXED_SAMPLES_SPEC_VERSION = 1;
+    public static final String VK_NV_FRAMEBUFFER_MIXED_SAMPLES_EXTENSION_NAME = "VK_NV_framebuffer_mixed_samples";
+    public static final long VK_NV_fill_rectangle = 1;
+    public static final long VK_NV_FILL_RECTANGLE_SPEC_VERSION = 1;
+    public static final String VK_NV_FILL_RECTANGLE_EXTENSION_NAME = "VK_NV_fill_rectangle";
+    public static final long VK_EXT_post_depth_coverage = 1;
+    public static final long VK_EXT_POST_DEPTH_COVERAGE_SPEC_VERSION = 1;
+    public static final String VK_EXT_POST_DEPTH_COVERAGE_EXTENSION_NAME = "VK_EXT_post_depth_coverage";
+    public static final long VK_EXT_validation_cache = 1;
+    public static final long VK_EXT_VALIDATION_CACHE_SPEC_VERSION = 1;
+    public static final String VK_EXT_VALIDATION_CACHE_EXTENSION_NAME = "VK_EXT_validation_cache";
+    public static final long VK_DEBUG_REPORT_OBJECT_TYPE_VALIDATION_CACHE_EXT = VK_DEBUG_REPORT_OBJECT_TYPE_VALIDATION_CACHE_EXT_EXT;
+    public static final long VK_EXT_descriptor_indexing = 1;
+    public static final long VK_EXT_DESCRIPTOR_INDEXING_SPEC_VERSION = 2;
+    public static final String VK_EXT_DESCRIPTOR_INDEXING_EXTENSION_NAME = "VK_EXT_descriptor_indexing";
+    public static final long VK_EXT_shader_viewport_index_layer = 1;
+    public static final long VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_SPEC_VERSION = 1;
+    public static final String VK_EXT_SHADER_VIEWPORT_INDEX_LAYER_EXTENSION_NAME = "VK_EXT_shader_viewport_index_layer";
+    public static final long VK_EXT_global_priority = 1;
+    public static final long VK_EXT_GLOBAL_PRIORITY_SPEC_VERSION = 2;
+    public static final String VK_EXT_GLOBAL_PRIORITY_EXTENSION_NAME = "VK_EXT_global_priority";
+    public static final long VK_EXT_external_memory_host = 1;
+    public static final long VK_EXT_EXTERNAL_MEMORY_HOST_SPEC_VERSION = 1;
+    public static final String VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME = "VK_EXT_external_memory_host";
+    public static final long VK_AMD_buffer_marker = 1;
+    public static final long VK_AMD_BUFFER_MARKER_SPEC_VERSION = 1;
+    public static final String VK_AMD_BUFFER_MARKER_EXTENSION_NAME = "VK_AMD_buffer_marker";
+    public static final long VK_AMD_shader_core_properties = 1;
+    public static final long VK_AMD_SHADER_CORE_PROPERTIES_SPEC_VERSION = 1;
+    public static final String VK_AMD_SHADER_CORE_PROPERTIES_EXTENSION_NAME = "VK_AMD_shader_core_properties";
+    public static final long VK_EXT_vertex_attribute_divisor = 1;
+    public static final long VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_SPEC_VERSION = 1;
+    public static final String VK_EXT_VERTEX_ATTRIBUTE_DIVISOR_EXTENSION_NAME = "VK_EXT_vertex_attribute_divisor";
+    public static final long VK_NV_shader_subgroup_partitioned = 1;
+    public static final long VK_NV_SHADER_SUBGROUP_PARTITIONED_SPEC_VERSION = 1;
+    public static final String VK_NV_SHADER_SUBGROUP_PARTITIONED_EXTENSION_NAME = "VK_NV_shader_subgroup_partitioned";
 }

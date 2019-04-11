@@ -31,7 +31,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     
     public void setSampleLocationSampleCounts(VkSampleCountFlags sampleLocationSampleCounts) {
-        setSampleLocationSampleCounts(getVkAddress(), sampleLocationSampleCounts != null ? sampleLocationSampleCounts.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSampleLocationSampleCounts(getVkAddress(), sampleLocationSampleCounts != null ? sampleLocationSampleCounts.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     
     public void setMaxSampleLocationGridSize(VkExtent2D maxSampleLocationGridSize) {
-        setMaxSampleLocationGridSize(getVkAddress(), maxSampleLocationGridSize != null ? maxSampleLocationGridSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxSampleLocationGridSize(getVkAddress(), maxSampleLocationGridSize != null ? maxSampleLocationGridSize.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     
     public void setSampleLocationSubPixelBits(VkUInt32 sampleLocationSubPixelBits) {
-        setSampleLocationSubPixelBits(getVkAddress(), sampleLocationSubPixelBits != null ? sampleLocationSubPixelBits.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSampleLocationSubPixelBits(getVkAddress(), sampleLocationSubPixelBits != null ? sampleLocationSubPixelBits.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -109,7 +109,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     
     public void setVariableSampleLocations(VkBool32 variableSampleLocations) {
-        setVariableSampleLocations(getVkAddress(), variableSampleLocations != null ? variableSampleLocations.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setVariableSampleLocations(getVkAddress(), variableSampleLocations != null ? variableSampleLocations.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

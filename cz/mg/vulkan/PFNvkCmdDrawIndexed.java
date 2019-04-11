@@ -22,7 +22,7 @@ public class PFNvkCmdDrawIndexed extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkUInt32 indexCount, VkUInt32 instanceCount, VkUInt32 firstIndex, VkInt32 vertexOffset, VkUInt32 firstInstance){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.NULL_ADDRESS, indexCount != null ? indexCount.getVkAddress() : VkPointer.NULL_ADDRESS, instanceCount != null ? instanceCount.getVkAddress() : VkPointer.NULL_ADDRESS, firstIndex != null ? firstIndex.getVkAddress() : VkPointer.NULL_ADDRESS, vertexOffset != null ? vertexOffset.getVkAddress() : VkPointer.NULL_ADDRESS, firstInstance != null ? firstInstance.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), indexCount != null ? indexCount.getVkAddress() : VkPointer.getNullAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddress(), firstIndex != null ? firstIndex.getVkAddress() : VkPointer.getNullAddress(), vertexOffset != null ? vertexOffset.getVkAddress() : VkPointer.getNullAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer, long indexCount, long instanceCount, long firstIndex, long vertexOffset, long firstInstance);

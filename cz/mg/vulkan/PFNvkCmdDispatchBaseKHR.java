@@ -22,7 +22,7 @@ public class PFNvkCmdDispatchBaseKHR extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkUInt32 baseGroupX, VkUInt32 baseGroupY, VkUInt32 baseGroupZ, VkUInt32 groupCountX, VkUInt32 groupCountY, VkUInt32 groupCountZ){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.NULL_ADDRESS, baseGroupX != null ? baseGroupX.getVkAddress() : VkPointer.NULL_ADDRESS, baseGroupY != null ? baseGroupY.getVkAddress() : VkPointer.NULL_ADDRESS, baseGroupZ != null ? baseGroupZ.getVkAddress() : VkPointer.NULL_ADDRESS, groupCountX != null ? groupCountX.getVkAddress() : VkPointer.NULL_ADDRESS, groupCountY != null ? groupCountY.getVkAddress() : VkPointer.NULL_ADDRESS, groupCountZ != null ? groupCountZ.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), baseGroupX != null ? baseGroupX.getVkAddress() : VkPointer.getNullAddress(), baseGroupY != null ? baseGroupY.getVkAddress() : VkPointer.getNullAddress(), baseGroupZ != null ? baseGroupZ.getVkAddress() : VkPointer.getNullAddress(), groupCountX != null ? groupCountX.getVkAddress() : VkPointer.getNullAddress(), groupCountY != null ? groupCountY.getVkAddress() : VkPointer.getNullAddress(), groupCountZ != null ? groupCountZ.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer, long baseGroupX, long baseGroupY, long baseGroupZ, long groupCountX, long groupCountY, long groupCountZ);

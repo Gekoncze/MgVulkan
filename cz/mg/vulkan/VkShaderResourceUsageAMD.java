@@ -29,7 +29,7 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     
     public void setNumUsedVgprs(VkUInt32 numUsedVgprs) {
-        setNumUsedVgprs(getVkAddress(), numUsedVgprs != null ? numUsedVgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setNumUsedVgprs(getVkAddress(), numUsedVgprs != null ? numUsedVgprs.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -42,7 +42,7 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     
     public void setNumUsedSgprs(VkUInt32 numUsedSgprs) {
-        setNumUsedSgprs(getVkAddress(), numUsedSgprs != null ? numUsedSgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setNumUsedSgprs(getVkAddress(), numUsedSgprs != null ? numUsedSgprs.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     
     public void setLdsSizePerLocalWorkGroup(VkUInt32 ldsSizePerLocalWorkGroup) {
-        setLdsSizePerLocalWorkGroup(getVkAddress(), ldsSizePerLocalWorkGroup != null ? ldsSizePerLocalWorkGroup.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLdsSizePerLocalWorkGroup(getVkAddress(), ldsSizePerLocalWorkGroup != null ? ldsSizePerLocalWorkGroup.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     
     public void setLdsUsageSizeInBytes(VkSize ldsUsageSizeInBytes) {
-        setLdsUsageSizeInBytes(getVkAddress(), ldsUsageSizeInBytes != null ? ldsUsageSizeInBytes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLdsUsageSizeInBytes(getVkAddress(), ldsUsageSizeInBytes != null ? ldsUsageSizeInBytes.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     
     public void setScratchMemUsageInBytes(VkSize scratchMemUsageInBytes) {
-        setScratchMemUsageInBytes(getVkAddress(), scratchMemUsageInBytes != null ? scratchMemUsageInBytes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setScratchMemUsageInBytes(getVkAddress(), scratchMemUsageInBytes != null ? scratchMemUsageInBytes.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

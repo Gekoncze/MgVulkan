@@ -22,7 +22,7 @@ public class PFNvkQueueEndDebugUtilsLabelEXT extends VkFunctionPointer {
     }
 
     public void call(VkQueue queue){
-        call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long queue);

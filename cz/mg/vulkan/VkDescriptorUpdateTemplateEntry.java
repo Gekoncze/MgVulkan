@@ -30,7 +30,7 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
 
     
     public void setDstBinding(VkUInt32 dstBinding) {
-        setDstBinding(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstBinding(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -43,7 +43,7 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
 
     
     public void setDstArrayElement(VkUInt32 dstArrayElement) {
-        setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
 
     
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
 
     
     public void setDescriptorType(VkDescriptorType descriptorType) {
-        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
 
     
     public void setOffset(VkSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -95,7 +95,7 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
 
     
     public void setStride(VkSize stride) {
-        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

@@ -27,7 +27,7 @@ public class VkPhysicalDevicePointClippingProperties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkPhysicalDevicePointClippingProperties extends VkObject {
 
     
     public void setPointClippingBehavior(VkPointClippingBehavior pointClippingBehavior) {
-        setPointClippingBehavior(getVkAddress(), pointClippingBehavior != null ? pointClippingBehavior.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPointClippingBehavior(getVkAddress(), pointClippingBehavior != null ? pointClippingBehavior.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

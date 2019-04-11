@@ -26,7 +26,7 @@ public class VkClearDepthStencilValue extends VkObject {
 
     
     public void setDepth(VkFloat depth) {
-        setDepth(getVkAddress(), depth != null ? depth.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDepth(getVkAddress(), depth != null ? depth.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -39,7 +39,7 @@ public class VkClearDepthStencilValue extends VkObject {
 
     
     public void setStencil(VkUInt32 stencil) {
-        setStencil(getVkAddress(), stencil != null ? stencil.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setStencil(getVkAddress(), stencil != null ? stencil.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

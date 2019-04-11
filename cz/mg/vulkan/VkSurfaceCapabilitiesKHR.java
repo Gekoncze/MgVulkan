@@ -34,7 +34,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setMinImageCount(VkUInt32 minImageCount) {
-        setMinImageCount(getVkAddress(), minImageCount != null ? minImageCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMinImageCount(getVkAddress(), minImageCount != null ? minImageCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -47,7 +47,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setMaxImageCount(VkUInt32 maxImageCount) {
-        setMaxImageCount(getVkAddress(), maxImageCount != null ? maxImageCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxImageCount(getVkAddress(), maxImageCount != null ? maxImageCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -60,7 +60,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setCurrentExtent(VkExtent2D currentExtent) {
-        setCurrentExtent(getVkAddress(), currentExtent != null ? currentExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCurrentExtent(getVkAddress(), currentExtent != null ? currentExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -73,7 +73,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setMinImageExtent(VkExtent2D minImageExtent) {
-        setMinImageExtent(getVkAddress(), minImageExtent != null ? minImageExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMinImageExtent(getVkAddress(), minImageExtent != null ? minImageExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -86,7 +86,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setMaxImageExtent(VkExtent2D maxImageExtent) {
-        setMaxImageExtent(getVkAddress(), maxImageExtent != null ? maxImageExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxImageExtent(getVkAddress(), maxImageExtent != null ? maxImageExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -99,7 +99,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setMaxImageArrayLayers(VkUInt32 maxImageArrayLayers) {
-        setMaxImageArrayLayers(getVkAddress(), maxImageArrayLayers != null ? maxImageArrayLayers.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxImageArrayLayers(getVkAddress(), maxImageArrayLayers != null ? maxImageArrayLayers.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -112,7 +112,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setSupportedTransforms(VkSurfaceTransformFlagsKHR supportedTransforms) {
-        setSupportedTransforms(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSupportedTransforms(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -125,7 +125,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setCurrentTransform(VkSurfaceTransformFlagBitsKHR currentTransform) {
-        setCurrentTransform(getVkAddress(), currentTransform != null ? currentTransform.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCurrentTransform(getVkAddress(), currentTransform != null ? currentTransform.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -138,7 +138,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setSupportedCompositeAlpha(VkCompositeAlphaFlagsKHR supportedCompositeAlpha) {
-        setSupportedCompositeAlpha(getVkAddress(), supportedCompositeAlpha != null ? supportedCompositeAlpha.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSupportedCompositeAlpha(getVkAddress(), supportedCompositeAlpha != null ? supportedCompositeAlpha.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -151,7 +151,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setSupportedUsageFlags(VkImageUsageFlags supportedUsageFlags) {
-        setSupportedUsageFlags(getVkAddress(), supportedUsageFlags != null ? supportedUsageFlags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSupportedUsageFlags(getVkAddress(), supportedUsageFlags != null ? supportedUsageFlags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

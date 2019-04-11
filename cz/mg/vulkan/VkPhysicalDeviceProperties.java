@@ -33,7 +33,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setApiVersion(VkUInt32 apiVersion) {
-        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -46,7 +46,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setDriverVersion(VkUInt32 driverVersion) {
-        setDriverVersion(getVkAddress(), driverVersion != null ? driverVersion.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDriverVersion(getVkAddress(), driverVersion != null ? driverVersion.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -59,7 +59,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setVendorID(VkUInt32 vendorID) {
-        setVendorID(getVkAddress(), vendorID != null ? vendorID.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setVendorID(getVkAddress(), vendorID != null ? vendorID.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -72,7 +72,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setDeviceID(VkUInt32 deviceID) {
-        setDeviceID(getVkAddress(), deviceID != null ? deviceID.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDeviceID(getVkAddress(), deviceID != null ? deviceID.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -85,7 +85,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setDeviceType(VkPhysicalDeviceType deviceType) {
-        setDeviceType(getVkAddress(), deviceType != null ? deviceType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDeviceType(getVkAddress(), deviceType != null ? deviceType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -124,7 +124,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setLimits(VkPhysicalDeviceLimits limits) {
-        setLimits(getVkAddress(), limits != null ? limits.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLimits(getVkAddress(), limits != null ? limits.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -137,7 +137,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setSparseProperties(VkPhysicalDeviceSparseProperties sparseProperties) {
-        setSparseProperties(getVkAddress(), sparseProperties != null ? sparseProperties.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSparseProperties(getVkAddress(), sparseProperties != null ? sparseProperties.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

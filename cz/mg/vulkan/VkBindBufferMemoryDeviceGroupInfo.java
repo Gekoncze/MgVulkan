@@ -28,7 +28,7 @@ public class VkBindBufferMemoryDeviceGroupInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkBindBufferMemoryDeviceGroupInfo extends VkObject {
 
     
     public void setDeviceIndexCount(VkUInt32 deviceIndexCount) {
-        setDeviceIndexCount(getVkAddress(), deviceIndexCount != null ? deviceIndexCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDeviceIndexCount(getVkAddress(), deviceIndexCount != null ? deviceIndexCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

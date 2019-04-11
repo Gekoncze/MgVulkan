@@ -33,7 +33,7 @@ public class VkSubmitInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -59,7 +59,7 @@ public class VkSubmitInfo extends VkObject {
 
     
     public void setWaitSemaphoreCount(VkUInt32 waitSemaphoreCount) {
-        setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount != null ? waitSemaphoreCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount != null ? waitSemaphoreCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -98,7 +98,7 @@ public class VkSubmitInfo extends VkObject {
 
     
     public void setCommandBufferCount(VkUInt32 commandBufferCount) {
-        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -124,7 +124,7 @@ public class VkSubmitInfo extends VkObject {
 
     
     public void setSignalSemaphoreCount(VkUInt32 signalSemaphoreCount) {
-        setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount != null ? signalSemaphoreCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount != null ? signalSemaphoreCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

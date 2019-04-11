@@ -27,7 +27,7 @@ public class VkFormatProperties extends VkObject {
 
     
     public void setLinearTilingFeatures(VkFormatFeatureFlags linearTilingFeatures) {
-        setLinearTilingFeatures(getVkAddress(), linearTilingFeatures != null ? linearTilingFeatures.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLinearTilingFeatures(getVkAddress(), linearTilingFeatures != null ? linearTilingFeatures.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkFormatProperties extends VkObject {
 
     
     public void setOptimalTilingFeatures(VkFormatFeatureFlags optimalTilingFeatures) {
-        setOptimalTilingFeatures(getVkAddress(), optimalTilingFeatures != null ? optimalTilingFeatures.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setOptimalTilingFeatures(getVkAddress(), optimalTilingFeatures != null ? optimalTilingFeatures.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkFormatProperties extends VkObject {
 
     
     public void setBufferFeatures(VkFormatFeatureFlags bufferFeatures) {
-        setBufferFeatures(getVkAddress(), bufferFeatures != null ? bufferFeatures.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setBufferFeatures(getVkAddress(), bufferFeatures != null ? bufferFeatures.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

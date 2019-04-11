@@ -27,7 +27,7 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
 
     
     public void setType(VkObjectEntryTypeNVX type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
 
     
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
 
     
     public void setPipeline(VkPipeline pipeline) {
-        setPipeline(getVkAddress(), pipeline != null ? pipeline.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPipeline(getVkAddress(), pipeline != null ? pipeline.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

@@ -29,7 +29,7 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
 
     
     public void setFlags(VkDebugReportFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
 
     
     public void setPfnCallback(PFNvkDebugReportCallbackEXT pfnCallback) {
-        setPfnCallback(getVkAddress(), pfnCallback != null ? pfnCallback.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPfnCallback(getVkAddress(), pfnCallback != null ? pfnCallback.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

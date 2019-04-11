@@ -26,7 +26,7 @@ public class VkSampleLocationEXT extends VkObject {
 
     
     public void setX(VkFloat x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -39,7 +39,7 @@ public class VkSampleLocationEXT extends VkObject {
 
     
     public void setY(VkFloat y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

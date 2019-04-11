@@ -30,7 +30,7 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setFlags(VkDescriptorPoolCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setMaxSets(VkUInt32 maxSets) {
-        setMaxSets(getVkAddress(), maxSets != null ? maxSets.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxSets(getVkAddress(), maxSets != null ? maxSets.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setPoolSizeCount(VkUInt32 poolSizeCount) {
-        setPoolSizeCount(getVkAddress(), poolSizeCount != null ? poolSizeCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPoolSizeCount(getVkAddress(), poolSizeCount != null ? poolSizeCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

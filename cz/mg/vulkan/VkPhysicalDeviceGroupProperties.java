@@ -29,7 +29,7 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
 
     
     public void setPhysicalDeviceCount(VkUInt32 physicalDeviceCount) {
-        setPhysicalDeviceCount(getVkAddress(), physicalDeviceCount != null ? physicalDeviceCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPhysicalDeviceCount(getVkAddress(), physicalDeviceCount != null ? physicalDeviceCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
 
     
     public void setSubsetAllocation(VkBool32 subsetAllocation) {
-        setSubsetAllocation(getVkAddress(), subsetAllocation != null ? subsetAllocation.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSubsetAllocation(getVkAddress(), subsetAllocation != null ? subsetAllocation.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

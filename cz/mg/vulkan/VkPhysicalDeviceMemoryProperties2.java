@@ -27,7 +27,7 @@ public class VkPhysicalDeviceMemoryProperties2 extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkPhysicalDeviceMemoryProperties2 extends VkObject {
 
     
     public void setMemoryProperties(VkPhysicalDeviceMemoryProperties memoryProperties) {
-        setMemoryProperties(getVkAddress(), memoryProperties != null ? memoryProperties.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMemoryProperties(getVkAddress(), memoryProperties != null ? memoryProperties.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

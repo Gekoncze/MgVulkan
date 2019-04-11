@@ -32,7 +32,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -58,7 +58,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setFlags(VkImageViewCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -71,7 +71,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -84,7 +84,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setViewType(VkImageViewType viewType) {
-        setViewType(getVkAddress(), viewType != null ? viewType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setViewType(getVkAddress(), viewType != null ? viewType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -97,7 +97,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -110,7 +110,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setComponents(VkComponentMapping components) {
-        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -123,7 +123,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setSubresourceRange(VkImageSubresourceRange subresourceRange) {
-        setSubresourceRange(getVkAddress(), subresourceRange != null ? subresourceRange.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSubresourceRange(getVkAddress(), subresourceRange != null ? subresourceRange.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

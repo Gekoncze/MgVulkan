@@ -27,7 +27,7 @@ public class VkExportMemoryAllocateInfoNV extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkExportMemoryAllocateInfoNV extends VkObject {
 
     
     public void setHandleTypes(VkExternalMemoryHandleTypeFlagsNV handleTypes) {
-        setHandleTypes(getVkAddress(), handleTypes != null ? handleTypes.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setHandleTypes(getVkAddress(), handleTypes != null ? handleTypes.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

@@ -28,7 +28,7 @@ public class VkMemoryAllocateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkMemoryAllocateInfo extends VkObject {
 
     
     public void setAllocationSize(VkDeviceSize allocationSize) {
-        setAllocationSize(getVkAddress(), allocationSize != null ? allocationSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAllocationSize(getVkAddress(), allocationSize != null ? allocationSize.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkMemoryAllocateInfo extends VkObject {
 
     
     public void setMemoryTypeIndex(VkUInt32 memoryTypeIndex) {
-        setMemoryTypeIndex(getVkAddress(), memoryTypeIndex != null ? memoryTypeIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMemoryTypeIndex(getVkAddress(), memoryTypeIndex != null ? memoryTypeIndex.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

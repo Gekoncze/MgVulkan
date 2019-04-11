@@ -27,7 +27,7 @@ public class VkShaderModuleValidationCacheCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkShaderModuleValidationCacheCreateInfoEXT extends VkObject {
 
     
     public void setValidationCache(VkValidationCacheEXT validationCache) {
-        setValidationCache(getVkAddress(), validationCache != null ? validationCache.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setValidationCache(getVkAddress(), validationCache != null ? validationCache.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

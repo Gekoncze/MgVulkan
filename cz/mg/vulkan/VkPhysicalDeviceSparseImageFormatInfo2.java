@@ -31,7 +31,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setType(VkImageType type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setSamples(VkSampleCountFlagBits samples) {
-        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setUsage(VkImageUsageFlags usage) {
-        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -109,7 +109,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setTiling(VkImageTiling tiling) {
-        setTiling(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setTiling(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

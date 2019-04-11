@@ -27,7 +27,7 @@ public class VkDeviceGroupCommandBufferBeginInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkDeviceGroupCommandBufferBeginInfo extends VkObject {
 
     
     public void setDeviceMask(VkUInt32 deviceMask) {
-        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

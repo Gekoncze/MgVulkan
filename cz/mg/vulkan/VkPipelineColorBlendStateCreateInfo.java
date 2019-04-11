@@ -32,7 +32,7 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -58,7 +58,7 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineColorBlendStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -71,7 +71,7 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
     
     public void setLogicOpEnable(VkBool32 logicOpEnable) {
-        setLogicOpEnable(getVkAddress(), logicOpEnable != null ? logicOpEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLogicOpEnable(getVkAddress(), logicOpEnable != null ? logicOpEnable.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -84,7 +84,7 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
     
     public void setLogicOp(VkLogicOp logicOp) {
-        setLogicOp(getVkAddress(), logicOp != null ? logicOp.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLogicOp(getVkAddress(), logicOp != null ? logicOp.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -97,7 +97,7 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
     
     public void setAttachmentCount(VkUInt32 attachmentCount) {
-        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

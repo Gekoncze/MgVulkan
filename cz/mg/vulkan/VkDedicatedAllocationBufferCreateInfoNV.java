@@ -27,7 +27,7 @@ public class VkDedicatedAllocationBufferCreateInfoNV extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkDedicatedAllocationBufferCreateInfoNV extends VkObject {
 
     
     public void setDedicatedAllocation(VkBool32 dedicatedAllocation) {
-        setDedicatedAllocation(getVkAddress(), dedicatedAllocation != null ? dedicatedAllocation.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDedicatedAllocation(getVkAddress(), dedicatedAllocation != null ? dedicatedAllocation.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

@@ -31,7 +31,7 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setSrcSubpass(VkUInt32 srcSubpass) {
-        setSrcSubpass(getVkAddress(), srcSubpass != null ? srcSubpass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSrcSubpass(getVkAddress(), srcSubpass != null ? srcSubpass.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -44,7 +44,7 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setDstSubpass(VkUInt32 dstSubpass) {
-        setDstSubpass(getVkAddress(), dstSubpass != null ? dstSubpass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstSubpass(getVkAddress(), dstSubpass != null ? dstSubpass.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setSrcStageMask(VkPipelineStageFlags srcStageMask) {
-        setSrcStageMask(getVkAddress(), srcStageMask != null ? srcStageMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSrcStageMask(getVkAddress(), srcStageMask != null ? srcStageMask.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setDstStageMask(VkPipelineStageFlags dstStageMask) {
-        setDstStageMask(getVkAddress(), dstStageMask != null ? dstStageMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstStageMask(getVkAddress(), dstStageMask != null ? dstStageMask.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setSrcAccessMask(VkAccessFlags srcAccessMask) {
-        setSrcAccessMask(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSrcAccessMask(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setDstAccessMask(VkAccessFlags dstAccessMask) {
-        setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -109,7 +109,7 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setDependencyFlags(VkDependencyFlags dependencyFlags) {
-        setDependencyFlags(getVkAddress(), dependencyFlags != null ? dependencyFlags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDependencyFlags(getVkAddress(), dependencyFlags != null ? dependencyFlags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

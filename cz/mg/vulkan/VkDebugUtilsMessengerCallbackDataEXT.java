@@ -36,7 +36,7 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -62,7 +62,7 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
 
     
     public void setFlags(VkDebugUtilsMessengerCallbackDataFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -88,7 +88,7 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
 
     
     public void setMessageIdNumber(VkInt32 messageIdNumber) {
-        setMessageIdNumber(getVkAddress(), messageIdNumber != null ? messageIdNumber.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMessageIdNumber(getVkAddress(), messageIdNumber != null ? messageIdNumber.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -114,7 +114,7 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
 
     
     public void setQueueLabelCount(VkUInt32 queueLabelCount) {
-        setQueueLabelCount(getVkAddress(), queueLabelCount != null ? queueLabelCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setQueueLabelCount(getVkAddress(), queueLabelCount != null ? queueLabelCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -140,7 +140,7 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
 
     
     public void setCmdBufLabelCount(VkUInt32 cmdBufLabelCount) {
-        setCmdBufLabelCount(getVkAddress(), cmdBufLabelCount != null ? cmdBufLabelCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCmdBufLabelCount(getVkAddress(), cmdBufLabelCount != null ? cmdBufLabelCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -166,7 +166,7 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
 
     
     public void setObjectCount(VkUInt32 objectCount) {
-        setObjectCount(getVkAddress(), objectCount != null ? objectCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setObjectCount(getVkAddress(), objectCount != null ? objectCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

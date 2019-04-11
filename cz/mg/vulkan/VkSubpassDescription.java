@@ -34,7 +34,7 @@ public class VkSubpassDescription extends VkObject {
 
     
     public void setFlags(VkSubpassDescriptionFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -47,7 +47,7 @@ public class VkSubpassDescription extends VkObject {
 
     
     public void setPipelineBindPoint(VkPipelineBindPoint pipelineBindPoint) {
-        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -60,7 +60,7 @@ public class VkSubpassDescription extends VkObject {
 
     
     public void setInputAttachmentCount(VkUInt32 inputAttachmentCount) {
-        setInputAttachmentCount(getVkAddress(), inputAttachmentCount != null ? inputAttachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setInputAttachmentCount(getVkAddress(), inputAttachmentCount != null ? inputAttachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -86,7 +86,7 @@ public class VkSubpassDescription extends VkObject {
 
     
     public void setColorAttachmentCount(VkUInt32 colorAttachmentCount) {
-        setColorAttachmentCount(getVkAddress(), colorAttachmentCount != null ? colorAttachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setColorAttachmentCount(getVkAddress(), colorAttachmentCount != null ? colorAttachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -138,7 +138,7 @@ public class VkSubpassDescription extends VkObject {
 
     
     public void setPreserveAttachmentCount(VkUInt32 preserveAttachmentCount) {
-        setPreserveAttachmentCount(getVkAddress(), preserveAttachmentCount != null ? preserveAttachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPreserveAttachmentCount(getVkAddress(), preserveAttachmentCount != null ? preserveAttachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

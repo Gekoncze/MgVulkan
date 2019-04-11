@@ -29,7 +29,7 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineInputAssemblyStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
 
     
     public void setTopology(VkPrimitiveTopology topology) {
-        setTopology(getVkAddress(), topology != null ? topology.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setTopology(getVkAddress(), topology != null ? topology.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
 
     
     public void setPrimitiveRestartEnable(VkBool32 primitiveRestartEnable) {
-        setPrimitiveRestartEnable(getVkAddress(), primitiveRestartEnable != null ? primitiveRestartEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPrimitiveRestartEnable(getVkAddress(), primitiveRestartEnable != null ? primitiveRestartEnable.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

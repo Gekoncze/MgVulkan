@@ -27,7 +27,7 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
 
     
     public void setProtectedMemory(VkBool32 protectedMemory) {
-        setProtectedMemory(getVkAddress(), protectedMemory != null ? protectedMemory.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setProtectedMemory(getVkAddress(), protectedMemory != null ? protectedMemory.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

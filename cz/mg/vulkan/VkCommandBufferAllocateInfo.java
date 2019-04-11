@@ -29,7 +29,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setCommandPool(VkCommandPool commandPool) {
-        setCommandPool(getVkAddress(), commandPool != null ? commandPool.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCommandPool(getVkAddress(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setLevel(VkCommandBufferLevel level) {
-        setLevel(getVkAddress(), level != null ? level.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLevel(getVkAddress(), level != null ? level.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setCommandBufferCount(VkUInt32 commandBufferCount) {
-        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

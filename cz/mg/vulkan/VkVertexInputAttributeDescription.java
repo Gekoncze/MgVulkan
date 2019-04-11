@@ -28,7 +28,7 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setLocation(VkUInt32 location) {
-        setLocation(getVkAddress(), location != null ? location.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLocation(getVkAddress(), location != null ? location.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -41,7 +41,7 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

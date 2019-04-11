@@ -31,7 +31,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setShaderStageMask(VkShaderStageFlags shaderStageMask) {
-        setShaderStageMask(getVkAddress(), shaderStageMask != null ? shaderStageMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setShaderStageMask(getVkAddress(), shaderStageMask != null ? shaderStageMask.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -44,7 +44,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setResourceUsage(VkShaderResourceUsageAMD resourceUsage) {
-        setResourceUsage(getVkAddress(), resourceUsage != null ? resourceUsage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setResourceUsage(getVkAddress(), resourceUsage != null ? resourceUsage.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setNumPhysicalVgprs(VkUInt32 numPhysicalVgprs) {
-        setNumPhysicalVgprs(getVkAddress(), numPhysicalVgprs != null ? numPhysicalVgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setNumPhysicalVgprs(getVkAddress(), numPhysicalVgprs != null ? numPhysicalVgprs.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setNumPhysicalSgprs(VkUInt32 numPhysicalSgprs) {
-        setNumPhysicalSgprs(getVkAddress(), numPhysicalSgprs != null ? numPhysicalSgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setNumPhysicalSgprs(getVkAddress(), numPhysicalSgprs != null ? numPhysicalSgprs.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setNumAvailableVgprs(VkUInt32 numAvailableVgprs) {
-        setNumAvailableVgprs(getVkAddress(), numAvailableVgprs != null ? numAvailableVgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setNumAvailableVgprs(getVkAddress(), numAvailableVgprs != null ? numAvailableVgprs.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setNumAvailableSgprs(VkUInt32 numAvailableSgprs) {
-        setNumAvailableSgprs(getVkAddress(), numAvailableSgprs != null ? numAvailableSgprs.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setNumAvailableSgprs(getVkAddress(), numAvailableSgprs != null ? numAvailableSgprs.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

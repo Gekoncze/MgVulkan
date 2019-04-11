@@ -22,7 +22,7 @@ public class PFNvkGetShaderInfoAMD extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkPipeline pipeline, VkShaderStageFlagBits shaderStage, VkShaderInfoTypeAMD infoType, VkSize pInfoSize, VkObject pInfo, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, pipeline != null ? pipeline.getVkAddress() : VkPointer.NULL_ADDRESS, shaderStage != null ? shaderStage.getVkAddress() : VkPointer.NULL_ADDRESS, infoType != null ? infoType.getVkAddress() : VkPointer.NULL_ADDRESS, pInfoSize != null ? pInfoSize.getVkAddress() : VkPointer.NULL, pInfo != null ? pInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pipeline != null ? pipeline.getVkAddress() : VkPointer.getNullAddress(), shaderStage != null ? shaderStage.getVkAddress() : VkPointer.getNullAddress(), infoType != null ? infoType.getVkAddress() : VkPointer.getNullAddress(), pInfoSize != null ? pInfoSize.getVkAddress() : VkPointer.NULL, pInfo != null ? pInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long device, long pipeline, long shaderStage, long infoType, long pInfoSize, long pInfo, long rval);

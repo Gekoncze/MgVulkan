@@ -30,7 +30,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSampleLocationsPerPixel(VkSampleCountFlagBits sampleLocationsPerPixel) {
-        setSampleLocationsPerPixel(getVkAddress(), sampleLocationsPerPixel != null ? sampleLocationsPerPixel.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSampleLocationsPerPixel(getVkAddress(), sampleLocationsPerPixel != null ? sampleLocationsPerPixel.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSampleLocationGridSize(VkExtent2D sampleLocationGridSize) {
-        setSampleLocationGridSize(getVkAddress(), sampleLocationGridSize != null ? sampleLocationGridSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSampleLocationGridSize(getVkAddress(), sampleLocationGridSize != null ? sampleLocationGridSize.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSampleLocationsCount(VkUInt32 sampleLocationsCount) {
-        setSampleLocationsCount(getVkAddress(), sampleLocationsCount != null ? sampleLocationsCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSampleLocationsCount(getVkAddress(), sampleLocationsCount != null ? sampleLocationsCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

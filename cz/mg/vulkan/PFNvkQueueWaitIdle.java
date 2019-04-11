@@ -22,7 +22,7 @@ public class PFNvkQueueWaitIdle extends VkFunctionPointer {
     }
 
     public void call(VkQueue queue, VkResult rval){
-        call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.NULL_ADDRESS, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.getNullAddress(), rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long queue, long rval);

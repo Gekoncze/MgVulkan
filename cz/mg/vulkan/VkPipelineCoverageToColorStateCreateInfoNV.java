@@ -29,7 +29,7 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
 
     
     public void setFlags(VkPipelineCoverageToColorStateCreateFlagsNV flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
 
     
     public void setCoverageToColorEnable(VkBool32 coverageToColorEnable) {
-        setCoverageToColorEnable(getVkAddress(), coverageToColorEnable != null ? coverageToColorEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCoverageToColorEnable(getVkAddress(), coverageToColorEnable != null ? coverageToColorEnable.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
 
     
     public void setCoverageToColorLocation(VkUInt32 coverageToColorLocation) {
-        setCoverageToColorLocation(getVkAddress(), coverageToColorLocation != null ? coverageToColorLocation.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCoverageToColorLocation(getVkAddress(), coverageToColorLocation != null ? coverageToColorLocation.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

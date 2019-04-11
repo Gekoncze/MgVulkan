@@ -29,7 +29,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setSrcPremultiplied(VkBool32 srcPremultiplied) {
-        setSrcPremultiplied(getVkAddress(), srcPremultiplied != null ? srcPremultiplied.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSrcPremultiplied(getVkAddress(), srcPremultiplied != null ? srcPremultiplied.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setDstPremultiplied(VkBool32 dstPremultiplied) {
-        setDstPremultiplied(getVkAddress(), dstPremultiplied != null ? dstPremultiplied.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstPremultiplied(getVkAddress(), dstPremultiplied != null ? dstPremultiplied.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setBlendOverlap(VkBlendOverlapEXT blendOverlap) {
-        setBlendOverlap(getVkAddress(), blendOverlap != null ? blendOverlap.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setBlendOverlap(getVkAddress(), blendOverlap != null ? blendOverlap.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

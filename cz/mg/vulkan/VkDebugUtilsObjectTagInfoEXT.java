@@ -31,7 +31,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
 
     
     public void setObjectType(VkObjectType objectType) {
-        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
 
     
     public void setObjectHandle(VkUInt64 objectHandle) {
-        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
 
     
     public void setTagName(VkUInt64 tagName) {
-        setTagName(getVkAddress(), tagName != null ? tagName.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setTagName(getVkAddress(), tagName != null ? tagName.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
 
     
     public void setTagSize(VkSize tagSize) {
-        setTagSize(getVkAddress(), tagSize != null ? tagSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setTagSize(getVkAddress(), tagSize != null ? tagSize.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

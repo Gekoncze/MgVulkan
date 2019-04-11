@@ -22,7 +22,7 @@ public class PFNvkQueuePresentKHR extends VkFunctionPointer {
     }
 
     public void call(VkQueue queue, VkPresentInfoKHR pPresentInfo, VkResult rval){
-        call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.NULL_ADDRESS, pPresentInfo != null ? pPresentInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.getNullAddress(), pPresentInfo != null ? pPresentInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long queue, long pPresentInfo, long rval);

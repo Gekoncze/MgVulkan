@@ -22,7 +22,7 @@ public class PFNvkGetBufferMemoryRequirements2KHR extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkBufferMemoryRequirementsInfo2 pInfo, VkMemoryRequirements2 pMemoryRequirements){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, pInfo != null ? pInfo.getVkAddress() : VkPointer.NULL, pMemoryRequirements != null ? pMemoryRequirements.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pInfo != null ? pInfo.getVkAddress() : VkPointer.NULL, pMemoryRequirements != null ? pMemoryRequirements.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long pInfo, long pMemoryRequirements);

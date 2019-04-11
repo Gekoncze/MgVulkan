@@ -27,7 +27,7 @@ public class VkSurfaceFormat2KHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkSurfaceFormat2KHR extends VkObject {
 
     
     public void setSurfaceFormat(VkSurfaceFormatKHR surfaceFormat) {
-        setSurfaceFormat(getVkAddress(), surfaceFormat != null ? surfaceFormat.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSurfaceFormat(getVkAddress(), surfaceFormat != null ? surfaceFormat.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

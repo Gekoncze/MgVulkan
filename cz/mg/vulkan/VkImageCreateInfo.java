@@ -39,7 +39,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -65,7 +65,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setFlags(VkImageCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -78,7 +78,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setImageType(VkImageType imageType) {
-        setImageType(getVkAddress(), imageType != null ? imageType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setImageType(getVkAddress(), imageType != null ? imageType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -91,7 +91,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -104,7 +104,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setExtent(VkExtent3D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -117,7 +117,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setMipLevels(VkUInt32 mipLevels) {
-        setMipLevels(getVkAddress(), mipLevels != null ? mipLevels.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMipLevels(getVkAddress(), mipLevels != null ? mipLevels.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -130,7 +130,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setArrayLayers(VkUInt32 arrayLayers) {
-        setArrayLayers(getVkAddress(), arrayLayers != null ? arrayLayers.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setArrayLayers(getVkAddress(), arrayLayers != null ? arrayLayers.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -143,7 +143,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setSamples(VkSampleCountFlagBits samples) {
-        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -156,7 +156,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setTiling(VkImageTiling tiling) {
-        setTiling(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setTiling(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -169,7 +169,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setUsage(VkImageUsageFlags usage) {
-        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -182,7 +182,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setSharingMode(VkSharingMode sharingMode) {
-        setSharingMode(getVkAddress(), sharingMode != null ? sharingMode.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSharingMode(getVkAddress(), sharingMode != null ? sharingMode.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -195,7 +195,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setQueueFamilyIndexCount(VkUInt32 queueFamilyIndexCount) {
-        setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount != null ? queueFamilyIndexCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount != null ? queueFamilyIndexCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -221,7 +221,7 @@ public class VkImageCreateInfo extends VkObject {
 
     
     public void setInitialLayout(VkImageLayout initialLayout) {
-        setInitialLayout(getVkAddress(), initialLayout != null ? initialLayout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setInitialLayout(getVkAddress(), initialLayout != null ? initialLayout.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

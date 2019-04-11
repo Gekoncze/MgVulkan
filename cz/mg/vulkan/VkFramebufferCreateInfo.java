@@ -33,7 +33,7 @@ public class VkFramebufferCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -59,7 +59,7 @@ public class VkFramebufferCreateInfo extends VkObject {
 
     
     public void setFlags(VkFramebufferCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -72,7 +72,7 @@ public class VkFramebufferCreateInfo extends VkObject {
 
     
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -85,7 +85,7 @@ public class VkFramebufferCreateInfo extends VkObject {
 
     
     public void setAttachmentCount(VkUInt32 attachmentCount) {
-        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -111,7 +111,7 @@ public class VkFramebufferCreateInfo extends VkObject {
 
     
     public void setWidth(VkUInt32 width) {
-        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -124,7 +124,7 @@ public class VkFramebufferCreateInfo extends VkObject {
 
     
     public void setHeight(VkUInt32 height) {
-        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -137,7 +137,7 @@ public class VkFramebufferCreateInfo extends VkObject {
 
     
     public void setLayers(VkUInt32 layers) {
-        setLayers(getVkAddress(), layers != null ? layers.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLayers(getVkAddress(), layers != null ? layers.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

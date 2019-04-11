@@ -27,7 +27,7 @@ public class VkSparseImageFormatProperties2 extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkSparseImageFormatProperties2 extends VkObject {
 
     
     public void setProperties(VkSparseImageFormatProperties properties) {
-        setProperties(getVkAddress(), properties != null ? properties.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setProperties(getVkAddress(), properties != null ? properties.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

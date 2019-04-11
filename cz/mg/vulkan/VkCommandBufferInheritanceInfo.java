@@ -32,7 +32,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -58,7 +58,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -71,7 +71,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setSubpass(VkUInt32 subpass) {
-        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -84,7 +84,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setFramebuffer(VkFramebuffer framebuffer) {
-        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -97,7 +97,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setOcclusionQueryEnable(VkBool32 occlusionQueryEnable) {
-        setOcclusionQueryEnable(getVkAddress(), occlusionQueryEnable != null ? occlusionQueryEnable.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setOcclusionQueryEnable(getVkAddress(), occlusionQueryEnable != null ? occlusionQueryEnable.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -110,7 +110,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setQueryFlags(VkQueryControlFlags queryFlags) {
-        setQueryFlags(getVkAddress(), queryFlags != null ? queryFlags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setQueryFlags(getVkAddress(), queryFlags != null ? queryFlags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -123,7 +123,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setPipelineStatistics(VkQueryPipelineStatisticFlags pipelineStatistics) {
-        setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

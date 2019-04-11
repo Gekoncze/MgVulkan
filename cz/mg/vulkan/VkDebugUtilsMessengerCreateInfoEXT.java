@@ -31,7 +31,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setFlags(VkDebugUtilsMessengerCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setMessageSeverity(VkDebugUtilsMessageSeverityFlagsEXT messageSeverity) {
-        setMessageSeverity(getVkAddress(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMessageSeverity(getVkAddress(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setMessageType(VkDebugUtilsMessageTypeFlagsEXT messageType) {
-        setMessageType(getVkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMessageType(getVkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setPfnUserCallback(PFNvkDebugUtilsMessengerCallbackEXT pfnUserCallback) {
-        setPfnUserCallback(getVkAddress(), pfnUserCallback != null ? pfnUserCallback.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPfnUserCallback(getVkAddress(), pfnUserCallback != null ? pfnUserCallback.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

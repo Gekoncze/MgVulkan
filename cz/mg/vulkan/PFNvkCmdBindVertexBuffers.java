@@ -22,7 +22,7 @@ public class PFNvkCmdBindVertexBuffers extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkUInt32 firstBinding, VkUInt32 bindingCount, VkBuffer pBuffers, VkDeviceSize pOffsets){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.NULL_ADDRESS, firstBinding != null ? firstBinding.getVkAddress() : VkPointer.NULL_ADDRESS, bindingCount != null ? bindingCount.getVkAddress() : VkPointer.NULL_ADDRESS, pBuffers != null ? pBuffers.getVkAddress() : VkPointer.NULL, pOffsets != null ? pOffsets.getVkAddress() : VkPointer.NULL);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), firstBinding != null ? firstBinding.getVkAddress() : VkPointer.getNullAddress(), bindingCount != null ? bindingCount.getVkAddress() : VkPointer.getNullAddress(), pBuffers != null ? pBuffers.getVkAddress() : VkPointer.NULL, pOffsets != null ? pOffsets.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long commandBuffer, long firstBinding, long bindingCount, long pBuffers, long pOffsets);

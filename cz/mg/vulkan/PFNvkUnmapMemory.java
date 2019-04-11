@@ -22,7 +22,7 @@ public class PFNvkUnmapMemory extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkDeviceMemory memory){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, memory != null ? memory.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long device, long memory);

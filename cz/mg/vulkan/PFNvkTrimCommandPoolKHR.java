@@ -22,7 +22,7 @@ public class PFNvkTrimCommandPoolKHR extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkCommandPool commandPool, VkCommandPoolTrimFlags flags){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, commandPool != null ? commandPool.getVkAddress() : VkPointer.NULL_ADDRESS, flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getNullAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long device, long commandPool, long flags);

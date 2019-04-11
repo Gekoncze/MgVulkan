@@ -29,7 +29,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxExtent(VkExtent3D maxExtent) {
-        setMaxExtent(getVkAddress(), maxExtent != null ? maxExtent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxExtent(getVkAddress(), maxExtent != null ? maxExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -42,7 +42,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxMipLevels(VkUInt32 maxMipLevels) {
-        setMaxMipLevels(getVkAddress(), maxMipLevels != null ? maxMipLevels.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxMipLevels(getVkAddress(), maxMipLevels != null ? maxMipLevels.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxArrayLayers(VkUInt32 maxArrayLayers) {
-        setMaxArrayLayers(getVkAddress(), maxArrayLayers != null ? maxArrayLayers.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxArrayLayers(getVkAddress(), maxArrayLayers != null ? maxArrayLayers.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setSampleCounts(VkSampleCountFlags sampleCounts) {
-        setSampleCounts(getVkAddress(), sampleCounts != null ? sampleCounts.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSampleCounts(getVkAddress(), sampleCounts != null ? sampleCounts.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxResourceSize(VkDeviceSize maxResourceSize) {
-        setMaxResourceSize(getVkAddress(), maxResourceSize != null ? maxResourceSize.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxResourceSize(getVkAddress(), maxResourceSize != null ? maxResourceSize.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

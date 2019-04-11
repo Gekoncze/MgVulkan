@@ -28,7 +28,7 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineTessellationStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
 
     
     public void setPatchControlPoints(VkUInt32 patchControlPoints) {
-        setPatchControlPoints(getVkAddress(), patchControlPoints != null ? patchControlPoints.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPatchControlPoints(getVkAddress(), patchControlPoints != null ? patchControlPoints.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

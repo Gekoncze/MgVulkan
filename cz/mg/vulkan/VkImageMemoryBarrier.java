@@ -34,7 +34,7 @@ public class VkImageMemoryBarrier extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -60,7 +60,7 @@ public class VkImageMemoryBarrier extends VkObject {
 
     
     public void setSrcAccessMask(VkAccessFlags srcAccessMask) {
-        setSrcAccessMask(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSrcAccessMask(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -73,7 +73,7 @@ public class VkImageMemoryBarrier extends VkObject {
 
     
     public void setDstAccessMask(VkAccessFlags dstAccessMask) {
-        setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -86,7 +86,7 @@ public class VkImageMemoryBarrier extends VkObject {
 
     
     public void setOldLayout(VkImageLayout oldLayout) {
-        setOldLayout(getVkAddress(), oldLayout != null ? oldLayout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setOldLayout(getVkAddress(), oldLayout != null ? oldLayout.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -99,7 +99,7 @@ public class VkImageMemoryBarrier extends VkObject {
 
     
     public void setNewLayout(VkImageLayout newLayout) {
-        setNewLayout(getVkAddress(), newLayout != null ? newLayout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setNewLayout(getVkAddress(), newLayout != null ? newLayout.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -112,7 +112,7 @@ public class VkImageMemoryBarrier extends VkObject {
 
     
     public void setSrcQueueFamilyIndex(VkUInt32 srcQueueFamilyIndex) {
-        setSrcQueueFamilyIndex(getVkAddress(), srcQueueFamilyIndex != null ? srcQueueFamilyIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSrcQueueFamilyIndex(getVkAddress(), srcQueueFamilyIndex != null ? srcQueueFamilyIndex.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -125,7 +125,7 @@ public class VkImageMemoryBarrier extends VkObject {
 
     
     public void setDstQueueFamilyIndex(VkUInt32 dstQueueFamilyIndex) {
-        setDstQueueFamilyIndex(getVkAddress(), dstQueueFamilyIndex != null ? dstQueueFamilyIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDstQueueFamilyIndex(getVkAddress(), dstQueueFamilyIndex != null ? dstQueueFamilyIndex.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -138,7 +138,7 @@ public class VkImageMemoryBarrier extends VkObject {
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -151,7 +151,7 @@ public class VkImageMemoryBarrier extends VkObject {
 
     
     public void setSubresourceRange(VkImageSubresourceRange subresourceRange) {
-        setSubresourceRange(getVkAddress(), subresourceRange != null ? subresourceRange.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSubresourceRange(getVkAddress(), subresourceRange != null ? subresourceRange.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

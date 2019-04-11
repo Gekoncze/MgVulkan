@@ -35,7 +35,7 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -61,7 +61,7 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
 
     
     public void setObjectCount(VkUInt32 objectCount) {
-        setObjectCount(getVkAddress(), objectCount != null ? objectCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setObjectCount(getVkAddress(), objectCount != null ? objectCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -113,7 +113,7 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
 
     
     public void setMaxUniformBuffersPerDescriptor(VkUInt32 maxUniformBuffersPerDescriptor) {
-        setMaxUniformBuffersPerDescriptor(getVkAddress(), maxUniformBuffersPerDescriptor != null ? maxUniformBuffersPerDescriptor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxUniformBuffersPerDescriptor(getVkAddress(), maxUniformBuffersPerDescriptor != null ? maxUniformBuffersPerDescriptor.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -126,7 +126,7 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
 
     
     public void setMaxStorageBuffersPerDescriptor(VkUInt32 maxStorageBuffersPerDescriptor) {
-        setMaxStorageBuffersPerDescriptor(getVkAddress(), maxStorageBuffersPerDescriptor != null ? maxStorageBuffersPerDescriptor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxStorageBuffersPerDescriptor(getVkAddress(), maxStorageBuffersPerDescriptor != null ? maxStorageBuffersPerDescriptor.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -139,7 +139,7 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
 
     
     public void setMaxStorageImagesPerDescriptor(VkUInt32 maxStorageImagesPerDescriptor) {
-        setMaxStorageImagesPerDescriptor(getVkAddress(), maxStorageImagesPerDescriptor != null ? maxStorageImagesPerDescriptor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxStorageImagesPerDescriptor(getVkAddress(), maxStorageImagesPerDescriptor != null ? maxStorageImagesPerDescriptor.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -152,7 +152,7 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
 
     
     public void setMaxSampledImagesPerDescriptor(VkUInt32 maxSampledImagesPerDescriptor) {
-        setMaxSampledImagesPerDescriptor(getVkAddress(), maxSampledImagesPerDescriptor != null ? maxSampledImagesPerDescriptor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxSampledImagesPerDescriptor(getVkAddress(), maxSampledImagesPerDescriptor != null ? maxSampledImagesPerDescriptor.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -165,7 +165,7 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
 
     
     public void setMaxPipelineLayouts(VkUInt32 maxPipelineLayouts) {
-        setMaxPipelineLayouts(getVkAddress(), maxPipelineLayouts != null ? maxPipelineLayouts.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxPipelineLayouts(getVkAddress(), maxPipelineLayouts != null ? maxPipelineLayouts.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

@@ -28,7 +28,7 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
 
     
     public void setDescriptorSetCount(VkUInt32 descriptorSetCount) {
-        setDescriptorSetCount(getVkAddress(), descriptorSetCount != null ? descriptorSetCount.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDescriptorSetCount(getVkAddress(), descriptorSetCount != null ? descriptorSetCount.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

@@ -27,7 +27,7 @@ public class VkPhysicalDeviceDiscardRectanglePropertiesEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkPhysicalDeviceDiscardRectanglePropertiesEXT extends VkObject {
 
     
     public void setMaxDiscardRectangles(VkUInt32 maxDiscardRectangles) {
-        setMaxDiscardRectangles(getVkAddress(), maxDiscardRectangles != null ? maxDiscardRectangles.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxDiscardRectangles(getVkAddress(), maxDiscardRectangles != null ? maxDiscardRectangles.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

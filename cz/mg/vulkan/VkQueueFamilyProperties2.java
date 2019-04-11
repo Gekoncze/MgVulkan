@@ -27,7 +27,7 @@ public class VkQueueFamilyProperties2 extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkQueueFamilyProperties2 extends VkObject {
 
     
     public void setQueueFamilyProperties(VkQueueFamilyProperties queueFamilyProperties) {
-        setQueueFamilyProperties(getVkAddress(), queueFamilyProperties != null ? queueFamilyProperties.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setQueueFamilyProperties(getVkAddress(), queueFamilyProperties != null ? queueFamilyProperties.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

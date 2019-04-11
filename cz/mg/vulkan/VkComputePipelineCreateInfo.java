@@ -31,7 +31,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setStage(VkPipelineShaderStageCreateInfo stage) {
-        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setLayout(VkPipelineLayout layout) {
-        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setBasePipelineHandle(VkPipeline basePipelineHandle) {
-        setBasePipelineHandle(getVkAddress(), basePipelineHandle != null ? basePipelineHandle.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setBasePipelineHandle(getVkAddress(), basePipelineHandle != null ? basePipelineHandle.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -109,7 +109,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setBasePipelineIndex(VkInt32 basePipelineIndex) {
-        setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

@@ -26,7 +26,7 @@ public class VkRect2D extends VkObject {
 
     
     public void setOffset(VkOffset2D offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -39,7 +39,7 @@ public class VkRect2D extends VkObject {
 
     
     public void setExtent(VkExtent2D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

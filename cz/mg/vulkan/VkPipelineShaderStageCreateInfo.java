@@ -31,7 +31,7 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineShaderStageCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
 
     
     public void setStage(VkShaderStageFlagBits stage) {
-        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
 
     
     public void setModule(VkShaderModule module) {
-        setModule(getVkAddress(), module != null ? module.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setModule(getVkAddress(), module != null ? module.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

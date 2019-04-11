@@ -22,7 +22,7 @@ public class PFNvkMergeValidationCachesEXT extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkValidationCacheEXT dstCache, VkUInt32 srcCacheCount, VkValidationCacheEXT pSrcCaches, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.NULL_ADDRESS, dstCache != null ? dstCache.getVkAddress() : VkPointer.NULL_ADDRESS, srcCacheCount != null ? srcCacheCount.getVkAddress() : VkPointer.NULL_ADDRESS, pSrcCaches != null ? pSrcCaches.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), dstCache != null ? dstCache.getVkAddress() : VkPointer.getNullAddress(), srcCacheCount != null ? srcCacheCount.getVkAddress() : VkPointer.getNullAddress(), pSrcCaches != null ? pSrcCaches.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long device, long dstCache, long srcCacheCount, long pSrcCaches, long rval);

@@ -34,7 +34,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -60,7 +60,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setDisplayPrimaryRed(VkXYColorEXT displayPrimaryRed) {
-        setDisplayPrimaryRed(getVkAddress(), displayPrimaryRed != null ? displayPrimaryRed.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDisplayPrimaryRed(getVkAddress(), displayPrimaryRed != null ? displayPrimaryRed.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -73,7 +73,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setDisplayPrimaryGreen(VkXYColorEXT displayPrimaryGreen) {
-        setDisplayPrimaryGreen(getVkAddress(), displayPrimaryGreen != null ? displayPrimaryGreen.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDisplayPrimaryGreen(getVkAddress(), displayPrimaryGreen != null ? displayPrimaryGreen.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -86,7 +86,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setDisplayPrimaryBlue(VkXYColorEXT displayPrimaryBlue) {
-        setDisplayPrimaryBlue(getVkAddress(), displayPrimaryBlue != null ? displayPrimaryBlue.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDisplayPrimaryBlue(getVkAddress(), displayPrimaryBlue != null ? displayPrimaryBlue.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -99,7 +99,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setWhitePoint(VkXYColorEXT whitePoint) {
-        setWhitePoint(getVkAddress(), whitePoint != null ? whitePoint.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setWhitePoint(getVkAddress(), whitePoint != null ? whitePoint.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -112,7 +112,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setMaxLuminance(VkFloat maxLuminance) {
-        setMaxLuminance(getVkAddress(), maxLuminance != null ? maxLuminance.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxLuminance(getVkAddress(), maxLuminance != null ? maxLuminance.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -125,7 +125,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setMinLuminance(VkFloat minLuminance) {
-        setMinLuminance(getVkAddress(), minLuminance != null ? minLuminance.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMinLuminance(getVkAddress(), minLuminance != null ? minLuminance.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -138,7 +138,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setMaxContentLightLevel(VkFloat maxContentLightLevel) {
-        setMaxContentLightLevel(getVkAddress(), maxContentLightLevel != null ? maxContentLightLevel.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxContentLightLevel(getVkAddress(), maxContentLightLevel != null ? maxContentLightLevel.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -151,7 +151,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setMaxFrameAverageLightLevel(VkFloat maxFrameAverageLightLevel) {
-        setMaxFrameAverageLightLevel(getVkAddress(), maxFrameAverageLightLevel != null ? maxFrameAverageLightLevel.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setMaxFrameAverageLightLevel(getVkAddress(), maxFrameAverageLightLevel != null ? maxFrameAverageLightLevel.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

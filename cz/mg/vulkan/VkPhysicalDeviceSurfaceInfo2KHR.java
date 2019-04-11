@@ -27,7 +27,7 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
 
     
     public void setSurface(VkSurfaceKHR surface) {
-        setSurface(getVkAddress(), surface != null ? surface.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setSurface(getVkAddress(), surface != null ? surface.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

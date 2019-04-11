@@ -22,7 +22,7 @@ public class PFNvkCmdSetDepthBias extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkFloat depthBiasConstantFactor, VkFloat depthBiasClamp, VkFloat depthBiasSlopeFactor){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.NULL_ADDRESS, depthBiasConstantFactor != null ? depthBiasConstantFactor.getVkAddress() : VkPointer.NULL_ADDRESS, depthBiasClamp != null ? depthBiasClamp.getVkAddress() : VkPointer.NULL_ADDRESS, depthBiasSlopeFactor != null ? depthBiasSlopeFactor.getVkAddress() : VkPointer.NULL_ADDRESS);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), depthBiasConstantFactor != null ? depthBiasConstantFactor.getVkAddress() : VkPointer.getNullAddress(), depthBiasClamp != null ? depthBiasClamp.getVkAddress() : VkPointer.getNullAddress(), depthBiasSlopeFactor != null ? depthBiasSlopeFactor.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer, long depthBiasConstantFactor, long depthBiasClamp, long depthBiasSlopeFactor);

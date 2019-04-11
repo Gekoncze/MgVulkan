@@ -26,7 +26,7 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
 
     
     public void setCurrentDisplay(VkDisplayKHR currentDisplay) {
-        setCurrentDisplay(getVkAddress(), currentDisplay != null ? currentDisplay.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCurrentDisplay(getVkAddress(), currentDisplay != null ? currentDisplay.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -39,7 +39,7 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
 
     
     public void setCurrentStackIndex(VkUInt32 currentStackIndex) {
-        setCurrentStackIndex(getVkAddress(), currentStackIndex != null ? currentStackIndex.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setCurrentStackIndex(getVkAddress(), currentStackIndex != null ? currentStackIndex.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

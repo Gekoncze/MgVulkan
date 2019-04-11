@@ -28,7 +28,7 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
 
     
     public void setType(VkObjectEntryTypeNVX type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -41,7 +41,7 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
 
     
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
 
     
     public void setPipelineLayout(VkPipelineLayout pipelineLayout) {
-        setPipelineLayout(getVkAddress(), pipelineLayout != null ? pipelineLayout.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setPipelineLayout(getVkAddress(), pipelineLayout != null ? pipelineLayout.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
 
     
     public void setDescriptorSet(VkDescriptorSet descriptorSet) {
-        setDescriptorSet(getVkAddress(), descriptorSet != null ? descriptorSet.getVkAddress() : VkPointer.NULL_ADDRESS);
+        setDescriptorSet(getVkAddress(), descriptorSet != null ? descriptorSet.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
