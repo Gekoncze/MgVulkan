@@ -17,7 +17,7 @@ jlong Java_cz_mg_vulkan_VkMemory_malloc(JNIEnv* env, jclass jc, jlong size)
     (void)env;
     (void)jc;
     if(size < 1) size = 1;
-    void* pointer = malloc((size_t)size);
+    void* pointer = calloc(1, (size_t)size);
     if(pointer == NULL) jniThrowException(env, "malloc failed");
     jlong address = jniPointerToLong(pointer);
     return address;
