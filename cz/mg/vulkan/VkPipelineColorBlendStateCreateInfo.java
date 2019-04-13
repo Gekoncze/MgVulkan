@@ -157,6 +157,8 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

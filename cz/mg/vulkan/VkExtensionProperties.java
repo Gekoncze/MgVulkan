@@ -73,6 +73,8 @@ public class VkExtensionProperties extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

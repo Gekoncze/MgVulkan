@@ -143,6 +143,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

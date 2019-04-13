@@ -101,6 +101,8 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

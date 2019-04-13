@@ -87,6 +87,8 @@ public class VkDisplayPowerInfoEXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

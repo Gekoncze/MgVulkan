@@ -185,6 +185,8 @@ public class VkDeviceCreateInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

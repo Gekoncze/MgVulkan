@@ -87,6 +87,8 @@ public class VkPhysicalDeviceExternalImageFormatInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -43,6 +43,8 @@ public class VkFlags extends VkUInt32 {
 
 
 
+
+
         @Override
         public int count(){
             return count;

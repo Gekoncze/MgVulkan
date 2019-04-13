@@ -157,6 +157,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

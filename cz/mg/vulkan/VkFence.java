@@ -43,6 +43,8 @@ public class VkFence extends VkNonDispatchableHandle {
 
 
 
+
+
         @Override
         public int count(){
             return count;

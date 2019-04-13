@@ -129,6 +129,8 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

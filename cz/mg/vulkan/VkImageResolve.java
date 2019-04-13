@@ -115,6 +115,8 @@ public class VkImageResolve extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

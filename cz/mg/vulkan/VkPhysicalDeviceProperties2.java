@@ -87,6 +87,8 @@ public class VkPhysicalDeviceProperties2 extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

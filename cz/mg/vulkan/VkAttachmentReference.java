@@ -73,6 +73,8 @@ public class VkAttachmentReference extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

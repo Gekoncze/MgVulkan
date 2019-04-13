@@ -87,6 +87,8 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

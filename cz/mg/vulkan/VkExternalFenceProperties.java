@@ -115,6 +115,8 @@ public class VkExternalFenceProperties extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

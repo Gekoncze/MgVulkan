@@ -199,6 +199,8 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
 
 
+
+
         @Override
         public int count(){
             return count;

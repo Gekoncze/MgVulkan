@@ -125,6 +125,11 @@ public class VkDebugReportObjectTypeEXT extends VkEnum {
 
 
 
+        public Array(int... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) get(i).setValue(values[i]);
+        }
+
         @Override
         public int count(){
             return count;

@@ -87,6 +87,8 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

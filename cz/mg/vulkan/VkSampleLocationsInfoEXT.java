@@ -129,6 +129,8 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

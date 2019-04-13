@@ -115,6 +115,8 @@ public class VkImageCopy extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -43,6 +43,8 @@ public class VkSemaphore extends VkNonDispatchableHandle {
 
 
 
+
+
         @Override
         public int count(){
             return count;

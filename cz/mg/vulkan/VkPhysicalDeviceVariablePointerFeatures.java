@@ -101,6 +101,8 @@ public class VkPhysicalDeviceVariablePointerFeatures extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -143,6 +143,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -101,6 +101,8 @@ public class VkMemoryAllocateFlagsInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

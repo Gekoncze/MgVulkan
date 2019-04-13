@@ -115,6 +115,8 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

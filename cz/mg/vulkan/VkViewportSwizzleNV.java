@@ -101,6 +101,8 @@ public class VkViewportSwizzleNV extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

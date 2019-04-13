@@ -101,6 +101,8 @@ public class VkDeviceGroupPresentCapabilitiesKHR extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -115,6 +115,8 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

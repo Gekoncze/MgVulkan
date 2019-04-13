@@ -143,6 +143,8 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

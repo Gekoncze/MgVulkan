@@ -87,6 +87,8 @@ public class VkSparseImageFormatProperties extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

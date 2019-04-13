@@ -43,6 +43,8 @@ public class VkQueryPool extends VkNonDispatchableHandle {
 
 
 
+
+
         @Override
         public int count(){
             return count;

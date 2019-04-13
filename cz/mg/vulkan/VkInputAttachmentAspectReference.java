@@ -87,6 +87,8 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -73,6 +73,8 @@ public class VkDisplayModeParametersKHR extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

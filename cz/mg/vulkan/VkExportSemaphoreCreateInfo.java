@@ -87,6 +87,8 @@ public class VkExportSemaphoreCreateInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

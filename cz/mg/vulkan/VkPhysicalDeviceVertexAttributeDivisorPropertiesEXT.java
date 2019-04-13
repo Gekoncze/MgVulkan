@@ -87,6 +87,8 @@ public class VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT extends VkObjec
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -185,6 +185,8 @@ public class VkHdrMetadataEXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

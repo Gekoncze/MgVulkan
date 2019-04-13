@@ -43,6 +43,8 @@ public class VkEnum extends VkInt32 {
 
 
 
+
+
         @Override
         public int count(){
             return count;

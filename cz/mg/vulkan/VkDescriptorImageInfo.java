@@ -87,6 +87,8 @@ public class VkDescriptorImageInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

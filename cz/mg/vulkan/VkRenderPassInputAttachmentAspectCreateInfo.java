@@ -101,6 +101,8 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

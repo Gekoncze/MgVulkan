@@ -129,6 +129,8 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

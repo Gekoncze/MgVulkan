@@ -129,6 +129,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

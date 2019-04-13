@@ -87,6 +87,8 @@ public class VkExportFenceCreateInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

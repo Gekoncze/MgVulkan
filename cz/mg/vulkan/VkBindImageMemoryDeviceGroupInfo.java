@@ -129,6 +129,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

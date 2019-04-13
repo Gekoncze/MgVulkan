@@ -87,6 +87,8 @@ public class VkFormatProperties extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

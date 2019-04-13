@@ -101,6 +101,8 @@ public class VkSpecializationInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

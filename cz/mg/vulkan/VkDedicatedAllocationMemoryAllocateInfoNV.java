@@ -101,6 +101,8 @@ public class VkDedicatedAllocationMemoryAllocateInfoNV extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -213,6 +213,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -87,6 +87,8 @@ public class VkPhysicalDeviceSamplerYcbcrConversionFeatures extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

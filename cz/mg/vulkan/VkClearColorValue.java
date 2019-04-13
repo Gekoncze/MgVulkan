@@ -96,6 +96,8 @@ public class VkClearColorValue extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

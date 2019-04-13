@@ -129,6 +129,8 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

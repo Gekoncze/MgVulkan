@@ -101,6 +101,8 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -63,6 +63,8 @@ public class VkInt8 extends VkObject {
             for(int i = 0; i < values.length; i++) get(i).setValue(values[i]);
         }
 
+
+
         @Override
         public int count(){
             return count;

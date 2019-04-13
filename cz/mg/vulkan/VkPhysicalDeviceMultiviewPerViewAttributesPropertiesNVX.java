@@ -87,6 +87,8 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -171,6 +171,8 @@ public class VkBufferMemoryBarrier extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -87,6 +87,8 @@ public class VkMemoryRequirements2 extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -171,6 +171,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

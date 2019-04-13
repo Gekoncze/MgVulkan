@@ -269,6 +269,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

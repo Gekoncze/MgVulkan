@@ -87,6 +87,8 @@ public class VkSamplerYcbcrConversionImageFormatProperties extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

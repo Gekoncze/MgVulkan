@@ -101,6 +101,8 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -115,6 +115,8 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -129,6 +129,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

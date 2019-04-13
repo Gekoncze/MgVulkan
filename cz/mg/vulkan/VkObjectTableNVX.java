@@ -43,6 +43,8 @@ public class VkObjectTableNVX extends VkNonDispatchableHandle {
 
 
 
+
+
         @Override
         public int count(){
             return count;

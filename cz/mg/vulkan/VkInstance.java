@@ -43,6 +43,8 @@ public class VkInstance extends VkDispatchableHandle {
 
 
 
+
+
         @Override
         public int count(){
             return count;

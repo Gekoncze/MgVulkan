@@ -157,6 +157,8 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

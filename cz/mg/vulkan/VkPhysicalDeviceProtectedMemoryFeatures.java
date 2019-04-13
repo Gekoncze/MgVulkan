@@ -87,6 +87,8 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

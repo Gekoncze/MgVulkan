@@ -43,6 +43,8 @@ public class VkDeviceMemory extends VkNonDispatchableHandle {
 
 
 
+
+
         @Override
         public int count(){
             return count;

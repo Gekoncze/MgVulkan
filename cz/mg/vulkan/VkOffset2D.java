@@ -73,6 +73,8 @@ public class VkOffset2D extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

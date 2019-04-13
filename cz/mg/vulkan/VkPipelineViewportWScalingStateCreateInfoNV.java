@@ -115,6 +115,8 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

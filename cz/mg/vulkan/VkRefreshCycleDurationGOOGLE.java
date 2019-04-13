@@ -59,6 +59,8 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

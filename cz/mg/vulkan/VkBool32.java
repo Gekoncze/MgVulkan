@@ -66,6 +66,8 @@ public class VkBool32 extends VkUInt32 {
             for(int i = 0; i < values.length; i++) get(i).setValue(values[i] == false ? Vk.VK_FALSE : Vk.VK_TRUE);
         }
 
+
+
         @Override
         public int count(){
             return count;

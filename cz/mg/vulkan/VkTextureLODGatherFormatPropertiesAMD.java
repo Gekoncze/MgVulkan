@@ -87,6 +87,8 @@ public class VkTextureLODGatherFormatPropertiesAMD extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

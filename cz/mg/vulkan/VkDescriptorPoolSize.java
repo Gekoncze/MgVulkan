@@ -73,6 +73,8 @@ public class VkDescriptorPoolSize extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

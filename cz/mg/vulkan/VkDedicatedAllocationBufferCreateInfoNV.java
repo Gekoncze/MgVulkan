@@ -87,6 +87,8 @@ public class VkDedicatedAllocationBufferCreateInfoNV extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -43,6 +43,8 @@ public class VkPhysicalDevice extends VkDispatchableHandle {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -87,6 +87,8 @@ public class VkClearRect extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -87,6 +87,8 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
 
 
 
+
+
         @Override
         public int count(){
             return count;

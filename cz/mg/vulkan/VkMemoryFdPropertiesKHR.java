@@ -87,6 +87,8 @@ public class VkMemoryFdPropertiesKHR extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

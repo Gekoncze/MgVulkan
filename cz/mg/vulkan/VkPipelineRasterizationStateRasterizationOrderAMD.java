@@ -87,6 +87,8 @@ public class VkPipelineRasterizationStateRasterizationOrderAMD extends VkObject 
 
 
 
+
+
         @Override
         public int count(){
             return count;

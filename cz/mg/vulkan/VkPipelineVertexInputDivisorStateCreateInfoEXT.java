@@ -101,6 +101,8 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

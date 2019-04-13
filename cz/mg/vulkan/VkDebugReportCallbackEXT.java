@@ -43,6 +43,8 @@ public class VkDebugReportCallbackEXT extends VkNonDispatchableHandle {
 
 
 
+
+
         @Override
         public int count(){
             return count;

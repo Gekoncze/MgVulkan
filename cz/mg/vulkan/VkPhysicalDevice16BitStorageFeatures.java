@@ -129,6 +129,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

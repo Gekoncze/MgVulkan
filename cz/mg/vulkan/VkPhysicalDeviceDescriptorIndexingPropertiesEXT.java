@@ -395,6 +395,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

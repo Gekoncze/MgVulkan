@@ -43,6 +43,8 @@ public class VkFlagBits extends VkInt32 {
 
 
 
+
+
         @Override
         public int count(){
             return count;

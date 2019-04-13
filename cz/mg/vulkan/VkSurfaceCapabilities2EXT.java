@@ -227,6 +227,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

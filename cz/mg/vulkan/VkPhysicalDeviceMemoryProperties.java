@@ -101,6 +101,8 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

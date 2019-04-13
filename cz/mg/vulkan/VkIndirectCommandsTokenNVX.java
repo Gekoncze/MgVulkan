@@ -87,6 +87,8 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

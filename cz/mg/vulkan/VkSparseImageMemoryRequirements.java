@@ -115,6 +115,8 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

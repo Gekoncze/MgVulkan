@@ -297,6 +297,8 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

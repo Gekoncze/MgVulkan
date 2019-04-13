@@ -143,6 +143,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

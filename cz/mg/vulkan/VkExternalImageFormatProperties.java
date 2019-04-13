@@ -87,6 +87,8 @@ public class VkExternalImageFormatProperties extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

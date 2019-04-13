@@ -115,6 +115,8 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

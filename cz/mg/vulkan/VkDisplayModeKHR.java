@@ -43,6 +43,8 @@ public class VkDisplayModeKHR extends VkNonDispatchableHandle {
 
 
 
+
+
         @Override
         public int count(){
             return count;

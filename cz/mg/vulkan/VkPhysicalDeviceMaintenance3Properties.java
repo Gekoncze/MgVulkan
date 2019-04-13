@@ -101,6 +101,8 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -43,6 +43,8 @@ public class VkSampleMask extends VkUInt32 {
 
 
 
+
+
         @Override
         public int count(){
             return count;

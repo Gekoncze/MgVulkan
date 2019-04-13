@@ -60,6 +60,8 @@ public class VkChar extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;

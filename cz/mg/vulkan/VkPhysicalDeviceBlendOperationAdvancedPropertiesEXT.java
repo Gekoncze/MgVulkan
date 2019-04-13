@@ -157,6 +157,8 @@ public class VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT extends VkObjec
 
 
 
+
+
         @Override
         public int count(){
             return count;

@@ -171,6 +171,8 @@ public class VkAttachmentDescription extends VkObject {
 
 
 
+
+
         @Override
         public int count(){
             return count;
