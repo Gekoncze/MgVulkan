@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkAccessFlagBits extends VkFlagBits {
     public static final int VK_ACCESS_INDIRECT_COMMAND_READ_BIT = 0x00000001;
     public static final int VK_ACCESS_INDEX_READ_BIT = 0x00000002;
@@ -38,29 +40,33 @@ public class VkAccessFlagBits extends VkFlagBits {
         setValue(value);
     }
 
+    public VkAccessFlagBits(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_ACCESS_INDIRECT_COMMAND_READ_BIT) s += "VK_ACCESS_INDIRECT_COMMAND_READ_BIT";
-        if(getValue() == VK_ACCESS_INDEX_READ_BIT) s += "VK_ACCESS_INDEX_READ_BIT";
-        if(getValue() == VK_ACCESS_VERTEX_ATTRIBUTE_READ_BIT) s += "VK_ACCESS_VERTEX_ATTRIBUTE_READ_BIT";
-        if(getValue() == VK_ACCESS_UNIFORM_READ_BIT) s += "VK_ACCESS_UNIFORM_READ_BIT";
-        if(getValue() == VK_ACCESS_INPUT_ATTACHMENT_READ_BIT) s += "VK_ACCESS_INPUT_ATTACHMENT_READ_BIT";
-        if(getValue() == VK_ACCESS_SHADER_READ_BIT) s += "VK_ACCESS_SHADER_READ_BIT";
-        if(getValue() == VK_ACCESS_SHADER_WRITE_BIT) s += "VK_ACCESS_SHADER_WRITE_BIT";
-        if(getValue() == VK_ACCESS_COLOR_ATTACHMENT_READ_BIT) s += "VK_ACCESS_COLOR_ATTACHMENT_READ_BIT";
-        if(getValue() == VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT) s += "VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT";
-        if(getValue() == VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_READ_BIT) s += "VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_READ_BIT";
-        if(getValue() == VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT) s += "VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT";
-        if(getValue() == VK_ACCESS_TRANSFER_READ_BIT) s += "VK_ACCESS_TRANSFER_READ_BIT";
-        if(getValue() == VK_ACCESS_TRANSFER_WRITE_BIT) s += "VK_ACCESS_TRANSFER_WRITE_BIT";
-        if(getValue() == VK_ACCESS_HOST_READ_BIT) s += "VK_ACCESS_HOST_READ_BIT";
-        if(getValue() == VK_ACCESS_HOST_WRITE_BIT) s += "VK_ACCESS_HOST_WRITE_BIT";
-        if(getValue() == VK_ACCESS_MEMORY_READ_BIT) s += "VK_ACCESS_MEMORY_READ_BIT";
-        if(getValue() == VK_ACCESS_MEMORY_WRITE_BIT) s += "VK_ACCESS_MEMORY_WRITE_BIT";
-        if(getValue() == VK_ACCESS_COMMAND_PROCESS_READ_BIT_NVX) s += "VK_ACCESS_COMMAND_PROCESS_READ_BIT_NVX";
-        if(getValue() == VK_ACCESS_COMMAND_PROCESS_WRITE_BIT_NVX) s += "VK_ACCESS_COMMAND_PROCESS_WRITE_BIT_NVX";
-        if(getValue() == VK_ACCESS_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT) s += "VK_ACCESS_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_ACCESS_INDIRECT_COMMAND_READ_BIT) != 0) s.addLast("VK_ACCESS_INDIRECT_COMMAND_READ_BIT");
+        if((getValue() & VK_ACCESS_INDEX_READ_BIT) != 0) s.addLast("VK_ACCESS_INDEX_READ_BIT");
+        if((getValue() & VK_ACCESS_VERTEX_ATTRIBUTE_READ_BIT) != 0) s.addLast("VK_ACCESS_VERTEX_ATTRIBUTE_READ_BIT");
+        if((getValue() & VK_ACCESS_UNIFORM_READ_BIT) != 0) s.addLast("VK_ACCESS_UNIFORM_READ_BIT");
+        if((getValue() & VK_ACCESS_INPUT_ATTACHMENT_READ_BIT) != 0) s.addLast("VK_ACCESS_INPUT_ATTACHMENT_READ_BIT");
+        if((getValue() & VK_ACCESS_SHADER_READ_BIT) != 0) s.addLast("VK_ACCESS_SHADER_READ_BIT");
+        if((getValue() & VK_ACCESS_SHADER_WRITE_BIT) != 0) s.addLast("VK_ACCESS_SHADER_WRITE_BIT");
+        if((getValue() & VK_ACCESS_COLOR_ATTACHMENT_READ_BIT) != 0) s.addLast("VK_ACCESS_COLOR_ATTACHMENT_READ_BIT");
+        if((getValue() & VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT) != 0) s.addLast("VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT");
+        if((getValue() & VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_READ_BIT) != 0) s.addLast("VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_READ_BIT");
+        if((getValue() & VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT) != 0) s.addLast("VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT");
+        if((getValue() & VK_ACCESS_TRANSFER_READ_BIT) != 0) s.addLast("VK_ACCESS_TRANSFER_READ_BIT");
+        if((getValue() & VK_ACCESS_TRANSFER_WRITE_BIT) != 0) s.addLast("VK_ACCESS_TRANSFER_WRITE_BIT");
+        if((getValue() & VK_ACCESS_HOST_READ_BIT) != 0) s.addLast("VK_ACCESS_HOST_READ_BIT");
+        if((getValue() & VK_ACCESS_HOST_WRITE_BIT) != 0) s.addLast("VK_ACCESS_HOST_WRITE_BIT");
+        if((getValue() & VK_ACCESS_MEMORY_READ_BIT) != 0) s.addLast("VK_ACCESS_MEMORY_READ_BIT");
+        if((getValue() & VK_ACCESS_MEMORY_WRITE_BIT) != 0) s.addLast("VK_ACCESS_MEMORY_WRITE_BIT");
+        if((getValue() & VK_ACCESS_COMMAND_PROCESS_READ_BIT_NVX) != 0) s.addLast("VK_ACCESS_COMMAND_PROCESS_READ_BIT_NVX");
+        if((getValue() & VK_ACCESS_COMMAND_PROCESS_WRITE_BIT_NVX) != 0) s.addLast("VK_ACCESS_COMMAND_PROCESS_WRITE_BIT_NVX");
+        if((getValue() & VK_ACCESS_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT) != 0) s.addLast("VK_ACCESS_COLOR_ATTACHMENT_READ_NONCOHERENT_BIT_EXT");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

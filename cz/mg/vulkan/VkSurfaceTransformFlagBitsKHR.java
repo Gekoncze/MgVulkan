@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkSurfaceTransformFlagBitsKHR extends VkFlagBits {
     public static final int VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR = 0x00000001;
     public static final int VK_SURFACE_TRANSFORM_ROTATE_90_BIT_KHR = 0x00000002;
@@ -27,18 +29,22 @@ public class VkSurfaceTransformFlagBitsKHR extends VkFlagBits {
         setValue(value);
     }
 
+    public VkSurfaceTransformFlagBitsKHR(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR) s += "VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR";
-        if(getValue() == VK_SURFACE_TRANSFORM_ROTATE_90_BIT_KHR) s += "VK_SURFACE_TRANSFORM_ROTATE_90_BIT_KHR";
-        if(getValue() == VK_SURFACE_TRANSFORM_ROTATE_180_BIT_KHR) s += "VK_SURFACE_TRANSFORM_ROTATE_180_BIT_KHR";
-        if(getValue() == VK_SURFACE_TRANSFORM_ROTATE_270_BIT_KHR) s += "VK_SURFACE_TRANSFORM_ROTATE_270_BIT_KHR";
-        if(getValue() == VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_BIT_KHR) s += "VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_BIT_KHR";
-        if(getValue() == VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_90_BIT_KHR) s += "VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_90_BIT_KHR";
-        if(getValue() == VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_180_BIT_KHR) s += "VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_180_BIT_KHR";
-        if(getValue() == VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_270_BIT_KHR) s += "VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_270_BIT_KHR";
-        if(getValue() == VK_SURFACE_TRANSFORM_INHERIT_BIT_KHR) s += "VK_SURFACE_TRANSFORM_INHERIT_BIT_KHR";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR) != 0) s.addLast("VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR");
+        if((getValue() & VK_SURFACE_TRANSFORM_ROTATE_90_BIT_KHR) != 0) s.addLast("VK_SURFACE_TRANSFORM_ROTATE_90_BIT_KHR");
+        if((getValue() & VK_SURFACE_TRANSFORM_ROTATE_180_BIT_KHR) != 0) s.addLast("VK_SURFACE_TRANSFORM_ROTATE_180_BIT_KHR");
+        if((getValue() & VK_SURFACE_TRANSFORM_ROTATE_270_BIT_KHR) != 0) s.addLast("VK_SURFACE_TRANSFORM_ROTATE_270_BIT_KHR");
+        if((getValue() & VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_BIT_KHR) != 0) s.addLast("VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_BIT_KHR");
+        if((getValue() & VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_90_BIT_KHR) != 0) s.addLast("VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_90_BIT_KHR");
+        if((getValue() & VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_180_BIT_KHR) != 0) s.addLast("VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_180_BIT_KHR");
+        if((getValue() & VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_270_BIT_KHR) != 0) s.addLast("VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_270_BIT_KHR");
+        if((getValue() & VK_SURFACE_TRANSFORM_INHERIT_BIT_KHR) != 0) s.addLast("VK_SURFACE_TRANSFORM_INHERIT_BIT_KHR");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

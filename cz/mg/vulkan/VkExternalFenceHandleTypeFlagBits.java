@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkExternalFenceHandleTypeFlagBits extends VkFlagBits {
     public static final int VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT = 0x00000001;
     public static final int VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT = 0x00000002;
@@ -26,17 +28,21 @@ public class VkExternalFenceHandleTypeFlagBits extends VkFlagBits {
         setValue(value);
     }
 
+    public VkExternalFenceHandleTypeFlagBits(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT) s += "VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT";
-        if(getValue() == VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT) s += "VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT";
-        if(getValue() == VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT) s += "VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT";
-        if(getValue() == VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT) s += "VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT";
-        if(getValue() == VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT_KHR) s += "VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT_KHR";
-        if(getValue() == VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT_KHR) s += "VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT_KHR";
-        if(getValue() == VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_KHR) s += "VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_KHR";
-        if(getValue() == VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT_KHR) s += "VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT_KHR";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT) != 0) s.addLast("VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT");
+        if((getValue() & VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT) != 0) s.addLast("VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT");
+        if((getValue() & VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT) != 0) s.addLast("VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT");
+        if((getValue() & VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT) != 0) s.addLast("VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT");
+        if((getValue() & VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT_KHR) != 0) s.addLast("VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_FD_BIT_KHR");
+        if((getValue() & VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT_KHR) != 0) s.addLast("VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_BIT_KHR");
+        if((getValue() & VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_KHR) != 0) s.addLast("VK_EXTERNAL_FENCE_HANDLE_TYPE_OPAQUE_WIN32_KMT_BIT_KHR");
+        if((getValue() & VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT_KHR) != 0) s.addLast("VK_EXTERNAL_FENCE_HANDLE_TYPE_SYNC_FD_BIT_KHR");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

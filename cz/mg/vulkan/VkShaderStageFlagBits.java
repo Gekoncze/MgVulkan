@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkShaderStageFlagBits extends VkFlagBits {
     public static final int VK_SHADER_STAGE_VERTEX_BIT = 0x00000001;
     public static final int VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT = 0x00000002;
@@ -26,17 +28,21 @@ public class VkShaderStageFlagBits extends VkFlagBits {
         setValue(value);
     }
 
+    public VkShaderStageFlagBits(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_SHADER_STAGE_VERTEX_BIT) s += "VK_SHADER_STAGE_VERTEX_BIT";
-        if(getValue() == VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT) s += "VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT";
-        if(getValue() == VK_SHADER_STAGE_TESSELLATION_EVALUATION_BIT) s += "VK_SHADER_STAGE_TESSELLATION_EVALUATION_BIT";
-        if(getValue() == VK_SHADER_STAGE_GEOMETRY_BIT) s += "VK_SHADER_STAGE_GEOMETRY_BIT";
-        if(getValue() == VK_SHADER_STAGE_FRAGMENT_BIT) s += "VK_SHADER_STAGE_FRAGMENT_BIT";
-        if(getValue() == VK_SHADER_STAGE_COMPUTE_BIT) s += "VK_SHADER_STAGE_COMPUTE_BIT";
-        if(getValue() == VK_SHADER_STAGE_ALL_GRAPHICS) s += "VK_SHADER_STAGE_ALL_GRAPHICS";
-        if(getValue() == VK_SHADER_STAGE_ALL) s += "VK_SHADER_STAGE_ALL";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_SHADER_STAGE_VERTEX_BIT) != 0) s.addLast("VK_SHADER_STAGE_VERTEX_BIT");
+        if((getValue() & VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT) != 0) s.addLast("VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT");
+        if((getValue() & VK_SHADER_STAGE_TESSELLATION_EVALUATION_BIT) != 0) s.addLast("VK_SHADER_STAGE_TESSELLATION_EVALUATION_BIT");
+        if((getValue() & VK_SHADER_STAGE_GEOMETRY_BIT) != 0) s.addLast("VK_SHADER_STAGE_GEOMETRY_BIT");
+        if((getValue() & VK_SHADER_STAGE_FRAGMENT_BIT) != 0) s.addLast("VK_SHADER_STAGE_FRAGMENT_BIT");
+        if((getValue() & VK_SHADER_STAGE_COMPUTE_BIT) != 0) s.addLast("VK_SHADER_STAGE_COMPUTE_BIT");
+        if((getValue() & VK_SHADER_STAGE_ALL_GRAPHICS) != 0) s.addLast("VK_SHADER_STAGE_ALL_GRAPHICS");
+        if((getValue() & VK_SHADER_STAGE_ALL) != 0) s.addLast("VK_SHADER_STAGE_ALL");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

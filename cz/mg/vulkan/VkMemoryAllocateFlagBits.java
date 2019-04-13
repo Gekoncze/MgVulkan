@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkMemoryAllocateFlagBits extends VkFlagBits {
     public static final int VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT = 0x00000001;
     public static final int VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR = VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT;
@@ -20,11 +22,15 @@ public class VkMemoryAllocateFlagBits extends VkFlagBits {
         setValue(value);
     }
 
+    public VkMemoryAllocateFlagBits(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT) s += "VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT";
-        if(getValue() == VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR) s += "VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT) != 0) s.addLast("VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT");
+        if((getValue() & VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR) != 0) s.addLast("VK_MEMORY_ALLOCATE_DEVICE_MASK_BIT_KHR");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

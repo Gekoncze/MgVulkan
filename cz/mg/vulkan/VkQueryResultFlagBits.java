@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkQueryResultFlagBits extends VkFlagBits {
     public static final int VK_QUERY_RESULT_64_BIT = 0x00000001;
     public static final int VK_QUERY_RESULT_WAIT_BIT = 0x00000002;
@@ -22,13 +24,17 @@ public class VkQueryResultFlagBits extends VkFlagBits {
         setValue(value);
     }
 
+    public VkQueryResultFlagBits(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_QUERY_RESULT_64_BIT) s += "VK_QUERY_RESULT_64_BIT";
-        if(getValue() == VK_QUERY_RESULT_WAIT_BIT) s += "VK_QUERY_RESULT_WAIT_BIT";
-        if(getValue() == VK_QUERY_RESULT_WITH_AVAILABILITY_BIT) s += "VK_QUERY_RESULT_WITH_AVAILABILITY_BIT";
-        if(getValue() == VK_QUERY_RESULT_PARTIAL_BIT) s += "VK_QUERY_RESULT_PARTIAL_BIT";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_QUERY_RESULT_64_BIT) != 0) s.addLast("VK_QUERY_RESULT_64_BIT");
+        if((getValue() & VK_QUERY_RESULT_WAIT_BIT) != 0) s.addLast("VK_QUERY_RESULT_WAIT_BIT");
+        if((getValue() & VK_QUERY_RESULT_WITH_AVAILABILITY_BIT) != 0) s.addLast("VK_QUERY_RESULT_WITH_AVAILABILITY_BIT");
+        if((getValue() & VK_QUERY_RESULT_PARTIAL_BIT) != 0) s.addLast("VK_QUERY_RESULT_PARTIAL_BIT");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

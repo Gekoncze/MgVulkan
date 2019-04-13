@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkDeviceQueueCreateFlagBits extends VkFlagBits {
     public static final int VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT = 0x00000001;
 
@@ -19,10 +21,14 @@ public class VkDeviceQueueCreateFlagBits extends VkFlagBits {
         setValue(value);
     }
 
+    public VkDeviceQueueCreateFlagBits(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT) s += "VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT) != 0) s.addLast("VK_DEVICE_QUEUE_CREATE_PROTECTED_BIT");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

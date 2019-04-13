@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkSubgroupFeatureFlagBits extends VkFlagBits {
     public static final int VK_SUBGROUP_FEATURE_BASIC_BIT = 0x00000001;
     public static final int VK_SUBGROUP_FEATURE_VOTE_BIT = 0x00000002;
@@ -27,18 +29,22 @@ public class VkSubgroupFeatureFlagBits extends VkFlagBits {
         setValue(value);
     }
 
+    public VkSubgroupFeatureFlagBits(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_SUBGROUP_FEATURE_BASIC_BIT) s += "VK_SUBGROUP_FEATURE_BASIC_BIT";
-        if(getValue() == VK_SUBGROUP_FEATURE_VOTE_BIT) s += "VK_SUBGROUP_FEATURE_VOTE_BIT";
-        if(getValue() == VK_SUBGROUP_FEATURE_ARITHMETIC_BIT) s += "VK_SUBGROUP_FEATURE_ARITHMETIC_BIT";
-        if(getValue() == VK_SUBGROUP_FEATURE_BALLOT_BIT) s += "VK_SUBGROUP_FEATURE_BALLOT_BIT";
-        if(getValue() == VK_SUBGROUP_FEATURE_SHUFFLE_BIT) s += "VK_SUBGROUP_FEATURE_SHUFFLE_BIT";
-        if(getValue() == VK_SUBGROUP_FEATURE_SHUFFLE_RELATIVE_BIT) s += "VK_SUBGROUP_FEATURE_SHUFFLE_RELATIVE_BIT";
-        if(getValue() == VK_SUBGROUP_FEATURE_CLUSTERED_BIT) s += "VK_SUBGROUP_FEATURE_CLUSTERED_BIT";
-        if(getValue() == VK_SUBGROUP_FEATURE_QUAD_BIT) s += "VK_SUBGROUP_FEATURE_QUAD_BIT";
-        if(getValue() == VK_SUBGROUP_FEATURE_PARTITIONED_BIT_NV) s += "VK_SUBGROUP_FEATURE_PARTITIONED_BIT_NV";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_SUBGROUP_FEATURE_BASIC_BIT) != 0) s.addLast("VK_SUBGROUP_FEATURE_BASIC_BIT");
+        if((getValue() & VK_SUBGROUP_FEATURE_VOTE_BIT) != 0) s.addLast("VK_SUBGROUP_FEATURE_VOTE_BIT");
+        if((getValue() & VK_SUBGROUP_FEATURE_ARITHMETIC_BIT) != 0) s.addLast("VK_SUBGROUP_FEATURE_ARITHMETIC_BIT");
+        if((getValue() & VK_SUBGROUP_FEATURE_BALLOT_BIT) != 0) s.addLast("VK_SUBGROUP_FEATURE_BALLOT_BIT");
+        if((getValue() & VK_SUBGROUP_FEATURE_SHUFFLE_BIT) != 0) s.addLast("VK_SUBGROUP_FEATURE_SHUFFLE_BIT");
+        if((getValue() & VK_SUBGROUP_FEATURE_SHUFFLE_RELATIVE_BIT) != 0) s.addLast("VK_SUBGROUP_FEATURE_SHUFFLE_RELATIVE_BIT");
+        if((getValue() & VK_SUBGROUP_FEATURE_CLUSTERED_BIT) != 0) s.addLast("VK_SUBGROUP_FEATURE_CLUSTERED_BIT");
+        if((getValue() & VK_SUBGROUP_FEATURE_QUAD_BIT) != 0) s.addLast("VK_SUBGROUP_FEATURE_QUAD_BIT");
+        if((getValue() & VK_SUBGROUP_FEATURE_PARTITIONED_BIT_NV) != 0) s.addLast("VK_SUBGROUP_FEATURE_PARTITIONED_BIT_NV");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

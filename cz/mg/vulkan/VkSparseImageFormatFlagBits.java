@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkSparseImageFormatFlagBits extends VkFlagBits {
     public static final int VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT = 0x00000001;
     public static final int VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT = 0x00000002;
@@ -21,12 +23,16 @@ public class VkSparseImageFormatFlagBits extends VkFlagBits {
         setValue(value);
     }
 
+    public VkSparseImageFormatFlagBits(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT) s += "VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT";
-        if(getValue() == VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT) s += "VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT";
-        if(getValue() == VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT) s += "VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT) != 0) s.addLast("VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT");
+        if((getValue() & VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT) != 0) s.addLast("VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT");
+        if((getValue() & VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT) != 0) s.addLast("VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

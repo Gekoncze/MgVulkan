@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkPeerMemoryFeatureFlagBits extends VkFlagBits {
     public static final int VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT = 0x00000001;
     public static final int VK_PEER_MEMORY_FEATURE_COPY_DST_BIT = 0x00000002;
@@ -26,17 +28,21 @@ public class VkPeerMemoryFeatureFlagBits extends VkFlagBits {
         setValue(value);
     }
 
+    public VkPeerMemoryFeatureFlagBits(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT) s += "VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT";
-        if(getValue() == VK_PEER_MEMORY_FEATURE_COPY_DST_BIT) s += "VK_PEER_MEMORY_FEATURE_COPY_DST_BIT";
-        if(getValue() == VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT) s += "VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT";
-        if(getValue() == VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT) s += "VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT";
-        if(getValue() == VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT_KHR) s += "VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT_KHR";
-        if(getValue() == VK_PEER_MEMORY_FEATURE_COPY_DST_BIT_KHR) s += "VK_PEER_MEMORY_FEATURE_COPY_DST_BIT_KHR";
-        if(getValue() == VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT_KHR) s += "VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT_KHR";
-        if(getValue() == VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT_KHR) s += "VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT_KHR";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT) != 0) s.addLast("VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT");
+        if((getValue() & VK_PEER_MEMORY_FEATURE_COPY_DST_BIT) != 0) s.addLast("VK_PEER_MEMORY_FEATURE_COPY_DST_BIT");
+        if((getValue() & VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT) != 0) s.addLast("VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT");
+        if((getValue() & VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT) != 0) s.addLast("VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT");
+        if((getValue() & VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT_KHR) != 0) s.addLast("VK_PEER_MEMORY_FEATURE_COPY_SRC_BIT_KHR");
+        if((getValue() & VK_PEER_MEMORY_FEATURE_COPY_DST_BIT_KHR) != 0) s.addLast("VK_PEER_MEMORY_FEATURE_COPY_DST_BIT_KHR");
+        if((getValue() & VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT_KHR) != 0) s.addLast("VK_PEER_MEMORY_FEATURE_GENERIC_SRC_BIT_KHR");
+        if((getValue() & VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT_KHR) != 0) s.addLast("VK_PEER_MEMORY_FEATURE_GENERIC_DST_BIT_KHR");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

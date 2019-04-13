@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkSwapchainCreateFlagBitsKHR extends VkFlagBits {
     public static final int VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR = 0x00000001;
     public static final int VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR = 0x00000002;
@@ -20,11 +22,15 @@ public class VkSwapchainCreateFlagBitsKHR extends VkFlagBits {
         setValue(value);
     }
 
+    public VkSwapchainCreateFlagBitsKHR(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR) s += "VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR";
-        if(getValue() == VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR) s += "VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR) != 0) s.addLast("VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR");
+        if((getValue() & VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR) != 0) s.addLast("VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

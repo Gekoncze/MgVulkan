@@ -1,5 +1,7 @@
 package cz.mg.vulkan;
 
+import cz.mg.collections.list.chainlist.ChainList;
+
 public class VkCullModeFlagBits extends VkFlagBits {
     public static final int VK_CULL_MODE_NONE = 0;
     public static final int VK_CULL_MODE_FRONT_BIT = 0x00000001;
@@ -22,13 +24,17 @@ public class VkCullModeFlagBits extends VkFlagBits {
         setValue(value);
     }
 
+    public VkCullModeFlagBits(VkFlags flags) {
+        setValue(flags.getValue());
+    }
+
     @Override
     public String toString() {
-        String s = "";
-        if(getValue() == VK_CULL_MODE_NONE) s += "VK_CULL_MODE_NONE";
-        if(getValue() == VK_CULL_MODE_FRONT_BIT) s += "VK_CULL_MODE_FRONT_BIT";
-        if(getValue() == VK_CULL_MODE_BACK_BIT) s += "VK_CULL_MODE_BACK_BIT";
-        if(getValue() == VK_CULL_MODE_FRONT_AND_BACK) s += "VK_CULL_MODE_FRONT_AND_BACK";
-        return s + "(0x" + Integer.toHexString(getValue()) + ")";
+        ChainList<String> s = new ChainList<>();
+        if((getValue() & VK_CULL_MODE_NONE) != 0) s.addLast("VK_CULL_MODE_NONE");
+        if((getValue() & VK_CULL_MODE_FRONT_BIT) != 0) s.addLast("VK_CULL_MODE_FRONT_BIT");
+        if((getValue() & VK_CULL_MODE_BACK_BIT) != 0) s.addLast("VK_CULL_MODE_BACK_BIT");
+        if((getValue() & VK_CULL_MODE_FRONT_AND_BACK) != 0) s.addLast("VK_CULL_MODE_FRONT_AND_BACK");
+        return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }
