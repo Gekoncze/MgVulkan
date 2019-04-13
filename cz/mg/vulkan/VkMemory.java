@@ -6,6 +6,7 @@ public class VkMemory implements AutoCloseable {
 
     public VkMemory(long size) {
         if(size < 0) throw new IllegalArgumentException("Memory size must be >= 0, given " + size + ".");
+        if(size == 0) size = 1;
         this.size = size;
         this.address = malloc(size);
     }
