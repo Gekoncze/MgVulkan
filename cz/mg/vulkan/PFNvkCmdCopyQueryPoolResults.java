@@ -13,6 +13,7 @@ public class PFNvkCmdCopyQueryPoolResults extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdCopyQueryPoolResults(long value) {
         setValue(value);
     }

@@ -13,7 +13,6 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDebugUtilsMessengerCallbackDataEXT(VkStructureType sType, VkObject pNext, VkDebugUtilsMessengerCallbackDataFlagsEXT flags, VkChar pMessageIdName, VkInt32 messageIdNumber, VkChar pMessage, VkUInt32 queueLabelCount, VkDebugUtilsLabelEXT pQueueLabels, VkUInt32 cmdBufLabelCount, VkDebugUtilsLabelEXT pCmdBufLabels, VkUInt32 objectCount, VkDebugUtilsObjectNameInfoEXT pObjects) {
         super(sizeof());
         setSType(sType);
@@ -189,7 +188,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDebugUtilsMessengerCallbackDataEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsMessengerCallbackDataEXT> {        private final int count;
+    public static class Array extends VkDebugUtilsMessengerCallbackDataEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsMessengerCallbackDataEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDebugUtilsMessengerCallbackDataEXT.sizeof()));
@@ -211,6 +211,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -222,8 +224,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -272,5 +274,4 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
             }
         }
     }
-
 }

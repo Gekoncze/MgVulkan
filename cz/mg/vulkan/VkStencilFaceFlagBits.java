@@ -19,6 +19,7 @@ public class VkStencilFaceFlagBits extends VkFlagBits {
     }
 
 
+
     public VkStencilFaceFlagBits(int value) {
         setValue(value);
     }

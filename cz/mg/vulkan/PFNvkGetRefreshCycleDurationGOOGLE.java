@@ -13,6 +13,7 @@ public class PFNvkGetRefreshCycleDurationGOOGLE extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetRefreshCycleDurationGOOGLE(long value) {
         setValue(value);
     }

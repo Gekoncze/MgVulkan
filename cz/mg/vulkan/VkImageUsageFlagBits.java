@@ -24,6 +24,7 @@ public class VkImageUsageFlagBits extends VkFlagBits {
     }
 
 
+
     public VkImageUsageFlagBits(int value) {
         setValue(value);
     }

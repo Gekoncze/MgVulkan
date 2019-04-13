@@ -13,6 +13,7 @@ public class VkImageUsageFlags extends VkFlags {
     }
 
 
+
     public VkImageUsageFlags(int value) {
         setValue(value);
     }

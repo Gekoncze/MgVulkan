@@ -65,6 +65,7 @@ public class VkBlendOp extends VkEnum {
     }
 
 
+
     public VkBlendOp(int value) {
         setValue(value);
     }
@@ -125,7 +126,8 @@ public class VkBlendOp extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkBlendOp implements cz.mg.collections.array.ReadonlyArray<VkBlendOp> {        private final int count;
+    public static class Array extends VkBlendOp implements cz.mg.collections.array.ReadonlyArray<VkBlendOp> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkBlendOp.sizeof()));
@@ -147,6 +149,8 @@ public class VkBlendOp extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -157,5 +161,4 @@ public class VkBlendOp extends VkEnum {
             return new VkBlendOp(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

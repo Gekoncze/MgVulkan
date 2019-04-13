@@ -20,6 +20,7 @@ public class VkColorComponentFlagBits extends VkFlagBits {
     }
 
 
+
     public VkColorComponentFlagBits(int value) {
         setValue(value);
     }

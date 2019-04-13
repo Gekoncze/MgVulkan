@@ -13,6 +13,7 @@ public class VkIndirectCommandsLayoutUsageFlagsNVX extends VkFlags {
     }
 
 
+
     public VkIndirectCommandsLayoutUsageFlagsNVX(int value) {
         setValue(value);
     }

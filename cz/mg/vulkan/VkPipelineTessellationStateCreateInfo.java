@@ -13,7 +13,6 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineTessellationStateCreateInfo(VkObject pNext, VkPipelineTessellationStateCreateFlags flags, VkUInt32 patchControlPoints) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_TESSELLATION_STATE_CREATE_INFO));
@@ -77,7 +76,8 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineTessellationStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineTessellationStateCreateInfo> {        private final int count;
+    public static class Array extends VkPipelineTessellationStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineTessellationStateCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineTessellationStateCreateInfo.sizeof()));
@@ -99,6 +99,8 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
             }
         }
     }
-
 }

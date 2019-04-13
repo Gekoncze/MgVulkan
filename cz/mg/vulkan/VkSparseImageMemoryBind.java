@@ -13,7 +13,6 @@ public class VkSparseImageMemoryBind extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSparseImageMemoryBind(VkImageSubresource subresource, VkOffset3D offset, VkExtent3D extent, VkDeviceMemory memory, VkDeviceSize memoryOffset, VkSparseMemoryBindFlags flags) {
         super(sizeof());
         setSubresource(subresource);
@@ -105,7 +104,8 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSparseImageMemoryBind implements cz.mg.collections.array.ReadonlyArray<VkSparseImageMemoryBind> {        private final int count;
+    public static class Array extends VkSparseImageMemoryBind implements cz.mg.collections.array.ReadonlyArray<VkSparseImageMemoryBind> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSparseImageMemoryBind.sizeof()));
@@ -127,6 +127,8 @@ public class VkSparseImageMemoryBind extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkSparseImageMemoryBind extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkSparseImageMemoryBind extends VkObject {
             }
         }
     }
-
 }

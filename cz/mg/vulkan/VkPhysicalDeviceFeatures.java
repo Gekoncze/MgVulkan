@@ -13,7 +13,6 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceFeatures(VkBool32 robustBufferAccess, VkBool32 fullDrawIndexUint32, VkBool32 imageCubeArray, VkBool32 independentBlend, VkBool32 geometryShader, VkBool32 tessellationShader, VkBool32 sampleRateShading, VkBool32 dualSrcBlend, VkBool32 logicOp, VkBool32 multiDrawIndirect, VkBool32 drawIndirectFirstInstance, VkBool32 depthClamp, VkBool32 depthBiasClamp, VkBool32 fillModeNonSolid, VkBool32 depthBounds, VkBool32 wideLines, VkBool32 largePoints, VkBool32 alphaToOne, VkBool32 multiViewport, VkBool32 samplerAnisotropy, VkBool32 textureCompressionETC2, VkBool32 textureCompressionASTC_LDR, VkBool32 textureCompressionBC, VkBool32 occlusionQueryPrecise, VkBool32 pipelineStatisticsQuery, VkBool32 vertexPipelineStoresAndAtomics, VkBool32 fragmentStoresAndAtomics, VkBool32 shaderTessellationAndGeometryPointSize, VkBool32 shaderImageGatherExtended, VkBool32 shaderStorageImageExtendedFormats, VkBool32 shaderStorageImageMultisample, VkBool32 shaderStorageImageReadWithoutFormat, VkBool32 shaderStorageImageWriteWithoutFormat, VkBool32 shaderUniformBufferArrayDynamicIndexing, VkBool32 shaderSampledImageArrayDynamicIndexing, VkBool32 shaderStorageBufferArrayDynamicIndexing, VkBool32 shaderStorageImageArrayDynamicIndexing, VkBool32 shaderClipDistance, VkBool32 shaderCullDistance, VkBool32 shaderFloat64, VkBool32 shaderInt64, VkBool32 shaderInt16, VkBool32 shaderResourceResidency, VkBool32 shaderResourceMinLod, VkBool32 sparseBinding, VkBool32 sparseResidencyBuffer, VkBool32 sparseResidencyImage2D, VkBool32 sparseResidencyImage3D, VkBool32 sparseResidency2Samples, VkBool32 sparseResidency4Samples, VkBool32 sparseResidency8Samples, VkBool32 sparseResidency16Samples, VkBool32 sparseResidencyAliased, VkBool32 variableMultisampleRate, VkBool32 inheritedQueries) {
         super(sizeof());
         setRobustBufferAccess(robustBufferAccess);
@@ -791,7 +790,8 @@ public class VkPhysicalDeviceFeatures extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceFeatures implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceFeatures> {        private final int count;
+    public static class Array extends VkPhysicalDeviceFeatures implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceFeatures> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceFeatures.sizeof()));
@@ -813,6 +813,8 @@ public class VkPhysicalDeviceFeatures extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -824,8 +826,8 @@ public class VkPhysicalDeviceFeatures extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -874,5 +876,4 @@ public class VkPhysicalDeviceFeatures extends VkObject {
             }
         }
     }
-
 }

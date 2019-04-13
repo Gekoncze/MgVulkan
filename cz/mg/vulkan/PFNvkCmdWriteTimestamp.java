@@ -13,6 +13,7 @@ public class PFNvkCmdWriteTimestamp extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdWriteTimestamp(long value) {
         setValue(value);
     }

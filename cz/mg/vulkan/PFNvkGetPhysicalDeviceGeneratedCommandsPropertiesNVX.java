@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX extends VkFunc
     }
 
 
+
     public PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(long value) {
         setValue(value);
     }

@@ -19,6 +19,7 @@ public class VkPhysicalDeviceType extends VkEnum {
     }
 
 
+
     public VkPhysicalDeviceType(int value) {
         setValue(value);
     }
@@ -33,7 +34,8 @@ public class VkPhysicalDeviceType extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkPhysicalDeviceType implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceType> {        private final int count;
+    public static class Array extends VkPhysicalDeviceType implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceType> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceType.sizeof()));
@@ -55,6 +57,8 @@ public class VkPhysicalDeviceType extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -65,5 +69,4 @@ public class VkPhysicalDeviceType extends VkEnum {
             return new VkPhysicalDeviceType(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class PFNvkDestroyBuffer extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyBuffer(long value) {
         setValue(value);
     }

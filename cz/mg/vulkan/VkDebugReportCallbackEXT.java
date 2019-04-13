@@ -13,11 +13,13 @@ public class VkDebugReportCallbackEXT extends VkNonDispatchableHandle {
     }
 
 
+
     public VkDebugReportCallbackEXT(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkDebugReportCallbackEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugReportCallbackEXT> {        private final int count;
+    public static class Array extends VkDebugReportCallbackEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugReportCallbackEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDebugReportCallbackEXT.sizeof()));
@@ -39,6 +41,8 @@ public class VkDebugReportCallbackEXT extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkDebugReportCallbackEXT extends VkNonDispatchableHandle {
             return new VkDebugReportCallbackEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

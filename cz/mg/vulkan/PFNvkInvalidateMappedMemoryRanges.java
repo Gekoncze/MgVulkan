@@ -13,6 +13,7 @@ public class PFNvkInvalidateMappedMemoryRanges extends VkFunctionPointer {
     }
 
 
+
     public PFNvkInvalidateMappedMemoryRanges(long value) {
         setValue(value);
     }

@@ -13,7 +13,6 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkRenderPassMultiviewCreateInfo(VkObject pNext, VkUInt32 subpassCount, VkUInt32 pViewMasks, VkUInt32 dependencyCount, VkInt32 pViewOffsets, VkUInt32 correlationMaskCount, VkUInt32 pCorrelationMasks) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_MULTIVIEW_CREATE_INFO));
@@ -133,7 +132,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkRenderPassMultiviewCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkRenderPassMultiviewCreateInfo> {        private final int count;
+    public static class Array extends VkRenderPassMultiviewCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkRenderPassMultiviewCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkRenderPassMultiviewCreateInfo.sizeof()));
@@ -155,6 +155,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -166,8 +168,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -216,5 +218,4 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
             }
         }
     }
-
 }

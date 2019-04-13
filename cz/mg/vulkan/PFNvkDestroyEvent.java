@@ -13,6 +13,7 @@ public class PFNvkDestroyEvent extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyEvent(long value) {
         setValue(value);
     }

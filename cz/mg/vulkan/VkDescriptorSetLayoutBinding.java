@@ -13,7 +13,6 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDescriptorSetLayoutBinding(VkUInt32 binding, VkDescriptorType descriptorType, VkUInt32 descriptorCount, VkShaderStageFlags stageFlags, VkSampler pImmutableSamplers) {
         super(sizeof());
         setBinding(binding);
@@ -91,7 +90,8 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDescriptorSetLayoutBinding implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetLayoutBinding> {        private final int count;
+    public static class Array extends VkDescriptorSetLayoutBinding implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetLayoutBinding> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorSetLayoutBinding.sizeof()));
@@ -113,6 +113,8 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
             }
         }
     }
-
 }

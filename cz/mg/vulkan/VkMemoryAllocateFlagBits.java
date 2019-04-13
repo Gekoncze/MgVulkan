@@ -18,6 +18,7 @@ public class VkMemoryAllocateFlagBits extends VkFlagBits {
     }
 
 
+
     public VkMemoryAllocateFlagBits(int value) {
         setValue(value);
     }

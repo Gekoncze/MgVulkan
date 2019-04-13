@@ -13,6 +13,7 @@ public class PFNvkGetMemoryFdPropertiesKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetMemoryFdPropertiesKHR(long value) {
         setValue(value);
     }

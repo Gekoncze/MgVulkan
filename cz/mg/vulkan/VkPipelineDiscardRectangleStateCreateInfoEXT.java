@@ -13,7 +13,6 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineDiscardRectangleStateCreateInfoEXT(VkObject pNext, VkPipelineDiscardRectangleStateCreateFlagsEXT flags, VkDiscardRectangleModeEXT discardRectangleMode, VkUInt32 discardRectangleCount, VkRect2D pDiscardRectangles) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT));
@@ -105,7 +104,8 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineDiscardRectangleStateCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkPipelineDiscardRectangleStateCreateInfoEXT> {        private final int count;
+    public static class Array extends VkPipelineDiscardRectangleStateCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkPipelineDiscardRectangleStateCreateInfoEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineDiscardRectangleStateCreateInfoEXT.sizeof()));
@@ -127,6 +127,8 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
             }
         }
     }
-
 }

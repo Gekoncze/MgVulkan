@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceSurfaceFormats2KHR extends VkFunctionPointer 
     }
 
 
+
     public PFNvkGetPhysicalDeviceSurfaceFormats2KHR(long value) {
         setValue(value);
     }

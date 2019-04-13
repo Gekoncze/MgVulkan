@@ -13,6 +13,7 @@ public class VkDebugUtilsMessageSeverityFlagsEXT extends VkFlags {
     }
 
 
+
     public VkDebugUtilsMessageSeverityFlagsEXT(int value) {
         setValue(value);
     }

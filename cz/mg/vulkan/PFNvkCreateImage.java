@@ -13,6 +13,7 @@ public class PFNvkCreateImage extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateImage(long value) {
         setValue(value);
     }

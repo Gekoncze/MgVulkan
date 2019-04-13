@@ -13,6 +13,7 @@ public class VkCommandPoolTrimFlags extends VkFlags {
     }
 
 
+
     public VkCommandPoolTrimFlags(int value) {
         setValue(value);
     }

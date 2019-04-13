@@ -13,7 +13,6 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDevice16BitStorageFeatures(VkStructureType sType, VkObject pNext, VkBool32 storageBuffer16BitAccess, VkBool32 uniformAndStorageBuffer16BitAccess, VkBool32 storagePushConstant16, VkBool32 storageInputOutput16) {
         super(sizeof());
         setSType(sType);
@@ -105,7 +104,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDevice16BitStorageFeatures implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDevice16BitStorageFeatures> {        private final int count;
+    public static class Array extends VkPhysicalDevice16BitStorageFeatures implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDevice16BitStorageFeatures> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDevice16BitStorageFeatures.sizeof()));
@@ -127,6 +127,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
             }
         }
     }
-
 }

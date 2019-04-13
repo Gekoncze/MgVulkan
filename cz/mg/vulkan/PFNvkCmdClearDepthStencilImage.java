@@ -13,6 +13,7 @@ public class PFNvkCmdClearDepthStencilImage extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdClearDepthStencilImage(long value) {
         setValue(value);
     }

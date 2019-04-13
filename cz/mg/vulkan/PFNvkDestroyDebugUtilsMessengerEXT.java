@@ -13,6 +13,7 @@ public class PFNvkDestroyDebugUtilsMessengerEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyDebugUtilsMessengerEXT(long value) {
         setValue(value);
     }

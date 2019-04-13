@@ -13,6 +13,7 @@ public class VkEventCreateFlags extends VkFlags {
     }
 
 
+
     public VkEventCreateFlags(int value) {
         setValue(value);
     }

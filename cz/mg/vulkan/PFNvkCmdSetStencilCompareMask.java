@@ -13,6 +13,7 @@ public class PFNvkCmdSetStencilCompareMask extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetStencilCompareMask(long value) {
         setValue(value);
     }

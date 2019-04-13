@@ -22,6 +22,7 @@ public class VkStencilOp extends VkEnum {
     }
 
 
+
     public VkStencilOp(int value) {
         setValue(value);
     }
@@ -39,7 +40,8 @@ public class VkStencilOp extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkStencilOp implements cz.mg.collections.array.ReadonlyArray<VkStencilOp> {        private final int count;
+    public static class Array extends VkStencilOp implements cz.mg.collections.array.ReadonlyArray<VkStencilOp> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkStencilOp.sizeof()));
@@ -61,6 +63,8 @@ public class VkStencilOp extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -71,5 +75,4 @@ public class VkStencilOp extends VkEnum {
             return new VkStencilOp(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

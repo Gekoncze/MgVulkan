@@ -13,7 +13,6 @@ public class VkDeviceQueueInfo2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDeviceQueueInfo2(VkObject pNext, VkDeviceQueueCreateFlags flags, VkUInt32 queueFamilyIndex, VkUInt32 queueIndex) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_QUEUE_INFO_2));
@@ -91,7 +90,8 @@ public class VkDeviceQueueInfo2 extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDeviceQueueInfo2 implements cz.mg.collections.array.ReadonlyArray<VkDeviceQueueInfo2> {        private final int count;
+    public static class Array extends VkDeviceQueueInfo2 implements cz.mg.collections.array.ReadonlyArray<VkDeviceQueueInfo2> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDeviceQueueInfo2.sizeof()));
@@ -113,6 +113,8 @@ public class VkDeviceQueueInfo2 extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkDeviceQueueInfo2 extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkDeviceQueueInfo2 extends VkObject {
             }
         }
     }
-
 }

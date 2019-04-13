@@ -13,6 +13,7 @@ public class PFNvkGetSwapchainStatusKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetSwapchainStatusKHR(long value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class VkPipelineDynamicStateCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineDynamicStateCreateFlags(int value) {
         setValue(value);
     }

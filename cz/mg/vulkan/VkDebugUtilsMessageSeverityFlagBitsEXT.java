@@ -20,6 +20,7 @@ public class VkDebugUtilsMessageSeverityFlagBitsEXT extends VkFlagBits {
     }
 
 
+
     public VkDebugUtilsMessageSeverityFlagBitsEXT(int value) {
         setValue(value);
     }

@@ -20,6 +20,7 @@ public class VkDescriptorBindingFlagBitsEXT extends VkFlagBits {
     }
 
 
+
     public VkDescriptorBindingFlagBitsEXT(int value) {
         setValue(value);
     }

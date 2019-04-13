@@ -13,6 +13,7 @@ public class PFNvkCreatePipelineLayout extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreatePipelineLayout(long value) {
         setValue(value);
     }

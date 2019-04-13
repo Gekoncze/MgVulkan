@@ -13,6 +13,7 @@ public class VkPipelineInputAssemblyStateCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineInputAssemblyStateCreateFlags(int value) {
         setValue(value);
     }

@@ -13,7 +13,6 @@ public class VkAttachmentReference extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkAttachmentReference(VkUInt32 attachment, VkImageLayout layout) {
         super(sizeof());
         setAttachment(attachment);
@@ -49,7 +48,8 @@ public class VkAttachmentReference extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkAttachmentReference implements cz.mg.collections.array.ReadonlyArray<VkAttachmentReference> {        private final int count;
+    public static class Array extends VkAttachmentReference implements cz.mg.collections.array.ReadonlyArray<VkAttachmentReference> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkAttachmentReference.sizeof()));
@@ -71,6 +71,8 @@ public class VkAttachmentReference extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -82,8 +84,8 @@ public class VkAttachmentReference extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -132,5 +134,4 @@ public class VkAttachmentReference extends VkObject {
             }
         }
     }
-
 }

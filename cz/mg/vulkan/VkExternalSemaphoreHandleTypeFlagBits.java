@@ -26,6 +26,7 @@ public class VkExternalSemaphoreHandleTypeFlagBits extends VkFlagBits {
     }
 
 
+
     public VkExternalSemaphoreHandleTypeFlagBits(int value) {
         setValue(value);
     }

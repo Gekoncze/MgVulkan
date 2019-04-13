@@ -13,6 +13,7 @@ public class VkPipelineCacheCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineCacheCreateFlags(int value) {
         setValue(value);
     }

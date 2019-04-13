@@ -13,7 +13,6 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineColorBlendAttachmentState(VkBool32 blendEnable, VkBlendFactor srcColorBlendFactor, VkBlendFactor dstColorBlendFactor, VkBlendOp colorBlendOp, VkBlendFactor srcAlphaBlendFactor, VkBlendFactor dstAlphaBlendFactor, VkBlendOp alphaBlendOp, VkColorComponentFlags colorWriteMask) {
         super(sizeof());
         setBlendEnable(blendEnable);
@@ -133,7 +132,8 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineColorBlendAttachmentState implements cz.mg.collections.array.ReadonlyArray<VkPipelineColorBlendAttachmentState> {        private final int count;
+    public static class Array extends VkPipelineColorBlendAttachmentState implements cz.mg.collections.array.ReadonlyArray<VkPipelineColorBlendAttachmentState> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineColorBlendAttachmentState.sizeof()));
@@ -155,6 +155,8 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -166,8 +168,8 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -216,5 +218,4 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
             }
         }
     }
-
 }

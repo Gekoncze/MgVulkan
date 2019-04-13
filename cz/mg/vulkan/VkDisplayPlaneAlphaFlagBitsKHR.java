@@ -20,6 +20,7 @@ public class VkDisplayPlaneAlphaFlagBitsKHR extends VkFlagBits {
     }
 
 
+
     public VkDisplayPlaneAlphaFlagBitsKHR(int value) {
         setValue(value);
     }

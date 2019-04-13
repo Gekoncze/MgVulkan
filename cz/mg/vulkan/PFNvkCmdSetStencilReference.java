@@ -13,6 +13,7 @@ public class PFNvkCmdSetStencilReference extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetStencilReference(long value) {
         setValue(value);
     }

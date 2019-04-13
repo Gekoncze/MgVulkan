@@ -13,6 +13,7 @@ public class PFNvkCreateFramebuffer extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateFramebuffer(long value) {
         setValue(value);
     }

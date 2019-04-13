@@ -13,6 +13,7 @@ public class VkDisplayPlaneAlphaFlagsKHR extends VkFlags {
     }
 
 
+
     public VkDisplayPlaneAlphaFlagsKHR(int value) {
         setValue(value);
     }

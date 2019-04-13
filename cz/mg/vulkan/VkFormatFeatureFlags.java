@@ -13,6 +13,7 @@ public class VkFormatFeatureFlags extends VkFlags {
     }
 
 
+
     public VkFormatFeatureFlags(int value) {
         setValue(value);
     }

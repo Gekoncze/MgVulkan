@@ -13,7 +13,6 @@ public class VkPhysicalDeviceProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceProperties(VkUInt32 apiVersion, VkUInt32 driverVersion, VkUInt32 vendorID, VkUInt32 deviceID, VkPhysicalDeviceType deviceType, VkChar deviceName, VkUInt8 pipelineCacheUUID, VkPhysicalDeviceLimits limits, VkPhysicalDeviceSparseProperties sparseProperties) {
         super(sizeof());
         setApiVersion(apiVersion);
@@ -147,7 +146,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceProperties> {        private final int count;
+    public static class Array extends VkPhysicalDeviceProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceProperties> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceProperties.sizeof()));
@@ -169,6 +169,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -180,8 +182,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -230,5 +232,4 @@ public class VkPhysicalDeviceProperties extends VkObject {
             }
         }
     }
-
 }

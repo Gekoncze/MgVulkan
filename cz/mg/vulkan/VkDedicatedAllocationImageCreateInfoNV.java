@@ -13,7 +13,6 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDedicatedAllocationImageCreateInfoNV(VkObject pNext, VkBool32 dedicatedAllocation) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV));
@@ -63,7 +62,8 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDedicatedAllocationImageCreateInfoNV implements cz.mg.collections.array.ReadonlyArray<VkDedicatedAllocationImageCreateInfoNV> {        private final int count;
+    public static class Array extends VkDedicatedAllocationImageCreateInfoNV implements cz.mg.collections.array.ReadonlyArray<VkDedicatedAllocationImageCreateInfoNV> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDedicatedAllocationImageCreateInfoNV.sizeof()));
@@ -85,6 +85,8 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
             }
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class VkValidationCacheCreateFlagsEXT extends VkFlags {
     }
 
 
+
     public VkValidationCacheCreateFlagsEXT(int value) {
         setValue(value);
     }

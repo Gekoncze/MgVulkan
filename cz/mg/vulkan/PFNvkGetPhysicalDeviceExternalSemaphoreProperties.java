@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceExternalSemaphoreProperties extends VkFunctio
     }
 
 
+
     public PFNvkGetPhysicalDeviceExternalSemaphoreProperties(long value) {
         setValue(value);
     }

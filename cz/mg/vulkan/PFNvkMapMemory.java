@@ -13,6 +13,7 @@ public class PFNvkMapMemory extends VkFunctionPointer {
     }
 
 
+
     public PFNvkMapMemory(long value) {
         setValue(value);
     }

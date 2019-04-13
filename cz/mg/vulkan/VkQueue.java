@@ -13,11 +13,13 @@ public class VkQueue extends VkDispatchableHandle {
     }
 
 
+
     public VkQueue(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkQueue implements cz.mg.collections.array.ReadonlyArray<VkQueue> {        private final int count;
+    public static class Array extends VkQueue implements cz.mg.collections.array.ReadonlyArray<VkQueue> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkQueue.sizeof()));
@@ -39,6 +41,8 @@ public class VkQueue extends VkDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkQueue extends VkDispatchableHandle {
             return new VkQueue(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -16,6 +16,7 @@ public class VkCommandBufferLevel extends VkEnum {
     }
 
 
+
     public VkCommandBufferLevel(int value) {
         setValue(value);
     }
@@ -27,7 +28,8 @@ public class VkCommandBufferLevel extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkCommandBufferLevel implements cz.mg.collections.array.ReadonlyArray<VkCommandBufferLevel> {        private final int count;
+    public static class Array extends VkCommandBufferLevel implements cz.mg.collections.array.ReadonlyArray<VkCommandBufferLevel> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkCommandBufferLevel.sizeof()));
@@ -49,6 +51,8 @@ public class VkCommandBufferLevel extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -59,5 +63,4 @@ public class VkCommandBufferLevel extends VkEnum {
             return new VkCommandBufferLevel(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

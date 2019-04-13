@@ -13,6 +13,7 @@ public class PFNvkCmdSetBlendConstants extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetBlendConstants(long value) {
         setValue(value);
     }

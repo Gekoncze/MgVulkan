@@ -19,6 +19,7 @@ public class VkExternalMemoryFeatureFlagBitsNV extends VkFlagBits {
     }
 
 
+
     public VkExternalMemoryFeatureFlagBitsNV(int value) {
         setValue(value);
     }

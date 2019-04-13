@@ -13,7 +13,6 @@ public class VkDebugUtilsLabelEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDebugUtilsLabelEXT(VkStructureType sType, VkObject pNext, VkChar pLabelName, VkFloat color) {
         super(sizeof());
         setSType(sType);
@@ -77,7 +76,8 @@ public class VkDebugUtilsLabelEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDebugUtilsLabelEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsLabelEXT> {        private final int count;
+    public static class Array extends VkDebugUtilsLabelEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsLabelEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDebugUtilsLabelEXT.sizeof()));
@@ -99,6 +99,8 @@ public class VkDebugUtilsLabelEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkDebugUtilsLabelEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkDebugUtilsLabelEXT extends VkObject {
             }
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class PFNvkGetMemoryHostPointerPropertiesEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetMemoryHostPointerPropertiesEXT(long value) {
         setValue(value);
     }

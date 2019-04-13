@@ -13,6 +13,7 @@ public class PFNvkMergeValidationCachesEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkMergeValidationCachesEXT(long value) {
         setValue(value);
     }

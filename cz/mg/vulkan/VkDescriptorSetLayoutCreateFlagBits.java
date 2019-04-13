@@ -18,6 +18,7 @@ public class VkDescriptorSetLayoutCreateFlagBits extends VkFlagBits {
     }
 
 
+
     public VkDescriptorSetLayoutCreateFlagBits(int value) {
         setValue(value);
     }

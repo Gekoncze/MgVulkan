@@ -13,6 +13,7 @@ public class PFNvkQueueInsertDebugUtilsLabelEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkQueueInsertDebugUtilsLabelEXT(long value) {
         setValue(value);
     }

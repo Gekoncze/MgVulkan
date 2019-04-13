@@ -13,6 +13,7 @@ public class PFNvkCmdSetViewport extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetViewport(long value) {
         setValue(value);
     }

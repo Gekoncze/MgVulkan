@@ -13,6 +13,7 @@ public class VkPipelineMultisampleStateCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineMultisampleStateCreateFlags(int value) {
         setValue(value);
     }

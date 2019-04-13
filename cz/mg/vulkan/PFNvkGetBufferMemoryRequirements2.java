@@ -13,6 +13,7 @@ public class PFNvkGetBufferMemoryRequirements2 extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetBufferMemoryRequirements2(long value) {
         setValue(value);
     }

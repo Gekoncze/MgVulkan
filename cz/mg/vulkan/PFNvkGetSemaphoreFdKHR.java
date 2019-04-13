@@ -13,6 +13,7 @@ public class PFNvkGetSemaphoreFdKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetSemaphoreFdKHR(long value) {
         setValue(value);
     }

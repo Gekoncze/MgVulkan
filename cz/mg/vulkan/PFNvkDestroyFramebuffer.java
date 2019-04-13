@@ -13,6 +13,7 @@ public class PFNvkDestroyFramebuffer extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyFramebuffer(long value) {
         setValue(value);
     }

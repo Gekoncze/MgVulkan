@@ -13,7 +13,6 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         super(vkmemory, vkaddress);
     }
 
-
     public VkDescriptorSetVariableDescriptorCountAllocateInfoEXT(VkObject pNext, VkUInt32 descriptorSetCount, VkUInt32 pDescriptorCounts) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO_EXT));
@@ -77,7 +76,8 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
 
     public static native long sizeof();
 
-    public static class Array extends VkDescriptorSetVariableDescriptorCountAllocateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetVariableDescriptorCountAllocateInfoEXT> {        private final int count;
+    public static class Array extends VkDescriptorSetVariableDescriptorCountAllocateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetVariableDescriptorCountAllocateInfoEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorSetVariableDescriptorCountAllocateInfoEXT.sizeof()));
@@ -99,6 +99,8 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
             }
         }
     }
-
 }

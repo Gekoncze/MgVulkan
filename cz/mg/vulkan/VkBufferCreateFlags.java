@@ -13,6 +13,7 @@ public class VkBufferCreateFlags extends VkFlags {
     }
 
 
+
     public VkBufferCreateFlags(int value) {
         setValue(value);
     }

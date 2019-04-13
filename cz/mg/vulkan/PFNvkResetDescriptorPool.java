@@ -13,6 +13,7 @@ public class PFNvkResetDescriptorPool extends VkFunctionPointer {
     }
 
 
+
     public PFNvkResetDescriptorPool(long value) {
         setValue(value);
     }

@@ -13,7 +13,6 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkIndirectCommandsLayoutCreateInfoNVX(VkObject pNext, VkPipelineBindPoint pipelineBindPoint, VkIndirectCommandsLayoutUsageFlagsNVX flags, VkUInt32 tokenCount, VkIndirectCommandsLayoutTokenNVX pTokens) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NVX));
@@ -105,7 +104,8 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkIndirectCommandsLayoutCreateInfoNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsLayoutCreateInfoNVX> {        private final int count;
+    public static class Array extends VkIndirectCommandsLayoutCreateInfoNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsLayoutCreateInfoNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkIndirectCommandsLayoutCreateInfoNVX.sizeof()));
@@ -127,6 +127,8 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
             }
         }
     }
-
 }

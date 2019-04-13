@@ -19,6 +19,7 @@ public class VkCommandPoolCreateFlagBits extends VkFlagBits {
     }
 
 
+
     public VkCommandPoolCreateFlagBits(int value) {
         setValue(value);
     }

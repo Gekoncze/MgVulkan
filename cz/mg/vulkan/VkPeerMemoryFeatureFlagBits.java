@@ -24,6 +24,7 @@ public class VkPeerMemoryFeatureFlagBits extends VkFlagBits {
     }
 
 
+
     public VkPeerMemoryFeatureFlagBits(int value) {
         setValue(value);
     }

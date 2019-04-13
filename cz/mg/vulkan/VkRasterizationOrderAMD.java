@@ -16,6 +16,7 @@ public class VkRasterizationOrderAMD extends VkEnum {
     }
 
 
+
     public VkRasterizationOrderAMD(int value) {
         setValue(value);
     }
@@ -27,7 +28,8 @@ public class VkRasterizationOrderAMD extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkRasterizationOrderAMD implements cz.mg.collections.array.ReadonlyArray<VkRasterizationOrderAMD> {        private final int count;
+    public static class Array extends VkRasterizationOrderAMD implements cz.mg.collections.array.ReadonlyArray<VkRasterizationOrderAMD> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkRasterizationOrderAMD.sizeof()));
@@ -49,6 +51,8 @@ public class VkRasterizationOrderAMD extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -59,5 +63,4 @@ public class VkRasterizationOrderAMD extends VkEnum {
             return new VkRasterizationOrderAMD(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

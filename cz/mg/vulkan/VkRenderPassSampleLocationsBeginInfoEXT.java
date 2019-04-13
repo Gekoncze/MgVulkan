@@ -13,7 +13,6 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkRenderPassSampleLocationsBeginInfoEXT(VkObject pNext, VkUInt32 attachmentInitialSampleLocationsCount, VkAttachmentSampleLocationsEXT pAttachmentInitialSampleLocations, VkUInt32 postSubpassSampleLocationsCount, VkSubpassSampleLocationsEXT pPostSubpassSampleLocations) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT));
@@ -105,7 +104,8 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkRenderPassSampleLocationsBeginInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkRenderPassSampleLocationsBeginInfoEXT> {        private final int count;
+    public static class Array extends VkRenderPassSampleLocationsBeginInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkRenderPassSampleLocationsBeginInfoEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkRenderPassSampleLocationsBeginInfoEXT.sizeof()));
@@ -127,6 +127,8 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
             }
         }
     }
-
 }

@@ -13,11 +13,13 @@ public class VkBuffer extends VkNonDispatchableHandle {
     }
 
 
+
     public VkBuffer(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkBuffer implements cz.mg.collections.array.ReadonlyArray<VkBuffer> {        private final int count;
+    public static class Array extends VkBuffer implements cz.mg.collections.array.ReadonlyArray<VkBuffer> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkBuffer.sizeof()));
@@ -39,6 +41,8 @@ public class VkBuffer extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkBuffer extends VkNonDispatchableHandle {
             return new VkBuffer(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,7 +13,6 @@ public class VkImageSubresource extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkImageSubresource(VkImageAspectFlags aspectMask, VkUInt32 mipLevel, VkUInt32 arrayLayer) {
         super(sizeof());
         setAspectMask(aspectMask);
@@ -63,7 +62,8 @@ public class VkImageSubresource extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkImageSubresource implements cz.mg.collections.array.ReadonlyArray<VkImageSubresource> {        private final int count;
+    public static class Array extends VkImageSubresource implements cz.mg.collections.array.ReadonlyArray<VkImageSubresource> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkImageSubresource.sizeof()));
@@ -85,6 +85,8 @@ public class VkImageSubresource extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkImageSubresource extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkImageSubresource extends VkObject {
             }
         }
     }
-
 }

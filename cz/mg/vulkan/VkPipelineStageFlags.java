@@ -13,6 +13,7 @@ public class VkPipelineStageFlags extends VkFlags {
     }
 
 
+
     public VkPipelineStageFlags(int value) {
         setValue(value);
     }

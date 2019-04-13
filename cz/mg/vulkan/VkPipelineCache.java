@@ -13,11 +13,13 @@ public class VkPipelineCache extends VkNonDispatchableHandle {
     }
 
 
+
     public VkPipelineCache(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkPipelineCache implements cz.mg.collections.array.ReadonlyArray<VkPipelineCache> {        private final int count;
+    public static class Array extends VkPipelineCache implements cz.mg.collections.array.ReadonlyArray<VkPipelineCache> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineCache.sizeof()));
@@ -39,6 +41,8 @@ public class VkPipelineCache extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkPipelineCache extends VkNonDispatchableHandle {
             return new VkPipelineCache(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,7 +13,6 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceDescriptorIndexingPropertiesEXT(VkStructureType sType, VkObject pNext, VkUInt32 maxUpdateAfterBindDescriptorsInAllPools, VkBool32 shaderUniformBufferArrayNonUniformIndexingNative, VkBool32 shaderSampledImageArrayNonUniformIndexingNative, VkBool32 shaderStorageBufferArrayNonUniformIndexingNative, VkBool32 shaderStorageImageArrayNonUniformIndexingNative, VkBool32 shaderInputAttachmentArrayNonUniformIndexingNative, VkBool32 robustBufferAccessUpdateAfterBind, VkBool32 quadDivergentImplicitLod, VkUInt32 maxPerStageDescriptorUpdateAfterBindSamplers, VkUInt32 maxPerStageDescriptorUpdateAfterBindUniformBuffers, VkUInt32 maxPerStageDescriptorUpdateAfterBindStorageBuffers, VkUInt32 maxPerStageDescriptorUpdateAfterBindSampledImages, VkUInt32 maxPerStageDescriptorUpdateAfterBindStorageImages, VkUInt32 maxPerStageDescriptorUpdateAfterBindInputAttachments, VkUInt32 maxPerStageUpdateAfterBindResources, VkUInt32 maxDescriptorSetUpdateAfterBindSamplers, VkUInt32 maxDescriptorSetUpdateAfterBindUniformBuffers, VkUInt32 maxDescriptorSetUpdateAfterBindUniformBuffersDynamic, VkUInt32 maxDescriptorSetUpdateAfterBindStorageBuffers, VkUInt32 maxDescriptorSetUpdateAfterBindStorageBuffersDynamic, VkUInt32 maxDescriptorSetUpdateAfterBindSampledImages, VkUInt32 maxDescriptorSetUpdateAfterBindStorageImages, VkUInt32 maxDescriptorSetUpdateAfterBindInputAttachments) {
         super(sizeof());
         setSType(sType);
@@ -371,7 +370,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceDescriptorIndexingPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceDescriptorIndexingPropertiesEXT> {        private final int count;
+    public static class Array extends VkPhysicalDeviceDescriptorIndexingPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceDescriptorIndexingPropertiesEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceDescriptorIndexingPropertiesEXT.sizeof()));
@@ -393,6 +393,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -404,8 +406,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -454,5 +456,4 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
             }
         }
     }
-
 }

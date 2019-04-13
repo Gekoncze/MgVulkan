@@ -22,6 +22,7 @@ public class VkIndirectCommandsTokenTypeNVX extends VkEnum {
     }
 
 
+
     public VkIndirectCommandsTokenTypeNVX(int value) {
         setValue(value);
     }
@@ -39,7 +40,8 @@ public class VkIndirectCommandsTokenTypeNVX extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkIndirectCommandsTokenTypeNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsTokenTypeNVX> {        private final int count;
+    public static class Array extends VkIndirectCommandsTokenTypeNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsTokenTypeNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkIndirectCommandsTokenTypeNVX.sizeof()));
@@ -61,6 +63,8 @@ public class VkIndirectCommandsTokenTypeNVX extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -71,5 +75,4 @@ public class VkIndirectCommandsTokenTypeNVX extends VkEnum {
             return new VkIndirectCommandsTokenTypeNVX(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class VkPipelineLayoutCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineLayoutCreateFlags(int value) {
         setValue(value);
     }

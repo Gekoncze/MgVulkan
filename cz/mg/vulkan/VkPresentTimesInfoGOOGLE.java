@@ -13,7 +13,6 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPresentTimesInfoGOOGLE(VkObject pNext, VkUInt32 swapchainCount, VkPresentTimeGOOGLE pTimes) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PRESENT_TIMES_INFO_GOOGLE));
@@ -77,7 +76,8 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPresentTimesInfoGOOGLE implements cz.mg.collections.array.ReadonlyArray<VkPresentTimesInfoGOOGLE> {        private final int count;
+    public static class Array extends VkPresentTimesInfoGOOGLE implements cz.mg.collections.array.ReadonlyArray<VkPresentTimesInfoGOOGLE> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPresentTimesInfoGOOGLE.sizeof()));
@@ -99,6 +99,8 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
             }
         }
     }
-
 }

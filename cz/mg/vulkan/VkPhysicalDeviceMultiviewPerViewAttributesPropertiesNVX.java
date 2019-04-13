@@ -13,7 +13,6 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX(VkStructureType sType, VkObject pNext, VkBool32 perViewPositionAllComponents) {
         super(sizeof());
         setSType(sType);
@@ -63,7 +62,8 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> {        private final int count;
+    public static class Array extends VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX.sizeof()));
@@ -85,6 +85,8 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
             }
         }
     }
-
 }

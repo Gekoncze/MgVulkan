@@ -13,7 +13,6 @@ public class VkApplicationInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkApplicationInfo(VkObject pNext, VkChar pApplicationName, VkUInt32 applicationVersion, VkChar pEngineName, VkUInt32 engineVersion, VkUInt32 apiVersion) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_APPLICATION_INFO));
@@ -119,7 +118,8 @@ public class VkApplicationInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkApplicationInfo implements cz.mg.collections.array.ReadonlyArray<VkApplicationInfo> {        private final int count;
+    public static class Array extends VkApplicationInfo implements cz.mg.collections.array.ReadonlyArray<VkApplicationInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkApplicationInfo.sizeof()));
@@ -141,6 +141,8 @@ public class VkApplicationInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkApplicationInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkApplicationInfo extends VkObject {
             }
         }
     }
-
 }

@@ -13,11 +13,13 @@ public class VkFence extends VkNonDispatchableHandle {
     }
 
 
+
     public VkFence(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkFence implements cz.mg.collections.array.ReadonlyArray<VkFence> {        private final int count;
+    public static class Array extends VkFence implements cz.mg.collections.array.ReadonlyArray<VkFence> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkFence.sizeof()));
@@ -39,6 +41,8 @@ public class VkFence extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkFence extends VkNonDispatchableHandle {
             return new VkFence(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

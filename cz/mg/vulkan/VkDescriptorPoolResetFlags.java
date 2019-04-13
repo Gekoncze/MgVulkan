@@ -13,6 +13,7 @@ public class VkDescriptorPoolResetFlags extends VkFlags {
     }
 
 
+
     public VkDescriptorPoolResetFlags(int value) {
         setValue(value);
     }

@@ -25,6 +25,7 @@ public class VkPrimitiveTopology extends VkEnum {
     }
 
 
+
     public VkPrimitiveTopology(int value) {
         setValue(value);
     }
@@ -45,7 +46,8 @@ public class VkPrimitiveTopology extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkPrimitiveTopology implements cz.mg.collections.array.ReadonlyArray<VkPrimitiveTopology> {        private final int count;
+    public static class Array extends VkPrimitiveTopology implements cz.mg.collections.array.ReadonlyArray<VkPrimitiveTopology> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPrimitiveTopology.sizeof()));
@@ -67,6 +69,8 @@ public class VkPrimitiveTopology extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -77,5 +81,4 @@ public class VkPrimitiveTopology extends VkEnum {
             return new VkPrimitiveTopology(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

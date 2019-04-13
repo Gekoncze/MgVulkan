@@ -13,6 +13,7 @@ public class VkPipelineViewportSwizzleStateCreateFlagsNV extends VkFlags {
     }
 
 
+
     public VkPipelineViewportSwizzleStateCreateFlagsNV(int value) {
         setValue(value);
     }

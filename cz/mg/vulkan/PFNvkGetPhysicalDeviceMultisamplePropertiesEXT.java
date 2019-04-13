@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceMultisamplePropertiesEXT extends VkFunctionPo
     }
 
 
+
     public PFNvkGetPhysicalDeviceMultisamplePropertiesEXT(long value) {
         setValue(value);
     }

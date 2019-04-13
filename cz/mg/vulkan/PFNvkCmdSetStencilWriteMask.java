@@ -13,6 +13,7 @@ public class PFNvkCmdSetStencilWriteMask extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetStencilWriteMask(long value) {
         setValue(value);
     }

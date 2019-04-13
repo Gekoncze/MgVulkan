@@ -13,6 +13,7 @@ public class PFNvkGetDescriptorSetLayoutSupport extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetDescriptorSetLayoutSupport(long value) {
         setValue(value);
     }

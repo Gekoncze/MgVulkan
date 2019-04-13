@@ -13,6 +13,7 @@ public class PFNvkCmdCopyBuffer extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdCopyBuffer(long value) {
         setValue(value);
     }

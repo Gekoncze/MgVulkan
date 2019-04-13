@@ -13,6 +13,7 @@ public class PFNvkCmdDrawIndexedIndirect extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdDrawIndexedIndirect(long value) {
         setValue(value);
     }

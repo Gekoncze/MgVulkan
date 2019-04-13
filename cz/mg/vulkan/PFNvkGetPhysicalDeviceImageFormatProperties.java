@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceImageFormatProperties extends VkFunctionPoint
     }
 
 
+
     public PFNvkGetPhysicalDeviceImageFormatProperties(long value) {
         setValue(value);
     }

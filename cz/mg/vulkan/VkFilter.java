@@ -17,6 +17,7 @@ public class VkFilter extends VkEnum {
     }
 
 
+
     public VkFilter(int value) {
         setValue(value);
     }
@@ -29,7 +30,8 @@ public class VkFilter extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkFilter implements cz.mg.collections.array.ReadonlyArray<VkFilter> {        private final int count;
+    public static class Array extends VkFilter implements cz.mg.collections.array.ReadonlyArray<VkFilter> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkFilter.sizeof()));
@@ -51,6 +53,8 @@ public class VkFilter extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -61,5 +65,4 @@ public class VkFilter extends VkEnum {
             return new VkFilter(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

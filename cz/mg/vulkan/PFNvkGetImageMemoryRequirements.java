@@ -13,6 +13,7 @@ public class PFNvkGetImageMemoryRequirements extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetImageMemoryRequirements(long value) {
         setValue(value);
     }

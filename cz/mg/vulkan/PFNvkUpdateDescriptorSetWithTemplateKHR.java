@@ -13,6 +13,7 @@ public class PFNvkUpdateDescriptorSetWithTemplateKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkUpdateDescriptorSetWithTemplateKHR(long value) {
         setValue(value);
     }

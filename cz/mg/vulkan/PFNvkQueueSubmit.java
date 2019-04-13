@@ -13,6 +13,7 @@ public class PFNvkQueueSubmit extends VkFunctionPointer {
     }
 
 
+
     public PFNvkQueueSubmit(long value) {
         setValue(value);
     }

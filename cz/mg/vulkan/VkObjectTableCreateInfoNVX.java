@@ -13,7 +13,6 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkObjectTableCreateInfoNVX(VkObject pNext, VkUInt32 objectCount, VkObjectEntryTypeNVX pObjectEntryTypes, VkUInt32 pObjectEntryCounts, VkObjectEntryUsageFlagsNVX pObjectEntryUsageFlags, VkUInt32 maxUniformBuffersPerDescriptor, VkUInt32 maxStorageBuffersPerDescriptor, VkUInt32 maxStorageImagesPerDescriptor, VkUInt32 maxSampledImagesPerDescriptor, VkUInt32 maxPipelineLayouts) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_OBJECT_TABLE_CREATE_INFO_NVX));
@@ -175,7 +174,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkObjectTableCreateInfoNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableCreateInfoNVX> {        private final int count;
+    public static class Array extends VkObjectTableCreateInfoNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableCreateInfoNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkObjectTableCreateInfoNVX.sizeof()));
@@ -197,6 +197,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -208,8 +210,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -258,5 +260,4 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
             }
         }
     }
-
 }

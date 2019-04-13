@@ -13,6 +13,7 @@ public class VkDisplaySurfaceCreateFlagsKHR extends VkFlags {
     }
 
 
+
     public VkDisplaySurfaceCreateFlagsKHR(int value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class PFNvkVoidFunction extends VkFunctionPointer {
     }
 
 
+
     public PFNvkVoidFunction(long value) {
         setValue(value);
     }

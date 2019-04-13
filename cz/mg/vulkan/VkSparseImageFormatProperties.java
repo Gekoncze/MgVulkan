@@ -13,7 +13,6 @@ public class VkSparseImageFormatProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSparseImageFormatProperties(VkImageAspectFlags aspectMask, VkExtent3D imageGranularity, VkSparseImageFormatFlags flags) {
         super(sizeof());
         setAspectMask(aspectMask);
@@ -63,7 +62,8 @@ public class VkSparseImageFormatProperties extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSparseImageFormatProperties implements cz.mg.collections.array.ReadonlyArray<VkSparseImageFormatProperties> {        private final int count;
+    public static class Array extends VkSparseImageFormatProperties implements cz.mg.collections.array.ReadonlyArray<VkSparseImageFormatProperties> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSparseImageFormatProperties.sizeof()));
@@ -85,6 +85,8 @@ public class VkSparseImageFormatProperties extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkSparseImageFormatProperties extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkSparseImageFormatProperties extends VkObject {
             }
         }
     }
-
 }

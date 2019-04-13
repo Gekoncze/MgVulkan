@@ -13,7 +13,6 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSubpassSampleLocationsEXT(VkUInt32 subpassIndex, VkSampleLocationsInfoEXT sampleLocationsInfo) {
         super(sizeof());
         setSubpassIndex(subpassIndex);
@@ -49,7 +48,8 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSubpassSampleLocationsEXT implements cz.mg.collections.array.ReadonlyArray<VkSubpassSampleLocationsEXT> {        private final int count;
+    public static class Array extends VkSubpassSampleLocationsEXT implements cz.mg.collections.array.ReadonlyArray<VkSubpassSampleLocationsEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSubpassSampleLocationsEXT.sizeof()));
@@ -71,6 +71,8 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -82,8 +84,8 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -132,5 +134,4 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
             }
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class PFNvkSubmitDebugUtilsMessageEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkSubmitDebugUtilsMessageEXT(long value) {
         setValue(value);
     }

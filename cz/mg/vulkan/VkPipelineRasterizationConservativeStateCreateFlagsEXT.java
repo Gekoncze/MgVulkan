@@ -13,6 +13,7 @@ public class VkPipelineRasterizationConservativeStateCreateFlagsEXT extends VkFl
     }
 
 
+
     public VkPipelineRasterizationConservativeStateCreateFlagsEXT(int value) {
         setValue(value);
     }

@@ -13,7 +13,6 @@ public class VkSpecializationMapEntry extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSpecializationMapEntry(VkUInt32 constantID, VkUInt32 offset, VkSize size) {
         super(sizeof());
         setConstantID(constantID);
@@ -63,7 +62,8 @@ public class VkSpecializationMapEntry extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSpecializationMapEntry implements cz.mg.collections.array.ReadonlyArray<VkSpecializationMapEntry> {        private final int count;
+    public static class Array extends VkSpecializationMapEntry implements cz.mg.collections.array.ReadonlyArray<VkSpecializationMapEntry> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSpecializationMapEntry.sizeof()));
@@ -85,6 +85,8 @@ public class VkSpecializationMapEntry extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkSpecializationMapEntry extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkSpecializationMapEntry extends VkObject {
             }
         }
     }
-
 }

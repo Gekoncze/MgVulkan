@@ -18,6 +18,7 @@ public class VkPointClippingBehavior extends VkEnum {
     }
 
 
+
     public VkPointClippingBehavior(int value) {
         setValue(value);
     }
@@ -31,7 +32,8 @@ public class VkPointClippingBehavior extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkPointClippingBehavior implements cz.mg.collections.array.ReadonlyArray<VkPointClippingBehavior> {        private final int count;
+    public static class Array extends VkPointClippingBehavior implements cz.mg.collections.array.ReadonlyArray<VkPointClippingBehavior> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPointClippingBehavior.sizeof()));
@@ -53,6 +55,8 @@ public class VkPointClippingBehavior extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -63,5 +67,4 @@ public class VkPointClippingBehavior extends VkEnum {
             return new VkPointClippingBehavior(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

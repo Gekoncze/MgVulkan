@@ -13,6 +13,7 @@ public class PFNvkInternalFreeNotification extends VkFunctionPointer {
     }
 
 
+
     public PFNvkInternalFreeNotification(long value) {
         setValue(value);
     }

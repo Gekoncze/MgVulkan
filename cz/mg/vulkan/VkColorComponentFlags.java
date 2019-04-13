@@ -13,6 +13,7 @@ public class VkColorComponentFlags extends VkFlags {
     }
 
 
+
     public VkColorComponentFlags(int value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class PFNvkCmdClearAttachments extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdClearAttachments(long value) {
         setValue(value);
     }

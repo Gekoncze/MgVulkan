@@ -13,7 +13,6 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSparseBufferMemoryBindInfo(VkBuffer buffer, VkUInt32 bindCount, VkSparseMemoryBind pBinds) {
         super(sizeof());
         setBuffer(buffer);
@@ -63,7 +62,8 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSparseBufferMemoryBindInfo implements cz.mg.collections.array.ReadonlyArray<VkSparseBufferMemoryBindInfo> {        private final int count;
+    public static class Array extends VkSparseBufferMemoryBindInfo implements cz.mg.collections.array.ReadonlyArray<VkSparseBufferMemoryBindInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSparseBufferMemoryBindInfo.sizeof()));
@@ -85,6 +85,8 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
             }
         }
     }
-
 }

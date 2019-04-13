@@ -13,6 +13,7 @@ public class PFNvkCmdPushDescriptorSetKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdPushDescriptorSetKHR(long value) {
         setValue(value);
     }

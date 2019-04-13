@@ -13,7 +13,6 @@ public class VkSparseImageMemoryRequirements2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSparseImageMemoryRequirements2(VkStructureType sType, VkObject pNext, VkSparseImageMemoryRequirements memoryRequirements) {
         super(sizeof());
         setSType(sType);
@@ -63,7 +62,8 @@ public class VkSparseImageMemoryRequirements2 extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSparseImageMemoryRequirements2 implements cz.mg.collections.array.ReadonlyArray<VkSparseImageMemoryRequirements2> {        private final int count;
+    public static class Array extends VkSparseImageMemoryRequirements2 implements cz.mg.collections.array.ReadonlyArray<VkSparseImageMemoryRequirements2> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSparseImageMemoryRequirements2.sizeof()));
@@ -85,6 +85,8 @@ public class VkSparseImageMemoryRequirements2 extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkSparseImageMemoryRequirements2 extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkSparseImageMemoryRequirements2 extends VkObject {
             }
         }
     }
-
 }

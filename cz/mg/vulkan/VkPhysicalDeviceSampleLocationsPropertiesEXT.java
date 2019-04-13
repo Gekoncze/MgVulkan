@@ -13,7 +13,6 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceSampleLocationsPropertiesEXT(VkStructureType sType, VkObject pNext, VkSampleCountFlags sampleLocationSampleCounts, VkExtent2D maxSampleLocationGridSize, VkFloat sampleLocationCoordinateRange, VkUInt32 sampleLocationSubPixelBits, VkBool32 variableSampleLocations) {
         super(sizeof());
         setSType(sType);
@@ -119,7 +118,8 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceSampleLocationsPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSampleLocationsPropertiesEXT> {        private final int count;
+    public static class Array extends VkPhysicalDeviceSampleLocationsPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSampleLocationsPropertiesEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceSampleLocationsPropertiesEXT.sizeof()));
@@ -141,6 +141,8 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
             }
         }
     }
-
 }

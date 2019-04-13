@@ -13,6 +13,7 @@ public class PFNvkGetImageSparseMemoryRequirements2KHR extends VkFunctionPointer
     }
 
 
+
     public PFNvkGetImageSparseMemoryRequirements2KHR(long value) {
         setValue(value);
     }

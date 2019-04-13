@@ -13,7 +13,6 @@ public class VkShaderResourceUsageAMD extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkShaderResourceUsageAMD(VkUInt32 numUsedVgprs, VkUInt32 numUsedSgprs, VkUInt32 ldsSizePerLocalWorkGroup, VkSize ldsUsageSizeInBytes, VkSize scratchMemUsageInBytes) {
         super(sizeof());
         setNumUsedVgprs(numUsedVgprs);
@@ -91,7 +90,8 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkShaderResourceUsageAMD implements cz.mg.collections.array.ReadonlyArray<VkShaderResourceUsageAMD> {        private final int count;
+    public static class Array extends VkShaderResourceUsageAMD implements cz.mg.collections.array.ReadonlyArray<VkShaderResourceUsageAMD> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkShaderResourceUsageAMD.sizeof()));
@@ -113,6 +113,8 @@ public class VkShaderResourceUsageAMD extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkShaderResourceUsageAMD extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkShaderResourceUsageAMD extends VkObject {
             }
         }
     }
-
 }

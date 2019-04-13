@@ -13,6 +13,7 @@ public class VkFenceImportFlags extends VkFlags {
     }
 
 
+
     public VkFenceImportFlags(int value) {
         setValue(value);
     }

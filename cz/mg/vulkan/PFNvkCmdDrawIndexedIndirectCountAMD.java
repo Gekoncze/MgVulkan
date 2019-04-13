@@ -13,6 +13,7 @@ public class PFNvkCmdDrawIndexedIndirectCountAMD extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdDrawIndexedIndirectCountAMD(long value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class VkMemoryHeapFlags extends VkFlags {
     }
 
 
+
     public VkMemoryHeapFlags(int value) {
         setValue(value);
     }

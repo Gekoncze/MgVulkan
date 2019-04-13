@@ -13,6 +13,7 @@ public class PFNvkGetDisplayModePropertiesKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetDisplayModePropertiesKHR(long value) {
         setValue(value);
     }

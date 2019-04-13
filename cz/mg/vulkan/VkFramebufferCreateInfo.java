@@ -13,7 +13,6 @@ public class VkFramebufferCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkFramebufferCreateInfo(VkObject pNext, VkFramebufferCreateFlags flags, VkRenderPass renderPass, VkUInt32 attachmentCount, VkImageView pAttachments, VkUInt32 width, VkUInt32 height, VkUInt32 layers) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO));
@@ -147,7 +146,8 @@ public class VkFramebufferCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkFramebufferCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkFramebufferCreateInfo> {        private final int count;
+    public static class Array extends VkFramebufferCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkFramebufferCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkFramebufferCreateInfo.sizeof()));
@@ -169,6 +169,8 @@ public class VkFramebufferCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -180,8 +182,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -230,5 +232,4 @@ public class VkFramebufferCreateInfo extends VkObject {
             }
         }
     }
-
 }

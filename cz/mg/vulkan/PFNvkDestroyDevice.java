@@ -13,6 +13,7 @@ public class PFNvkDestroyDevice extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyDevice(long value) {
         setValue(value);
     }

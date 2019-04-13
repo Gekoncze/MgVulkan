@@ -13,7 +13,6 @@ public class VkBindImagePlaneMemoryInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkBindImagePlaneMemoryInfo(VkObject pNext, VkImageAspectFlagBits planeAspect) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_IMAGE_PLANE_MEMORY_INFO));
@@ -63,7 +62,8 @@ public class VkBindImagePlaneMemoryInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkBindImagePlaneMemoryInfo implements cz.mg.collections.array.ReadonlyArray<VkBindImagePlaneMemoryInfo> {        private final int count;
+    public static class Array extends VkBindImagePlaneMemoryInfo implements cz.mg.collections.array.ReadonlyArray<VkBindImagePlaneMemoryInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkBindImagePlaneMemoryInfo.sizeof()));
@@ -85,6 +85,8 @@ public class VkBindImagePlaneMemoryInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkBindImagePlaneMemoryInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkBindImagePlaneMemoryInfo extends VkObject {
             }
         }
     }
-
 }

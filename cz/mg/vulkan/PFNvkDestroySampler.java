@@ -13,6 +13,7 @@ public class PFNvkDestroySampler extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroySampler(long value) {
         setValue(value);
     }

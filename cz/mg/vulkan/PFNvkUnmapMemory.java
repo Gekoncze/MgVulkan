@@ -13,6 +13,7 @@ public class PFNvkUnmapMemory extends VkFunctionPointer {
     }
 
 
+
     public PFNvkUnmapMemory(long value) {
         setValue(value);
     }

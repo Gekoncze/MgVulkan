@@ -13,6 +13,7 @@ public class VkSubpassDescriptionFlags extends VkFlags {
     }
 
 
+
     public VkSubpassDescriptionFlags(int value) {
         setValue(value);
     }

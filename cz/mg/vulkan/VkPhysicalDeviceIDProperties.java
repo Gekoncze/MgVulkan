@@ -13,7 +13,6 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceIDProperties(VkStructureType sType, VkObject pNext, VkUInt8 deviceUUID, VkUInt8 driverUUID, VkUInt8 deviceLUID, VkUInt32 deviceNodeMask, VkBool32 deviceLUIDValid) {
         super(sizeof());
         setSType(sType);
@@ -119,7 +118,8 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceIDProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceIDProperties> {        private final int count;
+    public static class Array extends VkPhysicalDeviceIDProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceIDProperties> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceIDProperties.sizeof()));
@@ -141,6 +141,8 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
             }
         }
     }
-
 }

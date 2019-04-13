@@ -13,6 +13,7 @@ public class PFNvkCmdDispatchBaseKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdDispatchBaseKHR(long value) {
         setValue(value);
     }

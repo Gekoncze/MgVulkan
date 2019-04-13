@@ -27,6 +27,7 @@ public class VkQueryPipelineStatisticFlagBits extends VkFlagBits {
     }
 
 
+
     public VkQueryPipelineStatisticFlagBits(int value) {
         setValue(value);
     }

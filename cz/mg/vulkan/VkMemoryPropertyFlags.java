@@ -13,6 +13,7 @@ public class VkMemoryPropertyFlags extends VkFlags {
     }
 
 
+
     public VkMemoryPropertyFlags(int value) {
         setValue(value);
     }

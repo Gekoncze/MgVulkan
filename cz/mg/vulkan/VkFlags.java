@@ -13,11 +13,13 @@ public class VkFlags extends VkUInt32 {
     }
 
 
+
     public VkFlags(int value) {
         setValue(value);
     }
 
-    public static class Array extends VkFlags implements cz.mg.collections.array.ReadonlyArray<VkFlags> {        private final int count;
+    public static class Array extends VkFlags implements cz.mg.collections.array.ReadonlyArray<VkFlags> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkFlags.sizeof()));
@@ -39,6 +41,8 @@ public class VkFlags extends VkUInt32 {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -50,8 +54,8 @@ public class VkFlags extends VkUInt32 {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -100,5 +104,4 @@ public class VkFlags extends VkUInt32 {
             }
         }
     }
-
 }

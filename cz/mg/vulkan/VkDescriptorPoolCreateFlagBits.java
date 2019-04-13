@@ -18,6 +18,7 @@ public class VkDescriptorPoolCreateFlagBits extends VkFlagBits {
     }
 
 
+
     public VkDescriptorPoolCreateFlagBits(int value) {
         setValue(value);
     }

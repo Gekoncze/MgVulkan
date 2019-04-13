@@ -13,7 +13,6 @@ public class VkSubpassDependency extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSubpassDependency(VkUInt32 srcSubpass, VkUInt32 dstSubpass, VkPipelineStageFlags srcStageMask, VkPipelineStageFlags dstStageMask, VkAccessFlags srcAccessMask, VkAccessFlags dstAccessMask, VkDependencyFlags dependencyFlags) {
         super(sizeof());
         setSrcSubpass(srcSubpass);
@@ -119,7 +118,8 @@ public class VkSubpassDependency extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSubpassDependency implements cz.mg.collections.array.ReadonlyArray<VkSubpassDependency> {        private final int count;
+    public static class Array extends VkSubpassDependency implements cz.mg.collections.array.ReadonlyArray<VkSubpassDependency> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSubpassDependency.sizeof()));
@@ -141,6 +141,8 @@ public class VkSubpassDependency extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkSubpassDependency extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkSubpassDependency extends VkObject {
             }
         }
     }
-
 }

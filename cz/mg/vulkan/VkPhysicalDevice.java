@@ -13,11 +13,13 @@ public class VkPhysicalDevice extends VkDispatchableHandle {
     }
 
 
+
     public VkPhysicalDevice(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkPhysicalDevice implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDevice> {        private final int count;
+    public static class Array extends VkPhysicalDevice implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDevice> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDevice.sizeof()));
@@ -39,6 +41,8 @@ public class VkPhysicalDevice extends VkDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkPhysicalDevice extends VkDispatchableHandle {
             return new VkPhysicalDevice(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

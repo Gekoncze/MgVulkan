@@ -20,6 +20,7 @@ public class VkDeviceGroupPresentModeFlagBitsKHR extends VkFlagBits {
     }
 
 
+
     public VkDeviceGroupPresentModeFlagBitsKHR(int value) {
         setValue(value);
     }

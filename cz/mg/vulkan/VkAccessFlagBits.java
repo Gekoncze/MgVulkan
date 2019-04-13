@@ -36,6 +36,7 @@ public class VkAccessFlagBits extends VkFlagBits {
     }
 
 
+
     public VkAccessFlagBits(int value) {
         setValue(value);
     }

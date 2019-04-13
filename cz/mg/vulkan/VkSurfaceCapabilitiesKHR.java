@@ -13,7 +13,6 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSurfaceCapabilitiesKHR(VkUInt32 minImageCount, VkUInt32 maxImageCount, VkExtent2D currentExtent, VkExtent2D minImageExtent, VkExtent2D maxImageExtent, VkUInt32 maxImageArrayLayers, VkSurfaceTransformFlagsKHR supportedTransforms, VkSurfaceTransformFlagBitsKHR currentTransform, VkCompositeAlphaFlagsKHR supportedCompositeAlpha, VkImageUsageFlags supportedUsageFlags) {
         super(sizeof());
         setMinImageCount(minImageCount);
@@ -161,7 +160,8 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSurfaceCapabilitiesKHR implements cz.mg.collections.array.ReadonlyArray<VkSurfaceCapabilitiesKHR> {        private final int count;
+    public static class Array extends VkSurfaceCapabilitiesKHR implements cz.mg.collections.array.ReadonlyArray<VkSurfaceCapabilitiesKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSurfaceCapabilitiesKHR.sizeof()));
@@ -183,6 +183,8 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -194,8 +196,8 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -244,5 +246,4 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
             }
         }
     }
-
 }

@@ -13,7 +13,6 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkValidationCacheCreateInfoEXT(VkObject pNext, VkValidationCacheCreateFlagsEXT flags, VkSize initialDataSize, VkObject pInitialData) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_VALIDATION_CACHE_CREATE_INFO_EXT));
@@ -91,7 +90,8 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkValidationCacheCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkValidationCacheCreateInfoEXT> {        private final int count;
+    public static class Array extends VkValidationCacheCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkValidationCacheCreateInfoEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkValidationCacheCreateInfoEXT.sizeof()));
@@ -113,6 +113,8 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
             }
         }
     }
-
 }

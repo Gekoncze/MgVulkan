@@ -13,6 +13,7 @@ public class PFNvkCmdSetDeviceMask extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetDeviceMask(long value) {
         setValue(value);
     }

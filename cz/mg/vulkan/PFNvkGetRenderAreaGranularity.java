@@ -13,6 +13,7 @@ public class PFNvkGetRenderAreaGranularity extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetRenderAreaGranularity(long value) {
         setValue(value);
     }

@@ -20,6 +20,7 @@ public class VkCompositeAlphaFlagBitsKHR extends VkFlagBits {
     }
 
 
+
     public VkCompositeAlphaFlagBitsKHR(int value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class PFNvkGetDisplayPlaneSupportedDisplaysKHR extends VkFunctionPointer 
     }
 
 
+
     public PFNvkGetDisplayPlaneSupportedDisplaysKHR(long value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class PFNvkDisplayPowerControlEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDisplayPowerControlEXT(long value) {
         setValue(value);
     }

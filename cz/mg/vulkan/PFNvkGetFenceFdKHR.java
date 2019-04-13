@@ -13,6 +13,7 @@ public class PFNvkGetFenceFdKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetFenceFdKHR(long value) {
         setValue(value);
     }

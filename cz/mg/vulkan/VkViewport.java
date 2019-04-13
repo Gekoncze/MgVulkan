@@ -13,7 +13,6 @@ public class VkViewport extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkViewport(VkFloat x, VkFloat y, VkFloat width, VkFloat height, VkFloat minDepth, VkFloat maxDepth) {
         super(sizeof());
         setX(x);
@@ -105,7 +104,8 @@ public class VkViewport extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkViewport implements cz.mg.collections.array.ReadonlyArray<VkViewport> {        private final int count;
+    public static class Array extends VkViewport implements cz.mg.collections.array.ReadonlyArray<VkViewport> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkViewport.sizeof()));
@@ -127,6 +127,8 @@ public class VkViewport extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkViewport extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkViewport extends VkObject {
             }
         }
     }
-
 }

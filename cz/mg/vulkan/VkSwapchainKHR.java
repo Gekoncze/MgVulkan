@@ -13,11 +13,13 @@ public class VkSwapchainKHR extends VkNonDispatchableHandle {
     }
 
 
+
     public VkSwapchainKHR(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkSwapchainKHR implements cz.mg.collections.array.ReadonlyArray<VkSwapchainKHR> {        private final int count;
+    public static class Array extends VkSwapchainKHR implements cz.mg.collections.array.ReadonlyArray<VkSwapchainKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSwapchainKHR.sizeof()));
@@ -39,6 +41,8 @@ public class VkSwapchainKHR extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkSwapchainKHR extends VkNonDispatchableHandle {
             return new VkSwapchainKHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

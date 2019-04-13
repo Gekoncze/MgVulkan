@@ -13,11 +13,13 @@ public class VkDisplayModeKHR extends VkNonDispatchableHandle {
     }
 
 
+
     public VkDisplayModeKHR(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkDisplayModeKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayModeKHR> {        private final int count;
+    public static class Array extends VkDisplayModeKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayModeKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDisplayModeKHR.sizeof()));
@@ -39,6 +41,8 @@ public class VkDisplayModeKHR extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkDisplayModeKHR extends VkNonDispatchableHandle {
             return new VkDisplayModeKHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

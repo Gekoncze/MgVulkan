@@ -13,7 +13,6 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDescriptorSetAllocateInfo(VkObject pNext, VkDescriptorPool descriptorPool, VkUInt32 descriptorSetCount, VkDescriptorSetLayout pSetLayouts) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO));
@@ -91,7 +90,8 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDescriptorSetAllocateInfo implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetAllocateInfo> {        private final int count;
+    public static class Array extends VkDescriptorSetAllocateInfo implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetAllocateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorSetAllocateInfo.sizeof()));
@@ -113,6 +113,8 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
             }
         }
     }
-
 }

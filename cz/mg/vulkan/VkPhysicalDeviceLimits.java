@@ -13,7 +13,6 @@ public class VkPhysicalDeviceLimits extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceLimits(VkUInt32 maxImageDimension1D, VkUInt32 maxImageDimension2D, VkUInt32 maxImageDimension3D, VkUInt32 maxImageDimensionCube, VkUInt32 maxImageArrayLayers, VkUInt32 maxTexelBufferElements, VkUInt32 maxUniformBufferRange, VkUInt32 maxStorageBufferRange, VkUInt32 maxPushConstantsSize, VkUInt32 maxMemoryAllocationCount, VkUInt32 maxSamplerAllocationCount, VkDeviceSize bufferImageGranularity, VkDeviceSize sparseAddressSpaceSize, VkUInt32 maxBoundDescriptorSets, VkUInt32 maxPerStageDescriptorSamplers, VkUInt32 maxPerStageDescriptorUniformBuffers, VkUInt32 maxPerStageDescriptorStorageBuffers, VkUInt32 maxPerStageDescriptorSampledImages, VkUInt32 maxPerStageDescriptorStorageImages, VkUInt32 maxPerStageDescriptorInputAttachments, VkUInt32 maxPerStageResources, VkUInt32 maxDescriptorSetSamplers, VkUInt32 maxDescriptorSetUniformBuffers, VkUInt32 maxDescriptorSetUniformBuffersDynamic, VkUInt32 maxDescriptorSetStorageBuffers, VkUInt32 maxDescriptorSetStorageBuffersDynamic, VkUInt32 maxDescriptorSetSampledImages, VkUInt32 maxDescriptorSetStorageImages, VkUInt32 maxDescriptorSetInputAttachments, VkUInt32 maxVertexInputAttributes, VkUInt32 maxVertexInputBindings, VkUInt32 maxVertexInputAttributeOffset, VkUInt32 maxVertexInputBindingStride, VkUInt32 maxVertexOutputComponents, VkUInt32 maxTessellationGenerationLevel, VkUInt32 maxTessellationPatchSize, VkUInt32 maxTessellationControlPerVertexInputComponents, VkUInt32 maxTessellationControlPerVertexOutputComponents, VkUInt32 maxTessellationControlPerPatchOutputComponents, VkUInt32 maxTessellationControlTotalOutputComponents, VkUInt32 maxTessellationEvaluationInputComponents, VkUInt32 maxTessellationEvaluationOutputComponents, VkUInt32 maxGeometryShaderInvocations, VkUInt32 maxGeometryInputComponents, VkUInt32 maxGeometryOutputComponents, VkUInt32 maxGeometryOutputVertices, VkUInt32 maxGeometryTotalOutputComponents, VkUInt32 maxFragmentInputComponents, VkUInt32 maxFragmentOutputAttachments, VkUInt32 maxFragmentDualSrcAttachments, VkUInt32 maxFragmentCombinedOutputResources, VkUInt32 maxComputeSharedMemorySize, VkUInt32 maxComputeWorkGroupCount, VkUInt32 maxComputeWorkGroupInvocations, VkUInt32 maxComputeWorkGroupSize, VkUInt32 subPixelPrecisionBits, VkUInt32 subTexelPrecisionBits, VkUInt32 mipmapPrecisionBits, VkUInt32 maxDrawIndexedIndexValue, VkUInt32 maxDrawIndirectCount, VkFloat maxSamplerLodBias, VkFloat maxSamplerAnisotropy, VkUInt32 maxViewports, VkUInt32 maxViewportDimensions, VkFloat viewportBoundsRange, VkUInt32 viewportSubPixelBits, VkSize minMemoryMapAlignment, VkDeviceSize minTexelBufferOffsetAlignment, VkDeviceSize minUniformBufferOffsetAlignment, VkDeviceSize minStorageBufferOffsetAlignment, VkInt32 minTexelOffset, VkUInt32 maxTexelOffset, VkInt32 minTexelGatherOffset, VkUInt32 maxTexelGatherOffset, VkFloat minInterpolationOffset, VkFloat maxInterpolationOffset, VkUInt32 subPixelInterpolationOffsetBits, VkUInt32 maxFramebufferWidth, VkUInt32 maxFramebufferHeight, VkUInt32 maxFramebufferLayers, VkSampleCountFlags framebufferColorSampleCounts, VkSampleCountFlags framebufferDepthSampleCounts, VkSampleCountFlags framebufferStencilSampleCounts, VkSampleCountFlags framebufferNoAttachmentsSampleCounts, VkUInt32 maxColorAttachments, VkSampleCountFlags sampledImageColorSampleCounts, VkSampleCountFlags sampledImageIntegerSampleCounts, VkSampleCountFlags sampledImageDepthSampleCounts, VkSampleCountFlags sampledImageStencilSampleCounts, VkSampleCountFlags storageImageSampleCounts, VkUInt32 maxSampleMaskWords, VkBool32 timestampComputeAndGraphics, VkFloat timestampPeriod, VkUInt32 maxClipDistances, VkUInt32 maxCullDistances, VkUInt32 maxCombinedClipAndCullDistances, VkUInt32 discreteQueuePriorities, VkFloat pointSizeRange, VkFloat lineWidthRange, VkFloat pointSizeGranularity, VkFloat lineWidthGranularity, VkBool32 strictLines, VkBool32 standardSampleLocations, VkDeviceSize optimalBufferCopyOffsetAlignment, VkDeviceSize optimalBufferCopyRowPitchAlignment, VkDeviceSize nonCoherentAtomSize) {
         super(sizeof());
         setMaxImageDimension1D(maxImageDimension1D);
@@ -1505,7 +1504,8 @@ public class VkPhysicalDeviceLimits extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceLimits implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceLimits> {        private final int count;
+    public static class Array extends VkPhysicalDeviceLimits implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceLimits> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceLimits.sizeof()));
@@ -1527,6 +1527,8 @@ public class VkPhysicalDeviceLimits extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -1538,8 +1540,8 @@ public class VkPhysicalDeviceLimits extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -1588,5 +1590,4 @@ public class VkPhysicalDeviceLimits extends VkObject {
             }
         }
     }
-
 }

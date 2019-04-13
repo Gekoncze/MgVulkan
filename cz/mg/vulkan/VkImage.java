@@ -13,11 +13,13 @@ public class VkImage extends VkNonDispatchableHandle {
     }
 
 
+
     public VkImage(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkImage implements cz.mg.collections.array.ReadonlyArray<VkImage> {        private final int count;
+    public static class Array extends VkImage implements cz.mg.collections.array.ReadonlyArray<VkImage> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkImage.sizeof()));
@@ -39,6 +41,8 @@ public class VkImage extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkImage extends VkNonDispatchableHandle {
             return new VkImage(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

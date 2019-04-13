@@ -13,6 +13,7 @@ public class VkQueryPipelineStatisticFlags extends VkFlags {
     }
 
 
+
     public VkQueryPipelineStatisticFlags(int value) {
         setValue(value);
     }

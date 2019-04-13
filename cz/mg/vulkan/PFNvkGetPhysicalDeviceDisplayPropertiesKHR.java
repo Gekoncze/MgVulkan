@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceDisplayPropertiesKHR extends VkFunctionPointe
     }
 
 
+
     public PFNvkGetPhysicalDeviceDisplayPropertiesKHR(long value) {
         setValue(value);
     }

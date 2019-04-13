@@ -13,6 +13,7 @@ public class PFNvkDestroyIndirectCommandsLayoutNVX extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyIndirectCommandsLayoutNVX(long value) {
         setValue(value);
     }

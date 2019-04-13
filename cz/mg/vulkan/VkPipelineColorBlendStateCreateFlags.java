@@ -13,6 +13,7 @@ public class VkPipelineColorBlendStateCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineColorBlendStateCreateFlags(int value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class VkImageAspectFlags extends VkFlags {
     }
 
 
+
     public VkImageAspectFlags(int value) {
         setValue(value);
     }

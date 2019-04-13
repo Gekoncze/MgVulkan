@@ -13,7 +13,6 @@ public class VkFormatProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkFormatProperties(VkFormatFeatureFlags linearTilingFeatures, VkFormatFeatureFlags optimalTilingFeatures, VkFormatFeatureFlags bufferFeatures) {
         super(sizeof());
         setLinearTilingFeatures(linearTilingFeatures);
@@ -63,7 +62,8 @@ public class VkFormatProperties extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkFormatProperties implements cz.mg.collections.array.ReadonlyArray<VkFormatProperties> {        private final int count;
+    public static class Array extends VkFormatProperties implements cz.mg.collections.array.ReadonlyArray<VkFormatProperties> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkFormatProperties.sizeof()));
@@ -85,6 +85,8 @@ public class VkFormatProperties extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkFormatProperties extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkFormatProperties extends VkObject {
             }
         }
     }
-
 }

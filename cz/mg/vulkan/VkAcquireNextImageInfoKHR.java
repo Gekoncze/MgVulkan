@@ -13,7 +13,6 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkAcquireNextImageInfoKHR(VkObject pNext, VkSwapchainKHR swapchain, VkUInt64 timeout, VkSemaphore semaphore, VkFence fence, VkUInt32 deviceMask) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_ACQUIRE_NEXT_IMAGE_INFO_KHR));
@@ -119,7 +118,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkAcquireNextImageInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkAcquireNextImageInfoKHR> {        private final int count;
+    public static class Array extends VkAcquireNextImageInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkAcquireNextImageInfoKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkAcquireNextImageInfoKHR.sizeof()));
@@ -141,6 +141,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
             }
         }
     }
-
 }

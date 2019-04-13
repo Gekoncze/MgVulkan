@@ -13,7 +13,6 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceConservativeRasterizationPropertiesEXT(VkStructureType sType, VkObject pNext, VkFloat primitiveOverestimationSize, VkFloat maxExtraPrimitiveOverestimationSize, VkFloat extraPrimitiveOverestimationSizeGranularity, VkBool32 primitiveUnderestimation, VkBool32 conservativePointAndLineRasterization, VkBool32 degenerateTrianglesRasterized, VkBool32 degenerateLinesRasterized, VkBool32 fullyCoveredFragmentShaderInputVariable, VkBool32 conservativeRasterizationPostDepthCoverage) {
         super(sizeof());
         setSType(sType);
@@ -175,7 +174,8 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceConservativeRasterizationPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceConservativeRasterizationPropertiesEXT> {        private final int count;
+    public static class Array extends VkPhysicalDeviceConservativeRasterizationPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceConservativeRasterizationPropertiesEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceConservativeRasterizationPropertiesEXT.sizeof()));
@@ -197,6 +197,8 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -208,8 +210,8 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -258,5 +260,4 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
             }
         }
     }
-
 }

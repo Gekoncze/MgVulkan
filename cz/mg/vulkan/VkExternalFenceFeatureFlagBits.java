@@ -20,6 +20,7 @@ public class VkExternalFenceFeatureFlagBits extends VkFlagBits {
     }
 
 
+
     public VkExternalFenceFeatureFlagBits(int value) {
         setValue(value);
     }

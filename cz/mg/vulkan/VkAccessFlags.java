@@ -13,6 +13,7 @@ public class VkAccessFlags extends VkFlags {
     }
 
 
+
     public VkAccessFlags(int value) {
         setValue(value);
     }

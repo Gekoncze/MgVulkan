@@ -13,6 +13,7 @@ public class PFNvkGetDeviceMemoryCommitment extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetDeviceMemoryCommitment(long value) {
         setValue(value);
     }

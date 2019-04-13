@@ -13,7 +13,6 @@ public class VkImageMemoryBarrier extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkImageMemoryBarrier(VkStructureType sType, VkObject pNext, VkAccessFlags srcAccessMask, VkAccessFlags dstAccessMask, VkImageLayout oldLayout, VkImageLayout newLayout, VkUInt32 srcQueueFamilyIndex, VkUInt32 dstQueueFamilyIndex, VkImage image, VkImageSubresourceRange subresourceRange) {
         super(sizeof());
         setSType(sType);
@@ -161,7 +160,8 @@ public class VkImageMemoryBarrier extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkImageMemoryBarrier implements cz.mg.collections.array.ReadonlyArray<VkImageMemoryBarrier> {        private final int count;
+    public static class Array extends VkImageMemoryBarrier implements cz.mg.collections.array.ReadonlyArray<VkImageMemoryBarrier> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkImageMemoryBarrier.sizeof()));
@@ -183,6 +183,8 @@ public class VkImageMemoryBarrier extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -194,8 +196,8 @@ public class VkImageMemoryBarrier extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -244,5 +246,4 @@ public class VkImageMemoryBarrier extends VkObject {
             }
         }
     }
-
 }

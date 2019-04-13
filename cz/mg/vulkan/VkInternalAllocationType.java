@@ -15,6 +15,7 @@ public class VkInternalAllocationType extends VkEnum {
     }
 
 
+
     public VkInternalAllocationType(int value) {
         setValue(value);
     }
@@ -25,7 +26,8 @@ public class VkInternalAllocationType extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkInternalAllocationType implements cz.mg.collections.array.ReadonlyArray<VkInternalAllocationType> {        private final int count;
+    public static class Array extends VkInternalAllocationType implements cz.mg.collections.array.ReadonlyArray<VkInternalAllocationType> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkInternalAllocationType.sizeof()));
@@ -47,6 +49,8 @@ public class VkInternalAllocationType extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -57,5 +61,4 @@ public class VkInternalAllocationType extends VkEnum {
             return new VkInternalAllocationType(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

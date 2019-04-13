@@ -15,6 +15,7 @@ public class VkPipelineCacheHeaderVersion extends VkEnum {
     }
 
 
+
     public VkPipelineCacheHeaderVersion(int value) {
         setValue(value);
     }
@@ -25,7 +26,8 @@ public class VkPipelineCacheHeaderVersion extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkPipelineCacheHeaderVersion implements cz.mg.collections.array.ReadonlyArray<VkPipelineCacheHeaderVersion> {        private final int count;
+    public static class Array extends VkPipelineCacheHeaderVersion implements cz.mg.collections.array.ReadonlyArray<VkPipelineCacheHeaderVersion> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineCacheHeaderVersion.sizeof()));
@@ -47,6 +49,8 @@ public class VkPipelineCacheHeaderVersion extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -57,5 +61,4 @@ public class VkPipelineCacheHeaderVersion extends VkEnum {
             return new VkPipelineCacheHeaderVersion(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

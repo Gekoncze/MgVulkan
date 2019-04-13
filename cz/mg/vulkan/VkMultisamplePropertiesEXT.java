@@ -13,7 +13,6 @@ public class VkMultisamplePropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkMultisamplePropertiesEXT(VkStructureType sType, VkObject pNext, VkExtent2D maxSampleLocationGridSize) {
         super(sizeof());
         setSType(sType);
@@ -63,7 +62,8 @@ public class VkMultisamplePropertiesEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkMultisamplePropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkMultisamplePropertiesEXT> {        private final int count;
+    public static class Array extends VkMultisamplePropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkMultisamplePropertiesEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkMultisamplePropertiesEXT.sizeof()));
@@ -85,6 +85,8 @@ public class VkMultisamplePropertiesEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkMultisamplePropertiesEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkMultisamplePropertiesEXT extends VkObject {
             }
         }
     }
-
 }

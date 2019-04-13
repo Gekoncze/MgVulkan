@@ -13,7 +13,6 @@ public class VkCopyDescriptorSet extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkCopyDescriptorSet(VkStructureType sType, VkObject pNext, VkDescriptorSet srcSet, VkUInt32 srcBinding, VkUInt32 srcArrayElement, VkDescriptorSet dstSet, VkUInt32 dstBinding, VkUInt32 dstArrayElement, VkUInt32 descriptorCount) {
         super(sizeof());
         setSType(sType);
@@ -147,7 +146,8 @@ public class VkCopyDescriptorSet extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkCopyDescriptorSet implements cz.mg.collections.array.ReadonlyArray<VkCopyDescriptorSet> {        private final int count;
+    public static class Array extends VkCopyDescriptorSet implements cz.mg.collections.array.ReadonlyArray<VkCopyDescriptorSet> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkCopyDescriptorSet.sizeof()));
@@ -169,6 +169,8 @@ public class VkCopyDescriptorSet extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -180,8 +182,8 @@ public class VkCopyDescriptorSet extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -230,5 +232,4 @@ public class VkCopyDescriptorSet extends VkObject {
             }
         }
     }
-
 }

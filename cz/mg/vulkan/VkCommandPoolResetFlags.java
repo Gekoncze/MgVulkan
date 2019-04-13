@@ -13,6 +13,7 @@ public class VkCommandPoolResetFlags extends VkFlags {
     }
 
 
+
     public VkCommandPoolResetFlags(int value) {
         setValue(value);
     }

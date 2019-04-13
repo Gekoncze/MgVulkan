@@ -13,6 +13,7 @@ public class PFNvkGetImageSubresourceLayout extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetImageSubresourceLayout(long value) {
         setValue(value);
     }

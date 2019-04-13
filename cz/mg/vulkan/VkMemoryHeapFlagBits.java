@@ -19,6 +19,7 @@ public class VkMemoryHeapFlagBits extends VkFlagBits {
     }
 
 
+
     public VkMemoryHeapFlagBits(int value) {
         setValue(value);
     }

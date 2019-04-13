@@ -13,7 +13,6 @@ public class VkClearColorValue extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkClearColorValue(VkFloat float32) {
         super(sizeof());
         setFloat32(float32);
@@ -72,7 +71,8 @@ public class VkClearColorValue extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkClearColorValue implements cz.mg.collections.array.ReadonlyArray<VkClearColorValue> {        private final int count;
+    public static class Array extends VkClearColorValue implements cz.mg.collections.array.ReadonlyArray<VkClearColorValue> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkClearColorValue.sizeof()));
@@ -94,6 +94,8 @@ public class VkClearColorValue extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -105,8 +107,8 @@ public class VkClearColorValue extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -155,5 +157,4 @@ public class VkClearColorValue extends VkObject {
             }
         }
     }
-
 }

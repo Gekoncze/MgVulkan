@@ -25,6 +25,7 @@ public class VkBufferUsageFlagBits extends VkFlagBits {
     }
 
 
+
     public VkBufferUsageFlagBits(int value) {
         setValue(value);
     }

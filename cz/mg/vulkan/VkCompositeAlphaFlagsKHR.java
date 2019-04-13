@@ -13,6 +13,7 @@ public class VkCompositeAlphaFlagsKHR extends VkFlags {
     }
 
 
+
     public VkCompositeAlphaFlagsKHR(int value) {
         setValue(value);
     }

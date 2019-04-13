@@ -13,6 +13,7 @@ public class VkPipelineVertexInputStateCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineVertexInputStateCreateFlags(int value) {
         setValue(value);
     }

@@ -18,6 +18,7 @@ public class VkChromaLocation extends VkEnum {
     }
 
 
+
     public VkChromaLocation(int value) {
         setValue(value);
     }
@@ -31,7 +32,8 @@ public class VkChromaLocation extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkChromaLocation implements cz.mg.collections.array.ReadonlyArray<VkChromaLocation> {        private final int count;
+    public static class Array extends VkChromaLocation implements cz.mg.collections.array.ReadonlyArray<VkChromaLocation> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkChromaLocation.sizeof()));
@@ -53,6 +55,8 @@ public class VkChromaLocation extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -63,5 +67,4 @@ public class VkChromaLocation extends VkEnum {
             return new VkChromaLocation(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

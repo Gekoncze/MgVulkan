@@ -13,6 +13,7 @@ public class VkSurfaceCounterFlagsEXT extends VkFlags {
     }
 
 
+
     public VkSurfaceCounterFlagsEXT(int value) {
         setValue(value);
     }

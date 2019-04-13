@@ -13,7 +13,6 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDisplayPlaneCapabilitiesKHR(VkDisplayPlaneAlphaFlagsKHR supportedAlpha, VkOffset2D minSrcPosition, VkOffset2D maxSrcPosition, VkExtent2D minSrcExtent, VkExtent2D maxSrcExtent, VkOffset2D minDstPosition, VkOffset2D maxDstPosition, VkExtent2D minDstExtent, VkExtent2D maxDstExtent) {
         super(sizeof());
         setSupportedAlpha(supportedAlpha);
@@ -147,7 +146,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDisplayPlaneCapabilitiesKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayPlaneCapabilitiesKHR> {        private final int count;
+    public static class Array extends VkDisplayPlaneCapabilitiesKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayPlaneCapabilitiesKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDisplayPlaneCapabilitiesKHR.sizeof()));
@@ -169,6 +169,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -180,8 +182,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -230,5 +232,4 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
             }
         }
     }
-
 }

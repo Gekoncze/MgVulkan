@@ -13,7 +13,6 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkObjectTableDescriptorSetEntryNVX(VkObjectEntryTypeNVX type, VkObjectEntryUsageFlagsNVX flags, VkPipelineLayout pipelineLayout, VkDescriptorSet descriptorSet) {
         super(sizeof());
         setType(type);
@@ -77,7 +76,8 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkObjectTableDescriptorSetEntryNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableDescriptorSetEntryNVX> {        private final int count;
+    public static class Array extends VkObjectTableDescriptorSetEntryNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableDescriptorSetEntryNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkObjectTableDescriptorSetEntryNVX.sizeof()));
@@ -99,6 +99,8 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
             }
         }
     }
-
 }

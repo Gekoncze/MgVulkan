@@ -16,6 +16,7 @@ public class VkPipelineBindPoint extends VkEnum {
     }
 
 
+
     public VkPipelineBindPoint(int value) {
         setValue(value);
     }
@@ -27,7 +28,8 @@ public class VkPipelineBindPoint extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkPipelineBindPoint implements cz.mg.collections.array.ReadonlyArray<VkPipelineBindPoint> {        private final int count;
+    public static class Array extends VkPipelineBindPoint implements cz.mg.collections.array.ReadonlyArray<VkPipelineBindPoint> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineBindPoint.sizeof()));
@@ -49,6 +51,8 @@ public class VkPipelineBindPoint extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -59,5 +63,4 @@ public class VkPipelineBindPoint extends VkEnum {
             return new VkPipelineBindPoint(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

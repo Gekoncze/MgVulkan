@@ -21,6 +21,7 @@ public class VkImageViewType extends VkEnum {
     }
 
 
+
     public VkImageViewType(int value) {
         setValue(value);
     }
@@ -37,7 +38,8 @@ public class VkImageViewType extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkImageViewType implements cz.mg.collections.array.ReadonlyArray<VkImageViewType> {        private final int count;
+    public static class Array extends VkImageViewType implements cz.mg.collections.array.ReadonlyArray<VkImageViewType> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkImageViewType.sizeof()));
@@ -59,6 +61,8 @@ public class VkImageViewType extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -69,5 +73,4 @@ public class VkImageViewType extends VkEnum {
             return new VkImageViewType(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

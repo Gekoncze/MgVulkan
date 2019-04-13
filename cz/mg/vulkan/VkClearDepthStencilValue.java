@@ -13,7 +13,6 @@ public class VkClearDepthStencilValue extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkClearDepthStencilValue(VkFloat depth, VkUInt32 stencil) {
         super(sizeof());
         setDepth(depth);
@@ -49,7 +48,8 @@ public class VkClearDepthStencilValue extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkClearDepthStencilValue implements cz.mg.collections.array.ReadonlyArray<VkClearDepthStencilValue> {        private final int count;
+    public static class Array extends VkClearDepthStencilValue implements cz.mg.collections.array.ReadonlyArray<VkClearDepthStencilValue> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkClearDepthStencilValue.sizeof()));
@@ -71,6 +71,8 @@ public class VkClearDepthStencilValue extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -82,8 +84,8 @@ public class VkClearDepthStencilValue extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -132,5 +134,4 @@ public class VkClearDepthStencilValue extends VkObject {
             }
         }
     }
-
 }

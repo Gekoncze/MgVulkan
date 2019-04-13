@@ -19,6 +19,7 @@ public class VkSparseImageFormatFlagBits extends VkFlagBits {
     }
 
 
+
     public VkSparseImageFormatFlagBits(int value) {
         setValue(value);
     }

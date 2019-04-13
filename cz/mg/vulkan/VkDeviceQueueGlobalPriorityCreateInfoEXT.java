@@ -13,7 +13,6 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDeviceQueueGlobalPriorityCreateInfoEXT(VkObject pNext, VkQueueGlobalPriorityEXT globalPriority) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT));
@@ -63,7 +62,8 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDeviceQueueGlobalPriorityCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDeviceQueueGlobalPriorityCreateInfoEXT> {        private final int count;
+    public static class Array extends VkDeviceQueueGlobalPriorityCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDeviceQueueGlobalPriorityCreateInfoEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDeviceQueueGlobalPriorityCreateInfoEXT.sizeof()));
@@ -85,6 +85,8 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
             }
         }
     }
-
 }

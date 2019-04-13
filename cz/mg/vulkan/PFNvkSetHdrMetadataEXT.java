@@ -13,6 +13,7 @@ public class PFNvkSetHdrMetadataEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkSetHdrMetadataEXT(long value) {
         setValue(value);
     }

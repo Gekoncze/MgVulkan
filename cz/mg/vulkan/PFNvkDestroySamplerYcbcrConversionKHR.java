@@ -13,6 +13,7 @@ public class PFNvkDestroySamplerYcbcrConversionKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroySamplerYcbcrConversionKHR(long value) {
         setValue(value);
     }

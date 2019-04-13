@@ -13,6 +13,7 @@ public class VkPeerMemoryFeatureFlags extends VkFlags {
     }
 
 
+
     public VkPeerMemoryFeatureFlags(int value) {
         setValue(value);
     }

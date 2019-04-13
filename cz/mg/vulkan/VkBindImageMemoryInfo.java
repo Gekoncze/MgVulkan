@@ -13,7 +13,6 @@ public class VkBindImageMemoryInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkBindImageMemoryInfo(VkObject pNext, VkImage image, VkDeviceMemory memory, VkDeviceSize memoryOffset) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_INFO));
@@ -91,7 +90,8 @@ public class VkBindImageMemoryInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkBindImageMemoryInfo implements cz.mg.collections.array.ReadonlyArray<VkBindImageMemoryInfo> {        private final int count;
+    public static class Array extends VkBindImageMemoryInfo implements cz.mg.collections.array.ReadonlyArray<VkBindImageMemoryInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkBindImageMemoryInfo.sizeof()));
@@ -113,6 +113,8 @@ public class VkBindImageMemoryInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkBindImageMemoryInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkBindImageMemoryInfo extends VkObject {
             }
         }
     }
-
 }

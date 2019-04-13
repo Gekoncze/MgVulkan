@@ -13,7 +13,6 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSamplerYcbcrConversionCreateInfo(VkObject pNext, VkFormat format, VkSamplerYcbcrModelConversion ycbcrModel, VkSamplerYcbcrRange ycbcrRange, VkComponentMapping components, VkChromaLocation xChromaOffset, VkChromaLocation yChromaOffset, VkFilter chromaFilter, VkBool32 forceExplicitReconstruction) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_YCBCR_CONVERSION_CREATE_INFO));
@@ -161,7 +160,8 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSamplerYcbcrConversionCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkSamplerYcbcrConversionCreateInfo> {        private final int count;
+    public static class Array extends VkSamplerYcbcrConversionCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkSamplerYcbcrConversionCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSamplerYcbcrConversionCreateInfo.sizeof()));
@@ -183,6 +183,8 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -194,8 +196,8 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -244,5 +246,4 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
             }
         }
     }
-
 }

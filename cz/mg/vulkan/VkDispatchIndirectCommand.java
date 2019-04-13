@@ -13,7 +13,6 @@ public class VkDispatchIndirectCommand extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDispatchIndirectCommand(VkUInt32 x, VkUInt32 y, VkUInt32 z) {
         super(sizeof());
         setX(x);
@@ -63,7 +62,8 @@ public class VkDispatchIndirectCommand extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDispatchIndirectCommand implements cz.mg.collections.array.ReadonlyArray<VkDispatchIndirectCommand> {        private final int count;
+    public static class Array extends VkDispatchIndirectCommand implements cz.mg.collections.array.ReadonlyArray<VkDispatchIndirectCommand> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDispatchIndirectCommand.sizeof()));
@@ -85,6 +85,8 @@ public class VkDispatchIndirectCommand extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkDispatchIndirectCommand extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkDispatchIndirectCommand extends VkObject {
             }
         }
     }
-
 }

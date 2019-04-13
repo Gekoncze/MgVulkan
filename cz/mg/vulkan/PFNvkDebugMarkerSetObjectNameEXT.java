@@ -13,6 +13,7 @@ public class PFNvkDebugMarkerSetObjectNameEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDebugMarkerSetObjectNameEXT(long value) {
         setValue(value);
     }

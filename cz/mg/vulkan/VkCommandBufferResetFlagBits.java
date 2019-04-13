@@ -17,6 +17,7 @@ public class VkCommandBufferResetFlagBits extends VkFlagBits {
     }
 
 
+
     public VkCommandBufferResetFlagBits(int value) {
         setValue(value);
     }

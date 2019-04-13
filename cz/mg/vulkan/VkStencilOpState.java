@@ -13,7 +13,6 @@ public class VkStencilOpState extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkStencilOpState(VkStencilOp failOp, VkStencilOp passOp, VkStencilOp depthFailOp, VkCompareOp compareOp, VkUInt32 compareMask, VkUInt32 writeMask, VkUInt32 reference) {
         super(sizeof());
         setFailOp(failOp);
@@ -119,7 +118,8 @@ public class VkStencilOpState extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkStencilOpState implements cz.mg.collections.array.ReadonlyArray<VkStencilOpState> {        private final int count;
+    public static class Array extends VkStencilOpState implements cz.mg.collections.array.ReadonlyArray<VkStencilOpState> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkStencilOpState.sizeof()));
@@ -141,6 +141,8 @@ public class VkStencilOpState extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkStencilOpState extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkStencilOpState extends VkObject {
             }
         }
     }
-
 }

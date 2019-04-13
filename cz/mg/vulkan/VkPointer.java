@@ -39,7 +39,8 @@ public class VkPointer extends VkObject {
         return "0x" + Long.toHexString(getValue());
     }
 
-    public static class Array extends VkPointer implements cz.mg.collections.array.ReadonlyArray<VkPointer> {        private final int count;
+    public static class Array extends VkPointer implements cz.mg.collections.array.ReadonlyArray<VkPointer> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPointer.sizeof()));
@@ -61,6 +62,8 @@ public class VkPointer extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -71,5 +74,4 @@ public class VkPointer extends VkObject {
             return new VkPointer(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

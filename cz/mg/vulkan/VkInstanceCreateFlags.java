@@ -13,6 +13,7 @@ public class VkInstanceCreateFlags extends VkFlags {
     }
 
 
+
     public VkInstanceCreateFlags(int value) {
         setValue(value);
     }

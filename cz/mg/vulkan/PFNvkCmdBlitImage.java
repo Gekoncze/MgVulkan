@@ -13,6 +13,7 @@ public class PFNvkCmdBlitImage extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdBlitImage(long value) {
         setValue(value);
     }

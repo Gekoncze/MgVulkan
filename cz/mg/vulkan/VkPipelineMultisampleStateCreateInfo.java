@@ -13,7 +13,6 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineMultisampleStateCreateInfo(VkObject pNext, VkPipelineMultisampleStateCreateFlags flags, VkSampleCountFlagBits rasterizationSamples, VkBool32 sampleShadingEnable, VkFloat minSampleShading, VkSampleMask pSampleMask, VkBool32 alphaToCoverageEnable, VkBool32 alphaToOneEnable) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO));
@@ -147,7 +146,8 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineMultisampleStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineMultisampleStateCreateInfo> {        private final int count;
+    public static class Array extends VkPipelineMultisampleStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineMultisampleStateCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineMultisampleStateCreateInfo.sizeof()));
@@ -169,6 +169,8 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -180,8 +182,8 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -230,5 +232,4 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
             }
         }
     }
-
 }

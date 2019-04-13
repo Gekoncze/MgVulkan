@@ -13,6 +13,7 @@ public class PFNvkReallocationFunction extends VkFunctionPointer {
     }
 
 
+
     public PFNvkReallocationFunction(long value) {
         setValue(value);
     }

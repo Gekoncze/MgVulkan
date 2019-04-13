@@ -13,6 +13,7 @@ public class PFNvkGetValidationCacheDataEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetValidationCacheDataEXT(long value) {
         setValue(value);
     }

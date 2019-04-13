@@ -13,7 +13,6 @@ public class VkDrawIndirectCommand extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDrawIndirectCommand(VkUInt32 vertexCount, VkUInt32 instanceCount, VkUInt32 firstVertex, VkUInt32 firstInstance) {
         super(sizeof());
         setVertexCount(vertexCount);
@@ -77,7 +76,8 @@ public class VkDrawIndirectCommand extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDrawIndirectCommand implements cz.mg.collections.array.ReadonlyArray<VkDrawIndirectCommand> {        private final int count;
+    public static class Array extends VkDrawIndirectCommand implements cz.mg.collections.array.ReadonlyArray<VkDrawIndirectCommand> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDrawIndirectCommand.sizeof()));
@@ -99,6 +99,8 @@ public class VkDrawIndirectCommand extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkDrawIndirectCommand extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkDrawIndirectCommand extends VkObject {
             }
         }
     }
-
 }

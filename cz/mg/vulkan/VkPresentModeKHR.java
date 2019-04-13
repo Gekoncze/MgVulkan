@@ -20,6 +20,7 @@ public class VkPresentModeKHR extends VkEnum {
     }
 
 
+
     public VkPresentModeKHR(int value) {
         setValue(value);
     }
@@ -35,7 +36,8 @@ public class VkPresentModeKHR extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkPresentModeKHR implements cz.mg.collections.array.ReadonlyArray<VkPresentModeKHR> {        private final int count;
+    public static class Array extends VkPresentModeKHR implements cz.mg.collections.array.ReadonlyArray<VkPresentModeKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPresentModeKHR.sizeof()));
@@ -57,6 +59,8 @@ public class VkPresentModeKHR extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -67,5 +71,4 @@ public class VkPresentModeKHR extends VkEnum {
             return new VkPresentModeKHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,7 +13,6 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkExternalImageFormatPropertiesNV(VkImageFormatProperties imageFormatProperties, VkExternalMemoryFeatureFlagsNV externalMemoryFeatures, VkExternalMemoryHandleTypeFlagsNV exportFromImportedHandleTypes, VkExternalMemoryHandleTypeFlagsNV compatibleHandleTypes) {
         super(sizeof());
         setImageFormatProperties(imageFormatProperties);
@@ -77,7 +76,8 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkExternalImageFormatPropertiesNV implements cz.mg.collections.array.ReadonlyArray<VkExternalImageFormatPropertiesNV> {        private final int count;
+    public static class Array extends VkExternalImageFormatPropertiesNV implements cz.mg.collections.array.ReadonlyArray<VkExternalImageFormatPropertiesNV> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkExternalImageFormatPropertiesNV.sizeof()));
@@ -99,6 +99,8 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
             }
         }
     }
-
 }

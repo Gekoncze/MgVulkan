@@ -13,6 +13,7 @@ public class PFNvkDestroyCommandPool extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyCommandPool(long value) {
         setValue(value);
     }

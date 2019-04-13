@@ -13,11 +13,13 @@ public class VkDescriptorUpdateTemplate extends VkNonDispatchableHandle {
     }
 
 
+
     public VkDescriptorUpdateTemplate(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkDescriptorUpdateTemplate implements cz.mg.collections.array.ReadonlyArray<VkDescriptorUpdateTemplate> {        private final int count;
+    public static class Array extends VkDescriptorUpdateTemplate implements cz.mg.collections.array.ReadonlyArray<VkDescriptorUpdateTemplate> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorUpdateTemplate.sizeof()));
@@ -39,6 +41,8 @@ public class VkDescriptorUpdateTemplate extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkDescriptorUpdateTemplate extends VkNonDispatchableHandle {
             return new VkDescriptorUpdateTemplate(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class PFNvkDestroyDescriptorSetLayout extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyDescriptorSetLayout(long value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class PFNvkRegisterObjectsNVX extends VkFunctionPointer {
     }
 
 
+
     public PFNvkRegisterObjectsNVX(long value) {
         setValue(value);
     }

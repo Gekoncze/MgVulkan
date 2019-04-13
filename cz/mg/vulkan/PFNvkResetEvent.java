@@ -13,6 +13,7 @@ public class PFNvkResetEvent extends VkFunctionPointer {
     }
 
 
+
     public PFNvkResetEvent(long value) {
         setValue(value);
     }

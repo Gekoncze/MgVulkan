@@ -17,6 +17,7 @@ public class VkSparseMemoryBindFlagBits extends VkFlagBits {
     }
 
 
+
     public VkSparseMemoryBindFlagBits(int value) {
         setValue(value);
     }

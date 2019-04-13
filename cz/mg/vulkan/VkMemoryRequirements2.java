@@ -13,7 +13,6 @@ public class VkMemoryRequirements2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkMemoryRequirements2(VkStructureType sType, VkObject pNext, VkMemoryRequirements memoryRequirements) {
         super(sizeof());
         setSType(sType);
@@ -63,7 +62,8 @@ public class VkMemoryRequirements2 extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkMemoryRequirements2 implements cz.mg.collections.array.ReadonlyArray<VkMemoryRequirements2> {        private final int count;
+    public static class Array extends VkMemoryRequirements2 implements cz.mg.collections.array.ReadonlyArray<VkMemoryRequirements2> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkMemoryRequirements2.sizeof()));
@@ -85,6 +85,8 @@ public class VkMemoryRequirements2 extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkMemoryRequirements2 extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkMemoryRequirements2 extends VkObject {
             }
         }
     }
-
 }

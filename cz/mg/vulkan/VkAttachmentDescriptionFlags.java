@@ -13,6 +13,7 @@ public class VkAttachmentDescriptionFlags extends VkFlags {
     }
 
 
+
     public VkAttachmentDescriptionFlags(int value) {
         setValue(value);
     }

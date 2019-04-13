@@ -13,6 +13,7 @@ public class PFNvkAcquireNextImageKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkAcquireNextImageKHR(long value) {
         setValue(value);
     }

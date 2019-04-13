@@ -13,7 +13,6 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkBindImageMemoryDeviceGroupInfo(VkObject pNext, VkUInt32 deviceIndexCount, VkUInt32 pDeviceIndices, VkUInt32 splitInstanceBindRegionCount, VkRect2D pSplitInstanceBindRegions) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO));
@@ -105,7 +104,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkBindImageMemoryDeviceGroupInfo implements cz.mg.collections.array.ReadonlyArray<VkBindImageMemoryDeviceGroupInfo> {        private final int count;
+    public static class Array extends VkBindImageMemoryDeviceGroupInfo implements cz.mg.collections.array.ReadonlyArray<VkBindImageMemoryDeviceGroupInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkBindImageMemoryDeviceGroupInfo.sizeof()));
@@ -127,6 +127,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
             }
         }
     }
-
 }

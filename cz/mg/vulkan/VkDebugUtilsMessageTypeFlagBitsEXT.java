@@ -19,6 +19,7 @@ public class VkDebugUtilsMessageTypeFlagBitsEXT extends VkFlagBits {
     }
 
 
+
     public VkDebugUtilsMessageTypeFlagBitsEXT(int value) {
         setValue(value);
     }

@@ -35,6 +35,7 @@ public class VkImageCreateFlagBits extends VkFlagBits {
     }
 
 
+
     public VkImageCreateFlagBits(int value) {
         setValue(value);
     }

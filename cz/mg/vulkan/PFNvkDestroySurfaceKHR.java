@@ -13,6 +13,7 @@ public class PFNvkDestroySurfaceKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroySurfaceKHR(long value) {
         setValue(value);
     }

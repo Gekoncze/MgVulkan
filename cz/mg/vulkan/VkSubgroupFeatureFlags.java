@@ -13,6 +13,7 @@ public class VkSubgroupFeatureFlags extends VkFlags {
     }
 
 
+
     public VkSubgroupFeatureFlags(int value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class PFNvkGetPastPresentationTimingGOOGLE extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetPastPresentationTimingGOOGLE(long value) {
         setValue(value);
     }

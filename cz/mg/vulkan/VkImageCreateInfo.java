@@ -13,7 +13,6 @@ public class VkImageCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkImageCreateInfo(VkObject pNext, VkImageCreateFlags flags, VkImageType imageType, VkFormat format, VkExtent3D extent, VkUInt32 mipLevels, VkUInt32 arrayLayers, VkSampleCountFlagBits samples, VkImageTiling tiling, VkImageUsageFlags usage, VkSharingMode sharingMode, VkUInt32 queueFamilyIndexCount, VkUInt32 pQueueFamilyIndices, VkImageLayout initialLayout) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO));
@@ -231,7 +230,8 @@ public class VkImageCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkImageCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkImageCreateInfo> {        private final int count;
+    public static class Array extends VkImageCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkImageCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkImageCreateInfo.sizeof()));
@@ -253,6 +253,8 @@ public class VkImageCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -264,8 +266,8 @@ public class VkImageCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -314,5 +316,4 @@ public class VkImageCreateInfo extends VkObject {
             }
         }
     }
-
 }

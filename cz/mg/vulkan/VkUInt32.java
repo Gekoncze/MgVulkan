@@ -13,7 +13,6 @@ public class VkUInt32 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkUInt32(int value) {
         super(sizeof());
         setValue(value);
@@ -36,7 +35,8 @@ public class VkUInt32 extends VkObject {
         return "" + getValue();
     }
 
-    public static class Array extends VkUInt32 implements cz.mg.collections.array.ReadonlyArray<VkUInt32> {        private final int count;
+    public static class Array extends VkUInt32 implements cz.mg.collections.array.ReadonlyArray<VkUInt32> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkUInt32.sizeof()));
@@ -58,6 +58,11 @@ public class VkUInt32 extends VkObject {
             this.count = count;
         }
 
+        public Array(int... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) get(i).setValue(values[i]);
+        }
+
         @Override
         public int count(){
             return count;
@@ -69,8 +74,8 @@ public class VkUInt32 extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -119,5 +124,4 @@ public class VkUInt32 extends VkObject {
             }
         }
     }
-
 }

@@ -13,7 +13,6 @@ public class VkImportFenceFdInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkImportFenceFdInfoKHR(VkObject pNext, VkFence fence, VkFenceImportFlags flags, VkExternalFenceHandleTypeFlagBits handleType, VkInt fd) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMPORT_FENCE_FD_INFO_KHR));
@@ -105,7 +104,8 @@ public class VkImportFenceFdInfoKHR extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkImportFenceFdInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkImportFenceFdInfoKHR> {        private final int count;
+    public static class Array extends VkImportFenceFdInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkImportFenceFdInfoKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkImportFenceFdInfoKHR.sizeof()));
@@ -127,6 +127,8 @@ public class VkImportFenceFdInfoKHR extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkImportFenceFdInfoKHR extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkImportFenceFdInfoKHR extends VkObject {
             }
         }
     }
-
 }

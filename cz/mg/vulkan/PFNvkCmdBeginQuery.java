@@ -13,6 +13,7 @@ public class PFNvkCmdBeginQuery extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdBeginQuery(long value) {
         setValue(value);
     }

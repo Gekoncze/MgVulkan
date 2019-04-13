@@ -13,11 +13,13 @@ public class VkSemaphore extends VkNonDispatchableHandle {
     }
 
 
+
     public VkSemaphore(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkSemaphore implements cz.mg.collections.array.ReadonlyArray<VkSemaphore> {        private final int count;
+    public static class Array extends VkSemaphore implements cz.mg.collections.array.ReadonlyArray<VkSemaphore> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSemaphore.sizeof()));
@@ -39,6 +41,8 @@ public class VkSemaphore extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkSemaphore extends VkNonDispatchableHandle {
             return new VkSemaphore(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

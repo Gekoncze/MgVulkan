@@ -13,6 +13,7 @@ public class PFNvkCmdPushConstants extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdPushConstants(long value) {
         setValue(value);
     }

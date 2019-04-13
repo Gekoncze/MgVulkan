@@ -13,7 +13,6 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkGraphicsPipelineCreateInfo(VkObject pNext, VkPipelineCreateFlags flags, VkUInt32 stageCount, VkPipelineShaderStageCreateInfo pStages, VkPipelineVertexInputStateCreateInfo pVertexInputState, VkPipelineInputAssemblyStateCreateInfo pInputAssemblyState, VkPipelineTessellationStateCreateInfo pTessellationState, VkPipelineViewportStateCreateInfo pViewportState, VkPipelineRasterizationStateCreateInfo pRasterizationState, VkPipelineMultisampleStateCreateInfo pMultisampleState, VkPipelineDepthStencilStateCreateInfo pDepthStencilState, VkPipelineColorBlendStateCreateInfo pColorBlendState, VkPipelineDynamicStateCreateInfo pDynamicState, VkPipelineLayout layout, VkRenderPass renderPass, VkUInt32 subpass, VkPipeline basePipelineHandle, VkInt32 basePipelineIndex) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO));
@@ -287,7 +286,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkGraphicsPipelineCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkGraphicsPipelineCreateInfo> {        private final int count;
+    public static class Array extends VkGraphicsPipelineCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkGraphicsPipelineCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkGraphicsPipelineCreateInfo.sizeof()));
@@ -309,6 +309,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -320,8 +322,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -370,5 +372,4 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
             }
         }
     }
-
 }

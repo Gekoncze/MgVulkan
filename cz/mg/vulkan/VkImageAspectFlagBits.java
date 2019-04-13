@@ -26,6 +26,7 @@ public class VkImageAspectFlagBits extends VkFlagBits {
     }
 
 
+
     public VkImageAspectFlagBits(int value) {
         setValue(value);
     }

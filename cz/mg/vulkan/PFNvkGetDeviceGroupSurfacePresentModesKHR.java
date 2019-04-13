@@ -13,6 +13,7 @@ public class PFNvkGetDeviceGroupSurfacePresentModesKHR extends VkFunctionPointer
     }
 
 
+
     public PFNvkGetDeviceGroupSurfacePresentModesKHR(long value) {
         setValue(value);
     }

@@ -13,7 +13,6 @@ public class VkRenderPassBeginInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkRenderPassBeginInfo(VkObject pNext, VkRenderPass renderPass, VkFramebuffer framebuffer, VkRect2D renderArea, VkUInt32 clearValueCount, VkClearValue pClearValues) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO));
@@ -119,7 +118,8 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkRenderPassBeginInfo implements cz.mg.collections.array.ReadonlyArray<VkRenderPassBeginInfo> {        private final int count;
+    public static class Array extends VkRenderPassBeginInfo implements cz.mg.collections.array.ReadonlyArray<VkRenderPassBeginInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkRenderPassBeginInfo.sizeof()));
@@ -141,6 +141,8 @@ public class VkRenderPassBeginInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkRenderPassBeginInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkRenderPassBeginInfo extends VkObject {
             }
         }
     }
-
 }

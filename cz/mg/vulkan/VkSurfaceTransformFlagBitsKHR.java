@@ -25,6 +25,7 @@ public class VkSurfaceTransformFlagBitsKHR extends VkFlagBits {
     }
 
 
+
     public VkSurfaceTransformFlagBitsKHR(int value) {
         setValue(value);
     }

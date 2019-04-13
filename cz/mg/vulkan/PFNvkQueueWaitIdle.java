@@ -13,6 +13,7 @@ public class PFNvkQueueWaitIdle extends VkFunctionPointer {
     }
 
 
+
     public PFNvkQueueWaitIdle(long value) {
         setValue(value);
     }

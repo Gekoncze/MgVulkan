@@ -22,6 +22,7 @@ public class VkMemoryPropertyFlagBits extends VkFlagBits {
     }
 
 
+
     public VkMemoryPropertyFlagBits(int value) {
         setValue(value);
     }

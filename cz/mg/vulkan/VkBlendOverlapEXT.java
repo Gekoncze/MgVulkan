@@ -17,6 +17,7 @@ public class VkBlendOverlapEXT extends VkEnum {
     }
 
 
+
     public VkBlendOverlapEXT(int value) {
         setValue(value);
     }
@@ -29,7 +30,8 @@ public class VkBlendOverlapEXT extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkBlendOverlapEXT implements cz.mg.collections.array.ReadonlyArray<VkBlendOverlapEXT> {        private final int count;
+    public static class Array extends VkBlendOverlapEXT implements cz.mg.collections.array.ReadonlyArray<VkBlendOverlapEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkBlendOverlapEXT.sizeof()));
@@ -51,6 +53,8 @@ public class VkBlendOverlapEXT extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -61,5 +65,4 @@ public class VkBlendOverlapEXT extends VkEnum {
             return new VkBlendOverlapEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

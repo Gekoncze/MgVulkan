@@ -13,6 +13,7 @@ public class PFNvkInternalAllocationNotification extends VkFunctionPointer {
     }
 
 
+
     public PFNvkInternalAllocationNotification(long value) {
         setValue(value);
     }

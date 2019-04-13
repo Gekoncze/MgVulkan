@@ -13,7 +13,6 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineCoverageModulationStateCreateInfoNV(VkObject pNext, VkPipelineCoverageModulationStateCreateFlagsNV flags, VkCoverageModulationModeNV coverageModulationMode, VkBool32 coverageModulationTableEnable, VkUInt32 coverageModulationTableCount, VkFloat pCoverageModulationTable) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV));
@@ -119,7 +118,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineCoverageModulationStateCreateInfoNV implements cz.mg.collections.array.ReadonlyArray<VkPipelineCoverageModulationStateCreateInfoNV> {        private final int count;
+    public static class Array extends VkPipelineCoverageModulationStateCreateInfoNV implements cz.mg.collections.array.ReadonlyArray<VkPipelineCoverageModulationStateCreateInfoNV> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineCoverageModulationStateCreateInfoNV.sizeof()));
@@ -141,6 +141,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
             }
         }
     }
-
 }

@@ -18,6 +18,7 @@ public class VkSubpassDescriptionFlagBits extends VkFlagBits {
     }
 
 
+
     public VkSubpassDescriptionFlagBits(int value) {
         setValue(value);
     }

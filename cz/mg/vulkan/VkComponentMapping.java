@@ -13,7 +13,6 @@ public class VkComponentMapping extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkComponentMapping(VkComponentSwizzle r, VkComponentSwizzle g, VkComponentSwizzle b, VkComponentSwizzle a) {
         super(sizeof());
         setR(r);
@@ -77,7 +76,8 @@ public class VkComponentMapping extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkComponentMapping implements cz.mg.collections.array.ReadonlyArray<VkComponentMapping> {        private final int count;
+    public static class Array extends VkComponentMapping implements cz.mg.collections.array.ReadonlyArray<VkComponentMapping> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkComponentMapping.sizeof()));
@@ -99,6 +99,8 @@ public class VkComponentMapping extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkComponentMapping extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkComponentMapping extends VkObject {
             }
         }
     }
-
 }

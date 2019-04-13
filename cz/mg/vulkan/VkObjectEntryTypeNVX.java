@@ -19,6 +19,7 @@ public class VkObjectEntryTypeNVX extends VkEnum {
     }
 
 
+
     public VkObjectEntryTypeNVX(int value) {
         setValue(value);
     }
@@ -33,7 +34,8 @@ public class VkObjectEntryTypeNVX extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkObjectEntryTypeNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectEntryTypeNVX> {        private final int count;
+    public static class Array extends VkObjectEntryTypeNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectEntryTypeNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkObjectEntryTypeNVX.sizeof()));
@@ -55,6 +57,8 @@ public class VkObjectEntryTypeNVX extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -65,5 +69,4 @@ public class VkObjectEntryTypeNVX extends VkEnum {
             return new VkObjectEntryTypeNVX(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

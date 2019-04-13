@@ -13,6 +13,7 @@ public class PFNvkDestroyRenderPass extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyRenderPass(long value) {
         setValue(value);
     }

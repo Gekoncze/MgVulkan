@@ -13,6 +13,7 @@ public class PFNvkTrimCommandPool extends VkFunctionPointer {
     }
 
 
+
     public PFNvkTrimCommandPool(long value) {
         setValue(value);
     }

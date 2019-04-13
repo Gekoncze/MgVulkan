@@ -13,6 +13,7 @@ public class PFNvkEnumerateInstanceVersion extends VkFunctionPointer {
     }
 
 
+
     public PFNvkEnumerateInstanceVersion(long value) {
         setValue(value);
     }

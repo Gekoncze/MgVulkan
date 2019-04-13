@@ -17,6 +17,7 @@ public class VkDeviceQueueCreateFlagBits extends VkFlagBits {
     }
 
 
+
     public VkDeviceQueueCreateFlagBits(int value) {
         setValue(value);
     }

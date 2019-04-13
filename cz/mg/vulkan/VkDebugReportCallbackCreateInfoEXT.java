@@ -13,7 +13,6 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDebugReportCallbackCreateInfoEXT(VkObject pNext, VkDebugReportFlagsEXT flags, PFNvkDebugReportCallbackEXT pfnCallback, VkObject pUserData) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT));
@@ -91,7 +90,8 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDebugReportCallbackCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugReportCallbackCreateInfoEXT> {        private final int count;
+    public static class Array extends VkDebugReportCallbackCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugReportCallbackCreateInfoEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDebugReportCallbackCreateInfoEXT.sizeof()));
@@ -113,6 +113,8 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
             }
         }
     }
-
 }

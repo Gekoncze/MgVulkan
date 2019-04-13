@@ -13,6 +13,7 @@ public class PFNvkDestroyShaderModule extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyShaderModule(long value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class VkQueueFlags extends VkFlags {
     }
 
 
+
     public VkQueueFlags(int value) {
         setValue(value);
     }

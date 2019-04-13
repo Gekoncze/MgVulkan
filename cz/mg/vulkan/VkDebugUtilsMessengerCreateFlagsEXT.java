@@ -13,6 +13,7 @@ public class VkDebugUtilsMessengerCreateFlagsEXT extends VkFlags {
     }
 
 
+
     public VkDebugUtilsMessengerCreateFlagsEXT(int value) {
         setValue(value);
     }

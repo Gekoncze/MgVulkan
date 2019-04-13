@@ -13,6 +13,7 @@ public class PFNvkCreateSamplerYcbcrConversion extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateSamplerYcbcrConversion(long value) {
         setValue(value);
     }

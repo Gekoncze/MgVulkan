@@ -13,6 +13,7 @@ public class VkSemaphoreCreateFlags extends VkFlags {
     }
 
 
+
     public VkSemaphoreCreateFlags(int value) {
         setValue(value);
     }

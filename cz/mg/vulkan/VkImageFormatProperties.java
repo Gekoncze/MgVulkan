@@ -13,7 +13,6 @@ public class VkImageFormatProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkImageFormatProperties(VkExtent3D maxExtent, VkUInt32 maxMipLevels, VkUInt32 maxArrayLayers, VkSampleCountFlags sampleCounts, VkDeviceSize maxResourceSize) {
         super(sizeof());
         setMaxExtent(maxExtent);
@@ -91,7 +90,8 @@ public class VkImageFormatProperties extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkImageFormatProperties implements cz.mg.collections.array.ReadonlyArray<VkImageFormatProperties> {        private final int count;
+    public static class Array extends VkImageFormatProperties implements cz.mg.collections.array.ReadonlyArray<VkImageFormatProperties> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkImageFormatProperties.sizeof()));
@@ -113,6 +113,8 @@ public class VkImageFormatProperties extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkImageFormatProperties extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkImageFormatProperties extends VkObject {
             }
         }
     }
-
 }

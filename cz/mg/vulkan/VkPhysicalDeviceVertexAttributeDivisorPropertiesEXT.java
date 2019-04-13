@@ -13,7 +13,6 @@ public class VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT extends VkObjec
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT(VkStructureType sType, VkObject pNext, VkUInt32 maxVertexAttribDivisor) {
         super(sizeof());
         setSType(sType);
@@ -63,7 +62,8 @@ public class VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT extends VkObjec
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT> {        private final int count;
+    public static class Array extends VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT.sizeof()));
@@ -85,6 +85,8 @@ public class VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT extends VkObjec
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT extends VkObjec
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT extends VkObjec
             }
         }
     }
-
 }

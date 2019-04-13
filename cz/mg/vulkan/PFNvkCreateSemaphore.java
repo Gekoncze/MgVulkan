@@ -13,6 +13,7 @@ public class PFNvkCreateSemaphore extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateSemaphore(long value) {
         setValue(value);
     }

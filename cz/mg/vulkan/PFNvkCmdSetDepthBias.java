@@ -13,6 +13,7 @@ public class PFNvkCmdSetDepthBias extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetDepthBias(long value) {
         setValue(value);
     }

@@ -17,6 +17,7 @@ public class VkQueryControlFlagBits extends VkFlagBits {
     }
 
 
+
     public VkQueryControlFlagBits(int value) {
         setValue(value);
     }

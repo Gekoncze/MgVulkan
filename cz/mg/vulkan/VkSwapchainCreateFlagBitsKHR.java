@@ -18,6 +18,7 @@ public class VkSwapchainCreateFlagBitsKHR extends VkFlagBits {
     }
 
 
+
     public VkSwapchainCreateFlagBitsKHR(int value) {
         setValue(value);
     }

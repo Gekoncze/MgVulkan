@@ -13,6 +13,7 @@ public class VkDescriptorUpdateTemplateCreateFlags extends VkFlags {
     }
 
 
+
     public VkDescriptorUpdateTemplateCreateFlags(int value) {
         setValue(value);
     }

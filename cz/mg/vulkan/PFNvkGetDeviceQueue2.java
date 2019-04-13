@@ -13,6 +13,7 @@ public class PFNvkGetDeviceQueue2 extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetDeviceQueue2(long value) {
         setValue(value);
     }

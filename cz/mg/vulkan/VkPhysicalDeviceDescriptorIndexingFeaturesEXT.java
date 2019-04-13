@@ -13,7 +13,6 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceDescriptorIndexingFeaturesEXT(VkStructureType sType, VkObject pNext, VkBool32 shaderInputAttachmentArrayDynamicIndexing, VkBool32 shaderUniformTexelBufferArrayDynamicIndexing, VkBool32 shaderStorageTexelBufferArrayDynamicIndexing, VkBool32 shaderUniformBufferArrayNonUniformIndexing, VkBool32 shaderSampledImageArrayNonUniformIndexing, VkBool32 shaderStorageBufferArrayNonUniformIndexing, VkBool32 shaderStorageImageArrayNonUniformIndexing, VkBool32 shaderInputAttachmentArrayNonUniformIndexing, VkBool32 shaderUniformTexelBufferArrayNonUniformIndexing, VkBool32 shaderStorageTexelBufferArrayNonUniformIndexing, VkBool32 descriptorBindingUniformBufferUpdateAfterBind, VkBool32 descriptorBindingSampledImageUpdateAfterBind, VkBool32 descriptorBindingStorageImageUpdateAfterBind, VkBool32 descriptorBindingStorageBufferUpdateAfterBind, VkBool32 descriptorBindingUniformTexelBufferUpdateAfterBind, VkBool32 descriptorBindingStorageTexelBufferUpdateAfterBind, VkBool32 descriptorBindingUpdateUnusedWhilePending, VkBool32 descriptorBindingPartiallyBound, VkBool32 descriptorBindingVariableDescriptorCount, VkBool32 runtimeDescriptorArray) {
         super(sizeof());
         setSType(sType);
@@ -329,7 +328,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceDescriptorIndexingFeaturesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceDescriptorIndexingFeaturesEXT> {        private final int count;
+    public static class Array extends VkPhysicalDeviceDescriptorIndexingFeaturesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceDescriptorIndexingFeaturesEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceDescriptorIndexingFeaturesEXT.sizeof()));
@@ -351,6 +351,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -362,8 +364,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -412,5 +414,4 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
             }
         }
     }
-
 }

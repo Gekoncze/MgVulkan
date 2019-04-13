@@ -13,6 +13,7 @@ public class PFNvkRegisterDisplayEventEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkRegisterDisplayEventEXT(long value) {
         setValue(value);
     }

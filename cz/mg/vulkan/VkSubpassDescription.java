@@ -13,7 +13,6 @@ public class VkSubpassDescription extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSubpassDescription(VkSubpassDescriptionFlags flags, VkPipelineBindPoint pipelineBindPoint, VkUInt32 inputAttachmentCount, VkAttachmentReference pInputAttachments, VkUInt32 colorAttachmentCount, VkAttachmentReference pColorAttachments, VkAttachmentReference pResolveAttachments, VkAttachmentReference pDepthStencilAttachment, VkUInt32 preserveAttachmentCount, VkUInt32 pPreserveAttachments) {
         super(sizeof());
         setFlags(flags);
@@ -161,7 +160,8 @@ public class VkSubpassDescription extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSubpassDescription implements cz.mg.collections.array.ReadonlyArray<VkSubpassDescription> {        private final int count;
+    public static class Array extends VkSubpassDescription implements cz.mg.collections.array.ReadonlyArray<VkSubpassDescription> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSubpassDescription.sizeof()));
@@ -183,6 +183,8 @@ public class VkSubpassDescription extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -194,8 +196,8 @@ public class VkSubpassDescription extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -244,5 +246,4 @@ public class VkSubpassDescription extends VkObject {
             }
         }
     }
-
 }

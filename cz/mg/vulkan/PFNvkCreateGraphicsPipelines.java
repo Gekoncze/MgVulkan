@@ -13,6 +13,7 @@ public class PFNvkCreateGraphicsPipelines extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateGraphicsPipelines(long value) {
         setValue(value);
     }

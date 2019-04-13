@@ -13,6 +13,7 @@ public class PFNvkDestroyQueryPool extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyQueryPool(long value) {
         setValue(value);
     }

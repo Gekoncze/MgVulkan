@@ -13,6 +13,7 @@ public class PFNvkBindImageMemory extends VkFunctionPointer {
     }
 
 
+
     public PFNvkBindImageMemory(long value) {
         setValue(value);
     }

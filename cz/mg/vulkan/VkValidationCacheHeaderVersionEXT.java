@@ -15,6 +15,7 @@ public class VkValidationCacheHeaderVersionEXT extends VkEnum {
     }
 
 
+
     public VkValidationCacheHeaderVersionEXT(int value) {
         setValue(value);
     }
@@ -25,7 +26,8 @@ public class VkValidationCacheHeaderVersionEXT extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkValidationCacheHeaderVersionEXT implements cz.mg.collections.array.ReadonlyArray<VkValidationCacheHeaderVersionEXT> {        private final int count;
+    public static class Array extends VkValidationCacheHeaderVersionEXT implements cz.mg.collections.array.ReadonlyArray<VkValidationCacheHeaderVersionEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkValidationCacheHeaderVersionEXT.sizeof()));
@@ -47,6 +49,8 @@ public class VkValidationCacheHeaderVersionEXT extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -57,5 +61,4 @@ public class VkValidationCacheHeaderVersionEXT extends VkEnum {
             return new VkValidationCacheHeaderVersionEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

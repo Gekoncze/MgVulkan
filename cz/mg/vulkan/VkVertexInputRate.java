@@ -16,6 +16,7 @@ public class VkVertexInputRate extends VkEnum {
     }
 
 
+
     public VkVertexInputRate(int value) {
         setValue(value);
     }
@@ -27,7 +28,8 @@ public class VkVertexInputRate extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkVertexInputRate implements cz.mg.collections.array.ReadonlyArray<VkVertexInputRate> {        private final int count;
+    public static class Array extends VkVertexInputRate implements cz.mg.collections.array.ReadonlyArray<VkVertexInputRate> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkVertexInputRate.sizeof()));
@@ -49,6 +51,8 @@ public class VkVertexInputRate extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -59,5 +63,4 @@ public class VkVertexInputRate extends VkEnum {
             return new VkVertexInputRate(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class PFNvkQueueBindSparse extends VkFunctionPointer {
     }
 
 
+
     public PFNvkQueueBindSparse(long value) {
         setValue(value);
     }

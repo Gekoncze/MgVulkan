@@ -13,7 +13,6 @@ public class VkMemoryHeap extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkMemoryHeap(VkDeviceSize size, VkMemoryHeapFlags flags) {
         super(sizeof());
         setSize(size);
@@ -49,7 +48,8 @@ public class VkMemoryHeap extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkMemoryHeap implements cz.mg.collections.array.ReadonlyArray<VkMemoryHeap> {        private final int count;
+    public static class Array extends VkMemoryHeap implements cz.mg.collections.array.ReadonlyArray<VkMemoryHeap> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkMemoryHeap.sizeof()));
@@ -71,6 +71,8 @@ public class VkMemoryHeap extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -82,8 +84,8 @@ public class VkMemoryHeap extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -132,5 +134,4 @@ public class VkMemoryHeap extends VkObject {
             }
         }
     }
-
 }

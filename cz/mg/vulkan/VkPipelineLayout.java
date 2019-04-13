@@ -13,11 +13,13 @@ public class VkPipelineLayout extends VkNonDispatchableHandle {
     }
 
 
+
     public VkPipelineLayout(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkPipelineLayout implements cz.mg.collections.array.ReadonlyArray<VkPipelineLayout> {        private final int count;
+    public static class Array extends VkPipelineLayout implements cz.mg.collections.array.ReadonlyArray<VkPipelineLayout> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineLayout.sizeof()));
@@ -39,6 +41,8 @@ public class VkPipelineLayout extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkPipelineLayout extends VkNonDispatchableHandle {
             return new VkPipelineLayout(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

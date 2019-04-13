@@ -13,6 +13,7 @@ public class VkSampleCountFlags extends VkFlags {
     }
 
 
+
     public VkSampleCountFlags(int value) {
         setValue(value);
     }

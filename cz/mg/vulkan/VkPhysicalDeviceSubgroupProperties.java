@@ -13,7 +13,6 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceSubgroupProperties(VkStructureType sType, VkObject pNext, VkUInt32 subgroupSize, VkShaderStageFlags supportedStages, VkSubgroupFeatureFlags supportedOperations, VkBool32 quadOperationsInAllStages) {
         super(sizeof());
         setSType(sType);
@@ -105,7 +104,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceSubgroupProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSubgroupProperties> {        private final int count;
+    public static class Array extends VkPhysicalDeviceSubgroupProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSubgroupProperties> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceSubgroupProperties.sizeof()));
@@ -127,6 +127,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
             }
         }
     }
-
 }

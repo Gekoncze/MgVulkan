@@ -17,6 +17,7 @@ public class VkAttachmentDescriptionFlagBits extends VkFlagBits {
     }
 
 
+
     public VkAttachmentDescriptionFlagBits(int value) {
         setValue(value);
     }

@@ -13,7 +13,6 @@ public class VkQueueFamilyProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkQueueFamilyProperties(VkQueueFlags queueFlags, VkUInt32 queueCount, VkUInt32 timestampValidBits, VkExtent3D minImageTransferGranularity) {
         super(sizeof());
         setQueueFlags(queueFlags);
@@ -77,7 +76,8 @@ public class VkQueueFamilyProperties extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkQueueFamilyProperties implements cz.mg.collections.array.ReadonlyArray<VkQueueFamilyProperties> {        private final int count;
+    public static class Array extends VkQueueFamilyProperties implements cz.mg.collections.array.ReadonlyArray<VkQueueFamilyProperties> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkQueueFamilyProperties.sizeof()));
@@ -99,6 +99,8 @@ public class VkQueueFamilyProperties extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkQueueFamilyProperties extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkQueueFamilyProperties extends VkObject {
             }
         }
     }
-
 }

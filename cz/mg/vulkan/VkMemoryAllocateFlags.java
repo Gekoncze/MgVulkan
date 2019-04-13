@@ -13,6 +13,7 @@ public class VkMemoryAllocateFlags extends VkFlags {
     }
 
 
+
     public VkMemoryAllocateFlags(int value) {
         setValue(value);
     }

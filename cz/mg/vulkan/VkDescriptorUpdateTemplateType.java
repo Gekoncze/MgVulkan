@@ -17,6 +17,7 @@ public class VkDescriptorUpdateTemplateType extends VkEnum {
     }
 
 
+
     public VkDescriptorUpdateTemplateType(int value) {
         setValue(value);
     }
@@ -29,7 +30,8 @@ public class VkDescriptorUpdateTemplateType extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkDescriptorUpdateTemplateType implements cz.mg.collections.array.ReadonlyArray<VkDescriptorUpdateTemplateType> {        private final int count;
+    public static class Array extends VkDescriptorUpdateTemplateType implements cz.mg.collections.array.ReadonlyArray<VkDescriptorUpdateTemplateType> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorUpdateTemplateType.sizeof()));
@@ -51,6 +53,8 @@ public class VkDescriptorUpdateTemplateType extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -61,5 +65,4 @@ public class VkDescriptorUpdateTemplateType extends VkEnum {
             return new VkDescriptorUpdateTemplateType(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class VkSparseImageFormatFlags extends VkFlags {
     }
 
 
+
     public VkSparseImageFormatFlags(int value) {
         setValue(value);
     }

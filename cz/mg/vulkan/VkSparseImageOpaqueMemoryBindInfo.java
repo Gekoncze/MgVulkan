@@ -13,7 +13,6 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSparseImageOpaqueMemoryBindInfo(VkImage image, VkUInt32 bindCount, VkSparseMemoryBind pBinds) {
         super(sizeof());
         setImage(image);
@@ -63,7 +62,8 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSparseImageOpaqueMemoryBindInfo implements cz.mg.collections.array.ReadonlyArray<VkSparseImageOpaqueMemoryBindInfo> {        private final int count;
+    public static class Array extends VkSparseImageOpaqueMemoryBindInfo implements cz.mg.collections.array.ReadonlyArray<VkSparseImageOpaqueMemoryBindInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSparseImageOpaqueMemoryBindInfo.sizeof()));
@@ -85,6 +85,8 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
             }
         }
     }
-
 }

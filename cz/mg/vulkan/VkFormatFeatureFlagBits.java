@@ -49,6 +49,7 @@ public class VkFormatFeatureFlagBits extends VkFlagBits {
     }
 
 
+
     public VkFormatFeatureFlagBits(int value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class PFNvkDestroyDescriptorPool extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyDescriptorPool(long value) {
         setValue(value);
     }

@@ -19,6 +19,7 @@ public class VkCommandBufferUsageFlagBits extends VkFlagBits {
     }
 
 
+
     public VkCommandBufferUsageFlagBits(int value) {
         setValue(value);
     }

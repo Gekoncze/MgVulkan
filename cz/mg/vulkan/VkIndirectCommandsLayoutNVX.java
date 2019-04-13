@@ -13,11 +13,13 @@ public class VkIndirectCommandsLayoutNVX extends VkNonDispatchableHandle {
     }
 
 
+
     public VkIndirectCommandsLayoutNVX(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkIndirectCommandsLayoutNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsLayoutNVX> {        private final int count;
+    public static class Array extends VkIndirectCommandsLayoutNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsLayoutNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkIndirectCommandsLayoutNVX.sizeof()));
@@ -39,6 +41,8 @@ public class VkIndirectCommandsLayoutNVX extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkIndirectCommandsLayoutNVX extends VkNonDispatchableHandle {
             return new VkIndirectCommandsLayoutNVX(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

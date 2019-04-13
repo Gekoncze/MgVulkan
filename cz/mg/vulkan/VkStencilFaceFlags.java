@@ -13,6 +13,7 @@ public class VkStencilFaceFlags extends VkFlags {
     }
 
 
+
     public VkStencilFaceFlags(int value) {
         setValue(value);
     }

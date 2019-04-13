@@ -16,6 +16,7 @@ public class VkFrontFace extends VkEnum {
     }
 
 
+
     public VkFrontFace(int value) {
         setValue(value);
     }
@@ -27,7 +28,8 @@ public class VkFrontFace extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkFrontFace implements cz.mg.collections.array.ReadonlyArray<VkFrontFace> {        private final int count;
+    public static class Array extends VkFrontFace implements cz.mg.collections.array.ReadonlyArray<VkFrontFace> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkFrontFace.sizeof()));
@@ -49,6 +51,8 @@ public class VkFrontFace extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -59,5 +63,4 @@ public class VkFrontFace extends VkEnum {
             return new VkFrontFace(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

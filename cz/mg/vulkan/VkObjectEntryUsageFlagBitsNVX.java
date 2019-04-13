@@ -18,6 +18,7 @@ public class VkObjectEntryUsageFlagBitsNVX extends VkFlagBits {
     }
 
 
+
     public VkObjectEntryUsageFlagBitsNVX(int value) {
         setValue(value);
     }

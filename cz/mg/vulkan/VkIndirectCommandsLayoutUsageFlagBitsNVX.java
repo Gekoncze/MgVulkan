@@ -20,6 +20,7 @@ public class VkIndirectCommandsLayoutUsageFlagBitsNVX extends VkFlagBits {
     }
 
 
+
     public VkIndirectCommandsLayoutUsageFlagBitsNVX(int value) {
         setValue(value);
     }

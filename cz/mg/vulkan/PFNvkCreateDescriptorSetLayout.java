@@ -13,6 +13,7 @@ public class PFNvkCreateDescriptorSetLayout extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateDescriptorSetLayout(long value) {
         setValue(value);
     }

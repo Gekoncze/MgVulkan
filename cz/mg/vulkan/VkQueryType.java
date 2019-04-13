@@ -17,6 +17,7 @@ public class VkQueryType extends VkEnum {
     }
 
 
+
     public VkQueryType(int value) {
         setValue(value);
     }
@@ -29,7 +30,8 @@ public class VkQueryType extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkQueryType implements cz.mg.collections.array.ReadonlyArray<VkQueryType> {        private final int count;
+    public static class Array extends VkQueryType implements cz.mg.collections.array.ReadonlyArray<VkQueryType> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkQueryType.sizeof()));
@@ -51,6 +53,8 @@ public class VkQueryType extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -61,5 +65,4 @@ public class VkQueryType extends VkEnum {
             return new VkQueryType(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

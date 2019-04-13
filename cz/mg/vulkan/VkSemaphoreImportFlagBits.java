@@ -18,6 +18,7 @@ public class VkSemaphoreImportFlagBits extends VkFlagBits {
     }
 
 
+
     public VkSemaphoreImportFlagBits(int value) {
         setValue(value);
     }

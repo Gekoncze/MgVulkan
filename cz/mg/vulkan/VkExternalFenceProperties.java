@@ -13,7 +13,6 @@ public class VkExternalFenceProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkExternalFenceProperties(VkStructureType sType, VkObject pNext, VkExternalFenceHandleTypeFlags exportFromImportedHandleTypes, VkExternalFenceHandleTypeFlags compatibleHandleTypes, VkExternalFenceFeatureFlags externalFenceFeatures) {
         super(sizeof());
         setSType(sType);
@@ -91,7 +90,8 @@ public class VkExternalFenceProperties extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkExternalFenceProperties implements cz.mg.collections.array.ReadonlyArray<VkExternalFenceProperties> {        private final int count;
+    public static class Array extends VkExternalFenceProperties implements cz.mg.collections.array.ReadonlyArray<VkExternalFenceProperties> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkExternalFenceProperties.sizeof()));
@@ -113,6 +113,8 @@ public class VkExternalFenceProperties extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkExternalFenceProperties extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkExternalFenceProperties extends VkObject {
             }
         }
     }
-
 }

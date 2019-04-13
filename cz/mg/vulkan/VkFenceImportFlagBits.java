@@ -18,6 +18,7 @@ public class VkFenceImportFlagBits extends VkFlagBits {
     }
 
 
+
     public VkFenceImportFlagBits(int value) {
         setValue(value);
     }

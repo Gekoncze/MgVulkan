@@ -13,6 +13,7 @@ public class PFNvkCreateSharedSwapchainsKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateSharedSwapchainsKHR(long value) {
         setValue(value);
     }

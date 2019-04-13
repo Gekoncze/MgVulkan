@@ -13,7 +13,6 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineRasterizationStateCreateInfo(VkObject pNext, VkPipelineRasterizationStateCreateFlags flags, VkBool32 depthClampEnable, VkBool32 rasterizerDiscardEnable, VkPolygonMode polygonMode, VkCullModeFlags cullMode, VkFrontFace frontFace, VkBool32 depthBiasEnable, VkFloat depthBiasConstantFactor, VkFloat depthBiasClamp, VkFloat depthBiasSlopeFactor, VkFloat lineWidth) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO));
@@ -203,7 +202,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineRasterizationStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineRasterizationStateCreateInfo> {        private final int count;
+    public static class Array extends VkPipelineRasterizationStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineRasterizationStateCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineRasterizationStateCreateInfo.sizeof()));
@@ -225,6 +225,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -236,8 +238,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -286,5 +288,4 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
             }
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class PFNvkEnumerateInstanceExtensionProperties extends VkFunctionPointer
     }
 
 
+
     public PFNvkEnumerateInstanceExtensionProperties(long value) {
         setValue(value);
     }

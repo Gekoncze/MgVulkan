@@ -13,6 +13,7 @@ public class VkExternalFenceFeatureFlags extends VkFlags {
     }
 
 
+
     public VkExternalFenceFeatureFlags(int value) {
         setValue(value);
     }

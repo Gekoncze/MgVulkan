@@ -13,7 +13,6 @@ public class VkExportSemaphoreCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkExportSemaphoreCreateInfo(VkObject pNext, VkExternalSemaphoreHandleTypeFlags handleTypes) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXPORT_SEMAPHORE_CREATE_INFO));
@@ -63,7 +62,8 @@ public class VkExportSemaphoreCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkExportSemaphoreCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkExportSemaphoreCreateInfo> {        private final int count;
+    public static class Array extends VkExportSemaphoreCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkExportSemaphoreCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkExportSemaphoreCreateInfo.sizeof()));
@@ -85,6 +85,8 @@ public class VkExportSemaphoreCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkExportSemaphoreCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkExportSemaphoreCreateInfo extends VkObject {
             }
         }
     }
-
 }

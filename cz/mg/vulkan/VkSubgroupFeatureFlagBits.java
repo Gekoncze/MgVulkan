@@ -25,6 +25,7 @@ public class VkSubgroupFeatureFlagBits extends VkFlagBits {
     }
 
 
+
     public VkSubgroupFeatureFlagBits(int value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class PFNvkCreateDevice extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateDevice(long value) {
         setValue(value);
     }

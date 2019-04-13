@@ -13,7 +13,6 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceMultiviewFeatures(VkStructureType sType, VkObject pNext, VkBool32 multiview, VkBool32 multiviewGeometryShader, VkBool32 multiviewTessellationShader) {
         super(sizeof());
         setSType(sType);
@@ -91,7 +90,8 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceMultiviewFeatures implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMultiviewFeatures> {        private final int count;
+    public static class Array extends VkPhysicalDeviceMultiviewFeatures implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMultiviewFeatures> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceMultiviewFeatures.sizeof()));
@@ -113,6 +113,8 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
             }
         }
     }
-
 }

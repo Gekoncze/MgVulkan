@@ -13,6 +13,7 @@ public class VkPipelineDepthStencilStateCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineDepthStencilStateCreateFlags(int value) {
         setValue(value);
     }

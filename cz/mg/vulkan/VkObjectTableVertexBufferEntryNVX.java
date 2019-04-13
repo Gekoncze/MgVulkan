@@ -13,7 +13,6 @@ public class VkObjectTableVertexBufferEntryNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkObjectTableVertexBufferEntryNVX(VkObjectEntryTypeNVX type, VkObjectEntryUsageFlagsNVX flags, VkBuffer buffer) {
         super(sizeof());
         setType(type);
@@ -63,7 +62,8 @@ public class VkObjectTableVertexBufferEntryNVX extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkObjectTableVertexBufferEntryNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableVertexBufferEntryNVX> {        private final int count;
+    public static class Array extends VkObjectTableVertexBufferEntryNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableVertexBufferEntryNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkObjectTableVertexBufferEntryNVX.sizeof()));
@@ -85,6 +85,8 @@ public class VkObjectTableVertexBufferEntryNVX extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkObjectTableVertexBufferEntryNVX extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkObjectTableVertexBufferEntryNVX extends VkObject {
             }
         }
     }
-
 }

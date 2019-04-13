@@ -13,6 +13,7 @@ public class PFNvkCmdSetScissor extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetScissor(long value) {
         setValue(value);
     }

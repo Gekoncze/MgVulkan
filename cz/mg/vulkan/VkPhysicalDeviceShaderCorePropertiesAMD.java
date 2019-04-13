@@ -13,7 +13,6 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceShaderCorePropertiesAMD(VkStructureType sType, VkObject pNext, VkUInt32 shaderEngineCount, VkUInt32 shaderArraysPerEngineCount, VkUInt32 computeUnitsPerShaderArray, VkUInt32 simdPerComputeUnit, VkUInt32 wavefrontsPerSimd, VkUInt32 wavefrontSize, VkUInt32 sgprsPerSimd, VkUInt32 minSgprAllocation, VkUInt32 maxSgprAllocation, VkUInt32 sgprAllocationGranularity, VkUInt32 vgprsPerSimd, VkUInt32 minVgprAllocation, VkUInt32 maxVgprAllocation, VkUInt32 vgprAllocationGranularity) {
         super(sizeof());
         setSType(sType);
@@ -245,7 +244,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceShaderCorePropertiesAMD implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceShaderCorePropertiesAMD> {        private final int count;
+    public static class Array extends VkPhysicalDeviceShaderCorePropertiesAMD implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceShaderCorePropertiesAMD> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceShaderCorePropertiesAMD.sizeof()));
@@ -267,6 +267,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -278,8 +280,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -328,5 +330,4 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
             }
         }
     }
-
 }

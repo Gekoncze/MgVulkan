@@ -13,7 +13,6 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDescriptorSetLayoutCreateInfo(VkObject pNext, VkDescriptorSetLayoutCreateFlags flags, VkUInt32 bindingCount, VkDescriptorSetLayoutBinding pBindings) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO));
@@ -91,7 +90,8 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDescriptorSetLayoutCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetLayoutCreateInfo> {        private final int count;
+    public static class Array extends VkDescriptorSetLayoutCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetLayoutCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorSetLayoutCreateInfo.sizeof()));
@@ -113,6 +113,8 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
             }
         }
     }
-
 }

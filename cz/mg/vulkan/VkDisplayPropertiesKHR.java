@@ -13,7 +13,6 @@ public class VkDisplayPropertiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDisplayPropertiesKHR(VkDisplayKHR display, VkChar displayName, VkExtent2D physicalDimensions, VkExtent2D physicalResolution, VkSurfaceTransformFlagsKHR supportedTransforms, VkBool32 planeReorderPossible, VkBool32 persistentContent) {
         super(sizeof());
         setDisplay(display);
@@ -119,7 +118,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDisplayPropertiesKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayPropertiesKHR> {        private final int count;
+    public static class Array extends VkDisplayPropertiesKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayPropertiesKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDisplayPropertiesKHR.sizeof()));
@@ -141,6 +141,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkDisplayPropertiesKHR extends VkObject {
             }
         }
     }
-
 }

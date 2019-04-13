@@ -13,7 +13,6 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceSparseProperties(VkBool32 residencyStandard2DBlockShape, VkBool32 residencyStandard2DMultisampleBlockShape, VkBool32 residencyStandard3DBlockShape, VkBool32 residencyAlignedMipSize, VkBool32 residencyNonResidentStrict) {
         super(sizeof());
         setResidencyStandard2DBlockShape(residencyStandard2DBlockShape);
@@ -91,7 +90,8 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceSparseProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSparseProperties> {        private final int count;
+    public static class Array extends VkPhysicalDeviceSparseProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSparseProperties> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceSparseProperties.sizeof()));
@@ -113,6 +113,8 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
             }
         }
     }
-
 }

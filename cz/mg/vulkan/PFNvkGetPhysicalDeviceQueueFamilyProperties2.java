@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceQueueFamilyProperties2 extends VkFunctionPoin
     }
 
 
+
     public PFNvkGetPhysicalDeviceQueueFamilyProperties2(long value) {
         setValue(value);
     }

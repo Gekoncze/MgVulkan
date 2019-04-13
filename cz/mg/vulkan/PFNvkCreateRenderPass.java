@@ -13,6 +13,7 @@ public class PFNvkCreateRenderPass extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateRenderPass(long value) {
         setValue(value);
     }

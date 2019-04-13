@@ -13,6 +13,7 @@ public class PFNvkEnumerateDeviceLayerProperties extends VkFunctionPointer {
     }
 
 
+
     public PFNvkEnumerateDeviceLayerProperties(long value) {
         setValue(value);
     }

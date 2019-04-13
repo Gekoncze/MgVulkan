@@ -13,6 +13,7 @@ public class PFNvkAllocateDescriptorSets extends VkFunctionPointer {
     }
 
 
+
     public PFNvkAllocateDescriptorSets(long value) {
         setValue(value);
     }

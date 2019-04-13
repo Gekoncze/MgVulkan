@@ -13,7 +13,6 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceSurfaceInfo2KHR(VkObject pNext, VkSurfaceKHR surface) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SURFACE_INFO_2_KHR));
@@ -63,7 +62,8 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceSurfaceInfo2KHR implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSurfaceInfo2KHR> {        private final int count;
+    public static class Array extends VkPhysicalDeviceSurfaceInfo2KHR implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSurfaceInfo2KHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceSurfaceInfo2KHR.sizeof()));
@@ -85,6 +85,8 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
             }
         }
     }
-
 }

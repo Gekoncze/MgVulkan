@@ -13,6 +13,7 @@ public class VkPipelineDiscardRectangleStateCreateFlagsEXT extends VkFlags {
     }
 
 
+
     public VkPipelineDiscardRectangleStateCreateFlagsEXT(int value) {
         setValue(value);
     }

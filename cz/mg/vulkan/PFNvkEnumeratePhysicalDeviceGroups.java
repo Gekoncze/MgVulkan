@@ -13,6 +13,7 @@ public class PFNvkEnumeratePhysicalDeviceGroups extends VkFunctionPointer {
     }
 
 
+
     public PFNvkEnumeratePhysicalDeviceGroups(long value) {
         setValue(value);
     }

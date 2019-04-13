@@ -13,6 +13,7 @@ public class VkPipelineShaderStageCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineShaderStageCreateFlags(int value) {
         setValue(value);
     }

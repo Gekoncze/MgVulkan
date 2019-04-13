@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDevicePresentRectanglesKHR extends VkFunctionPointe
     }
 
 
+
     public PFNvkGetPhysicalDevicePresentRectanglesKHR(long value) {
         setValue(value);
     }

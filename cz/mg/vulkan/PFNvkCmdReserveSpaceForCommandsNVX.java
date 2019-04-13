@@ -13,6 +13,7 @@ public class PFNvkCmdReserveSpaceForCommandsNVX extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdReserveSpaceForCommandsNVX(long value) {
         setValue(value);
     }

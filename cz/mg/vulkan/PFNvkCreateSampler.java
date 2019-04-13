@@ -13,6 +13,7 @@ public class PFNvkCreateSampler extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateSampler(long value) {
         setValue(value);
     }

@@ -13,7 +13,6 @@ public class VkQueryPoolCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkQueryPoolCreateInfo(VkObject pNext, VkQueryPoolCreateFlags flags, VkQueryType queryType, VkUInt32 queryCount, VkQueryPipelineStatisticFlags pipelineStatistics) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_QUERY_POOL_CREATE_INFO));
@@ -105,7 +104,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkQueryPoolCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkQueryPoolCreateInfo> {        private final int count;
+    public static class Array extends VkQueryPoolCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkQueryPoolCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkQueryPoolCreateInfo.sizeof()));
@@ -127,6 +127,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkQueryPoolCreateInfo extends VkObject {
             }
         }
     }
-
 }

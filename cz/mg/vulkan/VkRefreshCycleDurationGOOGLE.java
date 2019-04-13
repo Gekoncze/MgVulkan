@@ -13,7 +13,6 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkRefreshCycleDurationGOOGLE(VkUInt64 refreshDuration) {
         super(sizeof());
         setRefreshDuration(refreshDuration);
@@ -35,7 +34,8 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkRefreshCycleDurationGOOGLE implements cz.mg.collections.array.ReadonlyArray<VkRefreshCycleDurationGOOGLE> {        private final int count;
+    public static class Array extends VkRefreshCycleDurationGOOGLE implements cz.mg.collections.array.ReadonlyArray<VkRefreshCycleDurationGOOGLE> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkRefreshCycleDurationGOOGLE.sizeof()));
@@ -57,6 +57,8 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -68,8 +70,8 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -118,5 +120,4 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
             }
         }
     }
-
 }

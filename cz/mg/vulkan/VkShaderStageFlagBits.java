@@ -24,6 +24,7 @@ public class VkShaderStageFlagBits extends VkFlagBits {
     }
 
 
+
     public VkShaderStageFlagBits(int value) {
         setValue(value);
     }

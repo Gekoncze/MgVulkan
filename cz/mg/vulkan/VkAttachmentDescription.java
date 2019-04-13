@@ -13,7 +13,6 @@ public class VkAttachmentDescription extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkAttachmentDescription(VkAttachmentDescriptionFlags flags, VkFormat format, VkSampleCountFlagBits samples, VkAttachmentLoadOp loadOp, VkAttachmentStoreOp storeOp, VkAttachmentLoadOp stencilLoadOp, VkAttachmentStoreOp stencilStoreOp, VkImageLayout initialLayout, VkImageLayout finalLayout) {
         super(sizeof());
         setFlags(flags);
@@ -147,7 +146,8 @@ public class VkAttachmentDescription extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkAttachmentDescription implements cz.mg.collections.array.ReadonlyArray<VkAttachmentDescription> {        private final int count;
+    public static class Array extends VkAttachmentDescription implements cz.mg.collections.array.ReadonlyArray<VkAttachmentDescription> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkAttachmentDescription.sizeof()));
@@ -169,6 +169,8 @@ public class VkAttachmentDescription extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -180,8 +182,8 @@ public class VkAttachmentDescription extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -230,5 +232,4 @@ public class VkAttachmentDescription extends VkObject {
             }
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class PFNvkCmdSetDepthBounds extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetDepthBounds(long value) {
         setValue(value);
     }

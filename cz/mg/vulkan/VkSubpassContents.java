@@ -16,6 +16,7 @@ public class VkSubpassContents extends VkEnum {
     }
 
 
+
     public VkSubpassContents(int value) {
         setValue(value);
     }
@@ -27,7 +28,8 @@ public class VkSubpassContents extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkSubpassContents implements cz.mg.collections.array.ReadonlyArray<VkSubpassContents> {        private final int count;
+    public static class Array extends VkSubpassContents implements cz.mg.collections.array.ReadonlyArray<VkSubpassContents> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSubpassContents.sizeof()));
@@ -49,6 +51,8 @@ public class VkSubpassContents extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -59,5 +63,4 @@ public class VkSubpassContents extends VkEnum {
             return new VkSubpassContents(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

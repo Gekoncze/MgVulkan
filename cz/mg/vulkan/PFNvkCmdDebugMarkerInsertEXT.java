@@ -13,6 +13,7 @@ public class PFNvkCmdDebugMarkerInsertEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdDebugMarkerInsertEXT(long value) {
         setValue(value);
     }

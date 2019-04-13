@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceQueueFamilyProperties2KHR extends VkFunctionP
     }
 
 
+
     public PFNvkGetPhysicalDeviceQueueFamilyProperties2KHR(long value) {
         setValue(value);
     }

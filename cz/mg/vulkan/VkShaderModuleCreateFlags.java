@@ -13,6 +13,7 @@ public class VkShaderModuleCreateFlags extends VkFlags {
     }
 
 
+
     public VkShaderModuleCreateFlags(int value) {
         setValue(value);
     }

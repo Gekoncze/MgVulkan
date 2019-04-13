@@ -13,7 +13,6 @@ public class VkRenderPassCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkRenderPassCreateInfo(VkObject pNext, VkRenderPassCreateFlags flags, VkUInt32 attachmentCount, VkAttachmentDescription pAttachments, VkUInt32 subpassCount, VkSubpassDescription pSubpasses, VkUInt32 dependencyCount, VkSubpassDependency pDependencies) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO));
@@ -147,7 +146,8 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkRenderPassCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkRenderPassCreateInfo> {        private final int count;
+    public static class Array extends VkRenderPassCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkRenderPassCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkRenderPassCreateInfo.sizeof()));
@@ -169,6 +169,8 @@ public class VkRenderPassCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -180,8 +182,8 @@ public class VkRenderPassCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -230,5 +232,4 @@ public class VkRenderPassCreateInfo extends VkObject {
             }
         }
     }
-
 }

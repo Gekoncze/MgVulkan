@@ -13,7 +13,6 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDisplayPresentInfoKHR(VkObject pNext, VkRect2D srcRect, VkRect2D dstRect, VkBool32 persistent) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DISPLAY_PRESENT_INFO_KHR));
@@ -91,7 +90,8 @@ public class VkDisplayPresentInfoKHR extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDisplayPresentInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayPresentInfoKHR> {        private final int count;
+    public static class Array extends VkDisplayPresentInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayPresentInfoKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDisplayPresentInfoKHR.sizeof()));
@@ -113,6 +113,8 @@ public class VkDisplayPresentInfoKHR extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkDisplayPresentInfoKHR extends VkObject {
             }
         }
     }
-
 }

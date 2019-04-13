@@ -30,6 +30,7 @@ public class VkLogicOp extends VkEnum {
     }
 
 
+
     public VkLogicOp(int value) {
         setValue(value);
     }
@@ -55,7 +56,8 @@ public class VkLogicOp extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkLogicOp implements cz.mg.collections.array.ReadonlyArray<VkLogicOp> {        private final int count;
+    public static class Array extends VkLogicOp implements cz.mg.collections.array.ReadonlyArray<VkLogicOp> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkLogicOp.sizeof()));
@@ -77,6 +79,8 @@ public class VkLogicOp extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -87,5 +91,4 @@ public class VkLogicOp extends VkEnum {
             return new VkLogicOp(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

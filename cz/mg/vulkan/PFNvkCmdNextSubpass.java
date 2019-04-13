@@ -13,6 +13,7 @@ public class PFNvkCmdNextSubpass extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdNextSubpass(long value) {
         setValue(value);
     }

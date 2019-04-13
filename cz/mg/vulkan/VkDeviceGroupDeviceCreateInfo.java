@@ -13,7 +13,6 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDeviceGroupDeviceCreateInfo(VkObject pNext, VkUInt32 physicalDeviceCount, VkPhysicalDevice pPhysicalDevices) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_DEVICE_CREATE_INFO));
@@ -77,7 +76,8 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDeviceGroupDeviceCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupDeviceCreateInfo> {        private final int count;
+    public static class Array extends VkDeviceGroupDeviceCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupDeviceCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDeviceGroupDeviceCreateInfo.sizeof()));
@@ -99,6 +99,8 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
             }
         }
     }
-
 }

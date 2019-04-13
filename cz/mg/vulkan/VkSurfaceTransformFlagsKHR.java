@@ -13,6 +13,7 @@ public class VkSurfaceTransformFlagsKHR extends VkFlags {
     }
 
 
+
     public VkSurfaceTransformFlagsKHR(int value) {
         setValue(value);
     }

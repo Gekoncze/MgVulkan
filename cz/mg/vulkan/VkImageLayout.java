@@ -29,6 +29,7 @@ public class VkImageLayout extends VkEnum {
     }
 
 
+
     public VkImageLayout(int value) {
         setValue(value);
     }
@@ -53,7 +54,8 @@ public class VkImageLayout extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkImageLayout implements cz.mg.collections.array.ReadonlyArray<VkImageLayout> {        private final int count;
+    public static class Array extends VkImageLayout implements cz.mg.collections.array.ReadonlyArray<VkImageLayout> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkImageLayout.sizeof()));
@@ -75,6 +77,8 @@ public class VkImageLayout extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -85,5 +89,4 @@ public class VkImageLayout extends VkEnum {
             return new VkImageLayout(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

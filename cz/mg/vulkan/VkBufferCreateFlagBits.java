@@ -20,6 +20,7 @@ public class VkBufferCreateFlagBits extends VkFlagBits {
     }
 
 
+
     public VkBufferCreateFlagBits(int value) {
         setValue(value);
     }

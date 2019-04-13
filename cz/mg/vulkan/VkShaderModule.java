@@ -13,11 +13,13 @@ public class VkShaderModule extends VkNonDispatchableHandle {
     }
 
 
+
     public VkShaderModule(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkShaderModule implements cz.mg.collections.array.ReadonlyArray<VkShaderModule> {        private final int count;
+    public static class Array extends VkShaderModule implements cz.mg.collections.array.ReadonlyArray<VkShaderModule> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkShaderModule.sizeof()));
@@ -39,6 +41,8 @@ public class VkShaderModule extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkShaderModule extends VkNonDispatchableHandle {
             return new VkShaderModule(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

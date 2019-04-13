@@ -16,6 +16,7 @@ public class VkValidationCheckEXT extends VkEnum {
     }
 
 
+
     public VkValidationCheckEXT(int value) {
         setValue(value);
     }
@@ -27,7 +28,8 @@ public class VkValidationCheckEXT extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkValidationCheckEXT implements cz.mg.collections.array.ReadonlyArray<VkValidationCheckEXT> {        private final int count;
+    public static class Array extends VkValidationCheckEXT implements cz.mg.collections.array.ReadonlyArray<VkValidationCheckEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkValidationCheckEXT.sizeof()));
@@ -49,6 +51,8 @@ public class VkValidationCheckEXT extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -59,5 +63,4 @@ public class VkValidationCheckEXT extends VkEnum {
             return new VkValidationCheckEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

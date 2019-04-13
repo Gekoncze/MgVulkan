@@ -23,6 +23,7 @@ public class VkSampleCountFlagBits extends VkFlagBits {
     }
 
 
+
     public VkSampleCountFlagBits(int value) {
         setValue(value);
     }

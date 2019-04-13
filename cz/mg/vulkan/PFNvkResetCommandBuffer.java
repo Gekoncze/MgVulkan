@@ -13,6 +13,7 @@ public class PFNvkResetCommandBuffer extends VkFunctionPointer {
     }
 
 
+
     public PFNvkResetCommandBuffer(long value) {
         setValue(value);
     }

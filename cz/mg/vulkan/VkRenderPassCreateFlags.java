@@ -13,6 +13,7 @@ public class VkRenderPassCreateFlags extends VkFlags {
     }
 
 
+
     public VkRenderPassCreateFlags(int value) {
         setValue(value);
     }

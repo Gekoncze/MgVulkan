@@ -13,6 +13,7 @@ public class PFNvkDebugReportCallbackEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDebugReportCallbackEXT(long value) {
         setValue(value);
     }

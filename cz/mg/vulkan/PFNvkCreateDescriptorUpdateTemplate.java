@@ -13,6 +13,7 @@ public class PFNvkCreateDescriptorUpdateTemplate extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateDescriptorUpdateTemplate(long value) {
         setValue(value);
     }

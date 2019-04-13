@@ -13,6 +13,7 @@ public class PFNvkCmdSetViewportWScalingNV extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetViewportWScalingNV(long value) {
         setValue(value);
     }

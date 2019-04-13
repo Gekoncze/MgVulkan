@@ -13,6 +13,7 @@ public class VkDebugUtilsMessengerCallbackDataFlagsEXT extends VkFlags {
     }
 
 
+
     public VkDebugUtilsMessengerCallbackDataFlagsEXT(int value) {
         setValue(value);
     }

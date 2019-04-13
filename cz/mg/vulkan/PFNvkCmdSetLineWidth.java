@@ -13,6 +13,7 @@ public class PFNvkCmdSetLineWidth extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetLineWidth(long value) {
         setValue(value);
     }

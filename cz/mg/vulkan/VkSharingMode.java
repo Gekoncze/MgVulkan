@@ -16,6 +16,7 @@ public class VkSharingMode extends VkEnum {
     }
 
 
+
     public VkSharingMode(int value) {
         setValue(value);
     }
@@ -27,7 +28,8 @@ public class VkSharingMode extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkSharingMode implements cz.mg.collections.array.ReadonlyArray<VkSharingMode> {        private final int count;
+    public static class Array extends VkSharingMode implements cz.mg.collections.array.ReadonlyArray<VkSharingMode> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSharingMode.sizeof()));
@@ -49,6 +51,8 @@ public class VkSharingMode extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -59,5 +63,4 @@ public class VkSharingMode extends VkEnum {
             return new VkSharingMode(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

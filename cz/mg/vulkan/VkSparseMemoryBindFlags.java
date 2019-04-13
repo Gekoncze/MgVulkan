@@ -13,6 +13,7 @@ public class VkSparseMemoryBindFlags extends VkFlags {
     }
 
 
+
     public VkSparseMemoryBindFlags(int value) {
         setValue(value);
     }

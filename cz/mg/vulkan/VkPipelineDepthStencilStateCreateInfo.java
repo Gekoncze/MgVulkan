@@ -13,7 +13,6 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineDepthStencilStateCreateInfo(VkObject pNext, VkPipelineDepthStencilStateCreateFlags flags, VkBool32 depthTestEnable, VkBool32 depthWriteEnable, VkCompareOp depthCompareOp, VkBool32 depthBoundsTestEnable, VkBool32 stencilTestEnable, VkStencilOpState front, VkStencilOpState back, VkFloat minDepthBounds, VkFloat maxDepthBounds) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO));
@@ -189,7 +188,8 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineDepthStencilStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineDepthStencilStateCreateInfo> {        private final int count;
+    public static class Array extends VkPipelineDepthStencilStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineDepthStencilStateCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineDepthStencilStateCreateInfo.sizeof()));
@@ -211,6 +211,8 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -222,8 +224,8 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -272,5 +274,4 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
             }
         }
     }
-
 }

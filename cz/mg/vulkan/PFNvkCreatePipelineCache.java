@@ -13,6 +13,7 @@ public class PFNvkCreatePipelineCache extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreatePipelineCache(long value) {
         setValue(value);
     }

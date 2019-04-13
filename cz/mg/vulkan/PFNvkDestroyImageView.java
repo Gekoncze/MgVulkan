@@ -13,6 +13,7 @@ public class PFNvkDestroyImageView extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyImageView(long value) {
         setValue(value);
     }

@@ -13,7 +13,6 @@ public class VkInputAttachmentAspectReference extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkInputAttachmentAspectReference(VkUInt32 subpass, VkUInt32 inputAttachmentIndex, VkImageAspectFlags aspectMask) {
         super(sizeof());
         setSubpass(subpass);
@@ -63,7 +62,8 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkInputAttachmentAspectReference implements cz.mg.collections.array.ReadonlyArray<VkInputAttachmentAspectReference> {        private final int count;
+    public static class Array extends VkInputAttachmentAspectReference implements cz.mg.collections.array.ReadonlyArray<VkInputAttachmentAspectReference> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkInputAttachmentAspectReference.sizeof()));
@@ -85,6 +85,8 @@ public class VkInputAttachmentAspectReference extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkInputAttachmentAspectReference extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkInputAttachmentAspectReference extends VkObject {
             }
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class VkExternalSemaphoreFeatureFlags extends VkFlags {
     }
 
 
+
     public VkExternalSemaphoreFeatureFlags(int value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV extends VkFun
     }
 
 
+
     public PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV(long value) {
         setValue(value);
     }

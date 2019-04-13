@@ -13,6 +13,7 @@ public class PFNvkMergePipelineCaches extends VkFunctionPointer {
     }
 
 
+
     public PFNvkMergePipelineCaches(long value) {
         setValue(value);
     }

@@ -13,7 +13,6 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDeviceGeneratedCommandsLimitsNVX(VkStructureType sType, VkObject pNext, VkUInt32 maxIndirectCommandsLayoutTokenCount, VkUInt32 maxObjectEntryCounts, VkUInt32 minSequenceCountBufferOffsetAlignment, VkUInt32 minSequenceIndexBufferOffsetAlignment, VkUInt32 minCommandsTokenBufferOffsetAlignment) {
         super(sizeof());
         setSType(sType);
@@ -119,7 +118,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDeviceGeneratedCommandsLimitsNVX implements cz.mg.collections.array.ReadonlyArray<VkDeviceGeneratedCommandsLimitsNVX> {        private final int count;
+    public static class Array extends VkDeviceGeneratedCommandsLimitsNVX implements cz.mg.collections.array.ReadonlyArray<VkDeviceGeneratedCommandsLimitsNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDeviceGeneratedCommandsLimitsNVX.sizeof()));
@@ -141,6 +141,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
             }
         }
     }
-
 }

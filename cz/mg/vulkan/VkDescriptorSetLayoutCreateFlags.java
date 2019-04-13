@@ -13,6 +13,7 @@ public class VkDescriptorSetLayoutCreateFlags extends VkFlags {
     }
 
 
+
     public VkDescriptorSetLayoutCreateFlags(int value) {
         setValue(value);
     }

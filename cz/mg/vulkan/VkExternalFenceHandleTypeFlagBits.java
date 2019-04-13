@@ -24,6 +24,7 @@ public class VkExternalFenceHandleTypeFlagBits extends VkFlagBits {
     }
 
 
+
     public VkExternalFenceHandleTypeFlagBits(int value) {
         setValue(value);
     }

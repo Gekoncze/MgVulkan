@@ -13,7 +13,6 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineCacheCreateInfo(VkObject pNext, VkPipelineCacheCreateFlags flags, VkSize initialDataSize, VkObject pInitialData) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_CACHE_CREATE_INFO));
@@ -91,7 +90,8 @@ public class VkPipelineCacheCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineCacheCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineCacheCreateInfo> {        private final int count;
+    public static class Array extends VkPipelineCacheCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineCacheCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineCacheCreateInfo.sizeof()));
@@ -113,6 +113,8 @@ public class VkPipelineCacheCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkPipelineCacheCreateInfo extends VkObject {
             }
         }
     }
-
 }

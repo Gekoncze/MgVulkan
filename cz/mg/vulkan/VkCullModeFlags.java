@@ -13,6 +13,7 @@ public class VkCullModeFlags extends VkFlags {
     }
 
 
+
     public VkCullModeFlags(int value) {
         setValue(value);
     }

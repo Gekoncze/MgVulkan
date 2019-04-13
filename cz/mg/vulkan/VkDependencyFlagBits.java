@@ -21,6 +21,7 @@ public class VkDependencyFlagBits extends VkFlagBits {
     }
 
 
+
     public VkDependencyFlagBits(int value) {
         setValue(value);
     }

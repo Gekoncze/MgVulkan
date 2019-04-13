@@ -15,6 +15,7 @@ public class VkDisplayEventTypeEXT extends VkEnum {
     }
 
 
+
     public VkDisplayEventTypeEXT(int value) {
         setValue(value);
     }
@@ -25,7 +26,8 @@ public class VkDisplayEventTypeEXT extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkDisplayEventTypeEXT implements cz.mg.collections.array.ReadonlyArray<VkDisplayEventTypeEXT> {        private final int count;
+    public static class Array extends VkDisplayEventTypeEXT implements cz.mg.collections.array.ReadonlyArray<VkDisplayEventTypeEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDisplayEventTypeEXT.sizeof()));
@@ -47,6 +49,8 @@ public class VkDisplayEventTypeEXT extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -57,5 +61,4 @@ public class VkDisplayEventTypeEXT extends VkEnum {
             return new VkDisplayEventTypeEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

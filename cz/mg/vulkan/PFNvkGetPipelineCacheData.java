@@ -13,6 +13,7 @@ public class PFNvkGetPipelineCacheData extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetPipelineCacheData(long value) {
         setValue(value);
     }

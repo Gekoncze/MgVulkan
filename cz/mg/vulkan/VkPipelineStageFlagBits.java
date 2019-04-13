@@ -34,6 +34,7 @@ public class VkPipelineStageFlagBits extends VkFlagBits {
     }
 
 
+
     public VkPipelineStageFlagBits(int value) {
         setValue(value);
     }

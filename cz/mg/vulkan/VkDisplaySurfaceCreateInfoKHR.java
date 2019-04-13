@@ -13,7 +13,6 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDisplaySurfaceCreateInfoKHR(VkObject pNext, VkDisplaySurfaceCreateFlagsKHR flags, VkDisplayModeKHR displayMode, VkUInt32 planeIndex, VkUInt32 planeStackIndex, VkSurfaceTransformFlagBitsKHR transform, VkFloat globalAlpha, VkDisplayPlaneAlphaFlagBitsKHR alphaMode, VkExtent2D imageExtent) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DISPLAY_SURFACE_CREATE_INFO_KHR));
@@ -161,7 +160,8 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDisplaySurfaceCreateInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplaySurfaceCreateInfoKHR> {        private final int count;
+    public static class Array extends VkDisplaySurfaceCreateInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplaySurfaceCreateInfoKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDisplaySurfaceCreateInfoKHR.sizeof()));
@@ -183,6 +183,8 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -194,8 +196,8 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -244,5 +246,4 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
             }
         }
     }
-
 }

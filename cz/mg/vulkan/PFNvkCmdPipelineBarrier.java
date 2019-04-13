@@ -13,6 +13,7 @@ public class PFNvkCmdPipelineBarrier extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdPipelineBarrier(long value) {
         setValue(value);
     }

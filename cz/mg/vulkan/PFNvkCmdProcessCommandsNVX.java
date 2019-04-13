@@ -13,6 +13,7 @@ public class PFNvkCmdProcessCommandsNVX extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdProcessCommandsNVX(long value) {
         setValue(value);
     }

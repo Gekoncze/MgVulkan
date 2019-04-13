@@ -13,6 +13,7 @@ public class PFNvkGetShaderInfoAMD extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetShaderInfoAMD(long value) {
         setValue(value);
     }

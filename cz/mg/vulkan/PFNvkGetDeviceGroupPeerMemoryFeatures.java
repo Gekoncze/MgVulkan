@@ -13,6 +13,7 @@ public class PFNvkGetDeviceGroupPeerMemoryFeatures extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetDeviceGroupPeerMemoryFeatures(long value) {
         setValue(value);
     }

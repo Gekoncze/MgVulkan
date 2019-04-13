@@ -13,11 +13,13 @@ public class VkDescriptorPool extends VkNonDispatchableHandle {
     }
 
 
+
     public VkDescriptorPool(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkDescriptorPool implements cz.mg.collections.array.ReadonlyArray<VkDescriptorPool> {        private final int count;
+    public static class Array extends VkDescriptorPool implements cz.mg.collections.array.ReadonlyArray<VkDescriptorPool> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorPool.sizeof()));
@@ -39,6 +41,8 @@ public class VkDescriptorPool extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkDescriptorPool extends VkNonDispatchableHandle {
             return new VkDescriptorPool(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

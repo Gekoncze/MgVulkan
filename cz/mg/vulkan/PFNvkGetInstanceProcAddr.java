@@ -13,6 +13,7 @@ public class PFNvkGetInstanceProcAddr extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetInstanceProcAddr(long value) {
         setValue(value);
     }

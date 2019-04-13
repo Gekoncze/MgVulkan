@@ -37,7 +37,8 @@ public class VkNonDispatchableHandle extends VkHandle {
         return "" + getValue();
     }
 
-    public static class Array extends VkNonDispatchableHandle implements cz.mg.collections.array.ReadonlyArray<VkNonDispatchableHandle> {        private final int count;
+    public static class Array extends VkNonDispatchableHandle implements cz.mg.collections.array.ReadonlyArray<VkNonDispatchableHandle> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkNonDispatchableHandle.sizeof()));
@@ -59,6 +60,8 @@ public class VkNonDispatchableHandle extends VkHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -69,5 +72,4 @@ public class VkNonDispatchableHandle extends VkHandle {
             return new VkNonDispatchableHandle(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

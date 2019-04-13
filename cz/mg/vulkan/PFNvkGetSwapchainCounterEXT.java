@@ -13,6 +13,7 @@ public class PFNvkGetSwapchainCounterEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetSwapchainCounterEXT(long value) {
         setValue(value);
     }

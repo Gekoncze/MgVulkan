@@ -13,6 +13,7 @@ public class PFNvkCmdWaitEvents extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdWaitEvents(long value) {
         setValue(value);
     }

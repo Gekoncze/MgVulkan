@@ -13,6 +13,7 @@ public class PFNvkCreateBufferView extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateBufferView(long value) {
         setValue(value);
     }

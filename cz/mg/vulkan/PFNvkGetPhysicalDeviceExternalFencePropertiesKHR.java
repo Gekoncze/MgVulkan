@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceExternalFencePropertiesKHR extends VkFunction
     }
 
 
+
     public PFNvkGetPhysicalDeviceExternalFencePropertiesKHR(long value) {
         setValue(value);
     }

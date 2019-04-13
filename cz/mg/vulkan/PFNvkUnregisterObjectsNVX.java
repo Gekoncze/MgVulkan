@@ -13,6 +13,7 @@ public class PFNvkUnregisterObjectsNVX extends VkFunctionPointer {
     }
 
 
+
     public PFNvkUnregisterObjectsNVX(long value) {
         setValue(value);
     }

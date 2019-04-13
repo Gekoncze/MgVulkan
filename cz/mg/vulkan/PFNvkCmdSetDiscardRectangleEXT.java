@@ -13,6 +13,7 @@ public class PFNvkCmdSetDiscardRectangleEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetDiscardRectangleEXT(long value) {
         setValue(value);
     }

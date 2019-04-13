@@ -13,7 +13,6 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT(VkStructureType sType, VkObject pNext, VkBool32 filterMinmaxSingleComponentFormats, VkBool32 filterMinmaxImageComponentMapping) {
         super(sizeof());
         setSType(sType);
@@ -77,7 +76,8 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT> {        private final int count;
+    public static class Array extends VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT.sizeof()));
@@ -99,6 +99,8 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
             }
         }
     }
-
 }

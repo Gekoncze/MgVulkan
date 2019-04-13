@@ -21,6 +21,7 @@ public class VkDebugReportFlagBitsEXT extends VkFlagBits {
     }
 
 
+
     public VkDebugReportFlagBitsEXT(int value) {
         setValue(value);
     }

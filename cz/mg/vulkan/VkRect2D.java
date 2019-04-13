@@ -13,7 +13,6 @@ public class VkRect2D extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkRect2D(VkOffset2D offset, VkExtent2D extent) {
         super(sizeof());
         setOffset(offset);
@@ -49,7 +48,8 @@ public class VkRect2D extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkRect2D implements cz.mg.collections.array.ReadonlyArray<VkRect2D> {        private final int count;
+    public static class Array extends VkRect2D implements cz.mg.collections.array.ReadonlyArray<VkRect2D> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkRect2D.sizeof()));
@@ -71,6 +71,8 @@ public class VkRect2D extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -82,8 +84,8 @@ public class VkRect2D extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -132,5 +134,4 @@ public class VkRect2D extends VkObject {
             }
         }
     }
-
 }

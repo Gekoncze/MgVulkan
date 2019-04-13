@@ -13,6 +13,7 @@ public class PFNvkResetFences extends VkFunctionPointer {
     }
 
 
+
     public PFNvkResetFences(long value) {
         setValue(value);
     }

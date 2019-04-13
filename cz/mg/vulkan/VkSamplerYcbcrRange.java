@@ -18,6 +18,7 @@ public class VkSamplerYcbcrRange extends VkEnum {
     }
 
 
+
     public VkSamplerYcbcrRange(int value) {
         setValue(value);
     }
@@ -31,7 +32,8 @@ public class VkSamplerYcbcrRange extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkSamplerYcbcrRange implements cz.mg.collections.array.ReadonlyArray<VkSamplerYcbcrRange> {        private final int count;
+    public static class Array extends VkSamplerYcbcrRange implements cz.mg.collections.array.ReadonlyArray<VkSamplerYcbcrRange> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSamplerYcbcrRange.sizeof()));
@@ -53,6 +55,8 @@ public class VkSamplerYcbcrRange extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -63,5 +67,4 @@ public class VkSamplerYcbcrRange extends VkEnum {
             return new VkSamplerYcbcrRange(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class VkCommandBufferUsageFlags extends VkFlags {
     }
 
 
+
     public VkCommandBufferUsageFlags(int value) {
         setValue(value);
     }

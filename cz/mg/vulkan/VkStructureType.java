@@ -305,6 +305,7 @@ public class VkStructureType extends VkEnum {
     }
 
 
+
     public VkStructureType(int value) {
         setValue(value);
     }
@@ -605,7 +606,8 @@ public class VkStructureType extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkStructureType implements cz.mg.collections.array.ReadonlyArray<VkStructureType> {        private final int count;
+    public static class Array extends VkStructureType implements cz.mg.collections.array.ReadonlyArray<VkStructureType> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkStructureType.sizeof()));
@@ -627,6 +629,8 @@ public class VkStructureType extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -637,5 +641,4 @@ public class VkStructureType extends VkEnum {
             return new VkStructureType(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

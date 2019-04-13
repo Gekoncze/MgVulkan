@@ -22,6 +22,7 @@ public class VkViewportCoordinateSwizzleNV extends VkEnum {
     }
 
 
+
     public VkViewportCoordinateSwizzleNV(int value) {
         setValue(value);
     }
@@ -39,7 +40,8 @@ public class VkViewportCoordinateSwizzleNV extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkViewportCoordinateSwizzleNV implements cz.mg.collections.array.ReadonlyArray<VkViewportCoordinateSwizzleNV> {        private final int count;
+    public static class Array extends VkViewportCoordinateSwizzleNV implements cz.mg.collections.array.ReadonlyArray<VkViewportCoordinateSwizzleNV> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkViewportCoordinateSwizzleNV.sizeof()));
@@ -61,6 +63,8 @@ public class VkViewportCoordinateSwizzleNV extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -71,5 +75,4 @@ public class VkViewportCoordinateSwizzleNV extends VkEnum {
             return new VkViewportCoordinateSwizzleNV(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

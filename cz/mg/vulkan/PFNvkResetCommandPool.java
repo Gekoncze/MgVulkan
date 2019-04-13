@@ -13,6 +13,7 @@ public class PFNvkResetCommandPool extends VkFunctionPointer {
     }
 
 
+
     public PFNvkResetCommandPool(long value) {
         setValue(value);
     }

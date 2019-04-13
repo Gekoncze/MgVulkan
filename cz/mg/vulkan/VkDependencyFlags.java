@@ -13,6 +13,7 @@ public class VkDependencyFlags extends VkFlags {
     }
 
 
+
     public VkDependencyFlags(int value) {
         setValue(value);
     }

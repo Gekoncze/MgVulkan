@@ -13,7 +13,6 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineRasterizationConservativeStateCreateInfoEXT(VkObject pNext, VkPipelineRasterizationConservativeStateCreateFlagsEXT flags, VkConservativeRasterizationModeEXT conservativeRasterizationMode, VkFloat extraPrimitiveOverestimationSize) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT));
@@ -91,7 +90,8 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineRasterizationConservativeStateCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkPipelineRasterizationConservativeStateCreateInfoEXT> {        private final int count;
+    public static class Array extends VkPipelineRasterizationConservativeStateCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkPipelineRasterizationConservativeStateCreateInfoEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineRasterizationConservativeStateCreateInfoEXT.sizeof()));
@@ -113,6 +113,8 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -124,8 +126,8 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -174,5 +176,4 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
             }
         }
     }
-
 }

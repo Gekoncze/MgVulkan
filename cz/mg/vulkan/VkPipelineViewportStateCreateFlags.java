@@ -13,6 +13,7 @@ public class VkPipelineViewportStateCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineViewportStateCreateFlags(int value) {
         setValue(value);
     }

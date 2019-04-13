@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceMemoryProperties2KHR extends VkFunctionPointe
     }
 
 
+
     public PFNvkGetPhysicalDeviceMemoryProperties2KHR(long value) {
         setValue(value);
     }

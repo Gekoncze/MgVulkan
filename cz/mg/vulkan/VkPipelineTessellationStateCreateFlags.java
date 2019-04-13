@@ -13,6 +13,7 @@ public class VkPipelineTessellationStateCreateFlags extends VkFlags {
     }
 
 
+
     public VkPipelineTessellationStateCreateFlags(int value) {
         setValue(value);
     }

@@ -20,6 +20,7 @@ public class VkExternalSemaphoreFeatureFlagBits extends VkFlagBits {
     }
 
 
+
     public VkExternalSemaphoreFeatureFlagBits(int value) {
         setValue(value);
     }

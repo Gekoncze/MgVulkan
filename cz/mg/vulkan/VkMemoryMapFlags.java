@@ -13,6 +13,7 @@ public class VkMemoryMapFlags extends VkFlags {
     }
 
 
+
     public VkMemoryMapFlags(int value) {
         setValue(value);
     }

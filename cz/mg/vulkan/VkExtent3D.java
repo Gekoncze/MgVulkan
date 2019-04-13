@@ -13,7 +13,6 @@ public class VkExtent3D extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkExtent3D(VkUInt32 width, VkUInt32 height, VkUInt32 depth) {
         super(sizeof());
         setWidth(width);
@@ -63,7 +62,8 @@ public class VkExtent3D extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkExtent3D implements cz.mg.collections.array.ReadonlyArray<VkExtent3D> {        private final int count;
+    public static class Array extends VkExtent3D implements cz.mg.collections.array.ReadonlyArray<VkExtent3D> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkExtent3D.sizeof()));
@@ -85,6 +85,8 @@ public class VkExtent3D extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkExtent3D extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkExtent3D extends VkObject {
             }
         }
     }
-
 }

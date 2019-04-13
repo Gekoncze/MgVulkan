@@ -13,6 +13,7 @@ public class PFNvkDestroyPipelineLayout extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyPipelineLayout(long value) {
         setValue(value);
     }

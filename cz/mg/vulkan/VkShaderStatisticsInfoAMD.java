@@ -13,7 +13,6 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkShaderStatisticsInfoAMD(VkShaderStageFlags shaderStageMask, VkShaderResourceUsageAMD resourceUsage, VkUInt32 numPhysicalVgprs, VkUInt32 numPhysicalSgprs, VkUInt32 numAvailableVgprs, VkUInt32 numAvailableSgprs, VkUInt32 computeWorkGroupSize) {
         super(sizeof());
         setShaderStageMask(shaderStageMask);
@@ -119,7 +118,8 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkShaderStatisticsInfoAMD implements cz.mg.collections.array.ReadonlyArray<VkShaderStatisticsInfoAMD> {        private final int count;
+    public static class Array extends VkShaderStatisticsInfoAMD implements cz.mg.collections.array.ReadonlyArray<VkShaderStatisticsInfoAMD> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkShaderStatisticsInfoAMD.sizeof()));
@@ -141,6 +141,8 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
             }
         }
     }
-
 }

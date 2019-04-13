@@ -13,6 +13,7 @@ public class VkDescriptorBindingFlagsEXT extends VkFlags {
     }
 
 
+
     public VkDescriptorBindingFlagsEXT(int value) {
         setValue(value);
     }

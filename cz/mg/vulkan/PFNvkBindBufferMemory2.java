@@ -13,6 +13,7 @@ public class PFNvkBindBufferMemory2 extends VkFunctionPointer {
     }
 
 
+
     public PFNvkBindBufferMemory2(long value) {
         setValue(value);
     }

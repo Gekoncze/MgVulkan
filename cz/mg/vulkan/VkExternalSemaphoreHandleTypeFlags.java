@@ -13,6 +13,7 @@ public class VkExternalSemaphoreHandleTypeFlags extends VkFlags {
     }
 
 
+
     public VkExternalSemaphoreHandleTypeFlags(int value) {
         setValue(value);
     }

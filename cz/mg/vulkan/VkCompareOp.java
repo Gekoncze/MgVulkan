@@ -22,6 +22,7 @@ public class VkCompareOp extends VkEnum {
     }
 
 
+
     public VkCompareOp(int value) {
         setValue(value);
     }
@@ -39,7 +40,8 @@ public class VkCompareOp extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkCompareOp implements cz.mg.collections.array.ReadonlyArray<VkCompareOp> {        private final int count;
+    public static class Array extends VkCompareOp implements cz.mg.collections.array.ReadonlyArray<VkCompareOp> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkCompareOp.sizeof()));
@@ -61,6 +63,8 @@ public class VkCompareOp extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -71,5 +75,4 @@ public class VkCompareOp extends VkEnum {
             return new VkCompareOp(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

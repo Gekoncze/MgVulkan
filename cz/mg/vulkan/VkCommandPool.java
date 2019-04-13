@@ -13,11 +13,13 @@ public class VkCommandPool extends VkNonDispatchableHandle {
     }
 
 
+
     public VkCommandPool(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkCommandPool implements cz.mg.collections.array.ReadonlyArray<VkCommandPool> {        private final int count;
+    public static class Array extends VkCommandPool implements cz.mg.collections.array.ReadonlyArray<VkCommandPool> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkCommandPool.sizeof()));
@@ -39,6 +41,8 @@ public class VkCommandPool extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkCommandPool extends VkNonDispatchableHandle {
             return new VkCommandPool(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

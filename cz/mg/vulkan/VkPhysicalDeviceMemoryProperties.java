@@ -13,7 +13,6 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceMemoryProperties(VkUInt32 memoryTypeCount, VkMemoryType memoryTypes, VkUInt32 memoryHeapCount, VkMemoryHeap memoryHeaps) {
         super(sizeof());
         setMemoryTypeCount(memoryTypeCount);
@@ -77,7 +76,8 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceMemoryProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMemoryProperties> {        private final int count;
+    public static class Array extends VkPhysicalDeviceMemoryProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMemoryProperties> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceMemoryProperties.sizeof()));
@@ -99,6 +99,8 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
             }
         }
     }
-
 }

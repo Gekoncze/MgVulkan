@@ -20,6 +20,7 @@ public class VkQueryResultFlagBits extends VkFlagBits {
     }
 
 
+
     public VkQueryResultFlagBits(int value) {
         setValue(value);
     }

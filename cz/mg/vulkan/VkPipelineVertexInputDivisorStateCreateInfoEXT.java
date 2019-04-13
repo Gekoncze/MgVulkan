@@ -13,7 +13,6 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineVertexInputDivisorStateCreateInfoEXT(VkObject pNext, VkUInt32 vertexBindingDivisorCount, VkVertexInputBindingDivisorDescriptionEXT pVertexBindingDivisors) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT));
@@ -77,7 +76,8 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineVertexInputDivisorStateCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkPipelineVertexInputDivisorStateCreateInfoEXT> {        private final int count;
+    public static class Array extends VkPipelineVertexInputDivisorStateCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkPipelineVertexInputDivisorStateCreateInfoEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineVertexInputDivisorStateCreateInfoEXT.sizeof()));
@@ -99,6 +99,8 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
             }
         }
     }
-
 }

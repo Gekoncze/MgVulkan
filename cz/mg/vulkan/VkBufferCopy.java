@@ -13,7 +13,6 @@ public class VkBufferCopy extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkBufferCopy(VkDeviceSize srcOffset, VkDeviceSize dstOffset, VkDeviceSize size) {
         super(sizeof());
         setSrcOffset(srcOffset);
@@ -63,7 +62,8 @@ public class VkBufferCopy extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkBufferCopy implements cz.mg.collections.array.ReadonlyArray<VkBufferCopy> {        private final int count;
+    public static class Array extends VkBufferCopy implements cz.mg.collections.array.ReadonlyArray<VkBufferCopy> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkBufferCopy.sizeof()));
@@ -85,6 +85,8 @@ public class VkBufferCopy extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkBufferCopy extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkBufferCopy extends VkObject {
             }
         }
     }
-
 }

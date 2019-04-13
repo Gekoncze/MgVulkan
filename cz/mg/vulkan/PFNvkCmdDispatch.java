@@ -13,6 +13,7 @@ public class PFNvkCmdDispatch extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdDispatch(long value) {
         setValue(value);
     }

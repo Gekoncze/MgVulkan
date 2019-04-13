@@ -13,6 +13,7 @@ public class VkQueryPoolCreateFlags extends VkFlags {
     }
 
 
+
     public VkQueryPoolCreateFlags(int value) {
         setValue(value);
     }

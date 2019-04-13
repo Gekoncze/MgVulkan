@@ -17,6 +17,7 @@ public class VkSurfaceCounterFlagBitsEXT extends VkFlagBits {
     }
 
 
+
     public VkSurfaceCounterFlagBitsEXT(int value) {
         setValue(value);
     }

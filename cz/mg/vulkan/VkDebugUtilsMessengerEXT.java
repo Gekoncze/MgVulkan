@@ -13,11 +13,13 @@ public class VkDebugUtilsMessengerEXT extends VkNonDispatchableHandle {
     }
 
 
+
     public VkDebugUtilsMessengerEXT(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkDebugUtilsMessengerEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsMessengerEXT> {        private final int count;
+    public static class Array extends VkDebugUtilsMessengerEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsMessengerEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDebugUtilsMessengerEXT.sizeof()));
@@ -39,6 +41,8 @@ public class VkDebugUtilsMessengerEXT extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkDebugUtilsMessengerEXT extends VkNonDispatchableHandle {
             return new VkDebugUtilsMessengerEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,7 +13,6 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDescriptorPoolCreateInfo(VkObject pNext, VkDescriptorPoolCreateFlags flags, VkUInt32 maxSets, VkUInt32 poolSizeCount, VkDescriptorPoolSize pPoolSizes) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO));
@@ -105,7 +104,8 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDescriptorPoolCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDescriptorPoolCreateInfo> {        private final int count;
+    public static class Array extends VkDescriptorPoolCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDescriptorPoolCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorPoolCreateInfo.sizeof()));
@@ -127,6 +127,8 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -138,8 +140,8 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -188,5 +190,4 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
             }
         }
     }
-
 }

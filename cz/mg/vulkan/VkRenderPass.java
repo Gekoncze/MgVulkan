@@ -13,11 +13,13 @@ public class VkRenderPass extends VkNonDispatchableHandle {
     }
 
 
+
     public VkRenderPass(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkRenderPass implements cz.mg.collections.array.ReadonlyArray<VkRenderPass> {        private final int count;
+    public static class Array extends VkRenderPass implements cz.mg.collections.array.ReadonlyArray<VkRenderPass> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkRenderPass.sizeof()));
@@ -39,6 +41,8 @@ public class VkRenderPass extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkRenderPass extends VkNonDispatchableHandle {
             return new VkRenderPass(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

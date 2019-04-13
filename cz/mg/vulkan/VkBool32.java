@@ -12,12 +12,29 @@ public class VkBool32 extends VkUInt32 {
         super(vkmemory, vkaddress);
     }
 
+    public VkBool32(long value){
+        this((int)value);
+    }
+
+    public VkBool32(boolean value){
+        this(value == false ? Vk.VK_FALSE : Vk.VK_TRUE);
+    }
+
+    public void setValue(long value){
+        setValue((int)value);
+    }
+
+    @Override
+    public String toString(){
+        return getValue() == Vk.VK_FALSE ? "VK_FALSE" : "VK_TRUE";
+}
 
     public VkBool32(int value) {
         setValue(value);
     }
 
-    public static class Array extends VkBool32 implements cz.mg.collections.array.ReadonlyArray<VkBool32> {        private final int count;
+    public static class Array extends VkBool32 implements cz.mg.collections.array.ReadonlyArray<VkBool32> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkBool32.sizeof()));
@@ -39,6 +56,16 @@ public class VkBool32 extends VkUInt32 {
             this.count = count;
         }
 
+        public Array(long... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) get(i).setValue(values[i]);
+        }
+
+        public Array(boolean... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) get(i).setValue(values[i] == false ? Vk.VK_FALSE : Vk.VK_TRUE);
+        }
+
         @Override
         public int count(){
             return count;
@@ -50,8 +77,8 @@ public class VkBool32 extends VkUInt32 {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -100,5 +127,4 @@ public class VkBool32 extends VkUInt32 {
             }
         }
     }
-
 }

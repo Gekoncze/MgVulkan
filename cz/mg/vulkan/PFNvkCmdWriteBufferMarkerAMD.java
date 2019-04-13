@@ -13,6 +13,7 @@ public class PFNvkCmdWriteBufferMarkerAMD extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdWriteBufferMarkerAMD(long value) {
         setValue(value);
     }

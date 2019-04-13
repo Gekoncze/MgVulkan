@@ -13,6 +13,7 @@ public class PFNvkCmdClearColorImage extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdClearColorImage(long value) {
         setValue(value);
     }

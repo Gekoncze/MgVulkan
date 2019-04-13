@@ -13,7 +13,6 @@ public class VkSampleLocationEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSampleLocationEXT(VkFloat x, VkFloat y) {
         super(sizeof());
         setX(x);
@@ -49,7 +48,8 @@ public class VkSampleLocationEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSampleLocationEXT implements cz.mg.collections.array.ReadonlyArray<VkSampleLocationEXT> {        private final int count;
+    public static class Array extends VkSampleLocationEXT implements cz.mg.collections.array.ReadonlyArray<VkSampleLocationEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSampleLocationEXT.sizeof()));
@@ -71,6 +71,8 @@ public class VkSampleLocationEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -82,8 +84,8 @@ public class VkSampleLocationEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -132,5 +134,4 @@ public class VkSampleLocationEXT extends VkObject {
             }
         }
     }
-
 }

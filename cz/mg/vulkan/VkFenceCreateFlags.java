@@ -13,6 +13,7 @@ public class VkFenceCreateFlags extends VkFlags {
     }
 
 
+
     public VkFenceCreateFlags(int value) {
         setValue(value);
     }

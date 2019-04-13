@@ -13,6 +13,7 @@ public class PFNvkCmdCopyImageToBuffer extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdCopyImageToBuffer(long value) {
         setValue(value);
     }

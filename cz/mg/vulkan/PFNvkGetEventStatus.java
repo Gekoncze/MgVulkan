@@ -13,6 +13,7 @@ public class PFNvkGetEventStatus extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetEventStatus(long value) {
         setValue(value);
     }

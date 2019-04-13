@@ -13,11 +13,13 @@ public class VkDeviceSize extends VkUInt64 {
     }
 
 
+
     public VkDeviceSize(long value) {
         setValue(value);
     }
 
-    public static class Array extends VkDeviceSize implements cz.mg.collections.array.ReadonlyArray<VkDeviceSize> {        private final int count;
+    public static class Array extends VkDeviceSize implements cz.mg.collections.array.ReadonlyArray<VkDeviceSize> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDeviceSize.sizeof()));
@@ -39,6 +41,8 @@ public class VkDeviceSize extends VkUInt64 {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -50,8 +54,8 @@ public class VkDeviceSize extends VkUInt64 {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -100,5 +104,4 @@ public class VkDeviceSize extends VkUInt64 {
             }
         }
     }
-
 }

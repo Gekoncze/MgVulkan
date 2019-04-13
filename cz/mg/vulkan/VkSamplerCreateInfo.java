@@ -13,7 +13,6 @@ public class VkSamplerCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSamplerCreateInfo(VkObject pNext, VkSamplerCreateFlags flags, VkFilter magFilter, VkFilter minFilter, VkSamplerMipmapMode mipmapMode, VkSamplerAddressMode addressModeU, VkSamplerAddressMode addressModeV, VkSamplerAddressMode addressModeW, VkFloat mipLodBias, VkBool32 anisotropyEnable, VkFloat maxAnisotropy, VkBool32 compareEnable, VkCompareOp compareOp, VkFloat minLod, VkFloat maxLod, VkBorderColor borderColor, VkBool32 unnormalizedCoordinates) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO));
@@ -273,7 +272,8 @@ public class VkSamplerCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSamplerCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkSamplerCreateInfo> {        private final int count;
+    public static class Array extends VkSamplerCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkSamplerCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSamplerCreateInfo.sizeof()));
@@ -295,6 +295,8 @@ public class VkSamplerCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -306,8 +308,8 @@ public class VkSamplerCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -356,5 +358,4 @@ public class VkSamplerCreateInfo extends VkObject {
             }
         }
     }
-
 }

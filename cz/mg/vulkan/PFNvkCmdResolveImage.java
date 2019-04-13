@@ -13,6 +13,7 @@ public class PFNvkCmdResolveImage extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdResolveImage(long value) {
         setValue(value);
     }

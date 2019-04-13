@@ -13,6 +13,7 @@ public class PFNvkCmdSetSampleLocationsEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdSetSampleLocationsEXT(long value) {
         setValue(value);
     }

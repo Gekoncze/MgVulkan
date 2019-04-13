@@ -13,6 +13,7 @@ public class VkQueryControlFlags extends VkFlags {
     }
 
 
+
     public VkQueryControlFlags(int value) {
         setValue(value);
     }

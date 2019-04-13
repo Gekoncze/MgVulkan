@@ -13,6 +13,7 @@ public class VkDebugReportFlagsEXT extends VkFlags {
     }
 
 
+
     public VkDebugReportFlagsEXT(int value) {
         setValue(value);
     }

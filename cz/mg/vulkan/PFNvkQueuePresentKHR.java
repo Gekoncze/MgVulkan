@@ -13,6 +13,7 @@ public class PFNvkQueuePresentKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkQueuePresentKHR(long value) {
         setValue(value);
     }

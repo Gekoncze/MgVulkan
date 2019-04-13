@@ -19,6 +19,7 @@ public class VkSamplerAddressMode extends VkEnum {
     }
 
 
+
     public VkSamplerAddressMode(int value) {
         setValue(value);
     }
@@ -33,7 +34,8 @@ public class VkSamplerAddressMode extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkSamplerAddressMode implements cz.mg.collections.array.ReadonlyArray<VkSamplerAddressMode> {        private final int count;
+    public static class Array extends VkSamplerAddressMode implements cz.mg.collections.array.ReadonlyArray<VkSamplerAddressMode> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSamplerAddressMode.sizeof()));
@@ -55,6 +57,8 @@ public class VkSamplerAddressMode extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -65,5 +69,4 @@ public class VkSamplerAddressMode extends VkEnum {
             return new VkSamplerAddressMode(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

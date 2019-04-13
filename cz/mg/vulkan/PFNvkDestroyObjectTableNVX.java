@@ -13,6 +13,7 @@ public class PFNvkDestroyObjectTableNVX extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroyObjectTableNVX(long value) {
         setValue(value);
     }

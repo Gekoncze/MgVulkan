@@ -13,6 +13,7 @@ public class VkDeviceGroupPresentModeFlagsKHR extends VkFlags {
     }
 
 
+
     public VkDeviceGroupPresentModeFlagsKHR(int value) {
         setValue(value);
     }

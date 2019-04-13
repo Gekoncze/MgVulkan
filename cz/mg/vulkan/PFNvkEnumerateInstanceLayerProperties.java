@@ -13,6 +13,7 @@ public class PFNvkEnumerateInstanceLayerProperties extends VkFunctionPointer {
     }
 
 
+
     public PFNvkEnumerateInstanceLayerProperties(long value) {
         setValue(value);
     }

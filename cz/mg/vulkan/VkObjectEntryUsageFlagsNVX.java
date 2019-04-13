@@ -13,6 +13,7 @@ public class VkObjectEntryUsageFlagsNVX extends VkFlags {
     }
 
 
+
     public VkObjectEntryUsageFlagsNVX(int value) {
         setValue(value);
     }

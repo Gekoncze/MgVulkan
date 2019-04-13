@@ -13,11 +13,13 @@ public class VkValidationCacheEXT extends VkNonDispatchableHandle {
     }
 
 
+
     public VkValidationCacheEXT(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkValidationCacheEXT implements cz.mg.collections.array.ReadonlyArray<VkValidationCacheEXT> {        private final int count;
+    public static class Array extends VkValidationCacheEXT implements cz.mg.collections.array.ReadonlyArray<VkValidationCacheEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkValidationCacheEXT.sizeof()));
@@ -39,6 +41,8 @@ public class VkValidationCacheEXT extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkValidationCacheEXT extends VkNonDispatchableHandle {
             return new VkValidationCacheEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

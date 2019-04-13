@@ -20,6 +20,7 @@ public class VkCullModeFlagBits extends VkFlagBits {
     }
 
 
+
     public VkCullModeFlagBits(int value) {
         setValue(value);
     }

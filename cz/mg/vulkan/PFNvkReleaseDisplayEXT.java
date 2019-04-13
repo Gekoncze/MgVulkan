@@ -13,6 +13,7 @@ public class PFNvkReleaseDisplayEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkReleaseDisplayEXT(long value) {
         setValue(value);
     }

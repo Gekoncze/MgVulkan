@@ -13,7 +13,6 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkIndirectCommandsTokenNVX(VkIndirectCommandsTokenTypeNVX tokenType, VkBuffer buffer, VkDeviceSize offset) {
         super(sizeof());
         setTokenType(tokenType);
@@ -63,7 +62,8 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkIndirectCommandsTokenNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsTokenNVX> {        private final int count;
+    public static class Array extends VkIndirectCommandsTokenNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsTokenNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkIndirectCommandsTokenNVX.sizeof()));
@@ -85,6 +85,8 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
             }
         }
     }
-
 }

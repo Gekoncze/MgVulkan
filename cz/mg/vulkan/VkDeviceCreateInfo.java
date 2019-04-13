@@ -13,7 +13,6 @@ public class VkDeviceCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDeviceCreateInfo(VkObject pNext, VkDeviceCreateFlags flags, VkUInt32 queueCreateInfoCount, VkDeviceQueueCreateInfo pQueueCreateInfos, VkUInt32 enabledLayerCount, VkChar.Pointer ppEnabledLayerNames, VkUInt32 enabledExtensionCount, VkChar.Pointer ppEnabledExtensionNames, VkPhysicalDeviceFeatures pEnabledFeatures) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO));
@@ -161,7 +160,8 @@ public class VkDeviceCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDeviceCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceCreateInfo> {        private final int count;
+    public static class Array extends VkDeviceCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDeviceCreateInfo.sizeof()));
@@ -183,6 +183,8 @@ public class VkDeviceCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -194,8 +196,8 @@ public class VkDeviceCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -244,5 +246,4 @@ public class VkDeviceCreateInfo extends VkObject {
             }
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceFeatures extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetPhysicalDeviceFeatures(long value) {
         setValue(value);
     }

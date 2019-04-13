@@ -13,7 +13,6 @@ public class VkInt extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkInt(int value) {
         super(sizeof());
         setValue(value);
@@ -36,7 +35,8 @@ public class VkInt extends VkObject {
         return "" + getValue();
     }
 
-    public static class Array extends VkInt implements cz.mg.collections.array.ReadonlyArray<VkInt> {        private final int count;
+    public static class Array extends VkInt implements cz.mg.collections.array.ReadonlyArray<VkInt> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkInt.sizeof()));
@@ -58,6 +58,11 @@ public class VkInt extends VkObject {
             this.count = count;
         }
 
+        public Array(int... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) get(i).setValue(values[i]);
+        }
+
         @Override
         public int count(){
             return count;
@@ -69,8 +74,8 @@ public class VkInt extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -119,5 +124,4 @@ public class VkInt extends VkObject {
             }
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceSparseImageFormatProperties extends VkFunctio
     }
 
 
+
     public PFNvkGetPhysicalDeviceSparseImageFormatProperties(long value) {
         setValue(value);
     }

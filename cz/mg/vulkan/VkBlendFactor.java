@@ -33,6 +33,7 @@ public class VkBlendFactor extends VkEnum {
     }
 
 
+
     public VkBlendFactor(int value) {
         setValue(value);
     }
@@ -61,7 +62,8 @@ public class VkBlendFactor extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkBlendFactor implements cz.mg.collections.array.ReadonlyArray<VkBlendFactor> {        private final int count;
+    public static class Array extends VkBlendFactor implements cz.mg.collections.array.ReadonlyArray<VkBlendFactor> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkBlendFactor.sizeof()));
@@ -83,6 +85,8 @@ public class VkBlendFactor extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -93,5 +97,4 @@ public class VkBlendFactor extends VkEnum {
             return new VkBlendFactor(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

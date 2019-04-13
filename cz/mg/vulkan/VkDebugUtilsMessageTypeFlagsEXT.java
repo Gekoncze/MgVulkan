@@ -13,6 +13,7 @@ public class VkDebugUtilsMessageTypeFlagsEXT extends VkFlags {
     }
 
 
+
     public VkDebugUtilsMessageTypeFlagsEXT(int value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class VkPipelineCoverageToColorStateCreateFlagsNV extends VkFlags {
     }
 
 
+
     public VkPipelineCoverageToColorStateCreateFlagsNV(int value) {
         setValue(value);
     }

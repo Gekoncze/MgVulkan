@@ -13,7 +13,6 @@ public class VkPushConstantRange extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPushConstantRange(VkShaderStageFlags stageFlags, VkUInt32 offset, VkUInt32 size) {
         super(sizeof());
         setStageFlags(stageFlags);
@@ -63,7 +62,8 @@ public class VkPushConstantRange extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPushConstantRange implements cz.mg.collections.array.ReadonlyArray<VkPushConstantRange> {        private final int count;
+    public static class Array extends VkPushConstantRange implements cz.mg.collections.array.ReadonlyArray<VkPushConstantRange> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPushConstantRange.sizeof()));
@@ -85,6 +85,8 @@ public class VkPushConstantRange extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkPushConstantRange extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkPushConstantRange extends VkObject {
             }
         }
     }
-
 }

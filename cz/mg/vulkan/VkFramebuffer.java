@@ -13,11 +13,13 @@ public class VkFramebuffer extends VkNonDispatchableHandle {
     }
 
 
+
     public VkFramebuffer(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkFramebuffer implements cz.mg.collections.array.ReadonlyArray<VkFramebuffer> {        private final int count;
+    public static class Array extends VkFramebuffer implements cz.mg.collections.array.ReadonlyArray<VkFramebuffer> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkFramebuffer.sizeof()));
@@ -39,6 +41,8 @@ public class VkFramebuffer extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkFramebuffer extends VkNonDispatchableHandle {
             return new VkFramebuffer(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

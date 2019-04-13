@@ -13,6 +13,7 @@ public class PFNvkAllocateMemory extends VkFunctionPointer {
     }
 
 
+
     public PFNvkAllocateMemory(long value) {
         setValue(value);
     }

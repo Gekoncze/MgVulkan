@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR extends VkFunctionPoin
     }
 
 
+
     public PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR(long value) {
         setValue(value);
     }

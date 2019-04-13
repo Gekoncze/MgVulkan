@@ -13,7 +13,6 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPipelineShaderStageCreateInfo(VkObject pNext, VkPipelineShaderStageCreateFlags flags, VkShaderStageFlagBits stage, VkShaderModule module, VkChar pName, VkSpecializationInfo pSpecializationInfo) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO));
@@ -119,7 +118,8 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPipelineShaderStageCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineShaderStageCreateInfo> {        private final int count;
+    public static class Array extends VkPipelineShaderStageCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineShaderStageCreateInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineShaderStageCreateInfo.sizeof()));
@@ -141,6 +141,8 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -152,8 +154,8 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -202,5 +204,4 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
             }
         }
     }
-
 }

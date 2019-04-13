@@ -13,6 +13,7 @@ public class PFNvkDestroySwapchainKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkDestroySwapchainKHR(long value) {
         setValue(value);
     }

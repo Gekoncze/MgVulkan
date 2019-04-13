@@ -13,6 +13,7 @@ public class PFNvkCmdResetQueryPool extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdResetQueryPool(long value) {
         setValue(value);
     }

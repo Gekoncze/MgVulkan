@@ -26,6 +26,7 @@ public class VkDynamicState extends VkEnum {
     }
 
 
+
     public VkDynamicState(int value) {
         setValue(value);
     }
@@ -47,7 +48,8 @@ public class VkDynamicState extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkDynamicState implements cz.mg.collections.array.ReadonlyArray<VkDynamicState> {        private final int count;
+    public static class Array extends VkDynamicState implements cz.mg.collections.array.ReadonlyArray<VkDynamicState> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDynamicState.sizeof()));
@@ -69,6 +71,8 @@ public class VkDynamicState extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -79,5 +83,4 @@ public class VkDynamicState extends VkEnum {
             return new VkDynamicState(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

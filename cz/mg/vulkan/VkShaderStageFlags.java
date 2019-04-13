@@ -13,6 +13,7 @@ public class VkShaderStageFlags extends VkFlags {
     }
 
 
+
     public VkShaderStageFlags(int value) {
         setValue(value);
     }

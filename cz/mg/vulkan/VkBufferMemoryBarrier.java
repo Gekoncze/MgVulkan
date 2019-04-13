@@ -13,7 +13,6 @@ public class VkBufferMemoryBarrier extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkBufferMemoryBarrier(VkStructureType sType, VkObject pNext, VkAccessFlags srcAccessMask, VkAccessFlags dstAccessMask, VkUInt32 srcQueueFamilyIndex, VkUInt32 dstQueueFamilyIndex, VkBuffer buffer, VkDeviceSize offset, VkDeviceSize size) {
         super(sizeof());
         setSType(sType);
@@ -147,7 +146,8 @@ public class VkBufferMemoryBarrier extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkBufferMemoryBarrier implements cz.mg.collections.array.ReadonlyArray<VkBufferMemoryBarrier> {        private final int count;
+    public static class Array extends VkBufferMemoryBarrier implements cz.mg.collections.array.ReadonlyArray<VkBufferMemoryBarrier> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkBufferMemoryBarrier.sizeof()));
@@ -169,6 +169,8 @@ public class VkBufferMemoryBarrier extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -180,8 +182,8 @@ public class VkBufferMemoryBarrier extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -230,5 +232,4 @@ public class VkBufferMemoryBarrier extends VkObject {
             }
         }
     }
-
 }

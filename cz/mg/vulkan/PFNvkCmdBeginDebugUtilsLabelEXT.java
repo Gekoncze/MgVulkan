@@ -13,6 +13,7 @@ public class PFNvkCmdBeginDebugUtilsLabelEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdBeginDebugUtilsLabelEXT(long value) {
         setValue(value);
     }

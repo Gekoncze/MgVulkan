@@ -13,6 +13,7 @@ public class PFNvkCreateQueryPool extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateQueryPool(long value) {
         setValue(value);
     }

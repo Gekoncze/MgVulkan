@@ -16,6 +16,7 @@ public class VkIndexType extends VkEnum {
     }
 
 
+
     public VkIndexType(int value) {
         setValue(value);
     }
@@ -27,7 +28,8 @@ public class VkIndexType extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkIndexType implements cz.mg.collections.array.ReadonlyArray<VkIndexType> {        private final int count;
+    public static class Array extends VkIndexType implements cz.mg.collections.array.ReadonlyArray<VkIndexType> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkIndexType.sizeof()));
@@ -49,6 +51,8 @@ public class VkIndexType extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -59,5 +63,4 @@ public class VkIndexType extends VkEnum {
             return new VkIndexType(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

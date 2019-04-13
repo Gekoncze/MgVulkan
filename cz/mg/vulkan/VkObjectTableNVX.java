@@ -13,11 +13,13 @@ public class VkObjectTableNVX extends VkNonDispatchableHandle {
     }
 
 
+
     public VkObjectTableNVX(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkObjectTableNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableNVX> {        private final int count;
+    public static class Array extends VkObjectTableNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkObjectTableNVX.sizeof()));
@@ -39,6 +41,8 @@ public class VkObjectTableNVX extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkObjectTableNVX extends VkNonDispatchableHandle {
             return new VkObjectTableNVX(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

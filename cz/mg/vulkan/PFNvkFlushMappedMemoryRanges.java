@@ -13,6 +13,7 @@ public class PFNvkFlushMappedMemoryRanges extends VkFunctionPointer {
     }
 
 
+
     public PFNvkFlushMappedMemoryRanges(long value) {
         setValue(value);
     }

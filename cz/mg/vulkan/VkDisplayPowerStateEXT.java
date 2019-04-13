@@ -17,6 +17,7 @@ public class VkDisplayPowerStateEXT extends VkEnum {
     }
 
 
+
     public VkDisplayPowerStateEXT(int value) {
         setValue(value);
     }
@@ -29,7 +30,8 @@ public class VkDisplayPowerStateEXT extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkDisplayPowerStateEXT implements cz.mg.collections.array.ReadonlyArray<VkDisplayPowerStateEXT> {        private final int count;
+    public static class Array extends VkDisplayPowerStateEXT implements cz.mg.collections.array.ReadonlyArray<VkDisplayPowerStateEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDisplayPowerStateEXT.sizeof()));
@@ -51,6 +53,8 @@ public class VkDisplayPowerStateEXT extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -61,5 +65,4 @@ public class VkDisplayPowerStateEXT extends VkEnum {
             return new VkDisplayPowerStateEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

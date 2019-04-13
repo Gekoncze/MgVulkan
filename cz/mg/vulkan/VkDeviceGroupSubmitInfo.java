@@ -13,7 +13,6 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDeviceGroupSubmitInfo(VkObject pNext, VkUInt32 waitSemaphoreCount, VkUInt32 pWaitSemaphoreDeviceIndices, VkUInt32 commandBufferCount, VkUInt32 pCommandBufferDeviceMasks, VkUInt32 signalSemaphoreCount, VkUInt32 pSignalSemaphoreDeviceIndices) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_SUBMIT_INFO));
@@ -133,7 +132,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDeviceGroupSubmitInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupSubmitInfo> {        private final int count;
+    public static class Array extends VkDeviceGroupSubmitInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupSubmitInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDeviceGroupSubmitInfo.sizeof()));
@@ -155,6 +155,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -166,8 +168,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -216,5 +218,4 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
             }
         }
     }
-
 }

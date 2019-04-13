@@ -13,7 +13,6 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSwapchainCreateInfoKHR(VkObject pNext, VkSwapchainCreateFlagsKHR flags, VkSurfaceKHR surface, VkUInt32 minImageCount, VkFormat imageFormat, VkColorSpaceKHR imageColorSpace, VkExtent2D imageExtent, VkUInt32 imageArrayLayers, VkImageUsageFlags imageUsage, VkSharingMode imageSharingMode, VkUInt32 queueFamilyIndexCount, VkUInt32 pQueueFamilyIndices, VkSurfaceTransformFlagBitsKHR preTransform, VkCompositeAlphaFlagBitsKHR compositeAlpha, VkPresentModeKHR presentMode, VkBool32 clipped, VkSwapchainKHR oldSwapchain) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR));
@@ -273,7 +272,8 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSwapchainCreateInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkSwapchainCreateInfoKHR> {        private final int count;
+    public static class Array extends VkSwapchainCreateInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkSwapchainCreateInfoKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSwapchainCreateInfoKHR.sizeof()));
@@ -295,6 +295,8 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -306,8 +308,8 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -356,5 +358,4 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
             }
         }
     }
-
 }

@@ -13,11 +13,13 @@ public class VkSurfaceKHR extends VkNonDispatchableHandle {
     }
 
 
+
     public VkSurfaceKHR(long handle) {
         setValue(handle);
     }
 
-    public static class Array extends VkSurfaceKHR implements cz.mg.collections.array.ReadonlyArray<VkSurfaceKHR> {        private final int count;
+    public static class Array extends VkSurfaceKHR implements cz.mg.collections.array.ReadonlyArray<VkSurfaceKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSurfaceKHR.sizeof()));
@@ -39,6 +41,8 @@ public class VkSurfaceKHR extends VkNonDispatchableHandle {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -49,5 +53,4 @@ public class VkSurfaceKHR extends VkNonDispatchableHandle {
             return new VkSurfaceKHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class VkSwapchainCreateFlagsKHR extends VkFlags {
     }
 
 
+
     public VkSwapchainCreateFlagsKHR(int value) {
         setValue(value);
     }

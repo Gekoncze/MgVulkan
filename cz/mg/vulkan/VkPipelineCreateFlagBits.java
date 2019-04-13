@@ -23,6 +23,7 @@ public class VkPipelineCreateFlagBits extends VkFlagBits {
     }
 
 
+
     public VkPipelineCreateFlagBits(int value) {
         setValue(value);
     }

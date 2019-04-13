@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceExternalBufferPropertiesKHR extends VkFunctio
     }
 
 
+
     public PFNvkGetPhysicalDeviceExternalBufferPropertiesKHR(long value) {
         setValue(value);
     }

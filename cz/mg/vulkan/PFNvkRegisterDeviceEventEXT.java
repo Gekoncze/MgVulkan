@@ -13,6 +13,7 @@ public class PFNvkRegisterDeviceEventEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkRegisterDeviceEventEXT(long value) {
         setValue(value);
     }

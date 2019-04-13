@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceSurfaceCapabilities2KHR extends VkFunctionPoi
     }
 
 
+
     public PFNvkGetPhysicalDeviceSurfaceCapabilities2KHR(long value) {
         setValue(value);
     }

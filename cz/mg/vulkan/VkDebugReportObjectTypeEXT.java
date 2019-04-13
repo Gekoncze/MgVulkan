@@ -52,6 +52,7 @@ public class VkDebugReportObjectTypeEXT extends VkEnum {
     }
 
 
+
     public VkDebugReportObjectTypeEXT(int value) {
         setValue(value);
     }
@@ -99,7 +100,8 @@ public class VkDebugReportObjectTypeEXT extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkDebugReportObjectTypeEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugReportObjectTypeEXT> {        private final int count;
+    public static class Array extends VkDebugReportObjectTypeEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugReportObjectTypeEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDebugReportObjectTypeEXT.sizeof()));
@@ -121,6 +123,8 @@ public class VkDebugReportObjectTypeEXT extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -131,5 +135,4 @@ public class VkDebugReportObjectTypeEXT extends VkEnum {
             return new VkDebugReportObjectTypeEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

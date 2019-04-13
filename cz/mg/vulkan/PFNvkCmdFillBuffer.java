@@ -13,6 +13,7 @@ public class PFNvkCmdFillBuffer extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCmdFillBuffer(long value) {
         setValue(value);
     }

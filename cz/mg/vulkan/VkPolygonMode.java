@@ -18,6 +18,7 @@ public class VkPolygonMode extends VkEnum {
     }
 
 
+
     public VkPolygonMode(int value) {
         setValue(value);
     }
@@ -31,7 +32,8 @@ public class VkPolygonMode extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkPolygonMode implements cz.mg.collections.array.ReadonlyArray<VkPolygonMode> {        private final int count;
+    public static class Array extends VkPolygonMode implements cz.mg.collections.array.ReadonlyArray<VkPolygonMode> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPolygonMode.sizeof()));
@@ -53,6 +55,8 @@ public class VkPolygonMode extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -63,5 +67,4 @@ public class VkPolygonMode extends VkEnum {
             return new VkPolygonMode(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR extends VkFun
     }
 
 
+
     public PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR(long value) {
         setValue(value);
     }

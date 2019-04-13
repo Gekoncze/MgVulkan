@@ -19,6 +19,7 @@ public class VkSystemAllocationScope extends VkEnum {
     }
 
 
+
     public VkSystemAllocationScope(int value) {
         setValue(value);
     }
@@ -33,7 +34,8 @@ public class VkSystemAllocationScope extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkSystemAllocationScope implements cz.mg.collections.array.ReadonlyArray<VkSystemAllocationScope> {        private final int count;
+    public static class Array extends VkSystemAllocationScope implements cz.mg.collections.array.ReadonlyArray<VkSystemAllocationScope> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSystemAllocationScope.sizeof()));
@@ -55,6 +57,8 @@ public class VkSystemAllocationScope extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -65,5 +69,4 @@ public class VkSystemAllocationScope extends VkEnum {
             return new VkSystemAllocationScope(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

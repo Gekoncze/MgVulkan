@@ -13,6 +13,7 @@ public class PFNvkCreateObjectTableNVX extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateObjectTableNVX(long value) {
         setValue(value);
     }

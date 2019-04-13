@@ -13,6 +13,7 @@ public class PFNvkGetSwapchainImagesKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkGetSwapchainImagesKHR(long value) {
         setValue(value);
     }

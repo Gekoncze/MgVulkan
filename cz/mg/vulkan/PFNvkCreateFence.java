@@ -13,6 +13,7 @@ public class PFNvkCreateFence extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateFence(long value) {
         setValue(value);
     }

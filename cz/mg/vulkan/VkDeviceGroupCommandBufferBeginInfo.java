@@ -13,7 +13,6 @@ public class VkDeviceGroupCommandBufferBeginInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkDeviceGroupCommandBufferBeginInfo(VkObject pNext, VkUInt32 deviceMask) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO));
@@ -63,7 +62,8 @@ public class VkDeviceGroupCommandBufferBeginInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkDeviceGroupCommandBufferBeginInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupCommandBufferBeginInfo> {        private final int count;
+    public static class Array extends VkDeviceGroupCommandBufferBeginInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupCommandBufferBeginInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDeviceGroupCommandBufferBeginInfo.sizeof()));
@@ -85,6 +85,8 @@ public class VkDeviceGroupCommandBufferBeginInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkDeviceGroupCommandBufferBeginInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkDeviceGroupCommandBufferBeginInfo extends VkObject {
             }
         }
     }
-
 }

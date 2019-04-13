@@ -29,6 +29,7 @@ public class VkColorSpaceKHR extends VkEnum {
     }
 
 
+
     public VkColorSpaceKHR(int value) {
         setValue(value);
     }
@@ -53,7 +54,8 @@ public class VkColorSpaceKHR extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkColorSpaceKHR implements cz.mg.collections.array.ReadonlyArray<VkColorSpaceKHR> {        private final int count;
+    public static class Array extends VkColorSpaceKHR implements cz.mg.collections.array.ReadonlyArray<VkColorSpaceKHR> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkColorSpaceKHR.sizeof()));
@@ -75,6 +77,8 @@ public class VkColorSpaceKHR extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -85,5 +89,4 @@ public class VkColorSpaceKHR extends VkEnum {
             return new VkColorSpaceKHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

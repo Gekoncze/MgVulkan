@@ -20,6 +20,7 @@ public class VkExternalMemoryHandleTypeFlagBitsNV extends VkFlagBits {
     }
 
 
+
     public VkExternalMemoryHandleTypeFlagBitsNV(int value) {
         setValue(value);
     }

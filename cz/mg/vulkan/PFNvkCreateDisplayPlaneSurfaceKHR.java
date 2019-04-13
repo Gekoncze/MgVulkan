@@ -13,6 +13,7 @@ public class PFNvkCreateDisplayPlaneSurfaceKHR extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateDisplayPlaneSurfaceKHR(long value) {
         setValue(value);
     }

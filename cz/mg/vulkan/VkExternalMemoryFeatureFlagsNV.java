@@ -13,6 +13,7 @@ public class VkExternalMemoryFeatureFlagsNV extends VkFlags {
     }
 
 
+
     public VkExternalMemoryFeatureFlagsNV(int value) {
         setValue(value);
     }

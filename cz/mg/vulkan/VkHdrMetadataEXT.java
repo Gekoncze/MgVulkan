@@ -13,7 +13,6 @@ public class VkHdrMetadataEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkHdrMetadataEXT(VkStructureType sType, VkObject pNext, VkXYColorEXT displayPrimaryRed, VkXYColorEXT displayPrimaryGreen, VkXYColorEXT displayPrimaryBlue, VkXYColorEXT whitePoint, VkFloat maxLuminance, VkFloat minLuminance, VkFloat maxContentLightLevel, VkFloat maxFrameAverageLightLevel) {
         super(sizeof());
         setSType(sType);
@@ -161,7 +160,8 @@ public class VkHdrMetadataEXT extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkHdrMetadataEXT implements cz.mg.collections.array.ReadonlyArray<VkHdrMetadataEXT> {        private final int count;
+    public static class Array extends VkHdrMetadataEXT implements cz.mg.collections.array.ReadonlyArray<VkHdrMetadataEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkHdrMetadataEXT.sizeof()));
@@ -183,6 +183,8 @@ public class VkHdrMetadataEXT extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -194,8 +196,8 @@ public class VkHdrMetadataEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -244,5 +246,4 @@ public class VkHdrMetadataEXT extends VkObject {
             }
         }
     }
-
 }

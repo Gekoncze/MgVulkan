@@ -13,7 +13,6 @@ public class VkVertexInputAttributeDescription extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkVertexInputAttributeDescription(VkUInt32 location, VkUInt32 binding, VkFormat format, VkUInt32 offset) {
         super(sizeof());
         setLocation(location);
@@ -77,7 +76,8 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkVertexInputAttributeDescription implements cz.mg.collections.array.ReadonlyArray<VkVertexInputAttributeDescription> {        private final int count;
+    public static class Array extends VkVertexInputAttributeDescription implements cz.mg.collections.array.ReadonlyArray<VkVertexInputAttributeDescription> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkVertexInputAttributeDescription.sizeof()));
@@ -99,6 +99,8 @@ public class VkVertexInputAttributeDescription extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -110,8 +112,8 @@ public class VkVertexInputAttributeDescription extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -160,5 +162,4 @@ public class VkVertexInputAttributeDescription extends VkObject {
             }
         }
     }
-
 }

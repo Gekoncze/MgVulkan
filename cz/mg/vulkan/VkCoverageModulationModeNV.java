@@ -18,6 +18,7 @@ public class VkCoverageModulationModeNV extends VkEnum {
     }
 
 
+
     public VkCoverageModulationModeNV(int value) {
         setValue(value);
     }
@@ -31,7 +32,8 @@ public class VkCoverageModulationModeNV extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkCoverageModulationModeNV implements cz.mg.collections.array.ReadonlyArray<VkCoverageModulationModeNV> {        private final int count;
+    public static class Array extends VkCoverageModulationModeNV implements cz.mg.collections.array.ReadonlyArray<VkCoverageModulationModeNV> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkCoverageModulationModeNV.sizeof()));
@@ -53,6 +55,8 @@ public class VkCoverageModulationModeNV extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -63,5 +67,4 @@ public class VkCoverageModulationModeNV extends VkEnum {
             return new VkCoverageModulationModeNV(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

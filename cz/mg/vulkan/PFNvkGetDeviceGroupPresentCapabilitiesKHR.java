@@ -13,6 +13,7 @@ public class PFNvkGetDeviceGroupPresentCapabilitiesKHR extends VkFunctionPointer
     }
 
 
+
     public PFNvkGetDeviceGroupPresentCapabilitiesKHR(long value) {
         setValue(value);
     }

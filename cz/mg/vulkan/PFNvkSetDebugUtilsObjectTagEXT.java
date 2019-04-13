@@ -13,6 +13,7 @@ public class PFNvkSetDebugUtilsObjectTagEXT extends VkFunctionPointer {
     }
 
 
+
     public PFNvkSetDebugUtilsObjectTagEXT(long value) {
         setValue(value);
     }

@@ -13,6 +13,7 @@ public class VkFramebufferCreateFlags extends VkFlags {
     }
 
 
+
     public VkFramebufferCreateFlags(int value) {
         setValue(value);
     }

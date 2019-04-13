@@ -13,7 +13,6 @@ public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkPhysicalDeviceExternalSemaphoreInfo(VkObject pNext, VkExternalSemaphoreHandleTypeFlagBits handleType) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO));
@@ -63,7 +62,8 @@ public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkPhysicalDeviceExternalSemaphoreInfo implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceExternalSemaphoreInfo> {        private final int count;
+    public static class Array extends VkPhysicalDeviceExternalSemaphoreInfo implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceExternalSemaphoreInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceExternalSemaphoreInfo.sizeof()));
@@ -85,6 +85,8 @@ public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -96,8 +98,8 @@ public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -146,5 +148,4 @@ public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
             }
         }
     }
-
 }

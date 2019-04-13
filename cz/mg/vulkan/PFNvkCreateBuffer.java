@@ -13,6 +13,7 @@ public class PFNvkCreateBuffer extends VkFunctionPointer {
     }
 
 
+
     public PFNvkCreateBuffer(long value) {
         setValue(value);
     }

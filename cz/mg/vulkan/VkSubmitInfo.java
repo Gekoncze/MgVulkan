@@ -13,7 +13,6 @@ public class VkSubmitInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkSubmitInfo(VkObject pNext, VkUInt32 waitSemaphoreCount, VkSemaphore pWaitSemaphores, VkPipelineStageFlags pWaitDstStageMask, VkUInt32 commandBufferCount, VkCommandBuffer pCommandBuffers, VkUInt32 signalSemaphoreCount, VkSemaphore pSignalSemaphores) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SUBMIT_INFO));
@@ -147,7 +146,8 @@ public class VkSubmitInfo extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkSubmitInfo implements cz.mg.collections.array.ReadonlyArray<VkSubmitInfo> {        private final int count;
+    public static class Array extends VkSubmitInfo implements cz.mg.collections.array.ReadonlyArray<VkSubmitInfo> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkSubmitInfo.sizeof()));
@@ -169,6 +169,8 @@ public class VkSubmitInfo extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -180,8 +182,8 @@ public class VkSubmitInfo extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -230,5 +232,4 @@ public class VkSubmitInfo extends VkObject {
             }
         }
     }
-
 }

@@ -16,6 +16,7 @@ public class VkDiscardRectangleModeEXT extends VkEnum {
     }
 
 
+
     public VkDiscardRectangleModeEXT(int value) {
         setValue(value);
     }
@@ -27,7 +28,8 @@ public class VkDiscardRectangleModeEXT extends VkEnum {
         return "UNKNOWN";
     }
 
-    public static class Array extends VkDiscardRectangleModeEXT implements cz.mg.collections.array.ReadonlyArray<VkDiscardRectangleModeEXT> {        private final int count;
+    public static class Array extends VkDiscardRectangleModeEXT implements cz.mg.collections.array.ReadonlyArray<VkDiscardRectangleModeEXT> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkDiscardRectangleModeEXT.sizeof()));
@@ -49,6 +51,8 @@ public class VkDiscardRectangleModeEXT extends VkEnum {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -59,5 +63,4 @@ public class VkDiscardRectangleModeEXT extends VkEnum {
             return new VkDiscardRectangleModeEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
-
 }

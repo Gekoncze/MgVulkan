@@ -13,7 +13,6 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
     public VkCmdProcessCommandsInfoNVX(VkObject pNext, VkObjectTableNVX objectTable, VkIndirectCommandsLayoutNVX indirectCommandsLayout, VkUInt32 indirectCommandsTokenCount, VkIndirectCommandsTokenNVX pIndirectCommandsTokens, VkUInt32 maxSequencesCount, VkCommandBuffer targetCommandBuffer, VkBuffer sequencesCountBuffer, VkDeviceSize sequencesCountOffset, VkBuffer sequencesIndexBuffer, VkDeviceSize sequencesIndexOffset) {
         super(sizeof());
         setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_CMD_PROCESS_COMMANDS_INFO_NVX));
@@ -189,7 +188,8 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     public static native long sizeof();
 
-    public static class Array extends VkCmdProcessCommandsInfoNVX implements cz.mg.collections.array.ReadonlyArray<VkCmdProcessCommandsInfoNVX> {        private final int count;
+    public static class Array extends VkCmdProcessCommandsInfoNVX implements cz.mg.collections.array.ReadonlyArray<VkCmdProcessCommandsInfoNVX> {
+        private final int count;
 
         public Array(int count) {
             super(new VkMemory(count*VkCmdProcessCommandsInfoNVX.sizeof()));
@@ -211,6 +211,8 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
             this.count = count;
         }
 
+
+
         @Override
         public int count(){
             return count;
@@ -222,8 +224,8 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {        public Pointer() {
+    public static class Pointer extends VkObject.Pointer {
+        public Pointer() {
         }
 
         public Pointer(long value) {
@@ -272,5 +274,4 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
             }
         }
     }
-
 }
