@@ -29,7 +29,7 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
 
     
     public void setDeviceMask(VkUInt32 deviceMask) {
-        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddress());
+        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
 
     
     public void setDeviceRenderAreaCount(VkUInt32 deviceRenderAreaCount) {
-        setDeviceRenderAreaCount(getVkAddress(), deviceRenderAreaCount != null ? deviceRenderAreaCount.getVkAddress() : VkPointer.getNullAddress());
+        setDeviceRenderAreaCount(getVkAddress(), deviceRenderAreaCount != null ? deviceRenderAreaCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

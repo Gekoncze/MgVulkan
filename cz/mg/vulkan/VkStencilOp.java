@@ -38,4 +38,38 @@ public class VkStencilOp extends VkEnum {
         if(getValue() == VK_STENCIL_OP_DECREMENT_AND_WRAP) return "VK_STENCIL_OP_DECREMENT_AND_WRAP";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkStencilOp implements cz.mg.collections.array.ReadonlyArray<VkStencilOp> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkStencilOp.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkStencilOp o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkStencilOp get(int i){
+            return new VkStencilOp(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

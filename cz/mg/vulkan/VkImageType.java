@@ -28,4 +28,38 @@ public class VkImageType extends VkEnum {
         if(getValue() == VK_IMAGE_TYPE_3D) return "VK_IMAGE_TYPE_3D";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkImageType implements cz.mg.collections.array.ReadonlyArray<VkImageType> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkImageType.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkImageType o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkImageType get(int i){
+            return new VkImageType(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

@@ -30,7 +30,7 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
 
     
     public void setFlags(VkPipelineDiscardRectangleStateCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
 
     
     public void setDiscardRectangleMode(VkDiscardRectangleModeEXT discardRectangleMode) {
-        setDiscardRectangleMode(getVkAddress(), discardRectangleMode != null ? discardRectangleMode.getVkAddress() : VkPointer.getNullAddress());
+        setDiscardRectangleMode(getVkAddress(), discardRectangleMode != null ? discardRectangleMode.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
 
     
     public void setDiscardRectangleCount(VkUInt32 discardRectangleCount) {
-        setDiscardRectangleCount(getVkAddress(), discardRectangleCount != null ? discardRectangleCount.getVkAddress() : VkPointer.getNullAddress());
+        setDiscardRectangleCount(getVkAddress(), discardRectangleCount != null ? discardRectangleCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

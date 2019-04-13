@@ -27,7 +27,7 @@ public class VkObjectTableVertexBufferEntryNVX extends VkObject {
 
     
     public void setType(VkObjectEntryTypeNVX type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddress());
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkObjectTableVertexBufferEntryNVX extends VkObject {
 
     
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkObjectTableVertexBufferEntryNVX extends VkObject {
 
     
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress());
+        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

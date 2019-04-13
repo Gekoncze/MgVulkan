@@ -28,7 +28,7 @@ public class VkImportMemoryFdInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkImportMemoryFdInfoKHR extends VkObject {
 
     
     public void setHandleType(VkExternalMemoryHandleTypeFlagBits handleType) {
-        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddress());
+        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkImportMemoryFdInfoKHR extends VkObject {
 
     
     public void setFd(VkInt fd) {
-        setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getNullAddress());
+        setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

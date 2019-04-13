@@ -30,4 +30,38 @@ public class VkQueueGlobalPriorityEXT extends VkEnum {
         if(getValue() == VK_QUEUE_GLOBAL_PRIORITY_REALTIME_EXT) return "VK_QUEUE_GLOBAL_PRIORITY_REALTIME_EXT";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkQueueGlobalPriorityEXT implements cz.mg.collections.array.ReadonlyArray<VkQueueGlobalPriorityEXT> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkQueueGlobalPriorityEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkQueueGlobalPriorityEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkQueueGlobalPriorityEXT get(int i){
+            return new VkQueueGlobalPriorityEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

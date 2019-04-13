@@ -124,4 +124,38 @@ public class VkBlendOp extends VkEnum {
         if(getValue() == VK_BLEND_OP_BLUE_EXT) return "VK_BLEND_OP_BLUE_EXT";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkBlendOp implements cz.mg.collections.array.ReadonlyArray<VkBlendOp> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkBlendOp.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkBlendOp o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkBlendOp get(int i){
+            return new VkBlendOp(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

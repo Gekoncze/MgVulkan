@@ -26,4 +26,38 @@ public class VkIndexType extends VkEnum {
         if(getValue() == VK_INDEX_TYPE_UINT32) return "VK_INDEX_TYPE_UINT32";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkIndexType implements cz.mg.collections.array.ReadonlyArray<VkIndexType> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkIndexType.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkIndexType o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkIndexType get(int i){
+            return new VkIndexType(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

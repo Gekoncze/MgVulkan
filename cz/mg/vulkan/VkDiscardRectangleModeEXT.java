@@ -26,4 +26,38 @@ public class VkDiscardRectangleModeEXT extends VkEnum {
         if(getValue() == VK_DISCARD_RECTANGLE_MODE_EXCLUSIVE_EXT) return "VK_DISCARD_RECTANGLE_MODE_EXCLUSIVE_EXT";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkDiscardRectangleModeEXT implements cz.mg.collections.array.ReadonlyArray<VkDiscardRectangleModeEXT> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkDiscardRectangleModeEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDiscardRectangleModeEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkDiscardRectangleModeEXT get(int i){
+            return new VkDiscardRectangleModeEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

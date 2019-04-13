@@ -29,7 +29,7 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
 
     
     public void setFlags(VkBufferCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
 
     
     public void setUsage(VkBufferUsageFlags usage) {
-        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getNullAddress());
+        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
 
     
     public void setHandleType(VkExternalMemoryHandleTypeFlagBits handleType) {
-        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddress());
+        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

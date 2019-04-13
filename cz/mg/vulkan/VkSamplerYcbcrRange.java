@@ -30,4 +30,38 @@ public class VkSamplerYcbcrRange extends VkEnum {
         if(getValue() == VK_SAMPLER_YCBCR_RANGE_ITU_NARROW_KHR) return "VK_SAMPLER_YCBCR_RANGE_ITU_NARROW_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkSamplerYcbcrRange implements cz.mg.collections.array.ReadonlyArray<VkSamplerYcbcrRange> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkSamplerYcbcrRange.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSamplerYcbcrRange o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkSamplerYcbcrRange get(int i){
+            return new VkSamplerYcbcrRange(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

@@ -46,4 +46,38 @@ public class VkDynamicState extends VkEnum {
         if(getValue() == VK_DYNAMIC_STATE_SAMPLE_LOCATIONS_EXT) return "VK_DYNAMIC_STATE_SAMPLE_LOCATIONS_EXT";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkDynamicState implements cz.mg.collections.array.ReadonlyArray<VkDynamicState> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkDynamicState.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDynamicState o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkDynamicState get(int i){
+            return new VkDynamicState(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

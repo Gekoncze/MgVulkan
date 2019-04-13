@@ -27,7 +27,7 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
 
     
     public void setPerViewPositionAllComponents(VkBool32 perViewPositionAllComponents) {
-        setPerViewPositionAllComponents(getVkAddress(), perViewPositionAllComponents != null ? perViewPositionAllComponents.getVkAddress() : VkPointer.getNullAddress());
+        setPerViewPositionAllComponents(getVkAddress(), perViewPositionAllComponents != null ? perViewPositionAllComponents.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

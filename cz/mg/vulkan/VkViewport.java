@@ -30,7 +30,7 @@ public class VkViewport extends VkObject {
 
     
     public void setX(VkFloat x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -43,7 +43,7 @@ public class VkViewport extends VkObject {
 
     
     public void setY(VkFloat y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkViewport extends VkObject {
 
     
     public void setWidth(VkFloat width) {
-        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getNullAddress());
+        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkViewport extends VkObject {
 
     
     public void setHeight(VkFloat height) {
-        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getNullAddress());
+        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkViewport extends VkObject {
 
     
     public void setMinDepth(VkFloat minDepth) {
-        setMinDepth(getVkAddress(), minDepth != null ? minDepth.getVkAddress() : VkPointer.getNullAddress());
+        setMinDepth(getVkAddress(), minDepth != null ? minDepth.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -95,7 +95,7 @@ public class VkViewport extends VkObject {
 
     
     public void setMaxDepth(VkFloat maxDepth) {
-        setMaxDepth(getVkAddress(), maxDepth != null ? maxDepth.getVkAddress() : VkPointer.getNullAddress());
+        setMaxDepth(getVkAddress(), maxDepth != null ? maxDepth.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

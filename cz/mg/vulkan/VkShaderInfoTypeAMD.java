@@ -28,4 +28,38 @@ public class VkShaderInfoTypeAMD extends VkEnum {
         if(getValue() == VK_SHADER_INFO_TYPE_DISASSEMBLY_AMD) return "VK_SHADER_INFO_TYPE_DISASSEMBLY_AMD";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkShaderInfoTypeAMD implements cz.mg.collections.array.ReadonlyArray<VkShaderInfoTypeAMD> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkShaderInfoTypeAMD.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkShaderInfoTypeAMD o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkShaderInfoTypeAMD get(int i){
+            return new VkShaderInfoTypeAMD(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

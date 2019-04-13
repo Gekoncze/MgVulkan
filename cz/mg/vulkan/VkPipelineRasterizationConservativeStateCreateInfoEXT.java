@@ -29,7 +29,7 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
 
     
     public void setFlags(VkPipelineRasterizationConservativeStateCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
 
     
     public void setConservativeRasterizationMode(VkConservativeRasterizationModeEXT conservativeRasterizationMode) {
-        setConservativeRasterizationMode(getVkAddress(), conservativeRasterizationMode != null ? conservativeRasterizationMode.getVkAddress() : VkPointer.getNullAddress());
+        setConservativeRasterizationMode(getVkAddress(), conservativeRasterizationMode != null ? conservativeRasterizationMode.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
 
     
     public void setExtraPrimitiveOverestimationSize(VkFloat extraPrimitiveOverestimationSize) {
-        setExtraPrimitiveOverestimationSize(getVkAddress(), extraPrimitiveOverestimationSize != null ? extraPrimitiveOverestimationSize.getVkAddress() : VkPointer.getNullAddress());
+        setExtraPrimitiveOverestimationSize(getVkAddress(), extraPrimitiveOverestimationSize != null ? extraPrimitiveOverestimationSize.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

@@ -27,7 +27,7 @@ public class VkRectLayerKHR extends VkObject {
 
     
     public void setOffset(VkOffset2D offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkRectLayerKHR extends VkObject {
 
     
     public void setExtent(VkExtent2D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddress());
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkRectLayerKHR extends VkObject {
 
     
     public void setLayer(VkUInt32 layer) {
-        setLayer(getVkAddress(), layer != null ? layer.getVkAddress() : VkPointer.getNullAddress());
+        setLayer(getVkAddress(), layer != null ? layer.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

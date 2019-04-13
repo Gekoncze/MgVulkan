@@ -31,7 +31,7 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineLayoutCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
 
     
     public void setSetLayoutCount(VkUInt32 setLayoutCount) {
-        setSetLayoutCount(getVkAddress(), setLayoutCount != null ? setLayoutCount.getVkAddress() : VkPointer.getNullAddress());
+        setSetLayoutCount(getVkAddress(), setLayoutCount != null ? setLayoutCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
 
     
     public void setPushConstantRangeCount(VkUInt32 pushConstantRangeCount) {
-        setPushConstantRangeCount(getVkAddress(), pushConstantRangeCount != null ? pushConstantRangeCount.getVkAddress() : VkPointer.getNullAddress());
+        setPushConstantRangeCount(getVkAddress(), pushConstantRangeCount != null ? pushConstantRangeCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

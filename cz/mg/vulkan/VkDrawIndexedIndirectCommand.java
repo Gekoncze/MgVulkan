@@ -29,7 +29,7 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
 
     
     public void setIndexCount(VkUInt32 indexCount) {
-        setIndexCount(getVkAddress(), indexCount != null ? indexCount.getVkAddress() : VkPointer.getNullAddress());
+        setIndexCount(getVkAddress(), indexCount != null ? indexCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -42,7 +42,7 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
 
     
     public void setInstanceCount(VkUInt32 instanceCount) {
-        setInstanceCount(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddress());
+        setInstanceCount(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
 
     
     public void setFirstIndex(VkUInt32 firstIndex) {
-        setFirstIndex(getVkAddress(), firstIndex != null ? firstIndex.getVkAddress() : VkPointer.getNullAddress());
+        setFirstIndex(getVkAddress(), firstIndex != null ? firstIndex.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
 
     
     public void setVertexOffset(VkInt32 vertexOffset) {
-        setVertexOffset(getVkAddress(), vertexOffset != null ? vertexOffset.getVkAddress() : VkPointer.getNullAddress());
+        setVertexOffset(getVkAddress(), vertexOffset != null ? vertexOffset.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
 
     
     public void setFirstInstance(VkUInt32 firstInstance) {
-        setFirstInstance(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddress());
+        setFirstInstance(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

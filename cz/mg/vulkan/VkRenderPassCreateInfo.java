@@ -33,7 +33,7 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -59,7 +59,7 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     
     public void setFlags(VkRenderPassCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -72,7 +72,7 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     
     public void setAttachmentCount(VkUInt32 attachmentCount) {
-        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddress());
+        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -98,7 +98,7 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     
     public void setSubpassCount(VkUInt32 subpassCount) {
-        setSubpassCount(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.getNullAddress());
+        setSubpassCount(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -124,7 +124,7 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     
     public void setDependencyCount(VkUInt32 dependencyCount) {
-        setDependencyCount(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.getNullAddress());
+        setDependencyCount(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

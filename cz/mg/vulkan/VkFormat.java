@@ -544,4 +544,38 @@ public class VkFormat extends VkEnum {
         if(getValue() == VK_FORMAT_G16_B16_R16_3PLANE_444_UNORM_KHR) return "VK_FORMAT_G16_B16_R16_3PLANE_444_UNORM_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkFormat implements cz.mg.collections.array.ReadonlyArray<VkFormat> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkFormat.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkFormat o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkFormat get(int i){
+            return new VkFormat(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

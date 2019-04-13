@@ -28,4 +28,38 @@ public class VkDescriptorUpdateTemplateType extends VkEnum {
         if(getValue() == VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET_KHR) return "VK_DESCRIPTOR_UPDATE_TEMPLATE_TYPE_DESCRIPTOR_SET_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkDescriptorUpdateTemplateType implements cz.mg.collections.array.ReadonlyArray<VkDescriptorUpdateTemplateType> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkDescriptorUpdateTemplateType.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorUpdateTemplateType o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkDescriptorUpdateTemplateType get(int i){
+            return new VkDescriptorUpdateTemplateType(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

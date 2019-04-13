@@ -34,7 +34,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -60,7 +60,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setFlags(VkDescriptorUpdateTemplateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -73,7 +73,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setDescriptorUpdateEntryCount(VkUInt32 descriptorUpdateEntryCount) {
-        setDescriptorUpdateEntryCount(getVkAddress(), descriptorUpdateEntryCount != null ? descriptorUpdateEntryCount.getVkAddress() : VkPointer.getNullAddress());
+        setDescriptorUpdateEntryCount(getVkAddress(), descriptorUpdateEntryCount != null ? descriptorUpdateEntryCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -99,7 +99,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setTemplateType(VkDescriptorUpdateTemplateType templateType) {
-        setTemplateType(getVkAddress(), templateType != null ? templateType.getVkAddress() : VkPointer.getNullAddress());
+        setTemplateType(getVkAddress(), templateType != null ? templateType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -112,7 +112,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setDescriptorSetLayout(VkDescriptorSetLayout descriptorSetLayout) {
-        setDescriptorSetLayout(getVkAddress(), descriptorSetLayout != null ? descriptorSetLayout.getVkAddress() : VkPointer.getNullAddress());
+        setDescriptorSetLayout(getVkAddress(), descriptorSetLayout != null ? descriptorSetLayout.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -125,7 +125,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setPipelineBindPoint(VkPipelineBindPoint pipelineBindPoint) {
-        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddress());
+        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -138,7 +138,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setPipelineLayout(VkPipelineLayout pipelineLayout) {
-        setPipelineLayout(getVkAddress(), pipelineLayout != null ? pipelineLayout.getVkAddress() : VkPointer.getNullAddress());
+        setPipelineLayout(getVkAddress(), pipelineLayout != null ? pipelineLayout.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -151,7 +151,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setSet(VkUInt32 set) {
-        setSet(getVkAddress(), set != null ? set.getVkAddress() : VkPointer.getNullAddress());
+        setSet(getVkAddress(), set != null ? set.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

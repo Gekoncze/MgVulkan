@@ -60,4 +60,38 @@ public class VkBlendFactor extends VkEnum {
         if(getValue() == VK_BLEND_FACTOR_ONE_MINUS_SRC1_ALPHA) return "VK_BLEND_FACTOR_ONE_MINUS_SRC1_ALPHA";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkBlendFactor implements cz.mg.collections.array.ReadonlyArray<VkBlendFactor> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkBlendFactor.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkBlendFactor o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkBlendFactor get(int i){
+            return new VkBlendFactor(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

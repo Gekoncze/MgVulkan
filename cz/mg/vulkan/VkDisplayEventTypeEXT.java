@@ -24,4 +24,38 @@ public class VkDisplayEventTypeEXT extends VkEnum {
         if(getValue() == VK_DISPLAY_EVENT_TYPE_FIRST_PIXEL_OUT_EXT) return "VK_DISPLAY_EVENT_TYPE_FIRST_PIXEL_OUT_EXT";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkDisplayEventTypeEXT implements cz.mg.collections.array.ReadonlyArray<VkDisplayEventTypeEXT> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkDisplayEventTypeEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDisplayEventTypeEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkDisplayEventTypeEXT get(int i){
+            return new VkDisplayEventTypeEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

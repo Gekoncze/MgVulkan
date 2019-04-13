@@ -31,7 +31,7 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineVertexInputStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
 
     
     public void setVertexBindingDescriptionCount(VkUInt32 vertexBindingDescriptionCount) {
-        setVertexBindingDescriptionCount(getVkAddress(), vertexBindingDescriptionCount != null ? vertexBindingDescriptionCount.getVkAddress() : VkPointer.getNullAddress());
+        setVertexBindingDescriptionCount(getVkAddress(), vertexBindingDescriptionCount != null ? vertexBindingDescriptionCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
 
     
     public void setVertexAttributeDescriptionCount(VkUInt32 vertexAttributeDescriptionCount) {
-        setVertexAttributeDescriptionCount(getVkAddress(), vertexAttributeDescriptionCount != null ? vertexAttributeDescriptionCount.getVkAddress() : VkPointer.getNullAddress());
+        setVertexAttributeDescriptionCount(getVkAddress(), vertexAttributeDescriptionCount != null ? vertexAttributeDescriptionCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

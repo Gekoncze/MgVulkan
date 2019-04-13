@@ -27,7 +27,7 @@ public class VkSurfaceCapabilities2KHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkSurfaceCapabilities2KHR extends VkObject {
 
     
     public void setSurfaceCapabilities(VkSurfaceCapabilitiesKHR surfaceCapabilities) {
-        setSurfaceCapabilities(getVkAddress(), surfaceCapabilities != null ? surfaceCapabilities.getVkAddress() : VkPointer.getNullAddress());
+        setSurfaceCapabilities(getVkAddress(), surfaceCapabilities != null ? surfaceCapabilities.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

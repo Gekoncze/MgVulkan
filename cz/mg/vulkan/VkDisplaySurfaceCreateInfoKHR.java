@@ -34,7 +34,7 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -60,7 +60,7 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
     
     public void setFlags(VkDisplaySurfaceCreateFlagsKHR flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -73,7 +73,7 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
     
     public void setDisplayMode(VkDisplayModeKHR displayMode) {
-        setDisplayMode(getVkAddress(), displayMode != null ? displayMode.getVkAddress() : VkPointer.getNullAddress());
+        setDisplayMode(getVkAddress(), displayMode != null ? displayMode.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -86,7 +86,7 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
     
     public void setPlaneIndex(VkUInt32 planeIndex) {
-        setPlaneIndex(getVkAddress(), planeIndex != null ? planeIndex.getVkAddress() : VkPointer.getNullAddress());
+        setPlaneIndex(getVkAddress(), planeIndex != null ? planeIndex.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -99,7 +99,7 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
     
     public void setPlaneStackIndex(VkUInt32 planeStackIndex) {
-        setPlaneStackIndex(getVkAddress(), planeStackIndex != null ? planeStackIndex.getVkAddress() : VkPointer.getNullAddress());
+        setPlaneStackIndex(getVkAddress(), planeStackIndex != null ? planeStackIndex.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -112,7 +112,7 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
     
     public void setTransform(VkSurfaceTransformFlagBitsKHR transform) {
-        setTransform(getVkAddress(), transform != null ? transform.getVkAddress() : VkPointer.getNullAddress());
+        setTransform(getVkAddress(), transform != null ? transform.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -125,7 +125,7 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
     
     public void setGlobalAlpha(VkFloat globalAlpha) {
-        setGlobalAlpha(getVkAddress(), globalAlpha != null ? globalAlpha.getVkAddress() : VkPointer.getNullAddress());
+        setGlobalAlpha(getVkAddress(), globalAlpha != null ? globalAlpha.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -138,7 +138,7 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
     
     public void setAlphaMode(VkDisplayPlaneAlphaFlagBitsKHR alphaMode) {
-        setAlphaMode(getVkAddress(), alphaMode != null ? alphaMode.getVkAddress() : VkPointer.getNullAddress());
+        setAlphaMode(getVkAddress(), alphaMode != null ? alphaMode.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -151,7 +151,7 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
     
     public void setImageExtent(VkExtent2D imageExtent) {
-        setImageExtent(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.getNullAddress());
+        setImageExtent(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

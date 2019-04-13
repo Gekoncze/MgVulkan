@@ -54,4 +54,38 @@ public class VkLogicOp extends VkEnum {
         if(getValue() == VK_LOGIC_OP_SET) return "VK_LOGIC_OP_SET";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkLogicOp implements cz.mg.collections.array.ReadonlyArray<VkLogicOp> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkLogicOp.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkLogicOp o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkLogicOp get(int i){
+            return new VkLogicOp(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

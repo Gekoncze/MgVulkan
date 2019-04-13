@@ -28,7 +28,7 @@ public class VkSpecializationInfo extends VkObject {
 
     
     public void setMapEntryCount(VkUInt32 mapEntryCount) {
-        setMapEntryCount(getVkAddress(), mapEntryCount != null ? mapEntryCount.getVkAddress() : VkPointer.getNullAddress());
+        setMapEntryCount(getVkAddress(), mapEntryCount != null ? mapEntryCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkSpecializationInfo extends VkObject {
 
     
     public void setDataSize(VkSize dataSize) {
-        setDataSize(getVkAddress(), dataSize != null ? dataSize.getVkAddress() : VkPointer.getNullAddress());
+        setDataSize(getVkAddress(), dataSize != null ? dataSize.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

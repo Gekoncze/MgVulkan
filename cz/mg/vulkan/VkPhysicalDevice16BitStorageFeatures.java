@@ -30,7 +30,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     
     public void setStorageBuffer16BitAccess(VkBool32 storageBuffer16BitAccess) {
-        setStorageBuffer16BitAccess(getVkAddress(), storageBuffer16BitAccess != null ? storageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddress());
+        setStorageBuffer16BitAccess(getVkAddress(), storageBuffer16BitAccess != null ? storageBuffer16BitAccess.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     
     public void setUniformAndStorageBuffer16BitAccess(VkBool32 uniformAndStorageBuffer16BitAccess) {
-        setUniformAndStorageBuffer16BitAccess(getVkAddress(), uniformAndStorageBuffer16BitAccess != null ? uniformAndStorageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddress());
+        setUniformAndStorageBuffer16BitAccess(getVkAddress(), uniformAndStorageBuffer16BitAccess != null ? uniformAndStorageBuffer16BitAccess.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     
     public void setStoragePushConstant16(VkBool32 storagePushConstant16) {
-        setStoragePushConstant16(getVkAddress(), storagePushConstant16 != null ? storagePushConstant16.getVkAddress() : VkPointer.getNullAddress());
+        setStoragePushConstant16(getVkAddress(), storagePushConstant16 != null ? storagePushConstant16.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -95,7 +95,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     
     public void setStorageInputOutput16(VkBool32 storageInputOutput16) {
-        setStorageInputOutput16(getVkAddress(), storageInputOutput16 != null ? storageInputOutput16.getVkAddress() : VkPointer.getNullAddress());
+        setStorageInputOutput16(getVkAddress(), storageInputOutput16 != null ? storageInputOutput16.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

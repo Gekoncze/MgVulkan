@@ -28,4 +28,38 @@ public class VkQueryType extends VkEnum {
         if(getValue() == VK_QUERY_TYPE_TIMESTAMP) return "VK_QUERY_TYPE_TIMESTAMP";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkQueryType implements cz.mg.collections.array.ReadonlyArray<VkQueryType> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkQueryType.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkQueryType o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkQueryType get(int i){
+            return new VkQueryType(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

@@ -28,7 +28,7 @@ public class VkMemoryDedicatedRequirements extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkMemoryDedicatedRequirements extends VkObject {
 
     
     public void setPrefersDedicatedAllocation(VkBool32 prefersDedicatedAllocation) {
-        setPrefersDedicatedAllocation(getVkAddress(), prefersDedicatedAllocation != null ? prefersDedicatedAllocation.getVkAddress() : VkPointer.getNullAddress());
+        setPrefersDedicatedAllocation(getVkAddress(), prefersDedicatedAllocation != null ? prefersDedicatedAllocation.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkMemoryDedicatedRequirements extends VkObject {
 
     
     public void setRequiresDedicatedAllocation(VkBool32 requiresDedicatedAllocation) {
-        setRequiresDedicatedAllocation(getVkAddress(), requiresDedicatedAllocation != null ? requiresDedicatedAllocation.getVkAddress() : VkPointer.getNullAddress());
+        setRequiresDedicatedAllocation(getVkAddress(), requiresDedicatedAllocation != null ? requiresDedicatedAllocation.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

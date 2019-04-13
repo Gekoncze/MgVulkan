@@ -33,7 +33,7 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -59,7 +59,7 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineMultisampleStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -72,7 +72,7 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setRasterizationSamples(VkSampleCountFlagBits rasterizationSamples) {
-        setRasterizationSamples(getVkAddress(), rasterizationSamples != null ? rasterizationSamples.getVkAddress() : VkPointer.getNullAddress());
+        setRasterizationSamples(getVkAddress(), rasterizationSamples != null ? rasterizationSamples.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -85,7 +85,7 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setSampleShadingEnable(VkBool32 sampleShadingEnable) {
-        setSampleShadingEnable(getVkAddress(), sampleShadingEnable != null ? sampleShadingEnable.getVkAddress() : VkPointer.getNullAddress());
+        setSampleShadingEnable(getVkAddress(), sampleShadingEnable != null ? sampleShadingEnable.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -98,7 +98,7 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setMinSampleShading(VkFloat minSampleShading) {
-        setMinSampleShading(getVkAddress(), minSampleShading != null ? minSampleShading.getVkAddress() : VkPointer.getNullAddress());
+        setMinSampleShading(getVkAddress(), minSampleShading != null ? minSampleShading.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -124,7 +124,7 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setAlphaToCoverageEnable(VkBool32 alphaToCoverageEnable) {
-        setAlphaToCoverageEnable(getVkAddress(), alphaToCoverageEnable != null ? alphaToCoverageEnable.getVkAddress() : VkPointer.getNullAddress());
+        setAlphaToCoverageEnable(getVkAddress(), alphaToCoverageEnable != null ? alphaToCoverageEnable.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -137,7 +137,7 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setAlphaToOneEnable(VkBool32 alphaToOneEnable) {
-        setAlphaToOneEnable(getVkAddress(), alphaToOneEnable != null ? alphaToOneEnable.getVkAddress() : VkPointer.getNullAddress());
+        setAlphaToOneEnable(getVkAddress(), alphaToOneEnable != null ? alphaToOneEnable.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

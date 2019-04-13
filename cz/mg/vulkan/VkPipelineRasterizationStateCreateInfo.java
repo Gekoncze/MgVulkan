@@ -37,7 +37,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -63,7 +63,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineRasterizationStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -76,7 +76,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setDepthClampEnable(VkBool32 depthClampEnable) {
-        setDepthClampEnable(getVkAddress(), depthClampEnable != null ? depthClampEnable.getVkAddress() : VkPointer.getNullAddress());
+        setDepthClampEnable(getVkAddress(), depthClampEnable != null ? depthClampEnable.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -89,7 +89,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setRasterizerDiscardEnable(VkBool32 rasterizerDiscardEnable) {
-        setRasterizerDiscardEnable(getVkAddress(), rasterizerDiscardEnable != null ? rasterizerDiscardEnable.getVkAddress() : VkPointer.getNullAddress());
+        setRasterizerDiscardEnable(getVkAddress(), rasterizerDiscardEnable != null ? rasterizerDiscardEnable.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -102,7 +102,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setPolygonMode(VkPolygonMode polygonMode) {
-        setPolygonMode(getVkAddress(), polygonMode != null ? polygonMode.getVkAddress() : VkPointer.getNullAddress());
+        setPolygonMode(getVkAddress(), polygonMode != null ? polygonMode.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -115,7 +115,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setCullMode(VkCullModeFlags cullMode) {
-        setCullMode(getVkAddress(), cullMode != null ? cullMode.getVkAddress() : VkPointer.getNullAddress());
+        setCullMode(getVkAddress(), cullMode != null ? cullMode.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -128,7 +128,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setFrontFace(VkFrontFace frontFace) {
-        setFrontFace(getVkAddress(), frontFace != null ? frontFace.getVkAddress() : VkPointer.getNullAddress());
+        setFrontFace(getVkAddress(), frontFace != null ? frontFace.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -141,7 +141,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setDepthBiasEnable(VkBool32 depthBiasEnable) {
-        setDepthBiasEnable(getVkAddress(), depthBiasEnable != null ? depthBiasEnable.getVkAddress() : VkPointer.getNullAddress());
+        setDepthBiasEnable(getVkAddress(), depthBiasEnable != null ? depthBiasEnable.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -154,7 +154,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setDepthBiasConstantFactor(VkFloat depthBiasConstantFactor) {
-        setDepthBiasConstantFactor(getVkAddress(), depthBiasConstantFactor != null ? depthBiasConstantFactor.getVkAddress() : VkPointer.getNullAddress());
+        setDepthBiasConstantFactor(getVkAddress(), depthBiasConstantFactor != null ? depthBiasConstantFactor.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -167,7 +167,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setDepthBiasClamp(VkFloat depthBiasClamp) {
-        setDepthBiasClamp(getVkAddress(), depthBiasClamp != null ? depthBiasClamp.getVkAddress() : VkPointer.getNullAddress());
+        setDepthBiasClamp(getVkAddress(), depthBiasClamp != null ? depthBiasClamp.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -180,7 +180,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setDepthBiasSlopeFactor(VkFloat depthBiasSlopeFactor) {
-        setDepthBiasSlopeFactor(getVkAddress(), depthBiasSlopeFactor != null ? depthBiasSlopeFactor.getVkAddress() : VkPointer.getNullAddress());
+        setDepthBiasSlopeFactor(getVkAddress(), depthBiasSlopeFactor != null ? depthBiasSlopeFactor.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -193,7 +193,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
 
     
     public void setLineWidth(VkFloat lineWidth) {
-        setLineWidth(getVkAddress(), lineWidth != null ? lineWidth.getVkAddress() : VkPointer.getNullAddress());
+        setLineWidth(getVkAddress(), lineWidth != null ? lineWidth.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

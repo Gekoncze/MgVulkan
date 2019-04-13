@@ -31,7 +31,7 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
 
     
     public void setSwapchain(VkSwapchainKHR swapchain) {
-        setSwapchain(getVkAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddress());
+        setSwapchain(getVkAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
 
     
     public void setTimeout(VkUInt64 timeout) {
-        setTimeout(getVkAddress(), timeout != null ? timeout.getVkAddress() : VkPointer.getNullAddress());
+        setTimeout(getVkAddress(), timeout != null ? timeout.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
 
     
     public void setSemaphore(VkSemaphore semaphore) {
-        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddress());
+        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
 
     
     public void setFence(VkFence fence) {
-        setFence(getVkAddress(), fence != null ? fence.getVkAddress() : VkPointer.getNullAddress());
+        setFence(getVkAddress(), fence != null ? fence.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -109,7 +109,7 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
 
     
     public void setDeviceMask(VkUInt32 deviceMask) {
-        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddress());
+        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

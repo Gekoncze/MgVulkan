@@ -22,7 +22,7 @@ public class PFNvkCmdSetDepthBounds extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkFloat minDepthBounds, VkFloat maxDepthBounds){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), minDepthBounds != null ? minDepthBounds.getVkAddress() : VkPointer.getNullAddress(), maxDepthBounds != null ? maxDepthBounds.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getSinkAddress(), minDepthBounds != null ? minDepthBounds.getVkAddress() : VkPointer.getSinkAddress(), maxDepthBounds != null ? maxDepthBounds.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer, long minDepthBounds, long maxDepthBounds);

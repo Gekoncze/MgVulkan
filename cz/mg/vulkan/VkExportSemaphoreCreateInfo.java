@@ -27,7 +27,7 @@ public class VkExportSemaphoreCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkExportSemaphoreCreateInfo extends VkObject {
 
     
     public void setHandleTypes(VkExternalSemaphoreHandleTypeFlags handleTypes) {
-        setHandleTypes(getVkAddress(), handleTypes != null ? handleTypes.getVkAddress() : VkPointer.getNullAddress());
+        setHandleTypes(getVkAddress(), handleTypes != null ? handleTypes.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

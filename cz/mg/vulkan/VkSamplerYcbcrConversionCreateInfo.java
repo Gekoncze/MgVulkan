@@ -34,7 +34,7 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -60,7 +60,7 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -73,7 +73,7 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
 
     
     public void setYcbcrModel(VkSamplerYcbcrModelConversion ycbcrModel) {
-        setYcbcrModel(getVkAddress(), ycbcrModel != null ? ycbcrModel.getVkAddress() : VkPointer.getNullAddress());
+        setYcbcrModel(getVkAddress(), ycbcrModel != null ? ycbcrModel.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -86,7 +86,7 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
 
     
     public void setYcbcrRange(VkSamplerYcbcrRange ycbcrRange) {
-        setYcbcrRange(getVkAddress(), ycbcrRange != null ? ycbcrRange.getVkAddress() : VkPointer.getNullAddress());
+        setYcbcrRange(getVkAddress(), ycbcrRange != null ? ycbcrRange.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -99,7 +99,7 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
 
     
     public void setComponents(VkComponentMapping components) {
-        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getNullAddress());
+        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -112,7 +112,7 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
 
     
     public void setXChromaOffset(VkChromaLocation xChromaOffset) {
-        setXChromaOffset(getVkAddress(), xChromaOffset != null ? xChromaOffset.getVkAddress() : VkPointer.getNullAddress());
+        setXChromaOffset(getVkAddress(), xChromaOffset != null ? xChromaOffset.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -125,7 +125,7 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
 
     
     public void setYChromaOffset(VkChromaLocation yChromaOffset) {
-        setYChromaOffset(getVkAddress(), yChromaOffset != null ? yChromaOffset.getVkAddress() : VkPointer.getNullAddress());
+        setYChromaOffset(getVkAddress(), yChromaOffset != null ? yChromaOffset.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -138,7 +138,7 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
 
     
     public void setChromaFilter(VkFilter chromaFilter) {
-        setChromaFilter(getVkAddress(), chromaFilter != null ? chromaFilter.getVkAddress() : VkPointer.getNullAddress());
+        setChromaFilter(getVkAddress(), chromaFilter != null ? chromaFilter.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -151,7 +151,7 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
 
     
     public void setForceExplicitReconstruction(VkBool32 forceExplicitReconstruction) {
-        setForceExplicitReconstruction(getVkAddress(), forceExplicitReconstruction != null ? forceExplicitReconstruction.getVkAddress() : VkPointer.getNullAddress());
+        setForceExplicitReconstruction(getVkAddress(), forceExplicitReconstruction != null ? forceExplicitReconstruction.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

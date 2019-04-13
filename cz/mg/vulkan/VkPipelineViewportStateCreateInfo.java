@@ -31,7 +31,7 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineViewportStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
 
     
     public void setViewportCount(VkUInt32 viewportCount) {
-        setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.getNullAddress());
+        setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
 
     
     public void setScissorCount(VkUInt32 scissorCount) {
-        setScissorCount(getVkAddress(), scissorCount != null ? scissorCount.getVkAddress() : VkPointer.getNullAddress());
+        setScissorCount(getVkAddress(), scissorCount != null ? scissorCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

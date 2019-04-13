@@ -29,7 +29,7 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
 
     
     public void setObjectType(VkObjectType objectType) {
-        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddress());
+        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
 
     
     public void setObjectHandle(VkUInt64 objectHandle) {
-        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.getNullAddress());
+        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

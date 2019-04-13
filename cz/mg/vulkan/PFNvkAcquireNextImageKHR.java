@@ -22,7 +22,7 @@ public class PFNvkAcquireNextImageKHR extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkSwapchainKHR swapchain, VkUInt64 timeout, VkSemaphore semaphore, VkFence fence, VkUInt32 pImageIndex, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddress(), timeout != null ? timeout.getVkAddress() : VkPointer.getNullAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddress(), fence != null ? fence.getVkAddress() : VkPointer.getNullAddress(), pImageIndex != null ? pImageIndex.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getSinkAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getSinkAddress(), timeout != null ? timeout.getVkAddress() : VkPointer.getSinkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getSinkAddress(), fence != null ? fence.getVkAddress() : VkPointer.getSinkAddress(), pImageIndex != null ? pImageIndex.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long device, long swapchain, long timeout, long semaphore, long fence, long pImageIndex, long rval);

@@ -30,7 +30,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
     
     public void setSemaphore(VkSemaphore semaphore) {
-        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddress());
+        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
     
     public void setFlags(VkSemaphoreImportFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
     
     public void setHandleType(VkExternalSemaphoreHandleTypeFlagBits handleType) {
-        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddress());
+        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -95,7 +95,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
     
     public void setFd(VkInt fd) {
-        setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getNullAddress());
+        setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

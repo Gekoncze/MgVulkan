@@ -29,7 +29,7 @@ public class VkImageResolve extends VkObject {
 
     
     public void setSrcSubresource(VkImageSubresourceLayers srcSubresource) {
-        setSrcSubresource(getVkAddress(), srcSubresource != null ? srcSubresource.getVkAddress() : VkPointer.getNullAddress());
+        setSrcSubresource(getVkAddress(), srcSubresource != null ? srcSubresource.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -42,7 +42,7 @@ public class VkImageResolve extends VkObject {
 
     
     public void setSrcOffset(VkOffset3D srcOffset) {
-        setSrcOffset(getVkAddress(), srcOffset != null ? srcOffset.getVkAddress() : VkPointer.getNullAddress());
+        setSrcOffset(getVkAddress(), srcOffset != null ? srcOffset.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkImageResolve extends VkObject {
 
     
     public void setDstSubresource(VkImageSubresourceLayers dstSubresource) {
-        setDstSubresource(getVkAddress(), dstSubresource != null ? dstSubresource.getVkAddress() : VkPointer.getNullAddress());
+        setDstSubresource(getVkAddress(), dstSubresource != null ? dstSubresource.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkImageResolve extends VkObject {
 
     
     public void setDstOffset(VkOffset3D dstOffset) {
-        setDstOffset(getVkAddress(), dstOffset != null ? dstOffset.getVkAddress() : VkPointer.getNullAddress());
+        setDstOffset(getVkAddress(), dstOffset != null ? dstOffset.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkImageResolve extends VkObject {
 
     
     public void setExtent(VkExtent3D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddress());
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

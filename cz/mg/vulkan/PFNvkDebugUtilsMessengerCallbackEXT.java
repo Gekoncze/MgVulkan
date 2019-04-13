@@ -18,7 +18,7 @@ public class PFNvkDebugUtilsMessengerCallbackEXT extends VkFunctionPointer {
     }
 
     public void call(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, VkDebugUtilsMessengerCallbackDataEXT pCallbackData, VkObject pUserData, VkBool32 rval){
-        call(getValue(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.getNullAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.getNullAddress(), pCallbackData != null ? pCallbackData.getVkAddress() : VkPointer.NULL, pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.getSinkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.getSinkAddress(), pCallbackData != null ? pCallbackData.getVkAddress() : VkPointer.NULL, pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long messageSeverity, long messageType, long pCallbackData, long pUserData, long rval);

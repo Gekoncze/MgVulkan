@@ -22,7 +22,7 @@ public class PFNvkCmdResetQueryPool extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkQueryPool queryPool, VkUInt32 firstQuery, VkUInt32 queryCount){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), queryPool != null ? queryPool.getVkAddress() : VkPointer.getNullAddress(), firstQuery != null ? firstQuery.getVkAddress() : VkPointer.getNullAddress(), queryCount != null ? queryCount.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getSinkAddress(), queryPool != null ? queryPool.getVkAddress() : VkPointer.getSinkAddress(), firstQuery != null ? firstQuery.getVkAddress() : VkPointer.getSinkAddress(), queryCount != null ? queryCount.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer, long queryPool, long firstQuery, long queryCount);

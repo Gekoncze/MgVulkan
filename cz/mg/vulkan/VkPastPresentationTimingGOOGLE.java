@@ -29,7 +29,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
     
     public void setPresentID(VkUInt32 presentID) {
-        setPresentID(getVkAddress(), presentID != null ? presentID.getVkAddress() : VkPointer.getNullAddress());
+        setPresentID(getVkAddress(), presentID != null ? presentID.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -42,7 +42,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
     
     public void setDesiredPresentTime(VkUInt64 desiredPresentTime) {
-        setDesiredPresentTime(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.getNullAddress());
+        setDesiredPresentTime(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
     
     public void setActualPresentTime(VkUInt64 actualPresentTime) {
-        setActualPresentTime(getVkAddress(), actualPresentTime != null ? actualPresentTime.getVkAddress() : VkPointer.getNullAddress());
+        setActualPresentTime(getVkAddress(), actualPresentTime != null ? actualPresentTime.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
     
     public void setEarliestPresentTime(VkUInt64 earliestPresentTime) {
-        setEarliestPresentTime(getVkAddress(), earliestPresentTime != null ? earliestPresentTime.getVkAddress() : VkPointer.getNullAddress());
+        setEarliestPresentTime(getVkAddress(), earliestPresentTime != null ? earliestPresentTime.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
     
     public void setPresentMargin(VkUInt64 presentMargin) {
-        setPresentMargin(getVkAddress(), presentMargin != null ? presentMargin.getVkAddress() : VkPointer.getNullAddress());
+        setPresentMargin(getVkAddress(), presentMargin != null ? presentMargin.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

@@ -22,7 +22,7 @@ public class PFNvkDeviceWaitIdle extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getSinkAddress(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long device, long rval);

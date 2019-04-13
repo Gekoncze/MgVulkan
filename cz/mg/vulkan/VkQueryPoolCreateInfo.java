@@ -30,7 +30,7 @@ public class VkQueryPoolCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkQueryPoolCreateInfo extends VkObject {
 
     
     public void setFlags(VkQueryPoolCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkQueryPoolCreateInfo extends VkObject {
 
     
     public void setQueryType(VkQueryType queryType) {
-        setQueryType(getVkAddress(), queryType != null ? queryType.getVkAddress() : VkPointer.getNullAddress());
+        setQueryType(getVkAddress(), queryType != null ? queryType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkQueryPoolCreateInfo extends VkObject {
 
     
     public void setQueryCount(VkUInt32 queryCount) {
-        setQueryCount(getVkAddress(), queryCount != null ? queryCount.getVkAddress() : VkPointer.getNullAddress());
+        setQueryCount(getVkAddress(), queryCount != null ? queryCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -95,7 +95,7 @@ public class VkQueryPoolCreateInfo extends VkObject {
 
     
     public void setPipelineStatistics(VkQueryPipelineStatisticFlags pipelineStatistics) {
-        setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.getNullAddress());
+        setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

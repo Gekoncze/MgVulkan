@@ -22,7 +22,7 @@ public class PFNvkCmdSetLineWidth extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkFloat lineWidth){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), lineWidth != null ? lineWidth.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getSinkAddress(), lineWidth != null ? lineWidth.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer, long lineWidth);

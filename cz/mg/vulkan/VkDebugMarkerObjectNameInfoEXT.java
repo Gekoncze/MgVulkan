@@ -29,7 +29,7 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
 
     
     public void setObjectType(VkDebugReportObjectTypeEXT objectType) {
-        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddress());
+        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
 
     
     public void setObject(VkUInt64 object) {
-        setObject(getVkAddress(), object != null ? object.getVkAddress() : VkPointer.getNullAddress());
+        setObject(getVkAddress(), object != null ? object.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

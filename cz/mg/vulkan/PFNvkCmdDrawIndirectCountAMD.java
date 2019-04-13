@@ -22,7 +22,7 @@ public class PFNvkCmdDrawIndirectCountAMD extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkBuffer buffer, VkDeviceSize offset, VkBuffer countBuffer, VkDeviceSize countBufferOffset, VkUInt32 maxDrawCount, VkUInt32 stride){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress(), countBuffer != null ? countBuffer.getVkAddress() : VkPointer.getNullAddress(), countBufferOffset != null ? countBufferOffset.getVkAddress() : VkPointer.getNullAddress(), maxDrawCount != null ? maxDrawCount.getVkAddress() : VkPointer.getNullAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getSinkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getSinkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress(), countBuffer != null ? countBuffer.getVkAddress() : VkPointer.getSinkAddress(), countBufferOffset != null ? countBufferOffset.getVkAddress() : VkPointer.getSinkAddress(), maxDrawCount != null ? maxDrawCount.getVkAddress() : VkPointer.getSinkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer, long buffer, long offset, long countBuffer, long countBufferOffset, long maxDrawCount, long stride);

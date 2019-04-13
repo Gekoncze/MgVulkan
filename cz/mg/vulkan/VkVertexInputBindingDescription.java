@@ -27,7 +27,7 @@ public class VkVertexInputBindingDescription extends VkObject {
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkVertexInputBindingDescription extends VkObject {
 
     
     public void setStride(VkUInt32 stride) {
-        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddress());
+        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkVertexInputBindingDescription extends VkObject {
 
     
     public void setInputRate(VkVertexInputRate inputRate) {
-        setInputRate(getVkAddress(), inputRate != null ? inputRate.getVkAddress() : VkPointer.getNullAddress());
+        setInputRate(getVkAddress(), inputRate != null ? inputRate.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

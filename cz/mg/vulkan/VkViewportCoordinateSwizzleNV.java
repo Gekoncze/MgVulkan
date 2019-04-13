@@ -38,4 +38,38 @@ public class VkViewportCoordinateSwizzleNV extends VkEnum {
         if(getValue() == VK_VIEWPORT_COORDINATE_SWIZZLE_NEGATIVE_W_NV) return "VK_VIEWPORT_COORDINATE_SWIZZLE_NEGATIVE_W_NV";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkViewportCoordinateSwizzleNV implements cz.mg.collections.array.ReadonlyArray<VkViewportCoordinateSwizzleNV> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkViewportCoordinateSwizzleNV.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkViewportCoordinateSwizzleNV o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkViewportCoordinateSwizzleNV get(int i){
+            return new VkViewportCoordinateSwizzleNV(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

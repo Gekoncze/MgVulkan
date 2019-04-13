@@ -22,7 +22,7 @@ public class PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX extends VkFunc
     }
 
     public void call(VkPhysicalDevice physicalDevice, VkDeviceGeneratedCommandsFeaturesNVX pFeatures, VkDeviceGeneratedCommandsLimitsNVX pLimits){
-        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), pFeatures != null ? pFeatures.getVkAddress() : VkPointer.NULL, pLimits != null ? pLimits.getVkAddress() : VkPointer.NULL);
+        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getSinkAddress(), pFeatures != null ? pFeatures.getVkAddress() : VkPointer.NULL, pLimits != null ? pLimits.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long physicalDevice, long pFeatures, long pLimits);

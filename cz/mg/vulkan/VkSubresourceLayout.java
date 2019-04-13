@@ -29,7 +29,7 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -42,7 +42,7 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setRowPitch(VkDeviceSize rowPitch) {
-        setRowPitch(getVkAddress(), rowPitch != null ? rowPitch.getVkAddress() : VkPointer.getNullAddress());
+        setRowPitch(getVkAddress(), rowPitch != null ? rowPitch.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setArrayPitch(VkDeviceSize arrayPitch) {
-        setArrayPitch(getVkAddress(), arrayPitch != null ? arrayPitch.getVkAddress() : VkPointer.getNullAddress());
+        setArrayPitch(getVkAddress(), arrayPitch != null ? arrayPitch.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setDepthPitch(VkDeviceSize depthPitch) {
-        setDepthPitch(getVkAddress(), depthPitch != null ? depthPitch.getVkAddress() : VkPointer.getNullAddress());
+        setDepthPitch(getVkAddress(), depthPitch != null ? depthPitch.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

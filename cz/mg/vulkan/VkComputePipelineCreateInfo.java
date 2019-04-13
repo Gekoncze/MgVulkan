@@ -31,7 +31,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setStage(VkPipelineShaderStageCreateInfo stage) {
-        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.getNullAddress());
+        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setLayout(VkPipelineLayout layout) {
-        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddress());
+        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setBasePipelineHandle(VkPipeline basePipelineHandle) {
-        setBasePipelineHandle(getVkAddress(), basePipelineHandle != null ? basePipelineHandle.getVkAddress() : VkPointer.getNullAddress());
+        setBasePipelineHandle(getVkAddress(), basePipelineHandle != null ? basePipelineHandle.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -109,7 +109,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
 
     
     public void setBasePipelineIndex(VkInt32 basePipelineIndex) {
-        setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.getNullAddress());
+        setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

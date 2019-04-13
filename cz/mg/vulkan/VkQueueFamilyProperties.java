@@ -28,7 +28,7 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setQueueFlags(VkQueueFlags queueFlags) {
-        setQueueFlags(getVkAddress(), queueFlags != null ? queueFlags.getVkAddress() : VkPointer.getNullAddress());
+        setQueueFlags(getVkAddress(), queueFlags != null ? queueFlags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -41,7 +41,7 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setQueueCount(VkUInt32 queueCount) {
-        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.getNullAddress());
+        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setTimestampValidBits(VkUInt32 timestampValidBits) {
-        setTimestampValidBits(getVkAddress(), timestampValidBits != null ? timestampValidBits.getVkAddress() : VkPointer.getNullAddress());
+        setTimestampValidBits(getVkAddress(), timestampValidBits != null ? timestampValidBits.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setMinImageTransferGranularity(VkExtent3D minImageTransferGranularity) {
-        setMinImageTransferGranularity(getVkAddress(), minImageTransferGranularity != null ? minImageTransferGranularity.getVkAddress() : VkPointer.getNullAddress());
+        setMinImageTransferGranularity(getVkAddress(), minImageTransferGranularity != null ? minImageTransferGranularity.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

@@ -32,4 +32,38 @@ public class VkSystemAllocationScope extends VkEnum {
         if(getValue() == VK_SYSTEM_ALLOCATION_SCOPE_INSTANCE) return "VK_SYSTEM_ALLOCATION_SCOPE_INSTANCE";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkSystemAllocationScope implements cz.mg.collections.array.ReadonlyArray<VkSystemAllocationScope> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkSystemAllocationScope.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkSystemAllocationScope o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkSystemAllocationScope get(int i){
+            return new VkSystemAllocationScope(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

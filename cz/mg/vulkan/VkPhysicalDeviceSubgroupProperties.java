@@ -30,7 +30,7 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -56,7 +56,7 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     
     public void setSubgroupSize(VkUInt32 subgroupSize) {
-        setSubgroupSize(getVkAddress(), subgroupSize != null ? subgroupSize.getVkAddress() : VkPointer.getNullAddress());
+        setSubgroupSize(getVkAddress(), subgroupSize != null ? subgroupSize.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -69,7 +69,7 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     
     public void setSupportedStages(VkShaderStageFlags supportedStages) {
-        setSupportedStages(getVkAddress(), supportedStages != null ? supportedStages.getVkAddress() : VkPointer.getNullAddress());
+        setSupportedStages(getVkAddress(), supportedStages != null ? supportedStages.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -82,7 +82,7 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     
     public void setSupportedOperations(VkSubgroupFeatureFlags supportedOperations) {
-        setSupportedOperations(getVkAddress(), supportedOperations != null ? supportedOperations.getVkAddress() : VkPointer.getNullAddress());
+        setSupportedOperations(getVkAddress(), supportedOperations != null ? supportedOperations.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -95,7 +95,7 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     
     public void setQuadOperationsInAllStages(VkBool32 quadOperationsInAllStages) {
-        setQuadOperationsInAllStages(getVkAddress(), quadOperationsInAllStages != null ? quadOperationsInAllStages.getVkAddress() : VkPointer.getNullAddress());
+        setQuadOperationsInAllStages(getVkAddress(), quadOperationsInAllStages != null ? quadOperationsInAllStages.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

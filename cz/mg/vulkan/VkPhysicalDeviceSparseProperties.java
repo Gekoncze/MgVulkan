@@ -29,7 +29,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     
     public void setResidencyStandard2DBlockShape(VkBool32 residencyStandard2DBlockShape) {
-        setResidencyStandard2DBlockShape(getVkAddress(), residencyStandard2DBlockShape != null ? residencyStandard2DBlockShape.getVkAddress() : VkPointer.getNullAddress());
+        setResidencyStandard2DBlockShape(getVkAddress(), residencyStandard2DBlockShape != null ? residencyStandard2DBlockShape.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -42,7 +42,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     
     public void setResidencyStandard2DMultisampleBlockShape(VkBool32 residencyStandard2DMultisampleBlockShape) {
-        setResidencyStandard2DMultisampleBlockShape(getVkAddress(), residencyStandard2DMultisampleBlockShape != null ? residencyStandard2DMultisampleBlockShape.getVkAddress() : VkPointer.getNullAddress());
+        setResidencyStandard2DMultisampleBlockShape(getVkAddress(), residencyStandard2DMultisampleBlockShape != null ? residencyStandard2DMultisampleBlockShape.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     
     public void setResidencyStandard3DBlockShape(VkBool32 residencyStandard3DBlockShape) {
-        setResidencyStandard3DBlockShape(getVkAddress(), residencyStandard3DBlockShape != null ? residencyStandard3DBlockShape.getVkAddress() : VkPointer.getNullAddress());
+        setResidencyStandard3DBlockShape(getVkAddress(), residencyStandard3DBlockShape != null ? residencyStandard3DBlockShape.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     
     public void setResidencyAlignedMipSize(VkBool32 residencyAlignedMipSize) {
-        setResidencyAlignedMipSize(getVkAddress(), residencyAlignedMipSize != null ? residencyAlignedMipSize.getVkAddress() : VkPointer.getNullAddress());
+        setResidencyAlignedMipSize(getVkAddress(), residencyAlignedMipSize != null ? residencyAlignedMipSize.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     
     public void setResidencyNonResidentStrict(VkBool32 residencyNonResidentStrict) {
-        setResidencyNonResidentStrict(getVkAddress(), residencyNonResidentStrict != null ? residencyNonResidentStrict.getVkAddress() : VkPointer.getNullAddress());
+        setResidencyNonResidentStrict(getVkAddress(), residencyNonResidentStrict != null ? residencyNonResidentStrict.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

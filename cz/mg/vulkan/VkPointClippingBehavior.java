@@ -30,4 +30,38 @@ public class VkPointClippingBehavior extends VkEnum {
         if(getValue() == VK_POINT_CLIPPING_BEHAVIOR_USER_CLIP_PLANES_ONLY_KHR) return "VK_POINT_CLIPPING_BEHAVIOR_USER_CLIP_PLANES_ONLY_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkPointClippingBehavior implements cz.mg.collections.array.ReadonlyArray<VkPointClippingBehavior> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkPointClippingBehavior.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPointClippingBehavior o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkPointClippingBehavior get(int i){
+            return new VkPointClippingBehavior(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

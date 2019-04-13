@@ -22,7 +22,7 @@ public class PFNvkCmdDispatchBase extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkUInt32 baseGroupX, VkUInt32 baseGroupY, VkUInt32 baseGroupZ, VkUInt32 groupCountX, VkUInt32 groupCountY, VkUInt32 groupCountZ){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), baseGroupX != null ? baseGroupX.getVkAddress() : VkPointer.getNullAddress(), baseGroupY != null ? baseGroupY.getVkAddress() : VkPointer.getNullAddress(), baseGroupZ != null ? baseGroupZ.getVkAddress() : VkPointer.getNullAddress(), groupCountX != null ? groupCountX.getVkAddress() : VkPointer.getNullAddress(), groupCountY != null ? groupCountY.getVkAddress() : VkPointer.getNullAddress(), groupCountZ != null ? groupCountZ.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getSinkAddress(), baseGroupX != null ? baseGroupX.getVkAddress() : VkPointer.getSinkAddress(), baseGroupY != null ? baseGroupY.getVkAddress() : VkPointer.getSinkAddress(), baseGroupZ != null ? baseGroupZ.getVkAddress() : VkPointer.getSinkAddress(), groupCountX != null ? groupCountX.getVkAddress() : VkPointer.getSinkAddress(), groupCountY != null ? groupCountY.getVkAddress() : VkPointer.getSinkAddress(), groupCountZ != null ? groupCountZ.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer, long baseGroupX, long baseGroupY, long baseGroupZ, long groupCountX, long groupCountY, long groupCountZ);

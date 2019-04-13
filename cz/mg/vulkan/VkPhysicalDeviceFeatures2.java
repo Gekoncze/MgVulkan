@@ -27,7 +27,7 @@ public class VkPhysicalDeviceFeatures2 extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkPhysicalDeviceFeatures2 extends VkObject {
 
     
     public void setFeatures(VkPhysicalDeviceFeatures features) {
-        setFeatures(getVkAddress(), features != null ? features.getVkAddress() : VkPointer.getNullAddress());
+        setFeatures(getVkAddress(), features != null ? features.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

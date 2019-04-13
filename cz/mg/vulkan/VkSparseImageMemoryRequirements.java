@@ -29,7 +29,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
     
     public void setFormatProperties(VkSparseImageFormatProperties formatProperties) {
-        setFormatProperties(getVkAddress(), formatProperties != null ? formatProperties.getVkAddress() : VkPointer.getNullAddress());
+        setFormatProperties(getVkAddress(), formatProperties != null ? formatProperties.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -42,7 +42,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
     
     public void setImageMipTailFirstLod(VkUInt32 imageMipTailFirstLod) {
-        setImageMipTailFirstLod(getVkAddress(), imageMipTailFirstLod != null ? imageMipTailFirstLod.getVkAddress() : VkPointer.getNullAddress());
+        setImageMipTailFirstLod(getVkAddress(), imageMipTailFirstLod != null ? imageMipTailFirstLod.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
     
     public void setImageMipTailSize(VkDeviceSize imageMipTailSize) {
-        setImageMipTailSize(getVkAddress(), imageMipTailSize != null ? imageMipTailSize.getVkAddress() : VkPointer.getNullAddress());
+        setImageMipTailSize(getVkAddress(), imageMipTailSize != null ? imageMipTailSize.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
     
     public void setImageMipTailOffset(VkDeviceSize imageMipTailOffset) {
-        setImageMipTailOffset(getVkAddress(), imageMipTailOffset != null ? imageMipTailOffset.getVkAddress() : VkPointer.getNullAddress());
+        setImageMipTailOffset(getVkAddress(), imageMipTailOffset != null ? imageMipTailOffset.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
     
     public void setImageMipTailStride(VkDeviceSize imageMipTailStride) {
-        setImageMipTailStride(getVkAddress(), imageMipTailStride != null ? imageMipTailStride.getVkAddress() : VkPointer.getNullAddress());
+        setImageMipTailStride(getVkAddress(), imageMipTailStride != null ? imageMipTailStride.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

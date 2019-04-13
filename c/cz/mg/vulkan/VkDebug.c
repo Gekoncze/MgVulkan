@@ -54,6 +54,7 @@ VkBool32 defaultPFNvkDebugUtilsMessengerCallbackEXT(
     const VkDebugUtilsMessengerCallbackDataEXT*    pCallbackData,
     void*                                          pUserData
 ){
+    (void)pUserData;
     const char* verboseBit = " ";
     const char* infoBit = " ";
     const char* warningBit = " ";

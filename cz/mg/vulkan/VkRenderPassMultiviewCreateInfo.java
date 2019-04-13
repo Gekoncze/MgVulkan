@@ -32,7 +32,7 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -58,7 +58,7 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
 
     
     public void setSubpassCount(VkUInt32 subpassCount) {
-        setSubpassCount(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.getNullAddress());
+        setSubpassCount(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -84,7 +84,7 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
 
     
     public void setDependencyCount(VkUInt32 dependencyCount) {
-        setDependencyCount(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.getNullAddress());
+        setDependencyCount(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -110,7 +110,7 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
 
     
     public void setCorrelationMaskCount(VkUInt32 correlationMaskCount) {
-        setCorrelationMaskCount(getVkAddress(), correlationMaskCount != null ? correlationMaskCount.getVkAddress() : VkPointer.getNullAddress());
+        setCorrelationMaskCount(getVkAddress(), correlationMaskCount != null ? correlationMaskCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

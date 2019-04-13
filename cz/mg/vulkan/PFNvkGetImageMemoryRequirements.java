@@ -22,7 +22,7 @@ public class PFNvkGetImageMemoryRequirements extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkImage image, VkMemoryRequirements pMemoryRequirements){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress(), pMemoryRequirements != null ? pMemoryRequirements.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getSinkAddress(), image != null ? image.getVkAddress() : VkPointer.getSinkAddress(), pMemoryRequirements != null ? pMemoryRequirements.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long image, long pMemoryRequirements);

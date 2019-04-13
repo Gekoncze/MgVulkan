@@ -26,4 +26,38 @@ public class VkFrontFace extends VkEnum {
         if(getValue() == VK_FRONT_FACE_CLOCKWISE) return "VK_FRONT_FACE_CLOCKWISE";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkFrontFace implements cz.mg.collections.array.ReadonlyArray<VkFrontFace> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkFrontFace.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkFrontFace o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkFrontFace get(int i){
+            return new VkFrontFace(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

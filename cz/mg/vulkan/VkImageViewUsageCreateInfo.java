@@ -27,7 +27,7 @@ public class VkImageViewUsageCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkImageViewUsageCreateInfo extends VkObject {
 
     
     public void setUsage(VkImageUsageFlags usage) {
-        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getNullAddress());
+        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

@@ -84,4 +84,38 @@ public class VkResult extends VkEnum {
         if(getValue() == VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR) return "VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkResult implements cz.mg.collections.array.ReadonlyArray<VkResult> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkResult.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkResult o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkResult get(int i){
+            return new VkResult(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

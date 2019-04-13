@@ -32,7 +32,7 @@ public class VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT extends VkObjec
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -58,7 +58,7 @@ public class VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT extends VkObjec
 
     
     public void setAdvancedBlendMaxColorAttachments(VkUInt32 advancedBlendMaxColorAttachments) {
-        setAdvancedBlendMaxColorAttachments(getVkAddress(), advancedBlendMaxColorAttachments != null ? advancedBlendMaxColorAttachments.getVkAddress() : VkPointer.getNullAddress());
+        setAdvancedBlendMaxColorAttachments(getVkAddress(), advancedBlendMaxColorAttachments != null ? advancedBlendMaxColorAttachments.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -71,7 +71,7 @@ public class VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT extends VkObjec
 
     
     public void setAdvancedBlendIndependentBlend(VkBool32 advancedBlendIndependentBlend) {
-        setAdvancedBlendIndependentBlend(getVkAddress(), advancedBlendIndependentBlend != null ? advancedBlendIndependentBlend.getVkAddress() : VkPointer.getNullAddress());
+        setAdvancedBlendIndependentBlend(getVkAddress(), advancedBlendIndependentBlend != null ? advancedBlendIndependentBlend.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -84,7 +84,7 @@ public class VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT extends VkObjec
 
     
     public void setAdvancedBlendNonPremultipliedSrcColor(VkBool32 advancedBlendNonPremultipliedSrcColor) {
-        setAdvancedBlendNonPremultipliedSrcColor(getVkAddress(), advancedBlendNonPremultipliedSrcColor != null ? advancedBlendNonPremultipliedSrcColor.getVkAddress() : VkPointer.getNullAddress());
+        setAdvancedBlendNonPremultipliedSrcColor(getVkAddress(), advancedBlendNonPremultipliedSrcColor != null ? advancedBlendNonPremultipliedSrcColor.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -97,7 +97,7 @@ public class VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT extends VkObjec
 
     
     public void setAdvancedBlendNonPremultipliedDstColor(VkBool32 advancedBlendNonPremultipliedDstColor) {
-        setAdvancedBlendNonPremultipliedDstColor(getVkAddress(), advancedBlendNonPremultipliedDstColor != null ? advancedBlendNonPremultipliedDstColor.getVkAddress() : VkPointer.getNullAddress());
+        setAdvancedBlendNonPremultipliedDstColor(getVkAddress(), advancedBlendNonPremultipliedDstColor != null ? advancedBlendNonPremultipliedDstColor.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -110,7 +110,7 @@ public class VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT extends VkObjec
 
     
     public void setAdvancedBlendCorrelatedOverlap(VkBool32 advancedBlendCorrelatedOverlap) {
-        setAdvancedBlendCorrelatedOverlap(getVkAddress(), advancedBlendCorrelatedOverlap != null ? advancedBlendCorrelatedOverlap.getVkAddress() : VkPointer.getNullAddress());
+        setAdvancedBlendCorrelatedOverlap(getVkAddress(), advancedBlendCorrelatedOverlap != null ? advancedBlendCorrelatedOverlap.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -123,7 +123,7 @@ public class VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT extends VkObjec
 
     
     public void setAdvancedBlendAllOperations(VkBool32 advancedBlendAllOperations) {
-        setAdvancedBlendAllOperations(getVkAddress(), advancedBlendAllOperations != null ? advancedBlendAllOperations.getVkAddress() : VkPointer.getNullAddress());
+        setAdvancedBlendAllOperations(getVkAddress(), advancedBlendAllOperations != null ? advancedBlendAllOperations.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

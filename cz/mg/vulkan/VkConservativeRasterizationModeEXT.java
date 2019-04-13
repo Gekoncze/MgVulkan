@@ -28,4 +28,38 @@ public class VkConservativeRasterizationModeEXT extends VkEnum {
         if(getValue() == VK_CONSERVATIVE_RASTERIZATION_MODE_UNDERESTIMATE_EXT) return "VK_CONSERVATIVE_RASTERIZATION_MODE_UNDERESTIMATE_EXT";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkConservativeRasterizationModeEXT implements cz.mg.collections.array.ReadonlyArray<VkConservativeRasterizationModeEXT> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkConservativeRasterizationModeEXT.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkConservativeRasterizationModeEXT o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkConservativeRasterizationModeEXT get(int i){
+            return new VkConservativeRasterizationModeEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

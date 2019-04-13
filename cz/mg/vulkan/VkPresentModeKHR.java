@@ -34,4 +34,38 @@ public class VkPresentModeKHR extends VkEnum {
         if(getValue() == VK_PRESENT_MODE_SHARED_CONTINUOUS_REFRESH_KHR) return "VK_PRESENT_MODE_SHARED_CONTINUOUS_REFRESH_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkPresentModeKHR implements cz.mg.collections.array.ReadonlyArray<VkPresentModeKHR> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkPresentModeKHR.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPresentModeKHR o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkPresentModeKHR get(int i){
+            return new VkPresentModeKHR(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

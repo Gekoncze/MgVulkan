@@ -604,4 +604,38 @@ public class VkStructureType extends VkEnum {
         if(getValue() == VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR) return "VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_SUPPORT_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkStructureType implements cz.mg.collections.array.ReadonlyArray<VkStructureType> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkStructureType.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkStructureType o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkStructureType get(int i){
+            return new VkStructureType(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

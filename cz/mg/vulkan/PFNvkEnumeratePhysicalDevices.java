@@ -22,7 +22,7 @@ public class PFNvkEnumeratePhysicalDevices extends VkFunctionPointer {
     }
 
     public void call(VkInstance instance, VkUInt32 pPhysicalDeviceCount, VkPhysicalDevice pPhysicalDevices, VkResult rval){
-        call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddress(), pPhysicalDeviceCount != null ? pPhysicalDeviceCount.getVkAddress() : VkPointer.NULL, pPhysicalDevices != null ? pPhysicalDevices.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getSinkAddress(), pPhysicalDeviceCount != null ? pPhysicalDeviceCount.getVkAddress() : VkPointer.NULL, pPhysicalDevices != null ? pPhysicalDevices.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long instance, long pPhysicalDeviceCount, long pPhysicalDevices, long rval);

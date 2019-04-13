@@ -31,7 +31,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setFailOp(VkStencilOp failOp) {
-        setFailOp(getVkAddress(), failOp != null ? failOp.getVkAddress() : VkPointer.getNullAddress());
+        setFailOp(getVkAddress(), failOp != null ? failOp.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -44,7 +44,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setPassOp(VkStencilOp passOp) {
-        setPassOp(getVkAddress(), passOp != null ? passOp.getVkAddress() : VkPointer.getNullAddress());
+        setPassOp(getVkAddress(), passOp != null ? passOp.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setDepthFailOp(VkStencilOp depthFailOp) {
-        setDepthFailOp(getVkAddress(), depthFailOp != null ? depthFailOp.getVkAddress() : VkPointer.getNullAddress());
+        setDepthFailOp(getVkAddress(), depthFailOp != null ? depthFailOp.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setCompareOp(VkCompareOp compareOp) {
-        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddress());
+        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setCompareMask(VkUInt32 compareMask) {
-        setCompareMask(getVkAddress(), compareMask != null ? compareMask.getVkAddress() : VkPointer.getNullAddress());
+        setCompareMask(getVkAddress(), compareMask != null ? compareMask.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setWriteMask(VkUInt32 writeMask) {
-        setWriteMask(getVkAddress(), writeMask != null ? writeMask.getVkAddress() : VkPointer.getNullAddress());
+        setWriteMask(getVkAddress(), writeMask != null ? writeMask.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -109,7 +109,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setReference(VkUInt32 reference) {
-        setReference(getVkAddress(), reference != null ? reference.getVkAddress() : VkPointer.getNullAddress());
+        setReference(getVkAddress(), reference != null ? reference.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

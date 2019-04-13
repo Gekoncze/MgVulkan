@@ -39,7 +39,7 @@ public class VkExtensionProperties extends VkObject {
 
     
     public void setSpecVersion(VkUInt32 specVersion) {
-        setSpecVersion(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.getNullAddress());
+        setSpecVersion(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

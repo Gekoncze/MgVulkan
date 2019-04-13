@@ -29,7 +29,7 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
 
     
     public void setObjectTable(VkObjectTableNVX objectTable) {
-        setObjectTable(getVkAddress(), objectTable != null ? objectTable.getVkAddress() : VkPointer.getNullAddress());
+        setObjectTable(getVkAddress(), objectTable != null ? objectTable.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
 
     
     public void setIndirectCommandsLayout(VkIndirectCommandsLayoutNVX indirectCommandsLayout) {
-        setIndirectCommandsLayout(getVkAddress(), indirectCommandsLayout != null ? indirectCommandsLayout.getVkAddress() : VkPointer.getNullAddress());
+        setIndirectCommandsLayout(getVkAddress(), indirectCommandsLayout != null ? indirectCommandsLayout.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
 
     
     public void setMaxSequencesCount(VkUInt32 maxSequencesCount) {
-        setMaxSequencesCount(getVkAddress(), maxSequencesCount != null ? maxSequencesCount.getVkAddress() : VkPointer.getNullAddress());
+        setMaxSequencesCount(getVkAddress(), maxSequencesCount != null ? maxSequencesCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

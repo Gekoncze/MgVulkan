@@ -27,7 +27,7 @@ public class VkSparseImageMemoryBindInfo extends VkObject {
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress());
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkSparseImageMemoryBindInfo extends VkObject {
 
     
     public void setBindCount(VkUInt32 bindCount) {
-        setBindCount(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.getNullAddress());
+        setBindCount(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

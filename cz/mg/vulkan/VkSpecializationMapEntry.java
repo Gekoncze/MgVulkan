@@ -27,7 +27,7 @@ public class VkSpecializationMapEntry extends VkObject {
 
     
     public void setConstantID(VkUInt32 constantID) {
-        setConstantID(getVkAddress(), constantID != null ? constantID.getVkAddress() : VkPointer.getNullAddress());
+        setConstantID(getVkAddress(), constantID != null ? constantID.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkSpecializationMapEntry extends VkObject {
 
     
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkSpecializationMapEntry extends VkObject {
 
     
     public void setSize(VkSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

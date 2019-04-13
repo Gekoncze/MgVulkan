@@ -34,7 +34,7 @@ public class VkDeviceCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -60,7 +60,7 @@ public class VkDeviceCreateInfo extends VkObject {
 
     
     public void setFlags(VkDeviceCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -73,7 +73,7 @@ public class VkDeviceCreateInfo extends VkObject {
 
     
     public void setQueueCreateInfoCount(VkUInt32 queueCreateInfoCount) {
-        setQueueCreateInfoCount(getVkAddress(), queueCreateInfoCount != null ? queueCreateInfoCount.getVkAddress() : VkPointer.getNullAddress());
+        setQueueCreateInfoCount(getVkAddress(), queueCreateInfoCount != null ? queueCreateInfoCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -99,7 +99,7 @@ public class VkDeviceCreateInfo extends VkObject {
 
     
     public void setEnabledLayerCount(VkUInt32 enabledLayerCount) {
-        setEnabledLayerCount(getVkAddress(), enabledLayerCount != null ? enabledLayerCount.getVkAddress() : VkPointer.getNullAddress());
+        setEnabledLayerCount(getVkAddress(), enabledLayerCount != null ? enabledLayerCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -125,7 +125,7 @@ public class VkDeviceCreateInfo extends VkObject {
 
     
     public void setEnabledExtensionCount(VkUInt32 enabledExtensionCount) {
-        setEnabledExtensionCount(getVkAddress(), enabledExtensionCount != null ? enabledExtensionCount.getVkAddress() : VkPointer.getNullAddress());
+        setEnabledExtensionCount(getVkAddress(), enabledExtensionCount != null ? enabledExtensionCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

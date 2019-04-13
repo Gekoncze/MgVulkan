@@ -27,7 +27,7 @@ public class VkPipelineTessellationDomainOriginStateCreateInfo extends VkObject 
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkPipelineTessellationDomainOriginStateCreateInfo extends VkObject 
 
     
     public void setDomainOrigin(VkTessellationDomainOrigin domainOrigin) {
-        setDomainOrigin(getVkAddress(), domainOrigin != null ? domainOrigin.getVkAddress() : VkPointer.getNullAddress());
+        setDomainOrigin(getVkAddress(), domainOrigin != null ? domainOrigin.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

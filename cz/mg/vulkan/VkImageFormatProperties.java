@@ -29,7 +29,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxExtent(VkExtent3D maxExtent) {
-        setMaxExtent(getVkAddress(), maxExtent != null ? maxExtent.getVkAddress() : VkPointer.getNullAddress());
+        setMaxExtent(getVkAddress(), maxExtent != null ? maxExtent.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -42,7 +42,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxMipLevels(VkUInt32 maxMipLevels) {
-        setMaxMipLevels(getVkAddress(), maxMipLevels != null ? maxMipLevels.getVkAddress() : VkPointer.getNullAddress());
+        setMaxMipLevels(getVkAddress(), maxMipLevels != null ? maxMipLevels.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxArrayLayers(VkUInt32 maxArrayLayers) {
-        setMaxArrayLayers(getVkAddress(), maxArrayLayers != null ? maxArrayLayers.getVkAddress() : VkPointer.getNullAddress());
+        setMaxArrayLayers(getVkAddress(), maxArrayLayers != null ? maxArrayLayers.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setSampleCounts(VkSampleCountFlags sampleCounts) {
-        setSampleCounts(getVkAddress(), sampleCounts != null ? sampleCounts.getVkAddress() : VkPointer.getNullAddress());
+        setSampleCounts(getVkAddress(), sampleCounts != null ? sampleCounts.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxResourceSize(VkDeviceSize maxResourceSize) {
-        setMaxResourceSize(getVkAddress(), maxResourceSize != null ? maxResourceSize.getVkAddress() : VkPointer.getNullAddress());
+        setMaxResourceSize(getVkAddress(), maxResourceSize != null ? maxResourceSize.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

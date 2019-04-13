@@ -26,7 +26,7 @@ public class VkMemoryType extends VkObject {
 
     
     public void setPropertyFlags(VkMemoryPropertyFlags propertyFlags) {
-        setPropertyFlags(getVkAddress(), propertyFlags != null ? propertyFlags.getVkAddress() : VkPointer.getNullAddress());
+        setPropertyFlags(getVkAddress(), propertyFlags != null ? propertyFlags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -39,7 +39,7 @@ public class VkMemoryType extends VkObject {
 
     
     public void setHeapIndex(VkUInt32 heapIndex) {
-        setHeapIndex(getVkAddress(), heapIndex != null ? heapIndex.getVkAddress() : VkPointer.getNullAddress());
+        setHeapIndex(getVkAddress(), heapIndex != null ? heapIndex.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

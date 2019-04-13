@@ -22,7 +22,7 @@ public class PFNvkGetPipelineCacheData extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkPipelineCache pipelineCache, VkSize pDataSize, VkObject pData, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pipelineCache != null ? pipelineCache.getVkAddress() : VkPointer.getNullAddress(), pDataSize != null ? pDataSize.getVkAddress() : VkPointer.NULL, pData != null ? pData.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getSinkAddress(), pipelineCache != null ? pipelineCache.getVkAddress() : VkPointer.getSinkAddress(), pDataSize != null ? pDataSize.getVkAddress() : VkPointer.NULL, pData != null ? pData.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long device, long pipelineCache, long pDataSize, long pData, long rval);

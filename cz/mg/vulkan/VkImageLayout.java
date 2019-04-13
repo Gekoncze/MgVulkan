@@ -52,4 +52,38 @@ public class VkImageLayout extends VkEnum {
         if(getValue() == VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR) return "VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkImageLayout implements cz.mg.collections.array.ReadonlyArray<VkImageLayout> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkImageLayout.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkImageLayout o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkImageLayout get(int i){
+            return new VkImageLayout(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

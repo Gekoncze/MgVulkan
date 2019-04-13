@@ -31,7 +31,7 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
 
     
     public void setFlags(VkPipelineCoverageModulationStateCreateFlagsNV flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
 
     
     public void setCoverageModulationMode(VkCoverageModulationModeNV coverageModulationMode) {
-        setCoverageModulationMode(getVkAddress(), coverageModulationMode != null ? coverageModulationMode.getVkAddress() : VkPointer.getNullAddress());
+        setCoverageModulationMode(getVkAddress(), coverageModulationMode != null ? coverageModulationMode.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
 
     
     public void setCoverageModulationTableEnable(VkBool32 coverageModulationTableEnable) {
-        setCoverageModulationTableEnable(getVkAddress(), coverageModulationTableEnable != null ? coverageModulationTableEnable.getVkAddress() : VkPointer.getNullAddress());
+        setCoverageModulationTableEnable(getVkAddress(), coverageModulationTableEnable != null ? coverageModulationTableEnable.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
 
     
     public void setCoverageModulationTableCount(VkUInt32 coverageModulationTableCount) {
-        setCoverageModulationTableCount(getVkAddress(), coverageModulationTableCount != null ? coverageModulationTableCount.getVkAddress() : VkPointer.getNullAddress());
+        setCoverageModulationTableCount(getVkAddress(), coverageModulationTableCount != null ? coverageModulationTableCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

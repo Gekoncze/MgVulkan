@@ -38,4 +38,38 @@ public class VkIndirectCommandsTokenTypeNVX extends VkEnum {
         if(getValue() == VK_INDIRECT_COMMANDS_TOKEN_TYPE_DISPATCH_NVX) return "VK_INDIRECT_COMMANDS_TOKEN_TYPE_DISPATCH_NVX";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkIndirectCommandsTokenTypeNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsTokenTypeNVX> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkIndirectCommandsTokenTypeNVX.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkIndirectCommandsTokenTypeNVX o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkIndirectCommandsTokenTypeNVX get(int i){
+            return new VkIndirectCommandsTokenTypeNVX(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

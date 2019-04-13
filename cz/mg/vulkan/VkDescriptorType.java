@@ -44,4 +44,38 @@ public class VkDescriptorType extends VkEnum {
         if(getValue() == VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT) return "VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkDescriptorType implements cz.mg.collections.array.ReadonlyArray<VkDescriptorType> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkDescriptorType.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkDescriptorType o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkDescriptorType get(int i){
+            return new VkDescriptorType(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

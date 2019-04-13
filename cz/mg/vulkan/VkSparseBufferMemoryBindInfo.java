@@ -27,7 +27,7 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
 
     
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress());
+        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
 
     
     public void setBindCount(VkUInt32 bindCount) {
-        setBindCount(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.getNullAddress());
+        setBindCount(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

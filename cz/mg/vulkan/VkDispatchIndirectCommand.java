@@ -27,7 +27,7 @@ public class VkDispatchIndirectCommand extends VkObject {
 
     
     public void setX(VkUInt32 x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -40,7 +40,7 @@ public class VkDispatchIndirectCommand extends VkObject {
 
     
     public void setY(VkUInt32 y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkDispatchIndirectCommand extends VkObject {
 
     
     public void setZ(VkUInt32 z) {
-        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddress());
+        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

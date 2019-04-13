@@ -22,7 +22,7 @@ public class PFNvkDestroySamplerYcbcrConversionKHR extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkSamplerYcbcrConversion ycbcrConversion, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), ycbcrConversion != null ? ycbcrConversion.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getSinkAddress(), ycbcrConversion != null ? ycbcrConversion.getVkAddress() : VkPointer.getSinkAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long ycbcrConversion, long pAllocator);

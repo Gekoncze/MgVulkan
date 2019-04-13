@@ -29,7 +29,7 @@ public class VkDisplayPresentInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -55,7 +55,7 @@ public class VkDisplayPresentInfoKHR extends VkObject {
 
     
     public void setSrcRect(VkRect2D srcRect) {
-        setSrcRect(getVkAddress(), srcRect != null ? srcRect.getVkAddress() : VkPointer.getNullAddress());
+        setSrcRect(getVkAddress(), srcRect != null ? srcRect.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -68,7 +68,7 @@ public class VkDisplayPresentInfoKHR extends VkObject {
 
     
     public void setDstRect(VkRect2D dstRect) {
-        setDstRect(getVkAddress(), dstRect != null ? dstRect.getVkAddress() : VkPointer.getNullAddress());
+        setDstRect(getVkAddress(), dstRect != null ? dstRect.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -81,7 +81,7 @@ public class VkDisplayPresentInfoKHR extends VkObject {
 
     
     public void setPersistent(VkBool32 persistent) {
-        setPersistent(getVkAddress(), persistent != null ? persistent.getVkAddress() : VkPointer.getNullAddress());
+        setPersistent(getVkAddress(), persistent != null ? persistent.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

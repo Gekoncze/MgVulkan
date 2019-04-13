@@ -34,4 +34,38 @@ public class VkBorderColor extends VkEnum {
         if(getValue() == VK_BORDER_COLOR_INT_OPAQUE_WHITE) return "VK_BORDER_COLOR_INT_OPAQUE_WHITE";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkBorderColor implements cz.mg.collections.array.ReadonlyArray<VkBorderColor> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkBorderColor.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkBorderColor o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkBorderColor get(int i){
+            return new VkBorderColor(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

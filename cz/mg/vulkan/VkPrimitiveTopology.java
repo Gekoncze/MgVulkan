@@ -44,4 +44,38 @@ public class VkPrimitiveTopology extends VkEnum {
         if(getValue() == VK_PRIMITIVE_TOPOLOGY_PATCH_LIST) return "VK_PRIMITIVE_TOPOLOGY_PATCH_LIST";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkPrimitiveTopology implements cz.mg.collections.array.ReadonlyArray<VkPrimitiveTopology> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkPrimitiveTopology.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPrimitiveTopology o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkPrimitiveTopology get(int i){
+            return new VkPrimitiveTopology(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

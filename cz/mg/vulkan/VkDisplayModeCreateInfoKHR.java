@@ -28,7 +28,7 @@ public class VkDisplayModeCreateInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -54,7 +54,7 @@ public class VkDisplayModeCreateInfoKHR extends VkObject {
 
     
     public void setFlags(VkDisplayModeCreateFlagsKHR flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -67,7 +67,7 @@ public class VkDisplayModeCreateInfoKHR extends VkObject {
 
     
     public void setParameters(VkDisplayModeParametersKHR parameters) {
-        setParameters(getVkAddress(), parameters != null ? parameters.getVkAddress() : VkPointer.getNullAddress());
+        setParameters(getVkAddress(), parameters != null ? parameters.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

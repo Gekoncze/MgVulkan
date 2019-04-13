@@ -27,7 +27,7 @@ public class VkDeviceGroupSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -53,7 +53,7 @@ public class VkDeviceGroupSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setModes(VkDeviceGroupPresentModeFlagsKHR modes) {
-        setModes(getVkAddress(), modes != null ? modes.getVkAddress() : VkPointer.getNullAddress());
+        setModes(getVkAddress(), modes != null ? modes.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

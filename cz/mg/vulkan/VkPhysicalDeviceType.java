@@ -32,4 +32,38 @@ public class VkPhysicalDeviceType extends VkEnum {
         if(getValue() == VK_PHYSICAL_DEVICE_TYPE_CPU) return "VK_PHYSICAL_DEVICE_TYPE_CPU";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkPhysicalDeviceType implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceType> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkPhysicalDeviceType.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkPhysicalDeviceType o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkPhysicalDeviceType get(int i){
+            return new VkPhysicalDeviceType(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

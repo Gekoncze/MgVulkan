@@ -48,3 +48,12 @@ jlong Java_cz_mg_vulkan_VkPointer_getNullAddress(JNIEnv* env, jclass jc)
     null = NULL;
     return jniPointerToLong(&null);
 }
+
+void* sink;
+
+jlong Java_cz_mg_vulkan_VkPointer_getSinkAddress(JNIEnv* env, jclass jc)
+{
+    (void)env;
+    (void)jc;
+    return jniPointerToLong(&sink);
+}

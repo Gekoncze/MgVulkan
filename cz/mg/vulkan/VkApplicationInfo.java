@@ -31,7 +31,7 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setApplicationVersion(VkUInt32 applicationVersion) {
-        setApplicationVersion(getVkAddress(), applicationVersion != null ? applicationVersion.getVkAddress() : VkPointer.getNullAddress());
+        setApplicationVersion(getVkAddress(), applicationVersion != null ? applicationVersion.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setEngineVersion(VkUInt32 engineVersion) {
-        setEngineVersion(getVkAddress(), engineVersion != null ? engineVersion.getVkAddress() : VkPointer.getNullAddress());
+        setEngineVersion(getVkAddress(), engineVersion != null ? engineVersion.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -109,7 +109,7 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setApiVersion(VkUInt32 apiVersion) {
-        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getNullAddress());
+        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

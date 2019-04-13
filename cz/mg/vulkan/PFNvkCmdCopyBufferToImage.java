@@ -22,7 +22,7 @@ public class PFNvkCmdCopyBufferToImage extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkBuffer srcBuffer, VkImage dstImage, VkImageLayout dstImageLayout, VkUInt32 regionCount, VkBufferImageCopy pRegions){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), srcBuffer != null ? srcBuffer.getVkAddress() : VkPointer.getNullAddress(), dstImage != null ? dstImage.getVkAddress() : VkPointer.getNullAddress(), dstImageLayout != null ? dstImageLayout.getVkAddress() : VkPointer.getNullAddress(), regionCount != null ? regionCount.getVkAddress() : VkPointer.getNullAddress(), pRegions != null ? pRegions.getVkAddress() : VkPointer.NULL);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getSinkAddress(), srcBuffer != null ? srcBuffer.getVkAddress() : VkPointer.getSinkAddress(), dstImage != null ? dstImage.getVkAddress() : VkPointer.getSinkAddress(), dstImageLayout != null ? dstImageLayout.getVkAddress() : VkPointer.getSinkAddress(), regionCount != null ? regionCount.getVkAddress() : VkPointer.getSinkAddress(), pRegions != null ? pRegions.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long commandBuffer, long srcBuffer, long dstImage, long dstImageLayout, long regionCount, long pRegions);

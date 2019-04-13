@@ -31,7 +31,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddress());
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setFramebuffer(VkFramebuffer framebuffer) {
-        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getNullAddress());
+        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setRenderArea(VkRect2D renderArea) {
-        setRenderArea(getVkAddress(), renderArea != null ? renderArea.getVkAddress() : VkPointer.getNullAddress());
+        setRenderArea(getVkAddress(), renderArea != null ? renderArea.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setClearValueCount(VkUInt32 clearValueCount) {
-        setClearValueCount(getVkAddress(), clearValueCount != null ? clearValueCount.getVkAddress() : VkPointer.getNullAddress());
+        setClearValueCount(getVkAddress(), clearValueCount != null ? clearValueCount.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

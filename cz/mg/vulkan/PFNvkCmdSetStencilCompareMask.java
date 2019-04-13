@@ -22,7 +22,7 @@ public class PFNvkCmdSetStencilCompareMask extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, VkUInt32 compareMask){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), faceMask != null ? faceMask.getVkAddress() : VkPointer.getNullAddress(), compareMask != null ? compareMask.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getSinkAddress(), faceMask != null ? faceMask.getVkAddress() : VkPointer.getSinkAddress(), compareMask != null ? compareMask.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer, long faceMask, long compareMask);

@@ -31,7 +31,7 @@ public class VkDisplayPropertiesKHR extends VkObject {
 
     
     public void setDisplay(VkDisplayKHR display) {
-        setDisplay(getVkAddress(), display != null ? display.getVkAddress() : VkPointer.getNullAddress());
+        setDisplay(getVkAddress(), display != null ? display.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkDisplayPropertiesKHR extends VkObject {
 
     
     public void setPhysicalDimensions(VkExtent2D physicalDimensions) {
-        setPhysicalDimensions(getVkAddress(), physicalDimensions != null ? physicalDimensions.getVkAddress() : VkPointer.getNullAddress());
+        setPhysicalDimensions(getVkAddress(), physicalDimensions != null ? physicalDimensions.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkDisplayPropertiesKHR extends VkObject {
 
     
     public void setPhysicalResolution(VkExtent2D physicalResolution) {
-        setPhysicalResolution(getVkAddress(), physicalResolution != null ? physicalResolution.getVkAddress() : VkPointer.getNullAddress());
+        setPhysicalResolution(getVkAddress(), physicalResolution != null ? physicalResolution.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkDisplayPropertiesKHR extends VkObject {
 
     
     public void setSupportedTransforms(VkSurfaceTransformFlagsKHR supportedTransforms) {
-        setSupportedTransforms(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.getNullAddress());
+        setSupportedTransforms(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkDisplayPropertiesKHR extends VkObject {
 
     
     public void setPlaneReorderPossible(VkBool32 planeReorderPossible) {
-        setPlaneReorderPossible(getVkAddress(), planeReorderPossible != null ? planeReorderPossible.getVkAddress() : VkPointer.getNullAddress());
+        setPlaneReorderPossible(getVkAddress(), planeReorderPossible != null ? planeReorderPossible.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -109,7 +109,7 @@ public class VkDisplayPropertiesKHR extends VkObject {
 
     
     public void setPersistentContent(VkBool32 persistentContent) {
-        setPersistentContent(getVkAddress(), persistentContent != null ? persistentContent.getVkAddress() : VkPointer.getNullAddress());
+        setPersistentContent(getVkAddress(), persistentContent != null ? persistentContent.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

@@ -36,4 +36,38 @@ public class VkImageViewType extends VkEnum {
         if(getValue() == VK_IMAGE_VIEW_TYPE_CUBE_ARRAY) return "VK_IMAGE_VIEW_TYPE_CUBE_ARRAY";
         return "UNKNOWN";
     }
+
+    public static class Array extends VkImageViewType implements cz.mg.collections.array.ReadonlyArray<VkImageViewType> {        private final int count;
+
+        public Array(int count) {
+            super(new VkMemory(count*VkImageViewType.sizeof()));
+            this.count = count;
+        }
+
+        public Array(int count, VkImageViewType o){
+            super(o.getVkMemory(), o.getVkAddress());
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, int count) {
+            super(vkmemory);
+            this.count = count;
+        }
+
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
+            super(vkmemory, vkaddress);
+            this.count = count;
+        }
+
+        @Override
+        public int count(){
+            return count;
+        }
+
+        @Override
+        public VkImageViewType get(int i){
+            return new VkImageViewType(getVkMemory(), getVkAddress() + sizeof()*i);
+        }
+    }
+
 }

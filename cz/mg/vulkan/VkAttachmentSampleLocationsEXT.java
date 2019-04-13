@@ -26,7 +26,7 @@ public class VkAttachmentSampleLocationsEXT extends VkObject {
 
     
     public void setAttachmentIndex(VkUInt32 attachmentIndex) {
-        setAttachmentIndex(getVkAddress(), attachmentIndex != null ? attachmentIndex.getVkAddress() : VkPointer.getNullAddress());
+        setAttachmentIndex(getVkAddress(), attachmentIndex != null ? attachmentIndex.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -39,7 +39,7 @@ public class VkAttachmentSampleLocationsEXT extends VkObject {
 
     
     public void setSampleLocationsInfo(VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddress());
+        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 

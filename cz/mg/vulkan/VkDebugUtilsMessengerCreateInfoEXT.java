@@ -31,7 +31,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -57,7 +57,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setFlags(VkDebugUtilsMessengerCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -70,7 +70,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setMessageSeverity(VkDebugUtilsMessageSeverityFlagsEXT messageSeverity) {
-        setMessageSeverity(getVkAddress(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.getNullAddress());
+        setMessageSeverity(getVkAddress(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -83,7 +83,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setMessageType(VkDebugUtilsMessageTypeFlagsEXT messageType) {
-        setMessageType(getVkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.getNullAddress());
+        setMessageType(getVkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
@@ -96,7 +96,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setPfnUserCallback(PFNvkDebugUtilsMessengerCallbackEXT pfnUserCallback) {
-        setPfnUserCallback(getVkAddress(), pfnUserCallback != null ? pfnUserCallback.getVkAddress() : VkPointer.getNullAddress());
+        setPfnUserCallback(getVkAddress(), pfnUserCallback != null ? pfnUserCallback.getVkAddress() : VkPointer.getSinkAddress());
         
     }
 
