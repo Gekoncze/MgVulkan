@@ -21,8 +21,12 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
 
     
     public void setMemoryTypeCount(VkUInt32 memoryTypeCount) {
-        setMemoryTypeCount(getVkAddress(), memoryTypeCount != null ? memoryTypeCount.getVkAddress() : VkPointer.getSinkAddress());
+        setMemoryTypeCount(getVkAddress(), memoryTypeCount != null ? memoryTypeCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMemoryTypeCount(int memoryTypeCount) {
+        getMemoryTypeCount().setValue(memoryTypeCount);
     }
 
     private static native long getMemoryTypeCount(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
 
     
     public void setMemoryHeapCount(VkUInt32 memoryHeapCount) {
-        setMemoryHeapCount(getVkAddress(), memoryHeapCount != null ? memoryHeapCount.getVkAddress() : VkPointer.getSinkAddress());
+        setMemoryHeapCount(getVkAddress(), memoryHeapCount != null ? memoryHeapCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMemoryHeapCount(int memoryHeapCount) {
+        getMemoryHeapCount().setValue(memoryHeapCount);
     }
 
     private static native long getMemoryHeapCount(long address);

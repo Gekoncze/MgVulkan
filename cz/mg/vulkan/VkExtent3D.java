@@ -13,7 +13,12 @@ public class VkExtent3D extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
+    public VkExtent3D(int width, int height, int depth) {
+        super(sizeof());
+        getWidth().setValue(width);
+        getHeight().setValue(height);
+        getDepth().setValue(depth);
+    }
 
     public VkUInt32 getWidth() {
         return new VkUInt32(getVkMemory(), getWidth(getVkAddress()));
@@ -21,8 +26,12 @@ public class VkExtent3D extends VkObject {
 
     
     public void setWidth(VkUInt32 width) {
-        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getSinkAddress());
+        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setWidth(int width) {
+        getWidth().setValue(width);
     }
 
     private static native long getWidth(long address);
@@ -34,8 +43,12 @@ public class VkExtent3D extends VkObject {
 
     
     public void setHeight(VkUInt32 height) {
-        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getSinkAddress());
+        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setHeight(int height) {
+        getHeight().setValue(height);
     }
 
     private static native long getHeight(long address);
@@ -47,8 +60,12 @@ public class VkExtent3D extends VkObject {
 
     
     public void setDepth(VkUInt32 depth) {
-        setDepth(getVkAddress(), depth != null ? depth.getVkAddress() : VkPointer.getSinkAddress());
+        setDepth(getVkAddress(), depth != null ? depth.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDepth(int depth) {
+        getDepth().setValue(depth);
     }
 
     private static native long getDepth(long address);

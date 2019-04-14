@@ -21,8 +21,12 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
 
     
     public void setMaxPerSetDescriptors(VkUInt32 maxPerSetDescriptors) {
-        setMaxPerSetDescriptors(getVkAddress(), maxPerSetDescriptors != null ? maxPerSetDescriptors.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxPerSetDescriptors(getVkAddress(), maxPerSetDescriptors != null ? maxPerSetDescriptors.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxPerSetDescriptors(int maxPerSetDescriptors) {
+        getMaxPerSetDescriptors().setValue(maxPerSetDescriptors);
     }
 
     private static native long getMaxPerSetDescriptors(long address);
@@ -60,8 +68,12 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
 
     
     public void setMaxMemoryAllocationSize(VkDeviceSize maxMemoryAllocationSize) {
-        setMaxMemoryAllocationSize(getVkAddress(), maxMemoryAllocationSize != null ? maxMemoryAllocationSize.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxMemoryAllocationSize(getVkAddress(), maxMemoryAllocationSize != null ? maxMemoryAllocationSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxMemoryAllocationSize(long maxMemoryAllocationSize) {
+        getMaxMemoryAllocationSize().setValue(maxMemoryAllocationSize);
     }
 
     private static native long getMaxMemoryAllocationSize(long address);

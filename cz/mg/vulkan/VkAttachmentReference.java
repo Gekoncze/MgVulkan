@@ -21,8 +21,12 @@ public class VkAttachmentReference extends VkObject {
 
     
     public void setAttachment(VkUInt32 attachment) {
-        setAttachment(getVkAddress(), attachment != null ? attachment.getVkAddress() : VkPointer.getSinkAddress());
+        setAttachment(getVkAddress(), attachment != null ? attachment.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAttachment(int attachment) {
+        getAttachment().setValue(attachment);
     }
 
     private static native long getAttachment(long address);
@@ -34,8 +38,12 @@ public class VkAttachmentReference extends VkObject {
 
     
     public void setLayout(VkImageLayout layout) {
-        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getSinkAddress());
+        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLayout(int layout) {
+        getLayout().setValue(layout);
     }
 
     private static native long getLayout(long address);

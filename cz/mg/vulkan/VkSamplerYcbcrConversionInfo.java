@@ -22,8 +22,12 @@ public class VkSamplerYcbcrConversionInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,7 +52,7 @@ public class VkSamplerYcbcrConversionInfo extends VkObject {
 
     
     public void setConversion(VkSamplerYcbcrConversion conversion) {
-        setConversion(getVkAddress(), conversion != null ? conversion.getVkAddress() : VkPointer.getSinkAddress());
+        setConversion(getVkAddress(), conversion != null ? conversion.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

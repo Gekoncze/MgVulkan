@@ -21,8 +21,12 @@ public class VkDebugUtilsLabelEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -49,6 +53,10 @@ public class VkDebugUtilsLabelEXT extends VkObject {
     public void setPLabelName(VkChar pLabelName) {
         setPLabelName(getVkAddress(), pLabelName != null ? pLabelName.getVkAddress() : VkPointer.NULL);
         this.pLabelName = pLabelName;
+    }
+
+    public void setPLabelName(String pLabelName) {
+        setPLabelName(new VkString(pLabelName));
     }
 
     private static native long getPLabelName(long address);

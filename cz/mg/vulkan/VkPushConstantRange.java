@@ -21,8 +21,12 @@ public class VkPushConstantRange extends VkObject {
 
     
     public void setStageFlags(VkShaderStageFlags stageFlags) {
-        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getSinkAddress());
+        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setStageFlags(int stageFlags) {
+        getStageFlags().setValue(stageFlags);
     }
 
     private static native long getStageFlags(long address);
@@ -34,8 +38,12 @@ public class VkPushConstantRange extends VkObject {
 
     
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setOffset(int offset) {
+        getOffset().setValue(offset);
     }
 
     private static native long getOffset(long address);
@@ -47,8 +55,12 @@ public class VkPushConstantRange extends VkObject {
 
     
     public void setSize(VkUInt32 size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getSinkAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSize(int size) {
+        getSize().setValue(size);
     }
 
     private static native long getSize(long address);

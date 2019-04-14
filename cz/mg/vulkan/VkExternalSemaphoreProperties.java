@@ -21,8 +21,12 @@ public class VkExternalSemaphoreProperties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkExternalSemaphoreProperties extends VkObject {
 
     
     public void setExportFromImportedHandleTypes(VkExternalSemaphoreHandleTypeFlags exportFromImportedHandleTypes) {
-        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.getSinkAddress());
+        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setExportFromImportedHandleTypes(int exportFromImportedHandleTypes) {
+        getExportFromImportedHandleTypes().setValue(exportFromImportedHandleTypes);
     }
 
     private static native long getExportFromImportedHandleTypes(long address);
@@ -60,8 +68,12 @@ public class VkExternalSemaphoreProperties extends VkObject {
 
     
     public void setCompatibleHandleTypes(VkExternalSemaphoreHandleTypeFlags compatibleHandleTypes) {
-        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getSinkAddress());
+        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setCompatibleHandleTypes(int compatibleHandleTypes) {
+        getCompatibleHandleTypes().setValue(compatibleHandleTypes);
     }
 
     private static native long getCompatibleHandleTypes(long address);
@@ -73,8 +85,12 @@ public class VkExternalSemaphoreProperties extends VkObject {
 
     
     public void setExternalSemaphoreFeatures(VkExternalSemaphoreFeatureFlags externalSemaphoreFeatures) {
-        setExternalSemaphoreFeatures(getVkAddress(), externalSemaphoreFeatures != null ? externalSemaphoreFeatures.getVkAddress() : VkPointer.getSinkAddress());
+        setExternalSemaphoreFeatures(getVkAddress(), externalSemaphoreFeatures != null ? externalSemaphoreFeatures.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setExternalSemaphoreFeatures(int externalSemaphoreFeatures) {
+        getExternalSemaphoreFeatures().setValue(externalSemaphoreFeatures);
     }
 
     private static native long getExternalSemaphoreFeatures(long address);

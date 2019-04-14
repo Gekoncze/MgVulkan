@@ -21,8 +21,12 @@ public class VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT extends VkObject 
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT extends VkObject 
 
     
     public void setAdvancedBlendCoherentOperations(VkBool32 advancedBlendCoherentOperations) {
-        setAdvancedBlendCoherentOperations(getVkAddress(), advancedBlendCoherentOperations != null ? advancedBlendCoherentOperations.getVkAddress() : VkPointer.getSinkAddress());
+        setAdvancedBlendCoherentOperations(getVkAddress(), advancedBlendCoherentOperations != null ? advancedBlendCoherentOperations.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAdvancedBlendCoherentOperations(int advancedBlendCoherentOperations) {
+        getAdvancedBlendCoherentOperations().setValue(advancedBlendCoherentOperations);
     }
 
     private static native long getAdvancedBlendCoherentOperations(long address);

@@ -21,8 +21,12 @@ public class VkVertexInputBindingDescription extends VkObject {
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getSinkAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBinding(int binding) {
+        getBinding().setValue(binding);
     }
 
     private static native long getBinding(long address);
@@ -34,8 +38,12 @@ public class VkVertexInputBindingDescription extends VkObject {
 
     
     public void setStride(VkUInt32 stride) {
-        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getSinkAddress());
+        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setStride(int stride) {
+        getStride().setValue(stride);
     }
 
     private static native long getStride(long address);
@@ -47,8 +55,12 @@ public class VkVertexInputBindingDescription extends VkObject {
 
     
     public void setInputRate(VkVertexInputRate inputRate) {
-        setInputRate(getVkAddress(), inputRate != null ? inputRate.getVkAddress() : VkPointer.getSinkAddress());
+        setInputRate(getVkAddress(), inputRate != null ? inputRate.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setInputRate(int inputRate) {
+        getInputRate().setValue(inputRate);
     }
 
     private static native long getInputRate(long address);

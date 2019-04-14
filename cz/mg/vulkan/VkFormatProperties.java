@@ -21,8 +21,12 @@ public class VkFormatProperties extends VkObject {
 
     
     public void setLinearTilingFeatures(VkFormatFeatureFlags linearTilingFeatures) {
-        setLinearTilingFeatures(getVkAddress(), linearTilingFeatures != null ? linearTilingFeatures.getVkAddress() : VkPointer.getSinkAddress());
+        setLinearTilingFeatures(getVkAddress(), linearTilingFeatures != null ? linearTilingFeatures.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLinearTilingFeatures(int linearTilingFeatures) {
+        getLinearTilingFeatures().setValue(linearTilingFeatures);
     }
 
     private static native long getLinearTilingFeatures(long address);
@@ -34,8 +38,12 @@ public class VkFormatProperties extends VkObject {
 
     
     public void setOptimalTilingFeatures(VkFormatFeatureFlags optimalTilingFeatures) {
-        setOptimalTilingFeatures(getVkAddress(), optimalTilingFeatures != null ? optimalTilingFeatures.getVkAddress() : VkPointer.getSinkAddress());
+        setOptimalTilingFeatures(getVkAddress(), optimalTilingFeatures != null ? optimalTilingFeatures.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setOptimalTilingFeatures(int optimalTilingFeatures) {
+        getOptimalTilingFeatures().setValue(optimalTilingFeatures);
     }
 
     private static native long getOptimalTilingFeatures(long address);
@@ -47,8 +55,12 @@ public class VkFormatProperties extends VkObject {
 
     
     public void setBufferFeatures(VkFormatFeatureFlags bufferFeatures) {
-        setBufferFeatures(getVkAddress(), bufferFeatures != null ? bufferFeatures.getVkAddress() : VkPointer.getSinkAddress());
+        setBufferFeatures(getVkAddress(), bufferFeatures != null ? bufferFeatures.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBufferFeatures(int bufferFeatures) {
+        getBufferFeatures().setValue(bufferFeatures);
     }
 
     private static native long getBufferFeatures(long address);

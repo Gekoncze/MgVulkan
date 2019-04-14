@@ -21,8 +21,12 @@ public class VkPresentRegionKHR extends VkObject {
 
     
     public void setRectangleCount(VkUInt32 rectangleCount) {
-        setRectangleCount(getVkAddress(), rectangleCount != null ? rectangleCount.getVkAddress() : VkPointer.getSinkAddress());
+        setRectangleCount(getVkAddress(), rectangleCount != null ? rectangleCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setRectangleCount(int rectangleCount) {
+        getRectangleCount().setValue(rectangleCount);
     }
 
     private static native long getRectangleCount(long address);

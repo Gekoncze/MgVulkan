@@ -21,8 +21,12 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setLocation(VkUInt32 location) {
-        setLocation(getVkAddress(), location != null ? location.getVkAddress() : VkPointer.getSinkAddress());
+        setLocation(getVkAddress(), location != null ? location.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLocation(int location) {
+        getLocation().setValue(location);
     }
 
     private static native long getLocation(long address);
@@ -34,8 +38,12 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getSinkAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBinding(int binding) {
+        getBinding().setValue(binding);
     }
 
     private static native long getBinding(long address);
@@ -47,8 +55,12 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getSinkAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFormat(int format) {
+        getFormat().setValue(format);
     }
 
     private static native long getFormat(long address);
@@ -60,8 +72,12 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setOffset(int offset) {
+        getOffset().setValue(offset);
     }
 
     private static native long getOffset(long address);

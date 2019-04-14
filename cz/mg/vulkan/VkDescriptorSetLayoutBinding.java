@@ -21,8 +21,12 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getSinkAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBinding(int binding) {
+        getBinding().setValue(binding);
     }
 
     private static native long getBinding(long address);
@@ -34,8 +38,12 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
 
     
     public void setDescriptorType(VkDescriptorType descriptorType) {
-        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getSinkAddress());
+        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDescriptorType(int descriptorType) {
+        getDescriptorType().setValue(descriptorType);
     }
 
     private static native long getDescriptorType(long address);
@@ -47,8 +55,12 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
 
     
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getSinkAddress());
+        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDescriptorCount(int descriptorCount) {
+        getDescriptorCount().setValue(descriptorCount);
     }
 
     private static native long getDescriptorCount(long address);
@@ -60,8 +72,12 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
 
     
     public void setStageFlags(VkShaderStageFlags stageFlags) {
-        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getSinkAddress());
+        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setStageFlags(int stageFlags) {
+        getStageFlags().setValue(stageFlags);
     }
 
     private static native long getStageFlags(long address);

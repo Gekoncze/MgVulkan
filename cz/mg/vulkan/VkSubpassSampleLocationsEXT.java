@@ -21,8 +21,12 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
 
     
     public void setSubpassIndex(VkUInt32 subpassIndex) {
-        setSubpassIndex(getVkAddress(), subpassIndex != null ? subpassIndex.getVkAddress() : VkPointer.getSinkAddress());
+        setSubpassIndex(getVkAddress(), subpassIndex != null ? subpassIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSubpassIndex(int subpassIndex) {
+        getSubpassIndex().setValue(subpassIndex);
     }
 
     private static native long getSubpassIndex(long address);
@@ -34,7 +38,7 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
 
     
     public void setSampleLocationsInfo(VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getSinkAddress());
+        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

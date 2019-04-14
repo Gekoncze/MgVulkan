@@ -22,8 +22,12 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineDepthStencilStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setDepthTestEnable(VkBool32 depthTestEnable) {
-        setDepthTestEnable(getVkAddress(), depthTestEnable != null ? depthTestEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setDepthTestEnable(getVkAddress(), depthTestEnable != null ? depthTestEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDepthTestEnable(int depthTestEnable) {
+        getDepthTestEnable().setValue(depthTestEnable);
     }
 
     private static native long getDepthTestEnable(long address);
@@ -74,8 +86,12 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setDepthWriteEnable(VkBool32 depthWriteEnable) {
-        setDepthWriteEnable(getVkAddress(), depthWriteEnable != null ? depthWriteEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setDepthWriteEnable(getVkAddress(), depthWriteEnable != null ? depthWriteEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDepthWriteEnable(int depthWriteEnable) {
+        getDepthWriteEnable().setValue(depthWriteEnable);
     }
 
     private static native long getDepthWriteEnable(long address);
@@ -87,8 +103,12 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setDepthCompareOp(VkCompareOp depthCompareOp) {
-        setDepthCompareOp(getVkAddress(), depthCompareOp != null ? depthCompareOp.getVkAddress() : VkPointer.getSinkAddress());
+        setDepthCompareOp(getVkAddress(), depthCompareOp != null ? depthCompareOp.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDepthCompareOp(int depthCompareOp) {
+        getDepthCompareOp().setValue(depthCompareOp);
     }
 
     private static native long getDepthCompareOp(long address);
@@ -100,8 +120,12 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setDepthBoundsTestEnable(VkBool32 depthBoundsTestEnable) {
-        setDepthBoundsTestEnable(getVkAddress(), depthBoundsTestEnable != null ? depthBoundsTestEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setDepthBoundsTestEnable(getVkAddress(), depthBoundsTestEnable != null ? depthBoundsTestEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDepthBoundsTestEnable(int depthBoundsTestEnable) {
+        getDepthBoundsTestEnable().setValue(depthBoundsTestEnable);
     }
 
     private static native long getDepthBoundsTestEnable(long address);
@@ -113,8 +137,12 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setStencilTestEnable(VkBool32 stencilTestEnable) {
-        setStencilTestEnable(getVkAddress(), stencilTestEnable != null ? stencilTestEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setStencilTestEnable(getVkAddress(), stencilTestEnable != null ? stencilTestEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setStencilTestEnable(int stencilTestEnable) {
+        getStencilTestEnable().setValue(stencilTestEnable);
     }
 
     private static native long getStencilTestEnable(long address);
@@ -126,7 +154,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setFront(VkStencilOpState front) {
-        setFront(getVkAddress(), front != null ? front.getVkAddress() : VkPointer.getSinkAddress());
+        setFront(getVkAddress(), front != null ? front.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -139,7 +167,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setBack(VkStencilOpState back) {
-        setBack(getVkAddress(), back != null ? back.getVkAddress() : VkPointer.getSinkAddress());
+        setBack(getVkAddress(), back != null ? back.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -152,8 +180,12 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setMinDepthBounds(VkFloat minDepthBounds) {
-        setMinDepthBounds(getVkAddress(), minDepthBounds != null ? minDepthBounds.getVkAddress() : VkPointer.getSinkAddress());
+        setMinDepthBounds(getVkAddress(), minDepthBounds != null ? minDepthBounds.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMinDepthBounds(float minDepthBounds) {
+        getMinDepthBounds().setValue(minDepthBounds);
     }
 
     private static native long getMinDepthBounds(long address);
@@ -165,8 +197,12 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
 
     
     public void setMaxDepthBounds(VkFloat maxDepthBounds) {
-        setMaxDepthBounds(getVkAddress(), maxDepthBounds != null ? maxDepthBounds.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxDepthBounds(getVkAddress(), maxDepthBounds != null ? maxDepthBounds.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxDepthBounds(float maxDepthBounds) {
+        getMaxDepthBounds().setValue(maxDepthBounds);
     }
 
     private static native long getMaxDepthBounds(long address);

@@ -21,8 +21,12 @@ public class VkMemoryHostPointerPropertiesEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkMemoryHostPointerPropertiesEXT extends VkObject {
 
     
     public void setMemoryTypeBits(VkUInt32 memoryTypeBits) {
-        setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getSinkAddress());
+        setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMemoryTypeBits(int memoryTypeBits) {
+        getMemoryTypeBits().setValue(memoryTypeBits);
     }
 
     private static native long getMemoryTypeBits(long address);

@@ -13,7 +13,11 @@ public class VkExtent2D extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
+    public VkExtent2D(int width, int height) {
+        super(sizeof());
+        getWidth().setValue(width);
+        getHeight().setValue(height);
+    }
 
     public VkUInt32 getWidth() {
         return new VkUInt32(getVkMemory(), getWidth(getVkAddress()));
@@ -21,8 +25,12 @@ public class VkExtent2D extends VkObject {
 
     
     public void setWidth(VkUInt32 width) {
-        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getSinkAddress());
+        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setWidth(int width) {
+        getWidth().setValue(width);
     }
 
     private static native long getWidth(long address);
@@ -34,8 +42,12 @@ public class VkExtent2D extends VkObject {
 
     
     public void setHeight(VkUInt32 height) {
-        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getSinkAddress());
+        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setHeight(int height) {
+        getHeight().setValue(height);
     }
 
     private static native long getHeight(long address);

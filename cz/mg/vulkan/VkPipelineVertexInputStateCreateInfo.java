@@ -22,8 +22,12 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineVertexInputStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
 
     
     public void setVertexBindingDescriptionCount(VkUInt32 vertexBindingDescriptionCount) {
-        setVertexBindingDescriptionCount(getVkAddress(), vertexBindingDescriptionCount != null ? vertexBindingDescriptionCount.getVkAddress() : VkPointer.getSinkAddress());
+        setVertexBindingDescriptionCount(getVkAddress(), vertexBindingDescriptionCount != null ? vertexBindingDescriptionCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setVertexBindingDescriptionCount(int vertexBindingDescriptionCount) {
+        getVertexBindingDescriptionCount().setValue(vertexBindingDescriptionCount);
     }
 
     private static native long getVertexBindingDescriptionCount(long address);
@@ -87,8 +99,12 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
 
     
     public void setVertexAttributeDescriptionCount(VkUInt32 vertexAttributeDescriptionCount) {
-        setVertexAttributeDescriptionCount(getVkAddress(), vertexAttributeDescriptionCount != null ? vertexAttributeDescriptionCount.getVkAddress() : VkPointer.getSinkAddress());
+        setVertexAttributeDescriptionCount(getVkAddress(), vertexAttributeDescriptionCount != null ? vertexAttributeDescriptionCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setVertexAttributeDescriptionCount(int vertexAttributeDescriptionCount) {
+        getVertexAttributeDescriptionCount().setValue(vertexAttributeDescriptionCount);
     }
 
     private static native long getVertexAttributeDescriptionCount(long address);

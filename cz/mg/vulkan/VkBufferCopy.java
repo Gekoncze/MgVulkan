@@ -21,8 +21,12 @@ public class VkBufferCopy extends VkObject {
 
     
     public void setSrcOffset(VkDeviceSize srcOffset) {
-        setSrcOffset(getVkAddress(), srcOffset != null ? srcOffset.getVkAddress() : VkPointer.getSinkAddress());
+        setSrcOffset(getVkAddress(), srcOffset != null ? srcOffset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSrcOffset(long srcOffset) {
+        getSrcOffset().setValue(srcOffset);
     }
 
     private static native long getSrcOffset(long address);
@@ -34,8 +38,12 @@ public class VkBufferCopy extends VkObject {
 
     
     public void setDstOffset(VkDeviceSize dstOffset) {
-        setDstOffset(getVkAddress(), dstOffset != null ? dstOffset.getVkAddress() : VkPointer.getSinkAddress());
+        setDstOffset(getVkAddress(), dstOffset != null ? dstOffset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDstOffset(long dstOffset) {
+        getDstOffset().setValue(dstOffset);
     }
 
     private static native long getDstOffset(long address);
@@ -47,8 +55,12 @@ public class VkBufferCopy extends VkObject {
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getSinkAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSize(long size) {
+        getSize().setValue(size);
     }
 
     private static native long getSize(long address);

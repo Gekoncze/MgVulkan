@@ -21,8 +21,12 @@ public class VkExternalFenceProperties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkExternalFenceProperties extends VkObject {
 
     
     public void setExportFromImportedHandleTypes(VkExternalFenceHandleTypeFlags exportFromImportedHandleTypes) {
-        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.getSinkAddress());
+        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setExportFromImportedHandleTypes(int exportFromImportedHandleTypes) {
+        getExportFromImportedHandleTypes().setValue(exportFromImportedHandleTypes);
     }
 
     private static native long getExportFromImportedHandleTypes(long address);
@@ -60,8 +68,12 @@ public class VkExternalFenceProperties extends VkObject {
 
     
     public void setCompatibleHandleTypes(VkExternalFenceHandleTypeFlags compatibleHandleTypes) {
-        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getSinkAddress());
+        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setCompatibleHandleTypes(int compatibleHandleTypes) {
+        getCompatibleHandleTypes().setValue(compatibleHandleTypes);
     }
 
     private static native long getCompatibleHandleTypes(long address);
@@ -73,8 +85,12 @@ public class VkExternalFenceProperties extends VkObject {
 
     
     public void setExternalFenceFeatures(VkExternalFenceFeatureFlags externalFenceFeatures) {
-        setExternalFenceFeatures(getVkAddress(), externalFenceFeatures != null ? externalFenceFeatures.getVkAddress() : VkPointer.getSinkAddress());
+        setExternalFenceFeatures(getVkAddress(), externalFenceFeatures != null ? externalFenceFeatures.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setExternalFenceFeatures(int externalFenceFeatures) {
+        getExternalFenceFeatures().setValue(externalFenceFeatures);
     }
 
     private static native long getExternalFenceFeatures(long address);

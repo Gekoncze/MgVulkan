@@ -21,8 +21,12 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setQueueFlags(VkQueueFlags queueFlags) {
-        setQueueFlags(getVkAddress(), queueFlags != null ? queueFlags.getVkAddress() : VkPointer.getSinkAddress());
+        setQueueFlags(getVkAddress(), queueFlags != null ? queueFlags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setQueueFlags(int queueFlags) {
+        getQueueFlags().setValue(queueFlags);
     }
 
     private static native long getQueueFlags(long address);
@@ -34,8 +38,12 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setQueueCount(VkUInt32 queueCount) {
-        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.getSinkAddress());
+        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setQueueCount(int queueCount) {
+        getQueueCount().setValue(queueCount);
     }
 
     private static native long getQueueCount(long address);
@@ -47,8 +55,12 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setTimestampValidBits(VkUInt32 timestampValidBits) {
-        setTimestampValidBits(getVkAddress(), timestampValidBits != null ? timestampValidBits.getVkAddress() : VkPointer.getSinkAddress());
+        setTimestampValidBits(getVkAddress(), timestampValidBits != null ? timestampValidBits.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setTimestampValidBits(int timestampValidBits) {
+        getTimestampValidBits().setValue(timestampValidBits);
     }
 
     private static native long getTimestampValidBits(long address);
@@ -60,7 +72,7 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setMinImageTransferGranularity(VkExtent3D minImageTransferGranularity) {
-        setMinImageTransferGranularity(getVkAddress(), minImageTransferGranularity != null ? minImageTransferGranularity.getVkAddress() : VkPointer.getSinkAddress());
+        setMinImageTransferGranularity(getVkAddress(), minImageTransferGranularity != null ? minImageTransferGranularity.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

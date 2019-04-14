@@ -21,8 +21,12 @@ public class VkPhysicalDeviceSamplerYcbcrConversionFeatures extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceSamplerYcbcrConversionFeatures extends VkObject {
 
     
     public void setSamplerYcbcrConversion(VkBool32 samplerYcbcrConversion) {
-        setSamplerYcbcrConversion(getVkAddress(), samplerYcbcrConversion != null ? samplerYcbcrConversion.getVkAddress() : VkPointer.getSinkAddress());
+        setSamplerYcbcrConversion(getVkAddress(), samplerYcbcrConversion != null ? samplerYcbcrConversion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSamplerYcbcrConversion(int samplerYcbcrConversion) {
+        getSamplerYcbcrConversion().setValue(samplerYcbcrConversion);
     }
 
     private static native long getSamplerYcbcrConversion(long address);

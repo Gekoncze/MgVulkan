@@ -21,8 +21,12 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
 
     
     public void setBlendEnable(VkBool32 blendEnable) {
-        setBlendEnable(getVkAddress(), blendEnable != null ? blendEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setBlendEnable(getVkAddress(), blendEnable != null ? blendEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBlendEnable(int blendEnable) {
+        getBlendEnable().setValue(blendEnable);
     }
 
     private static native long getBlendEnable(long address);
@@ -34,8 +38,12 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
 
     
     public void setSrcColorBlendFactor(VkBlendFactor srcColorBlendFactor) {
-        setSrcColorBlendFactor(getVkAddress(), srcColorBlendFactor != null ? srcColorBlendFactor.getVkAddress() : VkPointer.getSinkAddress());
+        setSrcColorBlendFactor(getVkAddress(), srcColorBlendFactor != null ? srcColorBlendFactor.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSrcColorBlendFactor(int srcColorBlendFactor) {
+        getSrcColorBlendFactor().setValue(srcColorBlendFactor);
     }
 
     private static native long getSrcColorBlendFactor(long address);
@@ -47,8 +55,12 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
 
     
     public void setDstColorBlendFactor(VkBlendFactor dstColorBlendFactor) {
-        setDstColorBlendFactor(getVkAddress(), dstColorBlendFactor != null ? dstColorBlendFactor.getVkAddress() : VkPointer.getSinkAddress());
+        setDstColorBlendFactor(getVkAddress(), dstColorBlendFactor != null ? dstColorBlendFactor.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDstColorBlendFactor(int dstColorBlendFactor) {
+        getDstColorBlendFactor().setValue(dstColorBlendFactor);
     }
 
     private static native long getDstColorBlendFactor(long address);
@@ -60,8 +72,12 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
 
     
     public void setColorBlendOp(VkBlendOp colorBlendOp) {
-        setColorBlendOp(getVkAddress(), colorBlendOp != null ? colorBlendOp.getVkAddress() : VkPointer.getSinkAddress());
+        setColorBlendOp(getVkAddress(), colorBlendOp != null ? colorBlendOp.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setColorBlendOp(int colorBlendOp) {
+        getColorBlendOp().setValue(colorBlendOp);
     }
 
     private static native long getColorBlendOp(long address);
@@ -73,8 +89,12 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
 
     
     public void setSrcAlphaBlendFactor(VkBlendFactor srcAlphaBlendFactor) {
-        setSrcAlphaBlendFactor(getVkAddress(), srcAlphaBlendFactor != null ? srcAlphaBlendFactor.getVkAddress() : VkPointer.getSinkAddress());
+        setSrcAlphaBlendFactor(getVkAddress(), srcAlphaBlendFactor != null ? srcAlphaBlendFactor.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSrcAlphaBlendFactor(int srcAlphaBlendFactor) {
+        getSrcAlphaBlendFactor().setValue(srcAlphaBlendFactor);
     }
 
     private static native long getSrcAlphaBlendFactor(long address);
@@ -86,8 +106,12 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
 
     
     public void setDstAlphaBlendFactor(VkBlendFactor dstAlphaBlendFactor) {
-        setDstAlphaBlendFactor(getVkAddress(), dstAlphaBlendFactor != null ? dstAlphaBlendFactor.getVkAddress() : VkPointer.getSinkAddress());
+        setDstAlphaBlendFactor(getVkAddress(), dstAlphaBlendFactor != null ? dstAlphaBlendFactor.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDstAlphaBlendFactor(int dstAlphaBlendFactor) {
+        getDstAlphaBlendFactor().setValue(dstAlphaBlendFactor);
     }
 
     private static native long getDstAlphaBlendFactor(long address);
@@ -99,8 +123,12 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
 
     
     public void setAlphaBlendOp(VkBlendOp alphaBlendOp) {
-        setAlphaBlendOp(getVkAddress(), alphaBlendOp != null ? alphaBlendOp.getVkAddress() : VkPointer.getSinkAddress());
+        setAlphaBlendOp(getVkAddress(), alphaBlendOp != null ? alphaBlendOp.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAlphaBlendOp(int alphaBlendOp) {
+        getAlphaBlendOp().setValue(alphaBlendOp);
     }
 
     private static native long getAlphaBlendOp(long address);
@@ -112,8 +140,12 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
 
     
     public void setColorWriteMask(VkColorComponentFlags colorWriteMask) {
-        setColorWriteMask(getVkAddress(), colorWriteMask != null ? colorWriteMask.getVkAddress() : VkPointer.getSinkAddress());
+        setColorWriteMask(getVkAddress(), colorWriteMask != null ? colorWriteMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setColorWriteMask(int colorWriteMask) {
+        getColorWriteMask().setValue(colorWriteMask);
     }
 
     private static native long getColorWriteMask(long address);

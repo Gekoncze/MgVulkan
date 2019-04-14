@@ -22,8 +22,12 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
 
     
     public void setObjectType(VkDebugReportObjectTypeEXT objectType) {
-        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getSinkAddress());
+        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setObjectType(int objectType) {
+        getObjectType().setValue(objectType);
     }
 
     private static native long getObjectType(long address);
@@ -61,8 +69,12 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
 
     
     public void setObject(VkUInt64 object) {
-        setObject(getVkAddress(), object != null ? object.getVkAddress() : VkPointer.getSinkAddress());
+        setObject(getVkAddress(), object != null ? object.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setObject(long object) {
+        getObject().setValue(object);
     }
 
     private static native long getObject(long address);
@@ -76,6 +88,10 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
     public void setPObjectName(VkChar pObjectName) {
         setPObjectName(getVkAddress(), pObjectName != null ? pObjectName.getVkAddress() : VkPointer.NULL);
         this.pObjectName = pObjectName;
+    }
+
+    public void setPObjectName(String pObjectName) {
+        setPObjectName(new VkString(pObjectName));
     }
 
     private static native long getPObjectName(long address);

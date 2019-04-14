@@ -22,8 +22,12 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineLayoutCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
 
     
     public void setSetLayoutCount(VkUInt32 setLayoutCount) {
-        setSetLayoutCount(getVkAddress(), setLayoutCount != null ? setLayoutCount.getVkAddress() : VkPointer.getSinkAddress());
+        setSetLayoutCount(getVkAddress(), setLayoutCount != null ? setLayoutCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSetLayoutCount(int setLayoutCount) {
+        getSetLayoutCount().setValue(setLayoutCount);
     }
 
     private static native long getSetLayoutCount(long address);
@@ -87,8 +99,12 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
 
     
     public void setPushConstantRangeCount(VkUInt32 pushConstantRangeCount) {
-        setPushConstantRangeCount(getVkAddress(), pushConstantRangeCount != null ? pushConstantRangeCount.getVkAddress() : VkPointer.getSinkAddress());
+        setPushConstantRangeCount(getVkAddress(), pushConstantRangeCount != null ? pushConstantRangeCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPushConstantRangeCount(int pushConstantRangeCount) {
+        getPushConstantRangeCount().setValue(pushConstantRangeCount);
     }
 
     private static native long getPushConstantRangeCount(long address);

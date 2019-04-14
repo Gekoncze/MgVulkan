@@ -21,8 +21,12 @@ public class VkSparseImageFormatProperties extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getSinkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAspectMask(int aspectMask) {
+        getAspectMask().setValue(aspectMask);
     }
 
     private static native long getAspectMask(long address);
@@ -34,7 +38,7 @@ public class VkSparseImageFormatProperties extends VkObject {
 
     
     public void setImageGranularity(VkExtent3D imageGranularity) {
-        setImageGranularity(getVkAddress(), imageGranularity != null ? imageGranularity.getVkAddress() : VkPointer.getSinkAddress());
+        setImageGranularity(getVkAddress(), imageGranularity != null ? imageGranularity.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -47,8 +51,12 @@ public class VkSparseImageFormatProperties extends VkObject {
 
     
     public void setFlags(VkSparseImageFormatFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);

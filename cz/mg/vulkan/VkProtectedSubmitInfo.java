@@ -22,8 +22,12 @@ public class VkProtectedSubmitInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkProtectedSubmitInfo extends VkObject {
 
     
     public void setProtectedSubmit(VkBool32 protectedSubmit) {
-        setProtectedSubmit(getVkAddress(), protectedSubmit != null ? protectedSubmit.getVkAddress() : VkPointer.getSinkAddress());
+        setProtectedSubmit(getVkAddress(), protectedSubmit != null ? protectedSubmit.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setProtectedSubmit(int protectedSubmit) {
+        getProtectedSubmit().setValue(protectedSubmit);
     }
 
     private static native long getProtectedSubmit(long address);

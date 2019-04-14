@@ -22,8 +22,12 @@ public class VkBindImageMemoryInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,7 +52,7 @@ public class VkBindImageMemoryInfo extends VkObject {
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getSinkAddress());
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -61,7 +65,7 @@ public class VkBindImageMemoryInfo extends VkObject {
 
     
     public void setMemory(VkDeviceMemory memory) {
-        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getSinkAddress());
+        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -74,8 +78,12 @@ public class VkBindImageMemoryInfo extends VkObject {
 
     
     public void setMemoryOffset(VkDeviceSize memoryOffset) {
-        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getSinkAddress());
+        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMemoryOffset(long memoryOffset) {
+        getMemoryOffset().setValue(memoryOffset);
     }
 
     private static native long getMemoryOffset(long address);

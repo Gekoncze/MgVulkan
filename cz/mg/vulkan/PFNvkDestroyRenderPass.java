@@ -23,7 +23,7 @@ public class PFNvkDestroyRenderPass extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkRenderPass renderPass, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getSinkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getSinkAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long renderPass, long pAllocator);

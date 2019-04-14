@@ -21,8 +21,12 @@ public class VkPipelineRasterizationStateRasterizationOrderAMD extends VkObject 
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPipelineRasterizationStateRasterizationOrderAMD extends VkObject 
 
     
     public void setRasterizationOrder(VkRasterizationOrderAMD rasterizationOrder) {
-        setRasterizationOrder(getVkAddress(), rasterizationOrder != null ? rasterizationOrder.getVkAddress() : VkPointer.getSinkAddress());
+        setRasterizationOrder(getVkAddress(), rasterizationOrder != null ? rasterizationOrder.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setRasterizationOrder(int rasterizationOrder) {
+        getRasterizationOrder().setValue(rasterizationOrder);
     }
 
     private static native long getRasterizationOrder(long address);

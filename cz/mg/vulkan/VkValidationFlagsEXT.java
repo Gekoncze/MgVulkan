@@ -21,8 +21,12 @@ public class VkValidationFlagsEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkValidationFlagsEXT extends VkObject {
 
     
     public void setDisabledValidationCheckCount(VkUInt32 disabledValidationCheckCount) {
-        setDisabledValidationCheckCount(getVkAddress(), disabledValidationCheckCount != null ? disabledValidationCheckCount.getVkAddress() : VkPointer.getSinkAddress());
+        setDisabledValidationCheckCount(getVkAddress(), disabledValidationCheckCount != null ? disabledValidationCheckCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDisabledValidationCheckCount(int disabledValidationCheckCount) {
+        getDisabledValidationCheckCount().setValue(disabledValidationCheckCount);
     }
 
     private static native long getDisabledValidationCheckCount(long address);

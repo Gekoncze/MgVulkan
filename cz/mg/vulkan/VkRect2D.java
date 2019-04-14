@@ -13,7 +13,13 @@ public class VkRect2D extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
+    public VkRect2D(int x, int y, int width, int height) {
+        super(sizeof());
+        getOffset().getX().setValue(x);
+        getOffset().getY().setValue(y);
+        getExtent().getWidth().setValue(width);
+        getExtent().getHeight().setValue(height);
+    }
 
     public VkOffset2D getOffset() {
         return new VkOffset2D(getVkMemory(), getOffset(getVkAddress()));
@@ -21,7 +27,7 @@ public class VkRect2D extends VkObject {
 
     
     public void setOffset(VkOffset2D offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -34,7 +40,7 @@ public class VkRect2D extends VkObject {
 
     
     public void setExtent(VkExtent2D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getSinkAddress());
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

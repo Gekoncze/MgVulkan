@@ -13,7 +13,11 @@ public class VkOffset2D extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
+    public VkOffset2D(int x, int y){
+        super(sizeof());
+        getX().setValue(x);
+        getY().setValue(y);
+    }
 
     public VkInt32 getX() {
         return new VkInt32(getVkMemory(), getX(getVkAddress()));
@@ -21,8 +25,12 @@ public class VkOffset2D extends VkObject {
 
     
     public void setX(VkInt32 x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getSinkAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setX(int x) {
+        getX().setValue(x);
     }
 
     private static native long getX(long address);
@@ -34,8 +42,12 @@ public class VkOffset2D extends VkObject {
 
     
     public void setY(VkInt32 y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getSinkAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setY(int y) {
+        getY().setValue(y);
     }
 
     private static native long getY(long address);

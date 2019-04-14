@@ -22,8 +22,12 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
 
     
     public void setFlags(VkPipelineRasterizationConservativeStateCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
 
     
     public void setConservativeRasterizationMode(VkConservativeRasterizationModeEXT conservativeRasterizationMode) {
-        setConservativeRasterizationMode(getVkAddress(), conservativeRasterizationMode != null ? conservativeRasterizationMode.getVkAddress() : VkPointer.getSinkAddress());
+        setConservativeRasterizationMode(getVkAddress(), conservativeRasterizationMode != null ? conservativeRasterizationMode.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setConservativeRasterizationMode(int conservativeRasterizationMode) {
+        getConservativeRasterizationMode().setValue(conservativeRasterizationMode);
     }
 
     private static native long getConservativeRasterizationMode(long address);
@@ -74,8 +86,12 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
 
     
     public void setExtraPrimitiveOverestimationSize(VkFloat extraPrimitiveOverestimationSize) {
-        setExtraPrimitiveOverestimationSize(getVkAddress(), extraPrimitiveOverestimationSize != null ? extraPrimitiveOverestimationSize.getVkAddress() : VkPointer.getSinkAddress());
+        setExtraPrimitiveOverestimationSize(getVkAddress(), extraPrimitiveOverestimationSize != null ? extraPrimitiveOverestimationSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setExtraPrimitiveOverestimationSize(float extraPrimitiveOverestimationSize) {
+        getExtraPrimitiveOverestimationSize().setValue(extraPrimitiveOverestimationSize);
     }
 
     private static native long getExtraPrimitiveOverestimationSize(long address);

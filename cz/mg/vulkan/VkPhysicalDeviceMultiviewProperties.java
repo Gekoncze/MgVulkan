@@ -21,8 +21,12 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
 
     
     public void setMaxMultiviewViewCount(VkUInt32 maxMultiviewViewCount) {
-        setMaxMultiviewViewCount(getVkAddress(), maxMultiviewViewCount != null ? maxMultiviewViewCount.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxMultiviewViewCount(getVkAddress(), maxMultiviewViewCount != null ? maxMultiviewViewCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxMultiviewViewCount(int maxMultiviewViewCount) {
+        getMaxMultiviewViewCount().setValue(maxMultiviewViewCount);
     }
 
     private static native long getMaxMultiviewViewCount(long address);
@@ -60,8 +68,12 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
 
     
     public void setMaxMultiviewInstanceIndex(VkUInt32 maxMultiviewInstanceIndex) {
-        setMaxMultiviewInstanceIndex(getVkAddress(), maxMultiviewInstanceIndex != null ? maxMultiviewInstanceIndex.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxMultiviewInstanceIndex(getVkAddress(), maxMultiviewInstanceIndex != null ? maxMultiviewInstanceIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxMultiviewInstanceIndex(int maxMultiviewInstanceIndex) {
+        getMaxMultiviewInstanceIndex().setValue(maxMultiviewInstanceIndex);
     }
 
     private static native long getMaxMultiviewInstanceIndex(long address);

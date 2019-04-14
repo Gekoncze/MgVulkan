@@ -22,8 +22,12 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setSrcPremultiplied(VkBool32 srcPremultiplied) {
-        setSrcPremultiplied(getVkAddress(), srcPremultiplied != null ? srcPremultiplied.getVkAddress() : VkPointer.getSinkAddress());
+        setSrcPremultiplied(getVkAddress(), srcPremultiplied != null ? srcPremultiplied.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSrcPremultiplied(int srcPremultiplied) {
+        getSrcPremultiplied().setValue(srcPremultiplied);
     }
 
     private static native long getSrcPremultiplied(long address);
@@ -61,8 +69,12 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setDstPremultiplied(VkBool32 dstPremultiplied) {
-        setDstPremultiplied(getVkAddress(), dstPremultiplied != null ? dstPremultiplied.getVkAddress() : VkPointer.getSinkAddress());
+        setDstPremultiplied(getVkAddress(), dstPremultiplied != null ? dstPremultiplied.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDstPremultiplied(int dstPremultiplied) {
+        getDstPremultiplied().setValue(dstPremultiplied);
     }
 
     private static native long getDstPremultiplied(long address);
@@ -74,8 +86,12 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setBlendOverlap(VkBlendOverlapEXT blendOverlap) {
-        setBlendOverlap(getVkAddress(), blendOverlap != null ? blendOverlap.getVkAddress() : VkPointer.getSinkAddress());
+        setBlendOverlap(getVkAddress(), blendOverlap != null ? blendOverlap.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBlendOverlap(int blendOverlap) {
+        getBlendOverlap().setValue(blendOverlap);
     }
 
     private static native long getBlendOverlap(long address);

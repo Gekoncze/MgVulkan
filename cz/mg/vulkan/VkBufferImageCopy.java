@@ -21,8 +21,12 @@ public class VkBufferImageCopy extends VkObject {
 
     
     public void setBufferOffset(VkDeviceSize bufferOffset) {
-        setBufferOffset(getVkAddress(), bufferOffset != null ? bufferOffset.getVkAddress() : VkPointer.getSinkAddress());
+        setBufferOffset(getVkAddress(), bufferOffset != null ? bufferOffset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBufferOffset(long bufferOffset) {
+        getBufferOffset().setValue(bufferOffset);
     }
 
     private static native long getBufferOffset(long address);
@@ -34,8 +38,12 @@ public class VkBufferImageCopy extends VkObject {
 
     
     public void setBufferRowLength(VkUInt32 bufferRowLength) {
-        setBufferRowLength(getVkAddress(), bufferRowLength != null ? bufferRowLength.getVkAddress() : VkPointer.getSinkAddress());
+        setBufferRowLength(getVkAddress(), bufferRowLength != null ? bufferRowLength.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBufferRowLength(int bufferRowLength) {
+        getBufferRowLength().setValue(bufferRowLength);
     }
 
     private static native long getBufferRowLength(long address);
@@ -47,8 +55,12 @@ public class VkBufferImageCopy extends VkObject {
 
     
     public void setBufferImageHeight(VkUInt32 bufferImageHeight) {
-        setBufferImageHeight(getVkAddress(), bufferImageHeight != null ? bufferImageHeight.getVkAddress() : VkPointer.getSinkAddress());
+        setBufferImageHeight(getVkAddress(), bufferImageHeight != null ? bufferImageHeight.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBufferImageHeight(int bufferImageHeight) {
+        getBufferImageHeight().setValue(bufferImageHeight);
     }
 
     private static native long getBufferImageHeight(long address);
@@ -60,7 +72,7 @@ public class VkBufferImageCopy extends VkObject {
 
     
     public void setImageSubresource(VkImageSubresourceLayers imageSubresource) {
-        setImageSubresource(getVkAddress(), imageSubresource != null ? imageSubresource.getVkAddress() : VkPointer.getSinkAddress());
+        setImageSubresource(getVkAddress(), imageSubresource != null ? imageSubresource.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -73,7 +85,7 @@ public class VkBufferImageCopy extends VkObject {
 
     
     public void setImageOffset(VkOffset3D imageOffset) {
-        setImageOffset(getVkAddress(), imageOffset != null ? imageOffset.getVkAddress() : VkPointer.getSinkAddress());
+        setImageOffset(getVkAddress(), imageOffset != null ? imageOffset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -86,7 +98,7 @@ public class VkBufferImageCopy extends VkObject {
 
     
     public void setImageExtent(VkExtent3D imageExtent) {
-        setImageExtent(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.getSinkAddress());
+        setImageExtent(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

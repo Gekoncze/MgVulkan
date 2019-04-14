@@ -22,8 +22,12 @@ public class VkDeviceQueueCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkDeviceQueueCreateInfo extends VkObject {
 
     
     public void setFlags(VkDeviceQueueCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkDeviceQueueCreateInfo extends VkObject {
 
     
     public void setQueueFamilyIndex(VkUInt32 queueFamilyIndex) {
-        setQueueFamilyIndex(getVkAddress(), queueFamilyIndex != null ? queueFamilyIndex.getVkAddress() : VkPointer.getSinkAddress());
+        setQueueFamilyIndex(getVkAddress(), queueFamilyIndex != null ? queueFamilyIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setQueueFamilyIndex(int queueFamilyIndex) {
+        getQueueFamilyIndex().setValue(queueFamilyIndex);
     }
 
     private static native long getQueueFamilyIndex(long address);
@@ -74,8 +86,12 @@ public class VkDeviceQueueCreateInfo extends VkObject {
 
     
     public void setQueueCount(VkUInt32 queueCount) {
-        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.getSinkAddress());
+        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setQueueCount(int queueCount) {
+        getQueueCount().setValue(queueCount);
     }
 
     private static native long getQueueCount(long address);

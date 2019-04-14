@@ -21,8 +21,12 @@ public class VkMemoryHeap extends VkObject {
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getSinkAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSize(long size) {
+        getSize().setValue(size);
     }
 
     private static native long getSize(long address);
@@ -34,8 +38,12 @@ public class VkMemoryHeap extends VkObject {
 
     
     public void setFlags(VkMemoryHeapFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);

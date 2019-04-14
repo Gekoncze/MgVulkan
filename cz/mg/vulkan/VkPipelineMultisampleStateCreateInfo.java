@@ -22,8 +22,12 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineMultisampleStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setRasterizationSamples(VkSampleCountFlagBits rasterizationSamples) {
-        setRasterizationSamples(getVkAddress(), rasterizationSamples != null ? rasterizationSamples.getVkAddress() : VkPointer.getSinkAddress());
+        setRasterizationSamples(getVkAddress(), rasterizationSamples != null ? rasterizationSamples.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setRasterizationSamples(int rasterizationSamples) {
+        getRasterizationSamples().setValue(rasterizationSamples);
     }
 
     private static native long getRasterizationSamples(long address);
@@ -74,8 +86,12 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setSampleShadingEnable(VkBool32 sampleShadingEnable) {
-        setSampleShadingEnable(getVkAddress(), sampleShadingEnable != null ? sampleShadingEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setSampleShadingEnable(getVkAddress(), sampleShadingEnable != null ? sampleShadingEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSampleShadingEnable(int sampleShadingEnable) {
+        getSampleShadingEnable().setValue(sampleShadingEnable);
     }
 
     private static native long getSampleShadingEnable(long address);
@@ -87,8 +103,12 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setMinSampleShading(VkFloat minSampleShading) {
-        setMinSampleShading(getVkAddress(), minSampleShading != null ? minSampleShading.getVkAddress() : VkPointer.getSinkAddress());
+        setMinSampleShading(getVkAddress(), minSampleShading != null ? minSampleShading.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMinSampleShading(float minSampleShading) {
+        getMinSampleShading().setValue(minSampleShading);
     }
 
     private static native long getMinSampleShading(long address);
@@ -113,8 +133,12 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setAlphaToCoverageEnable(VkBool32 alphaToCoverageEnable) {
-        setAlphaToCoverageEnable(getVkAddress(), alphaToCoverageEnable != null ? alphaToCoverageEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setAlphaToCoverageEnable(getVkAddress(), alphaToCoverageEnable != null ? alphaToCoverageEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAlphaToCoverageEnable(int alphaToCoverageEnable) {
+        getAlphaToCoverageEnable().setValue(alphaToCoverageEnable);
     }
 
     private static native long getAlphaToCoverageEnable(long address);
@@ -126,8 +150,12 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
     
     public void setAlphaToOneEnable(VkBool32 alphaToOneEnable) {
-        setAlphaToOneEnable(getVkAddress(), alphaToOneEnable != null ? alphaToOneEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setAlphaToOneEnable(getVkAddress(), alphaToOneEnable != null ? alphaToOneEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAlphaToOneEnable(int alphaToOneEnable) {
+        getAlphaToOneEnable().setValue(alphaToOneEnable);
     }
 
     private static native long getAlphaToOneEnable(long address);

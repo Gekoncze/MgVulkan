@@ -21,8 +21,12 @@ public class VkPhysicalDeviceExternalMemoryHostPropertiesEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceExternalMemoryHostPropertiesEXT extends VkObject {
 
     
     public void setMinImportedHostPointerAlignment(VkDeviceSize minImportedHostPointerAlignment) {
-        setMinImportedHostPointerAlignment(getVkAddress(), minImportedHostPointerAlignment != null ? minImportedHostPointerAlignment.getVkAddress() : VkPointer.getSinkAddress());
+        setMinImportedHostPointerAlignment(getVkAddress(), minImportedHostPointerAlignment != null ? minImportedHostPointerAlignment.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMinImportedHostPointerAlignment(long minImportedHostPointerAlignment) {
+        getMinImportedHostPointerAlignment().setValue(minImportedHostPointerAlignment);
     }
 
     private static native long getMinImportedHostPointerAlignment(long address);

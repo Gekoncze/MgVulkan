@@ -22,8 +22,12 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setFlags(VkDescriptorUpdateTemplateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setDescriptorUpdateEntryCount(VkUInt32 descriptorUpdateEntryCount) {
-        setDescriptorUpdateEntryCount(getVkAddress(), descriptorUpdateEntryCount != null ? descriptorUpdateEntryCount.getVkAddress() : VkPointer.getSinkAddress());
+        setDescriptorUpdateEntryCount(getVkAddress(), descriptorUpdateEntryCount != null ? descriptorUpdateEntryCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDescriptorUpdateEntryCount(int descriptorUpdateEntryCount) {
+        getDescriptorUpdateEntryCount().setValue(descriptorUpdateEntryCount);
     }
 
     private static native long getDescriptorUpdateEntryCount(long address);
@@ -87,8 +99,12 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setTemplateType(VkDescriptorUpdateTemplateType templateType) {
-        setTemplateType(getVkAddress(), templateType != null ? templateType.getVkAddress() : VkPointer.getSinkAddress());
+        setTemplateType(getVkAddress(), templateType != null ? templateType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setTemplateType(int templateType) {
+        getTemplateType().setValue(templateType);
     }
 
     private static native long getTemplateType(long address);
@@ -100,7 +116,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setDescriptorSetLayout(VkDescriptorSetLayout descriptorSetLayout) {
-        setDescriptorSetLayout(getVkAddress(), descriptorSetLayout != null ? descriptorSetLayout.getVkAddress() : VkPointer.getSinkAddress());
+        setDescriptorSetLayout(getVkAddress(), descriptorSetLayout != null ? descriptorSetLayout.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -113,8 +129,12 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setPipelineBindPoint(VkPipelineBindPoint pipelineBindPoint) {
-        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getSinkAddress());
+        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPipelineBindPoint(int pipelineBindPoint) {
+        getPipelineBindPoint().setValue(pipelineBindPoint);
     }
 
     private static native long getPipelineBindPoint(long address);
@@ -126,7 +146,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setPipelineLayout(VkPipelineLayout pipelineLayout) {
-        setPipelineLayout(getVkAddress(), pipelineLayout != null ? pipelineLayout.getVkAddress() : VkPointer.getSinkAddress());
+        setPipelineLayout(getVkAddress(), pipelineLayout != null ? pipelineLayout.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -139,8 +159,12 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
 
     
     public void setSet(VkUInt32 set) {
-        setSet(getVkAddress(), set != null ? set.getVkAddress() : VkPointer.getSinkAddress());
+        setSet(getVkAddress(), set != null ? set.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSet(int set) {
+        getSet().setValue(set);
     }
 
     private static native long getSet(long address);

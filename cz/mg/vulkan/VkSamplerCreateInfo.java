@@ -22,8 +22,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setFlags(VkSamplerCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMagFilter(VkFilter magFilter) {
-        setMagFilter(getVkAddress(), magFilter != null ? magFilter.getVkAddress() : VkPointer.getSinkAddress());
+        setMagFilter(getVkAddress(), magFilter != null ? magFilter.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMagFilter(int magFilter) {
+        getMagFilter().setValue(magFilter);
     }
 
     private static native long getMagFilter(long address);
@@ -74,8 +86,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMinFilter(VkFilter minFilter) {
-        setMinFilter(getVkAddress(), minFilter != null ? minFilter.getVkAddress() : VkPointer.getSinkAddress());
+        setMinFilter(getVkAddress(), minFilter != null ? minFilter.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMinFilter(int minFilter) {
+        getMinFilter().setValue(minFilter);
     }
 
     private static native long getMinFilter(long address);
@@ -87,8 +103,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMipmapMode(VkSamplerMipmapMode mipmapMode) {
-        setMipmapMode(getVkAddress(), mipmapMode != null ? mipmapMode.getVkAddress() : VkPointer.getSinkAddress());
+        setMipmapMode(getVkAddress(), mipmapMode != null ? mipmapMode.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMipmapMode(int mipmapMode) {
+        getMipmapMode().setValue(mipmapMode);
     }
 
     private static native long getMipmapMode(long address);
@@ -100,8 +120,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setAddressModeU(VkSamplerAddressMode addressModeU) {
-        setAddressModeU(getVkAddress(), addressModeU != null ? addressModeU.getVkAddress() : VkPointer.getSinkAddress());
+        setAddressModeU(getVkAddress(), addressModeU != null ? addressModeU.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAddressModeU(int addressModeU) {
+        getAddressModeU().setValue(addressModeU);
     }
 
     private static native long getAddressModeU(long address);
@@ -113,8 +137,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setAddressModeV(VkSamplerAddressMode addressModeV) {
-        setAddressModeV(getVkAddress(), addressModeV != null ? addressModeV.getVkAddress() : VkPointer.getSinkAddress());
+        setAddressModeV(getVkAddress(), addressModeV != null ? addressModeV.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAddressModeV(int addressModeV) {
+        getAddressModeV().setValue(addressModeV);
     }
 
     private static native long getAddressModeV(long address);
@@ -126,8 +154,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setAddressModeW(VkSamplerAddressMode addressModeW) {
-        setAddressModeW(getVkAddress(), addressModeW != null ? addressModeW.getVkAddress() : VkPointer.getSinkAddress());
+        setAddressModeW(getVkAddress(), addressModeW != null ? addressModeW.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAddressModeW(int addressModeW) {
+        getAddressModeW().setValue(addressModeW);
     }
 
     private static native long getAddressModeW(long address);
@@ -139,8 +171,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMipLodBias(VkFloat mipLodBias) {
-        setMipLodBias(getVkAddress(), mipLodBias != null ? mipLodBias.getVkAddress() : VkPointer.getSinkAddress());
+        setMipLodBias(getVkAddress(), mipLodBias != null ? mipLodBias.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMipLodBias(float mipLodBias) {
+        getMipLodBias().setValue(mipLodBias);
     }
 
     private static native long getMipLodBias(long address);
@@ -152,8 +188,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setAnisotropyEnable(VkBool32 anisotropyEnable) {
-        setAnisotropyEnable(getVkAddress(), anisotropyEnable != null ? anisotropyEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setAnisotropyEnable(getVkAddress(), anisotropyEnable != null ? anisotropyEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAnisotropyEnable(int anisotropyEnable) {
+        getAnisotropyEnable().setValue(anisotropyEnable);
     }
 
     private static native long getAnisotropyEnable(long address);
@@ -165,8 +205,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMaxAnisotropy(VkFloat maxAnisotropy) {
-        setMaxAnisotropy(getVkAddress(), maxAnisotropy != null ? maxAnisotropy.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxAnisotropy(getVkAddress(), maxAnisotropy != null ? maxAnisotropy.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxAnisotropy(float maxAnisotropy) {
+        getMaxAnisotropy().setValue(maxAnisotropy);
     }
 
     private static native long getMaxAnisotropy(long address);
@@ -178,8 +222,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setCompareEnable(VkBool32 compareEnable) {
-        setCompareEnable(getVkAddress(), compareEnable != null ? compareEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setCompareEnable(getVkAddress(), compareEnable != null ? compareEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setCompareEnable(int compareEnable) {
+        getCompareEnable().setValue(compareEnable);
     }
 
     private static native long getCompareEnable(long address);
@@ -191,8 +239,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setCompareOp(VkCompareOp compareOp) {
-        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getSinkAddress());
+        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setCompareOp(int compareOp) {
+        getCompareOp().setValue(compareOp);
     }
 
     private static native long getCompareOp(long address);
@@ -204,8 +256,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMinLod(VkFloat minLod) {
-        setMinLod(getVkAddress(), minLod != null ? minLod.getVkAddress() : VkPointer.getSinkAddress());
+        setMinLod(getVkAddress(), minLod != null ? minLod.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMinLod(float minLod) {
+        getMinLod().setValue(minLod);
     }
 
     private static native long getMinLod(long address);
@@ -217,8 +273,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setMaxLod(VkFloat maxLod) {
-        setMaxLod(getVkAddress(), maxLod != null ? maxLod.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxLod(getVkAddress(), maxLod != null ? maxLod.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxLod(float maxLod) {
+        getMaxLod().setValue(maxLod);
     }
 
     private static native long getMaxLod(long address);
@@ -230,8 +290,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setBorderColor(VkBorderColor borderColor) {
-        setBorderColor(getVkAddress(), borderColor != null ? borderColor.getVkAddress() : VkPointer.getSinkAddress());
+        setBorderColor(getVkAddress(), borderColor != null ? borderColor.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBorderColor(int borderColor) {
+        getBorderColor().setValue(borderColor);
     }
 
     private static native long getBorderColor(long address);
@@ -243,8 +307,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
     
     public void setUnnormalizedCoordinates(VkBool32 unnormalizedCoordinates) {
-        setUnnormalizedCoordinates(getVkAddress(), unnormalizedCoordinates != null ? unnormalizedCoordinates.getVkAddress() : VkPointer.getSinkAddress());
+        setUnnormalizedCoordinates(getVkAddress(), unnormalizedCoordinates != null ? unnormalizedCoordinates.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setUnnormalizedCoordinates(int unnormalizedCoordinates) {
+        getUnnormalizedCoordinates().setValue(unnormalizedCoordinates);
     }
 
     private static native long getUnnormalizedCoordinates(long address);

@@ -21,8 +21,12 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     
     public void setNumUsedVgprs(VkUInt32 numUsedVgprs) {
-        setNumUsedVgprs(getVkAddress(), numUsedVgprs != null ? numUsedVgprs.getVkAddress() : VkPointer.getSinkAddress());
+        setNumUsedVgprs(getVkAddress(), numUsedVgprs != null ? numUsedVgprs.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setNumUsedVgprs(int numUsedVgprs) {
+        getNumUsedVgprs().setValue(numUsedVgprs);
     }
 
     private static native long getNumUsedVgprs(long address);
@@ -34,8 +38,12 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     
     public void setNumUsedSgprs(VkUInt32 numUsedSgprs) {
-        setNumUsedSgprs(getVkAddress(), numUsedSgprs != null ? numUsedSgprs.getVkAddress() : VkPointer.getSinkAddress());
+        setNumUsedSgprs(getVkAddress(), numUsedSgprs != null ? numUsedSgprs.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setNumUsedSgprs(int numUsedSgprs) {
+        getNumUsedSgprs().setValue(numUsedSgprs);
     }
 
     private static native long getNumUsedSgprs(long address);
@@ -47,8 +55,12 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     
     public void setLdsSizePerLocalWorkGroup(VkUInt32 ldsSizePerLocalWorkGroup) {
-        setLdsSizePerLocalWorkGroup(getVkAddress(), ldsSizePerLocalWorkGroup != null ? ldsSizePerLocalWorkGroup.getVkAddress() : VkPointer.getSinkAddress());
+        setLdsSizePerLocalWorkGroup(getVkAddress(), ldsSizePerLocalWorkGroup != null ? ldsSizePerLocalWorkGroup.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLdsSizePerLocalWorkGroup(int ldsSizePerLocalWorkGroup) {
+        getLdsSizePerLocalWorkGroup().setValue(ldsSizePerLocalWorkGroup);
     }
 
     private static native long getLdsSizePerLocalWorkGroup(long address);
@@ -60,8 +72,12 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     
     public void setLdsUsageSizeInBytes(VkSize ldsUsageSizeInBytes) {
-        setLdsUsageSizeInBytes(getVkAddress(), ldsUsageSizeInBytes != null ? ldsUsageSizeInBytes.getVkAddress() : VkPointer.getSinkAddress());
+        setLdsUsageSizeInBytes(getVkAddress(), ldsUsageSizeInBytes != null ? ldsUsageSizeInBytes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLdsUsageSizeInBytes(long ldsUsageSizeInBytes) {
+        getLdsUsageSizeInBytes().setValue(ldsUsageSizeInBytes);
     }
 
     private static native long getLdsUsageSizeInBytes(long address);
@@ -73,8 +89,12 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
     
     public void setScratchMemUsageInBytes(VkSize scratchMemUsageInBytes) {
-        setScratchMemUsageInBytes(getVkAddress(), scratchMemUsageInBytes != null ? scratchMemUsageInBytes.getVkAddress() : VkPointer.getSinkAddress());
+        setScratchMemUsageInBytes(getVkAddress(), scratchMemUsageInBytes != null ? scratchMemUsageInBytes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setScratchMemUsageInBytes(long scratchMemUsageInBytes) {
+        getScratchMemUsageInBytes().setValue(scratchMemUsageInBytes);
     }
 
     private static native long getScratchMemUsageInBytes(long address);

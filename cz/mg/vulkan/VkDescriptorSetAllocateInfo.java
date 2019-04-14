@@ -22,8 +22,12 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,7 +52,7 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
 
     
     public void setDescriptorPool(VkDescriptorPool descriptorPool) {
-        setDescriptorPool(getVkAddress(), descriptorPool != null ? descriptorPool.getVkAddress() : VkPointer.getSinkAddress());
+        setDescriptorPool(getVkAddress(), descriptorPool != null ? descriptorPool.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -61,8 +65,12 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
 
     
     public void setDescriptorSetCount(VkUInt32 descriptorSetCount) {
-        setDescriptorSetCount(getVkAddress(), descriptorSetCount != null ? descriptorSetCount.getVkAddress() : VkPointer.getSinkAddress());
+        setDescriptorSetCount(getVkAddress(), descriptorSetCount != null ? descriptorSetCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDescriptorSetCount(int descriptorSetCount) {
+        getDescriptorSetCount().setValue(descriptorSetCount);
     }
 
     private static native long getDescriptorSetCount(long address);

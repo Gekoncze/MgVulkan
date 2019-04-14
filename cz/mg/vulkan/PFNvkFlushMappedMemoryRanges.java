@@ -23,7 +23,7 @@ public class PFNvkFlushMappedMemoryRanges extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkUInt32 memoryRangeCount, VkMappedMemoryRange pMemoryRanges, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getSinkAddress(), memoryRangeCount != null ? memoryRangeCount.getVkAddress() : VkPointer.getSinkAddress(), pMemoryRanges != null ? pMemoryRanges.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), memoryRangeCount != null ? memoryRangeCount.getVkAddress() : VkPointer.getNullAddress(), pMemoryRanges != null ? pMemoryRanges.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long device, long memoryRangeCount, long pMemoryRanges, long rval);

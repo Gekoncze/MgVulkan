@@ -21,7 +21,7 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setSubresource(VkImageSubresource subresource) {
-        setSubresource(getVkAddress(), subresource != null ? subresource.getVkAddress() : VkPointer.getSinkAddress());
+        setSubresource(getVkAddress(), subresource != null ? subresource.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -34,7 +34,7 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setOffset(VkOffset3D offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -47,7 +47,7 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setExtent(VkExtent3D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getSinkAddress());
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -60,7 +60,7 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setMemory(VkDeviceMemory memory) {
-        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getSinkAddress());
+        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -73,8 +73,12 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setMemoryOffset(VkDeviceSize memoryOffset) {
-        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getSinkAddress());
+        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMemoryOffset(long memoryOffset) {
+        getMemoryOffset().setValue(memoryOffset);
     }
 
     private static native long getMemoryOffset(long address);
@@ -86,8 +90,12 @@ public class VkSparseImageMemoryBind extends VkObject {
 
     
     public void setFlags(VkSparseMemoryBindFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);

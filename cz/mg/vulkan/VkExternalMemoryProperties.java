@@ -21,8 +21,12 @@ public class VkExternalMemoryProperties extends VkObject {
 
     
     public void setExternalMemoryFeatures(VkExternalMemoryFeatureFlags externalMemoryFeatures) {
-        setExternalMemoryFeatures(getVkAddress(), externalMemoryFeatures != null ? externalMemoryFeatures.getVkAddress() : VkPointer.getSinkAddress());
+        setExternalMemoryFeatures(getVkAddress(), externalMemoryFeatures != null ? externalMemoryFeatures.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setExternalMemoryFeatures(int externalMemoryFeatures) {
+        getExternalMemoryFeatures().setValue(externalMemoryFeatures);
     }
 
     private static native long getExternalMemoryFeatures(long address);
@@ -34,8 +38,12 @@ public class VkExternalMemoryProperties extends VkObject {
 
     
     public void setExportFromImportedHandleTypes(VkExternalMemoryHandleTypeFlags exportFromImportedHandleTypes) {
-        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.getSinkAddress());
+        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setExportFromImportedHandleTypes(int exportFromImportedHandleTypes) {
+        getExportFromImportedHandleTypes().setValue(exportFromImportedHandleTypes);
     }
 
     private static native long getExportFromImportedHandleTypes(long address);
@@ -47,8 +55,12 @@ public class VkExternalMemoryProperties extends VkObject {
 
     
     public void setCompatibleHandleTypes(VkExternalMemoryHandleTypeFlags compatibleHandleTypes) {
-        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getSinkAddress());
+        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setCompatibleHandleTypes(int compatibleHandleTypes) {
+        getCompatibleHandleTypes().setValue(compatibleHandleTypes);
     }
 
     private static native long getCompatibleHandleTypes(long address);

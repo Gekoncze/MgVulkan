@@ -23,7 +23,7 @@ public class PFNvkDestroySampler extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkSampler sampler, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getSinkAddress(), sampler != null ? sampler.getVkAddress() : VkPointer.getSinkAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), sampler != null ? sampler.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     private static native void call(long vkaddress, long device, long sampler, long pAllocator);

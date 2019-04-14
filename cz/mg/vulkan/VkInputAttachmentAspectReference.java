@@ -21,8 +21,12 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
     
     public void setSubpass(VkUInt32 subpass) {
-        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getSinkAddress());
+        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSubpass(int subpass) {
+        getSubpass().setValue(subpass);
     }
 
     private static native long getSubpass(long address);
@@ -34,8 +38,12 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
     
     public void setInputAttachmentIndex(VkUInt32 inputAttachmentIndex) {
-        setInputAttachmentIndex(getVkAddress(), inputAttachmentIndex != null ? inputAttachmentIndex.getVkAddress() : VkPointer.getSinkAddress());
+        setInputAttachmentIndex(getVkAddress(), inputAttachmentIndex != null ? inputAttachmentIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setInputAttachmentIndex(int inputAttachmentIndex) {
+        getInputAttachmentIndex().setValue(inputAttachmentIndex);
     }
 
     private static native long getInputAttachmentIndex(long address);
@@ -47,8 +55,12 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getSinkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAspectMask(int aspectMask) {
+        getAspectMask().setValue(aspectMask);
     }
 
     private static native long getAspectMask(long address);

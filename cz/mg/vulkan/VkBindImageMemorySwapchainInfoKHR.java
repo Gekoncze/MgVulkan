@@ -22,8 +22,12 @@ public class VkBindImageMemorySwapchainInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,7 +52,7 @@ public class VkBindImageMemorySwapchainInfoKHR extends VkObject {
 
     
     public void setSwapchain(VkSwapchainKHR swapchain) {
-        setSwapchain(getVkAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getSinkAddress());
+        setSwapchain(getVkAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -61,8 +65,12 @@ public class VkBindImageMemorySwapchainInfoKHR extends VkObject {
 
     
     public void setImageIndex(VkUInt32 imageIndex) {
-        setImageIndex(getVkAddress(), imageIndex != null ? imageIndex.getVkAddress() : VkPointer.getSinkAddress());
+        setImageIndex(getVkAddress(), imageIndex != null ? imageIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setImageIndex(int imageIndex) {
+        getImageIndex().setValue(imageIndex);
     }
 
     private static native long getImageIndex(long address);

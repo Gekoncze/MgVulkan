@@ -21,8 +21,12 @@ public class VkDescriptorPoolSize extends VkObject {
 
     
     public void setType(VkDescriptorType type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getSinkAddress());
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setType(int type) {
+        getType().setValue(type);
     }
 
     private static native long getType(long address);
@@ -34,8 +38,12 @@ public class VkDescriptorPoolSize extends VkObject {
 
     
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getSinkAddress());
+        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDescriptorCount(int descriptorCount) {
+        getDescriptorCount().setValue(descriptorCount);
     }
 
     private static native long getDescriptorCount(long address);

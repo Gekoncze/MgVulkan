@@ -23,7 +23,7 @@ public class PFNvkCmdSetStencilWriteMask extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, VkUInt32 writeMask){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getSinkAddress(), faceMask != null ? faceMask.getVkAddress() : VkPointer.getSinkAddress(), writeMask != null ? writeMask.getVkAddress() : VkPointer.getSinkAddress());
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), faceMask != null ? faceMask.getVkAddress() : VkPointer.getNullAddress(), writeMask != null ? writeMask.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer, long faceMask, long writeMask);

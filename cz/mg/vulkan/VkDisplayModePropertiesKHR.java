@@ -21,7 +21,7 @@ public class VkDisplayModePropertiesKHR extends VkObject {
 
     
     public void setDisplayMode(VkDisplayModeKHR displayMode) {
-        setDisplayMode(getVkAddress(), displayMode != null ? displayMode.getVkAddress() : VkPointer.getSinkAddress());
+        setDisplayMode(getVkAddress(), displayMode != null ? displayMode.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -34,7 +34,7 @@ public class VkDisplayModePropertiesKHR extends VkObject {
 
     
     public void setParameters(VkDisplayModeParametersKHR parameters) {
-        setParameters(getVkAddress(), parameters != null ? parameters.getVkAddress() : VkPointer.getSinkAddress());
+        setParameters(getVkAddress(), parameters != null ? parameters.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

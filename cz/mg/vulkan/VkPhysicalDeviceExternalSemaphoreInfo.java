@@ -22,8 +22,12 @@ public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
 
     
     public void setHandleType(VkExternalSemaphoreHandleTypeFlagBits handleType) {
-        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getSinkAddress());
+        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setHandleType(int handleType) {
+        getHandleType().setValue(handleType);
     }
 
     private static native long getHandleType(long address);

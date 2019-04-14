@@ -21,8 +21,12 @@ public class VkImageSubresourceLayers extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getSinkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAspectMask(int aspectMask) {
+        getAspectMask().setValue(aspectMask);
     }
 
     private static native long getAspectMask(long address);
@@ -34,8 +38,12 @@ public class VkImageSubresourceLayers extends VkObject {
 
     
     public void setMipLevel(VkUInt32 mipLevel) {
-        setMipLevel(getVkAddress(), mipLevel != null ? mipLevel.getVkAddress() : VkPointer.getSinkAddress());
+        setMipLevel(getVkAddress(), mipLevel != null ? mipLevel.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMipLevel(int mipLevel) {
+        getMipLevel().setValue(mipLevel);
     }
 
     private static native long getMipLevel(long address);
@@ -47,8 +55,12 @@ public class VkImageSubresourceLayers extends VkObject {
 
     
     public void setBaseArrayLayer(VkUInt32 baseArrayLayer) {
-        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.getSinkAddress());
+        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBaseArrayLayer(int baseArrayLayer) {
+        getBaseArrayLayer().setValue(baseArrayLayer);
     }
 
     private static native long getBaseArrayLayer(long address);
@@ -60,8 +72,12 @@ public class VkImageSubresourceLayers extends VkObject {
 
     
     public void setLayerCount(VkUInt32 layerCount) {
-        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getSinkAddress());
+        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLayerCount(int layerCount) {
+        getLayerCount().setValue(layerCount);
     }
 
     private static native long getLayerCount(long address);

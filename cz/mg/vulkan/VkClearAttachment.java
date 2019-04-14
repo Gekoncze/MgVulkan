@@ -21,8 +21,12 @@ public class VkClearAttachment extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getSinkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAspectMask(int aspectMask) {
+        getAspectMask().setValue(aspectMask);
     }
 
     private static native long getAspectMask(long address);
@@ -34,8 +38,12 @@ public class VkClearAttachment extends VkObject {
 
     
     public void setColorAttachment(VkUInt32 colorAttachment) {
-        setColorAttachment(getVkAddress(), colorAttachment != null ? colorAttachment.getVkAddress() : VkPointer.getSinkAddress());
+        setColorAttachment(getVkAddress(), colorAttachment != null ? colorAttachment.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setColorAttachment(int colorAttachment) {
+        getColorAttachment().setValue(colorAttachment);
     }
 
     private static native long getColorAttachment(long address);
@@ -47,7 +55,7 @@ public class VkClearAttachment extends VkObject {
 
     
     public void setClearValue(VkClearValue clearValue) {
-        setClearValue(getVkAddress(), clearValue != null ? clearValue.getVkAddress() : VkPointer.getSinkAddress());
+        setClearValue(getVkAddress(), clearValue != null ? clearValue.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

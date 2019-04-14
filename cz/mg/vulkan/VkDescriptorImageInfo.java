@@ -21,7 +21,7 @@ public class VkDescriptorImageInfo extends VkObject {
 
     
     public void setSampler(VkSampler sampler) {
-        setSampler(getVkAddress(), sampler != null ? sampler.getVkAddress() : VkPointer.getSinkAddress());
+        setSampler(getVkAddress(), sampler != null ? sampler.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -34,7 +34,7 @@ public class VkDescriptorImageInfo extends VkObject {
 
     
     public void setImageView(VkImageView imageView) {
-        setImageView(getVkAddress(), imageView != null ? imageView.getVkAddress() : VkPointer.getSinkAddress());
+        setImageView(getVkAddress(), imageView != null ? imageView.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -47,8 +47,12 @@ public class VkDescriptorImageInfo extends VkObject {
 
     
     public void setImageLayout(VkImageLayout imageLayout) {
-        setImageLayout(getVkAddress(), imageLayout != null ? imageLayout.getVkAddress() : VkPointer.getSinkAddress());
+        setImageLayout(getVkAddress(), imageLayout != null ? imageLayout.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setImageLayout(int imageLayout) {
+        getImageLayout().setValue(imageLayout);
     }
 
     private static native long getImageLayout(long address);

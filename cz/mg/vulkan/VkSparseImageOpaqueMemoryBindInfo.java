@@ -21,7 +21,7 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getSinkAddress());
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -34,8 +34,12 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
 
     
     public void setBindCount(VkUInt32 bindCount) {
-        setBindCount(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.getSinkAddress());
+        setBindCount(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBindCount(int bindCount) {
+        getBindCount().setValue(bindCount);
     }
 
     private static native long getBindCount(long address);

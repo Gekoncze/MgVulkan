@@ -22,8 +22,12 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineInputAssemblyStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
 
     
     public void setTopology(VkPrimitiveTopology topology) {
-        setTopology(getVkAddress(), topology != null ? topology.getVkAddress() : VkPointer.getSinkAddress());
+        setTopology(getVkAddress(), topology != null ? topology.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setTopology(int topology) {
+        getTopology().setValue(topology);
     }
 
     private static native long getTopology(long address);
@@ -74,8 +86,12 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
 
     
     public void setPrimitiveRestartEnable(VkBool32 primitiveRestartEnable) {
-        setPrimitiveRestartEnable(getVkAddress(), primitiveRestartEnable != null ? primitiveRestartEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setPrimitiveRestartEnable(getVkAddress(), primitiveRestartEnable != null ? primitiveRestartEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPrimitiveRestartEnable(int primitiveRestartEnable) {
+        getPrimitiveRestartEnable().setValue(primitiveRestartEnable);
     }
 
     private static native long getPrimitiveRestartEnable(long address);

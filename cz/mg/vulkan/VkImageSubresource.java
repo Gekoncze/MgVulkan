@@ -21,8 +21,12 @@ public class VkImageSubresource extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getSinkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAspectMask(int aspectMask) {
+        getAspectMask().setValue(aspectMask);
     }
 
     private static native long getAspectMask(long address);
@@ -34,8 +38,12 @@ public class VkImageSubresource extends VkObject {
 
     
     public void setMipLevel(VkUInt32 mipLevel) {
-        setMipLevel(getVkAddress(), mipLevel != null ? mipLevel.getVkAddress() : VkPointer.getSinkAddress());
+        setMipLevel(getVkAddress(), mipLevel != null ? mipLevel.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMipLevel(int mipLevel) {
+        getMipLevel().setValue(mipLevel);
     }
 
     private static native long getMipLevel(long address);
@@ -47,8 +55,12 @@ public class VkImageSubresource extends VkObject {
 
     
     public void setArrayLayer(VkUInt32 arrayLayer) {
-        setArrayLayer(getVkAddress(), arrayLayer != null ? arrayLayer.getVkAddress() : VkPointer.getSinkAddress());
+        setArrayLayer(getVkAddress(), arrayLayer != null ? arrayLayer.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setArrayLayer(int arrayLayer) {
+        getArrayLayer().setValue(arrayLayer);
     }
 
     private static native long getArrayLayer(long address);

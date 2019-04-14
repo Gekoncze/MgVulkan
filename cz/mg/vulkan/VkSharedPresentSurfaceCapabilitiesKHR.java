@@ -21,8 +21,12 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setSharedPresentSupportedUsageFlags(VkImageUsageFlags sharedPresentSupportedUsageFlags) {
-        setSharedPresentSupportedUsageFlags(getVkAddress(), sharedPresentSupportedUsageFlags != null ? sharedPresentSupportedUsageFlags.getVkAddress() : VkPointer.getSinkAddress());
+        setSharedPresentSupportedUsageFlags(getVkAddress(), sharedPresentSupportedUsageFlags != null ? sharedPresentSupportedUsageFlags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSharedPresentSupportedUsageFlags(int sharedPresentSupportedUsageFlags) {
+        getSharedPresentSupportedUsageFlags().setValue(sharedPresentSupportedUsageFlags);
     }
 
     private static native long getSharedPresentSupportedUsageFlags(long address);

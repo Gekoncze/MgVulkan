@@ -21,8 +21,12 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setOffset(long offset) {
+        getOffset().setValue(offset);
     }
 
     private static native long getOffset(long address);
@@ -34,8 +38,12 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getSinkAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSize(long size) {
+        getSize().setValue(size);
     }
 
     private static native long getSize(long address);
@@ -47,8 +55,12 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setRowPitch(VkDeviceSize rowPitch) {
-        setRowPitch(getVkAddress(), rowPitch != null ? rowPitch.getVkAddress() : VkPointer.getSinkAddress());
+        setRowPitch(getVkAddress(), rowPitch != null ? rowPitch.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setRowPitch(long rowPitch) {
+        getRowPitch().setValue(rowPitch);
     }
 
     private static native long getRowPitch(long address);
@@ -60,8 +72,12 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setArrayPitch(VkDeviceSize arrayPitch) {
-        setArrayPitch(getVkAddress(), arrayPitch != null ? arrayPitch.getVkAddress() : VkPointer.getSinkAddress());
+        setArrayPitch(getVkAddress(), arrayPitch != null ? arrayPitch.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setArrayPitch(long arrayPitch) {
+        getArrayPitch().setValue(arrayPitch);
     }
 
     private static native long getArrayPitch(long address);
@@ -73,8 +89,12 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setDepthPitch(VkDeviceSize depthPitch) {
-        setDepthPitch(getVkAddress(), depthPitch != null ? depthPitch.getVkAddress() : VkPointer.getSinkAddress());
+        setDepthPitch(getVkAddress(), depthPitch != null ? depthPitch.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDepthPitch(long depthPitch) {
+        getDepthPitch().setValue(depthPitch);
     }
 
     private static native long getDepthPitch(long address);

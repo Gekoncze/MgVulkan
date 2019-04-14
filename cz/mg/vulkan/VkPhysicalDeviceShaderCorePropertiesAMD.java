@@ -21,8 +21,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setShaderEngineCount(VkUInt32 shaderEngineCount) {
-        setShaderEngineCount(getVkAddress(), shaderEngineCount != null ? shaderEngineCount.getVkAddress() : VkPointer.getSinkAddress());
+        setShaderEngineCount(getVkAddress(), shaderEngineCount != null ? shaderEngineCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setShaderEngineCount(int shaderEngineCount) {
+        getShaderEngineCount().setValue(shaderEngineCount);
     }
 
     private static native long getShaderEngineCount(long address);
@@ -60,8 +68,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setShaderArraysPerEngineCount(VkUInt32 shaderArraysPerEngineCount) {
-        setShaderArraysPerEngineCount(getVkAddress(), shaderArraysPerEngineCount != null ? shaderArraysPerEngineCount.getVkAddress() : VkPointer.getSinkAddress());
+        setShaderArraysPerEngineCount(getVkAddress(), shaderArraysPerEngineCount != null ? shaderArraysPerEngineCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setShaderArraysPerEngineCount(int shaderArraysPerEngineCount) {
+        getShaderArraysPerEngineCount().setValue(shaderArraysPerEngineCount);
     }
 
     private static native long getShaderArraysPerEngineCount(long address);
@@ -73,8 +85,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setComputeUnitsPerShaderArray(VkUInt32 computeUnitsPerShaderArray) {
-        setComputeUnitsPerShaderArray(getVkAddress(), computeUnitsPerShaderArray != null ? computeUnitsPerShaderArray.getVkAddress() : VkPointer.getSinkAddress());
+        setComputeUnitsPerShaderArray(getVkAddress(), computeUnitsPerShaderArray != null ? computeUnitsPerShaderArray.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setComputeUnitsPerShaderArray(int computeUnitsPerShaderArray) {
+        getComputeUnitsPerShaderArray().setValue(computeUnitsPerShaderArray);
     }
 
     private static native long getComputeUnitsPerShaderArray(long address);
@@ -86,8 +102,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setSimdPerComputeUnit(VkUInt32 simdPerComputeUnit) {
-        setSimdPerComputeUnit(getVkAddress(), simdPerComputeUnit != null ? simdPerComputeUnit.getVkAddress() : VkPointer.getSinkAddress());
+        setSimdPerComputeUnit(getVkAddress(), simdPerComputeUnit != null ? simdPerComputeUnit.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSimdPerComputeUnit(int simdPerComputeUnit) {
+        getSimdPerComputeUnit().setValue(simdPerComputeUnit);
     }
 
     private static native long getSimdPerComputeUnit(long address);
@@ -99,8 +119,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setWavefrontsPerSimd(VkUInt32 wavefrontsPerSimd) {
-        setWavefrontsPerSimd(getVkAddress(), wavefrontsPerSimd != null ? wavefrontsPerSimd.getVkAddress() : VkPointer.getSinkAddress());
+        setWavefrontsPerSimd(getVkAddress(), wavefrontsPerSimd != null ? wavefrontsPerSimd.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setWavefrontsPerSimd(int wavefrontsPerSimd) {
+        getWavefrontsPerSimd().setValue(wavefrontsPerSimd);
     }
 
     private static native long getWavefrontsPerSimd(long address);
@@ -112,8 +136,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setWavefrontSize(VkUInt32 wavefrontSize) {
-        setWavefrontSize(getVkAddress(), wavefrontSize != null ? wavefrontSize.getVkAddress() : VkPointer.getSinkAddress());
+        setWavefrontSize(getVkAddress(), wavefrontSize != null ? wavefrontSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setWavefrontSize(int wavefrontSize) {
+        getWavefrontSize().setValue(wavefrontSize);
     }
 
     private static native long getWavefrontSize(long address);
@@ -125,8 +153,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setSgprsPerSimd(VkUInt32 sgprsPerSimd) {
-        setSgprsPerSimd(getVkAddress(), sgprsPerSimd != null ? sgprsPerSimd.getVkAddress() : VkPointer.getSinkAddress());
+        setSgprsPerSimd(getVkAddress(), sgprsPerSimd != null ? sgprsPerSimd.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSgprsPerSimd(int sgprsPerSimd) {
+        getSgprsPerSimd().setValue(sgprsPerSimd);
     }
 
     private static native long getSgprsPerSimd(long address);
@@ -138,8 +170,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setMinSgprAllocation(VkUInt32 minSgprAllocation) {
-        setMinSgprAllocation(getVkAddress(), minSgprAllocation != null ? minSgprAllocation.getVkAddress() : VkPointer.getSinkAddress());
+        setMinSgprAllocation(getVkAddress(), minSgprAllocation != null ? minSgprAllocation.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMinSgprAllocation(int minSgprAllocation) {
+        getMinSgprAllocation().setValue(minSgprAllocation);
     }
 
     private static native long getMinSgprAllocation(long address);
@@ -151,8 +187,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setMaxSgprAllocation(VkUInt32 maxSgprAllocation) {
-        setMaxSgprAllocation(getVkAddress(), maxSgprAllocation != null ? maxSgprAllocation.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxSgprAllocation(getVkAddress(), maxSgprAllocation != null ? maxSgprAllocation.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxSgprAllocation(int maxSgprAllocation) {
+        getMaxSgprAllocation().setValue(maxSgprAllocation);
     }
 
     private static native long getMaxSgprAllocation(long address);
@@ -164,8 +204,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setSgprAllocationGranularity(VkUInt32 sgprAllocationGranularity) {
-        setSgprAllocationGranularity(getVkAddress(), sgprAllocationGranularity != null ? sgprAllocationGranularity.getVkAddress() : VkPointer.getSinkAddress());
+        setSgprAllocationGranularity(getVkAddress(), sgprAllocationGranularity != null ? sgprAllocationGranularity.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSgprAllocationGranularity(int sgprAllocationGranularity) {
+        getSgprAllocationGranularity().setValue(sgprAllocationGranularity);
     }
 
     private static native long getSgprAllocationGranularity(long address);
@@ -177,8 +221,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setVgprsPerSimd(VkUInt32 vgprsPerSimd) {
-        setVgprsPerSimd(getVkAddress(), vgprsPerSimd != null ? vgprsPerSimd.getVkAddress() : VkPointer.getSinkAddress());
+        setVgprsPerSimd(getVkAddress(), vgprsPerSimd != null ? vgprsPerSimd.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setVgprsPerSimd(int vgprsPerSimd) {
+        getVgprsPerSimd().setValue(vgprsPerSimd);
     }
 
     private static native long getVgprsPerSimd(long address);
@@ -190,8 +238,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setMinVgprAllocation(VkUInt32 minVgprAllocation) {
-        setMinVgprAllocation(getVkAddress(), minVgprAllocation != null ? minVgprAllocation.getVkAddress() : VkPointer.getSinkAddress());
+        setMinVgprAllocation(getVkAddress(), minVgprAllocation != null ? minVgprAllocation.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMinVgprAllocation(int minVgprAllocation) {
+        getMinVgprAllocation().setValue(minVgprAllocation);
     }
 
     private static native long getMinVgprAllocation(long address);
@@ -203,8 +255,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setMaxVgprAllocation(VkUInt32 maxVgprAllocation) {
-        setMaxVgprAllocation(getVkAddress(), maxVgprAllocation != null ? maxVgprAllocation.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxVgprAllocation(getVkAddress(), maxVgprAllocation != null ? maxVgprAllocation.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxVgprAllocation(int maxVgprAllocation) {
+        getMaxVgprAllocation().setValue(maxVgprAllocation);
     }
 
     private static native long getMaxVgprAllocation(long address);
@@ -216,8 +272,12 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
 
     
     public void setVgprAllocationGranularity(VkUInt32 vgprAllocationGranularity) {
-        setVgprAllocationGranularity(getVkAddress(), vgprAllocationGranularity != null ? vgprAllocationGranularity.getVkAddress() : VkPointer.getSinkAddress());
+        setVgprAllocationGranularity(getVkAddress(), vgprAllocationGranularity != null ? vgprAllocationGranularity.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setVgprAllocationGranularity(int vgprAllocationGranularity) {
+        getVgprAllocationGranularity().setValue(vgprAllocationGranularity);
     }
 
     private static native long getVgprAllocationGranularity(long address);

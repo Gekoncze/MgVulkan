@@ -21,8 +21,12 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
 
     
     public void setTokenType(VkIndirectCommandsTokenTypeNVX tokenType) {
-        setTokenType(getVkAddress(), tokenType != null ? tokenType.getVkAddress() : VkPointer.getSinkAddress());
+        setTokenType(getVkAddress(), tokenType != null ? tokenType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setTokenType(int tokenType) {
+        getTokenType().setValue(tokenType);
     }
 
     private static native long getTokenType(long address);
@@ -34,8 +38,12 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
 
     
     public void setBindingUnit(VkUInt32 bindingUnit) {
-        setBindingUnit(getVkAddress(), bindingUnit != null ? bindingUnit.getVkAddress() : VkPointer.getSinkAddress());
+        setBindingUnit(getVkAddress(), bindingUnit != null ? bindingUnit.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBindingUnit(int bindingUnit) {
+        getBindingUnit().setValue(bindingUnit);
     }
 
     private static native long getBindingUnit(long address);
@@ -47,8 +55,12 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
 
     
     public void setDynamicCount(VkUInt32 dynamicCount) {
-        setDynamicCount(getVkAddress(), dynamicCount != null ? dynamicCount.getVkAddress() : VkPointer.getSinkAddress());
+        setDynamicCount(getVkAddress(), dynamicCount != null ? dynamicCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDynamicCount(int dynamicCount) {
+        getDynamicCount().setValue(dynamicCount);
     }
 
     private static native long getDynamicCount(long address);
@@ -60,8 +72,12 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
 
     
     public void setDivisor(VkUInt32 divisor) {
-        setDivisor(getVkAddress(), divisor != null ? divisor.getVkAddress() : VkPointer.getSinkAddress());
+        setDivisor(getVkAddress(), divisor != null ? divisor.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDivisor(int divisor) {
+        getDivisor().setValue(divisor);
     }
 
     private static native long getDivisor(long address);

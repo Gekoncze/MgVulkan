@@ -22,8 +22,12 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineShaderStageCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
 
     
     public void setStage(VkShaderStageFlagBits stage) {
-        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.getSinkAddress());
+        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setStage(int stage) {
+        getStage().setValue(stage);
     }
 
     private static native long getStage(long address);
@@ -74,7 +86,7 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
 
     
     public void setModule(VkShaderModule module) {
-        setModule(getVkAddress(), module != null ? module.getVkAddress() : VkPointer.getSinkAddress());
+        setModule(getVkAddress(), module != null ? module.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -89,6 +101,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
     public void setPName(VkChar pName) {
         setPName(getVkAddress(), pName != null ? pName.getVkAddress() : VkPointer.NULL);
         this.pName = pName;
+    }
+
+    public void setPName(String pName) {
+        setPName(new VkString(pName));
     }
 
     private static native long getPName(long address);

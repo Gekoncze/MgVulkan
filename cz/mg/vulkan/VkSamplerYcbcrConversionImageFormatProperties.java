@@ -21,8 +21,12 @@ public class VkSamplerYcbcrConversionImageFormatProperties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkSamplerYcbcrConversionImageFormatProperties extends VkObject {
 
     
     public void setCombinedImageSamplerDescriptorCount(VkUInt32 combinedImageSamplerDescriptorCount) {
-        setCombinedImageSamplerDescriptorCount(getVkAddress(), combinedImageSamplerDescriptorCount != null ? combinedImageSamplerDescriptorCount.getVkAddress() : VkPointer.getSinkAddress());
+        setCombinedImageSamplerDescriptorCount(getVkAddress(), combinedImageSamplerDescriptorCount != null ? combinedImageSamplerDescriptorCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setCombinedImageSamplerDescriptorCount(int combinedImageSamplerDescriptorCount) {
+        getCombinedImageSamplerDescriptorCount().setValue(combinedImageSamplerDescriptorCount);
     }
 
     private static native long getCombinedImageSamplerDescriptorCount(long address);

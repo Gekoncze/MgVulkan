@@ -22,8 +22,12 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,7 +52,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getSinkAddress());
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -61,7 +65,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setFramebuffer(VkFramebuffer framebuffer) {
-        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getSinkAddress());
+        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -74,7 +78,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setRenderArea(VkRect2D renderArea) {
-        setRenderArea(getVkAddress(), renderArea != null ? renderArea.getVkAddress() : VkPointer.getSinkAddress());
+        setRenderArea(getVkAddress(), renderArea != null ? renderArea.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -87,8 +91,12 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setClearValueCount(VkUInt32 clearValueCount) {
-        setClearValueCount(getVkAddress(), clearValueCount != null ? clearValueCount.getVkAddress() : VkPointer.getSinkAddress());
+        setClearValueCount(getVkAddress(), clearValueCount != null ? clearValueCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setClearValueCount(int clearValueCount) {
+        getClearValueCount().setValue(clearValueCount);
     }
 
     private static native long getClearValueCount(long address);

@@ -19,7 +19,7 @@ public class PFNvkAllocationFunction extends VkFunctionPointer {
     }
 
     public void call(VkObject pUserData, VkSize size, VkSize alignment, VkSystemAllocationScope allocationScope){
-        call(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, size != null ? size.getVkAddress() : VkPointer.getSinkAddress(), alignment != null ? alignment.getVkAddress() : VkPointer.getSinkAddress(), allocationScope != null ? allocationScope.getVkAddress() : VkPointer.getSinkAddress());
+        call(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, size != null ? size.getVkAddress() : VkPointer.getNullAddress(), alignment != null ? alignment.getVkAddress() : VkPointer.getNullAddress(), allocationScope != null ? allocationScope.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long pUserData, long size, long alignment, long allocationScope);

@@ -21,8 +21,12 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setR(VkComponentSwizzle r) {
-        setR(getVkAddress(), r != null ? r.getVkAddress() : VkPointer.getSinkAddress());
+        setR(getVkAddress(), r != null ? r.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setR(int r) {
+        getR().setValue(r);
     }
 
     private static native long getR(long address);
@@ -34,8 +38,12 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setG(VkComponentSwizzle g) {
-        setG(getVkAddress(), g != null ? g.getVkAddress() : VkPointer.getSinkAddress());
+        setG(getVkAddress(), g != null ? g.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setG(int g) {
+        getG().setValue(g);
     }
 
     private static native long getG(long address);
@@ -47,8 +55,12 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setB(VkComponentSwizzle b) {
-        setB(getVkAddress(), b != null ? b.getVkAddress() : VkPointer.getSinkAddress());
+        setB(getVkAddress(), b != null ? b.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setB(int b) {
+        getB().setValue(b);
     }
 
     private static native long getB(long address);
@@ -60,8 +72,12 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setA(VkComponentSwizzle a) {
-        setA(getVkAddress(), a != null ? a.getVkAddress() : VkPointer.getSinkAddress());
+        setA(getVkAddress(), a != null ? a.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setA(int a) {
+        getA().setValue(a);
     }
 
     private static native long getA(long address);

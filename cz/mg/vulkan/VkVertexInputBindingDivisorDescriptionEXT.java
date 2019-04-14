@@ -21,8 +21,12 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getSinkAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBinding(int binding) {
+        getBinding().setValue(binding);
     }
 
     private static native long getBinding(long address);
@@ -34,8 +38,12 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
 
     
     public void setDivisor(VkUInt32 divisor) {
-        setDivisor(getVkAddress(), divisor != null ? divisor.getVkAddress() : VkPointer.getSinkAddress());
+        setDivisor(getVkAddress(), divisor != null ? divisor.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDivisor(int divisor) {
+        getDivisor().setValue(divisor);
     }
 
     private static native long getDivisor(long address);

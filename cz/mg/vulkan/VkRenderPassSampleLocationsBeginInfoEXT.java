@@ -22,8 +22,12 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
 
     
     public void setAttachmentInitialSampleLocationsCount(VkUInt32 attachmentInitialSampleLocationsCount) {
-        setAttachmentInitialSampleLocationsCount(getVkAddress(), attachmentInitialSampleLocationsCount != null ? attachmentInitialSampleLocationsCount.getVkAddress() : VkPointer.getSinkAddress());
+        setAttachmentInitialSampleLocationsCount(getVkAddress(), attachmentInitialSampleLocationsCount != null ? attachmentInitialSampleLocationsCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAttachmentInitialSampleLocationsCount(int attachmentInitialSampleLocationsCount) {
+        getAttachmentInitialSampleLocationsCount().setValue(attachmentInitialSampleLocationsCount);
     }
 
     private static native long getAttachmentInitialSampleLocationsCount(long address);
@@ -74,8 +82,12 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
 
     
     public void setPostSubpassSampleLocationsCount(VkUInt32 postSubpassSampleLocationsCount) {
-        setPostSubpassSampleLocationsCount(getVkAddress(), postSubpassSampleLocationsCount != null ? postSubpassSampleLocationsCount.getVkAddress() : VkPointer.getSinkAddress());
+        setPostSubpassSampleLocationsCount(getVkAddress(), postSubpassSampleLocationsCount != null ? postSubpassSampleLocationsCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPostSubpassSampleLocationsCount(int postSubpassSampleLocationsCount) {
+        getPostSubpassSampleLocationsCount().setValue(postSubpassSampleLocationsCount);
     }
 
     private static native long getPostSubpassSampleLocationsCount(long address);

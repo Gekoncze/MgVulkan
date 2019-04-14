@@ -22,8 +22,12 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
 
     
     public void setSampleLocationsEnable(VkBool32 sampleLocationsEnable) {
-        setSampleLocationsEnable(getVkAddress(), sampleLocationsEnable != null ? sampleLocationsEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setSampleLocationsEnable(getVkAddress(), sampleLocationsEnable != null ? sampleLocationsEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSampleLocationsEnable(int sampleLocationsEnable) {
+        getSampleLocationsEnable().setValue(sampleLocationsEnable);
     }
 
     private static native long getSampleLocationsEnable(long address);
@@ -61,7 +69,7 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
 
     
     public void setSampleLocationsInfo(VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getSinkAddress());
+        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

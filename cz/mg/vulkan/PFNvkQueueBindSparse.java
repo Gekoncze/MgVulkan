@@ -23,7 +23,7 @@ public class PFNvkQueueBindSparse extends VkFunctionPointer {
     }
 
     public void call(VkQueue queue, VkUInt32 bindInfoCount, VkBindSparseInfo pBindInfo, VkFence fence, VkResult rval){
-        call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.getSinkAddress(), bindInfoCount != null ? bindInfoCount.getVkAddress() : VkPointer.getSinkAddress(), pBindInfo != null ? pBindInfo.getVkAddress() : VkPointer.NULL, fence != null ? fence.getVkAddress() : VkPointer.getSinkAddress(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
+        call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.getNullAddress(), bindInfoCount != null ? bindInfoCount.getVkAddress() : VkPointer.getNullAddress(), pBindInfo != null ? pBindInfo.getVkAddress() : VkPointer.NULL, fence != null ? fence.getVkAddress() : VkPointer.getNullAddress(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
     private static native void call(long vkaddress, long queue, long bindInfoCount, long pBindInfo, long fence, long rval);

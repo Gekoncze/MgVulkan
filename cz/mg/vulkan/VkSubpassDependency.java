@@ -21,8 +21,12 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setSrcSubpass(VkUInt32 srcSubpass) {
-        setSrcSubpass(getVkAddress(), srcSubpass != null ? srcSubpass.getVkAddress() : VkPointer.getSinkAddress());
+        setSrcSubpass(getVkAddress(), srcSubpass != null ? srcSubpass.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSrcSubpass(int srcSubpass) {
+        getSrcSubpass().setValue(srcSubpass);
     }
 
     private static native long getSrcSubpass(long address);
@@ -34,8 +38,12 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setDstSubpass(VkUInt32 dstSubpass) {
-        setDstSubpass(getVkAddress(), dstSubpass != null ? dstSubpass.getVkAddress() : VkPointer.getSinkAddress());
+        setDstSubpass(getVkAddress(), dstSubpass != null ? dstSubpass.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDstSubpass(int dstSubpass) {
+        getDstSubpass().setValue(dstSubpass);
     }
 
     private static native long getDstSubpass(long address);
@@ -47,8 +55,12 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setSrcStageMask(VkPipelineStageFlags srcStageMask) {
-        setSrcStageMask(getVkAddress(), srcStageMask != null ? srcStageMask.getVkAddress() : VkPointer.getSinkAddress());
+        setSrcStageMask(getVkAddress(), srcStageMask != null ? srcStageMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSrcStageMask(int srcStageMask) {
+        getSrcStageMask().setValue(srcStageMask);
     }
 
     private static native long getSrcStageMask(long address);
@@ -60,8 +72,12 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setDstStageMask(VkPipelineStageFlags dstStageMask) {
-        setDstStageMask(getVkAddress(), dstStageMask != null ? dstStageMask.getVkAddress() : VkPointer.getSinkAddress());
+        setDstStageMask(getVkAddress(), dstStageMask != null ? dstStageMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDstStageMask(int dstStageMask) {
+        getDstStageMask().setValue(dstStageMask);
     }
 
     private static native long getDstStageMask(long address);
@@ -73,8 +89,12 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setSrcAccessMask(VkAccessFlags srcAccessMask) {
-        setSrcAccessMask(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.getSinkAddress());
+        setSrcAccessMask(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSrcAccessMask(int srcAccessMask) {
+        getSrcAccessMask().setValue(srcAccessMask);
     }
 
     private static native long getSrcAccessMask(long address);
@@ -86,8 +106,12 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setDstAccessMask(VkAccessFlags dstAccessMask) {
-        setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getSinkAddress());
+        setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDstAccessMask(int dstAccessMask) {
+        getDstAccessMask().setValue(dstAccessMask);
     }
 
     private static native long getDstAccessMask(long address);
@@ -99,8 +123,12 @@ public class VkSubpassDependency extends VkObject {
 
     
     public void setDependencyFlags(VkDependencyFlags dependencyFlags) {
-        setDependencyFlags(getVkAddress(), dependencyFlags != null ? dependencyFlags.getVkAddress() : VkPointer.getSinkAddress());
+        setDependencyFlags(getVkAddress(), dependencyFlags != null ? dependencyFlags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDependencyFlags(int dependencyFlags) {
+        getDependencyFlags().setValue(dependencyFlags);
     }
 
     private static native long getDependencyFlags(long address);

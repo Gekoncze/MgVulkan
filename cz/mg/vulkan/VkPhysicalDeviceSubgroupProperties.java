@@ -21,8 +21,12 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     
     public void setSubgroupSize(VkUInt32 subgroupSize) {
-        setSubgroupSize(getVkAddress(), subgroupSize != null ? subgroupSize.getVkAddress() : VkPointer.getSinkAddress());
+        setSubgroupSize(getVkAddress(), subgroupSize != null ? subgroupSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSubgroupSize(int subgroupSize) {
+        getSubgroupSize().setValue(subgroupSize);
     }
 
     private static native long getSubgroupSize(long address);
@@ -60,8 +68,12 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     
     public void setSupportedStages(VkShaderStageFlags supportedStages) {
-        setSupportedStages(getVkAddress(), supportedStages != null ? supportedStages.getVkAddress() : VkPointer.getSinkAddress());
+        setSupportedStages(getVkAddress(), supportedStages != null ? supportedStages.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSupportedStages(int supportedStages) {
+        getSupportedStages().setValue(supportedStages);
     }
 
     private static native long getSupportedStages(long address);
@@ -73,8 +85,12 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     
     public void setSupportedOperations(VkSubgroupFeatureFlags supportedOperations) {
-        setSupportedOperations(getVkAddress(), supportedOperations != null ? supportedOperations.getVkAddress() : VkPointer.getSinkAddress());
+        setSupportedOperations(getVkAddress(), supportedOperations != null ? supportedOperations.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSupportedOperations(int supportedOperations) {
+        getSupportedOperations().setValue(supportedOperations);
     }
 
     private static native long getSupportedOperations(long address);
@@ -86,8 +102,12 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
     
     public void setQuadOperationsInAllStages(VkBool32 quadOperationsInAllStages) {
-        setQuadOperationsInAllStages(getVkAddress(), quadOperationsInAllStages != null ? quadOperationsInAllStages.getVkAddress() : VkPointer.getSinkAddress());
+        setQuadOperationsInAllStages(getVkAddress(), quadOperationsInAllStages != null ? quadOperationsInAllStages.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setQuadOperationsInAllStages(int quadOperationsInAllStages) {
+        getQuadOperationsInAllStages().setValue(quadOperationsInAllStages);
     }
 
     private static native long getQuadOperationsInAllStages(long address);

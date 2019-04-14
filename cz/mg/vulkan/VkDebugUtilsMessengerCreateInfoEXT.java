@@ -22,8 +22,12 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setFlags(VkDebugUtilsMessengerCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setMessageSeverity(VkDebugUtilsMessageSeverityFlagsEXT messageSeverity) {
-        setMessageSeverity(getVkAddress(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.getSinkAddress());
+        setMessageSeverity(getVkAddress(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMessageSeverity(int messageSeverity) {
+        getMessageSeverity().setValue(messageSeverity);
     }
 
     private static native long getMessageSeverity(long address);
@@ -74,8 +86,12 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setMessageType(VkDebugUtilsMessageTypeFlagsEXT messageType) {
-        setMessageType(getVkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.getSinkAddress());
+        setMessageType(getVkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMessageType(int messageType) {
+        getMessageType().setValue(messageType);
     }
 
     private static native long getMessageType(long address);
@@ -87,7 +103,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
     
     public void setPfnUserCallback(PFNvkDebugUtilsMessengerCallbackEXT pfnUserCallback) {
-        setPfnUserCallback(getVkAddress(), pfnUserCallback != null ? pfnUserCallback.getVkAddress() : VkPointer.getSinkAddress());
+        setPfnUserCallback(getVkAddress(), pfnUserCallback != null ? pfnUserCallback.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

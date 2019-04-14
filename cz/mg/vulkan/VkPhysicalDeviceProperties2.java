@@ -21,8 +21,12 @@ public class VkPhysicalDeviceProperties2 extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,7 +51,7 @@ public class VkPhysicalDeviceProperties2 extends VkObject {
 
     
     public void setProperties(VkPhysicalDeviceProperties properties) {
-        setProperties(getVkAddress(), properties != null ? properties.getVkAddress() : VkPointer.getSinkAddress());
+        setProperties(getVkAddress(), properties != null ? properties.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

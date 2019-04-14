@@ -22,8 +22,12 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineViewportStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
 
     
     public void setViewportCount(VkUInt32 viewportCount) {
-        setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.getSinkAddress());
+        setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setViewportCount(int viewportCount) {
+        getViewportCount().setValue(viewportCount);
     }
 
     private static native long getViewportCount(long address);
@@ -87,8 +99,12 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
 
     
     public void setScissorCount(VkUInt32 scissorCount) {
-        setScissorCount(getVkAddress(), scissorCount != null ? scissorCount.getVkAddress() : VkPointer.getSinkAddress());
+        setScissorCount(getVkAddress(), scissorCount != null ? scissorCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setScissorCount(int scissorCount) {
+        getScissorCount().setValue(scissorCount);
     }
 
     private static native long getScissorCount(long address);

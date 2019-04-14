@@ -22,8 +22,12 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
 
     
     public void setDeviceIndexCount(VkUInt32 deviceIndexCount) {
-        setDeviceIndexCount(getVkAddress(), deviceIndexCount != null ? deviceIndexCount.getVkAddress() : VkPointer.getSinkAddress());
+        setDeviceIndexCount(getVkAddress(), deviceIndexCount != null ? deviceIndexCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDeviceIndexCount(int deviceIndexCount) {
+        getDeviceIndexCount().setValue(deviceIndexCount);
     }
 
     private static native long getDeviceIndexCount(long address);
@@ -74,8 +82,12 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
 
     
     public void setSplitInstanceBindRegionCount(VkUInt32 splitInstanceBindRegionCount) {
-        setSplitInstanceBindRegionCount(getVkAddress(), splitInstanceBindRegionCount != null ? splitInstanceBindRegionCount.getVkAddress() : VkPointer.getSinkAddress());
+        setSplitInstanceBindRegionCount(getVkAddress(), splitInstanceBindRegionCount != null ? splitInstanceBindRegionCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSplitInstanceBindRegionCount(int splitInstanceBindRegionCount) {
+        getSplitInstanceBindRegionCount().setValue(splitInstanceBindRegionCount);
     }
 
     private static native long getSplitInstanceBindRegionCount(long address);

@@ -21,8 +21,12 @@ public class VkDrawIndirectCommand extends VkObject {
 
     
     public void setVertexCount(VkUInt32 vertexCount) {
-        setVertexCount(getVkAddress(), vertexCount != null ? vertexCount.getVkAddress() : VkPointer.getSinkAddress());
+        setVertexCount(getVkAddress(), vertexCount != null ? vertexCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setVertexCount(int vertexCount) {
+        getVertexCount().setValue(vertexCount);
     }
 
     private static native long getVertexCount(long address);
@@ -34,8 +38,12 @@ public class VkDrawIndirectCommand extends VkObject {
 
     
     public void setInstanceCount(VkUInt32 instanceCount) {
-        setInstanceCount(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getSinkAddress());
+        setInstanceCount(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setInstanceCount(int instanceCount) {
+        getInstanceCount().setValue(instanceCount);
     }
 
     private static native long getInstanceCount(long address);
@@ -47,8 +55,12 @@ public class VkDrawIndirectCommand extends VkObject {
 
     
     public void setFirstVertex(VkUInt32 firstVertex) {
-        setFirstVertex(getVkAddress(), firstVertex != null ? firstVertex.getVkAddress() : VkPointer.getSinkAddress());
+        setFirstVertex(getVkAddress(), firstVertex != null ? firstVertex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFirstVertex(int firstVertex) {
+        getFirstVertex().setValue(firstVertex);
     }
 
     private static native long getFirstVertex(long address);
@@ -60,8 +72,12 @@ public class VkDrawIndirectCommand extends VkObject {
 
     
     public void setFirstInstance(VkUInt32 firstInstance) {
-        setFirstInstance(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getSinkAddress());
+        setFirstInstance(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFirstInstance(int firstInstance) {
+        getFirstInstance().setValue(firstInstance);
     }
 
     private static native long getFirstInstance(long address);

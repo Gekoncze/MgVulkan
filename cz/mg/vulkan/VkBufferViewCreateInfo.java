@@ -22,8 +22,12 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setFlags(VkBufferViewCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,7 +69,7 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getSinkAddress());
+        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -74,8 +82,12 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getSinkAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFormat(int format) {
+        getFormat().setValue(format);
     }
 
     private static native long getFormat(long address);
@@ -87,8 +99,12 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setOffset(long offset) {
+        getOffset().setValue(offset);
     }
 
     private static native long getOffset(long address);
@@ -100,8 +116,12 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setRange(VkDeviceSize range) {
-        setRange(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getSinkAddress());
+        setRange(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setRange(long range) {
+        getRange().setValue(range);
     }
 
     private static native long getRange(long address);

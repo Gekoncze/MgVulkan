@@ -21,8 +21,12 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
 
     
     public void setRefreshDuration(VkUInt64 refreshDuration) {
-        setRefreshDuration(getVkAddress(), refreshDuration != null ? refreshDuration.getVkAddress() : VkPointer.getSinkAddress());
+        setRefreshDuration(getVkAddress(), refreshDuration != null ? refreshDuration.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setRefreshDuration(long refreshDuration) {
+        getRefreshDuration().setValue(refreshDuration);
     }
 
     private static native long getRefreshDuration(long address);

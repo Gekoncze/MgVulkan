@@ -34,7 +34,7 @@ public class VkAllocationCallbacks extends VkObject {
 
     
     public void setPfnAllocation(PFNvkAllocationFunction pfnAllocation) {
-        setPfnAllocation(getVkAddress(), pfnAllocation != null ? pfnAllocation.getVkAddress() : VkPointer.getSinkAddress());
+        setPfnAllocation(getVkAddress(), pfnAllocation != null ? pfnAllocation.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -47,7 +47,7 @@ public class VkAllocationCallbacks extends VkObject {
 
     
     public void setPfnReallocation(PFNvkReallocationFunction pfnReallocation) {
-        setPfnReallocation(getVkAddress(), pfnReallocation != null ? pfnReallocation.getVkAddress() : VkPointer.getSinkAddress());
+        setPfnReallocation(getVkAddress(), pfnReallocation != null ? pfnReallocation.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -60,7 +60,7 @@ public class VkAllocationCallbacks extends VkObject {
 
     
     public void setPfnFree(PFNvkFreeFunction pfnFree) {
-        setPfnFree(getVkAddress(), pfnFree != null ? pfnFree.getVkAddress() : VkPointer.getSinkAddress());
+        setPfnFree(getVkAddress(), pfnFree != null ? pfnFree.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -73,7 +73,7 @@ public class VkAllocationCallbacks extends VkObject {
 
     
     public void setPfnInternalAllocation(PFNvkInternalAllocationNotification pfnInternalAllocation) {
-        setPfnInternalAllocation(getVkAddress(), pfnInternalAllocation != null ? pfnInternalAllocation.getVkAddress() : VkPointer.getSinkAddress());
+        setPfnInternalAllocation(getVkAddress(), pfnInternalAllocation != null ? pfnInternalAllocation.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -86,7 +86,7 @@ public class VkAllocationCallbacks extends VkObject {
 
     
     public void setPfnInternalFree(PFNvkInternalFreeNotification pfnInternalFree) {
-        setPfnInternalFree(getVkAddress(), pfnInternalFree != null ? pfnInternalFree.getVkAddress() : VkPointer.getSinkAddress());
+        setPfnInternalFree(getVkAddress(), pfnInternalFree != null ? pfnInternalFree.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

@@ -22,8 +22,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setFlags(VkSwapchainCreateFlagsKHR flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,7 +69,7 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setSurface(VkSurfaceKHR surface) {
-        setSurface(getVkAddress(), surface != null ? surface.getVkAddress() : VkPointer.getSinkAddress());
+        setSurface(getVkAddress(), surface != null ? surface.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -74,8 +82,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setMinImageCount(VkUInt32 minImageCount) {
-        setMinImageCount(getVkAddress(), minImageCount != null ? minImageCount.getVkAddress() : VkPointer.getSinkAddress());
+        setMinImageCount(getVkAddress(), minImageCount != null ? minImageCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMinImageCount(int minImageCount) {
+        getMinImageCount().setValue(minImageCount);
     }
 
     private static native long getMinImageCount(long address);
@@ -87,8 +99,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setImageFormat(VkFormat imageFormat) {
-        setImageFormat(getVkAddress(), imageFormat != null ? imageFormat.getVkAddress() : VkPointer.getSinkAddress());
+        setImageFormat(getVkAddress(), imageFormat != null ? imageFormat.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setImageFormat(int imageFormat) {
+        getImageFormat().setValue(imageFormat);
     }
 
     private static native long getImageFormat(long address);
@@ -100,8 +116,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setImageColorSpace(VkColorSpaceKHR imageColorSpace) {
-        setImageColorSpace(getVkAddress(), imageColorSpace != null ? imageColorSpace.getVkAddress() : VkPointer.getSinkAddress());
+        setImageColorSpace(getVkAddress(), imageColorSpace != null ? imageColorSpace.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setImageColorSpace(int imageColorSpace) {
+        getImageColorSpace().setValue(imageColorSpace);
     }
 
     private static native long getImageColorSpace(long address);
@@ -113,7 +133,7 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setImageExtent(VkExtent2D imageExtent) {
-        setImageExtent(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.getSinkAddress());
+        setImageExtent(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -126,8 +146,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setImageArrayLayers(VkUInt32 imageArrayLayers) {
-        setImageArrayLayers(getVkAddress(), imageArrayLayers != null ? imageArrayLayers.getVkAddress() : VkPointer.getSinkAddress());
+        setImageArrayLayers(getVkAddress(), imageArrayLayers != null ? imageArrayLayers.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setImageArrayLayers(int imageArrayLayers) {
+        getImageArrayLayers().setValue(imageArrayLayers);
     }
 
     private static native long getImageArrayLayers(long address);
@@ -139,8 +163,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setImageUsage(VkImageUsageFlags imageUsage) {
-        setImageUsage(getVkAddress(), imageUsage != null ? imageUsage.getVkAddress() : VkPointer.getSinkAddress());
+        setImageUsage(getVkAddress(), imageUsage != null ? imageUsage.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setImageUsage(int imageUsage) {
+        getImageUsage().setValue(imageUsage);
     }
 
     private static native long getImageUsage(long address);
@@ -152,8 +180,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setImageSharingMode(VkSharingMode imageSharingMode) {
-        setImageSharingMode(getVkAddress(), imageSharingMode != null ? imageSharingMode.getVkAddress() : VkPointer.getSinkAddress());
+        setImageSharingMode(getVkAddress(), imageSharingMode != null ? imageSharingMode.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setImageSharingMode(int imageSharingMode) {
+        getImageSharingMode().setValue(imageSharingMode);
     }
 
     private static native long getImageSharingMode(long address);
@@ -165,8 +197,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setQueueFamilyIndexCount(VkUInt32 queueFamilyIndexCount) {
-        setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount != null ? queueFamilyIndexCount.getVkAddress() : VkPointer.getSinkAddress());
+        setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount != null ? queueFamilyIndexCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setQueueFamilyIndexCount(int queueFamilyIndexCount) {
+        getQueueFamilyIndexCount().setValue(queueFamilyIndexCount);
     }
 
     private static native long getQueueFamilyIndexCount(long address);
@@ -191,8 +227,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setPreTransform(VkSurfaceTransformFlagBitsKHR preTransform) {
-        setPreTransform(getVkAddress(), preTransform != null ? preTransform.getVkAddress() : VkPointer.getSinkAddress());
+        setPreTransform(getVkAddress(), preTransform != null ? preTransform.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPreTransform(int preTransform) {
+        getPreTransform().setValue(preTransform);
     }
 
     private static native long getPreTransform(long address);
@@ -204,8 +244,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setCompositeAlpha(VkCompositeAlphaFlagBitsKHR compositeAlpha) {
-        setCompositeAlpha(getVkAddress(), compositeAlpha != null ? compositeAlpha.getVkAddress() : VkPointer.getSinkAddress());
+        setCompositeAlpha(getVkAddress(), compositeAlpha != null ? compositeAlpha.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setCompositeAlpha(int compositeAlpha) {
+        getCompositeAlpha().setValue(compositeAlpha);
     }
 
     private static native long getCompositeAlpha(long address);
@@ -217,8 +261,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setPresentMode(VkPresentModeKHR presentMode) {
-        setPresentMode(getVkAddress(), presentMode != null ? presentMode.getVkAddress() : VkPointer.getSinkAddress());
+        setPresentMode(getVkAddress(), presentMode != null ? presentMode.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPresentMode(int presentMode) {
+        getPresentMode().setValue(presentMode);
     }
 
     private static native long getPresentMode(long address);
@@ -230,8 +278,12 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setClipped(VkBool32 clipped) {
-        setClipped(getVkAddress(), clipped != null ? clipped.getVkAddress() : VkPointer.getSinkAddress());
+        setClipped(getVkAddress(), clipped != null ? clipped.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setClipped(int clipped) {
+        getClipped().setValue(clipped);
     }
 
     private static native long getClipped(long address);
@@ -243,7 +295,7 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
 
     
     public void setOldSwapchain(VkSwapchainKHR oldSwapchain) {
-        setOldSwapchain(getVkAddress(), oldSwapchain != null ? oldSwapchain.getVkAddress() : VkPointer.getSinkAddress());
+        setOldSwapchain(getVkAddress(), oldSwapchain != null ? oldSwapchain.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

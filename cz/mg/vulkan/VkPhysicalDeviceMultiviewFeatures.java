@@ -21,8 +21,12 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
 
     
     public void setMultiview(VkBool32 multiview) {
-        setMultiview(getVkAddress(), multiview != null ? multiview.getVkAddress() : VkPointer.getSinkAddress());
+        setMultiview(getVkAddress(), multiview != null ? multiview.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMultiview(int multiview) {
+        getMultiview().setValue(multiview);
     }
 
     private static native long getMultiview(long address);
@@ -60,8 +68,12 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
 
     
     public void setMultiviewGeometryShader(VkBool32 multiviewGeometryShader) {
-        setMultiviewGeometryShader(getVkAddress(), multiviewGeometryShader != null ? multiviewGeometryShader.getVkAddress() : VkPointer.getSinkAddress());
+        setMultiviewGeometryShader(getVkAddress(), multiviewGeometryShader != null ? multiviewGeometryShader.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMultiviewGeometryShader(int multiviewGeometryShader) {
+        getMultiviewGeometryShader().setValue(multiviewGeometryShader);
     }
 
     private static native long getMultiviewGeometryShader(long address);
@@ -73,8 +85,12 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
 
     
     public void setMultiviewTessellationShader(VkBool32 multiviewTessellationShader) {
-        setMultiviewTessellationShader(getVkAddress(), multiviewTessellationShader != null ? multiviewTessellationShader.getVkAddress() : VkPointer.getSinkAddress());
+        setMultiviewTessellationShader(getVkAddress(), multiviewTessellationShader != null ? multiviewTessellationShader.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMultiviewTessellationShader(int multiviewTessellationShader) {
+        getMultiviewTessellationShader().setValue(multiviewTessellationShader);
     }
 
     private static native long getMultiviewTessellationShader(long address);

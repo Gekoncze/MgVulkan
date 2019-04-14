@@ -22,8 +22,12 @@ public class VkSwapchainCounterCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkSwapchainCounterCreateInfoEXT extends VkObject {
 
     
     public void setSurfaceCounters(VkSurfaceCounterFlagsEXT surfaceCounters) {
-        setSurfaceCounters(getVkAddress(), surfaceCounters != null ? surfaceCounters.getVkAddress() : VkPointer.getSinkAddress());
+        setSurfaceCounters(getVkAddress(), surfaceCounters != null ? surfaceCounters.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSurfaceCounters(int surfaceCounters) {
+        getSurfaceCounters().setValue(surfaceCounters);
     }
 
     private static native long getSurfaceCounters(long address);

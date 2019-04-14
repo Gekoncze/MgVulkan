@@ -22,8 +22,12 @@ public class VkInstanceCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkInstanceCreateInfo extends VkObject {
 
     
     public void setFlags(VkInstanceCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -74,8 +82,12 @@ public class VkInstanceCreateInfo extends VkObject {
 
     
     public void setEnabledLayerCount(VkUInt32 enabledLayerCount) {
-        setEnabledLayerCount(getVkAddress(), enabledLayerCount != null ? enabledLayerCount.getVkAddress() : VkPointer.getSinkAddress());
+        setEnabledLayerCount(getVkAddress(), enabledLayerCount != null ? enabledLayerCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setEnabledLayerCount(int enabledLayerCount) {
+        getEnabledLayerCount().setValue(enabledLayerCount);
     }
 
     private static native long getEnabledLayerCount(long address);
@@ -100,8 +112,12 @@ public class VkInstanceCreateInfo extends VkObject {
 
     
     public void setEnabledExtensionCount(VkUInt32 enabledExtensionCount) {
-        setEnabledExtensionCount(getVkAddress(), enabledExtensionCount != null ? enabledExtensionCount.getVkAddress() : VkPointer.getSinkAddress());
+        setEnabledExtensionCount(getVkAddress(), enabledExtensionCount != null ? enabledExtensionCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setEnabledExtensionCount(int enabledExtensionCount) {
+        getEnabledExtensionCount().setValue(enabledExtensionCount);
     }
 
     private static native long getEnabledExtensionCount(long address);

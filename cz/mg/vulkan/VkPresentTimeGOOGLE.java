@@ -21,8 +21,12 @@ public class VkPresentTimeGOOGLE extends VkObject {
 
     
     public void setPresentID(VkUInt32 presentID) {
-        setPresentID(getVkAddress(), presentID != null ? presentID.getVkAddress() : VkPointer.getSinkAddress());
+        setPresentID(getVkAddress(), presentID != null ? presentID.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPresentID(int presentID) {
+        getPresentID().setValue(presentID);
     }
 
     private static native long getPresentID(long address);
@@ -34,8 +38,12 @@ public class VkPresentTimeGOOGLE extends VkObject {
 
     
     public void setDesiredPresentTime(VkUInt64 desiredPresentTime) {
-        setDesiredPresentTime(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.getSinkAddress());
+        setDesiredPresentTime(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDesiredPresentTime(long desiredPresentTime) {
+        getDesiredPresentTime().setValue(desiredPresentTime);
     }
 
     private static native long getDesiredPresentTime(long address);

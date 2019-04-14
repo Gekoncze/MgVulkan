@@ -22,8 +22,12 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setStageCount(VkUInt32 stageCount) {
-        setStageCount(getVkAddress(), stageCount != null ? stageCount.getVkAddress() : VkPointer.getSinkAddress());
+        setStageCount(getVkAddress(), stageCount != null ? stageCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setStageCount(int stageCount) {
+        getStageCount().setValue(stageCount);
     }
 
     private static native long getStageCount(long address);
@@ -204,7 +216,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setLayout(VkPipelineLayout layout) {
-        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getSinkAddress());
+        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -217,7 +229,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getSinkAddress());
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -230,8 +242,12 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setSubpass(VkUInt32 subpass) {
-        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getSinkAddress());
+        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSubpass(int subpass) {
+        getSubpass().setValue(subpass);
     }
 
     private static native long getSubpass(long address);
@@ -243,7 +259,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setBasePipelineHandle(VkPipeline basePipelineHandle) {
-        setBasePipelineHandle(getVkAddress(), basePipelineHandle != null ? basePipelineHandle.getVkAddress() : VkPointer.getSinkAddress());
+        setBasePipelineHandle(getVkAddress(), basePipelineHandle != null ? basePipelineHandle.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -256,8 +272,12 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setBasePipelineIndex(VkInt32 basePipelineIndex) {
-        setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.getSinkAddress());
+        setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBasePipelineIndex(int basePipelineIndex) {
+        getBasePipelineIndex().setValue(basePipelineIndex);
     }
 
     private static native long getBasePipelineIndex(long address);

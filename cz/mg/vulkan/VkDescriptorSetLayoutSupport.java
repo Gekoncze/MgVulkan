@@ -21,8 +21,12 @@ public class VkDescriptorSetLayoutSupport extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkDescriptorSetLayoutSupport extends VkObject {
 
     
     public void setSupported(VkBool32 supported) {
-        setSupported(getVkAddress(), supported != null ? supported.getVkAddress() : VkPointer.getSinkAddress());
+        setSupported(getVkAddress(), supported != null ? supported.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSupported(int supported) {
+        getSupported().setValue(supported);
     }
 
     private static native long getSupported(long address);

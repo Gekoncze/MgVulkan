@@ -21,8 +21,12 @@ public class VkImageSubresourceRange extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getSinkAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAspectMask(int aspectMask) {
+        getAspectMask().setValue(aspectMask);
     }
 
     private static native long getAspectMask(long address);
@@ -34,8 +38,12 @@ public class VkImageSubresourceRange extends VkObject {
 
     
     public void setBaseMipLevel(VkUInt32 baseMipLevel) {
-        setBaseMipLevel(getVkAddress(), baseMipLevel != null ? baseMipLevel.getVkAddress() : VkPointer.getSinkAddress());
+        setBaseMipLevel(getVkAddress(), baseMipLevel != null ? baseMipLevel.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBaseMipLevel(int baseMipLevel) {
+        getBaseMipLevel().setValue(baseMipLevel);
     }
 
     private static native long getBaseMipLevel(long address);
@@ -47,8 +55,12 @@ public class VkImageSubresourceRange extends VkObject {
 
     
     public void setLevelCount(VkUInt32 levelCount) {
-        setLevelCount(getVkAddress(), levelCount != null ? levelCount.getVkAddress() : VkPointer.getSinkAddress());
+        setLevelCount(getVkAddress(), levelCount != null ? levelCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLevelCount(int levelCount) {
+        getLevelCount().setValue(levelCount);
     }
 
     private static native long getLevelCount(long address);
@@ -60,8 +72,12 @@ public class VkImageSubresourceRange extends VkObject {
 
     
     public void setBaseArrayLayer(VkUInt32 baseArrayLayer) {
-        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.getSinkAddress());
+        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBaseArrayLayer(int baseArrayLayer) {
+        getBaseArrayLayer().setValue(baseArrayLayer);
     }
 
     private static native long getBaseArrayLayer(long address);
@@ -73,8 +89,12 @@ public class VkImageSubresourceRange extends VkObject {
 
     
     public void setLayerCount(VkUInt32 layerCount) {
-        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getSinkAddress());
+        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLayerCount(int layerCount) {
+        getLayerCount().setValue(layerCount);
     }
 
     private static native long getLayerCount(long address);

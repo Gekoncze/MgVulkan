@@ -22,8 +22,12 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineColorBlendStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
     
     public void setLogicOpEnable(VkBool32 logicOpEnable) {
-        setLogicOpEnable(getVkAddress(), logicOpEnable != null ? logicOpEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setLogicOpEnable(getVkAddress(), logicOpEnable != null ? logicOpEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLogicOpEnable(int logicOpEnable) {
+        getLogicOpEnable().setValue(logicOpEnable);
     }
 
     private static native long getLogicOpEnable(long address);
@@ -74,8 +86,12 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
     
     public void setLogicOp(VkLogicOp logicOp) {
-        setLogicOp(getVkAddress(), logicOp != null ? logicOp.getVkAddress() : VkPointer.getSinkAddress());
+        setLogicOp(getVkAddress(), logicOp != null ? logicOp.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLogicOp(int logicOp) {
+        getLogicOp().setValue(logicOp);
     }
 
     private static native long getLogicOp(long address);
@@ -87,8 +103,12 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
     
     public void setAttachmentCount(VkUInt32 attachmentCount) {
-        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getSinkAddress());
+        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAttachmentCount(int attachmentCount) {
+        getAttachmentCount().setValue(attachmentCount);
     }
 
     private static native long getAttachmentCount(long address);

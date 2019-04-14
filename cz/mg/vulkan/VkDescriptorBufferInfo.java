@@ -21,7 +21,7 @@ public class VkDescriptorBufferInfo extends VkObject {
 
     
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getSinkAddress());
+        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -34,8 +34,12 @@ public class VkDescriptorBufferInfo extends VkObject {
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getSinkAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setOffset(long offset) {
+        getOffset().setValue(offset);
     }
 
     private static native long getOffset(long address);
@@ -47,8 +51,12 @@ public class VkDescriptorBufferInfo extends VkObject {
 
     
     public void setRange(VkDeviceSize range) {
-        setRange(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getSinkAddress());
+        setRange(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setRange(long range) {
+        getRange().setValue(range);
     }
 
     private static native long getRange(long address);

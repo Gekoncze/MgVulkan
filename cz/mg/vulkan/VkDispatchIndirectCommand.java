@@ -21,8 +21,12 @@ public class VkDispatchIndirectCommand extends VkObject {
 
     
     public void setX(VkUInt32 x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getSinkAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setX(int x) {
+        getX().setValue(x);
     }
 
     private static native long getX(long address);
@@ -34,8 +38,12 @@ public class VkDispatchIndirectCommand extends VkObject {
 
     
     public void setY(VkUInt32 y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getSinkAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setY(int y) {
+        getY().setValue(y);
     }
 
     private static native long getY(long address);
@@ -47,8 +55,12 @@ public class VkDispatchIndirectCommand extends VkObject {
 
     
     public void setZ(VkUInt32 z) {
-        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getSinkAddress());
+        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setZ(int z) {
+        getZ().setValue(z);
     }
 
     private static native long getZ(long address);

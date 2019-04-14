@@ -22,8 +22,12 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
 
     
     public void setViewportWScalingEnable(VkBool32 viewportWScalingEnable) {
-        setViewportWScalingEnable(getVkAddress(), viewportWScalingEnable != null ? viewportWScalingEnable.getVkAddress() : VkPointer.getSinkAddress());
+        setViewportWScalingEnable(getVkAddress(), viewportWScalingEnable != null ? viewportWScalingEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setViewportWScalingEnable(int viewportWScalingEnable) {
+        getViewportWScalingEnable().setValue(viewportWScalingEnable);
     }
 
     private static native long getViewportWScalingEnable(long address);
@@ -61,8 +69,12 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
 
     
     public void setViewportCount(VkUInt32 viewportCount) {
-        setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.getSinkAddress());
+        setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setViewportCount(int viewportCount) {
+        getViewportCount().setValue(viewportCount);
     }
 
     private static native long getViewportCount(long address);

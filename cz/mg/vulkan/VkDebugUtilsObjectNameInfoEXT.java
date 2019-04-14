@@ -22,8 +22,12 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
 
     
     public void setObjectType(VkObjectType objectType) {
-        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getSinkAddress());
+        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setObjectType(int objectType) {
+        getObjectType().setValue(objectType);
     }
 
     private static native long getObjectType(long address);
@@ -61,8 +69,12 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
 
     
     public void setObjectHandle(VkUInt64 objectHandle) {
-        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.getSinkAddress());
+        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setObjectHandle(long objectHandle) {
+        getObjectHandle().setValue(objectHandle);
     }
 
     private static native long getObjectHandle(long address);
@@ -76,6 +88,10 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
     public void setPObjectName(VkChar pObjectName) {
         setPObjectName(getVkAddress(), pObjectName != null ? pObjectName.getVkAddress() : VkPointer.NULL);
         this.pObjectName = pObjectName;
+    }
+
+    public void setPObjectName(String pObjectName) {
+        setPObjectName(new VkString(pObjectName));
     }
 
     private static native long getPObjectName(long address);

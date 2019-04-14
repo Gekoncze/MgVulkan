@@ -21,8 +21,12 @@ public class VkMemoryDedicatedRequirements extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkMemoryDedicatedRequirements extends VkObject {
 
     
     public void setPrefersDedicatedAllocation(VkBool32 prefersDedicatedAllocation) {
-        setPrefersDedicatedAllocation(getVkAddress(), prefersDedicatedAllocation != null ? prefersDedicatedAllocation.getVkAddress() : VkPointer.getSinkAddress());
+        setPrefersDedicatedAllocation(getVkAddress(), prefersDedicatedAllocation != null ? prefersDedicatedAllocation.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPrefersDedicatedAllocation(int prefersDedicatedAllocation) {
+        getPrefersDedicatedAllocation().setValue(prefersDedicatedAllocation);
     }
 
     private static native long getPrefersDedicatedAllocation(long address);
@@ -60,8 +68,12 @@ public class VkMemoryDedicatedRequirements extends VkObject {
 
     
     public void setRequiresDedicatedAllocation(VkBool32 requiresDedicatedAllocation) {
-        setRequiresDedicatedAllocation(getVkAddress(), requiresDedicatedAllocation != null ? requiresDedicatedAllocation.getVkAddress() : VkPointer.getSinkAddress());
+        setRequiresDedicatedAllocation(getVkAddress(), requiresDedicatedAllocation != null ? requiresDedicatedAllocation.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setRequiresDedicatedAllocation(int requiresDedicatedAllocation) {
+        getRequiresDedicatedAllocation().setValue(requiresDedicatedAllocation);
     }
 
     private static native long getRequiresDedicatedAllocation(long address);

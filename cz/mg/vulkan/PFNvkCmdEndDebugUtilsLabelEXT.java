@@ -23,7 +23,7 @@ public class PFNvkCmdEndDebugUtilsLabelEXT extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getSinkAddress());
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress());
     }
 
     private static native void call(long vkaddress, long commandBuffer);

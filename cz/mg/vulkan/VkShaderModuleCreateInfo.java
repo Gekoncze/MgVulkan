@@ -22,8 +22,12 @@ public class VkShaderModuleCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkShaderModuleCreateInfo extends VkObject {
 
     
     public void setFlags(VkShaderModuleCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkShaderModuleCreateInfo extends VkObject {
 
     
     public void setCodeSize(VkSize codeSize) {
-        setCodeSize(getVkAddress(), codeSize != null ? codeSize.getVkAddress() : VkPointer.getSinkAddress());
+        setCodeSize(getVkAddress(), codeSize != null ? codeSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setCodeSize(long codeSize) {
+        getCodeSize().setValue(codeSize);
     }
 
     private static native long getCodeSize(long address);

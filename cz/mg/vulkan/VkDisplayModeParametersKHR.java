@@ -21,7 +21,7 @@ public class VkDisplayModeParametersKHR extends VkObject {
 
     
     public void setVisibleRegion(VkExtent2D visibleRegion) {
-        setVisibleRegion(getVkAddress(), visibleRegion != null ? visibleRegion.getVkAddress() : VkPointer.getSinkAddress());
+        setVisibleRegion(getVkAddress(), visibleRegion != null ? visibleRegion.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -34,8 +34,12 @@ public class VkDisplayModeParametersKHR extends VkObject {
 
     
     public void setRefreshRate(VkUInt32 refreshRate) {
-        setRefreshRate(getVkAddress(), refreshRate != null ? refreshRate.getVkAddress() : VkPointer.getSinkAddress());
+        setRefreshRate(getVkAddress(), refreshRate != null ? refreshRate.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setRefreshRate(int refreshRate) {
+        getRefreshRate().setValue(refreshRate);
     }
 
     private static native long getRefreshRate(long address);

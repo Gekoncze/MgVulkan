@@ -34,8 +34,12 @@ public class VkLayerProperties extends VkObject {
 
     
     public void setSpecVersion(VkUInt32 specVersion) {
-        setSpecVersion(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.getSinkAddress());
+        setSpecVersion(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSpecVersion(int specVersion) {
+        getSpecVersion().setValue(specVersion);
     }
 
     private static native long getSpecVersion(long address);
@@ -47,8 +51,12 @@ public class VkLayerProperties extends VkObject {
 
     
     public void setImplementationVersion(VkUInt32 implementationVersion) {
-        setImplementationVersion(getVkAddress(), implementationVersion != null ? implementationVersion.getVkAddress() : VkPointer.getSinkAddress());
+        setImplementationVersion(getVkAddress(), implementationVersion != null ? implementationVersion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setImplementationVersion(int implementationVersion) {
+        getImplementationVersion().setValue(implementationVersion);
     }
 
     private static native long getImplementationVersion(long address);

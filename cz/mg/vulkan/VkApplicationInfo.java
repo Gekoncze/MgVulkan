@@ -22,8 +22,12 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -52,6 +56,10 @@ public class VkApplicationInfo extends VkObject {
         this.pApplicationName = pApplicationName;
     }
 
+    public void setPApplicationName(String pApplicationName) {
+        setPApplicationName(new VkString(pApplicationName));
+    }
+
     private static native long getPApplicationName(long address);
     private static native void setPApplicationName(long address, long pApplicationName);
 
@@ -61,8 +69,12 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setApplicationVersion(VkUInt32 applicationVersion) {
-        setApplicationVersion(getVkAddress(), applicationVersion != null ? applicationVersion.getVkAddress() : VkPointer.getSinkAddress());
+        setApplicationVersion(getVkAddress(), applicationVersion != null ? applicationVersion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setApplicationVersion(int applicationVersion) {
+        getApplicationVersion().setValue(applicationVersion);
     }
 
     private static native long getApplicationVersion(long address);
@@ -78,6 +90,10 @@ public class VkApplicationInfo extends VkObject {
         this.pEngineName = pEngineName;
     }
 
+    public void setPEngineName(String pEngineName) {
+        setPEngineName(new VkString(pEngineName));
+    }
+
     private static native long getPEngineName(long address);
     private static native void setPEngineName(long address, long pEngineName);
 
@@ -87,8 +103,12 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setEngineVersion(VkUInt32 engineVersion) {
-        setEngineVersion(getVkAddress(), engineVersion != null ? engineVersion.getVkAddress() : VkPointer.getSinkAddress());
+        setEngineVersion(getVkAddress(), engineVersion != null ? engineVersion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setEngineVersion(int engineVersion) {
+        getEngineVersion().setValue(engineVersion);
     }
 
     private static native long getEngineVersion(long address);
@@ -100,8 +120,12 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setApiVersion(VkUInt32 apiVersion) {
-        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getSinkAddress());
+        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setApiVersion(int apiVersion) {
+        getApiVersion().setValue(apiVersion);
     }
 
     private static native long getApiVersion(long address);

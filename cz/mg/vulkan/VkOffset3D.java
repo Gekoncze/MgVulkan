@@ -13,7 +13,12 @@ public class VkOffset3D extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
+    public VkOffset3D(int x, int y, int z){
+        super(sizeof());
+        getX().setValue(x);
+        getY().setValue(y);
+        getZ().setValue(z);
+    }
 
     public VkInt32 getX() {
         return new VkInt32(getVkMemory(), getX(getVkAddress()));
@@ -21,8 +26,12 @@ public class VkOffset3D extends VkObject {
 
     
     public void setX(VkInt32 x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getSinkAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setX(int x) {
+        getX().setValue(x);
     }
 
     private static native long getX(long address);
@@ -34,8 +43,12 @@ public class VkOffset3D extends VkObject {
 
     
     public void setY(VkInt32 y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getSinkAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setY(int y) {
+        getY().setValue(y);
     }
 
     private static native long getY(long address);
@@ -47,8 +60,12 @@ public class VkOffset3D extends VkObject {
 
     
     public void setZ(VkInt32 z) {
-        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getSinkAddress());
+        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setZ(int z) {
+        getZ().setValue(z);
     }
 
     private static native long getZ(long address);

@@ -21,8 +21,12 @@ public class VkSurfaceFormatKHR extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getSinkAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFormat(int format) {
+        getFormat().setValue(format);
     }
 
     private static native long getFormat(long address);
@@ -34,8 +38,12 @@ public class VkSurfaceFormatKHR extends VkObject {
 
     
     public void setColorSpace(VkColorSpaceKHR colorSpace) {
-        setColorSpace(getVkAddress(), colorSpace != null ? colorSpace.getVkAddress() : VkPointer.getSinkAddress());
+        setColorSpace(getVkAddress(), colorSpace != null ? colorSpace.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setColorSpace(int colorSpace) {
+        getColorSpace().setValue(colorSpace);
     }
 
     private static native long getColorSpace(long address);

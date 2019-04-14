@@ -22,8 +22,12 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,7 +52,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setCommandPool(VkCommandPool commandPool) {
-        setCommandPool(getVkAddress(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getSinkAddress());
+        setCommandPool(getVkAddress(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -61,8 +65,12 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setLevel(VkCommandBufferLevel level) {
-        setLevel(getVkAddress(), level != null ? level.getVkAddress() : VkPointer.getSinkAddress());
+        setLevel(getVkAddress(), level != null ? level.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setLevel(int level) {
+        getLevel().setValue(level);
     }
 
     private static native long getLevel(long address);
@@ -74,8 +82,12 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setCommandBufferCount(VkUInt32 commandBufferCount) {
-        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getSinkAddress());
+        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setCommandBufferCount(int commandBufferCount) {
+        getCommandBufferCount().setValue(commandBufferCount);
     }
 
     private static native long getCommandBufferCount(long address);

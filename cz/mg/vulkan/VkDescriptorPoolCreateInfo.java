@@ -22,8 +22,12 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setFlags(VkDescriptorPoolCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setMaxSets(VkUInt32 maxSets) {
-        setMaxSets(getVkAddress(), maxSets != null ? maxSets.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxSets(getVkAddress(), maxSets != null ? maxSets.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxSets(int maxSets) {
+        getMaxSets().setValue(maxSets);
     }
 
     private static native long getMaxSets(long address);
@@ -74,8 +86,12 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setPoolSizeCount(VkUInt32 poolSizeCount) {
-        setPoolSizeCount(getVkAddress(), poolSizeCount != null ? poolSizeCount.getVkAddress() : VkPointer.getSinkAddress());
+        setPoolSizeCount(getVkAddress(), poolSizeCount != null ? poolSizeCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPoolSizeCount(int poolSizeCount) {
+        getPoolSizeCount().setValue(poolSizeCount);
     }
 
     private static native long getPoolSizeCount(long address);

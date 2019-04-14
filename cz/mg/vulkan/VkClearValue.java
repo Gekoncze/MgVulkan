@@ -21,7 +21,7 @@ public class VkClearValue extends VkObject {
 
     
     public void setColor(VkClearColorValue color) {
-        setColor(getVkAddress(), color != null ? color.getVkAddress() : VkPointer.getSinkAddress());
+        setColor(getVkAddress(), color != null ? color.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -34,7 +34,7 @@ public class VkClearValue extends VkObject {
 
     
     public void setDepthStencil(VkClearDepthStencilValue depthStencil) {
-        setDepthStencil(getVkAddress(), depthStencil != null ? depthStencil.getVkAddress() : VkPointer.getSinkAddress());
+        setDepthStencil(getVkAddress(), depthStencil != null ? depthStencil.getVkAddress() : VkPointer.getNullAddress());
         
     }
 

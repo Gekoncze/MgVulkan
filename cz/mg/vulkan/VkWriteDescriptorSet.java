@@ -21,8 +21,12 @@ public class VkWriteDescriptorSet extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,7 +51,7 @@ public class VkWriteDescriptorSet extends VkObject {
 
     
     public void setDstSet(VkDescriptorSet dstSet) {
-        setDstSet(getVkAddress(), dstSet != null ? dstSet.getVkAddress() : VkPointer.getSinkAddress());
+        setDstSet(getVkAddress(), dstSet != null ? dstSet.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -60,8 +64,12 @@ public class VkWriteDescriptorSet extends VkObject {
 
     
     public void setDstBinding(VkUInt32 dstBinding) {
-        setDstBinding(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.getSinkAddress());
+        setDstBinding(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDstBinding(int dstBinding) {
+        getDstBinding().setValue(dstBinding);
     }
 
     private static native long getDstBinding(long address);
@@ -73,8 +81,12 @@ public class VkWriteDescriptorSet extends VkObject {
 
     
     public void setDstArrayElement(VkUInt32 dstArrayElement) {
-        setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.getSinkAddress());
+        setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDstArrayElement(int dstArrayElement) {
+        getDstArrayElement().setValue(dstArrayElement);
     }
 
     private static native long getDstArrayElement(long address);
@@ -86,8 +98,12 @@ public class VkWriteDescriptorSet extends VkObject {
 
     
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getSinkAddress());
+        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDescriptorCount(int descriptorCount) {
+        getDescriptorCount().setValue(descriptorCount);
     }
 
     private static native long getDescriptorCount(long address);
@@ -99,8 +115,12 @@ public class VkWriteDescriptorSet extends VkObject {
 
     
     public void setDescriptorType(VkDescriptorType descriptorType) {
-        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getSinkAddress());
+        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDescriptorType(int descriptorType) {
+        getDescriptorType().setValue(descriptorType);
     }
 
     private static native long getDescriptorType(long address);

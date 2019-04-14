@@ -22,8 +22,12 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     
     public void setFlags(VkRenderPassCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getSinkAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFlags(int flags) {
+        getFlags().setValue(flags);
     }
 
     private static native long getFlags(long address);
@@ -61,8 +69,12 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     
     public void setAttachmentCount(VkUInt32 attachmentCount) {
-        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getSinkAddress());
+        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setAttachmentCount(int attachmentCount) {
+        getAttachmentCount().setValue(attachmentCount);
     }
 
     private static native long getAttachmentCount(long address);
@@ -87,8 +99,12 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     
     public void setSubpassCount(VkUInt32 subpassCount) {
-        setSubpassCount(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.getSinkAddress());
+        setSubpassCount(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSubpassCount(int subpassCount) {
+        getSubpassCount().setValue(subpassCount);
     }
 
     private static native long getSubpassCount(long address);
@@ -113,8 +129,12 @@ public class VkRenderPassCreateInfo extends VkObject {
 
     
     public void setDependencyCount(VkUInt32 dependencyCount) {
-        setDependencyCount(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.getSinkAddress());
+        setDependencyCount(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDependencyCount(int dependencyCount) {
+        getDependencyCount().setValue(dependencyCount);
     }
 
     private static native long getDependencyCount(long address);

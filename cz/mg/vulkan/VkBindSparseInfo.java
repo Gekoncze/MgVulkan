@@ -22,8 +22,12 @@ public class VkBindSparseInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkBindSparseInfo extends VkObject {
 
     
     public void setWaitSemaphoreCount(VkUInt32 waitSemaphoreCount) {
-        setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount != null ? waitSemaphoreCount.getVkAddress() : VkPointer.getSinkAddress());
+        setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount != null ? waitSemaphoreCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setWaitSemaphoreCount(int waitSemaphoreCount) {
+        getWaitSemaphoreCount().setValue(waitSemaphoreCount);
     }
 
     private static native long getWaitSemaphoreCount(long address);
@@ -74,8 +82,12 @@ public class VkBindSparseInfo extends VkObject {
 
     
     public void setBufferBindCount(VkUInt32 bufferBindCount) {
-        setBufferBindCount(getVkAddress(), bufferBindCount != null ? bufferBindCount.getVkAddress() : VkPointer.getSinkAddress());
+        setBufferBindCount(getVkAddress(), bufferBindCount != null ? bufferBindCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setBufferBindCount(int bufferBindCount) {
+        getBufferBindCount().setValue(bufferBindCount);
     }
 
     private static native long getBufferBindCount(long address);
@@ -100,8 +112,12 @@ public class VkBindSparseInfo extends VkObject {
 
     
     public void setImageOpaqueBindCount(VkUInt32 imageOpaqueBindCount) {
-        setImageOpaqueBindCount(getVkAddress(), imageOpaqueBindCount != null ? imageOpaqueBindCount.getVkAddress() : VkPointer.getSinkAddress());
+        setImageOpaqueBindCount(getVkAddress(), imageOpaqueBindCount != null ? imageOpaqueBindCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setImageOpaqueBindCount(int imageOpaqueBindCount) {
+        getImageOpaqueBindCount().setValue(imageOpaqueBindCount);
     }
 
     private static native long getImageOpaqueBindCount(long address);
@@ -126,8 +142,12 @@ public class VkBindSparseInfo extends VkObject {
 
     
     public void setImageBindCount(VkUInt32 imageBindCount) {
-        setImageBindCount(getVkAddress(), imageBindCount != null ? imageBindCount.getVkAddress() : VkPointer.getSinkAddress());
+        setImageBindCount(getVkAddress(), imageBindCount != null ? imageBindCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setImageBindCount(int imageBindCount) {
+        getImageBindCount().setValue(imageBindCount);
     }
 
     private static native long getImageBindCount(long address);
@@ -152,8 +172,12 @@ public class VkBindSparseInfo extends VkObject {
 
     
     public void setSignalSemaphoreCount(VkUInt32 signalSemaphoreCount) {
-        setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount != null ? signalSemaphoreCount.getVkAddress() : VkPointer.getSinkAddress());
+        setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount != null ? signalSemaphoreCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSignalSemaphoreCount(int signalSemaphoreCount) {
+        getSignalSemaphoreCount().setValue(signalSemaphoreCount);
     }
 
     private static native long getSignalSemaphoreCount(long address);

@@ -22,8 +22,12 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
 
     
     public void setVertexBindingDivisorCount(VkUInt32 vertexBindingDivisorCount) {
-        setVertexBindingDivisorCount(getVkAddress(), vertexBindingDivisorCount != null ? vertexBindingDivisorCount.getVkAddress() : VkPointer.getSinkAddress());
+        setVertexBindingDivisorCount(getVkAddress(), vertexBindingDivisorCount != null ? vertexBindingDivisorCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setVertexBindingDivisorCount(int vertexBindingDivisorCount) {
+        getVertexBindingDivisorCount().setValue(vertexBindingDivisorCount);
     }
 
     private static native long getVertexBindingDivisorCount(long address);

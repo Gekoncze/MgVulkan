@@ -21,8 +21,12 @@ public class VkPhysicalDeviceShaderDrawParameterFeatures extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceShaderDrawParameterFeatures extends VkObject {
 
     
     public void setShaderDrawParameters(VkBool32 shaderDrawParameters) {
-        setShaderDrawParameters(getVkAddress(), shaderDrawParameters != null ? shaderDrawParameters.getVkAddress() : VkPointer.getSinkAddress());
+        setShaderDrawParameters(getVkAddress(), shaderDrawParameters != null ? shaderDrawParameters.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setShaderDrawParameters(int shaderDrawParameters) {
+        getShaderDrawParameters().setValue(shaderDrawParameters);
     }
 
     private static native long getShaderDrawParameters(long address);

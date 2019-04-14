@@ -22,8 +22,12 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSampleLocationsPerPixel(VkSampleCountFlagBits sampleLocationsPerPixel) {
-        setSampleLocationsPerPixel(getVkAddress(), sampleLocationsPerPixel != null ? sampleLocationsPerPixel.getVkAddress() : VkPointer.getSinkAddress());
+        setSampleLocationsPerPixel(getVkAddress(), sampleLocationsPerPixel != null ? sampleLocationsPerPixel.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSampleLocationsPerPixel(int sampleLocationsPerPixel) {
+        getSampleLocationsPerPixel().setValue(sampleLocationsPerPixel);
     }
 
     private static native long getSampleLocationsPerPixel(long address);
@@ -61,7 +69,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSampleLocationGridSize(VkExtent2D sampleLocationGridSize) {
-        setSampleLocationGridSize(getVkAddress(), sampleLocationGridSize != null ? sampleLocationGridSize.getVkAddress() : VkPointer.getSinkAddress());
+        setSampleLocationGridSize(getVkAddress(), sampleLocationGridSize != null ? sampleLocationGridSize.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -74,8 +82,12 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSampleLocationsCount(VkUInt32 sampleLocationsCount) {
-        setSampleLocationsCount(getVkAddress(), sampleLocationsCount != null ? sampleLocationsCount.getVkAddress() : VkPointer.getSinkAddress());
+        setSampleLocationsCount(getVkAddress(), sampleLocationsCount != null ? sampleLocationsCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSampleLocationsCount(int sampleLocationsCount) {
+        getSampleLocationsCount().setValue(sampleLocationsCount);
     }
 
     private static native long getSampleLocationsCount(long address);

@@ -22,8 +22,12 @@ public class VkDisplayPowerInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -48,8 +52,12 @@ public class VkDisplayPowerInfoEXT extends VkObject {
 
     
     public void setPowerState(VkDisplayPowerStateEXT powerState) {
-        setPowerState(getVkAddress(), powerState != null ? powerState.getVkAddress() : VkPointer.getSinkAddress());
+        setPowerState(getVkAddress(), powerState != null ? powerState.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPowerState(int powerState) {
+        getPowerState().setValue(powerState);
     }
 
     private static native long getPowerState(long address);

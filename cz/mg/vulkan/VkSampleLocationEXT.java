@@ -21,8 +21,12 @@ public class VkSampleLocationEXT extends VkObject {
 
     
     public void setX(VkFloat x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getSinkAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setX(float x) {
+        getX().setValue(x);
     }
 
     private static native long getX(long address);
@@ -34,8 +38,12 @@ public class VkSampleLocationEXT extends VkObject {
 
     
     public void setY(VkFloat y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getSinkAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setY(float y) {
+        getY().setValue(y);
     }
 
     private static native long getY(long address);

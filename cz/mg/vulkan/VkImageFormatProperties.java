@@ -21,7 +21,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxExtent(VkExtent3D maxExtent) {
-        setMaxExtent(getVkAddress(), maxExtent != null ? maxExtent.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxExtent(getVkAddress(), maxExtent != null ? maxExtent.getVkAddress() : VkPointer.getNullAddress());
         
     }
 
@@ -34,8 +34,12 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxMipLevels(VkUInt32 maxMipLevels) {
-        setMaxMipLevels(getVkAddress(), maxMipLevels != null ? maxMipLevels.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxMipLevels(getVkAddress(), maxMipLevels != null ? maxMipLevels.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxMipLevels(int maxMipLevels) {
+        getMaxMipLevels().setValue(maxMipLevels);
     }
 
     private static native long getMaxMipLevels(long address);
@@ -47,8 +51,12 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxArrayLayers(VkUInt32 maxArrayLayers) {
-        setMaxArrayLayers(getVkAddress(), maxArrayLayers != null ? maxArrayLayers.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxArrayLayers(getVkAddress(), maxArrayLayers != null ? maxArrayLayers.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxArrayLayers(int maxArrayLayers) {
+        getMaxArrayLayers().setValue(maxArrayLayers);
     }
 
     private static native long getMaxArrayLayers(long address);
@@ -60,8 +68,12 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setSampleCounts(VkSampleCountFlags sampleCounts) {
-        setSampleCounts(getVkAddress(), sampleCounts != null ? sampleCounts.getVkAddress() : VkPointer.getSinkAddress());
+        setSampleCounts(getVkAddress(), sampleCounts != null ? sampleCounts.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSampleCounts(int sampleCounts) {
+        getSampleCounts().setValue(sampleCounts);
     }
 
     private static native long getSampleCounts(long address);
@@ -73,8 +85,12 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxResourceSize(VkDeviceSize maxResourceSize) {
-        setMaxResourceSize(getVkAddress(), maxResourceSize != null ? maxResourceSize.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxResourceSize(getVkAddress(), maxResourceSize != null ? maxResourceSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxResourceSize(long maxResourceSize) {
+        getMaxResourceSize().setValue(maxResourceSize);
     }
 
     private static native long getMaxResourceSize(long address);

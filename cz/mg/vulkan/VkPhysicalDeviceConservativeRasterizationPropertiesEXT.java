@@ -21,8 +21,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -47,8 +51,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     
     public void setPrimitiveOverestimationSize(VkFloat primitiveOverestimationSize) {
-        setPrimitiveOverestimationSize(getVkAddress(), primitiveOverestimationSize != null ? primitiveOverestimationSize.getVkAddress() : VkPointer.getSinkAddress());
+        setPrimitiveOverestimationSize(getVkAddress(), primitiveOverestimationSize != null ? primitiveOverestimationSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPrimitiveOverestimationSize(float primitiveOverestimationSize) {
+        getPrimitiveOverestimationSize().setValue(primitiveOverestimationSize);
     }
 
     private static native long getPrimitiveOverestimationSize(long address);
@@ -60,8 +68,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     
     public void setMaxExtraPrimitiveOverestimationSize(VkFloat maxExtraPrimitiveOverestimationSize) {
-        setMaxExtraPrimitiveOverestimationSize(getVkAddress(), maxExtraPrimitiveOverestimationSize != null ? maxExtraPrimitiveOverestimationSize.getVkAddress() : VkPointer.getSinkAddress());
+        setMaxExtraPrimitiveOverestimationSize(getVkAddress(), maxExtraPrimitiveOverestimationSize != null ? maxExtraPrimitiveOverestimationSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setMaxExtraPrimitiveOverestimationSize(float maxExtraPrimitiveOverestimationSize) {
+        getMaxExtraPrimitiveOverestimationSize().setValue(maxExtraPrimitiveOverestimationSize);
     }
 
     private static native long getMaxExtraPrimitiveOverestimationSize(long address);
@@ -73,8 +85,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     
     public void setExtraPrimitiveOverestimationSizeGranularity(VkFloat extraPrimitiveOverestimationSizeGranularity) {
-        setExtraPrimitiveOverestimationSizeGranularity(getVkAddress(), extraPrimitiveOverestimationSizeGranularity != null ? extraPrimitiveOverestimationSizeGranularity.getVkAddress() : VkPointer.getSinkAddress());
+        setExtraPrimitiveOverestimationSizeGranularity(getVkAddress(), extraPrimitiveOverestimationSizeGranularity != null ? extraPrimitiveOverestimationSizeGranularity.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setExtraPrimitiveOverestimationSizeGranularity(float extraPrimitiveOverestimationSizeGranularity) {
+        getExtraPrimitiveOverestimationSizeGranularity().setValue(extraPrimitiveOverestimationSizeGranularity);
     }
 
     private static native long getExtraPrimitiveOverestimationSizeGranularity(long address);
@@ -86,8 +102,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     
     public void setPrimitiveUnderestimation(VkBool32 primitiveUnderestimation) {
-        setPrimitiveUnderestimation(getVkAddress(), primitiveUnderestimation != null ? primitiveUnderestimation.getVkAddress() : VkPointer.getSinkAddress());
+        setPrimitiveUnderestimation(getVkAddress(), primitiveUnderestimation != null ? primitiveUnderestimation.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setPrimitiveUnderestimation(int primitiveUnderestimation) {
+        getPrimitiveUnderestimation().setValue(primitiveUnderestimation);
     }
 
     private static native long getPrimitiveUnderestimation(long address);
@@ -99,8 +119,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     
     public void setConservativePointAndLineRasterization(VkBool32 conservativePointAndLineRasterization) {
-        setConservativePointAndLineRasterization(getVkAddress(), conservativePointAndLineRasterization != null ? conservativePointAndLineRasterization.getVkAddress() : VkPointer.getSinkAddress());
+        setConservativePointAndLineRasterization(getVkAddress(), conservativePointAndLineRasterization != null ? conservativePointAndLineRasterization.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setConservativePointAndLineRasterization(int conservativePointAndLineRasterization) {
+        getConservativePointAndLineRasterization().setValue(conservativePointAndLineRasterization);
     }
 
     private static native long getConservativePointAndLineRasterization(long address);
@@ -112,8 +136,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     
     public void setDegenerateTrianglesRasterized(VkBool32 degenerateTrianglesRasterized) {
-        setDegenerateTrianglesRasterized(getVkAddress(), degenerateTrianglesRasterized != null ? degenerateTrianglesRasterized.getVkAddress() : VkPointer.getSinkAddress());
+        setDegenerateTrianglesRasterized(getVkAddress(), degenerateTrianglesRasterized != null ? degenerateTrianglesRasterized.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDegenerateTrianglesRasterized(int degenerateTrianglesRasterized) {
+        getDegenerateTrianglesRasterized().setValue(degenerateTrianglesRasterized);
     }
 
     private static native long getDegenerateTrianglesRasterized(long address);
@@ -125,8 +153,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     
     public void setDegenerateLinesRasterized(VkBool32 degenerateLinesRasterized) {
-        setDegenerateLinesRasterized(getVkAddress(), degenerateLinesRasterized != null ? degenerateLinesRasterized.getVkAddress() : VkPointer.getSinkAddress());
+        setDegenerateLinesRasterized(getVkAddress(), degenerateLinesRasterized != null ? degenerateLinesRasterized.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDegenerateLinesRasterized(int degenerateLinesRasterized) {
+        getDegenerateLinesRasterized().setValue(degenerateLinesRasterized);
     }
 
     private static native long getDegenerateLinesRasterized(long address);
@@ -138,8 +170,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     
     public void setFullyCoveredFragmentShaderInputVariable(VkBool32 fullyCoveredFragmentShaderInputVariable) {
-        setFullyCoveredFragmentShaderInputVariable(getVkAddress(), fullyCoveredFragmentShaderInputVariable != null ? fullyCoveredFragmentShaderInputVariable.getVkAddress() : VkPointer.getSinkAddress());
+        setFullyCoveredFragmentShaderInputVariable(getVkAddress(), fullyCoveredFragmentShaderInputVariable != null ? fullyCoveredFragmentShaderInputVariable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setFullyCoveredFragmentShaderInputVariable(int fullyCoveredFragmentShaderInputVariable) {
+        getFullyCoveredFragmentShaderInputVariable().setValue(fullyCoveredFragmentShaderInputVariable);
     }
 
     private static native long getFullyCoveredFragmentShaderInputVariable(long address);
@@ -151,8 +187,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
 
     
     public void setConservativeRasterizationPostDepthCoverage(VkBool32 conservativeRasterizationPostDepthCoverage) {
-        setConservativeRasterizationPostDepthCoverage(getVkAddress(), conservativeRasterizationPostDepthCoverage != null ? conservativeRasterizationPostDepthCoverage.getVkAddress() : VkPointer.getSinkAddress());
+        setConservativeRasterizationPostDepthCoverage(getVkAddress(), conservativeRasterizationPostDepthCoverage != null ? conservativeRasterizationPostDepthCoverage.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setConservativeRasterizationPostDepthCoverage(int conservativeRasterizationPostDepthCoverage) {
+        getConservativeRasterizationPostDepthCoverage().setValue(conservativeRasterizationPostDepthCoverage);
     }
 
     private static native long getConservativeRasterizationPostDepthCoverage(long address);

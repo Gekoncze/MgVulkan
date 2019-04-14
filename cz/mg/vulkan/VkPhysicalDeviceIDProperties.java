@@ -21,8 +21,12 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getSinkAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setSType(int sType) {
+        getSType().setValue(sType);
     }
 
     private static native long getSType(long address);
@@ -86,8 +90,12 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
 
     
     public void setDeviceNodeMask(VkUInt32 deviceNodeMask) {
-        setDeviceNodeMask(getVkAddress(), deviceNodeMask != null ? deviceNodeMask.getVkAddress() : VkPointer.getSinkAddress());
+        setDeviceNodeMask(getVkAddress(), deviceNodeMask != null ? deviceNodeMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDeviceNodeMask(int deviceNodeMask) {
+        getDeviceNodeMask().setValue(deviceNodeMask);
     }
 
     private static native long getDeviceNodeMask(long address);
@@ -99,8 +107,12 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
 
     
     public void setDeviceLUIDValid(VkBool32 deviceLUIDValid) {
-        setDeviceLUIDValid(getVkAddress(), deviceLUIDValid != null ? deviceLUIDValid.getVkAddress() : VkPointer.getSinkAddress());
+        setDeviceLUIDValid(getVkAddress(), deviceLUIDValid != null ? deviceLUIDValid.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public void setDeviceLUIDValid(int deviceLUIDValid) {
+        getDeviceLUIDValid().setValue(deviceLUIDValid);
     }
 
     private static native long getDeviceLUIDValid(long address);
