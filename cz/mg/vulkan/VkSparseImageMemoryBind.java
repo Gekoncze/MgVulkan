@@ -13,15 +13,7 @@ public class VkSparseImageMemoryBind extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSparseImageMemoryBind(VkImageSubresource subresource, VkOffset3D offset, VkExtent3D extent, VkDeviceMemory memory, VkDeviceSize memoryOffset, VkSparseMemoryBindFlags flags) {
-        super(sizeof());
-        setSubresource(subresource);
-        setOffset(offset);
-        setExtent(extent);
-        setMemory(memory);
-        setMemoryOffset(memoryOffset);
-        setFlags(flags);
-    }
+
 
     public VkImageSubresource getSubresource() {
         return new VkImageSubresource(getVkMemory(), getSubresource(getVkAddress()));

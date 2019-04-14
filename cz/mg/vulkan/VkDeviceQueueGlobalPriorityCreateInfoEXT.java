@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
     public VkDeviceQueueGlobalPriorityCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT));
     }
 
     public VkDeviceQueueGlobalPriorityCreateInfoEXT(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceQueueGlobalPriorityCreateInfoEXT(VkObject pNext, VkQueueGlobalPriorityEXT globalPriority) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_QUEUE_GLOBAL_PRIORITY_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setGlobalPriority(globalPriority);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

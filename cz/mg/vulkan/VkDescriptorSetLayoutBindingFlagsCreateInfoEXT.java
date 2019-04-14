@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
     public VkDescriptorSetLayoutBindingFlagsCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO_EXT));
     }
 
     public VkDescriptorSetLayoutBindingFlagsCreateInfoEXT(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorSetLayoutBindingFlagsCreateInfoEXT(VkObject pNext, VkUInt32 bindingCount, VkDescriptorBindingFlagsEXT pBindingFlags) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setBindingCount(bindingCount);
-        setPBindingFlags(pBindingFlags);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

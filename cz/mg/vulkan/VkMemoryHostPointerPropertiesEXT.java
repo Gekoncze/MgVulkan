@@ -13,12 +13,7 @@ public class VkMemoryHostPointerPropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMemoryHostPointerPropertiesEXT(VkStructureType sType, VkObject pNext, VkUInt32 memoryTypeBits) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMemoryTypeBits(memoryTypeBits);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

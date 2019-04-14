@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineViewportStateCreateInfo extends VkObject {
     public VkPipelineViewportStateCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO));
     }
 
     public VkPipelineViewportStateCreateInfo(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineViewportStateCreateInfo(VkObject pNext, VkPipelineViewportStateCreateFlags flags, VkUInt32 viewportCount, VkViewport pViewports, VkUInt32 scissorCount, VkRect2D pScissors) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setViewportCount(viewportCount);
-        setPViewports(pViewports);
-        setScissorCount(scissorCount);
-        setPScissors(pScissors);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

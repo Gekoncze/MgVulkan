@@ -13,14 +13,7 @@ public class VkExternalSemaphoreProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExternalSemaphoreProperties(VkStructureType sType, VkObject pNext, VkExternalSemaphoreHandleTypeFlags exportFromImportedHandleTypes, VkExternalSemaphoreHandleTypeFlags compatibleHandleTypes, VkExternalSemaphoreFeatureFlags externalSemaphoreFeatures) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setExportFromImportedHandleTypes(exportFromImportedHandleTypes);
-        setCompatibleHandleTypes(compatibleHandleTypes);
-        setExternalSemaphoreFeatures(externalSemaphoreFeatures);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

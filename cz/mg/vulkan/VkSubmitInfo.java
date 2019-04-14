@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkSubmitInfo extends VkObject {
     public VkSubmitInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SUBMIT_INFO));
     }
 
     public VkSubmitInfo(VkMemory vkmemory) {
@@ -13,18 +14,7 @@ public class VkSubmitInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSubmitInfo(VkObject pNext, VkUInt32 waitSemaphoreCount, VkSemaphore pWaitSemaphores, VkPipelineStageFlags pWaitDstStageMask, VkUInt32 commandBufferCount, VkCommandBuffer pCommandBuffers, VkUInt32 signalSemaphoreCount, VkSemaphore pSignalSemaphores) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SUBMIT_INFO));
-        setPNext(pNext);
-        setWaitSemaphoreCount(waitSemaphoreCount);
-        setPWaitSemaphores(pWaitSemaphores);
-        setPWaitDstStageMask(pWaitDstStageMask);
-        setCommandBufferCount(commandBufferCount);
-        setPCommandBuffers(pCommandBuffers);
-        setSignalSemaphoreCount(signalSemaphoreCount);
-        setPSignalSemaphores(pSignalSemaphores);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

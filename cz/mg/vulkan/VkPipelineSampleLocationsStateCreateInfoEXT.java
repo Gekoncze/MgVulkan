@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
     public VkPipelineSampleLocationsStateCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT));
     }
 
     public VkPipelineSampleLocationsStateCreateInfoEXT(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineSampleLocationsStateCreateInfoEXT(VkObject pNext, VkBool32 sampleLocationsEnable, VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_SAMPLE_LOCATIONS_STATE_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setSampleLocationsEnable(sampleLocationsEnable);
-        setSampleLocationsInfo(sampleLocationsInfo);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

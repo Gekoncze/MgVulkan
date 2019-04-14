@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDisplayPowerInfoEXT extends VkObject {
     public VkDisplayPowerInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DISPLAY_POWER_INFO_EXT));
     }
 
     public VkDisplayPowerInfoEXT(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkDisplayPowerInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDisplayPowerInfoEXT(VkObject pNext, VkDisplayPowerStateEXT powerState) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DISPLAY_POWER_INFO_EXT));
-        setPNext(pNext);
-        setPowerState(powerState);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

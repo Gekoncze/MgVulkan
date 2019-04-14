@@ -13,14 +13,7 @@ public class VkSparseMemoryBind extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSparseMemoryBind(VkDeviceSize resourceOffset, VkDeviceSize size, VkDeviceMemory memory, VkDeviceSize memoryOffset, VkSparseMemoryBindFlags flags) {
-        super(sizeof());
-        setResourceOffset(resourceOffset);
-        setSize(size);
-        setMemory(memory);
-        setMemoryOffset(memoryOffset);
-        setFlags(flags);
-    }
+
 
     public VkDeviceSize getResourceOffset() {
         return new VkDeviceSize(getVkMemory(), getResourceOffset(getVkAddress()));

@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkSwapchainCounterCreateInfoEXT extends VkObject {
     public VkSwapchainCounterCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SWAPCHAIN_COUNTER_CREATE_INFO_EXT));
     }
 
     public VkSwapchainCounterCreateInfoEXT(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkSwapchainCounterCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSwapchainCounterCreateInfoEXT(VkObject pNext, VkSurfaceCounterFlagsEXT surfaceCounters) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SWAPCHAIN_COUNTER_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setSurfaceCounters(surfaceCounters);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

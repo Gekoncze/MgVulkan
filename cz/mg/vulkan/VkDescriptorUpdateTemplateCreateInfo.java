@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
     public VkDescriptorUpdateTemplateCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO));
     }
 
     public VkDescriptorUpdateTemplateCreateInfo(VkMemory vkmemory) {
@@ -13,19 +14,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorUpdateTemplateCreateInfo(VkObject pNext, VkDescriptorUpdateTemplateCreateFlags flags, VkUInt32 descriptorUpdateEntryCount, VkDescriptorUpdateTemplateEntry pDescriptorUpdateEntries, VkDescriptorUpdateTemplateType templateType, VkDescriptorSetLayout descriptorSetLayout, VkPipelineBindPoint pipelineBindPoint, VkPipelineLayout pipelineLayout, VkUInt32 set) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setDescriptorUpdateEntryCount(descriptorUpdateEntryCount);
-        setPDescriptorUpdateEntries(pDescriptorUpdateEntries);
-        setTemplateType(templateType);
-        setDescriptorSetLayout(descriptorSetLayout);
-        setPipelineBindPoint(pipelineBindPoint);
-        setPipelineLayout(pipelineLayout);
-        setSet(set);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

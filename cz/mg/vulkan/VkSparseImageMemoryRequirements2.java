@@ -13,12 +13,7 @@ public class VkSparseImageMemoryRequirements2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSparseImageMemoryRequirements2(VkStructureType sType, VkObject pNext, VkSparseImageMemoryRequirements memoryRequirements) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMemoryRequirements(memoryRequirements);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

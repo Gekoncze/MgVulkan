@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkRenderPassBeginInfo extends VkObject {
     public VkRenderPassBeginInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO));
     }
 
     public VkRenderPassBeginInfo(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkRenderPassBeginInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkRenderPassBeginInfo(VkObject pNext, VkRenderPass renderPass, VkFramebuffer framebuffer, VkRect2D renderArea, VkUInt32 clearValueCount, VkClearValue pClearValues) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO));
-        setPNext(pNext);
-        setRenderPass(renderPass);
-        setFramebuffer(framebuffer);
-        setRenderArea(renderArea);
-        setClearValueCount(clearValueCount);
-        setPClearValues(pClearValues);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

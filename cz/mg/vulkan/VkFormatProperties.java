@@ -13,12 +13,7 @@ public class VkFormatProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkFormatProperties(VkFormatFeatureFlags linearTilingFeatures, VkFormatFeatureFlags optimalTilingFeatures, VkFormatFeatureFlags bufferFeatures) {
-        super(sizeof());
-        setLinearTilingFeatures(linearTilingFeatures);
-        setOptimalTilingFeatures(optimalTilingFeatures);
-        setBufferFeatures(bufferFeatures);
-    }
+
 
     public VkFormatFeatureFlags getLinearTilingFeatures() {
         return new VkFormatFeatureFlags(getVkMemory(), getLinearTilingFeatures(getVkAddress()));

@@ -13,13 +13,7 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkObjectTablePushConstantEntryNVX(VkObjectEntryTypeNVX type, VkObjectEntryUsageFlagsNVX flags, VkPipelineLayout pipelineLayout, VkShaderStageFlags stageFlags) {
-        super(sizeof());
-        setType(type);
-        setFlags(flags);
-        setPipelineLayout(pipelineLayout);
-        setStageFlags(stageFlags);
-    }
+
 
     public VkObjectEntryTypeNVX getType() {
         return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));

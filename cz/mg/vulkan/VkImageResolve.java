@@ -13,14 +13,7 @@ public class VkImageResolve extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageResolve(VkImageSubresourceLayers srcSubresource, VkOffset3D srcOffset, VkImageSubresourceLayers dstSubresource, VkOffset3D dstOffset, VkExtent3D extent) {
-        super(sizeof());
-        setSrcSubresource(srcSubresource);
-        setSrcOffset(srcOffset);
-        setDstSubresource(dstSubresource);
-        setDstOffset(dstOffset);
-        setExtent(extent);
-    }
+
 
     public VkImageSubresourceLayers getSrcSubresource() {
         return new VkImageSubresourceLayers(getVkMemory(), getSrcSubresource(getVkAddress()));

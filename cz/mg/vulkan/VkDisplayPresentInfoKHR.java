@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDisplayPresentInfoKHR extends VkObject {
     public VkDisplayPresentInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DISPLAY_PRESENT_INFO_KHR));
     }
 
     public VkDisplayPresentInfoKHR(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDisplayPresentInfoKHR(VkObject pNext, VkRect2D srcRect, VkRect2D dstRect, VkBool32 persistent) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DISPLAY_PRESENT_INFO_KHR));
-        setPNext(pNext);
-        setSrcRect(srcRect);
-        setDstRect(dstRect);
-        setPersistent(persistent);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

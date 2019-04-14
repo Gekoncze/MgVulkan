@@ -13,12 +13,7 @@ public class VkVertexInputBindingDescription extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkVertexInputBindingDescription(VkUInt32 binding, VkUInt32 stride, VkVertexInputRate inputRate) {
-        super(sizeof());
-        setBinding(binding);
-        setStride(stride);
-        setInputRate(inputRate);
-    }
+
 
     public VkUInt32 getBinding() {
         return new VkUInt32(getVkMemory(), getBinding(getVkAddress()));

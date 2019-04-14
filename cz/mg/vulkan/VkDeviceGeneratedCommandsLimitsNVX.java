@@ -13,16 +13,7 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceGeneratedCommandsLimitsNVX(VkStructureType sType, VkObject pNext, VkUInt32 maxIndirectCommandsLayoutTokenCount, VkUInt32 maxObjectEntryCounts, VkUInt32 minSequenceCountBufferOffsetAlignment, VkUInt32 minSequenceIndexBufferOffsetAlignment, VkUInt32 minCommandsTokenBufferOffsetAlignment) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMaxIndirectCommandsLayoutTokenCount(maxIndirectCommandsLayoutTokenCount);
-        setMaxObjectEntryCounts(maxObjectEntryCounts);
-        setMinSequenceCountBufferOffsetAlignment(minSequenceCountBufferOffsetAlignment);
-        setMinSequenceIndexBufferOffsetAlignment(minSequenceIndexBufferOffsetAlignment);
-        setMinCommandsTokenBufferOffsetAlignment(minCommandsTokenBufferOffsetAlignment);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -32,7 +32,7 @@ public class VkString extends VkChar {
     public static class Array extends VkChar.Pointer.Array {
         private final VkString[] array;
 
-        public Array(String[] strings) {
+        public Array(String... strings) {
             super(strings.length);
             this.array = new VkString[strings.length];
             for(int i = 0; i < strings.length; i++){

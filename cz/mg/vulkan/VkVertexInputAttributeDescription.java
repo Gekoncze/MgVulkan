@@ -13,13 +13,7 @@ public class VkVertexInputAttributeDescription extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkVertexInputAttributeDescription(VkUInt32 location, VkUInt32 binding, VkFormat format, VkUInt32 offset) {
-        super(sizeof());
-        setLocation(location);
-        setBinding(binding);
-        setFormat(format);
-        setOffset(offset);
-    }
+
 
     public VkUInt32 getLocation() {
         return new VkUInt32(getVkMemory(), getLocation(getVkAddress()));

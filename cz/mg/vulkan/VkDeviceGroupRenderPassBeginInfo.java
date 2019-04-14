@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
     public VkDeviceGroupRenderPassBeginInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_RENDER_PASS_BEGIN_INFO));
     }
 
     public VkDeviceGroupRenderPassBeginInfo(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceGroupRenderPassBeginInfo(VkObject pNext, VkUInt32 deviceMask, VkUInt32 deviceRenderAreaCount, VkRect2D pDeviceRenderAreas) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_RENDER_PASS_BEGIN_INFO));
-        setPNext(pNext);
-        setDeviceMask(deviceMask);
-        setDeviceRenderAreaCount(deviceRenderAreaCount);
-        setPDeviceRenderAreas(pDeviceRenderAreas);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

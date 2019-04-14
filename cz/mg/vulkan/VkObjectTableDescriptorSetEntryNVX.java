@@ -13,13 +13,7 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkObjectTableDescriptorSetEntryNVX(VkObjectEntryTypeNVX type, VkObjectEntryUsageFlagsNVX flags, VkPipelineLayout pipelineLayout, VkDescriptorSet descriptorSet) {
-        super(sizeof());
-        setType(type);
-        setFlags(flags);
-        setPipelineLayout(pipelineLayout);
-        setDescriptorSet(descriptorSet);
-    }
+
 
     public VkObjectEntryTypeNVX getType() {
         return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));

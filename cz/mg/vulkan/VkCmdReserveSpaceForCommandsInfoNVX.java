@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
     public VkCmdReserveSpaceForCommandsInfoNVX() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_CMD_RESERVE_SPACE_FOR_COMMANDS_INFO_NVX));
     }
 
     public VkCmdReserveSpaceForCommandsInfoNVX(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkCmdReserveSpaceForCommandsInfoNVX(VkObject pNext, VkObjectTableNVX objectTable, VkIndirectCommandsLayoutNVX indirectCommandsLayout, VkUInt32 maxSequencesCount) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_CMD_RESERVE_SPACE_FOR_COMMANDS_INFO_NVX));
-        setPNext(pNext);
-        setObjectTable(objectTable);
-        setIndirectCommandsLayout(indirectCommandsLayout);
-        setMaxSequencesCount(maxSequencesCount);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

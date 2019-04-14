@@ -13,12 +13,7 @@ public class VkPushConstantRange extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPushConstantRange(VkShaderStageFlags stageFlags, VkUInt32 offset, VkUInt32 size) {
-        super(sizeof());
-        setStageFlags(stageFlags);
-        setOffset(offset);
-        setSize(size);
-    }
+
 
     public VkShaderStageFlags getStageFlags() {
         return new VkShaderStageFlags(getVkMemory(), getStageFlags(getVkAddress()));

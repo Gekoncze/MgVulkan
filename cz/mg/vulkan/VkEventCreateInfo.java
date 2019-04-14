@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkEventCreateInfo extends VkObject {
     public VkEventCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EVENT_CREATE_INFO));
     }
 
     public VkEventCreateInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkEventCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkEventCreateInfo(VkObject pNext, VkEventCreateFlags flags) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EVENT_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

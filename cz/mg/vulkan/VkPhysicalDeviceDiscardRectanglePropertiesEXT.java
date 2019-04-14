@@ -13,12 +13,7 @@ public class VkPhysicalDeviceDiscardRectanglePropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceDiscardRectanglePropertiesEXT(VkStructureType sType, VkObject pNext, VkUInt32 maxDiscardRectangles) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMaxDiscardRectangles(maxDiscardRectangles);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -13,12 +13,7 @@ public class VkMemoryRequirements2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMemoryRequirements2(VkStructureType sType, VkObject pNext, VkMemoryRequirements memoryRequirements) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMemoryRequirements(memoryRequirements);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

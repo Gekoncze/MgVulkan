@@ -13,13 +13,7 @@ public class VkSpecializationInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSpecializationInfo(VkUInt32 mapEntryCount, VkSpecializationMapEntry pMapEntries, VkSize dataSize, VkObject pData) {
-        super(sizeof());
-        setMapEntryCount(mapEntryCount);
-        setPMapEntries(pMapEntries);
-        setDataSize(dataSize);
-        setPData(pData);
-    }
+
 
     public VkUInt32 getMapEntryCount() {
         return new VkUInt32(getVkMemory(), getMapEntryCount(getVkAddress()));

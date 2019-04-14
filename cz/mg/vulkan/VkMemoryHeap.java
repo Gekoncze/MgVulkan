@@ -13,11 +13,7 @@ public class VkMemoryHeap extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMemoryHeap(VkDeviceSize size, VkMemoryHeapFlags flags) {
-        super(sizeof());
-        setSize(size);
-        setFlags(flags);
-    }
+
 
     public VkDeviceSize getSize() {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));

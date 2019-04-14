@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDebugMarkerMarkerInfoEXT extends VkObject {
     public VkDebugMarkerMarkerInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_MARKER_MARKER_INFO_EXT));
     }
 
     public VkDebugMarkerMarkerInfoEXT(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDebugMarkerMarkerInfoEXT(VkObject pNext, VkChar pMarkerName, VkFloat color) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_MARKER_MARKER_INFO_EXT));
-        setPNext(pNext);
-        setPMarkerName(pMarkerName);
-        setColor(color);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

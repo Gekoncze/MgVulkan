@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkCommandBufferAllocateInfo extends VkObject {
     public VkCommandBufferAllocateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO));
     }
 
     public VkCommandBufferAllocateInfo(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkCommandBufferAllocateInfo(VkObject pNext, VkCommandPool commandPool, VkCommandBufferLevel level, VkUInt32 commandBufferCount) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO));
-        setPNext(pNext);
-        setCommandPool(commandPool);
-        setLevel(level);
-        setCommandBufferCount(commandBufferCount);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

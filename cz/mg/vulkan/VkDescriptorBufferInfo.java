@@ -13,12 +13,7 @@ public class VkDescriptorBufferInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorBufferInfo(VkBuffer buffer, VkDeviceSize offset, VkDeviceSize range) {
-        super(sizeof());
-        setBuffer(buffer);
-        setOffset(offset);
-        setRange(range);
-    }
+
 
     public VkBuffer getBuffer() {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));

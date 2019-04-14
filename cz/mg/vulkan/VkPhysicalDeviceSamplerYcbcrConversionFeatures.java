@@ -13,12 +13,7 @@ public class VkPhysicalDeviceSamplerYcbcrConversionFeatures extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceSamplerYcbcrConversionFeatures(VkStructureType sType, VkObject pNext, VkBool32 samplerYcbcrConversion) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSamplerYcbcrConversion(samplerYcbcrConversion);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

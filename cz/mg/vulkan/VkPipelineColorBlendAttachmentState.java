@@ -13,17 +13,7 @@ public class VkPipelineColorBlendAttachmentState extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineColorBlendAttachmentState(VkBool32 blendEnable, VkBlendFactor srcColorBlendFactor, VkBlendFactor dstColorBlendFactor, VkBlendOp colorBlendOp, VkBlendFactor srcAlphaBlendFactor, VkBlendFactor dstAlphaBlendFactor, VkBlendOp alphaBlendOp, VkColorComponentFlags colorWriteMask) {
-        super(sizeof());
-        setBlendEnable(blendEnable);
-        setSrcColorBlendFactor(srcColorBlendFactor);
-        setDstColorBlendFactor(dstColorBlendFactor);
-        setColorBlendOp(colorBlendOp);
-        setSrcAlphaBlendFactor(srcAlphaBlendFactor);
-        setDstAlphaBlendFactor(dstAlphaBlendFactor);
-        setAlphaBlendOp(alphaBlendOp);
-        setColorWriteMask(colorWriteMask);
-    }
+
 
     public VkBool32 getBlendEnable() {
         return new VkBool32(getVkMemory(), getBlendEnable(getVkAddress()));

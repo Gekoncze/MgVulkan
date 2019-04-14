@@ -13,14 +13,7 @@ public class VkExternalFenceProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExternalFenceProperties(VkStructureType sType, VkObject pNext, VkExternalFenceHandleTypeFlags exportFromImportedHandleTypes, VkExternalFenceHandleTypeFlags compatibleHandleTypes, VkExternalFenceFeatureFlags externalFenceFeatures) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setExportFromImportedHandleTypes(exportFromImportedHandleTypes);
-        setCompatibleHandleTypes(compatibleHandleTypes);
-        setExternalFenceFeatures(externalFenceFeatures);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

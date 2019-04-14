@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkBindImageMemorySwapchainInfoKHR extends VkObject {
     public VkBindImageMemorySwapchainInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR));
     }
 
     public VkBindImageMemorySwapchainInfoKHR(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkBindImageMemorySwapchainInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkBindImageMemorySwapchainInfoKHR(VkObject pNext, VkSwapchainKHR swapchain, VkUInt32 imageIndex) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_SWAPCHAIN_INFO_KHR));
-        setPNext(pNext);
-        setSwapchain(swapchain);
-        setImageIndex(imageIndex);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

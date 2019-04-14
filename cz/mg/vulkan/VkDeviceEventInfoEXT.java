@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDeviceEventInfoEXT extends VkObject {
     public VkDeviceEventInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_EVENT_INFO_EXT));
     }
 
     public VkDeviceEventInfoEXT(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkDeviceEventInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceEventInfoEXT(VkObject pNext, VkDeviceEventTypeEXT deviceEvent) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_EVENT_INFO_EXT));
-        setPNext(pNext);
-        setDeviceEvent(deviceEvent);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
     public VkRenderPassSampleLocationsBeginInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT));
     }
 
     public VkRenderPassSampleLocationsBeginInfoEXT(VkMemory vkmemory) {
@@ -13,15 +14,7 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkRenderPassSampleLocationsBeginInfoEXT(VkObject pNext, VkUInt32 attachmentInitialSampleLocationsCount, VkAttachmentSampleLocationsEXT pAttachmentInitialSampleLocations, VkUInt32 postSubpassSampleLocationsCount, VkSubpassSampleLocationsEXT pPostSubpassSampleLocations) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT));
-        setPNext(pNext);
-        setAttachmentInitialSampleLocationsCount(attachmentInitialSampleLocationsCount);
-        setPAttachmentInitialSampleLocations(pAttachmentInitialSampleLocations);
-        setPostSubpassSampleLocationsCount(postSubpassSampleLocationsCount);
-        setPPostSubpassSampleLocations(pPostSubpassSampleLocations);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

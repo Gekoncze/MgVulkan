@@ -13,22 +13,7 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSurfaceCapabilities2EXT(VkStructureType sType, VkObject pNext, VkUInt32 minImageCount, VkUInt32 maxImageCount, VkExtent2D currentExtent, VkExtent2D minImageExtent, VkExtent2D maxImageExtent, VkUInt32 maxImageArrayLayers, VkSurfaceTransformFlagsKHR supportedTransforms, VkSurfaceTransformFlagBitsKHR currentTransform, VkCompositeAlphaFlagsKHR supportedCompositeAlpha, VkImageUsageFlags supportedUsageFlags, VkSurfaceCounterFlagsEXT supportedSurfaceCounters) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMinImageCount(minImageCount);
-        setMaxImageCount(maxImageCount);
-        setCurrentExtent(currentExtent);
-        setMinImageExtent(minImageExtent);
-        setMaxImageExtent(maxImageExtent);
-        setMaxImageArrayLayers(maxImageArrayLayers);
-        setSupportedTransforms(supportedTransforms);
-        setCurrentTransform(currentTransform);
-        setSupportedCompositeAlpha(supportedCompositeAlpha);
-        setSupportedUsageFlags(supportedUsageFlags);
-        setSupportedSurfaceCounters(supportedSurfaceCounters);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

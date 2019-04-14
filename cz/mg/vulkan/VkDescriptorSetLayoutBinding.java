@@ -13,14 +13,7 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorSetLayoutBinding(VkUInt32 binding, VkDescriptorType descriptorType, VkUInt32 descriptorCount, VkShaderStageFlags stageFlags, VkSampler pImmutableSamplers) {
-        super(sizeof());
-        setBinding(binding);
-        setDescriptorType(descriptorType);
-        setDescriptorCount(descriptorCount);
-        setStageFlags(stageFlags);
-        setPImmutableSamplers(pImmutableSamplers);
-    }
+
 
     public VkUInt32 getBinding() {
         return new VkUInt32(getVkMemory(), getBinding(getVkAddress()));

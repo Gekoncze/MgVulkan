@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkBindBufferMemoryInfo extends VkObject {
     public VkBindBufferMemoryInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_BUFFER_MEMORY_INFO));
     }
 
     public VkBindBufferMemoryInfo(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkBindBufferMemoryInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkBindBufferMemoryInfo(VkObject pNext, VkBuffer buffer, VkDeviceMemory memory, VkDeviceSize memoryOffset) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_BUFFER_MEMORY_INFO));
-        setPNext(pNext);
-        setBuffer(buffer);
-        setMemory(memory);
-        setMemoryOffset(memoryOffset);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

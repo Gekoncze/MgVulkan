@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkQueryPoolCreateInfo extends VkObject {
     public VkQueryPoolCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_QUERY_POOL_CREATE_INFO));
     }
 
     public VkQueryPoolCreateInfo(VkMemory vkmemory) {
@@ -13,15 +14,7 @@ public class VkQueryPoolCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkQueryPoolCreateInfo(VkObject pNext, VkQueryPoolCreateFlags flags, VkQueryType queryType, VkUInt32 queryCount, VkQueryPipelineStatisticFlags pipelineStatistics) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_QUERY_POOL_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setQueryType(queryType);
-        setQueryCount(queryCount);
-        setPipelineStatistics(pipelineStatistics);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

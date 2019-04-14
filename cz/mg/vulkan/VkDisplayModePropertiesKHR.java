@@ -13,11 +13,7 @@ public class VkDisplayModePropertiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDisplayModePropertiesKHR(VkDisplayModeKHR displayMode, VkDisplayModeParametersKHR parameters) {
-        super(sizeof());
-        setDisplayMode(displayMode);
-        setParameters(parameters);
-    }
+
 
     public VkDisplayModeKHR getDisplayMode() {
         return new VkDisplayModeKHR(getVkMemory(), getDisplayMode(getVkAddress()));

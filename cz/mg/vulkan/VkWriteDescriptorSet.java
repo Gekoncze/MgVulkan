@@ -13,19 +13,7 @@ public class VkWriteDescriptorSet extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkWriteDescriptorSet(VkStructureType sType, VkObject pNext, VkDescriptorSet dstSet, VkUInt32 dstBinding, VkUInt32 dstArrayElement, VkUInt32 descriptorCount, VkDescriptorType descriptorType, VkDescriptorImageInfo pImageInfo, VkDescriptorBufferInfo pBufferInfo, VkBufferView pTexelBufferView) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setDstSet(dstSet);
-        setDstBinding(dstBinding);
-        setDstArrayElement(dstArrayElement);
-        setDescriptorCount(descriptorCount);
-        setDescriptorType(descriptorType);
-        setPImageInfo(pImageInfo);
-        setPBufferInfo(pBufferInfo);
-        setPTexelBufferView(pTexelBufferView);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -13,13 +13,7 @@ public class VkPresentRegionsKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPresentRegionsKHR(VkStructureType sType, VkObject pNext, VkUInt32 swapchainCount, VkPresentRegionKHR pRegions) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSwapchainCount(swapchainCount);
-        setPRegions(pRegions);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

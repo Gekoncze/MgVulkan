@@ -13,12 +13,7 @@ public class VkMultisamplePropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMultisamplePropertiesEXT(VkStructureType sType, VkObject pNext, VkExtent2D maxSampleLocationGridSize) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMaxSampleLocationGridSize(maxSampleLocationGridSize);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

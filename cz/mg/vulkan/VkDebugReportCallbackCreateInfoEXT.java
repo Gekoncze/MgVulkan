@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
     public VkDebugReportCallbackCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT));
     }
 
     public VkDebugReportCallbackCreateInfoEXT(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDebugReportCallbackCreateInfoEXT(VkObject pNext, VkDebugReportFlagsEXT flags, PFNvkDebugReportCallbackEXT pfnCallback, VkObject pUserData) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_REPORT_CALLBACK_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setFlags(flags);
-        setPfnCallback(pfnCallback);
-        setPUserData(pUserData);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

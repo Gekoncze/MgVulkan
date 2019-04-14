@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkObjectTableCreateInfoNVX extends VkObject {
     public VkObjectTableCreateInfoNVX() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_OBJECT_TABLE_CREATE_INFO_NVX));
     }
 
     public VkObjectTableCreateInfoNVX(VkMemory vkmemory) {
@@ -13,20 +14,7 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkObjectTableCreateInfoNVX(VkObject pNext, VkUInt32 objectCount, VkObjectEntryTypeNVX pObjectEntryTypes, VkUInt32 pObjectEntryCounts, VkObjectEntryUsageFlagsNVX pObjectEntryUsageFlags, VkUInt32 maxUniformBuffersPerDescriptor, VkUInt32 maxStorageBuffersPerDescriptor, VkUInt32 maxStorageImagesPerDescriptor, VkUInt32 maxSampledImagesPerDescriptor, VkUInt32 maxPipelineLayouts) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_OBJECT_TABLE_CREATE_INFO_NVX));
-        setPNext(pNext);
-        setObjectCount(objectCount);
-        setPObjectEntryTypes(pObjectEntryTypes);
-        setPObjectEntryCounts(pObjectEntryCounts);
-        setPObjectEntryUsageFlags(pObjectEntryUsageFlags);
-        setMaxUniformBuffersPerDescriptor(maxUniformBuffersPerDescriptor);
-        setMaxStorageBuffersPerDescriptor(maxStorageBuffersPerDescriptor);
-        setMaxStorageImagesPerDescriptor(maxStorageImagesPerDescriptor);
-        setMaxSampledImagesPerDescriptor(maxSampledImagesPerDescriptor);
-        setMaxPipelineLayouts(maxPipelineLayouts);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

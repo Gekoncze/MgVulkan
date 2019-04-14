@@ -13,12 +13,7 @@ public class VkObjectTableVertexBufferEntryNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkObjectTableVertexBufferEntryNVX(VkObjectEntryTypeNVX type, VkObjectEntryUsageFlagsNVX flags, VkBuffer buffer) {
-        super(sizeof());
-        setType(type);
-        setFlags(flags);
-        setBuffer(buffer);
-    }
+
 
     public VkObjectEntryTypeNVX getType() {
         return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));

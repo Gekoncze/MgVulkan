@@ -13,16 +13,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceSampleLocationsPropertiesEXT(VkStructureType sType, VkObject pNext, VkSampleCountFlags sampleLocationSampleCounts, VkExtent2D maxSampleLocationGridSize, VkFloat sampleLocationCoordinateRange, VkUInt32 sampleLocationSubPixelBits, VkBool32 variableSampleLocations) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSampleLocationSampleCounts(sampleLocationSampleCounts);
-        setMaxSampleLocationGridSize(maxSampleLocationGridSize);
-        setSampleLocationCoordinateRange(sampleLocationCoordinateRange);
-        setSampleLocationSubPixelBits(sampleLocationSubPixelBits);
-        setVariableSampleLocations(variableSampleLocations);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

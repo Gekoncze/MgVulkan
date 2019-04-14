@@ -13,11 +13,7 @@ public class VkViewportWScalingNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkViewportWScalingNV(VkFloat xcoeff, VkFloat ycoeff) {
-        super(sizeof());
-        setXcoeff(xcoeff);
-        setYcoeff(ycoeff);
-    }
+
 
     public VkFloat getXcoeff() {
         return new VkFloat(getVkMemory(), getXcoeff(getVkAddress()));

@@ -13,12 +13,7 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceProtectedMemoryFeatures(VkStructureType sType, VkObject pNext, VkBool32 protectedMemory) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setProtectedMemory(protectedMemory);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

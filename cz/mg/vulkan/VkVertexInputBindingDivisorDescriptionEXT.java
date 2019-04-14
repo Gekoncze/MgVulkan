@@ -13,11 +13,7 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkVertexInputBindingDivisorDescriptionEXT(VkUInt32 binding, VkUInt32 divisor) {
-        super(sizeof());
-        setBinding(binding);
-        setDivisor(divisor);
-    }
+
 
     public VkUInt32 getBinding() {
         return new VkUInt32(getVkMemory(), getBinding(getVkAddress()));

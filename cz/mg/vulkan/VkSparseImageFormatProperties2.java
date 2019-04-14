@@ -13,12 +13,7 @@ public class VkSparseImageFormatProperties2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSparseImageFormatProperties2(VkStructureType sType, VkObject pNext, VkSparseImageFormatProperties properties) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setProperties(properties);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

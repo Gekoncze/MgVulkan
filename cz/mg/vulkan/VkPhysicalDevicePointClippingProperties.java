@@ -13,12 +13,7 @@ public class VkPhysicalDevicePointClippingProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDevicePointClippingProperties(VkStructureType sType, VkObject pNext, VkPointClippingBehavior pointClippingBehavior) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setPointClippingBehavior(pointClippingBehavior);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

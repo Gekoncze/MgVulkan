@@ -13,12 +13,7 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorSetVariableDescriptorCountLayoutSupportEXT(VkStructureType sType, VkObject pNext, VkUInt32 maxVariableDescriptorCount) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMaxVariableDescriptorCount(maxVariableDescriptorCount);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

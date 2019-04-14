@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkExportFenceCreateInfo extends VkObject {
     public VkExportFenceCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXPORT_FENCE_CREATE_INFO));
     }
 
     public VkExportFenceCreateInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkExportFenceCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExportFenceCreateInfo(VkObject pNext, VkExternalFenceHandleTypeFlags handleTypes) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXPORT_FENCE_CREATE_INFO));
-        setPNext(pNext);
-        setHandleTypes(handleTypes);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

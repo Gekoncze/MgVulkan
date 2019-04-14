@@ -13,18 +13,7 @@ public class VkAttachmentDescription extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkAttachmentDescription(VkAttachmentDescriptionFlags flags, VkFormat format, VkSampleCountFlagBits samples, VkAttachmentLoadOp loadOp, VkAttachmentStoreOp storeOp, VkAttachmentLoadOp stencilLoadOp, VkAttachmentStoreOp stencilStoreOp, VkImageLayout initialLayout, VkImageLayout finalLayout) {
-        super(sizeof());
-        setFlags(flags);
-        setFormat(format);
-        setSamples(samples);
-        setLoadOp(loadOp);
-        setStoreOp(storeOp);
-        setStencilLoadOp(stencilLoadOp);
-        setStencilStoreOp(stencilStoreOp);
-        setInitialLayout(initialLayout);
-        setFinalLayout(finalLayout);
-    }
+
 
     public VkAttachmentDescriptionFlags getFlags() {
         return new VkAttachmentDescriptionFlags(getVkMemory(), getFlags(getVkAddress()));

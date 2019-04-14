@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkSwapchainCreateInfoKHR extends VkObject {
     public VkSwapchainCreateInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR));
     }
 
     public VkSwapchainCreateInfoKHR(VkMemory vkmemory) {
@@ -13,27 +14,7 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSwapchainCreateInfoKHR(VkObject pNext, VkSwapchainCreateFlagsKHR flags, VkSurfaceKHR surface, VkUInt32 minImageCount, VkFormat imageFormat, VkColorSpaceKHR imageColorSpace, VkExtent2D imageExtent, VkUInt32 imageArrayLayers, VkImageUsageFlags imageUsage, VkSharingMode imageSharingMode, VkUInt32 queueFamilyIndexCount, VkUInt32 pQueueFamilyIndices, VkSurfaceTransformFlagBitsKHR preTransform, VkCompositeAlphaFlagBitsKHR compositeAlpha, VkPresentModeKHR presentMode, VkBool32 clipped, VkSwapchainKHR oldSwapchain) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR));
-        setPNext(pNext);
-        setFlags(flags);
-        setSurface(surface);
-        setMinImageCount(minImageCount);
-        setImageFormat(imageFormat);
-        setImageColorSpace(imageColorSpace);
-        setImageExtent(imageExtent);
-        setImageArrayLayers(imageArrayLayers);
-        setImageUsage(imageUsage);
-        setImageSharingMode(imageSharingMode);
-        setQueueFamilyIndexCount(queueFamilyIndexCount);
-        setPQueueFamilyIndices(pQueueFamilyIndices);
-        setPreTransform(preTransform);
-        setCompositeAlpha(compositeAlpha);
-        setPresentMode(presentMode);
-        setClipped(clipped);
-        setOldSwapchain(oldSwapchain);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

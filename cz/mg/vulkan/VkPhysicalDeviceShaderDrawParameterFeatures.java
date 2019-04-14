@@ -13,12 +13,7 @@ public class VkPhysicalDeviceShaderDrawParameterFeatures extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceShaderDrawParameterFeatures(VkStructureType sType, VkObject pNext, VkBool32 shaderDrawParameters) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setShaderDrawParameters(shaderDrawParameters);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -13,6 +13,8 @@ public class VkChar extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+
+
     public VkChar(byte value) {
         super(sizeof());
         setValue(value);

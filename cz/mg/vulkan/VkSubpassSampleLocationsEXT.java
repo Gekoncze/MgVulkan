@@ -13,11 +13,7 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSubpassSampleLocationsEXT(VkUInt32 subpassIndex, VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        super(sizeof());
-        setSubpassIndex(subpassIndex);
-        setSampleLocationsInfo(sampleLocationsInfo);
-    }
+
 
     public VkUInt32 getSubpassIndex() {
         return new VkUInt32(getVkMemory(), getSubpassIndex(getVkAddress()));

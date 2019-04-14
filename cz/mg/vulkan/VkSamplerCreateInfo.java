@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkSamplerCreateInfo extends VkObject {
     public VkSamplerCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO));
     }
 
     public VkSamplerCreateInfo(VkMemory vkmemory) {
@@ -13,27 +14,7 @@ public class VkSamplerCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSamplerCreateInfo(VkObject pNext, VkSamplerCreateFlags flags, VkFilter magFilter, VkFilter minFilter, VkSamplerMipmapMode mipmapMode, VkSamplerAddressMode addressModeU, VkSamplerAddressMode addressModeV, VkSamplerAddressMode addressModeW, VkFloat mipLodBias, VkBool32 anisotropyEnable, VkFloat maxAnisotropy, VkBool32 compareEnable, VkCompareOp compareOp, VkFloat minLod, VkFloat maxLod, VkBorderColor borderColor, VkBool32 unnormalizedCoordinates) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setMagFilter(magFilter);
-        setMinFilter(minFilter);
-        setMipmapMode(mipmapMode);
-        setAddressModeU(addressModeU);
-        setAddressModeV(addressModeV);
-        setAddressModeW(addressModeW);
-        setMipLodBias(mipLodBias);
-        setAnisotropyEnable(anisotropyEnable);
-        setMaxAnisotropy(maxAnisotropy);
-        setCompareEnable(compareEnable);
-        setCompareOp(compareOp);
-        setMinLod(minLod);
-        setMaxLod(maxLod);
-        setBorderColor(borderColor);
-        setUnnormalizedCoordinates(unnormalizedCoordinates);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

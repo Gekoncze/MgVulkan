@@ -13,12 +13,7 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSharedPresentSurfaceCapabilitiesKHR(VkStructureType sType, VkObject pNext, VkImageUsageFlags sharedPresentSupportedUsageFlags) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSharedPresentSupportedUsageFlags(sharedPresentSupportedUsageFlags);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

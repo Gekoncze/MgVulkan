@@ -13,13 +13,7 @@ public class VkViewportSwizzleNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkViewportSwizzleNV(VkViewportCoordinateSwizzleNV x, VkViewportCoordinateSwizzleNV y, VkViewportCoordinateSwizzleNV z, VkViewportCoordinateSwizzleNV w) {
-        super(sizeof());
-        setX(x);
-        setY(y);
-        setZ(z);
-        setW(w);
-    }
+
 
     public VkViewportCoordinateSwizzleNV getX() {
         return new VkViewportCoordinateSwizzleNV(getVkMemory(), getX(getVkAddress()));

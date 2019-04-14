@@ -13,18 +13,7 @@ public class VkCopyDescriptorSet extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkCopyDescriptorSet(VkStructureType sType, VkObject pNext, VkDescriptorSet srcSet, VkUInt32 srcBinding, VkUInt32 srcArrayElement, VkDescriptorSet dstSet, VkUInt32 dstBinding, VkUInt32 dstArrayElement, VkUInt32 descriptorCount) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSrcSet(srcSet);
-        setSrcBinding(srcBinding);
-        setSrcArrayElement(srcArrayElement);
-        setDstSet(dstSet);
-        setDstBinding(dstBinding);
-        setDstArrayElement(dstArrayElement);
-        setDescriptorCount(descriptorCount);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

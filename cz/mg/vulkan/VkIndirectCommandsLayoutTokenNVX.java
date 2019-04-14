@@ -13,13 +13,7 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkIndirectCommandsLayoutTokenNVX(VkIndirectCommandsTokenTypeNVX tokenType, VkUInt32 bindingUnit, VkUInt32 dynamicCount, VkUInt32 divisor) {
-        super(sizeof());
-        setTokenType(tokenType);
-        setBindingUnit(bindingUnit);
-        setDynamicCount(dynamicCount);
-        setDivisor(divisor);
-    }
+
 
     public VkIndirectCommandsTokenTypeNVX getTokenType() {
         return new VkIndirectCommandsTokenTypeNVX(getVkMemory(), getTokenType(getVkAddress()));

@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
     public VkPipelineDiscardRectangleStateCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT));
     }
 
     public VkPipelineDiscardRectangleStateCreateInfoEXT(VkMemory vkmemory) {
@@ -13,15 +14,7 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineDiscardRectangleStateCreateInfoEXT(VkObject pNext, VkPipelineDiscardRectangleStateCreateFlagsEXT flags, VkDiscardRectangleModeEXT discardRectangleMode, VkUInt32 discardRectangleCount, VkRect2D pDiscardRectangles) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setFlags(flags);
-        setDiscardRectangleMode(discardRectangleMode);
-        setDiscardRectangleCount(discardRectangleCount);
-        setPDiscardRectangles(pDiscardRectangles);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -13,12 +13,7 @@ public class VkExtent3D extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExtent3D(VkUInt32 width, VkUInt32 height, VkUInt32 depth) {
-        super(sizeof());
-        setWidth(width);
-        setHeight(height);
-        setDepth(depth);
-    }
+
 
     public VkUInt32 getWidth() {
         return new VkUInt32(getVkMemory(), getWidth(getVkAddress()));

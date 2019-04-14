@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkExportMemoryAllocateInfoNV extends VkObject {
     public VkExportMemoryAllocateInfoNV() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXPORT_MEMORY_ALLOCATE_INFO_NV));
     }
 
     public VkExportMemoryAllocateInfoNV(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkExportMemoryAllocateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExportMemoryAllocateInfoNV(VkObject pNext, VkExternalMemoryHandleTypeFlagsNV handleTypes) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXPORT_MEMORY_ALLOCATE_INFO_NV));
-        setPNext(pNext);
-        setHandleTypes(handleTypes);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

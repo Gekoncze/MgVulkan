@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkImportMemoryHostPointerInfoEXT extends VkObject {
     public VkImportMemoryHostPointerInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMPORT_MEMORY_HOST_POINTER_INFO_EXT));
     }
 
     public VkImportMemoryHostPointerInfoEXT(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkImportMemoryHostPointerInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImportMemoryHostPointerInfoEXT(VkObject pNext, VkExternalMemoryHandleTypeFlagBits handleType, VkObject pHostPointer) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMPORT_MEMORY_HOST_POINTER_INFO_EXT));
-        setPNext(pNext);
-        setHandleType(handleType);
-        setPHostPointer(pHostPointer);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

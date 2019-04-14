@@ -13,11 +13,7 @@ public class VkSurfaceFormatKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSurfaceFormatKHR(VkFormat format, VkColorSpaceKHR colorSpace) {
-        super(sizeof());
-        setFormat(format);
-        setColorSpace(colorSpace);
-    }
+
 
     public VkFormat getFormat() {
         return new VkFormat(getVkMemory(), getFormat(getVkAddress()));

@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkImportFenceFdInfoKHR extends VkObject {
     public VkImportFenceFdInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMPORT_FENCE_FD_INFO_KHR));
     }
 
     public VkImportFenceFdInfoKHR(VkMemory vkmemory) {
@@ -13,15 +14,7 @@ public class VkImportFenceFdInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImportFenceFdInfoKHR(VkObject pNext, VkFence fence, VkFenceImportFlags flags, VkExternalFenceHandleTypeFlagBits handleType, VkInt fd) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMPORT_FENCE_FD_INFO_KHR));
-        setPNext(pNext);
-        setFence(fence);
-        setFlags(flags);
-        setHandleType(handleType);
-        setFd(fd);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

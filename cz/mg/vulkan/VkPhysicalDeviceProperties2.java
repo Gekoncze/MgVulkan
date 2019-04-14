@@ -13,12 +13,7 @@ public class VkPhysicalDeviceProperties2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceProperties2(VkStructureType sType, VkObject pNext, VkPhysicalDeviceProperties properties) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setProperties(properties);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

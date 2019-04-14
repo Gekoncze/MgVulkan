@@ -13,11 +13,7 @@ public class VkExtent2D extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExtent2D(VkUInt32 width, VkUInt32 height) {
-        super(sizeof());
-        setWidth(width);
-        setHeight(height);
-    }
+
 
     public VkUInt32 getWidth() {
         return new VkUInt32(getVkMemory(), getWidth(getVkAddress()));

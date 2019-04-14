@@ -13,12 +13,7 @@ public class VkClearAttachment extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkClearAttachment(VkImageAspectFlags aspectMask, VkUInt32 colorAttachment, VkClearValue clearValue) {
-        super(sizeof());
-        setAspectMask(aspectMask);
-        setColorAttachment(colorAttachment);
-        setClearValue(clearValue);
-    }
+
 
     public VkImageAspectFlags getAspectMask() {
         return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));

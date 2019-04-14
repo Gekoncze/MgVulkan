@@ -13,12 +13,7 @@ public class VkBufferCopy extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkBufferCopy(VkDeviceSize srcOffset, VkDeviceSize dstOffset, VkDeviceSize size) {
-        super(sizeof());
-        setSrcOffset(srcOffset);
-        setDstOffset(dstOffset);
-        setSize(size);
-    }
+
 
     public VkDeviceSize getSrcOffset() {
         return new VkDeviceSize(getVkMemory(), getSrcOffset(getVkAddress()));

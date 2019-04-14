@@ -13,6 +13,8 @@ public class VkUInt8 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+
+
     public VkUInt8(byte value) {
         super(sizeof());
         setValue(value);

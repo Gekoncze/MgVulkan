@@ -13,13 +13,7 @@ public class VkPhysicalDeviceVariablePointerFeatures extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceVariablePointerFeatures(VkStructureType sType, VkObject pNext, VkBool32 variablePointersStorageBuffer, VkBool32 variablePointers) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setVariablePointersStorageBuffer(variablePointersStorageBuffer);
-        setVariablePointers(variablePointers);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

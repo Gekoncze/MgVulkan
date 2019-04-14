@@ -13,6 +13,8 @@ public class VkUInt32 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+
+
     public VkUInt32(int value) {
         super(sizeof());
         setValue(value);

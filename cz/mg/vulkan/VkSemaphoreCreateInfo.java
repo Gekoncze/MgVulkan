@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkSemaphoreCreateInfo extends VkObject {
     public VkSemaphoreCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO));
     }
 
     public VkSemaphoreCreateInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkSemaphoreCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSemaphoreCreateInfo(VkObject pNext, VkSemaphoreCreateFlags flags) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

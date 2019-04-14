@@ -13,16 +13,7 @@ public class VkDisplayPropertiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDisplayPropertiesKHR(VkDisplayKHR display, VkChar displayName, VkExtent2D physicalDimensions, VkExtent2D physicalResolution, VkSurfaceTransformFlagsKHR supportedTransforms, VkBool32 planeReorderPossible, VkBool32 persistentContent) {
-        super(sizeof());
-        setDisplay(display);
-        setDisplayName(displayName);
-        setPhysicalDimensions(physicalDimensions);
-        setPhysicalResolution(physicalResolution);
-        setSupportedTransforms(supportedTransforms);
-        setPlaneReorderPossible(planeReorderPossible);
-        setPersistentContent(persistentContent);
-    }
+
 
     public VkDisplayKHR getDisplay() {
         return new VkDisplayKHR(getVkMemory(), getDisplay(getVkAddress()));

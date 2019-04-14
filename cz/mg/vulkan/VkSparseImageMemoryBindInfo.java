@@ -13,12 +13,7 @@ public class VkSparseImageMemoryBindInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSparseImageMemoryBindInfo(VkImage image, VkUInt32 bindCount, VkSparseImageMemoryBind pBinds) {
-        super(sizeof());
-        setImage(image);
-        setBindCount(bindCount);
-        setPBinds(pBinds);
-    }
+
 
     public VkImage getImage() {
         return new VkImage(getVkMemory(), getImage(getVkAddress()));

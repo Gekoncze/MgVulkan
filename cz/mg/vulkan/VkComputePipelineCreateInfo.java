@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkComputePipelineCreateInfo extends VkObject {
     public VkComputePipelineCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_CREATE_INFO));
     }
 
     public VkComputePipelineCreateInfo(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkComputePipelineCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkComputePipelineCreateInfo(VkObject pNext, VkPipelineCreateFlags flags, VkPipelineShaderStageCreateInfo stage, VkPipelineLayout layout, VkPipeline basePipelineHandle, VkInt32 basePipelineIndex) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setStage(stage);
-        setLayout(layout);
-        setBasePipelineHandle(basePipelineHandle);
-        setBasePipelineIndex(basePipelineIndex);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

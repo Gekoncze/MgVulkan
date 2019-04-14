@@ -13,12 +13,7 @@ public class VkSamplerYcbcrConversionImageFormatProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSamplerYcbcrConversionImageFormatProperties(VkStructureType sType, VkObject pNext, VkUInt32 combinedImageSamplerDescriptorCount) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setCombinedImageSamplerDescriptorCount(combinedImageSamplerDescriptorCount);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

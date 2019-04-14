@@ -13,15 +13,7 @@ public class VkViewport extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkViewport(VkFloat x, VkFloat y, VkFloat width, VkFloat height, VkFloat minDepth, VkFloat maxDepth) {
-        super(sizeof());
-        setX(x);
-        setY(y);
-        setWidth(width);
-        setHeight(height);
-        setMinDepth(minDepth);
-        setMaxDepth(maxDepth);
-    }
+
 
     public VkFloat getX() {
         return new VkFloat(getVkMemory(), getX(getVkAddress()));

@@ -13,12 +13,7 @@ public class VkQueueFamilyProperties2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkQueueFamilyProperties2(VkStructureType sType, VkObject pNext, VkQueueFamilyProperties queueFamilyProperties) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setQueueFamilyProperties(queueFamilyProperties);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

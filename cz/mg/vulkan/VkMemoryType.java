@@ -13,11 +13,7 @@ public class VkMemoryType extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMemoryType(VkMemoryPropertyFlags propertyFlags, VkUInt32 heapIndex) {
-        super(sizeof());
-        setPropertyFlags(propertyFlags);
-        setHeapIndex(heapIndex);
-    }
+
 
     public VkMemoryPropertyFlags getPropertyFlags() {
         return new VkMemoryPropertyFlags(getVkMemory(), getPropertyFlags(getVkAddress()));

@@ -13,12 +13,7 @@ public class VkPipelineRasterizationStateRasterizationOrderAMD extends VkObject 
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineRasterizationStateRasterizationOrderAMD(VkStructureType sType, VkObject pNext, VkRasterizationOrderAMD rasterizationOrder) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setRasterizationOrder(rasterizationOrder);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -13,21 +13,7 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDebugUtilsMessengerCallbackDataEXT(VkStructureType sType, VkObject pNext, VkDebugUtilsMessengerCallbackDataFlagsEXT flags, VkChar pMessageIdName, VkInt32 messageIdNumber, VkChar pMessage, VkUInt32 queueLabelCount, VkDebugUtilsLabelEXT pQueueLabels, VkUInt32 cmdBufLabelCount, VkDebugUtilsLabelEXT pCmdBufLabels, VkUInt32 objectCount, VkDebugUtilsObjectNameInfoEXT pObjects) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setFlags(flags);
-        setPMessageIdName(pMessageIdName);
-        setMessageIdNumber(messageIdNumber);
-        setPMessage(pMessage);
-        setQueueLabelCount(queueLabelCount);
-        setPQueueLabels(pQueueLabels);
-        setCmdBufLabelCount(cmdBufLabelCount);
-        setPCmdBufLabels(pCmdBufLabels);
-        setObjectCount(objectCount);
-        setPObjects(pObjects);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

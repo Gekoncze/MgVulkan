@@ -13,13 +13,7 @@ public class VkMemoryBarrier extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMemoryBarrier(VkStructureType sType, VkObject pNext, VkAccessFlags srcAccessMask, VkAccessFlags dstAccessMask) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSrcAccessMask(srcAccessMask);
-        setDstAccessMask(dstAccessMask);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

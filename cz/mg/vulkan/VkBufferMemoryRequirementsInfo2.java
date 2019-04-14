@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkBufferMemoryRequirementsInfo2 extends VkObject {
     public VkBufferMemoryRequirementsInfo2() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BUFFER_MEMORY_REQUIREMENTS_INFO_2));
     }
 
     public VkBufferMemoryRequirementsInfo2(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkBufferMemoryRequirementsInfo2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkBufferMemoryRequirementsInfo2(VkObject pNext, VkBuffer buffer) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BUFFER_MEMORY_REQUIREMENTS_INFO_2));
-        setPNext(pNext);
-        setBuffer(buffer);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

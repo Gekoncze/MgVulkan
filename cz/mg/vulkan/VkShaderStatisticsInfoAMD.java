@@ -13,16 +13,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkShaderStatisticsInfoAMD(VkShaderStageFlags shaderStageMask, VkShaderResourceUsageAMD resourceUsage, VkUInt32 numPhysicalVgprs, VkUInt32 numPhysicalSgprs, VkUInt32 numAvailableVgprs, VkUInt32 numAvailableSgprs, VkUInt32 computeWorkGroupSize) {
-        super(sizeof());
-        setShaderStageMask(shaderStageMask);
-        setResourceUsage(resourceUsage);
-        setNumPhysicalVgprs(numPhysicalVgprs);
-        setNumPhysicalSgprs(numPhysicalSgprs);
-        setNumAvailableVgprs(numAvailableVgprs);
-        setNumAvailableSgprs(numAvailableSgprs);
-        setComputeWorkGroupSize(computeWorkGroupSize);
-    }
+
 
     public VkShaderStageFlags getShaderStageMask() {
         return new VkShaderStageFlags(getVkMemory(), getShaderStageMask(getVkAddress()));

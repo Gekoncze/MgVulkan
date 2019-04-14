@@ -13,13 +13,7 @@ public class VkImageBlit extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageBlit(VkImageSubresourceLayers srcSubresource, VkOffset3D srcOffsets, VkImageSubresourceLayers dstSubresource, VkOffset3D dstOffsets) {
-        super(sizeof());
-        setSrcSubresource(srcSubresource);
-        setSrcOffsets(srcOffsets);
-        setDstSubresource(dstSubresource);
-        setDstOffsets(dstOffsets);
-    }
+
 
     public VkImageSubresourceLayers getSrcSubresource() {
         return new VkImageSubresourceLayers(getVkMemory(), getSrcSubresource(getVkAddress()));

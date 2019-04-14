@@ -13,13 +13,7 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceMemoryProperties(VkUInt32 memoryTypeCount, VkMemoryType memoryTypes, VkUInt32 memoryHeapCount, VkMemoryHeap memoryHeaps) {
-        super(sizeof());
-        setMemoryTypeCount(memoryTypeCount);
-        setMemoryTypes(memoryTypes);
-        setMemoryHeapCount(memoryHeapCount);
-        setMemoryHeaps(memoryHeaps);
-    }
+
 
     public VkUInt32 getMemoryTypeCount() {
         return new VkUInt32(getVkMemory(), getMemoryTypeCount(getVkAddress()));

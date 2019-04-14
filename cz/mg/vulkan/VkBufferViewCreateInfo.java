@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkBufferViewCreateInfo extends VkObject {
     public VkBufferViewCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BUFFER_VIEW_CREATE_INFO));
     }
 
     public VkBufferViewCreateInfo(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkBufferViewCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkBufferViewCreateInfo(VkObject pNext, VkBufferViewCreateFlags flags, VkBuffer buffer, VkFormat format, VkDeviceSize offset, VkDeviceSize range) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BUFFER_VIEW_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setBuffer(buffer);
-        setFormat(format);
-        setOffset(offset);
-        setRange(range);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -13,12 +13,7 @@ public class VkTextureLODGatherFormatPropertiesAMD extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkTextureLODGatherFormatPropertiesAMD(VkStructureType sType, VkObject pNext, VkBool32 supportsTextureGatherLODBiasAMD) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSupportsTextureGatherLODBiasAMD(supportsTextureGatherLODBiasAMD);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

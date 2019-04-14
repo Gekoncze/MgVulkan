@@ -13,14 +13,7 @@ public class VkShaderResourceUsageAMD extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkShaderResourceUsageAMD(VkUInt32 numUsedVgprs, VkUInt32 numUsedSgprs, VkUInt32 ldsSizePerLocalWorkGroup, VkSize ldsUsageSizeInBytes, VkSize scratchMemUsageInBytes) {
-        super(sizeof());
-        setNumUsedVgprs(numUsedVgprs);
-        setNumUsedSgprs(numUsedSgprs);
-        setLdsSizePerLocalWorkGroup(ldsSizePerLocalWorkGroup);
-        setLdsUsageSizeInBytes(ldsUsageSizeInBytes);
-        setScratchMemUsageInBytes(scratchMemUsageInBytes);
-    }
+
 
     public VkUInt32 getNumUsedVgprs() {
         return new VkUInt32(getVkMemory(), getNumUsedVgprs(getVkAddress()));

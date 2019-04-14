@@ -13,13 +13,7 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceMultiviewProperties(VkStructureType sType, VkObject pNext, VkUInt32 maxMultiviewViewCount, VkUInt32 maxMultiviewInstanceIndex) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMaxMultiviewViewCount(maxMultiviewViewCount);
-        setMaxMultiviewInstanceIndex(maxMultiviewInstanceIndex);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

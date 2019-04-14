@@ -13,12 +13,7 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceGeneratedCommandsFeaturesNVX(VkStructureType sType, VkObject pNext, VkBool32 computeBindingPointSupport) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setComputeBindingPointSupport(computeBindingPointSupport);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

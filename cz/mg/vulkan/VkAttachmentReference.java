@@ -13,11 +13,7 @@ public class VkAttachmentReference extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkAttachmentReference(VkUInt32 attachment, VkImageLayout layout) {
-        super(sizeof());
-        setAttachment(attachment);
-        setLayout(layout);
-    }
+
 
     public VkUInt32 getAttachment() {
         return new VkUInt32(getVkMemory(), getAttachment(getVkAddress()));

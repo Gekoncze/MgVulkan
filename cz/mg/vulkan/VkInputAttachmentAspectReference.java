@@ -13,12 +13,7 @@ public class VkInputAttachmentAspectReference extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkInputAttachmentAspectReference(VkUInt32 subpass, VkUInt32 inputAttachmentIndex, VkImageAspectFlags aspectMask) {
-        super(sizeof());
-        setSubpass(subpass);
-        setInputAttachmentIndex(inputAttachmentIndex);
-        setAspectMask(aspectMask);
-    }
+
 
     public VkUInt32 getSubpass() {
         return new VkUInt32(getVkMemory(), getSubpass(getVkAddress()));

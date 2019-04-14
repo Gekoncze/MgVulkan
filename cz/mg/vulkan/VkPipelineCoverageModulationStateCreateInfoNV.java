@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
     public VkPipelineCoverageModulationStateCreateInfoNV() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV));
     }
 
     public VkPipelineCoverageModulationStateCreateInfoNV(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineCoverageModulationStateCreateInfoNV(VkObject pNext, VkPipelineCoverageModulationStateCreateFlagsNV flags, VkCoverageModulationModeNV coverageModulationMode, VkBool32 coverageModulationTableEnable, VkUInt32 coverageModulationTableCount, VkFloat pCoverageModulationTable) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV));
-        setPNext(pNext);
-        setFlags(flags);
-        setCoverageModulationMode(coverageModulationMode);
-        setCoverageModulationTableEnable(coverageModulationTableEnable);
-        setCoverageModulationTableCount(coverageModulationTableCount);
-        setPCoverageModulationTable(pCoverageModulationTable);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -13,15 +13,6 @@ public class VkClearValue extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkClearValue(VkClearColorValue color) {
-        super(sizeof());
-        setColor(color);
-    }
-
-    public VkClearValue(VkClearDepthStencilValue depthStencil) {
-        super(sizeof());
-        setDepthStencil(depthStencil);
-    }
 
 
     public VkClearColorValue getColor() {

@@ -13,6 +13,8 @@ public class VkSize extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+
+
     public VkSize(long value) {
         super(sizeof());
         setValue(value);

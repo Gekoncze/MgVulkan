@@ -13,16 +13,7 @@ public class VkSubpassDependency extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSubpassDependency(VkUInt32 srcSubpass, VkUInt32 dstSubpass, VkPipelineStageFlags srcStageMask, VkPipelineStageFlags dstStageMask, VkAccessFlags srcAccessMask, VkAccessFlags dstAccessMask, VkDependencyFlags dependencyFlags) {
-        super(sizeof());
-        setSrcSubpass(srcSubpass);
-        setDstSubpass(dstSubpass);
-        setSrcStageMask(srcStageMask);
-        setDstStageMask(dstStageMask);
-        setSrcAccessMask(srcAccessMask);
-        setDstAccessMask(dstAccessMask);
-        setDependencyFlags(dependencyFlags);
-    }
+
 
     public VkUInt32 getSrcSubpass() {
         return new VkUInt32(getVkMemory(), getSrcSubpass(getVkAddress()));

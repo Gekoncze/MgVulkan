@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineTessellationDomainOriginStateCreateInfo extends VkObject {
     public VkPipelineTessellationDomainOriginStateCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO));
     }
 
     public VkPipelineTessellationDomainOriginStateCreateInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkPipelineTessellationDomainOriginStateCreateInfo extends VkObject 
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineTessellationDomainOriginStateCreateInfo(VkObject pNext, VkTessellationDomainOrigin domainOrigin) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO));
-        setPNext(pNext);
-        setDomainOrigin(domainOrigin);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

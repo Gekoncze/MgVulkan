@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
     public VkRenderPassInputAttachmentAspectCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO));
     }
 
     public VkRenderPassInputAttachmentAspectCreateInfo(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkRenderPassInputAttachmentAspectCreateInfo(VkObject pNext, VkUInt32 aspectReferenceCount, VkInputAttachmentAspectReference pAspectReferences) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO));
-        setPNext(pNext);
-        setAspectReferenceCount(aspectReferenceCount);
-        setPAspectReferences(pAspectReferences);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

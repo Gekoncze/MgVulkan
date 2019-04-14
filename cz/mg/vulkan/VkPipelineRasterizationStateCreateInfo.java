@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineRasterizationStateCreateInfo extends VkObject {
     public VkPipelineRasterizationStateCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO));
     }
 
     public VkPipelineRasterizationStateCreateInfo(VkMemory vkmemory) {
@@ -13,22 +14,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineRasterizationStateCreateInfo(VkObject pNext, VkPipelineRasterizationStateCreateFlags flags, VkBool32 depthClampEnable, VkBool32 rasterizerDiscardEnable, VkPolygonMode polygonMode, VkCullModeFlags cullMode, VkFrontFace frontFace, VkBool32 depthBiasEnable, VkFloat depthBiasConstantFactor, VkFloat depthBiasClamp, VkFloat depthBiasSlopeFactor, VkFloat lineWidth) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setDepthClampEnable(depthClampEnable);
-        setRasterizerDiscardEnable(rasterizerDiscardEnable);
-        setPolygonMode(polygonMode);
-        setCullMode(cullMode);
-        setFrontFace(frontFace);
-        setDepthBiasEnable(depthBiasEnable);
-        setDepthBiasConstantFactor(depthBiasConstantFactor);
-        setDepthBiasClamp(depthBiasClamp);
-        setDepthBiasSlopeFactor(depthBiasSlopeFactor);
-        setLineWidth(lineWidth);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

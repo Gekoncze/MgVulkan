@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPhysicalDeviceExternalImageFormatInfo extends VkObject {
     public VkPhysicalDeviceExternalImageFormatInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO));
     }
 
     public VkPhysicalDeviceExternalImageFormatInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkPhysicalDeviceExternalImageFormatInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceExternalImageFormatInfo(VkObject pNext, VkExternalMemoryHandleTypeFlagBits handleType) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO));
-        setPNext(pNext);
-        setHandleType(handleType);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

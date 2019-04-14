@@ -13,11 +13,7 @@ public class VkExtensionProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExtensionProperties(VkChar extensionName, VkUInt32 specVersion) {
-        super(sizeof());
-        setExtensionName(extensionName);
-        setSpecVersion(specVersion);
-    }
+
 
     public VkChar getExtensionName() {
         return new VkChar(getVkMemory(), getExtensionName(getVkAddress()));

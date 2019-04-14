@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
     public VkPipelineDepthStencilStateCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO));
     }
 
     public VkPipelineDepthStencilStateCreateInfo(VkMemory vkmemory) {
@@ -13,21 +14,7 @@ public class VkPipelineDepthStencilStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineDepthStencilStateCreateInfo(VkObject pNext, VkPipelineDepthStencilStateCreateFlags flags, VkBool32 depthTestEnable, VkBool32 depthWriteEnable, VkCompareOp depthCompareOp, VkBool32 depthBoundsTestEnable, VkBool32 stencilTestEnable, VkStencilOpState front, VkStencilOpState back, VkFloat minDepthBounds, VkFloat maxDepthBounds) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setDepthTestEnable(depthTestEnable);
-        setDepthWriteEnable(depthWriteEnable);
-        setDepthCompareOp(depthCompareOp);
-        setDepthBoundsTestEnable(depthBoundsTestEnable);
-        setStencilTestEnable(stencilTestEnable);
-        setFront(front);
-        setBack(back);
-        setMinDepthBounds(minDepthBounds);
-        setMaxDepthBounds(maxDepthBounds);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

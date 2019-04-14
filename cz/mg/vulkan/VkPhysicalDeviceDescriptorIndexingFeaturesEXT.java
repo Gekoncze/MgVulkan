@@ -13,31 +13,7 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceDescriptorIndexingFeaturesEXT(VkStructureType sType, VkObject pNext, VkBool32 shaderInputAttachmentArrayDynamicIndexing, VkBool32 shaderUniformTexelBufferArrayDynamicIndexing, VkBool32 shaderStorageTexelBufferArrayDynamicIndexing, VkBool32 shaderUniformBufferArrayNonUniformIndexing, VkBool32 shaderSampledImageArrayNonUniformIndexing, VkBool32 shaderStorageBufferArrayNonUniformIndexing, VkBool32 shaderStorageImageArrayNonUniformIndexing, VkBool32 shaderInputAttachmentArrayNonUniformIndexing, VkBool32 shaderUniformTexelBufferArrayNonUniformIndexing, VkBool32 shaderStorageTexelBufferArrayNonUniformIndexing, VkBool32 descriptorBindingUniformBufferUpdateAfterBind, VkBool32 descriptorBindingSampledImageUpdateAfterBind, VkBool32 descriptorBindingStorageImageUpdateAfterBind, VkBool32 descriptorBindingStorageBufferUpdateAfterBind, VkBool32 descriptorBindingUniformTexelBufferUpdateAfterBind, VkBool32 descriptorBindingStorageTexelBufferUpdateAfterBind, VkBool32 descriptorBindingUpdateUnusedWhilePending, VkBool32 descriptorBindingPartiallyBound, VkBool32 descriptorBindingVariableDescriptorCount, VkBool32 runtimeDescriptorArray) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setShaderInputAttachmentArrayDynamicIndexing(shaderInputAttachmentArrayDynamicIndexing);
-        setShaderUniformTexelBufferArrayDynamicIndexing(shaderUniformTexelBufferArrayDynamicIndexing);
-        setShaderStorageTexelBufferArrayDynamicIndexing(shaderStorageTexelBufferArrayDynamicIndexing);
-        setShaderUniformBufferArrayNonUniformIndexing(shaderUniformBufferArrayNonUniformIndexing);
-        setShaderSampledImageArrayNonUniformIndexing(shaderSampledImageArrayNonUniformIndexing);
-        setShaderStorageBufferArrayNonUniformIndexing(shaderStorageBufferArrayNonUniformIndexing);
-        setShaderStorageImageArrayNonUniformIndexing(shaderStorageImageArrayNonUniformIndexing);
-        setShaderInputAttachmentArrayNonUniformIndexing(shaderInputAttachmentArrayNonUniformIndexing);
-        setShaderUniformTexelBufferArrayNonUniformIndexing(shaderUniformTexelBufferArrayNonUniformIndexing);
-        setShaderStorageTexelBufferArrayNonUniformIndexing(shaderStorageTexelBufferArrayNonUniformIndexing);
-        setDescriptorBindingUniformBufferUpdateAfterBind(descriptorBindingUniformBufferUpdateAfterBind);
-        setDescriptorBindingSampledImageUpdateAfterBind(descriptorBindingSampledImageUpdateAfterBind);
-        setDescriptorBindingStorageImageUpdateAfterBind(descriptorBindingStorageImageUpdateAfterBind);
-        setDescriptorBindingStorageBufferUpdateAfterBind(descriptorBindingStorageBufferUpdateAfterBind);
-        setDescriptorBindingUniformTexelBufferUpdateAfterBind(descriptorBindingUniformTexelBufferUpdateAfterBind);
-        setDescriptorBindingStorageTexelBufferUpdateAfterBind(descriptorBindingStorageTexelBufferUpdateAfterBind);
-        setDescriptorBindingUpdateUnusedWhilePending(descriptorBindingUpdateUnusedWhilePending);
-        setDescriptorBindingPartiallyBound(descriptorBindingPartiallyBound);
-        setDescriptorBindingVariableDescriptorCount(descriptorBindingVariableDescriptorCount);
-        setRuntimeDescriptorArray(runtimeDescriptorArray);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

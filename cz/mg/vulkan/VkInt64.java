@@ -13,6 +13,8 @@ public class VkInt64 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+
+
     public VkInt64(long value) {
         super(sizeof());
         setValue(value);

@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
     public VkPipelineInputAssemblyStateCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO));
     }
 
     public VkPipelineInputAssemblyStateCreateInfo(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineInputAssemblyStateCreateInfo(VkObject pNext, VkPipelineInputAssemblyStateCreateFlags flags, VkPrimitiveTopology topology, VkBool32 primitiveRestartEnable) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setTopology(topology);
-        setPrimitiveRestartEnable(primitiveRestartEnable);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

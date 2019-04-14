@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkImportMemoryFdInfoKHR extends VkObject {
     public VkImportMemoryFdInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMPORT_MEMORY_FD_INFO_KHR));
     }
 
     public VkImportMemoryFdInfoKHR(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkImportMemoryFdInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImportMemoryFdInfoKHR(VkObject pNext, VkExternalMemoryHandleTypeFlagBits handleType, VkInt fd) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMPORT_MEMORY_FD_INFO_KHR));
-        setPNext(pNext);
-        setHandleType(handleType);
-        setFd(fd);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

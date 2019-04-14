@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkValidationCacheCreateInfoEXT extends VkObject {
     public VkValidationCacheCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_VALIDATION_CACHE_CREATE_INFO_EXT));
     }
 
     public VkValidationCacheCreateInfoEXT(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkValidationCacheCreateInfoEXT(VkObject pNext, VkValidationCacheCreateFlagsEXT flags, VkSize initialDataSize, VkObject pInitialData) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_VALIDATION_CACHE_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setFlags(flags);
-        setInitialDataSize(initialDataSize);
-        setPInitialData(pInitialData);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
     public VkPipelineVertexInputDivisorStateCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT));
     }
 
     public VkPipelineVertexInputDivisorStateCreateInfoEXT(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineVertexInputDivisorStateCreateInfoEXT(VkObject pNext, VkUInt32 vertexBindingDivisorCount, VkVertexInputBindingDivisorDescriptionEXT pVertexBindingDivisors) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setVertexBindingDivisorCount(vertexBindingDivisorCount);
-        setPVertexBindingDivisors(pVertexBindingDivisors);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -13,11 +13,7 @@ public class VkXYColorEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkXYColorEXT(VkFloat x, VkFloat y) {
-        super(sizeof());
-        setX(x);
-        setY(y);
-    }
+
 
     public VkFloat getX() {
         return new VkFloat(getVkMemory(), getX(getVkAddress()));

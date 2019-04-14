@@ -13,14 +13,7 @@ public class VkImageSubresourceRange extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageSubresourceRange(VkImageAspectFlags aspectMask, VkUInt32 baseMipLevel, VkUInt32 levelCount, VkUInt32 baseArrayLayer, VkUInt32 layerCount) {
-        super(sizeof());
-        setAspectMask(aspectMask);
-        setBaseMipLevel(baseMipLevel);
-        setLevelCount(levelCount);
-        setBaseArrayLayer(baseArrayLayer);
-        setLayerCount(layerCount);
-    }
+
 
     public VkImageAspectFlags getAspectMask() {
         return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));

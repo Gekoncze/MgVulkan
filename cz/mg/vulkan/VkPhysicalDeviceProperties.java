@@ -13,18 +13,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceProperties(VkUInt32 apiVersion, VkUInt32 driverVersion, VkUInt32 vendorID, VkUInt32 deviceID, VkPhysicalDeviceType deviceType, VkChar deviceName, VkUInt8 pipelineCacheUUID, VkPhysicalDeviceLimits limits, VkPhysicalDeviceSparseProperties sparseProperties) {
-        super(sizeof());
-        setApiVersion(apiVersion);
-        setDriverVersion(driverVersion);
-        setVendorID(vendorID);
-        setDeviceID(deviceID);
-        setDeviceType(deviceType);
-        setDeviceName(deviceName);
-        setPipelineCacheUUID(pipelineCacheUUID);
-        setLimits(limits);
-        setSparseProperties(sparseProperties);
-    }
+
 
     public VkUInt32 getApiVersion() {
         return new VkUInt32(getVkMemory(), getApiVersion(getVkAddress()));

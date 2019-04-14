@@ -13,16 +13,7 @@ public class VkStencilOpState extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkStencilOpState(VkStencilOp failOp, VkStencilOp passOp, VkStencilOp depthFailOp, VkCompareOp compareOp, VkUInt32 compareMask, VkUInt32 writeMask, VkUInt32 reference) {
-        super(sizeof());
-        setFailOp(failOp);
-        setPassOp(passOp);
-        setDepthFailOp(depthFailOp);
-        setCompareOp(compareOp);
-        setCompareMask(compareMask);
-        setWriteMask(writeMask);
-        setReference(reference);
-    }
+
 
     public VkStencilOp getFailOp() {
         return new VkStencilOp(getVkMemory(), getFailOp(getVkAddress()));

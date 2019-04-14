@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
     public VkPipelineCoverageToColorStateCreateInfoNV() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV));
     }
 
     public VkPipelineCoverageToColorStateCreateInfoNV(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineCoverageToColorStateCreateInfoNV(VkObject pNext, VkPipelineCoverageToColorStateCreateFlagsNV flags, VkBool32 coverageToColorEnable, VkUInt32 coverageToColorLocation) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV));
-        setPNext(pNext);
-        setFlags(flags);
-        setCoverageToColorEnable(coverageToColorEnable);
-        setCoverageToColorLocation(coverageToColorLocation);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

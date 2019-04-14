@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObject {
     public VkDescriptorSetVariableDescriptorCountAllocateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO_EXT));
     }
 
     public VkDescriptorSetVariableDescriptorCountAllocateInfoEXT(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorSetVariableDescriptorCountAllocateInfoEXT(VkObject pNext, VkUInt32 descriptorSetCount, VkUInt32 pDescriptorCounts) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO_EXT));
-        setPNext(pNext);
-        setDescriptorSetCount(descriptorSetCount);
-        setPDescriptorCounts(pDescriptorCounts);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

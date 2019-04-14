@@ -13,20 +13,7 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceConservativeRasterizationPropertiesEXT(VkStructureType sType, VkObject pNext, VkFloat primitiveOverestimationSize, VkFloat maxExtraPrimitiveOverestimationSize, VkFloat extraPrimitiveOverestimationSizeGranularity, VkBool32 primitiveUnderestimation, VkBool32 conservativePointAndLineRasterization, VkBool32 degenerateTrianglesRasterized, VkBool32 degenerateLinesRasterized, VkBool32 fullyCoveredFragmentShaderInputVariable, VkBool32 conservativeRasterizationPostDepthCoverage) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setPrimitiveOverestimationSize(primitiveOverestimationSize);
-        setMaxExtraPrimitiveOverestimationSize(maxExtraPrimitiveOverestimationSize);
-        setExtraPrimitiveOverestimationSizeGranularity(extraPrimitiveOverestimationSizeGranularity);
-        setPrimitiveUnderestimation(primitiveUnderestimation);
-        setConservativePointAndLineRasterization(conservativePointAndLineRasterization);
-        setDegenerateTrianglesRasterized(degenerateTrianglesRasterized);
-        setDegenerateLinesRasterized(degenerateLinesRasterized);
-        setFullyCoveredFragmentShaderInputVariable(fullyCoveredFragmentShaderInputVariable);
-        setConservativeRasterizationPostDepthCoverage(conservativeRasterizationPostDepthCoverage);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

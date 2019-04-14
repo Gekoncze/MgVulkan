@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
     public VkDebugUtilsMessengerCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT));
     }
 
     public VkDebugUtilsMessengerCreateInfoEXT(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDebugUtilsMessengerCreateInfoEXT(VkObject pNext, VkDebugUtilsMessengerCreateFlagsEXT flags, VkDebugUtilsMessageSeverityFlagsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, PFNvkDebugUtilsMessengerCallbackEXT pfnUserCallback, VkObject pUserData) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setFlags(flags);
-        setMessageSeverity(messageSeverity);
-        setMessageType(messageType);
-        setPfnUserCallback(pfnUserCallback);
-        setPUserData(pUserData);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

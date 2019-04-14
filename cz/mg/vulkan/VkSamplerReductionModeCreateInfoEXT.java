@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkSamplerReductionModeCreateInfoEXT extends VkObject {
     public VkSamplerReductionModeCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_REDUCTION_MODE_CREATE_INFO_EXT));
     }
 
     public VkSamplerReductionModeCreateInfoEXT(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkSamplerReductionModeCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSamplerReductionModeCreateInfoEXT(VkObject pNext, VkSamplerReductionModeEXT reductionMode) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_REDUCTION_MODE_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setReductionMode(reductionMode);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDescriptorPoolCreateInfo extends VkObject {
     public VkDescriptorPoolCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO));
     }
 
     public VkDescriptorPoolCreateInfo(VkMemory vkmemory) {
@@ -13,15 +14,7 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorPoolCreateInfo(VkObject pNext, VkDescriptorPoolCreateFlags flags, VkUInt32 maxSets, VkUInt32 poolSizeCount, VkDescriptorPoolSize pPoolSizes) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setMaxSets(maxSets);
-        setPoolSizeCount(poolSizeCount);
-        setPPoolSizes(pPoolSizes);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

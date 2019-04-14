@@ -13,12 +13,7 @@ public class VkRectLayerKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkRectLayerKHR(VkOffset2D offset, VkExtent2D extent, VkUInt32 layer) {
-        super(sizeof());
-        setOffset(offset);
-        setExtent(extent);
-        setLayer(layer);
-    }
+
 
     public VkOffset2D getOffset() {
         return new VkOffset2D(getVkMemory(), getOffset(getVkAddress()));

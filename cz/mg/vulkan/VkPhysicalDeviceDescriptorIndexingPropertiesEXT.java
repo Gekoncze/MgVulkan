@@ -13,34 +13,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceDescriptorIndexingPropertiesEXT(VkStructureType sType, VkObject pNext, VkUInt32 maxUpdateAfterBindDescriptorsInAllPools, VkBool32 shaderUniformBufferArrayNonUniformIndexingNative, VkBool32 shaderSampledImageArrayNonUniformIndexingNative, VkBool32 shaderStorageBufferArrayNonUniformIndexingNative, VkBool32 shaderStorageImageArrayNonUniformIndexingNative, VkBool32 shaderInputAttachmentArrayNonUniformIndexingNative, VkBool32 robustBufferAccessUpdateAfterBind, VkBool32 quadDivergentImplicitLod, VkUInt32 maxPerStageDescriptorUpdateAfterBindSamplers, VkUInt32 maxPerStageDescriptorUpdateAfterBindUniformBuffers, VkUInt32 maxPerStageDescriptorUpdateAfterBindStorageBuffers, VkUInt32 maxPerStageDescriptorUpdateAfterBindSampledImages, VkUInt32 maxPerStageDescriptorUpdateAfterBindStorageImages, VkUInt32 maxPerStageDescriptorUpdateAfterBindInputAttachments, VkUInt32 maxPerStageUpdateAfterBindResources, VkUInt32 maxDescriptorSetUpdateAfterBindSamplers, VkUInt32 maxDescriptorSetUpdateAfterBindUniformBuffers, VkUInt32 maxDescriptorSetUpdateAfterBindUniformBuffersDynamic, VkUInt32 maxDescriptorSetUpdateAfterBindStorageBuffers, VkUInt32 maxDescriptorSetUpdateAfterBindStorageBuffersDynamic, VkUInt32 maxDescriptorSetUpdateAfterBindSampledImages, VkUInt32 maxDescriptorSetUpdateAfterBindStorageImages, VkUInt32 maxDescriptorSetUpdateAfterBindInputAttachments) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMaxUpdateAfterBindDescriptorsInAllPools(maxUpdateAfterBindDescriptorsInAllPools);
-        setShaderUniformBufferArrayNonUniformIndexingNative(shaderUniformBufferArrayNonUniformIndexingNative);
-        setShaderSampledImageArrayNonUniformIndexingNative(shaderSampledImageArrayNonUniformIndexingNative);
-        setShaderStorageBufferArrayNonUniformIndexingNative(shaderStorageBufferArrayNonUniformIndexingNative);
-        setShaderStorageImageArrayNonUniformIndexingNative(shaderStorageImageArrayNonUniformIndexingNative);
-        setShaderInputAttachmentArrayNonUniformIndexingNative(shaderInputAttachmentArrayNonUniformIndexingNative);
-        setRobustBufferAccessUpdateAfterBind(robustBufferAccessUpdateAfterBind);
-        setQuadDivergentImplicitLod(quadDivergentImplicitLod);
-        setMaxPerStageDescriptorUpdateAfterBindSamplers(maxPerStageDescriptorUpdateAfterBindSamplers);
-        setMaxPerStageDescriptorUpdateAfterBindUniformBuffers(maxPerStageDescriptorUpdateAfterBindUniformBuffers);
-        setMaxPerStageDescriptorUpdateAfterBindStorageBuffers(maxPerStageDescriptorUpdateAfterBindStorageBuffers);
-        setMaxPerStageDescriptorUpdateAfterBindSampledImages(maxPerStageDescriptorUpdateAfterBindSampledImages);
-        setMaxPerStageDescriptorUpdateAfterBindStorageImages(maxPerStageDescriptorUpdateAfterBindStorageImages);
-        setMaxPerStageDescriptorUpdateAfterBindInputAttachments(maxPerStageDescriptorUpdateAfterBindInputAttachments);
-        setMaxPerStageUpdateAfterBindResources(maxPerStageUpdateAfterBindResources);
-        setMaxDescriptorSetUpdateAfterBindSamplers(maxDescriptorSetUpdateAfterBindSamplers);
-        setMaxDescriptorSetUpdateAfterBindUniformBuffers(maxDescriptorSetUpdateAfterBindUniformBuffers);
-        setMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(maxDescriptorSetUpdateAfterBindUniformBuffersDynamic);
-        setMaxDescriptorSetUpdateAfterBindStorageBuffers(maxDescriptorSetUpdateAfterBindStorageBuffers);
-        setMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(maxDescriptorSetUpdateAfterBindStorageBuffersDynamic);
-        setMaxDescriptorSetUpdateAfterBindSampledImages(maxDescriptorSetUpdateAfterBindSampledImages);
-        setMaxDescriptorSetUpdateAfterBindStorageImages(maxDescriptorSetUpdateAfterBindStorageImages);
-        setMaxDescriptorSetUpdateAfterBindInputAttachments(maxDescriptorSetUpdateAfterBindInputAttachments);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

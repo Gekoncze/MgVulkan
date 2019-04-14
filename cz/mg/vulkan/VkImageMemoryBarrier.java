@@ -13,19 +13,7 @@ public class VkImageMemoryBarrier extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageMemoryBarrier(VkStructureType sType, VkObject pNext, VkAccessFlags srcAccessMask, VkAccessFlags dstAccessMask, VkImageLayout oldLayout, VkImageLayout newLayout, VkUInt32 srcQueueFamilyIndex, VkUInt32 dstQueueFamilyIndex, VkImage image, VkImageSubresourceRange subresourceRange) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSrcAccessMask(srcAccessMask);
-        setDstAccessMask(dstAccessMask);
-        setOldLayout(oldLayout);
-        setNewLayout(newLayout);
-        setSrcQueueFamilyIndex(srcQueueFamilyIndex);
-        setDstQueueFamilyIndex(dstQueueFamilyIndex);
-        setImage(image);
-        setSubresourceRange(subresourceRange);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

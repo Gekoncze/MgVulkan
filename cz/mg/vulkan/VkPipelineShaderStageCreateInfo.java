@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineShaderStageCreateInfo extends VkObject {
     public VkPipelineShaderStageCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO));
     }
 
     public VkPipelineShaderStageCreateInfo(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineShaderStageCreateInfo(VkObject pNext, VkPipelineShaderStageCreateFlags flags, VkShaderStageFlagBits stage, VkShaderModule module, VkChar pName, VkSpecializationInfo pSpecializationInfo) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setStage(stage);
-        setModule(module);
-        setPName(pName);
-        setPSpecializationInfo(pSpecializationInfo);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

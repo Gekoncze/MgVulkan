@@ -13,11 +13,7 @@ public class VkDisplayModeParametersKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDisplayModeParametersKHR(VkExtent2D visibleRegion, VkUInt32 refreshRate) {
-        super(sizeof());
-        setVisibleRegion(visibleRegion);
-        setRefreshRate(refreshRate);
-    }
+
 
     public VkExtent2D getVisibleRegion() {
         return new VkExtent2D(getVkMemory(), getVisibleRegion(getVkAddress()));

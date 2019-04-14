@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkRenderPassMultiviewCreateInfo extends VkObject {
     public VkRenderPassMultiviewCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_MULTIVIEW_CREATE_INFO));
     }
 
     public VkRenderPassMultiviewCreateInfo(VkMemory vkmemory) {
@@ -13,17 +14,7 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkRenderPassMultiviewCreateInfo(VkObject pNext, VkUInt32 subpassCount, VkUInt32 pViewMasks, VkUInt32 dependencyCount, VkInt32 pViewOffsets, VkUInt32 correlationMaskCount, VkUInt32 pCorrelationMasks) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_MULTIVIEW_CREATE_INFO));
-        setPNext(pNext);
-        setSubpassCount(subpassCount);
-        setPViewMasks(pViewMasks);
-        setDependencyCount(dependencyCount);
-        setPViewOffsets(pViewOffsets);
-        setCorrelationMaskCount(correlationMaskCount);
-        setPCorrelationMasks(pCorrelationMasks);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

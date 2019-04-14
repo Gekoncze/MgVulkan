@@ -13,12 +13,7 @@ public class VkDescriptorSetLayoutSupport extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorSetLayoutSupport(VkStructureType sType, VkObject pNext, VkBool32 supported) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSupported(supported);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

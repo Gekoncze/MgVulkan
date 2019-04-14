@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDeviceGroupCommandBufferBeginInfo extends VkObject {
     public VkDeviceGroupCommandBufferBeginInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO));
     }
 
     public VkDeviceGroupCommandBufferBeginInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkDeviceGroupCommandBufferBeginInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceGroupCommandBufferBeginInfo(VkObject pNext, VkUInt32 deviceMask) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_COMMAND_BUFFER_BEGIN_INFO));
-        setPNext(pNext);
-        setDeviceMask(deviceMask);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

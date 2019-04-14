@@ -13,11 +13,7 @@ public class VkPresentRegionKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPresentRegionKHR(VkUInt32 rectangleCount, VkRectLayerKHR pRectangles) {
-        super(sizeof());
-        setRectangleCount(rectangleCount);
-        setPRectangles(pRectangles);
-    }
+
 
     public VkUInt32 getRectangleCount() {
         return new VkUInt32(getVkMemory(), getRectangleCount(getVkAddress()));

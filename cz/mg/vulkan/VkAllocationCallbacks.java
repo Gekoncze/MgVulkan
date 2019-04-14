@@ -13,15 +13,7 @@ public class VkAllocationCallbacks extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkAllocationCallbacks(VkObject pUserData, PFNvkAllocationFunction pfnAllocation, PFNvkReallocationFunction pfnReallocation, PFNvkFreeFunction pfnFree, PFNvkInternalAllocationNotification pfnInternalAllocation, PFNvkInternalFreeNotification pfnInternalFree) {
-        super(sizeof());
-        setPUserData(pUserData);
-        setPfnAllocation(pfnAllocation);
-        setPfnReallocation(pfnReallocation);
-        setPfnFree(pfnFree);
-        setPfnInternalAllocation(pfnInternalAllocation);
-        setPfnInternalFree(pfnInternalFree);
-    }
+
 
     public VkObject getPUserData() {
         return new VkObject(getVkMemory(), getPUserData(getVkAddress()));

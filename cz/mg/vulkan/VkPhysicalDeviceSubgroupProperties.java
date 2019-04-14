@@ -13,15 +13,7 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceSubgroupProperties(VkStructureType sType, VkObject pNext, VkUInt32 subgroupSize, VkShaderStageFlags supportedStages, VkSubgroupFeatureFlags supportedOperations, VkBool32 quadOperationsInAllStages) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSubgroupSize(subgroupSize);
-        setSupportedStages(supportedStages);
-        setSupportedOperations(supportedOperations);
-        setQuadOperationsInAllStages(quadOperationsInAllStages);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

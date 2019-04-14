@@ -13,13 +13,7 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceMaintenance3Properties(VkStructureType sType, VkObject pNext, VkUInt32 maxPerSetDescriptors, VkDeviceSize maxMemoryAllocationSize) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMaxPerSetDescriptors(maxPerSetDescriptors);
-        setMaxMemoryAllocationSize(maxMemoryAllocationSize);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

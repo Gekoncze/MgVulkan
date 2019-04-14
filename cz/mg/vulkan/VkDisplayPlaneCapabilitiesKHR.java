@@ -13,18 +13,7 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDisplayPlaneCapabilitiesKHR(VkDisplayPlaneAlphaFlagsKHR supportedAlpha, VkOffset2D minSrcPosition, VkOffset2D maxSrcPosition, VkExtent2D minSrcExtent, VkExtent2D maxSrcExtent, VkOffset2D minDstPosition, VkOffset2D maxDstPosition, VkExtent2D minDstExtent, VkExtent2D maxDstExtent) {
-        super(sizeof());
-        setSupportedAlpha(supportedAlpha);
-        setMinSrcPosition(minSrcPosition);
-        setMaxSrcPosition(maxSrcPosition);
-        setMinSrcExtent(minSrcExtent);
-        setMaxSrcExtent(maxSrcExtent);
-        setMinDstPosition(minDstPosition);
-        setMaxDstPosition(maxDstPosition);
-        setMinDstExtent(minDstExtent);
-        setMaxDstExtent(maxDstExtent);
-    }
+
 
     public VkDisplayPlaneAlphaFlagsKHR getSupportedAlpha() {
         return new VkDisplayPlaneAlphaFlagsKHR(getVkMemory(), getSupportedAlpha(getVkAddress()));

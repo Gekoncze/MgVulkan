@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineDynamicStateCreateInfo extends VkObject {
     public VkPipelineDynamicStateCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO));
     }
 
     public VkPipelineDynamicStateCreateInfo(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineDynamicStateCreateInfo(VkObject pNext, VkPipelineDynamicStateCreateFlags flags, VkUInt32 dynamicStateCount, VkDynamicState pDynamicStates) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setDynamicStateCount(dynamicStateCount);
-        setPDynamicStates(pDynamicStates);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

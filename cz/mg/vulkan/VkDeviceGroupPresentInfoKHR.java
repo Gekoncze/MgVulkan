@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDeviceGroupPresentInfoKHR extends VkObject {
     public VkDeviceGroupPresentInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_PRESENT_INFO_KHR));
     }
 
     public VkDeviceGroupPresentInfoKHR(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceGroupPresentInfoKHR(VkObject pNext, VkUInt32 swapchainCount, VkUInt32 pDeviceMasks, VkDeviceGroupPresentModeFlagBitsKHR mode) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_PRESENT_INFO_KHR));
-        setPNext(pNext);
-        setSwapchainCount(swapchainCount);
-        setPDeviceMasks(pDeviceMasks);
-        setMode(mode);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

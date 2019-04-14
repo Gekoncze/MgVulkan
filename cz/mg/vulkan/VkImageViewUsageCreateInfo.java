@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkImageViewUsageCreateInfo extends VkObject {
     public VkImageViewUsageCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_VIEW_USAGE_CREATE_INFO));
     }
 
     public VkImageViewUsageCreateInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkImageViewUsageCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageViewUsageCreateInfo(VkObject pNext, VkImageUsageFlags usage) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_VIEW_USAGE_CREATE_INFO));
-        setPNext(pNext);
-        setUsage(usage);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

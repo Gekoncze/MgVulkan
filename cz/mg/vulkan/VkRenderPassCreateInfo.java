@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkRenderPassCreateInfo extends VkObject {
     public VkRenderPassCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO));
     }
 
     public VkRenderPassCreateInfo(VkMemory vkmemory) {
@@ -13,18 +14,7 @@ public class VkRenderPassCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkRenderPassCreateInfo(VkObject pNext, VkRenderPassCreateFlags flags, VkUInt32 attachmentCount, VkAttachmentDescription pAttachments, VkUInt32 subpassCount, VkSubpassDescription pSubpasses, VkUInt32 dependencyCount, VkSubpassDependency pDependencies) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setAttachmentCount(attachmentCount);
-        setPAttachments(pAttachments);
-        setSubpassCount(subpassCount);
-        setPSubpasses(pSubpasses);
-        setDependencyCount(dependencyCount);
-        setPDependencies(pDependencies);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

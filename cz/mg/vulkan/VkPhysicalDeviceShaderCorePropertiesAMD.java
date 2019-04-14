@@ -13,25 +13,7 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceShaderCorePropertiesAMD(VkStructureType sType, VkObject pNext, VkUInt32 shaderEngineCount, VkUInt32 shaderArraysPerEngineCount, VkUInt32 computeUnitsPerShaderArray, VkUInt32 simdPerComputeUnit, VkUInt32 wavefrontsPerSimd, VkUInt32 wavefrontSize, VkUInt32 sgprsPerSimd, VkUInt32 minSgprAllocation, VkUInt32 maxSgprAllocation, VkUInt32 sgprAllocationGranularity, VkUInt32 vgprsPerSimd, VkUInt32 minVgprAllocation, VkUInt32 maxVgprAllocation, VkUInt32 vgprAllocationGranularity) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setShaderEngineCount(shaderEngineCount);
-        setShaderArraysPerEngineCount(shaderArraysPerEngineCount);
-        setComputeUnitsPerShaderArray(computeUnitsPerShaderArray);
-        setSimdPerComputeUnit(simdPerComputeUnit);
-        setWavefrontsPerSimd(wavefrontsPerSimd);
-        setWavefrontSize(wavefrontSize);
-        setSgprsPerSimd(sgprsPerSimd);
-        setMinSgprAllocation(minSgprAllocation);
-        setMaxSgprAllocation(maxSgprAllocation);
-        setSgprAllocationGranularity(sgprAllocationGranularity);
-        setVgprsPerSimd(vgprsPerSimd);
-        setMinVgprAllocation(minVgprAllocation);
-        setMaxVgprAllocation(maxVgprAllocation);
-        setVgprAllocationGranularity(vgprAllocationGranularity);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

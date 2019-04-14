@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkCmdProcessCommandsInfoNVX extends VkObject {
     public VkCmdProcessCommandsInfoNVX() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_CMD_PROCESS_COMMANDS_INFO_NVX));
     }
 
     public VkCmdProcessCommandsInfoNVX(VkMemory vkmemory) {
@@ -13,21 +14,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkCmdProcessCommandsInfoNVX(VkObject pNext, VkObjectTableNVX objectTable, VkIndirectCommandsLayoutNVX indirectCommandsLayout, VkUInt32 indirectCommandsTokenCount, VkIndirectCommandsTokenNVX pIndirectCommandsTokens, VkUInt32 maxSequencesCount, VkCommandBuffer targetCommandBuffer, VkBuffer sequencesCountBuffer, VkDeviceSize sequencesCountOffset, VkBuffer sequencesIndexBuffer, VkDeviceSize sequencesIndexOffset) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_CMD_PROCESS_COMMANDS_INFO_NVX));
-        setPNext(pNext);
-        setObjectTable(objectTable);
-        setIndirectCommandsLayout(indirectCommandsLayout);
-        setIndirectCommandsTokenCount(indirectCommandsTokenCount);
-        setPIndirectCommandsTokens(pIndirectCommandsTokens);
-        setMaxSequencesCount(maxSequencesCount);
-        setTargetCommandBuffer(targetCommandBuffer);
-        setSequencesCountBuffer(sequencesCountBuffer);
-        setSequencesCountOffset(sequencesCountOffset);
-        setSequencesIndexBuffer(sequencesIndexBuffer);
-        setSequencesIndexOffset(sequencesIndexOffset);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

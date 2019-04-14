@@ -13,13 +13,7 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMemoryDedicatedRequirements(VkStructureType sType, VkObject pNext, VkBool32 prefersDedicatedAllocation, VkBool32 requiresDedicatedAllocation) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setPrefersDedicatedAllocation(prefersDedicatedAllocation);
-        setRequiresDedicatedAllocation(requiresDedicatedAllocation);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

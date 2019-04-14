@@ -13,12 +13,7 @@ public class VkDescriptorImageInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorImageInfo(VkSampler sampler, VkImageView imageView, VkImageLayout imageLayout) {
-        super(sizeof());
-        setSampler(sampler);
-        setImageView(imageView);
-        setImageLayout(imageLayout);
-    }
+
 
     public VkSampler getSampler() {
         return new VkSampler(getVkMemory(), getSampler(getVkAddress()));

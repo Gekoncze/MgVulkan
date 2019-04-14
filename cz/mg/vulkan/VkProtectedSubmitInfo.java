@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkProtectedSubmitInfo extends VkObject {
     public VkProtectedSubmitInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PROTECTED_SUBMIT_INFO));
     }
 
     public VkProtectedSubmitInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkProtectedSubmitInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkProtectedSubmitInfo(VkObject pNext, VkBool32 protectedSubmit) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PROTECTED_SUBMIT_INFO));
-        setPNext(pNext);
-        setProtectedSubmit(protectedSubmit);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

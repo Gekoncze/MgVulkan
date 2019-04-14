@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
     public VkPhysicalDeviceExternalSemaphoreInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO));
     }
 
     public VkPhysicalDeviceExternalSemaphoreInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceExternalSemaphoreInfo(VkObject pNext, VkExternalSemaphoreHandleTypeFlagBits handleType) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO));
-        setPNext(pNext);
-        setHandleType(handleType);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

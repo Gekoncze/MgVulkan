@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDisplayModeCreateInfoKHR extends VkObject {
     public VkDisplayModeCreateInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DISPLAY_MODE_CREATE_INFO_KHR));
     }
 
     public VkDisplayModeCreateInfoKHR(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkDisplayModeCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDisplayModeCreateInfoKHR(VkObject pNext, VkDisplayModeCreateFlagsKHR flags, VkDisplayModeParametersKHR parameters) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DISPLAY_MODE_CREATE_INFO_KHR));
-        setPNext(pNext);
-        setFlags(flags);
-        setParameters(parameters);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

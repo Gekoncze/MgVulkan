@@ -13,12 +13,7 @@ public class VkSpecializationMapEntry extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSpecializationMapEntry(VkUInt32 constantID, VkUInt32 offset, VkSize size) {
-        super(sizeof());
-        setConstantID(constantID);
-        setOffset(offset);
-        setSize(size);
-    }
+
 
     public VkUInt32 getConstantID() {
         return new VkUInt32(getVkMemory(), getConstantID(getVkAddress()));

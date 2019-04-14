@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
     public VkPipelineViewportWScalingStateCreateInfoNV() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV));
     }
 
     public VkPipelineViewportWScalingStateCreateInfoNV(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineViewportWScalingStateCreateInfoNV(VkObject pNext, VkBool32 viewportWScalingEnable, VkUInt32 viewportCount, VkViewportWScalingNV pViewportWScalings) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV));
-        setPNext(pNext);
-        setViewportWScalingEnable(viewportWScalingEnable);
-        setViewportCount(viewportCount);
-        setPViewportWScalings(pViewportWScalings);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

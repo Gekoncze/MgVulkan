@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkSamplerYcbcrConversionInfo extends VkObject {
     public VkSamplerYcbcrConversionInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_YCBCR_CONVERSION_INFO));
     }
 
     public VkSamplerYcbcrConversionInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkSamplerYcbcrConversionInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSamplerYcbcrConversionInfo(VkObject pNext, VkSamplerYcbcrConversion conversion) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_YCBCR_CONVERSION_INFO));
-        setPNext(pNext);
-        setConversion(conversion);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

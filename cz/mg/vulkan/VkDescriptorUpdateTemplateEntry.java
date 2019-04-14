@@ -13,15 +13,7 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorUpdateTemplateEntry(VkUInt32 dstBinding, VkUInt32 dstArrayElement, VkUInt32 descriptorCount, VkDescriptorType descriptorType, VkSize offset, VkSize stride) {
-        super(sizeof());
-        setDstBinding(dstBinding);
-        setDstArrayElement(dstArrayElement);
-        setDescriptorCount(descriptorCount);
-        setDescriptorType(descriptorType);
-        setOffset(offset);
-        setStride(stride);
-    }
+
 
     public VkUInt32 getDstBinding() {
         return new VkUInt32(getVkMemory(), getDstBinding(getVkAddress()));

@@ -13,13 +13,7 @@ public class VkDeviceGroupPresentCapabilitiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceGroupPresentCapabilitiesKHR(VkStructureType sType, VkObject pNext, VkUInt32 presentMask, VkDeviceGroupPresentModeFlagsKHR modes) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setPresentMask(presentMask);
-        setModes(modes);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

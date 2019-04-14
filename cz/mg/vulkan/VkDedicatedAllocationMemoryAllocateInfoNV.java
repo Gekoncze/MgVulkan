@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDedicatedAllocationMemoryAllocateInfoNV extends VkObject {
     public VkDedicatedAllocationMemoryAllocateInfoNV() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV));
     }
 
     public VkDedicatedAllocationMemoryAllocateInfoNV(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkDedicatedAllocationMemoryAllocateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDedicatedAllocationMemoryAllocateInfoNV(VkObject pNext, VkImage image, VkBuffer buffer) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEDICATED_ALLOCATION_MEMORY_ALLOCATE_INFO_NV));
-        setPNext(pNext);
-        setImage(image);
-        setBuffer(buffer);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

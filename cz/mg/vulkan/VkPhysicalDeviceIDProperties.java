@@ -13,16 +13,7 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceIDProperties(VkStructureType sType, VkObject pNext, VkUInt8 deviceUUID, VkUInt8 driverUUID, VkUInt8 deviceLUID, VkUInt32 deviceNodeMask, VkBool32 deviceLUIDValid) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setDeviceUUID(deviceUUID);
-        setDriverUUID(driverUUID);
-        setDeviceLUID(deviceLUID);
-        setDeviceNodeMask(deviceNodeMask);
-        setDeviceLUIDValid(deviceLUIDValid);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

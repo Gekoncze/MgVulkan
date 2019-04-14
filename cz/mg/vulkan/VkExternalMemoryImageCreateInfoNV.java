@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkExternalMemoryImageCreateInfoNV extends VkObject {
     public VkExternalMemoryImageCreateInfoNV() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV));
     }
 
     public VkExternalMemoryImageCreateInfoNV(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkExternalMemoryImageCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExternalMemoryImageCreateInfoNV(VkObject pNext, VkExternalMemoryHandleTypeFlagsNV handleTypes) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV));
-        setPNext(pNext);
-        setHandleTypes(handleTypes);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

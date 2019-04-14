@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineMultisampleStateCreateInfo extends VkObject {
     public VkPipelineMultisampleStateCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO));
     }
 
     public VkPipelineMultisampleStateCreateInfo(VkMemory vkmemory) {
@@ -13,18 +14,7 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineMultisampleStateCreateInfo(VkObject pNext, VkPipelineMultisampleStateCreateFlags flags, VkSampleCountFlagBits rasterizationSamples, VkBool32 sampleShadingEnable, VkFloat minSampleShading, VkSampleMask pSampleMask, VkBool32 alphaToCoverageEnable, VkBool32 alphaToOneEnable) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setRasterizationSamples(rasterizationSamples);
-        setSampleShadingEnable(sampleShadingEnable);
-        setMinSampleShading(minSampleShading);
-        setPSampleMask(pSampleMask);
-        setAlphaToCoverageEnable(alphaToCoverageEnable);
-        setAlphaToOneEnable(alphaToOneEnable);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

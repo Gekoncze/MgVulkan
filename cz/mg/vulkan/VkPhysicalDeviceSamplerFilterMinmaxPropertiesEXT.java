@@ -13,13 +13,7 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT(VkStructureType sType, VkObject pNext, VkBool32 filterMinmaxSingleComponentFormats, VkBool32 filterMinmaxImageComponentMapping) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setFilterMinmaxSingleComponentFormats(filterMinmaxSingleComponentFormats);
-        setFilterMinmaxImageComponentMapping(filterMinmaxImageComponentMapping);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

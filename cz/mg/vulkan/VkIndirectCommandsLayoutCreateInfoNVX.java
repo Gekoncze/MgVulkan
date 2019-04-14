@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
     public VkIndirectCommandsLayoutCreateInfoNVX() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NVX));
     }
 
     public VkIndirectCommandsLayoutCreateInfoNVX(VkMemory vkmemory) {
@@ -13,15 +14,7 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkIndirectCommandsLayoutCreateInfoNVX(VkObject pNext, VkPipelineBindPoint pipelineBindPoint, VkIndirectCommandsLayoutUsageFlagsNVX flags, VkUInt32 tokenCount, VkIndirectCommandsLayoutTokenNVX pTokens) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NVX));
-        setPNext(pNext);
-        setPipelineBindPoint(pipelineBindPoint);
-        setFlags(flags);
-        setTokenCount(tokenCount);
-        setPTokens(pTokens);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -13,6 +13,8 @@ public class VkDouble extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+
+
     public VkDouble(double value) {
         super(sizeof());
         setValue(value);

@@ -13,12 +13,7 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkObjectTablePipelineEntryNVX(VkObjectEntryTypeNVX type, VkObjectEntryUsageFlagsNVX flags, VkPipeline pipeline) {
-        super(sizeof());
-        setType(type);
-        setFlags(flags);
-        setPipeline(pipeline);
-    }
+
 
     public VkObjectEntryTypeNVX getType() {
         return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));

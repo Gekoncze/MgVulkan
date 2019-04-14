@@ -13,12 +13,7 @@ public class VkSurfaceFormat2KHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSurfaceFormat2KHR(VkStructureType sType, VkObject pNext, VkSurfaceFormatKHR surfaceFormat) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSurfaceFormat(surfaceFormat);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPresentInfoKHR extends VkObject {
     public VkPresentInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PRESENT_INFO_KHR));
     }
 
     public VkPresentInfoKHR(VkMemory vkmemory) {
@@ -13,17 +14,7 @@ public class VkPresentInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPresentInfoKHR(VkObject pNext, VkUInt32 waitSemaphoreCount, VkSemaphore pWaitSemaphores, VkUInt32 swapchainCount, VkSwapchainKHR pSwapchains, VkUInt32 pImageIndices, VkResult pResults) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PRESENT_INFO_KHR));
-        setPNext(pNext);
-        setWaitSemaphoreCount(waitSemaphoreCount);
-        setPWaitSemaphores(pWaitSemaphores);
-        setSwapchainCount(swapchainCount);
-        setPSwapchains(pSwapchains);
-        setPImageIndices(pImageIndices);
-        setPResults(pResults);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

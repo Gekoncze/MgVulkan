@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkMemoryAllocateFlagsInfo extends VkObject {
     public VkMemoryAllocateFlagsInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_FLAGS_INFO));
     }
 
     public VkMemoryAllocateFlagsInfo(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkMemoryAllocateFlagsInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMemoryAllocateFlagsInfo(VkObject pNext, VkMemoryAllocateFlags flags, VkUInt32 deviceMask) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_FLAGS_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setDeviceMask(deviceMask);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

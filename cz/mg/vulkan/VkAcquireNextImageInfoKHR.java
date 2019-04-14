@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkAcquireNextImageInfoKHR extends VkObject {
     public VkAcquireNextImageInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_ACQUIRE_NEXT_IMAGE_INFO_KHR));
     }
 
     public VkAcquireNextImageInfoKHR(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkAcquireNextImageInfoKHR(VkObject pNext, VkSwapchainKHR swapchain, VkUInt64 timeout, VkSemaphore semaphore, VkFence fence, VkUInt32 deviceMask) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_ACQUIRE_NEXT_IMAGE_INFO_KHR));
-        setPNext(pNext);
-        setSwapchain(swapchain);
-        setTimeout(timeout);
-        setSemaphore(semaphore);
-        setFence(fence);
-        setDeviceMask(deviceMask);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

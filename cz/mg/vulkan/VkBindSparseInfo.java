@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkBindSparseInfo extends VkObject {
     public VkBindSparseInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_SPARSE_INFO));
     }
 
     public VkBindSparseInfo(VkMemory vkmemory) {
@@ -13,21 +14,7 @@ public class VkBindSparseInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkBindSparseInfo(VkObject pNext, VkUInt32 waitSemaphoreCount, VkSemaphore pWaitSemaphores, VkUInt32 bufferBindCount, VkSparseBufferMemoryBindInfo pBufferBinds, VkUInt32 imageOpaqueBindCount, VkSparseImageOpaqueMemoryBindInfo pImageOpaqueBinds, VkUInt32 imageBindCount, VkSparseImageMemoryBindInfo pImageBinds, VkUInt32 signalSemaphoreCount, VkSemaphore pSignalSemaphores) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_SPARSE_INFO));
-        setPNext(pNext);
-        setWaitSemaphoreCount(waitSemaphoreCount);
-        setPWaitSemaphores(pWaitSemaphores);
-        setBufferBindCount(bufferBindCount);
-        setPBufferBinds(pBufferBinds);
-        setImageOpaqueBindCount(imageOpaqueBindCount);
-        setPImageOpaqueBinds(pImageOpaqueBinds);
-        setImageBindCount(imageBindCount);
-        setPImageBinds(pImageBinds);
-        setSignalSemaphoreCount(signalSemaphoreCount);
-        setPSignalSemaphores(pSignalSemaphores);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

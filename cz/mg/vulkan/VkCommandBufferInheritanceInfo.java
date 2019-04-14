@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkCommandBufferInheritanceInfo extends VkObject {
     public VkCommandBufferInheritanceInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_COMMAND_BUFFER_INHERITANCE_INFO));
     }
 
     public VkCommandBufferInheritanceInfo(VkMemory vkmemory) {
@@ -13,17 +14,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkCommandBufferInheritanceInfo(VkObject pNext, VkRenderPass renderPass, VkUInt32 subpass, VkFramebuffer framebuffer, VkBool32 occlusionQueryEnable, VkQueryControlFlags queryFlags, VkQueryPipelineStatisticFlags pipelineStatistics) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_COMMAND_BUFFER_INHERITANCE_INFO));
-        setPNext(pNext);
-        setRenderPass(renderPass);
-        setSubpass(subpass);
-        setFramebuffer(framebuffer);
-        setOcclusionQueryEnable(occlusionQueryEnable);
-        setQueryFlags(queryFlags);
-        setPipelineStatistics(pipelineStatistics);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

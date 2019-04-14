@@ -13,12 +13,7 @@ public class VkPhysicalDevicePushDescriptorPropertiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDevicePushDescriptorPropertiesKHR(VkStructureType sType, VkObject pNext, VkUInt32 maxPushDescriptors) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMaxPushDescriptors(maxPushDescriptors);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

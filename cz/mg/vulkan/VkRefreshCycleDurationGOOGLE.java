@@ -13,10 +13,7 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkRefreshCycleDurationGOOGLE(VkUInt64 refreshDuration) {
-        super(sizeof());
-        setRefreshDuration(refreshDuration);
-    }
+
 
     public VkUInt64 getRefreshDuration() {
         return new VkUInt64(getVkMemory(), getRefreshDuration(getVkAddress()));

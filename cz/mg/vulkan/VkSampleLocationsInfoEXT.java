@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkSampleLocationsInfoEXT extends VkObject {
     public VkSampleLocationsInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLE_LOCATIONS_INFO_EXT));
     }
 
     public VkSampleLocationsInfoEXT(VkMemory vkmemory) {
@@ -13,15 +14,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSampleLocationsInfoEXT(VkObject pNext, VkSampleCountFlagBits sampleLocationsPerPixel, VkExtent2D sampleLocationGridSize, VkUInt32 sampleLocationsCount, VkSampleLocationEXT pSampleLocations) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLE_LOCATIONS_INFO_EXT));
-        setPNext(pNext);
-        setSampleLocationsPerPixel(sampleLocationsPerPixel);
-        setSampleLocationGridSize(sampleLocationGridSize);
-        setSampleLocationsCount(sampleLocationsCount);
-        setPSampleLocations(pSampleLocations);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

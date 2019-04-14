@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
     public VkSamplerYcbcrConversionCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_YCBCR_CONVERSION_CREATE_INFO));
     }
 
     public VkSamplerYcbcrConversionCreateInfo(VkMemory vkmemory) {
@@ -13,19 +14,7 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSamplerYcbcrConversionCreateInfo(VkObject pNext, VkFormat format, VkSamplerYcbcrModelConversion ycbcrModel, VkSamplerYcbcrRange ycbcrRange, VkComponentMapping components, VkChromaLocation xChromaOffset, VkChromaLocation yChromaOffset, VkFilter chromaFilter, VkBool32 forceExplicitReconstruction) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_YCBCR_CONVERSION_CREATE_INFO));
-        setPNext(pNext);
-        setFormat(format);
-        setYcbcrModel(ycbcrModel);
-        setYcbcrRange(ycbcrRange);
-        setComponents(components);
-        setXChromaOffset(xChromaOffset);
-        setYChromaOffset(yChromaOffset);
-        setChromaFilter(chromaFilter);
-        setForceExplicitReconstruction(forceExplicitReconstruction);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

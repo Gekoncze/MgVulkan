@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObject {
     public VkPipelineRasterizationConservativeStateCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT));
     }
 
     public VkPipelineRasterizationConservativeStateCreateInfoEXT(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineRasterizationConservativeStateCreateInfoEXT(VkObject pNext, VkPipelineRasterizationConservativeStateCreateFlagsEXT flags, VkConservativeRasterizationModeEXT conservativeRasterizationMode, VkFloat extraPrimitiveOverestimationSize) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setFlags(flags);
-        setConservativeRasterizationMode(conservativeRasterizationMode);
-        setExtraPrimitiveOverestimationSize(extraPrimitiveOverestimationSize);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

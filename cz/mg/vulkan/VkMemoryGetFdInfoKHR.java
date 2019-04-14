@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkMemoryGetFdInfoKHR extends VkObject {
     public VkMemoryGetFdInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_MEMORY_GET_FD_INFO_KHR));
     }
 
     public VkMemoryGetFdInfoKHR(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkMemoryGetFdInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMemoryGetFdInfoKHR(VkObject pNext, VkDeviceMemory memory, VkExternalMemoryHandleTypeFlagBits handleType) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_MEMORY_GET_FD_INFO_KHR));
-        setPNext(pNext);
-        setMemory(memory);
-        setHandleType(handleType);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

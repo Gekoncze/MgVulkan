@@ -13,19 +13,7 @@ public class VkHdrMetadataEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkHdrMetadataEXT(VkStructureType sType, VkObject pNext, VkXYColorEXT displayPrimaryRed, VkXYColorEXT displayPrimaryGreen, VkXYColorEXT displayPrimaryBlue, VkXYColorEXT whitePoint, VkFloat maxLuminance, VkFloat minLuminance, VkFloat maxContentLightLevel, VkFloat maxFrameAverageLightLevel) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setDisplayPrimaryRed(displayPrimaryRed);
-        setDisplayPrimaryGreen(displayPrimaryGreen);
-        setDisplayPrimaryBlue(displayPrimaryBlue);
-        setWhitePoint(whitePoint);
-        setMaxLuminance(maxLuminance);
-        setMinLuminance(minLuminance);
-        setMaxContentLightLevel(maxContentLightLevel);
-        setMaxFrameAverageLightLevel(maxFrameAverageLightLevel);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

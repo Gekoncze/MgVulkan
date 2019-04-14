@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
     public VkPipelineColorBlendAdvancedStateCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT));
     }
 
     public VkPipelineColorBlendAdvancedStateCreateInfoEXT(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineColorBlendAdvancedStateCreateInfoEXT(VkObject pNext, VkBool32 srcPremultiplied, VkBool32 dstPremultiplied, VkBlendOverlapEXT blendOverlap) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setSrcPremultiplied(srcPremultiplied);
-        setDstPremultiplied(dstPremultiplied);
-        setBlendOverlap(blendOverlap);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

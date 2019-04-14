@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkCommandPoolCreateInfo extends VkObject {
     public VkCommandPoolCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO));
     }
 
     public VkCommandPoolCreateInfo(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkCommandPoolCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkCommandPoolCreateInfo(VkObject pNext, VkCommandPoolCreateFlags flags, VkUInt32 queueFamilyIndex) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setQueueFamilyIndex(queueFamilyIndex);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

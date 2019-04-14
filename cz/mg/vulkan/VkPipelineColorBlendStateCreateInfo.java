@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineColorBlendStateCreateInfo extends VkObject {
     public VkPipelineColorBlendStateCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO));
     }
 
     public VkPipelineColorBlendStateCreateInfo(VkMemory vkmemory) {
@@ -13,17 +14,7 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineColorBlendStateCreateInfo(VkObject pNext, VkPipelineColorBlendStateCreateFlags flags, VkBool32 logicOpEnable, VkLogicOp logicOp, VkUInt32 attachmentCount, VkPipelineColorBlendAttachmentState pAttachments, VkFloat blendConstants) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setLogicOpEnable(logicOpEnable);
-        setLogicOp(logicOp);
-        setAttachmentCount(attachmentCount);
-        setPAttachments(pAttachments);
-        setBlendConstants(blendConstants);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

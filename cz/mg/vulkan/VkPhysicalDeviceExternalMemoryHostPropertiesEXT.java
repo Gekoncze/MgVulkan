@@ -13,12 +13,7 @@ public class VkPhysicalDeviceExternalMemoryHostPropertiesEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceExternalMemoryHostPropertiesEXT(VkStructureType sType, VkObject pNext, VkDeviceSize minImportedHostPointerAlignment) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMinImportedHostPointerAlignment(minImportedHostPointerAlignment);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

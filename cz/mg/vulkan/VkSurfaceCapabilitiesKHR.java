@@ -13,19 +13,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSurfaceCapabilitiesKHR(VkUInt32 minImageCount, VkUInt32 maxImageCount, VkExtent2D currentExtent, VkExtent2D minImageExtent, VkExtent2D maxImageExtent, VkUInt32 maxImageArrayLayers, VkSurfaceTransformFlagsKHR supportedTransforms, VkSurfaceTransformFlagBitsKHR currentTransform, VkCompositeAlphaFlagsKHR supportedCompositeAlpha, VkImageUsageFlags supportedUsageFlags) {
-        super(sizeof());
-        setMinImageCount(minImageCount);
-        setMaxImageCount(maxImageCount);
-        setCurrentExtent(currentExtent);
-        setMinImageExtent(minImageExtent);
-        setMaxImageExtent(maxImageExtent);
-        setMaxImageArrayLayers(maxImageArrayLayers);
-        setSupportedTransforms(supportedTransforms);
-        setCurrentTransform(currentTransform);
-        setSupportedCompositeAlpha(supportedCompositeAlpha);
-        setSupportedUsageFlags(supportedUsageFlags);
-    }
+
 
     public VkUInt32 getMinImageCount() {
         return new VkUInt32(getVkMemory(), getMinImageCount(getVkAddress()));

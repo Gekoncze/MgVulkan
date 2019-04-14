@@ -13,14 +13,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceSparseProperties(VkBool32 residencyStandard2DBlockShape, VkBool32 residencyStandard2DMultisampleBlockShape, VkBool32 residencyStandard3DBlockShape, VkBool32 residencyAlignedMipSize, VkBool32 residencyNonResidentStrict) {
-        super(sizeof());
-        setResidencyStandard2DBlockShape(residencyStandard2DBlockShape);
-        setResidencyStandard2DMultisampleBlockShape(residencyStandard2DMultisampleBlockShape);
-        setResidencyStandard3DBlockShape(residencyStandard3DBlockShape);
-        setResidencyAlignedMipSize(residencyAlignedMipSize);
-        setResidencyNonResidentStrict(residencyNonResidentStrict);
-    }
+
 
     public VkBool32 getResidencyStandard2DBlockShape() {
         return new VkBool32(getVkMemory(), getResidencyStandard2DBlockShape(getVkAddress()));

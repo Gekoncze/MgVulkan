@@ -13,12 +13,7 @@ public class VkOffset3D extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkOffset3D(VkInt32 x, VkInt32 y, VkInt32 z) {
-        super(sizeof());
-        setX(x);
-        setY(y);
-        setZ(z);
-    }
+
 
     public VkInt32 getX() {
         return new VkInt32(getVkMemory(), getX(getVkAddress()));

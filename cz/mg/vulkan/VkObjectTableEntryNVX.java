@@ -13,11 +13,7 @@ public class VkObjectTableEntryNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkObjectTableEntryNVX(VkObjectEntryTypeNVX type, VkObjectEntryUsageFlagsNVX flags) {
-        super(sizeof());
-        setType(type);
-        setFlags(flags);
-    }
+
 
     public VkObjectEntryTypeNVX getType() {
         return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));

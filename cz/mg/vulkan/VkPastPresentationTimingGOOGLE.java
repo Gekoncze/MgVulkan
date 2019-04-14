@@ -13,14 +13,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPastPresentationTimingGOOGLE(VkUInt32 presentID, VkUInt64 desiredPresentTime, VkUInt64 actualPresentTime, VkUInt64 earliestPresentTime, VkUInt64 presentMargin) {
-        super(sizeof());
-        setPresentID(presentID);
-        setDesiredPresentTime(desiredPresentTime);
-        setActualPresentTime(actualPresentTime);
-        setEarliestPresentTime(earliestPresentTime);
-        setPresentMargin(presentMargin);
-    }
+
 
     public VkUInt32 getPresentID() {
         return new VkUInt32(getVkMemory(), getPresentID(getVkAddress()));

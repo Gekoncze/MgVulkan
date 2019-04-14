@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkSemaphoreGetFdInfoKHR extends VkObject {
     public VkSemaphoreGetFdInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SEMAPHORE_GET_FD_INFO_KHR));
     }
 
     public VkSemaphoreGetFdInfoKHR(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkSemaphoreGetFdInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSemaphoreGetFdInfoKHR(VkObject pNext, VkSemaphore semaphore, VkExternalSemaphoreHandleTypeFlagBits handleType) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SEMAPHORE_GET_FD_INFO_KHR));
-        setPNext(pNext);
-        setSemaphore(semaphore);
-        setHandleType(handleType);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

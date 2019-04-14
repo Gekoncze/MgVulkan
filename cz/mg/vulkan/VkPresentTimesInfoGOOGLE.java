@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPresentTimesInfoGOOGLE extends VkObject {
     public VkPresentTimesInfoGOOGLE() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PRESENT_TIMES_INFO_GOOGLE));
     }
 
     public VkPresentTimesInfoGOOGLE(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPresentTimesInfoGOOGLE(VkObject pNext, VkUInt32 swapchainCount, VkPresentTimeGOOGLE pTimes) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PRESENT_TIMES_INFO_GOOGLE));
-        setPNext(pNext);
-        setSwapchainCount(swapchainCount);
-        setPTimes(pTimes);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

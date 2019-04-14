@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDeviceQueueInfo2 extends VkObject {
     public VkDeviceQueueInfo2() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_QUEUE_INFO_2));
     }
 
     public VkDeviceQueueInfo2(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkDeviceQueueInfo2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceQueueInfo2(VkObject pNext, VkDeviceQueueCreateFlags flags, VkUInt32 queueFamilyIndex, VkUInt32 queueIndex) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_QUEUE_INFO_2));
-        setPNext(pNext);
-        setFlags(flags);
-        setQueueFamilyIndex(queueFamilyIndex);
-        setQueueIndex(queueIndex);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

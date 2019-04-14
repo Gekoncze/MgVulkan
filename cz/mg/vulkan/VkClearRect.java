@@ -13,12 +13,7 @@ public class VkClearRect extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkClearRect(VkRect2D rect, VkUInt32 baseArrayLayer, VkUInt32 layerCount) {
-        super(sizeof());
-        setRect(rect);
-        setBaseArrayLayer(baseArrayLayer);
-        setLayerCount(layerCount);
-    }
+
 
     public VkRect2D getRect() {
         return new VkRect2D(getVkMemory(), getRect(getVkAddress()));

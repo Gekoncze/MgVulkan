@@ -13,11 +13,7 @@ public class VkClearDepthStencilValue extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkClearDepthStencilValue(VkFloat depth, VkUInt32 stencil) {
-        super(sizeof());
-        setDepth(depth);
-        setStencil(stencil);
-    }
+
 
     public VkFloat getDepth() {
         return new VkFloat(getVkMemory(), getDepth(getVkAddress()));

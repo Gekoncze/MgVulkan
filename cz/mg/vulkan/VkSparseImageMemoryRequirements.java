@@ -13,14 +13,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSparseImageMemoryRequirements(VkSparseImageFormatProperties formatProperties, VkUInt32 imageMipTailFirstLod, VkDeviceSize imageMipTailSize, VkDeviceSize imageMipTailOffset, VkDeviceSize imageMipTailStride) {
-        super(sizeof());
-        setFormatProperties(formatProperties);
-        setImageMipTailFirstLod(imageMipTailFirstLod);
-        setImageMipTailSize(imageMipTailSize);
-        setImageMipTailOffset(imageMipTailOffset);
-        setImageMipTailStride(imageMipTailStride);
-    }
+
 
     public VkSparseImageFormatProperties getFormatProperties() {
         return new VkSparseImageFormatProperties(getVkMemory(), getFormatProperties(getVkAddress()));

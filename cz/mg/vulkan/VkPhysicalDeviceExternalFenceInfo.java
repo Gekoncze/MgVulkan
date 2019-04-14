@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPhysicalDeviceExternalFenceInfo extends VkObject {
     public VkPhysicalDeviceExternalFenceInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO));
     }
 
     public VkPhysicalDeviceExternalFenceInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkPhysicalDeviceExternalFenceInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceExternalFenceInfo(VkObject pNext, VkExternalFenceHandleTypeFlagBits handleType) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO));
-        setPNext(pNext);
-        setHandleType(handleType);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

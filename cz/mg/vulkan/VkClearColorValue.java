@@ -13,20 +13,6 @@ public class VkClearColorValue extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkClearColorValue(VkFloat float32) {
-        super(sizeof());
-        setFloat32(float32);
-    }
-
-    public VkClearColorValue(VkInt32 int32) {
-        super(sizeof());
-        setInt32(int32);
-    }
-
-    public VkClearColorValue(VkUInt32 uint32) {
-        super(sizeof());
-        setUint32(uint32);
-    }
 
 
     public VkFloat getFloat32() {

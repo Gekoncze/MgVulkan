@@ -13,19 +13,7 @@ public class VkSubpassDescription extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSubpassDescription(VkSubpassDescriptionFlags flags, VkPipelineBindPoint pipelineBindPoint, VkUInt32 inputAttachmentCount, VkAttachmentReference pInputAttachments, VkUInt32 colorAttachmentCount, VkAttachmentReference pColorAttachments, VkAttachmentReference pResolveAttachments, VkAttachmentReference pDepthStencilAttachment, VkUInt32 preserveAttachmentCount, VkUInt32 pPreserveAttachments) {
-        super(sizeof());
-        setFlags(flags);
-        setPipelineBindPoint(pipelineBindPoint);
-        setInputAttachmentCount(inputAttachmentCount);
-        setPInputAttachments(pInputAttachments);
-        setColorAttachmentCount(colorAttachmentCount);
-        setPColorAttachments(pColorAttachments);
-        setPResolveAttachments(pResolveAttachments);
-        setPDepthStencilAttachment(pDepthStencilAttachment);
-        setPreserveAttachmentCount(preserveAttachmentCount);
-        setPPreserveAttachments(pPreserveAttachments);
-    }
+
 
     public VkSubpassDescriptionFlags getFlags() {
         return new VkSubpassDescriptionFlags(getVkMemory(), getFlags(getVkAddress()));

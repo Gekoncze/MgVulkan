@@ -13,15 +13,7 @@ public class VkBufferImageCopy extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkBufferImageCopy(VkDeviceSize bufferOffset, VkUInt32 bufferRowLength, VkUInt32 bufferImageHeight, VkImageSubresourceLayers imageSubresource, VkOffset3D imageOffset, VkExtent3D imageExtent) {
-        super(sizeof());
-        setBufferOffset(bufferOffset);
-        setBufferRowLength(bufferRowLength);
-        setBufferImageHeight(bufferImageHeight);
-        setImageSubresource(imageSubresource);
-        setImageOffset(imageOffset);
-        setImageExtent(imageExtent);
-    }
+
 
     public VkDeviceSize getBufferOffset() {
         return new VkDeviceSize(getVkMemory(), getBufferOffset(getVkAddress()));

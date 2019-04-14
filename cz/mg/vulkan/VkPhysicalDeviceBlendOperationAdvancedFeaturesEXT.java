@@ -13,12 +13,7 @@ public class VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT extends VkObject 
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT(VkStructureType sType, VkObject pNext, VkBool32 advancedBlendCoherentOperations) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setAdvancedBlendCoherentOperations(advancedBlendCoherentOperations);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

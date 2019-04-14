@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkImageFormatListCreateInfoKHR extends VkObject {
     public VkImageFormatListCreateInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_FORMAT_LIST_CREATE_INFO_KHR));
     }
 
     public VkImageFormatListCreateInfoKHR(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkImageFormatListCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageFormatListCreateInfoKHR(VkObject pNext, VkUInt32 viewFormatCount, VkFormat pViewFormats) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_FORMAT_LIST_CREATE_INFO_KHR));
-        setPNext(pNext);
-        setViewFormatCount(viewFormatCount);
-        setPViewFormats(pViewFormats);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

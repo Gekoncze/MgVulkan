@@ -13,13 +13,7 @@ public class VkLayerProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkLayerProperties(VkChar layerName, VkUInt32 specVersion, VkUInt32 implementationVersion, VkChar description) {
-        super(sizeof());
-        setLayerName(layerName);
-        setSpecVersion(specVersion);
-        setImplementationVersion(implementationVersion);
-        setDescription(description);
-    }
+
 
     public VkChar getLayerName() {
         return new VkChar(getVkMemory(), getLayerName(getVkAddress()));

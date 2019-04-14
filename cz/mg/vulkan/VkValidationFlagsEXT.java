@@ -13,13 +13,7 @@ public class VkValidationFlagsEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkValidationFlagsEXT(VkStructureType sType, VkObject pNext, VkUInt32 disabledValidationCheckCount, VkValidationCheckEXT pDisabledValidationChecks) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setDisabledValidationCheckCount(disabledValidationCheckCount);
-        setPDisabledValidationChecks(pDisabledValidationChecks);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

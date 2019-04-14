@@ -13,11 +13,7 @@ public class VkSampleLocationEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSampleLocationEXT(VkFloat x, VkFloat y) {
-        super(sizeof());
-        setX(x);
-        setY(y);
-    }
+
 
     public VkFloat getX() {
         return new VkFloat(getVkMemory(), getX(getVkAddress()));

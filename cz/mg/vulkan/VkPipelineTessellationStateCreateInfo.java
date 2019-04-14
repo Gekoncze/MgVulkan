@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPipelineTessellationStateCreateInfo extends VkObject {
     public VkPipelineTessellationStateCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_TESSELLATION_STATE_CREATE_INFO));
     }
 
     public VkPipelineTessellationStateCreateInfo(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPipelineTessellationStateCreateInfo(VkObject pNext, VkPipelineTessellationStateCreateFlags flags, VkUInt32 patchControlPoints) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_TESSELLATION_STATE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setPatchControlPoints(patchControlPoints);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

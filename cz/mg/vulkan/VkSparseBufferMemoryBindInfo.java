@@ -13,12 +13,7 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSparseBufferMemoryBindInfo(VkBuffer buffer, VkUInt32 bindCount, VkSparseMemoryBind pBinds) {
-        super(sizeof());
-        setBuffer(buffer);
-        setBindCount(bindCount);
-        setPBinds(pBinds);
-    }
+
 
     public VkBuffer getBuffer() {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));

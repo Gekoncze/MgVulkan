@@ -13,6 +13,8 @@ public class VkFloat extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+
+
     public VkFloat(float value) {
         super(sizeof());
         setValue(value);

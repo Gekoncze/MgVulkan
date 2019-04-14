@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkApplicationInfo extends VkObject {
     public VkApplicationInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_APPLICATION_INFO));
     }
 
     public VkApplicationInfo(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkApplicationInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkApplicationInfo(VkObject pNext, VkChar pApplicationName, VkUInt32 applicationVersion, VkChar pEngineName, VkUInt32 engineVersion, VkUInt32 apiVersion) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_APPLICATION_INFO));
-        setPNext(pNext);
-        setPApplicationName(pApplicationName);
-        setApplicationVersion(applicationVersion);
-        setPEngineName(pEngineName);
-        setEngineVersion(engineVersion);
-        setApiVersion(apiVersion);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

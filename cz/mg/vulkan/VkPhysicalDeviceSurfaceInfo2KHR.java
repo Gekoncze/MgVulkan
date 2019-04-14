@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
     public VkPhysicalDeviceSurfaceInfo2KHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SURFACE_INFO_2_KHR));
     }
 
     public VkPhysicalDeviceSurfaceInfo2KHR(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceSurfaceInfo2KHR(VkObject pNext, VkSurfaceKHR surface) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SURFACE_INFO_2_KHR));
-        setPNext(pNext);
-        setSurface(surface);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

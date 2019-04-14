@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkImageCreateInfo extends VkObject {
     public VkImageCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO));
     }
 
     public VkImageCreateInfo(VkMemory vkmemory) {
@@ -13,24 +14,7 @@ public class VkImageCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageCreateInfo(VkObject pNext, VkImageCreateFlags flags, VkImageType imageType, VkFormat format, VkExtent3D extent, VkUInt32 mipLevels, VkUInt32 arrayLayers, VkSampleCountFlagBits samples, VkImageTiling tiling, VkImageUsageFlags usage, VkSharingMode sharingMode, VkUInt32 queueFamilyIndexCount, VkUInt32 pQueueFamilyIndices, VkImageLayout initialLayout) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setImageType(imageType);
-        setFormat(format);
-        setExtent(extent);
-        setMipLevels(mipLevels);
-        setArrayLayers(arrayLayers);
-        setSamples(samples);
-        setTiling(tiling);
-        setUsage(usage);
-        setSharingMode(sharingMode);
-        setQueueFamilyIndexCount(queueFamilyIndexCount);
-        setPQueueFamilyIndices(pQueueFamilyIndices);
-        setInitialLayout(initialLayout);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

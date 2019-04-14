@@ -13,12 +13,7 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkIndirectCommandsTokenNVX(VkIndirectCommandsTokenTypeNVX tokenType, VkBuffer buffer, VkDeviceSize offset) {
-        super(sizeof());
-        setTokenType(tokenType);
-        setBuffer(buffer);
-        setOffset(offset);
-    }
+
 
     public VkIndirectCommandsTokenTypeNVX getTokenType() {
         return new VkIndirectCommandsTokenTypeNVX(getVkMemory(), getTokenType(getVkAddress()));

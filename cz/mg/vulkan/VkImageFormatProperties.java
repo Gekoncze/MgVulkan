@@ -13,14 +13,7 @@ public class VkImageFormatProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageFormatProperties(VkExtent3D maxExtent, VkUInt32 maxMipLevels, VkUInt32 maxArrayLayers, VkSampleCountFlags sampleCounts, VkDeviceSize maxResourceSize) {
-        super(sizeof());
-        setMaxExtent(maxExtent);
-        setMaxMipLevels(maxMipLevels);
-        setMaxArrayLayers(maxArrayLayers);
-        setSampleCounts(sampleCounts);
-        setMaxResourceSize(maxResourceSize);
-    }
+
 
     public VkExtent3D getMaxExtent() {
         return new VkExtent3D(getVkMemory(), getMaxExtent(getVkAddress()));

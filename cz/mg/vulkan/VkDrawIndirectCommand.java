@@ -13,13 +13,7 @@ public class VkDrawIndirectCommand extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDrawIndirectCommand(VkUInt32 vertexCount, VkUInt32 instanceCount, VkUInt32 firstVertex, VkUInt32 firstInstance) {
-        super(sizeof());
-        setVertexCount(vertexCount);
-        setInstanceCount(instanceCount);
-        setFirstVertex(firstVertex);
-        setFirstInstance(firstInstance);
-    }
+
 
     public VkUInt32 getVertexCount() {
         return new VkUInt32(getVkMemory(), getVertexCount(getVkAddress()));

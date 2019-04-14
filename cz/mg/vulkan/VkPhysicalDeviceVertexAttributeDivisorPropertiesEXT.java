@@ -13,12 +13,7 @@ public class VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT extends VkObjec
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT(VkStructureType sType, VkObject pNext, VkUInt32 maxVertexAttribDivisor) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMaxVertexAttribDivisor(maxVertexAttribDivisor);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

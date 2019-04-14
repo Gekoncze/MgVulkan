@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDeviceGroupSwapchainCreateInfoKHR extends VkObject {
     public VkDeviceGroupSwapchainCreateInfoKHR() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR));
     }
 
     public VkDeviceGroupSwapchainCreateInfoKHR(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkDeviceGroupSwapchainCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceGroupSwapchainCreateInfoKHR(VkObject pNext, VkDeviceGroupPresentModeFlagsKHR modes) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR));
-        setPNext(pNext);
-        setModes(modes);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

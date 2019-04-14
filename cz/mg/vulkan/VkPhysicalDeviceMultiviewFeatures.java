@@ -13,14 +13,7 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceMultiviewFeatures(VkStructureType sType, VkObject pNext, VkBool32 multiview, VkBool32 multiviewGeometryShader, VkBool32 multiviewTessellationShader) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMultiview(multiview);
-        setMultiviewGeometryShader(multiviewGeometryShader);
-        setMultiviewTessellationShader(multiviewTessellationShader);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

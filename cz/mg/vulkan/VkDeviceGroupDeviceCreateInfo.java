@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDeviceGroupDeviceCreateInfo extends VkObject {
     public VkDeviceGroupDeviceCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_DEVICE_CREATE_INFO));
     }
 
     public VkDeviceGroupDeviceCreateInfo(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceGroupDeviceCreateInfo(VkObject pNext, VkUInt32 physicalDeviceCount, VkPhysicalDevice pPhysicalDevices) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_DEVICE_CREATE_INFO));
-        setPNext(pNext);
-        setPhysicalDeviceCount(physicalDeviceCount);
-        setPPhysicalDevices(pPhysicalDevices);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

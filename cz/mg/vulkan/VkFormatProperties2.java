@@ -13,12 +13,7 @@ public class VkFormatProperties2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkFormatProperties2(VkStructureType sType, VkObject pNext, VkFormatProperties formatProperties) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setFormatProperties(formatProperties);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

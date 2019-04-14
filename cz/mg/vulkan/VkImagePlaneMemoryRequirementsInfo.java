@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkImagePlaneMemoryRequirementsInfo extends VkObject {
     public VkImagePlaneMemoryRequirementsInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO));
     }
 
     public VkImagePlaneMemoryRequirementsInfo(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkImagePlaneMemoryRequirementsInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImagePlaneMemoryRequirementsInfo(VkObject pNext, VkImageAspectFlagBits planeAspect) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO));
-        setPNext(pNext);
-        setPlaneAspect(planeAspect);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

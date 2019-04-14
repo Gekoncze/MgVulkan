@@ -13,12 +13,7 @@ public class VkSparseImageFormatProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSparseImageFormatProperties(VkImageAspectFlags aspectMask, VkExtent3D imageGranularity, VkSparseImageFormatFlags flags) {
-        super(sizeof());
-        setAspectMask(aspectMask);
-        setImageGranularity(imageGranularity);
-        setFlags(flags);
-    }
+
 
     public VkImageAspectFlags getAspectMask() {
         return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));

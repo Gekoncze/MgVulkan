@@ -13,12 +13,7 @@ public class VkExternalBufferProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExternalBufferProperties(VkStructureType sType, VkObject pNext, VkExternalMemoryProperties externalMemoryProperties) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setExternalMemoryProperties(externalMemoryProperties);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

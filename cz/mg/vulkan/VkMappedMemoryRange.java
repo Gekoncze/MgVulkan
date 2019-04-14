@@ -13,14 +13,7 @@ public class VkMappedMemoryRange extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMappedMemoryRange(VkStructureType sType, VkObject pNext, VkDeviceMemory memory, VkDeviceSize offset, VkDeviceSize size) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setMemory(memory);
-        setOffset(offset);
-        setSize(size);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

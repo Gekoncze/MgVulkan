@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
     public VkDebugUtilsObjectTagInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_UTILS_OBJECT_TAG_INFO_EXT));
     }
 
     public VkDebugUtilsObjectTagInfoEXT(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDebugUtilsObjectTagInfoEXT(VkObject pNext, VkObjectType objectType, VkUInt64 objectHandle, VkUInt64 tagName, VkSize tagSize, VkObject pTag) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_UTILS_OBJECT_TAG_INFO_EXT));
-        setPNext(pNext);
-        setObjectType(objectType);
-        setObjectHandle(objectHandle);
-        setTagName(tagName);
-        setTagSize(tagSize);
-        setPTag(pTag);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

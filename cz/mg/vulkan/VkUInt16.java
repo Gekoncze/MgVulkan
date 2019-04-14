@@ -13,6 +13,8 @@ public class VkUInt16 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+
+
     public VkUInt16(short value) {
         super(sizeof());
         setValue(value);

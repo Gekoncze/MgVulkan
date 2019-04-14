@@ -13,13 +13,7 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExternalImageFormatPropertiesNV(VkImageFormatProperties imageFormatProperties, VkExternalMemoryFeatureFlagsNV externalMemoryFeatures, VkExternalMemoryHandleTypeFlagsNV exportFromImportedHandleTypes, VkExternalMemoryHandleTypeFlagsNV compatibleHandleTypes) {
-        super(sizeof());
-        setImageFormatProperties(imageFormatProperties);
-        setExternalMemoryFeatures(externalMemoryFeatures);
-        setExportFromImportedHandleTypes(exportFromImportedHandleTypes);
-        setCompatibleHandleTypes(compatibleHandleTypes);
-    }
+
 
     public VkImageFormatProperties getImageFormatProperties() {
         return new VkImageFormatProperties(getVkMemory(), getImageFormatProperties(getVkAddress()));

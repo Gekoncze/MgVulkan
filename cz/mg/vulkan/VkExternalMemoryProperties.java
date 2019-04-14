@@ -13,12 +13,7 @@ public class VkExternalMemoryProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkExternalMemoryProperties(VkExternalMemoryFeatureFlags externalMemoryFeatures, VkExternalMemoryHandleTypeFlags exportFromImportedHandleTypes, VkExternalMemoryHandleTypeFlags compatibleHandleTypes) {
-        super(sizeof());
-        setExternalMemoryFeatures(externalMemoryFeatures);
-        setExportFromImportedHandleTypes(exportFromImportedHandleTypes);
-        setCompatibleHandleTypes(compatibleHandleTypes);
-    }
+
 
     public VkExternalMemoryFeatureFlags getExternalMemoryFeatures() {
         return new VkExternalMemoryFeatureFlags(getVkMemory(), getExternalMemoryFeatures(getVkAddress()));

@@ -13,12 +13,7 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX(VkStructureType sType, VkObject pNext, VkBool32 perViewPositionAllComponents) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setPerViewPositionAllComponents(perViewPositionAllComponents);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

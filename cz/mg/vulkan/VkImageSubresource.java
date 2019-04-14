@@ -13,12 +13,7 @@ public class VkImageSubresource extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageSubresource(VkImageAspectFlags aspectMask, VkUInt32 mipLevel, VkUInt32 arrayLayer) {
-        super(sizeof());
-        setAspectMask(aspectMask);
-        setMipLevel(mipLevel);
-        setArrayLayer(arrayLayer);
-    }
+
 
     public VkImageAspectFlags getAspectMask() {
         return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));

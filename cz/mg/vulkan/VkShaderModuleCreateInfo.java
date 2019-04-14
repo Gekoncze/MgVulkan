@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkShaderModuleCreateInfo extends VkObject {
     public VkShaderModuleCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO));
     }
 
     public VkShaderModuleCreateInfo(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkShaderModuleCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkShaderModuleCreateInfo(VkObject pNext, VkShaderModuleCreateFlags flags, VkSize codeSize, VkUInt32 pCode) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setCodeSize(codeSize);
-        setPCode(pCode);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

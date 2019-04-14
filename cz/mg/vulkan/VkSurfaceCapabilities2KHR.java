@@ -13,12 +13,7 @@ public class VkSurfaceCapabilities2KHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSurfaceCapabilities2KHR(VkStructureType sType, VkObject pNext, VkSurfaceCapabilitiesKHR surfaceCapabilities) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSurfaceCapabilities(surfaceCapabilities);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

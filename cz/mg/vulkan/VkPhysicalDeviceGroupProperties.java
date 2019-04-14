@@ -13,14 +13,7 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceGroupProperties(VkStructureType sType, VkObject pNext, VkUInt32 physicalDeviceCount, VkPhysicalDevice physicalDevices, VkBool32 subsetAllocation) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setPhysicalDeviceCount(physicalDeviceCount);
-        setPhysicalDevices(physicalDevices);
-        setSubsetAllocation(subsetAllocation);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

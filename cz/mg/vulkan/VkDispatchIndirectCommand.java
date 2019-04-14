@@ -13,12 +13,7 @@ public class VkDispatchIndirectCommand extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDispatchIndirectCommand(VkUInt32 x, VkUInt32 y, VkUInt32 z) {
-        super(sizeof());
-        setX(x);
-        setY(y);
-        setZ(z);
-    }
+
 
     public VkUInt32 getX() {
         return new VkUInt32(getVkMemory(), getX(getVkAddress()));

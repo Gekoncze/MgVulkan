@@ -13,18 +13,7 @@ public class VkBufferMemoryBarrier extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkBufferMemoryBarrier(VkStructureType sType, VkObject pNext, VkAccessFlags srcAccessMask, VkAccessFlags dstAccessMask, VkUInt32 srcQueueFamilyIndex, VkUInt32 dstQueueFamilyIndex, VkBuffer buffer, VkDeviceSize offset, VkDeviceSize size) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setSrcAccessMask(srcAccessMask);
-        setDstAccessMask(dstAccessMask);
-        setSrcQueueFamilyIndex(srcQueueFamilyIndex);
-        setDstQueueFamilyIndex(dstQueueFamilyIndex);
-        setBuffer(buffer);
-        setOffset(offset);
-        setSize(size);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

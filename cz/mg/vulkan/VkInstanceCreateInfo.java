@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkInstanceCreateInfo extends VkObject {
     public VkInstanceCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO));
     }
 
     public VkInstanceCreateInfo(VkMemory vkmemory) {
@@ -13,17 +14,7 @@ public class VkInstanceCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkInstanceCreateInfo(VkObject pNext, VkInstanceCreateFlags flags, VkApplicationInfo pApplicationInfo, VkUInt32 enabledLayerCount, VkChar.Pointer ppEnabledLayerNames, VkUInt32 enabledExtensionCount, VkChar.Pointer ppEnabledExtensionNames) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setPApplicationInfo(pApplicationInfo);
-        setEnabledLayerCount(enabledLayerCount);
-        setPpEnabledLayerNames(ppEnabledLayerNames);
-        setEnabledExtensionCount(enabledExtensionCount);
-        setPpEnabledExtensionNames(ppEnabledExtensionNames);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

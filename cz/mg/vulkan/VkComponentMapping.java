@@ -13,13 +13,7 @@ public class VkComponentMapping extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkComponentMapping(VkComponentSwizzle r, VkComponentSwizzle g, VkComponentSwizzle b, VkComponentSwizzle a) {
-        super(sizeof());
-        setR(r);
-        setG(g);
-        setB(b);
-        setA(a);
-    }
+
 
     public VkComponentSwizzle getR() {
         return new VkComponentSwizzle(getVkMemory(), getR(getVkAddress()));

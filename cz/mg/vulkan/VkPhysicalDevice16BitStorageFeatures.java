@@ -13,15 +13,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDevice16BitStorageFeatures(VkStructureType sType, VkObject pNext, VkBool32 storageBuffer16BitAccess, VkBool32 uniformAndStorageBuffer16BitAccess, VkBool32 storagePushConstant16, VkBool32 storageInputOutput16) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setStorageBuffer16BitAccess(storageBuffer16BitAccess);
-        setUniformAndStorageBuffer16BitAccess(uniformAndStorageBuffer16BitAccess);
-        setStoragePushConstant16(storagePushConstant16);
-        setStorageInputOutput16(storageInputOutput16);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkImageViewCreateInfo extends VkObject {
     public VkImageViewCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO));
     }
 
     public VkImageViewCreateInfo(VkMemory vkmemory) {
@@ -13,17 +14,7 @@ public class VkImageViewCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageViewCreateInfo(VkObject pNext, VkImageViewCreateFlags flags, VkImage image, VkImageViewType viewType, VkFormat format, VkComponentMapping components, VkImageSubresourceRange subresourceRange) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setImage(image);
-        setViewType(viewType);
-        setFormat(format);
-        setComponents(components);
-        setSubresourceRange(subresourceRange);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

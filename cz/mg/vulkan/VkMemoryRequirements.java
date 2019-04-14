@@ -13,12 +13,7 @@ public class VkMemoryRequirements extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkMemoryRequirements(VkDeviceSize size, VkDeviceSize alignment, VkUInt32 memoryTypeBits) {
-        super(sizeof());
-        setSize(size);
-        setAlignment(alignment);
-        setMemoryTypeBits(memoryTypeBits);
-    }
+
 
     public VkDeviceSize getSize() {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));

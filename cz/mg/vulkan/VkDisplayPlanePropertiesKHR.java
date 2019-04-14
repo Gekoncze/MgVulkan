@@ -13,11 +13,7 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDisplayPlanePropertiesKHR(VkDisplayKHR currentDisplay, VkUInt32 currentStackIndex) {
-        super(sizeof());
-        setCurrentDisplay(currentDisplay);
-        setCurrentStackIndex(currentStackIndex);
-    }
+
 
     public VkDisplayKHR getCurrentDisplay() {
         return new VkDisplayKHR(getVkMemory(), getCurrentDisplay(getVkAddress()));

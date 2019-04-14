@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkGraphicsPipelineCreateInfo extends VkObject {
     public VkGraphicsPipelineCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO));
     }
 
     public VkGraphicsPipelineCreateInfo(VkMemory vkmemory) {
@@ -13,28 +14,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkGraphicsPipelineCreateInfo(VkObject pNext, VkPipelineCreateFlags flags, VkUInt32 stageCount, VkPipelineShaderStageCreateInfo pStages, VkPipelineVertexInputStateCreateInfo pVertexInputState, VkPipelineInputAssemblyStateCreateInfo pInputAssemblyState, VkPipelineTessellationStateCreateInfo pTessellationState, VkPipelineViewportStateCreateInfo pViewportState, VkPipelineRasterizationStateCreateInfo pRasterizationState, VkPipelineMultisampleStateCreateInfo pMultisampleState, VkPipelineDepthStencilStateCreateInfo pDepthStencilState, VkPipelineColorBlendStateCreateInfo pColorBlendState, VkPipelineDynamicStateCreateInfo pDynamicState, VkPipelineLayout layout, VkRenderPass renderPass, VkUInt32 subpass, VkPipeline basePipelineHandle, VkInt32 basePipelineIndex) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setStageCount(stageCount);
-        setPStages(pStages);
-        setPVertexInputState(pVertexInputState);
-        setPInputAssemblyState(pInputAssemblyState);
-        setPTessellationState(pTessellationState);
-        setPViewportState(pViewportState);
-        setPRasterizationState(pRasterizationState);
-        setPMultisampleState(pMultisampleState);
-        setPDepthStencilState(pDepthStencilState);
-        setPColorBlendState(pColorBlendState);
-        setPDynamicState(pDynamicState);
-        setLayout(layout);
-        setRenderPass(renderPass);
-        setSubpass(subpass);
-        setBasePipelineHandle(basePipelineHandle);
-        setBasePipelineIndex(basePipelineIndex);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

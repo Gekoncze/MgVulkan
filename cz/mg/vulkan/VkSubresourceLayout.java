@@ -13,14 +13,7 @@ public class VkSubresourceLayout extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkSubresourceLayout(VkDeviceSize offset, VkDeviceSize size, VkDeviceSize rowPitch, VkDeviceSize arrayPitch, VkDeviceSize depthPitch) {
-        super(sizeof());
-        setOffset(offset);
-        setSize(size);
-        setRowPitch(rowPitch);
-        setArrayPitch(arrayPitch);
-        setDepthPitch(depthPitch);
-    }
+
 
     public VkDeviceSize getOffset() {
         return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));

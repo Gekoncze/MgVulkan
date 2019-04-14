@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkImageSparseMemoryRequirementsInfo2 extends VkObject {
     public VkImageSparseMemoryRequirementsInfo2() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2));
     }
 
     public VkImageSparseMemoryRequirementsInfo2(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkImageSparseMemoryRequirementsInfo2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageSparseMemoryRequirementsInfo2(VkObject pNext, VkImage image) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2));
-        setPNext(pNext);
-        setImage(image);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

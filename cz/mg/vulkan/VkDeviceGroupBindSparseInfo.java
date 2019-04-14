@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDeviceGroupBindSparseInfo extends VkObject {
     public VkDeviceGroupBindSparseInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_BIND_SPARSE_INFO));
     }
 
     public VkDeviceGroupBindSparseInfo(VkMemory vkmemory) {
@@ -13,13 +14,7 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceGroupBindSparseInfo(VkObject pNext, VkUInt32 resourceDeviceIndex, VkUInt32 memoryDeviceIndex) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_BIND_SPARSE_INFO));
-        setPNext(pNext);
-        setResourceDeviceIndex(resourceDeviceIndex);
-        setMemoryDeviceIndex(memoryDeviceIndex);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

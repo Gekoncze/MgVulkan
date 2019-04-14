@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkShaderModuleValidationCacheCreateInfoEXT extends VkObject {
     public VkShaderModuleValidationCacheCreateInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT));
     }
 
     public VkShaderModuleValidationCacheCreateInfoEXT(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkShaderModuleValidationCacheCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkShaderModuleValidationCacheCreateInfoEXT(VkObject pNext, VkValidationCacheEXT validationCache) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT));
-        setPNext(pNext);
-        setValidationCache(validationCache);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

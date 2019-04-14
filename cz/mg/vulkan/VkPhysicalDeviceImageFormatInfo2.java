@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkPhysicalDeviceImageFormatInfo2 extends VkObject {
     public VkPhysicalDeviceImageFormatInfo2() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2));
     }
 
     public VkPhysicalDeviceImageFormatInfo2(VkMemory vkmemory) {
@@ -13,16 +14,7 @@ public class VkPhysicalDeviceImageFormatInfo2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceImageFormatInfo2(VkObject pNext, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2));
-        setPNext(pNext);
-        setFormat(format);
-        setType(type);
-        setTiling(tiling);
-        setUsage(usage);
-        setFlags(flags);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

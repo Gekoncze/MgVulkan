@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
     public VkDebugUtilsObjectNameInfoEXT() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_UTILS_OBJECT_NAME_INFO_EXT));
     }
 
     public VkDebugUtilsObjectNameInfoEXT(VkMemory vkmemory) {
@@ -13,14 +14,7 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDebugUtilsObjectNameInfoEXT(VkObject pNext, VkObjectType objectType, VkUInt64 objectHandle, VkChar pObjectName) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_UTILS_OBJECT_NAME_INFO_EXT));
-        setPNext(pNext);
-        setObjectType(objectType);
-        setObjectHandle(objectHandle);
-        setPObjectName(pObjectName);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

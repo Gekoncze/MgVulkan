@@ -13,13 +13,7 @@ public class VkDebugUtilsLabelEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDebugUtilsLabelEXT(VkStructureType sType, VkObject pNext, VkChar pLabelName, VkFloat color) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setPLabelName(pLabelName);
-        setColor(color);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkImageMemoryRequirementsInfo2 extends VkObject {
     public VkImageMemoryRequirementsInfo2() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_MEMORY_REQUIREMENTS_INFO_2));
     }
 
     public VkImageMemoryRequirementsInfo2(VkMemory vkmemory) {
@@ -13,12 +14,7 @@ public class VkImageMemoryRequirementsInfo2 extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkImageMemoryRequirementsInfo2(VkObject pNext, VkImage image) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_MEMORY_REQUIREMENTS_INFO_2));
-        setPNext(pNext);
-        setImage(image);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

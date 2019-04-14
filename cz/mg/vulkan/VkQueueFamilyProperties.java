@@ -13,13 +13,7 @@ public class VkQueueFamilyProperties extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkQueueFamilyProperties(VkQueueFlags queueFlags, VkUInt32 queueCount, VkUInt32 timestampValidBits, VkExtent3D minImageTransferGranularity) {
-        super(sizeof());
-        setQueueFlags(queueFlags);
-        setQueueCount(queueCount);
-        setTimestampValidBits(timestampValidBits);
-        setMinImageTransferGranularity(minImageTransferGranularity);
-    }
+
 
     public VkQueueFlags getQueueFlags() {
         return new VkQueueFlags(getVkMemory(), getQueueFlags(getVkAddress()));

@@ -13,11 +13,7 @@ public class VkAttachmentSampleLocationsEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkAttachmentSampleLocationsEXT(VkUInt32 attachmentIndex, VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        super(sizeof());
-        setAttachmentIndex(attachmentIndex);
-        setSampleLocationsInfo(sampleLocationsInfo);
-    }
+
 
     public VkUInt32 getAttachmentIndex() {
         return new VkUInt32(getVkMemory(), getAttachmentIndex(getVkAddress()));

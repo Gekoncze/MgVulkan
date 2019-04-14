@@ -13,11 +13,7 @@ public class VkDescriptorPoolSize extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDescriptorPoolSize(VkDescriptorType type, VkUInt32 descriptorCount) {
-        super(sizeof());
-        setType(type);
-        setDescriptorCount(descriptorCount);
-    }
+
 
     public VkDescriptorType getType() {
         return new VkDescriptorType(getVkMemory(), getType(getVkAddress()));

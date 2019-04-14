@@ -13,17 +13,7 @@ public class VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT extends VkObjec
         super(vkmemory, vkaddress);
     }
 
-    public VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT(VkStructureType sType, VkObject pNext, VkUInt32 advancedBlendMaxColorAttachments, VkBool32 advancedBlendIndependentBlend, VkBool32 advancedBlendNonPremultipliedSrcColor, VkBool32 advancedBlendNonPremultipliedDstColor, VkBool32 advancedBlendCorrelatedOverlap, VkBool32 advancedBlendAllOperations) {
-        super(sizeof());
-        setSType(sType);
-        setPNext(pNext);
-        setAdvancedBlendMaxColorAttachments(advancedBlendMaxColorAttachments);
-        setAdvancedBlendIndependentBlend(advancedBlendIndependentBlend);
-        setAdvancedBlendNonPremultipliedSrcColor(advancedBlendNonPremultipliedSrcColor);
-        setAdvancedBlendNonPremultipliedDstColor(advancedBlendNonPremultipliedDstColor);
-        setAdvancedBlendCorrelatedOverlap(advancedBlendCorrelatedOverlap);
-        setAdvancedBlendAllOperations(advancedBlendAllOperations);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

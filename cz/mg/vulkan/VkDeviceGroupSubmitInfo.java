@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkDeviceGroupSubmitInfo extends VkObject {
     public VkDeviceGroupSubmitInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_SUBMIT_INFO));
     }
 
     public VkDeviceGroupSubmitInfo(VkMemory vkmemory) {
@@ -13,17 +14,7 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkDeviceGroupSubmitInfo(VkObject pNext, VkUInt32 waitSemaphoreCount, VkUInt32 pWaitSemaphoreDeviceIndices, VkUInt32 commandBufferCount, VkUInt32 pCommandBufferDeviceMasks, VkUInt32 signalSemaphoreCount, VkUInt32 pSignalSemaphoreDeviceIndices) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_SUBMIT_INFO));
-        setPNext(pNext);
-        setWaitSemaphoreCount(waitSemaphoreCount);
-        setPWaitSemaphoreDeviceIndices(pWaitSemaphoreDeviceIndices);
-        setCommandBufferCount(commandBufferCount);
-        setPCommandBufferDeviceMasks(pCommandBufferDeviceMasks);
-        setSignalSemaphoreCount(signalSemaphoreCount);
-        setPSignalSemaphoreDeviceIndices(pSignalSemaphoreDeviceIndices);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));

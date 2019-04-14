@@ -3,6 +3,7 @@ package cz.mg.vulkan;
 public class VkFramebufferCreateInfo extends VkObject {
     public VkFramebufferCreateInfo() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO));
     }
 
     public VkFramebufferCreateInfo(VkMemory vkmemory) {
@@ -13,18 +14,7 @@ public class VkFramebufferCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-    public VkFramebufferCreateInfo(VkObject pNext, VkFramebufferCreateFlags flags, VkRenderPass renderPass, VkUInt32 attachmentCount, VkImageView pAttachments, VkUInt32 width, VkUInt32 height, VkUInt32 layers) {
-        super(sizeof());
-        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO));
-        setPNext(pNext);
-        setFlags(flags);
-        setRenderPass(renderPass);
-        setAttachmentCount(attachmentCount);
-        setPAttachments(pAttachments);
-        setWidth(width);
-        setHeight(height);
-        setLayers(layers);
-    }
+
 
     public VkStructureType getSType() {
         return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
