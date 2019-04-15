@@ -25,6 +25,10 @@ public class VkMappedMemoryRange extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -68,6 +72,10 @@ public class VkMappedMemoryRange extends VkObject {
         
     }
 
+    public long getOffsetQ() {
+        return getOffset().getValue();
+    }
+
     public void setOffset(long offset) {
         getOffset().setValue(offset);
     }
@@ -83,6 +91,10 @@ public class VkMappedMemoryRange extends VkObject {
     public void setSize(VkDeviceSize size) {
         setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getSizeQ() {
+        return getSize().getValue();
     }
 
     public void setSize(long size) {

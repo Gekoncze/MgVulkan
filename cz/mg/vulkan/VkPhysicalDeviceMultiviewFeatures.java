@@ -25,6 +25,10 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         
     }
 
+    public int getMultiviewQ() {
+        return getMultiview().getValue();
+    }
+
     public void setMultiview(int multiview) {
         getMultiview().setValue(multiview);
     }
@@ -72,6 +80,10 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
         
     }
 
+    public int getMultiviewGeometryShaderQ() {
+        return getMultiviewGeometryShader().getValue();
+    }
+
     public void setMultiviewGeometryShader(int multiviewGeometryShader) {
         getMultiviewGeometryShader().setValue(multiviewGeometryShader);
     }
@@ -87,6 +99,10 @@ public class VkPhysicalDeviceMultiviewFeatures extends VkObject {
     public void setMultiviewTessellationShader(VkBool32 multiviewTessellationShader) {
         setMultiviewTessellationShader(getVkAddress(), multiviewTessellationShader != null ? multiviewTessellationShader.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMultiviewTessellationShaderQ() {
+        return getMultiviewTessellationShader().getValue();
     }
 
     public void setMultiviewTessellationShader(int multiviewTessellationShader) {

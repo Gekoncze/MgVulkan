@@ -26,6 +26,10 @@ public class VkBindImageMemoryInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -80,6 +84,10 @@ public class VkBindImageMemoryInfo extends VkObject {
     public void setMemoryOffset(VkDeviceSize memoryOffset) {
         setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getMemoryOffsetQ() {
+        return getMemoryOffset().getValue();
     }
 
     public void setMemoryOffset(long memoryOffset) {

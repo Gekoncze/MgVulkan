@@ -38,6 +38,10 @@ public class VkClearRect extends VkObject {
         
     }
 
+    public int getBaseArrayLayerQ() {
+        return getBaseArrayLayer().getValue();
+    }
+
     public void setBaseArrayLayer(int baseArrayLayer) {
         getBaseArrayLayer().setValue(baseArrayLayer);
     }
@@ -53,6 +57,10 @@ public class VkClearRect extends VkObject {
     public void setLayerCount(VkUInt32 layerCount) {
         setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getLayerCountQ() {
+        return getLayerCount().getValue();
     }
 
     public void setLayerCount(int layerCount) {

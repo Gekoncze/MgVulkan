@@ -26,6 +26,10 @@ public class VkFenceCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkFenceCreateInfo extends VkObject {
     public void setFlags(VkFenceCreateFlags flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {

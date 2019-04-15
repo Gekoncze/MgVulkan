@@ -26,6 +26,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
     public void setFlags(VkPipelineCreateFlags flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {
@@ -110,6 +118,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
     public void setBasePipelineIndex(VkInt32 basePipelineIndex) {
         setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getBasePipelineIndexQ() {
+        return getBasePipelineIndex().getValue();
     }
 
     public void setBasePipelineIndex(int basePipelineIndex) {

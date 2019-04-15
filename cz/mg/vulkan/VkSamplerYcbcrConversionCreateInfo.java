@@ -26,6 +26,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         
     }
 
+    public int getFormatQ() {
+        return getFormat().getValue();
+    }
+
     public void setFormat(int format) {
         getFormat().setValue(format);
     }
@@ -73,6 +81,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         
     }
 
+    public int getYcbcrModelQ() {
+        return getYcbcrModel().getValue();
+    }
+
     public void setYcbcrModel(int ycbcrModel) {
         getYcbcrModel().setValue(ycbcrModel);
     }
@@ -88,6 +100,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
     public void setYcbcrRange(VkSamplerYcbcrRange ycbcrRange) {
         setYcbcrRange(getVkAddress(), ycbcrRange != null ? ycbcrRange.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getYcbcrRangeQ() {
+        return getYcbcrRange().getValue();
     }
 
     public void setYcbcrRange(int ycbcrRange) {
@@ -120,6 +136,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         
     }
 
+    public int getXChromaOffsetQ() {
+        return getXChromaOffset().getValue();
+    }
+
     public void setXChromaOffset(int xChromaOffset) {
         getXChromaOffset().setValue(xChromaOffset);
     }
@@ -135,6 +155,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
     public void setYChromaOffset(VkChromaLocation yChromaOffset) {
         setYChromaOffset(getVkAddress(), yChromaOffset != null ? yChromaOffset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getYChromaOffsetQ() {
+        return getYChromaOffset().getValue();
     }
 
     public void setYChromaOffset(int yChromaOffset) {
@@ -154,6 +178,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
         
     }
 
+    public int getChromaFilterQ() {
+        return getChromaFilter().getValue();
+    }
+
     public void setChromaFilter(int chromaFilter) {
         getChromaFilter().setValue(chromaFilter);
     }
@@ -169,6 +197,10 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
     public void setForceExplicitReconstruction(VkBool32 forceExplicitReconstruction) {
         setForceExplicitReconstruction(getVkAddress(), forceExplicitReconstruction != null ? forceExplicitReconstruction.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getForceExplicitReconstructionQ() {
+        return getForceExplicitReconstruction().getValue();
     }
 
     public void setForceExplicitReconstruction(int forceExplicitReconstruction) {

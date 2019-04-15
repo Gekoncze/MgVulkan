@@ -25,6 +25,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         
     }
 
+    public int getResidencyStandard2DBlockShapeQ() {
+        return getResidencyStandard2DBlockShape().getValue();
+    }
+
     public void setResidencyStandard2DBlockShape(int residencyStandard2DBlockShape) {
         getResidencyStandard2DBlockShape().setValue(residencyStandard2DBlockShape);
     }
@@ -40,6 +44,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
     public void setResidencyStandard2DMultisampleBlockShape(VkBool32 residencyStandard2DMultisampleBlockShape) {
         setResidencyStandard2DMultisampleBlockShape(getVkAddress(), residencyStandard2DMultisampleBlockShape != null ? residencyStandard2DMultisampleBlockShape.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getResidencyStandard2DMultisampleBlockShapeQ() {
+        return getResidencyStandard2DMultisampleBlockShape().getValue();
     }
 
     public void setResidencyStandard2DMultisampleBlockShape(int residencyStandard2DMultisampleBlockShape) {
@@ -59,6 +67,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         
     }
 
+    public int getResidencyStandard3DBlockShapeQ() {
+        return getResidencyStandard3DBlockShape().getValue();
+    }
+
     public void setResidencyStandard3DBlockShape(int residencyStandard3DBlockShape) {
         getResidencyStandard3DBlockShape().setValue(residencyStandard3DBlockShape);
     }
@@ -76,6 +88,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
         
     }
 
+    public int getResidencyAlignedMipSizeQ() {
+        return getResidencyAlignedMipSize().getValue();
+    }
+
     public void setResidencyAlignedMipSize(int residencyAlignedMipSize) {
         getResidencyAlignedMipSize().setValue(residencyAlignedMipSize);
     }
@@ -91,6 +107,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
     public void setResidencyNonResidentStrict(VkBool32 residencyNonResidentStrict) {
         setResidencyNonResidentStrict(getVkAddress(), residencyNonResidentStrict != null ? residencyNonResidentStrict.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getResidencyNonResidentStrictQ() {
+        return getResidencyNonResidentStrict().getValue();
     }
 
     public void setResidencyNonResidentStrict(int residencyNonResidentStrict) {

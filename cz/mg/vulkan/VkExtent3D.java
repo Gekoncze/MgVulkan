@@ -30,6 +30,10 @@ public class VkExtent3D extends VkObject {
         
     }
 
+    public int getWidthQ() {
+        return getWidth().getValue();
+    }
+
     public void setWidth(int width) {
         getWidth().setValue(width);
     }
@@ -47,6 +51,10 @@ public class VkExtent3D extends VkObject {
         
     }
 
+    public int getHeightQ() {
+        return getHeight().getValue();
+    }
+
     public void setHeight(int height) {
         getHeight().setValue(height);
     }
@@ -62,6 +70,10 @@ public class VkExtent3D extends VkObject {
     public void setDepth(VkUInt32 depth) {
         setDepth(getVkAddress(), depth != null ? depth.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDepthQ() {
+        return getDepth().getValue();
     }
 
     public void setDepth(int depth) {

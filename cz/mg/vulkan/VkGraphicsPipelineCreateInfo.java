@@ -26,6 +26,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
     public void setStageCount(VkUInt32 stageCount) {
         setStageCount(getVkAddress(), stageCount != null ? stageCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getStageCountQ() {
+        return getStageCount().getValue();
     }
 
     public void setStageCount(int stageCount) {
@@ -246,6 +258,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         
     }
 
+    public int getSubpassQ() {
+        return getSubpass().getValue();
+    }
+
     public void setSubpass(int subpass) {
         getSubpass().setValue(subpass);
     }
@@ -274,6 +290,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
     public void setBasePipelineIndex(VkInt32 basePipelineIndex) {
         setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getBasePipelineIndexQ() {
+        return getBasePipelineIndex().getValue();
     }
 
     public void setBasePipelineIndex(int basePipelineIndex) {

@@ -26,6 +26,10 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
     public void setAspectReferenceCount(VkUInt32 aspectReferenceCount) {
         setAspectReferenceCount(getVkAddress(), aspectReferenceCount != null ? aspectReferenceCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getAspectReferenceCountQ() {
+        return getAspectReferenceCount().getValue();
     }
 
     public void setAspectReferenceCount(int aspectReferenceCount) {

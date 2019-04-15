@@ -25,6 +25,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
         
     }
 
+    public int getPresentIDQ() {
+        return getPresentID().getValue();
+    }
+
     public void setPresentID(int presentID) {
         getPresentID().setValue(presentID);
     }
@@ -40,6 +44,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
     public void setDesiredPresentTime(VkUInt64 desiredPresentTime) {
         setDesiredPresentTime(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getDesiredPresentTimeQ() {
+        return getDesiredPresentTime().getValue();
     }
 
     public void setDesiredPresentTime(long desiredPresentTime) {
@@ -59,6 +67,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
         
     }
 
+    public long getActualPresentTimeQ() {
+        return getActualPresentTime().getValue();
+    }
+
     public void setActualPresentTime(long actualPresentTime) {
         getActualPresentTime().setValue(actualPresentTime);
     }
@@ -76,6 +88,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
         
     }
 
+    public long getEarliestPresentTimeQ() {
+        return getEarliestPresentTime().getValue();
+    }
+
     public void setEarliestPresentTime(long earliestPresentTime) {
         getEarliestPresentTime().setValue(earliestPresentTime);
     }
@@ -91,6 +107,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
     public void setPresentMargin(VkUInt64 presentMargin) {
         setPresentMargin(getVkAddress(), presentMargin != null ? presentMargin.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getPresentMarginQ() {
+        return getPresentMargin().getValue();
     }
 
     public void setPresentMargin(long presentMargin) {

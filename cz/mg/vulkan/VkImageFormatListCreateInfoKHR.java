@@ -26,6 +26,10 @@ public class VkImageFormatListCreateInfoKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkImageFormatListCreateInfoKHR extends VkObject {
     public void setViewFormatCount(VkUInt32 viewFormatCount) {
         setViewFormatCount(getVkAddress(), viewFormatCount != null ? viewFormatCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getViewFormatCountQ() {
+        return getViewFormatCount().getValue();
     }
 
     public void setViewFormatCount(int viewFormatCount) {

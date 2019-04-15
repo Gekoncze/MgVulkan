@@ -26,6 +26,10 @@ public class VkCommandPoolCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkCommandPoolCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkCommandPoolCreateInfo extends VkObject {
     public void setQueueFamilyIndex(VkUInt32 queueFamilyIndex) {
         setQueueFamilyIndex(getVkAddress(), queueFamilyIndex != null ? queueFamilyIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getQueueFamilyIndexQ() {
+        return getQueueFamilyIndex().getValue();
     }
 
     public void setQueueFamilyIndex(int queueFamilyIndex) {

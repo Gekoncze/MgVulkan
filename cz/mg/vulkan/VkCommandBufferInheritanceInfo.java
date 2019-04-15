@@ -26,6 +26,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -69,6 +73,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         
     }
 
+    public int getSubpassQ() {
+        return getSubpass().getValue();
+    }
+
     public void setSubpass(int subpass) {
         getSubpass().setValue(subpass);
     }
@@ -99,6 +107,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         
     }
 
+    public int getOcclusionQueryEnableQ() {
+        return getOcclusionQueryEnable().getValue();
+    }
+
     public void setOcclusionQueryEnable(int occlusionQueryEnable) {
         getOcclusionQueryEnable().setValue(occlusionQueryEnable);
     }
@@ -116,6 +128,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         
     }
 
+    public int getQueryFlagsQ() {
+        return getQueryFlags().getValue();
+    }
+
     public void setQueryFlags(int queryFlags) {
         getQueryFlags().setValue(queryFlags);
     }
@@ -131,6 +147,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
     public void setPipelineStatistics(VkQueryPipelineStatisticFlags pipelineStatistics) {
         setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPipelineStatisticsQ() {
+        return getPipelineStatistics().getValue();
     }
 
     public void setPipelineStatistics(int pipelineStatistics) {

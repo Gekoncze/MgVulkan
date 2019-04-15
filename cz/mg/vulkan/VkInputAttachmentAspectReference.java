@@ -25,6 +25,10 @@ public class VkInputAttachmentAspectReference extends VkObject {
         
     }
 
+    public int getSubpassQ() {
+        return getSubpass().getValue();
+    }
+
     public void setSubpass(int subpass) {
         getSubpass().setValue(subpass);
     }
@@ -42,6 +46,10 @@ public class VkInputAttachmentAspectReference extends VkObject {
         
     }
 
+    public int getInputAttachmentIndexQ() {
+        return getInputAttachmentIndex().getValue();
+    }
+
     public void setInputAttachmentIndex(int inputAttachmentIndex) {
         getInputAttachmentIndex().setValue(inputAttachmentIndex);
     }
@@ -57,6 +65,10 @@ public class VkInputAttachmentAspectReference extends VkObject {
     public void setAspectMask(VkImageAspectFlags aspectMask) {
         setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getAspectMaskQ() {
+        return getAspectMask().getValue();
     }
 
     public void setAspectMask(int aspectMask) {

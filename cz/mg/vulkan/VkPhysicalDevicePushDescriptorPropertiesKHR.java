@@ -25,6 +25,10 @@ public class VkPhysicalDevicePushDescriptorPropertiesKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkPhysicalDevicePushDescriptorPropertiesKHR extends VkObject {
     public void setMaxPushDescriptors(VkUInt32 maxPushDescriptors) {
         setMaxPushDescriptors(getVkAddress(), maxPushDescriptors != null ? maxPushDescriptors.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMaxPushDescriptorsQ() {
+        return getMaxPushDescriptors().getValue();
     }
 
     public void setMaxPushDescriptors(int maxPushDescriptors) {

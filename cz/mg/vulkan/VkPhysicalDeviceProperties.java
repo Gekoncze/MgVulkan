@@ -25,6 +25,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         
     }
 
+    public int getApiVersionQ() {
+        return getApiVersion().getValue();
+    }
+
     public void setApiVersion(int apiVersion) {
         getApiVersion().setValue(apiVersion);
     }
@@ -40,6 +44,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
     public void setDriverVersion(VkUInt32 driverVersion) {
         setDriverVersion(getVkAddress(), driverVersion != null ? driverVersion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDriverVersionQ() {
+        return getDriverVersion().getValue();
     }
 
     public void setDriverVersion(int driverVersion) {
@@ -59,6 +67,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         
     }
 
+    public int getVendorIDQ() {
+        return getVendorID().getValue();
+    }
+
     public void setVendorID(int vendorID) {
         getVendorID().setValue(vendorID);
     }
@@ -74,6 +86,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
     public void setDeviceID(VkUInt32 deviceID) {
         setDeviceID(getVkAddress(), deviceID != null ? deviceID.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDeviceIDQ() {
+        return getDeviceID().getValue();
     }
 
     public void setDeviceID(int deviceID) {
@@ -93,6 +109,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
         
     }
 
+    public int getDeviceTypeQ() {
+        return getDeviceType().getValue();
+    }
+
     public void setDeviceType(int deviceType) {
         getDeviceType().setValue(deviceType);
     }
@@ -108,6 +128,14 @@ public class VkPhysicalDeviceProperties extends VkObject {
     public void setDeviceName(VkChar deviceName) {
         setDeviceName(getVkAddress(), deviceName != null ? deviceName.getVkAddress() : VkPointer.NULL);
         
+    }
+
+    public String getDeviceNameQ() {
+        return new VkString(getDeviceName()).toString();
+    }
+
+    public void setDeviceName(String deviceName) {
+        setDeviceName(new VkString(deviceName));
     }
 
     private static native long getDeviceName(long address);

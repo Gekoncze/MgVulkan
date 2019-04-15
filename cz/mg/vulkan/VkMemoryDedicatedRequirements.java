@@ -25,6 +25,10 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         
     }
 
+    public int getPrefersDedicatedAllocationQ() {
+        return getPrefersDedicatedAllocation().getValue();
+    }
+
     public void setPrefersDedicatedAllocation(int prefersDedicatedAllocation) {
         getPrefersDedicatedAllocation().setValue(prefersDedicatedAllocation);
     }
@@ -70,6 +78,10 @@ public class VkMemoryDedicatedRequirements extends VkObject {
     public void setRequiresDedicatedAllocation(VkBool32 requiresDedicatedAllocation) {
         setRequiresDedicatedAllocation(getVkAddress(), requiresDedicatedAllocation != null ? requiresDedicatedAllocation.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getRequiresDedicatedAllocationQ() {
+        return getRequiresDedicatedAllocation().getValue();
     }
 
     public void setRequiresDedicatedAllocation(int requiresDedicatedAllocation) {

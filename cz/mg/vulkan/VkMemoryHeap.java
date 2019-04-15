@@ -25,6 +25,10 @@ public class VkMemoryHeap extends VkObject {
         
     }
 
+    public long getSizeQ() {
+        return getSize().getValue();
+    }
+
     public void setSize(long size) {
         getSize().setValue(size);
     }
@@ -40,6 +44,10 @@ public class VkMemoryHeap extends VkObject {
     public void setFlags(VkMemoryHeapFlags flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {

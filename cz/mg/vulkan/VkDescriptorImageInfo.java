@@ -51,6 +51,10 @@ public class VkDescriptorImageInfo extends VkObject {
         
     }
 
+    public int getImageLayoutQ() {
+        return getImageLayout().getValue();
+    }
+
     public void setImageLayout(int imageLayout) {
         getImageLayout().setValue(imageLayout);
     }

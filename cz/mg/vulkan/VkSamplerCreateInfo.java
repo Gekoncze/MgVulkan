@@ -26,6 +26,10 @@ public class VkSamplerCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkSamplerCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkSamplerCreateInfo extends VkObject {
     public void setMagFilter(VkFilter magFilter) {
         setMagFilter(getVkAddress(), magFilter != null ? magFilter.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMagFilterQ() {
+        return getMagFilter().getValue();
     }
 
     public void setMagFilter(int magFilter) {
@@ -90,6 +102,10 @@ public class VkSamplerCreateInfo extends VkObject {
         
     }
 
+    public int getMinFilterQ() {
+        return getMinFilter().getValue();
+    }
+
     public void setMinFilter(int minFilter) {
         getMinFilter().setValue(minFilter);
     }
@@ -105,6 +121,10 @@ public class VkSamplerCreateInfo extends VkObject {
     public void setMipmapMode(VkSamplerMipmapMode mipmapMode) {
         setMipmapMode(getVkAddress(), mipmapMode != null ? mipmapMode.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMipmapModeQ() {
+        return getMipmapMode().getValue();
     }
 
     public void setMipmapMode(int mipmapMode) {
@@ -124,6 +144,10 @@ public class VkSamplerCreateInfo extends VkObject {
         
     }
 
+    public int getAddressModeUQ() {
+        return getAddressModeU().getValue();
+    }
+
     public void setAddressModeU(int addressModeU) {
         getAddressModeU().setValue(addressModeU);
     }
@@ -139,6 +163,10 @@ public class VkSamplerCreateInfo extends VkObject {
     public void setAddressModeV(VkSamplerAddressMode addressModeV) {
         setAddressModeV(getVkAddress(), addressModeV != null ? addressModeV.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getAddressModeVQ() {
+        return getAddressModeV().getValue();
     }
 
     public void setAddressModeV(int addressModeV) {
@@ -158,6 +186,10 @@ public class VkSamplerCreateInfo extends VkObject {
         
     }
 
+    public int getAddressModeWQ() {
+        return getAddressModeW().getValue();
+    }
+
     public void setAddressModeW(int addressModeW) {
         getAddressModeW().setValue(addressModeW);
     }
@@ -173,6 +205,10 @@ public class VkSamplerCreateInfo extends VkObject {
     public void setMipLodBias(VkFloat mipLodBias) {
         setMipLodBias(getVkAddress(), mipLodBias != null ? mipLodBias.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public float getMipLodBiasQ() {
+        return getMipLodBias().getValue();
     }
 
     public void setMipLodBias(float mipLodBias) {
@@ -192,6 +228,10 @@ public class VkSamplerCreateInfo extends VkObject {
         
     }
 
+    public int getAnisotropyEnableQ() {
+        return getAnisotropyEnable().getValue();
+    }
+
     public void setAnisotropyEnable(int anisotropyEnable) {
         getAnisotropyEnable().setValue(anisotropyEnable);
     }
@@ -207,6 +247,10 @@ public class VkSamplerCreateInfo extends VkObject {
     public void setMaxAnisotropy(VkFloat maxAnisotropy) {
         setMaxAnisotropy(getVkAddress(), maxAnisotropy != null ? maxAnisotropy.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public float getMaxAnisotropyQ() {
+        return getMaxAnisotropy().getValue();
     }
 
     public void setMaxAnisotropy(float maxAnisotropy) {
@@ -226,6 +270,10 @@ public class VkSamplerCreateInfo extends VkObject {
         
     }
 
+    public int getCompareEnableQ() {
+        return getCompareEnable().getValue();
+    }
+
     public void setCompareEnable(int compareEnable) {
         getCompareEnable().setValue(compareEnable);
     }
@@ -241,6 +289,10 @@ public class VkSamplerCreateInfo extends VkObject {
     public void setCompareOp(VkCompareOp compareOp) {
         setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getCompareOpQ() {
+        return getCompareOp().getValue();
     }
 
     public void setCompareOp(int compareOp) {
@@ -260,6 +312,10 @@ public class VkSamplerCreateInfo extends VkObject {
         
     }
 
+    public float getMinLodQ() {
+        return getMinLod().getValue();
+    }
+
     public void setMinLod(float minLod) {
         getMinLod().setValue(minLod);
     }
@@ -275,6 +331,10 @@ public class VkSamplerCreateInfo extends VkObject {
     public void setMaxLod(VkFloat maxLod) {
         setMaxLod(getVkAddress(), maxLod != null ? maxLod.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public float getMaxLodQ() {
+        return getMaxLod().getValue();
     }
 
     public void setMaxLod(float maxLod) {
@@ -294,6 +354,10 @@ public class VkSamplerCreateInfo extends VkObject {
         
     }
 
+    public int getBorderColorQ() {
+        return getBorderColor().getValue();
+    }
+
     public void setBorderColor(int borderColor) {
         getBorderColor().setValue(borderColor);
     }
@@ -309,6 +373,10 @@ public class VkSamplerCreateInfo extends VkObject {
     public void setUnnormalizedCoordinates(VkBool32 unnormalizedCoordinates) {
         setUnnormalizedCoordinates(getVkAddress(), unnormalizedCoordinates != null ? unnormalizedCoordinates.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getUnnormalizedCoordinatesQ() {
+        return getUnnormalizedCoordinates().getValue();
     }
 
     public void setUnnormalizedCoordinates(int unnormalizedCoordinates) {

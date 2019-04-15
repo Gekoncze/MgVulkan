@@ -26,6 +26,10 @@ public class VkRenderPassCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkRenderPassCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkRenderPassCreateInfo extends VkObject {
     public void setAttachmentCount(VkUInt32 attachmentCount) {
         setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getAttachmentCountQ() {
+        return getAttachmentCount().getValue();
     }
 
     public void setAttachmentCount(int attachmentCount) {
@@ -103,6 +115,10 @@ public class VkRenderPassCreateInfo extends VkObject {
         
     }
 
+    public int getSubpassCountQ() {
+        return getSubpassCount().getValue();
+    }
+
     public void setSubpassCount(int subpassCount) {
         getSubpassCount().setValue(subpassCount);
     }
@@ -131,6 +147,10 @@ public class VkRenderPassCreateInfo extends VkObject {
     public void setDependencyCount(VkUInt32 dependencyCount) {
         setDependencyCount(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDependencyCountQ() {
+        return getDependencyCount().getValue();
     }
 
     public void setDependencyCount(int dependencyCount) {

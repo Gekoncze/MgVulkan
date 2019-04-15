@@ -26,6 +26,10 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkPipelineCacheCreateInfo extends VkObject {
     public void setInitialDataSize(VkSize initialDataSize) {
         setInitialDataSize(getVkAddress(), initialDataSize != null ? initialDataSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getInitialDataSizeQ() {
+        return getInitialDataSize().getValue();
     }
 
     public void setInitialDataSize(long initialDataSize) {

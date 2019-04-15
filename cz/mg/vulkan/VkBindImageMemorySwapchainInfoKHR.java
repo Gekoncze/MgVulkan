@@ -26,6 +26,10 @@ public class VkBindImageMemorySwapchainInfoKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -67,6 +71,10 @@ public class VkBindImageMemorySwapchainInfoKHR extends VkObject {
     public void setImageIndex(VkUInt32 imageIndex) {
         setImageIndex(getVkAddress(), imageIndex != null ? imageIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getImageIndexQ() {
+        return getImageIndex().getValue();
     }
 
     public void setImageIndex(int imageIndex) {

@@ -26,6 +26,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
     public void setStage(VkShaderStageFlagBits stage) {
         setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getStageQ() {
+        return getStage().getValue();
     }
 
     public void setStage(int stage) {
@@ -101,6 +113,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
     public void setPName(VkChar pName) {
         setPName(getVkAddress(), pName != null ? pName.getVkAddress() : VkPointer.NULL);
         this.pName = pName;
+    }
+
+    public String getPNameQ() {
+        return new VkString(getPName()).toString();
     }
 
     public void setPName(String pName) {

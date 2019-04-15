@@ -26,6 +26,10 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
     public void setVertexBindingDescriptionCount(VkUInt32 vertexBindingDescriptionCount) {
         setVertexBindingDescriptionCount(getVkAddress(), vertexBindingDescriptionCount != null ? vertexBindingDescriptionCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getVertexBindingDescriptionCountQ() {
+        return getVertexBindingDescriptionCount().getValue();
     }
 
     public void setVertexBindingDescriptionCount(int vertexBindingDescriptionCount) {
@@ -101,6 +113,10 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
     public void setVertexAttributeDescriptionCount(VkUInt32 vertexAttributeDescriptionCount) {
         setVertexAttributeDescriptionCount(getVkAddress(), vertexAttributeDescriptionCount != null ? vertexAttributeDescriptionCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getVertexAttributeDescriptionCountQ() {
+        return getVertexAttributeDescriptionCount().getValue();
     }
 
     public void setVertexAttributeDescriptionCount(int vertexAttributeDescriptionCount) {

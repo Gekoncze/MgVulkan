@@ -25,6 +25,10 @@ public class VkObjectTableEntryNVX extends VkObject {
         
     }
 
+    public int getTypeQ() {
+        return getType().getValue();
+    }
+
     public void setType(int type) {
         getType().setValue(type);
     }
@@ -40,6 +44,10 @@ public class VkObjectTableEntryNVX extends VkObject {
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {

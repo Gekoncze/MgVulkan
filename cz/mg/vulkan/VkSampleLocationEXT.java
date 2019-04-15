@@ -25,6 +25,10 @@ public class VkSampleLocationEXT extends VkObject {
         
     }
 
+    public float getXQ() {
+        return getX().getValue();
+    }
+
     public void setX(float x) {
         getX().setValue(x);
     }
@@ -40,6 +44,10 @@ public class VkSampleLocationEXT extends VkObject {
     public void setY(VkFloat y) {
         setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public float getYQ() {
+        return getY().getValue();
     }
 
     public void setY(float y) {

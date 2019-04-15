@@ -26,6 +26,10 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
     public void setSwapchainCount(VkUInt32 swapchainCount) {
         setSwapchainCount(getVkAddress(), swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSwapchainCountQ() {
+        return getSwapchainCount().getValue();
     }
 
     public void setSwapchainCount(int swapchainCount) {

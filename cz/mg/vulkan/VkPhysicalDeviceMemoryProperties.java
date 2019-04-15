@@ -25,6 +25,10 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         
     }
 
+    public int getMemoryTypeCountQ() {
+        return getMemoryTypeCount().getValue();
+    }
+
     public void setMemoryTypeCount(int memoryTypeCount) {
         getMemoryTypeCount().setValue(memoryTypeCount);
     }
@@ -53,6 +57,10 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
     public void setMemoryHeapCount(VkUInt32 memoryHeapCount) {
         setMemoryHeapCount(getVkAddress(), memoryHeapCount != null ? memoryHeapCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMemoryHeapCountQ() {
+        return getMemoryHeapCount().getValue();
     }
 
     public void setMemoryHeapCount(int memoryHeapCount) {

@@ -25,6 +25,10 @@ public class VkSurfaceFormatKHR extends VkObject {
         
     }
 
+    public int getFormatQ() {
+        return getFormat().getValue();
+    }
+
     public void setFormat(int format) {
         getFormat().setValue(format);
     }
@@ -40,6 +44,10 @@ public class VkSurfaceFormatKHR extends VkObject {
     public void setColorSpace(VkColorSpaceKHR colorSpace) {
         setColorSpace(getVkAddress(), colorSpace != null ? colorSpace.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getColorSpaceQ() {
+        return getColorSpace().getValue();
     }
 
     public void setColorSpace(int colorSpace) {

@@ -26,6 +26,10 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -73,6 +81,10 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
         
     }
 
+    public int getUsageQ() {
+        return getUsage().getValue();
+    }
+
     public void setUsage(int usage) {
         getUsage().setValue(usage);
     }
@@ -88,6 +100,10 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
     public void setHandleType(VkExternalMemoryHandleTypeFlagBits handleType) {
         setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getHandleTypeQ() {
+        return getHandleType().getValue();
     }
 
     public void setHandleType(int handleType) {

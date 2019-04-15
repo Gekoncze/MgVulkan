@@ -26,6 +26,10 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
     public void setBindingCount(VkUInt32 bindingCount) {
         setBindingCount(getVkAddress(), bindingCount != null ? bindingCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getBindingCountQ() {
+        return getBindingCount().getValue();
     }
 
     public void setBindingCount(int bindingCount) {

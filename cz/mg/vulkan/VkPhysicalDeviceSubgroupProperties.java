@@ -25,6 +25,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         
     }
 
+    public int getSubgroupSizeQ() {
+        return getSubgroupSize().getValue();
+    }
+
     public void setSubgroupSize(int subgroupSize) {
         getSubgroupSize().setValue(subgroupSize);
     }
@@ -70,6 +78,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
     public void setSupportedStages(VkShaderStageFlags supportedStages) {
         setSupportedStages(getVkAddress(), supportedStages != null ? supportedStages.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSupportedStagesQ() {
+        return getSupportedStages().getValue();
     }
 
     public void setSupportedStages(int supportedStages) {
@@ -89,6 +101,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         
     }
 
+    public int getSupportedOperationsQ() {
+        return getSupportedOperations().getValue();
+    }
+
     public void setSupportedOperations(int supportedOperations) {
         getSupportedOperations().setValue(supportedOperations);
     }
@@ -104,6 +120,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
     public void setQuadOperationsInAllStages(VkBool32 quadOperationsInAllStages) {
         setQuadOperationsInAllStages(getVkAddress(), quadOperationsInAllStages != null ? quadOperationsInAllStages.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getQuadOperationsInAllStagesQ() {
+        return getQuadOperationsInAllStages().getValue();
     }
 
     public void setQuadOperationsInAllStages(int quadOperationsInAllStages) {

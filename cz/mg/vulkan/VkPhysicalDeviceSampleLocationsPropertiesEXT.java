@@ -25,6 +25,10 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
     public void setSampleLocationSampleCounts(VkSampleCountFlags sampleLocationSampleCounts) {
         setSampleLocationSampleCounts(getVkAddress(), sampleLocationSampleCounts != null ? sampleLocationSampleCounts.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSampleLocationSampleCountsQ() {
+        return getSampleLocationSampleCounts().getValue();
     }
 
     public void setSampleLocationSampleCounts(int sampleLocationSampleCounts) {
@@ -98,6 +106,10 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         
     }
 
+    public int getSampleLocationSubPixelBitsQ() {
+        return getSampleLocationSubPixelBits().getValue();
+    }
+
     public void setSampleLocationSubPixelBits(int sampleLocationSubPixelBits) {
         getSampleLocationSubPixelBits().setValue(sampleLocationSubPixelBits);
     }
@@ -113,6 +125,10 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
     public void setVariableSampleLocations(VkBool32 variableSampleLocations) {
         setVariableSampleLocations(getVkAddress(), variableSampleLocations != null ? variableSampleLocations.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getVariableSampleLocationsQ() {
+        return getVariableSampleLocations().getValue();
     }
 
     public void setVariableSampleLocations(int variableSampleLocations) {

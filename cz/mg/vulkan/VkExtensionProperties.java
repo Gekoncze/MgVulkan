@@ -25,6 +25,14 @@ public class VkExtensionProperties extends VkObject {
         
     }
 
+    public String getExtensionNameQ() {
+        return new VkString(getExtensionName()).toString();
+    }
+
+    public void setExtensionName(String extensionName) {
+        setExtensionName(new VkString(extensionName));
+    }
+
     private static native long getExtensionName(long address);
     private static native void setExtensionName(long address, long extensionName);
 
@@ -36,6 +44,10 @@ public class VkExtensionProperties extends VkObject {
     public void setSpecVersion(VkUInt32 specVersion) {
         setSpecVersion(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSpecVersionQ() {
+        return getSpecVersion().getValue();
     }
 
     public void setSpecVersion(int specVersion) {

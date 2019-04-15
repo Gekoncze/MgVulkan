@@ -38,6 +38,10 @@ public class VkDescriptorBufferInfo extends VkObject {
         
     }
 
+    public long getOffsetQ() {
+        return getOffset().getValue();
+    }
+
     public void setOffset(long offset) {
         getOffset().setValue(offset);
     }
@@ -53,6 +57,10 @@ public class VkDescriptorBufferInfo extends VkObject {
     public void setRange(VkDeviceSize range) {
         setRange(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getRangeQ() {
+        return getRange().getValue();
     }
 
     public void setRange(long range) {

@@ -25,6 +25,10 @@ public class VkPhysicalDeviceShaderDrawParameterFeatures extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkPhysicalDeviceShaderDrawParameterFeatures extends VkObject {
     public void setShaderDrawParameters(VkBool32 shaderDrawParameters) {
         setShaderDrawParameters(getVkAddress(), shaderDrawParameters != null ? shaderDrawParameters.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getShaderDrawParametersQ() {
+        return getShaderDrawParameters().getValue();
     }
 
     public void setShaderDrawParameters(int shaderDrawParameters) {

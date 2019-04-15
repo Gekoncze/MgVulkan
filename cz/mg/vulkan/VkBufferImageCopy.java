@@ -25,6 +25,10 @@ public class VkBufferImageCopy extends VkObject {
         
     }
 
+    public long getBufferOffsetQ() {
+        return getBufferOffset().getValue();
+    }
+
     public void setBufferOffset(long bufferOffset) {
         getBufferOffset().setValue(bufferOffset);
     }
@@ -42,6 +46,10 @@ public class VkBufferImageCopy extends VkObject {
         
     }
 
+    public int getBufferRowLengthQ() {
+        return getBufferRowLength().getValue();
+    }
+
     public void setBufferRowLength(int bufferRowLength) {
         getBufferRowLength().setValue(bufferRowLength);
     }
@@ -57,6 +65,10 @@ public class VkBufferImageCopy extends VkObject {
     public void setBufferImageHeight(VkUInt32 bufferImageHeight) {
         setBufferImageHeight(getVkAddress(), bufferImageHeight != null ? bufferImageHeight.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getBufferImageHeightQ() {
+        return getBufferImageHeight().getValue();
     }
 
     public void setBufferImageHeight(int bufferImageHeight) {

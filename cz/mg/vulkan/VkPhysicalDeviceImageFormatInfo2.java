@@ -26,6 +26,10 @@ public class VkPhysicalDeviceImageFormatInfo2 extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPhysicalDeviceImageFormatInfo2 extends VkObject {
         
     }
 
+    public int getFormatQ() {
+        return getFormat().getValue();
+    }
+
     public void setFormat(int format) {
         getFormat().setValue(format);
     }
@@ -71,6 +79,10 @@ public class VkPhysicalDeviceImageFormatInfo2 extends VkObject {
     public void setType(VkImageType type) {
         setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getTypeQ() {
+        return getType().getValue();
     }
 
     public void setType(int type) {
@@ -90,6 +102,10 @@ public class VkPhysicalDeviceImageFormatInfo2 extends VkObject {
         
     }
 
+    public int getTilingQ() {
+        return getTiling().getValue();
+    }
+
     public void setTiling(int tiling) {
         getTiling().setValue(tiling);
     }
@@ -107,6 +123,10 @@ public class VkPhysicalDeviceImageFormatInfo2 extends VkObject {
         
     }
 
+    public int getUsageQ() {
+        return getUsage().getValue();
+    }
+
     public void setUsage(int usage) {
         getUsage().setValue(usage);
     }
@@ -122,6 +142,10 @@ public class VkPhysicalDeviceImageFormatInfo2 extends VkObject {
     public void setFlags(VkImageCreateFlags flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {

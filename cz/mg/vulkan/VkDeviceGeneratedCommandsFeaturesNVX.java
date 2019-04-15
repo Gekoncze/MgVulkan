@@ -25,6 +25,10 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
     public void setComputeBindingPointSupport(VkBool32 computeBindingPointSupport) {
         setComputeBindingPointSupport(getVkAddress(), computeBindingPointSupport != null ? computeBindingPointSupport.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getComputeBindingPointSupportQ() {
+        return getComputeBindingPointSupport().getValue();
     }
 
     public void setComputeBindingPointSupport(int computeBindingPointSupport) {

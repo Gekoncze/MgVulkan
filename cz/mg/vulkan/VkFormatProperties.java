@@ -25,6 +25,10 @@ public class VkFormatProperties extends VkObject {
         
     }
 
+    public int getLinearTilingFeaturesQ() {
+        return getLinearTilingFeatures().getValue();
+    }
+
     public void setLinearTilingFeatures(int linearTilingFeatures) {
         getLinearTilingFeatures().setValue(linearTilingFeatures);
     }
@@ -42,6 +46,10 @@ public class VkFormatProperties extends VkObject {
         
     }
 
+    public int getOptimalTilingFeaturesQ() {
+        return getOptimalTilingFeatures().getValue();
+    }
+
     public void setOptimalTilingFeatures(int optimalTilingFeatures) {
         getOptimalTilingFeatures().setValue(optimalTilingFeatures);
     }
@@ -57,6 +65,10 @@ public class VkFormatProperties extends VkObject {
     public void setBufferFeatures(VkFormatFeatureFlags bufferFeatures) {
         setBufferFeatures(getVkAddress(), bufferFeatures != null ? bufferFeatures.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getBufferFeaturesQ() {
+        return getBufferFeatures().getValue();
     }
 
     public void setBufferFeatures(int bufferFeatures) {

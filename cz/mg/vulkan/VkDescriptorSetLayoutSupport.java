@@ -25,6 +25,10 @@ public class VkDescriptorSetLayoutSupport extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkDescriptorSetLayoutSupport extends VkObject {
     public void setSupported(VkBool32 supported) {
         setSupported(getVkAddress(), supported != null ? supported.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSupportedQ() {
+        return getSupported().getValue();
     }
 
     public void setSupported(int supported) {

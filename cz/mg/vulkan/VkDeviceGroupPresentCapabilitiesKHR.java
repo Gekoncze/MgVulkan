@@ -25,6 +25,10 @@ public class VkDeviceGroupPresentCapabilitiesKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -66,6 +70,10 @@ public class VkDeviceGroupPresentCapabilitiesKHR extends VkObject {
     public void setModes(VkDeviceGroupPresentModeFlagsKHR modes) {
         setModes(getVkAddress(), modes != null ? modes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getModesQ() {
+        return getModes().getValue();
     }
 
     public void setModes(int modes) {

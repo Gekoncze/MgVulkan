@@ -26,6 +26,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
     public void setObjectCount(VkUInt32 objectCount) {
         setObjectCount(getVkAddress(), objectCount != null ? objectCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getObjectCountQ() {
+        return getObjectCount().getValue();
     }
 
     public void setObjectCount(int objectCount) {
@@ -112,6 +120,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         
     }
 
+    public int getMaxUniformBuffersPerDescriptorQ() {
+        return getMaxUniformBuffersPerDescriptor().getValue();
+    }
+
     public void setMaxUniformBuffersPerDescriptor(int maxUniformBuffersPerDescriptor) {
         getMaxUniformBuffersPerDescriptor().setValue(maxUniformBuffersPerDescriptor);
     }
@@ -127,6 +139,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
     public void setMaxStorageBuffersPerDescriptor(VkUInt32 maxStorageBuffersPerDescriptor) {
         setMaxStorageBuffersPerDescriptor(getVkAddress(), maxStorageBuffersPerDescriptor != null ? maxStorageBuffersPerDescriptor.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMaxStorageBuffersPerDescriptorQ() {
+        return getMaxStorageBuffersPerDescriptor().getValue();
     }
 
     public void setMaxStorageBuffersPerDescriptor(int maxStorageBuffersPerDescriptor) {
@@ -146,6 +162,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         
     }
 
+    public int getMaxStorageImagesPerDescriptorQ() {
+        return getMaxStorageImagesPerDescriptor().getValue();
+    }
+
     public void setMaxStorageImagesPerDescriptor(int maxStorageImagesPerDescriptor) {
         getMaxStorageImagesPerDescriptor().setValue(maxStorageImagesPerDescriptor);
     }
@@ -163,6 +183,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         
     }
 
+    public int getMaxSampledImagesPerDescriptorQ() {
+        return getMaxSampledImagesPerDescriptor().getValue();
+    }
+
     public void setMaxSampledImagesPerDescriptor(int maxSampledImagesPerDescriptor) {
         getMaxSampledImagesPerDescriptor().setValue(maxSampledImagesPerDescriptor);
     }
@@ -178,6 +202,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
     public void setMaxPipelineLayouts(VkUInt32 maxPipelineLayouts) {
         setMaxPipelineLayouts(getVkAddress(), maxPipelineLayouts != null ? maxPipelineLayouts.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMaxPipelineLayoutsQ() {
+        return getMaxPipelineLayouts().getValue();
     }
 
     public void setMaxPipelineLayouts(int maxPipelineLayouts) {

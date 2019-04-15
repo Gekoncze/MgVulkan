@@ -26,6 +26,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -73,6 +81,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         
     }
 
+    public int getMessageSeverityQ() {
+        return getMessageSeverity().getValue();
+    }
+
     public void setMessageSeverity(int messageSeverity) {
         getMessageSeverity().setValue(messageSeverity);
     }
@@ -88,6 +100,10 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
     public void setMessageType(VkDebugUtilsMessageTypeFlagsEXT messageType) {
         setMessageType(getVkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMessageTypeQ() {
+        return getMessageType().getValue();
     }
 
     public void setMessageType(int messageType) {

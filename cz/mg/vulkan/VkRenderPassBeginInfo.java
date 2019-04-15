@@ -26,6 +26,10 @@ public class VkRenderPassBeginInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -93,6 +97,10 @@ public class VkRenderPassBeginInfo extends VkObject {
     public void setClearValueCount(VkUInt32 clearValueCount) {
         setClearValueCount(getVkAddress(), clearValueCount != null ? clearValueCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getClearValueCountQ() {
+        return getClearValueCount().getValue();
     }
 
     public void setClearValueCount(int clearValueCount) {

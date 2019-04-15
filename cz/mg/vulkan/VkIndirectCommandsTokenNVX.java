@@ -25,6 +25,10 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
         
     }
 
+    public int getTokenTypeQ() {
+        return getTokenType().getValue();
+    }
+
     public void setTokenType(int tokenType) {
         getTokenType().setValue(tokenType);
     }
@@ -53,6 +57,10 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
     public void setOffset(VkDeviceSize offset) {
         setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getOffsetQ() {
+        return getOffset().getValue();
     }
 
     public void setOffset(long offset) {

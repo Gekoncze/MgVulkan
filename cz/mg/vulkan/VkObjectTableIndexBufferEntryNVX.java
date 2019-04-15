@@ -25,6 +25,10 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         
     }
 
+    public int getTypeQ() {
+        return getType().getValue();
+    }
+
     public void setType(int type) {
         getType().setValue(type);
     }
@@ -40,6 +44,10 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {
@@ -70,6 +78,10 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
     public void setIndexType(VkIndexType indexType) {
         setIndexType(getVkAddress(), indexType != null ? indexType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getIndexTypeQ() {
+        return getIndexType().getValue();
     }
 
     public void setIndexType(int indexType) {

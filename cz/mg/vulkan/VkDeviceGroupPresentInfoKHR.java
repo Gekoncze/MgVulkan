@@ -26,6 +26,10 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         
     }
 
+    public int getSwapchainCountQ() {
+        return getSwapchainCount().getValue();
+    }
+
     public void setSwapchainCount(int swapchainCount) {
         getSwapchainCount().setValue(swapchainCount);
     }
@@ -84,6 +92,10 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
     public void setMode(VkDeviceGroupPresentModeFlagBitsKHR mode) {
         setMode(getVkAddress(), mode != null ? mode.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getModeQ() {
+        return getMode().getValue();
     }
 
     public void setMode(int mode) {

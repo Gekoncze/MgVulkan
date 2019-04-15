@@ -26,6 +26,10 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         
     }
 
+    public int getDeviceIndexCountQ() {
+        return getDeviceIndexCount().getValue();
+    }
+
     public void setDeviceIndexCount(int deviceIndexCount) {
         getDeviceIndexCount().setValue(deviceIndexCount);
     }
@@ -84,6 +92,10 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
     public void setSplitInstanceBindRegionCount(VkUInt32 splitInstanceBindRegionCount) {
         setSplitInstanceBindRegionCount(getVkAddress(), splitInstanceBindRegionCount != null ? splitInstanceBindRegionCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSplitInstanceBindRegionCountQ() {
+        return getSplitInstanceBindRegionCount().getValue();
     }
 
     public void setSplitInstanceBindRegionCount(int splitInstanceBindRegionCount) {

@@ -26,6 +26,10 @@ public class VkCommandBufferAllocateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -69,6 +73,10 @@ public class VkCommandBufferAllocateInfo extends VkObject {
         
     }
 
+    public int getLevelQ() {
+        return getLevel().getValue();
+    }
+
     public void setLevel(int level) {
         getLevel().setValue(level);
     }
@@ -84,6 +92,10 @@ public class VkCommandBufferAllocateInfo extends VkObject {
     public void setCommandBufferCount(VkUInt32 commandBufferCount) {
         setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getCommandBufferCountQ() {
+        return getCommandBufferCount().getValue();
     }
 
     public void setCommandBufferCount(int commandBufferCount) {

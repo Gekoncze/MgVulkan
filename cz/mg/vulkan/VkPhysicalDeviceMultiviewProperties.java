@@ -25,6 +25,10 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
         
     }
 
+    public int getMaxMultiviewViewCountQ() {
+        return getMaxMultiviewViewCount().getValue();
+    }
+
     public void setMaxMultiviewViewCount(int maxMultiviewViewCount) {
         getMaxMultiviewViewCount().setValue(maxMultiviewViewCount);
     }
@@ -70,6 +78,10 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
     public void setMaxMultiviewInstanceIndex(VkUInt32 maxMultiviewInstanceIndex) {
         setMaxMultiviewInstanceIndex(getVkAddress(), maxMultiviewInstanceIndex != null ? maxMultiviewInstanceIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMaxMultiviewInstanceIndexQ() {
+        return getMaxMultiviewInstanceIndex().getValue();
     }
 
     public void setMaxMultiviewInstanceIndex(int maxMultiviewInstanceIndex) {

@@ -25,6 +25,10 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
         
     }
 
+    public long getRefreshDurationQ() {
+        return getRefreshDuration().getValue();
+    }
+
     public void setRefreshDuration(long refreshDuration) {
         getRefreshDuration().setValue(refreshDuration);
     }

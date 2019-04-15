@@ -26,6 +26,10 @@ public class VkPresentInfoKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPresentInfoKHR extends VkObject {
         
     }
 
+    public int getWaitSemaphoreCountQ() {
+        return getWaitSemaphoreCount().getValue();
+    }
+
     public void setWaitSemaphoreCount(int waitSemaphoreCount) {
         getWaitSemaphoreCount().setValue(waitSemaphoreCount);
     }
@@ -84,6 +92,10 @@ public class VkPresentInfoKHR extends VkObject {
     public void setSwapchainCount(VkUInt32 swapchainCount) {
         setSwapchainCount(getVkAddress(), swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSwapchainCountQ() {
+        return getSwapchainCount().getValue();
     }
 
     public void setSwapchainCount(int swapchainCount) {

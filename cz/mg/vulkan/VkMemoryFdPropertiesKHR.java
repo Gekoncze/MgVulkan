@@ -25,6 +25,10 @@ public class VkMemoryFdPropertiesKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkMemoryFdPropertiesKHR extends VkObject {
     public void setMemoryTypeBits(VkUInt32 memoryTypeBits) {
         setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMemoryTypeBitsQ() {
+        return getMemoryTypeBits().getValue();
     }
 
     public void setMemoryTypeBits(int memoryTypeBits) {

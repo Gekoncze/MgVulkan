@@ -25,6 +25,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -70,6 +78,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
     public void setPMessageIdName(VkChar pMessageIdName) {
         setPMessageIdName(getVkAddress(), pMessageIdName != null ? pMessageIdName.getVkAddress() : VkPointer.NULL);
         this.pMessageIdName = pMessageIdName;
+    }
+
+    public String getPMessageIdNameQ() {
+        return new VkString(getPMessageIdName()).toString();
     }
 
     public void setPMessageIdName(String pMessageIdName) {
@@ -89,6 +101,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         
     }
 
+    public int getMessageIdNumberQ() {
+        return getMessageIdNumber().getValue();
+    }
+
     public void setMessageIdNumber(int messageIdNumber) {
         getMessageIdNumber().setValue(messageIdNumber);
     }
@@ -106,6 +122,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         this.pMessage = pMessage;
     }
 
+    public String getPMessageQ() {
+        return new VkString(getPMessage()).toString();
+    }
+
     public void setPMessage(String pMessage) {
         setPMessage(new VkString(pMessage));
     }
@@ -121,6 +141,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
     public void setQueueLabelCount(VkUInt32 queueLabelCount) {
         setQueueLabelCount(getVkAddress(), queueLabelCount != null ? queueLabelCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getQueueLabelCountQ() {
+        return getQueueLabelCount().getValue();
     }
 
     public void setQueueLabelCount(int queueLabelCount) {
@@ -153,6 +177,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         
     }
 
+    public int getCmdBufLabelCountQ() {
+        return getCmdBufLabelCount().getValue();
+    }
+
     public void setCmdBufLabelCount(int cmdBufLabelCount) {
         getCmdBufLabelCount().setValue(cmdBufLabelCount);
     }
@@ -181,6 +209,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
     public void setObjectCount(VkUInt32 objectCount) {
         setObjectCount(getVkAddress(), objectCount != null ? objectCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getObjectCountQ() {
+        return getObjectCount().getValue();
     }
 
     public void setObjectCount(int objectCount) {

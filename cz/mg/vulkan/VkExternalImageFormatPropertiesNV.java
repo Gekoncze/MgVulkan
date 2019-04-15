@@ -38,6 +38,10 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         
     }
 
+    public int getExternalMemoryFeaturesQ() {
+        return getExternalMemoryFeatures().getValue();
+    }
+
     public void setExternalMemoryFeatures(int externalMemoryFeatures) {
         getExternalMemoryFeatures().setValue(externalMemoryFeatures);
     }
@@ -55,6 +59,10 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         
     }
 
+    public int getExportFromImportedHandleTypesQ() {
+        return getExportFromImportedHandleTypes().getValue();
+    }
+
     public void setExportFromImportedHandleTypes(int exportFromImportedHandleTypes) {
         getExportFromImportedHandleTypes().setValue(exportFromImportedHandleTypes);
     }
@@ -70,6 +78,10 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
     public void setCompatibleHandleTypes(VkExternalMemoryHandleTypeFlagsNV compatibleHandleTypes) {
         setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getCompatibleHandleTypesQ() {
+        return getCompatibleHandleTypes().getValue();
     }
 
     public void setCompatibleHandleTypes(int compatibleHandleTypes) {

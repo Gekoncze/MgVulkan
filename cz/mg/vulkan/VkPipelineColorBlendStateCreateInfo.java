@@ -26,6 +26,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
     public void setLogicOpEnable(VkBool32 logicOpEnable) {
         setLogicOpEnable(getVkAddress(), logicOpEnable != null ? logicOpEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getLogicOpEnableQ() {
+        return getLogicOpEnable().getValue();
     }
 
     public void setLogicOpEnable(int logicOpEnable) {
@@ -90,6 +102,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         
     }
 
+    public int getLogicOpQ() {
+        return getLogicOp().getValue();
+    }
+
     public void setLogicOp(int logicOp) {
         getLogicOp().setValue(logicOp);
     }
@@ -105,6 +121,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
     public void setAttachmentCount(VkUInt32 attachmentCount) {
         setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getAttachmentCountQ() {
+        return getAttachmentCount().getValue();
     }
 
     public void setAttachmentCount(int attachmentCount) {

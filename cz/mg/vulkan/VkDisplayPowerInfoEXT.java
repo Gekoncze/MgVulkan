@@ -26,6 +26,10 @@ public class VkDisplayPowerInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkDisplayPowerInfoEXT extends VkObject {
     public void setPowerState(VkDisplayPowerStateEXT powerState) {
         setPowerState(getVkAddress(), powerState != null ? powerState.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPowerStateQ() {
+        return getPowerState().getValue();
     }
 
     public void setPowerState(int powerState) {

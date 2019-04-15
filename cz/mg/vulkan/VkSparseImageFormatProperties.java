@@ -25,6 +25,10 @@ public class VkSparseImageFormatProperties extends VkObject {
         
     }
 
+    public int getAspectMaskQ() {
+        return getAspectMask().getValue();
+    }
+
     public void setAspectMask(int aspectMask) {
         getAspectMask().setValue(aspectMask);
     }
@@ -53,6 +57,10 @@ public class VkSparseImageFormatProperties extends VkObject {
     public void setFlags(VkSparseImageFormatFlags flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {

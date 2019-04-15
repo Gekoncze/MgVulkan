@@ -25,6 +25,10 @@ public class VkTextureLODGatherFormatPropertiesAMD extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkTextureLODGatherFormatPropertiesAMD extends VkObject {
     public void setSupportsTextureGatherLODBiasAMD(VkBool32 supportsTextureGatherLODBiasAMD) {
         setSupportsTextureGatherLODBiasAMD(getVkAddress(), supportsTextureGatherLODBiasAMD != null ? supportsTextureGatherLODBiasAMD.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSupportsTextureGatherLODBiasAMDQ() {
+        return getSupportsTextureGatherLODBiasAMD().getValue();
     }
 
     public void setSupportsTextureGatherLODBiasAMD(int supportsTextureGatherLODBiasAMD) {

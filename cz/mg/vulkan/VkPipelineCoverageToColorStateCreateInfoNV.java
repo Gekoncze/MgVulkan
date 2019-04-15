@@ -26,6 +26,10 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -73,6 +81,10 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         
     }
 
+    public int getCoverageToColorEnableQ() {
+        return getCoverageToColorEnable().getValue();
+    }
+
     public void setCoverageToColorEnable(int coverageToColorEnable) {
         getCoverageToColorEnable().setValue(coverageToColorEnable);
     }
@@ -88,6 +100,10 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
     public void setCoverageToColorLocation(VkUInt32 coverageToColorLocation) {
         setCoverageToColorLocation(getVkAddress(), coverageToColorLocation != null ? coverageToColorLocation.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getCoverageToColorLocationQ() {
+        return getCoverageToColorLocation().getValue();
     }
 
     public void setCoverageToColorLocation(int coverageToColorLocation) {

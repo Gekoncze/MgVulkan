@@ -25,6 +25,10 @@ public class VkStencilOpState extends VkObject {
         
     }
 
+    public int getFailOpQ() {
+        return getFailOp().getValue();
+    }
+
     public void setFailOp(int failOp) {
         getFailOp().setValue(failOp);
     }
@@ -40,6 +44,10 @@ public class VkStencilOpState extends VkObject {
     public void setPassOp(VkStencilOp passOp) {
         setPassOp(getVkAddress(), passOp != null ? passOp.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPassOpQ() {
+        return getPassOp().getValue();
     }
 
     public void setPassOp(int passOp) {
@@ -59,6 +67,10 @@ public class VkStencilOpState extends VkObject {
         
     }
 
+    public int getDepthFailOpQ() {
+        return getDepthFailOp().getValue();
+    }
+
     public void setDepthFailOp(int depthFailOp) {
         getDepthFailOp().setValue(depthFailOp);
     }
@@ -74,6 +86,10 @@ public class VkStencilOpState extends VkObject {
     public void setCompareOp(VkCompareOp compareOp) {
         setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getCompareOpQ() {
+        return getCompareOp().getValue();
     }
 
     public void setCompareOp(int compareOp) {
@@ -93,6 +109,10 @@ public class VkStencilOpState extends VkObject {
         
     }
 
+    public int getCompareMaskQ() {
+        return getCompareMask().getValue();
+    }
+
     public void setCompareMask(int compareMask) {
         getCompareMask().setValue(compareMask);
     }
@@ -110,6 +130,10 @@ public class VkStencilOpState extends VkObject {
         
     }
 
+    public int getWriteMaskQ() {
+        return getWriteMask().getValue();
+    }
+
     public void setWriteMask(int writeMask) {
         getWriteMask().setValue(writeMask);
     }
@@ -125,6 +149,10 @@ public class VkStencilOpState extends VkObject {
     public void setReference(VkUInt32 reference) {
         setReference(getVkAddress(), reference != null ? reference.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getReferenceQ() {
+        return getReference().getValue();
     }
 
     public void setReference(int reference) {

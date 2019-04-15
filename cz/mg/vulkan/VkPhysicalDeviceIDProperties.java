@@ -25,6 +25,10 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -94,6 +98,10 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
         
     }
 
+    public int getDeviceNodeMaskQ() {
+        return getDeviceNodeMask().getValue();
+    }
+
     public void setDeviceNodeMask(int deviceNodeMask) {
         getDeviceNodeMask().setValue(deviceNodeMask);
     }
@@ -109,6 +117,10 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
     public void setDeviceLUIDValid(VkBool32 deviceLUIDValid) {
         setDeviceLUIDValid(getVkAddress(), deviceLUIDValid != null ? deviceLUIDValid.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDeviceLUIDValidQ() {
+        return getDeviceLUIDValid().getValue();
     }
 
     public void setDeviceLUIDValid(int deviceLUIDValid) {

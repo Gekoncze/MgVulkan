@@ -25,6 +25,10 @@ public class VkViewportWScalingNV extends VkObject {
         
     }
 
+    public float getXcoeffQ() {
+        return getXcoeff().getValue();
+    }
+
     public void setXcoeff(float xcoeff) {
         getXcoeff().setValue(xcoeff);
     }
@@ -40,6 +44,10 @@ public class VkViewportWScalingNV extends VkObject {
     public void setYcoeff(VkFloat ycoeff) {
         setYcoeff(getVkAddress(), ycoeff != null ? ycoeff.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public float getYcoeffQ() {
+        return getYcoeff().getValue();
     }
 
     public void setYcoeff(float ycoeff) {

@@ -26,6 +26,10 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -73,6 +81,10 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         
     }
 
+    public int getDiscardRectangleModeQ() {
+        return getDiscardRectangleMode().getValue();
+    }
+
     public void setDiscardRectangleMode(int discardRectangleMode) {
         getDiscardRectangleMode().setValue(discardRectangleMode);
     }
@@ -88,6 +100,10 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
     public void setDiscardRectangleCount(VkUInt32 discardRectangleCount) {
         setDiscardRectangleCount(getVkAddress(), discardRectangleCount != null ? discardRectangleCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDiscardRectangleCountQ() {
+        return getDiscardRectangleCount().getValue();
     }
 
     public void setDiscardRectangleCount(int discardRectangleCount) {

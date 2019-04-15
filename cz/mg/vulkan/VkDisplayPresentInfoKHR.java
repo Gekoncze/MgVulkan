@@ -26,6 +26,10 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -80,6 +84,10 @@ public class VkDisplayPresentInfoKHR extends VkObject {
     public void setPersistent(VkBool32 persistent) {
         setPersistent(getVkAddress(), persistent != null ? persistent.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPersistentQ() {
+        return getPersistent().getValue();
     }
 
     public void setPersistent(int persistent) {

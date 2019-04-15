@@ -25,6 +25,10 @@ public class VkPhysicalDeviceSamplerYcbcrConversionFeatures extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkPhysicalDeviceSamplerYcbcrConversionFeatures extends VkObject {
     public void setSamplerYcbcrConversion(VkBool32 samplerYcbcrConversion) {
         setSamplerYcbcrConversion(getVkAddress(), samplerYcbcrConversion != null ? samplerYcbcrConversion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSamplerYcbcrConversionQ() {
+        return getSamplerYcbcrConversion().getValue();
     }
 
     public void setSamplerYcbcrConversion(int samplerYcbcrConversion) {

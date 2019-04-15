@@ -38,6 +38,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
         this.displayName = displayName;
     }
 
+    public String getDisplayNameQ() {
+        return new VkString(getDisplayName()).toString();
+    }
+
     public void setDisplayName(String displayName) {
         setDisplayName(new VkString(displayName));
     }
@@ -81,6 +85,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
         
     }
 
+    public int getSupportedTransformsQ() {
+        return getSupportedTransforms().getValue();
+    }
+
     public void setSupportedTransforms(int supportedTransforms) {
         getSupportedTransforms().setValue(supportedTransforms);
     }
@@ -98,6 +106,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
         
     }
 
+    public int getPlaneReorderPossibleQ() {
+        return getPlaneReorderPossible().getValue();
+    }
+
     public void setPlaneReorderPossible(int planeReorderPossible) {
         getPlaneReorderPossible().setValue(planeReorderPossible);
     }
@@ -113,6 +125,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
     public void setPersistentContent(VkBool32 persistentContent) {
         setPersistentContent(getVkAddress(), persistentContent != null ? persistentContent.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPersistentContentQ() {
+        return getPersistentContent().getValue();
     }
 
     public void setPersistentContent(int persistentContent) {

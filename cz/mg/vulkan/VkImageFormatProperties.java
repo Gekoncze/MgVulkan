@@ -38,6 +38,10 @@ public class VkImageFormatProperties extends VkObject {
         
     }
 
+    public int getMaxMipLevelsQ() {
+        return getMaxMipLevels().getValue();
+    }
+
     public void setMaxMipLevels(int maxMipLevels) {
         getMaxMipLevels().setValue(maxMipLevels);
     }
@@ -53,6 +57,10 @@ public class VkImageFormatProperties extends VkObject {
     public void setMaxArrayLayers(VkUInt32 maxArrayLayers) {
         setMaxArrayLayers(getVkAddress(), maxArrayLayers != null ? maxArrayLayers.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMaxArrayLayersQ() {
+        return getMaxArrayLayers().getValue();
     }
 
     public void setMaxArrayLayers(int maxArrayLayers) {
@@ -72,6 +80,10 @@ public class VkImageFormatProperties extends VkObject {
         
     }
 
+    public int getSampleCountsQ() {
+        return getSampleCounts().getValue();
+    }
+
     public void setSampleCounts(int sampleCounts) {
         getSampleCounts().setValue(sampleCounts);
     }
@@ -87,6 +99,10 @@ public class VkImageFormatProperties extends VkObject {
     public void setMaxResourceSize(VkDeviceSize maxResourceSize) {
         setMaxResourceSize(getVkAddress(), maxResourceSize != null ? maxResourceSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getMaxResourceSizeQ() {
+        return getMaxResourceSize().getValue();
     }
 
     public void setMaxResourceSize(long maxResourceSize) {

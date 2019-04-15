@@ -29,6 +29,10 @@ public class VkExtent2D extends VkObject {
         
     }
 
+    public int getWidthQ() {
+        return getWidth().getValue();
+    }
+
     public void setWidth(int width) {
         getWidth().setValue(width);
     }
@@ -44,6 +48,10 @@ public class VkExtent2D extends VkObject {
     public void setHeight(VkUInt32 height) {
         setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getHeightQ() {
+        return getHeight().getValue();
     }
 
     public void setHeight(int height) {

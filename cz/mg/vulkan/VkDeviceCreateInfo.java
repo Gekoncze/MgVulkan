@@ -26,6 +26,10 @@ public class VkDeviceCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkDeviceCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkDeviceCreateInfo extends VkObject {
     public void setQueueCreateInfoCount(VkUInt32 queueCreateInfoCount) {
         setQueueCreateInfoCount(getVkAddress(), queueCreateInfoCount != null ? queueCreateInfoCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getQueueCreateInfoCountQ() {
+        return getQueueCreateInfoCount().getValue();
     }
 
     public void setQueueCreateInfoCount(int queueCreateInfoCount) {
@@ -103,6 +115,10 @@ public class VkDeviceCreateInfo extends VkObject {
         
     }
 
+    public int getEnabledLayerCountQ() {
+        return getEnabledLayerCount().getValue();
+    }
+
     public void setEnabledLayerCount(int enabledLayerCount) {
         getEnabledLayerCount().setValue(enabledLayerCount);
     }
@@ -131,6 +147,10 @@ public class VkDeviceCreateInfo extends VkObject {
     public void setEnabledExtensionCount(VkUInt32 enabledExtensionCount) {
         setEnabledExtensionCount(getVkAddress(), enabledExtensionCount != null ? enabledExtensionCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getEnabledExtensionCountQ() {
+        return getEnabledExtensionCount().getValue();
     }
 
     public void setEnabledExtensionCount(int enabledExtensionCount) {

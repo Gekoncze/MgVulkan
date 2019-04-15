@@ -26,6 +26,10 @@ public class VkImportMemoryFdInfoKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkImportMemoryFdInfoKHR extends VkObject {
         
     }
 
+    public int getHandleTypeQ() {
+        return getHandleType().getValue();
+    }
+
     public void setHandleType(int handleType) {
         getHandleType().setValue(handleType);
     }
@@ -71,6 +79,10 @@ public class VkImportMemoryFdInfoKHR extends VkObject {
     public void setFd(VkInt fd) {
         setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFdQ() {
+        return getFd().getValue();
     }
 
     public void setFd(int fd) {

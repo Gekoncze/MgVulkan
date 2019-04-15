@@ -25,6 +25,10 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         
     }
 
+    public int getMinImageCountQ() {
+        return getMinImageCount().getValue();
+    }
+
     public void setMinImageCount(int minImageCount) {
         getMinImageCount().setValue(minImageCount);
     }
@@ -70,6 +78,10 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
     public void setMaxImageCount(VkUInt32 maxImageCount) {
         setMaxImageCount(getVkAddress(), maxImageCount != null ? maxImageCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMaxImageCountQ() {
+        return getMaxImageCount().getValue();
     }
 
     public void setMaxImageCount(int maxImageCount) {
@@ -128,6 +140,10 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         
     }
 
+    public int getMaxImageArrayLayersQ() {
+        return getMaxImageArrayLayers().getValue();
+    }
+
     public void setMaxImageArrayLayers(int maxImageArrayLayers) {
         getMaxImageArrayLayers().setValue(maxImageArrayLayers);
     }
@@ -143,6 +159,10 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
     public void setSupportedTransforms(VkSurfaceTransformFlagsKHR supportedTransforms) {
         setSupportedTransforms(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSupportedTransformsQ() {
+        return getSupportedTransforms().getValue();
     }
 
     public void setSupportedTransforms(int supportedTransforms) {
@@ -162,6 +182,10 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         
     }
 
+    public int getCurrentTransformQ() {
+        return getCurrentTransform().getValue();
+    }
+
     public void setCurrentTransform(int currentTransform) {
         getCurrentTransform().setValue(currentTransform);
     }
@@ -177,6 +201,10 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
     public void setSupportedCompositeAlpha(VkCompositeAlphaFlagsKHR supportedCompositeAlpha) {
         setSupportedCompositeAlpha(getVkAddress(), supportedCompositeAlpha != null ? supportedCompositeAlpha.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSupportedCompositeAlphaQ() {
+        return getSupportedCompositeAlpha().getValue();
     }
 
     public void setSupportedCompositeAlpha(int supportedCompositeAlpha) {
@@ -196,6 +224,10 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         
     }
 
+    public int getSupportedUsageFlagsQ() {
+        return getSupportedUsageFlags().getValue();
+    }
+
     public void setSupportedUsageFlags(int supportedUsageFlags) {
         getSupportedUsageFlags().setValue(supportedUsageFlags);
     }
@@ -211,6 +243,10 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
     public void setSupportedSurfaceCounters(VkSurfaceCounterFlagsEXT supportedSurfaceCounters) {
         setSupportedSurfaceCounters(getVkAddress(), supportedSurfaceCounters != null ? supportedSurfaceCounters.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSupportedSurfaceCountersQ() {
+        return getSupportedSurfaceCounters().getValue();
     }
 
     public void setSupportedSurfaceCounters(int supportedSurfaceCounters) {

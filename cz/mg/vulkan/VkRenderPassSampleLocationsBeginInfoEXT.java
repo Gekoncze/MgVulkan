@@ -26,6 +26,10 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         
     }
 
+    public int getAttachmentInitialSampleLocationsCountQ() {
+        return getAttachmentInitialSampleLocationsCount().getValue();
+    }
+
     public void setAttachmentInitialSampleLocationsCount(int attachmentInitialSampleLocationsCount) {
         getAttachmentInitialSampleLocationsCount().setValue(attachmentInitialSampleLocationsCount);
     }
@@ -84,6 +92,10 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
     public void setPostSubpassSampleLocationsCount(VkUInt32 postSubpassSampleLocationsCount) {
         setPostSubpassSampleLocationsCount(getVkAddress(), postSubpassSampleLocationsCount != null ? postSubpassSampleLocationsCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPostSubpassSampleLocationsCountQ() {
+        return getPostSubpassSampleLocationsCount().getValue();
     }
 
     public void setPostSubpassSampleLocationsCount(int postSubpassSampleLocationsCount) {

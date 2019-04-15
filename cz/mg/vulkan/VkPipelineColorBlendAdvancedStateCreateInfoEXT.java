@@ -26,6 +26,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         
     }
 
+    public int getSrcPremultipliedQ() {
+        return getSrcPremultiplied().getValue();
+    }
+
     public void setSrcPremultiplied(int srcPremultiplied) {
         getSrcPremultiplied().setValue(srcPremultiplied);
     }
@@ -73,6 +81,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         
     }
 
+    public int getDstPremultipliedQ() {
+        return getDstPremultiplied().getValue();
+    }
+
     public void setDstPremultiplied(int dstPremultiplied) {
         getDstPremultiplied().setValue(dstPremultiplied);
     }
@@ -88,6 +100,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
     public void setBlendOverlap(VkBlendOverlapEXT blendOverlap) {
         setBlendOverlap(getVkAddress(), blendOverlap != null ? blendOverlap.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getBlendOverlapQ() {
+        return getBlendOverlap().getValue();
     }
 
     public void setBlendOverlap(int blendOverlap) {

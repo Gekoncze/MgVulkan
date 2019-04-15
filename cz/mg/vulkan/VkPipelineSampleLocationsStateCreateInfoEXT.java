@@ -26,6 +26,10 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
     public void setSampleLocationsEnable(VkBool32 sampleLocationsEnable) {
         setSampleLocationsEnable(getVkAddress(), sampleLocationsEnable != null ? sampleLocationsEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSampleLocationsEnableQ() {
+        return getSampleLocationsEnable().getValue();
     }
 
     public void setSampleLocationsEnable(int sampleLocationsEnable) {

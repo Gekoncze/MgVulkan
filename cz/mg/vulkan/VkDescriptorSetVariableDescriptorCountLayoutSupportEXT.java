@@ -25,6 +25,10 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
     public void setMaxVariableDescriptorCount(VkUInt32 maxVariableDescriptorCount) {
         setMaxVariableDescriptorCount(getVkAddress(), maxVariableDescriptorCount != null ? maxVariableDescriptorCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMaxVariableDescriptorCountQ() {
+        return getMaxVariableDescriptorCount().getValue();
     }
 
     public void setMaxVariableDescriptorCount(int maxVariableDescriptorCount) {

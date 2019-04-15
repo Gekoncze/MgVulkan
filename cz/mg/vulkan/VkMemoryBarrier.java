@@ -25,6 +25,10 @@ public class VkMemoryBarrier extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkMemoryBarrier extends VkObject {
         
     }
 
+    public int getSrcAccessMaskQ() {
+        return getSrcAccessMask().getValue();
+    }
+
     public void setSrcAccessMask(int srcAccessMask) {
         getSrcAccessMask().setValue(srcAccessMask);
     }
@@ -70,6 +78,10 @@ public class VkMemoryBarrier extends VkObject {
     public void setDstAccessMask(VkAccessFlags dstAccessMask) {
         setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDstAccessMaskQ() {
+        return getDstAccessMask().getValue();
     }
 
     public void setDstAccessMask(int dstAccessMask) {

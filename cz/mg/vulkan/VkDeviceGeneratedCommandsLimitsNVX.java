@@ -25,6 +25,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         
     }
 
+    public int getMaxIndirectCommandsLayoutTokenCountQ() {
+        return getMaxIndirectCommandsLayoutTokenCount().getValue();
+    }
+
     public void setMaxIndirectCommandsLayoutTokenCount(int maxIndirectCommandsLayoutTokenCount) {
         getMaxIndirectCommandsLayoutTokenCount().setValue(maxIndirectCommandsLayoutTokenCount);
     }
@@ -70,6 +78,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
     public void setMaxObjectEntryCounts(VkUInt32 maxObjectEntryCounts) {
         setMaxObjectEntryCounts(getVkAddress(), maxObjectEntryCounts != null ? maxObjectEntryCounts.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMaxObjectEntryCountsQ() {
+        return getMaxObjectEntryCounts().getValue();
     }
 
     public void setMaxObjectEntryCounts(int maxObjectEntryCounts) {
@@ -89,6 +101,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         
     }
 
+    public int getMinSequenceCountBufferOffsetAlignmentQ() {
+        return getMinSequenceCountBufferOffsetAlignment().getValue();
+    }
+
     public void setMinSequenceCountBufferOffsetAlignment(int minSequenceCountBufferOffsetAlignment) {
         getMinSequenceCountBufferOffsetAlignment().setValue(minSequenceCountBufferOffsetAlignment);
     }
@@ -106,6 +122,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         
     }
 
+    public int getMinSequenceIndexBufferOffsetAlignmentQ() {
+        return getMinSequenceIndexBufferOffsetAlignment().getValue();
+    }
+
     public void setMinSequenceIndexBufferOffsetAlignment(int minSequenceIndexBufferOffsetAlignment) {
         getMinSequenceIndexBufferOffsetAlignment().setValue(minSequenceIndexBufferOffsetAlignment);
     }
@@ -121,6 +141,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
     public void setMinCommandsTokenBufferOffsetAlignment(VkUInt32 minCommandsTokenBufferOffsetAlignment) {
         setMinCommandsTokenBufferOffsetAlignment(getVkAddress(), minCommandsTokenBufferOffsetAlignment != null ? minCommandsTokenBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMinCommandsTokenBufferOffsetAlignmentQ() {
+        return getMinCommandsTokenBufferOffsetAlignment().getValue();
     }
 
     public void setMinCommandsTokenBufferOffsetAlignment(int minCommandsTokenBufferOffsetAlignment) {

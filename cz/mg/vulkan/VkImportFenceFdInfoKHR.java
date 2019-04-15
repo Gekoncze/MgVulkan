@@ -26,6 +26,10 @@ public class VkImportFenceFdInfoKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -69,6 +73,10 @@ public class VkImportFenceFdInfoKHR extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -86,6 +94,10 @@ public class VkImportFenceFdInfoKHR extends VkObject {
         
     }
 
+    public int getHandleTypeQ() {
+        return getHandleType().getValue();
+    }
+
     public void setHandleType(int handleType) {
         getHandleType().setValue(handleType);
     }
@@ -101,6 +113,10 @@ public class VkImportFenceFdInfoKHR extends VkObject {
     public void setFd(VkInt fd) {
         setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFdQ() {
+        return getFd().getValue();
     }
 
     public void setFd(int fd) {

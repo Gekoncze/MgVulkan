@@ -51,6 +51,10 @@ public class VkRectLayerKHR extends VkObject {
         
     }
 
+    public int getLayerQ() {
+        return getLayer().getValue();
+    }
+
     public void setLayer(int layer) {
         getLayer().setValue(layer);
     }

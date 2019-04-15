@@ -25,6 +25,10 @@ public class VkAttachmentSampleLocationsEXT extends VkObject {
         
     }
 
+    public int getAttachmentIndexQ() {
+        return getAttachmentIndex().getValue();
+    }
+
     public void setAttachmentIndex(int attachmentIndex) {
         getAttachmentIndex().setValue(attachmentIndex);
     }

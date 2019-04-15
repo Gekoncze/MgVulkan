@@ -26,6 +26,10 @@ public class VkProtectedSubmitInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkProtectedSubmitInfo extends VkObject {
     public void setProtectedSubmit(VkBool32 protectedSubmit) {
         setProtectedSubmit(getVkAddress(), protectedSubmit != null ? protectedSubmit.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getProtectedSubmitQ() {
+        return getProtectedSubmit().getValue();
     }
 
     public void setProtectedSubmit(int protectedSubmit) {

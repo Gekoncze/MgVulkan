@@ -38,6 +38,10 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
         
     }
 
+    public int getCurrentStackIndexQ() {
+        return getCurrentStackIndex().getValue();
+    }
+
     public void setCurrentStackIndex(int currentStackIndex) {
         getCurrentStackIndex().setValue(currentStackIndex);
     }

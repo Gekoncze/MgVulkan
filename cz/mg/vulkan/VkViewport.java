@@ -25,6 +25,10 @@ public class VkViewport extends VkObject {
         
     }
 
+    public float getXQ() {
+        return getX().getValue();
+    }
+
     public void setX(float x) {
         getX().setValue(x);
     }
@@ -40,6 +44,10 @@ public class VkViewport extends VkObject {
     public void setY(VkFloat y) {
         setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public float getYQ() {
+        return getY().getValue();
     }
 
     public void setY(float y) {
@@ -59,6 +67,10 @@ public class VkViewport extends VkObject {
         
     }
 
+    public float getWidthQ() {
+        return getWidth().getValue();
+    }
+
     public void setWidth(float width) {
         getWidth().setValue(width);
     }
@@ -74,6 +86,10 @@ public class VkViewport extends VkObject {
     public void setHeight(VkFloat height) {
         setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public float getHeightQ() {
+        return getHeight().getValue();
     }
 
     public void setHeight(float height) {
@@ -93,6 +109,10 @@ public class VkViewport extends VkObject {
         
     }
 
+    public float getMinDepthQ() {
+        return getMinDepth().getValue();
+    }
+
     public void setMinDepth(float minDepth) {
         getMinDepth().setValue(minDepth);
     }
@@ -108,6 +128,10 @@ public class VkViewport extends VkObject {
     public void setMaxDepth(VkFloat maxDepth) {
         setMaxDepth(getVkAddress(), maxDepth != null ? maxDepth.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public float getMaxDepthQ() {
+        return getMaxDepth().getValue();
     }
 
     public void setMaxDepth(float maxDepth) {

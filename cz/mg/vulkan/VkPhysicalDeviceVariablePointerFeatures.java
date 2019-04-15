@@ -25,6 +25,10 @@ public class VkPhysicalDeviceVariablePointerFeatures extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkPhysicalDeviceVariablePointerFeatures extends VkObject {
         
     }
 
+    public int getVariablePointersStorageBufferQ() {
+        return getVariablePointersStorageBuffer().getValue();
+    }
+
     public void setVariablePointersStorageBuffer(int variablePointersStorageBuffer) {
         getVariablePointersStorageBuffer().setValue(variablePointersStorageBuffer);
     }
@@ -70,6 +78,10 @@ public class VkPhysicalDeviceVariablePointerFeatures extends VkObject {
     public void setVariablePointers(VkBool32 variablePointers) {
         setVariablePointers(getVkAddress(), variablePointers != null ? variablePointers.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getVariablePointersQ() {
+        return getVariablePointers().getValue();
     }
 
     public void setVariablePointers(int variablePointers) {

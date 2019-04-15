@@ -25,6 +25,10 @@ public class VkVertexInputBindingDescription extends VkObject {
         
     }
 
+    public int getBindingQ() {
+        return getBinding().getValue();
+    }
+
     public void setBinding(int binding) {
         getBinding().setValue(binding);
     }
@@ -42,6 +46,10 @@ public class VkVertexInputBindingDescription extends VkObject {
         
     }
 
+    public int getStrideQ() {
+        return getStride().getValue();
+    }
+
     public void setStride(int stride) {
         getStride().setValue(stride);
     }
@@ -57,6 +65,10 @@ public class VkVertexInputBindingDescription extends VkObject {
     public void setInputRate(VkVertexInputRate inputRate) {
         setInputRate(getVkAddress(), inputRate != null ? inputRate.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getInputRateQ() {
+        return getInputRate().getValue();
     }
 
     public void setInputRate(int inputRate) {

@@ -25,6 +25,10 @@ public class VkDrawIndirectCommand extends VkObject {
         
     }
 
+    public int getVertexCountQ() {
+        return getVertexCount().getValue();
+    }
+
     public void setVertexCount(int vertexCount) {
         getVertexCount().setValue(vertexCount);
     }
@@ -40,6 +44,10 @@ public class VkDrawIndirectCommand extends VkObject {
     public void setInstanceCount(VkUInt32 instanceCount) {
         setInstanceCount(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getInstanceCountQ() {
+        return getInstanceCount().getValue();
     }
 
     public void setInstanceCount(int instanceCount) {
@@ -59,6 +67,10 @@ public class VkDrawIndirectCommand extends VkObject {
         
     }
 
+    public int getFirstVertexQ() {
+        return getFirstVertex().getValue();
+    }
+
     public void setFirstVertex(int firstVertex) {
         getFirstVertex().setValue(firstVertex);
     }
@@ -74,6 +86,10 @@ public class VkDrawIndirectCommand extends VkObject {
     public void setFirstInstance(VkUInt32 firstInstance) {
         setFirstInstance(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFirstInstanceQ() {
+        return getFirstInstance().getValue();
     }
 
     public void setFirstInstance(int firstInstance) {

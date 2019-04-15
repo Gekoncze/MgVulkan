@@ -25,6 +25,10 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
         
     }
 
+    public int getSubpassIndexQ() {
+        return getSubpassIndex().getValue();
+    }
+
     public void setSubpassIndex(int subpassIndex) {
         getSubpassIndex().setValue(subpassIndex);
     }

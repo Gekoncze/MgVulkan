@@ -25,6 +25,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         
     }
 
+    public int getDstBindingQ() {
+        return getDstBinding().getValue();
+    }
+
     public void setDstBinding(int dstBinding) {
         getDstBinding().setValue(dstBinding);
     }
@@ -40,6 +44,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
     public void setDstArrayElement(VkUInt32 dstArrayElement) {
         setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDstArrayElementQ() {
+        return getDstArrayElement().getValue();
     }
 
     public void setDstArrayElement(int dstArrayElement) {
@@ -59,6 +67,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         
     }
 
+    public int getDescriptorCountQ() {
+        return getDescriptorCount().getValue();
+    }
+
     public void setDescriptorCount(int descriptorCount) {
         getDescriptorCount().setValue(descriptorCount);
     }
@@ -74,6 +86,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
     public void setDescriptorType(VkDescriptorType descriptorType) {
         setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDescriptorTypeQ() {
+        return getDescriptorType().getValue();
     }
 
     public void setDescriptorType(int descriptorType) {
@@ -93,6 +109,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         
     }
 
+    public long getOffsetQ() {
+        return getOffset().getValue();
+    }
+
     public void setOffset(long offset) {
         getOffset().setValue(offset);
     }
@@ -108,6 +128,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
     public void setStride(VkSize stride) {
         setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getStrideQ() {
+        return getStride().getValue();
     }
 
     public void setStride(long stride) {

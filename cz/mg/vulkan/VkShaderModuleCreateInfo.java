@@ -26,6 +26,10 @@ public class VkShaderModuleCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkShaderModuleCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkShaderModuleCreateInfo extends VkObject {
     public void setCodeSize(VkSize codeSize) {
         setCodeSize(getVkAddress(), codeSize != null ? codeSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getCodeSizeQ() {
+        return getCodeSize().getValue();
     }
 
     public void setCodeSize(long codeSize) {

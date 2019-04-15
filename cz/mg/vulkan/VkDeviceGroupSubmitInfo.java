@@ -26,6 +26,10 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
     public void setWaitSemaphoreCount(VkUInt32 waitSemaphoreCount) {
         setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount != null ? waitSemaphoreCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getWaitSemaphoreCountQ() {
+        return getWaitSemaphoreCount().getValue();
     }
 
     public void setWaitSemaphoreCount(int waitSemaphoreCount) {
@@ -86,6 +94,10 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         
     }
 
+    public int getCommandBufferCountQ() {
+        return getCommandBufferCount().getValue();
+    }
+
     public void setCommandBufferCount(int commandBufferCount) {
         getCommandBufferCount().setValue(commandBufferCount);
     }
@@ -114,6 +126,10 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
     public void setSignalSemaphoreCount(VkUInt32 signalSemaphoreCount) {
         setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount != null ? signalSemaphoreCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSignalSemaphoreCountQ() {
+        return getSignalSemaphoreCount().getValue();
     }
 
     public void setSignalSemaphoreCount(int signalSemaphoreCount) {

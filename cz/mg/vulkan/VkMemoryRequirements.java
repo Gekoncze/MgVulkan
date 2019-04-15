@@ -25,6 +25,10 @@ public class VkMemoryRequirements extends VkObject {
         
     }
 
+    public long getSizeQ() {
+        return getSize().getValue();
+    }
+
     public void setSize(long size) {
         getSize().setValue(size);
     }
@@ -42,6 +46,10 @@ public class VkMemoryRequirements extends VkObject {
         
     }
 
+    public long getAlignmentQ() {
+        return getAlignment().getValue();
+    }
+
     public void setAlignment(long alignment) {
         getAlignment().setValue(alignment);
     }
@@ -57,6 +65,10 @@ public class VkMemoryRequirements extends VkObject {
     public void setMemoryTypeBits(VkUInt32 memoryTypeBits) {
         setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMemoryTypeBitsQ() {
+        return getMemoryTypeBits().getValue();
     }
 
     public void setMemoryTypeBits(int memoryTypeBits) {

@@ -25,6 +25,10 @@ public class VkPushConstantRange extends VkObject {
         
     }
 
+    public int getStageFlagsQ() {
+        return getStageFlags().getValue();
+    }
+
     public void setStageFlags(int stageFlags) {
         getStageFlags().setValue(stageFlags);
     }
@@ -42,6 +46,10 @@ public class VkPushConstantRange extends VkObject {
         
     }
 
+    public int getOffsetQ() {
+        return getOffset().getValue();
+    }
+
     public void setOffset(int offset) {
         getOffset().setValue(offset);
     }
@@ -57,6 +65,10 @@ public class VkPushConstantRange extends VkObject {
     public void setSize(VkUInt32 size) {
         setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSizeQ() {
+        return getSize().getValue();
     }
 
     public void setSize(int size) {

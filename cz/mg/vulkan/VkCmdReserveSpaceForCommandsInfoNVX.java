@@ -26,6 +26,10 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -80,6 +84,10 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
     public void setMaxSequencesCount(VkUInt32 maxSequencesCount) {
         setMaxSequencesCount(getVkAddress(), maxSequencesCount != null ? maxSequencesCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMaxSequencesCountQ() {
+        return getMaxSequencesCount().getValue();
     }
 
     public void setMaxSequencesCount(int maxSequencesCount) {

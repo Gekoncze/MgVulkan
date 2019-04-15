@@ -26,6 +26,10 @@ public class VkBindBufferMemoryDeviceGroupInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkBindBufferMemoryDeviceGroupInfo extends VkObject {
     public void setDeviceIndexCount(VkUInt32 deviceIndexCount) {
         setDeviceIndexCount(getVkAddress(), deviceIndexCount != null ? deviceIndexCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDeviceIndexCountQ() {
+        return getDeviceIndexCount().getValue();
     }
 
     public void setDeviceIndexCount(int deviceIndexCount) {

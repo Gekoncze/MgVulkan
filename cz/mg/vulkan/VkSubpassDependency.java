@@ -25,6 +25,10 @@ public class VkSubpassDependency extends VkObject {
         
     }
 
+    public int getSrcSubpassQ() {
+        return getSrcSubpass().getValue();
+    }
+
     public void setSrcSubpass(int srcSubpass) {
         getSrcSubpass().setValue(srcSubpass);
     }
@@ -40,6 +44,10 @@ public class VkSubpassDependency extends VkObject {
     public void setDstSubpass(VkUInt32 dstSubpass) {
         setDstSubpass(getVkAddress(), dstSubpass != null ? dstSubpass.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDstSubpassQ() {
+        return getDstSubpass().getValue();
     }
 
     public void setDstSubpass(int dstSubpass) {
@@ -59,6 +67,10 @@ public class VkSubpassDependency extends VkObject {
         
     }
 
+    public int getSrcStageMaskQ() {
+        return getSrcStageMask().getValue();
+    }
+
     public void setSrcStageMask(int srcStageMask) {
         getSrcStageMask().setValue(srcStageMask);
     }
@@ -74,6 +86,10 @@ public class VkSubpassDependency extends VkObject {
     public void setDstStageMask(VkPipelineStageFlags dstStageMask) {
         setDstStageMask(getVkAddress(), dstStageMask != null ? dstStageMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDstStageMaskQ() {
+        return getDstStageMask().getValue();
     }
 
     public void setDstStageMask(int dstStageMask) {
@@ -93,6 +109,10 @@ public class VkSubpassDependency extends VkObject {
         
     }
 
+    public int getSrcAccessMaskQ() {
+        return getSrcAccessMask().getValue();
+    }
+
     public void setSrcAccessMask(int srcAccessMask) {
         getSrcAccessMask().setValue(srcAccessMask);
     }
@@ -110,6 +130,10 @@ public class VkSubpassDependency extends VkObject {
         
     }
 
+    public int getDstAccessMaskQ() {
+        return getDstAccessMask().getValue();
+    }
+
     public void setDstAccessMask(int dstAccessMask) {
         getDstAccessMask().setValue(dstAccessMask);
     }
@@ -125,6 +149,10 @@ public class VkSubpassDependency extends VkObject {
     public void setDependencyFlags(VkDependencyFlags dependencyFlags) {
         setDependencyFlags(getVkAddress(), dependencyFlags != null ? dependencyFlags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDependencyFlagsQ() {
+        return getDependencyFlags().getValue();
     }
 
     public void setDependencyFlags(int dependencyFlags) {

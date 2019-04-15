@@ -25,6 +25,10 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
     public void setPerViewPositionAllComponents(VkBool32 perViewPositionAllComponents) {
         setPerViewPositionAllComponents(getVkAddress(), perViewPositionAllComponents != null ? perViewPositionAllComponents.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPerViewPositionAllComponentsQ() {
+        return getPerViewPositionAllComponents().getValue();
     }
 
     public void setPerViewPositionAllComponents(int perViewPositionAllComponents) {

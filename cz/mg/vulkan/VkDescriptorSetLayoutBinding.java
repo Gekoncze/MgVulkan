@@ -25,6 +25,10 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         
     }
 
+    public int getBindingQ() {
+        return getBinding().getValue();
+    }
+
     public void setBinding(int binding) {
         getBinding().setValue(binding);
     }
@@ -40,6 +44,10 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
     public void setDescriptorType(VkDescriptorType descriptorType) {
         setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDescriptorTypeQ() {
+        return getDescriptorType().getValue();
     }
 
     public void setDescriptorType(int descriptorType) {
@@ -59,6 +67,10 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         
     }
 
+    public int getDescriptorCountQ() {
+        return getDescriptorCount().getValue();
+    }
+
     public void setDescriptorCount(int descriptorCount) {
         getDescriptorCount().setValue(descriptorCount);
     }
@@ -74,6 +86,10 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
     public void setStageFlags(VkShaderStageFlags stageFlags) {
         setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getStageFlagsQ() {
+        return getStageFlags().getValue();
     }
 
     public void setStageFlags(int stageFlags) {

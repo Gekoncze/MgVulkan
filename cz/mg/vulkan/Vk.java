@@ -42,6 +42,7 @@ public class Vk {
 
     public Vk(){
         System.loadLibrary("MgVulkanC");
+        VkResourceManager.getInstance().add(this, resources);
     }
 
     public Vk(String mgVulkanLibraryFilename){

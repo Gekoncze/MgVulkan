@@ -25,6 +25,10 @@ public class VkAttachmentDescription extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -40,6 +44,10 @@ public class VkAttachmentDescription extends VkObject {
     public void setFormat(VkFormat format) {
         setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFormatQ() {
+        return getFormat().getValue();
     }
 
     public void setFormat(int format) {
@@ -59,6 +67,10 @@ public class VkAttachmentDescription extends VkObject {
         
     }
 
+    public int getSamplesQ() {
+        return getSamples().getValue();
+    }
+
     public void setSamples(int samples) {
         getSamples().setValue(samples);
     }
@@ -74,6 +86,10 @@ public class VkAttachmentDescription extends VkObject {
     public void setLoadOp(VkAttachmentLoadOp loadOp) {
         setLoadOp(getVkAddress(), loadOp != null ? loadOp.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getLoadOpQ() {
+        return getLoadOp().getValue();
     }
 
     public void setLoadOp(int loadOp) {
@@ -93,6 +109,10 @@ public class VkAttachmentDescription extends VkObject {
         
     }
 
+    public int getStoreOpQ() {
+        return getStoreOp().getValue();
+    }
+
     public void setStoreOp(int storeOp) {
         getStoreOp().setValue(storeOp);
     }
@@ -108,6 +128,10 @@ public class VkAttachmentDescription extends VkObject {
     public void setStencilLoadOp(VkAttachmentLoadOp stencilLoadOp) {
         setStencilLoadOp(getVkAddress(), stencilLoadOp != null ? stencilLoadOp.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getStencilLoadOpQ() {
+        return getStencilLoadOp().getValue();
     }
 
     public void setStencilLoadOp(int stencilLoadOp) {
@@ -127,6 +151,10 @@ public class VkAttachmentDescription extends VkObject {
         
     }
 
+    public int getStencilStoreOpQ() {
+        return getStencilStoreOp().getValue();
+    }
+
     public void setStencilStoreOp(int stencilStoreOp) {
         getStencilStoreOp().setValue(stencilStoreOp);
     }
@@ -144,6 +172,10 @@ public class VkAttachmentDescription extends VkObject {
         
     }
 
+    public int getInitialLayoutQ() {
+        return getInitialLayout().getValue();
+    }
+
     public void setInitialLayout(int initialLayout) {
         getInitialLayout().setValue(initialLayout);
     }
@@ -159,6 +191,10 @@ public class VkAttachmentDescription extends VkObject {
     public void setFinalLayout(VkImageLayout finalLayout) {
         setFinalLayout(getVkAddress(), finalLayout != null ? finalLayout.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFinalLayoutQ() {
+        return getFinalLayout().getValue();
     }
 
     public void setFinalLayout(int finalLayout) {

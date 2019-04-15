@@ -25,6 +25,10 @@ public class VkViewportSwizzleNV extends VkObject {
         
     }
 
+    public int getXQ() {
+        return getX().getValue();
+    }
+
     public void setX(int x) {
         getX().setValue(x);
     }
@@ -40,6 +44,10 @@ public class VkViewportSwizzleNV extends VkObject {
     public void setY(VkViewportCoordinateSwizzleNV y) {
         setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getYQ() {
+        return getY().getValue();
     }
 
     public void setY(int y) {
@@ -59,6 +67,10 @@ public class VkViewportSwizzleNV extends VkObject {
         
     }
 
+    public int getZQ() {
+        return getZ().getValue();
+    }
+
     public void setZ(int z) {
         getZ().setValue(z);
     }
@@ -74,6 +86,10 @@ public class VkViewportSwizzleNV extends VkObject {
     public void setW(VkViewportCoordinateSwizzleNV w) {
         setW(getVkAddress(), w != null ? w.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getWQ() {
+        return getW().getValue();
     }
 
     public void setW(int w) {

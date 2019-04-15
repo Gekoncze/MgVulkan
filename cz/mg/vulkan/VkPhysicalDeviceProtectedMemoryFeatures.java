@@ -25,6 +25,10 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
     public void setProtectedMemory(VkBool32 protectedMemory) {
         setProtectedMemory(getVkAddress(), protectedMemory != null ? protectedMemory.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getProtectedMemoryQ() {
+        return getProtectedMemory().getValue();
     }
 
     public void setProtectedMemory(int protectedMemory) {

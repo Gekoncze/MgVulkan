@@ -26,6 +26,10 @@ public class VkDisplayEventInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkDisplayEventInfoEXT extends VkObject {
     public void setDisplayEvent(VkDisplayEventTypeEXT displayEvent) {
         setDisplayEvent(getVkAddress(), displayEvent != null ? displayEvent.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDisplayEventQ() {
+        return getDisplayEvent().getValue();
     }
 
     public void setDisplayEvent(int displayEvent) {

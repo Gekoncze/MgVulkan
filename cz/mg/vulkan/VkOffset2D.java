@@ -29,6 +29,10 @@ public class VkOffset2D extends VkObject {
         
     }
 
+    public int getXQ() {
+        return getX().getValue();
+    }
+
     public void setX(int x) {
         getX().setValue(x);
     }
@@ -44,6 +48,10 @@ public class VkOffset2D extends VkObject {
     public void setY(VkInt32 y) {
         setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getYQ() {
+        return getY().getValue();
     }
 
     public void setY(int y) {

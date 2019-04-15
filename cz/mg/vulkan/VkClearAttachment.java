@@ -25,6 +25,10 @@ public class VkClearAttachment extends VkObject {
         
     }
 
+    public int getAspectMaskQ() {
+        return getAspectMask().getValue();
+    }
+
     public void setAspectMask(int aspectMask) {
         getAspectMask().setValue(aspectMask);
     }
@@ -40,6 +44,10 @@ public class VkClearAttachment extends VkObject {
     public void setColorAttachment(VkUInt32 colorAttachment) {
         setColorAttachment(getVkAddress(), colorAttachment != null ? colorAttachment.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getColorAttachmentQ() {
+        return getColorAttachment().getValue();
     }
 
     public void setColorAttachment(int colorAttachment) {

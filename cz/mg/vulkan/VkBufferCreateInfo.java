@@ -26,6 +26,10 @@ public class VkBufferCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkBufferCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkBufferCreateInfo extends VkObject {
     public void setSize(VkDeviceSize size) {
         setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getSizeQ() {
+        return getSize().getValue();
     }
 
     public void setSize(long size) {
@@ -90,6 +102,10 @@ public class VkBufferCreateInfo extends VkObject {
         
     }
 
+    public int getUsageQ() {
+        return getUsage().getValue();
+    }
+
     public void setUsage(int usage) {
         getUsage().setValue(usage);
     }
@@ -107,6 +123,10 @@ public class VkBufferCreateInfo extends VkObject {
         
     }
 
+    public int getSharingModeQ() {
+        return getSharingMode().getValue();
+    }
+
     public void setSharingMode(int sharingMode) {
         getSharingMode().setValue(sharingMode);
     }
@@ -122,6 +142,10 @@ public class VkBufferCreateInfo extends VkObject {
     public void setQueueFamilyIndexCount(VkUInt32 queueFamilyIndexCount) {
         setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount != null ? queueFamilyIndexCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getQueueFamilyIndexCountQ() {
+        return getQueueFamilyIndexCount().getValue();
     }
 
     public void setQueueFamilyIndexCount(int queueFamilyIndexCount) {

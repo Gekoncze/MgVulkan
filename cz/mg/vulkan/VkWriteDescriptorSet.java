@@ -25,6 +25,10 @@ public class VkWriteDescriptorSet extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -68,6 +72,10 @@ public class VkWriteDescriptorSet extends VkObject {
         
     }
 
+    public int getDstBindingQ() {
+        return getDstBinding().getValue();
+    }
+
     public void setDstBinding(int dstBinding) {
         getDstBinding().setValue(dstBinding);
     }
@@ -83,6 +91,10 @@ public class VkWriteDescriptorSet extends VkObject {
     public void setDstArrayElement(VkUInt32 dstArrayElement) {
         setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDstArrayElementQ() {
+        return getDstArrayElement().getValue();
     }
 
     public void setDstArrayElement(int dstArrayElement) {
@@ -102,6 +114,10 @@ public class VkWriteDescriptorSet extends VkObject {
         
     }
 
+    public int getDescriptorCountQ() {
+        return getDescriptorCount().getValue();
+    }
+
     public void setDescriptorCount(int descriptorCount) {
         getDescriptorCount().setValue(descriptorCount);
     }
@@ -117,6 +133,10 @@ public class VkWriteDescriptorSet extends VkObject {
     public void setDescriptorType(VkDescriptorType descriptorType) {
         setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDescriptorTypeQ() {
+        return getDescriptorType().getValue();
     }
 
     public void setDescriptorType(int descriptorType) {

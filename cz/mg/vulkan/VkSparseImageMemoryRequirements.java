@@ -38,6 +38,10 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         
     }
 
+    public int getImageMipTailFirstLodQ() {
+        return getImageMipTailFirstLod().getValue();
+    }
+
     public void setImageMipTailFirstLod(int imageMipTailFirstLod) {
         getImageMipTailFirstLod().setValue(imageMipTailFirstLod);
     }
@@ -53,6 +57,10 @@ public class VkSparseImageMemoryRequirements extends VkObject {
     public void setImageMipTailSize(VkDeviceSize imageMipTailSize) {
         setImageMipTailSize(getVkAddress(), imageMipTailSize != null ? imageMipTailSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getImageMipTailSizeQ() {
+        return getImageMipTailSize().getValue();
     }
 
     public void setImageMipTailSize(long imageMipTailSize) {
@@ -72,6 +80,10 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         
     }
 
+    public long getImageMipTailOffsetQ() {
+        return getImageMipTailOffset().getValue();
+    }
+
     public void setImageMipTailOffset(long imageMipTailOffset) {
         getImageMipTailOffset().setValue(imageMipTailOffset);
     }
@@ -87,6 +99,10 @@ public class VkSparseImageMemoryRequirements extends VkObject {
     public void setImageMipTailStride(VkDeviceSize imageMipTailStride) {
         setImageMipTailStride(getVkAddress(), imageMipTailStride != null ? imageMipTailStride.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getImageMipTailStrideQ() {
+        return getImageMipTailStride().getValue();
     }
 
     public void setImageMipTailStride(long imageMipTailStride) {

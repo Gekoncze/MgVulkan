@@ -25,6 +25,10 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
         
     }
 
+    public int getMaxPerSetDescriptorsQ() {
+        return getMaxPerSetDescriptors().getValue();
+    }
+
     public void setMaxPerSetDescriptors(int maxPerSetDescriptors) {
         getMaxPerSetDescriptors().setValue(maxPerSetDescriptors);
     }
@@ -70,6 +78,10 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
     public void setMaxMemoryAllocationSize(VkDeviceSize maxMemoryAllocationSize) {
         setMaxMemoryAllocationSize(getVkAddress(), maxMemoryAllocationSize != null ? maxMemoryAllocationSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getMaxMemoryAllocationSizeQ() {
+        return getMaxMemoryAllocationSize().getValue();
     }
 
     public void setMaxMemoryAllocationSize(long maxMemoryAllocationSize) {

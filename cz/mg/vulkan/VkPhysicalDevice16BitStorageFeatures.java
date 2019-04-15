@@ -25,6 +25,10 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         
     }
 
+    public int getStorageBuffer16BitAccessQ() {
+        return getStorageBuffer16BitAccess().getValue();
+    }
+
     public void setStorageBuffer16BitAccess(int storageBuffer16BitAccess) {
         getStorageBuffer16BitAccess().setValue(storageBuffer16BitAccess);
     }
@@ -70,6 +78,10 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
     public void setUniformAndStorageBuffer16BitAccess(VkBool32 uniformAndStorageBuffer16BitAccess) {
         setUniformAndStorageBuffer16BitAccess(getVkAddress(), uniformAndStorageBuffer16BitAccess != null ? uniformAndStorageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getUniformAndStorageBuffer16BitAccessQ() {
+        return getUniformAndStorageBuffer16BitAccess().getValue();
     }
 
     public void setUniformAndStorageBuffer16BitAccess(int uniformAndStorageBuffer16BitAccess) {
@@ -89,6 +101,10 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         
     }
 
+    public int getStoragePushConstant16Q() {
+        return getStoragePushConstant16().getValue();
+    }
+
     public void setStoragePushConstant16(int storagePushConstant16) {
         getStoragePushConstant16().setValue(storagePushConstant16);
     }
@@ -104,6 +120,10 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
     public void setStorageInputOutput16(VkBool32 storageInputOutput16) {
         setStorageInputOutput16(getVkAddress(), storageInputOutput16 != null ? storageInputOutput16.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getStorageInputOutput16Q() {
+        return getStorageInputOutput16().getValue();
     }
 
     public void setStorageInputOutput16(int storageInputOutput16) {

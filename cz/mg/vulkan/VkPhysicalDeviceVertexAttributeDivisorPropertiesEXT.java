@@ -25,6 +25,10 @@ public class VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT extends VkObjec
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -53,6 +57,10 @@ public class VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT extends VkObjec
     public void setMaxVertexAttribDivisor(VkUInt32 maxVertexAttribDivisor) {
         setMaxVertexAttribDivisor(getVkAddress(), maxVertexAttribDivisor != null ? maxVertexAttribDivisor.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMaxVertexAttribDivisorQ() {
+        return getMaxVertexAttribDivisor().getValue();
     }
 
     public void setMaxVertexAttribDivisor(int maxVertexAttribDivisor) {

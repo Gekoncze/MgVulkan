@@ -25,6 +25,10 @@ public class VkSubresourceLayout extends VkObject {
         
     }
 
+    public long getOffsetQ() {
+        return getOffset().getValue();
+    }
+
     public void setOffset(long offset) {
         getOffset().setValue(offset);
     }
@@ -40,6 +44,10 @@ public class VkSubresourceLayout extends VkObject {
     public void setSize(VkDeviceSize size) {
         setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getSizeQ() {
+        return getSize().getValue();
     }
 
     public void setSize(long size) {
@@ -59,6 +67,10 @@ public class VkSubresourceLayout extends VkObject {
         
     }
 
+    public long getRowPitchQ() {
+        return getRowPitch().getValue();
+    }
+
     public void setRowPitch(long rowPitch) {
         getRowPitch().setValue(rowPitch);
     }
@@ -76,6 +88,10 @@ public class VkSubresourceLayout extends VkObject {
         
     }
 
+    public long getArrayPitchQ() {
+        return getArrayPitch().getValue();
+    }
+
     public void setArrayPitch(long arrayPitch) {
         getArrayPitch().setValue(arrayPitch);
     }
@@ -91,6 +107,10 @@ public class VkSubresourceLayout extends VkObject {
     public void setDepthPitch(VkDeviceSize depthPitch) {
         setDepthPitch(getVkAddress(), depthPitch != null ? depthPitch.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getDepthPitchQ() {
+        return getDepthPitch().getValue();
     }
 
     public void setDepthPitch(long depthPitch) {

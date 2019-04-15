@@ -25,6 +25,10 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
         
     }
 
+    public int getBindingQ() {
+        return getBinding().getValue();
+    }
+
     public void setBinding(int binding) {
         getBinding().setValue(binding);
     }
@@ -40,6 +44,10 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
     public void setDivisor(VkUInt32 divisor) {
         setDivisor(getVkAddress(), divisor != null ? divisor.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDivisorQ() {
+        return getDivisor().getValue();
     }
 
     public void setDivisor(int divisor) {

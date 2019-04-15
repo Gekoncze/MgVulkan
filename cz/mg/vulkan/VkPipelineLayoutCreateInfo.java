@@ -26,6 +26,10 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
     public void setSetLayoutCount(VkUInt32 setLayoutCount) {
         setSetLayoutCount(getVkAddress(), setLayoutCount != null ? setLayoutCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSetLayoutCountQ() {
+        return getSetLayoutCount().getValue();
     }
 
     public void setSetLayoutCount(int setLayoutCount) {
@@ -101,6 +113,10 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
     public void setPushConstantRangeCount(VkUInt32 pushConstantRangeCount) {
         setPushConstantRangeCount(getVkAddress(), pushConstantRangeCount != null ? pushConstantRangeCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPushConstantRangeCountQ() {
+        return getPushConstantRangeCount().getValue();
     }
 
     public void setPushConstantRangeCount(int pushConstantRangeCount) {

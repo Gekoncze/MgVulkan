@@ -25,6 +25,10 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         
     }
 
+    public int getFilterMinmaxSingleComponentFormatsQ() {
+        return getFilterMinmaxSingleComponentFormats().getValue();
+    }
+
     public void setFilterMinmaxSingleComponentFormats(int filterMinmaxSingleComponentFormats) {
         getFilterMinmaxSingleComponentFormats().setValue(filterMinmaxSingleComponentFormats);
     }
@@ -70,6 +78,10 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
     public void setFilterMinmaxImageComponentMapping(VkBool32 filterMinmaxImageComponentMapping) {
         setFilterMinmaxImageComponentMapping(getVkAddress(), filterMinmaxImageComponentMapping != null ? filterMinmaxImageComponentMapping.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFilterMinmaxImageComponentMappingQ() {
+        return getFilterMinmaxImageComponentMapping().getValue();
     }
 
     public void setFilterMinmaxImageComponentMapping(int filterMinmaxImageComponentMapping) {

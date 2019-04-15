@@ -26,6 +26,10 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
     public void setPatchControlPoints(VkUInt32 patchControlPoints) {
         setPatchControlPoints(getVkAddress(), patchControlPoints != null ? patchControlPoints.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPatchControlPointsQ() {
+        return getPatchControlPoints().getValue();
     }
 
     public void setPatchControlPoints(int patchControlPoints) {

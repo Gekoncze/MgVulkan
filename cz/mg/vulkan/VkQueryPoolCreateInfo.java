@@ -26,6 +26,10 @@ public class VkQueryPoolCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkQueryPoolCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkQueryPoolCreateInfo extends VkObject {
     public void setQueryType(VkQueryType queryType) {
         setQueryType(getVkAddress(), queryType != null ? queryType.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getQueryTypeQ() {
+        return getQueryType().getValue();
     }
 
     public void setQueryType(int queryType) {
@@ -90,6 +102,10 @@ public class VkQueryPoolCreateInfo extends VkObject {
         
     }
 
+    public int getQueryCountQ() {
+        return getQueryCount().getValue();
+    }
+
     public void setQueryCount(int queryCount) {
         getQueryCount().setValue(queryCount);
     }
@@ -105,6 +121,10 @@ public class VkQueryPoolCreateInfo extends VkObject {
     public void setPipelineStatistics(VkQueryPipelineStatisticFlags pipelineStatistics) {
         setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPipelineStatisticsQ() {
+        return getPipelineStatistics().getValue();
     }
 
     public void setPipelineStatistics(int pipelineStatistics) {

@@ -26,6 +26,10 @@ public class VkInstanceCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkInstanceCreateInfo extends VkObject {
     public void setFlags(VkInstanceCreateFlags flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {
@@ -86,6 +94,10 @@ public class VkInstanceCreateInfo extends VkObject {
         
     }
 
+    public int getEnabledLayerCountQ() {
+        return getEnabledLayerCount().getValue();
+    }
+
     public void setEnabledLayerCount(int enabledLayerCount) {
         getEnabledLayerCount().setValue(enabledLayerCount);
     }
@@ -114,6 +126,10 @@ public class VkInstanceCreateInfo extends VkObject {
     public void setEnabledExtensionCount(VkUInt32 enabledExtensionCount) {
         setEnabledExtensionCount(getVkAddress(), enabledExtensionCount != null ? enabledExtensionCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getEnabledExtensionCountQ() {
+        return getEnabledExtensionCount().getValue();
     }
 
     public void setEnabledExtensionCount(int enabledExtensionCount) {

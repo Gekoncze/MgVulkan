@@ -26,6 +26,10 @@ public class VkImageViewCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkImageViewCreateInfo extends VkObject {
     public void setFlags(VkImageViewCreateFlags flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {
@@ -86,6 +94,10 @@ public class VkImageViewCreateInfo extends VkObject {
         
     }
 
+    public int getViewTypeQ() {
+        return getViewType().getValue();
+    }
+
     public void setViewType(int viewType) {
         getViewType().setValue(viewType);
     }
@@ -101,6 +113,10 @@ public class VkImageViewCreateInfo extends VkObject {
     public void setFormat(VkFormat format) {
         setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFormatQ() {
+        return getFormat().getValue();
     }
 
     public void setFormat(int format) {

@@ -26,6 +26,10 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
     public void setGlobalPriority(VkQueueGlobalPriorityEXT globalPriority) {
         setGlobalPriority(getVkAddress(), globalPriority != null ? globalPriority.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getGlobalPriorityQ() {
+        return getGlobalPriority().getValue();
     }
 
     public void setGlobalPriority(int globalPriority) {

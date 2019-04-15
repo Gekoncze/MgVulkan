@@ -38,6 +38,10 @@ public class VkDisplayModeParametersKHR extends VkObject {
         
     }
 
+    public int getRefreshRateQ() {
+        return getRefreshRate().getValue();
+    }
+
     public void setRefreshRate(int refreshRate) {
         getRefreshRate().setValue(refreshRate);
     }

@@ -26,6 +26,10 @@ public class VkSamplerReductionModeCreateInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkSamplerReductionModeCreateInfoEXT extends VkObject {
     public void setReductionMode(VkSamplerReductionModeEXT reductionMode) {
         setReductionMode(getVkAddress(), reductionMode != null ? reductionMode.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getReductionModeQ() {
+        return getReductionMode().getValue();
     }
 
     public void setReductionMode(int reductionMode) {

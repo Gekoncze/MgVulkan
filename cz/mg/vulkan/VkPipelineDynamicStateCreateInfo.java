@@ -26,6 +26,10 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
     public void setDynamicStateCount(VkUInt32 dynamicStateCount) {
         setDynamicStateCount(getVkAddress(), dynamicStateCount != null ? dynamicStateCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDynamicStateCountQ() {
+        return getDynamicStateCount().getValue();
     }
 
     public void setDynamicStateCount(int dynamicStateCount) {

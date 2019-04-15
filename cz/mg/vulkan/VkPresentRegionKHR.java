@@ -25,6 +25,10 @@ public class VkPresentRegionKHR extends VkObject {
         
     }
 
+    public int getRectangleCountQ() {
+        return getRectangleCount().getValue();
+    }
+
     public void setRectangleCount(int rectangleCount) {
         getRectangleCount().setValue(rectangleCount);
     }

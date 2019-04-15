@@ -25,6 +25,10 @@ public class VkImageMemoryBarrier extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkImageMemoryBarrier extends VkObject {
         
     }
 
+    public int getSrcAccessMaskQ() {
+        return getSrcAccessMask().getValue();
+    }
+
     public void setSrcAccessMask(int srcAccessMask) {
         getSrcAccessMask().setValue(srcAccessMask);
     }
@@ -70,6 +78,10 @@ public class VkImageMemoryBarrier extends VkObject {
     public void setDstAccessMask(VkAccessFlags dstAccessMask) {
         setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDstAccessMaskQ() {
+        return getDstAccessMask().getValue();
     }
 
     public void setDstAccessMask(int dstAccessMask) {
@@ -89,6 +101,10 @@ public class VkImageMemoryBarrier extends VkObject {
         
     }
 
+    public int getOldLayoutQ() {
+        return getOldLayout().getValue();
+    }
+
     public void setOldLayout(int oldLayout) {
         getOldLayout().setValue(oldLayout);
     }
@@ -104,6 +120,10 @@ public class VkImageMemoryBarrier extends VkObject {
     public void setNewLayout(VkImageLayout newLayout) {
         setNewLayout(getVkAddress(), newLayout != null ? newLayout.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getNewLayoutQ() {
+        return getNewLayout().getValue();
     }
 
     public void setNewLayout(int newLayout) {
@@ -123,6 +143,10 @@ public class VkImageMemoryBarrier extends VkObject {
         
     }
 
+    public int getSrcQueueFamilyIndexQ() {
+        return getSrcQueueFamilyIndex().getValue();
+    }
+
     public void setSrcQueueFamilyIndex(int srcQueueFamilyIndex) {
         getSrcQueueFamilyIndex().setValue(srcQueueFamilyIndex);
     }
@@ -138,6 +162,10 @@ public class VkImageMemoryBarrier extends VkObject {
     public void setDstQueueFamilyIndex(VkUInt32 dstQueueFamilyIndex) {
         setDstQueueFamilyIndex(getVkAddress(), dstQueueFamilyIndex != null ? dstQueueFamilyIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDstQueueFamilyIndexQ() {
+        return getDstQueueFamilyIndex().getValue();
     }
 
     public void setDstQueueFamilyIndex(int dstQueueFamilyIndex) {

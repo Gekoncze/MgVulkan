@@ -25,6 +25,14 @@ public class VkLayerProperties extends VkObject {
         
     }
 
+    public String getLayerNameQ() {
+        return new VkString(getLayerName()).toString();
+    }
+
+    public void setLayerName(String layerName) {
+        setLayerName(new VkString(layerName));
+    }
+
     private static native long getLayerName(long address);
     private static native void setLayerName(long address, long layerName);
 
@@ -36,6 +44,10 @@ public class VkLayerProperties extends VkObject {
     public void setSpecVersion(VkUInt32 specVersion) {
         setSpecVersion(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSpecVersionQ() {
+        return getSpecVersion().getValue();
     }
 
     public void setSpecVersion(int specVersion) {
@@ -55,6 +67,10 @@ public class VkLayerProperties extends VkObject {
         
     }
 
+    public int getImplementationVersionQ() {
+        return getImplementationVersion().getValue();
+    }
+
     public void setImplementationVersion(int implementationVersion) {
         getImplementationVersion().setValue(implementationVersion);
     }
@@ -70,6 +86,14 @@ public class VkLayerProperties extends VkObject {
     public void setDescription(VkChar description) {
         setDescription(getVkAddress(), description != null ? description.getVkAddress() : VkPointer.NULL);
         
+    }
+
+    public String getDescriptionQ() {
+        return new VkString(getDescription()).toString();
+    }
+
+    public void setDescription(String description) {
+        setDescription(new VkString(description));
     }
 
     private static native long getDescription(long address);

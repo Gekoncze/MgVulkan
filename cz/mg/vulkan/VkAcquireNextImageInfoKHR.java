@@ -26,6 +26,10 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -69,6 +73,10 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         
     }
 
+    public long getTimeoutQ() {
+        return getTimeout().getValue();
+    }
+
     public void setTimeout(long timeout) {
         getTimeout().setValue(timeout);
     }
@@ -110,6 +118,10 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
     public void setDeviceMask(VkUInt32 deviceMask) {
         setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDeviceMaskQ() {
+        return getDeviceMask().getValue();
     }
 
     public void setDeviceMask(int deviceMask) {

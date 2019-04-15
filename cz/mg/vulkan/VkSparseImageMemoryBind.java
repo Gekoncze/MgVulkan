@@ -77,6 +77,10 @@ public class VkSparseImageMemoryBind extends VkObject {
         
     }
 
+    public long getMemoryOffsetQ() {
+        return getMemoryOffset().getValue();
+    }
+
     public void setMemoryOffset(long memoryOffset) {
         getMemoryOffset().setValue(memoryOffset);
     }
@@ -92,6 +96,10 @@ public class VkSparseImageMemoryBind extends VkObject {
     public void setFlags(VkSparseMemoryBindFlags flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {

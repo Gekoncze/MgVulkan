@@ -26,6 +26,10 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         
     }
 
+    public int getSampleLocationsPerPixelQ() {
+        return getSampleLocationsPerPixel().getValue();
+    }
+
     public void setSampleLocationsPerPixel(int sampleLocationsPerPixel) {
         getSampleLocationsPerPixel().setValue(sampleLocationsPerPixel);
     }
@@ -84,6 +92,10 @@ public class VkSampleLocationsInfoEXT extends VkObject {
     public void setSampleLocationsCount(VkUInt32 sampleLocationsCount) {
         setSampleLocationsCount(getVkAddress(), sampleLocationsCount != null ? sampleLocationsCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSampleLocationsCountQ() {
+        return getSampleLocationsCount().getValue();
     }
 
     public void setSampleLocationsCount(int sampleLocationsCount) {

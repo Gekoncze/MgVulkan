@@ -25,6 +25,10 @@ public class VkAttachmentReference extends VkObject {
         
     }
 
+    public int getAttachmentQ() {
+        return getAttachment().getValue();
+    }
+
     public void setAttachment(int attachment) {
         getAttachment().setValue(attachment);
     }
@@ -40,6 +44,10 @@ public class VkAttachmentReference extends VkObject {
     public void setLayout(VkImageLayout layout) {
         setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getLayoutQ() {
+        return getLayout().getValue();
     }
 
     public void setLayout(int layout) {

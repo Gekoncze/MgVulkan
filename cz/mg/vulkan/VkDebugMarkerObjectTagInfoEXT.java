@@ -26,6 +26,10 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
         
     }
 
+    public int getObjectTypeQ() {
+        return getObjectType().getValue();
+    }
+
     public void setObjectType(int objectType) {
         getObjectType().setValue(objectType);
     }
@@ -71,6 +79,10 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
     public void setObject(VkUInt64 object) {
         setObject(getVkAddress(), object != null ? object.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getObjectQ() {
+        return getObject().getValue();
     }
 
     public void setObject(long object) {
@@ -90,6 +102,10 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
         
     }
 
+    public long getTagNameQ() {
+        return getTagName().getValue();
+    }
+
     public void setTagName(long tagName) {
         getTagName().setValue(tagName);
     }
@@ -105,6 +121,10 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
     public void setTagSize(VkSize tagSize) {
         setTagSize(getVkAddress(), tagSize != null ? tagSize.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getTagSizeQ() {
+        return getTagSize().getValue();
     }
 
     public void setTagSize(long tagSize) {

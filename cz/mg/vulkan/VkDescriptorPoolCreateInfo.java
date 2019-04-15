@@ -26,6 +26,10 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -73,6 +81,10 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         
     }
 
+    public int getMaxSetsQ() {
+        return getMaxSets().getValue();
+    }
+
     public void setMaxSets(int maxSets) {
         getMaxSets().setValue(maxSets);
     }
@@ -88,6 +100,10 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
     public void setPoolSizeCount(VkUInt32 poolSizeCount) {
         setPoolSizeCount(getVkAddress(), poolSizeCount != null ? poolSizeCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPoolSizeCountQ() {
+        return getPoolSizeCount().getValue();
     }
 
     public void setPoolSizeCount(int poolSizeCount) {

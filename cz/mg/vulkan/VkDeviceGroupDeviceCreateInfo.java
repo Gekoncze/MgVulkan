@@ -26,6 +26,10 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
     public void setPhysicalDeviceCount(VkUInt32 physicalDeviceCount) {
         setPhysicalDeviceCount(getVkAddress(), physicalDeviceCount != null ? physicalDeviceCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPhysicalDeviceCountQ() {
+        return getPhysicalDeviceCount().getValue();
     }
 
     public void setPhysicalDeviceCount(int physicalDeviceCount) {

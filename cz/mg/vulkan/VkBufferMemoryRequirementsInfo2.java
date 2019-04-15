@@ -26,6 +26,10 @@ public class VkBufferMemoryRequirementsInfo2 extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }

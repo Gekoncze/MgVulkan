@@ -25,6 +25,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         
     }
 
+    public int getSupportedAlphaQ() {
+        return getSupportedAlpha().getValue();
+    }
+
     public void setSupportedAlpha(int supportedAlpha) {
         getSupportedAlpha().setValue(supportedAlpha);
     }

@@ -25,6 +25,10 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
         
     }
 
+    public int getPhysicalDeviceCountQ() {
+        return getPhysicalDeviceCount().getValue();
+    }
+
     public void setPhysicalDeviceCount(int physicalDeviceCount) {
         getPhysicalDeviceCount().setValue(physicalDeviceCount);
     }
@@ -83,6 +91,10 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
     public void setSubsetAllocation(VkBool32 subsetAllocation) {
         setSubsetAllocation(getVkAddress(), subsetAllocation != null ? subsetAllocation.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSubsetAllocationQ() {
+        return getSubsetAllocation().getValue();
     }
 
     public void setSubsetAllocation(int subsetAllocation) {

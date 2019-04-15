@@ -25,6 +25,10 @@ public class VkExternalSemaphoreProperties extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkExternalSemaphoreProperties extends VkObject {
         
     }
 
+    public int getExportFromImportedHandleTypesQ() {
+        return getExportFromImportedHandleTypes().getValue();
+    }
+
     public void setExportFromImportedHandleTypes(int exportFromImportedHandleTypes) {
         getExportFromImportedHandleTypes().setValue(exportFromImportedHandleTypes);
     }
@@ -72,6 +80,10 @@ public class VkExternalSemaphoreProperties extends VkObject {
         
     }
 
+    public int getCompatibleHandleTypesQ() {
+        return getCompatibleHandleTypes().getValue();
+    }
+
     public void setCompatibleHandleTypes(int compatibleHandleTypes) {
         getCompatibleHandleTypes().setValue(compatibleHandleTypes);
     }
@@ -87,6 +99,10 @@ public class VkExternalSemaphoreProperties extends VkObject {
     public void setExternalSemaphoreFeatures(VkExternalSemaphoreFeatureFlags externalSemaphoreFeatures) {
         setExternalSemaphoreFeatures(getVkAddress(), externalSemaphoreFeatures != null ? externalSemaphoreFeatures.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getExternalSemaphoreFeaturesQ() {
+        return getExternalSemaphoreFeatures().getValue();
     }
 
     public void setExternalSemaphoreFeatures(int externalSemaphoreFeatures) {

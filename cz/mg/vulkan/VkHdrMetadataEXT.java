@@ -25,6 +25,10 @@ public class VkHdrMetadataEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -107,6 +111,10 @@ public class VkHdrMetadataEXT extends VkObject {
         
     }
 
+    public float getMaxLuminanceQ() {
+        return getMaxLuminance().getValue();
+    }
+
     public void setMaxLuminance(float maxLuminance) {
         getMaxLuminance().setValue(maxLuminance);
     }
@@ -122,6 +130,10 @@ public class VkHdrMetadataEXT extends VkObject {
     public void setMinLuminance(VkFloat minLuminance) {
         setMinLuminance(getVkAddress(), minLuminance != null ? minLuminance.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public float getMinLuminanceQ() {
+        return getMinLuminance().getValue();
     }
 
     public void setMinLuminance(float minLuminance) {
@@ -141,6 +153,10 @@ public class VkHdrMetadataEXT extends VkObject {
         
     }
 
+    public float getMaxContentLightLevelQ() {
+        return getMaxContentLightLevel().getValue();
+    }
+
     public void setMaxContentLightLevel(float maxContentLightLevel) {
         getMaxContentLightLevel().setValue(maxContentLightLevel);
     }
@@ -156,6 +172,10 @@ public class VkHdrMetadataEXT extends VkObject {
     public void setMaxFrameAverageLightLevel(VkFloat maxFrameAverageLightLevel) {
         setMaxFrameAverageLightLevel(getVkAddress(), maxFrameAverageLightLevel != null ? maxFrameAverageLightLevel.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public float getMaxFrameAverageLightLevelQ() {
+        return getMaxFrameAverageLightLevel().getValue();
     }
 
     public void setMaxFrameAverageLightLevel(float maxFrameAverageLightLevel) {

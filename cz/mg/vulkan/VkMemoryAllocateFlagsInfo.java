@@ -26,6 +26,10 @@ public class VkMemoryAllocateFlagsInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkMemoryAllocateFlagsInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkMemoryAllocateFlagsInfo extends VkObject {
     public void setDeviceMask(VkUInt32 deviceMask) {
         setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDeviceMaskQ() {
+        return getDeviceMask().getValue();
     }
 
     public void setDeviceMask(int deviceMask) {

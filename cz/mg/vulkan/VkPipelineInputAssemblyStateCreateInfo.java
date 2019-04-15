@@ -26,6 +26,10 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -73,6 +81,10 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
         
     }
 
+    public int getTopologyQ() {
+        return getTopology().getValue();
+    }
+
     public void setTopology(int topology) {
         getTopology().setValue(topology);
     }
@@ -88,6 +100,10 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
     public void setPrimitiveRestartEnable(VkBool32 primitiveRestartEnable) {
         setPrimitiveRestartEnable(getVkAddress(), primitiveRestartEnable != null ? primitiveRestartEnable.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPrimitiveRestartEnableQ() {
+        return getPrimitiveRestartEnable().getValue();
     }
 
     public void setPrimitiveRestartEnable(int primitiveRestartEnable) {

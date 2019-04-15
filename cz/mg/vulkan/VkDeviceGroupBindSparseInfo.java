@@ -26,6 +26,10 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
         
     }
 
+    public int getResourceDeviceIndexQ() {
+        return getResourceDeviceIndex().getValue();
+    }
+
     public void setResourceDeviceIndex(int resourceDeviceIndex) {
         getResourceDeviceIndex().setValue(resourceDeviceIndex);
     }
@@ -71,6 +79,10 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
     public void setMemoryDeviceIndex(VkUInt32 memoryDeviceIndex) {
         setMemoryDeviceIndex(getVkAddress(), memoryDeviceIndex != null ? memoryDeviceIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMemoryDeviceIndexQ() {
+        return getMemoryDeviceIndex().getValue();
     }
 
     public void setMemoryDeviceIndex(int memoryDeviceIndex) {

@@ -26,6 +26,10 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
     public void setSubpassCount(VkUInt32 subpassCount) {
         setSubpassCount(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSubpassCountQ() {
+        return getSubpassCount().getValue();
     }
 
     public void setSubpassCount(int subpassCount) {
@@ -86,6 +94,10 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         
     }
 
+    public int getDependencyCountQ() {
+        return getDependencyCount().getValue();
+    }
+
     public void setDependencyCount(int dependencyCount) {
         getDependencyCount().setValue(dependencyCount);
     }
@@ -114,6 +126,10 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
     public void setCorrelationMaskCount(VkUInt32 correlationMaskCount) {
         setCorrelationMaskCount(getVkAddress(), correlationMaskCount != null ? correlationMaskCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getCorrelationMaskCountQ() {
+        return getCorrelationMaskCount().getValue();
     }
 
     public void setCorrelationMaskCount(int correlationMaskCount) {

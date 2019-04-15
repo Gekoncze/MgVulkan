@@ -26,6 +26,10 @@ public class VkApplicationInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkApplicationInfo extends VkObject {
         this.pApplicationName = pApplicationName;
     }
 
+    public String getPApplicationNameQ() {
+        return new VkString(getPApplicationName()).toString();
+    }
+
     public void setPApplicationName(String pApplicationName) {
         setPApplicationName(new VkString(pApplicationName));
     }
@@ -71,6 +79,10 @@ public class VkApplicationInfo extends VkObject {
     public void setApplicationVersion(VkUInt32 applicationVersion) {
         setApplicationVersion(getVkAddress(), applicationVersion != null ? applicationVersion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getApplicationVersionQ() {
+        return getApplicationVersion().getValue();
     }
 
     public void setApplicationVersion(int applicationVersion) {
@@ -90,6 +102,10 @@ public class VkApplicationInfo extends VkObject {
         this.pEngineName = pEngineName;
     }
 
+    public String getPEngineNameQ() {
+        return new VkString(getPEngineName()).toString();
+    }
+
     public void setPEngineName(String pEngineName) {
         setPEngineName(new VkString(pEngineName));
     }
@@ -107,6 +123,10 @@ public class VkApplicationInfo extends VkObject {
         
     }
 
+    public int getEngineVersionQ() {
+        return getEngineVersion().getValue();
+    }
+
     public void setEngineVersion(int engineVersion) {
         getEngineVersion().setValue(engineVersion);
     }
@@ -122,6 +142,10 @@ public class VkApplicationInfo extends VkObject {
     public void setApiVersion(VkUInt32 apiVersion) {
         setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getApiVersionQ() {
+        return getApiVersion().getValue();
     }
 
     public void setApiVersion(int apiVersion) {

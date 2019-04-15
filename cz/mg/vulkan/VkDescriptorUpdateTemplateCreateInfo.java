@@ -26,6 +26,10 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
     public void setDescriptorUpdateEntryCount(VkUInt32 descriptorUpdateEntryCount) {
         setDescriptorUpdateEntryCount(getVkAddress(), descriptorUpdateEntryCount != null ? descriptorUpdateEntryCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDescriptorUpdateEntryCountQ() {
+        return getDescriptorUpdateEntryCount().getValue();
     }
 
     public void setDescriptorUpdateEntryCount(int descriptorUpdateEntryCount) {
@@ -103,6 +115,10 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
         
     }
 
+    public int getTemplateTypeQ() {
+        return getTemplateType().getValue();
+    }
+
     public void setTemplateType(int templateType) {
         getTemplateType().setValue(templateType);
     }
@@ -133,6 +149,10 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
         
     }
 
+    public int getPipelineBindPointQ() {
+        return getPipelineBindPoint().getValue();
+    }
+
     public void setPipelineBindPoint(int pipelineBindPoint) {
         getPipelineBindPoint().setValue(pipelineBindPoint);
     }
@@ -161,6 +181,10 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
     public void setSet(VkUInt32 set) {
         setSet(getVkAddress(), set != null ? set.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSetQ() {
+        return getSet().getValue();
     }
 
     public void setSet(int set) {

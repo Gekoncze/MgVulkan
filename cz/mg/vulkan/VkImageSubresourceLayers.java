@@ -25,6 +25,10 @@ public class VkImageSubresourceLayers extends VkObject {
         
     }
 
+    public int getAspectMaskQ() {
+        return getAspectMask().getValue();
+    }
+
     public void setAspectMask(int aspectMask) {
         getAspectMask().setValue(aspectMask);
     }
@@ -40,6 +44,10 @@ public class VkImageSubresourceLayers extends VkObject {
     public void setMipLevel(VkUInt32 mipLevel) {
         setMipLevel(getVkAddress(), mipLevel != null ? mipLevel.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getMipLevelQ() {
+        return getMipLevel().getValue();
     }
 
     public void setMipLevel(int mipLevel) {
@@ -59,6 +67,10 @@ public class VkImageSubresourceLayers extends VkObject {
         
     }
 
+    public int getBaseArrayLayerQ() {
+        return getBaseArrayLayer().getValue();
+    }
+
     public void setBaseArrayLayer(int baseArrayLayer) {
         getBaseArrayLayer().setValue(baseArrayLayer);
     }
@@ -74,6 +86,10 @@ public class VkImageSubresourceLayers extends VkObject {
     public void setLayerCount(VkUInt32 layerCount) {
         setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getLayerCountQ() {
+        return getLayerCount().getValue();
     }
 
     public void setLayerCount(int layerCount) {

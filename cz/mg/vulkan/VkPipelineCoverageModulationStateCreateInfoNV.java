@@ -26,6 +26,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
     public void setCoverageModulationMode(VkCoverageModulationModeNV coverageModulationMode) {
         setCoverageModulationMode(getVkAddress(), coverageModulationMode != null ? coverageModulationMode.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getCoverageModulationModeQ() {
+        return getCoverageModulationMode().getValue();
     }
 
     public void setCoverageModulationMode(int coverageModulationMode) {
@@ -90,6 +102,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         
     }
 
+    public int getCoverageModulationTableEnableQ() {
+        return getCoverageModulationTableEnable().getValue();
+    }
+
     public void setCoverageModulationTableEnable(int coverageModulationTableEnable) {
         getCoverageModulationTableEnable().setValue(coverageModulationTableEnable);
     }
@@ -105,6 +121,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
     public void setCoverageModulationTableCount(VkUInt32 coverageModulationTableCount) {
         setCoverageModulationTableCount(getVkAddress(), coverageModulationTableCount != null ? coverageModulationTableCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getCoverageModulationTableCountQ() {
+        return getCoverageModulationTableCount().getValue();
     }
 
     public void setCoverageModulationTableCount(int coverageModulationTableCount) {

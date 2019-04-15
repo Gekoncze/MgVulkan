@@ -26,6 +26,10 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -71,6 +79,10 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
     public void setViewportCount(VkUInt32 viewportCount) {
         setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getViewportCountQ() {
+        return getViewportCount().getValue();
     }
 
     public void setViewportCount(int viewportCount) {

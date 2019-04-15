@@ -25,6 +25,10 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
         
     }
 
+    public int getIndexCountQ() {
+        return getIndexCount().getValue();
+    }
+
     public void setIndexCount(int indexCount) {
         getIndexCount().setValue(indexCount);
     }
@@ -40,6 +44,10 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
     public void setInstanceCount(VkUInt32 instanceCount) {
         setInstanceCount(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getInstanceCountQ() {
+        return getInstanceCount().getValue();
     }
 
     public void setInstanceCount(int instanceCount) {
@@ -59,6 +67,10 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
         
     }
 
+    public int getFirstIndexQ() {
+        return getFirstIndex().getValue();
+    }
+
     public void setFirstIndex(int firstIndex) {
         getFirstIndex().setValue(firstIndex);
     }
@@ -76,6 +88,10 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
         
     }
 
+    public int getVertexOffsetQ() {
+        return getVertexOffset().getValue();
+    }
+
     public void setVertexOffset(int vertexOffset) {
         getVertexOffset().setValue(vertexOffset);
     }
@@ -91,6 +107,10 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
     public void setFirstInstance(VkUInt32 firstInstance) {
         setFirstInstance(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFirstInstanceQ() {
+        return getFirstInstance().getValue();
     }
 
     public void setFirstInstance(int firstInstance) {

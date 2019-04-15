@@ -25,6 +25,10 @@ public class VkSubpassDescription extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -42,6 +46,10 @@ public class VkSubpassDescription extends VkObject {
         
     }
 
+    public int getPipelineBindPointQ() {
+        return getPipelineBindPoint().getValue();
+    }
+
     public void setPipelineBindPoint(int pipelineBindPoint) {
         getPipelineBindPoint().setValue(pipelineBindPoint);
     }
@@ -57,6 +65,10 @@ public class VkSubpassDescription extends VkObject {
     public void setInputAttachmentCount(VkUInt32 inputAttachmentCount) {
         setInputAttachmentCount(getVkAddress(), inputAttachmentCount != null ? inputAttachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getInputAttachmentCountQ() {
+        return getInputAttachmentCount().getValue();
     }
 
     public void setInputAttachmentCount(int inputAttachmentCount) {
@@ -87,6 +99,10 @@ public class VkSubpassDescription extends VkObject {
     public void setColorAttachmentCount(VkUInt32 colorAttachmentCount) {
         setColorAttachmentCount(getVkAddress(), colorAttachmentCount != null ? colorAttachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getColorAttachmentCountQ() {
+        return getColorAttachmentCount().getValue();
     }
 
     public void setColorAttachmentCount(int colorAttachmentCount) {
@@ -143,6 +159,10 @@ public class VkSubpassDescription extends VkObject {
     public void setPreserveAttachmentCount(VkUInt32 preserveAttachmentCount) {
         setPreserveAttachmentCount(getVkAddress(), preserveAttachmentCount != null ? preserveAttachmentCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPreserveAttachmentCountQ() {
+        return getPreserveAttachmentCount().getValue();
     }
 
     public void setPreserveAttachmentCount(int preserveAttachmentCount) {

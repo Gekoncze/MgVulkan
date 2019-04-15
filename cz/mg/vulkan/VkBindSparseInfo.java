@@ -26,6 +26,10 @@ public class VkBindSparseInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkBindSparseInfo extends VkObject {
     public void setWaitSemaphoreCount(VkUInt32 waitSemaphoreCount) {
         setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount != null ? waitSemaphoreCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getWaitSemaphoreCountQ() {
+        return getWaitSemaphoreCount().getValue();
     }
 
     public void setWaitSemaphoreCount(int waitSemaphoreCount) {
@@ -86,6 +94,10 @@ public class VkBindSparseInfo extends VkObject {
         
     }
 
+    public int getBufferBindCountQ() {
+        return getBufferBindCount().getValue();
+    }
+
     public void setBufferBindCount(int bufferBindCount) {
         getBufferBindCount().setValue(bufferBindCount);
     }
@@ -114,6 +126,10 @@ public class VkBindSparseInfo extends VkObject {
     public void setImageOpaqueBindCount(VkUInt32 imageOpaqueBindCount) {
         setImageOpaqueBindCount(getVkAddress(), imageOpaqueBindCount != null ? imageOpaqueBindCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getImageOpaqueBindCountQ() {
+        return getImageOpaqueBindCount().getValue();
     }
 
     public void setImageOpaqueBindCount(int imageOpaqueBindCount) {
@@ -146,6 +162,10 @@ public class VkBindSparseInfo extends VkObject {
         
     }
 
+    public int getImageBindCountQ() {
+        return getImageBindCount().getValue();
+    }
+
     public void setImageBindCount(int imageBindCount) {
         getImageBindCount().setValue(imageBindCount);
     }
@@ -174,6 +194,10 @@ public class VkBindSparseInfo extends VkObject {
     public void setSignalSemaphoreCount(VkUInt32 signalSemaphoreCount) {
         setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount != null ? signalSemaphoreCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSignalSemaphoreCountQ() {
+        return getSignalSemaphoreCount().getValue();
     }
 
     public void setSignalSemaphoreCount(int signalSemaphoreCount) {

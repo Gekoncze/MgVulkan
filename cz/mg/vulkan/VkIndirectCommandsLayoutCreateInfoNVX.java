@@ -26,6 +26,10 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         
     }
 
+    public int getPipelineBindPointQ() {
+        return getPipelineBindPoint().getValue();
+    }
+
     public void setPipelineBindPoint(int pipelineBindPoint) {
         getPipelineBindPoint().setValue(pipelineBindPoint);
     }
@@ -73,6 +81,10 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -88,6 +100,10 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
     public void setTokenCount(VkUInt32 tokenCount) {
         setTokenCount(getVkAddress(), tokenCount != null ? tokenCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getTokenCountQ() {
+        return getTokenCount().getValue();
     }
 
     public void setTokenCount(int tokenCount) {

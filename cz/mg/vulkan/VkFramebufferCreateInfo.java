@@ -26,6 +26,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkFramebufferCreateInfo extends VkObject {
     public void setFlags(VkFramebufferCreateFlags flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {
@@ -86,6 +94,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         
     }
 
+    public int getAttachmentCountQ() {
+        return getAttachmentCount().getValue();
+    }
+
     public void setAttachmentCount(int attachmentCount) {
         getAttachmentCount().setValue(attachmentCount);
     }
@@ -116,6 +128,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         
     }
 
+    public int getWidthQ() {
+        return getWidth().getValue();
+    }
+
     public void setWidth(int width) {
         getWidth().setValue(width);
     }
@@ -133,6 +149,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         
     }
 
+    public int getHeightQ() {
+        return getHeight().getValue();
+    }
+
     public void setHeight(int height) {
         getHeight().setValue(height);
     }
@@ -148,6 +168,10 @@ public class VkFramebufferCreateInfo extends VkObject {
     public void setLayers(VkUInt32 layers) {
         setLayers(getVkAddress(), layers != null ? layers.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getLayersQ() {
+        return getLayers().getValue();
     }
 
     public void setLayers(int layers) {

@@ -25,6 +25,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
         
     }
 
+    public int getNumUsedVgprsQ() {
+        return getNumUsedVgprs().getValue();
+    }
+
     public void setNumUsedVgprs(int numUsedVgprs) {
         getNumUsedVgprs().setValue(numUsedVgprs);
     }
@@ -40,6 +44,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
     public void setNumUsedSgprs(VkUInt32 numUsedSgprs) {
         setNumUsedSgprs(getVkAddress(), numUsedSgprs != null ? numUsedSgprs.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getNumUsedSgprsQ() {
+        return getNumUsedSgprs().getValue();
     }
 
     public void setNumUsedSgprs(int numUsedSgprs) {
@@ -59,6 +67,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
         
     }
 
+    public int getLdsSizePerLocalWorkGroupQ() {
+        return getLdsSizePerLocalWorkGroup().getValue();
+    }
+
     public void setLdsSizePerLocalWorkGroup(int ldsSizePerLocalWorkGroup) {
         getLdsSizePerLocalWorkGroup().setValue(ldsSizePerLocalWorkGroup);
     }
@@ -76,6 +88,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
         
     }
 
+    public long getLdsUsageSizeInBytesQ() {
+        return getLdsUsageSizeInBytes().getValue();
+    }
+
     public void setLdsUsageSizeInBytes(long ldsUsageSizeInBytes) {
         getLdsUsageSizeInBytes().setValue(ldsUsageSizeInBytes);
     }
@@ -91,6 +107,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
     public void setScratchMemUsageInBytes(VkSize scratchMemUsageInBytes) {
         setScratchMemUsageInBytes(getVkAddress(), scratchMemUsageInBytes != null ? scratchMemUsageInBytes.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getScratchMemUsageInBytesQ() {
+        return getScratchMemUsageInBytes().getValue();
     }
 
     public void setScratchMemUsageInBytes(long scratchMemUsageInBytes) {

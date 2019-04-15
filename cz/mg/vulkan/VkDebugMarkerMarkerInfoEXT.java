@@ -26,6 +26,10 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
     public void setPMarkerName(VkChar pMarkerName) {
         setPMarkerName(getVkAddress(), pMarkerName != null ? pMarkerName.getVkAddress() : VkPointer.NULL);
         this.pMarkerName = pMarkerName;
+    }
+
+    public String getPMarkerNameQ() {
+        return new VkString(getPMarkerName()).toString();
     }
 
     public void setPMarkerName(String pMarkerName) {

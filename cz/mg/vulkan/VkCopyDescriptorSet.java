@@ -25,6 +25,10 @@ public class VkCopyDescriptorSet extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -68,6 +72,10 @@ public class VkCopyDescriptorSet extends VkObject {
         
     }
 
+    public int getSrcBindingQ() {
+        return getSrcBinding().getValue();
+    }
+
     public void setSrcBinding(int srcBinding) {
         getSrcBinding().setValue(srcBinding);
     }
@@ -83,6 +91,10 @@ public class VkCopyDescriptorSet extends VkObject {
     public void setSrcArrayElement(VkUInt32 srcArrayElement) {
         setSrcArrayElement(getVkAddress(), srcArrayElement != null ? srcArrayElement.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getSrcArrayElementQ() {
+        return getSrcArrayElement().getValue();
     }
 
     public void setSrcArrayElement(int srcArrayElement) {
@@ -115,6 +127,10 @@ public class VkCopyDescriptorSet extends VkObject {
         
     }
 
+    public int getDstBindingQ() {
+        return getDstBinding().getValue();
+    }
+
     public void setDstBinding(int dstBinding) {
         getDstBinding().setValue(dstBinding);
     }
@@ -132,6 +148,10 @@ public class VkCopyDescriptorSet extends VkObject {
         
     }
 
+    public int getDstArrayElementQ() {
+        return getDstArrayElement().getValue();
+    }
+
     public void setDstArrayElement(int dstArrayElement) {
         getDstArrayElement().setValue(dstArrayElement);
     }
@@ -147,6 +167,10 @@ public class VkCopyDescriptorSet extends VkObject {
     public void setDescriptorCount(VkUInt32 descriptorCount) {
         setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDescriptorCountQ() {
+        return getDescriptorCount().getValue();
     }
 
     public void setDescriptorCount(int descriptorCount) {

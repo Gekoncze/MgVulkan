@@ -25,6 +25,10 @@ public class VkBufferMemoryBarrier extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -55,6 +59,10 @@ public class VkBufferMemoryBarrier extends VkObject {
         
     }
 
+    public int getSrcAccessMaskQ() {
+        return getSrcAccessMask().getValue();
+    }
+
     public void setSrcAccessMask(int srcAccessMask) {
         getSrcAccessMask().setValue(srcAccessMask);
     }
@@ -70,6 +78,10 @@ public class VkBufferMemoryBarrier extends VkObject {
     public void setDstAccessMask(VkAccessFlags dstAccessMask) {
         setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDstAccessMaskQ() {
+        return getDstAccessMask().getValue();
     }
 
     public void setDstAccessMask(int dstAccessMask) {
@@ -89,6 +101,10 @@ public class VkBufferMemoryBarrier extends VkObject {
         
     }
 
+    public int getSrcQueueFamilyIndexQ() {
+        return getSrcQueueFamilyIndex().getValue();
+    }
+
     public void setSrcQueueFamilyIndex(int srcQueueFamilyIndex) {
         getSrcQueueFamilyIndex().setValue(srcQueueFamilyIndex);
     }
@@ -104,6 +120,10 @@ public class VkBufferMemoryBarrier extends VkObject {
     public void setDstQueueFamilyIndex(VkUInt32 dstQueueFamilyIndex) {
         setDstQueueFamilyIndex(getVkAddress(), dstQueueFamilyIndex != null ? dstQueueFamilyIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getDstQueueFamilyIndexQ() {
+        return getDstQueueFamilyIndex().getValue();
     }
 
     public void setDstQueueFamilyIndex(int dstQueueFamilyIndex) {
@@ -136,6 +156,10 @@ public class VkBufferMemoryBarrier extends VkObject {
         
     }
 
+    public long getOffsetQ() {
+        return getOffset().getValue();
+    }
+
     public void setOffset(long offset) {
         getOffset().setValue(offset);
     }
@@ -151,6 +175,10 @@ public class VkBufferMemoryBarrier extends VkObject {
     public void setSize(VkDeviceSize size) {
         setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public long getSizeQ() {
+        return getSize().getValue();
     }
 
     public void setSize(long size) {

@@ -25,6 +25,10 @@ public class VkQueueFamilyProperties extends VkObject {
         
     }
 
+    public int getQueueFlagsQ() {
+        return getQueueFlags().getValue();
+    }
+
     public void setQueueFlags(int queueFlags) {
         getQueueFlags().setValue(queueFlags);
     }
@@ -42,6 +46,10 @@ public class VkQueueFamilyProperties extends VkObject {
         
     }
 
+    public int getQueueCountQ() {
+        return getQueueCount().getValue();
+    }
+
     public void setQueueCount(int queueCount) {
         getQueueCount().setValue(queueCount);
     }
@@ -57,6 +65,10 @@ public class VkQueueFamilyProperties extends VkObject {
     public void setTimestampValidBits(VkUInt32 timestampValidBits) {
         setTimestampValidBits(getVkAddress(), timestampValidBits != null ? timestampValidBits.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getTimestampValidBitsQ() {
+        return getTimestampValidBits().getValue();
     }
 
     public void setTimestampValidBits(int timestampValidBits) {

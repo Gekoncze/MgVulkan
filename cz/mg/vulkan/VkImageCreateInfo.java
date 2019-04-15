@@ -26,6 +26,10 @@ public class VkImageCreateInfo extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkImageCreateInfo extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -73,6 +81,10 @@ public class VkImageCreateInfo extends VkObject {
         
     }
 
+    public int getImageTypeQ() {
+        return getImageType().getValue();
+    }
+
     public void setImageType(int imageType) {
         getImageType().setValue(imageType);
     }
@@ -88,6 +100,10 @@ public class VkImageCreateInfo extends VkObject {
     public void setFormat(VkFormat format) {
         setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFormatQ() {
+        return getFormat().getValue();
     }
 
     public void setFormat(int format) {
@@ -120,6 +136,10 @@ public class VkImageCreateInfo extends VkObject {
         
     }
 
+    public int getMipLevelsQ() {
+        return getMipLevels().getValue();
+    }
+
     public void setMipLevels(int mipLevels) {
         getMipLevels().setValue(mipLevels);
     }
@@ -135,6 +155,10 @@ public class VkImageCreateInfo extends VkObject {
     public void setArrayLayers(VkUInt32 arrayLayers) {
         setArrayLayers(getVkAddress(), arrayLayers != null ? arrayLayers.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getArrayLayersQ() {
+        return getArrayLayers().getValue();
     }
 
     public void setArrayLayers(int arrayLayers) {
@@ -154,6 +178,10 @@ public class VkImageCreateInfo extends VkObject {
         
     }
 
+    public int getSamplesQ() {
+        return getSamples().getValue();
+    }
+
     public void setSamples(int samples) {
         getSamples().setValue(samples);
     }
@@ -169,6 +197,10 @@ public class VkImageCreateInfo extends VkObject {
     public void setTiling(VkImageTiling tiling) {
         setTiling(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getTilingQ() {
+        return getTiling().getValue();
     }
 
     public void setTiling(int tiling) {
@@ -188,6 +220,10 @@ public class VkImageCreateInfo extends VkObject {
         
     }
 
+    public int getUsageQ() {
+        return getUsage().getValue();
+    }
+
     public void setUsage(int usage) {
         getUsage().setValue(usage);
     }
@@ -205,6 +241,10 @@ public class VkImageCreateInfo extends VkObject {
         
     }
 
+    public int getSharingModeQ() {
+        return getSharingMode().getValue();
+    }
+
     public void setSharingMode(int sharingMode) {
         getSharingMode().setValue(sharingMode);
     }
@@ -220,6 +260,10 @@ public class VkImageCreateInfo extends VkObject {
     public void setQueueFamilyIndexCount(VkUInt32 queueFamilyIndexCount) {
         setQueueFamilyIndexCount(getVkAddress(), queueFamilyIndexCount != null ? queueFamilyIndexCount.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getQueueFamilyIndexCountQ() {
+        return getQueueFamilyIndexCount().getValue();
     }
 
     public void setQueueFamilyIndexCount(int queueFamilyIndexCount) {
@@ -250,6 +294,10 @@ public class VkImageCreateInfo extends VkObject {
     public void setInitialLayout(VkImageLayout initialLayout) {
         setInitialLayout(getVkAddress(), initialLayout != null ? initialLayout.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getInitialLayoutQ() {
+        return getInitialLayout().getValue();
     }
 
     public void setInitialLayout(int initialLayout) {

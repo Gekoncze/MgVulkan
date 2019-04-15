@@ -38,6 +38,10 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
         
     }
 
+    public int getBindCountQ() {
+        return getBindCount().getValue();
+    }
+
     public void setBindCount(int bindCount) {
         getBindCount().setValue(bindCount);
     }

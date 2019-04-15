@@ -26,6 +26,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -54,6 +58,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
     public void setFlags(VkDisplaySurfaceCreateFlagsKHR flags) {
         setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getFlagsQ() {
+        return getFlags().getValue();
     }
 
     public void setFlags(int flags) {
@@ -86,6 +94,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         
     }
 
+    public int getPlaneIndexQ() {
+        return getPlaneIndex().getValue();
+    }
+
     public void setPlaneIndex(int planeIndex) {
         getPlaneIndex().setValue(planeIndex);
     }
@@ -101,6 +113,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
     public void setPlaneStackIndex(VkUInt32 planeStackIndex) {
         setPlaneStackIndex(getVkAddress(), planeStackIndex != null ? planeStackIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getPlaneStackIndexQ() {
+        return getPlaneStackIndex().getValue();
     }
 
     public void setPlaneStackIndex(int planeStackIndex) {
@@ -120,6 +136,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         
     }
 
+    public int getTransformQ() {
+        return getTransform().getValue();
+    }
+
     public void setTransform(int transform) {
         getTransform().setValue(transform);
     }
@@ -137,6 +157,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         
     }
 
+    public float getGlobalAlphaQ() {
+        return getGlobalAlpha().getValue();
+    }
+
     public void setGlobalAlpha(float globalAlpha) {
         getGlobalAlpha().setValue(globalAlpha);
     }
@@ -152,6 +176,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
     public void setAlphaMode(VkDisplayPlaneAlphaFlagBitsKHR alphaMode) {
         setAlphaMode(getVkAddress(), alphaMode != null ? alphaMode.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getAlphaModeQ() {
+        return getAlphaMode().getValue();
     }
 
     public void setAlphaMode(int alphaMode) {

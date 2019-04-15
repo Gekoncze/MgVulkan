@@ -26,6 +26,10 @@ public class VkDeviceQueueInfo2 extends VkObject {
         
     }
 
+    public int getSTypeQ() {
+        return getSType().getValue();
+    }
+
     public void setSType(int sType) {
         getSType().setValue(sType);
     }
@@ -56,6 +60,10 @@ public class VkDeviceQueueInfo2 extends VkObject {
         
     }
 
+    public int getFlagsQ() {
+        return getFlags().getValue();
+    }
+
     public void setFlags(int flags) {
         getFlags().setValue(flags);
     }
@@ -73,6 +81,10 @@ public class VkDeviceQueueInfo2 extends VkObject {
         
     }
 
+    public int getQueueFamilyIndexQ() {
+        return getQueueFamilyIndex().getValue();
+    }
+
     public void setQueueFamilyIndex(int queueFamilyIndex) {
         getQueueFamilyIndex().setValue(queueFamilyIndex);
     }
@@ -88,6 +100,10 @@ public class VkDeviceQueueInfo2 extends VkObject {
     public void setQueueIndex(VkUInt32 queueIndex) {
         setQueueIndex(getVkAddress(), queueIndex != null ? queueIndex.getVkAddress() : VkPointer.getNullAddress());
         
+    }
+
+    public int getQueueIndexQ() {
+        return getQueueIndex().getValue();
     }
 
     public void setQueueIndex(int queueIndex) {
