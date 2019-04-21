@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MgResourceManager">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../MgResourceManager/out/artifacts/MgResourceManager_jar/MgResourceManager.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

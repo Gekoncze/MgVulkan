@@ -1,0 +1,104 @@
+#include <jni.h>
+#include <stdlib.h>
+#include <string.h>
+#include <vulkan/vulkan.h>
+
+jlong jniPointerToLong(const void* p);
+void* jniLongToPointer(jlong l);
+jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
+PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
+void jniThrowException(JNIEnv* env, const char* message);
+
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_sizeof(JNIEnv* env, jclass jc)
+{
+    (void)env;
+    (void)jc;
+    return sizeof(VkDeviceGroupRenderPassBeginInfoKHX);
+}
+
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getSType(JNIEnv* env, jclass jc, jlong address)
+{
+    (void)env;
+    (void)jc;
+    VkDeviceGroupRenderPassBeginInfoKHX* o = (VkDeviceGroupRenderPassBeginInfoKHX*)jniLongToPointer(address);
+    return jniPointerToLong(&o->sType);
+}
+
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+{
+    (void)env;
+    (void)jc;
+    VkDeviceGroupRenderPassBeginInfoKHX* o = (VkDeviceGroupRenderPassBeginInfoKHX*)jniLongToPointer(address);
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->sType, valuePointer, sizeof(o->sType));
+}
+
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getPNext(JNIEnv* env, jclass jc, jlong address)
+{
+    (void)env;
+    (void)jc;
+    VkDeviceGroupRenderPassBeginInfoKHX* o = (VkDeviceGroupRenderPassBeginInfoKHX*)jniLongToPointer(address);
+    return jniPointerToLong(o->pNext);
+}
+
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+{
+    (void)env;
+    (void)jc;
+    VkDeviceGroupRenderPassBeginInfoKHX* o = (VkDeviceGroupRenderPassBeginInfoKHX*)jniLongToPointer(address);
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
+}
+
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getDeviceMask(JNIEnv* env, jclass jc, jlong address)
+{
+    (void)env;
+    (void)jc;
+    VkDeviceGroupRenderPassBeginInfoKHX* o = (VkDeviceGroupRenderPassBeginInfoKHX*)jniLongToPointer(address);
+    return jniPointerToLong(&o->deviceMask);
+}
+
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setDeviceMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+{
+    (void)env;
+    (void)jc;
+    VkDeviceGroupRenderPassBeginInfoKHX* o = (VkDeviceGroupRenderPassBeginInfoKHX*)jniLongToPointer(address);
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->deviceMask, valuePointer, sizeof(o->deviceMask));
+}
+
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getDeviceRenderAreaCount(JNIEnv* env, jclass jc, jlong address)
+{
+    (void)env;
+    (void)jc;
+    VkDeviceGroupRenderPassBeginInfoKHX* o = (VkDeviceGroupRenderPassBeginInfoKHX*)jniLongToPointer(address);
+    return jniPointerToLong(&o->deviceRenderAreaCount);
+}
+
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setDeviceRenderAreaCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+{
+    (void)env;
+    (void)jc;
+    VkDeviceGroupRenderPassBeginInfoKHX* o = (VkDeviceGroupRenderPassBeginInfoKHX*)jniLongToPointer(address);
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->deviceRenderAreaCount, valuePointer, sizeof(o->deviceRenderAreaCount));
+}
+
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getPDeviceRenderAreas(JNIEnv* env, jclass jc, jlong address)
+{
+    (void)env;
+    (void)jc;
+    VkDeviceGroupRenderPassBeginInfoKHX* o = (VkDeviceGroupRenderPassBeginInfoKHX*)jniLongToPointer(address);
+    return jniPointerToLong(o->pDeviceRenderAreas);
+}
+
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setPDeviceRenderAreas(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+{
+    (void)env;
+    (void)jc;
+    VkDeviceGroupRenderPassBeginInfoKHX* o = (VkDeviceGroupRenderPassBeginInfoKHX*)jniLongToPointer(address);
+    void* valuePointer = jniLongToPointer(valueAddress);
+    memcpy(&o->pDeviceRenderAreas, &valuePointer, sizeof(o->pDeviceRenderAreas));
+}
+
+

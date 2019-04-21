@@ -1,0 +1,37 @@
+package cz.mg.vulkan;
+
+import static cz.mg.vulkan.Vk.*;
+
+public class VkVersion extends VkUInt32 {
+    public VkVersion(){
+    }
+
+    public VkVersion(int value){
+        super(value);
+    }
+
+    public VkVersion(int major, int minor, int patch){
+        this(VK_MAKE_VERSION(major, minor, patch));
+    }
+
+    public VkVersion(VkUInt32 value){
+        this(value.getValue());
+    }
+
+    public int getMajorVersion(){
+        return VK_VERSION_MAJOR(getValue());
+    }
+
+    public int getMinorVersion(){
+        return VK_VERSION_MINOR(getValue());
+    }
+
+    public int getPatchVersion(){
+        return VK_VERSION_PATCH(getValue());
+    }
+
+    @Override
+    public String toString(){
+        return getMajorVersion() + "." + getMinorVersion() + "." + getPatchVersion();
+    }
+}

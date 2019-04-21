@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MgCollections">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../MgCollections/out/artifacts/MgCollections_jar/MgCollections.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
