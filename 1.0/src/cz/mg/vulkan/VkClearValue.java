@@ -13,7 +13,16 @@ public class VkClearValue extends VkObject {
         super(vkmemory, vkaddress);
     }
 
-
+    public VkClearValue(float r, float g, float b, float a, float d, int s) {
+        super(sizeof());
+        VkFloat.Array floats = new VkFloat.Array(4, getColor().getFloat32());
+        floats.get(0).setValue(r);
+        floats.get(1).setValue(g);
+        floats.get(2).setValue(b);
+        floats.get(3).setValue(a);
+        getDepthStencil().setDepth(d);
+        getDepthStencil().setStencil(s);
+    }
 
     public VkClearColorValue getColor() {
         return new VkClearColorValue(getVkMemory(), getColor(getVkAddress()));
