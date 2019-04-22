@@ -161,6 +161,7 @@ public class VkDeviceGroupSubmitInfoKHX extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkDeviceGroupSubmitInfoKHX.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_SUBMIT_INFO_KHX));;
         }
 
         public Array(int count, VkDeviceGroupSubmitInfoKHX o){
@@ -192,6 +193,7 @@ public class VkDeviceGroupSubmitInfoKHX extends VkObject {
             return new VkDeviceGroupSubmitInfoKHX(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

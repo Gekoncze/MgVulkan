@@ -106,6 +106,7 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorSetAllocateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO));;
         }
 
         public Array(int count, VkDescriptorSetAllocateInfo o){
@@ -137,6 +138,7 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
             return new VkDescriptorSetAllocateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

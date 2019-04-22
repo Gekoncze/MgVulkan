@@ -127,6 +127,7 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkBindImageMemoryDeviceGroupInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_DEVICE_GROUP_INFO));;
         }
 
         public Array(int count, VkBindImageMemoryDeviceGroupInfo o){
@@ -158,6 +159,7 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
             return new VkBindImageMemoryDeviceGroupInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

@@ -114,6 +114,7 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkValidationCacheCreateInfoEXT.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_VALIDATION_CACHE_CREATE_INFO_EXT));;
         }
 
         public Array(int count, VkValidationCacheCreateInfoEXT o){
@@ -145,6 +146,7 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
             return new VkValidationCacheCreateInfoEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

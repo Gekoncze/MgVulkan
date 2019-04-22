@@ -114,6 +114,7 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorSetLayoutCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO));;
         }
 
         public Array(int count, VkDescriptorSetLayoutCreateInfo o){
@@ -145,6 +146,7 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
             return new VkDescriptorSetLayoutCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

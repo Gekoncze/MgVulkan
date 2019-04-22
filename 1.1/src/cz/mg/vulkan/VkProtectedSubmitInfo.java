@@ -80,6 +80,7 @@ public class VkProtectedSubmitInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkProtectedSubmitInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PROTECTED_SUBMIT_INFO));;
         }
 
         public Array(int count, VkProtectedSubmitInfo o){
@@ -111,6 +112,7 @@ public class VkProtectedSubmitInfo extends VkObject {
             return new VkProtectedSubmitInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

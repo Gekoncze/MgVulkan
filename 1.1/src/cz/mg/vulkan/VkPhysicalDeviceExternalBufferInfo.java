@@ -122,6 +122,7 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceExternalBufferInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_BUFFER_INFO));;
         }
 
         public Array(int count, VkPhysicalDeviceExternalBufferInfo o){
@@ -153,6 +154,7 @@ public class VkPhysicalDeviceExternalBufferInfo extends VkObject {
             return new VkPhysicalDeviceExternalBufferInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

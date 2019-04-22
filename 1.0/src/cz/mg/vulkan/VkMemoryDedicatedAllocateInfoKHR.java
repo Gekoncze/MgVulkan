@@ -85,6 +85,7 @@ public class VkMemoryDedicatedAllocateInfoKHR extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkMemoryDedicatedAllocateInfoKHR.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_MEMORY_DEDICATED_ALLOCATE_INFO_KHR));;
         }
 
         public Array(int count, VkMemoryDedicatedAllocateInfoKHR o){
@@ -116,6 +117,7 @@ public class VkMemoryDedicatedAllocateInfoKHR extends VkObject {
             return new VkMemoryDedicatedAllocateInfoKHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

@@ -101,6 +101,7 @@ public class VkMemoryAllocateFlagsInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkMemoryAllocateFlagsInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_MEMORY_ALLOCATE_FLAGS_INFO));;
         }
 
         public Array(int count, VkMemoryAllocateFlagsInfo o){
@@ -132,6 +133,7 @@ public class VkMemoryAllocateFlagsInfo extends VkObject {
             return new VkMemoryAllocateFlagsInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

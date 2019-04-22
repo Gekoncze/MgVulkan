@@ -114,6 +114,7 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPipelineCacheCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_CACHE_CREATE_INFO));;
         }
 
         public Array(int count, VkPipelineCacheCreateInfo o){
@@ -145,6 +146,7 @@ public class VkPipelineCacheCreateInfo extends VkObject {
             return new VkPipelineCacheCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

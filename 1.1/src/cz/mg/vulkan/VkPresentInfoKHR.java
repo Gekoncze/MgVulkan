@@ -153,6 +153,7 @@ public class VkPresentInfoKHR extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPresentInfoKHR.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PRESENT_INFO_KHR));;
         }
 
         public Array(int count, VkPresentInfoKHR o){
@@ -184,6 +185,7 @@ public class VkPresentInfoKHR extends VkObject {
             return new VkPresentInfoKHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

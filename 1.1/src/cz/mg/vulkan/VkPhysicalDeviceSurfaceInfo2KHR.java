@@ -72,6 +72,7 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceSurfaceInfo2KHR.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SURFACE_INFO_2_KHR));;
         }
 
         public Array(int count, VkPhysicalDeviceSurfaceInfo2KHR o){
@@ -103,6 +104,7 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
             return new VkPhysicalDeviceSurfaceInfo2KHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

@@ -190,6 +190,7 @@ public class VkFramebufferCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkFramebufferCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_FRAMEBUFFER_CREATE_INFO));;
         }
 
         public Array(int count, VkFramebufferCreateInfo o){
@@ -221,6 +222,7 @@ public class VkFramebufferCreateInfo extends VkObject {
             return new VkFramebufferCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

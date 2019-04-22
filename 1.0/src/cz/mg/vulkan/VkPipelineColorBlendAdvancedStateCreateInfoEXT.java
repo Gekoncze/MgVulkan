@@ -122,6 +122,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPipelineColorBlendAdvancedStateCreateInfoEXT.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_ADVANCED_STATE_CREATE_INFO_EXT));;
         }
 
         public Array(int count, VkPipelineColorBlendAdvancedStateCreateInfoEXT o){
@@ -153,6 +154,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
             return new VkPipelineColorBlendAdvancedStateCreateInfoEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

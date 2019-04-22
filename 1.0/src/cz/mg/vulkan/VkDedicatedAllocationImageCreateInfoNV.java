@@ -80,6 +80,7 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkDedicatedAllocationImageCreateInfoNV.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV));;
         }
 
         public Array(int count, VkDedicatedAllocationImageCreateInfoNV o){
@@ -111,6 +112,7 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
             return new VkDedicatedAllocationImageCreateInfoNV(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

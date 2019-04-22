@@ -80,6 +80,7 @@ public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceExternalSemaphoreInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_SEMAPHORE_INFO));;
         }
 
         public Array(int count, VkPhysicalDeviceExternalSemaphoreInfo o){
@@ -111,6 +112,7 @@ public class VkPhysicalDeviceExternalSemaphoreInfo extends VkObject {
             return new VkPhysicalDeviceExternalSemaphoreInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

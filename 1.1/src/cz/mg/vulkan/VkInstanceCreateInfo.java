@@ -161,6 +161,7 @@ public class VkInstanceCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkInstanceCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO));;
         }
 
         public Array(int count, VkInstanceCreateInfo o){
@@ -192,6 +193,7 @@ public class VkInstanceCreateInfo extends VkObject {
             return new VkInstanceCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

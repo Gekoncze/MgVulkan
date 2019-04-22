@@ -93,6 +93,7 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkDeviceGroupDeviceCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_DEVICE_CREATE_INFO));;
         }
 
         public Array(int count, VkDeviceGroupDeviceCreateInfo o){
@@ -124,6 +125,7 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
             return new VkDeviceGroupDeviceCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

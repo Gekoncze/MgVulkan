@@ -80,6 +80,7 @@ public class VkExportMemoryAllocateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkExportMemoryAllocateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXPORT_MEMORY_ALLOCATE_INFO));;
         }
 
         public Array(int count, VkExportMemoryAllocateInfo o){
@@ -111,6 +112,7 @@ public class VkExportMemoryAllocateInfo extends VkObject {
             return new VkExportMemoryAllocateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

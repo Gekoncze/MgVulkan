@@ -101,6 +101,7 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkDeviceGroupBindSparseInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_BIND_SPARSE_INFO));;
         }
 
         public Array(int count, VkDeviceGroupBindSparseInfo o){
@@ -132,6 +133,7 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
             return new VkDeviceGroupBindSparseInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

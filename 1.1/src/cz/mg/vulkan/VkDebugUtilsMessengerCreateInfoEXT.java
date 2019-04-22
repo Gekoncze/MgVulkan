@@ -148,6 +148,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkDebugUtilsMessengerCreateInfoEXT.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_UTILS_MESSENGER_CREATE_INFO_EXT));;
         }
 
         public Array(int count, VkDebugUtilsMessengerCreateInfoEXT o){
@@ -179,6 +180,7 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
             return new VkDebugUtilsMessengerCreateInfoEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

@@ -106,6 +106,7 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkCmdReserveSpaceForCommandsInfoNVX.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_CMD_RESERVE_SPACE_FOR_COMMANDS_INFO_NVX));;
         }
 
         public Array(int count, VkCmdReserveSpaceForCommandsInfoNVX o){
@@ -137,6 +138,7 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
             return new VkCmdReserveSpaceForCommandsInfoNVX(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

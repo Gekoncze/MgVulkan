@@ -93,6 +93,7 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkDescriptorSetLayoutBindingFlagsCreateInfoEXT.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO_EXT));;
         }
 
         public Array(int count, VkDescriptorSetLayoutBindingFlagsCreateInfoEXT o){
@@ -124,6 +125,7 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
             return new VkDescriptorSetLayoutBindingFlagsCreateInfoEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

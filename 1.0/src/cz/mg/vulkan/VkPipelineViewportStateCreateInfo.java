@@ -148,6 +148,7 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPipelineViewportStateCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO));;
         }
 
         public Array(int count, VkPipelineViewportStateCreateInfo o){
@@ -179,6 +180,7 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
             return new VkPipelineViewportStateCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

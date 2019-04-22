@@ -132,6 +132,7 @@ public class VkRenderPassBeginInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkRenderPassBeginInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO));;
         }
 
         public Array(int count, VkRenderPassBeginInfo o){
@@ -163,6 +164,7 @@ public class VkRenderPassBeginInfo extends VkObject {
             return new VkRenderPassBeginInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

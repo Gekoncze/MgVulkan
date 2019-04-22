@@ -80,6 +80,7 @@ public class VkBindImagePlaneMemoryInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkBindImagePlaneMemoryInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_IMAGE_PLANE_MEMORY_INFO));;
         }
 
         public Array(int count, VkBindImagePlaneMemoryInfo o){
@@ -111,6 +112,7 @@ public class VkBindImagePlaneMemoryInfo extends VkObject {
             return new VkBindImagePlaneMemoryInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

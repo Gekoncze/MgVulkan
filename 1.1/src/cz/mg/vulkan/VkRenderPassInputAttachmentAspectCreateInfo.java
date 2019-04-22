@@ -93,6 +93,7 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkRenderPassInputAttachmentAspectCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_INPUT_ATTACHMENT_ASPECT_CREATE_INFO));;
         }
 
         public Array(int count, VkRenderPassInputAttachmentAspectCreateInfo o){
@@ -124,6 +125,7 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
             return new VkRenderPassInputAttachmentAspectCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

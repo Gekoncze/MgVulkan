@@ -106,6 +106,7 @@ public class VkBindImageMemoryInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkBindImageMemoryInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_INFO));;
         }
 
         public Array(int count, VkBindImageMemoryInfo o){
@@ -137,6 +138,7 @@ public class VkBindImageMemoryInfo extends VkObject {
             return new VkBindImageMemoryInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

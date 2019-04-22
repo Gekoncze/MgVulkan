@@ -80,6 +80,7 @@ public class VkPhysicalDeviceExternalImageFormatInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceExternalImageFormatInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_IMAGE_FORMAT_INFO));;
         }
 
         public Array(int count, VkPhysicalDeviceExternalImageFormatInfo o){
@@ -111,6 +112,7 @@ public class VkPhysicalDeviceExternalImageFormatInfo extends VkObject {
             return new VkPhysicalDeviceExternalImageFormatInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

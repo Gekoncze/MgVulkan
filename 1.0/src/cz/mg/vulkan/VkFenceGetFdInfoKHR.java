@@ -93,6 +93,7 @@ public class VkFenceGetFdInfoKHR extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkFenceGetFdInfoKHR.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_FENCE_GET_FD_INFO_KHR));;
         }
 
         public Array(int count, VkFenceGetFdInfoKHR o){
@@ -124,6 +125,7 @@ public class VkFenceGetFdInfoKHR extends VkObject {
             return new VkFenceGetFdInfoKHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

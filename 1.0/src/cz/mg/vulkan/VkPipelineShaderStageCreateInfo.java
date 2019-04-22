@@ -148,6 +148,7 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPipelineShaderStageCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO));;
         }
 
         public Array(int count, VkPipelineShaderStageCreateInfo o){
@@ -179,6 +180,7 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
             return new VkPipelineShaderStageCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

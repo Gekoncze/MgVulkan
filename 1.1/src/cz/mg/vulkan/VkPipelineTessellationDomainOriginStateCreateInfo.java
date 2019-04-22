@@ -80,6 +80,7 @@ public class VkPipelineTessellationDomainOriginStateCreateInfo extends VkObject 
         public Array(int count) {
             super(new VkMemory(count*VkPipelineTessellationDomainOriginStateCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_TESSELLATION_DOMAIN_ORIGIN_STATE_CREATE_INFO));;
         }
 
         public Array(int count, VkPipelineTessellationDomainOriginStateCreateInfo o){
@@ -111,6 +112,7 @@ public class VkPipelineTessellationDomainOriginStateCreateInfo extends VkObject 
             return new VkPipelineTessellationDomainOriginStateCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

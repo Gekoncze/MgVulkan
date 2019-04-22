@@ -164,6 +164,7 @@ public class VkApplicationInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkApplicationInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_APPLICATION_INFO));;
         }
 
         public Array(int count, VkApplicationInfo o){
@@ -195,6 +196,7 @@ public class VkApplicationInfo extends VkObject {
             return new VkApplicationInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

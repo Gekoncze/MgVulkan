@@ -148,6 +148,7 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPipelineVertexInputStateCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO));;
         }
 
         public Array(int count, VkPipelineVertexInputStateCreateInfo o){
@@ -179,6 +180,7 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
             return new VkPipelineVertexInputStateCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

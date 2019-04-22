@@ -161,6 +161,7 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkRenderPassMultiviewCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_MULTIVIEW_CREATE_INFO));;
         }
 
         public Array(int count, VkRenderPassMultiviewCreateInfo o){
@@ -192,6 +193,7 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
             return new VkRenderPassMultiviewCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

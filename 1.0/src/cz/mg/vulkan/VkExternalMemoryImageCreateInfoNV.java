@@ -80,6 +80,7 @@ public class VkExternalMemoryImageCreateInfoNV extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkExternalMemoryImageCreateInfoNV.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXTERNAL_MEMORY_IMAGE_CREATE_INFO_NV));;
         }
 
         public Array(int count, VkExternalMemoryImageCreateInfoNV o){
@@ -111,6 +112,7 @@ public class VkExternalMemoryImageCreateInfoNV extends VkObject {
             return new VkExternalMemoryImageCreateInfoNV(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

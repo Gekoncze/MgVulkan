@@ -363,6 +363,7 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkSwapchainCreateInfoKHR.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR));;
         }
 
         public Array(int count, VkSwapchainCreateInfoKHR o){
@@ -394,6 +395,7 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
             return new VkSwapchainCreateInfoKHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

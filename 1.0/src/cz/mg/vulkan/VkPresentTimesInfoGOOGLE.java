@@ -93,6 +93,7 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPresentTimesInfoGOOGLE.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PRESENT_TIMES_INFO_GOOGLE));;
         }
 
         public Array(int count, VkPresentTimesInfoGOOGLE o){
@@ -124,6 +125,7 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
             return new VkPresentTimesInfoGOOGLE(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

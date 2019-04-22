@@ -80,6 +80,7 @@ public class VkPhysicalDeviceExternalFenceInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceExternalFenceInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTERNAL_FENCE_INFO));;
         }
 
         public Array(int count, VkPhysicalDeviceExternalFenceInfo o){
@@ -111,6 +112,7 @@ public class VkPhysicalDeviceExternalFenceInfo extends VkObject {
             return new VkPhysicalDeviceExternalFenceInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

@@ -114,6 +114,7 @@ public class VkDeviceGroupRenderPassBeginInfoKHX extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkDeviceGroupRenderPassBeginInfoKHX.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_RENDER_PASS_BEGIN_INFO_KHX));;
         }
 
         public Array(int count, VkDeviceGroupRenderPassBeginInfoKHX o){
@@ -145,6 +146,7 @@ public class VkDeviceGroupRenderPassBeginInfoKHX extends VkObject {
             return new VkDeviceGroupRenderPassBeginInfoKHX(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

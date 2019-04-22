@@ -164,6 +164,7 @@ public class VkPhysicalDeviceImageFormatInfo2KHR extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPhysicalDeviceImageFormatInfo2KHR.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2_KHR));;
         }
 
         public Array(int count, VkPhysicalDeviceImageFormatInfo2KHR o){
@@ -195,6 +196,7 @@ public class VkPhysicalDeviceImageFormatInfo2KHR extends VkObject {
             return new VkPhysicalDeviceImageFormatInfo2KHR(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

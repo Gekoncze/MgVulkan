@@ -80,6 +80,7 @@ public class VkExportFenceCreateInfo extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkExportFenceCreateInfo.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXPORT_FENCE_CREATE_INFO));;
         }
 
         public Array(int count, VkExportFenceCreateInfo o){
@@ -111,6 +112,7 @@ public class VkExportFenceCreateInfo extends VkObject {
             return new VkExportFenceCreateInfo(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {

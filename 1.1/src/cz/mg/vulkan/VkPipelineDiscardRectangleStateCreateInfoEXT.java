@@ -135,6 +135,7 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkPipelineDiscardRectangleStateCreateInfoEXT.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT));;
         }
 
         public Array(int count, VkPipelineDiscardRectangleStateCreateInfoEXT o){
@@ -166,6 +167,7 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
             return new VkPipelineDiscardRectangleStateCreateInfoEXT(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 
     public static class Pointer extends VkObject.Pointer {
         public Pointer() {
