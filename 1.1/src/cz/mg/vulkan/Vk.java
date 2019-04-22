@@ -2444,9 +2444,16 @@ public class Vk {
     }
 
 
-    public void vkAllocateMemory(VkDevice device, VkMemoryAllocateInfo pAllocateInfo, VkAllocationCallbacks pAllocator, VkDeviceMemory pMemory){
-        vkAllocateMemory(device, pAllocateInfo, pAllocator, pMemory, resources.result.get());
+    public VkDeviceMemory vkAllocateMemory(VkDevice device, VkMemoryAllocateInfo pAllocateInfo){
+        VkDeviceMemory o = new VkDeviceMemory();
+        vkAllocateMemory(device, pAllocateInfo, pAllocator, o, resources.result.get());
         if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkAllocateMemory");
+        return o;
+    }
+
+
+    public void vkFreeMemory(VkDevice device, VkDeviceMemory memory){
+        vkFreeMemory(device, memory, pAllocator);
     }
 
 
