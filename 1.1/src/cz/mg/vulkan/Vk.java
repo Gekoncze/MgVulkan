@@ -2804,9 +2804,11 @@ public class Vk {
     }
 
 
-    public void vkAllocateDescriptorSets(VkDevice device, VkDescriptorSetAllocateInfo pAllocateInfo, VkDescriptorSet pDescriptorSets){
-        vkAllocateDescriptorSets(device, pAllocateInfo, pDescriptorSets, resources.result.get());
+    public VkDescriptorSet vkAllocateDescriptorSets(VkDevice device, VkDescriptorSetAllocateInfo pAllocateInfo){
+        VkDescriptorSet o = new VkDescriptorSet();
+        vkAllocateDescriptorSets(device, pAllocateInfo, o, resources.result.get());
         if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkAllocateDescriptorSets");
+        return o;
     }
 
 
@@ -2868,9 +2870,11 @@ public class Vk {
     }
 
 
-    public void vkAllocateCommandBuffers(VkDevice device, VkCommandBufferAllocateInfo pAllocateInfo, VkCommandBuffer pCommandBuffers){
-        vkAllocateCommandBuffers(device, pAllocateInfo, pCommandBuffers, resources.result.get());
+    public VkCommandBuffer vkAllocateCommandBuffers(VkDevice device, VkCommandBufferAllocateInfo pAllocateInfo){
+        VkCommandBuffer o = new VkCommandBuffer();
+        vkAllocateCommandBuffers(device, pAllocateInfo, o, resources.result.get());
         if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkAllocateCommandBuffers");
+        return o;
     }
 
 
