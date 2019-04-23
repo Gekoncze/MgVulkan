@@ -2284,10 +2284,15 @@ public class Vk {
     }
 
 
+    public void vkCreateInstance(VkInstanceCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkInstance pInstance){
+        vkCreateInstance(pCreateInfo, pAllocator, pInstance, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateInstance");
+    }
+
+
     public VkInstance vkCreateInstance(VkInstanceCreateInfo pCreateInfo){
         VkInstance o = new VkInstance();
-        vkCreateInstance(pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateInstance");
+        vkCreateInstance(pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2297,15 +2302,16 @@ public class Vk {
     }
 
 
+    public void vkEnumeratePhysicalDevices(VkInstance instance, VkUInt32 pPhysicalDeviceCount, VkPhysicalDevice pPhysicalDevices){
+        vkEnumeratePhysicalDevices(instance, pPhysicalDeviceCount, pPhysicalDevices, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumeratePhysicalDevices");
+    }
+
+
     public VkPhysicalDevice.Array vkEnumeratePhysicalDevices(VkInstance instance){
-        vkEnumeratePhysicalDevices(instance, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumeratePhysicalDevices");
-
+        vkEnumeratePhysicalDevices(instance, resources.count.get(), null);
         VkPhysicalDevice.Array o = new VkPhysicalDevice.Array(resources.count.get().getValue());
-
-        vkEnumeratePhysicalDevices(instance, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumeratePhysicalDevices");
-
+        vkEnumeratePhysicalDevices(instance, resources.count.get(), o);
         return o;
     }
 
@@ -2324,10 +2330,15 @@ public class Vk {
     }
 
 
+    public void vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags, VkImageFormatProperties pImageFormatProperties){
+        vkGetPhysicalDeviceImageFormatProperties(physicalDevice, format, type, tiling, usage, flags, pImageFormatProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceImageFormatProperties");
+    }
+
+
     public VkImageFormatProperties vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags){
         VkImageFormatProperties o = new VkImageFormatProperties();
-        vkGetPhysicalDeviceImageFormatProperties(physicalDevice, format, type, tiling, usage, flags, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceImageFormatProperties");
+        vkGetPhysicalDeviceImageFormatProperties(physicalDevice, format, type, tiling, usage, flags, o);
         return o;
     }
 
@@ -2354,10 +2365,15 @@ public class Vk {
     }
 
 
+    public void vkCreateDevice(VkPhysicalDevice physicalDevice, VkDeviceCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDevice pDevice){
+        vkCreateDevice(physicalDevice, pCreateInfo, pAllocator, pDevice, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDevice");
+    }
+
+
     public VkDevice vkCreateDevice(VkPhysicalDevice physicalDevice, VkDeviceCreateInfo pCreateInfo){
         VkDevice o = new VkDevice();
-        vkCreateDevice(physicalDevice, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDevice");
+        vkCreateDevice(physicalDevice, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2367,54 +2383,58 @@ public class Vk {
     }
 
 
+    public void vkEnumerateInstanceExtensionProperties(VkChar pLayerName, VkUInt32 pPropertyCount, VkExtensionProperties pProperties){
+        vkEnumerateInstanceExtensionProperties(pLayerName, pPropertyCount, pProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateInstanceExtensionProperties");
+    }
+
+
     public VkExtensionProperties.Array vkEnumerateInstanceExtensionProperties(VkChar pLayerName){
-        vkEnumerateInstanceExtensionProperties(pLayerName, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateInstanceExtensionProperties");
-
+        vkEnumerateInstanceExtensionProperties(pLayerName, resources.count.get(), null);
         VkExtensionProperties.Array o = new VkExtensionProperties.Array(resources.count.get().getValue());
-
-        vkEnumerateInstanceExtensionProperties(pLayerName, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateInstanceExtensionProperties");
-
+        vkEnumerateInstanceExtensionProperties(pLayerName, resources.count.get(), o);
         return o;
+    }
+
+
+    public void vkEnumerateDeviceExtensionProperties(VkPhysicalDevice physicalDevice, VkChar pLayerName, VkUInt32 pPropertyCount, VkExtensionProperties pProperties){
+        vkEnumerateDeviceExtensionProperties(physicalDevice, pLayerName, pPropertyCount, pProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateDeviceExtensionProperties");
     }
 
 
     public VkExtensionProperties.Array vkEnumerateDeviceExtensionProperties(VkPhysicalDevice physicalDevice, VkChar pLayerName){
-        vkEnumerateDeviceExtensionProperties(physicalDevice, pLayerName, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateDeviceExtensionProperties");
-
+        vkEnumerateDeviceExtensionProperties(physicalDevice, pLayerName, resources.count.get(), null);
         VkExtensionProperties.Array o = new VkExtensionProperties.Array(resources.count.get().getValue());
-
-        vkEnumerateDeviceExtensionProperties(physicalDevice, pLayerName, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateDeviceExtensionProperties");
-
+        vkEnumerateDeviceExtensionProperties(physicalDevice, pLayerName, resources.count.get(), o);
         return o;
+    }
+
+
+    public void vkEnumerateInstanceLayerProperties(VkUInt32 pPropertyCount, VkLayerProperties pProperties){
+        vkEnumerateInstanceLayerProperties(pPropertyCount, pProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateInstanceLayerProperties");
     }
 
 
     public VkLayerProperties.Array vkEnumerateInstanceLayerProperties(){
-        vkEnumerateInstanceLayerProperties(resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateInstanceLayerProperties");
-
+        vkEnumerateInstanceLayerProperties(resources.count.get(), null);
         VkLayerProperties.Array o = new VkLayerProperties.Array(resources.count.get().getValue());
-
-        vkEnumerateInstanceLayerProperties(resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateInstanceLayerProperties");
-
+        vkEnumerateInstanceLayerProperties(resources.count.get(), o);
         return o;
     }
 
 
+    public void vkEnumerateDeviceLayerProperties(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkLayerProperties pProperties){
+        vkEnumerateDeviceLayerProperties(physicalDevice, pPropertyCount, pProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateDeviceLayerProperties");
+    }
+
+
     public VkLayerProperties.Array vkEnumerateDeviceLayerProperties(VkPhysicalDevice physicalDevice){
-        vkEnumerateDeviceLayerProperties(physicalDevice, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateDeviceLayerProperties");
-
+        vkEnumerateDeviceLayerProperties(physicalDevice, resources.count.get(), null);
         VkLayerProperties.Array o = new VkLayerProperties.Array(resources.count.get().getValue());
-
-        vkEnumerateDeviceLayerProperties(physicalDevice, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumerateDeviceLayerProperties");
-
+        vkEnumerateDeviceLayerProperties(physicalDevice, resources.count.get(), o);
         return o;
     }
 
@@ -2444,10 +2464,15 @@ public class Vk {
     }
 
 
+    public void vkAllocateMemory(VkDevice device, VkMemoryAllocateInfo pAllocateInfo, VkAllocationCallbacks pAllocator, VkDeviceMemory pMemory){
+        vkAllocateMemory(device, pAllocateInfo, pAllocator, pMemory, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkAllocateMemory");
+    }
+
+
     public VkDeviceMemory vkAllocateMemory(VkDevice device, VkMemoryAllocateInfo pAllocateInfo){
         VkDeviceMemory o = new VkDeviceMemory();
-        vkAllocateMemory(device, pAllocateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkAllocateMemory");
+        vkAllocateMemory(device, pAllocateInfo, pAllocator, o);
         return o;
     }
 
@@ -2536,10 +2561,15 @@ public class Vk {
     }
 
 
+    public void vkCreateFence(VkDevice device, VkFenceCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkFence pFence){
+        vkCreateFence(device, pCreateInfo, pAllocator, pFence, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateFence");
+    }
+
+
     public VkFence vkCreateFence(VkDevice device, VkFenceCreateInfo pCreateInfo){
         VkFence o = new VkFence();
-        vkCreateFence(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateFence");
+        vkCreateFence(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2568,10 +2598,15 @@ public class Vk {
     }
 
 
+    public void vkCreateSemaphore(VkDevice device, VkSemaphoreCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSemaphore pSemaphore){
+        vkCreateSemaphore(device, pCreateInfo, pAllocator, pSemaphore, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSemaphore");
+    }
+
+
     public VkSemaphore vkCreateSemaphore(VkDevice device, VkSemaphoreCreateInfo pCreateInfo){
         VkSemaphore o = new VkSemaphore();
-        vkCreateSemaphore(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSemaphore");
+        vkCreateSemaphore(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2581,10 +2616,15 @@ public class Vk {
     }
 
 
+    public void vkCreateEvent(VkDevice device, VkEventCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkEvent pEvent){
+        vkCreateEvent(device, pCreateInfo, pAllocator, pEvent, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateEvent");
+    }
+
+
     public VkEvent vkCreateEvent(VkDevice device, VkEventCreateInfo pCreateInfo){
         VkEvent o = new VkEvent();
-        vkCreateEvent(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateEvent");
+        vkCreateEvent(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2613,10 +2653,15 @@ public class Vk {
     }
 
 
+    public void vkCreateQueryPool(VkDevice device, VkQueryPoolCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkQueryPool pQueryPool){
+        vkCreateQueryPool(device, pCreateInfo, pAllocator, pQueryPool, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateQueryPool");
+    }
+
+
     public VkQueryPool vkCreateQueryPool(VkDevice device, VkQueryPoolCreateInfo pCreateInfo){
         VkQueryPool o = new VkQueryPool();
-        vkCreateQueryPool(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateQueryPool");
+        vkCreateQueryPool(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2626,18 +2671,28 @@ public class Vk {
     }
 
 
+    public void vkGetQueryPoolResults(VkDevice device, VkQueryPool queryPool, VkUInt32 firstQuery, VkUInt32 queryCount, VkSize dataSize, VkObject pData, VkDeviceSize stride, VkQueryResultFlags flags){
+        vkGetQueryPoolResults(device, queryPool, firstQuery, queryCount, dataSize, pData, stride, flags, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetQueryPoolResults");
+    }
+
+
     public VkQueryResultFlags vkGetQueryPoolResults(VkDevice device, VkQueryPool queryPool, VkUInt32 firstQuery, VkUInt32 queryCount, VkSize dataSize, VkObject pData, VkDeviceSize stride){
         VkQueryResultFlags o = new VkQueryResultFlags();
-        vkGetQueryPoolResults(device, queryPool, firstQuery, queryCount, dataSize, pData, stride, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetQueryPoolResults");
+        vkGetQueryPoolResults(device, queryPool, firstQuery, queryCount, dataSize, pData, stride, o);
         return o;
+    }
+
+
+    public void vkCreateBuffer(VkDevice device, VkBufferCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkBuffer pBuffer){
+        vkCreateBuffer(device, pCreateInfo, pAllocator, pBuffer, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateBuffer");
     }
 
 
     public VkBuffer vkCreateBuffer(VkDevice device, VkBufferCreateInfo pCreateInfo){
         VkBuffer o = new VkBuffer();
-        vkCreateBuffer(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateBuffer");
+        vkCreateBuffer(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2647,10 +2702,15 @@ public class Vk {
     }
 
 
+    public void vkCreateBufferView(VkDevice device, VkBufferViewCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkBufferView pView){
+        vkCreateBufferView(device, pCreateInfo, pAllocator, pView, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateBufferView");
+    }
+
+
     public VkBufferView vkCreateBufferView(VkDevice device, VkBufferViewCreateInfo pCreateInfo){
         VkBufferView o = new VkBufferView();
-        vkCreateBufferView(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateBufferView");
+        vkCreateBufferView(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2660,10 +2720,15 @@ public class Vk {
     }
 
 
+    public void vkCreateImage(VkDevice device, VkImageCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkImage pImage){
+        vkCreateImage(device, pCreateInfo, pAllocator, pImage, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateImage");
+    }
+
+
     public VkImage vkCreateImage(VkDevice device, VkImageCreateInfo pCreateInfo){
         VkImage o = new VkImage();
-        vkCreateImage(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateImage");
+        vkCreateImage(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2680,10 +2745,15 @@ public class Vk {
     }
 
 
+    public void vkCreateImageView(VkDevice device, VkImageViewCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkImageView pView){
+        vkCreateImageView(device, pCreateInfo, pAllocator, pView, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateImageView");
+    }
+
+
     public VkImageView vkCreateImageView(VkDevice device, VkImageViewCreateInfo pCreateInfo){
         VkImageView o = new VkImageView();
-        vkCreateImageView(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateImageView");
+        vkCreateImageView(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2693,10 +2763,15 @@ public class Vk {
     }
 
 
+    public void vkCreateShaderModule(VkDevice device, VkShaderModuleCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkShaderModule pShaderModule){
+        vkCreateShaderModule(device, pCreateInfo, pAllocator, pShaderModule, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateShaderModule");
+    }
+
+
     public VkShaderModule vkCreateShaderModule(VkDevice device, VkShaderModuleCreateInfo pCreateInfo){
         VkShaderModule o = new VkShaderModule();
-        vkCreateShaderModule(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateShaderModule");
+        vkCreateShaderModule(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2706,10 +2781,15 @@ public class Vk {
     }
 
 
+    public void vkCreatePipelineCache(VkDevice device, VkPipelineCacheCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkPipelineCache pPipelineCache){
+        vkCreatePipelineCache(device, pCreateInfo, pAllocator, pPipelineCache, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreatePipelineCache");
+    }
+
+
     public VkPipelineCache vkCreatePipelineCache(VkDevice device, VkPipelineCacheCreateInfo pCreateInfo){
         VkPipelineCache o = new VkPipelineCache();
-        vkCreatePipelineCache(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreatePipelineCache");
+        vkCreatePipelineCache(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2731,18 +2811,28 @@ public class Vk {
     }
 
 
+    public void vkCreateGraphicsPipelines(VkDevice device, VkPipelineCache pipelineCache, VkUInt32 createInfoCount, VkGraphicsPipelineCreateInfo pCreateInfos, VkAllocationCallbacks pAllocator, VkPipeline pPipelines){
+        vkCreateGraphicsPipelines(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, pPipelines, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateGraphicsPipelines");
+    }
+
+
     public VkPipeline vkCreateGraphicsPipelines(VkDevice device, VkPipelineCache pipelineCache, VkUInt32 createInfoCount, VkGraphicsPipelineCreateInfo pCreateInfos){
         VkPipeline o = new VkPipeline();
-        vkCreateGraphicsPipelines(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateGraphicsPipelines");
+        vkCreateGraphicsPipelines(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, o);
         return o;
+    }
+
+
+    public void vkCreateComputePipelines(VkDevice device, VkPipelineCache pipelineCache, VkUInt32 createInfoCount, VkComputePipelineCreateInfo pCreateInfos, VkAllocationCallbacks pAllocator, VkPipeline pPipelines){
+        vkCreateComputePipelines(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, pPipelines, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateComputePipelines");
     }
 
 
     public VkPipeline vkCreateComputePipelines(VkDevice device, VkPipelineCache pipelineCache, VkUInt32 createInfoCount, VkComputePipelineCreateInfo pCreateInfos){
         VkPipeline o = new VkPipeline();
-        vkCreateComputePipelines(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateComputePipelines");
+        vkCreateComputePipelines(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, o);
         return o;
     }
 
@@ -2752,10 +2842,15 @@ public class Vk {
     }
 
 
+    public void vkCreatePipelineLayout(VkDevice device, VkPipelineLayoutCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkPipelineLayout pPipelineLayout){
+        vkCreatePipelineLayout(device, pCreateInfo, pAllocator, pPipelineLayout, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreatePipelineLayout");
+    }
+
+
     public VkPipelineLayout vkCreatePipelineLayout(VkDevice device, VkPipelineLayoutCreateInfo pCreateInfo){
         VkPipelineLayout o = new VkPipelineLayout();
-        vkCreatePipelineLayout(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreatePipelineLayout");
+        vkCreatePipelineLayout(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2765,10 +2860,15 @@ public class Vk {
     }
 
 
+    public void vkCreateSampler(VkDevice device, VkSamplerCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSampler pSampler){
+        vkCreateSampler(device, pCreateInfo, pAllocator, pSampler, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSampler");
+    }
+
+
     public VkSampler vkCreateSampler(VkDevice device, VkSamplerCreateInfo pCreateInfo){
         VkSampler o = new VkSampler();
-        vkCreateSampler(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSampler");
+        vkCreateSampler(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2778,10 +2878,15 @@ public class Vk {
     }
 
 
+    public void vkCreateDescriptorSetLayout(VkDevice device, VkDescriptorSetLayoutCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorSetLayout pSetLayout){
+        vkCreateDescriptorSetLayout(device, pCreateInfo, pAllocator, pSetLayout, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDescriptorSetLayout");
+    }
+
+
     public VkDescriptorSetLayout vkCreateDescriptorSetLayout(VkDevice device, VkDescriptorSetLayoutCreateInfo pCreateInfo){
         VkDescriptorSetLayout o = new VkDescriptorSetLayout();
-        vkCreateDescriptorSetLayout(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDescriptorSetLayout");
+        vkCreateDescriptorSetLayout(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2791,10 +2896,15 @@ public class Vk {
     }
 
 
+    public void vkCreateDescriptorPool(VkDevice device, VkDescriptorPoolCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorPool pDescriptorPool){
+        vkCreateDescriptorPool(device, pCreateInfo, pAllocator, pDescriptorPool, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDescriptorPool");
+    }
+
+
     public VkDescriptorPool vkCreateDescriptorPool(VkDevice device, VkDescriptorPoolCreateInfo pCreateInfo){
         VkDescriptorPool o = new VkDescriptorPool();
-        vkCreateDescriptorPool(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDescriptorPool");
+        vkCreateDescriptorPool(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2810,10 +2920,15 @@ public class Vk {
     }
 
 
+    public void vkAllocateDescriptorSets(VkDevice device, VkDescriptorSetAllocateInfo pAllocateInfo, VkDescriptorSet pDescriptorSets){
+        vkAllocateDescriptorSets(device, pAllocateInfo, pDescriptorSets, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkAllocateDescriptorSets");
+    }
+
+
     public VkDescriptorSet vkAllocateDescriptorSets(VkDevice device, VkDescriptorSetAllocateInfo pAllocateInfo){
         VkDescriptorSet o = new VkDescriptorSet();
-        vkAllocateDescriptorSets(device, pAllocateInfo, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkAllocateDescriptorSets");
+        vkAllocateDescriptorSets(device, pAllocateInfo, o);
         return o;
     }
 
@@ -2824,10 +2939,15 @@ public class Vk {
     }
 
 
+    public void vkCreateFramebuffer(VkDevice device, VkFramebufferCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkFramebuffer pFramebuffer){
+        vkCreateFramebuffer(device, pCreateInfo, pAllocator, pFramebuffer, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateFramebuffer");
+    }
+
+
     public VkFramebuffer vkCreateFramebuffer(VkDevice device, VkFramebufferCreateInfo pCreateInfo){
         VkFramebuffer o = new VkFramebuffer();
-        vkCreateFramebuffer(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateFramebuffer");
+        vkCreateFramebuffer(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2837,10 +2957,15 @@ public class Vk {
     }
 
 
+    public void vkCreateRenderPass(VkDevice device, VkRenderPassCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkRenderPass pRenderPass){
+        vkCreateRenderPass(device, pCreateInfo, pAllocator, pRenderPass, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateRenderPass");
+    }
+
+
     public VkRenderPass vkCreateRenderPass(VkDevice device, VkRenderPassCreateInfo pCreateInfo){
         VkRenderPass o = new VkRenderPass();
-        vkCreateRenderPass(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateRenderPass");
+        vkCreateRenderPass(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2857,10 +2982,15 @@ public class Vk {
     }
 
 
+    public void vkCreateCommandPool(VkDevice device, VkCommandPoolCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkCommandPool pCommandPool){
+        vkCreateCommandPool(device, pCreateInfo, pAllocator, pCommandPool, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateCommandPool");
+    }
+
+
     public VkCommandPool vkCreateCommandPool(VkDevice device, VkCommandPoolCreateInfo pCreateInfo){
         VkCommandPool o = new VkCommandPool();
-        vkCreateCommandPool(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateCommandPool");
+        vkCreateCommandPool(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -2876,10 +3006,15 @@ public class Vk {
     }
 
 
+    public void vkAllocateCommandBuffers(VkDevice device, VkCommandBufferAllocateInfo pAllocateInfo, VkCommandBuffer pCommandBuffers){
+        vkAllocateCommandBuffers(device, pAllocateInfo, pCommandBuffers, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkAllocateCommandBuffers");
+    }
+
+
     public VkCommandBuffer vkAllocateCommandBuffers(VkDevice device, VkCommandBufferAllocateInfo pAllocateInfo){
         VkCommandBuffer o = new VkCommandBuffer();
-        vkAllocateCommandBuffers(device, pAllocateInfo, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkAllocateCommandBuffers");
+        vkAllocateCommandBuffers(device, pAllocateInfo, o);
         return o;
     }
 
@@ -2927,15 +3062,16 @@ public class Vk {
     }
 
 
+    public void vkEnumeratePhysicalDeviceGroups(VkInstance instance, VkUInt32 pPhysicalDeviceGroupCount, VkPhysicalDeviceGroupProperties pPhysicalDeviceGroupProperties){
+        vkEnumeratePhysicalDeviceGroups(instance, pPhysicalDeviceGroupCount, pPhysicalDeviceGroupProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumeratePhysicalDeviceGroups");
+    }
+
+
     public VkPhysicalDeviceGroupProperties.Array vkEnumeratePhysicalDeviceGroups(VkInstance instance){
-        vkEnumeratePhysicalDeviceGroups(instance, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumeratePhysicalDeviceGroups");
-
+        vkEnumeratePhysicalDeviceGroups(instance, resources.count.get(), null);
         VkPhysicalDeviceGroupProperties.Array o = new VkPhysicalDeviceGroupProperties.Array(resources.count.get().getValue());
-
-        vkEnumeratePhysicalDeviceGroups(instance, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumeratePhysicalDeviceGroups");
-
+        vkEnumeratePhysicalDeviceGroups(instance, resources.count.get(), o);
         return o;
     }
 
@@ -2983,10 +3119,15 @@ public class Vk {
     }
 
 
+    public void vkGetPhysicalDeviceImageFormatProperties2(VkPhysicalDevice physicalDevice, VkPhysicalDeviceImageFormatInfo2 pImageFormatInfo, VkImageFormatProperties2 pImageFormatProperties){
+        vkGetPhysicalDeviceImageFormatProperties2(physicalDevice, pImageFormatInfo, pImageFormatProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceImageFormatProperties2");
+    }
+
+
     public VkImageFormatProperties2 vkGetPhysicalDeviceImageFormatProperties2(VkPhysicalDevice physicalDevice, VkPhysicalDeviceImageFormatInfo2 pImageFormatInfo){
         VkImageFormatProperties2 o = new VkImageFormatProperties2();
-        vkGetPhysicalDeviceImageFormatProperties2(physicalDevice, pImageFormatInfo, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceImageFormatProperties2");
+        vkGetPhysicalDeviceImageFormatProperties2(physicalDevice, pImageFormatInfo, o);
         return o;
     }
 
@@ -3021,10 +3162,15 @@ public class Vk {
     }
 
 
+    public void vkCreateSamplerYcbcrConversion(VkDevice device, VkSamplerYcbcrConversionCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSamplerYcbcrConversion pYcbcrConversion){
+        vkCreateSamplerYcbcrConversion(device, pCreateInfo, pAllocator, pYcbcrConversion, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSamplerYcbcrConversion");
+    }
+
+
     public VkSamplerYcbcrConversion vkCreateSamplerYcbcrConversion(VkDevice device, VkSamplerYcbcrConversionCreateInfo pCreateInfo){
         VkSamplerYcbcrConversion o = new VkSamplerYcbcrConversion();
-        vkCreateSamplerYcbcrConversion(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSamplerYcbcrConversion");
+        vkCreateSamplerYcbcrConversion(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -3034,10 +3180,15 @@ public class Vk {
     }
 
 
+    public void vkCreateDescriptorUpdateTemplate(VkDevice device, VkDescriptorUpdateTemplateCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorUpdateTemplate pDescriptorUpdateTemplate){
+        vkCreateDescriptorUpdateTemplate(device, pCreateInfo, pAllocator, pDescriptorUpdateTemplate, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDescriptorUpdateTemplate");
+    }
+
+
     public VkDescriptorUpdateTemplate vkCreateDescriptorUpdateTemplate(VkDevice device, VkDescriptorUpdateTemplateCreateInfo pCreateInfo){
         VkDescriptorUpdateTemplate o = new VkDescriptorUpdateTemplate();
-        vkCreateDescriptorUpdateTemplate(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDescriptorUpdateTemplate");
+        vkCreateDescriptorUpdateTemplate(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -3080,52 +3231,69 @@ public class Vk {
     }
 
 
+    public void vkGetPhysicalDeviceSurfaceSupportKHR(VkPhysicalDevice physicalDevice, VkUInt32 queueFamilyIndex, VkSurfaceKHR surface, VkBool32 pSupported){
+        vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, pSupported, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceSupportKHR");
+    }
+
+
     public VkBool32 vkGetPhysicalDeviceSurfaceSupportKHR(VkPhysicalDevice physicalDevice, VkUInt32 queueFamilyIndex, VkSurfaceKHR surface){
         VkBool32 o = new VkBool32();
-        vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceSupportKHR");
+        vkGetPhysicalDeviceSurfaceSupportKHR(physicalDevice, queueFamilyIndex, surface, o);
         return o;
+    }
+
+
+    public void vkGetPhysicalDeviceSurfaceCapabilitiesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkSurfaceCapabilitiesKHR pSurfaceCapabilities){
+        vkGetPhysicalDeviceSurfaceCapabilitiesKHR(physicalDevice, surface, pSurfaceCapabilities, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceCapabilitiesKHR");
     }
 
 
     public VkSurfaceCapabilitiesKHR vkGetPhysicalDeviceSurfaceCapabilitiesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface){
         VkSurfaceCapabilitiesKHR o = new VkSurfaceCapabilitiesKHR();
-        vkGetPhysicalDeviceSurfaceCapabilitiesKHR(physicalDevice, surface, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceCapabilitiesKHR");
+        vkGetPhysicalDeviceSurfaceCapabilitiesKHR(physicalDevice, surface, o);
         return o;
+    }
+
+
+    public void vkGetPhysicalDeviceSurfaceFormatsKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkUInt32 pSurfaceFormatCount, VkSurfaceFormatKHR pSurfaceFormats){
+        vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, pSurfaceFormatCount, pSurfaceFormats, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceFormatsKHR");
     }
 
 
     public VkSurfaceFormatKHR.Array vkGetPhysicalDeviceSurfaceFormatsKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface){
-        vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceFormatsKHR");
-
+        vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, resources.count.get(), null);
         VkSurfaceFormatKHR.Array o = new VkSurfaceFormatKHR.Array(resources.count.get().getValue());
-
-        vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceFormatsKHR");
-
+        vkGetPhysicalDeviceSurfaceFormatsKHR(physicalDevice, surface, resources.count.get(), o);
         return o;
     }
 
 
+    public void vkGetPhysicalDeviceSurfacePresentModesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkUInt32 pPresentModeCount, VkPresentModeKHR pPresentModes){
+        vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, pPresentModeCount, pPresentModes, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfacePresentModesKHR");
+    }
+
+
     public VkPresentModeKHR.Array vkGetPhysicalDeviceSurfacePresentModesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface){
-        vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfacePresentModesKHR");
-
+        vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, resources.count.get(), null);
         VkPresentModeKHR.Array o = new VkPresentModeKHR.Array(resources.count.get().getValue());
-
-        vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfacePresentModesKHR");
-
+        vkGetPhysicalDeviceSurfacePresentModesKHR(physicalDevice, surface, resources.count.get(), o);
         return o;
+    }
+
+
+    public void vkCreateSwapchainKHR(VkDevice device, VkSwapchainCreateInfoKHR pCreateInfo, VkAllocationCallbacks pAllocator, VkSwapchainKHR pSwapchain){
+        vkCreateSwapchainKHR(device, pCreateInfo, pAllocator, pSwapchain, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSwapchainKHR");
     }
 
 
     public VkSwapchainKHR vkCreateSwapchainKHR(VkDevice device, VkSwapchainCreateInfoKHR pCreateInfo){
         VkSwapchainKHR o = new VkSwapchainKHR();
-        vkCreateSwapchainKHR(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSwapchainKHR");
+        vkCreateSwapchainKHR(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -3135,15 +3303,16 @@ public class Vk {
     }
 
 
+    public void vkGetSwapchainImagesKHR(VkDevice device, VkSwapchainKHR swapchain, VkUInt32 pSwapchainImageCount, VkImage pSwapchainImages){
+        vkGetSwapchainImagesKHR(device, swapchain, pSwapchainImageCount, pSwapchainImages, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetSwapchainImagesKHR");
+    }
+
+
     public VkImage.Array vkGetSwapchainImagesKHR(VkDevice device, VkSwapchainKHR swapchain){
-        vkGetSwapchainImagesKHR(device, swapchain, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetSwapchainImagesKHR");
-
+        vkGetSwapchainImagesKHR(device, swapchain, resources.count.get(), null);
         VkImage.Array o = new VkImage.Array(resources.count.get().getValue());
-
-        vkGetSwapchainImagesKHR(device, swapchain, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetSwapchainImagesKHR");
-
+        vkGetSwapchainImagesKHR(device, swapchain, resources.count.get(), o);
         return o;
     }
 
@@ -3160,31 +3329,42 @@ public class Vk {
     }
 
 
+    public void vkGetDeviceGroupPresentCapabilitiesKHR(VkDevice device, VkDeviceGroupPresentCapabilitiesKHR pDeviceGroupPresentCapabilities){
+        vkGetDeviceGroupPresentCapabilitiesKHR(device, pDeviceGroupPresentCapabilities, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDeviceGroupPresentCapabilitiesKHR");
+    }
+
+
     public VkDeviceGroupPresentCapabilitiesKHR vkGetDeviceGroupPresentCapabilitiesKHR(VkDevice device){
         VkDeviceGroupPresentCapabilitiesKHR o = new VkDeviceGroupPresentCapabilitiesKHR();
-        vkGetDeviceGroupPresentCapabilitiesKHR(device, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDeviceGroupPresentCapabilitiesKHR");
+        vkGetDeviceGroupPresentCapabilitiesKHR(device, o);
         return o;
+    }
+
+
+    public void vkGetDeviceGroupSurfacePresentModesKHR(VkDevice device, VkSurfaceKHR surface, VkDeviceGroupPresentModeFlagsKHR pModes){
+        vkGetDeviceGroupSurfacePresentModesKHR(device, surface, pModes, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDeviceGroupSurfacePresentModesKHR");
     }
 
 
     public VkDeviceGroupPresentModeFlagsKHR vkGetDeviceGroupSurfacePresentModesKHR(VkDevice device, VkSurfaceKHR surface){
         VkDeviceGroupPresentModeFlagsKHR o = new VkDeviceGroupPresentModeFlagsKHR();
-        vkGetDeviceGroupSurfacePresentModesKHR(device, surface, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDeviceGroupSurfacePresentModesKHR");
+        vkGetDeviceGroupSurfacePresentModesKHR(device, surface, o);
         return o;
     }
 
 
+    public void vkGetPhysicalDevicePresentRectanglesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkUInt32 pRectCount, VkRect2D pRects){
+        vkGetPhysicalDevicePresentRectanglesKHR(physicalDevice, surface, pRectCount, pRects, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDevicePresentRectanglesKHR");
+    }
+
+
     public VkRect2D.Array vkGetPhysicalDevicePresentRectanglesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface){
-        vkGetPhysicalDevicePresentRectanglesKHR(physicalDevice, surface, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDevicePresentRectanglesKHR");
-
+        vkGetPhysicalDevicePresentRectanglesKHR(physicalDevice, surface, resources.count.get(), null);
         VkRect2D.Array o = new VkRect2D.Array(resources.count.get().getValue());
-
-        vkGetPhysicalDevicePresentRectanglesKHR(physicalDevice, surface, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDevicePresentRectanglesKHR");
-
+        vkGetPhysicalDevicePresentRectanglesKHR(physicalDevice, surface, resources.count.get(), o);
         return o;
     }
 
@@ -3195,86 +3375,110 @@ public class Vk {
     }
 
 
+    public void vkGetPhysicalDeviceDisplayPropertiesKHR(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkDisplayPropertiesKHR pProperties){
+        vkGetPhysicalDeviceDisplayPropertiesKHR(physicalDevice, pPropertyCount, pProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceDisplayPropertiesKHR");
+    }
+
+
     public VkDisplayPropertiesKHR.Array vkGetPhysicalDeviceDisplayPropertiesKHR(VkPhysicalDevice physicalDevice){
-        vkGetPhysicalDeviceDisplayPropertiesKHR(physicalDevice, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceDisplayPropertiesKHR");
-
+        vkGetPhysicalDeviceDisplayPropertiesKHR(physicalDevice, resources.count.get(), null);
         VkDisplayPropertiesKHR.Array o = new VkDisplayPropertiesKHR.Array(resources.count.get().getValue());
-
-        vkGetPhysicalDeviceDisplayPropertiesKHR(physicalDevice, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceDisplayPropertiesKHR");
-
+        vkGetPhysicalDeviceDisplayPropertiesKHR(physicalDevice, resources.count.get(), o);
         return o;
+    }
+
+
+    public void vkGetPhysicalDeviceDisplayPlanePropertiesKHR(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkDisplayPlanePropertiesKHR pProperties){
+        vkGetPhysicalDeviceDisplayPlanePropertiesKHR(physicalDevice, pPropertyCount, pProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceDisplayPlanePropertiesKHR");
     }
 
 
     public VkDisplayPlanePropertiesKHR.Array vkGetPhysicalDeviceDisplayPlanePropertiesKHR(VkPhysicalDevice physicalDevice){
-        vkGetPhysicalDeviceDisplayPlanePropertiesKHR(physicalDevice, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceDisplayPlanePropertiesKHR");
-
+        vkGetPhysicalDeviceDisplayPlanePropertiesKHR(physicalDevice, resources.count.get(), null);
         VkDisplayPlanePropertiesKHR.Array o = new VkDisplayPlanePropertiesKHR.Array(resources.count.get().getValue());
-
-        vkGetPhysicalDeviceDisplayPlanePropertiesKHR(physicalDevice, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceDisplayPlanePropertiesKHR");
-
+        vkGetPhysicalDeviceDisplayPlanePropertiesKHR(physicalDevice, resources.count.get(), o);
         return o;
+    }
+
+
+    public void vkGetDisplayPlaneSupportedDisplaysKHR(VkPhysicalDevice physicalDevice, VkUInt32 planeIndex, VkUInt32 pDisplayCount, VkDisplayKHR pDisplays){
+        vkGetDisplayPlaneSupportedDisplaysKHR(physicalDevice, planeIndex, pDisplayCount, pDisplays, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDisplayPlaneSupportedDisplaysKHR");
     }
 
 
     public VkDisplayKHR.Array vkGetDisplayPlaneSupportedDisplaysKHR(VkPhysicalDevice physicalDevice, VkUInt32 planeIndex){
-        vkGetDisplayPlaneSupportedDisplaysKHR(physicalDevice, planeIndex, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDisplayPlaneSupportedDisplaysKHR");
-
+        vkGetDisplayPlaneSupportedDisplaysKHR(physicalDevice, planeIndex, resources.count.get(), null);
         VkDisplayKHR.Array o = new VkDisplayKHR.Array(resources.count.get().getValue());
-
-        vkGetDisplayPlaneSupportedDisplaysKHR(physicalDevice, planeIndex, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDisplayPlaneSupportedDisplaysKHR");
-
+        vkGetDisplayPlaneSupportedDisplaysKHR(physicalDevice, planeIndex, resources.count.get(), o);
         return o;
     }
 
 
+    public void vkGetDisplayModePropertiesKHR(VkPhysicalDevice physicalDevice, VkDisplayKHR display, VkUInt32 pPropertyCount, VkDisplayModePropertiesKHR pProperties){
+        vkGetDisplayModePropertiesKHR(physicalDevice, display, pPropertyCount, pProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDisplayModePropertiesKHR");
+    }
+
+
     public VkDisplayModePropertiesKHR.Array vkGetDisplayModePropertiesKHR(VkPhysicalDevice physicalDevice, VkDisplayKHR display){
-        vkGetDisplayModePropertiesKHR(physicalDevice, display, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDisplayModePropertiesKHR");
-
+        vkGetDisplayModePropertiesKHR(physicalDevice, display, resources.count.get(), null);
         VkDisplayModePropertiesKHR.Array o = new VkDisplayModePropertiesKHR.Array(resources.count.get().getValue());
-
-        vkGetDisplayModePropertiesKHR(physicalDevice, display, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDisplayModePropertiesKHR");
-
+        vkGetDisplayModePropertiesKHR(physicalDevice, display, resources.count.get(), o);
         return o;
+    }
+
+
+    public void vkCreateDisplayModeKHR(VkPhysicalDevice physicalDevice, VkDisplayKHR display, VkDisplayModeCreateInfoKHR pCreateInfo, VkAllocationCallbacks pAllocator, VkDisplayModeKHR pMode){
+        vkCreateDisplayModeKHR(physicalDevice, display, pCreateInfo, pAllocator, pMode, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDisplayModeKHR");
     }
 
 
     public VkDisplayModeKHR vkCreateDisplayModeKHR(VkPhysicalDevice physicalDevice, VkDisplayKHR display, VkDisplayModeCreateInfoKHR pCreateInfo){
         VkDisplayModeKHR o = new VkDisplayModeKHR();
-        vkCreateDisplayModeKHR(physicalDevice, display, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDisplayModeKHR");
+        vkCreateDisplayModeKHR(physicalDevice, display, pCreateInfo, pAllocator, o);
         return o;
+    }
+
+
+    public void vkGetDisplayPlaneCapabilitiesKHR(VkPhysicalDevice physicalDevice, VkDisplayModeKHR mode, VkUInt32 planeIndex, VkDisplayPlaneCapabilitiesKHR pCapabilities){
+        vkGetDisplayPlaneCapabilitiesKHR(physicalDevice, mode, planeIndex, pCapabilities, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDisplayPlaneCapabilitiesKHR");
     }
 
 
     public VkDisplayPlaneCapabilitiesKHR vkGetDisplayPlaneCapabilitiesKHR(VkPhysicalDevice physicalDevice, VkDisplayModeKHR mode, VkUInt32 planeIndex){
         VkDisplayPlaneCapabilitiesKHR o = new VkDisplayPlaneCapabilitiesKHR();
-        vkGetDisplayPlaneCapabilitiesKHR(physicalDevice, mode, planeIndex, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetDisplayPlaneCapabilitiesKHR");
+        vkGetDisplayPlaneCapabilitiesKHR(physicalDevice, mode, planeIndex, o);
         return o;
+    }
+
+
+    public void vkCreateDisplayPlaneSurfaceKHR(VkInstance instance, VkDisplaySurfaceCreateInfoKHR pCreateInfo, VkAllocationCallbacks pAllocator, VkSurfaceKHR pSurface){
+        vkCreateDisplayPlaneSurfaceKHR(instance, pCreateInfo, pAllocator, pSurface, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDisplayPlaneSurfaceKHR");
     }
 
 
     public VkSurfaceKHR vkCreateDisplayPlaneSurfaceKHR(VkInstance instance, VkDisplaySurfaceCreateInfoKHR pCreateInfo){
         VkSurfaceKHR o = new VkSurfaceKHR();
-        vkCreateDisplayPlaneSurfaceKHR(instance, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDisplayPlaneSurfaceKHR");
+        vkCreateDisplayPlaneSurfaceKHR(instance, pCreateInfo, pAllocator, o);
         return o;
+    }
+
+
+    public void vkCreateSharedSwapchainsKHR(VkDevice device, VkUInt32 swapchainCount, VkSwapchainCreateInfoKHR pCreateInfos, VkAllocationCallbacks pAllocator, VkSwapchainKHR pSwapchains){
+        vkCreateSharedSwapchainsKHR(device, swapchainCount, pCreateInfos, pAllocator, pSwapchains, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSharedSwapchainsKHR");
     }
 
 
     public VkSwapchainKHR vkCreateSharedSwapchainsKHR(VkDevice device, VkUInt32 swapchainCount, VkSwapchainCreateInfoKHR pCreateInfos){
         VkSwapchainKHR o = new VkSwapchainKHR();
-        vkCreateSharedSwapchainsKHR(device, swapchainCount, pCreateInfos, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSharedSwapchainsKHR");
+        vkCreateSharedSwapchainsKHR(device, swapchainCount, pCreateInfos, pAllocator, o);
         return o;
     }
 
@@ -3300,10 +3504,15 @@ public class Vk {
     }
 
 
+    public void vkGetPhysicalDeviceImageFormatProperties2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceImageFormatInfo2 pImageFormatInfo, VkImageFormatProperties2 pImageFormatProperties){
+        vkGetPhysicalDeviceImageFormatProperties2KHR(physicalDevice, pImageFormatInfo, pImageFormatProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceImageFormatProperties2KHR");
+    }
+
+
     public VkImageFormatProperties2 vkGetPhysicalDeviceImageFormatProperties2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceImageFormatInfo2 pImageFormatInfo){
         VkImageFormatProperties2 o = new VkImageFormatProperties2();
-        vkGetPhysicalDeviceImageFormatProperties2KHR(physicalDevice, pImageFormatInfo, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceImageFormatProperties2KHR");
+        vkGetPhysicalDeviceImageFormatProperties2KHR(physicalDevice, pImageFormatInfo, o);
         return o;
     }
 
@@ -3338,15 +3547,16 @@ public class Vk {
     }
 
 
+    public void vkEnumeratePhysicalDeviceGroupsKHR(VkInstance instance, VkUInt32 pPhysicalDeviceGroupCount, VkPhysicalDeviceGroupProperties pPhysicalDeviceGroupProperties){
+        vkEnumeratePhysicalDeviceGroupsKHR(instance, pPhysicalDeviceGroupCount, pPhysicalDeviceGroupProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumeratePhysicalDeviceGroupsKHR");
+    }
+
+
     public VkPhysicalDeviceGroupProperties.Array vkEnumeratePhysicalDeviceGroupsKHR(VkInstance instance){
-        vkEnumeratePhysicalDeviceGroupsKHR(instance, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumeratePhysicalDeviceGroupsKHR");
-
+        vkEnumeratePhysicalDeviceGroupsKHR(instance, resources.count.get(), null);
         VkPhysicalDeviceGroupProperties.Array o = new VkPhysicalDeviceGroupProperties.Array(resources.count.get().getValue());
-
-        vkEnumeratePhysicalDeviceGroupsKHR(instance, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkEnumeratePhysicalDeviceGroupsKHR");
-
+        vkEnumeratePhysicalDeviceGroupsKHR(instance, resources.count.get(), o);
         return o;
     }
 
@@ -3358,18 +3568,28 @@ public class Vk {
     }
 
 
+    public void vkGetMemoryFdKHR(VkDevice device, VkMemoryGetFdInfoKHR pGetFdInfo, VkInt pFd){
+        vkGetMemoryFdKHR(device, pGetFdInfo, pFd, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetMemoryFdKHR");
+    }
+
+
     public VkInt vkGetMemoryFdKHR(VkDevice device, VkMemoryGetFdInfoKHR pGetFdInfo){
         VkInt o = new VkInt();
-        vkGetMemoryFdKHR(device, pGetFdInfo, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetMemoryFdKHR");
+        vkGetMemoryFdKHR(device, pGetFdInfo, o);
         return o;
+    }
+
+
+    public void vkGetMemoryFdPropertiesKHR(VkDevice device, VkExternalMemoryHandleTypeFlagBits handleType, VkInt fd, VkMemoryFdPropertiesKHR pMemoryFdProperties){
+        vkGetMemoryFdPropertiesKHR(device, handleType, fd, pMemoryFdProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetMemoryFdPropertiesKHR");
     }
 
 
     public VkMemoryFdPropertiesKHR vkGetMemoryFdPropertiesKHR(VkDevice device, VkExternalMemoryHandleTypeFlagBits handleType, VkInt fd){
         VkMemoryFdPropertiesKHR o = new VkMemoryFdPropertiesKHR();
-        vkGetMemoryFdPropertiesKHR(device, handleType, fd, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetMemoryFdPropertiesKHR");
+        vkGetMemoryFdPropertiesKHR(device, handleType, fd, o);
         return o;
     }
 
@@ -3387,18 +3607,28 @@ public class Vk {
     }
 
 
+    public void vkGetSemaphoreFdKHR(VkDevice device, VkSemaphoreGetFdInfoKHR pGetFdInfo, VkInt pFd){
+        vkGetSemaphoreFdKHR(device, pGetFdInfo, pFd, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetSemaphoreFdKHR");
+    }
+
+
     public VkInt vkGetSemaphoreFdKHR(VkDevice device, VkSemaphoreGetFdInfoKHR pGetFdInfo){
         VkInt o = new VkInt();
-        vkGetSemaphoreFdKHR(device, pGetFdInfo, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetSemaphoreFdKHR");
+        vkGetSemaphoreFdKHR(device, pGetFdInfo, o);
         return o;
+    }
+
+
+    public void vkCreateDescriptorUpdateTemplateKHR(VkDevice device, VkDescriptorUpdateTemplateCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorUpdateTemplate pDescriptorUpdateTemplate){
+        vkCreateDescriptorUpdateTemplateKHR(device, pCreateInfo, pAllocator, pDescriptorUpdateTemplate, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDescriptorUpdateTemplateKHR");
     }
 
 
     public VkDescriptorUpdateTemplate vkCreateDescriptorUpdateTemplateKHR(VkDevice device, VkDescriptorUpdateTemplateCreateInfo pCreateInfo){
         VkDescriptorUpdateTemplate o = new VkDescriptorUpdateTemplate();
-        vkCreateDescriptorUpdateTemplateKHR(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDescriptorUpdateTemplateKHR");
+        vkCreateDescriptorUpdateTemplateKHR(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -3428,31 +3658,42 @@ public class Vk {
     }
 
 
+    public void vkGetFenceFdKHR(VkDevice device, VkFenceGetFdInfoKHR pGetFdInfo, VkInt pFd){
+        vkGetFenceFdKHR(device, pGetFdInfo, pFd, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetFenceFdKHR");
+    }
+
+
     public VkInt vkGetFenceFdKHR(VkDevice device, VkFenceGetFdInfoKHR pGetFdInfo){
         VkInt o = new VkInt();
-        vkGetFenceFdKHR(device, pGetFdInfo, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetFenceFdKHR");
+        vkGetFenceFdKHR(device, pGetFdInfo, o);
         return o;
+    }
+
+
+    public void vkGetPhysicalDeviceSurfaceCapabilities2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceSurfaceInfo2KHR pSurfaceInfo, VkSurfaceCapabilities2KHR pSurfaceCapabilities){
+        vkGetPhysicalDeviceSurfaceCapabilities2KHR(physicalDevice, pSurfaceInfo, pSurfaceCapabilities, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceCapabilities2KHR");
     }
 
 
     public VkSurfaceCapabilities2KHR vkGetPhysicalDeviceSurfaceCapabilities2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceSurfaceInfo2KHR pSurfaceInfo){
         VkSurfaceCapabilities2KHR o = new VkSurfaceCapabilities2KHR();
-        vkGetPhysicalDeviceSurfaceCapabilities2KHR(physicalDevice, pSurfaceInfo, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceCapabilities2KHR");
+        vkGetPhysicalDeviceSurfaceCapabilities2KHR(physicalDevice, pSurfaceInfo, o);
         return o;
     }
 
 
+    public void vkGetPhysicalDeviceSurfaceFormats2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceSurfaceInfo2KHR pSurfaceInfo, VkUInt32 pSurfaceFormatCount, VkSurfaceFormat2KHR pSurfaceFormats){
+        vkGetPhysicalDeviceSurfaceFormats2KHR(physicalDevice, pSurfaceInfo, pSurfaceFormatCount, pSurfaceFormats, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceFormats2KHR");
+    }
+
+
     public VkSurfaceFormat2KHR.Array vkGetPhysicalDeviceSurfaceFormats2KHR(VkPhysicalDevice physicalDevice, VkPhysicalDeviceSurfaceInfo2KHR pSurfaceInfo){
-        vkGetPhysicalDeviceSurfaceFormats2KHR(physicalDevice, pSurfaceInfo, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceFormats2KHR");
-
+        vkGetPhysicalDeviceSurfaceFormats2KHR(physicalDevice, pSurfaceInfo, resources.count.get(), null);
         VkSurfaceFormat2KHR.Array o = new VkSurfaceFormat2KHR.Array(resources.count.get().getValue());
-
-        vkGetPhysicalDeviceSurfaceFormats2KHR(physicalDevice, pSurfaceInfo, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceFormats2KHR");
-
+        vkGetPhysicalDeviceSurfaceFormats2KHR(physicalDevice, pSurfaceInfo, resources.count.get(), o);
         return o;
     }
 
@@ -3479,10 +3720,15 @@ public class Vk {
     }
 
 
+    public void vkCreateSamplerYcbcrConversionKHR(VkDevice device, VkSamplerYcbcrConversionCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSamplerYcbcrConversion pYcbcrConversion){
+        vkCreateSamplerYcbcrConversionKHR(device, pCreateInfo, pAllocator, pYcbcrConversion, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSamplerYcbcrConversionKHR");
+    }
+
+
     public VkSamplerYcbcrConversion vkCreateSamplerYcbcrConversionKHR(VkDevice device, VkSamplerYcbcrConversionCreateInfo pCreateInfo){
         VkSamplerYcbcrConversion o = new VkSamplerYcbcrConversion();
-        vkCreateSamplerYcbcrConversionKHR(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateSamplerYcbcrConversionKHR");
+        vkCreateSamplerYcbcrConversionKHR(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -3511,10 +3757,15 @@ public class Vk {
     }
 
 
+    public void vkCreateDebugReportCallbackEXT(VkInstance instance, VkDebugReportCallbackCreateInfoEXT pCreateInfo, VkAllocationCallbacks pAllocator, VkDebugReportCallbackEXT pCallback){
+        vkCreateDebugReportCallbackEXT(instance, pCreateInfo, pAllocator, pCallback, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDebugReportCallbackEXT");
+    }
+
+
     public VkDebugReportCallbackEXT vkCreateDebugReportCallbackEXT(VkInstance instance, VkDebugReportCallbackCreateInfoEXT pCreateInfo){
         VkDebugReportCallbackEXT o = new VkDebugReportCallbackEXT();
-        vkCreateDebugReportCallbackEXT(instance, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDebugReportCallbackEXT");
+        vkCreateDebugReportCallbackEXT(instance, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -3542,18 +3793,28 @@ public class Vk {
     }
 
 
+    public void vkGetPhysicalDeviceExternalImageFormatPropertiesNV(VkPhysicalDevice physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags, VkExternalMemoryHandleTypeFlagsNV externalHandleType, VkExternalImageFormatPropertiesNV pExternalImageFormatProperties){
+        vkGetPhysicalDeviceExternalImageFormatPropertiesNV(physicalDevice, format, type, tiling, usage, flags, externalHandleType, pExternalImageFormatProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceExternalImageFormatPropertiesNV");
+    }
+
+
     public VkExternalImageFormatPropertiesNV vkGetPhysicalDeviceExternalImageFormatPropertiesNV(VkPhysicalDevice physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags, VkExternalMemoryHandleTypeFlagsNV externalHandleType){
         VkExternalImageFormatPropertiesNV o = new VkExternalImageFormatPropertiesNV();
-        vkGetPhysicalDeviceExternalImageFormatPropertiesNV(physicalDevice, format, type, tiling, usage, flags, externalHandleType, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceExternalImageFormatPropertiesNV");
+        vkGetPhysicalDeviceExternalImageFormatPropertiesNV(physicalDevice, format, type, tiling, usage, flags, externalHandleType, o);
         return o;
+    }
+
+
+    public void vkCreateIndirectCommandsLayoutNVX(VkDevice device, VkIndirectCommandsLayoutCreateInfoNVX pCreateInfo, VkAllocationCallbacks pAllocator, VkIndirectCommandsLayoutNVX pIndirectCommandsLayout){
+        vkCreateIndirectCommandsLayoutNVX(device, pCreateInfo, pAllocator, pIndirectCommandsLayout, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateIndirectCommandsLayoutNVX");
     }
 
 
     public VkIndirectCommandsLayoutNVX vkCreateIndirectCommandsLayoutNVX(VkDevice device, VkIndirectCommandsLayoutCreateInfoNVX pCreateInfo){
         VkIndirectCommandsLayoutNVX o = new VkIndirectCommandsLayoutNVX();
-        vkCreateIndirectCommandsLayoutNVX(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateIndirectCommandsLayoutNVX");
+        vkCreateIndirectCommandsLayoutNVX(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -3563,10 +3824,15 @@ public class Vk {
     }
 
 
+    public void vkCreateObjectTableNVX(VkDevice device, VkObjectTableCreateInfoNVX pCreateInfo, VkAllocationCallbacks pAllocator, VkObjectTableNVX pObjectTable){
+        vkCreateObjectTableNVX(device, pCreateInfo, pAllocator, pObjectTable, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateObjectTableNVX");
+    }
+
+
     public VkObjectTableNVX vkCreateObjectTableNVX(VkDevice device, VkObjectTableCreateInfoNVX pCreateInfo){
         VkObjectTableNVX o = new VkObjectTableNVX();
-        vkCreateObjectTableNVX(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateObjectTableNVX");
+        vkCreateObjectTableNVX(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -3601,10 +3867,15 @@ public class Vk {
     }
 
 
+    public void vkGetPhysicalDeviceSurfaceCapabilities2EXT(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkSurfaceCapabilities2EXT pSurfaceCapabilities){
+        vkGetPhysicalDeviceSurfaceCapabilities2EXT(physicalDevice, surface, pSurfaceCapabilities, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceCapabilities2EXT");
+    }
+
+
     public VkSurfaceCapabilities2EXT vkGetPhysicalDeviceSurfaceCapabilities2EXT(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface){
         VkSurfaceCapabilities2EXT o = new VkSurfaceCapabilities2EXT();
-        vkGetPhysicalDeviceSurfaceCapabilities2EXT(physicalDevice, surface, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPhysicalDeviceSurfaceCapabilities2EXT");
+        vkGetPhysicalDeviceSurfaceCapabilities2EXT(physicalDevice, surface, o);
         return o;
     }
 
@@ -3627,31 +3898,42 @@ public class Vk {
     }
 
 
+    public void vkGetSwapchainCounterEXT(VkDevice device, VkSwapchainKHR swapchain, VkSurfaceCounterFlagBitsEXT counter, VkUInt64 pCounterValue){
+        vkGetSwapchainCounterEXT(device, swapchain, counter, pCounterValue, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetSwapchainCounterEXT");
+    }
+
+
     public VkUInt64 vkGetSwapchainCounterEXT(VkDevice device, VkSwapchainKHR swapchain, VkSurfaceCounterFlagBitsEXT counter){
         VkUInt64 o = new VkUInt64();
-        vkGetSwapchainCounterEXT(device, swapchain, counter, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetSwapchainCounterEXT");
+        vkGetSwapchainCounterEXT(device, swapchain, counter, o);
         return o;
+    }
+
+
+    public void vkGetRefreshCycleDurationGOOGLE(VkDevice device, VkSwapchainKHR swapchain, VkRefreshCycleDurationGOOGLE pDisplayTimingProperties){
+        vkGetRefreshCycleDurationGOOGLE(device, swapchain, pDisplayTimingProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetRefreshCycleDurationGOOGLE");
     }
 
 
     public VkRefreshCycleDurationGOOGLE vkGetRefreshCycleDurationGOOGLE(VkDevice device, VkSwapchainKHR swapchain){
         VkRefreshCycleDurationGOOGLE o = new VkRefreshCycleDurationGOOGLE();
-        vkGetRefreshCycleDurationGOOGLE(device, swapchain, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetRefreshCycleDurationGOOGLE");
+        vkGetRefreshCycleDurationGOOGLE(device, swapchain, o);
         return o;
     }
 
 
+    public void vkGetPastPresentationTimingGOOGLE(VkDevice device, VkSwapchainKHR swapchain, VkUInt32 pPresentationTimingCount, VkPastPresentationTimingGOOGLE pPresentationTimings){
+        vkGetPastPresentationTimingGOOGLE(device, swapchain, pPresentationTimingCount, pPresentationTimings, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPastPresentationTimingGOOGLE");
+    }
+
+
     public VkPastPresentationTimingGOOGLE.Array vkGetPastPresentationTimingGOOGLE(VkDevice device, VkSwapchainKHR swapchain){
-        vkGetPastPresentationTimingGOOGLE(device, swapchain, resources.count.get(), null, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPastPresentationTimingGOOGLE");
-
+        vkGetPastPresentationTimingGOOGLE(device, swapchain, resources.count.get(), null);
         VkPastPresentationTimingGOOGLE.Array o = new VkPastPresentationTimingGOOGLE.Array(resources.count.get().getValue());
-
-        vkGetPastPresentationTimingGOOGLE(device, swapchain, resources.count.get(), o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetPastPresentationTimingGOOGLE");
-
+        vkGetPastPresentationTimingGOOGLE(device, swapchain, resources.count.get(), o);
         return o;
     }
 
@@ -3668,10 +3950,15 @@ public class Vk {
     }
 
 
+    public void vkCreateDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerCreateInfoEXT pCreateInfo, VkAllocationCallbacks pAllocator, VkDebugUtilsMessengerEXT pMessenger){
+        vkCreateDebugUtilsMessengerEXT(instance, pCreateInfo, pAllocator, pMessenger, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDebugUtilsMessengerEXT");
+    }
+
+
     public VkDebugUtilsMessengerEXT vkCreateDebugUtilsMessengerEXT(VkInstance instance, VkDebugUtilsMessengerCreateInfoEXT pCreateInfo){
         VkDebugUtilsMessengerEXT o = new VkDebugUtilsMessengerEXT();
-        vkCreateDebugUtilsMessengerEXT(instance, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateDebugUtilsMessengerEXT");
+        vkCreateDebugUtilsMessengerEXT(instance, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -3688,10 +3975,15 @@ public class Vk {
     }
 
 
+    public void vkCreateValidationCacheEXT(VkDevice device, VkValidationCacheCreateInfoEXT pCreateInfo, VkAllocationCallbacks pAllocator, VkValidationCacheEXT pValidationCache){
+        vkCreateValidationCacheEXT(device, pCreateInfo, pAllocator, pValidationCache, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateValidationCacheEXT");
+    }
+
+
     public VkValidationCacheEXT vkCreateValidationCacheEXT(VkDevice device, VkValidationCacheCreateInfoEXT pCreateInfo){
         VkValidationCacheEXT o = new VkValidationCacheEXT();
-        vkCreateValidationCacheEXT(device, pCreateInfo, pAllocator, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkCreateValidationCacheEXT");
+        vkCreateValidationCacheEXT(device, pCreateInfo, pAllocator, o);
         return o;
     }
 
@@ -3713,10 +4005,15 @@ public class Vk {
     }
 
 
+    public void vkGetMemoryHostPointerPropertiesEXT(VkDevice device, VkExternalMemoryHandleTypeFlagBits handleType, VkObject pHostPointer, VkMemoryHostPointerPropertiesEXT pMemoryHostPointerProperties){
+        vkGetMemoryHostPointerPropertiesEXT(device, handleType, pHostPointer, pMemoryHostPointerProperties, resources.result.get());
+        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetMemoryHostPointerPropertiesEXT");
+    }
+
+
     public VkMemoryHostPointerPropertiesEXT vkGetMemoryHostPointerPropertiesEXT(VkDevice device, VkExternalMemoryHandleTypeFlagBits handleType, VkObject pHostPointer){
         VkMemoryHostPointerPropertiesEXT o = new VkMemoryHostPointerPropertiesEXT();
-        vkGetMemoryHostPointerPropertiesEXT(device, handleType, pHostPointer, o, resources.result.get());
-        if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkGetMemoryHostPointerPropertiesEXT");
+        vkGetMemoryHostPointerPropertiesEXT(device, handleType, pHostPointer, o);
         return o;
     }
 
