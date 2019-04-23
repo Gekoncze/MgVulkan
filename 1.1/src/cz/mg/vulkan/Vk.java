@@ -2463,6 +2463,12 @@ public class Vk {
     }
 
 
+    public VkPointer vkMapMemory(VkDevice device, VkDeviceMemory memory, VkDeviceSize offset, VkDeviceSize size, VkMemoryMapFlags flags){
+        VkPointer pointer = new VkObject.Pointer();
+        vkMapMemory(device, memory, offset, size, flags, pointer);
+        return pointer;
+    }
+
     public void vkFlushMappedMemoryRanges(VkDevice device, VkUInt32 memoryRangeCount, VkMappedMemoryRange pMemoryRanges){
         vkFlushMappedMemoryRanges(device, memoryRangeCount, pMemoryRanges, resources.result.get());
         if(resources.result.get().getValue() != VK_SUCCESS) throw new VkException(resources.result.get(), "vkFlushMappedMemoryRanges");
