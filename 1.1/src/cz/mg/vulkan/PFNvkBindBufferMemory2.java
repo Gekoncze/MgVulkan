@@ -4,11 +4,11 @@ public class PFNvkBindBufferMemory2 extends VkFunctionPointer {
     public PFNvkBindBufferMemory2() {
     }
 
-    public PFNvkBindBufferMemory2(VkMemory vkmemory) {
+    protected PFNvkBindBufferMemory2(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkBindBufferMemory2(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkBindBufferMemory2(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,15 +4,13 @@ public class PFNvkInternalAllocationNotification extends VkFunctionPointer {
     public PFNvkInternalAllocationNotification() {
     }
 
-    public PFNvkInternalAllocationNotification(VkMemory vkmemory) {
+    protected PFNvkInternalAllocationNotification(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkInternalAllocationNotification(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkInternalAllocationNotification(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
-
-
 
     public PFNvkInternalAllocationNotification(long value) {
         setValue(value);

@@ -14,6 +14,10 @@ public class VkExportSemaphoreCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkExportSemaphoreCreateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

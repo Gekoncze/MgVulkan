@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceDisplayPropertiesKHR extends VkFunctionPointe
     public PFNvkGetPhysicalDeviceDisplayPropertiesKHR() {
     }
 
-    public PFNvkGetPhysicalDeviceDisplayPropertiesKHR(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceDisplayPropertiesKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceDisplayPropertiesKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceDisplayPropertiesKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

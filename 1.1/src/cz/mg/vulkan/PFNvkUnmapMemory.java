@@ -4,11 +4,11 @@ public class PFNvkUnmapMemory extends VkFunctionPointer {
     public PFNvkUnmapMemory() {
     }
 
-    public PFNvkUnmapMemory(VkMemory vkmemory) {
+    protected PFNvkUnmapMemory(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkUnmapMemory(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkUnmapMemory(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

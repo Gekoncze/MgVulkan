@@ -14,6 +14,10 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkSampleLocationsInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

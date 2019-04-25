@@ -4,11 +4,11 @@ public class PFNvkMapMemory extends VkFunctionPointer {
     public PFNvkMapMemory() {
     }
 
-    public PFNvkMapMemory(VkMemory vkmemory) {
+    protected PFNvkMapMemory(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkMapMemory(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkMapMemory(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

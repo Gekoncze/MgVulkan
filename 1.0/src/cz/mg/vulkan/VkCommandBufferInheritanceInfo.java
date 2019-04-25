@@ -14,6 +14,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkCommandBufferInheritanceInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

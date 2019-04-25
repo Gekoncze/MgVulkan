@@ -4,15 +4,13 @@ public class PFNvkInternalFreeNotification extends VkFunctionPointer {
     public PFNvkInternalFreeNotification() {
     }
 
-    public PFNvkInternalFreeNotification(VkMemory vkmemory) {
+    protected PFNvkInternalFreeNotification(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkInternalFreeNotification(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkInternalFreeNotification(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
-
-
 
     public PFNvkInternalFreeNotification(long value) {
         setValue(value);

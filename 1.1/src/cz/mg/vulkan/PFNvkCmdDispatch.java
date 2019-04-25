@@ -4,11 +4,11 @@ public class PFNvkCmdDispatch extends VkFunctionPointer {
     public PFNvkCmdDispatch() {
     }
 
-    public PFNvkCmdDispatch(VkMemory vkmemory) {
+    protected PFNvkCmdDispatch(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdDispatch(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdDispatch(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

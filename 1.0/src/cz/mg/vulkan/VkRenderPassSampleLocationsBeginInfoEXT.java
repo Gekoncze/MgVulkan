@@ -14,6 +14,10 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkRenderPassSampleLocationsBeginInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

@@ -5,12 +5,16 @@ public class VkExtent3D extends VkObject {
         super(sizeof());
     }
 
-    public VkExtent3D(VkMemory vkmemory) {
+    protected VkExtent3D(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExtent3D(VkMemory vkmemory, long vkaddress) {
+    protected VkExtent3D(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExtent3D(VkPointer pointer) {
+        super(pointer);
     }
 
     public VkExtent3D(int width, int height, int depth) {
@@ -94,17 +98,22 @@ public class VkExtent3D extends VkObject {
             this.count = count;
         }
 
-        public Array(int count, VkExtent3D o){
+        public Array(VkExtent3D o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -132,15 +141,11 @@ public class VkExtent3D extends VkObject {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

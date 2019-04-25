@@ -4,11 +4,11 @@ public class PFNvkDestroyShaderModule extends VkFunctionPointer {
     public PFNvkDestroyShaderModule() {
     }
 
-    public PFNvkDestroyShaderModule(VkMemory vkmemory) {
+    protected PFNvkDestroyShaderModule(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyShaderModule(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyShaderModule(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

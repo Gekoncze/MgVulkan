@@ -9,12 +9,16 @@ public class VkSubpassDescriptionFlagBits extends VkFlagBits {
     public VkSubpassDescriptionFlagBits() {
     }
 
-    public VkSubpassDescriptionFlagBits(VkMemory vkmemory) {
+    protected VkSubpassDescriptionFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSubpassDescriptionFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkSubpassDescriptionFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSubpassDescriptionFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -7,18 +7,20 @@ public class VkSharingMode extends VkEnum {
     public VkSharingMode() {
     }
 
-    public VkSharingMode(VkMemory vkmemory) {
+    protected VkSharingMode(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSharingMode(VkMemory vkmemory, long vkaddress) {
+    protected VkSharingMode(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 
-
-
     public VkSharingMode(int value) {
         setValue(value);
+    }
+
+    public VkSharingMode(VkPointer pointer) {
+        super(pointer);
     }
 
     @Override
@@ -36,17 +38,22 @@ public class VkSharingMode extends VkEnum {
             this.count = count;
         }
 
-        public Array(int count, VkSharingMode o){
+        public Array(VkSharingMode o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -78,6 +85,20 @@ public class VkSharingMode extends VkEnum {
 
         protected long addressAt(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
+        }
+
+        public static class Array2 extends VkPointer.Array {
+            public Array2(int count) {
+                super(count);
+            }
+
+            protected Array2(VkMemory vkmemory, int count) {
+                super(vkmemory, count);
+            }
+
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
+                super(vkmemory, vkaddress, count);
+            }
         }
     }
 }

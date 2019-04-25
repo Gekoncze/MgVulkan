@@ -4,11 +4,11 @@ public class PFNvkGetFenceStatus extends VkFunctionPointer {
     public PFNvkGetFenceStatus() {
     }
 
-    public PFNvkGetFenceStatus(VkMemory vkmemory) {
+    protected PFNvkGetFenceStatus(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetFenceStatus(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetFenceStatus(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

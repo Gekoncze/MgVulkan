@@ -4,11 +4,11 @@ public class PFNvkResetCommandBuffer extends VkFunctionPointer {
     public PFNvkResetCommandBuffer() {
     }
 
-    public PFNvkResetCommandBuffer(VkMemory vkmemory) {
+    protected PFNvkResetCommandBuffer(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkResetCommandBuffer(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkResetCommandBuffer(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

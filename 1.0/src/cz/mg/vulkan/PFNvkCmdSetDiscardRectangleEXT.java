@@ -4,11 +4,11 @@ public class PFNvkCmdSetDiscardRectangleEXT extends VkFunctionPointer {
     public PFNvkCmdSetDiscardRectangleEXT() {
     }
 
-    public PFNvkCmdSetDiscardRectangleEXT(VkMemory vkmemory) {
+    protected PFNvkCmdSetDiscardRectangleEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetDiscardRectangleEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetDiscardRectangleEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

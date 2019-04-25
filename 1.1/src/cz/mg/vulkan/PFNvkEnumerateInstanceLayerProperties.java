@@ -4,11 +4,11 @@ public class PFNvkEnumerateInstanceLayerProperties extends VkFunctionPointer {
     public PFNvkEnumerateInstanceLayerProperties() {
     }
 
-    public PFNvkEnumerateInstanceLayerProperties(VkMemory vkmemory) {
+    protected PFNvkEnumerateInstanceLayerProperties(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkEnumerateInstanceLayerProperties(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkEnumerateInstanceLayerProperties(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

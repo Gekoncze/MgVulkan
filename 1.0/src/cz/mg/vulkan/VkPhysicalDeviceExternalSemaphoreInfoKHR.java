@@ -14,6 +14,10 @@ public class VkPhysicalDeviceExternalSemaphoreInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPhysicalDeviceExternalSemaphoreInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

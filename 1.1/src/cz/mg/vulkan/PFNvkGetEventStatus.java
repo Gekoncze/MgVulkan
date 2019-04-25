@@ -4,11 +4,11 @@ public class PFNvkGetEventStatus extends VkFunctionPointer {
     public PFNvkGetEventStatus() {
     }
 
-    public PFNvkGetEventStatus(VkMemory vkmemory) {
+    protected PFNvkGetEventStatus(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetEventStatus(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetEventStatus(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

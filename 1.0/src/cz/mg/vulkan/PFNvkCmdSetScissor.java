@@ -4,11 +4,11 @@ public class PFNvkCmdSetScissor extends VkFunctionPointer {
     public PFNvkCmdSetScissor() {
     }
 
-    public PFNvkCmdSetScissor(VkMemory vkmemory) {
+    protected PFNvkCmdSetScissor(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetScissor(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetScissor(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

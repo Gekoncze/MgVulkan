@@ -14,6 +14,10 @@ public class VkValidationCacheCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkValidationCacheCreateInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

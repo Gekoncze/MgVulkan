@@ -4,11 +4,11 @@ public class PFNvkCmdDispatchBaseKHX extends VkFunctionPointer {
     public PFNvkCmdDispatchBaseKHX() {
     }
 
-    public PFNvkCmdDispatchBaseKHX(VkMemory vkmemory) {
+    protected PFNvkCmdDispatchBaseKHX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdDispatchBaseKHX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdDispatchBaseKHX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

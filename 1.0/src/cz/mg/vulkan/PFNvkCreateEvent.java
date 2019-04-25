@@ -4,11 +4,11 @@ public class PFNvkCreateEvent extends VkFunctionPointer {
     public PFNvkCreateEvent() {
     }
 
-    public PFNvkCreateEvent(VkMemory vkmemory) {
+    protected PFNvkCreateEvent(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateEvent(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateEvent(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

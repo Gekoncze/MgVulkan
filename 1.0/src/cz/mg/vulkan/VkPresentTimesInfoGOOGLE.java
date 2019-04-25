@@ -14,6 +14,10 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPresentTimesInfoGOOGLE(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

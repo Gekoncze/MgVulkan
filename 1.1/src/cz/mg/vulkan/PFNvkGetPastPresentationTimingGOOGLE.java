@@ -4,11 +4,11 @@ public class PFNvkGetPastPresentationTimingGOOGLE extends VkFunctionPointer {
     public PFNvkGetPastPresentationTimingGOOGLE() {
     }
 
-    public PFNvkGetPastPresentationTimingGOOGLE(VkMemory vkmemory) {
+    protected PFNvkGetPastPresentationTimingGOOGLE(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPastPresentationTimingGOOGLE(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPastPresentationTimingGOOGLE(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

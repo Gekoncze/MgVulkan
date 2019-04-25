@@ -17,12 +17,16 @@ public class VkExternalSemaphoreHandleTypeFlagBits extends VkFlagBits {
     public VkExternalSemaphoreHandleTypeFlagBits() {
     }
 
-    public VkExternalSemaphoreHandleTypeFlagBits(VkMemory vkmemory) {
+    protected VkExternalSemaphoreHandleTypeFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalSemaphoreHandleTypeFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalSemaphoreHandleTypeFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalSemaphoreHandleTypeFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

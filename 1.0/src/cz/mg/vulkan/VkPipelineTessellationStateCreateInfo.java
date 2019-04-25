@@ -14,6 +14,10 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineTessellationStateCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

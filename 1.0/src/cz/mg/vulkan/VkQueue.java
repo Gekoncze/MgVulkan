@@ -4,12 +4,16 @@ public class VkQueue extends VkDispatchableHandle {
     public VkQueue() {
     }
 
-    public VkQueue(VkMemory vkmemory) {
+    protected VkQueue(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkQueue(VkMemory vkmemory, long vkaddress) {
+    protected VkQueue(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkQueue(VkPointer pointer) {
+        super(pointer);
     }
 
 
@@ -26,17 +30,22 @@ public class VkQueue extends VkDispatchableHandle {
             this.count = count;
         }
 
-        public Array(int count, VkQueue o){
+        public Array(VkQueue o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -64,15 +73,11 @@ public class VkQueue extends VkDispatchableHandle {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

@@ -14,6 +14,10 @@ public class VkShaderModuleCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkShaderModuleCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

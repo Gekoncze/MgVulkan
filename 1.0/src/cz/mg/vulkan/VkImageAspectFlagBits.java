@@ -14,12 +14,16 @@ public class VkImageAspectFlagBits extends VkFlagBits {
     public VkImageAspectFlagBits() {
     }
 
-    public VkImageAspectFlagBits(VkMemory vkmemory) {
+    protected VkImageAspectFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkImageAspectFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkImageAspectFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkImageAspectFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

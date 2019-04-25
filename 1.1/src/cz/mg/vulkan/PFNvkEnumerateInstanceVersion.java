@@ -4,11 +4,11 @@ public class PFNvkEnumerateInstanceVersion extends VkFunctionPointer {
     public PFNvkEnumerateInstanceVersion() {
     }
 
-    public PFNvkEnumerateInstanceVersion(VkMemory vkmemory) {
+    protected PFNvkEnumerateInstanceVersion(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkEnumerateInstanceVersion(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkEnumerateInstanceVersion(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

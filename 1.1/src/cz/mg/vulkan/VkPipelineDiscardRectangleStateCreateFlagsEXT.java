@@ -4,12 +4,16 @@ public class VkPipelineDiscardRectangleStateCreateFlagsEXT extends VkFlags {
     public VkPipelineDiscardRectangleStateCreateFlagsEXT() {
     }
 
-    public VkPipelineDiscardRectangleStateCreateFlagsEXT(VkMemory vkmemory) {
+    protected VkPipelineDiscardRectangleStateCreateFlagsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineDiscardRectangleStateCreateFlagsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineDiscardRectangleStateCreateFlagsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineDiscardRectangleStateCreateFlagsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -14,12 +14,16 @@ public class VkSampleCountFlagBits extends VkFlagBits {
     public VkSampleCountFlagBits() {
     }
 
-    public VkSampleCountFlagBits(VkMemory vkmemory) {
+    protected VkSampleCountFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSampleCountFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkSampleCountFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSampleCountFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

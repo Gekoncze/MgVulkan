@@ -25,12 +25,16 @@ public class VkExternalMemoryHandleTypeFlagBits extends VkFlagBits {
     public VkExternalMemoryHandleTypeFlagBits() {
     }
 
-    public VkExternalMemoryHandleTypeFlagBits(VkMemory vkmemory) {
+    protected VkExternalMemoryHandleTypeFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalMemoryHandleTypeFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalMemoryHandleTypeFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalMemoryHandleTypeFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -4,11 +4,11 @@ public class PFNvkSetDebugUtilsObjectTagEXT extends VkFunctionPointer {
     public PFNvkSetDebugUtilsObjectTagEXT() {
     }
 
-    public PFNvkSetDebugUtilsObjectTagEXT(VkMemory vkmemory) {
+    protected PFNvkSetDebugUtilsObjectTagEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkSetDebugUtilsObjectTagEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkSetDebugUtilsObjectTagEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

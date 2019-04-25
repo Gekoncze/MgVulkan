@@ -8,12 +8,16 @@ public class VkSurfaceCounterFlagBitsEXT extends VkFlagBits {
     public VkSurfaceCounterFlagBitsEXT() {
     }
 
-    public VkSurfaceCounterFlagBitsEXT(VkMemory vkmemory) {
+    protected VkSurfaceCounterFlagBitsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSurfaceCounterFlagBitsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkSurfaceCounterFlagBitsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSurfaceCounterFlagBitsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

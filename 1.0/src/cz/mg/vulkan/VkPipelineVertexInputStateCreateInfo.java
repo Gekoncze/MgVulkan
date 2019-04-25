@@ -14,6 +14,10 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineVertexInputStateCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

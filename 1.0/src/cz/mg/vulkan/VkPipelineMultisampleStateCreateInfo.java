@@ -14,6 +14,10 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineMultisampleStateCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

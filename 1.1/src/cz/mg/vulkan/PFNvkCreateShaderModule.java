@@ -4,11 +4,11 @@ public class PFNvkCreateShaderModule extends VkFunctionPointer {
     public PFNvkCreateShaderModule() {
     }
 
-    public PFNvkCreateShaderModule(VkMemory vkmemory) {
+    protected PFNvkCreateShaderModule(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateShaderModule(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateShaderModule(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

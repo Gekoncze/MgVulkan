@@ -14,6 +14,10 @@ public class VkDeviceGroupCommandBufferBeginInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDeviceGroupCommandBufferBeginInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

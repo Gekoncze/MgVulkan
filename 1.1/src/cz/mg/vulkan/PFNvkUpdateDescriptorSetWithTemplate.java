@@ -4,11 +4,11 @@ public class PFNvkUpdateDescriptorSetWithTemplate extends VkFunctionPointer {
     public PFNvkUpdateDescriptorSetWithTemplate() {
     }
 
-    public PFNvkUpdateDescriptorSetWithTemplate(VkMemory vkmemory) {
+    protected PFNvkUpdateDescriptorSetWithTemplate(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkUpdateDescriptorSetWithTemplate(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkUpdateDescriptorSetWithTemplate(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

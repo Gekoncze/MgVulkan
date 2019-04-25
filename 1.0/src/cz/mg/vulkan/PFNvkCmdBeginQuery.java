@@ -4,11 +4,11 @@ public class PFNvkCmdBeginQuery extends VkFunctionPointer {
     public PFNvkCmdBeginQuery() {
     }
 
-    public PFNvkCmdBeginQuery(VkMemory vkmemory) {
+    protected PFNvkCmdBeginQuery(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdBeginQuery(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdBeginQuery(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

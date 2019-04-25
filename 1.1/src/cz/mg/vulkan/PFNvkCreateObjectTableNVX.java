@@ -4,11 +4,11 @@ public class PFNvkCreateObjectTableNVX extends VkFunctionPointer {
     public PFNvkCreateObjectTableNVX() {
     }
 
-    public PFNvkCreateObjectTableNVX(VkMemory vkmemory) {
+    protected PFNvkCreateObjectTableNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateObjectTableNVX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateObjectTableNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

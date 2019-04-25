@@ -10,12 +10,16 @@ public class VkExternalMemoryFeatureFlagBitsNV extends VkFlagBits {
     public VkExternalMemoryFeatureFlagBitsNV() {
     }
 
-    public VkExternalMemoryFeatureFlagBitsNV(VkMemory vkmemory) {
+    protected VkExternalMemoryFeatureFlagBitsNV(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalMemoryFeatureFlagBitsNV(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalMemoryFeatureFlagBitsNV(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalMemoryFeatureFlagBitsNV(VkPointer pointer) {
+        super(pointer);
     }
 
 

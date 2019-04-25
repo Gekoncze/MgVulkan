@@ -4,11 +4,11 @@ public class PFNvkGetRenderAreaGranularity extends VkFunctionPointer {
     public PFNvkGetRenderAreaGranularity() {
     }
 
-    public PFNvkGetRenderAreaGranularity(VkMemory vkmemory) {
+    protected PFNvkGetRenderAreaGranularity(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetRenderAreaGranularity(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetRenderAreaGranularity(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

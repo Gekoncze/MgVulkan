@@ -4,12 +4,16 @@ public class VkCommandPoolResetFlags extends VkFlags {
     public VkCommandPoolResetFlags() {
     }
 
-    public VkCommandPoolResetFlags(VkMemory vkmemory) {
+    protected VkCommandPoolResetFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkCommandPoolResetFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkCommandPoolResetFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkCommandPoolResetFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

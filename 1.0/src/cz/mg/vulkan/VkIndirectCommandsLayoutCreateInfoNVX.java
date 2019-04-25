@@ -14,6 +14,10 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkIndirectCommandsLayoutCreateInfoNVX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

@@ -4,11 +4,11 @@ public class PFNvkGetSwapchainImagesKHR extends VkFunctionPointer {
     public PFNvkGetSwapchainImagesKHR() {
     }
 
-    public PFNvkGetSwapchainImagesKHR(VkMemory vkmemory) {
+    protected PFNvkGetSwapchainImagesKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetSwapchainImagesKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetSwapchainImagesKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

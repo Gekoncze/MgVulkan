@@ -11,12 +11,16 @@ public class VkDescriptorBindingFlagBitsEXT extends VkFlagBits {
     public VkDescriptorBindingFlagBitsEXT() {
     }
 
-    public VkDescriptorBindingFlagBitsEXT(VkMemory vkmemory) {
+    protected VkDescriptorBindingFlagBitsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDescriptorBindingFlagBitsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkDescriptorBindingFlagBitsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDescriptorBindingFlagBitsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

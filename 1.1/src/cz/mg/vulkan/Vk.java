@@ -2489,7 +2489,7 @@ public class Vk {
 
 
     public VkPointer vkMapMemory(VkDevice device, VkDeviceMemory memory, VkDeviceSize offset, VkDeviceSize size, VkMemoryMapFlags flags){
-        VkPointer pointer = new VkObject.Pointer();
+        VkPointer pointer = new VkPointer();
         vkMapMemory(device, memory, offset, size, flags, pointer);
         return pointer;
     }

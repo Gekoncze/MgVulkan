@@ -4,11 +4,11 @@ public class PFNvkDestroyRenderPass extends VkFunctionPointer {
     public PFNvkDestroyRenderPass() {
     }
 
-    public PFNvkDestroyRenderPass(VkMemory vkmemory) {
+    protected PFNvkDestroyRenderPass(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyRenderPass(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyRenderPass(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -14,6 +14,10 @@ public class VkDisplayPowerInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDisplayPowerInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

@@ -11,12 +11,16 @@ public class VkBufferCreateFlagBits extends VkFlagBits {
     public VkBufferCreateFlagBits() {
     }
 
-    public VkBufferCreateFlagBits(VkMemory vkmemory) {
+    protected VkBufferCreateFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkBufferCreateFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkBufferCreateFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkBufferCreateFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

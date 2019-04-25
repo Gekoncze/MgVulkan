@@ -14,6 +14,10 @@ public class VkCommandPoolCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkCommandPoolCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

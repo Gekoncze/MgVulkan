@@ -4,12 +4,16 @@ public class VkPipelineRasterizationConservativeStateCreateFlagsEXT extends VkFl
     public VkPipelineRasterizationConservativeStateCreateFlagsEXT() {
     }
 
-    public VkPipelineRasterizationConservativeStateCreateFlagsEXT(VkMemory vkmemory) {
+    protected VkPipelineRasterizationConservativeStateCreateFlagsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineRasterizationConservativeStateCreateFlagsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineRasterizationConservativeStateCreateFlagsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineRasterizationConservativeStateCreateFlagsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

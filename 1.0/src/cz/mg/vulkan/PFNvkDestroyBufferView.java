@@ -4,11 +4,11 @@ public class PFNvkDestroyBufferView extends VkFunctionPointer {
     public PFNvkDestroyBufferView() {
     }
 
-    public PFNvkDestroyBufferView(VkMemory vkmemory) {
+    protected PFNvkDestroyBufferView(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyBufferView(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyBufferView(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

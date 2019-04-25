@@ -14,6 +14,10 @@ public class VkPhysicalDeviceExternalImageFormatInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPhysicalDeviceExternalImageFormatInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

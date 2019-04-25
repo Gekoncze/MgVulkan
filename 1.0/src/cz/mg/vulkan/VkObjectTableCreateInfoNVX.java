@@ -14,6 +14,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkObjectTableCreateInfoNVX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

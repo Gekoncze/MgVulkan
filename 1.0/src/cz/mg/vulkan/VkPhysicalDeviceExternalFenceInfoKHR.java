@@ -14,6 +14,10 @@ public class VkPhysicalDeviceExternalFenceInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPhysicalDeviceExternalFenceInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

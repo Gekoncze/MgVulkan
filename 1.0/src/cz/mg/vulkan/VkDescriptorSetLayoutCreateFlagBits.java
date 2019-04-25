@@ -8,12 +8,16 @@ public class VkDescriptorSetLayoutCreateFlagBits extends VkFlagBits {
     public VkDescriptorSetLayoutCreateFlagBits() {
     }
 
-    public VkDescriptorSetLayoutCreateFlagBits(VkMemory vkmemory) {
+    protected VkDescriptorSetLayoutCreateFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDescriptorSetLayoutCreateFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkDescriptorSetLayoutCreateFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDescriptorSetLayoutCreateFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

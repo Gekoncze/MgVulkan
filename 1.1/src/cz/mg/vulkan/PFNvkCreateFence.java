@@ -4,11 +4,11 @@ public class PFNvkCreateFence extends VkFunctionPointer {
     public PFNvkCreateFence() {
     }
 
-    public PFNvkCreateFence(VkMemory vkmemory) {
+    protected PFNvkCreateFence(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateFence(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateFence(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

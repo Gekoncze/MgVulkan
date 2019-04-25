@@ -4,15 +4,13 @@ public class PFNvkDebugUtilsMessengerCallbackEXT extends VkFunctionPointer {
     public PFNvkDebugUtilsMessengerCallbackEXT() {
     }
 
-    public PFNvkDebugUtilsMessengerCallbackEXT(VkMemory vkmemory) {
+    protected PFNvkDebugUtilsMessengerCallbackEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDebugUtilsMessengerCallbackEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDebugUtilsMessengerCallbackEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
-
-
 
     public PFNvkDebugUtilsMessengerCallbackEXT(long value) {
         setValue(value);

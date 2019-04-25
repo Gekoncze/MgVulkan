@@ -9,18 +9,20 @@ public class VkQueueGlobalPriorityEXT extends VkEnum {
     public VkQueueGlobalPriorityEXT() {
     }
 
-    public VkQueueGlobalPriorityEXT(VkMemory vkmemory) {
+    protected VkQueueGlobalPriorityEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkQueueGlobalPriorityEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkQueueGlobalPriorityEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 
-
-
     public VkQueueGlobalPriorityEXT(int value) {
         setValue(value);
+    }
+
+    public VkQueueGlobalPriorityEXT(VkPointer pointer) {
+        super(pointer);
     }
 
     @Override
@@ -40,17 +42,22 @@ public class VkQueueGlobalPriorityEXT extends VkEnum {
             this.count = count;
         }
 
-        public Array(int count, VkQueueGlobalPriorityEXT o){
+        public Array(VkQueueGlobalPriorityEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -82,6 +89,20 @@ public class VkQueueGlobalPriorityEXT extends VkEnum {
 
         protected long addressAt(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
+        }
+
+        public static class Array2 extends VkPointer.Array {
+            public Array2(int count) {
+                super(count);
+            }
+
+            protected Array2(VkMemory vkmemory, int count) {
+                super(vkmemory, count);
+            }
+
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
+                super(vkmemory, vkaddress, count);
+            }
         }
     }
 }

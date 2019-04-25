@@ -10,12 +10,16 @@ public class VkStencilFaceFlagBits extends VkFlagBits {
     public VkStencilFaceFlagBits() {
     }
 
-    public VkStencilFaceFlagBits(VkMemory vkmemory) {
+    protected VkStencilFaceFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkStencilFaceFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkStencilFaceFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkStencilFaceFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -4,11 +4,11 @@ public class PFNvkCmdSetLineWidth extends VkFunctionPointer {
     public PFNvkCmdSetLineWidth() {
     }
 
-    public PFNvkCmdSetLineWidth(VkMemory vkmemory) {
+    protected PFNvkCmdSetLineWidth(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetLineWidth(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetLineWidth(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

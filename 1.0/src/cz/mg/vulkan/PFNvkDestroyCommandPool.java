@@ -4,11 +4,11 @@ public class PFNvkDestroyCommandPool extends VkFunctionPointer {
     public PFNvkDestroyCommandPool() {
     }
 
-    public PFNvkDestroyCommandPool(VkMemory vkmemory) {
+    protected PFNvkDestroyCommandPool(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyCommandPool(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyCommandPool(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

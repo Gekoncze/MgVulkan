@@ -4,12 +4,16 @@ public class VkIndirectCommandsLayoutUsageFlagsNVX extends VkFlags {
     public VkIndirectCommandsLayoutUsageFlagsNVX() {
     }
 
-    public VkIndirectCommandsLayoutUsageFlagsNVX(VkMemory vkmemory) {
+    protected VkIndirectCommandsLayoutUsageFlagsNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkIndirectCommandsLayoutUsageFlagsNVX(VkMemory vkmemory, long vkaddress) {
+    protected VkIndirectCommandsLayoutUsageFlagsNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkIndirectCommandsLayoutUsageFlagsNVX(VkPointer pointer) {
+        super(pointer);
     }
 
 

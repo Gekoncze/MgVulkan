@@ -4,11 +4,11 @@ public class PFNvkCmdDrawIndirect extends VkFunctionPointer {
     public PFNvkCmdDrawIndirect() {
     }
 
-    public PFNvkCmdDrawIndirect(VkMemory vkmemory) {
+    protected PFNvkCmdDrawIndirect(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdDrawIndirect(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdDrawIndirect(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

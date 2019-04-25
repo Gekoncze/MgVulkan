@@ -14,6 +14,10 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineViewportStateCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

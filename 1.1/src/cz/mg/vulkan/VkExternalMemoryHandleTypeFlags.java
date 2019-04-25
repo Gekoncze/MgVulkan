@@ -4,12 +4,16 @@ public class VkExternalMemoryHandleTypeFlags extends VkFlags {
     public VkExternalMemoryHandleTypeFlags() {
     }
 
-    public VkExternalMemoryHandleTypeFlags(VkMemory vkmemory) {
+    protected VkExternalMemoryHandleTypeFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalMemoryHandleTypeFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalMemoryHandleTypeFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalMemoryHandleTypeFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

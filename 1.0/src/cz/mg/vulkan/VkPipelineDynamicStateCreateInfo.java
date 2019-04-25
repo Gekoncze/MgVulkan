@@ -14,6 +14,10 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineDynamicStateCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

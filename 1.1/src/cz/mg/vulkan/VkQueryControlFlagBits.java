@@ -8,12 +8,16 @@ public class VkQueryControlFlagBits extends VkFlagBits {
     public VkQueryControlFlagBits() {
     }
 
-    public VkQueryControlFlagBits(VkMemory vkmemory) {
+    protected VkQueryControlFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkQueryControlFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkQueryControlFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkQueryControlFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

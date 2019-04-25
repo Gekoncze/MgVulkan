@@ -11,12 +11,16 @@ public class VkQueryResultFlagBits extends VkFlagBits {
     public VkQueryResultFlagBits() {
     }
 
-    public VkQueryResultFlagBits(VkMemory vkmemory) {
+    protected VkQueryResultFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkQueryResultFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkQueryResultFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkQueryResultFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

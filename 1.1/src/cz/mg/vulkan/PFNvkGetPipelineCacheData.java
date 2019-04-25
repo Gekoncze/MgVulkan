@@ -4,11 +4,11 @@ public class PFNvkGetPipelineCacheData extends VkFunctionPointer {
     public PFNvkGetPipelineCacheData() {
     }
 
-    public PFNvkGetPipelineCacheData(VkMemory vkmemory) {
+    protected PFNvkGetPipelineCacheData(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPipelineCacheData(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPipelineCacheData(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

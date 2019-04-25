@@ -4,11 +4,11 @@ public class PFNvkCmdSetDepthBias extends VkFunctionPointer {
     public PFNvkCmdSetDepthBias() {
     }
 
-    public PFNvkCmdSetDepthBias(VkMemory vkmemory) {
+    protected PFNvkCmdSetDepthBias(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetDepthBias(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetDepthBias(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

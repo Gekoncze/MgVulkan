@@ -4,11 +4,11 @@ public class PFNvkRegisterObjectsNVX extends VkFunctionPointer {
     public PFNvkRegisterObjectsNVX() {
     }
 
-    public PFNvkRegisterObjectsNVX(VkMemory vkmemory) {
+    protected PFNvkRegisterObjectsNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkRegisterObjectsNVX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkRegisterObjectsNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

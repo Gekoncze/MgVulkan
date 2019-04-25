@@ -4,12 +4,16 @@ public class VkPipelineCreateFlags extends VkFlags {
     public VkPipelineCreateFlags() {
     }
 
-    public VkPipelineCreateFlags(VkMemory vkmemory) {
+    protected VkPipelineCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

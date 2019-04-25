@@ -4,12 +4,16 @@ public class VkPipelineShaderStageCreateFlags extends VkFlags {
     public VkPipelineShaderStageCreateFlags() {
     }
 
-    public VkPipelineShaderStageCreateFlags(VkMemory vkmemory) {
+    protected VkPipelineShaderStageCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineShaderStageCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineShaderStageCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineShaderStageCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

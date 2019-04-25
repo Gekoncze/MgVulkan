@@ -14,6 +14,10 @@ public class VkFenceGetFdInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkFenceGetFdInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

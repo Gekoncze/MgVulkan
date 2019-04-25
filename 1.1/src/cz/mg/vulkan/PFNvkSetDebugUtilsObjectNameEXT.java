@@ -4,11 +4,11 @@ public class PFNvkSetDebugUtilsObjectNameEXT extends VkFunctionPointer {
     public PFNvkSetDebugUtilsObjectNameEXT() {
     }
 
-    public PFNvkSetDebugUtilsObjectNameEXT(VkMemory vkmemory) {
+    protected PFNvkSetDebugUtilsObjectNameEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkSetDebugUtilsObjectNameEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkSetDebugUtilsObjectNameEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

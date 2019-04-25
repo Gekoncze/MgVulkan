@@ -4,12 +4,16 @@ public class VkMemoryAllocateFlagsKHX extends VkFlags {
     public VkMemoryAllocateFlagsKHX() {
     }
 
-    public VkMemoryAllocateFlagsKHX(VkMemory vkmemory) {
+    protected VkMemoryAllocateFlagsKHX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkMemoryAllocateFlagsKHX(VkMemory vkmemory, long vkaddress) {
+    protected VkMemoryAllocateFlagsKHX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkMemoryAllocateFlagsKHX(VkPointer pointer) {
+        super(pointer);
     }
 
 

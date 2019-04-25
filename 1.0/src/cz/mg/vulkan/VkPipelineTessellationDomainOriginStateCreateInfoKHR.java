@@ -14,6 +14,10 @@ public class VkPipelineTessellationDomainOriginStateCreateInfoKHR extends VkObje
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineTessellationDomainOriginStateCreateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

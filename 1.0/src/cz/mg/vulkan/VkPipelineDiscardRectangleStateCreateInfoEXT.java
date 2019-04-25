@@ -14,6 +14,10 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineDiscardRectangleStateCreateInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

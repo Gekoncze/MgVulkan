@@ -4,11 +4,11 @@ public class PFNvkEnumerateInstanceExtensionProperties extends VkFunctionPointer
     public PFNvkEnumerateInstanceExtensionProperties() {
     }
 
-    public PFNvkEnumerateInstanceExtensionProperties(VkMemory vkmemory) {
+    protected PFNvkEnumerateInstanceExtensionProperties(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkEnumerateInstanceExtensionProperties(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkEnumerateInstanceExtensionProperties(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

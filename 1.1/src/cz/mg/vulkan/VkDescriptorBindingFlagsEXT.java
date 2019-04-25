@@ -4,12 +4,16 @@ public class VkDescriptorBindingFlagsEXT extends VkFlags {
     public VkDescriptorBindingFlagsEXT() {
     }
 
-    public VkDescriptorBindingFlagsEXT(VkMemory vkmemory) {
+    protected VkDescriptorBindingFlagsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDescriptorBindingFlagsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkDescriptorBindingFlagsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDescriptorBindingFlagsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

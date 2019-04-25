@@ -11,12 +11,16 @@ public class VkDisplayPlaneAlphaFlagBitsKHR extends VkFlagBits {
     public VkDisplayPlaneAlphaFlagBitsKHR() {
     }
 
-    public VkDisplayPlaneAlphaFlagBitsKHR(VkMemory vkmemory) {
+    protected VkDisplayPlaneAlphaFlagBitsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDisplayPlaneAlphaFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkDisplayPlaneAlphaFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDisplayPlaneAlphaFlagBitsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

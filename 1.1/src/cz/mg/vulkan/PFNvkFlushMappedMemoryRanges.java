@@ -4,11 +4,11 @@ public class PFNvkFlushMappedMemoryRanges extends VkFunctionPointer {
     public PFNvkFlushMappedMemoryRanges() {
     }
 
-    public PFNvkFlushMappedMemoryRanges(VkMemory vkmemory) {
+    protected PFNvkFlushMappedMemoryRanges(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkFlushMappedMemoryRanges(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkFlushMappedMemoryRanges(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

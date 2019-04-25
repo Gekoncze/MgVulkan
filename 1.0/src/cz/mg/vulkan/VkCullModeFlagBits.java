@@ -11,12 +11,16 @@ public class VkCullModeFlagBits extends VkFlagBits {
     public VkCullModeFlagBits() {
     }
 
-    public VkCullModeFlagBits(VkMemory vkmemory) {
+    protected VkCullModeFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkCullModeFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkCullModeFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkCullModeFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

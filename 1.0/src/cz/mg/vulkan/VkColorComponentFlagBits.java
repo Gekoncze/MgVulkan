@@ -11,12 +11,16 @@ public class VkColorComponentFlagBits extends VkFlagBits {
     public VkColorComponentFlagBits() {
     }
 
-    public VkColorComponentFlagBits(VkMemory vkmemory) {
+    protected VkColorComponentFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkColorComponentFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkColorComponentFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkColorComponentFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -10,12 +10,16 @@ public class VkSparseImageFormatFlagBits extends VkFlagBits {
     public VkSparseImageFormatFlagBits() {
     }
 
-    public VkSparseImageFormatFlagBits(VkMemory vkmemory) {
+    protected VkSparseImageFormatFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSparseImageFormatFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkSparseImageFormatFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSparseImageFormatFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

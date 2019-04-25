@@ -4,11 +4,11 @@ public class PFNvkCreateQueryPool extends VkFunctionPointer {
     public PFNvkCreateQueryPool() {
     }
 
-    public PFNvkCreateQueryPool(VkMemory vkmemory) {
+    protected PFNvkCreateQueryPool(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateQueryPool(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateQueryPool(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

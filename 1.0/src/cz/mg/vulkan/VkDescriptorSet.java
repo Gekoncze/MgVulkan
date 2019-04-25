@@ -4,12 +4,16 @@ public class VkDescriptorSet extends VkNonDispatchableHandle {
     public VkDescriptorSet() {
     }
 
-    public VkDescriptorSet(VkMemory vkmemory) {
+    protected VkDescriptorSet(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDescriptorSet(VkMemory vkmemory, long vkaddress) {
+    protected VkDescriptorSet(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDescriptorSet(VkPointer pointer) {
+        super(pointer);
     }
 
 
@@ -26,17 +30,22 @@ public class VkDescriptorSet extends VkNonDispatchableHandle {
             this.count = count;
         }
 
-        public Array(int count, VkDescriptorSet o){
+        public Array(VkDescriptorSet o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -64,15 +73,11 @@ public class VkDescriptorSet extends VkNonDispatchableHandle {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

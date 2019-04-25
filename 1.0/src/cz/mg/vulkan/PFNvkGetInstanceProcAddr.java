@@ -4,11 +4,11 @@ public class PFNvkGetInstanceProcAddr extends VkFunctionPointer {
     public PFNvkGetInstanceProcAddr() {
     }
 
-    public PFNvkGetInstanceProcAddr(VkMemory vkmemory) {
+    protected PFNvkGetInstanceProcAddr(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetInstanceProcAddr(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetInstanceProcAddr(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

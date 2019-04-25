@@ -14,6 +14,10 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDescriptorUpdateTemplateCreateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

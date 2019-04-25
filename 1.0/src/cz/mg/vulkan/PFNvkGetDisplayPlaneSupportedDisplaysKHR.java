@@ -4,11 +4,11 @@ public class PFNvkGetDisplayPlaneSupportedDisplaysKHR extends VkFunctionPointer 
     public PFNvkGetDisplayPlaneSupportedDisplaysKHR() {
     }
 
-    public PFNvkGetDisplayPlaneSupportedDisplaysKHR(VkMemory vkmemory) {
+    protected PFNvkGetDisplayPlaneSupportedDisplaysKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetDisplayPlaneSupportedDisplaysKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetDisplayPlaneSupportedDisplaysKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

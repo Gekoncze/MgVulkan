@@ -27,12 +27,16 @@ public class VkAccessFlagBits extends VkFlagBits {
     public VkAccessFlagBits() {
     }
 
-    public VkAccessFlagBits(VkMemory vkmemory) {
+    protected VkAccessFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkAccessFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkAccessFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkAccessFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

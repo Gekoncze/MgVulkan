@@ -4,12 +4,16 @@ public class VkDeviceQueueCreateFlags extends VkFlags {
     public VkDeviceQueueCreateFlags() {
     }
 
-    public VkDeviceQueueCreateFlags(VkMemory vkmemory) {
+    protected VkDeviceQueueCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDeviceQueueCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkDeviceQueueCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDeviceQueueCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

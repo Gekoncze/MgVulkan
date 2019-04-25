@@ -8,12 +8,16 @@ public class VkFenceCreateFlagBits extends VkFlagBits {
     public VkFenceCreateFlagBits() {
     }
 
-    public VkFenceCreateFlagBits(VkMemory vkmemory) {
+    protected VkFenceCreateFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkFenceCreateFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkFenceCreateFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkFenceCreateFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

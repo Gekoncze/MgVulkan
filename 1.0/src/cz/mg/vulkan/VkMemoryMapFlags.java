@@ -4,12 +4,16 @@ public class VkMemoryMapFlags extends VkFlags {
     public VkMemoryMapFlags() {
     }
 
-    public VkMemoryMapFlags(VkMemory vkmemory) {
+    protected VkMemoryMapFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkMemoryMapFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkMemoryMapFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkMemoryMapFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

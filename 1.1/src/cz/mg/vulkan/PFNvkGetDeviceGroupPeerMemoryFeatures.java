@@ -4,11 +4,11 @@ public class PFNvkGetDeviceGroupPeerMemoryFeatures extends VkFunctionPointer {
     public PFNvkGetDeviceGroupPeerMemoryFeatures() {
     }
 
-    public PFNvkGetDeviceGroupPeerMemoryFeatures(VkMemory vkmemory) {
+    protected PFNvkGetDeviceGroupPeerMemoryFeatures(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetDeviceGroupPeerMemoryFeatures(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetDeviceGroupPeerMemoryFeatures(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -14,6 +14,10 @@ public class VkBindImageMemoryDeviceGroupInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkBindImageMemoryDeviceGroupInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

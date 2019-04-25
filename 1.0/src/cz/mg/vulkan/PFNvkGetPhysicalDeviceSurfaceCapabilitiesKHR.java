@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR extends VkFunctionPoin
     public PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR() {
     }
 
-    public PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

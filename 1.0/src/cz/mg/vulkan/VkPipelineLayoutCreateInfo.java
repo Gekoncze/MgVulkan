@@ -14,6 +14,10 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineLayoutCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

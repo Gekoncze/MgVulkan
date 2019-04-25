@@ -4,12 +4,16 @@ public class VkCommandBufferResetFlags extends VkFlags {
     public VkCommandBufferResetFlags() {
     }
 
-    public VkCommandBufferResetFlags(VkMemory vkmemory) {
+    protected VkCommandBufferResetFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkCommandBufferResetFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkCommandBufferResetFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkCommandBufferResetFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

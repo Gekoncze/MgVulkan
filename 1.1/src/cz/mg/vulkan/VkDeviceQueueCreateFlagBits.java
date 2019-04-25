@@ -8,12 +8,16 @@ public class VkDeviceQueueCreateFlagBits extends VkFlagBits {
     public VkDeviceQueueCreateFlagBits() {
     }
 
-    public VkDeviceQueueCreateFlagBits(VkMemory vkmemory) {
+    protected VkDeviceQueueCreateFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDeviceQueueCreateFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkDeviceQueueCreateFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDeviceQueueCreateFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

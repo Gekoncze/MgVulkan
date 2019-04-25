@@ -5,12 +5,16 @@ public class VkSubpassDescription extends VkObject {
         super(sizeof());
     }
 
-    public VkSubpassDescription(VkMemory vkmemory) {
+    protected VkSubpassDescription(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSubpassDescription(VkMemory vkmemory, long vkaddress) {
+    protected VkSubpassDescription(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSubpassDescription(VkPointer pointer) {
+        super(pointer);
     }
 
 
@@ -196,17 +200,22 @@ public class VkSubpassDescription extends VkObject {
             this.count = count;
         }
 
-        public Array(int count, VkSubpassDescription o){
+        public Array(VkSubpassDescription o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -234,15 +243,11 @@ public class VkSubpassDescription extends VkObject {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

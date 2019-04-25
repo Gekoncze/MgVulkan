@@ -4,11 +4,11 @@ public class PFNvkCmdBlitImage extends VkFunctionPointer {
     public PFNvkCmdBlitImage() {
     }
 
-    public PFNvkCmdBlitImage(VkMemory vkmemory) {
+    protected PFNvkCmdBlitImage(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdBlitImage(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdBlitImage(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -12,11 +12,11 @@ public class VkFunctionPointer extends VkObject {
         setValue(value);
     }
 
-    public VkFunctionPointer(VkMemory vkmemory) {
+    protected VkFunctionPointer(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkFunctionPointer(VkMemory vkmemory, long vkaddress) {
+    protected VkFunctionPointer(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

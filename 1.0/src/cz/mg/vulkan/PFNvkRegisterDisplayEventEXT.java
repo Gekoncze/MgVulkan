@@ -4,11 +4,11 @@ public class PFNvkRegisterDisplayEventEXT extends VkFunctionPointer {
     public PFNvkRegisterDisplayEventEXT() {
     }
 
-    public PFNvkRegisterDisplayEventEXT(VkMemory vkmemory) {
+    protected PFNvkRegisterDisplayEventEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkRegisterDisplayEventEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkRegisterDisplayEventEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

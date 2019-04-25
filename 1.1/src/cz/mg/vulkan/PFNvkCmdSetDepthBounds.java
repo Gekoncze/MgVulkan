@@ -4,11 +4,11 @@ public class PFNvkCmdSetDepthBounds extends VkFunctionPointer {
     public PFNvkCmdSetDepthBounds() {
     }
 
-    public PFNvkCmdSetDepthBounds(VkMemory vkmemory) {
+    protected PFNvkCmdSetDepthBounds(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetDepthBounds(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetDepthBounds(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

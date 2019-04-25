@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceQueueFamilyProperties2KHR extends VkFunctionP
     public PFNvkGetPhysicalDeviceQueueFamilyProperties2KHR() {
     }
 
-    public PFNvkGetPhysicalDeviceQueueFamilyProperties2KHR(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceQueueFamilyProperties2KHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceQueueFamilyProperties2KHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceQueueFamilyProperties2KHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

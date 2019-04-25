@@ -14,6 +14,10 @@ public class VkComputePipelineCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkComputePipelineCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

@@ -4,11 +4,11 @@ public class PFNvkUpdateDescriptorSetWithTemplateKHR extends VkFunctionPointer {
     public PFNvkUpdateDescriptorSetWithTemplateKHR() {
     }
 
-    public PFNvkUpdateDescriptorSetWithTemplateKHR(VkMemory vkmemory) {
+    protected PFNvkUpdateDescriptorSetWithTemplateKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkUpdateDescriptorSetWithTemplateKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkUpdateDescriptorSetWithTemplateKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

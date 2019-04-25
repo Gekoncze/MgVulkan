@@ -14,6 +14,10 @@ public class VkImageFormatListCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkImageFormatListCreateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

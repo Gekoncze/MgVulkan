@@ -4,11 +4,11 @@ public class PFNvkGetDeviceGroupPresentCapabilitiesKHR extends VkFunctionPointer
     public PFNvkGetDeviceGroupPresentCapabilitiesKHR() {
     }
 
-    public PFNvkGetDeviceGroupPresentCapabilitiesKHR(VkMemory vkmemory) {
+    protected PFNvkGetDeviceGroupPresentCapabilitiesKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetDeviceGroupPresentCapabilitiesKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetDeviceGroupPresentCapabilitiesKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

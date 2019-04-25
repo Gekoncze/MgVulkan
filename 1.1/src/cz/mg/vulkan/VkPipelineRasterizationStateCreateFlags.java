@@ -4,12 +4,16 @@ public class VkPipelineRasterizationStateCreateFlags extends VkFlags {
     public VkPipelineRasterizationStateCreateFlags() {
     }
 
-    public VkPipelineRasterizationStateCreateFlags(VkMemory vkmemory) {
+    protected VkPipelineRasterizationStateCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineRasterizationStateCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineRasterizationStateCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineRasterizationStateCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

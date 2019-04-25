@@ -14,6 +14,10 @@ public class VkBindImageMemorySwapchainInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkBindImageMemorySwapchainInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

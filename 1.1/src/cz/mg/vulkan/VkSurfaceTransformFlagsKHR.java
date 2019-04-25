@@ -4,12 +4,16 @@ public class VkSurfaceTransformFlagsKHR extends VkFlags {
     public VkSurfaceTransformFlagsKHR() {
     }
 
-    public VkSurfaceTransformFlagsKHR(VkMemory vkmemory) {
+    protected VkSurfaceTransformFlagsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSurfaceTransformFlagsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkSurfaceTransformFlagsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSurfaceTransformFlagsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -14,6 +14,10 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkSwapchainCreateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

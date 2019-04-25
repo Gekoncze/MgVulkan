@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV extends VkFun
     public PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV() {
     }
 
-    public PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -14,6 +14,10 @@ public class VkRenderPassBeginInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkRenderPassBeginInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

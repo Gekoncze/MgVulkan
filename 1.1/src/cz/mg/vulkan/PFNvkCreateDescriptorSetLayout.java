@@ -4,11 +4,11 @@ public class PFNvkCreateDescriptorSetLayout extends VkFunctionPointer {
     public PFNvkCreateDescriptorSetLayout() {
     }
 
-    public PFNvkCreateDescriptorSetLayout(VkMemory vkmemory) {
+    protected PFNvkCreateDescriptorSetLayout(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateDescriptorSetLayout(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateDescriptorSetLayout(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -14,6 +14,10 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkCmdProcessCommandsInfoNVX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

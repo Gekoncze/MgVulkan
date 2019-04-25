@@ -4,11 +4,11 @@ public class PFNvkCmdSetStencilCompareMask extends VkFunctionPointer {
     public PFNvkCmdSetStencilCompareMask() {
     }
 
-    public PFNvkCmdSetStencilCompareMask(VkMemory vkmemory) {
+    protected PFNvkCmdSetStencilCompareMask(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetStencilCompareMask(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetStencilCompareMask(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

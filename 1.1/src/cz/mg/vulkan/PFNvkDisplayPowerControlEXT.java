@@ -4,11 +4,11 @@ public class PFNvkDisplayPowerControlEXT extends VkFunctionPointer {
     public PFNvkDisplayPowerControlEXT() {
     }
 
-    public PFNvkDisplayPowerControlEXT(VkMemory vkmemory) {
+    protected PFNvkDisplayPowerControlEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDisplayPowerControlEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDisplayPowerControlEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

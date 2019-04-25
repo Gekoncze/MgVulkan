@@ -4,11 +4,11 @@ public class PFNvkDestroyPipeline extends VkFunctionPointer {
     public PFNvkDestroyPipeline() {
     }
 
-    public PFNvkDestroyPipeline(VkMemory vkmemory) {
+    protected PFNvkDestroyPipeline(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyPipeline(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyPipeline(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

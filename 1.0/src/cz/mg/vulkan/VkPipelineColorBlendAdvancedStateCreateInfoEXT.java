@@ -14,6 +14,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineColorBlendAdvancedStateCreateInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

@@ -9,12 +9,16 @@ public class VkMemoryAllocateFlagBits extends VkFlagBits {
     public VkMemoryAllocateFlagBits() {
     }
 
-    public VkMemoryAllocateFlagBits(VkMemory vkmemory) {
+    protected VkMemoryAllocateFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkMemoryAllocateFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkMemoryAllocateFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkMemoryAllocateFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

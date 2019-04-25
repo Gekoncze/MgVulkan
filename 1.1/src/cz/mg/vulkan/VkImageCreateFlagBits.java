@@ -26,12 +26,16 @@ public class VkImageCreateFlagBits extends VkFlagBits {
     public VkImageCreateFlagBits() {
     }
 
-    public VkImageCreateFlagBits(VkMemory vkmemory) {
+    protected VkImageCreateFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkImageCreateFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkImageCreateFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkImageCreateFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -14,6 +14,10 @@ public class VkMemoryGetFdInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkMemoryGetFdInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

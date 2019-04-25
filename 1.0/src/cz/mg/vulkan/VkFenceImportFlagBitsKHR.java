@@ -8,12 +8,16 @@ public class VkFenceImportFlagBitsKHR extends VkFlagBits {
     public VkFenceImportFlagBitsKHR() {
     }
 
-    public VkFenceImportFlagBitsKHR(VkMemory vkmemory) {
+    protected VkFenceImportFlagBitsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkFenceImportFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkFenceImportFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkFenceImportFlagBitsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -4,11 +4,11 @@ public class PFNvkCreateBuffer extends VkFunctionPointer {
     public PFNvkCreateBuffer() {
     }
 
-    public PFNvkCreateBuffer(VkMemory vkmemory) {
+    protected PFNvkCreateBuffer(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateBuffer(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateBuffer(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

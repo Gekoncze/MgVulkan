@@ -14,6 +14,10 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineSampleLocationsStateCreateInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

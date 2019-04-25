@@ -4,11 +4,11 @@ public class PFNvkBeginCommandBuffer extends VkFunctionPointer {
     public PFNvkBeginCommandBuffer() {
     }
 
-    public PFNvkBeginCommandBuffer(VkMemory vkmemory) {
+    protected PFNvkBeginCommandBuffer(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkBeginCommandBuffer(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkBeginCommandBuffer(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

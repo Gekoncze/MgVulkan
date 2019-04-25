@@ -4,11 +4,11 @@ public class PFNvkCmdPushDescriptorSetWithTemplateKHR extends VkFunctionPointer 
     public PFNvkCmdPushDescriptorSetWithTemplateKHR() {
     }
 
-    public PFNvkCmdPushDescriptorSetWithTemplateKHR(VkMemory vkmemory) {
+    protected PFNvkCmdPushDescriptorSetWithTemplateKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdPushDescriptorSetWithTemplateKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdPushDescriptorSetWithTemplateKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

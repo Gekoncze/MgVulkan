@@ -4,11 +4,11 @@ public class PFNvkReleaseDisplayEXT extends VkFunctionPointer {
     public PFNvkReleaseDisplayEXT() {
     }
 
-    public PFNvkReleaseDisplayEXT(VkMemory vkmemory) {
+    protected PFNvkReleaseDisplayEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkReleaseDisplayEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkReleaseDisplayEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

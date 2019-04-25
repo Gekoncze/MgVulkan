@@ -14,6 +14,10 @@ public class VkExportMemoryAllocateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkExportMemoryAllocateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

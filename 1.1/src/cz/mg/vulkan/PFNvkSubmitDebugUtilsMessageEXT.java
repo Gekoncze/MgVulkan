@@ -4,11 +4,11 @@ public class PFNvkSubmitDebugUtilsMessageEXT extends VkFunctionPointer {
     public PFNvkSubmitDebugUtilsMessageEXT() {
     }
 
-    public PFNvkSubmitDebugUtilsMessageEXT(VkMemory vkmemory) {
+    protected PFNvkSubmitDebugUtilsMessageEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkSubmitDebugUtilsMessageEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkSubmitDebugUtilsMessageEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

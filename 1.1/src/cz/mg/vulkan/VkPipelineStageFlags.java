@@ -4,12 +4,16 @@ public class VkPipelineStageFlags extends VkFlags {
     public VkPipelineStageFlags() {
     }
 
-    public VkPipelineStageFlags(VkMemory vkmemory) {
+    protected VkPipelineStageFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineStageFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineStageFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineStageFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

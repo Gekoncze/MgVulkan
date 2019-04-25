@@ -10,12 +10,16 @@ public class VkCommandPoolCreateFlagBits extends VkFlagBits {
     public VkCommandPoolCreateFlagBits() {
     }
 
-    public VkCommandPoolCreateFlagBits(VkMemory vkmemory) {
+    protected VkCommandPoolCreateFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkCommandPoolCreateFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkCommandPoolCreateFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkCommandPoolCreateFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -4,11 +4,11 @@ public class PFNvkCreateIndirectCommandsLayoutNVX extends VkFunctionPointer {
     public PFNvkCreateIndirectCommandsLayoutNVX() {
     }
 
-    public PFNvkCreateIndirectCommandsLayoutNVX(VkMemory vkmemory) {
+    protected PFNvkCreateIndirectCommandsLayoutNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateIndirectCommandsLayoutNVX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateIndirectCommandsLayoutNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

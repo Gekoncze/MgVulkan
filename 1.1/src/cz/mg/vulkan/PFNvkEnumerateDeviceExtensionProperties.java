@@ -4,11 +4,11 @@ public class PFNvkEnumerateDeviceExtensionProperties extends VkFunctionPointer {
     public PFNvkEnumerateDeviceExtensionProperties() {
     }
 
-    public PFNvkEnumerateDeviceExtensionProperties(VkMemory vkmemory) {
+    protected PFNvkEnumerateDeviceExtensionProperties(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkEnumerateDeviceExtensionProperties(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkEnumerateDeviceExtensionProperties(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

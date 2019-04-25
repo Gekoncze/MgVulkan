@@ -14,6 +14,10 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineViewportSwizzleStateCreateInfoNV(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

@@ -4,11 +4,11 @@ public class PFNvkCmdFillBuffer extends VkFunctionPointer {
     public PFNvkCmdFillBuffer() {
     }
 
-    public PFNvkCmdFillBuffer(VkMemory vkmemory) {
+    protected PFNvkCmdFillBuffer(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdFillBuffer(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdFillBuffer(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

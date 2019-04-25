@@ -4,11 +4,11 @@ public class PFNvkCmdExecuteCommands extends VkFunctionPointer {
     public PFNvkCmdExecuteCommands() {
     }
 
-    public PFNvkCmdExecuteCommands(VkMemory vkmemory) {
+    protected PFNvkCmdExecuteCommands(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdExecuteCommands(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdExecuteCommands(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

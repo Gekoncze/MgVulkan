@@ -14,6 +14,10 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDedicatedAllocationImageCreateInfoNV(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

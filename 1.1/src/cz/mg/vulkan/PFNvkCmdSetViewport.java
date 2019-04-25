@@ -4,11 +4,11 @@ public class PFNvkCmdSetViewport extends VkFunctionPointer {
     public PFNvkCmdSetViewport() {
     }
 
-    public PFNvkCmdSetViewport(VkMemory vkmemory) {
+    protected PFNvkCmdSetViewport(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetViewport(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetViewport(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

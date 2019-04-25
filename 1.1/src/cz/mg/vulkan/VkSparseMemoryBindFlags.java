@@ -4,12 +4,16 @@ public class VkSparseMemoryBindFlags extends VkFlags {
     public VkSparseMemoryBindFlags() {
     }
 
-    public VkSparseMemoryBindFlags(VkMemory vkmemory) {
+    protected VkSparseMemoryBindFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSparseMemoryBindFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkSparseMemoryBindFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSparseMemoryBindFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

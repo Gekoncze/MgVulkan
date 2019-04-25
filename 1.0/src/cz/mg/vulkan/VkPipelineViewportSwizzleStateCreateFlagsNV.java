@@ -4,12 +4,16 @@ public class VkPipelineViewportSwizzleStateCreateFlagsNV extends VkFlags {
     public VkPipelineViewportSwizzleStateCreateFlagsNV() {
     }
 
-    public VkPipelineViewportSwizzleStateCreateFlagsNV(VkMemory vkmemory) {
+    protected VkPipelineViewportSwizzleStateCreateFlagsNV(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineViewportSwizzleStateCreateFlagsNV(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineViewportSwizzleStateCreateFlagsNV(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineViewportSwizzleStateCreateFlagsNV(VkPointer pointer) {
+        super(pointer);
     }
 
 

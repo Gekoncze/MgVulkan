@@ -4,11 +4,11 @@ public class PFNvkGetSwapchainStatusKHR extends VkFunctionPointer {
     public PFNvkGetSwapchainStatusKHR() {
     }
 
-    public PFNvkGetSwapchainStatusKHR(VkMemory vkmemory) {
+    protected PFNvkGetSwapchainStatusKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetSwapchainStatusKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetSwapchainStatusKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

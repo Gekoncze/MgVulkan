@@ -4,11 +4,11 @@ public class PFNvkGetMemoryHostPointerPropertiesEXT extends VkFunctionPointer {
     public PFNvkGetMemoryHostPointerPropertiesEXT() {
     }
 
-    public PFNvkGetMemoryHostPointerPropertiesEXT(VkMemory vkmemory) {
+    protected PFNvkGetMemoryHostPointerPropertiesEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetMemoryHostPointerPropertiesEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetMemoryHostPointerPropertiesEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

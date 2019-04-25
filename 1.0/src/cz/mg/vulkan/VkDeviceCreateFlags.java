@@ -4,12 +4,16 @@ public class VkDeviceCreateFlags extends VkFlags {
     public VkDeviceCreateFlags() {
     }
 
-    public VkDeviceCreateFlags(VkMemory vkmemory) {
+    protected VkDeviceCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDeviceCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkDeviceCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDeviceCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

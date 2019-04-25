@@ -4,11 +4,11 @@ public class PFNvkQueueSubmit extends VkFunctionPointer {
     public PFNvkQueueSubmit() {
     }
 
-    public PFNvkQueueSubmit(VkMemory vkmemory) {
+    protected PFNvkQueueSubmit(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkQueueSubmit(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkQueueSubmit(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

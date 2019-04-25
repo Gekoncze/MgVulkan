@@ -10,12 +10,16 @@ public class VkDebugUtilsMessageTypeFlagBitsEXT extends VkFlagBits {
     public VkDebugUtilsMessageTypeFlagBitsEXT() {
     }
 
-    public VkDebugUtilsMessageTypeFlagBitsEXT(VkMemory vkmemory) {
+    protected VkDebugUtilsMessageTypeFlagBitsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDebugUtilsMessageTypeFlagBitsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkDebugUtilsMessageTypeFlagBitsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDebugUtilsMessageTypeFlagBitsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

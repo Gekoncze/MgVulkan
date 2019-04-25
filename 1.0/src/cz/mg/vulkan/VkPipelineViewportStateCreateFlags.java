@@ -4,12 +4,16 @@ public class VkPipelineViewportStateCreateFlags extends VkFlags {
     public VkPipelineViewportStateCreateFlags() {
     }
 
-    public VkPipelineViewportStateCreateFlags(VkMemory vkmemory) {
+    protected VkPipelineViewportStateCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineViewportStateCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineViewportStateCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineViewportStateCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -10,12 +10,16 @@ public class VkDependencyFlagBits extends VkFlagBits {
     public VkDependencyFlagBits() {
     }
 
-    public VkDependencyFlagBits(VkMemory vkmemory) {
+    protected VkDependencyFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDependencyFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkDependencyFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDependencyFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

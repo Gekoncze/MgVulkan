@@ -4,11 +4,11 @@ public class PFNvkDestroyDescriptorPool extends VkFunctionPointer {
     public PFNvkDestroyDescriptorPool() {
     }
 
-    public PFNvkDestroyDescriptorPool(VkMemory vkmemory) {
+    protected PFNvkDestroyDescriptorPool(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyDescriptorPool(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyDescriptorPool(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

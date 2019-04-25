@@ -4,12 +4,16 @@ public class VkSampleMask extends VkUInt32 {
     public VkSampleMask() {
     }
 
-    public VkSampleMask(VkMemory vkmemory) {
+    protected VkSampleMask(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSampleMask(VkMemory vkmemory, long vkaddress) {
+    protected VkSampleMask(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSampleMask(VkPointer pointer) {
+        super(pointer);
     }
 
 
@@ -26,17 +30,22 @@ public class VkSampleMask extends VkUInt32 {
             this.count = count;
         }
 
-        public Array(int count, VkSampleMask o){
+        public Array(VkSampleMask o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -64,15 +73,11 @@ public class VkSampleMask extends VkUInt32 {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

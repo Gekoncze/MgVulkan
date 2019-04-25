@@ -4,12 +4,16 @@ public class VkSubpassDescriptionFlags extends VkFlags {
     public VkSubpassDescriptionFlags() {
     }
 
-    public VkSubpassDescriptionFlags(VkMemory vkmemory) {
+    protected VkSubpassDescriptionFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSubpassDescriptionFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkSubpassDescriptionFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSubpassDescriptionFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

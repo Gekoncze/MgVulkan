@@ -7,7 +7,7 @@ public class VkString extends VkChar.Array {
         setValueAt(string.length(), (byte) 0);
     }
 
-    public VkString(VkMemory vkmemory, long vkaddress) {
+    protected VkString(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress, countNative(vkaddress));
     }
 

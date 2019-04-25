@@ -4,12 +4,16 @@ public class VkBufferViewCreateFlags extends VkFlags {
     public VkBufferViewCreateFlags() {
     }
 
-    public VkBufferViewCreateFlags(VkMemory vkmemory) {
+    protected VkBufferViewCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkBufferViewCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkBufferViewCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkBufferViewCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

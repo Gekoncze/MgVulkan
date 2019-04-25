@@ -4,12 +4,16 @@ public class VkAccessFlags extends VkFlags {
     public VkAccessFlags() {
     }
 
-    public VkAccessFlags(VkMemory vkmemory) {
+    protected VkAccessFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkAccessFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkAccessFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkAccessFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

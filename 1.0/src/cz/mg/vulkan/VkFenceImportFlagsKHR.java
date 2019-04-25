@@ -4,12 +4,16 @@ public class VkFenceImportFlagsKHR extends VkFlags {
     public VkFenceImportFlagsKHR() {
     }
 
-    public VkFenceImportFlagsKHR(VkMemory vkmemory) {
+    protected VkFenceImportFlagsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkFenceImportFlagsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkFenceImportFlagsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkFenceImportFlagsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

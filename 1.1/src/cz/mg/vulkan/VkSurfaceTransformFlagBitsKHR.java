@@ -16,12 +16,16 @@ public class VkSurfaceTransformFlagBitsKHR extends VkFlagBits {
     public VkSurfaceTransformFlagBitsKHR() {
     }
 
-    public VkSurfaceTransformFlagBitsKHR(VkMemory vkmemory) {
+    protected VkSurfaceTransformFlagBitsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSurfaceTransformFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkSurfaceTransformFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSurfaceTransformFlagBitsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

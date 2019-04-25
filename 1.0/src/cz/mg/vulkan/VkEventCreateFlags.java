@@ -4,12 +4,16 @@ public class VkEventCreateFlags extends VkFlags {
     public VkEventCreateFlags() {
     }
 
-    public VkEventCreateFlags(VkMemory vkmemory) {
+    protected VkEventCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkEventCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkEventCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkEventCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

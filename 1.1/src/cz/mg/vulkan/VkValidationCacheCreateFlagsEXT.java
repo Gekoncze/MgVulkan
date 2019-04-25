@@ -4,12 +4,16 @@ public class VkValidationCacheCreateFlagsEXT extends VkFlags {
     public VkValidationCacheCreateFlagsEXT() {
     }
 
-    public VkValidationCacheCreateFlagsEXT(VkMemory vkmemory) {
+    protected VkValidationCacheCreateFlagsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkValidationCacheCreateFlagsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkValidationCacheCreateFlagsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkValidationCacheCreateFlagsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

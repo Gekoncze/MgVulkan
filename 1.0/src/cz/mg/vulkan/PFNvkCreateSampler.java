@@ -4,11 +4,11 @@ public class PFNvkCreateSampler extends VkFunctionPointer {
     public PFNvkCreateSampler() {
     }
 
-    public PFNvkCreateSampler(VkMemory vkmemory) {
+    protected PFNvkCreateSampler(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateSampler(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateSampler(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

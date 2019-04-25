@@ -9,12 +9,16 @@ public class VkObjectEntryUsageFlagBitsNVX extends VkFlagBits {
     public VkObjectEntryUsageFlagBitsNVX() {
     }
 
-    public VkObjectEntryUsageFlagBitsNVX(VkMemory vkmemory) {
+    protected VkObjectEntryUsageFlagBitsNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkObjectEntryUsageFlagBitsNVX(VkMemory vkmemory, long vkaddress) {
+    protected VkObjectEntryUsageFlagBitsNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkObjectEntryUsageFlagBitsNVX(VkPointer pointer) {
+        super(pointer);
     }
 
 

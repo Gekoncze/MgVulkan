@@ -4,11 +4,11 @@ public class PFNvkDebugReportMessageEXT extends VkFunctionPointer {
     public PFNvkDebugReportMessageEXT() {
     }
 
-    public PFNvkDebugReportMessageEXT(VkMemory vkmemory) {
+    protected PFNvkDebugReportMessageEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDebugReportMessageEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDebugReportMessageEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,11 +4,11 @@ public class PFNvkWaitForFences extends VkFunctionPointer {
     public PFNvkWaitForFences() {
     }
 
-    public PFNvkWaitForFences(VkMemory vkmemory) {
+    protected PFNvkWaitForFences(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkWaitForFences(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkWaitForFences(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

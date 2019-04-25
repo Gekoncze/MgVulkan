@@ -14,6 +14,10 @@ public class VkCommandBufferAllocateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkCommandBufferAllocateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

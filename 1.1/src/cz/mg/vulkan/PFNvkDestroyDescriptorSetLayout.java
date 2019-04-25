@@ -4,11 +4,11 @@ public class PFNvkDestroyDescriptorSetLayout extends VkFunctionPointer {
     public PFNvkDestroyDescriptorSetLayout() {
     }
 
-    public PFNvkDestroyDescriptorSetLayout(VkMemory vkmemory) {
+    protected PFNvkDestroyDescriptorSetLayout(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyDescriptorSetLayout(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyDescriptorSetLayout(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

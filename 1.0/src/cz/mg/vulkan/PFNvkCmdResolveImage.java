@@ -4,11 +4,11 @@ public class PFNvkCmdResolveImage extends VkFunctionPointer {
     public PFNvkCmdResolveImage() {
     }
 
-    public PFNvkCmdResolveImage(VkMemory vkmemory) {
+    protected PFNvkCmdResolveImage(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdResolveImage(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdResolveImage(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

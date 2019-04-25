@@ -11,12 +11,16 @@ public class VkExternalFenceHandleTypeFlagBitsKHR extends VkFlagBits {
     public VkExternalFenceHandleTypeFlagBitsKHR() {
     }
 
-    public VkExternalFenceHandleTypeFlagBitsKHR(VkMemory vkmemory) {
+    protected VkExternalFenceHandleTypeFlagBitsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalFenceHandleTypeFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalFenceHandleTypeFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalFenceHandleTypeFlagBitsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

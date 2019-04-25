@@ -14,6 +14,10 @@ public class VkDeviceGroupRenderPassBeginInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDeviceGroupRenderPassBeginInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

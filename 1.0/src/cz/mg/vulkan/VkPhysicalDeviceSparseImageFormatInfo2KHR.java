@@ -14,6 +14,10 @@ public class VkPhysicalDeviceSparseImageFormatInfo2KHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPhysicalDeviceSparseImageFormatInfo2KHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

@@ -4,12 +4,16 @@ public class VkDebugReportFlagsEXT extends VkFlags {
     public VkDebugReportFlagsEXT() {
     }
 
-    public VkDebugReportFlagsEXT(VkMemory vkmemory) {
+    protected VkDebugReportFlagsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDebugReportFlagsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkDebugReportFlagsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDebugReportFlagsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

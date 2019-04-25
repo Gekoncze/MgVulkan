@@ -14,6 +14,10 @@ public class VkMemoryAllocateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkMemoryAllocateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

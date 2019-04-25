@@ -14,6 +14,10 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDebugUtilsObjectNameInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {
@@ -155,72 +159,4 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
         }
     }
 
-
-    public static class Pointer extends VkObject.Pointer {
-        public Pointer() {
-        }
-
-        public Pointer(long value) {
-            setValue(value);
-        }
-
-        public Pointer(VkMemory vkmemory) {
-            super(vkmemory);
-        }
-
-        public Pointer(VkMemory vkmemory, long vkaddress) {
-            super(vkmemory, vkaddress);
-        }
-
-        public static class Array extends VkDebugUtilsObjectNameInfoEXT.Pointer implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsObjectNameInfoEXT.Pointer> {
-            private final int count;
-
-            public Array(int count) {
-                super(new VkMemory(count*VkPointer.sizeof()));
-                this.count = count;
-            }
-
-            public Array(VkMemory vkmemory, int count) {
-                super(vkmemory);
-                this.count = count;
-            }
-
-            public Array(VkMemory vkmemory, long vkaddress, int count) {
-                super(vkmemory, vkaddress);
-                this.count = count;
-            }
-
-            public Array(VkDebugUtilsObjectNameInfoEXT[] a) {
-                this(a.length);
-                for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
-            }
-
-            public Array(long... values){
-                this(values.length);
-                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
-            }
-
-            public long getValueAt(int i){
-                return getValueNative(addressAt(i));
-            }
-
-            public void setValueAt(int i, long value){
-                setValueNative(addressAt(i), value);
-            }
-
-            @Override
-            public int count(){
-                return count;
-            }
-
-            @Override
-            public VkDebugUtilsObjectNameInfoEXT.Pointer get(int i){
-                return new VkDebugUtilsObjectNameInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
-            }
-
-            protected long addressAt(int i){
-                return VkPointer.plus(getVkAddress(), sizeof()*i);
-            }
-        }
-    }
 }

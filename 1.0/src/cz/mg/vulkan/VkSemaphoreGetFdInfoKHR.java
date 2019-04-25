@@ -14,6 +14,10 @@ public class VkSemaphoreGetFdInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkSemaphoreGetFdInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

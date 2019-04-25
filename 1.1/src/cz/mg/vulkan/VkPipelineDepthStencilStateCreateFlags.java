@@ -4,12 +4,16 @@ public class VkPipelineDepthStencilStateCreateFlags extends VkFlags {
     public VkPipelineDepthStencilStateCreateFlags() {
     }
 
-    public VkPipelineDepthStencilStateCreateFlags(VkMemory vkmemory) {
+    protected VkPipelineDepthStencilStateCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineDepthStencilStateCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineDepthStencilStateCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineDepthStencilStateCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

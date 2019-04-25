@@ -4,11 +4,11 @@ public class PFNvkTrimCommandPool extends VkFunctionPointer {
     public PFNvkTrimCommandPool() {
     }
 
-    public PFNvkTrimCommandPool(VkMemory vkmemory) {
+    protected PFNvkTrimCommandPool(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkTrimCommandPool(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkTrimCommandPool(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

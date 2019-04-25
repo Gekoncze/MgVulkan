@@ -4,11 +4,11 @@ public class PFNvkResetDescriptorPool extends VkFunctionPointer {
     public PFNvkResetDescriptorPool() {
     }
 
-    public PFNvkResetDescriptorPool(VkMemory vkmemory) {
+    protected PFNvkResetDescriptorPool(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkResetDescriptorPool(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkResetDescriptorPool(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

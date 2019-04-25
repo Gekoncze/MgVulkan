@@ -4,11 +4,11 @@ public class PFNvkAllocateMemory extends VkFunctionPointer {
     public PFNvkAllocateMemory() {
     }
 
-    public PFNvkAllocateMemory(VkMemory vkmemory) {
+    protected PFNvkAllocateMemory(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkAllocateMemory(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkAllocateMemory(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

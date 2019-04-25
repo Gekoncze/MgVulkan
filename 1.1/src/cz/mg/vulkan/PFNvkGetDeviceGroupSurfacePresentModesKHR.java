@@ -4,11 +4,11 @@ public class PFNvkGetDeviceGroupSurfacePresentModesKHR extends VkFunctionPointer
     public PFNvkGetDeviceGroupSurfacePresentModesKHR() {
     }
 
-    public PFNvkGetDeviceGroupSurfacePresentModesKHR(VkMemory vkmemory) {
+    protected PFNvkGetDeviceGroupSurfacePresentModesKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetDeviceGroupSurfacePresentModesKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetDeviceGroupSurfacePresentModesKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

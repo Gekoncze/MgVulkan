@@ -4,11 +4,11 @@ public class PFNvkCreateSemaphore extends VkFunctionPointer {
     public PFNvkCreateSemaphore() {
     }
 
-    public PFNvkCreateSemaphore(VkMemory vkmemory) {
+    protected PFNvkCreateSemaphore(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateSemaphore(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateSemaphore(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

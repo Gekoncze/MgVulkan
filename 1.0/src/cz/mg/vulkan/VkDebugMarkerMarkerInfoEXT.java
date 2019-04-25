@@ -14,6 +14,10 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDebugMarkerMarkerInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

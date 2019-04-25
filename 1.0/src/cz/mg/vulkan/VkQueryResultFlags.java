@@ -4,12 +4,16 @@ public class VkQueryResultFlags extends VkFlags {
     public VkQueryResultFlags() {
     }
 
-    public VkQueryResultFlags(VkMemory vkmemory) {
+    protected VkQueryResultFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkQueryResultFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkQueryResultFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkQueryResultFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

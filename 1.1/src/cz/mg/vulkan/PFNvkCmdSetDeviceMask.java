@@ -4,11 +4,11 @@ public class PFNvkCmdSetDeviceMask extends VkFunctionPointer {
     public PFNvkCmdSetDeviceMask() {
     }
 
-    public PFNvkCmdSetDeviceMask(VkMemory vkmemory) {
+    protected PFNvkCmdSetDeviceMask(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetDeviceMask(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetDeviceMask(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

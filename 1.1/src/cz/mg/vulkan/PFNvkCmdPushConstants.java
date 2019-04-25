@@ -4,11 +4,11 @@ public class PFNvkCmdPushConstants extends VkFunctionPointer {
     public PFNvkCmdPushConstants() {
     }
 
-    public PFNvkCmdPushConstants(VkMemory vkmemory) {
+    protected PFNvkCmdPushConstants(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdPushConstants(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdPushConstants(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

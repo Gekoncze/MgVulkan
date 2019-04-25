@@ -4,11 +4,11 @@ public class PFNvkGetImageSubresourceLayout extends VkFunctionPointer {
     public PFNvkGetImageSubresourceLayout() {
     }
 
-    public PFNvkGetImageSubresourceLayout(VkMemory vkmemory) {
+    protected PFNvkGetImageSubresourceLayout(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetImageSubresourceLayout(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetImageSubresourceLayout(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

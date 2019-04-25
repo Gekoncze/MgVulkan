@@ -4,12 +4,16 @@ public class VkPipelineTessellationStateCreateFlags extends VkFlags {
     public VkPipelineTessellationStateCreateFlags() {
     }
 
-    public VkPipelineTessellationStateCreateFlags(VkMemory vkmemory) {
+    protected VkPipelineTessellationStateCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineTessellationStateCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineTessellationStateCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineTessellationStateCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -14,6 +14,10 @@ public class VkBufferViewCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkBufferViewCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

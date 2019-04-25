@@ -4,11 +4,11 @@ public class PFNvkMergeValidationCachesEXT extends VkFunctionPointer {
     public PFNvkMergeValidationCachesEXT() {
     }
 
-    public PFNvkMergeValidationCachesEXT(VkMemory vkmemory) {
+    protected PFNvkMergeValidationCachesEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkMergeValidationCachesEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkMergeValidationCachesEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

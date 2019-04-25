@@ -40,12 +40,16 @@ public class VkFormatFeatureFlagBits extends VkFlagBits {
     public VkFormatFeatureFlagBits() {
     }
 
-    public VkFormatFeatureFlagBits(VkMemory vkmemory) {
+    protected VkFormatFeatureFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkFormatFeatureFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkFormatFeatureFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkFormatFeatureFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -4,11 +4,11 @@ public class PFNvkCreateDisplayModeKHR extends VkFunctionPointer {
     public PFNvkCreateDisplayModeKHR() {
     }
 
-    public PFNvkCreateDisplayModeKHR(VkMemory vkmemory) {
+    protected PFNvkCreateDisplayModeKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateDisplayModeKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateDisplayModeKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

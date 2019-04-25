@@ -14,6 +14,10 @@ public class VkDeviceGroupSwapchainCreateInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDeviceGroupSwapchainCreateInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

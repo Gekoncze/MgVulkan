@@ -14,6 +14,10 @@ public class VkDisplayModeCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDisplayModeCreateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

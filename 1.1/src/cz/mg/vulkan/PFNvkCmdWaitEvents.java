@@ -4,11 +4,11 @@ public class PFNvkCmdWaitEvents extends VkFunctionPointer {
     public PFNvkCmdWaitEvents() {
     }
 
-    public PFNvkCmdWaitEvents(VkMemory vkmemory) {
+    protected PFNvkCmdWaitEvents(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdWaitEvents(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdWaitEvents(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

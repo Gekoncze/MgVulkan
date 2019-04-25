@@ -14,6 +14,10 @@ public class VkDedicatedAllocationBufferCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDedicatedAllocationBufferCreateInfoNV(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

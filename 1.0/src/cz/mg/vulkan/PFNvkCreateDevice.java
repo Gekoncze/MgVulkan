@@ -4,11 +4,11 @@ public class PFNvkCreateDevice extends VkFunctionPointer {
     public PFNvkCreateDevice() {
     }
 
-    public PFNvkCreateDevice(VkMemory vkmemory) {
+    protected PFNvkCreateDevice(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateDevice(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateDevice(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

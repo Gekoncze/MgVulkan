@@ -14,6 +14,10 @@ public class VkMemoryAllocateFlagsInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkMemoryAllocateFlagsInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

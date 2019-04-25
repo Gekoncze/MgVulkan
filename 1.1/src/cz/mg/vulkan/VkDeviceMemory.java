@@ -4,12 +4,16 @@ public class VkDeviceMemory extends VkNonDispatchableHandle {
     public VkDeviceMemory() {
     }
 
-    public VkDeviceMemory(VkMemory vkmemory) {
+    protected VkDeviceMemory(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDeviceMemory(VkMemory vkmemory, long vkaddress) {
+    protected VkDeviceMemory(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDeviceMemory(VkPointer pointer) {
+        super(pointer);
     }
 
 
@@ -26,17 +30,22 @@ public class VkDeviceMemory extends VkNonDispatchableHandle {
             this.count = count;
         }
 
-        public Array(int count, VkDeviceMemory o){
+        public Array(VkDeviceMemory o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -57,6 +66,20 @@ public class VkDeviceMemory extends VkNonDispatchableHandle {
 
         protected long addressAt(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
+        }
+
+        public static class Array2 extends VkPointer.Array {
+            public Array2(int count) {
+                super(count);
+            }
+
+            protected Array2(VkMemory vkmemory, int count) {
+                super(vkmemory, count);
+            }
+
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
+                super(vkmemory, vkaddress, count);
+            }
         }
     }
 }

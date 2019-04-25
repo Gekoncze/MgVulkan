@@ -14,6 +14,10 @@ public class VkShaderModuleValidationCacheCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkShaderModuleValidationCacheCreateInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

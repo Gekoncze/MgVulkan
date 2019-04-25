@@ -12,12 +12,16 @@ public class VkDebugReportFlagBitsEXT extends VkFlagBits {
     public VkDebugReportFlagBitsEXT() {
     }
 
-    public VkDebugReportFlagBitsEXT(VkMemory vkmemory) {
+    protected VkDebugReportFlagBitsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDebugReportFlagBitsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkDebugReportFlagBitsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDebugReportFlagBitsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

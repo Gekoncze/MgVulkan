@@ -4,11 +4,11 @@ public class PFNvkCmdBeginRenderPass extends VkFunctionPointer {
     public PFNvkCmdBeginRenderPass() {
     }
 
-    public PFNvkCmdBeginRenderPass(VkMemory vkmemory) {
+    protected PFNvkCmdBeginRenderPass(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdBeginRenderPass(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdBeginRenderPass(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

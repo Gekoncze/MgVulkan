@@ -4,12 +4,16 @@ public class VkInstanceCreateFlags extends VkFlags {
     public VkInstanceCreateFlags() {
     }
 
-    public VkInstanceCreateFlags(VkMemory vkmemory) {
+    protected VkInstanceCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkInstanceCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkInstanceCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkInstanceCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

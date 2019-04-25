@@ -16,12 +16,16 @@ public class VkSubgroupFeatureFlagBits extends VkFlagBits {
     public VkSubgroupFeatureFlagBits() {
     }
 
-    public VkSubgroupFeatureFlagBits(VkMemory vkmemory) {
+    protected VkSubgroupFeatureFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSubgroupFeatureFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkSubgroupFeatureFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSubgroupFeatureFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

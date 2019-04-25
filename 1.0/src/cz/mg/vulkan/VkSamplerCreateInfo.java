@@ -14,6 +14,10 @@ public class VkSamplerCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkSamplerCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

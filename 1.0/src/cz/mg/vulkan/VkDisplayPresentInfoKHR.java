@@ -14,6 +14,10 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDisplayPresentInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

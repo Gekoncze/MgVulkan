@@ -4,11 +4,11 @@ public class PFNvkCmdBindPipeline extends VkFunctionPointer {
     public PFNvkCmdBindPipeline() {
     }
 
-    public PFNvkCmdBindPipeline(VkMemory vkmemory) {
+    protected PFNvkCmdBindPipeline(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdBindPipeline(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdBindPipeline(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,12 +4,16 @@ public class VkPipelineVertexInputStateCreateFlags extends VkFlags {
     public VkPipelineVertexInputStateCreateFlags() {
     }
 
-    public VkPipelineVertexInputStateCreateFlags(VkMemory vkmemory) {
+    protected VkPipelineVertexInputStateCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineVertexInputStateCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineVertexInputStateCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineVertexInputStateCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

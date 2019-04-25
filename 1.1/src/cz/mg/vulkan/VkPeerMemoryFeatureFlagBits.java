@@ -15,12 +15,16 @@ public class VkPeerMemoryFeatureFlagBits extends VkFlagBits {
     public VkPeerMemoryFeatureFlagBits() {
     }
 
-    public VkPeerMemoryFeatureFlagBits(VkMemory vkmemory) {
+    protected VkPeerMemoryFeatureFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPeerMemoryFeatureFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkPeerMemoryFeatureFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPeerMemoryFeatureFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

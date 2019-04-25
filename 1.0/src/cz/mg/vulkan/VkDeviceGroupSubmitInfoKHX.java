@@ -14,6 +14,10 @@ public class VkDeviceGroupSubmitInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDeviceGroupSubmitInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

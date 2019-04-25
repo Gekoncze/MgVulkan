@@ -14,12 +14,16 @@ public class VkPipelineCreateFlagBits extends VkFlagBits {
     public VkPipelineCreateFlagBits() {
     }
 
-    public VkPipelineCreateFlagBits(VkMemory vkmemory) {
+    protected VkPipelineCreateFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineCreateFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineCreateFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineCreateFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

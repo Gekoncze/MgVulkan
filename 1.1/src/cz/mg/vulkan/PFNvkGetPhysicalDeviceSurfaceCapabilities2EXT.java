@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceSurfaceCapabilities2EXT extends VkFunctionPoi
     public PFNvkGetPhysicalDeviceSurfaceCapabilities2EXT() {
     }
 
-    public PFNvkGetPhysicalDeviceSurfaceCapabilities2EXT(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceSurfaceCapabilities2EXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceSurfaceCapabilities2EXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceSurfaceCapabilities2EXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

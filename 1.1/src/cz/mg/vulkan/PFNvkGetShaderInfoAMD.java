@@ -4,11 +4,11 @@ public class PFNvkGetShaderInfoAMD extends VkFunctionPointer {
     public PFNvkGetShaderInfoAMD() {
     }
 
-    public PFNvkGetShaderInfoAMD(VkMemory vkmemory) {
+    protected PFNvkGetShaderInfoAMD(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetShaderInfoAMD(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetShaderInfoAMD(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

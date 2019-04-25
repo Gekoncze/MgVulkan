@@ -4,11 +4,11 @@ public class PFNvkDestroyDescriptorUpdateTemplateKHR extends VkFunctionPointer {
     public PFNvkDestroyDescriptorUpdateTemplateKHR() {
     }
 
-    public PFNvkDestroyDescriptorUpdateTemplateKHR(VkMemory vkmemory) {
+    protected PFNvkDestroyDescriptorUpdateTemplateKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyDescriptorUpdateTemplateKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyDescriptorUpdateTemplateKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

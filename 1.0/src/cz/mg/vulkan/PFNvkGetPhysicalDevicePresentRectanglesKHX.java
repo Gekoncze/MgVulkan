@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDevicePresentRectanglesKHX extends VkFunctionPointe
     public PFNvkGetPhysicalDevicePresentRectanglesKHX() {
     }
 
-    public PFNvkGetPhysicalDevicePresentRectanglesKHX(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDevicePresentRectanglesKHX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDevicePresentRectanglesKHX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDevicePresentRectanglesKHX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

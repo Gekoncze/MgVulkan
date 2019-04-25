@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR extends VkFun
     public PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR() {
     }
 
-    public PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

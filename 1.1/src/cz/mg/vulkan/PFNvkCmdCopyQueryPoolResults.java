@@ -4,11 +4,11 @@ public class PFNvkCmdCopyQueryPoolResults extends VkFunctionPointer {
     public PFNvkCmdCopyQueryPoolResults() {
     }
 
-    public PFNvkCmdCopyQueryPoolResults(VkMemory vkmemory) {
+    protected PFNvkCmdCopyQueryPoolResults(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdCopyQueryPoolResults(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdCopyQueryPoolResults(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -14,6 +14,10 @@ public class VkMemoryDedicatedAllocateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkMemoryDedicatedAllocateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

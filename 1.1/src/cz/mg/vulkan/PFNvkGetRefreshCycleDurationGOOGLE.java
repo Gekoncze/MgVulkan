@@ -4,11 +4,11 @@ public class PFNvkGetRefreshCycleDurationGOOGLE extends VkFunctionPointer {
     public PFNvkGetRefreshCycleDurationGOOGLE() {
     }
 
-    public PFNvkGetRefreshCycleDurationGOOGLE(VkMemory vkmemory) {
+    protected PFNvkGetRefreshCycleDurationGOOGLE(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetRefreshCycleDurationGOOGLE(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetRefreshCycleDurationGOOGLE(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

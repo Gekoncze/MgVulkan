@@ -4,11 +4,11 @@ public class PFNvkQueueBindSparse extends VkFunctionPointer {
     public PFNvkQueueBindSparse() {
     }
 
-    public PFNvkQueueBindSparse(VkMemory vkmemory) {
+    protected PFNvkQueueBindSparse(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkQueueBindSparse(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkQueueBindSparse(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,11 +4,11 @@ public class PFNvkResetFences extends VkFunctionPointer {
     public PFNvkResetFences() {
     }
 
-    public PFNvkResetFences(VkMemory vkmemory) {
+    protected PFNvkResetFences(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkResetFences(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkResetFences(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

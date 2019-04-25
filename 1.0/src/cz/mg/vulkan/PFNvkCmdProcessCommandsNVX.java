@@ -4,11 +4,11 @@ public class PFNvkCmdProcessCommandsNVX extends VkFunctionPointer {
     public PFNvkCmdProcessCommandsNVX() {
     }
 
-    public PFNvkCmdProcessCommandsNVX(VkMemory vkmemory) {
+    protected PFNvkCmdProcessCommandsNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdProcessCommandsNVX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdProcessCommandsNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

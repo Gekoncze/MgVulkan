@@ -14,6 +14,10 @@ public class VkDeviceGroupDeviceCreateInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDeviceGroupDeviceCreateInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

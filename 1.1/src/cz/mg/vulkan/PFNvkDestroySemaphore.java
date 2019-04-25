@@ -4,11 +4,11 @@ public class PFNvkDestroySemaphore extends VkFunctionPointer {
     public PFNvkDestroySemaphore() {
     }
 
-    public PFNvkDestroySemaphore(VkMemory vkmemory) {
+    protected PFNvkDestroySemaphore(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroySemaphore(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroySemaphore(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

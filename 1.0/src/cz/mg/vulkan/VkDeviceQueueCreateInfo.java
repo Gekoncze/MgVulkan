@@ -14,6 +14,10 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDeviceQueueCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

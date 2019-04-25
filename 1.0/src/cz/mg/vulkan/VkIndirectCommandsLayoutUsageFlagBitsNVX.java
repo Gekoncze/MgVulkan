@@ -11,12 +11,16 @@ public class VkIndirectCommandsLayoutUsageFlagBitsNVX extends VkFlagBits {
     public VkIndirectCommandsLayoutUsageFlagBitsNVX() {
     }
 
-    public VkIndirectCommandsLayoutUsageFlagBitsNVX(VkMemory vkmemory) {
+    protected VkIndirectCommandsLayoutUsageFlagBitsNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkIndirectCommandsLayoutUsageFlagBitsNVX(VkMemory vkmemory, long vkaddress) {
+    protected VkIndirectCommandsLayoutUsageFlagBitsNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkIndirectCommandsLayoutUsageFlagBitsNVX(VkPointer pointer) {
+        super(pointer);
     }
 
 

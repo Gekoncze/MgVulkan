@@ -4,12 +4,16 @@ public class VkSamplerCreateFlags extends VkFlags {
     public VkSamplerCreateFlags() {
     }
 
-    public VkSamplerCreateFlags(VkMemory vkmemory) {
+    protected VkSamplerCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSamplerCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkSamplerCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSamplerCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -4,11 +4,11 @@ public class PFNvkGetMemoryFdKHR extends VkFunctionPointer {
     public PFNvkGetMemoryFdKHR() {
     }
 
-    public PFNvkGetMemoryFdKHR(VkMemory vkmemory) {
+    protected PFNvkGetMemoryFdKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetMemoryFdKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetMemoryFdKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

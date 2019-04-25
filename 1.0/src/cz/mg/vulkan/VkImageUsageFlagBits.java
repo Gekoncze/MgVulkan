@@ -15,12 +15,16 @@ public class VkImageUsageFlagBits extends VkFlagBits {
     public VkImageUsageFlagBits() {
     }
 
-    public VkImageUsageFlagBits(VkMemory vkmemory) {
+    protected VkImageUsageFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkImageUsageFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkImageUsageFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkImageUsageFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

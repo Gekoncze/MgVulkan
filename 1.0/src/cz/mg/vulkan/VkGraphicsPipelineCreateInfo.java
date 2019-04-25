@@ -14,6 +14,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkGraphicsPipelineCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

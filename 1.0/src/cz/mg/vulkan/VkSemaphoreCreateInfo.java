@@ -14,6 +14,10 @@ public class VkSemaphoreCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkSemaphoreCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

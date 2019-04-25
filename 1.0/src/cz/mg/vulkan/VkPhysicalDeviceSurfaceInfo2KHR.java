@@ -14,6 +14,10 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPhysicalDeviceSurfaceInfo2KHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

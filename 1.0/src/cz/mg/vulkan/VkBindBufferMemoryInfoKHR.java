@@ -14,6 +14,10 @@ public class VkBindBufferMemoryInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkBindBufferMemoryInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

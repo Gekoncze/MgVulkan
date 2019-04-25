@@ -4,11 +4,11 @@ public class PFNvkCreateFramebuffer extends VkFunctionPointer {
     public PFNvkCreateFramebuffer() {
     }
 
-    public PFNvkCreateFramebuffer(VkMemory vkmemory) {
+    protected PFNvkCreateFramebuffer(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateFramebuffer(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateFramebuffer(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

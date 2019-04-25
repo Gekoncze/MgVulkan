@@ -4,11 +4,11 @@ public class PFNvkResetEvent extends VkFunctionPointer {
     public PFNvkResetEvent() {
     }
 
-    public PFNvkResetEvent(VkMemory vkmemory) {
+    protected PFNvkResetEvent(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkResetEvent(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkResetEvent(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

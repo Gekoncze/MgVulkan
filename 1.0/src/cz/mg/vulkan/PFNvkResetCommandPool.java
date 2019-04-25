@@ -4,11 +4,11 @@ public class PFNvkResetCommandPool extends VkFunctionPointer {
     public PFNvkResetCommandPool() {
     }
 
-    public PFNvkResetCommandPool(VkMemory vkmemory) {
+    protected PFNvkResetCommandPool(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkResetCommandPool(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkResetCommandPool(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

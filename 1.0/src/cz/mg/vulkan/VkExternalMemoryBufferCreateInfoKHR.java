@@ -14,6 +14,10 @@ public class VkExternalMemoryBufferCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkExternalMemoryBufferCreateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

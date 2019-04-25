@@ -4,11 +4,11 @@ public class PFNvkQueuePresentKHR extends VkFunctionPointer {
     public PFNvkQueuePresentKHR() {
     }
 
-    public PFNvkQueuePresentKHR(VkMemory vkmemory) {
+    protected PFNvkQueuePresentKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkQueuePresentKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkQueuePresentKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

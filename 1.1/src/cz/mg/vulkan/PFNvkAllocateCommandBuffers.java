@@ -4,11 +4,11 @@ public class PFNvkAllocateCommandBuffers extends VkFunctionPointer {
     public PFNvkAllocateCommandBuffers() {
     }
 
-    public PFNvkAllocateCommandBuffers(VkMemory vkmemory) {
+    protected PFNvkAllocateCommandBuffers(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkAllocateCommandBuffers(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkAllocateCommandBuffers(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

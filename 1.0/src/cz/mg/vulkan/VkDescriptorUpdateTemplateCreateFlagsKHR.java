@@ -4,12 +4,16 @@ public class VkDescriptorUpdateTemplateCreateFlagsKHR extends VkFlags {
     public VkDescriptorUpdateTemplateCreateFlagsKHR() {
     }
 
-    public VkDescriptorUpdateTemplateCreateFlagsKHR(VkMemory vkmemory) {
+    protected VkDescriptorUpdateTemplateCreateFlagsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDescriptorUpdateTemplateCreateFlagsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkDescriptorUpdateTemplateCreateFlagsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDescriptorUpdateTemplateCreateFlagsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

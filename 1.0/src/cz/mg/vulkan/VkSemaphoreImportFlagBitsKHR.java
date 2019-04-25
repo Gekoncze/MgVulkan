@@ -8,12 +8,16 @@ public class VkSemaphoreImportFlagBitsKHR extends VkFlagBits {
     public VkSemaphoreImportFlagBitsKHR() {
     }
 
-    public VkSemaphoreImportFlagBitsKHR(VkMemory vkmemory) {
+    protected VkSemaphoreImportFlagBitsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSemaphoreImportFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkSemaphoreImportFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSemaphoreImportFlagBitsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

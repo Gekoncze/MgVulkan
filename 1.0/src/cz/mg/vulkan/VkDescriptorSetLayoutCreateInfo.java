@@ -14,6 +14,10 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDescriptorSetLayoutCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

@@ -4,12 +4,16 @@ public class VkSubgroupFeatureFlags extends VkFlags {
     public VkSubgroupFeatureFlags() {
     }
 
-    public VkSubgroupFeatureFlags(VkMemory vkmemory) {
+    protected VkSubgroupFeatureFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSubgroupFeatureFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkSubgroupFeatureFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSubgroupFeatureFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

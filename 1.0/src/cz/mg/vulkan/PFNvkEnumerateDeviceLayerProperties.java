@@ -4,11 +4,11 @@ public class PFNvkEnumerateDeviceLayerProperties extends VkFunctionPointer {
     public PFNvkEnumerateDeviceLayerProperties() {
     }
 
-    public PFNvkEnumerateDeviceLayerProperties(VkMemory vkmemory) {
+    protected PFNvkEnumerateDeviceLayerProperties(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkEnumerateDeviceLayerProperties(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkEnumerateDeviceLayerProperties(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

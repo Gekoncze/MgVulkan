@@ -14,6 +14,10 @@ public class VkImageViewUsageCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkImageViewUsageCreateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

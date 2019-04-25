@@ -4,12 +4,16 @@ public class VkRenderPassCreateFlags extends VkFlags {
     public VkRenderPassCreateFlags() {
     }
 
-    public VkRenderPassCreateFlags(VkMemory vkmemory) {
+    protected VkRenderPassCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkRenderPassCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkRenderPassCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkRenderPassCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

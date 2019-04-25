@@ -4,11 +4,11 @@ public class PFNvkCmdSetStencilReference extends VkFunctionPointer {
     public PFNvkCmdSetStencilReference() {
     }
 
-    public PFNvkCmdSetStencilReference(VkMemory vkmemory) {
+    protected PFNvkCmdSetStencilReference(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetStencilReference(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetStencilReference(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

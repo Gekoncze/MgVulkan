@@ -11,12 +11,16 @@ public class VkExternalFenceFeatureFlagBits extends VkFlagBits {
     public VkExternalFenceFeatureFlagBits() {
     }
 
-    public VkExternalFenceFeatureFlagBits(VkMemory vkmemory) {
+    protected VkExternalFenceFeatureFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalFenceFeatureFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalFenceFeatureFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalFenceFeatureFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

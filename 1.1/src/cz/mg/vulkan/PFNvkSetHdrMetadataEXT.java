@@ -4,11 +4,11 @@ public class PFNvkSetHdrMetadataEXT extends VkFunctionPointer {
     public PFNvkSetHdrMetadataEXT() {
     }
 
-    public PFNvkSetHdrMetadataEXT(VkMemory vkmemory) {
+    protected PFNvkSetHdrMetadataEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkSetHdrMetadataEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkSetHdrMetadataEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

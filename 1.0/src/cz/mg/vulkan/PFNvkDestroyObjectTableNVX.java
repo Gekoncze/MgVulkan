@@ -4,11 +4,11 @@ public class PFNvkDestroyObjectTableNVX extends VkFunctionPointer {
     public PFNvkDestroyObjectTableNVX() {
     }
 
-    public PFNvkDestroyObjectTableNVX(VkMemory vkmemory) {
+    protected PFNvkDestroyObjectTableNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyObjectTableNVX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyObjectTableNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,11 +4,11 @@ public class PFNvkGetDescriptorSetLayoutSupportKHR extends VkFunctionPointer {
     public PFNvkGetDescriptorSetLayoutSupportKHR() {
     }
 
-    public PFNvkGetDescriptorSetLayoutSupportKHR(VkMemory vkmemory) {
+    protected PFNvkGetDescriptorSetLayoutSupportKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetDescriptorSetLayoutSupportKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetDescriptorSetLayoutSupportKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

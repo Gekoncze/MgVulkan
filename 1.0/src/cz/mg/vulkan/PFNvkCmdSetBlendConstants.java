@@ -4,11 +4,11 @@ public class PFNvkCmdSetBlendConstants extends VkFunctionPointer {
     public PFNvkCmdSetBlendConstants() {
     }
 
-    public PFNvkCmdSetBlendConstants(VkMemory vkmemory) {
+    protected PFNvkCmdSetBlendConstants(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetBlendConstants(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetBlendConstants(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

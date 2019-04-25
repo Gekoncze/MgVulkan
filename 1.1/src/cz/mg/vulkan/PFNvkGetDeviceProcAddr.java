@@ -4,11 +4,11 @@ public class PFNvkGetDeviceProcAddr extends VkFunctionPointer {
     public PFNvkGetDeviceProcAddr() {
     }
 
-    public PFNvkGetDeviceProcAddr(VkMemory vkmemory) {
+    protected PFNvkGetDeviceProcAddr(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetDeviceProcAddr(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetDeviceProcAddr(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

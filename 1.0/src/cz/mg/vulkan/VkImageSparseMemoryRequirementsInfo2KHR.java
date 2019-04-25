@@ -14,6 +14,10 @@ public class VkImageSparseMemoryRequirementsInfo2KHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkImageSparseMemoryRequirementsInfo2KHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

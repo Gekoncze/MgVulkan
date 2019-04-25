@@ -4,11 +4,11 @@ public class PFNvkUnregisterObjectsNVX extends VkFunctionPointer {
     public PFNvkUnregisterObjectsNVX() {
     }
 
-    public PFNvkUnregisterObjectsNVX(VkMemory vkmemory) {
+    protected PFNvkUnregisterObjectsNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkUnregisterObjectsNVX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkUnregisterObjectsNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

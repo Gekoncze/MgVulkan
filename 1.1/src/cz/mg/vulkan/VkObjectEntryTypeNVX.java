@@ -10,18 +10,20 @@ public class VkObjectEntryTypeNVX extends VkEnum {
     public VkObjectEntryTypeNVX() {
     }
 
-    public VkObjectEntryTypeNVX(VkMemory vkmemory) {
+    protected VkObjectEntryTypeNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkObjectEntryTypeNVX(VkMemory vkmemory, long vkaddress) {
+    protected VkObjectEntryTypeNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 
-
-
     public VkObjectEntryTypeNVX(int value) {
         setValue(value);
+    }
+
+    public VkObjectEntryTypeNVX(VkPointer pointer) {
+        super(pointer);
     }
 
     @Override
@@ -42,17 +44,22 @@ public class VkObjectEntryTypeNVX extends VkEnum {
             this.count = count;
         }
 
-        public Array(int count, VkObjectEntryTypeNVX o){
+        public Array(VkObjectEntryTypeNVX o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -84,6 +91,20 @@ public class VkObjectEntryTypeNVX extends VkEnum {
 
         protected long addressAt(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
+        }
+
+        public static class Array2 extends VkPointer.Array {
+            public Array2(int count) {
+                super(count);
+            }
+
+            protected Array2(VkMemory vkmemory, int count) {
+                super(vkmemory, count);
+            }
+
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
+                super(vkmemory, vkaddress, count);
+            }
         }
     }
 }

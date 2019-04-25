@@ -4,11 +4,11 @@ public class PFNvkCmdBindVertexBuffers extends VkFunctionPointer {
     public PFNvkCmdBindVertexBuffers() {
     }
 
-    public PFNvkCmdBindVertexBuffers(VkMemory vkmemory) {
+    protected PFNvkCmdBindVertexBuffers(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdBindVertexBuffers(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdBindVertexBuffers(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

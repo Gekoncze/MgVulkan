@@ -14,6 +14,10 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDebugReportCallbackCreateInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

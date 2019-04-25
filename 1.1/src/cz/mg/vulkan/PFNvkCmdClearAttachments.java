@@ -4,11 +4,11 @@ public class PFNvkCmdClearAttachments extends VkFunctionPointer {
     public PFNvkCmdClearAttachments() {
     }
 
-    public PFNvkCmdClearAttachments(VkMemory vkmemory) {
+    protected PFNvkCmdClearAttachments(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdClearAttachments(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdClearAttachments(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

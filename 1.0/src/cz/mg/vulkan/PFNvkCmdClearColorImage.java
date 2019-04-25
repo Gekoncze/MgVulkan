@@ -4,11 +4,11 @@ public class PFNvkCmdClearColorImage extends VkFunctionPointer {
     public PFNvkCmdClearColorImage() {
     }
 
-    public PFNvkCmdClearColorImage(VkMemory vkmemory) {
+    protected PFNvkCmdClearColorImage(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdClearColorImage(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdClearColorImage(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

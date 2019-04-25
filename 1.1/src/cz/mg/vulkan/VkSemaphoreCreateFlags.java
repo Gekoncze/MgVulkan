@@ -4,12 +4,16 @@ public class VkSemaphoreCreateFlags extends VkFlags {
     public VkSemaphoreCreateFlags() {
     }
 
-    public VkSemaphoreCreateFlags(VkMemory vkmemory) {
+    protected VkSemaphoreCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSemaphoreCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkSemaphoreCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSemaphoreCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

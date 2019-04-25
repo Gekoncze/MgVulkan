@@ -14,6 +14,10 @@ public class VkExternalMemoryImageCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkExternalMemoryImageCreateInfoNV(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

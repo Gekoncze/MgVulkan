@@ -4,12 +4,16 @@ public class VkExternalMemoryFeatureFlags extends VkFlags {
     public VkExternalMemoryFeatureFlags() {
     }
 
-    public VkExternalMemoryFeatureFlags(VkMemory vkmemory) {
+    protected VkExternalMemoryFeatureFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalMemoryFeatureFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalMemoryFeatureFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalMemoryFeatureFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -5,12 +5,16 @@ public class VkPhysicalDeviceProperties2KHR extends VkObject {
         super(sizeof());
     }
 
-    public VkPhysicalDeviceProperties2KHR(VkMemory vkmemory) {
+    protected VkPhysicalDeviceProperties2KHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPhysicalDeviceProperties2KHR(VkMemory vkmemory, long vkaddress) {
+    protected VkPhysicalDeviceProperties2KHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPhysicalDeviceProperties2KHR(VkPointer pointer) {
+        super(pointer);
     }
 
 
@@ -73,17 +77,22 @@ public class VkPhysicalDeviceProperties2KHR extends VkObject {
             this.count = count;
         }
 
-        public Array(int count, VkPhysicalDeviceProperties2KHR o){
+        public Array(VkPhysicalDeviceProperties2KHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -111,15 +120,11 @@ public class VkPhysicalDeviceProperties2KHR extends VkObject {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

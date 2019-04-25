@@ -4,12 +4,16 @@ public class VkDisplayPlaneAlphaFlagsKHR extends VkFlags {
     public VkDisplayPlaneAlphaFlagsKHR() {
     }
 
-    public VkDisplayPlaneAlphaFlagsKHR(VkMemory vkmemory) {
+    protected VkDisplayPlaneAlphaFlagsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDisplayPlaneAlphaFlagsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkDisplayPlaneAlphaFlagsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDisplayPlaneAlphaFlagsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -4,11 +4,11 @@ public class PFNvkAllocateDescriptorSets extends VkFunctionPointer {
     public PFNvkAllocateDescriptorSets() {
     }
 
-    public PFNvkAllocateDescriptorSets(VkMemory vkmemory) {
+    protected PFNvkAllocateDescriptorSets(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkAllocateDescriptorSets(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkAllocateDescriptorSets(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

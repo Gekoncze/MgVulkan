@@ -20,18 +20,20 @@ public class VkColorSpaceKHR extends VkEnum {
     public VkColorSpaceKHR() {
     }
 
-    public VkColorSpaceKHR(VkMemory vkmemory) {
+    protected VkColorSpaceKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkColorSpaceKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkColorSpaceKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 
-
-
     public VkColorSpaceKHR(int value) {
         setValue(value);
+    }
+
+    public VkColorSpaceKHR(VkPointer pointer) {
+        super(pointer);
     }
 
     @Override
@@ -62,17 +64,22 @@ public class VkColorSpaceKHR extends VkEnum {
             this.count = count;
         }
 
-        public Array(int count, VkColorSpaceKHR o){
+        public Array(VkColorSpaceKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -111,15 +118,11 @@ public class VkColorSpaceKHR extends VkEnum {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

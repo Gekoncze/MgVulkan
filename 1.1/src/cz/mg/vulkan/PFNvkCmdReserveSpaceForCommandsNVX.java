@@ -4,11 +4,11 @@ public class PFNvkCmdReserveSpaceForCommandsNVX extends VkFunctionPointer {
     public PFNvkCmdReserveSpaceForCommandsNVX() {
     }
 
-    public PFNvkCmdReserveSpaceForCommandsNVX(VkMemory vkmemory) {
+    protected PFNvkCmdReserveSpaceForCommandsNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdReserveSpaceForCommandsNVX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdReserveSpaceForCommandsNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

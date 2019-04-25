@@ -4,11 +4,11 @@ public class PFNvkDestroyFramebuffer extends VkFunctionPointer {
     public PFNvkDestroyFramebuffer() {
     }
 
-    public PFNvkDestroyFramebuffer(VkMemory vkmemory) {
+    protected PFNvkDestroyFramebuffer(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyFramebuffer(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyFramebuffer(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

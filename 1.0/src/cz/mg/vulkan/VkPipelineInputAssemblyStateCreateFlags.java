@@ -4,12 +4,16 @@ public class VkPipelineInputAssemblyStateCreateFlags extends VkFlags {
     public VkPipelineInputAssemblyStateCreateFlags() {
     }
 
-    public VkPipelineInputAssemblyStateCreateFlags(VkMemory vkmemory) {
+    protected VkPipelineInputAssemblyStateCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineInputAssemblyStateCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineInputAssemblyStateCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineInputAssemblyStateCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

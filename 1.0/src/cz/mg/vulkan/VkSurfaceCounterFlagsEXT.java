@@ -4,12 +4,16 @@ public class VkSurfaceCounterFlagsEXT extends VkFlags {
     public VkSurfaceCounterFlagsEXT() {
     }
 
-    public VkSurfaceCounterFlagsEXT(VkMemory vkmemory) {
+    protected VkSurfaceCounterFlagsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSurfaceCounterFlagsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkSurfaceCounterFlagsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSurfaceCounterFlagsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

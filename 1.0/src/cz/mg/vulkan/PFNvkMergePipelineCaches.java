@@ -4,11 +4,11 @@ public class PFNvkMergePipelineCaches extends VkFunctionPointer {
     public PFNvkMergePipelineCaches() {
     }
 
-    public PFNvkMergePipelineCaches(VkMemory vkmemory) {
+    protected PFNvkMergePipelineCaches(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkMergePipelineCaches(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkMergePipelineCaches(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

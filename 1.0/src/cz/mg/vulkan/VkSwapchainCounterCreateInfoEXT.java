@@ -14,6 +14,10 @@ public class VkSwapchainCounterCreateInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkSwapchainCounterCreateInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

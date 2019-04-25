@@ -12,12 +12,16 @@ public class VkExternalSemaphoreHandleTypeFlagBitsKHR extends VkFlagBits {
     public VkExternalSemaphoreHandleTypeFlagBitsKHR() {
     }
 
-    public VkExternalSemaphoreHandleTypeFlagBitsKHR(VkMemory vkmemory) {
+    protected VkExternalSemaphoreHandleTypeFlagBitsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalSemaphoreHandleTypeFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalSemaphoreHandleTypeFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalSemaphoreHandleTypeFlagBitsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

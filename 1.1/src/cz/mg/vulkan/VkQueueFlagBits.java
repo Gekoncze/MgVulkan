@@ -12,12 +12,16 @@ public class VkQueueFlagBits extends VkFlagBits {
     public VkQueueFlagBits() {
     }
 
-    public VkQueueFlagBits(VkMemory vkmemory) {
+    protected VkQueueFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkQueueFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkQueueFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkQueueFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

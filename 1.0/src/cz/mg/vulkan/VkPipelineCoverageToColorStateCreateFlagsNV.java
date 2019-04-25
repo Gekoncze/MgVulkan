@@ -4,12 +4,16 @@ public class VkPipelineCoverageToColorStateCreateFlagsNV extends VkFlags {
     public VkPipelineCoverageToColorStateCreateFlagsNV() {
     }
 
-    public VkPipelineCoverageToColorStateCreateFlagsNV(VkMemory vkmemory) {
+    protected VkPipelineCoverageToColorStateCreateFlagsNV(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineCoverageToColorStateCreateFlagsNV(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineCoverageToColorStateCreateFlagsNV(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineCoverageToColorStateCreateFlagsNV(VkPointer pointer) {
+        super(pointer);
     }
 
 

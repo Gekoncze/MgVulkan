@@ -4,12 +4,16 @@ public class VkShaderModuleCreateFlags extends VkFlags {
     public VkShaderModuleCreateFlags() {
     }
 
-    public VkShaderModuleCreateFlags(VkMemory vkmemory) {
+    protected VkShaderModuleCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkShaderModuleCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkShaderModuleCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkShaderModuleCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

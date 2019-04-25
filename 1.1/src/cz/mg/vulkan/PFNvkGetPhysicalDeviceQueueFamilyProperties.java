@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceQueueFamilyProperties extends VkFunctionPoint
     public PFNvkGetPhysicalDeviceQueueFamilyProperties() {
     }
 
-    public PFNvkGetPhysicalDeviceQueueFamilyProperties(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceQueueFamilyProperties(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceQueueFamilyProperties(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceQueueFamilyProperties(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

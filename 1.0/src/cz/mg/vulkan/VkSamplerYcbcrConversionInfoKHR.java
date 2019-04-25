@@ -14,6 +14,10 @@ public class VkSamplerYcbcrConversionInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkSamplerYcbcrConversionInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

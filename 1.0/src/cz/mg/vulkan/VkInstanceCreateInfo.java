@@ -14,6 +14,10 @@ public class VkInstanceCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkInstanceCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

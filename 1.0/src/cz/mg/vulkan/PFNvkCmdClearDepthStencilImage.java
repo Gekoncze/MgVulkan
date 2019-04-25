@@ -4,11 +4,11 @@ public class PFNvkCmdClearDepthStencilImage extends VkFunctionPointer {
     public PFNvkCmdClearDepthStencilImage() {
     }
 
-    public PFNvkCmdClearDepthStencilImage(VkMemory vkmemory) {
+    protected PFNvkCmdClearDepthStencilImage(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdClearDepthStencilImage(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdClearDepthStencilImage(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,11 +4,11 @@ public class PFNvkCreateBufferView extends VkFunctionPointer {
     public PFNvkCreateBufferView() {
     }
 
-    public PFNvkCreateBufferView(VkMemory vkmemory) {
+    protected PFNvkCreateBufferView(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateBufferView(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateBufferView(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

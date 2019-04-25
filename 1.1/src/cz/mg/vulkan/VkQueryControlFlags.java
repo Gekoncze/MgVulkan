@@ -4,12 +4,16 @@ public class VkQueryControlFlags extends VkFlags {
     public VkQueryControlFlags() {
     }
 
-    public VkQueryControlFlags(VkMemory vkmemory) {
+    protected VkQueryControlFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkQueryControlFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkQueryControlFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkQueryControlFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

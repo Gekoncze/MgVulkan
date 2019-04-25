@@ -4,12 +4,16 @@ public class VkBufferUsageFlags extends VkFlags {
     public VkBufferUsageFlags() {
     }
 
-    public VkBufferUsageFlags(VkMemory vkmemory) {
+    protected VkBufferUsageFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkBufferUsageFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkBufferUsageFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkBufferUsageFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

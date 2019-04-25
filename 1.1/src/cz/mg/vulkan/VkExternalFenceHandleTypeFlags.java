@@ -4,12 +4,16 @@ public class VkExternalFenceHandleTypeFlags extends VkFlags {
     public VkExternalFenceHandleTypeFlags() {
     }
 
-    public VkExternalFenceHandleTypeFlags(VkMemory vkmemory) {
+    protected VkExternalFenceHandleTypeFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalFenceHandleTypeFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalFenceHandleTypeFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalFenceHandleTypeFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

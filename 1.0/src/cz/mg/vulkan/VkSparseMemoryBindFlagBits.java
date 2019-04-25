@@ -8,12 +8,16 @@ public class VkSparseMemoryBindFlagBits extends VkFlagBits {
     public VkSparseMemoryBindFlagBits() {
     }
 
-    public VkSparseMemoryBindFlagBits(VkMemory vkmemory) {
+    protected VkSparseMemoryBindFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSparseMemoryBindFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkSparseMemoryBindFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSparseMemoryBindFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

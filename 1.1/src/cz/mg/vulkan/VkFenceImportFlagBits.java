@@ -9,12 +9,16 @@ public class VkFenceImportFlagBits extends VkFlagBits {
     public VkFenceImportFlagBits() {
     }
 
-    public VkFenceImportFlagBits(VkMemory vkmemory) {
+    protected VkFenceImportFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkFenceImportFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkFenceImportFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkFenceImportFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

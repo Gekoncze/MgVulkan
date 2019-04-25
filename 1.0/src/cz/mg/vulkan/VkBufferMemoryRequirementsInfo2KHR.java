@@ -14,6 +14,10 @@ public class VkBufferMemoryRequirementsInfo2KHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkBufferMemoryRequirementsInfo2KHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

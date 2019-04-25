@@ -4,11 +4,11 @@ public class PFNvkCmdWriteBufferMarkerAMD extends VkFunctionPointer {
     public PFNvkCmdWriteBufferMarkerAMD() {
     }
 
-    public PFNvkCmdWriteBufferMarkerAMD(VkMemory vkmemory) {
+    protected PFNvkCmdWriteBufferMarkerAMD(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdWriteBufferMarkerAMD(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdWriteBufferMarkerAMD(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

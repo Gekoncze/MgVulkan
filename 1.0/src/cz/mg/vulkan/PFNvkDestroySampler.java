@@ -4,11 +4,11 @@ public class PFNvkDestroySampler extends VkFunctionPointer {
     public PFNvkDestroySampler() {
     }
 
-    public PFNvkDestroySampler(VkMemory vkmemory) {
+    protected PFNvkDestroySampler(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroySampler(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroySampler(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

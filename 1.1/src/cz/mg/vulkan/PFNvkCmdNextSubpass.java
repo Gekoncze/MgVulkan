@@ -4,11 +4,11 @@ public class PFNvkCmdNextSubpass extends VkFunctionPointer {
     public PFNvkCmdNextSubpass() {
     }
 
-    public PFNvkCmdNextSubpass(VkMemory vkmemory) {
+    protected PFNvkCmdNextSubpass(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdNextSubpass(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdNextSubpass(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

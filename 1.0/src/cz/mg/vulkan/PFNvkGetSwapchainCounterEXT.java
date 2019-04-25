@@ -4,11 +4,11 @@ public class PFNvkGetSwapchainCounterEXT extends VkFunctionPointer {
     public PFNvkGetSwapchainCounterEXT() {
     }
 
-    public PFNvkGetSwapchainCounterEXT(VkMemory vkmemory) {
+    protected PFNvkGetSwapchainCounterEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetSwapchainCounterEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetSwapchainCounterEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

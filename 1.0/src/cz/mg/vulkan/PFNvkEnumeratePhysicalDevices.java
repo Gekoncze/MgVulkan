@@ -4,11 +4,11 @@ public class PFNvkEnumeratePhysicalDevices extends VkFunctionPointer {
     public PFNvkEnumeratePhysicalDevices() {
     }
 
-    public PFNvkEnumeratePhysicalDevices(VkMemory vkmemory) {
+    protected PFNvkEnumeratePhysicalDevices(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkEnumeratePhysicalDevices(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkEnumeratePhysicalDevices(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

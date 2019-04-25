@@ -4,11 +4,11 @@ public class PFNvkGetDeviceQueue2 extends VkFunctionPointer {
     public PFNvkGetDeviceQueue2() {
     }
 
-    public PFNvkGetDeviceQueue2(VkMemory vkmemory) {
+    protected PFNvkGetDeviceQueue2(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetDeviceQueue2(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetDeviceQueue2(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

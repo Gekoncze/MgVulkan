@@ -5,12 +5,16 @@ public class VkDisplayModeParametersKHR extends VkObject {
         super(sizeof());
     }
 
-    public VkDisplayModeParametersKHR(VkMemory vkmemory) {
+    protected VkDisplayModeParametersKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDisplayModeParametersKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkDisplayModeParametersKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDisplayModeParametersKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 
@@ -60,17 +64,22 @@ public class VkDisplayModeParametersKHR extends VkObject {
             this.count = count;
         }
 
-        public Array(int count, VkDisplayModeParametersKHR o){
+        public Array(VkDisplayModeParametersKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -98,15 +107,11 @@ public class VkDisplayModeParametersKHR extends VkObject {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

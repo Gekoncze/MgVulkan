@@ -4,11 +4,11 @@ public class PFNvkGetDisplayModePropertiesKHR extends VkFunctionPointer {
     public PFNvkGetDisplayModePropertiesKHR() {
     }
 
-    public PFNvkGetDisplayModePropertiesKHR(VkMemory vkmemory) {
+    protected PFNvkGetDisplayModePropertiesKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetDisplayModePropertiesKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetDisplayModePropertiesKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

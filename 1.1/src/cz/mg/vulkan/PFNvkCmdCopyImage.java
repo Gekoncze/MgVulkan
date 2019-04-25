@@ -4,11 +4,11 @@ public class PFNvkCmdCopyImage extends VkFunctionPointer {
     public PFNvkCmdCopyImage() {
     }
 
-    public PFNvkCmdCopyImage(VkMemory vkmemory) {
+    protected PFNvkCmdCopyImage(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdCopyImage(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdCopyImage(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

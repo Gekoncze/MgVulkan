@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR extends VkFunctionP
     public PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR() {
     }
 
-    public PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

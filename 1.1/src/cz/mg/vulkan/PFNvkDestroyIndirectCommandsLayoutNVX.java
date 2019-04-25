@@ -4,11 +4,11 @@ public class PFNvkDestroyIndirectCommandsLayoutNVX extends VkFunctionPointer {
     public PFNvkDestroyIndirectCommandsLayoutNVX() {
     }
 
-    public PFNvkDestroyIndirectCommandsLayoutNVX(VkMemory vkmemory) {
+    protected PFNvkDestroyIndirectCommandsLayoutNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyIndirectCommandsLayoutNVX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyIndirectCommandsLayoutNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

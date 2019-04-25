@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceExternalSemaphorePropertiesKHR extends VkFunc
     public PFNvkGetPhysicalDeviceExternalSemaphorePropertiesKHR() {
     }
 
-    public PFNvkGetPhysicalDeviceExternalSemaphorePropertiesKHR(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceExternalSemaphorePropertiesKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceExternalSemaphorePropertiesKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceExternalSemaphorePropertiesKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

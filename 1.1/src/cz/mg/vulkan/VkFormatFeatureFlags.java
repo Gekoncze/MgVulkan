@@ -4,12 +4,16 @@ public class VkFormatFeatureFlags extends VkFlags {
     public VkFormatFeatureFlags() {
     }
 
-    public VkFormatFeatureFlags(VkMemory vkmemory) {
+    protected VkFormatFeatureFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkFormatFeatureFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkFormatFeatureFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkFormatFeatureFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -14,6 +14,10 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineShaderStageCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

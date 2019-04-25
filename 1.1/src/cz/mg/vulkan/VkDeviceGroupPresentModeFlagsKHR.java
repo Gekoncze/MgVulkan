@@ -4,12 +4,16 @@ public class VkDeviceGroupPresentModeFlagsKHR extends VkFlags {
     public VkDeviceGroupPresentModeFlagsKHR() {
     }
 
-    public VkDeviceGroupPresentModeFlagsKHR(VkMemory vkmemory) {
+    protected VkDeviceGroupPresentModeFlagsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDeviceGroupPresentModeFlagsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkDeviceGroupPresentModeFlagsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDeviceGroupPresentModeFlagsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

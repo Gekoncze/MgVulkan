@@ -4,11 +4,11 @@ public class PFNvkRegisterDeviceEventEXT extends VkFunctionPointer {
     public PFNvkRegisterDeviceEventEXT() {
     }
 
-    public PFNvkRegisterDeviceEventEXT(VkMemory vkmemory) {
+    protected PFNvkRegisterDeviceEventEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkRegisterDeviceEventEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkRegisterDeviceEventEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

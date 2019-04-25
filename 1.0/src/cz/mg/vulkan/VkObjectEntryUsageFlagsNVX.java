@@ -4,12 +4,16 @@ public class VkObjectEntryUsageFlagsNVX extends VkFlags {
     public VkObjectEntryUsageFlagsNVX() {
     }
 
-    public VkObjectEntryUsageFlagsNVX(VkMemory vkmemory) {
+    protected VkObjectEntryUsageFlagsNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkObjectEntryUsageFlagsNVX(VkMemory vkmemory, long vkaddress) {
+    protected VkObjectEntryUsageFlagsNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkObjectEntryUsageFlagsNVX(VkPointer pointer) {
+        super(pointer);
     }
 
 

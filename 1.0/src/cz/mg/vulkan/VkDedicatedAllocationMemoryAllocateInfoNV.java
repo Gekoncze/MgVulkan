@@ -14,6 +14,10 @@ public class VkDedicatedAllocationMemoryAllocateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDedicatedAllocationMemoryAllocateInfoNV(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

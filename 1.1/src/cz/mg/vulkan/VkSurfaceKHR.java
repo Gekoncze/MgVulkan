@@ -4,12 +4,16 @@ public class VkSurfaceKHR extends VkNonDispatchableHandle {
     public VkSurfaceKHR() {
     }
 
-    public VkSurfaceKHR(VkMemory vkmemory) {
+    protected VkSurfaceKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSurfaceKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkSurfaceKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSurfaceKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 
@@ -26,17 +30,22 @@ public class VkSurfaceKHR extends VkNonDispatchableHandle {
             this.count = count;
         }
 
-        public Array(int count, VkSurfaceKHR o){
+        public Array(VkSurfaceKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -57,6 +66,20 @@ public class VkSurfaceKHR extends VkNonDispatchableHandle {
 
         protected long addressAt(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
+        }
+
+        public static class Array2 extends VkPointer.Array {
+            public Array2(int count) {
+                super(count);
+            }
+
+            protected Array2(VkMemory vkmemory, int count) {
+                super(vkmemory, count);
+            }
+
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
+                super(vkmemory, vkaddress, count);
+            }
         }
     }
 }

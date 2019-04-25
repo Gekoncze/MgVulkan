@@ -13,6 +13,9 @@ public abstract class VkHandle extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkHandle(VkPointer pointer) {
+        super(pointer);
+    }
 
     public abstract long getValue();
     public abstract void setValue(long value);

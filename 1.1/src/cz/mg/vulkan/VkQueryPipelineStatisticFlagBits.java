@@ -18,12 +18,16 @@ public class VkQueryPipelineStatisticFlagBits extends VkFlagBits {
     public VkQueryPipelineStatisticFlagBits() {
     }
 
-    public VkQueryPipelineStatisticFlagBits(VkMemory vkmemory) {
+    protected VkQueryPipelineStatisticFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkQueryPipelineStatisticFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkQueryPipelineStatisticFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkQueryPipelineStatisticFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

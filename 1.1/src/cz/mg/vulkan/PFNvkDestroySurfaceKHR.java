@@ -4,11 +4,11 @@ public class PFNvkDestroySurfaceKHR extends VkFunctionPointer {
     public PFNvkDestroySurfaceKHR() {
     }
 
-    public PFNvkDestroySurfaceKHR(VkMemory vkmemory) {
+    protected PFNvkDestroySurfaceKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroySurfaceKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroySurfaceKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,15 +4,13 @@ public class PFNvkFreeFunction extends VkFunctionPointer {
     public PFNvkFreeFunction() {
     }
 
-    public PFNvkFreeFunction(VkMemory vkmemory) {
+    protected PFNvkFreeFunction(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkFreeFunction(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkFreeFunction(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
-
-
 
     public PFNvkFreeFunction(long value) {
         setValue(value);

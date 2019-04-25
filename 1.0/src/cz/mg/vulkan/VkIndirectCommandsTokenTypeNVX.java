@@ -13,18 +13,20 @@ public class VkIndirectCommandsTokenTypeNVX extends VkEnum {
     public VkIndirectCommandsTokenTypeNVX() {
     }
 
-    public VkIndirectCommandsTokenTypeNVX(VkMemory vkmemory) {
+    protected VkIndirectCommandsTokenTypeNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkIndirectCommandsTokenTypeNVX(VkMemory vkmemory, long vkaddress) {
+    protected VkIndirectCommandsTokenTypeNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 
-
-
     public VkIndirectCommandsTokenTypeNVX(int value) {
         setValue(value);
+    }
+
+    public VkIndirectCommandsTokenTypeNVX(VkPointer pointer) {
+        super(pointer);
     }
 
     @Override
@@ -48,17 +50,22 @@ public class VkIndirectCommandsTokenTypeNVX extends VkEnum {
             this.count = count;
         }
 
-        public Array(int count, VkIndirectCommandsTokenTypeNVX o){
+        public Array(VkIndirectCommandsTokenTypeNVX o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -97,15 +104,11 @@ public class VkIndirectCommandsTokenTypeNVX extends VkEnum {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

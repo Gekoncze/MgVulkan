@@ -4,15 +4,13 @@ public class PFNvkVoidFunction extends VkFunctionPointer {
     public PFNvkVoidFunction() {
     }
 
-    public PFNvkVoidFunction(VkMemory vkmemory) {
+    protected PFNvkVoidFunction(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkVoidFunction(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkVoidFunction(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
-
-
 
     public PFNvkVoidFunction(long value) {
         setValue(value);

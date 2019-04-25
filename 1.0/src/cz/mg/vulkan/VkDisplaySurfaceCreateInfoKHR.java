@@ -14,6 +14,10 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDisplaySurfaceCreateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

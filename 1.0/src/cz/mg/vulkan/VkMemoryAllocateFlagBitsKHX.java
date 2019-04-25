@@ -8,12 +8,16 @@ public class VkMemoryAllocateFlagBitsKHX extends VkFlagBits {
     public VkMemoryAllocateFlagBitsKHX() {
     }
 
-    public VkMemoryAllocateFlagBitsKHX(VkMemory vkmemory) {
+    protected VkMemoryAllocateFlagBitsKHX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkMemoryAllocateFlagBitsKHX(VkMemory vkmemory, long vkaddress) {
+    protected VkMemoryAllocateFlagBitsKHX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkMemoryAllocateFlagBitsKHX(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -4,11 +4,11 @@ public class PFNvkCreateDescriptorPool extends VkFunctionPointer {
     public PFNvkCreateDescriptorPool() {
     }
 
-    public PFNvkCreateDescriptorPool(VkMemory vkmemory) {
+    protected PFNvkCreateDescriptorPool(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateDescriptorPool(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateDescriptorPool(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

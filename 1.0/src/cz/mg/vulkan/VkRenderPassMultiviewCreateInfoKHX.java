@@ -14,6 +14,10 @@ public class VkRenderPassMultiviewCreateInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkRenderPassMultiviewCreateInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

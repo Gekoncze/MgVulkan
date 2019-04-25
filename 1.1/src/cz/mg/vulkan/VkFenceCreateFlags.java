@@ -4,12 +4,16 @@ public class VkFenceCreateFlags extends VkFlags {
     public VkFenceCreateFlags() {
     }
 
-    public VkFenceCreateFlags(VkMemory vkmemory) {
+    protected VkFenceCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkFenceCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkFenceCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkFenceCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -4,15 +4,13 @@ public class PFNvkAllocationFunction extends VkFunctionPointer {
     public PFNvkAllocationFunction() {
     }
 
-    public PFNvkAllocationFunction(VkMemory vkmemory) {
+    protected PFNvkAllocationFunction(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkAllocationFunction(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkAllocationFunction(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
-
-
 
     public PFNvkAllocationFunction(long value) {
         setValue(value);

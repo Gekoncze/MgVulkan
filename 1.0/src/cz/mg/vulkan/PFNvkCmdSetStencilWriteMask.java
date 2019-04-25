@@ -4,11 +4,11 @@ public class PFNvkCmdSetStencilWriteMask extends VkFunctionPointer {
     public PFNvkCmdSetStencilWriteMask() {
     }
 
-    public PFNvkCmdSetStencilWriteMask(VkMemory vkmemory) {
+    protected PFNvkCmdSetStencilWriteMask(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetStencilWriteMask(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetStencilWriteMask(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

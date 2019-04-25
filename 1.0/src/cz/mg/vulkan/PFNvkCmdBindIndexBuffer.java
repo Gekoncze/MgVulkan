@@ -4,11 +4,11 @@ public class PFNvkCmdBindIndexBuffer extends VkFunctionPointer {
     public PFNvkCmdBindIndexBuffer() {
     }
 
-    public PFNvkCmdBindIndexBuffer(VkMemory vkmemory) {
+    protected PFNvkCmdBindIndexBuffer(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdBindIndexBuffer(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdBindIndexBuffer(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

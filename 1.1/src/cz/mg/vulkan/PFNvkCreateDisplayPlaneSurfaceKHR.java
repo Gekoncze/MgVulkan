@@ -4,11 +4,11 @@ public class PFNvkCreateDisplayPlaneSurfaceKHR extends VkFunctionPointer {
     public PFNvkCreateDisplayPlaneSurfaceKHR() {
     }
 
-    public PFNvkCreateDisplayPlaneSurfaceKHR(VkMemory vkmemory) {
+    protected PFNvkCreateDisplayPlaneSurfaceKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateDisplayPlaneSurfaceKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateDisplayPlaneSurfaceKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

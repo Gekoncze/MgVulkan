@@ -8,12 +8,16 @@ public class VkAttachmentDescriptionFlagBits extends VkFlagBits {
     public VkAttachmentDescriptionFlagBits() {
     }
 
-    public VkAttachmentDescriptionFlagBits(VkMemory vkmemory) {
+    protected VkAttachmentDescriptionFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkAttachmentDescriptionFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkAttachmentDescriptionFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkAttachmentDescriptionFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

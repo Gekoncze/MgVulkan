@@ -13,12 +13,16 @@ public class VkMemoryPropertyFlagBits extends VkFlagBits {
     public VkMemoryPropertyFlagBits() {
     }
 
-    public VkMemoryPropertyFlagBits(VkMemory vkmemory) {
+    protected VkMemoryPropertyFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkMemoryPropertyFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkMemoryPropertyFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkMemoryPropertyFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

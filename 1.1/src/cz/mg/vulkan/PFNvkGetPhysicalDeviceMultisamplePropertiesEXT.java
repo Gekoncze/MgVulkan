@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceMultisamplePropertiesEXT extends VkFunctionPo
     public PFNvkGetPhysicalDeviceMultisamplePropertiesEXT() {
     }
 
-    public PFNvkGetPhysicalDeviceMultisamplePropertiesEXT(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceMultisamplePropertiesEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceMultisamplePropertiesEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceMultisamplePropertiesEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

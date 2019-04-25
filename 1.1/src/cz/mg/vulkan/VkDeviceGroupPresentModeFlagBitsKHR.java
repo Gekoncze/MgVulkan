@@ -11,12 +11,16 @@ public class VkDeviceGroupPresentModeFlagBitsKHR extends VkFlagBits {
     public VkDeviceGroupPresentModeFlagBitsKHR() {
     }
 
-    public VkDeviceGroupPresentModeFlagBitsKHR(VkMemory vkmemory) {
+    protected VkDeviceGroupPresentModeFlagBitsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDeviceGroupPresentModeFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkDeviceGroupPresentModeFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDeviceGroupPresentModeFlagBitsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

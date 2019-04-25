@@ -14,12 +14,16 @@ public class VkExternalMemoryHandleTypeFlagBitsKHR extends VkFlagBits {
     public VkExternalMemoryHandleTypeFlagBitsKHR() {
     }
 
-    public VkExternalMemoryHandleTypeFlagBitsKHR(VkMemory vkmemory) {
+    protected VkExternalMemoryHandleTypeFlagBitsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalMemoryHandleTypeFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalMemoryHandleTypeFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalMemoryHandleTypeFlagBitsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

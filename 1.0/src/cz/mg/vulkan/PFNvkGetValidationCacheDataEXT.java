@@ -4,11 +4,11 @@ public class PFNvkGetValidationCacheDataEXT extends VkFunctionPointer {
     public PFNvkGetValidationCacheDataEXT() {
     }
 
-    public PFNvkGetValidationCacheDataEXT(VkMemory vkmemory) {
+    protected PFNvkGetValidationCacheDataEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetValidationCacheDataEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetValidationCacheDataEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

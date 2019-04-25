@@ -4,11 +4,11 @@ public class PFNvkDestroyFence extends VkFunctionPointer {
     public PFNvkDestroyFence() {
     }
 
-    public PFNvkDestroyFence(VkMemory vkmemory) {
+    protected PFNvkDestroyFence(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyFence(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyFence(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

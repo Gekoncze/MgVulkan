@@ -4,12 +4,16 @@ public class VkPipelineColorBlendStateCreateFlags extends VkFlags {
     public VkPipelineColorBlendStateCreateFlags() {
     }
 
-    public VkPipelineColorBlendStateCreateFlags(VkMemory vkmemory) {
+    protected VkPipelineColorBlendStateCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineColorBlendStateCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineColorBlendStateCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineColorBlendStateCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

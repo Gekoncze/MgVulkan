@@ -14,6 +14,10 @@ public class VkDeviceCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDeviceCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

@@ -4,11 +4,11 @@ public class PFNvkCreateCommandPool extends VkFunctionPointer {
     public PFNvkCreateCommandPool() {
     }
 
-    public PFNvkCreateCommandPool(VkMemory vkmemory) {
+    protected PFNvkCreateCommandPool(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateCommandPool(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateCommandPool(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

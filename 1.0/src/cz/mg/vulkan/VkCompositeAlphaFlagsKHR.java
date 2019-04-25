@@ -4,12 +4,16 @@ public class VkCompositeAlphaFlagsKHR extends VkFlags {
     public VkCompositeAlphaFlagsKHR() {
     }
 
-    public VkCompositeAlphaFlagsKHR(VkMemory vkmemory) {
+    protected VkCompositeAlphaFlagsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkCompositeAlphaFlagsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkCompositeAlphaFlagsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkCompositeAlphaFlagsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

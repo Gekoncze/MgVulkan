@@ -4,11 +4,11 @@ public class PFNvkCmdDrawIndexedIndirectCountAMD extends VkFunctionPointer {
     public PFNvkCmdDrawIndexedIndirectCountAMD() {
     }
 
-    public PFNvkCmdDrawIndexedIndirectCountAMD(VkMemory vkmemory) {
+    protected PFNvkCmdDrawIndexedIndirectCountAMD(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdDrawIndexedIndirectCountAMD(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdDrawIndexedIndirectCountAMD(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,11 +4,11 @@ public class PFNvkCmdSetSampleLocationsEXT extends VkFunctionPointer {
     public PFNvkCmdSetSampleLocationsEXT() {
     }
 
-    public PFNvkCmdSetSampleLocationsEXT(VkMemory vkmemory) {
+    protected PFNvkCmdSetSampleLocationsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetSampleLocationsEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetSampleLocationsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

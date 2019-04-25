@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX extends VkFunc
     public PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX() {
     }
 
-    public PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

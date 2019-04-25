@@ -14,6 +14,10 @@ public class VkDisplayEventInfoEXT extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkDisplayEventInfoEXT(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

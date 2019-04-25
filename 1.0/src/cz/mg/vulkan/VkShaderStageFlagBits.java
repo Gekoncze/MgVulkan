@@ -15,12 +15,16 @@ public class VkShaderStageFlagBits extends VkFlagBits {
     public VkShaderStageFlagBits() {
     }
 
-    public VkShaderStageFlagBits(VkMemory vkmemory) {
+    protected VkShaderStageFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkShaderStageFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkShaderStageFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkShaderStageFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

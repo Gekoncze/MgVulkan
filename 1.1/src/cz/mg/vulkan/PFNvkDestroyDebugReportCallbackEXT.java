@@ -4,11 +4,11 @@ public class PFNvkDestroyDebugReportCallbackEXT extends VkFunctionPointer {
     public PFNvkDestroyDebugReportCallbackEXT() {
     }
 
-    public PFNvkDestroyDebugReportCallbackEXT(VkMemory vkmemory) {
+    protected PFNvkDestroyDebugReportCallbackEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyDebugReportCallbackEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyDebugReportCallbackEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

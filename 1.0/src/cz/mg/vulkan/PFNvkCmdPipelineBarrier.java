@@ -4,11 +4,11 @@ public class PFNvkCmdPipelineBarrier extends VkFunctionPointer {
     public PFNvkCmdPipelineBarrier() {
     }
 
-    public PFNvkCmdPipelineBarrier(VkMemory vkmemory) {
+    protected PFNvkCmdPipelineBarrier(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdPipelineBarrier(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdPipelineBarrier(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,11 +4,11 @@ public class PFNvkCreateSharedSwapchainsKHR extends VkFunctionPointer {
     public PFNvkCreateSharedSwapchainsKHR() {
     }
 
-    public PFNvkCreateSharedSwapchainsKHR(VkMemory vkmemory) {
+    protected PFNvkCreateSharedSwapchainsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateSharedSwapchainsKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateSharedSwapchainsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

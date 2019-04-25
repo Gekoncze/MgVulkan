@@ -4,11 +4,11 @@ public class PFNvkInvalidateMappedMemoryRanges extends VkFunctionPointer {
     public PFNvkInvalidateMappedMemoryRanges() {
     }
 
-    public PFNvkInvalidateMappedMemoryRanges(VkMemory vkmemory) {
+    protected PFNvkInvalidateMappedMemoryRanges(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkInvalidateMappedMemoryRanges(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkInvalidateMappedMemoryRanges(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,11 +4,11 @@ public class PFNvkCmdBindDescriptorSets extends VkFunctionPointer {
     public PFNvkCmdBindDescriptorSets() {
     }
 
-    public PFNvkCmdBindDescriptorSets(VkMemory vkmemory) {
+    protected PFNvkCmdBindDescriptorSets(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdBindDescriptorSets(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdBindDescriptorSets(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

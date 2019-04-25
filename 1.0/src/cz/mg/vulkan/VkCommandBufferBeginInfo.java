@@ -14,6 +14,10 @@ public class VkCommandBufferBeginInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkCommandBufferBeginInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

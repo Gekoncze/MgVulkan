@@ -8,12 +8,16 @@ public class VkDescriptorPoolCreateFlagBits extends VkFlagBits {
     public VkDescriptorPoolCreateFlagBits() {
     }
 
-    public VkDescriptorPoolCreateFlagBits(VkMemory vkmemory) {
+    protected VkDescriptorPoolCreateFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDescriptorPoolCreateFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkDescriptorPoolCreateFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDescriptorPoolCreateFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

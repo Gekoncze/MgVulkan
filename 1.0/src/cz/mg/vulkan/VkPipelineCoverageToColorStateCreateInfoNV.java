@@ -14,6 +14,10 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineCoverageToColorStateCreateInfoNV(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

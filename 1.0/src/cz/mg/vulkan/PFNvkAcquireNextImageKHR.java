@@ -4,11 +4,11 @@ public class PFNvkAcquireNextImageKHR extends VkFunctionPointer {
     public PFNvkAcquireNextImageKHR() {
     }
 
-    public PFNvkAcquireNextImageKHR(VkMemory vkmemory) {
+    protected PFNvkAcquireNextImageKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkAcquireNextImageKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkAcquireNextImageKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -10,12 +10,16 @@ public class VkMemoryHeapFlagBits extends VkFlagBits {
     public VkMemoryHeapFlagBits() {
     }
 
-    public VkMemoryHeapFlagBits(VkMemory vkmemory) {
+    protected VkMemoryHeapFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkMemoryHeapFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkMemoryHeapFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkMemoryHeapFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

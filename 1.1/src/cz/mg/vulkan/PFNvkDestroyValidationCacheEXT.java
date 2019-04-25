@@ -4,11 +4,11 @@ public class PFNvkDestroyValidationCacheEXT extends VkFunctionPointer {
     public PFNvkDestroyValidationCacheEXT() {
     }
 
-    public PFNvkDestroyValidationCacheEXT(VkMemory vkmemory) {
+    protected PFNvkDestroyValidationCacheEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyValidationCacheEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyValidationCacheEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

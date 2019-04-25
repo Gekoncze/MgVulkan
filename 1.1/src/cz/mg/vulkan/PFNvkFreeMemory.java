@@ -4,11 +4,11 @@ public class PFNvkFreeMemory extends VkFunctionPointer {
     public PFNvkFreeMemory() {
     }
 
-    public PFNvkFreeMemory(VkMemory vkmemory) {
+    protected PFNvkFreeMemory(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkFreeMemory(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkFreeMemory(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

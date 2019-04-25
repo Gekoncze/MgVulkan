@@ -14,6 +14,10 @@ public class VkFramebufferCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkFramebufferCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

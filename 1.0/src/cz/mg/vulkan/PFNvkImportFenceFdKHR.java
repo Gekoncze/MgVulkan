@@ -4,11 +4,11 @@ public class PFNvkImportFenceFdKHR extends VkFunctionPointer {
     public PFNvkImportFenceFdKHR() {
     }
 
-    public PFNvkImportFenceFdKHR(VkMemory vkmemory) {
+    protected PFNvkImportFenceFdKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkImportFenceFdKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkImportFenceFdKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,15 +4,13 @@ public class PFNvkReallocationFunction extends VkFunctionPointer {
     public PFNvkReallocationFunction() {
     }
 
-    public PFNvkReallocationFunction(VkMemory vkmemory) {
+    protected PFNvkReallocationFunction(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkReallocationFunction(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkReallocationFunction(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
-
-
 
     public PFNvkReallocationFunction(long value) {
         setValue(value);

@@ -4,11 +4,11 @@ public class PFNvkCmdWriteTimestamp extends VkFunctionPointer {
     public PFNvkCmdWriteTimestamp() {
     }
 
-    public PFNvkCmdWriteTimestamp(VkMemory vkmemory) {
+    protected PFNvkCmdWriteTimestamp(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdWriteTimestamp(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdWriteTimestamp(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

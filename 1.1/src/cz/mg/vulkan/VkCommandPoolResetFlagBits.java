@@ -8,12 +8,16 @@ public class VkCommandPoolResetFlagBits extends VkFlagBits {
     public VkCommandPoolResetFlagBits() {
     }
 
-    public VkCommandPoolResetFlagBits(VkMemory vkmemory) {
+    protected VkCommandPoolResetFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkCommandPoolResetFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkCommandPoolResetFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkCommandPoolResetFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

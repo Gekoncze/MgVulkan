@@ -4,11 +4,11 @@ public class PFNvkDeviceWaitIdle extends VkFunctionPointer {
     public PFNvkDeviceWaitIdle() {
     }
 
-    public PFNvkDeviceWaitIdle(VkMemory vkmemory) {
+    protected PFNvkDeviceWaitIdle(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDeviceWaitIdle(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDeviceWaitIdle(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

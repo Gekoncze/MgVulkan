@@ -11,12 +11,16 @@ public class VkExternalSemaphoreFeatureFlagBits extends VkFlagBits {
     public VkExternalSemaphoreFeatureFlagBits() {
     }
 
-    public VkExternalSemaphoreFeatureFlagBits(VkMemory vkmemory) {
+    protected VkExternalSemaphoreFeatureFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalSemaphoreFeatureFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalSemaphoreFeatureFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalSemaphoreFeatureFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

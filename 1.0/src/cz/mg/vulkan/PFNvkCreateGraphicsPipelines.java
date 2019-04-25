@@ -4,11 +4,11 @@ public class PFNvkCreateGraphicsPipelines extends VkFunctionPointer {
     public PFNvkCreateGraphicsPipelines() {
     }
 
-    public PFNvkCreateGraphicsPipelines(VkMemory vkmemory) {
+    protected PFNvkCreateGraphicsPipelines(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateGraphicsPipelines(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateGraphicsPipelines(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

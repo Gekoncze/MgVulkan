@@ -4,11 +4,11 @@ public class PFNvkGetBufferMemoryRequirements2 extends VkFunctionPointer {
     public PFNvkGetBufferMemoryRequirements2() {
     }
 
-    public PFNvkGetBufferMemoryRequirements2(VkMemory vkmemory) {
+    protected PFNvkGetBufferMemoryRequirements2(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetBufferMemoryRequirements2(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetBufferMemoryRequirements2(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

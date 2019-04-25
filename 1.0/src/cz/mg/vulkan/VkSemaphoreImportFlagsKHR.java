@@ -4,12 +4,16 @@ public class VkSemaphoreImportFlagsKHR extends VkFlags {
     public VkSemaphoreImportFlagsKHR() {
     }
 
-    public VkSemaphoreImportFlagsKHR(VkMemory vkmemory) {
+    protected VkSemaphoreImportFlagsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSemaphoreImportFlagsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkSemaphoreImportFlagsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSemaphoreImportFlagsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

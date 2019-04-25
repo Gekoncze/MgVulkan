@@ -14,6 +14,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPipelineCoverageModulationStateCreateInfoNV(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

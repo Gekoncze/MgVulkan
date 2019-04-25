@@ -4,12 +4,16 @@ public class VkDebugUtilsMessageTypeFlagsEXT extends VkFlags {
     public VkDebugUtilsMessageTypeFlagsEXT() {
     }
 
-    public VkDebugUtilsMessageTypeFlagsEXT(VkMemory vkmemory) {
+    protected VkDebugUtilsMessageTypeFlagsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDebugUtilsMessageTypeFlagsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkDebugUtilsMessageTypeFlagsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDebugUtilsMessageTypeFlagsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

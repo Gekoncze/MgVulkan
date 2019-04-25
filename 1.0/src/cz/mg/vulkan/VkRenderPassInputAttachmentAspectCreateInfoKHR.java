@@ -14,6 +14,10 @@ public class VkRenderPassInputAttachmentAspectCreateInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkRenderPassInputAttachmentAspectCreateInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

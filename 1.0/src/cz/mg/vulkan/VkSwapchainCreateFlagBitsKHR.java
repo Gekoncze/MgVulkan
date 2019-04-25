@@ -8,12 +8,16 @@ public class VkSwapchainCreateFlagBitsKHR extends VkFlagBits {
     public VkSwapchainCreateFlagBitsKHR() {
     }
 
-    public VkSwapchainCreateFlagBitsKHR(VkMemory vkmemory) {
+    protected VkSwapchainCreateFlagBitsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSwapchainCreateFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkSwapchainCreateFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSwapchainCreateFlagBitsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

@@ -4,12 +4,16 @@ public class VkStencilFaceFlags extends VkFlags {
     public VkStencilFaceFlags() {
     }
 
-    public VkStencilFaceFlags(VkMemory vkmemory) {
+    protected VkStencilFaceFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkStencilFaceFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkStencilFaceFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkStencilFaceFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

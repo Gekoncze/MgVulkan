@@ -4,11 +4,11 @@ public class PFNvkCmdSetViewportWScalingNV extends VkFunctionPointer {
     public PFNvkCmdSetViewportWScalingNV() {
     }
 
-    public PFNvkCmdSetViewportWScalingNV(VkMemory vkmemory) {
+    protected PFNvkCmdSetViewportWScalingNV(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdSetViewportWScalingNV(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdSetViewportWScalingNV(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

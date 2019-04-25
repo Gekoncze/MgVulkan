@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceImageFormatProperties2 extends VkFunctionPoin
     public PFNvkGetPhysicalDeviceImageFormatProperties2() {
     }
 
-    public PFNvkGetPhysicalDeviceImageFormatProperties2(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceImageFormatProperties2(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceImageFormatProperties2(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceImageFormatProperties2(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

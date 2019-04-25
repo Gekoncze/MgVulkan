@@ -4,12 +4,16 @@ public class VkMemoryHeapFlags extends VkFlags {
     public VkMemoryHeapFlags() {
     }
 
-    public VkMemoryHeapFlags(VkMemory vkmemory) {
+    protected VkMemoryHeapFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkMemoryHeapFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkMemoryHeapFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkMemoryHeapFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

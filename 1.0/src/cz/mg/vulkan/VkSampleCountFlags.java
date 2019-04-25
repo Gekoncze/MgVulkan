@@ -4,12 +4,16 @@ public class VkSampleCountFlags extends VkFlags {
     public VkSampleCountFlags() {
     }
 
-    public VkSampleCountFlags(VkMemory vkmemory) {
+    protected VkSampleCountFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSampleCountFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkSampleCountFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSampleCountFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

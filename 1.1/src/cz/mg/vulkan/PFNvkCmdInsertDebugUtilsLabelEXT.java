@@ -4,11 +4,11 @@ public class PFNvkCmdInsertDebugUtilsLabelEXT extends VkFunctionPointer {
     public PFNvkCmdInsertDebugUtilsLabelEXT() {
     }
 
-    public PFNvkCmdInsertDebugUtilsLabelEXT(VkMemory vkmemory) {
+    protected PFNvkCmdInsertDebugUtilsLabelEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdInsertDebugUtilsLabelEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdInsertDebugUtilsLabelEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

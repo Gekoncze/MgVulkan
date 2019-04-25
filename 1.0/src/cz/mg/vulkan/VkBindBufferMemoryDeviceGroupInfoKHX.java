@@ -14,6 +14,10 @@ public class VkBindBufferMemoryDeviceGroupInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkBindBufferMemoryDeviceGroupInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

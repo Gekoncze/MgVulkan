@@ -4,11 +4,11 @@ public class PFNvkImportSemaphoreFdKHR extends VkFunctionPointer {
     public PFNvkImportSemaphoreFdKHR() {
     }
 
-    public PFNvkImportSemaphoreFdKHR(VkMemory vkmemory) {
+    protected PFNvkImportSemaphoreFdKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkImportSemaphoreFdKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkImportSemaphoreFdKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

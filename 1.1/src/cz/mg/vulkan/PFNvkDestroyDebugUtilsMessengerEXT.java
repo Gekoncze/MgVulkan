@@ -4,11 +4,11 @@ public class PFNvkDestroyDebugUtilsMessengerEXT extends VkFunctionPointer {
     public PFNvkDestroyDebugUtilsMessengerEXT() {
     }
 
-    public PFNvkDestroyDebugUtilsMessengerEXT(VkMemory vkmemory) {
+    protected PFNvkDestroyDebugUtilsMessengerEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyDebugUtilsMessengerEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyDebugUtilsMessengerEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

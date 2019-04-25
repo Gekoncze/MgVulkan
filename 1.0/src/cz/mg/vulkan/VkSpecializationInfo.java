@@ -5,12 +5,16 @@ public class VkSpecializationInfo extends VkObject {
         super(sizeof());
     }
 
-    public VkSpecializationInfo(VkMemory vkmemory) {
+    protected VkSpecializationInfo(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkSpecializationInfo(VkMemory vkmemory, long vkaddress) {
+    protected VkSpecializationInfo(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkSpecializationInfo(VkPointer pointer) {
+        super(pointer);
     }
 
 
@@ -94,17 +98,22 @@ public class VkSpecializationInfo extends VkObject {
             this.count = count;
         }
 
-        public Array(int count, VkSpecializationInfo o){
+        public Array(VkSpecializationInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -132,15 +141,11 @@ public class VkSpecializationInfo extends VkObject {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

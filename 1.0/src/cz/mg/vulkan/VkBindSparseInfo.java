@@ -14,6 +14,10 @@ public class VkBindSparseInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkBindSparseInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

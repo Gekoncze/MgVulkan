@@ -4,11 +4,11 @@ public class PFNvkCreateImageView extends VkFunctionPointer {
     public PFNvkCreateImageView() {
     }
 
-    public PFNvkCreateImageView(VkMemory vkmemory) {
+    protected PFNvkCreateImageView(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCreateImageView(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCreateImageView(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -14,6 +14,10 @@ public class VkPhysicalDeviceExternalBufferInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkPhysicalDeviceExternalBufferInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

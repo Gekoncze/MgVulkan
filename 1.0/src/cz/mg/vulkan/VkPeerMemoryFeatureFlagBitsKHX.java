@@ -11,12 +11,16 @@ public class VkPeerMemoryFeatureFlagBitsKHX extends VkFlagBits {
     public VkPeerMemoryFeatureFlagBitsKHX() {
     }
 
-    public VkPeerMemoryFeatureFlagBitsKHX(VkMemory vkmemory) {
+    protected VkPeerMemoryFeatureFlagBitsKHX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPeerMemoryFeatureFlagBitsKHX(VkMemory vkmemory, long vkaddress) {
+    protected VkPeerMemoryFeatureFlagBitsKHX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPeerMemoryFeatureFlagBitsKHX(VkPointer pointer) {
+        super(pointer);
     }
 
 

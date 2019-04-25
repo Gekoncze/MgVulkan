@@ -4,15 +4,13 @@ public class PFNvkDebugReportCallbackEXT extends VkFunctionPointer {
     public PFNvkDebugReportCallbackEXT() {
     }
 
-    public PFNvkDebugReportCallbackEXT(VkMemory vkmemory) {
+    protected PFNvkDebugReportCallbackEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDebugReportCallbackEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDebugReportCallbackEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
-
-
 
     public PFNvkDebugReportCallbackEXT(long value) {
         setValue(value);

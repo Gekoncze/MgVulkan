@@ -4,12 +4,16 @@ public class VkExternalSemaphoreHandleTypeFlags extends VkFlags {
     public VkExternalSemaphoreHandleTypeFlags() {
     }
 
-    public VkExternalSemaphoreHandleTypeFlags(VkMemory vkmemory) {
+    protected VkExternalSemaphoreHandleTypeFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkExternalSemaphoreHandleTypeFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkExternalSemaphoreHandleTypeFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkExternalSemaphoreHandleTypeFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

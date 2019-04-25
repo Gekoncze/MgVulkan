@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceExternalBufferProperties extends VkFunctionPo
     public PFNvkGetPhysicalDeviceExternalBufferProperties() {
     }
 
-    public PFNvkGetPhysicalDeviceExternalBufferProperties(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceExternalBufferProperties(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceExternalBufferProperties(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceExternalBufferProperties(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

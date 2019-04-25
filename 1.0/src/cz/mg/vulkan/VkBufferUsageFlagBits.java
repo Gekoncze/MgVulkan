@@ -16,12 +16,16 @@ public class VkBufferUsageFlagBits extends VkFlagBits {
     public VkBufferUsageFlagBits() {
     }
 
-    public VkBufferUsageFlagBits(VkMemory vkmemory) {
+    protected VkBufferUsageFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkBufferUsageFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkBufferUsageFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkBufferUsageFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

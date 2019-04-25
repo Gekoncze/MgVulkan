@@ -4,12 +4,16 @@ public class VkDescriptorPoolCreateFlags extends VkFlags {
     public VkDescriptorPoolCreateFlags() {
     }
 
-    public VkDescriptorPoolCreateFlags(VkMemory vkmemory) {
+    protected VkDescriptorPoolCreateFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDescriptorPoolCreateFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkDescriptorPoolCreateFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDescriptorPoolCreateFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

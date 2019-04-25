@@ -4,11 +4,11 @@ public class PFNvkQueueBeginDebugUtilsLabelEXT extends VkFunctionPointer {
     public PFNvkQueueBeginDebugUtilsLabelEXT() {
     }
 
-    public PFNvkQueueBeginDebugUtilsLabelEXT(VkMemory vkmemory) {
+    protected PFNvkQueueBeginDebugUtilsLabelEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkQueueBeginDebugUtilsLabelEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkQueueBeginDebugUtilsLabelEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

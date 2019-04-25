@@ -4,11 +4,11 @@ public class PFNvkGetDeviceMemoryCommitment extends VkFunctionPointer {
     public PFNvkGetDeviceMemoryCommitment() {
     }
 
-    public PFNvkGetDeviceMemoryCommitment(VkMemory vkmemory) {
+    protected PFNvkGetDeviceMemoryCommitment(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetDeviceMemoryCommitment(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetDeviceMemoryCommitment(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

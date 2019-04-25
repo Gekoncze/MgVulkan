@@ -4,11 +4,11 @@ public class PFNvkGetImageSparseMemoryRequirements2 extends VkFunctionPointer {
     public PFNvkGetImageSparseMemoryRequirements2() {
     }
 
-    public PFNvkGetImageSparseMemoryRequirements2(VkMemory vkmemory) {
+    protected PFNvkGetImageSparseMemoryRequirements2(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetImageSparseMemoryRequirements2(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetImageSparseMemoryRequirements2(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

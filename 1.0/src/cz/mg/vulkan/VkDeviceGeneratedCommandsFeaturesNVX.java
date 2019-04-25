@@ -5,12 +5,16 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
         super(sizeof());
     }
 
-    public VkDeviceGeneratedCommandsFeaturesNVX(VkMemory vkmemory) {
+    protected VkDeviceGeneratedCommandsFeaturesNVX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDeviceGeneratedCommandsFeaturesNVX(VkMemory vkmemory, long vkaddress) {
+    protected VkDeviceGeneratedCommandsFeaturesNVX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDeviceGeneratedCommandsFeaturesNVX(VkPointer pointer) {
+        super(pointer);
     }
 
 
@@ -81,17 +85,22 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
             this.count = count;
         }
 
-        public Array(int count, VkDeviceGeneratedCommandsFeaturesNVX o){
+        public Array(VkDeviceGeneratedCommandsFeaturesNVX o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, int count) {
+        public Array(VkPointer pointer, int count){
+            super(pointer);
+            this.count = count;
+        }
+
+        protected Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
+        protected Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -119,15 +128,11 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
                 super(count);
             }
 
-            public Array2(int count, VkPointer o){
-                super(count, o);
-            }
-
-            public Array2(VkMemory vkmemory, int count) {
+            protected Array2(VkMemory vkmemory, int count) {
                 super(vkmemory, count);
             }
 
-            public Array2(VkMemory vkmemory, long vkaddress, int count) {
+            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
                 super(vkmemory, vkaddress, count);
             }
         }

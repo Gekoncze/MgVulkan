@@ -4,12 +4,16 @@ public class VkCommandPoolTrimFlags extends VkFlags {
     public VkCommandPoolTrimFlags() {
     }
 
-    public VkCommandPoolTrimFlags(VkMemory vkmemory) {
+    protected VkCommandPoolTrimFlags(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkCommandPoolTrimFlags(VkMemory vkmemory, long vkaddress) {
+    protected VkCommandPoolTrimFlags(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkCommandPoolTrimFlags(VkPointer pointer) {
+        super(pointer);
     }
 
 

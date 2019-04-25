@@ -11,12 +11,16 @@ public class VkDebugUtilsMessageSeverityFlagBitsEXT extends VkFlagBits {
     public VkDebugUtilsMessageSeverityFlagBitsEXT() {
     }
 
-    public VkDebugUtilsMessageSeverityFlagBitsEXT(VkMemory vkmemory) {
+    protected VkDebugUtilsMessageSeverityFlagBitsEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkDebugUtilsMessageSeverityFlagBitsEXT(VkMemory vkmemory, long vkaddress) {
+    protected VkDebugUtilsMessageSeverityFlagBitsEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkDebugUtilsMessageSeverityFlagBitsEXT(VkPointer pointer) {
+        super(pointer);
     }
 
 

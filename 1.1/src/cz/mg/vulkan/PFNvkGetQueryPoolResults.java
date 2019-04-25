@@ -4,11 +4,11 @@ public class PFNvkGetQueryPoolResults extends VkFunctionPointer {
     public PFNvkGetQueryPoolResults() {
     }
 
-    public PFNvkGetQueryPoolResults(VkMemory vkmemory) {
+    protected PFNvkGetQueryPoolResults(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetQueryPoolResults(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetQueryPoolResults(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,11 +4,11 @@ public class PFNvkDestroyInstance extends VkFunctionPointer {
     public PFNvkDestroyInstance() {
     }
 
-    public PFNvkDestroyInstance(VkMemory vkmemory) {
+    protected PFNvkDestroyInstance(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroyInstance(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroyInstance(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

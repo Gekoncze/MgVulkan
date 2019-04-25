@@ -25,12 +25,16 @@ public class VkPipelineStageFlagBits extends VkFlagBits {
     public VkPipelineStageFlagBits() {
     }
 
-    public VkPipelineStageFlagBits(VkMemory vkmemory) {
+    protected VkPipelineStageFlagBits(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPipelineStageFlagBits(VkMemory vkmemory, long vkaddress) {
+    protected VkPipelineStageFlagBits(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPipelineStageFlagBits(VkPointer pointer) {
+        super(pointer);
     }
 
 

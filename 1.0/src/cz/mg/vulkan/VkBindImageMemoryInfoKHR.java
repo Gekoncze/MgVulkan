@@ -14,6 +14,10 @@ public class VkBindImageMemoryInfoKHR extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkBindImageMemoryInfoKHR(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

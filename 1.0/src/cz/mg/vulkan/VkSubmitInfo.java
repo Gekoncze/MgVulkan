@@ -14,6 +14,10 @@ public class VkSubmitInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkSubmitInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

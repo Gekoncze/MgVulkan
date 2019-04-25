@@ -4,11 +4,11 @@ public class PFNvkGetPhysicalDeviceExternalFenceProperties extends VkFunctionPoi
     public PFNvkGetPhysicalDeviceExternalFenceProperties() {
     }
 
-    public PFNvkGetPhysicalDeviceExternalFenceProperties(VkMemory vkmemory) {
+    protected PFNvkGetPhysicalDeviceExternalFenceProperties(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkGetPhysicalDeviceExternalFenceProperties(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkGetPhysicalDeviceExternalFenceProperties(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -4,11 +4,11 @@ public class PFNvkDestroySwapchainKHR extends VkFunctionPointer {
     public PFNvkDestroySwapchainKHR() {
     }
 
-    public PFNvkDestroySwapchainKHR(VkMemory vkmemory) {
+    protected PFNvkDestroySwapchainKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroySwapchainKHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroySwapchainKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

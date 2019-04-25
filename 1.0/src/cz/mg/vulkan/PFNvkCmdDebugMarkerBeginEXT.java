@@ -4,11 +4,11 @@ public class PFNvkCmdDebugMarkerBeginEXT extends VkFunctionPointer {
     public PFNvkCmdDebugMarkerBeginEXT() {
     }
 
-    public PFNvkCmdDebugMarkerBeginEXT(VkMemory vkmemory) {
+    protected PFNvkCmdDebugMarkerBeginEXT(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkCmdDebugMarkerBeginEXT(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkCmdDebugMarkerBeginEXT(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

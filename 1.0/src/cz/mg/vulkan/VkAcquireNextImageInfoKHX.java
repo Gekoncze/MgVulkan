@@ -14,6 +14,10 @@ public class VkAcquireNextImageInfoKHX extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkAcquireNextImageInfoKHX(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

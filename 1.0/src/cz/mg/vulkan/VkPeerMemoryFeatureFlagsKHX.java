@@ -4,12 +4,16 @@ public class VkPeerMemoryFeatureFlagsKHX extends VkFlags {
     public VkPeerMemoryFeatureFlagsKHX() {
     }
 
-    public VkPeerMemoryFeatureFlagsKHX(VkMemory vkmemory) {
+    protected VkPeerMemoryFeatureFlagsKHX(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkPeerMemoryFeatureFlagsKHX(VkMemory vkmemory, long vkaddress) {
+    protected VkPeerMemoryFeatureFlagsKHX(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkPeerMemoryFeatureFlagsKHX(VkPointer pointer) {
+        super(pointer);
     }
 
 

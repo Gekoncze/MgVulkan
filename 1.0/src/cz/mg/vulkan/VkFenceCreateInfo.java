@@ -14,6 +14,10 @@ public class VkFenceCreateInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkFenceCreateInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

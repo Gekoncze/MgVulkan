@@ -11,12 +11,16 @@ public class VkCompositeAlphaFlagBitsKHR extends VkFlagBits {
     public VkCompositeAlphaFlagBitsKHR() {
     }
 
-    public VkCompositeAlphaFlagBitsKHR(VkMemory vkmemory) {
+    protected VkCompositeAlphaFlagBitsKHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public VkCompositeAlphaFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
+    protected VkCompositeAlphaFlagBitsKHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
+    }
+
+    public VkCompositeAlphaFlagBitsKHR(VkPointer pointer) {
+        super(pointer);
     }
 
 

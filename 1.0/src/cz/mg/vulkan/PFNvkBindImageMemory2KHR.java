@@ -4,11 +4,11 @@ public class PFNvkBindImageMemory2KHR extends VkFunctionPointer {
     public PFNvkBindImageMemory2KHR() {
     }
 
-    public PFNvkBindImageMemory2KHR(VkMemory vkmemory) {
+    protected PFNvkBindImageMemory2KHR(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkBindImageMemory2KHR(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkBindImageMemory2KHR(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 

@@ -14,6 +14,10 @@ public class VkApplicationInfo extends VkObject {
         super(vkmemory, vkaddress);
     }
 
+    public VkApplicationInfo(VkPointer pointer) {
+        super(pointer);
+    }
+
 
 
     public VkStructureType getSType() {

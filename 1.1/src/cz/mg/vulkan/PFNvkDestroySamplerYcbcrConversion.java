@@ -4,11 +4,11 @@ public class PFNvkDestroySamplerYcbcrConversion extends VkFunctionPointer {
     public PFNvkDestroySamplerYcbcrConversion() {
     }
 
-    public PFNvkDestroySamplerYcbcrConversion(VkMemory vkmemory) {
+    protected PFNvkDestroySamplerYcbcrConversion(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    public PFNvkDestroySamplerYcbcrConversion(VkMemory vkmemory, long vkaddress) {
+    protected PFNvkDestroySamplerYcbcrConversion(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 
