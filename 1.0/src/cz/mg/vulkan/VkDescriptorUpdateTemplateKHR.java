@@ -52,7 +52,11 @@ public class VkDescriptorUpdateTemplateKHR extends VkNonDispatchableHandle {
 
         @Override
         public VkDescriptorUpdateTemplateKHR get(int i){
-            return new VkDescriptorUpdateTemplateKHR(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDescriptorUpdateTemplateKHR(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

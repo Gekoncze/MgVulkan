@@ -23,7 +23,7 @@ public class PFNvkGetDeviceMemoryCommitment extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkDeviceMemory memory, VkDeviceSize pCommittedMemoryInBytes){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddress(), pCommittedMemoryInBytes != null ? pCommittedMemoryInBytes.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddressNative(), pCommittedMemoryInBytes != null ? pCommittedMemoryInBytes.getVkAddress() : VkPointer.NULL);
     }
 
     protected static native void call(long vkaddress, long device, long memory, long pCommittedMemoryInBytes);

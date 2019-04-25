@@ -21,7 +21,7 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
 
     
     public void setDescriptorType(VkDescriptorType descriptorType) {
-        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddress());
+        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
 
     
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddress());
+        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
 
     
     public void setStageFlags(VkShaderStageFlags stageFlags) {
-        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddress());
+        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -149,7 +149,11 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
 
         @Override
         public VkDescriptorSetLayoutBinding get(int i){
-            return new VkDescriptorSetLayoutBinding(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDescriptorSetLayoutBinding(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -192,6 +196,19 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -200,6 +217,10 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
             @Override
             public VkDescriptorSetLayoutBinding.Pointer get(int i){
                 return new VkDescriptorSetLayoutBinding.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

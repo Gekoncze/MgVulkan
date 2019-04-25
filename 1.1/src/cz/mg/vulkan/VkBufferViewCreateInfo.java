@@ -22,7 +22,7 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setFlags(VkBufferViewCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress());
+        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -90,7 +90,7 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -111,7 +111,7 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -132,7 +132,7 @@ public class VkBufferViewCreateInfo extends VkObject {
 
     
     public void setRange(VkDeviceSize range) {
-        setRange(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getNullAddress());
+        setRange(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -229,6 +229,19 @@ public class VkBufferViewCreateInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -237,6 +250,10 @@ public class VkBufferViewCreateInfo extends VkObject {
             @Override
             public VkBufferViewCreateInfo.Pointer get(int i){
                 return new VkBufferViewCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

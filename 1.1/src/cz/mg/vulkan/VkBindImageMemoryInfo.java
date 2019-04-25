@@ -22,7 +22,7 @@ public class VkBindImageMemoryInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkBindImageMemoryInfo extends VkObject {
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress());
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -69,7 +69,7 @@ public class VkBindImageMemoryInfo extends VkObject {
 
     
     public void setMemory(VkDeviceMemory memory) {
-        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddress());
+        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -82,7 +82,7 @@ public class VkBindImageMemoryInfo extends VkObject {
 
     
     public void setMemoryOffset(VkDeviceSize memoryOffset) {
-        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getNullAddress());
+        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -179,6 +179,19 @@ public class VkBindImageMemoryInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -187,6 +200,10 @@ public class VkBindImageMemoryInfo extends VkObject {
             @Override
             public VkBindImageMemoryInfo.Pointer get(int i){
                 return new VkBindImageMemoryInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

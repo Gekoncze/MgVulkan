@@ -23,7 +23,7 @@ public class PFNvkCmdResetEvent extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkEvent event, VkPipelineStageFlags stageMask){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), event != null ? event.getVkAddress() : VkPointer.getNullAddress(), stageMask != null ? stageMask.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), event != null ? event.getVkAddress() : VkPointer.getNullAddressNative(), stageMask != null ? stageMask.getVkAddress() : VkPointer.getNullAddressNative());
     }
 
     protected static native void call(long vkaddress, long commandBuffer, long event, long stageMask);

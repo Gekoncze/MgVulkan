@@ -52,7 +52,11 @@ public class VkDescriptorSetLayout extends VkNonDispatchableHandle {
 
         @Override
         public VkDescriptorSetLayout get(int i){
-            return new VkDescriptorSetLayout(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDescriptorSetLayout(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

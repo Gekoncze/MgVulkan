@@ -52,7 +52,11 @@ public class VkSampler extends VkNonDispatchableHandle {
 
         @Override
         public VkSampler get(int i){
-            return new VkSampler(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSampler(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

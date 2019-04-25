@@ -22,7 +22,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     
     public void setObjectTable(VkObjectTableNVX objectTable) {
-        setObjectTable(getVkAddress(), objectTable != null ? objectTable.getVkAddress() : VkPointer.getNullAddress());
+        setObjectTable(getVkAddress(), objectTable != null ? objectTable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -69,7 +69,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     
     public void setIndirectCommandsLayout(VkIndirectCommandsLayoutNVX indirectCommandsLayout) {
-        setIndirectCommandsLayout(getVkAddress(), indirectCommandsLayout != null ? indirectCommandsLayout.getVkAddress() : VkPointer.getNullAddress());
+        setIndirectCommandsLayout(getVkAddress(), indirectCommandsLayout != null ? indirectCommandsLayout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -82,7 +82,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     
     public void setIndirectCommandsTokenCount(VkUInt32 indirectCommandsTokenCount) {
-        setIndirectCommandsTokenCount(getVkAddress(), indirectCommandsTokenCount != null ? indirectCommandsTokenCount.getVkAddress() : VkPointer.getNullAddress());
+        setIndirectCommandsTokenCount(getVkAddress(), indirectCommandsTokenCount != null ? indirectCommandsTokenCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -116,7 +116,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     
     public void setMaxSequencesCount(VkUInt32 maxSequencesCount) {
-        setMaxSequencesCount(getVkAddress(), maxSequencesCount != null ? maxSequencesCount.getVkAddress() : VkPointer.getNullAddress());
+        setMaxSequencesCount(getVkAddress(), maxSequencesCount != null ? maxSequencesCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -137,7 +137,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     
     public void setTargetCommandBuffer(VkCommandBuffer targetCommandBuffer) {
-        setTargetCommandBuffer(getVkAddress(), targetCommandBuffer != null ? targetCommandBuffer.getVkAddress() : VkPointer.getNullAddress());
+        setTargetCommandBuffer(getVkAddress(), targetCommandBuffer != null ? targetCommandBuffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -150,7 +150,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     
     public void setSequencesCountBuffer(VkBuffer sequencesCountBuffer) {
-        setSequencesCountBuffer(getVkAddress(), sequencesCountBuffer != null ? sequencesCountBuffer.getVkAddress() : VkPointer.getNullAddress());
+        setSequencesCountBuffer(getVkAddress(), sequencesCountBuffer != null ? sequencesCountBuffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -163,7 +163,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     
     public void setSequencesCountOffset(VkDeviceSize sequencesCountOffset) {
-        setSequencesCountOffset(getVkAddress(), sequencesCountOffset != null ? sequencesCountOffset.getVkAddress() : VkPointer.getNullAddress());
+        setSequencesCountOffset(getVkAddress(), sequencesCountOffset != null ? sequencesCountOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -184,7 +184,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     
     public void setSequencesIndexBuffer(VkBuffer sequencesIndexBuffer) {
-        setSequencesIndexBuffer(getVkAddress(), sequencesIndexBuffer != null ? sequencesIndexBuffer.getVkAddress() : VkPointer.getNullAddress());
+        setSequencesIndexBuffer(getVkAddress(), sequencesIndexBuffer != null ? sequencesIndexBuffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -197,7 +197,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
 
     
     public void setSequencesIndexOffset(VkDeviceSize sequencesIndexOffset) {
-        setSequencesIndexOffset(getVkAddress(), sequencesIndexOffset != null ? sequencesIndexOffset.getVkAddress() : VkPointer.getNullAddress());
+        setSequencesIndexOffset(getVkAddress(), sequencesIndexOffset != null ? sequencesIndexOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -294,6 +294,19 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -302,6 +315,10 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
             @Override
             public VkCmdProcessCommandsInfoNVX.Pointer get(int i){
                 return new VkCmdProcessCommandsInfoNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

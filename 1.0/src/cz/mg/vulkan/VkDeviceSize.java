@@ -52,7 +52,11 @@ public class VkDeviceSize extends VkUInt64 {
 
         @Override
         public VkDeviceSize get(int i){
-            return new VkDeviceSize(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDeviceSize(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -95,6 +99,19 @@ public class VkDeviceSize extends VkUInt64 {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -103,6 +120,10 @@ public class VkDeviceSize extends VkUInt64 {
             @Override
             public VkDeviceSize.Pointer get(int i){
                 return new VkDeviceSize.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

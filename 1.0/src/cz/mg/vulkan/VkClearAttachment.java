@@ -21,7 +21,7 @@ public class VkClearAttachment extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkClearAttachment extends VkObject {
 
     
     public void setColorAttachment(VkUInt32 colorAttachment) {
-        setColorAttachment(getVkAddress(), colorAttachment != null ? colorAttachment.getVkAddress() : VkPointer.getNullAddress());
+        setColorAttachment(getVkAddress(), colorAttachment != null ? colorAttachment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkClearAttachment extends VkObject {
 
     
     public void setClearValue(VkClearValue clearValue) {
-        setClearValue(getVkAddress(), clearValue != null ? clearValue.getVkAddress() : VkPointer.getNullAddress());
+        setClearValue(getVkAddress(), clearValue != null ? clearValue.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -107,7 +107,11 @@ public class VkClearAttachment extends VkObject {
 
         @Override
         public VkClearAttachment get(int i){
-            return new VkClearAttachment(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkClearAttachment(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -150,6 +154,19 @@ public class VkClearAttachment extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -158,6 +175,10 @@ public class VkClearAttachment extends VkObject {
             @Override
             public VkClearAttachment.Pointer get(int i){
                 return new VkClearAttachment.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

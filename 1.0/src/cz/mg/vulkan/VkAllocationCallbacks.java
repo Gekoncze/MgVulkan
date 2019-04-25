@@ -34,7 +34,7 @@ public class VkAllocationCallbacks extends VkObject {
 
     
     public void setPfnAllocation(PFNvkAllocationFunction pfnAllocation) {
-        setPfnAllocation(getVkAddress(), pfnAllocation != null ? pfnAllocation.getVkAddress() : VkPointer.getNullAddress());
+        setPfnAllocation(getVkAddress(), pfnAllocation != null ? pfnAllocation.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -47,7 +47,7 @@ public class VkAllocationCallbacks extends VkObject {
 
     
     public void setPfnReallocation(PFNvkReallocationFunction pfnReallocation) {
-        setPfnReallocation(getVkAddress(), pfnReallocation != null ? pfnReallocation.getVkAddress() : VkPointer.getNullAddress());
+        setPfnReallocation(getVkAddress(), pfnReallocation != null ? pfnReallocation.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -60,7 +60,7 @@ public class VkAllocationCallbacks extends VkObject {
 
     
     public void setPfnFree(PFNvkFreeFunction pfnFree) {
-        setPfnFree(getVkAddress(), pfnFree != null ? pfnFree.getVkAddress() : VkPointer.getNullAddress());
+        setPfnFree(getVkAddress(), pfnFree != null ? pfnFree.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -73,7 +73,7 @@ public class VkAllocationCallbacks extends VkObject {
 
     
     public void setPfnInternalAllocation(PFNvkInternalAllocationNotification pfnInternalAllocation) {
-        setPfnInternalAllocation(getVkAddress(), pfnInternalAllocation != null ? pfnInternalAllocation.getVkAddress() : VkPointer.getNullAddress());
+        setPfnInternalAllocation(getVkAddress(), pfnInternalAllocation != null ? pfnInternalAllocation.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -86,7 +86,7 @@ public class VkAllocationCallbacks extends VkObject {
 
     
     public void setPfnInternalFree(PFNvkInternalFreeNotification pfnInternalFree) {
-        setPfnInternalFree(getVkAddress(), pfnInternalFree != null ? pfnInternalFree.getVkAddress() : VkPointer.getNullAddress());
+        setPfnInternalFree(getVkAddress(), pfnInternalFree != null ? pfnInternalFree.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -130,7 +130,11 @@ public class VkAllocationCallbacks extends VkObject {
 
         @Override
         public VkAllocationCallbacks get(int i){
-            return new VkAllocationCallbacks(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkAllocationCallbacks(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -173,6 +177,19 @@ public class VkAllocationCallbacks extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -181,6 +198,10 @@ public class VkAllocationCallbacks extends VkObject {
             @Override
             public VkAllocationCallbacks.Pointer get(int i){
                 return new VkAllocationCallbacks.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

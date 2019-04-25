@@ -21,7 +21,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setMinImageCount(VkUInt32 minImageCount) {
-        setMinImageCount(getVkAddress(), minImageCount != null ? minImageCount.getVkAddress() : VkPointer.getNullAddress());
+        setMinImageCount(getVkAddress(), minImageCount != null ? minImageCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setMaxImageCount(VkUInt32 maxImageCount) {
-        setMaxImageCount(getVkAddress(), maxImageCount != null ? maxImageCount.getVkAddress() : VkPointer.getNullAddress());
+        setMaxImageCount(getVkAddress(), maxImageCount != null ? maxImageCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setCurrentExtent(VkExtent2D currentExtent) {
-        setCurrentExtent(getVkAddress(), currentExtent != null ? currentExtent.getVkAddress() : VkPointer.getNullAddress());
+        setCurrentExtent(getVkAddress(), currentExtent != null ? currentExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -76,7 +76,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setMinImageExtent(VkExtent2D minImageExtent) {
-        setMinImageExtent(getVkAddress(), minImageExtent != null ? minImageExtent.getVkAddress() : VkPointer.getNullAddress());
+        setMinImageExtent(getVkAddress(), minImageExtent != null ? minImageExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -89,7 +89,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setMaxImageExtent(VkExtent2D maxImageExtent) {
-        setMaxImageExtent(getVkAddress(), maxImageExtent != null ? maxImageExtent.getVkAddress() : VkPointer.getNullAddress());
+        setMaxImageExtent(getVkAddress(), maxImageExtent != null ? maxImageExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -102,7 +102,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setMaxImageArrayLayers(VkUInt32 maxImageArrayLayers) {
-        setMaxImageArrayLayers(getVkAddress(), maxImageArrayLayers != null ? maxImageArrayLayers.getVkAddress() : VkPointer.getNullAddress());
+        setMaxImageArrayLayers(getVkAddress(), maxImageArrayLayers != null ? maxImageArrayLayers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -123,7 +123,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setSupportedTransforms(VkSurfaceTransformFlagsKHR supportedTransforms) {
-        setSupportedTransforms(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.getNullAddress());
+        setSupportedTransforms(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -144,7 +144,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setCurrentTransform(VkSurfaceTransformFlagBitsKHR currentTransform) {
-        setCurrentTransform(getVkAddress(), currentTransform != null ? currentTransform.getVkAddress() : VkPointer.getNullAddress());
+        setCurrentTransform(getVkAddress(), currentTransform != null ? currentTransform.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -165,7 +165,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setSupportedCompositeAlpha(VkCompositeAlphaFlagsKHR supportedCompositeAlpha) {
-        setSupportedCompositeAlpha(getVkAddress(), supportedCompositeAlpha != null ? supportedCompositeAlpha.getVkAddress() : VkPointer.getNullAddress());
+        setSupportedCompositeAlpha(getVkAddress(), supportedCompositeAlpha != null ? supportedCompositeAlpha.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -186,7 +186,7 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
     
     public void setSupportedUsageFlags(VkImageUsageFlags supportedUsageFlags) {
-        setSupportedUsageFlags(getVkAddress(), supportedUsageFlags != null ? supportedUsageFlags.getVkAddress() : VkPointer.getNullAddress());
+        setSupportedUsageFlags(getVkAddress(), supportedUsageFlags != null ? supportedUsageFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -238,7 +238,11 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
 
         @Override
         public VkSurfaceCapabilitiesKHR get(int i){
-            return new VkSurfaceCapabilitiesKHR(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSurfaceCapabilitiesKHR(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -281,6 +285,19 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -289,6 +306,10 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
             @Override
             public VkSurfaceCapabilitiesKHR.Pointer get(int i){
                 return new VkSurfaceCapabilitiesKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

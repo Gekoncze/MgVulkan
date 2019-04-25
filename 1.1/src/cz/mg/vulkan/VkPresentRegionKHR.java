@@ -21,7 +21,7 @@ public class VkPresentRegionKHR extends VkObject {
 
     
     public void setRectangleCount(VkUInt32 rectangleCount) {
-        setRectangleCount(getVkAddress(), rectangleCount != null ? rectangleCount.getVkAddress() : VkPointer.getNullAddress());
+        setRectangleCount(getVkAddress(), rectangleCount != null ? rectangleCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -86,7 +86,11 @@ public class VkPresentRegionKHR extends VkObject {
 
         @Override
         public VkPresentRegionKHR get(int i){
-            return new VkPresentRegionKHR(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPresentRegionKHR(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -129,6 +133,19 @@ public class VkPresentRegionKHR extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -137,6 +154,10 @@ public class VkPresentRegionKHR extends VkObject {
             @Override
             public VkPresentRegionKHR.Pointer get(int i){
                 return new VkPresentRegionKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

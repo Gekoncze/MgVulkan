@@ -21,7 +21,7 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setQueueFlags(VkQueueFlags queueFlags) {
-        setQueueFlags(getVkAddress(), queueFlags != null ? queueFlags.getVkAddress() : VkPointer.getNullAddress());
+        setQueueFlags(getVkAddress(), queueFlags != null ? queueFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setQueueCount(VkUInt32 queueCount) {
-        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.getNullAddress());
+        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setTimestampValidBits(VkUInt32 timestampValidBits) {
-        setTimestampValidBits(getVkAddress(), timestampValidBits != null ? timestampValidBits.getVkAddress() : VkPointer.getNullAddress());
+        setTimestampValidBits(getVkAddress(), timestampValidBits != null ? timestampValidBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkQueueFamilyProperties extends VkObject {
 
     
     public void setMinImageTransferGranularity(VkExtent3D minImageTransferGranularity) {
-        setMinImageTransferGranularity(getVkAddress(), minImageTransferGranularity != null ? minImageTransferGranularity.getVkAddress() : VkPointer.getNullAddress());
+        setMinImageTransferGranularity(getVkAddress(), minImageTransferGranularity != null ? minImageTransferGranularity.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -128,7 +128,11 @@ public class VkQueueFamilyProperties extends VkObject {
 
         @Override
         public VkQueueFamilyProperties get(int i){
-            return new VkQueueFamilyProperties(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkQueueFamilyProperties(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -171,6 +175,19 @@ public class VkQueueFamilyProperties extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -179,6 +196,10 @@ public class VkQueueFamilyProperties extends VkObject {
             @Override
             public VkQueueFamilyProperties.Pointer get(int i){
                 return new VkQueueFamilyProperties.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

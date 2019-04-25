@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-jint Java_cz_mg_vulkan_VkString_count(JNIEnv* env, jclass jc, jlong address)
+jint Java_cz_mg_vulkan_VkString_countNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;

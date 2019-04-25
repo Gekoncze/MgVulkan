@@ -52,7 +52,11 @@ public class VkBuffer extends VkNonDispatchableHandle {
 
         @Override
         public VkBuffer get(int i){
-            return new VkBuffer(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkBuffer(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

@@ -75,7 +75,15 @@ public class VkDynamicState extends VkEnum {
 
         public Array(int... values){
             this(values.length);
-            for(int i = 0; i < values.length; i++) get(i).setValue(values[i]);
+            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+        }
+
+        public int getValueAt(int i){
+            return getValueNative(addressAt(i));
+        }
+
+        public void setValueAt(int i, int value){
+            setValueNative(addressAt(i), value);
         }
 
         @Override
@@ -85,7 +93,11 @@ public class VkDynamicState extends VkEnum {
 
         @Override
         public VkDynamicState get(int i){
-            return new VkDynamicState(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDynamicState(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

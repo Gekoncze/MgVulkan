@@ -21,7 +21,7 @@ public class VkAttachmentDescription extends VkObject {
 
     
     public void setFlags(VkAttachmentDescriptionFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkAttachmentDescription extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkAttachmentDescription extends VkObject {
 
     
     public void setSamples(VkSampleCountFlagBits samples) {
-        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddress());
+        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkAttachmentDescription extends VkObject {
 
     
     public void setLoadOp(VkAttachmentLoadOp loadOp) {
-        setLoadOp(getVkAddress(), loadOp != null ? loadOp.getVkAddress() : VkPointer.getNullAddress());
+        setLoadOp(getVkAddress(), loadOp != null ? loadOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -105,7 +105,7 @@ public class VkAttachmentDescription extends VkObject {
 
     
     public void setStoreOp(VkAttachmentStoreOp storeOp) {
-        setStoreOp(getVkAddress(), storeOp != null ? storeOp.getVkAddress() : VkPointer.getNullAddress());
+        setStoreOp(getVkAddress(), storeOp != null ? storeOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -126,7 +126,7 @@ public class VkAttachmentDescription extends VkObject {
 
     
     public void setStencilLoadOp(VkAttachmentLoadOp stencilLoadOp) {
-        setStencilLoadOp(getVkAddress(), stencilLoadOp != null ? stencilLoadOp.getVkAddress() : VkPointer.getNullAddress());
+        setStencilLoadOp(getVkAddress(), stencilLoadOp != null ? stencilLoadOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -147,7 +147,7 @@ public class VkAttachmentDescription extends VkObject {
 
     
     public void setStencilStoreOp(VkAttachmentStoreOp stencilStoreOp) {
-        setStencilStoreOp(getVkAddress(), stencilStoreOp != null ? stencilStoreOp.getVkAddress() : VkPointer.getNullAddress());
+        setStencilStoreOp(getVkAddress(), stencilStoreOp != null ? stencilStoreOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -168,7 +168,7 @@ public class VkAttachmentDescription extends VkObject {
 
     
     public void setInitialLayout(VkImageLayout initialLayout) {
-        setInitialLayout(getVkAddress(), initialLayout != null ? initialLayout.getVkAddress() : VkPointer.getNullAddress());
+        setInitialLayout(getVkAddress(), initialLayout != null ? initialLayout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -189,7 +189,7 @@ public class VkAttachmentDescription extends VkObject {
 
     
     public void setFinalLayout(VkImageLayout finalLayout) {
-        setFinalLayout(getVkAddress(), finalLayout != null ? finalLayout.getVkAddress() : VkPointer.getNullAddress());
+        setFinalLayout(getVkAddress(), finalLayout != null ? finalLayout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -241,7 +241,11 @@ public class VkAttachmentDescription extends VkObject {
 
         @Override
         public VkAttachmentDescription get(int i){
-            return new VkAttachmentDescription(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkAttachmentDescription(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -284,6 +288,19 @@ public class VkAttachmentDescription extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -292,6 +309,10 @@ public class VkAttachmentDescription extends VkObject {
             @Override
             public VkAttachmentDescription.Pointer get(int i){
                 return new VkAttachmentDescription.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

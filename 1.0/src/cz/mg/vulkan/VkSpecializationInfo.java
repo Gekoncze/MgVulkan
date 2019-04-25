@@ -21,7 +21,7 @@ public class VkSpecializationInfo extends VkObject {
 
     
     public void setMapEntryCount(VkUInt32 mapEntryCount) {
-        setMapEntryCount(getVkAddress(), mapEntryCount != null ? mapEntryCount.getVkAddress() : VkPointer.getNullAddress());
+        setMapEntryCount(getVkAddress(), mapEntryCount != null ? mapEntryCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkSpecializationInfo extends VkObject {
 
     
     public void setDataSize(VkSize dataSize) {
-        setDataSize(getVkAddress(), dataSize != null ? dataSize.getVkAddress() : VkPointer.getNullAddress());
+        setDataSize(getVkAddress(), dataSize != null ? dataSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -120,7 +120,11 @@ public class VkSpecializationInfo extends VkObject {
 
         @Override
         public VkSpecializationInfo get(int i){
-            return new VkSpecializationInfo(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSpecializationInfo(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -163,6 +167,19 @@ public class VkSpecializationInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -171,6 +188,10 @@ public class VkSpecializationInfo extends VkObject {
             @Override
             public VkSpecializationInfo.Pointer get(int i){
                 return new VkSpecializationInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

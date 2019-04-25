@@ -22,7 +22,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setSrcPremultiplied(VkBool32 srcPremultiplied) {
-        setSrcPremultiplied(getVkAddress(), srcPremultiplied != null ? srcPremultiplied.getVkAddress() : VkPointer.getNullAddress());
+        setSrcPremultiplied(getVkAddress(), srcPremultiplied != null ? srcPremultiplied.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setDstPremultiplied(VkBool32 dstPremultiplied) {
-        setDstPremultiplied(getVkAddress(), dstPremultiplied != null ? dstPremultiplied.getVkAddress() : VkPointer.getNullAddress());
+        setDstPremultiplied(getVkAddress(), dstPremultiplied != null ? dstPremultiplied.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -98,7 +98,7 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
 
     
     public void setBlendOverlap(VkBlendOverlapEXT blendOverlap) {
-        setBlendOverlap(getVkAddress(), blendOverlap != null ? blendOverlap.getVkAddress() : VkPointer.getNullAddress());
+        setBlendOverlap(getVkAddress(), blendOverlap != null ? blendOverlap.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -195,6 +195,19 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -203,6 +216,10 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
             @Override
             public VkPipelineColorBlendAdvancedStateCreateInfoEXT.Pointer get(int i){
                 return new VkPipelineColorBlendAdvancedStateCreateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -21,7 +21,7 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress());
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -34,7 +34,7 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
 
     
     public void setBindCount(VkUInt32 bindCount) {
-        setBindCount(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.getNullAddress());
+        setBindCount(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -99,7 +99,11 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
 
         @Override
         public VkSparseImageOpaqueMemoryBindInfo get(int i){
-            return new VkSparseImageOpaqueMemoryBindInfo(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSparseImageOpaqueMemoryBindInfo(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -142,6 +146,19 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -150,6 +167,10 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
             @Override
             public VkSparseImageOpaqueMemoryBindInfo.Pointer get(int i){
                 return new VkSparseImageOpaqueMemoryBindInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

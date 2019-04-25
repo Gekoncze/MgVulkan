@@ -22,7 +22,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setStageCount(VkUInt32 stageCount) {
-        setStageCount(getVkAddress(), stageCount != null ? stageCount.getVkAddress() : VkPointer.getNullAddress());
+        setStageCount(getVkAddress(), stageCount != null ? stageCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -228,7 +228,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setLayout(VkPipelineLayout layout) {
-        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddress());
+        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -241,7 +241,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddress());
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -254,7 +254,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setSubpass(VkUInt32 subpass) {
-        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getNullAddress());
+        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -275,7 +275,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setBasePipelineHandle(VkPipeline basePipelineHandle) {
-        setBasePipelineHandle(getVkAddress(), basePipelineHandle != null ? basePipelineHandle.getVkAddress() : VkPointer.getNullAddress());
+        setBasePipelineHandle(getVkAddress(), basePipelineHandle != null ? basePipelineHandle.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -288,7 +288,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
 
     
     public void setBasePipelineIndex(VkInt32 basePipelineIndex) {
-        setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.getNullAddress());
+        setBasePipelineIndex(getVkAddress(), basePipelineIndex != null ? basePipelineIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -385,6 +385,19 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -393,6 +406,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
             @Override
             public VkGraphicsPipelineCreateInfo.Pointer get(int i){
                 return new VkGraphicsPipelineCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

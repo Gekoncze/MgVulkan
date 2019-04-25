@@ -21,7 +21,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     
     public void setResidencyStandard2DBlockShape(VkBool32 residencyStandard2DBlockShape) {
-        setResidencyStandard2DBlockShape(getVkAddress(), residencyStandard2DBlockShape != null ? residencyStandard2DBlockShape.getVkAddress() : VkPointer.getNullAddress());
+        setResidencyStandard2DBlockShape(getVkAddress(), residencyStandard2DBlockShape != null ? residencyStandard2DBlockShape.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     
     public void setResidencyStandard2DMultisampleBlockShape(VkBool32 residencyStandard2DMultisampleBlockShape) {
-        setResidencyStandard2DMultisampleBlockShape(getVkAddress(), residencyStandard2DMultisampleBlockShape != null ? residencyStandard2DMultisampleBlockShape.getVkAddress() : VkPointer.getNullAddress());
+        setResidencyStandard2DMultisampleBlockShape(getVkAddress(), residencyStandard2DMultisampleBlockShape != null ? residencyStandard2DMultisampleBlockShape.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     
     public void setResidencyStandard3DBlockShape(VkBool32 residencyStandard3DBlockShape) {
-        setResidencyStandard3DBlockShape(getVkAddress(), residencyStandard3DBlockShape != null ? residencyStandard3DBlockShape.getVkAddress() : VkPointer.getNullAddress());
+        setResidencyStandard3DBlockShape(getVkAddress(), residencyStandard3DBlockShape != null ? residencyStandard3DBlockShape.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     
     public void setResidencyAlignedMipSize(VkBool32 residencyAlignedMipSize) {
-        setResidencyAlignedMipSize(getVkAddress(), residencyAlignedMipSize != null ? residencyAlignedMipSize.getVkAddress() : VkPointer.getNullAddress());
+        setResidencyAlignedMipSize(getVkAddress(), residencyAlignedMipSize != null ? residencyAlignedMipSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -105,7 +105,7 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
     
     public void setResidencyNonResidentStrict(VkBool32 residencyNonResidentStrict) {
-        setResidencyNonResidentStrict(getVkAddress(), residencyNonResidentStrict != null ? residencyNonResidentStrict.getVkAddress() : VkPointer.getNullAddress());
+        setResidencyNonResidentStrict(getVkAddress(), residencyNonResidentStrict != null ? residencyNonResidentStrict.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -157,7 +157,11 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
 
         @Override
         public VkPhysicalDeviceSparseProperties get(int i){
-            return new VkPhysicalDeviceSparseProperties(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPhysicalDeviceSparseProperties(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -200,6 +204,19 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -208,6 +225,10 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
             @Override
             public VkPhysicalDeviceSparseProperties.Pointer get(int i){
                 return new VkPhysicalDeviceSparseProperties.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

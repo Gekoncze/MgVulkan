@@ -1,18 +1,14 @@
 package cz.mg.vulkan;
 
-public class VkString extends VkChar {
+public class VkString extends VkChar.Array {
     public VkString(String string) {
-        super(new VkMemory(string.length() * VkChar.sizeof() + 1));
-        for(int i = 0; i < string.length(); i++) VkChar.setValue(getVkAddress()+i*VkChar.sizeof(), (byte) string.charAt(i));
-        VkChar.setValue(getVkAddress()+(string.length())*VkChar.sizeof(), (byte) 0);
-    }
-
-    public VkString(VkMemory vkmemory) {
-        super(vkmemory);
+        super(string.length() + 1);
+        for(int i = 0; i < string.length(); i++) setValueAt(i, (byte) string.charAt(i));
+        setValueAt(string.length(), (byte) 0);
     }
 
     public VkString(VkMemory vkmemory, long vkaddress) {
-        super(vkmemory, vkaddress);
+        super(vkmemory, vkaddress, countNative(vkaddress));
     }
 
     public VkString(VkChar ch){
@@ -22,12 +18,11 @@ public class VkString extends VkChar {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        int c = count(getVkAddress());
-        for(int i = 0; i < c; i++) sb.append((char)VkChar.getValue(getVkAddress()+i*VkChar.sizeof()));
+        for(int i = 0; i < count(); i++) sb.append((char)getValueAt(i));
         return sb.toString();
     }
 
-    private static native int count(long vkaddress);
+    protected static native int countNative(long vkaddress);
 
     public static class Array extends VkChar.Pointer.Array {
         private final VkString[] array;
@@ -37,7 +32,7 @@ public class VkString extends VkChar {
             this.array = new VkString[strings.length];
             for(int i = 0; i < strings.length; i++){
                 this.array[i] = new VkString(strings[i]);
-                get(i).setValue(this.array[i].getVkAddress());
+                setValueAt(i, this.array[i].getVkAddress());
             }
         }
     }

@@ -21,7 +21,7 @@ public class VkImageSubresourceLayers extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkImageSubresourceLayers extends VkObject {
 
     
     public void setMipLevel(VkUInt32 mipLevel) {
-        setMipLevel(getVkAddress(), mipLevel != null ? mipLevel.getVkAddress() : VkPointer.getNullAddress());
+        setMipLevel(getVkAddress(), mipLevel != null ? mipLevel.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkImageSubresourceLayers extends VkObject {
 
     
     public void setBaseArrayLayer(VkUInt32 baseArrayLayer) {
-        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.getNullAddress());
+        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkImageSubresourceLayers extends VkObject {
 
     
     public void setLayerCount(VkUInt32 layerCount) {
-        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getNullAddress());
+        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -136,7 +136,11 @@ public class VkImageSubresourceLayers extends VkObject {
 
         @Override
         public VkImageSubresourceLayers get(int i){
-            return new VkImageSubresourceLayers(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkImageSubresourceLayers(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -179,6 +183,19 @@ public class VkImageSubresourceLayers extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -187,6 +204,10 @@ public class VkImageSubresourceLayers extends VkObject {
             @Override
             public VkImageSubresourceLayers.Pointer get(int i){
                 return new VkImageSubresourceLayers.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -21,7 +21,7 @@ public class VkDispatchIndirectCommand extends VkObject {
 
     
     public void setX(VkUInt32 x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkDispatchIndirectCommand extends VkObject {
 
     
     public void setY(VkUInt32 y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkDispatchIndirectCommand extends VkObject {
 
     
     public void setZ(VkUInt32 z) {
-        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddress());
+        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -115,7 +115,11 @@ public class VkDispatchIndirectCommand extends VkObject {
 
         @Override
         public VkDispatchIndirectCommand get(int i){
-            return new VkDispatchIndirectCommand(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDispatchIndirectCommand(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -158,6 +162,19 @@ public class VkDispatchIndirectCommand extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -166,6 +183,10 @@ public class VkDispatchIndirectCommand extends VkObject {
             @Override
             public VkDispatchIndirectCommand.Pointer get(int i){
                 return new VkDispatchIndirectCommand.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

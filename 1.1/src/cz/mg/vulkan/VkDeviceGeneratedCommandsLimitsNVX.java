@@ -21,7 +21,7 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
 
     
     public void setMaxIndirectCommandsLayoutTokenCount(VkUInt32 maxIndirectCommandsLayoutTokenCount) {
-        setMaxIndirectCommandsLayoutTokenCount(getVkAddress(), maxIndirectCommandsLayoutTokenCount != null ? maxIndirectCommandsLayoutTokenCount.getVkAddress() : VkPointer.getNullAddress());
+        setMaxIndirectCommandsLayoutTokenCount(getVkAddress(), maxIndirectCommandsLayoutTokenCount != null ? maxIndirectCommandsLayoutTokenCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -76,7 +76,7 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
 
     
     public void setMaxObjectEntryCounts(VkUInt32 maxObjectEntryCounts) {
-        setMaxObjectEntryCounts(getVkAddress(), maxObjectEntryCounts != null ? maxObjectEntryCounts.getVkAddress() : VkPointer.getNullAddress());
+        setMaxObjectEntryCounts(getVkAddress(), maxObjectEntryCounts != null ? maxObjectEntryCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -97,7 +97,7 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
 
     
     public void setMinSequenceCountBufferOffsetAlignment(VkUInt32 minSequenceCountBufferOffsetAlignment) {
-        setMinSequenceCountBufferOffsetAlignment(getVkAddress(), minSequenceCountBufferOffsetAlignment != null ? minSequenceCountBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddress());
+        setMinSequenceCountBufferOffsetAlignment(getVkAddress(), minSequenceCountBufferOffsetAlignment != null ? minSequenceCountBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -118,7 +118,7 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
 
     
     public void setMinSequenceIndexBufferOffsetAlignment(VkUInt32 minSequenceIndexBufferOffsetAlignment) {
-        setMinSequenceIndexBufferOffsetAlignment(getVkAddress(), minSequenceIndexBufferOffsetAlignment != null ? minSequenceIndexBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddress());
+        setMinSequenceIndexBufferOffsetAlignment(getVkAddress(), minSequenceIndexBufferOffsetAlignment != null ? minSequenceIndexBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -139,7 +139,7 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
 
     
     public void setMinCommandsTokenBufferOffsetAlignment(VkUInt32 minCommandsTokenBufferOffsetAlignment) {
-        setMinCommandsTokenBufferOffsetAlignment(getVkAddress(), minCommandsTokenBufferOffsetAlignment != null ? minCommandsTokenBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddress());
+        setMinCommandsTokenBufferOffsetAlignment(getVkAddress(), minCommandsTokenBufferOffsetAlignment != null ? minCommandsTokenBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -191,7 +191,11 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
 
         @Override
         public VkDeviceGeneratedCommandsLimitsNVX get(int i){
-            return new VkDeviceGeneratedCommandsLimitsNVX(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDeviceGeneratedCommandsLimitsNVX(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -234,6 +238,19 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -242,6 +259,10 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
             @Override
             public VkDeviceGeneratedCommandsLimitsNVX.Pointer get(int i){
                 return new VkDeviceGeneratedCommandsLimitsNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

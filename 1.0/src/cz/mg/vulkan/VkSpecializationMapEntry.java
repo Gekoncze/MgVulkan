@@ -21,7 +21,7 @@ public class VkSpecializationMapEntry extends VkObject {
 
     
     public void setConstantID(VkUInt32 constantID) {
-        setConstantID(getVkAddress(), constantID != null ? constantID.getVkAddress() : VkPointer.getNullAddress());
+        setConstantID(getVkAddress(), constantID != null ? constantID.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkSpecializationMapEntry extends VkObject {
 
     
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkSpecializationMapEntry extends VkObject {
 
     
     public void setSize(VkSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -115,7 +115,11 @@ public class VkSpecializationMapEntry extends VkObject {
 
         @Override
         public VkSpecializationMapEntry get(int i){
-            return new VkSpecializationMapEntry(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSpecializationMapEntry(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -158,6 +162,19 @@ public class VkSpecializationMapEntry extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -166,6 +183,10 @@ public class VkSpecializationMapEntry extends VkObject {
             @Override
             public VkSpecializationMapEntry.Pointer get(int i){
                 return new VkSpecializationMapEntry.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

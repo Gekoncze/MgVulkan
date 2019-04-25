@@ -22,7 +22,7 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setApplicationVersion(VkUInt32 applicationVersion) {
-        setApplicationVersion(getVkAddress(), applicationVersion != null ? applicationVersion.getVkAddress() : VkPointer.getNullAddress());
+        setApplicationVersion(getVkAddress(), applicationVersion != null ? applicationVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -119,7 +119,7 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setEngineVersion(VkUInt32 engineVersion) {
-        setEngineVersion(getVkAddress(), engineVersion != null ? engineVersion.getVkAddress() : VkPointer.getNullAddress());
+        setEngineVersion(getVkAddress(), engineVersion != null ? engineVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -140,7 +140,7 @@ public class VkApplicationInfo extends VkObject {
 
     
     public void setApiVersion(VkUInt32 apiVersion) {
-        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getNullAddress());
+        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -237,6 +237,19 @@ public class VkApplicationInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -245,6 +258,10 @@ public class VkApplicationInfo extends VkObject {
             @Override
             public VkApplicationInfo.Pointer get(int i){
                 return new VkApplicationInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

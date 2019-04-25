@@ -34,7 +34,7 @@ public class VkClearValue extends VkObject {
 
     
     public void setColor(VkClearColorValue color) {
-        setColor(getVkAddress(), color != null ? color.getVkAddress() : VkPointer.getNullAddress());
+        setColor(getVkAddress(), color != null ? color.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -47,7 +47,7 @@ public class VkClearValue extends VkObject {
 
     
     public void setDepthStencil(VkClearDepthStencilValue depthStencil) {
-        setDepthStencil(getVkAddress(), depthStencil != null ? depthStencil.getVkAddress() : VkPointer.getNullAddress());
+        setDepthStencil(getVkAddress(), depthStencil != null ? depthStencil.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -91,7 +91,11 @@ public class VkClearValue extends VkObject {
 
         @Override
         public VkClearValue get(int i){
-            return new VkClearValue(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkClearValue(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -134,6 +138,19 @@ public class VkClearValue extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -142,6 +159,10 @@ public class VkClearValue extends VkObject {
             @Override
             public VkClearValue.Pointer get(int i){
                 return new VkClearValue.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

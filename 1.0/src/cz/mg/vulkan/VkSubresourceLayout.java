@@ -21,7 +21,7 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setRowPitch(VkDeviceSize rowPitch) {
-        setRowPitch(getVkAddress(), rowPitch != null ? rowPitch.getVkAddress() : VkPointer.getNullAddress());
+        setRowPitch(getVkAddress(), rowPitch != null ? rowPitch.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setArrayPitch(VkDeviceSize arrayPitch) {
-        setArrayPitch(getVkAddress(), arrayPitch != null ? arrayPitch.getVkAddress() : VkPointer.getNullAddress());
+        setArrayPitch(getVkAddress(), arrayPitch != null ? arrayPitch.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -105,7 +105,7 @@ public class VkSubresourceLayout extends VkObject {
 
     
     public void setDepthPitch(VkDeviceSize depthPitch) {
-        setDepthPitch(getVkAddress(), depthPitch != null ? depthPitch.getVkAddress() : VkPointer.getNullAddress());
+        setDepthPitch(getVkAddress(), depthPitch != null ? depthPitch.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -157,7 +157,11 @@ public class VkSubresourceLayout extends VkObject {
 
         @Override
         public VkSubresourceLayout get(int i){
-            return new VkSubresourceLayout(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSubresourceLayout(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -200,6 +204,19 @@ public class VkSubresourceLayout extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -208,6 +225,10 @@ public class VkSubresourceLayout extends VkObject {
             @Override
             public VkSubresourceLayout.Pointer get(int i){
                 return new VkSubresourceLayout.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

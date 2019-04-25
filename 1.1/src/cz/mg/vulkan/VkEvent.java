@@ -52,7 +52,11 @@ public class VkEvent extends VkNonDispatchableHandle {
 
         @Override
         public VkEvent get(int i){
-            return new VkEvent(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkEvent(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

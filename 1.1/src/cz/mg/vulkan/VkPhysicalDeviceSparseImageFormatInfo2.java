@@ -22,7 +22,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setType(VkImageType type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddress());
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -98,7 +98,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setSamples(VkSampleCountFlagBits samples) {
-        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddress());
+        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -119,7 +119,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setUsage(VkImageUsageFlags usage) {
-        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getNullAddress());
+        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -140,7 +140,7 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
 
     
     public void setTiling(VkImageTiling tiling) {
-        setTiling(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.getNullAddress());
+        setTiling(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -237,6 +237,19 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -245,6 +258,10 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
             @Override
             public VkPhysicalDeviceSparseImageFormatInfo2.Pointer get(int i){
                 return new VkPhysicalDeviceSparseImageFormatInfo2.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

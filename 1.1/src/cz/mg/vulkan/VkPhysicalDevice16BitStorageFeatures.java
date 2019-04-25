@@ -21,7 +21,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     
     public void setStorageBuffer16BitAccess(VkBool32 storageBuffer16BitAccess) {
-        setStorageBuffer16BitAccess(getVkAddress(), storageBuffer16BitAccess != null ? storageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddress());
+        setStorageBuffer16BitAccess(getVkAddress(), storageBuffer16BitAccess != null ? storageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -76,7 +76,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     
     public void setUniformAndStorageBuffer16BitAccess(VkBool32 uniformAndStorageBuffer16BitAccess) {
-        setUniformAndStorageBuffer16BitAccess(getVkAddress(), uniformAndStorageBuffer16BitAccess != null ? uniformAndStorageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddress());
+        setUniformAndStorageBuffer16BitAccess(getVkAddress(), uniformAndStorageBuffer16BitAccess != null ? uniformAndStorageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -97,7 +97,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     
     public void setStoragePushConstant16(VkBool32 storagePushConstant16) {
-        setStoragePushConstant16(getVkAddress(), storagePushConstant16 != null ? storagePushConstant16.getVkAddress() : VkPointer.getNullAddress());
+        setStoragePushConstant16(getVkAddress(), storagePushConstant16 != null ? storagePushConstant16.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -118,7 +118,7 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
     
     public void setStorageInputOutput16(VkBool32 storageInputOutput16) {
-        setStorageInputOutput16(getVkAddress(), storageInputOutput16 != null ? storageInputOutput16.getVkAddress() : VkPointer.getNullAddress());
+        setStorageInputOutput16(getVkAddress(), storageInputOutput16 != null ? storageInputOutput16.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -170,7 +170,11 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
         @Override
         public VkPhysicalDevice16BitStorageFeatures get(int i){
-            return new VkPhysicalDevice16BitStorageFeatures(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPhysicalDevice16BitStorageFeatures(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -213,6 +217,19 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -221,6 +238,10 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
             @Override
             public VkPhysicalDevice16BitStorageFeatures.Pointer get(int i){
                 return new VkPhysicalDevice16BitStorageFeatures.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

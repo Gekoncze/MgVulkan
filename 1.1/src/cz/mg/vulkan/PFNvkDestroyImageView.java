@@ -23,7 +23,7 @@ public class PFNvkDestroyImageView extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkImageView imageView, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), imageView != null ? imageView.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), imageView != null ? imageView.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     protected static native void call(long vkaddress, long device, long imageView, long pAllocator);

@@ -16,7 +16,14 @@ jlong Java_cz_mg_vulkan_VkPointer_sizeof(JNIEnv* env, jclass jc)
     return sizeof(void*);
 }
 
-jlong Java_cz_mg_vulkan_VkPointer_getValue(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPointer_plus(JNIEnv* env, jclass jc, jlong address, jlong offset)
+{
+    (void)env;
+    (void)jc;
+    return jniPointerToLong(jniLongToPointer(address) + offset);
+}
+
+jlong Java_cz_mg_vulkan_VkPointer_getValueNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +31,7 @@ jlong Java_cz_mg_vulkan_VkPointer_getValue(JNIEnv* env, jclass jc, jlong address
     return jniPointerToLong(*pointerAddress);
 }
 
-void Java_cz_mg_vulkan_VkPointer_setValue(JNIEnv* env, jclass jc, jlong address, jlong value)
+void Java_cz_mg_vulkan_VkPointer_setValueNative(JNIEnv* env, jclass jc, jlong address, jlong value)
 {
     (void)env;
     (void)jc;
@@ -32,7 +39,7 @@ void Java_cz_mg_vulkan_VkPointer_setValue(JNIEnv* env, jclass jc, jlong address,
     *pointerAddress = jniLongToPointer(value);
 }
 
-jlong Java_cz_mg_vulkan_VkPointer_getNullValue(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkPointer_getNullValueNative(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
@@ -41,7 +48,7 @@ jlong Java_cz_mg_vulkan_VkPointer_getNullValue(JNIEnv* env, jclass jc)
 
 void* null;
 
-jlong Java_cz_mg_vulkan_VkPointer_getNullAddress(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkPointer_getNullAddressNative(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;
@@ -51,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPointer_getNullAddress(JNIEnv* env, jclass jc)
 
 void* sink;
 
-jlong Java_cz_mg_vulkan_VkPointer_getSinkAddress(JNIEnv* env, jclass jc)
+jlong Java_cz_mg_vulkan_VkPointer_getSinkAddressNative(JNIEnv* env, jclass jc)
 {
     (void)env;
     (void)jc;

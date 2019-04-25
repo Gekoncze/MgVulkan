@@ -23,7 +23,7 @@ public class PFNvkImportSemaphoreFdKHR extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkImportSemaphoreFdInfoKHR pImportSemaphoreFdInfo, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pImportSemaphoreFdInfo != null ? pImportSemaphoreFdInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pImportSemaphoreFdInfo != null ? pImportSemaphoreFdInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
     protected static native void call(long vkaddress, long device, long pImportSemaphoreFdInfo, long rval);

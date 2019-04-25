@@ -22,7 +22,7 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
 
     
     public void setFlags(VkDescriptorUpdateTemplateCreateFlagsKHR flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
 
     
     public void setDescriptorUpdateEntryCount(VkUInt32 descriptorUpdateEntryCount) {
-        setDescriptorUpdateEntryCount(getVkAddress(), descriptorUpdateEntryCount != null ? descriptorUpdateEntryCount.getVkAddress() : VkPointer.getNullAddress());
+        setDescriptorUpdateEntryCount(getVkAddress(), descriptorUpdateEntryCount != null ? descriptorUpdateEntryCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -111,7 +111,7 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
 
     
     public void setTemplateType(VkDescriptorUpdateTemplateTypeKHR templateType) {
-        setTemplateType(getVkAddress(), templateType != null ? templateType.getVkAddress() : VkPointer.getNullAddress());
+        setTemplateType(getVkAddress(), templateType != null ? templateType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -132,7 +132,7 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
 
     
     public void setDescriptorSetLayout(VkDescriptorSetLayout descriptorSetLayout) {
-        setDescriptorSetLayout(getVkAddress(), descriptorSetLayout != null ? descriptorSetLayout.getVkAddress() : VkPointer.getNullAddress());
+        setDescriptorSetLayout(getVkAddress(), descriptorSetLayout != null ? descriptorSetLayout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -145,7 +145,7 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
 
     
     public void setPipelineBindPoint(VkPipelineBindPoint pipelineBindPoint) {
-        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddress());
+        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -166,7 +166,7 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
 
     
     public void setPipelineLayout(VkPipelineLayout pipelineLayout) {
-        setPipelineLayout(getVkAddress(), pipelineLayout != null ? pipelineLayout.getVkAddress() : VkPointer.getNullAddress());
+        setPipelineLayout(getVkAddress(), pipelineLayout != null ? pipelineLayout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -179,7 +179,7 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
 
     
     public void setSet(VkUInt32 set) {
-        setSet(getVkAddress(), set != null ? set.getVkAddress() : VkPointer.getNullAddress());
+        setSet(getVkAddress(), set != null ? set.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -276,6 +276,19 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -284,6 +297,10 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
             @Override
             public VkDescriptorUpdateTemplateCreateInfoKHR.Pointer get(int i){
                 return new VkDescriptorUpdateTemplateCreateInfoKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

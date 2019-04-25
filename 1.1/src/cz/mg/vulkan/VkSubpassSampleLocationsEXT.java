@@ -21,7 +21,7 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
 
     
     public void setSubpassIndex(VkUInt32 subpassIndex) {
-        setSubpassIndex(getVkAddress(), subpassIndex != null ? subpassIndex.getVkAddress() : VkPointer.getNullAddress());
+        setSubpassIndex(getVkAddress(), subpassIndex != null ? subpassIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
 
     
     public void setSampleLocationsInfo(VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddress());
+        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -86,7 +86,11 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
 
         @Override
         public VkSubpassSampleLocationsEXT get(int i){
-            return new VkSubpassSampleLocationsEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSubpassSampleLocationsEXT(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -129,6 +133,19 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -137,6 +154,10 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
             @Override
             public VkSubpassSampleLocationsEXT.Pointer get(int i){
                 return new VkSubpassSampleLocationsEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

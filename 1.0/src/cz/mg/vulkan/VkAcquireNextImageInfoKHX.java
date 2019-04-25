@@ -22,7 +22,7 @@ public class VkAcquireNextImageInfoKHX extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkAcquireNextImageInfoKHX extends VkObject {
 
     
     public void setSwapchain(VkSwapchainKHR swapchain) {
-        setSwapchain(getVkAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddress());
+        setSwapchain(getVkAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -69,7 +69,7 @@ public class VkAcquireNextImageInfoKHX extends VkObject {
 
     
     public void setTimeout(VkUInt64 timeout) {
-        setTimeout(getVkAddress(), timeout != null ? timeout.getVkAddress() : VkPointer.getNullAddress());
+        setTimeout(getVkAddress(), timeout != null ? timeout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -90,7 +90,7 @@ public class VkAcquireNextImageInfoKHX extends VkObject {
 
     
     public void setSemaphore(VkSemaphore semaphore) {
-        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddress());
+        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -103,7 +103,7 @@ public class VkAcquireNextImageInfoKHX extends VkObject {
 
     
     public void setFence(VkFence fence) {
-        setFence(getVkAddress(), fence != null ? fence.getVkAddress() : VkPointer.getNullAddress());
+        setFence(getVkAddress(), fence != null ? fence.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -116,7 +116,7 @@ public class VkAcquireNextImageInfoKHX extends VkObject {
 
     
     public void setDeviceMask(VkUInt32 deviceMask) {
-        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddress());
+        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -213,6 +213,19 @@ public class VkAcquireNextImageInfoKHX extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -221,6 +234,10 @@ public class VkAcquireNextImageInfoKHX extends VkObject {
             @Override
             public VkAcquireNextImageInfoKHX.Pointer get(int i){
                 return new VkAcquireNextImageInfoKHX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

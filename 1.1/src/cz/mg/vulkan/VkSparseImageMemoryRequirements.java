@@ -21,7 +21,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
     
     public void setFormatProperties(VkSparseImageFormatProperties formatProperties) {
-        setFormatProperties(getVkAddress(), formatProperties != null ? formatProperties.getVkAddress() : VkPointer.getNullAddress());
+        setFormatProperties(getVkAddress(), formatProperties != null ? formatProperties.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -34,7 +34,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
     
     public void setImageMipTailFirstLod(VkUInt32 imageMipTailFirstLod) {
-        setImageMipTailFirstLod(getVkAddress(), imageMipTailFirstLod != null ? imageMipTailFirstLod.getVkAddress() : VkPointer.getNullAddress());
+        setImageMipTailFirstLod(getVkAddress(), imageMipTailFirstLod != null ? imageMipTailFirstLod.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
     
     public void setImageMipTailSize(VkDeviceSize imageMipTailSize) {
-        setImageMipTailSize(getVkAddress(), imageMipTailSize != null ? imageMipTailSize.getVkAddress() : VkPointer.getNullAddress());
+        setImageMipTailSize(getVkAddress(), imageMipTailSize != null ? imageMipTailSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -76,7 +76,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
     
     public void setImageMipTailOffset(VkDeviceSize imageMipTailOffset) {
-        setImageMipTailOffset(getVkAddress(), imageMipTailOffset != null ? imageMipTailOffset.getVkAddress() : VkPointer.getNullAddress());
+        setImageMipTailOffset(getVkAddress(), imageMipTailOffset != null ? imageMipTailOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -97,7 +97,7 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
     
     public void setImageMipTailStride(VkDeviceSize imageMipTailStride) {
-        setImageMipTailStride(getVkAddress(), imageMipTailStride != null ? imageMipTailStride.getVkAddress() : VkPointer.getNullAddress());
+        setImageMipTailStride(getVkAddress(), imageMipTailStride != null ? imageMipTailStride.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -149,7 +149,11 @@ public class VkSparseImageMemoryRequirements extends VkObject {
 
         @Override
         public VkSparseImageMemoryRequirements get(int i){
-            return new VkSparseImageMemoryRequirements(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSparseImageMemoryRequirements(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -192,6 +196,19 @@ public class VkSparseImageMemoryRequirements extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -200,6 +217,10 @@ public class VkSparseImageMemoryRequirements extends VkObject {
             @Override
             public VkSparseImageMemoryRequirements.Pointer get(int i){
                 return new VkSparseImageMemoryRequirements.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

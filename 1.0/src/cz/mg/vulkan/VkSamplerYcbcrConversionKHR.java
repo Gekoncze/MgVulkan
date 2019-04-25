@@ -52,7 +52,11 @@ public class VkSamplerYcbcrConversionKHR extends VkNonDispatchableHandle {
 
         @Override
         public VkSamplerYcbcrConversionKHR get(int i){
-            return new VkSamplerYcbcrConversionKHR(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSamplerYcbcrConversionKHR(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

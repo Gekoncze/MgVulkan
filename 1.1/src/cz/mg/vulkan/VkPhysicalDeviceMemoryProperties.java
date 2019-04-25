@@ -21,7 +21,7 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
 
     
     public void setMemoryTypeCount(VkUInt32 memoryTypeCount) {
-        setMemoryTypeCount(getVkAddress(), memoryTypeCount != null ? memoryTypeCount.getVkAddress() : VkPointer.getNullAddress());
+        setMemoryTypeCount(getVkAddress(), memoryTypeCount != null ? memoryTypeCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
 
     
     public void setMemoryHeapCount(VkUInt32 memoryHeapCount) {
-        setMemoryHeapCount(getVkAddress(), memoryHeapCount != null ? memoryHeapCount.getVkAddress() : VkPointer.getNullAddress());
+        setMemoryHeapCount(getVkAddress(), memoryHeapCount != null ? memoryHeapCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -120,7 +120,11 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
 
         @Override
         public VkPhysicalDeviceMemoryProperties get(int i){
-            return new VkPhysicalDeviceMemoryProperties(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPhysicalDeviceMemoryProperties(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -163,6 +167,19 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -171,6 +188,10 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
             @Override
             public VkPhysicalDeviceMemoryProperties.Pointer get(int i){
                 return new VkPhysicalDeviceMemoryProperties.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

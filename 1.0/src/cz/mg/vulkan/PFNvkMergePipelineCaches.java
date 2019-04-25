@@ -23,7 +23,7 @@ public class PFNvkMergePipelineCaches extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkPipelineCache dstCache, VkUInt32 srcCacheCount, VkPipelineCache pSrcCaches, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), dstCache != null ? dstCache.getVkAddress() : VkPointer.getNullAddress(), srcCacheCount != null ? srcCacheCount.getVkAddress() : VkPointer.getNullAddress(), pSrcCaches != null ? pSrcCaches.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), dstCache != null ? dstCache.getVkAddress() : VkPointer.getNullAddressNative(), srcCacheCount != null ? srcCacheCount.getVkAddress() : VkPointer.getNullAddressNative(), pSrcCaches != null ? pSrcCaches.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
     protected static native void call(long vkaddress, long device, long dstCache, long srcCacheCount, long pSrcCaches, long rval);

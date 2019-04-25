@@ -21,7 +21,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setShaderStageMask(VkShaderStageFlags shaderStageMask) {
-        setShaderStageMask(getVkAddress(), shaderStageMask != null ? shaderStageMask.getVkAddress() : VkPointer.getNullAddress());
+        setShaderStageMask(getVkAddress(), shaderStageMask != null ? shaderStageMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setResourceUsage(VkShaderResourceUsageAMD resourceUsage) {
-        setResourceUsage(getVkAddress(), resourceUsage != null ? resourceUsage.getVkAddress() : VkPointer.getNullAddress());
+        setResourceUsage(getVkAddress(), resourceUsage != null ? resourceUsage.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setNumPhysicalVgprs(VkUInt32 numPhysicalVgprs) {
-        setNumPhysicalVgprs(getVkAddress(), numPhysicalVgprs != null ? numPhysicalVgprs.getVkAddress() : VkPointer.getNullAddress());
+        setNumPhysicalVgprs(getVkAddress(), numPhysicalVgprs != null ? numPhysicalVgprs.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -76,7 +76,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setNumPhysicalSgprs(VkUInt32 numPhysicalSgprs) {
-        setNumPhysicalSgprs(getVkAddress(), numPhysicalSgprs != null ? numPhysicalSgprs.getVkAddress() : VkPointer.getNullAddress());
+        setNumPhysicalSgprs(getVkAddress(), numPhysicalSgprs != null ? numPhysicalSgprs.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -97,7 +97,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setNumAvailableVgprs(VkUInt32 numAvailableVgprs) {
-        setNumAvailableVgprs(getVkAddress(), numAvailableVgprs != null ? numAvailableVgprs.getVkAddress() : VkPointer.getNullAddress());
+        setNumAvailableVgprs(getVkAddress(), numAvailableVgprs != null ? numAvailableVgprs.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -118,7 +118,7 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
     
     public void setNumAvailableSgprs(VkUInt32 numAvailableSgprs) {
-        setNumAvailableSgprs(getVkAddress(), numAvailableSgprs != null ? numAvailableSgprs.getVkAddress() : VkPointer.getNullAddress());
+        setNumAvailableSgprs(getVkAddress(), numAvailableSgprs != null ? numAvailableSgprs.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -183,7 +183,11 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
         @Override
         public VkShaderStatisticsInfoAMD get(int i){
-            return new VkShaderStatisticsInfoAMD(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkShaderStatisticsInfoAMD(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -226,6 +230,19 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -234,6 +251,10 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
             @Override
             public VkShaderStatisticsInfoAMD.Pointer get(int i){
                 return new VkShaderStatisticsInfoAMD.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -21,16 +21,16 @@ public class VkChar extends VkObject {
     }
 
     public byte getValue(){
-        return getValue(getVkAddress());
+        return getValueNative(getVkAddress());
     }
 
     public void setValue(byte value){
-        setValue(getVkAddress(), value);
+        setValueNative(getVkAddress(), value);
     }
 
     public static native long sizeof();
-    protected static native byte getValue(long vkaddress);
-    protected static native void setValue(long vkaddress, byte value);
+    protected static native byte getValueNative(long vkaddress);
+    protected static native void setValueNative(long vkaddress, byte value);
 
     @Override
     public String toString() {
@@ -60,7 +60,18 @@ public class VkChar extends VkObject {
             this.count = count;
         }
 
+        public Array(byte... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+        }
 
+        public byte getValueAt(int i){
+            return getValueNative(addressAt(i));
+        }
+
+        public void setValueAt(int i, byte value){
+            setValueNative(addressAt(i), value);
+        }
 
 
 
@@ -71,7 +82,11 @@ public class VkChar extends VkObject {
 
         @Override
         public VkChar get(int i){
-            return new VkChar(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkChar(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -114,6 +129,19 @@ public class VkChar extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -122,6 +150,10 @@ public class VkChar extends VkObject {
             @Override
             public VkChar.Pointer get(int i){
                 return new VkChar.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

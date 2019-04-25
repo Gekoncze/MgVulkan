@@ -22,7 +22,7 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
 
     
     public void setObjectType(VkObjectType objectType) {
-        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddress());
+        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
 
     
     public void setObjectHandle(VkUInt64 objectHandle) {
-        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.getNullAddress());
+        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -195,6 +195,19 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -203,6 +216,10 @@ public class VkDebugUtilsObjectNameInfoEXT extends VkObject {
             @Override
             public VkDebugUtilsObjectNameInfoEXT.Pointer get(int i){
                 return new VkDebugUtilsObjectNameInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

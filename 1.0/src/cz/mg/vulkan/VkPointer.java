@@ -21,18 +21,19 @@ public class VkPointer extends VkObject {
     }
 
     public long getValue() {
-        return getValue(getVkAddress());
+        return getValueNative(getVkAddress());
     }
 
     public void setValue(long value) {
-        setValue(getVkAddress(), value);
+        setValueNative(getVkAddress(), value);
     }
 
     public static native long sizeof();
-    private static native long getValue(long vkaddress);
-    private static native void setValue(long vkaddress, long value);
-    public static native long getNullAddress();
-    public static native long getSinkAddress();
+    public static native long plus(long address, long offset);
+    protected static native long getValueNative(long vkaddress);
+    protected static native void setValueNative(long vkaddress, long value);
+    protected static native long getNullAddressNative();
+    protected static native long getSinkAddressNative();
 
     @Override
     public String toString() {
@@ -62,7 +63,18 @@ public class VkPointer extends VkObject {
             this.count = count;
         }
 
+        public Array(long... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+        }
+        
+        public long getValueAt(int i){
+            return getValueNative(addressAt(i));
+        }
 
+        public void setValueAt(int i, long value){
+            setValueNative(addressAt(i), value);
+        }
 
 
 
@@ -73,7 +85,11 @@ public class VkPointer extends VkObject {
 
         @Override
         public VkPointer get(int i){
-            return new VkPointer(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPointer(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

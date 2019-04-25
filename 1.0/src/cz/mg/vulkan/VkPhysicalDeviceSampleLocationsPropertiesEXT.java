@@ -21,7 +21,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     
     public void setSampleLocationSampleCounts(VkSampleCountFlags sampleLocationSampleCounts) {
-        setSampleLocationSampleCounts(getVkAddress(), sampleLocationSampleCounts != null ? sampleLocationSampleCounts.getVkAddress() : VkPointer.getNullAddress());
+        setSampleLocationSampleCounts(getVkAddress(), sampleLocationSampleCounts != null ? sampleLocationSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -76,7 +76,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     
     public void setMaxSampleLocationGridSize(VkExtent2D maxSampleLocationGridSize) {
-        setMaxSampleLocationGridSize(getVkAddress(), maxSampleLocationGridSize != null ? maxSampleLocationGridSize.getVkAddress() : VkPointer.getNullAddress());
+        setMaxSampleLocationGridSize(getVkAddress(), maxSampleLocationGridSize != null ? maxSampleLocationGridSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -102,7 +102,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     
     public void setSampleLocationSubPixelBits(VkUInt32 sampleLocationSubPixelBits) {
-        setSampleLocationSubPixelBits(getVkAddress(), sampleLocationSubPixelBits != null ? sampleLocationSubPixelBits.getVkAddress() : VkPointer.getNullAddress());
+        setSampleLocationSubPixelBits(getVkAddress(), sampleLocationSubPixelBits != null ? sampleLocationSubPixelBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -123,7 +123,7 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
     
     public void setVariableSampleLocations(VkBool32 variableSampleLocations) {
-        setVariableSampleLocations(getVkAddress(), variableSampleLocations != null ? variableSampleLocations.getVkAddress() : VkPointer.getNullAddress());
+        setVariableSampleLocations(getVkAddress(), variableSampleLocations != null ? variableSampleLocations.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -175,7 +175,11 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
 
         @Override
         public VkPhysicalDeviceSampleLocationsPropertiesEXT get(int i){
-            return new VkPhysicalDeviceSampleLocationsPropertiesEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPhysicalDeviceSampleLocationsPropertiesEXT(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -218,6 +222,19 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -226,6 +243,10 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
             @Override
             public VkPhysicalDeviceSampleLocationsPropertiesEXT.Pointer get(int i){
                 return new VkPhysicalDeviceSampleLocationsPropertiesEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

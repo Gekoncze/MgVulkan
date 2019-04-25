@@ -21,7 +21,7 @@ public class VkObjectTableEntryNVX extends VkObject {
 
     
     public void setType(VkObjectEntryTypeNVX type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddress());
+        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkObjectTableEntryNVX extends VkObject {
 
     
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -94,7 +94,11 @@ public class VkObjectTableEntryNVX extends VkObject {
 
         @Override
         public VkObjectTableEntryNVX get(int i){
-            return new VkObjectTableEntryNVX(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkObjectTableEntryNVX(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -137,6 +141,19 @@ public class VkObjectTableEntryNVX extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -145,6 +162,10 @@ public class VkObjectTableEntryNVX extends VkObject {
             @Override
             public VkObjectTableEntryNVX.Pointer get(int i){
                 return new VkObjectTableEntryNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

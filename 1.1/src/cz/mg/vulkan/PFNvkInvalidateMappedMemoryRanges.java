@@ -23,7 +23,7 @@ public class PFNvkInvalidateMappedMemoryRanges extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkUInt32 memoryRangeCount, VkMappedMemoryRange pMemoryRanges, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), memoryRangeCount != null ? memoryRangeCount.getVkAddress() : VkPointer.getNullAddress(), pMemoryRanges != null ? pMemoryRanges.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), memoryRangeCount != null ? memoryRangeCount.getVkAddress() : VkPointer.getNullAddressNative(), pMemoryRanges != null ? pMemoryRanges.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
     protected static native void call(long vkaddress, long device, long memoryRangeCount, long pMemoryRanges, long rval);

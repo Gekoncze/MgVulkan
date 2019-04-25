@@ -52,7 +52,11 @@ public class VkCommandBuffer extends VkDispatchableHandle {
 
         @Override
         public VkCommandBuffer get(int i){
-            return new VkCommandBuffer(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkCommandBuffer(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

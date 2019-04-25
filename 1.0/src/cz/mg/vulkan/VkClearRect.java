@@ -21,7 +21,7 @@ public class VkClearRect extends VkObject {
 
     
     public void setRect(VkRect2D rect) {
-        setRect(getVkAddress(), rect != null ? rect.getVkAddress() : VkPointer.getNullAddress());
+        setRect(getVkAddress(), rect != null ? rect.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -34,7 +34,7 @@ public class VkClearRect extends VkObject {
 
     
     public void setBaseArrayLayer(VkUInt32 baseArrayLayer) {
-        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.getNullAddress());
+        setBaseArrayLayer(getVkAddress(), baseArrayLayer != null ? baseArrayLayer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkClearRect extends VkObject {
 
     
     public void setLayerCount(VkUInt32 layerCount) {
-        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getNullAddress());
+        setLayerCount(getVkAddress(), layerCount != null ? layerCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -107,7 +107,11 @@ public class VkClearRect extends VkObject {
 
         @Override
         public VkClearRect get(int i){
-            return new VkClearRect(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkClearRect(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -150,6 +154,19 @@ public class VkClearRect extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -158,6 +175,10 @@ public class VkClearRect extends VkObject {
             @Override
             public VkClearRect.Pointer get(int i){
                 return new VkClearRect.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -21,7 +21,7 @@ public class VkPushConstantRange extends VkObject {
 
     
     public void setStageFlags(VkShaderStageFlags stageFlags) {
-        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddress());
+        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkPushConstantRange extends VkObject {
 
     
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkPushConstantRange extends VkObject {
 
     
     public void setSize(VkUInt32 size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -115,7 +115,11 @@ public class VkPushConstantRange extends VkObject {
 
         @Override
         public VkPushConstantRange get(int i){
-            return new VkPushConstantRange(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPushConstantRange(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -158,6 +162,19 @@ public class VkPushConstantRange extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -166,6 +183,10 @@ public class VkPushConstantRange extends VkObject {
             @Override
             public VkPushConstantRange.Pointer get(int i){
                 return new VkPushConstantRange.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

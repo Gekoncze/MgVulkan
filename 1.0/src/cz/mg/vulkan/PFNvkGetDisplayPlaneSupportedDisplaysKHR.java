@@ -23,7 +23,7 @@ public class PFNvkGetDisplayPlaneSupportedDisplaysKHR extends VkFunctionPointer 
     }
 
     public void call(VkPhysicalDevice physicalDevice, VkUInt32 planeIndex, VkUInt32 pDisplayCount, VkDisplayKHR pDisplays, VkResult rval){
-        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), planeIndex != null ? planeIndex.getVkAddress() : VkPointer.getNullAddress(), pDisplayCount != null ? pDisplayCount.getVkAddress() : VkPointer.NULL, pDisplays != null ? pDisplays.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
+        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), planeIndex != null ? planeIndex.getVkAddress() : VkPointer.getNullAddressNative(), pDisplayCount != null ? pDisplayCount.getVkAddress() : VkPointer.NULL, pDisplays != null ? pDisplays.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
     protected static native void call(long vkaddress, long physicalDevice, long planeIndex, long pDisplayCount, long pDisplays, long rval);

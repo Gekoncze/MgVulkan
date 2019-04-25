@@ -23,7 +23,7 @@ public class PFNvkDestroyPipeline extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkPipeline pipeline, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pipeline != null ? pipeline.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pipeline != null ? pipeline.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     protected static native void call(long vkaddress, long device, long pipeline, long pAllocator);

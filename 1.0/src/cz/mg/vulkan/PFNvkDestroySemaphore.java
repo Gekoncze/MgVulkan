@@ -23,7 +23,7 @@ public class PFNvkDestroySemaphore extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkSemaphore semaphore, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     protected static native void call(long vkaddress, long device, long semaphore, long pAllocator);

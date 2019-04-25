@@ -21,7 +21,7 @@ public class VkSubpassDescription extends VkObject {
 
     
     public void setFlags(VkSubpassDescriptionFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkSubpassDescription extends VkObject {
 
     
     public void setPipelineBindPoint(VkPipelineBindPoint pipelineBindPoint) {
-        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddress());
+        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkSubpassDescription extends VkObject {
 
     
     public void setInputAttachmentCount(VkUInt32 inputAttachmentCount) {
-        setInputAttachmentCount(getVkAddress(), inputAttachmentCount != null ? inputAttachmentCount.getVkAddress() : VkPointer.getNullAddress());
+        setInputAttachmentCount(getVkAddress(), inputAttachmentCount != null ? inputAttachmentCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -97,7 +97,7 @@ public class VkSubpassDescription extends VkObject {
 
     
     public void setColorAttachmentCount(VkUInt32 colorAttachmentCount) {
-        setColorAttachmentCount(getVkAddress(), colorAttachmentCount != null ? colorAttachmentCount.getVkAddress() : VkPointer.getNullAddress());
+        setColorAttachmentCount(getVkAddress(), colorAttachmentCount != null ? colorAttachmentCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -157,7 +157,7 @@ public class VkSubpassDescription extends VkObject {
 
     
     public void setPreserveAttachmentCount(VkUInt32 preserveAttachmentCount) {
-        setPreserveAttachmentCount(getVkAddress(), preserveAttachmentCount != null ? preserveAttachmentCount.getVkAddress() : VkPointer.getNullAddress());
+        setPreserveAttachmentCount(getVkAddress(), preserveAttachmentCount != null ? preserveAttachmentCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -222,7 +222,11 @@ public class VkSubpassDescription extends VkObject {
 
         @Override
         public VkSubpassDescription get(int i){
-            return new VkSubpassDescription(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSubpassDescription(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -265,6 +269,19 @@ public class VkSubpassDescription extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -273,6 +290,10 @@ public class VkSubpassDescription extends VkObject {
             @Override
             public VkSubpassDescription.Pointer get(int i){
                 return new VkSubpassDescription.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

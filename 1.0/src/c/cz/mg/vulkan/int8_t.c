@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkInt8_sizeof(JNIEnv* env, jclass jc)
     return sizeof(int8_t);
 }
 
-jbyte Java_cz_mg_vulkan_VkInt8_getValue(JNIEnv* env, jclass jc, jlong address)
+jbyte Java_cz_mg_vulkan_VkInt8_getValueNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -25,7 +25,7 @@ jbyte Java_cz_mg_vulkan_VkInt8_getValue(JNIEnv* env, jclass jc, jlong address)
     return value;
 }
 
-void Java_cz_mg_vulkan_VkInt8_setValue(JNIEnv* env, jclass jc, jlong address, jbyte value)
+void Java_cz_mg_vulkan_VkInt8_setValueNative(JNIEnv* env, jclass jc, jlong address, jbyte value)
 {
     (void)env;
     (void)jc;

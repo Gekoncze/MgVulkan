@@ -52,7 +52,11 @@ public class VkSemaphore extends VkNonDispatchableHandle {
 
         @Override
         public VkSemaphore get(int i){
-            return new VkSemaphore(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSemaphore(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

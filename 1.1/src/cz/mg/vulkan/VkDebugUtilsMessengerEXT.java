@@ -52,7 +52,11 @@ public class VkDebugUtilsMessengerEXT extends VkNonDispatchableHandle {
 
         @Override
         public VkDebugUtilsMessengerEXT get(int i){
-            return new VkDebugUtilsMessengerEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDebugUtilsMessengerEXT(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

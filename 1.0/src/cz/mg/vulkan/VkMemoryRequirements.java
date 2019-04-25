@@ -21,7 +21,7 @@ public class VkMemoryRequirements extends VkObject {
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress());
+        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkMemoryRequirements extends VkObject {
 
     
     public void setAlignment(VkDeviceSize alignment) {
-        setAlignment(getVkAddress(), alignment != null ? alignment.getVkAddress() : VkPointer.getNullAddress());
+        setAlignment(getVkAddress(), alignment != null ? alignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkMemoryRequirements extends VkObject {
 
     
     public void setMemoryTypeBits(VkUInt32 memoryTypeBits) {
-        setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getNullAddress());
+        setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -115,7 +115,11 @@ public class VkMemoryRequirements extends VkObject {
 
         @Override
         public VkMemoryRequirements get(int i){
-            return new VkMemoryRequirements(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkMemoryRequirements(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -158,6 +162,19 @@ public class VkMemoryRequirements extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -166,6 +183,10 @@ public class VkMemoryRequirements extends VkObject {
             @Override
             public VkMemoryRequirements.Pointer get(int i){
                 return new VkMemoryRequirements.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

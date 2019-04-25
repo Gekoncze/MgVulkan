@@ -22,7 +22,7 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
 
     
     public void setYcbcrModel(VkSamplerYcbcrModelConversionKHR ycbcrModel) {
-        setYcbcrModel(getVkAddress(), ycbcrModel != null ? ycbcrModel.getVkAddress() : VkPointer.getNullAddress());
+        setYcbcrModel(getVkAddress(), ycbcrModel != null ? ycbcrModel.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -98,7 +98,7 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
 
     
     public void setYcbcrRange(VkSamplerYcbcrRangeKHR ycbcrRange) {
-        setYcbcrRange(getVkAddress(), ycbcrRange != null ? ycbcrRange.getVkAddress() : VkPointer.getNullAddress());
+        setYcbcrRange(getVkAddress(), ycbcrRange != null ? ycbcrRange.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -119,7 +119,7 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
 
     
     public void setComponents(VkComponentMapping components) {
-        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getNullAddress());
+        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -132,7 +132,7 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
 
     
     public void setXChromaOffset(VkChromaLocationKHR xChromaOffset) {
-        setXChromaOffset(getVkAddress(), xChromaOffset != null ? xChromaOffset.getVkAddress() : VkPointer.getNullAddress());
+        setXChromaOffset(getVkAddress(), xChromaOffset != null ? xChromaOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -153,7 +153,7 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
 
     
     public void setYChromaOffset(VkChromaLocationKHR yChromaOffset) {
-        setYChromaOffset(getVkAddress(), yChromaOffset != null ? yChromaOffset.getVkAddress() : VkPointer.getNullAddress());
+        setYChromaOffset(getVkAddress(), yChromaOffset != null ? yChromaOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -174,7 +174,7 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
 
     
     public void setChromaFilter(VkFilter chromaFilter) {
-        setChromaFilter(getVkAddress(), chromaFilter != null ? chromaFilter.getVkAddress() : VkPointer.getNullAddress());
+        setChromaFilter(getVkAddress(), chromaFilter != null ? chromaFilter.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -195,7 +195,7 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
 
     
     public void setForceExplicitReconstruction(VkBool32 forceExplicitReconstruction) {
-        setForceExplicitReconstruction(getVkAddress(), forceExplicitReconstruction != null ? forceExplicitReconstruction.getVkAddress() : VkPointer.getNullAddress());
+        setForceExplicitReconstruction(getVkAddress(), forceExplicitReconstruction != null ? forceExplicitReconstruction.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -292,6 +292,19 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -300,6 +313,10 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
             @Override
             public VkSamplerYcbcrConversionCreateInfoKHR.Pointer get(int i){
                 return new VkSamplerYcbcrConversionCreateInfoKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

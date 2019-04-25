@@ -21,7 +21,7 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
 
     
     public void setMaxVariableDescriptorCount(VkUInt32 maxVariableDescriptorCount) {
-        setMaxVariableDescriptorCount(getVkAddress(), maxVariableDescriptorCount != null ? maxVariableDescriptorCount.getVkAddress() : VkPointer.getNullAddress());
+        setMaxVariableDescriptorCount(getVkAddress(), maxVariableDescriptorCount != null ? maxVariableDescriptorCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -107,7 +107,11 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
 
         @Override
         public VkDescriptorSetVariableDescriptorCountLayoutSupportEXT get(int i){
-            return new VkDescriptorSetVariableDescriptorCountLayoutSupportEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDescriptorSetVariableDescriptorCountLayoutSupportEXT(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -150,6 +154,19 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -158,6 +175,10 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
             @Override
             public VkDescriptorSetVariableDescriptorCountLayoutSupportEXT.Pointer get(int i){
                 return new VkDescriptorSetVariableDescriptorCountLayoutSupportEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

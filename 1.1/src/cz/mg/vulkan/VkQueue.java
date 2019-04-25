@@ -52,7 +52,11 @@ public class VkQueue extends VkDispatchableHandle {
 
         @Override
         public VkQueue get(int i){
-            return new VkQueue(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkQueue(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

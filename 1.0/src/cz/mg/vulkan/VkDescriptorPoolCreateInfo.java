@@ -22,7 +22,7 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setFlags(VkDescriptorPoolCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setMaxSets(VkUInt32 maxSets) {
-        setMaxSets(getVkAddress(), maxSets != null ? maxSets.getVkAddress() : VkPointer.getNullAddress());
+        setMaxSets(getVkAddress(), maxSets != null ? maxSets.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -98,7 +98,7 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
 
     
     public void setPoolSizeCount(VkUInt32 poolSizeCount) {
-        setPoolSizeCount(getVkAddress(), poolSizeCount != null ? poolSizeCount.getVkAddress() : VkPointer.getNullAddress());
+        setPoolSizeCount(getVkAddress(), poolSizeCount != null ? poolSizeCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -208,6 +208,19 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -216,6 +229,10 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
             @Override
             public VkDescriptorPoolCreateInfo.Pointer get(int i){
                 return new VkDescriptorPoolCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

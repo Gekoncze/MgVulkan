@@ -22,7 +22,7 @@ public class VkPipelineTessellationDomainOriginStateCreateInfoKHR extends VkObje
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkPipelineTessellationDomainOriginStateCreateInfoKHR extends VkObje
 
     
     public void setDomainOrigin(VkTessellationDomainOriginKHR domainOrigin) {
-        setDomainOrigin(getVkAddress(), domainOrigin != null ? domainOrigin.getVkAddress() : VkPointer.getNullAddress());
+        setDomainOrigin(getVkAddress(), domainOrigin != null ? domainOrigin.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -153,6 +153,19 @@ public class VkPipelineTessellationDomainOriginStateCreateInfoKHR extends VkObje
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -161,6 +174,10 @@ public class VkPipelineTessellationDomainOriginStateCreateInfoKHR extends VkObje
             @Override
             public VkPipelineTessellationDomainOriginStateCreateInfoKHR.Pointer get(int i){
                 return new VkPipelineTessellationDomainOriginStateCreateInfoKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

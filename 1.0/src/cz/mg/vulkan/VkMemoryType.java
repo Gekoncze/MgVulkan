@@ -21,7 +21,7 @@ public class VkMemoryType extends VkObject {
 
     
     public void setPropertyFlags(VkMemoryPropertyFlags propertyFlags) {
-        setPropertyFlags(getVkAddress(), propertyFlags != null ? propertyFlags.getVkAddress() : VkPointer.getNullAddress());
+        setPropertyFlags(getVkAddress(), propertyFlags != null ? propertyFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkMemoryType extends VkObject {
 
     
     public void setHeapIndex(VkUInt32 heapIndex) {
-        setHeapIndex(getVkAddress(), heapIndex != null ? heapIndex.getVkAddress() : VkPointer.getNullAddress());
+        setHeapIndex(getVkAddress(), heapIndex != null ? heapIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -94,7 +94,11 @@ public class VkMemoryType extends VkObject {
 
         @Override
         public VkMemoryType get(int i){
-            return new VkMemoryType(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkMemoryType(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -137,6 +141,19 @@ public class VkMemoryType extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -145,6 +162,10 @@ public class VkMemoryType extends VkObject {
             @Override
             public VkMemoryType.Pointer get(int i){
                 return new VkMemoryType.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

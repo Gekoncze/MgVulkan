@@ -21,7 +21,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
     
     public void setPresentID(VkUInt32 presentID) {
-        setPresentID(getVkAddress(), presentID != null ? presentID.getVkAddress() : VkPointer.getNullAddress());
+        setPresentID(getVkAddress(), presentID != null ? presentID.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
     
     public void setDesiredPresentTime(VkUInt64 desiredPresentTime) {
-        setDesiredPresentTime(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.getNullAddress());
+        setDesiredPresentTime(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
     
     public void setActualPresentTime(VkUInt64 actualPresentTime) {
-        setActualPresentTime(getVkAddress(), actualPresentTime != null ? actualPresentTime.getVkAddress() : VkPointer.getNullAddress());
+        setActualPresentTime(getVkAddress(), actualPresentTime != null ? actualPresentTime.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
     
     public void setEarliestPresentTime(VkUInt64 earliestPresentTime) {
-        setEarliestPresentTime(getVkAddress(), earliestPresentTime != null ? earliestPresentTime.getVkAddress() : VkPointer.getNullAddress());
+        setEarliestPresentTime(getVkAddress(), earliestPresentTime != null ? earliestPresentTime.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -105,7 +105,7 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
     
     public void setPresentMargin(VkUInt64 presentMargin) {
-        setPresentMargin(getVkAddress(), presentMargin != null ? presentMargin.getVkAddress() : VkPointer.getNullAddress());
+        setPresentMargin(getVkAddress(), presentMargin != null ? presentMargin.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -157,7 +157,11 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
 
         @Override
         public VkPastPresentationTimingGOOGLE get(int i){
-            return new VkPastPresentationTimingGOOGLE(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPastPresentationTimingGOOGLE(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -200,6 +204,19 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -208,6 +225,10 @@ public class VkPastPresentationTimingGOOGLE extends VkObject {
             @Override
             public VkPastPresentationTimingGOOGLE.Pointer get(int i){
                 return new VkPastPresentationTimingGOOGLE.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

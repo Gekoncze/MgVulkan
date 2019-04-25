@@ -52,7 +52,11 @@ public class VkPipeline extends VkNonDispatchableHandle {
 
         @Override
         public VkPipeline get(int i){
-            return new VkPipeline(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPipeline(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

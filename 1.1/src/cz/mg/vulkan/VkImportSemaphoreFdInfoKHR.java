@@ -22,7 +22,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
     
     public void setSemaphore(VkSemaphore semaphore) {
-        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddress());
+        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -69,7 +69,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
     
     public void setFlags(VkSemaphoreImportFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -90,7 +90,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
     
     public void setHandleType(VkExternalSemaphoreHandleTypeFlagBits handleType) {
-        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddress());
+        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -111,7 +111,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
     
     public void setFd(VkInt fd) {
-        setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getNullAddress());
+        setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -208,6 +208,19 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -216,6 +229,10 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
             @Override
             public VkImportSemaphoreFdInfoKHR.Pointer get(int i){
                 return new VkImportSemaphoreFdInfoKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

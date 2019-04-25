@@ -22,7 +22,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setCommandPool(VkCommandPool commandPool) {
-        setCommandPool(getVkAddress(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getNullAddress());
+        setCommandPool(getVkAddress(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -69,7 +69,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setLevel(VkCommandBufferLevel level) {
-        setLevel(getVkAddress(), level != null ? level.getVkAddress() : VkPointer.getNullAddress());
+        setLevel(getVkAddress(), level != null ? level.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -90,7 +90,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
     
     public void setCommandBufferCount(VkUInt32 commandBufferCount) {
-        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddress());
+        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -187,6 +187,19 @@ public class VkCommandBufferAllocateInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -195,6 +208,10 @@ public class VkCommandBufferAllocateInfo extends VkObject {
             @Override
             public VkCommandBufferAllocateInfo.Pointer get(int i){
                 return new VkCommandBufferAllocateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

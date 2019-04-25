@@ -22,7 +22,7 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
 
     
     public void setSampleLocationsEnable(VkBool32 sampleLocationsEnable) {
-        setSampleLocationsEnable(getVkAddress(), sampleLocationsEnable != null ? sampleLocationsEnable.getVkAddress() : VkPointer.getNullAddress());
+        setSampleLocationsEnable(getVkAddress(), sampleLocationsEnable != null ? sampleLocationsEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
 
     
     public void setSampleLocationsInfo(VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddress());
+        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -166,6 +166,19 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -174,6 +187,10 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
             @Override
             public VkPipelineSampleLocationsStateCreateInfoEXT.Pointer get(int i){
                 return new VkPipelineSampleLocationsStateCreateInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

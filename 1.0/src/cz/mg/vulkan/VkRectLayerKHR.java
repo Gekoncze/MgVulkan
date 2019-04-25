@@ -21,7 +21,7 @@ public class VkRectLayerKHR extends VkObject {
 
     
     public void setOffset(VkOffset2D offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -34,7 +34,7 @@ public class VkRectLayerKHR extends VkObject {
 
     
     public void setExtent(VkExtent2D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddress());
+        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -47,7 +47,7 @@ public class VkRectLayerKHR extends VkObject {
 
     
     public void setLayer(VkUInt32 layer) {
-        setLayer(getVkAddress(), layer != null ? layer.getVkAddress() : VkPointer.getNullAddress());
+        setLayer(getVkAddress(), layer != null ? layer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -99,7 +99,11 @@ public class VkRectLayerKHR extends VkObject {
 
         @Override
         public VkRectLayerKHR get(int i){
-            return new VkRectLayerKHR(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkRectLayerKHR(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -142,6 +146,19 @@ public class VkRectLayerKHR extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -150,6 +167,10 @@ public class VkRectLayerKHR extends VkObject {
             @Override
             public VkRectLayerKHR.Pointer get(int i){
                 return new VkRectLayerKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

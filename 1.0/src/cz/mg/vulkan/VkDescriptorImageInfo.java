@@ -21,7 +21,7 @@ public class VkDescriptorImageInfo extends VkObject {
 
     
     public void setSampler(VkSampler sampler) {
-        setSampler(getVkAddress(), sampler != null ? sampler.getVkAddress() : VkPointer.getNullAddress());
+        setSampler(getVkAddress(), sampler != null ? sampler.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -34,7 +34,7 @@ public class VkDescriptorImageInfo extends VkObject {
 
     
     public void setImageView(VkImageView imageView) {
-        setImageView(getVkAddress(), imageView != null ? imageView.getVkAddress() : VkPointer.getNullAddress());
+        setImageView(getVkAddress(), imageView != null ? imageView.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -47,7 +47,7 @@ public class VkDescriptorImageInfo extends VkObject {
 
     
     public void setImageLayout(VkImageLayout imageLayout) {
-        setImageLayout(getVkAddress(), imageLayout != null ? imageLayout.getVkAddress() : VkPointer.getNullAddress());
+        setImageLayout(getVkAddress(), imageLayout != null ? imageLayout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -99,7 +99,11 @@ public class VkDescriptorImageInfo extends VkObject {
 
         @Override
         public VkDescriptorImageInfo get(int i){
-            return new VkDescriptorImageInfo(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDescriptorImageInfo(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -142,6 +146,19 @@ public class VkDescriptorImageInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -150,6 +167,10 @@ public class VkDescriptorImageInfo extends VkObject {
             @Override
             public VkDescriptorImageInfo.Pointer get(int i){
                 return new VkDescriptorImageInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -21,7 +21,7 @@ public class VkViewportWScalingNV extends VkObject {
 
     
     public void setXcoeff(VkFloat xcoeff) {
-        setXcoeff(getVkAddress(), xcoeff != null ? xcoeff.getVkAddress() : VkPointer.getNullAddress());
+        setXcoeff(getVkAddress(), xcoeff != null ? xcoeff.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkViewportWScalingNV extends VkObject {
 
     
     public void setYcoeff(VkFloat ycoeff) {
-        setYcoeff(getVkAddress(), ycoeff != null ? ycoeff.getVkAddress() : VkPointer.getNullAddress());
+        setYcoeff(getVkAddress(), ycoeff != null ? ycoeff.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -94,7 +94,11 @@ public class VkViewportWScalingNV extends VkObject {
 
         @Override
         public VkViewportWScalingNV get(int i){
-            return new VkViewportWScalingNV(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkViewportWScalingNV(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -137,6 +141,19 @@ public class VkViewportWScalingNV extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -145,6 +162,10 @@ public class VkViewportWScalingNV extends VkObject {
             @Override
             public VkViewportWScalingNV.Pointer get(int i){
                 return new VkViewportWScalingNV.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

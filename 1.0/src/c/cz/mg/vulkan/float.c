@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkFloat_sizeof(JNIEnv* env, jclass jc)
     return sizeof(float);
 }
 
-jfloat Java_cz_mg_vulkan_VkFloat_getValue(JNIEnv* env, jclass jc, jlong address)
+jfloat Java_cz_mg_vulkan_VkFloat_getValueNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -25,7 +25,7 @@ jfloat Java_cz_mg_vulkan_VkFloat_getValue(JNIEnv* env, jclass jc, jlong address)
     return value;
 }
 
-void Java_cz_mg_vulkan_VkFloat_setValue(JNIEnv* env, jclass jc, jlong address, jfloat value)
+void Java_cz_mg_vulkan_VkFloat_setValueNative(JNIEnv* env, jclass jc, jlong address, jfloat value)
 {
     (void)env;
     (void)jc;

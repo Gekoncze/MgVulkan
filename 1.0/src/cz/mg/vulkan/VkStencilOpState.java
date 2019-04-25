@@ -21,7 +21,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setFailOp(VkStencilOp failOp) {
-        setFailOp(getVkAddress(), failOp != null ? failOp.getVkAddress() : VkPointer.getNullAddress());
+        setFailOp(getVkAddress(), failOp != null ? failOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setPassOp(VkStencilOp passOp) {
-        setPassOp(getVkAddress(), passOp != null ? passOp.getVkAddress() : VkPointer.getNullAddress());
+        setPassOp(getVkAddress(), passOp != null ? passOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setDepthFailOp(VkStencilOp depthFailOp) {
-        setDepthFailOp(getVkAddress(), depthFailOp != null ? depthFailOp.getVkAddress() : VkPointer.getNullAddress());
+        setDepthFailOp(getVkAddress(), depthFailOp != null ? depthFailOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setCompareOp(VkCompareOp compareOp) {
-        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddress());
+        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -105,7 +105,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setCompareMask(VkUInt32 compareMask) {
-        setCompareMask(getVkAddress(), compareMask != null ? compareMask.getVkAddress() : VkPointer.getNullAddress());
+        setCompareMask(getVkAddress(), compareMask != null ? compareMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -126,7 +126,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setWriteMask(VkUInt32 writeMask) {
-        setWriteMask(getVkAddress(), writeMask != null ? writeMask.getVkAddress() : VkPointer.getNullAddress());
+        setWriteMask(getVkAddress(), writeMask != null ? writeMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -147,7 +147,7 @@ public class VkStencilOpState extends VkObject {
 
     
     public void setReference(VkUInt32 reference) {
-        setReference(getVkAddress(), reference != null ? reference.getVkAddress() : VkPointer.getNullAddress());
+        setReference(getVkAddress(), reference != null ? reference.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -199,7 +199,11 @@ public class VkStencilOpState extends VkObject {
 
         @Override
         public VkStencilOpState get(int i){
-            return new VkStencilOpState(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkStencilOpState(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -242,6 +246,19 @@ public class VkStencilOpState extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -250,6 +267,10 @@ public class VkStencilOpState extends VkObject {
             @Override
             public VkStencilOpState.Pointer get(int i){
                 return new VkStencilOpState.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

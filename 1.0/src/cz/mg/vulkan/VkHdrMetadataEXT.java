@@ -21,7 +21,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setDisplayPrimaryRed(VkXYColorEXT displayPrimaryRed) {
-        setDisplayPrimaryRed(getVkAddress(), displayPrimaryRed != null ? displayPrimaryRed.getVkAddress() : VkPointer.getNullAddress());
+        setDisplayPrimaryRed(getVkAddress(), displayPrimaryRed != null ? displayPrimaryRed.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -68,7 +68,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setDisplayPrimaryGreen(VkXYColorEXT displayPrimaryGreen) {
-        setDisplayPrimaryGreen(getVkAddress(), displayPrimaryGreen != null ? displayPrimaryGreen.getVkAddress() : VkPointer.getNullAddress());
+        setDisplayPrimaryGreen(getVkAddress(), displayPrimaryGreen != null ? displayPrimaryGreen.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -81,7 +81,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setDisplayPrimaryBlue(VkXYColorEXT displayPrimaryBlue) {
-        setDisplayPrimaryBlue(getVkAddress(), displayPrimaryBlue != null ? displayPrimaryBlue.getVkAddress() : VkPointer.getNullAddress());
+        setDisplayPrimaryBlue(getVkAddress(), displayPrimaryBlue != null ? displayPrimaryBlue.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -94,7 +94,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setWhitePoint(VkXYColorEXT whitePoint) {
-        setWhitePoint(getVkAddress(), whitePoint != null ? whitePoint.getVkAddress() : VkPointer.getNullAddress());
+        setWhitePoint(getVkAddress(), whitePoint != null ? whitePoint.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -107,7 +107,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setMaxLuminance(VkFloat maxLuminance) {
-        setMaxLuminance(getVkAddress(), maxLuminance != null ? maxLuminance.getVkAddress() : VkPointer.getNullAddress());
+        setMaxLuminance(getVkAddress(), maxLuminance != null ? maxLuminance.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -128,7 +128,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setMinLuminance(VkFloat minLuminance) {
-        setMinLuminance(getVkAddress(), minLuminance != null ? minLuminance.getVkAddress() : VkPointer.getNullAddress());
+        setMinLuminance(getVkAddress(), minLuminance != null ? minLuminance.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -149,7 +149,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setMaxContentLightLevel(VkFloat maxContentLightLevel) {
-        setMaxContentLightLevel(getVkAddress(), maxContentLightLevel != null ? maxContentLightLevel.getVkAddress() : VkPointer.getNullAddress());
+        setMaxContentLightLevel(getVkAddress(), maxContentLightLevel != null ? maxContentLightLevel.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -170,7 +170,7 @@ public class VkHdrMetadataEXT extends VkObject {
 
     
     public void setMaxFrameAverageLightLevel(VkFloat maxFrameAverageLightLevel) {
-        setMaxFrameAverageLightLevel(getVkAddress(), maxFrameAverageLightLevel != null ? maxFrameAverageLightLevel.getVkAddress() : VkPointer.getNullAddress());
+        setMaxFrameAverageLightLevel(getVkAddress(), maxFrameAverageLightLevel != null ? maxFrameAverageLightLevel.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -222,7 +222,11 @@ public class VkHdrMetadataEXT extends VkObject {
 
         @Override
         public VkHdrMetadataEXT get(int i){
-            return new VkHdrMetadataEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkHdrMetadataEXT(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -265,6 +269,19 @@ public class VkHdrMetadataEXT extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -273,6 +290,10 @@ public class VkHdrMetadataEXT extends VkObject {
             @Override
             public VkHdrMetadataEXT.Pointer get(int i){
                 return new VkHdrMetadataEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

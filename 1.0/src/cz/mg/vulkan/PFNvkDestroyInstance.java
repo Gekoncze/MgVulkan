@@ -23,7 +23,7 @@ public class PFNvkDestroyInstance extends VkFunctionPointer {
     }
 
     public void call(VkInstance instance, VkAllocationCallbacks pAllocator){
-        call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     protected static native void call(long vkaddress, long instance, long pAllocator);

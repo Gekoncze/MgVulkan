@@ -22,7 +22,7 @@ public class VkDeviceGroupSubmitInfoKHX extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkDeviceGroupSubmitInfoKHX extends VkObject {
 
     
     public void setWaitSemaphoreCount(VkUInt32 waitSemaphoreCount) {
-        setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount != null ? waitSemaphoreCount.getVkAddress() : VkPointer.getNullAddress());
+        setWaitSemaphoreCount(getVkAddress(), waitSemaphoreCount != null ? waitSemaphoreCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -90,7 +90,7 @@ public class VkDeviceGroupSubmitInfoKHX extends VkObject {
 
     
     public void setCommandBufferCount(VkUInt32 commandBufferCount) {
-        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddress());
+        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -124,7 +124,7 @@ public class VkDeviceGroupSubmitInfoKHX extends VkObject {
 
     
     public void setSignalSemaphoreCount(VkUInt32 signalSemaphoreCount) {
-        setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount != null ? signalSemaphoreCount.getVkAddress() : VkPointer.getNullAddress());
+        setSignalSemaphoreCount(getVkAddress(), signalSemaphoreCount != null ? signalSemaphoreCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -234,6 +234,19 @@ public class VkDeviceGroupSubmitInfoKHX extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -242,6 +255,10 @@ public class VkDeviceGroupSubmitInfoKHX extends VkObject {
             @Override
             public VkDeviceGroupSubmitInfoKHX.Pointer get(int i){
                 return new VkDeviceGroupSubmitInfoKHX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

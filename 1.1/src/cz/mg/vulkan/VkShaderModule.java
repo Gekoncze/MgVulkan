@@ -52,7 +52,11 @@ public class VkShaderModule extends VkNonDispatchableHandle {
 
         @Override
         public VkShaderModule get(int i){
-            return new VkShaderModule(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkShaderModule(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

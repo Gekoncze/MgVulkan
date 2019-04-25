@@ -21,7 +21,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxExtent(VkExtent3D maxExtent) {
-        setMaxExtent(getVkAddress(), maxExtent != null ? maxExtent.getVkAddress() : VkPointer.getNullAddress());
+        setMaxExtent(getVkAddress(), maxExtent != null ? maxExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -34,7 +34,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxMipLevels(VkUInt32 maxMipLevels) {
-        setMaxMipLevels(getVkAddress(), maxMipLevels != null ? maxMipLevels.getVkAddress() : VkPointer.getNullAddress());
+        setMaxMipLevels(getVkAddress(), maxMipLevels != null ? maxMipLevels.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxArrayLayers(VkUInt32 maxArrayLayers) {
-        setMaxArrayLayers(getVkAddress(), maxArrayLayers != null ? maxArrayLayers.getVkAddress() : VkPointer.getNullAddress());
+        setMaxArrayLayers(getVkAddress(), maxArrayLayers != null ? maxArrayLayers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -76,7 +76,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setSampleCounts(VkSampleCountFlags sampleCounts) {
-        setSampleCounts(getVkAddress(), sampleCounts != null ? sampleCounts.getVkAddress() : VkPointer.getNullAddress());
+        setSampleCounts(getVkAddress(), sampleCounts != null ? sampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -97,7 +97,7 @@ public class VkImageFormatProperties extends VkObject {
 
     
     public void setMaxResourceSize(VkDeviceSize maxResourceSize) {
-        setMaxResourceSize(getVkAddress(), maxResourceSize != null ? maxResourceSize.getVkAddress() : VkPointer.getNullAddress());
+        setMaxResourceSize(getVkAddress(), maxResourceSize != null ? maxResourceSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -149,7 +149,11 @@ public class VkImageFormatProperties extends VkObject {
 
         @Override
         public VkImageFormatProperties get(int i){
-            return new VkImageFormatProperties(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkImageFormatProperties(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -192,6 +196,19 @@ public class VkImageFormatProperties extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -200,6 +217,10 @@ public class VkImageFormatProperties extends VkObject {
             @Override
             public VkImageFormatProperties.Pointer get(int i){
                 return new VkImageFormatProperties.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

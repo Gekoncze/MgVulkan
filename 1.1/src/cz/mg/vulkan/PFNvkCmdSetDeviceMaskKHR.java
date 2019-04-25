@@ -23,7 +23,7 @@ public class PFNvkCmdSetDeviceMaskKHR extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkUInt32 deviceMask){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddress());
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddressNative());
     }
 
     protected static native void call(long vkaddress, long commandBuffer, long deviceMask);

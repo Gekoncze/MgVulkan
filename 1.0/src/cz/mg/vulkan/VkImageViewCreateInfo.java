@@ -22,7 +22,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setFlags(VkImageViewCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress());
+        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -90,7 +90,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setViewType(VkImageViewType viewType) {
-        setViewType(getVkAddress(), viewType != null ? viewType.getVkAddress() : VkPointer.getNullAddress());
+        setViewType(getVkAddress(), viewType != null ? viewType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -111,7 +111,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -132,7 +132,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setComponents(VkComponentMapping components) {
-        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getNullAddress());
+        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -145,7 +145,7 @@ public class VkImageViewCreateInfo extends VkObject {
 
     
     public void setSubresourceRange(VkImageSubresourceRange subresourceRange) {
-        setSubresourceRange(getVkAddress(), subresourceRange != null ? subresourceRange.getVkAddress() : VkPointer.getNullAddress());
+        setSubresourceRange(getVkAddress(), subresourceRange != null ? subresourceRange.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -234,6 +234,19 @@ public class VkImageViewCreateInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -242,6 +255,10 @@ public class VkImageViewCreateInfo extends VkObject {
             @Override
             public VkImageViewCreateInfo.Pointer get(int i){
                 return new VkImageViewCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

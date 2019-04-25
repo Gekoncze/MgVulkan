@@ -21,7 +21,7 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setR(VkComponentSwizzle r) {
-        setR(getVkAddress(), r != null ? r.getVkAddress() : VkPointer.getNullAddress());
+        setR(getVkAddress(), r != null ? r.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setG(VkComponentSwizzle g) {
-        setG(getVkAddress(), g != null ? g.getVkAddress() : VkPointer.getNullAddress());
+        setG(getVkAddress(), g != null ? g.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setB(VkComponentSwizzle b) {
-        setB(getVkAddress(), b != null ? b.getVkAddress() : VkPointer.getNullAddress());
+        setB(getVkAddress(), b != null ? b.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkComponentMapping extends VkObject {
 
     
     public void setA(VkComponentSwizzle a) {
-        setA(getVkAddress(), a != null ? a.getVkAddress() : VkPointer.getNullAddress());
+        setA(getVkAddress(), a != null ? a.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -136,7 +136,11 @@ public class VkComponentMapping extends VkObject {
 
         @Override
         public VkComponentMapping get(int i){
-            return new VkComponentMapping(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkComponentMapping(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -179,6 +183,19 @@ public class VkComponentMapping extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -187,6 +204,10 @@ public class VkComponentMapping extends VkObject {
             @Override
             public VkComponentMapping.Pointer get(int i){
                 return new VkComponentMapping.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

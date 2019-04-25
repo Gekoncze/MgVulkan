@@ -21,7 +21,7 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
     
     public void setSubpass(VkUInt32 subpass) {
-        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getNullAddress());
+        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
     
     public void setInputAttachmentIndex(VkUInt32 inputAttachmentIndex) {
-        setInputAttachmentIndex(getVkAddress(), inputAttachmentIndex != null ? inputAttachmentIndex.getVkAddress() : VkPointer.getNullAddress());
+        setInputAttachmentIndex(getVkAddress(), inputAttachmentIndex != null ? inputAttachmentIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddress());
+        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -115,7 +115,11 @@ public class VkInputAttachmentAspectReference extends VkObject {
 
         @Override
         public VkInputAttachmentAspectReference get(int i){
-            return new VkInputAttachmentAspectReference(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkInputAttachmentAspectReference(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -158,6 +162,19 @@ public class VkInputAttachmentAspectReference extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -166,6 +183,10 @@ public class VkInputAttachmentAspectReference extends VkObject {
             @Override
             public VkInputAttachmentAspectReference.Pointer get(int i){
                 return new VkInputAttachmentAspectReference.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

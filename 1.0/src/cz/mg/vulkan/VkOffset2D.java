@@ -25,7 +25,7 @@ public class VkOffset2D extends VkObject {
 
     
     public void setX(VkInt32 x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -46,7 +46,7 @@ public class VkOffset2D extends VkObject {
 
     
     public void setY(VkInt32 y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -98,7 +98,11 @@ public class VkOffset2D extends VkObject {
 
         @Override
         public VkOffset2D get(int i){
-            return new VkOffset2D(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkOffset2D(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -141,6 +145,19 @@ public class VkOffset2D extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -149,6 +166,10 @@ public class VkOffset2D extends VkObject {
             @Override
             public VkOffset2D.Pointer get(int i){
                 return new VkOffset2D.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

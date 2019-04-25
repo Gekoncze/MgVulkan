@@ -21,7 +21,7 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
 
     
     public void setTokenType(VkIndirectCommandsTokenTypeNVX tokenType) {
-        setTokenType(getVkAddress(), tokenType != null ? tokenType.getVkAddress() : VkPointer.getNullAddress());
+        setTokenType(getVkAddress(), tokenType != null ? tokenType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
 
     
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress());
+        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -107,7 +107,11 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
 
         @Override
         public VkIndirectCommandsTokenNVX get(int i){
-            return new VkIndirectCommandsTokenNVX(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkIndirectCommandsTokenNVX(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -150,6 +154,19 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -158,6 +175,10 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
             @Override
             public VkIndirectCommandsTokenNVX.Pointer get(int i){
                 return new VkIndirectCommandsTokenNVX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

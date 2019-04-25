@@ -21,7 +21,7 @@ public class VkFormatProperties extends VkObject {
 
     
     public void setLinearTilingFeatures(VkFormatFeatureFlags linearTilingFeatures) {
-        setLinearTilingFeatures(getVkAddress(), linearTilingFeatures != null ? linearTilingFeatures.getVkAddress() : VkPointer.getNullAddress());
+        setLinearTilingFeatures(getVkAddress(), linearTilingFeatures != null ? linearTilingFeatures.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkFormatProperties extends VkObject {
 
     
     public void setOptimalTilingFeatures(VkFormatFeatureFlags optimalTilingFeatures) {
-        setOptimalTilingFeatures(getVkAddress(), optimalTilingFeatures != null ? optimalTilingFeatures.getVkAddress() : VkPointer.getNullAddress());
+        setOptimalTilingFeatures(getVkAddress(), optimalTilingFeatures != null ? optimalTilingFeatures.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkFormatProperties extends VkObject {
 
     
     public void setBufferFeatures(VkFormatFeatureFlags bufferFeatures) {
-        setBufferFeatures(getVkAddress(), bufferFeatures != null ? bufferFeatures.getVkAddress() : VkPointer.getNullAddress());
+        setBufferFeatures(getVkAddress(), bufferFeatures != null ? bufferFeatures.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -115,7 +115,11 @@ public class VkFormatProperties extends VkObject {
 
         @Override
         public VkFormatProperties get(int i){
-            return new VkFormatProperties(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkFormatProperties(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -158,6 +162,19 @@ public class VkFormatProperties extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -166,6 +183,10 @@ public class VkFormatProperties extends VkObject {
             @Override
             public VkFormatProperties.Pointer get(int i){
                 return new VkFormatProperties.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

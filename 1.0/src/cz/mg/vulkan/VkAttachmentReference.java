@@ -21,7 +21,7 @@ public class VkAttachmentReference extends VkObject {
 
     
     public void setAttachment(VkUInt32 attachment) {
-        setAttachment(getVkAddress(), attachment != null ? attachment.getVkAddress() : VkPointer.getNullAddress());
+        setAttachment(getVkAddress(), attachment != null ? attachment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkAttachmentReference extends VkObject {
 
     
     public void setLayout(VkImageLayout layout) {
-        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddress());
+        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -94,7 +94,11 @@ public class VkAttachmentReference extends VkObject {
 
         @Override
         public VkAttachmentReference get(int i){
-            return new VkAttachmentReference(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkAttachmentReference(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -137,6 +141,19 @@ public class VkAttachmentReference extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -145,6 +162,10 @@ public class VkAttachmentReference extends VkObject {
             @Override
             public VkAttachmentReference.Pointer get(int i){
                 return new VkAttachmentReference.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

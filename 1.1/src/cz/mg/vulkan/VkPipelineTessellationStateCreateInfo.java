@@ -22,7 +22,7 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
 
     
     public void setFlags(VkPipelineTessellationStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
 
     
     public void setPatchControlPoints(VkUInt32 patchControlPoints) {
-        setPatchControlPoints(getVkAddress(), patchControlPoints != null ? patchControlPoints.getVkAddress() : VkPointer.getNullAddress());
+        setPatchControlPoints(getVkAddress(), patchControlPoints != null ? patchControlPoints.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -174,6 +174,19 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -182,6 +195,10 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
             @Override
             public VkPipelineTessellationStateCreateInfo.Pointer get(int i){
                 return new VkPipelineTessellationStateCreateInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

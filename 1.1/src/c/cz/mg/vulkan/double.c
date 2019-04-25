@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDouble_sizeof(JNIEnv* env, jclass jc)
     return sizeof(double);
 }
 
-jdouble Java_cz_mg_vulkan_VkDouble_getValue(JNIEnv* env, jclass jc, jlong address)
+jdouble Java_cz_mg_vulkan_VkDouble_getValueNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -25,7 +25,7 @@ jdouble Java_cz_mg_vulkan_VkDouble_getValue(JNIEnv* env, jclass jc, jlong addres
     return value;
 }
 
-void Java_cz_mg_vulkan_VkDouble_setValue(JNIEnv* env, jclass jc, jlong address, jdouble value)
+void Java_cz_mg_vulkan_VkDouble_setValueNative(JNIEnv* env, jclass jc, jlong address, jdouble value)
 {
     (void)env;
     (void)jc;

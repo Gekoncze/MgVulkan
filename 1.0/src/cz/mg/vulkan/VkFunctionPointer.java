@@ -22,22 +22,22 @@ public class VkFunctionPointer extends VkObject {
 
     public VkFunctionPointer(VkInstance instance, VkString name) {
         super(sizeof());
-        load(getVkAddress(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddress(), name.getVkAddress());
+        loadNative(getVkAddress(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddressNative(), name.getVkAddress());
         if(getValue() == NULL) throw new RuntimeException("Could not load vulkan function " + name);
     }
 
     public long getValue() {
-        return getValue(getVkAddress());
+        return getValueNative(getVkAddress());
     }
 
     public void setValue(long value) {
-        setValue(getVkAddress(), value);
+        setValueNative(getVkAddress(), value);
     }
 
     public static native long sizeof();
-    private static native long getValue(long vkaddress);
-    private static native void setValue(long vkaddress, long value);
-    private static native void load(long vkaddress, long instance, long string);
+    protected static native long getValueNative(long vkaddress);
+    protected static native void setValueNative(long vkaddress, long value);
+    protected static native void loadNative(long vkaddress, long instance, long string);
 
     @Override
     public String toString() {
@@ -78,7 +78,11 @@ public class VkFunctionPointer extends VkObject {
 
         @Override
         public VkFunctionPointer get(int i){
-            return new VkFunctionPointer(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkFunctionPointer(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

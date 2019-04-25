@@ -59,7 +59,15 @@ public class VkSamplerYcbcrRange extends VkEnum {
 
         public Array(int... values){
             this(values.length);
-            for(int i = 0; i < values.length; i++) get(i).setValue(values[i]);
+            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+        }
+
+        public int getValueAt(int i){
+            return getValueNative(addressAt(i));
+        }
+
+        public void setValueAt(int i, int value){
+            setValueNative(addressAt(i), value);
         }
 
         @Override
@@ -69,7 +77,11 @@ public class VkSamplerYcbcrRange extends VkEnum {
 
         @Override
         public VkSamplerYcbcrRange get(int i){
-            return new VkSamplerYcbcrRange(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkSamplerYcbcrRange(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

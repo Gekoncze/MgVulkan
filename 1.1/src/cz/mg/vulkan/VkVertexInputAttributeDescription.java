@@ -21,7 +21,7 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setLocation(VkUInt32 location) {
-        setLocation(getVkAddress(), location != null ? location.getVkAddress() : VkPointer.getNullAddress());
+        setLocation(getVkAddress(), location != null ? location.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress());
+        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
     
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
+        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -136,7 +136,11 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
         @Override
         public VkVertexInputAttributeDescription get(int i){
-            return new VkVertexInputAttributeDescription(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkVertexInputAttributeDescription(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -179,6 +183,19 @@ public class VkVertexInputAttributeDescription extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -187,6 +204,10 @@ public class VkVertexInputAttributeDescription extends VkObject {
             @Override
             public VkVertexInputAttributeDescription.Pointer get(int i){
                 return new VkVertexInputAttributeDescription.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -21,7 +21,7 @@ public class VkVertexInputBindingDescription extends VkObject {
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddress());
+        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkVertexInputBindingDescription extends VkObject {
 
     
     public void setStride(VkUInt32 stride) {
-        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddress());
+        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkVertexInputBindingDescription extends VkObject {
 
     
     public void setInputRate(VkVertexInputRate inputRate) {
-        setInputRate(getVkAddress(), inputRate != null ? inputRate.getVkAddress() : VkPointer.getNullAddress());
+        setInputRate(getVkAddress(), inputRate != null ? inputRate.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -115,7 +115,11 @@ public class VkVertexInputBindingDescription extends VkObject {
 
         @Override
         public VkVertexInputBindingDescription get(int i){
-            return new VkVertexInputBindingDescription(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkVertexInputBindingDescription(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -158,6 +162,19 @@ public class VkVertexInputBindingDescription extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -166,6 +183,10 @@ public class VkVertexInputBindingDescription extends VkObject {
             @Override
             public VkVertexInputBindingDescription.Pointer get(int i){
                 return new VkVertexInputBindingDescription.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

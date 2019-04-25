@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkChar_sizeof(JNIEnv* env, jclass jc)
     return sizeof(char);
 }
 
-jbyte Java_cz_mg_vulkan_VkChar_getValue(JNIEnv* env, jclass jc, jlong address)
+jbyte Java_cz_mg_vulkan_VkChar_getValueNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -25,7 +25,7 @@ jbyte Java_cz_mg_vulkan_VkChar_getValue(JNIEnv* env, jclass jc, jlong address)
     return value;
 }
 
-void Java_cz_mg_vulkan_VkChar_setValue(JNIEnv* env, jclass jc, jlong address, jbyte value)
+void Java_cz_mg_vulkan_VkChar_setValueNative(JNIEnv* env, jclass jc, jlong address, jbyte value)
 {
     (void)env;
     (void)jc;

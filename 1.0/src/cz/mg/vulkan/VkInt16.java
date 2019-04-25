@@ -21,16 +21,16 @@ public class VkInt16 extends VkObject {
     }
 
     public short getValue(){
-        return getValue(getVkAddress());
+        return getValueNative(getVkAddress());
     }
 
     public void setValue(short value){
-        setValue(getVkAddress(), value);
+        setValueNative(getVkAddress(), value);
     }
 
     public static native long sizeof();
-    protected static native short getValue(long vkaddress);
-    protected static native void setValue(long vkaddress, short value);
+    protected static native short getValueNative(long vkaddress);
+    protected static native void setValueNative(long vkaddress, short value);
 
     @Override
     public String toString() {
@@ -66,11 +66,11 @@ public class VkInt16 extends VkObject {
         }
 
         public short getValueAt(int i){
-            return getValue(getVkAddress() + sizeof()*i);
+            return getValueNative(addressAt(i));
         }
 
         public void setValueAt(int i, short value){
-            setValue(getVkAddress() + sizeof()*i, value);
+            setValueNative(addressAt(i), value);
         }
 
 
@@ -82,7 +82,11 @@ public class VkInt16 extends VkObject {
 
         @Override
         public VkInt16 get(int i){
-            return new VkInt16(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkInt16(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -125,6 +129,19 @@ public class VkInt16 extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -133,6 +150,10 @@ public class VkInt16 extends VkObject {
             @Override
             public VkInt16.Pointer get(int i){
                 return new VkInt16.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

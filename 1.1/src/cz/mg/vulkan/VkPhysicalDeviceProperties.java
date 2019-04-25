@@ -21,7 +21,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setApiVersion(VkUInt32 apiVersion) {
-        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getNullAddress());
+        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setDriverVersion(VkUInt32 driverVersion) {
-        setDriverVersion(getVkAddress(), driverVersion != null ? driverVersion.getVkAddress() : VkPointer.getNullAddress());
+        setDriverVersion(getVkAddress(), driverVersion != null ? driverVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,7 +63,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setVendorID(VkUInt32 vendorID) {
-        setVendorID(getVkAddress(), vendorID != null ? vendorID.getVkAddress() : VkPointer.getNullAddress());
+        setVendorID(getVkAddress(), vendorID != null ? vendorID.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,7 +84,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setDeviceID(VkUInt32 deviceID) {
-        setDeviceID(getVkAddress(), deviceID != null ? deviceID.getVkAddress() : VkPointer.getNullAddress());
+        setDeviceID(getVkAddress(), deviceID != null ? deviceID.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -105,7 +105,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setDeviceType(VkPhysicalDeviceType deviceType) {
-        setDeviceType(getVkAddress(), deviceType != null ? deviceType.getVkAddress() : VkPointer.getNullAddress());
+        setDeviceType(getVkAddress(), deviceType != null ? deviceType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -160,7 +160,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setLimits(VkPhysicalDeviceLimits limits) {
-        setLimits(getVkAddress(), limits != null ? limits.getVkAddress() : VkPointer.getNullAddress());
+        setLimits(getVkAddress(), limits != null ? limits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -173,7 +173,7 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
     
     public void setSparseProperties(VkPhysicalDeviceSparseProperties sparseProperties) {
-        setSparseProperties(getVkAddress(), sparseProperties != null ? sparseProperties.getVkAddress() : VkPointer.getNullAddress());
+        setSparseProperties(getVkAddress(), sparseProperties != null ? sparseProperties.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -217,7 +217,11 @@ public class VkPhysicalDeviceProperties extends VkObject {
 
         @Override
         public VkPhysicalDeviceProperties get(int i){
-            return new VkPhysicalDeviceProperties(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPhysicalDeviceProperties(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -260,6 +264,19 @@ public class VkPhysicalDeviceProperties extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -268,6 +285,10 @@ public class VkPhysicalDeviceProperties extends VkObject {
             @Override
             public VkPhysicalDeviceProperties.Pointer get(int i){
                 return new VkPhysicalDeviceProperties.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -21,7 +21,7 @@ public class VkXYColorEXT extends VkObject {
 
     
     public void setX(VkFloat x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddress());
+        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,7 +42,7 @@ public class VkXYColorEXT extends VkObject {
 
     
     public void setY(VkFloat y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddress());
+        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -94,7 +94,11 @@ public class VkXYColorEXT extends VkObject {
 
         @Override
         public VkXYColorEXT get(int i){
-            return new VkXYColorEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkXYColorEXT(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -137,6 +141,19 @@ public class VkXYColorEXT extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -145,6 +162,10 @@ public class VkXYColorEXT extends VkObject {
             @Override
             public VkXYColorEXT.Pointer get(int i){
                 return new VkXYColorEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

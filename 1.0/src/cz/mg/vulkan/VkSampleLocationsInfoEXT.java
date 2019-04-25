@@ -22,7 +22,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSampleLocationsPerPixel(VkSampleCountFlagBits sampleLocationsPerPixel) {
-        setSampleLocationsPerPixel(getVkAddress(), sampleLocationsPerPixel != null ? sampleLocationsPerPixel.getVkAddress() : VkPointer.getNullAddress());
+        setSampleLocationsPerPixel(getVkAddress(), sampleLocationsPerPixel != null ? sampleLocationsPerPixel.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSampleLocationGridSize(VkExtent2D sampleLocationGridSize) {
-        setSampleLocationGridSize(getVkAddress(), sampleLocationGridSize != null ? sampleLocationGridSize.getVkAddress() : VkPointer.getNullAddress());
+        setSampleLocationGridSize(getVkAddress(), sampleLocationGridSize != null ? sampleLocationGridSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -90,7 +90,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
     
     public void setSampleLocationsCount(VkUInt32 sampleLocationsCount) {
-        setSampleLocationsCount(getVkAddress(), sampleLocationsCount != null ? sampleLocationsCount.getVkAddress() : VkPointer.getNullAddress());
+        setSampleLocationsCount(getVkAddress(), sampleLocationsCount != null ? sampleLocationsCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -200,6 +200,19 @@ public class VkSampleLocationsInfoEXT extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -208,6 +221,10 @@ public class VkSampleLocationsInfoEXT extends VkObject {
             @Override
             public VkSampleLocationsInfoEXT.Pointer get(int i){
                 return new VkSampleLocationsInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

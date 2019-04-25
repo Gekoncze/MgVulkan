@@ -23,7 +23,7 @@ public class PFNvkDestroyObjectTableNVX extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkObjectTableNVX objectTable, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), objectTable != null ? objectTable.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), objectTable != null ? objectTable.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
     protected static native void call(long vkaddress, long device, long objectTable, long pAllocator);

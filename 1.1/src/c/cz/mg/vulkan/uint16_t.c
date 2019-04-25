@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkUInt16_sizeof(JNIEnv* env, jclass jc)
     return sizeof(uint16_t);
 }
 
-jshort Java_cz_mg_vulkan_VkUInt16_getValue(JNIEnv* env, jclass jc, jlong address)
+jshort Java_cz_mg_vulkan_VkUInt16_getValueNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -25,7 +25,7 @@ jshort Java_cz_mg_vulkan_VkUInt16_getValue(JNIEnv* env, jclass jc, jlong address
     return value;
 }
 
-void Java_cz_mg_vulkan_VkUInt16_setValue(JNIEnv* env, jclass jc, jlong address, jshort value)
+void Java_cz_mg_vulkan_VkUInt16_setValueNative(JNIEnv* env, jclass jc, jlong address, jshort value)
 {
     (void)env;
     (void)jc;

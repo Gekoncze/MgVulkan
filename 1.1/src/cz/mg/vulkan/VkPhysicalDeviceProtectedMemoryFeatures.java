@@ -21,7 +21,7 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
 
     
     public void setProtectedMemory(VkBool32 protectedMemory) {
-        setProtectedMemory(getVkAddress(), protectedMemory != null ? protectedMemory.getVkAddress() : VkPointer.getNullAddress());
+        setProtectedMemory(getVkAddress(), protectedMemory != null ? protectedMemory.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -107,7 +107,11 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
 
         @Override
         public VkPhysicalDeviceProtectedMemoryFeatures get(int i){
-            return new VkPhysicalDeviceProtectedMemoryFeatures(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPhysicalDeviceProtectedMemoryFeatures(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -150,6 +154,19 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -158,6 +175,10 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
             @Override
             public VkPhysicalDeviceProtectedMemoryFeatures.Pointer get(int i){
                 return new VkPhysicalDeviceProtectedMemoryFeatures.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -52,7 +52,11 @@ public class VkIndirectCommandsLayoutNVX extends VkNonDispatchableHandle {
 
         @Override
         public VkIndirectCommandsLayoutNVX get(int i){
-            return new VkIndirectCommandsLayoutNVX(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkIndirectCommandsLayoutNVX(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

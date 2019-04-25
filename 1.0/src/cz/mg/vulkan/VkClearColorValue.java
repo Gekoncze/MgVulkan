@@ -91,7 +91,11 @@ public class VkClearColorValue extends VkObject {
 
         @Override
         public VkClearColorValue get(int i){
-            return new VkClearColorValue(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkClearColorValue(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -134,6 +138,19 @@ public class VkClearColorValue extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -142,6 +159,10 @@ public class VkClearColorValue extends VkObject {
             @Override
             public VkClearColorValue.Pointer get(int i){
                 return new VkClearColorValue.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

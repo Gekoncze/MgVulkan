@@ -22,7 +22,7 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
 
     
     public void setFlags(VkPipelineCoverageToColorStateCreateFlagsNV flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
+        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
 
     
     public void setCoverageToColorEnable(VkBool32 coverageToColorEnable) {
-        setCoverageToColorEnable(getVkAddress(), coverageToColorEnable != null ? coverageToColorEnable.getVkAddress() : VkPointer.getNullAddress());
+        setCoverageToColorEnable(getVkAddress(), coverageToColorEnable != null ? coverageToColorEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -98,7 +98,7 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
 
     
     public void setCoverageToColorLocation(VkUInt32 coverageToColorLocation) {
-        setCoverageToColorLocation(getVkAddress(), coverageToColorLocation != null ? coverageToColorLocation.getVkAddress() : VkPointer.getNullAddress());
+        setCoverageToColorLocation(getVkAddress(), coverageToColorLocation != null ? coverageToColorLocation.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -195,6 +195,19 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -203,6 +216,10 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
             @Override
             public VkPipelineCoverageToColorStateCreateInfoNV.Pointer get(int i){
                 return new VkPipelineCoverageToColorStateCreateInfoNV.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -23,7 +23,7 @@ public class PFNvkCmdDebugMarkerBeginEXT extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkDebugMarkerMarkerInfoEXT pMarkerInfo){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), pMarkerInfo != null ? pMarkerInfo.getVkAddress() : VkPointer.NULL);
+        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), pMarkerInfo != null ? pMarkerInfo.getVkAddress() : VkPointer.NULL);
     }
 
     protected static native void call(long vkaddress, long commandBuffer, long pMarkerInfo);

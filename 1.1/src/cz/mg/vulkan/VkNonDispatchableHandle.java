@@ -71,7 +71,11 @@ public class VkNonDispatchableHandle extends VkHandle {
 
         @Override
         public VkNonDispatchableHandle get(int i){
-            return new VkNonDispatchableHandle(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkNonDispatchableHandle(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

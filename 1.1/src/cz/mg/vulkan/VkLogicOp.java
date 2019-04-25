@@ -83,7 +83,15 @@ public class VkLogicOp extends VkEnum {
 
         public Array(int... values){
             this(values.length);
-            for(int i = 0; i < values.length; i++) get(i).setValue(values[i]);
+            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+        }
+
+        public int getValueAt(int i){
+            return getValueNative(addressAt(i));
+        }
+
+        public void setValueAt(int i, int value){
+            setValueNative(addressAt(i), value);
         }
 
         @Override
@@ -93,7 +101,11 @@ public class VkLogicOp extends VkEnum {
 
         @Override
         public VkLogicOp get(int i){
-            return new VkLogicOp(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkLogicOp(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

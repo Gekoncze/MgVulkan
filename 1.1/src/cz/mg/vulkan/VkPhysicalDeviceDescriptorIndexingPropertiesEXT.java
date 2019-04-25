@@ -21,7 +21,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxUpdateAfterBindDescriptorsInAllPools(VkUInt32 maxUpdateAfterBindDescriptorsInAllPools) {
-        setMaxUpdateAfterBindDescriptorsInAllPools(getVkAddress(), maxUpdateAfterBindDescriptorsInAllPools != null ? maxUpdateAfterBindDescriptorsInAllPools.getVkAddress() : VkPointer.getNullAddress());
+        setMaxUpdateAfterBindDescriptorsInAllPools(getVkAddress(), maxUpdateAfterBindDescriptorsInAllPools != null ? maxUpdateAfterBindDescriptorsInAllPools.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -76,7 +76,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setShaderUniformBufferArrayNonUniformIndexingNative(VkBool32 shaderUniformBufferArrayNonUniformIndexingNative) {
-        setShaderUniformBufferArrayNonUniformIndexingNative(getVkAddress(), shaderUniformBufferArrayNonUniformIndexingNative != null ? shaderUniformBufferArrayNonUniformIndexingNative.getVkAddress() : VkPointer.getNullAddress());
+        setShaderUniformBufferArrayNonUniformIndexingNative(getVkAddress(), shaderUniformBufferArrayNonUniformIndexingNative != null ? shaderUniformBufferArrayNonUniformIndexingNative.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -97,7 +97,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setShaderSampledImageArrayNonUniformIndexingNative(VkBool32 shaderSampledImageArrayNonUniformIndexingNative) {
-        setShaderSampledImageArrayNonUniformIndexingNative(getVkAddress(), shaderSampledImageArrayNonUniformIndexingNative != null ? shaderSampledImageArrayNonUniformIndexingNative.getVkAddress() : VkPointer.getNullAddress());
+        setShaderSampledImageArrayNonUniformIndexingNative(getVkAddress(), shaderSampledImageArrayNonUniformIndexingNative != null ? shaderSampledImageArrayNonUniformIndexingNative.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -118,7 +118,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setShaderStorageBufferArrayNonUniformIndexingNative(VkBool32 shaderStorageBufferArrayNonUniformIndexingNative) {
-        setShaderStorageBufferArrayNonUniformIndexingNative(getVkAddress(), shaderStorageBufferArrayNonUniformIndexingNative != null ? shaderStorageBufferArrayNonUniformIndexingNative.getVkAddress() : VkPointer.getNullAddress());
+        setShaderStorageBufferArrayNonUniformIndexingNative(getVkAddress(), shaderStorageBufferArrayNonUniformIndexingNative != null ? shaderStorageBufferArrayNonUniformIndexingNative.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -139,7 +139,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setShaderStorageImageArrayNonUniformIndexingNative(VkBool32 shaderStorageImageArrayNonUniformIndexingNative) {
-        setShaderStorageImageArrayNonUniformIndexingNative(getVkAddress(), shaderStorageImageArrayNonUniformIndexingNative != null ? shaderStorageImageArrayNonUniformIndexingNative.getVkAddress() : VkPointer.getNullAddress());
+        setShaderStorageImageArrayNonUniformIndexingNative(getVkAddress(), shaderStorageImageArrayNonUniformIndexingNative != null ? shaderStorageImageArrayNonUniformIndexingNative.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -160,7 +160,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setShaderInputAttachmentArrayNonUniformIndexingNative(VkBool32 shaderInputAttachmentArrayNonUniformIndexingNative) {
-        setShaderInputAttachmentArrayNonUniformIndexingNative(getVkAddress(), shaderInputAttachmentArrayNonUniformIndexingNative != null ? shaderInputAttachmentArrayNonUniformIndexingNative.getVkAddress() : VkPointer.getNullAddress());
+        setShaderInputAttachmentArrayNonUniformIndexingNative(getVkAddress(), shaderInputAttachmentArrayNonUniformIndexingNative != null ? shaderInputAttachmentArrayNonUniformIndexingNative.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -181,7 +181,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setRobustBufferAccessUpdateAfterBind(VkBool32 robustBufferAccessUpdateAfterBind) {
-        setRobustBufferAccessUpdateAfterBind(getVkAddress(), robustBufferAccessUpdateAfterBind != null ? robustBufferAccessUpdateAfterBind.getVkAddress() : VkPointer.getNullAddress());
+        setRobustBufferAccessUpdateAfterBind(getVkAddress(), robustBufferAccessUpdateAfterBind != null ? robustBufferAccessUpdateAfterBind.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -202,7 +202,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setQuadDivergentImplicitLod(VkBool32 quadDivergentImplicitLod) {
-        setQuadDivergentImplicitLod(getVkAddress(), quadDivergentImplicitLod != null ? quadDivergentImplicitLod.getVkAddress() : VkPointer.getNullAddress());
+        setQuadDivergentImplicitLod(getVkAddress(), quadDivergentImplicitLod != null ? quadDivergentImplicitLod.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -223,7 +223,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxPerStageDescriptorUpdateAfterBindSamplers(VkUInt32 maxPerStageDescriptorUpdateAfterBindSamplers) {
-        setMaxPerStageDescriptorUpdateAfterBindSamplers(getVkAddress(), maxPerStageDescriptorUpdateAfterBindSamplers != null ? maxPerStageDescriptorUpdateAfterBindSamplers.getVkAddress() : VkPointer.getNullAddress());
+        setMaxPerStageDescriptorUpdateAfterBindSamplers(getVkAddress(), maxPerStageDescriptorUpdateAfterBindSamplers != null ? maxPerStageDescriptorUpdateAfterBindSamplers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -244,7 +244,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxPerStageDescriptorUpdateAfterBindUniformBuffers(VkUInt32 maxPerStageDescriptorUpdateAfterBindUniformBuffers) {
-        setMaxPerStageDescriptorUpdateAfterBindUniformBuffers(getVkAddress(), maxPerStageDescriptorUpdateAfterBindUniformBuffers != null ? maxPerStageDescriptorUpdateAfterBindUniformBuffers.getVkAddress() : VkPointer.getNullAddress());
+        setMaxPerStageDescriptorUpdateAfterBindUniformBuffers(getVkAddress(), maxPerStageDescriptorUpdateAfterBindUniformBuffers != null ? maxPerStageDescriptorUpdateAfterBindUniformBuffers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -265,7 +265,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxPerStageDescriptorUpdateAfterBindStorageBuffers(VkUInt32 maxPerStageDescriptorUpdateAfterBindStorageBuffers) {
-        setMaxPerStageDescriptorUpdateAfterBindStorageBuffers(getVkAddress(), maxPerStageDescriptorUpdateAfterBindStorageBuffers != null ? maxPerStageDescriptorUpdateAfterBindStorageBuffers.getVkAddress() : VkPointer.getNullAddress());
+        setMaxPerStageDescriptorUpdateAfterBindStorageBuffers(getVkAddress(), maxPerStageDescriptorUpdateAfterBindStorageBuffers != null ? maxPerStageDescriptorUpdateAfterBindStorageBuffers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -286,7 +286,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxPerStageDescriptorUpdateAfterBindSampledImages(VkUInt32 maxPerStageDescriptorUpdateAfterBindSampledImages) {
-        setMaxPerStageDescriptorUpdateAfterBindSampledImages(getVkAddress(), maxPerStageDescriptorUpdateAfterBindSampledImages != null ? maxPerStageDescriptorUpdateAfterBindSampledImages.getVkAddress() : VkPointer.getNullAddress());
+        setMaxPerStageDescriptorUpdateAfterBindSampledImages(getVkAddress(), maxPerStageDescriptorUpdateAfterBindSampledImages != null ? maxPerStageDescriptorUpdateAfterBindSampledImages.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -307,7 +307,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxPerStageDescriptorUpdateAfterBindStorageImages(VkUInt32 maxPerStageDescriptorUpdateAfterBindStorageImages) {
-        setMaxPerStageDescriptorUpdateAfterBindStorageImages(getVkAddress(), maxPerStageDescriptorUpdateAfterBindStorageImages != null ? maxPerStageDescriptorUpdateAfterBindStorageImages.getVkAddress() : VkPointer.getNullAddress());
+        setMaxPerStageDescriptorUpdateAfterBindStorageImages(getVkAddress(), maxPerStageDescriptorUpdateAfterBindStorageImages != null ? maxPerStageDescriptorUpdateAfterBindStorageImages.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -328,7 +328,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxPerStageDescriptorUpdateAfterBindInputAttachments(VkUInt32 maxPerStageDescriptorUpdateAfterBindInputAttachments) {
-        setMaxPerStageDescriptorUpdateAfterBindInputAttachments(getVkAddress(), maxPerStageDescriptorUpdateAfterBindInputAttachments != null ? maxPerStageDescriptorUpdateAfterBindInputAttachments.getVkAddress() : VkPointer.getNullAddress());
+        setMaxPerStageDescriptorUpdateAfterBindInputAttachments(getVkAddress(), maxPerStageDescriptorUpdateAfterBindInputAttachments != null ? maxPerStageDescriptorUpdateAfterBindInputAttachments.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -349,7 +349,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxPerStageUpdateAfterBindResources(VkUInt32 maxPerStageUpdateAfterBindResources) {
-        setMaxPerStageUpdateAfterBindResources(getVkAddress(), maxPerStageUpdateAfterBindResources != null ? maxPerStageUpdateAfterBindResources.getVkAddress() : VkPointer.getNullAddress());
+        setMaxPerStageUpdateAfterBindResources(getVkAddress(), maxPerStageUpdateAfterBindResources != null ? maxPerStageUpdateAfterBindResources.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -370,7 +370,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxDescriptorSetUpdateAfterBindSamplers(VkUInt32 maxDescriptorSetUpdateAfterBindSamplers) {
-        setMaxDescriptorSetUpdateAfterBindSamplers(getVkAddress(), maxDescriptorSetUpdateAfterBindSamplers != null ? maxDescriptorSetUpdateAfterBindSamplers.getVkAddress() : VkPointer.getNullAddress());
+        setMaxDescriptorSetUpdateAfterBindSamplers(getVkAddress(), maxDescriptorSetUpdateAfterBindSamplers != null ? maxDescriptorSetUpdateAfterBindSamplers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -391,7 +391,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxDescriptorSetUpdateAfterBindUniformBuffers(VkUInt32 maxDescriptorSetUpdateAfterBindUniformBuffers) {
-        setMaxDescriptorSetUpdateAfterBindUniformBuffers(getVkAddress(), maxDescriptorSetUpdateAfterBindUniformBuffers != null ? maxDescriptorSetUpdateAfterBindUniformBuffers.getVkAddress() : VkPointer.getNullAddress());
+        setMaxDescriptorSetUpdateAfterBindUniformBuffers(getVkAddress(), maxDescriptorSetUpdateAfterBindUniformBuffers != null ? maxDescriptorSetUpdateAfterBindUniformBuffers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -412,7 +412,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(VkUInt32 maxDescriptorSetUpdateAfterBindUniformBuffersDynamic) {
-        setMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(getVkAddress(), maxDescriptorSetUpdateAfterBindUniformBuffersDynamic != null ? maxDescriptorSetUpdateAfterBindUniformBuffersDynamic.getVkAddress() : VkPointer.getNullAddress());
+        setMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(getVkAddress(), maxDescriptorSetUpdateAfterBindUniformBuffersDynamic != null ? maxDescriptorSetUpdateAfterBindUniformBuffersDynamic.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -433,7 +433,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxDescriptorSetUpdateAfterBindStorageBuffers(VkUInt32 maxDescriptorSetUpdateAfterBindStorageBuffers) {
-        setMaxDescriptorSetUpdateAfterBindStorageBuffers(getVkAddress(), maxDescriptorSetUpdateAfterBindStorageBuffers != null ? maxDescriptorSetUpdateAfterBindStorageBuffers.getVkAddress() : VkPointer.getNullAddress());
+        setMaxDescriptorSetUpdateAfterBindStorageBuffers(getVkAddress(), maxDescriptorSetUpdateAfterBindStorageBuffers != null ? maxDescriptorSetUpdateAfterBindStorageBuffers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -454,7 +454,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(VkUInt32 maxDescriptorSetUpdateAfterBindStorageBuffersDynamic) {
-        setMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(getVkAddress(), maxDescriptorSetUpdateAfterBindStorageBuffersDynamic != null ? maxDescriptorSetUpdateAfterBindStorageBuffersDynamic.getVkAddress() : VkPointer.getNullAddress());
+        setMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(getVkAddress(), maxDescriptorSetUpdateAfterBindStorageBuffersDynamic != null ? maxDescriptorSetUpdateAfterBindStorageBuffersDynamic.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -475,7 +475,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxDescriptorSetUpdateAfterBindSampledImages(VkUInt32 maxDescriptorSetUpdateAfterBindSampledImages) {
-        setMaxDescriptorSetUpdateAfterBindSampledImages(getVkAddress(), maxDescriptorSetUpdateAfterBindSampledImages != null ? maxDescriptorSetUpdateAfterBindSampledImages.getVkAddress() : VkPointer.getNullAddress());
+        setMaxDescriptorSetUpdateAfterBindSampledImages(getVkAddress(), maxDescriptorSetUpdateAfterBindSampledImages != null ? maxDescriptorSetUpdateAfterBindSampledImages.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -496,7 +496,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxDescriptorSetUpdateAfterBindStorageImages(VkUInt32 maxDescriptorSetUpdateAfterBindStorageImages) {
-        setMaxDescriptorSetUpdateAfterBindStorageImages(getVkAddress(), maxDescriptorSetUpdateAfterBindStorageImages != null ? maxDescriptorSetUpdateAfterBindStorageImages.getVkAddress() : VkPointer.getNullAddress());
+        setMaxDescriptorSetUpdateAfterBindStorageImages(getVkAddress(), maxDescriptorSetUpdateAfterBindStorageImages != null ? maxDescriptorSetUpdateAfterBindStorageImages.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -517,7 +517,7 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
     
     public void setMaxDescriptorSetUpdateAfterBindInputAttachments(VkUInt32 maxDescriptorSetUpdateAfterBindInputAttachments) {
-        setMaxDescriptorSetUpdateAfterBindInputAttachments(getVkAddress(), maxDescriptorSetUpdateAfterBindInputAttachments != null ? maxDescriptorSetUpdateAfterBindInputAttachments.getVkAddress() : VkPointer.getNullAddress());
+        setMaxDescriptorSetUpdateAfterBindInputAttachments(getVkAddress(), maxDescriptorSetUpdateAfterBindInputAttachments != null ? maxDescriptorSetUpdateAfterBindInputAttachments.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -569,7 +569,11 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
 
         @Override
         public VkPhysicalDeviceDescriptorIndexingPropertiesEXT get(int i){
-            return new VkPhysicalDeviceDescriptorIndexingPropertiesEXT(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPhysicalDeviceDescriptorIndexingPropertiesEXT(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -612,6 +616,19 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -620,6 +637,10 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
             @Override
             public VkPhysicalDeviceDescriptorIndexingPropertiesEXT.Pointer get(int i){
                 return new VkPhysicalDeviceDescriptorIndexingPropertiesEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -21,7 +21,7 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
 
     
     public void setRefreshDuration(VkUInt64 refreshDuration) {
-        setRefreshDuration(getVkAddress(), refreshDuration != null ? refreshDuration.getVkAddress() : VkPointer.getNullAddress());
+        setRefreshDuration(getVkAddress(), refreshDuration != null ? refreshDuration.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -73,7 +73,11 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
 
         @Override
         public VkRefreshCycleDurationGOOGLE get(int i){
-            return new VkRefreshCycleDurationGOOGLE(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkRefreshCycleDurationGOOGLE(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -116,6 +120,19 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -124,6 +141,10 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
             @Override
             public VkRefreshCycleDurationGOOGLE.Pointer get(int i){
                 return new VkRefreshCycleDurationGOOGLE.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -52,7 +52,11 @@ public class VkFramebuffer extends VkNonDispatchableHandle {
 
         @Override
         public VkFramebuffer get(int i){
-            return new VkFramebuffer(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkFramebuffer(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 }

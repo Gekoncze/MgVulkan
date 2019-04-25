@@ -22,7 +22,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddress());
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -69,7 +69,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setFramebuffer(VkFramebuffer framebuffer) {
-        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getNullAddress());
+        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -82,7 +82,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setRenderArea(VkRect2D renderArea) {
-        setRenderArea(getVkAddress(), renderArea != null ? renderArea.getVkAddress() : VkPointer.getNullAddress());
+        setRenderArea(getVkAddress(), renderArea != null ? renderArea.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -95,7 +95,7 @@ public class VkRenderPassBeginInfo extends VkObject {
 
     
     public void setClearValueCount(VkUInt32 clearValueCount) {
-        setClearValueCount(getVkAddress(), clearValueCount != null ? clearValueCount.getVkAddress() : VkPointer.getNullAddress());
+        setClearValueCount(getVkAddress(), clearValueCount != null ? clearValueCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -205,6 +205,19 @@ public class VkRenderPassBeginInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -213,6 +226,10 @@ public class VkRenderPassBeginInfo extends VkObject {
             @Override
             public VkRenderPassBeginInfo.Pointer get(int i){
                 return new VkRenderPassBeginInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -22,7 +22,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
 
     
     public void setObjectType(VkObjectType objectType) {
-        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddress());
+        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -77,7 +77,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
 
     
     public void setObjectHandle(VkUInt64 objectHandle) {
-        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.getNullAddress());
+        setObjectHandle(getVkAddress(), objectHandle != null ? objectHandle.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -98,7 +98,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
 
     
     public void setTagName(VkUInt64 tagName) {
-        setTagName(getVkAddress(), tagName != null ? tagName.getVkAddress() : VkPointer.getNullAddress());
+        setTagName(getVkAddress(), tagName != null ? tagName.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -119,7 +119,7 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
 
     
     public void setTagSize(VkSize tagSize) {
-        setTagSize(getVkAddress(), tagSize != null ? tagSize.getVkAddress() : VkPointer.getNullAddress());
+        setTagSize(getVkAddress(), tagSize != null ? tagSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -229,6 +229,19 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -237,6 +250,10 @@ public class VkDebugUtilsObjectTagInfoEXT extends VkObject {
             @Override
             public VkDebugUtilsObjectTagInfoEXT.Pointer get(int i){
                 return new VkDebugUtilsObjectTagInfoEXT.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

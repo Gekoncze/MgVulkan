@@ -21,7 +21,7 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -55,7 +55,7 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
 
     
     public void setMultiview(VkBool32 multiview) {
-        setMultiview(getVkAddress(), multiview != null ? multiview.getVkAddress() : VkPointer.getNullAddress());
+        setMultiview(getVkAddress(), multiview != null ? multiview.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -76,7 +76,7 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
 
     
     public void setMultiviewGeometryShader(VkBool32 multiviewGeometryShader) {
-        setMultiviewGeometryShader(getVkAddress(), multiviewGeometryShader != null ? multiviewGeometryShader.getVkAddress() : VkPointer.getNullAddress());
+        setMultiviewGeometryShader(getVkAddress(), multiviewGeometryShader != null ? multiviewGeometryShader.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -97,7 +97,7 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
 
     
     public void setMultiviewTessellationShader(VkBool32 multiviewTessellationShader) {
-        setMultiviewTessellationShader(getVkAddress(), multiviewTessellationShader != null ? multiviewTessellationShader.getVkAddress() : VkPointer.getNullAddress());
+        setMultiviewTessellationShader(getVkAddress(), multiviewTessellationShader != null ? multiviewTessellationShader.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -149,7 +149,11 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
 
         @Override
         public VkPhysicalDeviceMultiviewFeaturesKHX get(int i){
-            return new VkPhysicalDeviceMultiviewFeaturesKHX(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPhysicalDeviceMultiviewFeaturesKHX(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -192,6 +196,19 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -200,6 +217,10 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
             @Override
             public VkPhysicalDeviceMultiviewFeaturesKHX.Pointer get(int i){
                 return new VkPhysicalDeviceMultiviewFeaturesKHX.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

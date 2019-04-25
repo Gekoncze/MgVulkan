@@ -21,7 +21,7 @@ public class VkDisplayModeParametersKHR extends VkObject {
 
     
     public void setVisibleRegion(VkExtent2D visibleRegion) {
-        setVisibleRegion(getVkAddress(), visibleRegion != null ? visibleRegion.getVkAddress() : VkPointer.getNullAddress());
+        setVisibleRegion(getVkAddress(), visibleRegion != null ? visibleRegion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -34,7 +34,7 @@ public class VkDisplayModeParametersKHR extends VkObject {
 
     
     public void setRefreshRate(VkUInt32 refreshRate) {
-        setRefreshRate(getVkAddress(), refreshRate != null ? refreshRate.getVkAddress() : VkPointer.getNullAddress());
+        setRefreshRate(getVkAddress(), refreshRate != null ? refreshRate.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -86,7 +86,11 @@ public class VkDisplayModeParametersKHR extends VkObject {
 
         @Override
         public VkDisplayModeParametersKHR get(int i){
-            return new VkDisplayModeParametersKHR(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkDisplayModeParametersKHR(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -129,6 +133,19 @@ public class VkDisplayModeParametersKHR extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -137,6 +154,10 @@ public class VkDisplayModeParametersKHR extends VkObject {
             @Override
             public VkDisplayModeParametersKHR.Pointer get(int i){
                 return new VkDisplayModeParametersKHR.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

@@ -22,7 +22,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -56,7 +56,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddress());
+        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -69,7 +69,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setSubpass(VkUInt32 subpass) {
-        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getNullAddress());
+        setSubpass(getVkAddress(), subpass != null ? subpass.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -90,7 +90,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setFramebuffer(VkFramebuffer framebuffer) {
-        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getNullAddress());
+        setFramebuffer(getVkAddress(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -103,7 +103,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setOcclusionQueryEnable(VkBool32 occlusionQueryEnable) {
-        setOcclusionQueryEnable(getVkAddress(), occlusionQueryEnable != null ? occlusionQueryEnable.getVkAddress() : VkPointer.getNullAddress());
+        setOcclusionQueryEnable(getVkAddress(), occlusionQueryEnable != null ? occlusionQueryEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -124,7 +124,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setQueryFlags(VkQueryControlFlags queryFlags) {
-        setQueryFlags(getVkAddress(), queryFlags != null ? queryFlags.getVkAddress() : VkPointer.getNullAddress());
+        setQueryFlags(getVkAddress(), queryFlags != null ? queryFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -145,7 +145,7 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
 
     
     public void setPipelineStatistics(VkQueryPipelineStatisticFlags pipelineStatistics) {
-        setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.getNullAddress());
+        setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -242,6 +242,19 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -250,6 +263,10 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
             @Override
             public VkCommandBufferInheritanceInfo.Pointer get(int i){
                 return new VkCommandBufferInheritanceInfo.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }

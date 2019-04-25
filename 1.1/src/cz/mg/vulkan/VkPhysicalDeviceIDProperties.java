@@ -21,7 +21,7 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddress());
+        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -94,7 +94,7 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
 
     
     public void setDeviceNodeMask(VkUInt32 deviceNodeMask) {
-        setDeviceNodeMask(getVkAddress(), deviceNodeMask != null ? deviceNodeMask.getVkAddress() : VkPointer.getNullAddress());
+        setDeviceNodeMask(getVkAddress(), deviceNodeMask != null ? deviceNodeMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -115,7 +115,7 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
 
     
     public void setDeviceLUIDValid(VkBool32 deviceLUIDValid) {
-        setDeviceLUIDValid(getVkAddress(), deviceLUIDValid != null ? deviceLUIDValid.getVkAddress() : VkPointer.getNullAddress());
+        setDeviceLUIDValid(getVkAddress(), deviceLUIDValid != null ? deviceLUIDValid.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -167,7 +167,11 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
 
         @Override
         public VkPhysicalDeviceIDProperties get(int i){
-            return new VkPhysicalDeviceIDProperties(getVkMemory(), getVkAddress() + sizeof()*i);
+            return new VkPhysicalDeviceIDProperties(getVkMemory(), addressAt(i));
+        }
+
+        protected long addressAt(int i){
+            return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
     }
 
@@ -210,6 +214,19 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
                 for(int i = 0; i < a.length; i++) get(i).setValue(a[i].getVkAddress());
             }
 
+            public Array(long... values){
+                this(values.length);
+                for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            }
+
+            public long getValueAt(int i){
+                return getValueNative(addressAt(i));
+            }
+
+            public void setValueAt(int i, long value){
+                setValueNative(addressAt(i), value);
+            }
+
             @Override
             public int count(){
                 return count;
@@ -218,6 +235,10 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
             @Override
             public VkPhysicalDeviceIDProperties.Pointer get(int i){
                 return new VkPhysicalDeviceIDProperties.Pointer(getVkMemory(), getVkAddress() + VkPointer.sizeof()*i);
+            }
+
+            protected long addressAt(int i){
+                return VkPointer.plus(getVkAddress(), sizeof()*i);
             }
         }
     }
