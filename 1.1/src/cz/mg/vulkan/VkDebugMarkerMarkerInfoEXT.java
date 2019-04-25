@@ -21,12 +21,12 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkChar getPMarkerName() {
-        return new VkChar(getVkMemory(), getPMarkerName(getVkAddress()));
+        return new VkChar(getVkMemory(), getPMarkerNameNative(getVkAddress()));
     }
 
     private VkObject pMarkerName = null;
     public void setPMarkerName(VkChar pMarkerName) {
-        setPMarkerName(getVkAddress(), pMarkerName != null ? pMarkerName.getVkAddress() : VkPointer.NULL);
+        setPMarkerNameNative(getVkAddress(), pMarkerName != null ? pMarkerName.getVkAddress() : VkPointer.NULL);
         this.pMarkerName = pMarkerName;
     }
 
@@ -72,21 +72,21 @@ public class VkDebugMarkerMarkerInfoEXT extends VkObject {
         setPMarkerName(new VkString(pMarkerName));
     }
 
-    protected static native long getPMarkerName(long address);
-    protected static native void setPMarkerName(long address, long pMarkerName);
+    protected static native long getPMarkerNameNative(long address);
+    protected static native void setPMarkerNameNative(long address, long pMarkerName);
 
     public VkFloat getColor() {
-        return new VkFloat(getVkMemory(), getColor(getVkAddress()));
+        return new VkFloat(getVkMemory(), getColorNative(getVkAddress()));
     }
 
     
     public void setColor(VkFloat color) {
-        setColor(getVkAddress(), color != null ? color.getVkAddress() : VkPointer.NULL);
+        setColorNative(getVkAddress(), color != null ? color.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getColor(long address);
-    protected static native void setColor(long address, long color);
+    protected static native long getColorNative(long address);
+    protected static native void setColorNative(long address, long color);
 
 
     public static native long sizeof();

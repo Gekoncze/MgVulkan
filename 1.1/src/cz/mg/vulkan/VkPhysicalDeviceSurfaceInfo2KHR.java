@@ -21,12 +21,12 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,34 +38,34 @@ public class VkPhysicalDeviceSurfaceInfo2KHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkSurfaceKHR getSurface() {
-        return new VkSurfaceKHR(getVkMemory(), getSurface(getVkAddress()));
+        return new VkSurfaceKHR(getVkMemory(), getSurfaceNative(getVkAddress()));
     }
 
     
     public void setSurface(VkSurfaceKHR surface) {
-        setSurface(getVkAddress(), surface != null ? surface.getVkAddress() : VkPointer.getNullAddressNative());
+        setSurfaceNative(getVkAddress(), surface != null ? surface.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSurface(long address);
-    protected static native void setSurface(long address, long surface);
+    protected static native long getSurfaceNative(long address);
+    protected static native void setSurfaceNative(long address, long surface);
 
 
     public static native long sizeof();

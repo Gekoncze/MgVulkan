@@ -20,12 +20,12 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getMaxPerSetDescriptors() {
-        return new VkUInt32(getVkMemory(), getMaxPerSetDescriptors(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPerSetDescriptorsNative(getVkAddress()));
     }
 
     
     public void setMaxPerSetDescriptors(VkUInt32 maxPerSetDescriptors) {
-        setMaxPerSetDescriptors(getVkAddress(), maxPerSetDescriptors != null ? maxPerSetDescriptors.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPerSetDescriptorsNative(getVkAddress(), maxPerSetDescriptors != null ? maxPerSetDescriptors.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
         getMaxPerSetDescriptors().setValue(maxPerSetDescriptors);
     }
 
-    protected static native long getMaxPerSetDescriptors(long address);
-    protected static native void setMaxPerSetDescriptors(long address, long maxPerSetDescriptors);
+    protected static native long getMaxPerSetDescriptorsNative(long address);
+    protected static native void setMaxPerSetDescriptorsNative(long address, long maxPerSetDescriptors);
 
     public VkDeviceSize getMaxMemoryAllocationSize() {
-        return new VkDeviceSize(getVkMemory(), getMaxMemoryAllocationSize(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getMaxMemoryAllocationSizeNative(getVkAddress()));
     }
 
     
     public void setMaxMemoryAllocationSize(VkDeviceSize maxMemoryAllocationSize) {
-        setMaxMemoryAllocationSize(getVkAddress(), maxMemoryAllocationSize != null ? maxMemoryAllocationSize.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxMemoryAllocationSizeNative(getVkAddress(), maxMemoryAllocationSize != null ? maxMemoryAllocationSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,8 +92,8 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
         getMaxMemoryAllocationSize().setValue(maxMemoryAllocationSize);
     }
 
-    protected static native long getMaxMemoryAllocationSize(long address);
-    protected static native void setMaxMemoryAllocationSize(long address, long maxMemoryAllocationSize);
+    protected static native long getMaxMemoryAllocationSizeNative(long address);
+    protected static native void setMaxMemoryAllocationSizeNative(long address, long maxMemoryAllocationSize);
 
 
     public static native long sizeof();
@@ -137,10 +137,10 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
 
         @Override
         public VkPhysicalDeviceMaintenance3Properties get(int i){
-            return new VkPhysicalDeviceMaintenance3Properties(getVkMemory(), addressAt(i));
+            return new VkPhysicalDeviceMaintenance3Properties(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

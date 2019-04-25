@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_sizeof(JNIEnv* env, jclass
     return sizeof(VkExternalSemaphoreProperties);
 }
 
-jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getSType(JNIEnv* env, jcla
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setSType(JNIEnv* env, jclas
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getPNext(JNIEnv* env, jcla
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setPNext(JNIEnv* env, jclas
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getExportFromImportedHandleTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getExportFromImportedHandl
     return jniPointerToLong(&o->exportFromImportedHandleTypes);
 }
 
-void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setExportFromImportedHandleTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setExportFromImportedHandle
     memcpy(&o->exportFromImportedHandleTypes, valuePointer, sizeof(o->exportFromImportedHandleTypes));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getCompatibleHandleTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getCompatibleHandleTypes(J
     return jniPointerToLong(&o->compatibleHandleTypes);
 }
 
-void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setCompatibleHandleTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setCompatibleHandleTypes(JN
     memcpy(&o->compatibleHandleTypes, valuePointer, sizeof(o->compatibleHandleTypes));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getExternalSemaphoreFeatures(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getExternalSemaphoreFeaturesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkExternalSemaphoreProperties_getExternalSemaphoreFeatur
     return jniPointerToLong(&o->externalSemaphoreFeatures);
 }
 
-void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setExternalSemaphoreFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalSemaphoreProperties_setExternalSemaphoreFeaturesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

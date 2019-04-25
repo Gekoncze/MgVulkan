@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_sizeof(JNIEnv* 
     return sizeof(VkPhysicalDeviceExternalSemaphoreInfoKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_getSType(JNIEnv
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_setSType(JNIEnv*
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_getPNext(JNIEnv
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_setPNext(JNIEnv*
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_getHandleType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_getHandleTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_getHandleType(J
     return jniPointerToLong(&o->handleType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_setHandleType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceExternalSemaphoreInfoKHR_setHandleTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

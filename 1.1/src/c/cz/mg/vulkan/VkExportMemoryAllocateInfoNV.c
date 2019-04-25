@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_sizeof(JNIEnv* env, jclass 
     return sizeof(VkExportMemoryAllocateInfoNV);
 }
 
-jlong Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_getSType(JNIEnv* env, jclas
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_setSType(JNIEnv* env, jclass
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_getPNext(JNIEnv* env, jclas
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_setPNext(JNIEnv* env, jclass
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_getHandleTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_getHandleTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_getHandleTypes(JNIEnv* env,
     return jniPointerToLong(&o->handleTypes);
 }
 
-void Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_setHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExportMemoryAllocateInfoNV_setHandleTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

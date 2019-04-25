@@ -21,12 +21,12 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkDisplaySurfaceCreateFlagsKHR getFlags() {
-        return new VkDisplaySurfaceCreateFlagsKHR(getVkMemory(), getFlags(getVkAddress()));
+        return new VkDisplaySurfaceCreateFlagsKHR(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkDisplaySurfaceCreateFlagsKHR flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,29 +72,29 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkDisplayModeKHR getDisplayMode() {
-        return new VkDisplayModeKHR(getVkMemory(), getDisplayMode(getVkAddress()));
+        return new VkDisplayModeKHR(getVkMemory(), getDisplayModeNative(getVkAddress()));
     }
 
     
     public void setDisplayMode(VkDisplayModeKHR displayMode) {
-        setDisplayMode(getVkAddress(), displayMode != null ? displayMode.getVkAddress() : VkPointer.getNullAddressNative());
+        setDisplayModeNative(getVkAddress(), displayMode != null ? displayMode.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDisplayMode(long address);
-    protected static native void setDisplayMode(long address, long displayMode);
+    protected static native long getDisplayModeNative(long address);
+    protected static native void setDisplayModeNative(long address, long displayMode);
 
     public VkUInt32 getPlaneIndex() {
-        return new VkUInt32(getVkMemory(), getPlaneIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPlaneIndexNative(getVkAddress()));
     }
 
     
     public void setPlaneIndex(VkUInt32 planeIndex) {
-        setPlaneIndex(getVkAddress(), planeIndex != null ? planeIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setPlaneIndexNative(getVkAddress(), planeIndex != null ? planeIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,16 +106,16 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         getPlaneIndex().setValue(planeIndex);
     }
 
-    protected static native long getPlaneIndex(long address);
-    protected static native void setPlaneIndex(long address, long planeIndex);
+    protected static native long getPlaneIndexNative(long address);
+    protected static native void setPlaneIndexNative(long address, long planeIndex);
 
     public VkUInt32 getPlaneStackIndex() {
-        return new VkUInt32(getVkMemory(), getPlaneStackIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPlaneStackIndexNative(getVkAddress()));
     }
 
     
     public void setPlaneStackIndex(VkUInt32 planeStackIndex) {
-        setPlaneStackIndex(getVkAddress(), planeStackIndex != null ? planeStackIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setPlaneStackIndexNative(getVkAddress(), planeStackIndex != null ? planeStackIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -127,16 +127,16 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         getPlaneStackIndex().setValue(planeStackIndex);
     }
 
-    protected static native long getPlaneStackIndex(long address);
-    protected static native void setPlaneStackIndex(long address, long planeStackIndex);
+    protected static native long getPlaneStackIndexNative(long address);
+    protected static native void setPlaneStackIndexNative(long address, long planeStackIndex);
 
     public VkSurfaceTransformFlagBitsKHR getTransform() {
-        return new VkSurfaceTransformFlagBitsKHR(getVkMemory(), getTransform(getVkAddress()));
+        return new VkSurfaceTransformFlagBitsKHR(getVkMemory(), getTransformNative(getVkAddress()));
     }
 
     
     public void setTransform(VkSurfaceTransformFlagBitsKHR transform) {
-        setTransform(getVkAddress(), transform != null ? transform.getVkAddress() : VkPointer.getNullAddressNative());
+        setTransformNative(getVkAddress(), transform != null ? transform.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -148,16 +148,16 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         getTransform().setValue(transform);
     }
 
-    protected static native long getTransform(long address);
-    protected static native void setTransform(long address, long transform);
+    protected static native long getTransformNative(long address);
+    protected static native void setTransformNative(long address, long transform);
 
     public VkFloat getGlobalAlpha() {
-        return new VkFloat(getVkMemory(), getGlobalAlpha(getVkAddress()));
+        return new VkFloat(getVkMemory(), getGlobalAlphaNative(getVkAddress()));
     }
 
     
     public void setGlobalAlpha(VkFloat globalAlpha) {
-        setGlobalAlpha(getVkAddress(), globalAlpha != null ? globalAlpha.getVkAddress() : VkPointer.getNullAddressNative());
+        setGlobalAlphaNative(getVkAddress(), globalAlpha != null ? globalAlpha.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -169,16 +169,16 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         getGlobalAlpha().setValue(globalAlpha);
     }
 
-    protected static native long getGlobalAlpha(long address);
-    protected static native void setGlobalAlpha(long address, long globalAlpha);
+    protected static native long getGlobalAlphaNative(long address);
+    protected static native void setGlobalAlphaNative(long address, long globalAlpha);
 
     public VkDisplayPlaneAlphaFlagBitsKHR getAlphaMode() {
-        return new VkDisplayPlaneAlphaFlagBitsKHR(getVkMemory(), getAlphaMode(getVkAddress()));
+        return new VkDisplayPlaneAlphaFlagBitsKHR(getVkMemory(), getAlphaModeNative(getVkAddress()));
     }
 
     
     public void setAlphaMode(VkDisplayPlaneAlphaFlagBitsKHR alphaMode) {
-        setAlphaMode(getVkAddress(), alphaMode != null ? alphaMode.getVkAddress() : VkPointer.getNullAddressNative());
+        setAlphaModeNative(getVkAddress(), alphaMode != null ? alphaMode.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -190,21 +190,21 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
         getAlphaMode().setValue(alphaMode);
     }
 
-    protected static native long getAlphaMode(long address);
-    protected static native void setAlphaMode(long address, long alphaMode);
+    protected static native long getAlphaModeNative(long address);
+    protected static native void setAlphaModeNative(long address, long alphaMode);
 
     public VkExtent2D getImageExtent() {
-        return new VkExtent2D(getVkMemory(), getImageExtent(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getImageExtentNative(getVkAddress()));
     }
 
     
     public void setImageExtent(VkExtent2D imageExtent) {
-        setImageExtent(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.getNullAddressNative());
+        setImageExtentNative(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getImageExtent(long address);
-    protected static native void setImageExtent(long address, long imageExtent);
+    protected static native long getImageExtentNative(long address);
+    protected static native void setImageExtentNative(long address, long imageExtent);
 
 
     public static native long sizeof();

@@ -25,12 +25,12 @@ public class VkOffset3D extends VkObject {
     }
 
     public VkInt32 getX() {
-        return new VkInt32(getVkMemory(), getX(getVkAddress()));
+        return new VkInt32(getVkMemory(), getXNative(getVkAddress()));
     }
 
     
     public void setX(VkInt32 x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
+        setXNative(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -42,16 +42,16 @@ public class VkOffset3D extends VkObject {
         getX().setValue(x);
     }
 
-    protected static native long getX(long address);
-    protected static native void setX(long address, long x);
+    protected static native long getXNative(long address);
+    protected static native void setXNative(long address, long x);
 
     public VkInt32 getY() {
-        return new VkInt32(getVkMemory(), getY(getVkAddress()));
+        return new VkInt32(getVkMemory(), getYNative(getVkAddress()));
     }
 
     
     public void setY(VkInt32 y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
+        setYNative(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,16 +63,16 @@ public class VkOffset3D extends VkObject {
         getY().setValue(y);
     }
 
-    protected static native long getY(long address);
-    protected static native void setY(long address, long y);
+    protected static native long getYNative(long address);
+    protected static native void setYNative(long address, long y);
 
     public VkInt32 getZ() {
-        return new VkInt32(getVkMemory(), getZ(getVkAddress()));
+        return new VkInt32(getVkMemory(), getZNative(getVkAddress()));
     }
 
     
     public void setZ(VkInt32 z) {
-        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddressNative());
+        setZNative(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,8 +84,8 @@ public class VkOffset3D extends VkObject {
         getZ().setValue(z);
     }
 
-    protected static native long getZ(long address);
-    protected static native void setZ(long address, long z);
+    protected static native long getZNative(long address);
+    protected static native void setZNative(long address, long z);
 
 
     public static native long sizeof();
@@ -129,10 +129,10 @@ public class VkOffset3D extends VkObject {
 
         @Override
         public VkOffset3D get(int i){
-            return new VkOffset3D(getVkMemory(), addressAt(i));
+            return new VkOffset3D(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

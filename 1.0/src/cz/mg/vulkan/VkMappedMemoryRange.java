@@ -20,12 +20,12 @@ public class VkMappedMemoryRange extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,42 +37,42 @@ public class VkMappedMemoryRange extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkDeviceMemory getMemory() {
-        return new VkDeviceMemory(getVkMemory(), getMemory(getVkAddress()));
+        return new VkDeviceMemory(getVkMemory(), getMemoryNative(getVkAddress()));
     }
 
     
     public void setMemory(VkDeviceMemory memory) {
-        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddressNative());
+        setMemoryNative(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMemory(long address);
-    protected static native void setMemory(long address, long memory);
+    protected static native long getMemoryNative(long address);
+    protected static native void setMemoryNative(long address, long memory);
 
     public VkDeviceSize getOffset() {
-        return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,16 +84,16 @@ public class VkMappedMemoryRange extends VkObject {
         getOffset().setValue(offset);
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
     public VkDeviceSize getSize() {
-        return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getSizeNative(getVkAddress()));
     }
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
+        setSizeNative(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -105,8 +105,8 @@ public class VkMappedMemoryRange extends VkObject {
         getSize().setValue(size);
     }
 
-    protected static native long getSize(long address);
-    protected static native void setSize(long address, long size);
+    protected static native long getSizeNative(long address);
+    protected static native void setSizeNative(long address, long size);
 
 
     public static native long sizeof();
@@ -150,10 +150,10 @@ public class VkMappedMemoryRange extends VkObject {
 
         @Override
         public VkMappedMemoryRange get(int i){
-            return new VkMappedMemoryRange(getVkMemory(), addressAt(i));
+            return new VkMappedMemoryRange(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

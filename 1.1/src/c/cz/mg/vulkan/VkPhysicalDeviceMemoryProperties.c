@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_sizeof(JNIEnv* env, jcl
     return sizeof(VkPhysicalDeviceMemoryProperties);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryTypeCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryTypeCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryTypeCount(JNIE
     return jniPointerToLong(&o->memoryTypeCount);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryTypeCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryTypeCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryTypeCount(JNIEn
     memcpy(&o->memoryTypeCount, valuePointer, sizeof(o->memoryTypeCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryTypes(JNIEnv* 
     return jniPointerToLong(o->memoryTypes);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryTypes(JNIEnv* e
     memcpy(o->memoryTypes, valuePointer, sizeof(o->memoryTypes));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryHeapCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryHeapCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryHeapCount(JNIE
     return jniPointerToLong(&o->memoryHeapCount);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryHeapCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryHeapCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryHeapCount(JNIEn
     memcpy(&o->memoryHeapCount, valuePointer, sizeof(o->memoryHeapCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryHeaps(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryHeapsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryHeaps(JNIEnv* 
     return jniPointerToLong(o->memoryHeaps);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryHeaps(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setMemoryHeapsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

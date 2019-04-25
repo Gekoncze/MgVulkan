@@ -61,10 +61,10 @@ public class VkDescriptorSet extends VkNonDispatchableHandle {
 
         @Override
         public VkDescriptorSet get(int i){
-            return new VkDescriptorSet(getVkMemory(), addressAt(i));
+            return new VkDescriptorSet(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

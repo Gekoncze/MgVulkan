@@ -20,12 +20,12 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
 
     public VkDisplayPlaneAlphaFlagsKHR getSupportedAlpha() {
-        return new VkDisplayPlaneAlphaFlagsKHR(getVkMemory(), getSupportedAlpha(getVkAddress()));
+        return new VkDisplayPlaneAlphaFlagsKHR(getVkMemory(), getSupportedAlphaNative(getVkAddress()));
     }
 
     
     public void setSupportedAlpha(VkDisplayPlaneAlphaFlagsKHR supportedAlpha) {
-        setSupportedAlpha(getVkAddress(), supportedAlpha != null ? supportedAlpha.getVkAddress() : VkPointer.getNullAddressNative());
+        setSupportedAlphaNative(getVkAddress(), supportedAlpha != null ? supportedAlpha.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,112 +37,112 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         getSupportedAlpha().setValue(supportedAlpha);
     }
 
-    protected static native long getSupportedAlpha(long address);
-    protected static native void setSupportedAlpha(long address, long supportedAlpha);
+    protected static native long getSupportedAlphaNative(long address);
+    protected static native void setSupportedAlphaNative(long address, long supportedAlpha);
 
     public VkOffset2D getMinSrcPosition() {
-        return new VkOffset2D(getVkMemory(), getMinSrcPosition(getVkAddress()));
+        return new VkOffset2D(getVkMemory(), getMinSrcPositionNative(getVkAddress()));
     }
 
     
     public void setMinSrcPosition(VkOffset2D minSrcPosition) {
-        setMinSrcPosition(getVkAddress(), minSrcPosition != null ? minSrcPosition.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinSrcPositionNative(getVkAddress(), minSrcPosition != null ? minSrcPosition.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMinSrcPosition(long address);
-    protected static native void setMinSrcPosition(long address, long minSrcPosition);
+    protected static native long getMinSrcPositionNative(long address);
+    protected static native void setMinSrcPositionNative(long address, long minSrcPosition);
 
     public VkOffset2D getMaxSrcPosition() {
-        return new VkOffset2D(getVkMemory(), getMaxSrcPosition(getVkAddress()));
+        return new VkOffset2D(getVkMemory(), getMaxSrcPositionNative(getVkAddress()));
     }
 
     
     public void setMaxSrcPosition(VkOffset2D maxSrcPosition) {
-        setMaxSrcPosition(getVkAddress(), maxSrcPosition != null ? maxSrcPosition.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxSrcPositionNative(getVkAddress(), maxSrcPosition != null ? maxSrcPosition.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMaxSrcPosition(long address);
-    protected static native void setMaxSrcPosition(long address, long maxSrcPosition);
+    protected static native long getMaxSrcPositionNative(long address);
+    protected static native void setMaxSrcPositionNative(long address, long maxSrcPosition);
 
     public VkExtent2D getMinSrcExtent() {
-        return new VkExtent2D(getVkMemory(), getMinSrcExtent(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getMinSrcExtentNative(getVkAddress()));
     }
 
     
     public void setMinSrcExtent(VkExtent2D minSrcExtent) {
-        setMinSrcExtent(getVkAddress(), minSrcExtent != null ? minSrcExtent.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinSrcExtentNative(getVkAddress(), minSrcExtent != null ? minSrcExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMinSrcExtent(long address);
-    protected static native void setMinSrcExtent(long address, long minSrcExtent);
+    protected static native long getMinSrcExtentNative(long address);
+    protected static native void setMinSrcExtentNative(long address, long minSrcExtent);
 
     public VkExtent2D getMaxSrcExtent() {
-        return new VkExtent2D(getVkMemory(), getMaxSrcExtent(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getMaxSrcExtentNative(getVkAddress()));
     }
 
     
     public void setMaxSrcExtent(VkExtent2D maxSrcExtent) {
-        setMaxSrcExtent(getVkAddress(), maxSrcExtent != null ? maxSrcExtent.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxSrcExtentNative(getVkAddress(), maxSrcExtent != null ? maxSrcExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMaxSrcExtent(long address);
-    protected static native void setMaxSrcExtent(long address, long maxSrcExtent);
+    protected static native long getMaxSrcExtentNative(long address);
+    protected static native void setMaxSrcExtentNative(long address, long maxSrcExtent);
 
     public VkOffset2D getMinDstPosition() {
-        return new VkOffset2D(getVkMemory(), getMinDstPosition(getVkAddress()));
+        return new VkOffset2D(getVkMemory(), getMinDstPositionNative(getVkAddress()));
     }
 
     
     public void setMinDstPosition(VkOffset2D minDstPosition) {
-        setMinDstPosition(getVkAddress(), minDstPosition != null ? minDstPosition.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinDstPositionNative(getVkAddress(), minDstPosition != null ? minDstPosition.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMinDstPosition(long address);
-    protected static native void setMinDstPosition(long address, long minDstPosition);
+    protected static native long getMinDstPositionNative(long address);
+    protected static native void setMinDstPositionNative(long address, long minDstPosition);
 
     public VkOffset2D getMaxDstPosition() {
-        return new VkOffset2D(getVkMemory(), getMaxDstPosition(getVkAddress()));
+        return new VkOffset2D(getVkMemory(), getMaxDstPositionNative(getVkAddress()));
     }
 
     
     public void setMaxDstPosition(VkOffset2D maxDstPosition) {
-        setMaxDstPosition(getVkAddress(), maxDstPosition != null ? maxDstPosition.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDstPositionNative(getVkAddress(), maxDstPosition != null ? maxDstPosition.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMaxDstPosition(long address);
-    protected static native void setMaxDstPosition(long address, long maxDstPosition);
+    protected static native long getMaxDstPositionNative(long address);
+    protected static native void setMaxDstPositionNative(long address, long maxDstPosition);
 
     public VkExtent2D getMinDstExtent() {
-        return new VkExtent2D(getVkMemory(), getMinDstExtent(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getMinDstExtentNative(getVkAddress()));
     }
 
     
     public void setMinDstExtent(VkExtent2D minDstExtent) {
-        setMinDstExtent(getVkAddress(), minDstExtent != null ? minDstExtent.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinDstExtentNative(getVkAddress(), minDstExtent != null ? minDstExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMinDstExtent(long address);
-    protected static native void setMinDstExtent(long address, long minDstExtent);
+    protected static native long getMinDstExtentNative(long address);
+    protected static native void setMinDstExtentNative(long address, long minDstExtent);
 
     public VkExtent2D getMaxDstExtent() {
-        return new VkExtent2D(getVkMemory(), getMaxDstExtent(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getMaxDstExtentNative(getVkAddress()));
     }
 
     
     public void setMaxDstExtent(VkExtent2D maxDstExtent) {
-        setMaxDstExtent(getVkAddress(), maxDstExtent != null ? maxDstExtent.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDstExtentNative(getVkAddress(), maxDstExtent != null ? maxDstExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMaxDstExtent(long address);
-    protected static native void setMaxDstExtent(long address, long maxDstExtent);
+    protected static native long getMaxDstExtentNative(long address);
+    protected static native void setMaxDstExtentNative(long address, long maxDstExtent);
 
 
     public static native long sizeof();
@@ -186,10 +186,10 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
 
         @Override
         public VkDisplayPlaneCapabilitiesKHR get(int i){
-            return new VkDisplayPlaneCapabilitiesKHR(getVkMemory(), addressAt(i));
+            return new VkDisplayPlaneCapabilitiesKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

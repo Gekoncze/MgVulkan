@@ -61,10 +61,10 @@ public class VkDisplayKHR extends VkNonDispatchableHandle {
 
         @Override
         public VkDisplayKHR get(int i){
-            return new VkDisplayKHR(getVkMemory(), addressAt(i));
+            return new VkDisplayKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

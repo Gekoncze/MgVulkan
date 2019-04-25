@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatProperties_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkImageFormatProperties);
 }
 
-jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxExtent(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxExtentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxExtent(JNIEnv* env, jclass
     return jniPointerToLong(&o->maxExtent);
 }
 
-void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxExtent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxExtentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxExtent(JNIEnv* env, jclass 
     memcpy(&o->maxExtent, valuePointer, sizeof(o->maxExtent));
 }
 
-jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxMipLevels(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxMipLevelsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxMipLevels(JNIEnv* env, jcl
     return jniPointerToLong(&o->maxMipLevels);
 }
 
-void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxMipLevels(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxMipLevelsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxMipLevels(JNIEnv* env, jcla
     memcpy(&o->maxMipLevels, valuePointer, sizeof(o->maxMipLevels));
 }
 
-jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxArrayLayers(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxArrayLayersNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxArrayLayers(JNIEnv* env, j
     return jniPointerToLong(&o->maxArrayLayers);
 }
 
-void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxArrayLayers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxArrayLayersNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxArrayLayers(JNIEnv* env, jc
     memcpy(&o->maxArrayLayers, valuePointer, sizeof(o->maxArrayLayers));
 }
 
-jlong Java_cz_mg_vulkan_VkImageFormatProperties_getSampleCounts(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageFormatProperties_getSampleCountsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatProperties_getSampleCounts(JNIEnv* env, jcl
     return jniPointerToLong(&o->sampleCounts);
 }
 
-void Java_cz_mg_vulkan_VkImageFormatProperties_setSampleCounts(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageFormatProperties_setSampleCountsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkImageFormatProperties_setSampleCounts(JNIEnv* env, jcla
     memcpy(&o->sampleCounts, valuePointer, sizeof(o->sampleCounts));
 }
 
-jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxResourceSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxResourceSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatProperties_getMaxResourceSize(JNIEnv* env, 
     return jniPointerToLong(&o->maxResourceSize);
 }
 
-void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxResourceSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageFormatProperties_setMaxResourceSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

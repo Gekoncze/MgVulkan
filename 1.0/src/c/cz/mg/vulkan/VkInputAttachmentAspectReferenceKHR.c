@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_sizeof(JNIEnv* env, 
     return sizeof(VkInputAttachmentAspectReferenceKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_getSubpass(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_getSubpassNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_getSubpass(JNIEnv* e
     return jniPointerToLong(&o->subpass);
 }
 
-void Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_setSubpass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_setSubpassNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_setSubpass(JNIEnv* en
     memcpy(&o->subpass, valuePointer, sizeof(o->subpass));
 }
 
-jlong Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_getInputAttachmentIndex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_getInputAttachmentIndexNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_getInputAttachmentIn
     return jniPointerToLong(&o->inputAttachmentIndex);
 }
 
-void Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_setInputAttachmentIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_setInputAttachmentIndexNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_setInputAttachmentInd
     memcpy(&o->inputAttachmentIndex, valuePointer, sizeof(o->inputAttachmentIndex));
 }
 
-jlong Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_getAspectMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_getAspectMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_getAspectMask(JNIEnv
     return jniPointerToLong(&o->aspectMask);
 }
 
-void Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_setAspectMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInputAttachmentAspectReferenceKHR_setAspectMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

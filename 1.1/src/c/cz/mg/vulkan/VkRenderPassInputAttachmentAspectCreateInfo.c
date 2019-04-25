@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_sizeof(JNIEn
     return sizeof(VkRenderPassInputAttachmentAspectCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getSType(JNI
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setSType(JNIE
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getPNext(JNI
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setPNext(JNIE
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getAspectReferenceCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getAspectReferenceCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getAspectRef
     return jniPointerToLong(&o->aspectReferenceCount);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setAspectReferenceCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setAspectReferenceCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setAspectRefe
     memcpy(&o->aspectReferenceCount, valuePointer, sizeof(o->aspectReferenceCount));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getPAspectReferences(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getPAspectReferencesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_getPAspectRe
     return jniPointerToLong(o->pAspectReferences);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setPAspectReferences(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassInputAttachmentAspectCreateInfo_setPAspectReferencesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

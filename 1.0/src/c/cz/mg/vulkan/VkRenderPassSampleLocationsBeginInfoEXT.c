@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_sizeof(JNIEnv* e
     return sizeof(VkRenderPassSampleLocationsBeginInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getSType(JNIEnv*
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setSType(JNIEnv* 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPNext(JNIEnv*
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPNext(JNIEnv* 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getAttachmentInitialSampleLocationsCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getAttachmentInitialSampleLocationsCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getAttachmentIni
     return jniPointerToLong(&o->attachmentInitialSampleLocationsCount);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setAttachmentInitialSampleLocationsCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setAttachmentInitialSampleLocationsCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setAttachmentInit
     memcpy(&o->attachmentInitialSampleLocationsCount, valuePointer, sizeof(o->attachmentInitialSampleLocationsCount));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPAttachmentInitialSampleLocations(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPAttachmentInitialSampleLocationsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPAttachmentIn
     return jniPointerToLong(o->pAttachmentInitialSampleLocations);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPAttachmentInitialSampleLocations(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPAttachmentInitialSampleLocationsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPAttachmentIni
     memcpy(&o->pAttachmentInitialSampleLocations, &valuePointer, sizeof(o->pAttachmentInitialSampleLocations));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPostSubpassSampleLocationsCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPostSubpassSampleLocationsCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPostSubpassSa
     return jniPointerToLong(&o->postSubpassSampleLocationsCount);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPostSubpassSampleLocationsCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPostSubpassSampleLocationsCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPostSubpassSam
     memcpy(&o->postSubpassSampleLocationsCount, valuePointer, sizeof(o->postSubpassSampleLocationsCount));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPSubpassSampleLocations(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPSubpassSampleLocationsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_getPSubpassSampl
     return jniPointerToLong(o->pSubpassSampleLocations);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPSubpassSampleLocations(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassSampleLocationsBeginInfoEXT_setPSubpassSampleLocationsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

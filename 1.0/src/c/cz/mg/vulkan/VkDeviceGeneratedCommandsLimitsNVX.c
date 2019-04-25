@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_sizeof(JNIEnv* env, j
     return sizeof(VkDeviceGeneratedCommandsLimitsNVX);
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getSType(JNIEnv* env,
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setSType(JNIEnv* env, 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getPNext(JNIEnv* env,
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setPNext(JNIEnv* env, 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMaxIndirectCommandsLayoutTokenCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMaxIndirectCommandsLayoutTokenCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMaxIndirectCommand
     return jniPointerToLong(&o->maxIndirectCommandsLayoutTokenCount);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMaxIndirectCommandsLayoutTokenCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMaxIndirectCommandsLayoutTokenCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMaxIndirectCommands
     memcpy(&o->maxIndirectCommandsLayoutTokenCount, valuePointer, sizeof(o->maxIndirectCommandsLayoutTokenCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMaxObjectEntryCounts(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMaxObjectEntryCountsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMaxObjectEntryCoun
     return jniPointerToLong(&o->maxObjectEntryCounts);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMaxObjectEntryCounts(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMaxObjectEntryCountsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMaxObjectEntryCount
     memcpy(&o->maxObjectEntryCounts, valuePointer, sizeof(o->maxObjectEntryCounts));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMinSequenceCountBufferOffsetAlignment(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMinSequenceCountBufferOffsetAlignmentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMinSequenceCountBu
     return jniPointerToLong(&o->minSequenceCountBufferOffsetAlignment);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMinSequenceCountBufferOffsetAlignment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMinSequenceCountBufferOffsetAlignmentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMinSequenceCountBuf
     memcpy(&o->minSequenceCountBufferOffsetAlignment, valuePointer, sizeof(o->minSequenceCountBufferOffsetAlignment));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMinSequenceIndexBufferOffsetAlignment(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMinSequenceIndexBufferOffsetAlignmentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMinSequenceIndexBu
     return jniPointerToLong(&o->minSequenceIndexBufferOffsetAlignment);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMinSequenceIndexBufferOffsetAlignment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMinSequenceIndexBufferOffsetAlignmentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMinSequenceIndexBuf
     memcpy(&o->minSequenceIndexBufferOffsetAlignment, valuePointer, sizeof(o->minSequenceIndexBufferOffsetAlignment));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMinCommandsTokenBufferOffsetAlignment(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMinCommandsTokenBufferOffsetAlignmentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_getMinCommandsTokenBu
     return jniPointerToLong(&o->minCommandsTokenBufferOffsetAlignment);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMinCommandsTokenBufferOffsetAlignment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGeneratedCommandsLimitsNVX_setMinCommandsTokenBufferOffsetAlignmentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

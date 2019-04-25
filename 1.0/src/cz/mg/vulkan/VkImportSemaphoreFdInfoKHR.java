@@ -21,12 +21,12 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,42 +38,42 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkSemaphore getSemaphore() {
-        return new VkSemaphore(getVkMemory(), getSemaphore(getVkAddress()));
+        return new VkSemaphore(getVkMemory(), getSemaphoreNative(getVkAddress()));
     }
 
     
     public void setSemaphore(VkSemaphore semaphore) {
-        setSemaphore(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddressNative());
+        setSemaphoreNative(getVkAddress(), semaphore != null ? semaphore.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSemaphore(long address);
-    protected static native void setSemaphore(long address, long semaphore);
+    protected static native long getSemaphoreNative(long address);
+    protected static native void setSemaphoreNative(long address, long semaphore);
 
     public VkSemaphoreImportFlagsKHR getFlags() {
-        return new VkSemaphoreImportFlagsKHR(getVkMemory(), getFlags(getVkAddress()));
+        return new VkSemaphoreImportFlagsKHR(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkSemaphoreImportFlagsKHR flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -85,16 +85,16 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkExternalSemaphoreHandleTypeFlagBitsKHR getHandleType() {
-        return new VkExternalSemaphoreHandleTypeFlagBitsKHR(getVkMemory(), getHandleType(getVkAddress()));
+        return new VkExternalSemaphoreHandleTypeFlagBitsKHR(getVkMemory(), getHandleTypeNative(getVkAddress()));
     }
 
     
     public void setHandleType(VkExternalSemaphoreHandleTypeFlagBitsKHR handleType) {
-        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddressNative());
+        setHandleTypeNative(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,16 +106,16 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         getHandleType().setValue(handleType);
     }
 
-    protected static native long getHandleType(long address);
-    protected static native void setHandleType(long address, long handleType);
+    protected static native long getHandleTypeNative(long address);
+    protected static native void setHandleTypeNative(long address, long handleType);
 
     public VkInt getFd() {
-        return new VkInt(getVkMemory(), getFd(getVkAddress()));
+        return new VkInt(getVkMemory(), getFdNative(getVkAddress()));
     }
 
     
     public void setFd(VkInt fd) {
-        setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getNullAddressNative());
+        setFdNative(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -127,8 +127,8 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
         getFd().setValue(fd);
     }
 
-    protected static native long getFd(long address);
-    protected static native void setFd(long address, long fd);
+    protected static native long getFdNative(long address);
+    protected static native void setFdNative(long address, long fd);
 
 
     public static native long sizeof();

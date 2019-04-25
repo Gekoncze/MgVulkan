@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_sizeof(JNI
     return sizeof(VkPipelineCoverageModulationStateCreateInfoNV);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getSType(J
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setSType(JN
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getPNext(J
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setPNext(JN
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getFlags(J
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setFlags(JN
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getCoverageModulationMode(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getCoverageModulationModeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getCoverag
     return jniPointerToLong(&o->coverageModulationMode);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setCoverageModulationMode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setCoverageModulationModeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setCoverage
     memcpy(&o->coverageModulationMode, valuePointer, sizeof(o->coverageModulationMode));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getCoverageModulationTableEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getCoverageModulationTableEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getCoverag
     return jniPointerToLong(&o->coverageModulationTableEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setCoverageModulationTableEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setCoverageModulationTableEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setCoverage
     memcpy(&o->coverageModulationTableEnable, valuePointer, sizeof(o->coverageModulationTableEnable));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getCoverageModulationTableCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getCoverageModulationTableCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getCoverag
     return jniPointerToLong(&o->coverageModulationTableCount);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setCoverageModulationTableCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setCoverageModulationTableCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setCoverage
     memcpy(&o->coverageModulationTableCount, valuePointer, sizeof(o->coverageModulationTableCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getPCoverageModulationTable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getPCoverageModulationTableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_getPCovera
     return jniPointerToLong(o->pCoverageModulationTable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setPCoverageModulationTable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageModulationStateCreateInfoNV_setPCoverageModulationTableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

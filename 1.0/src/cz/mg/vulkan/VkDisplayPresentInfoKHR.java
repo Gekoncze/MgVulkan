@@ -21,12 +21,12 @@ public class VkDisplayPresentInfoKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,55 +38,55 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkRect2D getSrcRect() {
-        return new VkRect2D(getVkMemory(), getSrcRect(getVkAddress()));
+        return new VkRect2D(getVkMemory(), getSrcRectNative(getVkAddress()));
     }
 
     
     public void setSrcRect(VkRect2D srcRect) {
-        setSrcRect(getVkAddress(), srcRect != null ? srcRect.getVkAddress() : VkPointer.getNullAddressNative());
+        setSrcRectNative(getVkAddress(), srcRect != null ? srcRect.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSrcRect(long address);
-    protected static native void setSrcRect(long address, long srcRect);
+    protected static native long getSrcRectNative(long address);
+    protected static native void setSrcRectNative(long address, long srcRect);
 
     public VkRect2D getDstRect() {
-        return new VkRect2D(getVkMemory(), getDstRect(getVkAddress()));
+        return new VkRect2D(getVkMemory(), getDstRectNative(getVkAddress()));
     }
 
     
     public void setDstRect(VkRect2D dstRect) {
-        setDstRect(getVkAddress(), dstRect != null ? dstRect.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstRectNative(getVkAddress(), dstRect != null ? dstRect.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDstRect(long address);
-    protected static native void setDstRect(long address, long dstRect);
+    protected static native long getDstRectNative(long address);
+    protected static native void setDstRectNative(long address, long dstRect);
 
     public VkBool32 getPersistent() {
-        return new VkBool32(getVkMemory(), getPersistent(getVkAddress()));
+        return new VkBool32(getVkMemory(), getPersistentNative(getVkAddress()));
     }
 
     
     public void setPersistent(VkBool32 persistent) {
-        setPersistent(getVkAddress(), persistent != null ? persistent.getVkAddress() : VkPointer.getNullAddressNative());
+        setPersistentNative(getVkAddress(), persistent != null ? persistent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -98,8 +98,8 @@ public class VkDisplayPresentInfoKHR extends VkObject {
         getPersistent().setValue(persistent);
     }
 
-    protected static native long getPersistent(long address);
-    protected static native void setPersistent(long address, long persistent);
+    protected static native long getPersistentNative(long address);
+    protected static native void setPersistentNative(long address, long persistent);
 
 
     public static native long sizeof();

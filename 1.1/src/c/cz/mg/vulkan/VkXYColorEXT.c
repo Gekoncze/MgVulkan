@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkXYColorEXT_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkXYColorEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkXYColorEXT_getX(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkXYColorEXT_getXNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkXYColorEXT_getX(JNIEnv* env, jclass jc, jlong address)
     return jniPointerToLong(&o->x);
 }
 
-void Java_cz_mg_vulkan_VkXYColorEXT_setX(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkXYColorEXT_setXNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkXYColorEXT_setX(JNIEnv* env, jclass jc, jlong address, 
     memcpy(&o->x, valuePointer, sizeof(o->x));
 }
 
-jlong Java_cz_mg_vulkan_VkXYColorEXT_getY(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkXYColorEXT_getYNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkXYColorEXT_getY(JNIEnv* env, jclass jc, jlong address)
     return jniPointerToLong(&o->y);
 }
 
-void Java_cz_mg_vulkan_VkXYColorEXT_setY(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkXYColorEXT_setYNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

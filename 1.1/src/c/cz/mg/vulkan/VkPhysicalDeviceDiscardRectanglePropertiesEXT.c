@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_sizeof(JNI
     return sizeof(VkPhysicalDeviceDiscardRectanglePropertiesEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_getSType(J
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_setSType(JN
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_getPNext(J
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_setPNext(JN
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_getMaxDiscardRectangles(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_getMaxDiscardRectanglesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_getMaxDisc
     return jniPointerToLong(&o->maxDiscardRectangles);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_setMaxDiscardRectangles(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceDiscardRectanglePropertiesEXT_setMaxDiscardRectanglesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

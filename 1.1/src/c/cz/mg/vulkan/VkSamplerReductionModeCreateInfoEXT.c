@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_sizeof(JNIEnv* env, 
     return sizeof(VkSamplerReductionModeCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_getSType(JNIEnv* env
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_setSType(JNIEnv* env,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_getPNext(JNIEnv* env
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_setPNext(JNIEnv* env,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_getReductionMode(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_getReductionModeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_getReductionMode(JNI
     return jniPointerToLong(&o->reductionMode);
 }
 
-void Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_setReductionMode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerReductionModeCreateInfoEXT_setReductionModeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

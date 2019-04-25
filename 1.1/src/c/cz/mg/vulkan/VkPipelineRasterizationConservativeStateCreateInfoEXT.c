@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_si
     return sizeof(VkPipelineRasterizationConservativeStateCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_ge
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_set
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_ge
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_set
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_ge
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_set
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_getConservativeRasterizationMode(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_getConservativeRasterizationModeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_ge
     return jniPointerToLong(&o->conservativeRasterizationMode);
 }
 
-void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_setConservativeRasterizationMode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_setConservativeRasterizationModeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_set
     memcpy(&o->conservativeRasterizationMode, valuePointer, sizeof(o->conservativeRasterizationMode));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_getExtraPrimitiveOverestimationSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_getExtraPrimitiveOverestimationSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_ge
     return jniPointerToLong(&o->extraPrimitiveOverestimationSize);
 }
 
-void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_setExtraPrimitiveOverestimationSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineRasterizationConservativeStateCreateInfoEXT_setExtraPrimitiveOverestimationSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

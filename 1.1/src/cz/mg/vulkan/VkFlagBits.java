@@ -61,10 +61,10 @@ public class VkFlagBits extends VkInt32 {
 
         @Override
         public VkFlagBits get(int i){
-            return new VkFlagBits(getVkMemory(), addressAt(i));
+            return new VkFlagBits(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

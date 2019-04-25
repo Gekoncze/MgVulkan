@@ -61,10 +61,10 @@ public class VkRenderPass extends VkNonDispatchableHandle {
 
         @Override
         public VkRenderPass get(int i){
-            return new VkRenderPass(getVkMemory(), addressAt(i));
+            return new VkRenderPass(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

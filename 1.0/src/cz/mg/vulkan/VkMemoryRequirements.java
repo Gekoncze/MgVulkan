@@ -20,12 +20,12 @@ public class VkMemoryRequirements extends VkObject {
 
 
     public VkDeviceSize getSize() {
-        return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getSizeNative(getVkAddress()));
     }
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
+        setSizeNative(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkMemoryRequirements extends VkObject {
         getSize().setValue(size);
     }
 
-    protected static native long getSize(long address);
-    protected static native void setSize(long address, long size);
+    protected static native long getSizeNative(long address);
+    protected static native void setSizeNative(long address, long size);
 
     public VkDeviceSize getAlignment() {
-        return new VkDeviceSize(getVkMemory(), getAlignment(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getAlignmentNative(getVkAddress()));
     }
 
     
     public void setAlignment(VkDeviceSize alignment) {
-        setAlignment(getVkAddress(), alignment != null ? alignment.getVkAddress() : VkPointer.getNullAddressNative());
+        setAlignmentNative(getVkAddress(), alignment != null ? alignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkMemoryRequirements extends VkObject {
         getAlignment().setValue(alignment);
     }
 
-    protected static native long getAlignment(long address);
-    protected static native void setAlignment(long address, long alignment);
+    protected static native long getAlignmentNative(long address);
+    protected static native void setAlignmentNative(long address, long alignment);
 
     public VkUInt32 getMemoryTypeBits() {
-        return new VkUInt32(getVkMemory(), getMemoryTypeBits(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMemoryTypeBitsNative(getVkAddress()));
     }
 
     
     public void setMemoryTypeBits(VkUInt32 memoryTypeBits) {
-        setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getNullAddressNative());
+        setMemoryTypeBitsNative(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,8 +79,8 @@ public class VkMemoryRequirements extends VkObject {
         getMemoryTypeBits().setValue(memoryTypeBits);
     }
 
-    protected static native long getMemoryTypeBits(long address);
-    protected static native void setMemoryTypeBits(long address, long memoryTypeBits);
+    protected static native long getMemoryTypeBitsNative(long address);
+    protected static native void setMemoryTypeBitsNative(long address, long memoryTypeBits);
 
 
     public static native long sizeof();
@@ -124,10 +124,10 @@ public class VkMemoryRequirements extends VkObject {
 
         @Override
         public VkMemoryRequirements get(int i){
-            return new VkMemoryRequirements(getVkMemory(), addressAt(i));
+            return new VkMemoryRequirements(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

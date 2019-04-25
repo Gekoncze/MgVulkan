@@ -3,8 +3,8 @@ package cz.mg.vulkan;
 public class VkString extends VkChar.Array {
     public VkString(String string) {
         super(string.length() + 1);
-        for(int i = 0; i < string.length(); i++) setValueAt(i, (byte) string.charAt(i));
-        setValueAt(string.length(), (byte) 0);
+        for(int i = 0; i < string.length(); i++) setValue(i, (byte) string.charAt(i));
+        setValue(string.length(), (byte) 0);
     }
 
     protected VkString(VkMemory vkmemory, long vkaddress) {
@@ -18,7 +18,7 @@ public class VkString extends VkChar.Array {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < count(); i++) sb.append((char)getValueAt(i));
+        for(int i = 0; i < count(); i++) sb.append((char)getValue(i));
         return sb.toString();
     }
 
@@ -32,7 +32,7 @@ public class VkString extends VkChar.Array {
             this.array = new VkString[strings.length];
             for(int i = 0; i < strings.length; i++){
                 this.array[i] = new VkString(strings[i]);
-                setValueAt(i, this.array[i].getVkAddress());
+                setValue(i, this.array[i].getVkAddress());
             }
         }
     }

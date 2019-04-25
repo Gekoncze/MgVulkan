@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDisplayModeParametersKHR_sizeof(JNIEnv* env, jclass jc
     return sizeof(VkDisplayModeParametersKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayModeParametersKHR_getVisibleRegion(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayModeParametersKHR_getVisibleRegionNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDisplayModeParametersKHR_getVisibleRegion(JNIEnv* env,
     return jniPointerToLong(&o->visibleRegion);
 }
 
-void Java_cz_mg_vulkan_VkDisplayModeParametersKHR_setVisibleRegion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayModeParametersKHR_setVisibleRegionNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDisplayModeParametersKHR_setVisibleRegion(JNIEnv* env, 
     memcpy(&o->visibleRegion, valuePointer, sizeof(o->visibleRegion));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayModeParametersKHR_getRefreshRate(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayModeParametersKHR_getRefreshRateNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDisplayModeParametersKHR_getRefreshRate(JNIEnv* env, j
     return jniPointerToLong(&o->refreshRate);
 }
 
-void Java_cz_mg_vulkan_VkDisplayModeParametersKHR_setRefreshRate(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayModeParametersKHR_setRefreshRateNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

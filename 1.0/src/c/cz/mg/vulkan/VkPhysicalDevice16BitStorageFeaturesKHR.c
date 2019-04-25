@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_sizeof(JNIEnv* e
     return sizeof(VkPhysicalDevice16BitStorageFeaturesKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getSType(JNIEnv*
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setSType(JNIEnv* 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getPNext(JNIEnv*
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setPNext(JNIEnv* 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getStorageBuffer16BitAccess(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getStorageBuffer16BitAccessNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getStorageBuffer
     return jniPointerToLong(&o->storageBuffer16BitAccess);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setStorageBuffer16BitAccess(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setStorageBuffer16BitAccessNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setStorageBuffer1
     memcpy(&o->storageBuffer16BitAccess, valuePointer, sizeof(o->storageBuffer16BitAccess));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getUniformAndStorageBuffer16BitAccess(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getUniformAndStorageBuffer16BitAccessNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getUniformAndSto
     return jniPointerToLong(&o->uniformAndStorageBuffer16BitAccess);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setUniformAndStorageBuffer16BitAccess(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setUniformAndStorageBuffer16BitAccessNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setUniformAndStor
     memcpy(&o->uniformAndStorageBuffer16BitAccess, valuePointer, sizeof(o->uniformAndStorageBuffer16BitAccess));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getStoragePushConstant16(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getStoragePushConstant16Native(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getStoragePushCo
     return jniPointerToLong(&o->storagePushConstant16);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setStoragePushConstant16(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setStoragePushConstant16Native(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setStoragePushCon
     memcpy(&o->storagePushConstant16, valuePointer, sizeof(o->storagePushConstant16));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getStorageInputOutput16(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getStorageInputOutput16Native(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_getStorageInputO
     return jniPointerToLong(&o->storageInputOutput16);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setStorageInputOutput16(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeaturesKHR_setStorageInputOutput16Native(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

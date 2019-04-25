@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_sizeof(JNIEnv* env, 
     return sizeof(VkDeviceGroupSwapchainCreateInfoKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_getSType(JNIEnv* env
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_setSType(JNIEnv* env,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_getPNext(JNIEnv* env
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_setPNext(JNIEnv* env,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_getModes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_getModesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_getModes(JNIEnv* env
     return jniPointerToLong(&o->modes);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_setModes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSwapchainCreateInfoKHR_setModesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

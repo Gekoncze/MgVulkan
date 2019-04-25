@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceFormatKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSurfaceFormatKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceFormatKHR_getFormat(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceFormatKHR_getFormatNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceFormatKHR_getFormat(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(&o->format);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceFormatKHR_setFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceFormatKHR_setFormatNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSurfaceFormatKHR_setFormat(JNIEnv* env, jclass jc, jlon
     memcpy(&o->format, valuePointer, sizeof(o->format));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceFormatKHR_getColorSpace(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceFormatKHR_getColorSpaceNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceFormatKHR_getColorSpace(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->colorSpace);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceFormatKHR_setColorSpace(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceFormatKHR_setColorSpaceNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

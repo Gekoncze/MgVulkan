@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkMemoryAllocateFlagsInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getSType(JNIEnv* env, jclass j
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setSType(JNIEnv* env, jclass jc
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getPNext(JNIEnv* env, jclass j
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setPNext(JNIEnv* env, jclass jc
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getFlags(JNIEnv* env, jclass j
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setFlags(JNIEnv* env, jclass jc
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getDeviceMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getDeviceMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_getDeviceMask(JNIEnv* env, jcl
     return jniPointerToLong(&o->deviceMask);
 }
 
-void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setDeviceMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryAllocateFlagsInfo_setDeviceMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

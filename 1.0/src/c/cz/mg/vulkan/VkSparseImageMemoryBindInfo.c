@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_sizeof(JNIEnv* env, jclass j
     return sizeof(VkSparseImageMemoryBindInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_getImage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_getImageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_getImage(JNIEnv* env, jclass
     return jniPointerToLong(&o->image);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_setImage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_setImageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_setImage(JNIEnv* env, jclass 
     memcpy(&o->image, valuePointer, sizeof(o->image));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_getBindCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_getBindCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_getBindCount(JNIEnv* env, jc
     return jniPointerToLong(&o->bindCount);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_setBindCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_setBindCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_setBindCount(JNIEnv* env, jcl
     memcpy(&o->bindCount, valuePointer, sizeof(o->bindCount));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_getPBinds(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_getPBindsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_getPBinds(JNIEnv* env, jclas
     return jniPointerToLong(o->pBinds);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_setPBinds(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryBindInfo_setPBindsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkImageMemoryBarrier);
 }
 
-jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSType(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSType(JNIEnv* env, jclass jc, jlo
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getPNext(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkImageMemoryBarrier_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageMemoryBarrier_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkImageMemoryBarrier_setPNext(JNIEnv* env, jclass jc, jlo
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSrcAccessMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSrcAccessMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSrcAccessMask(JNIEnv* env, jclas
     return jniPointerToLong(&o->srcAccessMask);
 }
 
-void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSrcAccessMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSrcAccessMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSrcAccessMask(JNIEnv* env, jclass
     memcpy(&o->srcAccessMask, valuePointer, sizeof(o->srcAccessMask));
 }
 
-jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getDstAccessMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getDstAccessMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getDstAccessMask(JNIEnv* env, jclas
     return jniPointerToLong(&o->dstAccessMask);
 }
 
-void Java_cz_mg_vulkan_VkImageMemoryBarrier_setDstAccessMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageMemoryBarrier_setDstAccessMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkImageMemoryBarrier_setDstAccessMask(JNIEnv* env, jclass
     memcpy(&o->dstAccessMask, valuePointer, sizeof(o->dstAccessMask));
 }
 
-jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getOldLayout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getOldLayoutNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getOldLayout(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->oldLayout);
 }
 
-void Java_cz_mg_vulkan_VkImageMemoryBarrier_setOldLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageMemoryBarrier_setOldLayoutNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkImageMemoryBarrier_setOldLayout(JNIEnv* env, jclass jc,
     memcpy(&o->oldLayout, valuePointer, sizeof(o->oldLayout));
 }
 
-jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getNewLayout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getNewLayoutNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getNewLayout(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->newLayout);
 }
 
-void Java_cz_mg_vulkan_VkImageMemoryBarrier_setNewLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageMemoryBarrier_setNewLayoutNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkImageMemoryBarrier_setNewLayout(JNIEnv* env, jclass jc,
     memcpy(&o->newLayout, valuePointer, sizeof(o->newLayout));
 }
 
-jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSrcQueueFamilyIndex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSrcQueueFamilyIndexNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSrcQueueFamilyIndex(JNIEnv* env,
     return jniPointerToLong(&o->srcQueueFamilyIndex);
 }
 
-void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSrcQueueFamilyIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSrcQueueFamilyIndexNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSrcQueueFamilyIndex(JNIEnv* env, 
     memcpy(&o->srcQueueFamilyIndex, valuePointer, sizeof(o->srcQueueFamilyIndex));
 }
 
-jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getDstQueueFamilyIndex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getDstQueueFamilyIndexNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getDstQueueFamilyIndex(JNIEnv* env,
     return jniPointerToLong(&o->dstQueueFamilyIndex);
 }
 
-void Java_cz_mg_vulkan_VkImageMemoryBarrier_setDstQueueFamilyIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageMemoryBarrier_setDstQueueFamilyIndexNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkImageMemoryBarrier_setDstQueueFamilyIndex(JNIEnv* env, 
     memcpy(&o->dstQueueFamilyIndex, valuePointer, sizeof(o->dstQueueFamilyIndex));
 }
 
-jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getImage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getImageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getImage(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->image);
 }
 
-void Java_cz_mg_vulkan_VkImageMemoryBarrier_setImage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageMemoryBarrier_setImageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_VkImageMemoryBarrier_setImage(JNIEnv* env, jclass jc, jlo
     memcpy(&o->image, valuePointer, sizeof(o->image));
 }
 
-jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSubresourceRange(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSubresourceRangeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_VkImageMemoryBarrier_getSubresourceRange(JNIEnv* env, jc
     return jniPointerToLong(&o->subresourceRange);
 }
 
-void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSubresourceRange(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageMemoryBarrier_setSubresourceRangeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

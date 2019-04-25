@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_sizeof(JNIEnv* env, j
     return sizeof(VkDescriptorUpdateTemplateEntryKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDstBinding(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDstBindingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDstBinding(JNIEnv*
     return jniPointerToLong(&o->dstBinding);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDstBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDstBindingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDstBinding(JNIEnv* 
     memcpy(&o->dstBinding, valuePointer, sizeof(o->dstBinding));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDstArrayElement(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDstArrayElementNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDstArrayElement(JN
     return jniPointerToLong(&o->dstArrayElement);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDstArrayElement(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDstArrayElementNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDstArrayElement(JNI
     memcpy(&o->dstArrayElement, valuePointer, sizeof(o->dstArrayElement));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDescriptorCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDescriptorCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDescriptorCount(JN
     return jniPointerToLong(&o->descriptorCount);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDescriptorCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDescriptorCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDescriptorCount(JNI
     memcpy(&o->descriptorCount, valuePointer, sizeof(o->descriptorCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDescriptorType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDescriptorTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getDescriptorType(JNI
     return jniPointerToLong(&o->descriptorType);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDescriptorType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDescriptorTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setDescriptorType(JNIE
     memcpy(&o->descriptorType, valuePointer, sizeof(o->descriptorType));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getOffset(JNIEnv* env
     return jniPointerToLong(&o->offset);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setOffset(JNIEnv* env,
     memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getStride(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getStrideNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_getStride(JNIEnv* env
     return jniPointerToLong(&o->stride);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setStride(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntryKHR_setStrideNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

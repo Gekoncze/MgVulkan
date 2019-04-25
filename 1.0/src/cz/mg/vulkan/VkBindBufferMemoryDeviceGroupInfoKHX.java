@@ -21,12 +21,12 @@ public class VkBindBufferMemoryDeviceGroupInfoKHX extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkBindBufferMemoryDeviceGroupInfoKHX extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getDeviceIndexCount() {
-        return new VkUInt32(getVkMemory(), getDeviceIndexCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDeviceIndexCountNative(getVkAddress()));
     }
 
     
     public void setDeviceIndexCount(VkUInt32 deviceIndexCount) {
-        setDeviceIndexCount(getVkAddress(), deviceIndexCount != null ? deviceIndexCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDeviceIndexCountNative(getVkAddress(), deviceIndexCount != null ? deviceIndexCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,21 +72,21 @@ public class VkBindBufferMemoryDeviceGroupInfoKHX extends VkObject {
         getDeviceIndexCount().setValue(deviceIndexCount);
     }
 
-    protected static native long getDeviceIndexCount(long address);
-    protected static native void setDeviceIndexCount(long address, long deviceIndexCount);
+    protected static native long getDeviceIndexCountNative(long address);
+    protected static native void setDeviceIndexCountNative(long address, long deviceIndexCount);
 
     public VkUInt32 getPDeviceIndices() {
-        return new VkUInt32(getVkMemory(), getPDeviceIndices(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPDeviceIndicesNative(getVkAddress()));
     }
 
     private VkObject pDeviceIndices = null;
     public void setPDeviceIndices(VkUInt32 pDeviceIndices) {
-        setPDeviceIndices(getVkAddress(), pDeviceIndices != null ? pDeviceIndices.getVkAddress() : VkPointer.NULL);
+        setPDeviceIndicesNative(getVkAddress(), pDeviceIndices != null ? pDeviceIndices.getVkAddress() : VkPointer.NULL);
         this.pDeviceIndices = pDeviceIndices;
     }
 
-    protected static native long getPDeviceIndices(long address);
-    protected static native void setPDeviceIndices(long address, long pDeviceIndices);
+    protected static native long getPDeviceIndicesNative(long address);
+    protected static native void setPDeviceIndicesNative(long address, long pDeviceIndices);
 
 
     public static native long sizeof();

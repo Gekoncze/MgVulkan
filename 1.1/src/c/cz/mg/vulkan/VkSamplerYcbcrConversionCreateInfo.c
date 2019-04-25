@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_sizeof(JNIEnv* env, j
     return sizeof(VkSamplerYcbcrConversionCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getSType(JNIEnv* env,
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setSType(JNIEnv* env, 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getPNext(JNIEnv* env,
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setPNext(JNIEnv* env, 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getFormat(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getFormatNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getFormat(JNIEnv* env
     return jniPointerToLong(&o->format);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setFormatNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setFormat(JNIEnv* env,
     memcpy(&o->format, valuePointer, sizeof(o->format));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getYcbcrModel(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getYcbcrModelNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getYcbcrModel(JNIEnv*
     return jniPointerToLong(&o->ycbcrModel);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setYcbcrModel(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setYcbcrModelNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setYcbcrModel(JNIEnv* 
     memcpy(&o->ycbcrModel, valuePointer, sizeof(o->ycbcrModel));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getYcbcrRange(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getYcbcrRangeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getYcbcrRange(JNIEnv*
     return jniPointerToLong(&o->ycbcrRange);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setYcbcrRange(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setYcbcrRangeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setYcbcrRange(JNIEnv* 
     memcpy(&o->ycbcrRange, valuePointer, sizeof(o->ycbcrRange));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getComponents(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getComponentsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getComponents(JNIEnv*
     return jniPointerToLong(&o->components);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setComponents(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setComponentsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setComponents(JNIEnv* 
     memcpy(&o->components, valuePointer, sizeof(o->components));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getXChromaOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getXChromaOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getXChromaOffset(JNIE
     return jniPointerToLong(&o->xChromaOffset);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setXChromaOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setXChromaOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setXChromaOffset(JNIEn
     memcpy(&o->xChromaOffset, valuePointer, sizeof(o->xChromaOffset));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getYChromaOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getYChromaOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getYChromaOffset(JNIE
     return jniPointerToLong(&o->yChromaOffset);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setYChromaOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setYChromaOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setYChromaOffset(JNIEn
     memcpy(&o->yChromaOffset, valuePointer, sizeof(o->yChromaOffset));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getChromaFilter(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getChromaFilterNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getChromaFilter(JNIEn
     return jniPointerToLong(&o->chromaFilter);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setChromaFilter(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setChromaFilterNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setChromaFilter(JNIEnv
     memcpy(&o->chromaFilter, valuePointer, sizeof(o->chromaFilter));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getForceExplicitReconstruction(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getForceExplicitReconstructionNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_getForceExplicitRecon
     return jniPointerToLong(&o->forceExplicitReconstruction);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setForceExplicitReconstruction(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionCreateInfo_setForceExplicitReconstructionNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -21,12 +21,12 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getAspectReferenceCount() {
-        return new VkUInt32(getVkMemory(), getAspectReferenceCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getAspectReferenceCountNative(getVkAddress()));
     }
 
     
     public void setAspectReferenceCount(VkUInt32 aspectReferenceCount) {
-        setAspectReferenceCount(getVkAddress(), aspectReferenceCount != null ? aspectReferenceCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setAspectReferenceCountNative(getVkAddress(), aspectReferenceCount != null ? aspectReferenceCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,21 +72,21 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
         getAspectReferenceCount().setValue(aspectReferenceCount);
     }
 
-    protected static native long getAspectReferenceCount(long address);
-    protected static native void setAspectReferenceCount(long address, long aspectReferenceCount);
+    protected static native long getAspectReferenceCountNative(long address);
+    protected static native void setAspectReferenceCountNative(long address, long aspectReferenceCount);
 
     public VkInputAttachmentAspectReference getPAspectReferences() {
-        return new VkInputAttachmentAspectReference(getVkMemory(), getPAspectReferences(getVkAddress()));
+        return new VkInputAttachmentAspectReference(getVkMemory(), getPAspectReferencesNative(getVkAddress()));
     }
 
     private VkObject pAspectReferences = null;
     public void setPAspectReferences(VkInputAttachmentAspectReference pAspectReferences) {
-        setPAspectReferences(getVkAddress(), pAspectReferences != null ? pAspectReferences.getVkAddress() : VkPointer.NULL);
+        setPAspectReferencesNative(getVkAddress(), pAspectReferences != null ? pAspectReferences.getVkAddress() : VkPointer.NULL);
         this.pAspectReferences = pAspectReferences;
     }
 
-    protected static native long getPAspectReferences(long address);
-    protected static native void setPAspectReferences(long address, long pAspectReferences);
+    protected static native long getPAspectReferencesNative(long address);
+    protected static native void setPAspectReferencesNative(long address, long pAspectReferences);
 
 
     public static native long sizeof();

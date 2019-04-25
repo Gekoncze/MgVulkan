@@ -20,38 +20,38 @@ public class VkRectLayerKHR extends VkObject {
 
 
     public VkOffset2D getOffset() {
-        return new VkOffset2D(getVkMemory(), getOffset(getVkAddress()));
+        return new VkOffset2D(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkOffset2D offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
     public VkExtent2D getExtent() {
-        return new VkExtent2D(getVkMemory(), getExtent(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getExtentNative(getVkAddress()));
     }
 
     
     public void setExtent(VkExtent2D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddressNative());
+        setExtentNative(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getExtent(long address);
-    protected static native void setExtent(long address, long extent);
+    protected static native long getExtentNative(long address);
+    protected static native void setExtentNative(long address, long extent);
 
     public VkUInt32 getLayer() {
-        return new VkUInt32(getVkMemory(), getLayer(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getLayerNative(getVkAddress()));
     }
 
     
     public void setLayer(VkUInt32 layer) {
-        setLayer(getVkAddress(), layer != null ? layer.getVkAddress() : VkPointer.getNullAddressNative());
+        setLayerNative(getVkAddress(), layer != null ? layer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,8 +63,8 @@ public class VkRectLayerKHR extends VkObject {
         getLayer().setValue(layer);
     }
 
-    protected static native long getLayer(long address);
-    protected static native void setLayer(long address, long layer);
+    protected static native long getLayerNative(long address);
+    protected static native void setLayerNative(long address, long layer);
 
 
     public static native long sizeof();
@@ -108,10 +108,10 @@ public class VkRectLayerKHR extends VkObject {
 
         @Override
         public VkRectLayerKHR get(int i){
-            return new VkRectLayerKHR(getVkMemory(), addressAt(i));
+            return new VkRectLayerKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

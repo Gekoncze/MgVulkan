@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSampleLocationEXT_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSampleLocationEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkSampleLocationEXT_getX(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSampleLocationEXT_getXNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSampleLocationEXT_getX(JNIEnv* env, jclass jc, jlong a
     return jniPointerToLong(&o->x);
 }
 
-void Java_cz_mg_vulkan_VkSampleLocationEXT_setX(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSampleLocationEXT_setXNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSampleLocationEXT_setX(JNIEnv* env, jclass jc, jlong ad
     memcpy(&o->x, valuePointer, sizeof(o->x));
 }
 
-jlong Java_cz_mg_vulkan_VkSampleLocationEXT_getY(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSampleLocationEXT_getYNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSampleLocationEXT_getY(JNIEnv* env, jclass jc, jlong a
     return jniPointerToLong(&o->y);
 }
 
-void Java_cz_mg_vulkan_VkSampleLocationEXT_setY(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSampleLocationEXT_setYNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

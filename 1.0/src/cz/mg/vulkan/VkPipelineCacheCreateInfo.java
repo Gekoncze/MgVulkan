@@ -21,12 +21,12 @@ public class VkPipelineCacheCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineCacheCreateFlags getFlags() {
-        return new VkPipelineCacheCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineCacheCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineCacheCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkSize getInitialDataSize() {
-        return new VkSize(getVkMemory(), getInitialDataSize(getVkAddress()));
+        return new VkSize(getVkMemory(), getInitialDataSizeNative(getVkAddress()));
     }
 
     
     public void setInitialDataSize(VkSize initialDataSize) {
-        setInitialDataSize(getVkAddress(), initialDataSize != null ? initialDataSize.getVkAddress() : VkPointer.getNullAddressNative());
+        setInitialDataSizeNative(getVkAddress(), initialDataSize != null ? initialDataSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,21 +93,21 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         getInitialDataSize().setValue(initialDataSize);
     }
 
-    protected static native long getInitialDataSize(long address);
-    protected static native void setInitialDataSize(long address, long initialDataSize);
+    protected static native long getInitialDataSizeNative(long address);
+    protected static native void setInitialDataSizeNative(long address, long initialDataSize);
 
     public VkObject getPInitialData() {
-        return new VkObject(getVkMemory(), getPInitialData(getVkAddress()));
+        return new VkObject(getVkMemory(), getPInitialDataNative(getVkAddress()));
     }
 
     private VkObject pInitialData = null;
     public void setPInitialData(VkObject pInitialData) {
-        setPInitialData(getVkAddress(), pInitialData != null ? pInitialData.getVkAddress() : VkPointer.NULL);
+        setPInitialDataNative(getVkAddress(), pInitialData != null ? pInitialData.getVkAddress() : VkPointer.NULL);
         this.pInitialData = pInitialData;
     }
 
-    protected static native long getPInitialData(long address);
-    protected static native void setPInitialData(long address, long pInitialData);
+    protected static native long getPInitialDataNative(long address);
+    protected static native void setPInitialDataNative(long address, long pInitialData);
 
 
     public static native long sizeof();

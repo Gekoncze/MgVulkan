@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_sizeof(JNIEnv* env, jclass jc
     return sizeof(VkPipelineLayoutCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getSType(JNIEnv* env, jclass 
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setSType(JNIEnv* env, jclass j
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPNext(JNIEnv* env, jclass 
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPNext(JNIEnv* env, jclass j
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getFlags(JNIEnv* env, jclass 
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setFlags(JNIEnv* env, jclass j
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getSetLayoutCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getSetLayoutCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getSetLayoutCount(JNIEnv* env
     return jniPointerToLong(&o->setLayoutCount);
 }
 
-void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setSetLayoutCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setSetLayoutCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setSetLayoutCount(JNIEnv* env,
     memcpy(&o->setLayoutCount, valuePointer, sizeof(o->setLayoutCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPSetLayouts(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPSetLayoutsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPSetLayouts(JNIEnv* env, j
     return jniPointerToLong(o->pSetLayouts);
 }
 
-void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPSetLayouts(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPSetLayoutsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPSetLayouts(JNIEnv* env, jc
     memcpy(&o->pSetLayouts, &valuePointer, sizeof(o->pSetLayouts));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPushConstantRangeCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPushConstantRangeCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPushConstantRangeCount(JNI
     return jniPointerToLong(&o->pushConstantRangeCount);
 }
 
-void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPushConstantRangeCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPushConstantRangeCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPushConstantRangeCount(JNIE
     memcpy(&o->pushConstantRangeCount, valuePointer, sizeof(o->pushConstantRangeCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPPushConstantRanges(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPPushConstantRangesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_getPPushConstantRanges(JNIEnv
     return jniPointerToLong(o->pPushConstantRanges);
 }
 
-void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPPushConstantRanges(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineLayoutCreateInfo_setPPushConstantRangesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

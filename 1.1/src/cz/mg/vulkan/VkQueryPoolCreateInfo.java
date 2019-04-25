@@ -21,12 +21,12 @@ public class VkQueryPoolCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkQueryPoolCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkQueryPoolCreateFlags getFlags() {
-        return new VkQueryPoolCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkQueryPoolCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkQueryPoolCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkQueryPoolCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkQueryType getQueryType() {
-        return new VkQueryType(getVkMemory(), getQueryType(getVkAddress()));
+        return new VkQueryType(getVkMemory(), getQueryTypeNative(getVkAddress()));
     }
 
     
     public void setQueryType(VkQueryType queryType) {
-        setQueryType(getVkAddress(), queryType != null ? queryType.getVkAddress() : VkPointer.getNullAddressNative());
+        setQueryTypeNative(getVkAddress(), queryType != null ? queryType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkQueryPoolCreateInfo extends VkObject {
         getQueryType().setValue(queryType);
     }
 
-    protected static native long getQueryType(long address);
-    protected static native void setQueryType(long address, long queryType);
+    protected static native long getQueryTypeNative(long address);
+    protected static native void setQueryTypeNative(long address, long queryType);
 
     public VkUInt32 getQueryCount() {
-        return new VkUInt32(getVkMemory(), getQueryCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getQueryCountNative(getVkAddress()));
     }
 
     
     public void setQueryCount(VkUInt32 queryCount) {
-        setQueryCount(getVkAddress(), queryCount != null ? queryCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setQueryCountNative(getVkAddress(), queryCount != null ? queryCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,16 +114,16 @@ public class VkQueryPoolCreateInfo extends VkObject {
         getQueryCount().setValue(queryCount);
     }
 
-    protected static native long getQueryCount(long address);
-    protected static native void setQueryCount(long address, long queryCount);
+    protected static native long getQueryCountNative(long address);
+    protected static native void setQueryCountNative(long address, long queryCount);
 
     public VkQueryPipelineStatisticFlags getPipelineStatistics() {
-        return new VkQueryPipelineStatisticFlags(getVkMemory(), getPipelineStatistics(getVkAddress()));
+        return new VkQueryPipelineStatisticFlags(getVkMemory(), getPipelineStatisticsNative(getVkAddress()));
     }
 
     
     public void setPipelineStatistics(VkQueryPipelineStatisticFlags pipelineStatistics) {
-        setPipelineStatistics(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.getNullAddressNative());
+        setPipelineStatisticsNative(getVkAddress(), pipelineStatistics != null ? pipelineStatistics.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -135,8 +135,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
         getPipelineStatistics().setValue(pipelineStatistics);
     }
 
-    protected static native long getPipelineStatistics(long address);
-    protected static native void setPipelineStatistics(long address, long pipelineStatistics);
+    protected static native long getPipelineStatisticsNative(long address);
+    protected static native void setPipelineStatisticsNative(long address, long pipelineStatistics);
 
 
     public static native long sizeof();

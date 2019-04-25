@@ -20,12 +20,12 @@ public class VkWriteDescriptorSet extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,42 +37,42 @@ public class VkWriteDescriptorSet extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkDescriptorSet getDstSet() {
-        return new VkDescriptorSet(getVkMemory(), getDstSet(getVkAddress()));
+        return new VkDescriptorSet(getVkMemory(), getDstSetNative(getVkAddress()));
     }
 
     
     public void setDstSet(VkDescriptorSet dstSet) {
-        setDstSet(getVkAddress(), dstSet != null ? dstSet.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstSetNative(getVkAddress(), dstSet != null ? dstSet.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDstSet(long address);
-    protected static native void setDstSet(long address, long dstSet);
+    protected static native long getDstSetNative(long address);
+    protected static native void setDstSetNative(long address, long dstSet);
 
     public VkUInt32 getDstBinding() {
-        return new VkUInt32(getVkMemory(), getDstBinding(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDstBindingNative(getVkAddress()));
     }
 
     
     public void setDstBinding(VkUInt32 dstBinding) {
-        setDstBinding(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstBindingNative(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,16 +84,16 @@ public class VkWriteDescriptorSet extends VkObject {
         getDstBinding().setValue(dstBinding);
     }
 
-    protected static native long getDstBinding(long address);
-    protected static native void setDstBinding(long address, long dstBinding);
+    protected static native long getDstBindingNative(long address);
+    protected static native void setDstBindingNative(long address, long dstBinding);
 
     public VkUInt32 getDstArrayElement() {
-        return new VkUInt32(getVkMemory(), getDstArrayElement(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDstArrayElementNative(getVkAddress()));
     }
 
     
     public void setDstArrayElement(VkUInt32 dstArrayElement) {
-        setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstArrayElementNative(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -105,16 +105,16 @@ public class VkWriteDescriptorSet extends VkObject {
         getDstArrayElement().setValue(dstArrayElement);
     }
 
-    protected static native long getDstArrayElement(long address);
-    protected static native void setDstArrayElement(long address, long dstArrayElement);
+    protected static native long getDstArrayElementNative(long address);
+    protected static native void setDstArrayElementNative(long address, long dstArrayElement);
 
     public VkUInt32 getDescriptorCount() {
-        return new VkUInt32(getVkMemory(), getDescriptorCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDescriptorCountNative(getVkAddress()));
     }
 
     
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDescriptorCountNative(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -126,16 +126,16 @@ public class VkWriteDescriptorSet extends VkObject {
         getDescriptorCount().setValue(descriptorCount);
     }
 
-    protected static native long getDescriptorCount(long address);
-    protected static native void setDescriptorCount(long address, long descriptorCount);
+    protected static native long getDescriptorCountNative(long address);
+    protected static native void setDescriptorCountNative(long address, long descriptorCount);
 
     public VkDescriptorType getDescriptorType() {
-        return new VkDescriptorType(getVkMemory(), getDescriptorType(getVkAddress()));
+        return new VkDescriptorType(getVkMemory(), getDescriptorTypeNative(getVkAddress()));
     }
 
     
     public void setDescriptorType(VkDescriptorType descriptorType) {
-        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddressNative());
+        setDescriptorTypeNative(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -147,47 +147,47 @@ public class VkWriteDescriptorSet extends VkObject {
         getDescriptorType().setValue(descriptorType);
     }
 
-    protected static native long getDescriptorType(long address);
-    protected static native void setDescriptorType(long address, long descriptorType);
+    protected static native long getDescriptorTypeNative(long address);
+    protected static native void setDescriptorTypeNative(long address, long descriptorType);
 
     public VkDescriptorImageInfo getPImageInfo() {
-        return new VkDescriptorImageInfo(getVkMemory(), getPImageInfo(getVkAddress()));
+        return new VkDescriptorImageInfo(getVkMemory(), getPImageInfoNative(getVkAddress()));
     }
 
     private VkObject pImageInfo = null;
     public void setPImageInfo(VkDescriptorImageInfo pImageInfo) {
-        setPImageInfo(getVkAddress(), pImageInfo != null ? pImageInfo.getVkAddress() : VkPointer.NULL);
+        setPImageInfoNative(getVkAddress(), pImageInfo != null ? pImageInfo.getVkAddress() : VkPointer.NULL);
         this.pImageInfo = pImageInfo;
     }
 
-    protected static native long getPImageInfo(long address);
-    protected static native void setPImageInfo(long address, long pImageInfo);
+    protected static native long getPImageInfoNative(long address);
+    protected static native void setPImageInfoNative(long address, long pImageInfo);
 
     public VkDescriptorBufferInfo getPBufferInfo() {
-        return new VkDescriptorBufferInfo(getVkMemory(), getPBufferInfo(getVkAddress()));
+        return new VkDescriptorBufferInfo(getVkMemory(), getPBufferInfoNative(getVkAddress()));
     }
 
     private VkObject pBufferInfo = null;
     public void setPBufferInfo(VkDescriptorBufferInfo pBufferInfo) {
-        setPBufferInfo(getVkAddress(), pBufferInfo != null ? pBufferInfo.getVkAddress() : VkPointer.NULL);
+        setPBufferInfoNative(getVkAddress(), pBufferInfo != null ? pBufferInfo.getVkAddress() : VkPointer.NULL);
         this.pBufferInfo = pBufferInfo;
     }
 
-    protected static native long getPBufferInfo(long address);
-    protected static native void setPBufferInfo(long address, long pBufferInfo);
+    protected static native long getPBufferInfoNative(long address);
+    protected static native void setPBufferInfoNative(long address, long pBufferInfo);
 
     public VkBufferView getPTexelBufferView() {
-        return new VkBufferView(getVkMemory(), getPTexelBufferView(getVkAddress()));
+        return new VkBufferView(getVkMemory(), getPTexelBufferViewNative(getVkAddress()));
     }
 
     private VkObject pTexelBufferView = null;
     public void setPTexelBufferView(VkBufferView pTexelBufferView) {
-        setPTexelBufferView(getVkAddress(), pTexelBufferView != null ? pTexelBufferView.getVkAddress() : VkPointer.NULL);
+        setPTexelBufferViewNative(getVkAddress(), pTexelBufferView != null ? pTexelBufferView.getVkAddress() : VkPointer.NULL);
         this.pTexelBufferView = pTexelBufferView;
     }
 
-    protected static native long getPTexelBufferView(long address);
-    protected static native void setPTexelBufferView(long address, long pTexelBufferView);
+    protected static native long getPTexelBufferViewNative(long address);
+    protected static native void setPTexelBufferViewNative(long address, long pTexelBufferView);
 
 
     public static native long sizeof();
@@ -231,10 +231,10 @@ public class VkWriteDescriptorSet extends VkObject {
 
         @Override
         public VkWriteDescriptorSet get(int i){
-            return new VkWriteDescriptorSet(getVkMemory(), addressAt(i));
+            return new VkWriteDescriptorSet(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

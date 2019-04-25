@@ -61,10 +61,10 @@ public class VkSampleMask extends VkUInt32 {
 
         @Override
         public VkSampleMask get(int i){
-            return new VkSampleMask(getVkMemory(), addressAt(i));
+            return new VkSampleMask(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

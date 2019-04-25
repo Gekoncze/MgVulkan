@@ -61,10 +61,10 @@ public class VkDeviceSize extends VkUInt64 {
 
         @Override
         public VkDeviceSize get(int i){
-            return new VkDeviceSize(getVkMemory(), addressAt(i));
+            return new VkDeviceSize(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

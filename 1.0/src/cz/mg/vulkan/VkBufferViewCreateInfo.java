@@ -21,12 +21,12 @@ public class VkBufferViewCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkBufferViewCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkBufferViewCreateFlags getFlags() {
-        return new VkBufferViewCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkBufferViewCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkBufferViewCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,29 +72,29 @@ public class VkBufferViewCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkBuffer getBuffer() {
-        return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
+        return new VkBuffer(getVkMemory(), getBufferNative(getVkAddress()));
     }
 
     
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative());
+        setBufferNative(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getBuffer(long address);
-    protected static native void setBuffer(long address, long buffer);
+    protected static native long getBufferNative(long address);
+    protected static native void setBufferNative(long address, long buffer);
 
     public VkFormat getFormat() {
-        return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
+        return new VkFormat(getVkMemory(), getFormatNative(getVkAddress()));
     }
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
+        setFormatNative(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,16 +106,16 @@ public class VkBufferViewCreateInfo extends VkObject {
         getFormat().setValue(format);
     }
 
-    protected static native long getFormat(long address);
-    protected static native void setFormat(long address, long format);
+    protected static native long getFormatNative(long address);
+    protected static native void setFormatNative(long address, long format);
 
     public VkDeviceSize getOffset() {
-        return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -127,16 +127,16 @@ public class VkBufferViewCreateInfo extends VkObject {
         getOffset().setValue(offset);
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
     public VkDeviceSize getRange() {
-        return new VkDeviceSize(getVkMemory(), getRange(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getRangeNative(getVkAddress()));
     }
 
     
     public void setRange(VkDeviceSize range) {
-        setRange(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getNullAddressNative());
+        setRangeNative(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -148,8 +148,8 @@ public class VkBufferViewCreateInfo extends VkObject {
         getRange().setValue(range);
     }
 
-    protected static native long getRange(long address);
-    protected static native void setRange(long address, long range);
+    protected static native long getRangeNative(long address);
+    protected static native void setRangeNative(long address, long range);
 
 
     public static native long sizeof();

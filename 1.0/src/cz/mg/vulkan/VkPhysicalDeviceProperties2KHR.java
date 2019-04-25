@@ -20,12 +20,12 @@ public class VkPhysicalDeviceProperties2KHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,34 +37,34 @@ public class VkPhysicalDeviceProperties2KHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPhysicalDeviceProperties getProperties() {
-        return new VkPhysicalDeviceProperties(getVkMemory(), getProperties(getVkAddress()));
+        return new VkPhysicalDeviceProperties(getVkMemory(), getPropertiesNative(getVkAddress()));
     }
 
     
     public void setProperties(VkPhysicalDeviceProperties properties) {
-        setProperties(getVkAddress(), properties != null ? properties.getVkAddress() : VkPointer.getNullAddressNative());
+        setPropertiesNative(getVkAddress(), properties != null ? properties.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getProperties(long address);
-    protected static native void setProperties(long address, long properties);
+    protected static native long getPropertiesNative(long address);
+    protected static native void setPropertiesNative(long address, long properties);
 
 
     public static native long sizeof();
@@ -108,10 +108,10 @@ public class VkPhysicalDeviceProperties2KHR extends VkObject {
 
         @Override
         public VkPhysicalDeviceProperties2KHR get(int i){
-            return new VkPhysicalDeviceProperties2KHR(getVkMemory(), addressAt(i));
+            return new VkPhysicalDeviceProperties2KHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

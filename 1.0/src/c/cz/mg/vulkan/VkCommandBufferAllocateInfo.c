@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_sizeof(JNIEnv* env, jclass j
     return sizeof(VkCommandBufferAllocateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getSType(JNIEnv* env, jclass
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setSType(JNIEnv* env, jclass 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getPNext(JNIEnv* env, jclass
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setPNext(JNIEnv* env, jclass 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getCommandPool(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getCommandPoolNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getCommandPool(JNIEnv* env, 
     return jniPointerToLong(&o->commandPool);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setCommandPool(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setCommandPoolNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setCommandPool(JNIEnv* env, j
     memcpy(&o->commandPool, valuePointer, sizeof(o->commandPool));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getLevel(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getLevelNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getLevel(JNIEnv* env, jclass
     return jniPointerToLong(&o->level);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setLevel(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setLevelNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setLevel(JNIEnv* env, jclass 
     memcpy(&o->level, valuePointer, sizeof(o->level));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getCommandBufferCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getCommandBufferCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_getCommandBufferCount(JNIEnv
     return jniPointerToLong(&o->commandBufferCount);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setCommandBufferCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferAllocateInfo_setCommandBufferCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

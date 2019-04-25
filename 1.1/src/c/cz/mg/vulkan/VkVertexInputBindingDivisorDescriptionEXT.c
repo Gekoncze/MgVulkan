@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_sizeof(JNIEnv*
     return sizeof(VkVertexInputBindingDivisorDescriptionEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_getBinding(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_getBindingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_getBinding(JNI
     return jniPointerToLong(&o->binding);
 }
 
-void Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_setBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_setBindingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_setBinding(JNIE
     memcpy(&o->binding, valuePointer, sizeof(o->binding));
 }
 
-jlong Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_getDivisor(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_getDivisorNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_getDivisor(JNI
     return jniPointerToLong(&o->divisor);
 }
 
-void Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_setDivisor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputBindingDivisorDescriptionEXT_setDivisorNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

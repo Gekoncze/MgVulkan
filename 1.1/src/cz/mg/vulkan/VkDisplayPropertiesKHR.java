@@ -20,25 +20,25 @@ public class VkDisplayPropertiesKHR extends VkObject {
 
 
     public VkDisplayKHR getDisplay() {
-        return new VkDisplayKHR(getVkMemory(), getDisplay(getVkAddress()));
+        return new VkDisplayKHR(getVkMemory(), getDisplayNative(getVkAddress()));
     }
 
     
     public void setDisplay(VkDisplayKHR display) {
-        setDisplay(getVkAddress(), display != null ? display.getVkAddress() : VkPointer.getNullAddressNative());
+        setDisplayNative(getVkAddress(), display != null ? display.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDisplay(long address);
-    protected static native void setDisplay(long address, long display);
+    protected static native long getDisplayNative(long address);
+    protected static native void setDisplayNative(long address, long display);
 
     public VkChar getDisplayName() {
-        return new VkChar(getVkMemory(), getDisplayName(getVkAddress()));
+        return new VkChar(getVkMemory(), getDisplayNameNative(getVkAddress()));
     }
 
     private VkObject displayName = null;
     public void setDisplayName(VkChar displayName) {
-        setDisplayName(getVkAddress(), displayName != null ? displayName.getVkAddress() : VkPointer.NULL);
+        setDisplayNameNative(getVkAddress(), displayName != null ? displayName.getVkAddress() : VkPointer.NULL);
         this.displayName = displayName;
     }
 
@@ -50,42 +50,42 @@ public class VkDisplayPropertiesKHR extends VkObject {
         setDisplayName(new VkString(displayName));
     }
 
-    protected static native long getDisplayName(long address);
-    protected static native void setDisplayName(long address, long displayName);
+    protected static native long getDisplayNameNative(long address);
+    protected static native void setDisplayNameNative(long address, long displayName);
 
     public VkExtent2D getPhysicalDimensions() {
-        return new VkExtent2D(getVkMemory(), getPhysicalDimensions(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getPhysicalDimensionsNative(getVkAddress()));
     }
 
     
     public void setPhysicalDimensions(VkExtent2D physicalDimensions) {
-        setPhysicalDimensions(getVkAddress(), physicalDimensions != null ? physicalDimensions.getVkAddress() : VkPointer.getNullAddressNative());
+        setPhysicalDimensionsNative(getVkAddress(), physicalDimensions != null ? physicalDimensions.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getPhysicalDimensions(long address);
-    protected static native void setPhysicalDimensions(long address, long physicalDimensions);
+    protected static native long getPhysicalDimensionsNative(long address);
+    protected static native void setPhysicalDimensionsNative(long address, long physicalDimensions);
 
     public VkExtent2D getPhysicalResolution() {
-        return new VkExtent2D(getVkMemory(), getPhysicalResolution(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getPhysicalResolutionNative(getVkAddress()));
     }
 
     
     public void setPhysicalResolution(VkExtent2D physicalResolution) {
-        setPhysicalResolution(getVkAddress(), physicalResolution != null ? physicalResolution.getVkAddress() : VkPointer.getNullAddressNative());
+        setPhysicalResolutionNative(getVkAddress(), physicalResolution != null ? physicalResolution.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getPhysicalResolution(long address);
-    protected static native void setPhysicalResolution(long address, long physicalResolution);
+    protected static native long getPhysicalResolutionNative(long address);
+    protected static native void setPhysicalResolutionNative(long address, long physicalResolution);
 
     public VkSurfaceTransformFlagsKHR getSupportedTransforms() {
-        return new VkSurfaceTransformFlagsKHR(getVkMemory(), getSupportedTransforms(getVkAddress()));
+        return new VkSurfaceTransformFlagsKHR(getVkMemory(), getSupportedTransformsNative(getVkAddress()));
     }
 
     
     public void setSupportedTransforms(VkSurfaceTransformFlagsKHR supportedTransforms) {
-        setSupportedTransforms(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.getNullAddressNative());
+        setSupportedTransformsNative(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -97,16 +97,16 @@ public class VkDisplayPropertiesKHR extends VkObject {
         getSupportedTransforms().setValue(supportedTransforms);
     }
 
-    protected static native long getSupportedTransforms(long address);
-    protected static native void setSupportedTransforms(long address, long supportedTransforms);
+    protected static native long getSupportedTransformsNative(long address);
+    protected static native void setSupportedTransformsNative(long address, long supportedTransforms);
 
     public VkBool32 getPlaneReorderPossible() {
-        return new VkBool32(getVkMemory(), getPlaneReorderPossible(getVkAddress()));
+        return new VkBool32(getVkMemory(), getPlaneReorderPossibleNative(getVkAddress()));
     }
 
     
     public void setPlaneReorderPossible(VkBool32 planeReorderPossible) {
-        setPlaneReorderPossible(getVkAddress(), planeReorderPossible != null ? planeReorderPossible.getVkAddress() : VkPointer.getNullAddressNative());
+        setPlaneReorderPossibleNative(getVkAddress(), planeReorderPossible != null ? planeReorderPossible.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -118,16 +118,16 @@ public class VkDisplayPropertiesKHR extends VkObject {
         getPlaneReorderPossible().setValue(planeReorderPossible);
     }
 
-    protected static native long getPlaneReorderPossible(long address);
-    protected static native void setPlaneReorderPossible(long address, long planeReorderPossible);
+    protected static native long getPlaneReorderPossibleNative(long address);
+    protected static native void setPlaneReorderPossibleNative(long address, long planeReorderPossible);
 
     public VkBool32 getPersistentContent() {
-        return new VkBool32(getVkMemory(), getPersistentContent(getVkAddress()));
+        return new VkBool32(getVkMemory(), getPersistentContentNative(getVkAddress()));
     }
 
     
     public void setPersistentContent(VkBool32 persistentContent) {
-        setPersistentContent(getVkAddress(), persistentContent != null ? persistentContent.getVkAddress() : VkPointer.getNullAddressNative());
+        setPersistentContentNative(getVkAddress(), persistentContent != null ? persistentContent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -139,8 +139,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
         getPersistentContent().setValue(persistentContent);
     }
 
-    protected static native long getPersistentContent(long address);
-    protected static native void setPersistentContent(long address, long persistentContent);
+    protected static native long getPersistentContentNative(long address);
+    protected static native void setPersistentContentNative(long address, long persistentContent);
 
 
     public static native long sizeof();
@@ -184,10 +184,10 @@ public class VkDisplayPropertiesKHR extends VkObject {
 
         @Override
         public VkDisplayPropertiesKHR get(int i){
-            return new VkDisplayPropertiesKHR(getVkMemory(), addressAt(i));
+            return new VkDisplayPropertiesKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

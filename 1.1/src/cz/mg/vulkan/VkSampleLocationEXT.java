@@ -20,12 +20,12 @@ public class VkSampleLocationEXT extends VkObject {
 
 
     public VkFloat getX() {
-        return new VkFloat(getVkMemory(), getX(getVkAddress()));
+        return new VkFloat(getVkMemory(), getXNative(getVkAddress()));
     }
 
     
     public void setX(VkFloat x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
+        setXNative(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkSampleLocationEXT extends VkObject {
         getX().setValue(x);
     }
 
-    protected static native long getX(long address);
-    protected static native void setX(long address, long x);
+    protected static native long getXNative(long address);
+    protected static native void setXNative(long address, long x);
 
     public VkFloat getY() {
-        return new VkFloat(getVkMemory(), getY(getVkAddress()));
+        return new VkFloat(getVkMemory(), getYNative(getVkAddress()));
     }
 
     
     public void setY(VkFloat y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
+        setYNative(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,8 +58,8 @@ public class VkSampleLocationEXT extends VkObject {
         getY().setValue(y);
     }
 
-    protected static native long getY(long address);
-    protected static native void setY(long address, long y);
+    protected static native long getYNative(long address);
+    protected static native void setYNative(long address, long y);
 
 
     public static native long sizeof();
@@ -103,10 +103,10 @@ public class VkSampleLocationEXT extends VkObject {
 
         @Override
         public VkSampleLocationEXT get(int i){
-            return new VkSampleLocationEXT(getVkMemory(), addressAt(i));
+            return new VkSampleLocationEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

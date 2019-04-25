@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_sizeof(JNIEnv* env, jclass
     return sizeof(VkDebugUtilsObjectNameInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getSType(JNIEnv* env, jcla
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setSType(JNIEnv* env, jclas
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getPNext(JNIEnv* env, jcla
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setPNext(JNIEnv* env, jclas
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getObjectType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getObjectTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getObjectType(JNIEnv* env,
     return jniPointerToLong(&o->objectType);
 }
 
-void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setObjectType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setObjectTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setObjectType(JNIEnv* env, 
     memcpy(&o->objectType, valuePointer, sizeof(o->objectType));
 }
 
-jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getObjectHandle(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getObjectHandleNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getObjectHandle(JNIEnv* en
     return jniPointerToLong(&o->objectHandle);
 }
 
-void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setObjectHandle(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setObjectHandleNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setObjectHandle(JNIEnv* env
     memcpy(&o->objectHandle, valuePointer, sizeof(o->objectHandle));
 }
 
-jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getPObjectName(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getPObjectNameNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_getPObjectName(JNIEnv* env
     return jniPointerToLong(o->pObjectName);
 }
 
-void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setPObjectName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugUtilsObjectNameInfoEXT_setPObjectNameNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

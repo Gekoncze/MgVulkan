@@ -20,12 +20,12 @@ public class VkQueueFamilyProperties2 extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,34 +37,34 @@ public class VkQueueFamilyProperties2 extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkQueueFamilyProperties getQueueFamilyProperties() {
-        return new VkQueueFamilyProperties(getVkMemory(), getQueueFamilyProperties(getVkAddress()));
+        return new VkQueueFamilyProperties(getVkMemory(), getQueueFamilyPropertiesNative(getVkAddress()));
     }
 
     
     public void setQueueFamilyProperties(VkQueueFamilyProperties queueFamilyProperties) {
-        setQueueFamilyProperties(getVkAddress(), queueFamilyProperties != null ? queueFamilyProperties.getVkAddress() : VkPointer.getNullAddressNative());
+        setQueueFamilyPropertiesNative(getVkAddress(), queueFamilyProperties != null ? queueFamilyProperties.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getQueueFamilyProperties(long address);
-    protected static native void setQueueFamilyProperties(long address, long queueFamilyProperties);
+    protected static native long getQueueFamilyPropertiesNative(long address);
+    protected static native void setQueueFamilyPropertiesNative(long address, long queueFamilyProperties);
 
 
     public static native long sizeof();
@@ -108,10 +108,10 @@ public class VkQueueFamilyProperties2 extends VkObject {
 
         @Override
         public VkQueueFamilyProperties2 get(int i){
-            return new VkQueueFamilyProperties2(getVkMemory(), addressAt(i));
+            return new VkQueueFamilyProperties2(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

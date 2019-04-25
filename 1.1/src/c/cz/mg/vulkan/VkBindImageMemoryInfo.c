@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkBindImageMemoryInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getSType(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setSType(JNIEnv* env, jclass jc, jl
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getPNext(JNIEnv* env, jclass jc, j
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setPNext(JNIEnv* env, jclass jc, jl
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getImage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getImageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getImage(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->image);
 }
 
-void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setImage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setImageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setImage(JNIEnv* env, jclass jc, jl
     memcpy(&o->image, valuePointer, sizeof(o->image));
 }
 
-jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getMemory(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getMemoryNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getMemory(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->memory);
 }
 
-void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setMemory(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setMemoryNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setMemory(JNIEnv* env, jclass jc, j
     memcpy(&o->memory, valuePointer, sizeof(o->memory));
 }
 
-jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getMemoryOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getMemoryOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getMemoryOffset(JNIEnv* env, jclas
     return jniPointerToLong(&o->memoryOffset);
 }
 
-void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setMemoryOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setMemoryOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

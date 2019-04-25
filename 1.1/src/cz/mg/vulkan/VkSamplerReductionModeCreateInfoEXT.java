@@ -21,12 +21,12 @@ public class VkSamplerReductionModeCreateInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkSamplerReductionModeCreateInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkSamplerReductionModeEXT getReductionMode() {
-        return new VkSamplerReductionModeEXT(getVkMemory(), getReductionMode(getVkAddress()));
+        return new VkSamplerReductionModeEXT(getVkMemory(), getReductionModeNative(getVkAddress()));
     }
 
     
     public void setReductionMode(VkSamplerReductionModeEXT reductionMode) {
-        setReductionMode(getVkAddress(), reductionMode != null ? reductionMode.getVkAddress() : VkPointer.getNullAddressNative());
+        setReductionModeNative(getVkAddress(), reductionMode != null ? reductionMode.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,8 +72,8 @@ public class VkSamplerReductionModeCreateInfoEXT extends VkObject {
         getReductionMode().setValue(reductionMode);
     }
 
-    protected static native long getReductionMode(long address);
-    protected static native void setReductionMode(long address, long reductionMode);
+    protected static native long getReductionModeNative(long address);
+    protected static native void setReductionModeNative(long address, long reductionMode);
 
 
     public static native long sizeof();

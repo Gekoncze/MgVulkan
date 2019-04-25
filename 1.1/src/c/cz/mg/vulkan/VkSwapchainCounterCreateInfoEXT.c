@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_sizeof(JNIEnv* env, jcla
     return sizeof(VkSwapchainCounterCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_getSType(JNIEnv* env, jc
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_setSType(JNIEnv* env, jcl
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_getPNext(JNIEnv* env, jc
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_setPNext(JNIEnv* env, jcl
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_getSurfaceCounters(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_getSurfaceCountersNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_getSurfaceCounters(JNIEn
     return jniPointerToLong(&o->surfaceCounters);
 }
 
-void Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_setSurfaceCounters(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSwapchainCounterCreateInfoEXT_setSurfaceCountersNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

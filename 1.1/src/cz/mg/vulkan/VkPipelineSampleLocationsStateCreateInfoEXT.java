@@ -21,12 +21,12 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkBool32 getSampleLocationsEnable() {
-        return new VkBool32(getVkMemory(), getSampleLocationsEnable(getVkAddress()));
+        return new VkBool32(getVkMemory(), getSampleLocationsEnableNative(getVkAddress()));
     }
 
     
     public void setSampleLocationsEnable(VkBool32 sampleLocationsEnable) {
-        setSampleLocationsEnable(getVkAddress(), sampleLocationsEnable != null ? sampleLocationsEnable.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampleLocationsEnableNative(getVkAddress(), sampleLocationsEnable != null ? sampleLocationsEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,21 +72,21 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
         getSampleLocationsEnable().setValue(sampleLocationsEnable);
     }
 
-    protected static native long getSampleLocationsEnable(long address);
-    protected static native void setSampleLocationsEnable(long address, long sampleLocationsEnable);
+    protected static native long getSampleLocationsEnableNative(long address);
+    protected static native void setSampleLocationsEnableNative(long address, long sampleLocationsEnable);
 
     public VkSampleLocationsInfoEXT getSampleLocationsInfo() {
-        return new VkSampleLocationsInfoEXT(getVkMemory(), getSampleLocationsInfo(getVkAddress()));
+        return new VkSampleLocationsInfoEXT(getVkMemory(), getSampleLocationsInfoNative(getVkAddress()));
     }
 
     
     public void setSampleLocationsInfo(VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampleLocationsInfoNative(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSampleLocationsInfo(long address);
-    protected static native void setSampleLocationsInfo(long address, long sampleLocationsInfo);
+    protected static native long getSampleLocationsInfoNative(long address);
+    protected static native void setSampleLocationsInfoNative(long address, long sampleLocationsInfo);
 
 
     public static native long sizeof();

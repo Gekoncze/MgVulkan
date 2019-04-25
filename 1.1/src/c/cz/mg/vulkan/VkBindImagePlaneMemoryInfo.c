@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_sizeof(JNIEnv* env, jclass jc
     return sizeof(VkBindImagePlaneMemoryInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_getSType(JNIEnv* env, jclass 
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_setSType(JNIEnv* env, jclass j
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_getPNext(JNIEnv* env, jclass 
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_setPNext(JNIEnv* env, jclass j
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_getPlaneAspect(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_getPlaneAspectNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_getPlaneAspect(JNIEnv* env, j
     return jniPointerToLong(&o->planeAspect);
 }
 
-void Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_setPlaneAspect(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImagePlaneMemoryInfo_setPlaneAspectNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

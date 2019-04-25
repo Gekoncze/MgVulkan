@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkBindSparseInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getSType(JNIEnv* env, jclass jc, jlong 
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setSType(JNIEnv* env, jclass jc, jlong a
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPNext(JNIEnv* env, jclass jc, jlong 
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setPNext(JNIEnv* env, jclass jc, jlong a
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getWaitSemaphoreCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getWaitSemaphoreCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getWaitSemaphoreCount(JNIEnv* env, jcla
     return jniPointerToLong(&o->waitSemaphoreCount);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setWaitSemaphoreCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setWaitSemaphoreCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setWaitSemaphoreCount(JNIEnv* env, jclas
     memcpy(&o->waitSemaphoreCount, valuePointer, sizeof(o->waitSemaphoreCount));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPWaitSemaphores(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPWaitSemaphoresNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPWaitSemaphores(JNIEnv* env, jclass 
     return jniPointerToLong(o->pWaitSemaphores);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setPWaitSemaphores(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setPWaitSemaphoresNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setPWaitSemaphores(JNIEnv* env, jclass j
     memcpy(&o->pWaitSemaphores, &valuePointer, sizeof(o->pWaitSemaphores));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getBufferBindCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getBufferBindCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getBufferBindCount(JNIEnv* env, jclass 
     return jniPointerToLong(&o->bufferBindCount);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setBufferBindCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setBufferBindCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setBufferBindCount(JNIEnv* env, jclass j
     memcpy(&o->bufferBindCount, valuePointer, sizeof(o->bufferBindCount));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPBufferBinds(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPBufferBindsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPBufferBinds(JNIEnv* env, jclass jc,
     return jniPointerToLong(o->pBufferBinds);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setPBufferBinds(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setPBufferBindsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setPBufferBinds(JNIEnv* env, jclass jc, 
     memcpy(&o->pBufferBinds, &valuePointer, sizeof(o->pBufferBinds));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getImageOpaqueBindCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getImageOpaqueBindCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getImageOpaqueBindCount(JNIEnv* env, jc
     return jniPointerToLong(&o->imageOpaqueBindCount);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setImageOpaqueBindCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setImageOpaqueBindCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setImageOpaqueBindCount(JNIEnv* env, jcl
     memcpy(&o->imageOpaqueBindCount, valuePointer, sizeof(o->imageOpaqueBindCount));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPImageOpaqueBinds(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPImageOpaqueBindsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPImageOpaqueBinds(JNIEnv* env, jclas
     return jniPointerToLong(o->pImageOpaqueBinds);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setPImageOpaqueBinds(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setPImageOpaqueBindsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setPImageOpaqueBinds(JNIEnv* env, jclass
     memcpy(&o->pImageOpaqueBinds, &valuePointer, sizeof(o->pImageOpaqueBinds));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getImageBindCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getImageBindCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getImageBindCount(JNIEnv* env, jclass j
     return jniPointerToLong(&o->imageBindCount);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setImageBindCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setImageBindCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setImageBindCount(JNIEnv* env, jclass jc
     memcpy(&o->imageBindCount, valuePointer, sizeof(o->imageBindCount));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPImageBinds(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPImageBindsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPImageBinds(JNIEnv* env, jclass jc, 
     return jniPointerToLong(o->pImageBinds);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setPImageBinds(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setPImageBindsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -186,7 +186,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setPImageBinds(JNIEnv* env, jclass jc, j
     memcpy(&o->pImageBinds, &valuePointer, sizeof(o->pImageBinds));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getSignalSemaphoreCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getSignalSemaphoreCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -194,7 +194,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getSignalSemaphoreCount(JNIEnv* env, jc
     return jniPointerToLong(&o->signalSemaphoreCount);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setSignalSemaphoreCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setSignalSemaphoreCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -203,7 +203,7 @@ void Java_cz_mg_vulkan_VkBindSparseInfo_setSignalSemaphoreCount(JNIEnv* env, jcl
     memcpy(&o->signalSemaphoreCount, valuePointer, sizeof(o->signalSemaphoreCount));
 }
 
-jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPSignalSemaphores(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPSignalSemaphoresNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -211,7 +211,7 @@ jlong Java_cz_mg_vulkan_VkBindSparseInfo_getPSignalSemaphores(JNIEnv* env, jclas
     return jniPointerToLong(o->pSignalSemaphores);
 }
 
-void Java_cz_mg_vulkan_VkBindSparseInfo_setPSignalSemaphores(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindSparseInfo_setPSignalSemaphoresNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

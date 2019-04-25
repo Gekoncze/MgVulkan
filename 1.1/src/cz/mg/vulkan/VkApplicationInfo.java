@@ -21,12 +21,12 @@ public class VkApplicationInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkApplicationInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkChar getPApplicationName() {
-        return new VkChar(getVkMemory(), getPApplicationName(getVkAddress()));
+        return new VkChar(getVkMemory(), getPApplicationNameNative(getVkAddress()));
     }
 
     private VkObject pApplicationName = null;
     public void setPApplicationName(VkChar pApplicationName) {
-        setPApplicationName(getVkAddress(), pApplicationName != null ? pApplicationName.getVkAddress() : VkPointer.NULL);
+        setPApplicationNameNative(getVkAddress(), pApplicationName != null ? pApplicationName.getVkAddress() : VkPointer.NULL);
         this.pApplicationName = pApplicationName;
     }
 
@@ -72,16 +72,16 @@ public class VkApplicationInfo extends VkObject {
         setPApplicationName(new VkString(pApplicationName));
     }
 
-    protected static native long getPApplicationName(long address);
-    protected static native void setPApplicationName(long address, long pApplicationName);
+    protected static native long getPApplicationNameNative(long address);
+    protected static native void setPApplicationNameNative(long address, long pApplicationName);
 
     public VkUInt32 getApplicationVersion() {
-        return new VkUInt32(getVkMemory(), getApplicationVersion(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getApplicationVersionNative(getVkAddress()));
     }
 
     
     public void setApplicationVersion(VkUInt32 applicationVersion) {
-        setApplicationVersion(getVkAddress(), applicationVersion != null ? applicationVersion.getVkAddress() : VkPointer.getNullAddressNative());
+        setApplicationVersionNative(getVkAddress(), applicationVersion != null ? applicationVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkApplicationInfo extends VkObject {
         getApplicationVersion().setValue(applicationVersion);
     }
 
-    protected static native long getApplicationVersion(long address);
-    protected static native void setApplicationVersion(long address, long applicationVersion);
+    protected static native long getApplicationVersionNative(long address);
+    protected static native void setApplicationVersionNative(long address, long applicationVersion);
 
     public VkChar getPEngineName() {
-        return new VkChar(getVkMemory(), getPEngineName(getVkAddress()));
+        return new VkChar(getVkMemory(), getPEngineNameNative(getVkAddress()));
     }
 
     private VkObject pEngineName = null;
     public void setPEngineName(VkChar pEngineName) {
-        setPEngineName(getVkAddress(), pEngineName != null ? pEngineName.getVkAddress() : VkPointer.NULL);
+        setPEngineNameNative(getVkAddress(), pEngineName != null ? pEngineName.getVkAddress() : VkPointer.NULL);
         this.pEngineName = pEngineName;
     }
 
@@ -114,16 +114,16 @@ public class VkApplicationInfo extends VkObject {
         setPEngineName(new VkString(pEngineName));
     }
 
-    protected static native long getPEngineName(long address);
-    protected static native void setPEngineName(long address, long pEngineName);
+    protected static native long getPEngineNameNative(long address);
+    protected static native void setPEngineNameNative(long address, long pEngineName);
 
     public VkUInt32 getEngineVersion() {
-        return new VkUInt32(getVkMemory(), getEngineVersion(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getEngineVersionNative(getVkAddress()));
     }
 
     
     public void setEngineVersion(VkUInt32 engineVersion) {
-        setEngineVersion(getVkAddress(), engineVersion != null ? engineVersion.getVkAddress() : VkPointer.getNullAddressNative());
+        setEngineVersionNative(getVkAddress(), engineVersion != null ? engineVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -135,16 +135,16 @@ public class VkApplicationInfo extends VkObject {
         getEngineVersion().setValue(engineVersion);
     }
 
-    protected static native long getEngineVersion(long address);
-    protected static native void setEngineVersion(long address, long engineVersion);
+    protected static native long getEngineVersionNative(long address);
+    protected static native void setEngineVersionNative(long address, long engineVersion);
 
     public VkUInt32 getApiVersion() {
-        return new VkUInt32(getVkMemory(), getApiVersion(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getApiVersionNative(getVkAddress()));
     }
 
     
     public void setApiVersion(VkUInt32 apiVersion) {
-        setApiVersion(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getNullAddressNative());
+        setApiVersionNative(getVkAddress(), apiVersion != null ? apiVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -156,8 +156,8 @@ public class VkApplicationInfo extends VkObject {
         getApiVersion().setValue(apiVersion);
     }
 
-    protected static native long getApiVersion(long address);
-    protected static native void setApiVersion(long address, long apiVersion);
+    protected static native long getApiVersionNative(long address);
+    protected static native void setApiVersionNative(long address, long apiVersion);
 
 
     public static native long sizeof();

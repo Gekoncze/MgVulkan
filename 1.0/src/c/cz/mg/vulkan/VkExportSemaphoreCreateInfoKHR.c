@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_sizeof(JNIEnv* env, jclas
     return sizeof(VkExportSemaphoreCreateInfoKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_getSType(JNIEnv* env, jcl
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_setSType(JNIEnv* env, jcla
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_getPNext(JNIEnv* env, jcl
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_setPNext(JNIEnv* env, jcla
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_getHandleTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_getHandleTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_getHandleTypes(JNIEnv* en
     return jniPointerToLong(&o->handleTypes);
 }
 
-void Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_setHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExportSemaphoreCreateInfoKHR_setHandleTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

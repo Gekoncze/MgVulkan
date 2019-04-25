@@ -20,12 +20,12 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
 
     public VkShaderStageFlags getShaderStageMask() {
-        return new VkShaderStageFlags(getVkMemory(), getShaderStageMask(getVkAddress()));
+        return new VkShaderStageFlags(getVkMemory(), getShaderStageMaskNative(getVkAddress()));
     }
 
     
     public void setShaderStageMask(VkShaderStageFlags shaderStageMask) {
-        setShaderStageMask(getVkAddress(), shaderStageMask != null ? shaderStageMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setShaderStageMaskNative(getVkAddress(), shaderStageMask != null ? shaderStageMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         getShaderStageMask().setValue(shaderStageMask);
     }
 
-    protected static native long getShaderStageMask(long address);
-    protected static native void setShaderStageMask(long address, long shaderStageMask);
+    protected static native long getShaderStageMaskNative(long address);
+    protected static native void setShaderStageMaskNative(long address, long shaderStageMask);
 
     public VkShaderResourceUsageAMD getResourceUsage() {
-        return new VkShaderResourceUsageAMD(getVkMemory(), getResourceUsage(getVkAddress()));
+        return new VkShaderResourceUsageAMD(getVkMemory(), getResourceUsageNative(getVkAddress()));
     }
 
     
     public void setResourceUsage(VkShaderResourceUsageAMD resourceUsage) {
-        setResourceUsage(getVkAddress(), resourceUsage != null ? resourceUsage.getVkAddress() : VkPointer.getNullAddressNative());
+        setResourceUsageNative(getVkAddress(), resourceUsage != null ? resourceUsage.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getResourceUsage(long address);
-    protected static native void setResourceUsage(long address, long resourceUsage);
+    protected static native long getResourceUsageNative(long address);
+    protected static native void setResourceUsageNative(long address, long resourceUsage);
 
     public VkUInt32 getNumPhysicalVgprs() {
-        return new VkUInt32(getVkMemory(), getNumPhysicalVgprs(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getNumPhysicalVgprsNative(getVkAddress()));
     }
 
     
     public void setNumPhysicalVgprs(VkUInt32 numPhysicalVgprs) {
-        setNumPhysicalVgprs(getVkAddress(), numPhysicalVgprs != null ? numPhysicalVgprs.getVkAddress() : VkPointer.getNullAddressNative());
+        setNumPhysicalVgprsNative(getVkAddress(), numPhysicalVgprs != null ? numPhysicalVgprs.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         getNumPhysicalVgprs().setValue(numPhysicalVgprs);
     }
 
-    protected static native long getNumPhysicalVgprs(long address);
-    protected static native void setNumPhysicalVgprs(long address, long numPhysicalVgprs);
+    protected static native long getNumPhysicalVgprsNative(long address);
+    protected static native void setNumPhysicalVgprsNative(long address, long numPhysicalVgprs);
 
     public VkUInt32 getNumPhysicalSgprs() {
-        return new VkUInt32(getVkMemory(), getNumPhysicalSgprs(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getNumPhysicalSgprsNative(getVkAddress()));
     }
 
     
     public void setNumPhysicalSgprs(VkUInt32 numPhysicalSgprs) {
-        setNumPhysicalSgprs(getVkAddress(), numPhysicalSgprs != null ? numPhysicalSgprs.getVkAddress() : VkPointer.getNullAddressNative());
+        setNumPhysicalSgprsNative(getVkAddress(), numPhysicalSgprs != null ? numPhysicalSgprs.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,16 +92,16 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         getNumPhysicalSgprs().setValue(numPhysicalSgprs);
     }
 
-    protected static native long getNumPhysicalSgprs(long address);
-    protected static native void setNumPhysicalSgprs(long address, long numPhysicalSgprs);
+    protected static native long getNumPhysicalSgprsNative(long address);
+    protected static native void setNumPhysicalSgprsNative(long address, long numPhysicalSgprs);
 
     public VkUInt32 getNumAvailableVgprs() {
-        return new VkUInt32(getVkMemory(), getNumAvailableVgprs(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getNumAvailableVgprsNative(getVkAddress()));
     }
 
     
     public void setNumAvailableVgprs(VkUInt32 numAvailableVgprs) {
-        setNumAvailableVgprs(getVkAddress(), numAvailableVgprs != null ? numAvailableVgprs.getVkAddress() : VkPointer.getNullAddressNative());
+        setNumAvailableVgprsNative(getVkAddress(), numAvailableVgprs != null ? numAvailableVgprs.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -113,16 +113,16 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         getNumAvailableVgprs().setValue(numAvailableVgprs);
     }
 
-    protected static native long getNumAvailableVgprs(long address);
-    protected static native void setNumAvailableVgprs(long address, long numAvailableVgprs);
+    protected static native long getNumAvailableVgprsNative(long address);
+    protected static native void setNumAvailableVgprsNative(long address, long numAvailableVgprs);
 
     public VkUInt32 getNumAvailableSgprs() {
-        return new VkUInt32(getVkMemory(), getNumAvailableSgprs(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getNumAvailableSgprsNative(getVkAddress()));
     }
 
     
     public void setNumAvailableSgprs(VkUInt32 numAvailableSgprs) {
-        setNumAvailableSgprs(getVkAddress(), numAvailableSgprs != null ? numAvailableSgprs.getVkAddress() : VkPointer.getNullAddressNative());
+        setNumAvailableSgprsNative(getVkAddress(), numAvailableSgprs != null ? numAvailableSgprs.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -134,21 +134,21 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
         getNumAvailableSgprs().setValue(numAvailableSgprs);
     }
 
-    protected static native long getNumAvailableSgprs(long address);
-    protected static native void setNumAvailableSgprs(long address, long numAvailableSgprs);
+    protected static native long getNumAvailableSgprsNative(long address);
+    protected static native void setNumAvailableSgprsNative(long address, long numAvailableSgprs);
 
     public VkUInt32 getComputeWorkGroupSize() {
-        return new VkUInt32(getVkMemory(), getComputeWorkGroupSize(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getComputeWorkGroupSizeNative(getVkAddress()));
     }
 
     
     public void setComputeWorkGroupSize(VkUInt32 computeWorkGroupSize) {
-        setComputeWorkGroupSize(getVkAddress(), computeWorkGroupSize != null ? computeWorkGroupSize.getVkAddress() : VkPointer.NULL);
+        setComputeWorkGroupSizeNative(getVkAddress(), computeWorkGroupSize != null ? computeWorkGroupSize.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getComputeWorkGroupSize(long address);
-    protected static native void setComputeWorkGroupSize(long address, long computeWorkGroupSize);
+    protected static native long getComputeWorkGroupSizeNative(long address);
+    protected static native void setComputeWorkGroupSizeNative(long address, long computeWorkGroupSize);
 
 
     public static native long sizeof();
@@ -192,10 +192,10 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
 
         @Override
         public VkShaderStatisticsInfoAMD get(int i){
-            return new VkShaderStatisticsInfoAMD(getVkMemory(), addressAt(i));
+            return new VkShaderStatisticsInfoAMD(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

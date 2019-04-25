@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDependency_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSubpassDependency);
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDependency_getSrcSubpass(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDependency_getSrcSubpassNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDependency_getSrcSubpass(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->srcSubpass);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDependency_setSrcSubpass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDependency_setSrcSubpassNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSubpassDependency_setSrcSubpass(JNIEnv* env, jclass jc,
     memcpy(&o->srcSubpass, valuePointer, sizeof(o->srcSubpass));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDependency_getDstSubpass(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDependency_getDstSubpassNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDependency_getDstSubpass(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->dstSubpass);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDependency_setDstSubpass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDependency_setDstSubpassNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSubpassDependency_setDstSubpass(JNIEnv* env, jclass jc,
     memcpy(&o->dstSubpass, valuePointer, sizeof(o->dstSubpass));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDependency_getSrcStageMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDependency_getSrcStageMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDependency_getSrcStageMask(JNIEnv* env, jclass 
     return jniPointerToLong(&o->srcStageMask);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDependency_setSrcStageMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDependency_setSrcStageMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkSubpassDependency_setSrcStageMask(JNIEnv* env, jclass j
     memcpy(&o->srcStageMask, valuePointer, sizeof(o->srcStageMask));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDependency_getDstStageMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDependency_getDstStageMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDependency_getDstStageMask(JNIEnv* env, jclass 
     return jniPointerToLong(&o->dstStageMask);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDependency_setDstStageMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDependency_setDstStageMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkSubpassDependency_setDstStageMask(JNIEnv* env, jclass j
     memcpy(&o->dstStageMask, valuePointer, sizeof(o->dstStageMask));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDependency_getSrcAccessMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDependency_getSrcAccessMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDependency_getSrcAccessMask(JNIEnv* env, jclass
     return jniPointerToLong(&o->srcAccessMask);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDependency_setSrcAccessMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDependency_setSrcAccessMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkSubpassDependency_setSrcAccessMask(JNIEnv* env, jclass 
     memcpy(&o->srcAccessMask, valuePointer, sizeof(o->srcAccessMask));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDependency_getDstAccessMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDependency_getDstAccessMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDependency_getDstAccessMask(JNIEnv* env, jclass
     return jniPointerToLong(&o->dstAccessMask);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDependency_setDstAccessMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDependency_setDstAccessMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkSubpassDependency_setDstAccessMask(JNIEnv* env, jclass 
     memcpy(&o->dstAccessMask, valuePointer, sizeof(o->dstAccessMask));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDependency_getDependencyFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDependency_getDependencyFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDependency_getDependencyFlags(JNIEnv* env, jcla
     return jniPointerToLong(&o->dependencyFlags);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDependency_setDependencyFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDependency_setDependencyFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

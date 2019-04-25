@@ -61,10 +61,10 @@ public class VkEvent extends VkNonDispatchableHandle {
 
         @Override
         public VkEvent get(int i){
-            return new VkEvent(getVkMemory(), addressAt(i));
+            return new VkEvent(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

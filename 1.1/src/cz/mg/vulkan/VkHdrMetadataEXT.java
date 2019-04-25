@@ -20,12 +20,12 @@ public class VkHdrMetadataEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,81 +37,81 @@ public class VkHdrMetadataEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkXYColorEXT getDisplayPrimaryRed() {
-        return new VkXYColorEXT(getVkMemory(), getDisplayPrimaryRed(getVkAddress()));
+        return new VkXYColorEXT(getVkMemory(), getDisplayPrimaryRedNative(getVkAddress()));
     }
 
     
     public void setDisplayPrimaryRed(VkXYColorEXT displayPrimaryRed) {
-        setDisplayPrimaryRed(getVkAddress(), displayPrimaryRed != null ? displayPrimaryRed.getVkAddress() : VkPointer.getNullAddressNative());
+        setDisplayPrimaryRedNative(getVkAddress(), displayPrimaryRed != null ? displayPrimaryRed.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDisplayPrimaryRed(long address);
-    protected static native void setDisplayPrimaryRed(long address, long displayPrimaryRed);
+    protected static native long getDisplayPrimaryRedNative(long address);
+    protected static native void setDisplayPrimaryRedNative(long address, long displayPrimaryRed);
 
     public VkXYColorEXT getDisplayPrimaryGreen() {
-        return new VkXYColorEXT(getVkMemory(), getDisplayPrimaryGreen(getVkAddress()));
+        return new VkXYColorEXT(getVkMemory(), getDisplayPrimaryGreenNative(getVkAddress()));
     }
 
     
     public void setDisplayPrimaryGreen(VkXYColorEXT displayPrimaryGreen) {
-        setDisplayPrimaryGreen(getVkAddress(), displayPrimaryGreen != null ? displayPrimaryGreen.getVkAddress() : VkPointer.getNullAddressNative());
+        setDisplayPrimaryGreenNative(getVkAddress(), displayPrimaryGreen != null ? displayPrimaryGreen.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDisplayPrimaryGreen(long address);
-    protected static native void setDisplayPrimaryGreen(long address, long displayPrimaryGreen);
+    protected static native long getDisplayPrimaryGreenNative(long address);
+    protected static native void setDisplayPrimaryGreenNative(long address, long displayPrimaryGreen);
 
     public VkXYColorEXT getDisplayPrimaryBlue() {
-        return new VkXYColorEXT(getVkMemory(), getDisplayPrimaryBlue(getVkAddress()));
+        return new VkXYColorEXT(getVkMemory(), getDisplayPrimaryBlueNative(getVkAddress()));
     }
 
     
     public void setDisplayPrimaryBlue(VkXYColorEXT displayPrimaryBlue) {
-        setDisplayPrimaryBlue(getVkAddress(), displayPrimaryBlue != null ? displayPrimaryBlue.getVkAddress() : VkPointer.getNullAddressNative());
+        setDisplayPrimaryBlueNative(getVkAddress(), displayPrimaryBlue != null ? displayPrimaryBlue.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDisplayPrimaryBlue(long address);
-    protected static native void setDisplayPrimaryBlue(long address, long displayPrimaryBlue);
+    protected static native long getDisplayPrimaryBlueNative(long address);
+    protected static native void setDisplayPrimaryBlueNative(long address, long displayPrimaryBlue);
 
     public VkXYColorEXT getWhitePoint() {
-        return new VkXYColorEXT(getVkMemory(), getWhitePoint(getVkAddress()));
+        return new VkXYColorEXT(getVkMemory(), getWhitePointNative(getVkAddress()));
     }
 
     
     public void setWhitePoint(VkXYColorEXT whitePoint) {
-        setWhitePoint(getVkAddress(), whitePoint != null ? whitePoint.getVkAddress() : VkPointer.getNullAddressNative());
+        setWhitePointNative(getVkAddress(), whitePoint != null ? whitePoint.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getWhitePoint(long address);
-    protected static native void setWhitePoint(long address, long whitePoint);
+    protected static native long getWhitePointNative(long address);
+    protected static native void setWhitePointNative(long address, long whitePoint);
 
     public VkFloat getMaxLuminance() {
-        return new VkFloat(getVkMemory(), getMaxLuminance(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMaxLuminanceNative(getVkAddress()));
     }
 
     
     public void setMaxLuminance(VkFloat maxLuminance) {
-        setMaxLuminance(getVkAddress(), maxLuminance != null ? maxLuminance.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxLuminanceNative(getVkAddress(), maxLuminance != null ? maxLuminance.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -123,16 +123,16 @@ public class VkHdrMetadataEXT extends VkObject {
         getMaxLuminance().setValue(maxLuminance);
     }
 
-    protected static native long getMaxLuminance(long address);
-    protected static native void setMaxLuminance(long address, long maxLuminance);
+    protected static native long getMaxLuminanceNative(long address);
+    protected static native void setMaxLuminanceNative(long address, long maxLuminance);
 
     public VkFloat getMinLuminance() {
-        return new VkFloat(getVkMemory(), getMinLuminance(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMinLuminanceNative(getVkAddress()));
     }
 
     
     public void setMinLuminance(VkFloat minLuminance) {
-        setMinLuminance(getVkAddress(), minLuminance != null ? minLuminance.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinLuminanceNative(getVkAddress(), minLuminance != null ? minLuminance.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -144,16 +144,16 @@ public class VkHdrMetadataEXT extends VkObject {
         getMinLuminance().setValue(minLuminance);
     }
 
-    protected static native long getMinLuminance(long address);
-    protected static native void setMinLuminance(long address, long minLuminance);
+    protected static native long getMinLuminanceNative(long address);
+    protected static native void setMinLuminanceNative(long address, long minLuminance);
 
     public VkFloat getMaxContentLightLevel() {
-        return new VkFloat(getVkMemory(), getMaxContentLightLevel(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMaxContentLightLevelNative(getVkAddress()));
     }
 
     
     public void setMaxContentLightLevel(VkFloat maxContentLightLevel) {
-        setMaxContentLightLevel(getVkAddress(), maxContentLightLevel != null ? maxContentLightLevel.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxContentLightLevelNative(getVkAddress(), maxContentLightLevel != null ? maxContentLightLevel.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -165,16 +165,16 @@ public class VkHdrMetadataEXT extends VkObject {
         getMaxContentLightLevel().setValue(maxContentLightLevel);
     }
 
-    protected static native long getMaxContentLightLevel(long address);
-    protected static native void setMaxContentLightLevel(long address, long maxContentLightLevel);
+    protected static native long getMaxContentLightLevelNative(long address);
+    protected static native void setMaxContentLightLevelNative(long address, long maxContentLightLevel);
 
     public VkFloat getMaxFrameAverageLightLevel() {
-        return new VkFloat(getVkMemory(), getMaxFrameAverageLightLevel(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMaxFrameAverageLightLevelNative(getVkAddress()));
     }
 
     
     public void setMaxFrameAverageLightLevel(VkFloat maxFrameAverageLightLevel) {
-        setMaxFrameAverageLightLevel(getVkAddress(), maxFrameAverageLightLevel != null ? maxFrameAverageLightLevel.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxFrameAverageLightLevelNative(getVkAddress(), maxFrameAverageLightLevel != null ? maxFrameAverageLightLevel.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -186,8 +186,8 @@ public class VkHdrMetadataEXT extends VkObject {
         getMaxFrameAverageLightLevel().setValue(maxFrameAverageLightLevel);
     }
 
-    protected static native long getMaxFrameAverageLightLevel(long address);
-    protected static native void setMaxFrameAverageLightLevel(long address, long maxFrameAverageLightLevel);
+    protected static native long getMaxFrameAverageLightLevelNative(long address);
+    protected static native void setMaxFrameAverageLightLevelNative(long address, long maxFrameAverageLightLevel);
 
 
     public static native long sizeof();
@@ -231,10 +231,10 @@ public class VkHdrMetadataEXT extends VkObject {
 
         @Override
         public VkHdrMetadataEXT get(int i){
-            return new VkHdrMetadataEXT(getVkMemory(), addressAt(i));
+            return new VkHdrMetadataEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

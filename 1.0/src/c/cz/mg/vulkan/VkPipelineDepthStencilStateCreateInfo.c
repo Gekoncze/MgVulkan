@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_sizeof(JNIEnv* env
     return sizeof(VkPipelineDepthStencilStateCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getSType(JNIEnv* e
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setSType(JNIEnv* en
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getPNext(JNIEnv* e
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setPNext(JNIEnv* en
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getFlags(JNIEnv* e
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setFlags(JNIEnv* en
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthTestEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthTestEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthTestEnable
     return jniPointerToLong(&o->depthTestEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthTestEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthTestEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthTestEnable(
     memcpy(&o->depthTestEnable, valuePointer, sizeof(o->depthTestEnable));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthWriteEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthWriteEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthWriteEnabl
     return jniPointerToLong(&o->depthWriteEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthWriteEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthWriteEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthWriteEnable
     memcpy(&o->depthWriteEnable, valuePointer, sizeof(o->depthWriteEnable));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthCompareOp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthCompareOpNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthCompareOp(
     return jniPointerToLong(&o->depthCompareOp);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthCompareOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthCompareOpNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthCompareOp(J
     memcpy(&o->depthCompareOp, valuePointer, sizeof(o->depthCompareOp));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthBoundsTestEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthBoundsTestEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getDepthBoundsTest
     return jniPointerToLong(&o->depthBoundsTestEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthBoundsTestEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthBoundsTestEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setDepthBoundsTestE
     memcpy(&o->depthBoundsTestEnable, valuePointer, sizeof(o->depthBoundsTestEnable));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getStencilTestEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getStencilTestEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getStencilTestEnab
     return jniPointerToLong(&o->stencilTestEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setStencilTestEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setStencilTestEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setStencilTestEnabl
     memcpy(&o->stencilTestEnable, valuePointer, sizeof(o->stencilTestEnable));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getFront(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getFrontNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getFront(JNIEnv* e
     return jniPointerToLong(&o->front);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setFront(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setFrontNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setFront(JNIEnv* en
     memcpy(&o->front, valuePointer, sizeof(o->front));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getBack(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getBackNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getBack(JNIEnv* en
     return jniPointerToLong(&o->back);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setBack(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setBackNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -186,7 +186,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setBack(JNIEnv* env
     memcpy(&o->back, valuePointer, sizeof(o->back));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getMinDepthBounds(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getMinDepthBoundsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -194,7 +194,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getMinDepthBounds(
     return jniPointerToLong(&o->minDepthBounds);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setMinDepthBounds(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setMinDepthBoundsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -203,7 +203,7 @@ void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setMinDepthBounds(J
     memcpy(&o->minDepthBounds, valuePointer, sizeof(o->minDepthBounds));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getMaxDepthBounds(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getMaxDepthBoundsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -211,7 +211,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_getMaxDepthBounds(
     return jniPointerToLong(&o->maxDepthBounds);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setMaxDepthBounds(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDepthStencilStateCreateInfo_setMaxDepthBoundsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

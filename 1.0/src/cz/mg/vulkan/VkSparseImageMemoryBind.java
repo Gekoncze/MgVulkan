@@ -20,64 +20,64 @@ public class VkSparseImageMemoryBind extends VkObject {
 
 
     public VkImageSubresource getSubresource() {
-        return new VkImageSubresource(getVkMemory(), getSubresource(getVkAddress()));
+        return new VkImageSubresource(getVkMemory(), getSubresourceNative(getVkAddress()));
     }
 
     
     public void setSubresource(VkImageSubresource subresource) {
-        setSubresource(getVkAddress(), subresource != null ? subresource.getVkAddress() : VkPointer.getNullAddressNative());
+        setSubresourceNative(getVkAddress(), subresource != null ? subresource.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSubresource(long address);
-    protected static native void setSubresource(long address, long subresource);
+    protected static native long getSubresourceNative(long address);
+    protected static native void setSubresourceNative(long address, long subresource);
 
     public VkOffset3D getOffset() {
-        return new VkOffset3D(getVkMemory(), getOffset(getVkAddress()));
+        return new VkOffset3D(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkOffset3D offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
     public VkExtent3D getExtent() {
-        return new VkExtent3D(getVkMemory(), getExtent(getVkAddress()));
+        return new VkExtent3D(getVkMemory(), getExtentNative(getVkAddress()));
     }
 
     
     public void setExtent(VkExtent3D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddressNative());
+        setExtentNative(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getExtent(long address);
-    protected static native void setExtent(long address, long extent);
+    protected static native long getExtentNative(long address);
+    protected static native void setExtentNative(long address, long extent);
 
     public VkDeviceMemory getMemory() {
-        return new VkDeviceMemory(getVkMemory(), getMemory(getVkAddress()));
+        return new VkDeviceMemory(getVkMemory(), getMemoryNative(getVkAddress()));
     }
 
     
     public void setMemory(VkDeviceMemory memory) {
-        setMemory(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddressNative());
+        setMemoryNative(getVkAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMemory(long address);
-    protected static native void setMemory(long address, long memory);
+    protected static native long getMemoryNative(long address);
+    protected static native void setMemoryNative(long address, long memory);
 
     public VkDeviceSize getMemoryOffset() {
-        return new VkDeviceSize(getVkMemory(), getMemoryOffset(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getMemoryOffsetNative(getVkAddress()));
     }
 
     
     public void setMemoryOffset(VkDeviceSize memoryOffset) {
-        setMemoryOffset(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setMemoryOffsetNative(getVkAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -89,16 +89,16 @@ public class VkSparseImageMemoryBind extends VkObject {
         getMemoryOffset().setValue(memoryOffset);
     }
 
-    protected static native long getMemoryOffset(long address);
-    protected static native void setMemoryOffset(long address, long memoryOffset);
+    protected static native long getMemoryOffsetNative(long address);
+    protected static native void setMemoryOffsetNative(long address, long memoryOffset);
 
     public VkSparseMemoryBindFlags getFlags() {
-        return new VkSparseMemoryBindFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkSparseMemoryBindFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkSparseMemoryBindFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -110,8 +110,8 @@ public class VkSparseImageMemoryBind extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
 
     public static native long sizeof();
@@ -155,10 +155,10 @@ public class VkSparseImageMemoryBind extends VkObject {
 
         @Override
         public VkSparseImageMemoryBind get(int i){
-            return new VkSparseImageMemoryBind(getVkMemory(), addressAt(i));
+            return new VkSparseImageMemoryBind(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

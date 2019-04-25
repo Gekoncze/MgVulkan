@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkClearValue_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkClearValue);
 }
 
-jlong Java_cz_mg_vulkan_VkClearValue_getColor(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearValue_getColorNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkClearValue_getColor(JNIEnv* env, jclass jc, jlong addr
     return jniPointerToLong(&o->color);
 }
 
-void Java_cz_mg_vulkan_VkClearValue_setColor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearValue_setColorNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkClearValue_setColor(JNIEnv* env, jclass jc, jlong addre
     memcpy(&o->color, valuePointer, sizeof(o->color));
 }
 
-jlong Java_cz_mg_vulkan_VkClearValue_getDepthStencil(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearValue_getDepthStencilNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkClearValue_getDepthStencil(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(&o->depthStencil);
 }
 
-void Java_cz_mg_vulkan_VkClearValue_setDepthStencil(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearValue_setDepthStencilNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

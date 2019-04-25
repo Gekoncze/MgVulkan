@@ -21,12 +21,12 @@ public class VkPhysicalDeviceSparseImageFormatInfo2KHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPhysicalDeviceSparseImageFormatInfo2KHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkFormat getFormat() {
-        return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
+        return new VkFormat(getVkMemory(), getFormatNative(getVkAddress()));
     }
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
+        setFormatNative(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPhysicalDeviceSparseImageFormatInfo2KHR extends VkObject {
         getFormat().setValue(format);
     }
 
-    protected static native long getFormat(long address);
-    protected static native void setFormat(long address, long format);
+    protected static native long getFormatNative(long address);
+    protected static native void setFormatNative(long address, long format);
 
     public VkImageType getType() {
-        return new VkImageType(getVkMemory(), getType(getVkAddress()));
+        return new VkImageType(getVkMemory(), getTypeNative(getVkAddress()));
     }
 
     
     public void setType(VkImageType type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddressNative());
+        setTypeNative(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkPhysicalDeviceSparseImageFormatInfo2KHR extends VkObject {
         getType().setValue(type);
     }
 
-    protected static native long getType(long address);
-    protected static native void setType(long address, long type);
+    protected static native long getTypeNative(long address);
+    protected static native void setTypeNative(long address, long type);
 
     public VkSampleCountFlagBits getSamples() {
-        return new VkSampleCountFlagBits(getVkMemory(), getSamples(getVkAddress()));
+        return new VkSampleCountFlagBits(getVkMemory(), getSamplesNative(getVkAddress()));
     }
 
     
     public void setSamples(VkSampleCountFlagBits samples) {
-        setSamples(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddressNative());
+        setSamplesNative(getVkAddress(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,16 +114,16 @@ public class VkPhysicalDeviceSparseImageFormatInfo2KHR extends VkObject {
         getSamples().setValue(samples);
     }
 
-    protected static native long getSamples(long address);
-    protected static native void setSamples(long address, long samples);
+    protected static native long getSamplesNative(long address);
+    protected static native void setSamplesNative(long address, long samples);
 
     public VkImageUsageFlags getUsage() {
-        return new VkImageUsageFlags(getVkMemory(), getUsage(getVkAddress()));
+        return new VkImageUsageFlags(getVkMemory(), getUsageNative(getVkAddress()));
     }
 
     
     public void setUsage(VkImageUsageFlags usage) {
-        setUsage(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getNullAddressNative());
+        setUsageNative(getVkAddress(), usage != null ? usage.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -135,16 +135,16 @@ public class VkPhysicalDeviceSparseImageFormatInfo2KHR extends VkObject {
         getUsage().setValue(usage);
     }
 
-    protected static native long getUsage(long address);
-    protected static native void setUsage(long address, long usage);
+    protected static native long getUsageNative(long address);
+    protected static native void setUsageNative(long address, long usage);
 
     public VkImageTiling getTiling() {
-        return new VkImageTiling(getVkMemory(), getTiling(getVkAddress()));
+        return new VkImageTiling(getVkMemory(), getTilingNative(getVkAddress()));
     }
 
     
     public void setTiling(VkImageTiling tiling) {
-        setTiling(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.getNullAddressNative());
+        setTilingNative(getVkAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -156,8 +156,8 @@ public class VkPhysicalDeviceSparseImageFormatInfo2KHR extends VkObject {
         getTiling().setValue(tiling);
     }
 
-    protected static native long getTiling(long address);
-    protected static native void setTiling(long address, long tiling);
+    protected static native long getTilingNative(long address);
+    protected static native void setTilingNative(long address, long tiling);
 
 
     public static native long sizeof();

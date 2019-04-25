@@ -21,12 +21,12 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkDebugUtilsMessengerCreateFlagsEXT getFlags() {
-        return new VkDebugUtilsMessengerCreateFlagsEXT(getVkMemory(), getFlags(getVkAddress()));
+        return new VkDebugUtilsMessengerCreateFlagsEXT(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkDebugUtilsMessengerCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkDebugUtilsMessageSeverityFlagsEXT getMessageSeverity() {
-        return new VkDebugUtilsMessageSeverityFlagsEXT(getVkMemory(), getMessageSeverity(getVkAddress()));
+        return new VkDebugUtilsMessageSeverityFlagsEXT(getVkMemory(), getMessageSeverityNative(getVkAddress()));
     }
 
     
     public void setMessageSeverity(VkDebugUtilsMessageSeverityFlagsEXT messageSeverity) {
-        setMessageSeverity(getVkAddress(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.getNullAddressNative());
+        setMessageSeverityNative(getVkAddress(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         getMessageSeverity().setValue(messageSeverity);
     }
 
-    protected static native long getMessageSeverity(long address);
-    protected static native void setMessageSeverity(long address, long messageSeverity);
+    protected static native long getMessageSeverityNative(long address);
+    protected static native void setMessageSeverityNative(long address, long messageSeverity);
 
     public VkDebugUtilsMessageTypeFlagsEXT getMessageType() {
-        return new VkDebugUtilsMessageTypeFlagsEXT(getVkMemory(), getMessageType(getVkAddress()));
+        return new VkDebugUtilsMessageTypeFlagsEXT(getVkMemory(), getMessageTypeNative(getVkAddress()));
     }
 
     
     public void setMessageType(VkDebugUtilsMessageTypeFlagsEXT messageType) {
-        setMessageType(getVkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.getNullAddressNative());
+        setMessageTypeNative(getVkAddress(), messageType != null ? messageType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,34 +114,34 @@ public class VkDebugUtilsMessengerCreateInfoEXT extends VkObject {
         getMessageType().setValue(messageType);
     }
 
-    protected static native long getMessageType(long address);
-    protected static native void setMessageType(long address, long messageType);
+    protected static native long getMessageTypeNative(long address);
+    protected static native void setMessageTypeNative(long address, long messageType);
 
     public PFNvkDebugUtilsMessengerCallbackEXT getPfnUserCallback() {
-        return new PFNvkDebugUtilsMessengerCallbackEXT(getVkMemory(), getPfnUserCallback(getVkAddress()));
+        return new PFNvkDebugUtilsMessengerCallbackEXT(getVkMemory(), getPfnUserCallbackNative(getVkAddress()));
     }
 
     
     public void setPfnUserCallback(PFNvkDebugUtilsMessengerCallbackEXT pfnUserCallback) {
-        setPfnUserCallback(getVkAddress(), pfnUserCallback != null ? pfnUserCallback.getVkAddress() : VkPointer.getNullAddressNative());
+        setPfnUserCallbackNative(getVkAddress(), pfnUserCallback != null ? pfnUserCallback.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getPfnUserCallback(long address);
-    protected static native void setPfnUserCallback(long address, long pfnUserCallback);
+    protected static native long getPfnUserCallbackNative(long address);
+    protected static native void setPfnUserCallbackNative(long address, long pfnUserCallback);
 
     public VkObject getPUserData() {
-        return new VkObject(getVkMemory(), getPUserData(getVkAddress()));
+        return new VkObject(getVkMemory(), getPUserDataNative(getVkAddress()));
     }
 
     private VkObject pUserData = null;
     public void setPUserData(VkObject pUserData) {
-        setPUserData(getVkAddress(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL);
+        setPUserDataNative(getVkAddress(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL);
         this.pUserData = pUserData;
     }
 
-    protected static native long getPUserData(long address);
-    protected static native void setPUserData(long address, long pUserData);
+    protected static native long getPUserDataNative(long address);
+    protected static native void setPUserDataNative(long address, long pUserData);
 
 
     public static native long sizeof();

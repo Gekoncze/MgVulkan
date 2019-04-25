@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkDisplayPropertiesKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getDisplay(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getDisplayNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getDisplay(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->display);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setDisplay(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setDisplayNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setDisplay(JNIEnv* env, jclass jc,
     memcpy(&o->display, valuePointer, sizeof(o->display));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getDisplayName(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getDisplayNameNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getDisplayName(JNIEnv* env, jclas
     return jniPointerToLong(o->displayName);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setDisplayName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setDisplayNameNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setDisplayName(JNIEnv* env, jclass
     memcpy(&o->displayName, &valuePointer, sizeof(o->displayName));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPhysicalDimensions(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPhysicalDimensionsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPhysicalDimensions(JNIEnv* env
     return jniPointerToLong(&o->physicalDimensions);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPhysicalDimensions(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPhysicalDimensionsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPhysicalDimensions(JNIEnv* env,
     memcpy(&o->physicalDimensions, valuePointer, sizeof(o->physicalDimensions));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPhysicalResolution(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPhysicalResolutionNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPhysicalResolution(JNIEnv* env
     return jniPointerToLong(&o->physicalResolution);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPhysicalResolution(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPhysicalResolutionNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPhysicalResolution(JNIEnv* env,
     memcpy(&o->physicalResolution, valuePointer, sizeof(o->physicalResolution));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getSupportedTransforms(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getSupportedTransformsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getSupportedTransforms(JNIEnv* en
     return jniPointerToLong(&o->supportedTransforms);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setSupportedTransforms(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setSupportedTransformsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setSupportedTransforms(JNIEnv* env
     memcpy(&o->supportedTransforms, valuePointer, sizeof(o->supportedTransforms));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPlaneReorderPossible(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPlaneReorderPossibleNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPlaneReorderPossible(JNIEnv* e
     return jniPointerToLong(&o->planeReorderPossible);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPlaneReorderPossible(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPlaneReorderPossibleNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPlaneReorderPossible(JNIEnv* en
     memcpy(&o->planeReorderPossible, valuePointer, sizeof(o->planeReorderPossible));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPersistentContent(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPersistentContentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPropertiesKHR_getPersistentContent(JNIEnv* env,
     return jniPointerToLong(&o->persistentContent);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPersistentContent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPropertiesKHR_setPersistentContentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

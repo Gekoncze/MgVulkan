@@ -20,12 +20,12 @@ public class VkMemoryHeap extends VkObject {
 
 
     public VkDeviceSize getSize() {
-        return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getSizeNative(getVkAddress()));
     }
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
+        setSizeNative(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkMemoryHeap extends VkObject {
         getSize().setValue(size);
     }
 
-    protected static native long getSize(long address);
-    protected static native void setSize(long address, long size);
+    protected static native long getSizeNative(long address);
+    protected static native void setSizeNative(long address, long size);
 
     public VkMemoryHeapFlags getFlags() {
-        return new VkMemoryHeapFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkMemoryHeapFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkMemoryHeapFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,8 +58,8 @@ public class VkMemoryHeap extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
 
     public static native long sizeof();
@@ -103,10 +103,10 @@ public class VkMemoryHeap extends VkObject {
 
         @Override
         public VkMemoryHeap get(int i){
-            return new VkMemoryHeap(getVkMemory(), addressAt(i));
+            return new VkMemoryHeap(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

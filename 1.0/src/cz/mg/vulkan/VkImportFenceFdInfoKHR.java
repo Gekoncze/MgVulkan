@@ -21,12 +21,12 @@ public class VkImportFenceFdInfoKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,42 +38,42 @@ public class VkImportFenceFdInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkFence getFence() {
-        return new VkFence(getVkMemory(), getFence(getVkAddress()));
+        return new VkFence(getVkMemory(), getFenceNative(getVkAddress()));
     }
 
     
     public void setFence(VkFence fence) {
-        setFence(getVkAddress(), fence != null ? fence.getVkAddress() : VkPointer.getNullAddressNative());
+        setFenceNative(getVkAddress(), fence != null ? fence.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getFence(long address);
-    protected static native void setFence(long address, long fence);
+    protected static native long getFenceNative(long address);
+    protected static native void setFenceNative(long address, long fence);
 
     public VkFenceImportFlagsKHR getFlags() {
-        return new VkFenceImportFlagsKHR(getVkMemory(), getFlags(getVkAddress()));
+        return new VkFenceImportFlagsKHR(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkFenceImportFlagsKHR flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -85,16 +85,16 @@ public class VkImportFenceFdInfoKHR extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkExternalFenceHandleTypeFlagBitsKHR getHandleType() {
-        return new VkExternalFenceHandleTypeFlagBitsKHR(getVkMemory(), getHandleType(getVkAddress()));
+        return new VkExternalFenceHandleTypeFlagBitsKHR(getVkMemory(), getHandleTypeNative(getVkAddress()));
     }
 
     
     public void setHandleType(VkExternalFenceHandleTypeFlagBitsKHR handleType) {
-        setHandleType(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddressNative());
+        setHandleTypeNative(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,16 +106,16 @@ public class VkImportFenceFdInfoKHR extends VkObject {
         getHandleType().setValue(handleType);
     }
 
-    protected static native long getHandleType(long address);
-    protected static native void setHandleType(long address, long handleType);
+    protected static native long getHandleTypeNative(long address);
+    protected static native void setHandleTypeNative(long address, long handleType);
 
     public VkInt getFd() {
-        return new VkInt(getVkMemory(), getFd(getVkAddress()));
+        return new VkInt(getVkMemory(), getFdNative(getVkAddress()));
     }
 
     
     public void setFd(VkInt fd) {
-        setFd(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getNullAddressNative());
+        setFdNative(getVkAddress(), fd != null ? fd.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -127,8 +127,8 @@ public class VkImportFenceFdInfoKHR extends VkObject {
         getFd().setValue(fd);
     }
 
-    protected static native long getFd(long address);
-    protected static native void setFd(long address, long fd);
+    protected static native long getFdNative(long address);
+    protected static native void setFdNative(long address, long fd);
 
 
     public static native long sizeof();

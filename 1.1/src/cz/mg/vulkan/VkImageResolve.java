@@ -20,69 +20,69 @@ public class VkImageResolve extends VkObject {
 
 
     public VkImageSubresourceLayers getSrcSubresource() {
-        return new VkImageSubresourceLayers(getVkMemory(), getSrcSubresource(getVkAddress()));
+        return new VkImageSubresourceLayers(getVkMemory(), getSrcSubresourceNative(getVkAddress()));
     }
 
     
     public void setSrcSubresource(VkImageSubresourceLayers srcSubresource) {
-        setSrcSubresource(getVkAddress(), srcSubresource != null ? srcSubresource.getVkAddress() : VkPointer.getNullAddressNative());
+        setSrcSubresourceNative(getVkAddress(), srcSubresource != null ? srcSubresource.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSrcSubresource(long address);
-    protected static native void setSrcSubresource(long address, long srcSubresource);
+    protected static native long getSrcSubresourceNative(long address);
+    protected static native void setSrcSubresourceNative(long address, long srcSubresource);
 
     public VkOffset3D getSrcOffset() {
-        return new VkOffset3D(getVkMemory(), getSrcOffset(getVkAddress()));
+        return new VkOffset3D(getVkMemory(), getSrcOffsetNative(getVkAddress()));
     }
 
     
     public void setSrcOffset(VkOffset3D srcOffset) {
-        setSrcOffset(getVkAddress(), srcOffset != null ? srcOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setSrcOffsetNative(getVkAddress(), srcOffset != null ? srcOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSrcOffset(long address);
-    protected static native void setSrcOffset(long address, long srcOffset);
+    protected static native long getSrcOffsetNative(long address);
+    protected static native void setSrcOffsetNative(long address, long srcOffset);
 
     public VkImageSubresourceLayers getDstSubresource() {
-        return new VkImageSubresourceLayers(getVkMemory(), getDstSubresource(getVkAddress()));
+        return new VkImageSubresourceLayers(getVkMemory(), getDstSubresourceNative(getVkAddress()));
     }
 
     
     public void setDstSubresource(VkImageSubresourceLayers dstSubresource) {
-        setDstSubresource(getVkAddress(), dstSubresource != null ? dstSubresource.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstSubresourceNative(getVkAddress(), dstSubresource != null ? dstSubresource.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDstSubresource(long address);
-    protected static native void setDstSubresource(long address, long dstSubresource);
+    protected static native long getDstSubresourceNative(long address);
+    protected static native void setDstSubresourceNative(long address, long dstSubresource);
 
     public VkOffset3D getDstOffset() {
-        return new VkOffset3D(getVkMemory(), getDstOffset(getVkAddress()));
+        return new VkOffset3D(getVkMemory(), getDstOffsetNative(getVkAddress()));
     }
 
     
     public void setDstOffset(VkOffset3D dstOffset) {
-        setDstOffset(getVkAddress(), dstOffset != null ? dstOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstOffsetNative(getVkAddress(), dstOffset != null ? dstOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDstOffset(long address);
-    protected static native void setDstOffset(long address, long dstOffset);
+    protected static native long getDstOffsetNative(long address);
+    protected static native void setDstOffsetNative(long address, long dstOffset);
 
     public VkExtent3D getExtent() {
-        return new VkExtent3D(getVkMemory(), getExtent(getVkAddress()));
+        return new VkExtent3D(getVkMemory(), getExtentNative(getVkAddress()));
     }
 
     
     public void setExtent(VkExtent3D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddressNative());
+        setExtentNative(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getExtent(long address);
-    protected static native void setExtent(long address, long extent);
+    protected static native long getExtentNative(long address);
+    protected static native void setExtentNative(long address, long extent);
 
 
     public static native long sizeof();
@@ -126,10 +126,10 @@ public class VkImageResolve extends VkObject {
 
         @Override
         public VkImageResolve get(int i){
-            return new VkImageResolve(getVkMemory(), addressAt(i));
+            return new VkImageResolve(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

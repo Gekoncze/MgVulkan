@@ -20,12 +20,12 @@ public class VkSpecializationMapEntry extends VkObject {
 
 
     public VkUInt32 getConstantID() {
-        return new VkUInt32(getVkMemory(), getConstantID(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getConstantIDNative(getVkAddress()));
     }
 
     
     public void setConstantID(VkUInt32 constantID) {
-        setConstantID(getVkAddress(), constantID != null ? constantID.getVkAddress() : VkPointer.getNullAddressNative());
+        setConstantIDNative(getVkAddress(), constantID != null ? constantID.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkSpecializationMapEntry extends VkObject {
         getConstantID().setValue(constantID);
     }
 
-    protected static native long getConstantID(long address);
-    protected static native void setConstantID(long address, long constantID);
+    protected static native long getConstantIDNative(long address);
+    protected static native void setConstantIDNative(long address, long constantID);
 
     public VkUInt32 getOffset() {
-        return new VkUInt32(getVkMemory(), getOffset(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkSpecializationMapEntry extends VkObject {
         getOffset().setValue(offset);
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
     public VkSize getSize() {
-        return new VkSize(getVkMemory(), getSize(getVkAddress()));
+        return new VkSize(getVkMemory(), getSizeNative(getVkAddress()));
     }
 
     
     public void setSize(VkSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
+        setSizeNative(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,8 +79,8 @@ public class VkSpecializationMapEntry extends VkObject {
         getSize().setValue(size);
     }
 
-    protected static native long getSize(long address);
-    protected static native void setSize(long address, long size);
+    protected static native long getSizeNative(long address);
+    protected static native void setSizeNative(long address, long size);
 
 
     public static native long sizeof();
@@ -124,10 +124,10 @@ public class VkSpecializationMapEntry extends VkObject {
 
         @Override
         public VkSpecializationMapEntry get(int i){
-            return new VkSpecializationMapEntry(getVkMemory(), addressAt(i));
+            return new VkSpecializationMapEntry(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

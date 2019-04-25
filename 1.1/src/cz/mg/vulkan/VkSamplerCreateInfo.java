@@ -21,12 +21,12 @@ public class VkSamplerCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkSamplerCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkSamplerCreateFlags getFlags() {
-        return new VkSamplerCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkSamplerCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkSamplerCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkFilter getMagFilter() {
-        return new VkFilter(getVkMemory(), getMagFilter(getVkAddress()));
+        return new VkFilter(getVkMemory(), getMagFilterNative(getVkAddress()));
     }
 
     
     public void setMagFilter(VkFilter magFilter) {
-        setMagFilter(getVkAddress(), magFilter != null ? magFilter.getVkAddress() : VkPointer.getNullAddressNative());
+        setMagFilterNative(getVkAddress(), magFilter != null ? magFilter.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getMagFilter().setValue(magFilter);
     }
 
-    protected static native long getMagFilter(long address);
-    protected static native void setMagFilter(long address, long magFilter);
+    protected static native long getMagFilterNative(long address);
+    protected static native void setMagFilterNative(long address, long magFilter);
 
     public VkFilter getMinFilter() {
-        return new VkFilter(getVkMemory(), getMinFilter(getVkAddress()));
+        return new VkFilter(getVkMemory(), getMinFilterNative(getVkAddress()));
     }
 
     
     public void setMinFilter(VkFilter minFilter) {
-        setMinFilter(getVkAddress(), minFilter != null ? minFilter.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinFilterNative(getVkAddress(), minFilter != null ? minFilter.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,16 +114,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getMinFilter().setValue(minFilter);
     }
 
-    protected static native long getMinFilter(long address);
-    protected static native void setMinFilter(long address, long minFilter);
+    protected static native long getMinFilterNative(long address);
+    protected static native void setMinFilterNative(long address, long minFilter);
 
     public VkSamplerMipmapMode getMipmapMode() {
-        return new VkSamplerMipmapMode(getVkMemory(), getMipmapMode(getVkAddress()));
+        return new VkSamplerMipmapMode(getVkMemory(), getMipmapModeNative(getVkAddress()));
     }
 
     
     public void setMipmapMode(VkSamplerMipmapMode mipmapMode) {
-        setMipmapMode(getVkAddress(), mipmapMode != null ? mipmapMode.getVkAddress() : VkPointer.getNullAddressNative());
+        setMipmapModeNative(getVkAddress(), mipmapMode != null ? mipmapMode.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -135,16 +135,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getMipmapMode().setValue(mipmapMode);
     }
 
-    protected static native long getMipmapMode(long address);
-    protected static native void setMipmapMode(long address, long mipmapMode);
+    protected static native long getMipmapModeNative(long address);
+    protected static native void setMipmapModeNative(long address, long mipmapMode);
 
     public VkSamplerAddressMode getAddressModeU() {
-        return new VkSamplerAddressMode(getVkMemory(), getAddressModeU(getVkAddress()));
+        return new VkSamplerAddressMode(getVkMemory(), getAddressModeUNative(getVkAddress()));
     }
 
     
     public void setAddressModeU(VkSamplerAddressMode addressModeU) {
-        setAddressModeU(getVkAddress(), addressModeU != null ? addressModeU.getVkAddress() : VkPointer.getNullAddressNative());
+        setAddressModeUNative(getVkAddress(), addressModeU != null ? addressModeU.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -156,16 +156,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getAddressModeU().setValue(addressModeU);
     }
 
-    protected static native long getAddressModeU(long address);
-    protected static native void setAddressModeU(long address, long addressModeU);
+    protected static native long getAddressModeUNative(long address);
+    protected static native void setAddressModeUNative(long address, long addressModeU);
 
     public VkSamplerAddressMode getAddressModeV() {
-        return new VkSamplerAddressMode(getVkMemory(), getAddressModeV(getVkAddress()));
+        return new VkSamplerAddressMode(getVkMemory(), getAddressModeVNative(getVkAddress()));
     }
 
     
     public void setAddressModeV(VkSamplerAddressMode addressModeV) {
-        setAddressModeV(getVkAddress(), addressModeV != null ? addressModeV.getVkAddress() : VkPointer.getNullAddressNative());
+        setAddressModeVNative(getVkAddress(), addressModeV != null ? addressModeV.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -177,16 +177,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getAddressModeV().setValue(addressModeV);
     }
 
-    protected static native long getAddressModeV(long address);
-    protected static native void setAddressModeV(long address, long addressModeV);
+    protected static native long getAddressModeVNative(long address);
+    protected static native void setAddressModeVNative(long address, long addressModeV);
 
     public VkSamplerAddressMode getAddressModeW() {
-        return new VkSamplerAddressMode(getVkMemory(), getAddressModeW(getVkAddress()));
+        return new VkSamplerAddressMode(getVkMemory(), getAddressModeWNative(getVkAddress()));
     }
 
     
     public void setAddressModeW(VkSamplerAddressMode addressModeW) {
-        setAddressModeW(getVkAddress(), addressModeW != null ? addressModeW.getVkAddress() : VkPointer.getNullAddressNative());
+        setAddressModeWNative(getVkAddress(), addressModeW != null ? addressModeW.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -198,16 +198,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getAddressModeW().setValue(addressModeW);
     }
 
-    protected static native long getAddressModeW(long address);
-    protected static native void setAddressModeW(long address, long addressModeW);
+    protected static native long getAddressModeWNative(long address);
+    protected static native void setAddressModeWNative(long address, long addressModeW);
 
     public VkFloat getMipLodBias() {
-        return new VkFloat(getVkMemory(), getMipLodBias(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMipLodBiasNative(getVkAddress()));
     }
 
     
     public void setMipLodBias(VkFloat mipLodBias) {
-        setMipLodBias(getVkAddress(), mipLodBias != null ? mipLodBias.getVkAddress() : VkPointer.getNullAddressNative());
+        setMipLodBiasNative(getVkAddress(), mipLodBias != null ? mipLodBias.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -219,16 +219,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getMipLodBias().setValue(mipLodBias);
     }
 
-    protected static native long getMipLodBias(long address);
-    protected static native void setMipLodBias(long address, long mipLodBias);
+    protected static native long getMipLodBiasNative(long address);
+    protected static native void setMipLodBiasNative(long address, long mipLodBias);
 
     public VkBool32 getAnisotropyEnable() {
-        return new VkBool32(getVkMemory(), getAnisotropyEnable(getVkAddress()));
+        return new VkBool32(getVkMemory(), getAnisotropyEnableNative(getVkAddress()));
     }
 
     
     public void setAnisotropyEnable(VkBool32 anisotropyEnable) {
-        setAnisotropyEnable(getVkAddress(), anisotropyEnable != null ? anisotropyEnable.getVkAddress() : VkPointer.getNullAddressNative());
+        setAnisotropyEnableNative(getVkAddress(), anisotropyEnable != null ? anisotropyEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -240,16 +240,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getAnisotropyEnable().setValue(anisotropyEnable);
     }
 
-    protected static native long getAnisotropyEnable(long address);
-    protected static native void setAnisotropyEnable(long address, long anisotropyEnable);
+    protected static native long getAnisotropyEnableNative(long address);
+    protected static native void setAnisotropyEnableNative(long address, long anisotropyEnable);
 
     public VkFloat getMaxAnisotropy() {
-        return new VkFloat(getVkMemory(), getMaxAnisotropy(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMaxAnisotropyNative(getVkAddress()));
     }
 
     
     public void setMaxAnisotropy(VkFloat maxAnisotropy) {
-        setMaxAnisotropy(getVkAddress(), maxAnisotropy != null ? maxAnisotropy.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxAnisotropyNative(getVkAddress(), maxAnisotropy != null ? maxAnisotropy.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -261,16 +261,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getMaxAnisotropy().setValue(maxAnisotropy);
     }
 
-    protected static native long getMaxAnisotropy(long address);
-    protected static native void setMaxAnisotropy(long address, long maxAnisotropy);
+    protected static native long getMaxAnisotropyNative(long address);
+    protected static native void setMaxAnisotropyNative(long address, long maxAnisotropy);
 
     public VkBool32 getCompareEnable() {
-        return new VkBool32(getVkMemory(), getCompareEnable(getVkAddress()));
+        return new VkBool32(getVkMemory(), getCompareEnableNative(getVkAddress()));
     }
 
     
     public void setCompareEnable(VkBool32 compareEnable) {
-        setCompareEnable(getVkAddress(), compareEnable != null ? compareEnable.getVkAddress() : VkPointer.getNullAddressNative());
+        setCompareEnableNative(getVkAddress(), compareEnable != null ? compareEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -282,16 +282,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getCompareEnable().setValue(compareEnable);
     }
 
-    protected static native long getCompareEnable(long address);
-    protected static native void setCompareEnable(long address, long compareEnable);
+    protected static native long getCompareEnableNative(long address);
+    protected static native void setCompareEnableNative(long address, long compareEnable);
 
     public VkCompareOp getCompareOp() {
-        return new VkCompareOp(getVkMemory(), getCompareOp(getVkAddress()));
+        return new VkCompareOp(getVkMemory(), getCompareOpNative(getVkAddress()));
     }
 
     
     public void setCompareOp(VkCompareOp compareOp) {
-        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddressNative());
+        setCompareOpNative(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -303,16 +303,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getCompareOp().setValue(compareOp);
     }
 
-    protected static native long getCompareOp(long address);
-    protected static native void setCompareOp(long address, long compareOp);
+    protected static native long getCompareOpNative(long address);
+    protected static native void setCompareOpNative(long address, long compareOp);
 
     public VkFloat getMinLod() {
-        return new VkFloat(getVkMemory(), getMinLod(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMinLodNative(getVkAddress()));
     }
 
     
     public void setMinLod(VkFloat minLod) {
-        setMinLod(getVkAddress(), minLod != null ? minLod.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinLodNative(getVkAddress(), minLod != null ? minLod.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -324,16 +324,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getMinLod().setValue(minLod);
     }
 
-    protected static native long getMinLod(long address);
-    protected static native void setMinLod(long address, long minLod);
+    protected static native long getMinLodNative(long address);
+    protected static native void setMinLodNative(long address, long minLod);
 
     public VkFloat getMaxLod() {
-        return new VkFloat(getVkMemory(), getMaxLod(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMaxLodNative(getVkAddress()));
     }
 
     
     public void setMaxLod(VkFloat maxLod) {
-        setMaxLod(getVkAddress(), maxLod != null ? maxLod.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxLodNative(getVkAddress(), maxLod != null ? maxLod.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -345,16 +345,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getMaxLod().setValue(maxLod);
     }
 
-    protected static native long getMaxLod(long address);
-    protected static native void setMaxLod(long address, long maxLod);
+    protected static native long getMaxLodNative(long address);
+    protected static native void setMaxLodNative(long address, long maxLod);
 
     public VkBorderColor getBorderColor() {
-        return new VkBorderColor(getVkMemory(), getBorderColor(getVkAddress()));
+        return new VkBorderColor(getVkMemory(), getBorderColorNative(getVkAddress()));
     }
 
     
     public void setBorderColor(VkBorderColor borderColor) {
-        setBorderColor(getVkAddress(), borderColor != null ? borderColor.getVkAddress() : VkPointer.getNullAddressNative());
+        setBorderColorNative(getVkAddress(), borderColor != null ? borderColor.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -366,16 +366,16 @@ public class VkSamplerCreateInfo extends VkObject {
         getBorderColor().setValue(borderColor);
     }
 
-    protected static native long getBorderColor(long address);
-    protected static native void setBorderColor(long address, long borderColor);
+    protected static native long getBorderColorNative(long address);
+    protected static native void setBorderColorNative(long address, long borderColor);
 
     public VkBool32 getUnnormalizedCoordinates() {
-        return new VkBool32(getVkMemory(), getUnnormalizedCoordinates(getVkAddress()));
+        return new VkBool32(getVkMemory(), getUnnormalizedCoordinatesNative(getVkAddress()));
     }
 
     
     public void setUnnormalizedCoordinates(VkBool32 unnormalizedCoordinates) {
-        setUnnormalizedCoordinates(getVkAddress(), unnormalizedCoordinates != null ? unnormalizedCoordinates.getVkAddress() : VkPointer.getNullAddressNative());
+        setUnnormalizedCoordinatesNative(getVkAddress(), unnormalizedCoordinates != null ? unnormalizedCoordinates.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -387,8 +387,8 @@ public class VkSamplerCreateInfo extends VkObject {
         getUnnormalizedCoordinates().setValue(unnormalizedCoordinates);
     }
 
-    protected static native long getUnnormalizedCoordinates(long address);
-    protected static native void setUnnormalizedCoordinates(long address, long unnormalizedCoordinates);
+    protected static native long getUnnormalizedCoordinatesNative(long address);
+    protected static native void setUnnormalizedCoordinatesNative(long address, long unnormalizedCoordinates);
 
 
     public static native long sizeof();

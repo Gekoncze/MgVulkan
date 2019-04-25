@@ -21,12 +21,12 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineVertexInputStateCreateFlags getFlags() {
-        return new VkPipelineVertexInputStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineVertexInputStateCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineVertexInputStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkUInt32 getVertexBindingDescriptionCount() {
-        return new VkUInt32(getVkMemory(), getVertexBindingDescriptionCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getVertexBindingDescriptionCountNative(getVkAddress()));
     }
 
     
     public void setVertexBindingDescriptionCount(VkUInt32 vertexBindingDescriptionCount) {
-        setVertexBindingDescriptionCount(getVkAddress(), vertexBindingDescriptionCount != null ? vertexBindingDescriptionCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setVertexBindingDescriptionCountNative(getVkAddress(), vertexBindingDescriptionCount != null ? vertexBindingDescriptionCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,29 +93,29 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         getVertexBindingDescriptionCount().setValue(vertexBindingDescriptionCount);
     }
 
-    protected static native long getVertexBindingDescriptionCount(long address);
-    protected static native void setVertexBindingDescriptionCount(long address, long vertexBindingDescriptionCount);
+    protected static native long getVertexBindingDescriptionCountNative(long address);
+    protected static native void setVertexBindingDescriptionCountNative(long address, long vertexBindingDescriptionCount);
 
     public VkVertexInputBindingDescription getPVertexBindingDescriptions() {
-        return new VkVertexInputBindingDescription(getVkMemory(), getPVertexBindingDescriptions(getVkAddress()));
+        return new VkVertexInputBindingDescription(getVkMemory(), getPVertexBindingDescriptionsNative(getVkAddress()));
     }
 
     private VkObject pVertexBindingDescriptions = null;
     public void setPVertexBindingDescriptions(VkVertexInputBindingDescription pVertexBindingDescriptions) {
-        setPVertexBindingDescriptions(getVkAddress(), pVertexBindingDescriptions != null ? pVertexBindingDescriptions.getVkAddress() : VkPointer.NULL);
+        setPVertexBindingDescriptionsNative(getVkAddress(), pVertexBindingDescriptions != null ? pVertexBindingDescriptions.getVkAddress() : VkPointer.NULL);
         this.pVertexBindingDescriptions = pVertexBindingDescriptions;
     }
 
-    protected static native long getPVertexBindingDescriptions(long address);
-    protected static native void setPVertexBindingDescriptions(long address, long pVertexBindingDescriptions);
+    protected static native long getPVertexBindingDescriptionsNative(long address);
+    protected static native void setPVertexBindingDescriptionsNative(long address, long pVertexBindingDescriptions);
 
     public VkUInt32 getVertexAttributeDescriptionCount() {
-        return new VkUInt32(getVkMemory(), getVertexAttributeDescriptionCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getVertexAttributeDescriptionCountNative(getVkAddress()));
     }
 
     
     public void setVertexAttributeDescriptionCount(VkUInt32 vertexAttributeDescriptionCount) {
-        setVertexAttributeDescriptionCount(getVkAddress(), vertexAttributeDescriptionCount != null ? vertexAttributeDescriptionCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setVertexAttributeDescriptionCountNative(getVkAddress(), vertexAttributeDescriptionCount != null ? vertexAttributeDescriptionCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -127,21 +127,21 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         getVertexAttributeDescriptionCount().setValue(vertexAttributeDescriptionCount);
     }
 
-    protected static native long getVertexAttributeDescriptionCount(long address);
-    protected static native void setVertexAttributeDescriptionCount(long address, long vertexAttributeDescriptionCount);
+    protected static native long getVertexAttributeDescriptionCountNative(long address);
+    protected static native void setVertexAttributeDescriptionCountNative(long address, long vertexAttributeDescriptionCount);
 
     public VkVertexInputAttributeDescription getPVertexAttributeDescriptions() {
-        return new VkVertexInputAttributeDescription(getVkMemory(), getPVertexAttributeDescriptions(getVkAddress()));
+        return new VkVertexInputAttributeDescription(getVkMemory(), getPVertexAttributeDescriptionsNative(getVkAddress()));
     }
 
     private VkObject pVertexAttributeDescriptions = null;
     public void setPVertexAttributeDescriptions(VkVertexInputAttributeDescription pVertexAttributeDescriptions) {
-        setPVertexAttributeDescriptions(getVkAddress(), pVertexAttributeDescriptions != null ? pVertexAttributeDescriptions.getVkAddress() : VkPointer.NULL);
+        setPVertexAttributeDescriptionsNative(getVkAddress(), pVertexAttributeDescriptions != null ? pVertexAttributeDescriptions.getVkAddress() : VkPointer.NULL);
         this.pVertexAttributeDescriptions = pVertexAttributeDescriptions;
     }
 
-    protected static native long getPVertexAttributeDescriptions(long address);
-    protected static native void setPVertexAttributeDescriptions(long address, long pVertexAttributeDescriptions);
+    protected static native long getPVertexAttributeDescriptionsNative(long address);
+    protected static native void setPVertexAttributeDescriptionsNative(long address, long pVertexAttributeDescriptions);
 
 
     public static native long sizeof();

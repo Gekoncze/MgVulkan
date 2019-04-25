@@ -24,12 +24,12 @@ public class VkExtent2D extends VkObject {
     }
 
     public VkUInt32 getWidth() {
-        return new VkUInt32(getVkMemory(), getWidth(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getWidthNative(getVkAddress()));
     }
 
     
     public void setWidth(VkUInt32 width) {
-        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getNullAddressNative());
+        setWidthNative(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -41,16 +41,16 @@ public class VkExtent2D extends VkObject {
         getWidth().setValue(width);
     }
 
-    protected static native long getWidth(long address);
-    protected static native void setWidth(long address, long width);
+    protected static native long getWidthNative(long address);
+    protected static native void setWidthNative(long address, long width);
 
     public VkUInt32 getHeight() {
-        return new VkUInt32(getVkMemory(), getHeight(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getHeightNative(getVkAddress()));
     }
 
     
     public void setHeight(VkUInt32 height) {
-        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getNullAddressNative());
+        setHeightNative(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -62,8 +62,8 @@ public class VkExtent2D extends VkObject {
         getHeight().setValue(height);
     }
 
-    protected static native long getHeight(long address);
-    protected static native void setHeight(long address, long height);
+    protected static native long getHeightNative(long address);
+    protected static native void setHeightNative(long address, long height);
 
 
     public static native long sizeof();
@@ -107,10 +107,10 @@ public class VkExtent2D extends VkObject {
 
         @Override
         public VkExtent2D get(int i){
-            return new VkExtent2D(getVkMemory(), addressAt(i));
+            return new VkExtent2D(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

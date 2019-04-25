@@ -21,12 +21,12 @@ public class VkDeviceEventInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDeviceEventInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkDeviceEventTypeEXT getDeviceEvent() {
-        return new VkDeviceEventTypeEXT(getVkMemory(), getDeviceEvent(getVkAddress()));
+        return new VkDeviceEventTypeEXT(getVkMemory(), getDeviceEventNative(getVkAddress()));
     }
 
     
     public void setDeviceEvent(VkDeviceEventTypeEXT deviceEvent) {
-        setDeviceEvent(getVkAddress(), deviceEvent != null ? deviceEvent.getVkAddress() : VkPointer.getNullAddressNative());
+        setDeviceEventNative(getVkAddress(), deviceEvent != null ? deviceEvent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,8 +72,8 @@ public class VkDeviceEventInfoEXT extends VkObject {
         getDeviceEvent().setValue(deviceEvent);
     }
 
-    protected static native long getDeviceEvent(long address);
-    protected static native void setDeviceEvent(long address, long deviceEvent);
+    protected static native long getDeviceEventNative(long address);
+    protected static native void setDeviceEventNative(long address, long deviceEvent);
 
 
     public static native long sizeof();

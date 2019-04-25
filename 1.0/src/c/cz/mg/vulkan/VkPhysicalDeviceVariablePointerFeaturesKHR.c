@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_sizeof(JNIEnv
     return sizeof(VkPhysicalDeviceVariablePointerFeaturesKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getSType(JNIE
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setSType(JNIEn
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getPNext(JNIE
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setPNext(JNIEn
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getVariablePointersStorageBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getVariablePointersStorageBufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getVariablePo
     return jniPointerToLong(&o->variablePointersStorageBuffer);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setVariablePointersStorageBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setVariablePointersStorageBufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setVariablePoi
     memcpy(&o->variablePointersStorageBuffer, valuePointer, sizeof(o->variablePointersStorageBuffer));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getVariablePointers(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getVariablePointersNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_getVariablePo
     return jniPointerToLong(&o->variablePointers);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setVariablePointers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceVariablePointerFeaturesKHR_setVariablePointersNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

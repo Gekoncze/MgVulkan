@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkShaderModuleCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getSType(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setSType(JNIEnv* env, jclass jc,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getPNext(JNIEnv* env, jclass jc
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setPNext(JNIEnv* env, jclass jc,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getFlags(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setFlags(JNIEnv* env, jclass jc,
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getCodeSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getCodeSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getCodeSize(JNIEnv* env, jclass
     return jniPointerToLong(&o->codeSize);
 }
 
-void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setCodeSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setCodeSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setCodeSize(JNIEnv* env, jclass 
     memcpy(&o->codeSize, valuePointer, sizeof(o->codeSize));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getPCode(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getPCodeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkShaderModuleCreateInfo_getPCode(JNIEnv* env, jclass jc
     return jniPointerToLong(o->pCode);
 }
 
-void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setPCode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderModuleCreateInfo_setPCodeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

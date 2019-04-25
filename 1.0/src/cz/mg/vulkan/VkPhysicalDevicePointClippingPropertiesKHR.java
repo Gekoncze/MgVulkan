@@ -20,12 +20,12 @@ public class VkPhysicalDevicePointClippingPropertiesKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPhysicalDevicePointClippingPropertiesKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPointClippingBehaviorKHR getPointClippingBehavior() {
-        return new VkPointClippingBehaviorKHR(getVkMemory(), getPointClippingBehavior(getVkAddress()));
+        return new VkPointClippingBehaviorKHR(getVkMemory(), getPointClippingBehaviorNative(getVkAddress()));
     }
 
     
     public void setPointClippingBehavior(VkPointClippingBehaviorKHR pointClippingBehavior) {
-        setPointClippingBehavior(getVkAddress(), pointClippingBehavior != null ? pointClippingBehavior.getVkAddress() : VkPointer.getNullAddressNative());
+        setPointClippingBehaviorNative(getVkAddress(), pointClippingBehavior != null ? pointClippingBehavior.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,8 +71,8 @@ public class VkPhysicalDevicePointClippingPropertiesKHR extends VkObject {
         getPointClippingBehavior().setValue(pointClippingBehavior);
     }
 
-    protected static native long getPointClippingBehavior(long address);
-    protected static native void setPointClippingBehavior(long address, long pointClippingBehavior);
+    protected static native long getPointClippingBehaviorNative(long address);
+    protected static native void setPointClippingBehaviorNative(long address, long pointClippingBehavior);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkPhysicalDevicePointClippingPropertiesKHR extends VkObject {
 
         @Override
         public VkPhysicalDevicePointClippingPropertiesKHR get(int i){
-            return new VkPhysicalDevicePointClippingPropertiesKHR(getVkMemory(), addressAt(i));
+            return new VkPhysicalDevicePointClippingPropertiesKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

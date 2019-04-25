@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkShaderStatisticsInfoAMD);
 }
 
-jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getShaderStageMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getShaderStageMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getShaderStageMask(JNIEnv* env
     return jniPointerToLong(&o->shaderStageMask);
 }
 
-void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setShaderStageMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setShaderStageMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setShaderStageMask(JNIEnv* env,
     memcpy(&o->shaderStageMask, valuePointer, sizeof(o->shaderStageMask));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getResourceUsage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getResourceUsageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getResourceUsage(JNIEnv* env, 
     return jniPointerToLong(&o->resourceUsage);
 }
 
-void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setResourceUsage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setResourceUsageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setResourceUsage(JNIEnv* env, j
     memcpy(&o->resourceUsage, valuePointer, sizeof(o->resourceUsage));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumPhysicalVgprs(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumPhysicalVgprsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumPhysicalVgprs(JNIEnv* en
     return jniPointerToLong(&o->numPhysicalVgprs);
 }
 
-void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumPhysicalVgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumPhysicalVgprsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumPhysicalVgprs(JNIEnv* env
     memcpy(&o->numPhysicalVgprs, valuePointer, sizeof(o->numPhysicalVgprs));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumPhysicalSgprs(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumPhysicalSgprsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumPhysicalSgprs(JNIEnv* en
     return jniPointerToLong(&o->numPhysicalSgprs);
 }
 
-void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumPhysicalSgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumPhysicalSgprsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumPhysicalSgprs(JNIEnv* env
     memcpy(&o->numPhysicalSgprs, valuePointer, sizeof(o->numPhysicalSgprs));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumAvailableVgprs(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumAvailableVgprsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumAvailableVgprs(JNIEnv* e
     return jniPointerToLong(&o->numAvailableVgprs);
 }
 
-void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumAvailableVgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumAvailableVgprsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumAvailableVgprs(JNIEnv* en
     memcpy(&o->numAvailableVgprs, valuePointer, sizeof(o->numAvailableVgprs));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumAvailableSgprs(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumAvailableSgprsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getNumAvailableSgprs(JNIEnv* e
     return jniPointerToLong(&o->numAvailableSgprs);
 }
 
-void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumAvailableSgprs(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumAvailableSgprsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setNumAvailableSgprs(JNIEnv* en
     memcpy(&o->numAvailableSgprs, valuePointer, sizeof(o->numAvailableSgprs));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getComputeWorkGroupSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getComputeWorkGroupSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_getComputeWorkGroupSize(JNIEnv
     return jniPointerToLong(o->computeWorkGroupSize);
 }
 
-void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setComputeWorkGroupSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderStatisticsInfoAMD_setComputeWorkGroupSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

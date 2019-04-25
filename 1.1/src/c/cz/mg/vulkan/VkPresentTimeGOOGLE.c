@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPresentTimeGOOGLE_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkPresentTimeGOOGLE);
 }
 
-jlong Java_cz_mg_vulkan_VkPresentTimeGOOGLE_getPresentID(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPresentTimeGOOGLE_getPresentIDNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPresentTimeGOOGLE_getPresentID(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->presentID);
 }
 
-void Java_cz_mg_vulkan_VkPresentTimeGOOGLE_setPresentID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPresentTimeGOOGLE_setPresentIDNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPresentTimeGOOGLE_setPresentID(JNIEnv* env, jclass jc, 
     memcpy(&o->presentID, valuePointer, sizeof(o->presentID));
 }
 
-jlong Java_cz_mg_vulkan_VkPresentTimeGOOGLE_getDesiredPresentTime(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPresentTimeGOOGLE_getDesiredPresentTimeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPresentTimeGOOGLE_getDesiredPresentTime(JNIEnv* env, j
     return jniPointerToLong(&o->desiredPresentTime);
 }
 
-void Java_cz_mg_vulkan_VkPresentTimeGOOGLE_setDesiredPresentTime(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPresentTimeGOOGLE_setDesiredPresentTimeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

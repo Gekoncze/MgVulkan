@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSubpassDescription);
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDescription_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDescription_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_getFlags(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDescription_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDescription_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSubpassDescription_setFlags(JNIEnv* env, jclass jc, jlo
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDescription_getPipelineBindPoint(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDescription_getPipelineBindPointNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_getPipelineBindPoint(JNIEnv* env, j
     return jniPointerToLong(&o->pipelineBindPoint);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDescription_setPipelineBindPoint(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDescription_setPipelineBindPointNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSubpassDescription_setPipelineBindPoint(JNIEnv* env, jc
     memcpy(&o->pipelineBindPoint, valuePointer, sizeof(o->pipelineBindPoint));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDescription_getInputAttachmentCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDescription_getInputAttachmentCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_getInputAttachmentCount(JNIEnv* env
     return jniPointerToLong(&o->inputAttachmentCount);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDescription_setInputAttachmentCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDescription_setInputAttachmentCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkSubpassDescription_setInputAttachmentCount(JNIEnv* env,
     memcpy(&o->inputAttachmentCount, valuePointer, sizeof(o->inputAttachmentCount));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDescription_getPInputAttachments(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDescription_getPInputAttachmentsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_getPInputAttachments(JNIEnv* env, j
     return jniPointerToLong(o->pInputAttachments);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDescription_setPInputAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDescription_setPInputAttachmentsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkSubpassDescription_setPInputAttachments(JNIEnv* env, jc
     memcpy(&o->pInputAttachments, &valuePointer, sizeof(o->pInputAttachments));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDescription_getColorAttachmentCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDescription_getColorAttachmentCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_getColorAttachmentCount(JNIEnv* env
     return jniPointerToLong(&o->colorAttachmentCount);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDescription_setColorAttachmentCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDescription_setColorAttachmentCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkSubpassDescription_setColorAttachmentCount(JNIEnv* env,
     memcpy(&o->colorAttachmentCount, valuePointer, sizeof(o->colorAttachmentCount));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDescription_getPColorAttachments(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDescription_getPColorAttachmentsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_getPColorAttachments(JNIEnv* env, j
     return jniPointerToLong(o->pColorAttachments);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDescription_setPColorAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDescription_setPColorAttachmentsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkSubpassDescription_setPColorAttachments(JNIEnv* env, jc
     memcpy(&o->pColorAttachments, &valuePointer, sizeof(o->pColorAttachments));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDescription_getPResolveAttachments(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDescription_getPResolveAttachmentsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_getPResolveAttachments(JNIEnv* env,
     return jniPointerToLong(o->pResolveAttachments);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDescription_setPResolveAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDescription_setPResolveAttachmentsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkSubpassDescription_setPResolveAttachments(JNIEnv* env, 
     memcpy(&o->pResolveAttachments, &valuePointer, sizeof(o->pResolveAttachments));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDescription_getPDepthStencilAttachment(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDescription_getPDepthStencilAttachmentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_getPDepthStencilAttachment(JNIEnv* 
     return jniPointerToLong(o->pDepthStencilAttachment);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDescription_setPDepthStencilAttachment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDescription_setPDepthStencilAttachmentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkSubpassDescription_setPDepthStencilAttachment(JNIEnv* e
     memcpy(&o->pDepthStencilAttachment, &valuePointer, sizeof(o->pDepthStencilAttachment));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDescription_getPreserveAttachmentCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDescription_getPreserveAttachmentCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_getPreserveAttachmentCount(JNIEnv* 
     return jniPointerToLong(&o->preserveAttachmentCount);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDescription_setPreserveAttachmentCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDescription_setPreserveAttachmentCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_VkSubpassDescription_setPreserveAttachmentCount(JNIEnv* e
     memcpy(&o->preserveAttachmentCount, valuePointer, sizeof(o->preserveAttachmentCount));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassDescription_getPPreserveAttachments(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassDescription_getPPreserveAttachmentsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_VkSubpassDescription_getPPreserveAttachments(JNIEnv* env
     return jniPointerToLong(o->pPreserveAttachments);
 }
 
-void Java_cz_mg_vulkan_VkSubpassDescription_setPPreserveAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassDescription_setPPreserveAttachmentsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

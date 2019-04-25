@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkClearAttachment_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkClearAttachment);
 }
 
-jlong Java_cz_mg_vulkan_VkClearAttachment_getAspectMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearAttachment_getAspectMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkClearAttachment_getAspectMask(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->aspectMask);
 }
 
-void Java_cz_mg_vulkan_VkClearAttachment_setAspectMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearAttachment_setAspectMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkClearAttachment_setAspectMask(JNIEnv* env, jclass jc, j
     memcpy(&o->aspectMask, valuePointer, sizeof(o->aspectMask));
 }
 
-jlong Java_cz_mg_vulkan_VkClearAttachment_getColorAttachment(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearAttachment_getColorAttachmentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkClearAttachment_getColorAttachment(JNIEnv* env, jclass
     return jniPointerToLong(&o->colorAttachment);
 }
 
-void Java_cz_mg_vulkan_VkClearAttachment_setColorAttachment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearAttachment_setColorAttachmentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkClearAttachment_setColorAttachment(JNIEnv* env, jclass 
     memcpy(&o->colorAttachment, valuePointer, sizeof(o->colorAttachment));
 }
 
-jlong Java_cz_mg_vulkan_VkClearAttachment_getClearValue(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearAttachment_getClearValueNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkClearAttachment_getClearValue(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->clearValue);
 }
 
-void Java_cz_mg_vulkan_VkClearAttachment_setClearValue(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearAttachment_setClearValueNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

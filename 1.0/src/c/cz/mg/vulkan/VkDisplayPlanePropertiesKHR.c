@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_sizeof(JNIEnv* env, jclass j
     return sizeof(VkDisplayPlanePropertiesKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_getCurrentDisplay(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_getCurrentDisplayNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_getCurrentDisplay(JNIEnv* en
     return jniPointerToLong(&o->currentDisplay);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_setCurrentDisplay(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_setCurrentDisplayNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_setCurrentDisplay(JNIEnv* env
     memcpy(&o->currentDisplay, valuePointer, sizeof(o->currentDisplay));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_getCurrentStackIndex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_getCurrentStackIndexNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_getCurrentStackIndex(JNIEnv*
     return jniPointerToLong(&o->currentStackIndex);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_setCurrentStackIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_setCurrentStackIndexNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

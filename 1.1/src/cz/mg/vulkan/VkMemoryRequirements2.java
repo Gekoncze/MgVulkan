@@ -20,12 +20,12 @@ public class VkMemoryRequirements2 extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,34 +37,34 @@ public class VkMemoryRequirements2 extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkMemoryRequirements getMemoryRequirements() {
-        return new VkMemoryRequirements(getVkMemory(), getMemoryRequirements(getVkAddress()));
+        return new VkMemoryRequirements(getVkMemory(), getMemoryRequirementsNative(getVkAddress()));
     }
 
     
     public void setMemoryRequirements(VkMemoryRequirements memoryRequirements) {
-        setMemoryRequirements(getVkAddress(), memoryRequirements != null ? memoryRequirements.getVkAddress() : VkPointer.getNullAddressNative());
+        setMemoryRequirementsNative(getVkAddress(), memoryRequirements != null ? memoryRequirements.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMemoryRequirements(long address);
-    protected static native void setMemoryRequirements(long address, long memoryRequirements);
+    protected static native long getMemoryRequirementsNative(long address);
+    protected static native void setMemoryRequirementsNative(long address, long memoryRequirements);
 
 
     public static native long sizeof();
@@ -108,10 +108,10 @@ public class VkMemoryRequirements2 extends VkObject {
 
         @Override
         public VkMemoryRequirements2 get(int i){
-            return new VkMemoryRequirements2(getVkMemory(), addressAt(i));
+            return new VkMemoryRequirements2(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

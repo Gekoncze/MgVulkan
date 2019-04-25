@@ -21,12 +21,12 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkDebugReportObjectTypeEXT getObjectType() {
-        return new VkDebugReportObjectTypeEXT(getVkMemory(), getObjectType(getVkAddress()));
+        return new VkDebugReportObjectTypeEXT(getVkMemory(), getObjectTypeNative(getVkAddress()));
     }
 
     
     public void setObjectType(VkDebugReportObjectTypeEXT objectType) {
-        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddressNative());
+        setObjectTypeNative(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
         getObjectType().setValue(objectType);
     }
 
-    protected static native long getObjectType(long address);
-    protected static native void setObjectType(long address, long objectType);
+    protected static native long getObjectTypeNative(long address);
+    protected static native void setObjectTypeNative(long address, long objectType);
 
     public VkUInt64 getObject() {
-        return new VkUInt64(getVkMemory(), getObject(getVkAddress()));
+        return new VkUInt64(getVkMemory(), getObjectNative(getVkAddress()));
     }
 
     
     public void setObject(VkUInt64 object) {
-        setObject(getVkAddress(), object != null ? object.getVkAddress() : VkPointer.getNullAddressNative());
+        setObjectNative(getVkAddress(), object != null ? object.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
         getObject().setValue(object);
     }
 
-    protected static native long getObject(long address);
-    protected static native void setObject(long address, long object);
+    protected static native long getObjectNative(long address);
+    protected static native void setObjectNative(long address, long object);
 
     public VkUInt64 getTagName() {
-        return new VkUInt64(getVkMemory(), getTagName(getVkAddress()));
+        return new VkUInt64(getVkMemory(), getTagNameNative(getVkAddress()));
     }
 
     
     public void setTagName(VkUInt64 tagName) {
-        setTagName(getVkAddress(), tagName != null ? tagName.getVkAddress() : VkPointer.getNullAddressNative());
+        setTagNameNative(getVkAddress(), tagName != null ? tagName.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,16 +114,16 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
         getTagName().setValue(tagName);
     }
 
-    protected static native long getTagName(long address);
-    protected static native void setTagName(long address, long tagName);
+    protected static native long getTagNameNative(long address);
+    protected static native void setTagNameNative(long address, long tagName);
 
     public VkSize getTagSize() {
-        return new VkSize(getVkMemory(), getTagSize(getVkAddress()));
+        return new VkSize(getVkMemory(), getTagSizeNative(getVkAddress()));
     }
 
     
     public void setTagSize(VkSize tagSize) {
-        setTagSize(getVkAddress(), tagSize != null ? tagSize.getVkAddress() : VkPointer.getNullAddressNative());
+        setTagSizeNative(getVkAddress(), tagSize != null ? tagSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -135,21 +135,21 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
         getTagSize().setValue(tagSize);
     }
 
-    protected static native long getTagSize(long address);
-    protected static native void setTagSize(long address, long tagSize);
+    protected static native long getTagSizeNative(long address);
+    protected static native void setTagSizeNative(long address, long tagSize);
 
     public VkObject getPTag() {
-        return new VkObject(getVkMemory(), getPTag(getVkAddress()));
+        return new VkObject(getVkMemory(), getPTagNative(getVkAddress()));
     }
 
     private VkObject pTag = null;
     public void setPTag(VkObject pTag) {
-        setPTag(getVkAddress(), pTag != null ? pTag.getVkAddress() : VkPointer.NULL);
+        setPTagNative(getVkAddress(), pTag != null ? pTag.getVkAddress() : VkPointer.NULL);
         this.pTag = pTag;
     }
 
-    protected static native long getPTag(long address);
-    protected static native void setPTag(long address, long pTag);
+    protected static native long getPTagNative(long address);
+    protected static native void setPTagNative(long address, long pTag);
 
 
     public static native long sizeof();

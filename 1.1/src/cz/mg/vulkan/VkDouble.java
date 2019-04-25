@@ -71,15 +71,15 @@ public class VkDouble extends VkObject {
 
         public Array(double... values){
             this(values.length);
-            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            for(int i = 0; i < values.length; i++) setValue(i, values[i]);
         }
 
-        public double getValueAt(int i){
-            return getValueNative(addressAt(i));
+        public double getValue(int i){
+            return getValueNative(address(i));
         }
 
-        public void setValueAt(int i, double value){
-            setValueNative(addressAt(i), value);
+        public void setValue(int i, double value){
+            setValueNative(address(i), value);
         }
 
 
@@ -91,10 +91,10 @@ public class VkDouble extends VkObject {
 
         @Override
         public VkDouble get(int i){
-            return new VkDouble(getVkMemory(), addressAt(i));
+            return new VkDouble(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

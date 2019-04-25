@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_sizeof(JNIEnv* en
     return sizeof(VkPhysicalDeviceMaintenance3Properties);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getSType(JNIEnv* 
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setSType(JNIEnv* e
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getPNext(JNIEnv* 
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setPNext(JNIEnv* e
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getMaxPerSetDescriptors(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getMaxPerSetDescriptorsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getMaxPerSetDescr
     return jniPointerToLong(&o->maxPerSetDescriptors);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setMaxPerSetDescriptors(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setMaxPerSetDescriptorsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setMaxPerSetDescri
     memcpy(&o->maxPerSetDescriptors, valuePointer, sizeof(o->maxPerSetDescriptors));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getMaxMemoryAllocationSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getMaxMemoryAllocationSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_getMaxMemoryAlloc
     return jniPointerToLong(&o->maxMemoryAllocationSize);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setMaxMemoryAllocationSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMaintenance3Properties_setMaxMemoryAllocationSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

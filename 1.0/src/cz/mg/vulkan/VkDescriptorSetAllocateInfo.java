@@ -21,12 +21,12 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,42 +38,42 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkDescriptorPool getDescriptorPool() {
-        return new VkDescriptorPool(getVkMemory(), getDescriptorPool(getVkAddress()));
+        return new VkDescriptorPool(getVkMemory(), getDescriptorPoolNative(getVkAddress()));
     }
 
     
     public void setDescriptorPool(VkDescriptorPool descriptorPool) {
-        setDescriptorPool(getVkAddress(), descriptorPool != null ? descriptorPool.getVkAddress() : VkPointer.getNullAddressNative());
+        setDescriptorPoolNative(getVkAddress(), descriptorPool != null ? descriptorPool.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDescriptorPool(long address);
-    protected static native void setDescriptorPool(long address, long descriptorPool);
+    protected static native long getDescriptorPoolNative(long address);
+    protected static native void setDescriptorPoolNative(long address, long descriptorPool);
 
     public VkUInt32 getDescriptorSetCount() {
-        return new VkUInt32(getVkMemory(), getDescriptorSetCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDescriptorSetCountNative(getVkAddress()));
     }
 
     
     public void setDescriptorSetCount(VkUInt32 descriptorSetCount) {
-        setDescriptorSetCount(getVkAddress(), descriptorSetCount != null ? descriptorSetCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDescriptorSetCountNative(getVkAddress(), descriptorSetCount != null ? descriptorSetCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -85,21 +85,21 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         getDescriptorSetCount().setValue(descriptorSetCount);
     }
 
-    protected static native long getDescriptorSetCount(long address);
-    protected static native void setDescriptorSetCount(long address, long descriptorSetCount);
+    protected static native long getDescriptorSetCountNative(long address);
+    protected static native void setDescriptorSetCountNative(long address, long descriptorSetCount);
 
     public VkDescriptorSetLayout getPSetLayouts() {
-        return new VkDescriptorSetLayout(getVkMemory(), getPSetLayouts(getVkAddress()));
+        return new VkDescriptorSetLayout(getVkMemory(), getPSetLayoutsNative(getVkAddress()));
     }
 
     private VkObject pSetLayouts = null;
     public void setPSetLayouts(VkDescriptorSetLayout pSetLayouts) {
-        setPSetLayouts(getVkAddress(), pSetLayouts != null ? pSetLayouts.getVkAddress() : VkPointer.NULL);
+        setPSetLayoutsNative(getVkAddress(), pSetLayouts != null ? pSetLayouts.getVkAddress() : VkPointer.NULL);
         this.pSetLayouts = pSetLayouts;
     }
 
-    protected static native long getPSetLayouts(long address);
-    protected static native void setPSetLayouts(long address, long pSetLayouts);
+    protected static native long getPSetLayoutsNative(long address);
+    protected static native void setPSetLayoutsNative(long address, long pSetLayouts);
 
 
     public static native long sizeof();

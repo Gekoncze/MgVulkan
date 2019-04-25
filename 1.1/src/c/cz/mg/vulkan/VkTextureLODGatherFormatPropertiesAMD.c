@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_sizeof(JNIEnv* env
     return sizeof(VkTextureLODGatherFormatPropertiesAMD);
 }
 
-jlong Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_getSType(JNIEnv* e
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_setSType(JNIEnv* en
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_getPNext(JNIEnv* e
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_setPNext(JNIEnv* en
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_getSupportsTextureGatherLODBiasAMD(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_getSupportsTextureGatherLODBiasAMDNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_getSupportsTexture
     return jniPointerToLong(&o->supportsTextureGatherLODBiasAMD);
 }
 
-void Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_setSupportsTextureGatherLODBiasAMD(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkTextureLODGatherFormatPropertiesAMD_setSupportsTextureGatherLODBiasAMDNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

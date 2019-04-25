@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_sizeof(JNIEnv* env, jc
     return sizeof(VkVertexInputAttributeDescription);
 }
 
-jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getLocation(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getLocationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getLocation(JNIEnv* en
     return jniPointerToLong(&o->location);
 }
 
-void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setLocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setLocationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setLocation(JNIEnv* env
     memcpy(&o->location, valuePointer, sizeof(o->location));
 }
 
-jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getBinding(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getBindingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getBinding(JNIEnv* env
     return jniPointerToLong(&o->binding);
 }
 
-void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setBindingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setBinding(JNIEnv* env,
     memcpy(&o->binding, valuePointer, sizeof(o->binding));
 }
 
-jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getFormat(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getFormatNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getFormat(JNIEnv* env,
     return jniPointerToLong(&o->format);
 }
 
-void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setFormatNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setFormat(JNIEnv* env, 
     memcpy(&o->format, valuePointer, sizeof(o->format));
 }
 
-jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkVertexInputAttributeDescription_getOffset(JNIEnv* env,
     return jniPointerToLong(&o->offset);
 }
 
-void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkVertexInputAttributeDescription_setOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

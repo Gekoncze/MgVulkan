@@ -20,12 +20,12 @@ public class VkSubresourceLayout extends VkObject {
 
 
     public VkDeviceSize getOffset() {
-        return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkSubresourceLayout extends VkObject {
         getOffset().setValue(offset);
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
     public VkDeviceSize getSize() {
-        return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getSizeNative(getVkAddress()));
     }
 
     
     public void setSize(VkDeviceSize size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
+        setSizeNative(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkSubresourceLayout extends VkObject {
         getSize().setValue(size);
     }
 
-    protected static native long getSize(long address);
-    protected static native void setSize(long address, long size);
+    protected static native long getSizeNative(long address);
+    protected static native void setSizeNative(long address, long size);
 
     public VkDeviceSize getRowPitch() {
-        return new VkDeviceSize(getVkMemory(), getRowPitch(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getRowPitchNative(getVkAddress()));
     }
 
     
     public void setRowPitch(VkDeviceSize rowPitch) {
-        setRowPitch(getVkAddress(), rowPitch != null ? rowPitch.getVkAddress() : VkPointer.getNullAddressNative());
+        setRowPitchNative(getVkAddress(), rowPitch != null ? rowPitch.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkSubresourceLayout extends VkObject {
         getRowPitch().setValue(rowPitch);
     }
 
-    protected static native long getRowPitch(long address);
-    protected static native void setRowPitch(long address, long rowPitch);
+    protected static native long getRowPitchNative(long address);
+    protected static native void setRowPitchNative(long address, long rowPitch);
 
     public VkDeviceSize getArrayPitch() {
-        return new VkDeviceSize(getVkMemory(), getArrayPitch(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getArrayPitchNative(getVkAddress()));
     }
 
     
     public void setArrayPitch(VkDeviceSize arrayPitch) {
-        setArrayPitch(getVkAddress(), arrayPitch != null ? arrayPitch.getVkAddress() : VkPointer.getNullAddressNative());
+        setArrayPitchNative(getVkAddress(), arrayPitch != null ? arrayPitch.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -100,16 +100,16 @@ public class VkSubresourceLayout extends VkObject {
         getArrayPitch().setValue(arrayPitch);
     }
 
-    protected static native long getArrayPitch(long address);
-    protected static native void setArrayPitch(long address, long arrayPitch);
+    protected static native long getArrayPitchNative(long address);
+    protected static native void setArrayPitchNative(long address, long arrayPitch);
 
     public VkDeviceSize getDepthPitch() {
-        return new VkDeviceSize(getVkMemory(), getDepthPitch(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getDepthPitchNative(getVkAddress()));
     }
 
     
     public void setDepthPitch(VkDeviceSize depthPitch) {
-        setDepthPitch(getVkAddress(), depthPitch != null ? depthPitch.getVkAddress() : VkPointer.getNullAddressNative());
+        setDepthPitchNative(getVkAddress(), depthPitch != null ? depthPitch.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -121,8 +121,8 @@ public class VkSubresourceLayout extends VkObject {
         getDepthPitch().setValue(depthPitch);
     }
 
-    protected static native long getDepthPitch(long address);
-    protected static native void setDepthPitch(long address, long depthPitch);
+    protected static native long getDepthPitchNative(long address);
+    protected static native void setDepthPitchNative(long address, long depthPitch);
 
 
     public static native long sizeof();
@@ -166,10 +166,10 @@ public class VkSubresourceLayout extends VkObject {
 
         @Override
         public VkSubresourceLayout get(int i){
-            return new VkSubresourceLayout(getVkMemory(), addressAt(i));
+            return new VkSubresourceLayout(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

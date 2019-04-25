@@ -20,12 +20,12 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
 
 
     public VkUInt32 getMemoryTypeCount() {
-        return new VkUInt32(getVkMemory(), getMemoryTypeCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMemoryTypeCountNative(getVkAddress()));
     }
 
     
     public void setMemoryTypeCount(VkUInt32 memoryTypeCount) {
-        setMemoryTypeCount(getVkAddress(), memoryTypeCount != null ? memoryTypeCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setMemoryTypeCountNative(getVkAddress(), memoryTypeCount != null ? memoryTypeCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         getMemoryTypeCount().setValue(memoryTypeCount);
     }
 
-    protected static native long getMemoryTypeCount(long address);
-    protected static native void setMemoryTypeCount(long address, long memoryTypeCount);
+    protected static native long getMemoryTypeCountNative(long address);
+    protected static native void setMemoryTypeCountNative(long address, long memoryTypeCount);
 
     public VkMemoryType getMemoryTypes() {
-        return new VkMemoryType(getVkMemory(), getMemoryTypes(getVkAddress()));
+        return new VkMemoryType(getVkMemory(), getMemoryTypesNative(getVkAddress()));
     }
 
     
     public void setMemoryTypes(VkMemoryType memoryTypes) {
-        setMemoryTypes(getVkAddress(), memoryTypes != null ? memoryTypes.getVkAddress() : VkPointer.NULL);
+        setMemoryTypesNative(getVkAddress(), memoryTypes != null ? memoryTypes.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getMemoryTypes(long address);
-    protected static native void setMemoryTypes(long address, long memoryTypes);
+    protected static native long getMemoryTypesNative(long address);
+    protected static native void setMemoryTypesNative(long address, long memoryTypes);
 
     public VkUInt32 getMemoryHeapCount() {
-        return new VkUInt32(getVkMemory(), getMemoryHeapCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMemoryHeapCountNative(getVkAddress()));
     }
 
     
     public void setMemoryHeapCount(VkUInt32 memoryHeapCount) {
-        setMemoryHeapCount(getVkAddress(), memoryHeapCount != null ? memoryHeapCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setMemoryHeapCountNative(getVkAddress(), memoryHeapCount != null ? memoryHeapCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,21 +71,21 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         getMemoryHeapCount().setValue(memoryHeapCount);
     }
 
-    protected static native long getMemoryHeapCount(long address);
-    protected static native void setMemoryHeapCount(long address, long memoryHeapCount);
+    protected static native long getMemoryHeapCountNative(long address);
+    protected static native void setMemoryHeapCountNative(long address, long memoryHeapCount);
 
     public VkMemoryHeap getMemoryHeaps() {
-        return new VkMemoryHeap(getVkMemory(), getMemoryHeaps(getVkAddress()));
+        return new VkMemoryHeap(getVkMemory(), getMemoryHeapsNative(getVkAddress()));
     }
 
     
     public void setMemoryHeaps(VkMemoryHeap memoryHeaps) {
-        setMemoryHeaps(getVkAddress(), memoryHeaps != null ? memoryHeaps.getVkAddress() : VkPointer.NULL);
+        setMemoryHeapsNative(getVkAddress(), memoryHeaps != null ? memoryHeaps.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getMemoryHeaps(long address);
-    protected static native void setMemoryHeaps(long address, long memoryHeaps);
+    protected static native long getMemoryHeapsNative(long address);
+    protected static native void setMemoryHeapsNative(long address, long memoryHeaps);
 
 
     public static native long sizeof();
@@ -129,10 +129,10 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
 
         @Override
         public VkPhysicalDeviceMemoryProperties get(int i){
-            return new VkPhysicalDeviceMemoryProperties(getVkMemory(), addressAt(i));
+            return new VkPhysicalDeviceMemoryProperties(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

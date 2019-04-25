@@ -61,10 +61,10 @@ public class VkQueryPool extends VkNonDispatchableHandle {
 
         @Override
         public VkQueryPool get(int i){
-            return new VkQueryPool(getVkMemory(), addressAt(i));
+            return new VkQueryPool(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

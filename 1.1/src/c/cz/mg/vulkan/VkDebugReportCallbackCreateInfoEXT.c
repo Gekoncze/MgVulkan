@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_sizeof(JNIEnv* env, j
     return sizeof(VkDebugReportCallbackCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getSType(JNIEnv* env,
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setSType(JNIEnv* env, 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getPNext(JNIEnv* env,
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setPNext(JNIEnv* env, 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getFlags(JNIEnv* env,
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setFlags(JNIEnv* env, 
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getPfnCallback(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getPfnCallbackNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getPfnCallback(JNIEnv
     return jniPointerToLong(&o->pfnCallback);
 }
 
-void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setPfnCallback(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setPfnCallbackNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setPfnCallback(JNIEnv*
     memcpy(&o->pfnCallback, valuePointer, sizeof(o->pfnCallback));
 }
 
-jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getPUserData(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getPUserDataNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_getPUserData(JNIEnv* 
     return jniPointerToLong(o->pUserData);
 }
 
-void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setPUserData(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDebugReportCallbackCreateInfoEXT_setPUserDataNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

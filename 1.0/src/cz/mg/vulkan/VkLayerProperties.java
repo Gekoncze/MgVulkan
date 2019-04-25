@@ -20,12 +20,12 @@ public class VkLayerProperties extends VkObject {
 
 
     public VkChar getLayerName() {
-        return new VkChar(getVkMemory(), getLayerName(getVkAddress()));
+        return new VkChar(getVkMemory(), getLayerNameNative(getVkAddress()));
     }
 
     
     public void setLayerName(VkChar layerName) {
-        setLayerName(getVkAddress(), layerName != null ? layerName.getVkAddress() : VkPointer.NULL);
+        setLayerNameNative(getVkAddress(), layerName != null ? layerName.getVkAddress() : VkPointer.NULL);
         
     }
 
@@ -37,16 +37,16 @@ public class VkLayerProperties extends VkObject {
         setLayerName(new VkString(layerName));
     }
 
-    protected static native long getLayerName(long address);
-    protected static native void setLayerName(long address, long layerName);
+    protected static native long getLayerNameNative(long address);
+    protected static native void setLayerNameNative(long address, long layerName);
 
     public VkUInt32 getSpecVersion() {
-        return new VkUInt32(getVkMemory(), getSpecVersion(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSpecVersionNative(getVkAddress()));
     }
 
     
     public void setSpecVersion(VkUInt32 specVersion) {
-        setSpecVersion(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.getNullAddressNative());
+        setSpecVersionNative(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkLayerProperties extends VkObject {
         getSpecVersion().setValue(specVersion);
     }
 
-    protected static native long getSpecVersion(long address);
-    protected static native void setSpecVersion(long address, long specVersion);
+    protected static native long getSpecVersionNative(long address);
+    protected static native void setSpecVersionNative(long address, long specVersion);
 
     public VkUInt32 getImplementationVersion() {
-        return new VkUInt32(getVkMemory(), getImplementationVersion(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getImplementationVersionNative(getVkAddress()));
     }
 
     
     public void setImplementationVersion(VkUInt32 implementationVersion) {
-        setImplementationVersion(getVkAddress(), implementationVersion != null ? implementationVersion.getVkAddress() : VkPointer.getNullAddressNative());
+        setImplementationVersionNative(getVkAddress(), implementationVersion != null ? implementationVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkLayerProperties extends VkObject {
         getImplementationVersion().setValue(implementationVersion);
     }
 
-    protected static native long getImplementationVersion(long address);
-    protected static native void setImplementationVersion(long address, long implementationVersion);
+    protected static native long getImplementationVersionNative(long address);
+    protected static native void setImplementationVersionNative(long address, long implementationVersion);
 
     public VkChar getDescription() {
-        return new VkChar(getVkMemory(), getDescription(getVkAddress()));
+        return new VkChar(getVkMemory(), getDescriptionNative(getVkAddress()));
     }
 
     
     public void setDescription(VkChar description) {
-        setDescription(getVkAddress(), description != null ? description.getVkAddress() : VkPointer.NULL);
+        setDescriptionNative(getVkAddress(), description != null ? description.getVkAddress() : VkPointer.NULL);
         
     }
 
@@ -100,8 +100,8 @@ public class VkLayerProperties extends VkObject {
         setDescription(new VkString(description));
     }
 
-    protected static native long getDescription(long address);
-    protected static native void setDescription(long address, long description);
+    protected static native long getDescriptionNative(long address);
+    protected static native void setDescriptionNative(long address, long description);
 
 
     public static native long sizeof();
@@ -145,10 +145,10 @@ public class VkLayerProperties extends VkObject {
 
         @Override
         public VkLayerProperties get(int i){
-            return new VkLayerProperties(getVkMemory(), addressAt(i));
+            return new VkLayerProperties(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

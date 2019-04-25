@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_s
     return sizeof(VkPhysicalDeviceConservativeRasterizationPropertiesEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_se
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_se
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getPrimitiveOverestimationSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getPrimitiveOverestimationSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(&o->primitiveOverestimationSize);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setPrimitiveOverestimationSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setPrimitiveOverestimationSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_se
     memcpy(&o->primitiveOverestimationSize, valuePointer, sizeof(o->primitiveOverestimationSize));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getMaxExtraPrimitiveOverestimationSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getMaxExtraPrimitiveOverestimationSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(&o->maxExtraPrimitiveOverestimationSize);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setMaxExtraPrimitiveOverestimationSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setMaxExtraPrimitiveOverestimationSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_se
     memcpy(&o->maxExtraPrimitiveOverestimationSize, valuePointer, sizeof(o->maxExtraPrimitiveOverestimationSize));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getExtraPrimitiveOverestimationSizeGranularity(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getExtraPrimitiveOverestimationSizeGranularityNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(&o->extraPrimitiveOverestimationSizeGranularity);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setExtraPrimitiveOverestimationSizeGranularity(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setExtraPrimitiveOverestimationSizeGranularityNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_se
     memcpy(&o->extraPrimitiveOverestimationSizeGranularity, valuePointer, sizeof(o->extraPrimitiveOverestimationSizeGranularity));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getPrimitiveUnderestimation(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getPrimitiveUnderestimationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(&o->primitiveUnderestimation);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setPrimitiveUnderestimation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setPrimitiveUnderestimationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_se
     memcpy(&o->primitiveUnderestimation, valuePointer, sizeof(o->primitiveUnderestimation));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getConservativePointAndLineRasterization(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getConservativePointAndLineRasterizationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(&o->conservativePointAndLineRasterization);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setConservativePointAndLineRasterization(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setConservativePointAndLineRasterizationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_se
     memcpy(&o->conservativePointAndLineRasterization, valuePointer, sizeof(o->conservativePointAndLineRasterization));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getDegenerateTrianglesRasterized(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getDegenerateTrianglesRasterizedNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(&o->degenerateTrianglesRasterized);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setDegenerateTrianglesRasterized(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setDegenerateTrianglesRasterizedNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_se
     memcpy(&o->degenerateTrianglesRasterized, valuePointer, sizeof(o->degenerateTrianglesRasterized));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getDegenerateLinesRasterized(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getDegenerateLinesRasterizedNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(&o->degenerateLinesRasterized);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setDegenerateLinesRasterized(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setDegenerateLinesRasterizedNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_se
     memcpy(&o->degenerateLinesRasterized, valuePointer, sizeof(o->degenerateLinesRasterized));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getFullyCoveredFragmentShaderInputVariable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getFullyCoveredFragmentShaderInputVariableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(&o->fullyCoveredFragmentShaderInputVariable);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setFullyCoveredFragmentShaderInputVariable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setFullyCoveredFragmentShaderInputVariableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -186,7 +186,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_se
     memcpy(&o->fullyCoveredFragmentShaderInputVariable, valuePointer, sizeof(o->fullyCoveredFragmentShaderInputVariable));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getConservativeRasterizationPostDepthCoverage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_getConservativeRasterizationPostDepthCoverageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -194,7 +194,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_g
     return jniPointerToLong(&o->conservativeRasterizationPostDepthCoverage);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setConservativeRasterizationPostDepthCoverage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceConservativeRasterizationPropertiesEXT_setConservativeRasterizationPostDepthCoverageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

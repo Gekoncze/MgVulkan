@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkBindImageMemoryInfoKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getSType(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setSType(JNIEnv* env, jclass jc,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getPNext(JNIEnv* env, jclass jc
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setPNext(JNIEnv* env, jclass jc,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getImage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getImageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getImage(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->image);
 }
 
-void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setImage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setImageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setImage(JNIEnv* env, jclass jc,
     memcpy(&o->image, valuePointer, sizeof(o->image));
 }
 
-jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getMemory(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getMemoryNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getMemory(JNIEnv* env, jclass j
     return jniPointerToLong(&o->memory);
 }
 
-void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setMemory(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setMemoryNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setMemory(JNIEnv* env, jclass jc
     memcpy(&o->memory, valuePointer, sizeof(o->memory));
 }
 
-jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getMemoryOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getMemoryOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_getMemoryOffset(JNIEnv* env, jc
     return jniPointerToLong(&o->memoryOffset);
 }
 
-void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setMemoryOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindImageMemoryInfoKHR_setMemoryOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

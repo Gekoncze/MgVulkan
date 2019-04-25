@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_sizeof(JNIEnv* env, jclass j
     return sizeof(VkCmdProcessCommandsInfoNVX);
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSType(JNIEnv* env, jclass
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSType(JNIEnv* env, jclass 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getPNext(JNIEnv* env, jclass
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setPNext(JNIEnv* env, jclass 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getObjectTable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getObjectTableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getObjectTable(JNIEnv* env, 
     return jniPointerToLong(&o->objectTable);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setObjectTable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setObjectTableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setObjectTable(JNIEnv* env, j
     memcpy(&o->objectTable, valuePointer, sizeof(o->objectTable));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getIndirectCommandsLayout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getIndirectCommandsLayoutNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getIndirectCommandsLayout(JN
     return jniPointerToLong(&o->indirectCommandsLayout);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setIndirectCommandsLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setIndirectCommandsLayoutNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setIndirectCommandsLayout(JNI
     memcpy(&o->indirectCommandsLayout, valuePointer, sizeof(o->indirectCommandsLayout));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getIndirectCommandsTokenCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getIndirectCommandsTokenCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getIndirectCommandsTokenCoun
     return jniPointerToLong(&o->indirectCommandsTokenCount);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setIndirectCommandsTokenCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setIndirectCommandsTokenCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setIndirectCommandsTokenCount
     memcpy(&o->indirectCommandsTokenCount, valuePointer, sizeof(o->indirectCommandsTokenCount));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getPIndirectCommandsTokens(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getPIndirectCommandsTokensNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getPIndirectCommandsTokens(J
     return jniPointerToLong(o->pIndirectCommandsTokens);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setPIndirectCommandsTokens(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setPIndirectCommandsTokensNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setPIndirectCommandsTokens(JN
     memcpy(&o->pIndirectCommandsTokens, &valuePointer, sizeof(o->pIndirectCommandsTokens));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getMaxSequencesCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getMaxSequencesCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getMaxSequencesCount(JNIEnv*
     return jniPointerToLong(&o->maxSequencesCount);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setMaxSequencesCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setMaxSequencesCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setMaxSequencesCount(JNIEnv* 
     memcpy(&o->maxSequencesCount, valuePointer, sizeof(o->maxSequencesCount));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getTargetCommandBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getTargetCommandBufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getTargetCommandBuffer(JNIEn
     return jniPointerToLong(&o->targetCommandBuffer);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setTargetCommandBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setTargetCommandBufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setTargetCommandBuffer(JNIEnv
     memcpy(&o->targetCommandBuffer, valuePointer, sizeof(o->targetCommandBuffer));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesCountBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesCountBufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesCountBuffer(JNIE
     return jniPointerToLong(&o->sequencesCountBuffer);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesCountBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesCountBufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesCountBuffer(JNIEn
     memcpy(&o->sequencesCountBuffer, valuePointer, sizeof(o->sequencesCountBuffer));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesCountOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesCountOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesCountOffset(JNIE
     return jniPointerToLong(&o->sequencesCountOffset);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesCountOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesCountOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -186,7 +186,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesCountOffset(JNIEn
     memcpy(&o->sequencesCountOffset, valuePointer, sizeof(o->sequencesCountOffset));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesIndexBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesIndexBufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -194,7 +194,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesIndexBuffer(JNIE
     return jniPointerToLong(&o->sequencesIndexBuffer);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesIndexBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesIndexBufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -203,7 +203,7 @@ void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesIndexBuffer(JNIEn
     memcpy(&o->sequencesIndexBuffer, valuePointer, sizeof(o->sequencesIndexBuffer));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesIndexOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesIndexOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -211,7 +211,7 @@ jlong Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_getSequencesIndexOffset(JNIE
     return jniPointerToLong(&o->sequencesIndexOffset);
 }
 
-void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesIndexOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdProcessCommandsInfoNVX_setSequencesIndexOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

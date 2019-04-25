@@ -20,12 +20,12 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkBool32 getProtectedMemory() {
-        return new VkBool32(getVkMemory(), getProtectedMemory(getVkAddress()));
+        return new VkBool32(getVkMemory(), getProtectedMemoryNative(getVkAddress()));
     }
 
     
     public void setProtectedMemory(VkBool32 protectedMemory) {
-        setProtectedMemory(getVkAddress(), protectedMemory != null ? protectedMemory.getVkAddress() : VkPointer.getNullAddressNative());
+        setProtectedMemoryNative(getVkAddress(), protectedMemory != null ? protectedMemory.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,8 +71,8 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
         getProtectedMemory().setValue(protectedMemory);
     }
 
-    protected static native long getProtectedMemory(long address);
-    protected static native void setProtectedMemory(long address, long protectedMemory);
+    protected static native long getProtectedMemoryNative(long address);
+    protected static native void setProtectedMemoryNative(long address, long protectedMemory);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkPhysicalDeviceProtectedMemoryFeatures extends VkObject {
 
         @Override
         public VkPhysicalDeviceProtectedMemoryFeatures get(int i){
-            return new VkPhysicalDeviceProtectedMemoryFeatures(getVkMemory(), addressAt(i));
+            return new VkPhysicalDeviceProtectedMemoryFeatures(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

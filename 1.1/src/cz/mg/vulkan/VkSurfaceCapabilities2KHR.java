@@ -20,12 +20,12 @@ public class VkSurfaceCapabilities2KHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,34 +37,34 @@ public class VkSurfaceCapabilities2KHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkSurfaceCapabilitiesKHR getSurfaceCapabilities() {
-        return new VkSurfaceCapabilitiesKHR(getVkMemory(), getSurfaceCapabilities(getVkAddress()));
+        return new VkSurfaceCapabilitiesKHR(getVkMemory(), getSurfaceCapabilitiesNative(getVkAddress()));
     }
 
     
     public void setSurfaceCapabilities(VkSurfaceCapabilitiesKHR surfaceCapabilities) {
-        setSurfaceCapabilities(getVkAddress(), surfaceCapabilities != null ? surfaceCapabilities.getVkAddress() : VkPointer.getNullAddressNative());
+        setSurfaceCapabilitiesNative(getVkAddress(), surfaceCapabilities != null ? surfaceCapabilities.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSurfaceCapabilities(long address);
-    protected static native void setSurfaceCapabilities(long address, long surfaceCapabilities);
+    protected static native long getSurfaceCapabilitiesNative(long address);
+    protected static native void setSurfaceCapabilitiesNative(long address, long surfaceCapabilities);
 
 
     public static native long sizeof();
@@ -108,10 +108,10 @@ public class VkSurfaceCapabilities2KHR extends VkObject {
 
         @Override
         public VkSurfaceCapabilities2KHR get(int i){
-            return new VkSurfaceCapabilities2KHR(getVkMemory(), addressAt(i));
+            return new VkSurfaceCapabilities2KHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

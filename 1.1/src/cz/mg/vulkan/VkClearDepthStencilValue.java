@@ -20,12 +20,12 @@ public class VkClearDepthStencilValue extends VkObject {
 
 
     public VkFloat getDepth() {
-        return new VkFloat(getVkMemory(), getDepth(getVkAddress()));
+        return new VkFloat(getVkMemory(), getDepthNative(getVkAddress()));
     }
 
     
     public void setDepth(VkFloat depth) {
-        setDepth(getVkAddress(), depth != null ? depth.getVkAddress() : VkPointer.getNullAddressNative());
+        setDepthNative(getVkAddress(), depth != null ? depth.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkClearDepthStencilValue extends VkObject {
         getDepth().setValue(depth);
     }
 
-    protected static native long getDepth(long address);
-    protected static native void setDepth(long address, long depth);
+    protected static native long getDepthNative(long address);
+    protected static native void setDepthNative(long address, long depth);
 
     public VkUInt32 getStencil() {
-        return new VkUInt32(getVkMemory(), getStencil(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getStencilNative(getVkAddress()));
     }
 
     
     public void setStencil(VkUInt32 stencil) {
-        setStencil(getVkAddress(), stencil != null ? stencil.getVkAddress() : VkPointer.getNullAddressNative());
+        setStencilNative(getVkAddress(), stencil != null ? stencil.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,8 +58,8 @@ public class VkClearDepthStencilValue extends VkObject {
         getStencil().setValue(stencil);
     }
 
-    protected static native long getStencil(long address);
-    protected static native void setStencil(long address, long stencil);
+    protected static native long getStencilNative(long address);
+    protected static native void setStencilNative(long address, long stencil);
 
 
     public static native long sizeof();
@@ -103,10 +103,10 @@ public class VkClearDepthStencilValue extends VkObject {
 
         @Override
         public VkClearDepthStencilValue get(int i){
-            return new VkClearDepthStencilValue(getVkMemory(), addressAt(i));
+            return new VkClearDepthStencilValue(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

@@ -20,12 +20,12 @@ public class VkDescriptorPoolSize extends VkObject {
 
 
     public VkDescriptorType getType() {
-        return new VkDescriptorType(getVkMemory(), getType(getVkAddress()));
+        return new VkDescriptorType(getVkMemory(), getTypeNative(getVkAddress()));
     }
 
     
     public void setType(VkDescriptorType type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddressNative());
+        setTypeNative(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkDescriptorPoolSize extends VkObject {
         getType().setValue(type);
     }
 
-    protected static native long getType(long address);
-    protected static native void setType(long address, long type);
+    protected static native long getTypeNative(long address);
+    protected static native void setTypeNative(long address, long type);
 
     public VkUInt32 getDescriptorCount() {
-        return new VkUInt32(getVkMemory(), getDescriptorCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDescriptorCountNative(getVkAddress()));
     }
 
     
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDescriptorCountNative(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,8 +58,8 @@ public class VkDescriptorPoolSize extends VkObject {
         getDescriptorCount().setValue(descriptorCount);
     }
 
-    protected static native long getDescriptorCount(long address);
-    protected static native void setDescriptorCount(long address, long descriptorCount);
+    protected static native long getDescriptorCountNative(long address);
+    protected static native void setDescriptorCountNative(long address, long descriptorCount);
 
 
     public static native long sizeof();
@@ -103,10 +103,10 @@ public class VkDescriptorPoolSize extends VkObject {
 
         @Override
         public VkDescriptorPoolSize get(int i){
-            return new VkDescriptorPoolSize(getVkMemory(), addressAt(i));
+            return new VkDescriptorPoolSize(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

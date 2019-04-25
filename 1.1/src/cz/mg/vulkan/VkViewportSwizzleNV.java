@@ -20,12 +20,12 @@ public class VkViewportSwizzleNV extends VkObject {
 
 
     public VkViewportCoordinateSwizzleNV getX() {
-        return new VkViewportCoordinateSwizzleNV(getVkMemory(), getX(getVkAddress()));
+        return new VkViewportCoordinateSwizzleNV(getVkMemory(), getXNative(getVkAddress()));
     }
 
     
     public void setX(VkViewportCoordinateSwizzleNV x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
+        setXNative(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkViewportSwizzleNV extends VkObject {
         getX().setValue(x);
     }
 
-    protected static native long getX(long address);
-    protected static native void setX(long address, long x);
+    protected static native long getXNative(long address);
+    protected static native void setXNative(long address, long x);
 
     public VkViewportCoordinateSwizzleNV getY() {
-        return new VkViewportCoordinateSwizzleNV(getVkMemory(), getY(getVkAddress()));
+        return new VkViewportCoordinateSwizzleNV(getVkMemory(), getYNative(getVkAddress()));
     }
 
     
     public void setY(VkViewportCoordinateSwizzleNV y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
+        setYNative(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkViewportSwizzleNV extends VkObject {
         getY().setValue(y);
     }
 
-    protected static native long getY(long address);
-    protected static native void setY(long address, long y);
+    protected static native long getYNative(long address);
+    protected static native void setYNative(long address, long y);
 
     public VkViewportCoordinateSwizzleNV getZ() {
-        return new VkViewportCoordinateSwizzleNV(getVkMemory(), getZ(getVkAddress()));
+        return new VkViewportCoordinateSwizzleNV(getVkMemory(), getZNative(getVkAddress()));
     }
 
     
     public void setZ(VkViewportCoordinateSwizzleNV z) {
-        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddressNative());
+        setZNative(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkViewportSwizzleNV extends VkObject {
         getZ().setValue(z);
     }
 
-    protected static native long getZ(long address);
-    protected static native void setZ(long address, long z);
+    protected static native long getZNative(long address);
+    protected static native void setZNative(long address, long z);
 
     public VkViewportCoordinateSwizzleNV getW() {
-        return new VkViewportCoordinateSwizzleNV(getVkMemory(), getW(getVkAddress()));
+        return new VkViewportCoordinateSwizzleNV(getVkMemory(), getWNative(getVkAddress()));
     }
 
     
     public void setW(VkViewportCoordinateSwizzleNV w) {
-        setW(getVkAddress(), w != null ? w.getVkAddress() : VkPointer.getNullAddressNative());
+        setWNative(getVkAddress(), w != null ? w.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -100,8 +100,8 @@ public class VkViewportSwizzleNV extends VkObject {
         getW().setValue(w);
     }
 
-    protected static native long getW(long address);
-    protected static native void setW(long address, long w);
+    protected static native long getWNative(long address);
+    protected static native void setWNative(long address, long w);
 
 
     public static native long sizeof();
@@ -145,10 +145,10 @@ public class VkViewportSwizzleNV extends VkObject {
 
         @Override
         public VkViewportSwizzleNV get(int i){
-            return new VkViewportSwizzleNV(getVkMemory(), addressAt(i));
+            return new VkViewportSwizzleNV(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

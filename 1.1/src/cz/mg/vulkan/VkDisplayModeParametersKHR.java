@@ -20,25 +20,25 @@ public class VkDisplayModeParametersKHR extends VkObject {
 
 
     public VkExtent2D getVisibleRegion() {
-        return new VkExtent2D(getVkMemory(), getVisibleRegion(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getVisibleRegionNative(getVkAddress()));
     }
 
     
     public void setVisibleRegion(VkExtent2D visibleRegion) {
-        setVisibleRegion(getVkAddress(), visibleRegion != null ? visibleRegion.getVkAddress() : VkPointer.getNullAddressNative());
+        setVisibleRegionNative(getVkAddress(), visibleRegion != null ? visibleRegion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getVisibleRegion(long address);
-    protected static native void setVisibleRegion(long address, long visibleRegion);
+    protected static native long getVisibleRegionNative(long address);
+    protected static native void setVisibleRegionNative(long address, long visibleRegion);
 
     public VkUInt32 getRefreshRate() {
-        return new VkUInt32(getVkMemory(), getRefreshRate(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getRefreshRateNative(getVkAddress()));
     }
 
     
     public void setRefreshRate(VkUInt32 refreshRate) {
-        setRefreshRate(getVkAddress(), refreshRate != null ? refreshRate.getVkAddress() : VkPointer.getNullAddressNative());
+        setRefreshRateNative(getVkAddress(), refreshRate != null ? refreshRate.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -50,8 +50,8 @@ public class VkDisplayModeParametersKHR extends VkObject {
         getRefreshRate().setValue(refreshRate);
     }
 
-    protected static native long getRefreshRate(long address);
-    protected static native void setRefreshRate(long address, long refreshRate);
+    protected static native long getRefreshRateNative(long address);
+    protected static native void setRefreshRateNative(long address, long refreshRate);
 
 
     public static native long sizeof();
@@ -95,10 +95,10 @@ public class VkDisplayModeParametersKHR extends VkObject {
 
         @Override
         public VkDisplayModeParametersKHR get(int i){
-            return new VkDisplayModeParametersKHR(getVkMemory(), addressAt(i));
+            return new VkDisplayModeParametersKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

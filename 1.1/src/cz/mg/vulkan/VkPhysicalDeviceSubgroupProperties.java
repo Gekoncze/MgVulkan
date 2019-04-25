@@ -20,12 +20,12 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getSubgroupSize() {
-        return new VkUInt32(getVkMemory(), getSubgroupSize(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSubgroupSizeNative(getVkAddress()));
     }
 
     
     public void setSubgroupSize(VkUInt32 subgroupSize) {
-        setSubgroupSize(getVkAddress(), subgroupSize != null ? subgroupSize.getVkAddress() : VkPointer.getNullAddressNative());
+        setSubgroupSizeNative(getVkAddress(), subgroupSize != null ? subgroupSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         getSubgroupSize().setValue(subgroupSize);
     }
 
-    protected static native long getSubgroupSize(long address);
-    protected static native void setSubgroupSize(long address, long subgroupSize);
+    protected static native long getSubgroupSizeNative(long address);
+    protected static native void setSubgroupSizeNative(long address, long subgroupSize);
 
     public VkShaderStageFlags getSupportedStages() {
-        return new VkShaderStageFlags(getVkMemory(), getSupportedStages(getVkAddress()));
+        return new VkShaderStageFlags(getVkMemory(), getSupportedStagesNative(getVkAddress()));
     }
 
     
     public void setSupportedStages(VkShaderStageFlags supportedStages) {
-        setSupportedStages(getVkAddress(), supportedStages != null ? supportedStages.getVkAddress() : VkPointer.getNullAddressNative());
+        setSupportedStagesNative(getVkAddress(), supportedStages != null ? supportedStages.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,16 +92,16 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         getSupportedStages().setValue(supportedStages);
     }
 
-    protected static native long getSupportedStages(long address);
-    protected static native void setSupportedStages(long address, long supportedStages);
+    protected static native long getSupportedStagesNative(long address);
+    protected static native void setSupportedStagesNative(long address, long supportedStages);
 
     public VkSubgroupFeatureFlags getSupportedOperations() {
-        return new VkSubgroupFeatureFlags(getVkMemory(), getSupportedOperations(getVkAddress()));
+        return new VkSubgroupFeatureFlags(getVkMemory(), getSupportedOperationsNative(getVkAddress()));
     }
 
     
     public void setSupportedOperations(VkSubgroupFeatureFlags supportedOperations) {
-        setSupportedOperations(getVkAddress(), supportedOperations != null ? supportedOperations.getVkAddress() : VkPointer.getNullAddressNative());
+        setSupportedOperationsNative(getVkAddress(), supportedOperations != null ? supportedOperations.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -113,16 +113,16 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         getSupportedOperations().setValue(supportedOperations);
     }
 
-    protected static native long getSupportedOperations(long address);
-    protected static native void setSupportedOperations(long address, long supportedOperations);
+    protected static native long getSupportedOperationsNative(long address);
+    protected static native void setSupportedOperationsNative(long address, long supportedOperations);
 
     public VkBool32 getQuadOperationsInAllStages() {
-        return new VkBool32(getVkMemory(), getQuadOperationsInAllStages(getVkAddress()));
+        return new VkBool32(getVkMemory(), getQuadOperationsInAllStagesNative(getVkAddress()));
     }
 
     
     public void setQuadOperationsInAllStages(VkBool32 quadOperationsInAllStages) {
-        setQuadOperationsInAllStages(getVkAddress(), quadOperationsInAllStages != null ? quadOperationsInAllStages.getVkAddress() : VkPointer.getNullAddressNative());
+        setQuadOperationsInAllStagesNative(getVkAddress(), quadOperationsInAllStages != null ? quadOperationsInAllStages.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -134,8 +134,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         getQuadOperationsInAllStages().setValue(quadOperationsInAllStages);
     }
 
-    protected static native long getQuadOperationsInAllStages(long address);
-    protected static native void setQuadOperationsInAllStages(long address, long quadOperationsInAllStages);
+    protected static native long getQuadOperationsInAllStagesNative(long address);
+    protected static native void setQuadOperationsInAllStagesNative(long address, long quadOperationsInAllStages);
 
 
     public static native long sizeof();
@@ -179,10 +179,10 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
 
         @Override
         public VkPhysicalDeviceSubgroupProperties get(int i){
-            return new VkPhysicalDeviceSubgroupProperties(getVkMemory(), addressAt(i));
+            return new VkPhysicalDeviceSubgroupProperties(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

@@ -61,10 +61,10 @@ public class VkObjectTableNVX extends VkNonDispatchableHandle {
 
         @Override
         public VkObjectTableNVX get(int i){
-            return new VkObjectTableNVX(getVkMemory(), addressAt(i));
+            return new VkObjectTableNVX(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

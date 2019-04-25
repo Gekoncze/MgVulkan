@@ -20,12 +20,12 @@ public class VkPresentRegionKHR extends VkObject {
 
 
     public VkUInt32 getRectangleCount() {
-        return new VkUInt32(getVkMemory(), getRectangleCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getRectangleCountNative(getVkAddress()));
     }
 
     
     public void setRectangleCount(VkUInt32 rectangleCount) {
-        setRectangleCount(getVkAddress(), rectangleCount != null ? rectangleCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setRectangleCountNative(getVkAddress(), rectangleCount != null ? rectangleCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,21 +37,21 @@ public class VkPresentRegionKHR extends VkObject {
         getRectangleCount().setValue(rectangleCount);
     }
 
-    protected static native long getRectangleCount(long address);
-    protected static native void setRectangleCount(long address, long rectangleCount);
+    protected static native long getRectangleCountNative(long address);
+    protected static native void setRectangleCountNative(long address, long rectangleCount);
 
     public VkRectLayerKHR getPRectangles() {
-        return new VkRectLayerKHR(getVkMemory(), getPRectangles(getVkAddress()));
+        return new VkRectLayerKHR(getVkMemory(), getPRectanglesNative(getVkAddress()));
     }
 
     private VkObject pRectangles = null;
     public void setPRectangles(VkRectLayerKHR pRectangles) {
-        setPRectangles(getVkAddress(), pRectangles != null ? pRectangles.getVkAddress() : VkPointer.NULL);
+        setPRectanglesNative(getVkAddress(), pRectangles != null ? pRectangles.getVkAddress() : VkPointer.NULL);
         this.pRectangles = pRectangles;
     }
 
-    protected static native long getPRectangles(long address);
-    protected static native void setPRectangles(long address, long pRectangles);
+    protected static native long getPRectanglesNative(long address);
+    protected static native void setPRectanglesNative(long address, long pRectangles);
 
 
     public static native long sizeof();
@@ -95,10 +95,10 @@ public class VkPresentRegionKHR extends VkObject {
 
         @Override
         public VkPresentRegionKHR get(int i){
-            return new VkPresentRegionKHR(getVkMemory(), addressAt(i));
+            return new VkPresentRegionKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

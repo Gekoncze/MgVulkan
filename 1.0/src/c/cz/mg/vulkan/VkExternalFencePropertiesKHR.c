@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_sizeof(JNIEnv* env, jclass 
     return sizeof(VkExternalFencePropertiesKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getSType(JNIEnv* env, jclas
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setSType(JNIEnv* env, jclass
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getPNext(JNIEnv* env, jclas
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setPNext(JNIEnv* env, jclass
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getExportFromImportedHandleTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getExportFromImportedHandle
     return jniPointerToLong(&o->exportFromImportedHandleTypes);
 }
 
-void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setExportFromImportedHandleTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setExportFromImportedHandleT
     memcpy(&o->exportFromImportedHandleTypes, valuePointer, sizeof(o->exportFromImportedHandleTypes));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getCompatibleHandleTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getCompatibleHandleTypes(JN
     return jniPointerToLong(&o->compatibleHandleTypes);
 }
 
-void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setCompatibleHandleTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setCompatibleHandleTypes(JNI
     memcpy(&o->compatibleHandleTypes, valuePointer, sizeof(o->compatibleHandleTypes));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getExternalFenceFeatures(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getExternalFenceFeaturesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_getExternalFenceFeatures(JN
     return jniPointerToLong(&o->externalFenceFeatures);
 }
 
-void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setExternalFenceFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalFencePropertiesKHR_setExternalFenceFeaturesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

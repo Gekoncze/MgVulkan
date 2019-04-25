@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_sizeof(JNIEnv* env, jcl
     return sizeof(VkPipelineDynamicStateCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getSType(JNIEnv* env, j
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setSType(JNIEnv* env, jc
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getPNext(JNIEnv* env, j
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setPNext(JNIEnv* env, jc
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getFlags(JNIEnv* env, j
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setFlags(JNIEnv* env, jc
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getDynamicStateCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getDynamicStateCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getDynamicStateCount(JN
     return jniPointerToLong(&o->dynamicStateCount);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setDynamicStateCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setDynamicStateCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setDynamicStateCount(JNI
     memcpy(&o->dynamicStateCount, valuePointer, sizeof(o->dynamicStateCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getPDynamicStates(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getPDynamicStatesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getPDynamicStates(JNIEn
     return jniPointerToLong(o->pDynamicStates);
 }
 
-void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setPDynamicStates(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setPDynamicStatesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_sizeof(JNIEnv* env, jc
     return sizeof(VkPhysicalDeviceMultiviewFeatures);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getSType(JNIEnv* env, 
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setSType(JNIEnv* env, j
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getPNext(JNIEnv* env, 
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setPNext(JNIEnv* env, j
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getMultiview(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getMultiviewNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getMultiview(JNIEnv* e
     return jniPointerToLong(&o->multiview);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setMultiview(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setMultiviewNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setMultiview(JNIEnv* en
     memcpy(&o->multiview, valuePointer, sizeof(o->multiview));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getMultiviewGeometryShader(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getMultiviewGeometryShaderNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getMultiviewGeometrySh
     return jniPointerToLong(&o->multiviewGeometryShader);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setMultiviewGeometryShader(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setMultiviewGeometryShaderNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setMultiviewGeometrySha
     memcpy(&o->multiviewGeometryShader, valuePointer, sizeof(o->multiviewGeometryShader));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getMultiviewTessellationShader(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getMultiviewTessellationShaderNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_getMultiviewTessellati
     return jniPointerToLong(&o->multiviewTessellationShader);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setMultiviewTessellationShader(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewFeatures_setMultiviewTessellationShaderNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

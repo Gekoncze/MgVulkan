@@ -20,12 +20,12 @@ public class VkPresentTimeGOOGLE extends VkObject {
 
 
     public VkUInt32 getPresentID() {
-        return new VkUInt32(getVkMemory(), getPresentID(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPresentIDNative(getVkAddress()));
     }
 
     
     public void setPresentID(VkUInt32 presentID) {
-        setPresentID(getVkAddress(), presentID != null ? presentID.getVkAddress() : VkPointer.getNullAddressNative());
+        setPresentIDNative(getVkAddress(), presentID != null ? presentID.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkPresentTimeGOOGLE extends VkObject {
         getPresentID().setValue(presentID);
     }
 
-    protected static native long getPresentID(long address);
-    protected static native void setPresentID(long address, long presentID);
+    protected static native long getPresentIDNative(long address);
+    protected static native void setPresentIDNative(long address, long presentID);
 
     public VkUInt64 getDesiredPresentTime() {
-        return new VkUInt64(getVkMemory(), getDesiredPresentTime(getVkAddress()));
+        return new VkUInt64(getVkMemory(), getDesiredPresentTimeNative(getVkAddress()));
     }
 
     
     public void setDesiredPresentTime(VkUInt64 desiredPresentTime) {
-        setDesiredPresentTime(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.getNullAddressNative());
+        setDesiredPresentTimeNative(getVkAddress(), desiredPresentTime != null ? desiredPresentTime.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,8 +58,8 @@ public class VkPresentTimeGOOGLE extends VkObject {
         getDesiredPresentTime().setValue(desiredPresentTime);
     }
 
-    protected static native long getDesiredPresentTime(long address);
-    protected static native void setDesiredPresentTime(long address, long desiredPresentTime);
+    protected static native long getDesiredPresentTimeNative(long address);
+    protected static native void setDesiredPresentTimeNative(long address, long desiredPresentTime);
 
 
     public static native long sizeof();
@@ -103,10 +103,10 @@ public class VkPresentTimeGOOGLE extends VkObject {
 
         @Override
         public VkPresentTimeGOOGLE get(int i){
-            return new VkPresentTimeGOOGLE(getVkMemory(), addressAt(i));
+            return new VkPresentTimeGOOGLE(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

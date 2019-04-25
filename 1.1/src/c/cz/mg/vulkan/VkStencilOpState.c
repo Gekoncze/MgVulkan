@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkStencilOpState_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkStencilOpState);
 }
 
-jlong Java_cz_mg_vulkan_VkStencilOpState_getFailOp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkStencilOpState_getFailOpNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkStencilOpState_getFailOp(JNIEnv* env, jclass jc, jlong
     return jniPointerToLong(&o->failOp);
 }
 
-void Java_cz_mg_vulkan_VkStencilOpState_setFailOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkStencilOpState_setFailOpNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkStencilOpState_setFailOp(JNIEnv* env, jclass jc, jlong 
     memcpy(&o->failOp, valuePointer, sizeof(o->failOp));
 }
 
-jlong Java_cz_mg_vulkan_VkStencilOpState_getPassOp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkStencilOpState_getPassOpNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkStencilOpState_getPassOp(JNIEnv* env, jclass jc, jlong
     return jniPointerToLong(&o->passOp);
 }
 
-void Java_cz_mg_vulkan_VkStencilOpState_setPassOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkStencilOpState_setPassOpNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkStencilOpState_setPassOp(JNIEnv* env, jclass jc, jlong 
     memcpy(&o->passOp, valuePointer, sizeof(o->passOp));
 }
 
-jlong Java_cz_mg_vulkan_VkStencilOpState_getDepthFailOp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkStencilOpState_getDepthFailOpNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkStencilOpState_getDepthFailOp(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->depthFailOp);
 }
 
-void Java_cz_mg_vulkan_VkStencilOpState_setDepthFailOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkStencilOpState_setDepthFailOpNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkStencilOpState_setDepthFailOp(JNIEnv* env, jclass jc, j
     memcpy(&o->depthFailOp, valuePointer, sizeof(o->depthFailOp));
 }
 
-jlong Java_cz_mg_vulkan_VkStencilOpState_getCompareOp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkStencilOpState_getCompareOpNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkStencilOpState_getCompareOp(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->compareOp);
 }
 
-void Java_cz_mg_vulkan_VkStencilOpState_setCompareOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkStencilOpState_setCompareOpNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkStencilOpState_setCompareOp(JNIEnv* env, jclass jc, jlo
     memcpy(&o->compareOp, valuePointer, sizeof(o->compareOp));
 }
 
-jlong Java_cz_mg_vulkan_VkStencilOpState_getCompareMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkStencilOpState_getCompareMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkStencilOpState_getCompareMask(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->compareMask);
 }
 
-void Java_cz_mg_vulkan_VkStencilOpState_setCompareMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkStencilOpState_setCompareMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkStencilOpState_setCompareMask(JNIEnv* env, jclass jc, j
     memcpy(&o->compareMask, valuePointer, sizeof(o->compareMask));
 }
 
-jlong Java_cz_mg_vulkan_VkStencilOpState_getWriteMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkStencilOpState_getWriteMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkStencilOpState_getWriteMask(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->writeMask);
 }
 
-void Java_cz_mg_vulkan_VkStencilOpState_setWriteMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkStencilOpState_setWriteMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkStencilOpState_setWriteMask(JNIEnv* env, jclass jc, jlo
     memcpy(&o->writeMask, valuePointer, sizeof(o->writeMask));
 }
 
-jlong Java_cz_mg_vulkan_VkStencilOpState_getReference(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkStencilOpState_getReferenceNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkStencilOpState_getReference(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->reference);
 }
 
-void Java_cz_mg_vulkan_VkStencilOpState_setReference(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkStencilOpState_setReferenceNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

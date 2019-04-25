@@ -24,12 +24,12 @@ public class VkOffset2D extends VkObject {
     }
 
     public VkInt32 getX() {
-        return new VkInt32(getVkMemory(), getX(getVkAddress()));
+        return new VkInt32(getVkMemory(), getXNative(getVkAddress()));
     }
 
     
     public void setX(VkInt32 x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
+        setXNative(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -41,16 +41,16 @@ public class VkOffset2D extends VkObject {
         getX().setValue(x);
     }
 
-    protected static native long getX(long address);
-    protected static native void setX(long address, long x);
+    protected static native long getXNative(long address);
+    protected static native void setXNative(long address, long x);
 
     public VkInt32 getY() {
-        return new VkInt32(getVkMemory(), getY(getVkAddress()));
+        return new VkInt32(getVkMemory(), getYNative(getVkAddress()));
     }
 
     
     public void setY(VkInt32 y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
+        setYNative(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -62,8 +62,8 @@ public class VkOffset2D extends VkObject {
         getY().setValue(y);
     }
 
-    protected static native long getY(long address);
-    protected static native void setY(long address, long y);
+    protected static native long getYNative(long address);
+    protected static native void setYNative(long address, long y);
 
 
     public static native long sizeof();
@@ -107,10 +107,10 @@ public class VkOffset2D extends VkObject {
 
         @Override
         public VkOffset2D get(int i){
-            return new VkOffset2D(getVkMemory(), addressAt(i));
+            return new VkOffset2D(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_sizeof(JNIEn
     return sizeof(VkPipelineSampleLocationsStateCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getSType(JNI
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setSType(JNIE
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getPNext(JNI
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setPNext(JNIE
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getSampleLocationsEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getSampleLocationsEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getSampleLoc
     return jniPointerToLong(&o->sampleLocationsEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setSampleLocationsEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setSampleLocationsEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setSampleLoca
     memcpy(&o->sampleLocationsEnable, valuePointer, sizeof(o->sampleLocationsEnable));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getSampleLocationsInfoNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getSampleLoc
     return jniPointerToLong(&o->sampleLocationsInfo);
 }
 
-void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setSampleLocationsInfoNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

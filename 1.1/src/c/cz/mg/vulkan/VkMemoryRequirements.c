@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkMemoryRequirements_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkMemoryRequirements);
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryRequirements_getSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryRequirements_getSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkMemoryRequirements_getSize(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(&o->size);
 }
 
-void Java_cz_mg_vulkan_VkMemoryRequirements_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryRequirements_setSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkMemoryRequirements_setSize(JNIEnv* env, jclass jc, jlon
     memcpy(&o->size, valuePointer, sizeof(o->size));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryRequirements_getAlignment(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryRequirements_getAlignmentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkMemoryRequirements_getAlignment(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->alignment);
 }
 
-void Java_cz_mg_vulkan_VkMemoryRequirements_setAlignment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryRequirements_setAlignmentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkMemoryRequirements_setAlignment(JNIEnv* env, jclass jc,
     memcpy(&o->alignment, valuePointer, sizeof(o->alignment));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryRequirements_getMemoryTypeBits(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryRequirements_getMemoryTypeBitsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkMemoryRequirements_getMemoryTypeBits(JNIEnv* env, jcla
     return jniPointerToLong(&o->memoryTypeBits);
 }
 
-void Java_cz_mg_vulkan_VkMemoryRequirements_setMemoryTypeBits(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryRequirements_setMemoryTypeBitsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkDeviceCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getSType(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDeviceCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDeviceCreateInfo_setSType(JNIEnv* env, jclass jc, jlong
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPNext(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getFlags(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkDeviceCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDeviceCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getQueueCreateInfoCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getQueueCreateInfoCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getQueueCreateInfoCount(JNIEnv* env, 
     return jniPointerToLong(&o->queueCreateInfoCount);
 }
 
-void Java_cz_mg_vulkan_VkDeviceCreateInfo_setQueueCreateInfoCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceCreateInfo_setQueueCreateInfoCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkDeviceCreateInfo_setQueueCreateInfoCount(JNIEnv* env, j
     memcpy(&o->queueCreateInfoCount, valuePointer, sizeof(o->queueCreateInfoCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPQueueCreateInfos(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPQueueCreateInfosNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPQueueCreateInfos(JNIEnv* env, jcl
     return jniPointerToLong(o->pQueueCreateInfos);
 }
 
-void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPQueueCreateInfos(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPQueueCreateInfosNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPQueueCreateInfos(JNIEnv* env, jcla
     memcpy(&o->pQueueCreateInfos, &valuePointer, sizeof(o->pQueueCreateInfos));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getEnabledLayerCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getEnabledLayerCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getEnabledLayerCount(JNIEnv* env, jcl
     return jniPointerToLong(&o->enabledLayerCount);
 }
 
-void Java_cz_mg_vulkan_VkDeviceCreateInfo_setEnabledLayerCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceCreateInfo_setEnabledLayerCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkDeviceCreateInfo_setEnabledLayerCount(JNIEnv* env, jcla
     memcpy(&o->enabledLayerCount, valuePointer, sizeof(o->enabledLayerCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPpEnabledLayerNames(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPpEnabledLayerNamesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPpEnabledLayerNames(JNIEnv* env, j
     return jniPointerToLong(o->ppEnabledLayerNames);
 }
 
-void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPpEnabledLayerNames(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPpEnabledLayerNamesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPpEnabledLayerNames(JNIEnv* env, jc
     memcpy(&o->ppEnabledLayerNames, &valuePointer, sizeof(o->ppEnabledLayerNames));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getEnabledExtensionCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getEnabledExtensionCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getEnabledExtensionCount(JNIEnv* env,
     return jniPointerToLong(&o->enabledExtensionCount);
 }
 
-void Java_cz_mg_vulkan_VkDeviceCreateInfo_setEnabledExtensionCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceCreateInfo_setEnabledExtensionCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkDeviceCreateInfo_setEnabledExtensionCount(JNIEnv* env, 
     memcpy(&o->enabledExtensionCount, valuePointer, sizeof(o->enabledExtensionCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPpEnabledExtensionNames(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPpEnabledExtensionNamesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPpEnabledExtensionNames(JNIEnv* en
     return jniPointerToLong(o->ppEnabledExtensionNames);
 }
 
-void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPpEnabledExtensionNames(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPpEnabledExtensionNamesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPpEnabledExtensionNames(JNIEnv* env
     memcpy(&o->ppEnabledExtensionNames, &valuePointer, sizeof(o->ppEnabledExtensionNames));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPEnabledFeatures(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPEnabledFeaturesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_VkDeviceCreateInfo_getPEnabledFeatures(JNIEnv* env, jcla
     return jniPointerToLong(o->pEnabledFeatures);
 }
 
-void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPEnabledFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceCreateInfo_setPEnabledFeaturesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -20,12 +20,12 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
 
 
     public VkIndirectCommandsTokenTypeNVX getTokenType() {
-        return new VkIndirectCommandsTokenTypeNVX(getVkMemory(), getTokenType(getVkAddress()));
+        return new VkIndirectCommandsTokenTypeNVX(getVkMemory(), getTokenTypeNative(getVkAddress()));
     }
 
     
     public void setTokenType(VkIndirectCommandsTokenTypeNVX tokenType) {
-        setTokenType(getVkAddress(), tokenType != null ? tokenType.getVkAddress() : VkPointer.getNullAddressNative());
+        setTokenTypeNative(getVkAddress(), tokenType != null ? tokenType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
         getTokenType().setValue(tokenType);
     }
 
-    protected static native long getTokenType(long address);
-    protected static native void setTokenType(long address, long tokenType);
+    protected static native long getTokenTypeNative(long address);
+    protected static native void setTokenTypeNative(long address, long tokenType);
 
     public VkBuffer getBuffer() {
-        return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
+        return new VkBuffer(getVkMemory(), getBufferNative(getVkAddress()));
     }
 
     
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative());
+        setBufferNative(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getBuffer(long address);
-    protected static native void setBuffer(long address, long buffer);
+    protected static native long getBufferNative(long address);
+    protected static native void setBufferNative(long address, long buffer);
 
     public VkDeviceSize getOffset() {
-        return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,8 +71,8 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
         getOffset().setValue(offset);
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
 
         @Override
         public VkIndirectCommandsTokenNVX get(int i){
-            return new VkIndirectCommandsTokenNVX(getVkMemory(), addressAt(i));
+            return new VkIndirectCommandsTokenNVX(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

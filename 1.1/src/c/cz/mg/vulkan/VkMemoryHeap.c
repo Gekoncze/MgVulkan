@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkMemoryHeap_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkMemoryHeap);
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryHeap_getSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryHeap_getSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkMemoryHeap_getSize(JNIEnv* env, jclass jc, jlong addre
     return jniPointerToLong(&o->size);
 }
 
-void Java_cz_mg_vulkan_VkMemoryHeap_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryHeap_setSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkMemoryHeap_setSize(JNIEnv* env, jclass jc, jlong addres
     memcpy(&o->size, valuePointer, sizeof(o->size));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryHeap_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryHeap_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkMemoryHeap_getFlags(JNIEnv* env, jclass jc, jlong addr
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkMemoryHeap_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryHeap_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

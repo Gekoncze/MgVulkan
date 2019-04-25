@@ -21,12 +21,12 @@ public class VkCommandBufferBeginInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkCommandBufferBeginInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkCommandBufferUsageFlags getFlags() {
-        return new VkCommandBufferUsageFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkCommandBufferUsageFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkCommandBufferUsageFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,21 +72,21 @@ public class VkCommandBufferBeginInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkCommandBufferInheritanceInfo getPInheritanceInfo() {
-        return new VkCommandBufferInheritanceInfo(getVkMemory(), getPInheritanceInfo(getVkAddress()));
+        return new VkCommandBufferInheritanceInfo(getVkMemory(), getPInheritanceInfoNative(getVkAddress()));
     }
 
     private VkObject pInheritanceInfo = null;
     public void setPInheritanceInfo(VkCommandBufferInheritanceInfo pInheritanceInfo) {
-        setPInheritanceInfo(getVkAddress(), pInheritanceInfo != null ? pInheritanceInfo.getVkAddress() : VkPointer.NULL);
+        setPInheritanceInfoNative(getVkAddress(), pInheritanceInfo != null ? pInheritanceInfo.getVkAddress() : VkPointer.NULL);
         this.pInheritanceInfo = pInheritanceInfo;
     }
 
-    protected static native long getPInheritanceInfo(long address);
-    protected static native void setPInheritanceInfo(long address, long pInheritanceInfo);
+    protected static native long getPInheritanceInfoNative(long address);
+    protected static native void setPInheritanceInfoNative(long address, long pInheritanceInfo);
 
 
     public static native long sizeof();

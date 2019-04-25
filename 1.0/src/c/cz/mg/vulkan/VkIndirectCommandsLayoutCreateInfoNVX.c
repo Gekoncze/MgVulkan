@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_sizeof(JNIEnv* env
     return sizeof(VkIndirectCommandsLayoutCreateInfoNVX);
 }
 
-jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getSType(JNIEnv* e
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setSType(JNIEnv* en
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getPNext(JNIEnv* e
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setPNext(JNIEnv* en
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getPipelineBindPoint(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getPipelineBindPointNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getPipelineBindPoi
     return jniPointerToLong(&o->pipelineBindPoint);
 }
 
-void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setPipelineBindPoint(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setPipelineBindPointNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setPipelineBindPoin
     memcpy(&o->pipelineBindPoint, valuePointer, sizeof(o->pipelineBindPoint));
 }
 
-jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getFlags(JNIEnv* e
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setFlags(JNIEnv* en
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getTokenCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getTokenCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getTokenCount(JNIE
     return jniPointerToLong(&o->tokenCount);
 }
 
-void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setTokenCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setTokenCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setTokenCount(JNIEn
     memcpy(&o->tokenCount, valuePointer, sizeof(o->tokenCount));
 }
 
-jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getPTokens(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getPTokensNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_getPTokens(JNIEnv*
     return jniPointerToLong(o->pTokens);
 }
 
-void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setPTokens(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkIndirectCommandsLayoutCreateInfoNVX_setPTokensNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

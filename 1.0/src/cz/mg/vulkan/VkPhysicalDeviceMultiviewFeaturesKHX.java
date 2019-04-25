@@ -20,12 +20,12 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkBool32 getMultiview() {
-        return new VkBool32(getVkMemory(), getMultiview(getVkAddress()));
+        return new VkBool32(getVkMemory(), getMultiviewNative(getVkAddress()));
     }
 
     
     public void setMultiview(VkBool32 multiview) {
-        setMultiview(getVkAddress(), multiview != null ? multiview.getVkAddress() : VkPointer.getNullAddressNative());
+        setMultiviewNative(getVkAddress(), multiview != null ? multiview.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
         getMultiview().setValue(multiview);
     }
 
-    protected static native long getMultiview(long address);
-    protected static native void setMultiview(long address, long multiview);
+    protected static native long getMultiviewNative(long address);
+    protected static native void setMultiviewNative(long address, long multiview);
 
     public VkBool32 getMultiviewGeometryShader() {
-        return new VkBool32(getVkMemory(), getMultiviewGeometryShader(getVkAddress()));
+        return new VkBool32(getVkMemory(), getMultiviewGeometryShaderNative(getVkAddress()));
     }
 
     
     public void setMultiviewGeometryShader(VkBool32 multiviewGeometryShader) {
-        setMultiviewGeometryShader(getVkAddress(), multiviewGeometryShader != null ? multiviewGeometryShader.getVkAddress() : VkPointer.getNullAddressNative());
+        setMultiviewGeometryShaderNative(getVkAddress(), multiviewGeometryShader != null ? multiviewGeometryShader.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,16 +92,16 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
         getMultiviewGeometryShader().setValue(multiviewGeometryShader);
     }
 
-    protected static native long getMultiviewGeometryShader(long address);
-    protected static native void setMultiviewGeometryShader(long address, long multiviewGeometryShader);
+    protected static native long getMultiviewGeometryShaderNative(long address);
+    protected static native void setMultiviewGeometryShaderNative(long address, long multiviewGeometryShader);
 
     public VkBool32 getMultiviewTessellationShader() {
-        return new VkBool32(getVkMemory(), getMultiviewTessellationShader(getVkAddress()));
+        return new VkBool32(getVkMemory(), getMultiviewTessellationShaderNative(getVkAddress()));
     }
 
     
     public void setMultiviewTessellationShader(VkBool32 multiviewTessellationShader) {
-        setMultiviewTessellationShader(getVkAddress(), multiviewTessellationShader != null ? multiviewTessellationShader.getVkAddress() : VkPointer.getNullAddressNative());
+        setMultiviewTessellationShaderNative(getVkAddress(), multiviewTessellationShader != null ? multiviewTessellationShader.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -113,8 +113,8 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
         getMultiviewTessellationShader().setValue(multiviewTessellationShader);
     }
 
-    protected static native long getMultiviewTessellationShader(long address);
-    protected static native void setMultiviewTessellationShader(long address, long multiviewTessellationShader);
+    protected static native long getMultiviewTessellationShaderNative(long address);
+    protected static native void setMultiviewTessellationShaderNative(long address, long multiviewTessellationShader);
 
 
     public static native long sizeof();
@@ -158,10 +158,10 @@ public class VkPhysicalDeviceMultiviewFeaturesKHX extends VkObject {
 
         @Override
         public VkPhysicalDeviceMultiviewFeaturesKHX get(int i){
-            return new VkPhysicalDeviceMultiviewFeaturesKHX(getVkMemory(), addressAt(i));
+            return new VkPhysicalDeviceMultiviewFeaturesKHX(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

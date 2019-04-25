@@ -20,12 +20,12 @@ public class VkDeviceGroupPresentCapabilitiesKHX extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,42 +37,42 @@ public class VkDeviceGroupPresentCapabilitiesKHX extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getPresentMask() {
-        return new VkUInt32(getVkMemory(), getPresentMask(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPresentMaskNative(getVkAddress()));
     }
 
     
     public void setPresentMask(VkUInt32 presentMask) {
-        setPresentMask(getVkAddress(), presentMask != null ? presentMask.getVkAddress() : VkPointer.NULL);
+        setPresentMaskNative(getVkAddress(), presentMask != null ? presentMask.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getPresentMask(long address);
-    protected static native void setPresentMask(long address, long presentMask);
+    protected static native long getPresentMaskNative(long address);
+    protected static native void setPresentMaskNative(long address, long presentMask);
 
     public VkDeviceGroupPresentModeFlagsKHX getModes() {
-        return new VkDeviceGroupPresentModeFlagsKHX(getVkMemory(), getModes(getVkAddress()));
+        return new VkDeviceGroupPresentModeFlagsKHX(getVkMemory(), getModesNative(getVkAddress()));
     }
 
     
     public void setModes(VkDeviceGroupPresentModeFlagsKHX modes) {
-        setModes(getVkAddress(), modes != null ? modes.getVkAddress() : VkPointer.getNullAddressNative());
+        setModesNative(getVkAddress(), modes != null ? modes.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -84,8 +84,8 @@ public class VkDeviceGroupPresentCapabilitiesKHX extends VkObject {
         getModes().setValue(modes);
     }
 
-    protected static native long getModes(long address);
-    protected static native void setModes(long address, long modes);
+    protected static native long getModesNative(long address);
+    protected static native void setModesNative(long address, long modes);
 
 
     public static native long sizeof();
@@ -129,10 +129,10 @@ public class VkDeviceGroupPresentCapabilitiesKHX extends VkObject {
 
         @Override
         public VkDeviceGroupPresentCapabilitiesKHX get(int i){
-            return new VkDeviceGroupPresentCapabilitiesKHX(getVkMemory(), addressAt(i));
+            return new VkDeviceGroupPresentCapabilitiesKHX(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_sizeof(JN
     return sizeof(VkPipelineColorBlendAdvancedStateCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getSType(
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setSType(J
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getPNext(
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setPNext(J
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getSrcPremultiplied(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getSrcPremultipliedNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getSrcPre
     return jniPointerToLong(&o->srcPremultiplied);
 }
 
-void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setSrcPremultiplied(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setSrcPremultipliedNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setSrcPrem
     memcpy(&o->srcPremultiplied, valuePointer, sizeof(o->srcPremultiplied));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getDstPremultiplied(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getDstPremultipliedNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getDstPre
     return jniPointerToLong(&o->dstPremultiplied);
 }
 
-void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setDstPremultiplied(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setDstPremultipliedNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setDstPrem
     memcpy(&o->dstPremultiplied, valuePointer, sizeof(o->dstPremultiplied));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getBlendOverlap(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getBlendOverlapNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_getBlendO
     return jniPointerToLong(&o->blendOverlap);
 }
 
-void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setBlendOverlap(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineColorBlendAdvancedStateCreateInfoEXT_setBlendOverlapNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -20,12 +20,12 @@ public class VkExtensionProperties extends VkObject {
 
 
     public VkChar getExtensionName() {
-        return new VkChar(getVkMemory(), getExtensionName(getVkAddress()));
+        return new VkChar(getVkMemory(), getExtensionNameNative(getVkAddress()));
     }
 
     
     public void setExtensionName(VkChar extensionName) {
-        setExtensionName(getVkAddress(), extensionName != null ? extensionName.getVkAddress() : VkPointer.NULL);
+        setExtensionNameNative(getVkAddress(), extensionName != null ? extensionName.getVkAddress() : VkPointer.NULL);
         
     }
 
@@ -37,16 +37,16 @@ public class VkExtensionProperties extends VkObject {
         setExtensionName(new VkString(extensionName));
     }
 
-    protected static native long getExtensionName(long address);
-    protected static native void setExtensionName(long address, long extensionName);
+    protected static native long getExtensionNameNative(long address);
+    protected static native void setExtensionNameNative(long address, long extensionName);
 
     public VkUInt32 getSpecVersion() {
-        return new VkUInt32(getVkMemory(), getSpecVersion(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSpecVersionNative(getVkAddress()));
     }
 
     
     public void setSpecVersion(VkUInt32 specVersion) {
-        setSpecVersion(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.getNullAddressNative());
+        setSpecVersionNative(getVkAddress(), specVersion != null ? specVersion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,8 +58,8 @@ public class VkExtensionProperties extends VkObject {
         getSpecVersion().setValue(specVersion);
     }
 
-    protected static native long getSpecVersion(long address);
-    protected static native void setSpecVersion(long address, long specVersion);
+    protected static native long getSpecVersionNative(long address);
+    protected static native void setSpecVersionNative(long address, long specVersion);
 
 
     public static native long sizeof();
@@ -103,10 +103,10 @@ public class VkExtensionProperties extends VkObject {
 
         @Override
         public VkExtensionProperties get(int i){
-            return new VkExtensionProperties(getVkMemory(), addressAt(i));
+            return new VkExtensionProperties(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

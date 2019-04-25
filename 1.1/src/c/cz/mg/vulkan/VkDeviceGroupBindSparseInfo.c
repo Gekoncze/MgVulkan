@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_sizeof(JNIEnv* env, jclass j
     return sizeof(VkDeviceGroupBindSparseInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getSType(JNIEnv* env, jclass
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setSType(JNIEnv* env, jclass 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getPNext(JNIEnv* env, jclass
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setPNext(JNIEnv* env, jclass 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getResourceDeviceIndex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getResourceDeviceIndexNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getResourceDeviceIndex(JNIEn
     return jniPointerToLong(&o->resourceDeviceIndex);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setResourceDeviceIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setResourceDeviceIndexNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setResourceDeviceIndex(JNIEnv
     memcpy(&o->resourceDeviceIndex, valuePointer, sizeof(o->resourceDeviceIndex));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getMemoryDeviceIndex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getMemoryDeviceIndexNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_getMemoryDeviceIndex(JNIEnv*
     return jniPointerToLong(&o->memoryDeviceIndex);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setMemoryDeviceIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupBindSparseInfo_setMemoryDeviceIndexNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

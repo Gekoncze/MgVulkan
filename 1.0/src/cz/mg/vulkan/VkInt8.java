@@ -71,15 +71,15 @@ public class VkInt8 extends VkObject {
 
         public Array(byte... values){
             this(values.length);
-            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            for(int i = 0; i < values.length; i++) setValue(i, values[i]);
         }
 
-        public byte getValueAt(int i){
-            return getValueNative(addressAt(i));
+        public byte getValue(int i){
+            return getValueNative(address(i));
         }
 
-        public void setValueAt(int i, byte value){
-            setValueNative(addressAt(i), value);
+        public void setValue(int i, byte value){
+            setValueNative(address(i), value);
         }
 
 
@@ -91,10 +91,10 @@ public class VkInt8 extends VkObject {
 
         @Override
         public VkInt8 get(int i){
-            return new VkInt8(getVkMemory(), addressAt(i));
+            return new VkInt8(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

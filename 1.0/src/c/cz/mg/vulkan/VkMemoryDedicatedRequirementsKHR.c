@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_sizeof(JNIEnv* env, jcl
     return sizeof(VkMemoryDedicatedRequirementsKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getSType(JNIEnv* env, j
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setSType(JNIEnv* env, jc
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getPNext(JNIEnv* env, j
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setPNext(JNIEnv* env, jc
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getPrefersDedicatedAllocation(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getPrefersDedicatedAllocationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getPrefersDedicatedAllo
     return jniPointerToLong(&o->prefersDedicatedAllocation);
 }
 
-void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setPrefersDedicatedAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setPrefersDedicatedAllocationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setPrefersDedicatedAlloc
     memcpy(&o->prefersDedicatedAllocation, valuePointer, sizeof(o->prefersDedicatedAllocation));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getRequiresDedicatedAllocation(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getRequiresDedicatedAllocationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_getRequiresDedicatedAll
     return jniPointerToLong(&o->requiresDedicatedAllocation);
 }
 
-void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setRequiresDedicatedAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryDedicatedRequirementsKHR_setRequiresDedicatedAllocationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

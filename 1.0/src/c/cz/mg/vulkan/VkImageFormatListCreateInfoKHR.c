@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_sizeof(JNIEnv* env, jclas
     return sizeof(VkImageFormatListCreateInfoKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getSType(JNIEnv* env, jcl
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setSType(JNIEnv* env, jcla
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getPNext(JNIEnv* env, jcl
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setPNext(JNIEnv* env, jcla
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getViewFormatCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getViewFormatCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getViewFormatCount(JNIEnv
     return jniPointerToLong(&o->viewFormatCount);
 }
 
-void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setViewFormatCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setViewFormatCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setViewFormatCount(JNIEnv*
     memcpy(&o->viewFormatCount, valuePointer, sizeof(o->viewFormatCount));
 }
 
-jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getPViewFormats(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getPViewFormatsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_getPViewFormats(JNIEnv* e
     return jniPointerToLong(o->pViewFormats);
 }
 
-void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setPViewFormats(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageFormatListCreateInfoKHR_setPViewFormatsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

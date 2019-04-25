@@ -21,12 +21,12 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getSwapchainCount() {
-        return new VkUInt32(getVkMemory(), getSwapchainCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSwapchainCountNative(getVkAddress()));
     }
 
     
     public void setSwapchainCount(VkUInt32 swapchainCount) {
-        setSwapchainCount(getVkAddress(), swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setSwapchainCountNative(getVkAddress(), swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,29 +72,29 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         getSwapchainCount().setValue(swapchainCount);
     }
 
-    protected static native long getSwapchainCount(long address);
-    protected static native void setSwapchainCount(long address, long swapchainCount);
+    protected static native long getSwapchainCountNative(long address);
+    protected static native void setSwapchainCountNative(long address, long swapchainCount);
 
     public VkUInt32 getPDeviceMasks() {
-        return new VkUInt32(getVkMemory(), getPDeviceMasks(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPDeviceMasksNative(getVkAddress()));
     }
 
     private VkObject pDeviceMasks = null;
     public void setPDeviceMasks(VkUInt32 pDeviceMasks) {
-        setPDeviceMasks(getVkAddress(), pDeviceMasks != null ? pDeviceMasks.getVkAddress() : VkPointer.NULL);
+        setPDeviceMasksNative(getVkAddress(), pDeviceMasks != null ? pDeviceMasks.getVkAddress() : VkPointer.NULL);
         this.pDeviceMasks = pDeviceMasks;
     }
 
-    protected static native long getPDeviceMasks(long address);
-    protected static native void setPDeviceMasks(long address, long pDeviceMasks);
+    protected static native long getPDeviceMasksNative(long address);
+    protected static native void setPDeviceMasksNative(long address, long pDeviceMasks);
 
     public VkDeviceGroupPresentModeFlagBitsKHR getMode() {
-        return new VkDeviceGroupPresentModeFlagBitsKHR(getVkMemory(), getMode(getVkAddress()));
+        return new VkDeviceGroupPresentModeFlagBitsKHR(getVkMemory(), getModeNative(getVkAddress()));
     }
 
     
     public void setMode(VkDeviceGroupPresentModeFlagBitsKHR mode) {
-        setMode(getVkAddress(), mode != null ? mode.getVkAddress() : VkPointer.getNullAddressNative());
+        setModeNative(getVkAddress(), mode != null ? mode.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,8 +106,8 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         getMode().setValue(mode);
     }
 
-    protected static native long getMode(long address);
-    protected static native void setMode(long address, long mode);
+    protected static native long getModeNative(long address);
+    protected static native void setModeNative(long address, long mode);
 
 
     public static native long sizeof();

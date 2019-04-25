@@ -20,12 +20,12 @@ public class VkExternalImageFormatProperties extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,34 +37,34 @@ public class VkExternalImageFormatProperties extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkExternalMemoryProperties getExternalMemoryProperties() {
-        return new VkExternalMemoryProperties(getVkMemory(), getExternalMemoryProperties(getVkAddress()));
+        return new VkExternalMemoryProperties(getVkMemory(), getExternalMemoryPropertiesNative(getVkAddress()));
     }
 
     
     public void setExternalMemoryProperties(VkExternalMemoryProperties externalMemoryProperties) {
-        setExternalMemoryProperties(getVkAddress(), externalMemoryProperties != null ? externalMemoryProperties.getVkAddress() : VkPointer.getNullAddressNative());
+        setExternalMemoryPropertiesNative(getVkAddress(), externalMemoryProperties != null ? externalMemoryProperties.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getExternalMemoryProperties(long address);
-    protected static native void setExternalMemoryProperties(long address, long externalMemoryProperties);
+    protected static native long getExternalMemoryPropertiesNative(long address);
+    protected static native void setExternalMemoryPropertiesNative(long address, long externalMemoryProperties);
 
 
     public static native long sizeof();
@@ -108,10 +108,10 @@ public class VkExternalImageFormatProperties extends VkObject {
 
         @Override
         public VkExternalImageFormatProperties get(int i){
-            return new VkExternalImageFormatProperties(getVkMemory(), addressAt(i));
+            return new VkExternalImageFormatProperties(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

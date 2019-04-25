@@ -21,12 +21,12 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineShaderStageCreateFlags getFlags() {
-        return new VkPipelineShaderStageCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineShaderStageCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineShaderStageCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkShaderStageFlagBits getStage() {
-        return new VkShaderStageFlagBits(getVkMemory(), getStage(getVkAddress()));
+        return new VkShaderStageFlagBits(getVkMemory(), getStageNative(getVkAddress()));
     }
 
     
     public void setStage(VkShaderStageFlagBits stage) {
-        setStage(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.getNullAddressNative());
+        setStageNative(getVkAddress(), stage != null ? stage.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,29 +93,29 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         getStage().setValue(stage);
     }
 
-    protected static native long getStage(long address);
-    protected static native void setStage(long address, long stage);
+    protected static native long getStageNative(long address);
+    protected static native void setStageNative(long address, long stage);
 
     public VkShaderModule getModule() {
-        return new VkShaderModule(getVkMemory(), getModule(getVkAddress()));
+        return new VkShaderModule(getVkMemory(), getModuleNative(getVkAddress()));
     }
 
     
     public void setModule(VkShaderModule module) {
-        setModule(getVkAddress(), module != null ? module.getVkAddress() : VkPointer.getNullAddressNative());
+        setModuleNative(getVkAddress(), module != null ? module.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getModule(long address);
-    protected static native void setModule(long address, long module);
+    protected static native long getModuleNative(long address);
+    protected static native void setModuleNative(long address, long module);
 
     public VkChar getPName() {
-        return new VkChar(getVkMemory(), getPName(getVkAddress()));
+        return new VkChar(getVkMemory(), getPNameNative(getVkAddress()));
     }
 
     private VkObject pName = null;
     public void setPName(VkChar pName) {
-        setPName(getVkAddress(), pName != null ? pName.getVkAddress() : VkPointer.NULL);
+        setPNameNative(getVkAddress(), pName != null ? pName.getVkAddress() : VkPointer.NULL);
         this.pName = pName;
     }
 
@@ -127,21 +127,21 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         setPName(new VkString(pName));
     }
 
-    protected static native long getPName(long address);
-    protected static native void setPName(long address, long pName);
+    protected static native long getPNameNative(long address);
+    protected static native void setPNameNative(long address, long pName);
 
     public VkSpecializationInfo getPSpecializationInfo() {
-        return new VkSpecializationInfo(getVkMemory(), getPSpecializationInfo(getVkAddress()));
+        return new VkSpecializationInfo(getVkMemory(), getPSpecializationInfoNative(getVkAddress()));
     }
 
     private VkObject pSpecializationInfo = null;
     public void setPSpecializationInfo(VkSpecializationInfo pSpecializationInfo) {
-        setPSpecializationInfo(getVkAddress(), pSpecializationInfo != null ? pSpecializationInfo.getVkAddress() : VkPointer.NULL);
+        setPSpecializationInfoNative(getVkAddress(), pSpecializationInfo != null ? pSpecializationInfo.getVkAddress() : VkPointer.NULL);
         this.pSpecializationInfo = pSpecializationInfo;
     }
 
-    protected static native long getPSpecializationInfo(long address);
-    protected static native void setPSpecializationInfo(long address, long pSpecializationInfo);
+    protected static native long getPSpecializationInfoNative(long address);
+    protected static native void setPSpecializationInfoNative(long address, long pSpecializationInfo);
 
 
     public static native long sizeof();

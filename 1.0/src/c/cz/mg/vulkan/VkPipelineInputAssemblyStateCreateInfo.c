@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_sizeof(JNIEnv* en
     return sizeof(VkPipelineInputAssemblyStateCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getSType(JNIEnv* 
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setSType(JNIEnv* e
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getPNext(JNIEnv* 
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setPNext(JNIEnv* e
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getFlags(JNIEnv* 
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setFlags(JNIEnv* e
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getTopology(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getTopologyNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getTopology(JNIEn
     return jniPointerToLong(&o->topology);
 }
 
-void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setTopology(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setTopologyNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setTopology(JNIEnv
     memcpy(&o->topology, valuePointer, sizeof(o->topology));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getPrimitiveRestartEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getPrimitiveRestartEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getPrimitiveResta
     return jniPointerToLong(&o->primitiveRestartEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setPrimitiveRestartEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setPrimitiveRestartEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

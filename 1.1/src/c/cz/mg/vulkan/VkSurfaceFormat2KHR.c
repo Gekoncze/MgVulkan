@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceFormat2KHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSurfaceFormat2KHR);
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceFormat2KHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceFormat2KHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceFormat2KHR_getSType(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceFormat2KHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceFormat2KHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSurfaceFormat2KHR_setSType(JNIEnv* env, jclass jc, jlon
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceFormat2KHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceFormat2KHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceFormat2KHR_getPNext(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceFormat2KHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceFormat2KHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSurfaceFormat2KHR_setPNext(JNIEnv* env, jclass jc, jlon
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceFormat2KHR_getSurfaceFormat(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceFormat2KHR_getSurfaceFormatNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceFormat2KHR_getSurfaceFormat(JNIEnv* env, jclass
     return jniPointerToLong(&o->surfaceFormat);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceFormat2KHR_setSurfaceFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceFormat2KHR_setSurfaceFormatNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

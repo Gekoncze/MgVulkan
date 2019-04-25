@@ -21,12 +21,12 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getObjectCount() {
-        return new VkUInt32(getVkMemory(), getObjectCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getObjectCountNative(getVkAddress()));
     }
 
     
     public void setObjectCount(VkUInt32 objectCount) {
-        setObjectCount(getVkAddress(), objectCount != null ? objectCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setObjectCountNative(getVkAddress(), objectCount != null ? objectCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,55 +72,55 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getObjectCount().setValue(objectCount);
     }
 
-    protected static native long getObjectCount(long address);
-    protected static native void setObjectCount(long address, long objectCount);
+    protected static native long getObjectCountNative(long address);
+    protected static native void setObjectCountNative(long address, long objectCount);
 
     public VkObjectEntryTypeNVX getPObjectEntryTypes() {
-        return new VkObjectEntryTypeNVX(getVkMemory(), getPObjectEntryTypes(getVkAddress()));
+        return new VkObjectEntryTypeNVX(getVkMemory(), getPObjectEntryTypesNative(getVkAddress()));
     }
 
     private VkObject pObjectEntryTypes = null;
     public void setPObjectEntryTypes(VkObjectEntryTypeNVX pObjectEntryTypes) {
-        setPObjectEntryTypes(getVkAddress(), pObjectEntryTypes != null ? pObjectEntryTypes.getVkAddress() : VkPointer.NULL);
+        setPObjectEntryTypesNative(getVkAddress(), pObjectEntryTypes != null ? pObjectEntryTypes.getVkAddress() : VkPointer.NULL);
         this.pObjectEntryTypes = pObjectEntryTypes;
     }
 
-    protected static native long getPObjectEntryTypes(long address);
-    protected static native void setPObjectEntryTypes(long address, long pObjectEntryTypes);
+    protected static native long getPObjectEntryTypesNative(long address);
+    protected static native void setPObjectEntryTypesNative(long address, long pObjectEntryTypes);
 
     public VkUInt32 getPObjectEntryCounts() {
-        return new VkUInt32(getVkMemory(), getPObjectEntryCounts(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPObjectEntryCountsNative(getVkAddress()));
     }
 
     private VkObject pObjectEntryCounts = null;
     public void setPObjectEntryCounts(VkUInt32 pObjectEntryCounts) {
-        setPObjectEntryCounts(getVkAddress(), pObjectEntryCounts != null ? pObjectEntryCounts.getVkAddress() : VkPointer.NULL);
+        setPObjectEntryCountsNative(getVkAddress(), pObjectEntryCounts != null ? pObjectEntryCounts.getVkAddress() : VkPointer.NULL);
         this.pObjectEntryCounts = pObjectEntryCounts;
     }
 
-    protected static native long getPObjectEntryCounts(long address);
-    protected static native void setPObjectEntryCounts(long address, long pObjectEntryCounts);
+    protected static native long getPObjectEntryCountsNative(long address);
+    protected static native void setPObjectEntryCountsNative(long address, long pObjectEntryCounts);
 
     public VkObjectEntryUsageFlagsNVX getPObjectEntryUsageFlags() {
-        return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getPObjectEntryUsageFlags(getVkAddress()));
+        return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getPObjectEntryUsageFlagsNative(getVkAddress()));
     }
 
     private VkObject pObjectEntryUsageFlags = null;
     public void setPObjectEntryUsageFlags(VkObjectEntryUsageFlagsNVX pObjectEntryUsageFlags) {
-        setPObjectEntryUsageFlags(getVkAddress(), pObjectEntryUsageFlags != null ? pObjectEntryUsageFlags.getVkAddress() : VkPointer.NULL);
+        setPObjectEntryUsageFlagsNative(getVkAddress(), pObjectEntryUsageFlags != null ? pObjectEntryUsageFlags.getVkAddress() : VkPointer.NULL);
         this.pObjectEntryUsageFlags = pObjectEntryUsageFlags;
     }
 
-    protected static native long getPObjectEntryUsageFlags(long address);
-    protected static native void setPObjectEntryUsageFlags(long address, long pObjectEntryUsageFlags);
+    protected static native long getPObjectEntryUsageFlagsNative(long address);
+    protected static native void setPObjectEntryUsageFlagsNative(long address, long pObjectEntryUsageFlags);
 
     public VkUInt32 getMaxUniformBuffersPerDescriptor() {
-        return new VkUInt32(getVkMemory(), getMaxUniformBuffersPerDescriptor(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxUniformBuffersPerDescriptorNative(getVkAddress()));
     }
 
     
     public void setMaxUniformBuffersPerDescriptor(VkUInt32 maxUniformBuffersPerDescriptor) {
-        setMaxUniformBuffersPerDescriptor(getVkAddress(), maxUniformBuffersPerDescriptor != null ? maxUniformBuffersPerDescriptor.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxUniformBuffersPerDescriptorNative(getVkAddress(), maxUniformBuffersPerDescriptor != null ? maxUniformBuffersPerDescriptor.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -132,16 +132,16 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getMaxUniformBuffersPerDescriptor().setValue(maxUniformBuffersPerDescriptor);
     }
 
-    protected static native long getMaxUniformBuffersPerDescriptor(long address);
-    protected static native void setMaxUniformBuffersPerDescriptor(long address, long maxUniformBuffersPerDescriptor);
+    protected static native long getMaxUniformBuffersPerDescriptorNative(long address);
+    protected static native void setMaxUniformBuffersPerDescriptorNative(long address, long maxUniformBuffersPerDescriptor);
 
     public VkUInt32 getMaxStorageBuffersPerDescriptor() {
-        return new VkUInt32(getVkMemory(), getMaxStorageBuffersPerDescriptor(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxStorageBuffersPerDescriptorNative(getVkAddress()));
     }
 
     
     public void setMaxStorageBuffersPerDescriptor(VkUInt32 maxStorageBuffersPerDescriptor) {
-        setMaxStorageBuffersPerDescriptor(getVkAddress(), maxStorageBuffersPerDescriptor != null ? maxStorageBuffersPerDescriptor.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxStorageBuffersPerDescriptorNative(getVkAddress(), maxStorageBuffersPerDescriptor != null ? maxStorageBuffersPerDescriptor.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -153,16 +153,16 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getMaxStorageBuffersPerDescriptor().setValue(maxStorageBuffersPerDescriptor);
     }
 
-    protected static native long getMaxStorageBuffersPerDescriptor(long address);
-    protected static native void setMaxStorageBuffersPerDescriptor(long address, long maxStorageBuffersPerDescriptor);
+    protected static native long getMaxStorageBuffersPerDescriptorNative(long address);
+    protected static native void setMaxStorageBuffersPerDescriptorNative(long address, long maxStorageBuffersPerDescriptor);
 
     public VkUInt32 getMaxStorageImagesPerDescriptor() {
-        return new VkUInt32(getVkMemory(), getMaxStorageImagesPerDescriptor(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxStorageImagesPerDescriptorNative(getVkAddress()));
     }
 
     
     public void setMaxStorageImagesPerDescriptor(VkUInt32 maxStorageImagesPerDescriptor) {
-        setMaxStorageImagesPerDescriptor(getVkAddress(), maxStorageImagesPerDescriptor != null ? maxStorageImagesPerDescriptor.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxStorageImagesPerDescriptorNative(getVkAddress(), maxStorageImagesPerDescriptor != null ? maxStorageImagesPerDescriptor.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -174,16 +174,16 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getMaxStorageImagesPerDescriptor().setValue(maxStorageImagesPerDescriptor);
     }
 
-    protected static native long getMaxStorageImagesPerDescriptor(long address);
-    protected static native void setMaxStorageImagesPerDescriptor(long address, long maxStorageImagesPerDescriptor);
+    protected static native long getMaxStorageImagesPerDescriptorNative(long address);
+    protected static native void setMaxStorageImagesPerDescriptorNative(long address, long maxStorageImagesPerDescriptor);
 
     public VkUInt32 getMaxSampledImagesPerDescriptor() {
-        return new VkUInt32(getVkMemory(), getMaxSampledImagesPerDescriptor(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxSampledImagesPerDescriptorNative(getVkAddress()));
     }
 
     
     public void setMaxSampledImagesPerDescriptor(VkUInt32 maxSampledImagesPerDescriptor) {
-        setMaxSampledImagesPerDescriptor(getVkAddress(), maxSampledImagesPerDescriptor != null ? maxSampledImagesPerDescriptor.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxSampledImagesPerDescriptorNative(getVkAddress(), maxSampledImagesPerDescriptor != null ? maxSampledImagesPerDescriptor.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -195,16 +195,16 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getMaxSampledImagesPerDescriptor().setValue(maxSampledImagesPerDescriptor);
     }
 
-    protected static native long getMaxSampledImagesPerDescriptor(long address);
-    protected static native void setMaxSampledImagesPerDescriptor(long address, long maxSampledImagesPerDescriptor);
+    protected static native long getMaxSampledImagesPerDescriptorNative(long address);
+    protected static native void setMaxSampledImagesPerDescriptorNative(long address, long maxSampledImagesPerDescriptor);
 
     public VkUInt32 getMaxPipelineLayouts() {
-        return new VkUInt32(getVkMemory(), getMaxPipelineLayouts(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPipelineLayoutsNative(getVkAddress()));
     }
 
     
     public void setMaxPipelineLayouts(VkUInt32 maxPipelineLayouts) {
-        setMaxPipelineLayouts(getVkAddress(), maxPipelineLayouts != null ? maxPipelineLayouts.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPipelineLayoutsNative(getVkAddress(), maxPipelineLayouts != null ? maxPipelineLayouts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -216,8 +216,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getMaxPipelineLayouts().setValue(maxPipelineLayouts);
     }
 
-    protected static native long getMaxPipelineLayouts(long address);
-    protected static native void setMaxPipelineLayouts(long address, long maxPipelineLayouts);
+    protected static native long getMaxPipelineLayoutsNative(long address);
+    protected static native void setMaxPipelineLayoutsNative(long address, long maxPipelineLayouts);
 
 
     public static native long sizeof();

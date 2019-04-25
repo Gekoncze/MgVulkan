@@ -21,12 +21,12 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineBindPoint getPipelineBindPoint() {
-        return new VkPipelineBindPoint(getVkMemory(), getPipelineBindPoint(getVkAddress()));
+        return new VkPipelineBindPoint(getVkMemory(), getPipelineBindPointNative(getVkAddress()));
     }
 
     
     public void setPipelineBindPoint(VkPipelineBindPoint pipelineBindPoint) {
-        setPipelineBindPoint(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddressNative());
+        setPipelineBindPointNative(getVkAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         getPipelineBindPoint().setValue(pipelineBindPoint);
     }
 
-    protected static native long getPipelineBindPoint(long address);
-    protected static native void setPipelineBindPoint(long address, long pipelineBindPoint);
+    protected static native long getPipelineBindPointNative(long address);
+    protected static native void setPipelineBindPointNative(long address, long pipelineBindPoint);
 
     public VkIndirectCommandsLayoutUsageFlagsNVX getFlags() {
-        return new VkIndirectCommandsLayoutUsageFlagsNVX(getVkMemory(), getFlags(getVkAddress()));
+        return new VkIndirectCommandsLayoutUsageFlagsNVX(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkIndirectCommandsLayoutUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkUInt32 getTokenCount() {
-        return new VkUInt32(getVkMemory(), getTokenCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getTokenCountNative(getVkAddress()));
     }
 
     
     public void setTokenCount(VkUInt32 tokenCount) {
-        setTokenCount(getVkAddress(), tokenCount != null ? tokenCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setTokenCountNative(getVkAddress(), tokenCount != null ? tokenCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,21 +114,21 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         getTokenCount().setValue(tokenCount);
     }
 
-    protected static native long getTokenCount(long address);
-    protected static native void setTokenCount(long address, long tokenCount);
+    protected static native long getTokenCountNative(long address);
+    protected static native void setTokenCountNative(long address, long tokenCount);
 
     public VkIndirectCommandsLayoutTokenNVX getPTokens() {
-        return new VkIndirectCommandsLayoutTokenNVX(getVkMemory(), getPTokens(getVkAddress()));
+        return new VkIndirectCommandsLayoutTokenNVX(getVkMemory(), getPTokensNative(getVkAddress()));
     }
 
     private VkObject pTokens = null;
     public void setPTokens(VkIndirectCommandsLayoutTokenNVX pTokens) {
-        setPTokens(getVkAddress(), pTokens != null ? pTokens.getVkAddress() : VkPointer.NULL);
+        setPTokensNative(getVkAddress(), pTokens != null ? pTokens.getVkAddress() : VkPointer.NULL);
         this.pTokens = pTokens;
     }
 
-    protected static native long getPTokens(long address);
-    protected static native void setPTokens(long address, long pTokens);
+    protected static native long getPTokensNative(long address);
+    protected static native void setPTokensNative(long address, long pTokens);
 
 
     public static native long sizeof();

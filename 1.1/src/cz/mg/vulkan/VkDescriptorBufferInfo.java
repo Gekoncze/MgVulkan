@@ -20,25 +20,25 @@ public class VkDescriptorBufferInfo extends VkObject {
 
 
     public VkBuffer getBuffer() {
-        return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
+        return new VkBuffer(getVkMemory(), getBufferNative(getVkAddress()));
     }
 
     
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative());
+        setBufferNative(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getBuffer(long address);
-    protected static native void setBuffer(long address, long buffer);
+    protected static native long getBufferNative(long address);
+    protected static native void setBufferNative(long address, long buffer);
 
     public VkDeviceSize getOffset() {
-        return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkDeviceSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -50,16 +50,16 @@ public class VkDescriptorBufferInfo extends VkObject {
         getOffset().setValue(offset);
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
     public VkDeviceSize getRange() {
-        return new VkDeviceSize(getVkMemory(), getRange(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getRangeNative(getVkAddress()));
     }
 
     
     public void setRange(VkDeviceSize range) {
-        setRange(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getNullAddressNative());
+        setRangeNative(getVkAddress(), range != null ? range.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,8 +71,8 @@ public class VkDescriptorBufferInfo extends VkObject {
         getRange().setValue(range);
     }
 
-    protected static native long getRange(long address);
-    protected static native void setRange(long address, long range);
+    protected static native long getRangeNative(long address);
+    protected static native void setRangeNative(long address, long range);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkDescriptorBufferInfo extends VkObject {
 
         @Override
         public VkDescriptorBufferInfo get(int i){
-            return new VkDescriptorBufferInfo(getVkMemory(), addressAt(i));
+            return new VkDescriptorBufferInfo(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

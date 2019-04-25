@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_sizeof(JNIEnv* env, 
     return sizeof(VkCmdReserveSpaceForCommandsInfoNVX);
 }
 
-jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getSType(JNIEnv* env
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setSType(JNIEnv* env,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getPNext(JNIEnv* env
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setPNext(JNIEnv* env,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getObjectTable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getObjectTableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getObjectTable(JNIEn
     return jniPointerToLong(&o->objectTable);
 }
 
-void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setObjectTable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setObjectTableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setObjectTable(JNIEnv
     memcpy(&o->objectTable, valuePointer, sizeof(o->objectTable));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getIndirectCommandsLayout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getIndirectCommandsLayoutNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getIndirectCommandsL
     return jniPointerToLong(&o->indirectCommandsLayout);
 }
 
-void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setIndirectCommandsLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setIndirectCommandsLayoutNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setIndirectCommandsLa
     memcpy(&o->indirectCommandsLayout, valuePointer, sizeof(o->indirectCommandsLayout));
 }
 
-jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getMaxSequencesCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getMaxSequencesCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getMaxSequencesCount
     return jniPointerToLong(&o->maxSequencesCount);
 }
 
-void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setMaxSequencesCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setMaxSequencesCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

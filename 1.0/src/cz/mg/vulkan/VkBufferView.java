@@ -61,10 +61,10 @@ public class VkBufferView extends VkNonDispatchableHandle {
 
         @Override
         public VkBufferView get(int i){
-            return new VkBufferView(getVkMemory(), addressAt(i));
+            return new VkBufferView(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_sizeof(JNIEnv* 
     return sizeof(VkDeviceQueueGlobalPriorityCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getSType(JNIEnv
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setSType(JNIEnv*
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getPNext(JNIEnv
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setPNext(JNIEnv*
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getGlobalPriority(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getGlobalPriorityNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_getGlobalPriori
     return jniPointerToLong(&o->globalPriority);
 }
 
-void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setGlobalPriority(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceQueueGlobalPriorityCreateInfoEXT_setGlobalPriorityNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

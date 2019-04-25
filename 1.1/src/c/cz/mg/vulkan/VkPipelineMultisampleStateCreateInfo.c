@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_sizeof(JNIEnv* env,
     return sizeof(VkPipelineMultisampleStateCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getSType(JNIEnv* en
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setSType(JNIEnv* env
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getPNext(JNIEnv* en
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setPNext(JNIEnv* env
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getFlags(JNIEnv* en
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setFlags(JNIEnv* env
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getRasterizationSamples(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getRasterizationSamplesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getRasterizationSam
     return jniPointerToLong(&o->rasterizationSamples);
 }
 
-void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setRasterizationSamples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setRasterizationSamplesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setRasterizationSamp
     memcpy(&o->rasterizationSamples, valuePointer, sizeof(o->rasterizationSamples));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getSampleShadingEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getSampleShadingEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getSampleShadingEna
     return jniPointerToLong(&o->sampleShadingEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setSampleShadingEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setSampleShadingEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setSampleShadingEnab
     memcpy(&o->sampleShadingEnable, valuePointer, sizeof(o->sampleShadingEnable));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getMinSampleShading(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getMinSampleShadingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getMinSampleShading
     return jniPointerToLong(&o->minSampleShading);
 }
 
-void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setMinSampleShading(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setMinSampleShadingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setMinSampleShading(
     memcpy(&o->minSampleShading, valuePointer, sizeof(o->minSampleShading));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getPSampleMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getPSampleMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getPSampleMask(JNIE
     return jniPointerToLong(o->pSampleMask);
 }
 
-void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setPSampleMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setPSampleMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setPSampleMask(JNIEn
     memcpy(&o->pSampleMask, &valuePointer, sizeof(o->pSampleMask));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getAlphaToCoverageEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getAlphaToCoverageEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getAlphaToCoverageE
     return jniPointerToLong(&o->alphaToCoverageEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setAlphaToCoverageEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setAlphaToCoverageEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setAlphaToCoverageEn
     memcpy(&o->alphaToCoverageEnable, valuePointer, sizeof(o->alphaToCoverageEnable));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getAlphaToOneEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getAlphaToOneEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_getAlphaToOneEnable
     return jniPointerToLong(&o->alphaToOneEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setAlphaToOneEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineMultisampleStateCreateInfo_setAlphaToOneEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -61,10 +61,10 @@ public class VkPhysicalDevice extends VkDispatchableHandle {
 
         @Override
         public VkPhysicalDevice get(int i){
-            return new VkPhysicalDevice(getVkMemory(), addressAt(i));
+            return new VkPhysicalDevice(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

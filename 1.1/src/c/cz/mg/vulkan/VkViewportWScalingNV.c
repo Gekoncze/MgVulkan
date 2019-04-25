@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkViewportWScalingNV_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkViewportWScalingNV);
 }
 
-jlong Java_cz_mg_vulkan_VkViewportWScalingNV_getXcoeff(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkViewportWScalingNV_getXcoeffNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkViewportWScalingNV_getXcoeff(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->xcoeff);
 }
 
-void Java_cz_mg_vulkan_VkViewportWScalingNV_setXcoeff(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkViewportWScalingNV_setXcoeffNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkViewportWScalingNV_setXcoeff(JNIEnv* env, jclass jc, jl
     memcpy(&o->xcoeff, valuePointer, sizeof(o->xcoeff));
 }
 
-jlong Java_cz_mg_vulkan_VkViewportWScalingNV_getYcoeff(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkViewportWScalingNV_getYcoeffNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkViewportWScalingNV_getYcoeff(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->ycoeff);
 }
 
-void Java_cz_mg_vulkan_VkViewportWScalingNV_setYcoeff(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkViewportWScalingNV_setYcoeffNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

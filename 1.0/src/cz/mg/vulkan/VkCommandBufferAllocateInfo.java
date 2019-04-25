@@ -21,12 +21,12 @@ public class VkCommandBufferAllocateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,42 +38,42 @@ public class VkCommandBufferAllocateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkCommandPool getCommandPool() {
-        return new VkCommandPool(getVkMemory(), getCommandPool(getVkAddress()));
+        return new VkCommandPool(getVkMemory(), getCommandPoolNative(getVkAddress()));
     }
 
     
     public void setCommandPool(VkCommandPool commandPool) {
-        setCommandPool(getVkAddress(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getNullAddressNative());
+        setCommandPoolNative(getVkAddress(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getCommandPool(long address);
-    protected static native void setCommandPool(long address, long commandPool);
+    protected static native long getCommandPoolNative(long address);
+    protected static native void setCommandPoolNative(long address, long commandPool);
 
     public VkCommandBufferLevel getLevel() {
-        return new VkCommandBufferLevel(getVkMemory(), getLevel(getVkAddress()));
+        return new VkCommandBufferLevel(getVkMemory(), getLevelNative(getVkAddress()));
     }
 
     
     public void setLevel(VkCommandBufferLevel level) {
-        setLevel(getVkAddress(), level != null ? level.getVkAddress() : VkPointer.getNullAddressNative());
+        setLevelNative(getVkAddress(), level != null ? level.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -85,16 +85,16 @@ public class VkCommandBufferAllocateInfo extends VkObject {
         getLevel().setValue(level);
     }
 
-    protected static native long getLevel(long address);
-    protected static native void setLevel(long address, long level);
+    protected static native long getLevelNative(long address);
+    protected static native void setLevelNative(long address, long level);
 
     public VkUInt32 getCommandBufferCount() {
-        return new VkUInt32(getVkMemory(), getCommandBufferCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getCommandBufferCountNative(getVkAddress()));
     }
 
     
     public void setCommandBufferCount(VkUInt32 commandBufferCount) {
-        setCommandBufferCount(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setCommandBufferCountNative(getVkAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,8 +106,8 @@ public class VkCommandBufferAllocateInfo extends VkObject {
         getCommandBufferCount().setValue(commandBufferCount);
     }
 
-    protected static native long getCommandBufferCount(long address);
-    protected static native void setCommandBufferCount(long address, long commandBufferCount);
+    protected static native long getCommandBufferCountNative(long address);
+    protected static native void setCommandBufferCountNative(long address, long commandBufferCount);
 
 
     public static native long sizeof();

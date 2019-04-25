@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkRectLayerKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkRectLayerKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkRectLayerKHR_getOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRectLayerKHR_getOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkRectLayerKHR_getOffset(JNIEnv* env, jclass jc, jlong a
     return jniPointerToLong(&o->offset);
 }
 
-void Java_cz_mg_vulkan_VkRectLayerKHR_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRectLayerKHR_setOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkRectLayerKHR_setOffset(JNIEnv* env, jclass jc, jlong ad
     memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
 
-jlong Java_cz_mg_vulkan_VkRectLayerKHR_getExtent(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRectLayerKHR_getExtentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkRectLayerKHR_getExtent(JNIEnv* env, jclass jc, jlong a
     return jniPointerToLong(&o->extent);
 }
 
-void Java_cz_mg_vulkan_VkRectLayerKHR_setExtent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRectLayerKHR_setExtentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkRectLayerKHR_setExtent(JNIEnv* env, jclass jc, jlong ad
     memcpy(&o->extent, valuePointer, sizeof(o->extent));
 }
 
-jlong Java_cz_mg_vulkan_VkRectLayerKHR_getLayer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRectLayerKHR_getLayerNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkRectLayerKHR_getLayer(JNIEnv* env, jclass jc, jlong ad
     return jniPointerToLong(&o->layer);
 }
 
-void Java_cz_mg_vulkan_VkRectLayerKHR_setLayer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRectLayerKHR_setLayerNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

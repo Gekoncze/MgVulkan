@@ -20,12 +20,12 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
 
     public VkUInt32 getNumUsedVgprs() {
-        return new VkUInt32(getVkMemory(), getNumUsedVgprs(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getNumUsedVgprsNative(getVkAddress()));
     }
 
     
     public void setNumUsedVgprs(VkUInt32 numUsedVgprs) {
-        setNumUsedVgprs(getVkAddress(), numUsedVgprs != null ? numUsedVgprs.getVkAddress() : VkPointer.getNullAddressNative());
+        setNumUsedVgprsNative(getVkAddress(), numUsedVgprs != null ? numUsedVgprs.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkShaderResourceUsageAMD extends VkObject {
         getNumUsedVgprs().setValue(numUsedVgprs);
     }
 
-    protected static native long getNumUsedVgprs(long address);
-    protected static native void setNumUsedVgprs(long address, long numUsedVgprs);
+    protected static native long getNumUsedVgprsNative(long address);
+    protected static native void setNumUsedVgprsNative(long address, long numUsedVgprs);
 
     public VkUInt32 getNumUsedSgprs() {
-        return new VkUInt32(getVkMemory(), getNumUsedSgprs(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getNumUsedSgprsNative(getVkAddress()));
     }
 
     
     public void setNumUsedSgprs(VkUInt32 numUsedSgprs) {
-        setNumUsedSgprs(getVkAddress(), numUsedSgprs != null ? numUsedSgprs.getVkAddress() : VkPointer.getNullAddressNative());
+        setNumUsedSgprsNative(getVkAddress(), numUsedSgprs != null ? numUsedSgprs.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkShaderResourceUsageAMD extends VkObject {
         getNumUsedSgprs().setValue(numUsedSgprs);
     }
 
-    protected static native long getNumUsedSgprs(long address);
-    protected static native void setNumUsedSgprs(long address, long numUsedSgprs);
+    protected static native long getNumUsedSgprsNative(long address);
+    protected static native void setNumUsedSgprsNative(long address, long numUsedSgprs);
 
     public VkUInt32 getLdsSizePerLocalWorkGroup() {
-        return new VkUInt32(getVkMemory(), getLdsSizePerLocalWorkGroup(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getLdsSizePerLocalWorkGroupNative(getVkAddress()));
     }
 
     
     public void setLdsSizePerLocalWorkGroup(VkUInt32 ldsSizePerLocalWorkGroup) {
-        setLdsSizePerLocalWorkGroup(getVkAddress(), ldsSizePerLocalWorkGroup != null ? ldsSizePerLocalWorkGroup.getVkAddress() : VkPointer.getNullAddressNative());
+        setLdsSizePerLocalWorkGroupNative(getVkAddress(), ldsSizePerLocalWorkGroup != null ? ldsSizePerLocalWorkGroup.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkShaderResourceUsageAMD extends VkObject {
         getLdsSizePerLocalWorkGroup().setValue(ldsSizePerLocalWorkGroup);
     }
 
-    protected static native long getLdsSizePerLocalWorkGroup(long address);
-    protected static native void setLdsSizePerLocalWorkGroup(long address, long ldsSizePerLocalWorkGroup);
+    protected static native long getLdsSizePerLocalWorkGroupNative(long address);
+    protected static native void setLdsSizePerLocalWorkGroupNative(long address, long ldsSizePerLocalWorkGroup);
 
     public VkSize getLdsUsageSizeInBytes() {
-        return new VkSize(getVkMemory(), getLdsUsageSizeInBytes(getVkAddress()));
+        return new VkSize(getVkMemory(), getLdsUsageSizeInBytesNative(getVkAddress()));
     }
 
     
     public void setLdsUsageSizeInBytes(VkSize ldsUsageSizeInBytes) {
-        setLdsUsageSizeInBytes(getVkAddress(), ldsUsageSizeInBytes != null ? ldsUsageSizeInBytes.getVkAddress() : VkPointer.getNullAddressNative());
+        setLdsUsageSizeInBytesNative(getVkAddress(), ldsUsageSizeInBytes != null ? ldsUsageSizeInBytes.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -100,16 +100,16 @@ public class VkShaderResourceUsageAMD extends VkObject {
         getLdsUsageSizeInBytes().setValue(ldsUsageSizeInBytes);
     }
 
-    protected static native long getLdsUsageSizeInBytes(long address);
-    protected static native void setLdsUsageSizeInBytes(long address, long ldsUsageSizeInBytes);
+    protected static native long getLdsUsageSizeInBytesNative(long address);
+    protected static native void setLdsUsageSizeInBytesNative(long address, long ldsUsageSizeInBytes);
 
     public VkSize getScratchMemUsageInBytes() {
-        return new VkSize(getVkMemory(), getScratchMemUsageInBytes(getVkAddress()));
+        return new VkSize(getVkMemory(), getScratchMemUsageInBytesNative(getVkAddress()));
     }
 
     
     public void setScratchMemUsageInBytes(VkSize scratchMemUsageInBytes) {
-        setScratchMemUsageInBytes(getVkAddress(), scratchMemUsageInBytes != null ? scratchMemUsageInBytes.getVkAddress() : VkPointer.getNullAddressNative());
+        setScratchMemUsageInBytesNative(getVkAddress(), scratchMemUsageInBytes != null ? scratchMemUsageInBytes.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -121,8 +121,8 @@ public class VkShaderResourceUsageAMD extends VkObject {
         getScratchMemUsageInBytes().setValue(scratchMemUsageInBytes);
     }
 
-    protected static native long getScratchMemUsageInBytes(long address);
-    protected static native void setScratchMemUsageInBytes(long address, long scratchMemUsageInBytes);
+    protected static native long getScratchMemUsageInBytesNative(long address);
+    protected static native void setScratchMemUsageInBytesNative(long address, long scratchMemUsageInBytes);
 
 
     public static native long sizeof();
@@ -166,10 +166,10 @@ public class VkShaderResourceUsageAMD extends VkObject {
 
         @Override
         public VkShaderResourceUsageAMD get(int i){
-            return new VkShaderResourceUsageAMD(getVkMemory(), addressAt(i));
+            return new VkShaderResourceUsageAMD(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

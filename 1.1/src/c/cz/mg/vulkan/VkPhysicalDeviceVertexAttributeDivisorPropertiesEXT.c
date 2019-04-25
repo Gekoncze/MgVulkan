@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_size
     return sizeof(VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_getS
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_setST
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_getP
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_setPN
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_getMaxVertexAttribDivisor(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_getMaxVertexAttribDivisorNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_getM
     return jniPointerToLong(&o->maxVertexAttribDivisor);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_setMaxVertexAttribDivisor(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT_setMaxVertexAttribDivisorNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

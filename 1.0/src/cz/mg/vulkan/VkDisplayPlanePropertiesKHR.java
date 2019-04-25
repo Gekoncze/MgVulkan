@@ -20,25 +20,25 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
 
 
     public VkDisplayKHR getCurrentDisplay() {
-        return new VkDisplayKHR(getVkMemory(), getCurrentDisplay(getVkAddress()));
+        return new VkDisplayKHR(getVkMemory(), getCurrentDisplayNative(getVkAddress()));
     }
 
     
     public void setCurrentDisplay(VkDisplayKHR currentDisplay) {
-        setCurrentDisplay(getVkAddress(), currentDisplay != null ? currentDisplay.getVkAddress() : VkPointer.getNullAddressNative());
+        setCurrentDisplayNative(getVkAddress(), currentDisplay != null ? currentDisplay.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getCurrentDisplay(long address);
-    protected static native void setCurrentDisplay(long address, long currentDisplay);
+    protected static native long getCurrentDisplayNative(long address);
+    protected static native void setCurrentDisplayNative(long address, long currentDisplay);
 
     public VkUInt32 getCurrentStackIndex() {
-        return new VkUInt32(getVkMemory(), getCurrentStackIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getCurrentStackIndexNative(getVkAddress()));
     }
 
     
     public void setCurrentStackIndex(VkUInt32 currentStackIndex) {
-        setCurrentStackIndex(getVkAddress(), currentStackIndex != null ? currentStackIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setCurrentStackIndexNative(getVkAddress(), currentStackIndex != null ? currentStackIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -50,8 +50,8 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
         getCurrentStackIndex().setValue(currentStackIndex);
     }
 
-    protected static native long getCurrentStackIndex(long address);
-    protected static native void setCurrentStackIndex(long address, long currentStackIndex);
+    protected static native long getCurrentStackIndexNative(long address);
+    protected static native void setCurrentStackIndexNative(long address, long currentStackIndex);
 
 
     public static native long sizeof();
@@ -95,10 +95,10 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
 
         @Override
         public VkDisplayPlanePropertiesKHR get(int i){
-            return new VkDisplayPlanePropertiesKHR(getVkMemory(), addressAt(i));
+            return new VkDisplayPlanePropertiesKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

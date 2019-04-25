@@ -20,12 +20,12 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
 
 
     public VkUInt64 getRefreshDuration() {
-        return new VkUInt64(getVkMemory(), getRefreshDuration(getVkAddress()));
+        return new VkUInt64(getVkMemory(), getRefreshDurationNative(getVkAddress()));
     }
 
     
     public void setRefreshDuration(VkUInt64 refreshDuration) {
-        setRefreshDuration(getVkAddress(), refreshDuration != null ? refreshDuration.getVkAddress() : VkPointer.getNullAddressNative());
+        setRefreshDurationNative(getVkAddress(), refreshDuration != null ? refreshDuration.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,8 +37,8 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
         getRefreshDuration().setValue(refreshDuration);
     }
 
-    protected static native long getRefreshDuration(long address);
-    protected static native void setRefreshDuration(long address, long refreshDuration);
+    protected static native long getRefreshDurationNative(long address);
+    protected static native void setRefreshDurationNative(long address, long refreshDuration);
 
 
     public static native long sizeof();
@@ -82,10 +82,10 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
 
         @Override
         public VkRefreshCycleDurationGOOGLE get(int i){
-            return new VkRefreshCycleDurationGOOGLE(getVkMemory(), addressAt(i));
+            return new VkRefreshCycleDurationGOOGLE(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

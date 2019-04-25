@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkBufferCreateInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkBufferCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getSType(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkBufferCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkBufferCreateInfo_setSType(JNIEnv* env, jclass jc, jlong
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getPNext(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkBufferCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkBufferCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getFlags(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkBufferCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkBufferCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getSize(JNIEnv* env, jclass jc, jlong
     return jniPointerToLong(&o->size);
 }
 
-void Java_cz_mg_vulkan_VkBufferCreateInfo_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCreateInfo_setSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkBufferCreateInfo_setSize(JNIEnv* env, jclass jc, jlong 
     memcpy(&o->size, valuePointer, sizeof(o->size));
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getUsage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getUsageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getUsage(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(&o->usage);
 }
 
-void Java_cz_mg_vulkan_VkBufferCreateInfo_setUsage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCreateInfo_setUsageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkBufferCreateInfo_setUsage(JNIEnv* env, jclass jc, jlong
     memcpy(&o->usage, valuePointer, sizeof(o->usage));
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getSharingMode(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getSharingModeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getSharingMode(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->sharingMode);
 }
 
-void Java_cz_mg_vulkan_VkBufferCreateInfo_setSharingMode(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCreateInfo_setSharingModeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkBufferCreateInfo_setSharingMode(JNIEnv* env, jclass jc,
     memcpy(&o->sharingMode, valuePointer, sizeof(o->sharingMode));
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getQueueFamilyIndexCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getQueueFamilyIndexCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getQueueFamilyIndexCount(JNIEnv* env,
     return jniPointerToLong(&o->queueFamilyIndexCount);
 }
 
-void Java_cz_mg_vulkan_VkBufferCreateInfo_setQueueFamilyIndexCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCreateInfo_setQueueFamilyIndexCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkBufferCreateInfo_setQueueFamilyIndexCount(JNIEnv* env, 
     memcpy(&o->queueFamilyIndexCount, valuePointer, sizeof(o->queueFamilyIndexCount));
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getPQueueFamilyIndices(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getPQueueFamilyIndicesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkBufferCreateInfo_getPQueueFamilyIndices(JNIEnv* env, j
     return jniPointerToLong(o->pQueueFamilyIndices);
 }
 
-void Java_cz_mg_vulkan_VkBufferCreateInfo_setPQueueFamilyIndices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCreateInfo_setPQueueFamilyIndicesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

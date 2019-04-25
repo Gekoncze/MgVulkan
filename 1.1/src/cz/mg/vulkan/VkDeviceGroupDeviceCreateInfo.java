@@ -21,12 +21,12 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getPhysicalDeviceCount() {
-        return new VkUInt32(getVkMemory(), getPhysicalDeviceCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPhysicalDeviceCountNative(getVkAddress()));
     }
 
     
     public void setPhysicalDeviceCount(VkUInt32 physicalDeviceCount) {
-        setPhysicalDeviceCount(getVkAddress(), physicalDeviceCount != null ? physicalDeviceCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setPhysicalDeviceCountNative(getVkAddress(), physicalDeviceCount != null ? physicalDeviceCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,21 +72,21 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
         getPhysicalDeviceCount().setValue(physicalDeviceCount);
     }
 
-    protected static native long getPhysicalDeviceCount(long address);
-    protected static native void setPhysicalDeviceCount(long address, long physicalDeviceCount);
+    protected static native long getPhysicalDeviceCountNative(long address);
+    protected static native void setPhysicalDeviceCountNative(long address, long physicalDeviceCount);
 
     public VkPhysicalDevice getPPhysicalDevices() {
-        return new VkPhysicalDevice(getVkMemory(), getPPhysicalDevices(getVkAddress()));
+        return new VkPhysicalDevice(getVkMemory(), getPPhysicalDevicesNative(getVkAddress()));
     }
 
     private VkObject pPhysicalDevices = null;
     public void setPPhysicalDevices(VkPhysicalDevice pPhysicalDevices) {
-        setPPhysicalDevices(getVkAddress(), pPhysicalDevices != null ? pPhysicalDevices.getVkAddress() : VkPointer.NULL);
+        setPPhysicalDevicesNative(getVkAddress(), pPhysicalDevices != null ? pPhysicalDevices.getVkAddress() : VkPointer.NULL);
         this.pPhysicalDevices = pPhysicalDevices;
     }
 
-    protected static native long getPPhysicalDevices(long address);
-    protected static native void setPPhysicalDevices(long address, long pPhysicalDevices);
+    protected static native long getPPhysicalDevicesNative(long address);
+    protected static native void setPPhysicalDevicesNative(long address, long pPhysicalDevices);
 
 
     public static native long sizeof();

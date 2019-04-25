@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_sizeof(JNIEnv* env, 
     return sizeof(VkPhysicalDeviceMultiviewProperties);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getSType(JNIEnv* env
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setSType(JNIEnv* env,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getPNext(JNIEnv* env
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setPNext(JNIEnv* env,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getMaxMultiviewViewCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getMaxMultiviewViewCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getMaxMultiviewViewC
     return jniPointerToLong(&o->maxMultiviewViewCount);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setMaxMultiviewViewCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setMaxMultiviewViewCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setMaxMultiviewViewCo
     memcpy(&o->maxMultiviewViewCount, valuePointer, sizeof(o->maxMultiviewViewCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getMaxMultiviewInstanceIndex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getMaxMultiviewInstanceIndexNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getMaxMultiviewInsta
     return jniPointerToLong(&o->maxMultiviewInstanceIndex);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setMaxMultiviewInstanceIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setMaxMultiviewInstanceIndexNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

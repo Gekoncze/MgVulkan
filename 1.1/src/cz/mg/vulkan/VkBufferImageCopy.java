@@ -20,12 +20,12 @@ public class VkBufferImageCopy extends VkObject {
 
 
     public VkDeviceSize getBufferOffset() {
-        return new VkDeviceSize(getVkMemory(), getBufferOffset(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getBufferOffsetNative(getVkAddress()));
     }
 
     
     public void setBufferOffset(VkDeviceSize bufferOffset) {
-        setBufferOffset(getVkAddress(), bufferOffset != null ? bufferOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setBufferOffsetNative(getVkAddress(), bufferOffset != null ? bufferOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkBufferImageCopy extends VkObject {
         getBufferOffset().setValue(bufferOffset);
     }
 
-    protected static native long getBufferOffset(long address);
-    protected static native void setBufferOffset(long address, long bufferOffset);
+    protected static native long getBufferOffsetNative(long address);
+    protected static native void setBufferOffsetNative(long address, long bufferOffset);
 
     public VkUInt32 getBufferRowLength() {
-        return new VkUInt32(getVkMemory(), getBufferRowLength(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getBufferRowLengthNative(getVkAddress()));
     }
 
     
     public void setBufferRowLength(VkUInt32 bufferRowLength) {
-        setBufferRowLength(getVkAddress(), bufferRowLength != null ? bufferRowLength.getVkAddress() : VkPointer.getNullAddressNative());
+        setBufferRowLengthNative(getVkAddress(), bufferRowLength != null ? bufferRowLength.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkBufferImageCopy extends VkObject {
         getBufferRowLength().setValue(bufferRowLength);
     }
 
-    protected static native long getBufferRowLength(long address);
-    protected static native void setBufferRowLength(long address, long bufferRowLength);
+    protected static native long getBufferRowLengthNative(long address);
+    protected static native void setBufferRowLengthNative(long address, long bufferRowLength);
 
     public VkUInt32 getBufferImageHeight() {
-        return new VkUInt32(getVkMemory(), getBufferImageHeight(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getBufferImageHeightNative(getVkAddress()));
     }
 
     
     public void setBufferImageHeight(VkUInt32 bufferImageHeight) {
-        setBufferImageHeight(getVkAddress(), bufferImageHeight != null ? bufferImageHeight.getVkAddress() : VkPointer.getNullAddressNative());
+        setBufferImageHeightNative(getVkAddress(), bufferImageHeight != null ? bufferImageHeight.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,47 +79,47 @@ public class VkBufferImageCopy extends VkObject {
         getBufferImageHeight().setValue(bufferImageHeight);
     }
 
-    protected static native long getBufferImageHeight(long address);
-    protected static native void setBufferImageHeight(long address, long bufferImageHeight);
+    protected static native long getBufferImageHeightNative(long address);
+    protected static native void setBufferImageHeightNative(long address, long bufferImageHeight);
 
     public VkImageSubresourceLayers getImageSubresource() {
-        return new VkImageSubresourceLayers(getVkMemory(), getImageSubresource(getVkAddress()));
+        return new VkImageSubresourceLayers(getVkMemory(), getImageSubresourceNative(getVkAddress()));
     }
 
     
     public void setImageSubresource(VkImageSubresourceLayers imageSubresource) {
-        setImageSubresource(getVkAddress(), imageSubresource != null ? imageSubresource.getVkAddress() : VkPointer.getNullAddressNative());
+        setImageSubresourceNative(getVkAddress(), imageSubresource != null ? imageSubresource.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getImageSubresource(long address);
-    protected static native void setImageSubresource(long address, long imageSubresource);
+    protected static native long getImageSubresourceNative(long address);
+    protected static native void setImageSubresourceNative(long address, long imageSubresource);
 
     public VkOffset3D getImageOffset() {
-        return new VkOffset3D(getVkMemory(), getImageOffset(getVkAddress()));
+        return new VkOffset3D(getVkMemory(), getImageOffsetNative(getVkAddress()));
     }
 
     
     public void setImageOffset(VkOffset3D imageOffset) {
-        setImageOffset(getVkAddress(), imageOffset != null ? imageOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setImageOffsetNative(getVkAddress(), imageOffset != null ? imageOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getImageOffset(long address);
-    protected static native void setImageOffset(long address, long imageOffset);
+    protected static native long getImageOffsetNative(long address);
+    protected static native void setImageOffsetNative(long address, long imageOffset);
 
     public VkExtent3D getImageExtent() {
-        return new VkExtent3D(getVkMemory(), getImageExtent(getVkAddress()));
+        return new VkExtent3D(getVkMemory(), getImageExtentNative(getVkAddress()));
     }
 
     
     public void setImageExtent(VkExtent3D imageExtent) {
-        setImageExtent(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.getNullAddressNative());
+        setImageExtentNative(getVkAddress(), imageExtent != null ? imageExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getImageExtent(long address);
-    protected static native void setImageExtent(long address, long imageExtent);
+    protected static native long getImageExtentNative(long address);
+    protected static native void setImageExtentNative(long address, long imageExtent);
 
 
     public static native long sizeof();
@@ -163,10 +163,10 @@ public class VkBufferImageCopy extends VkObject {
 
         @Override
         public VkBufferImageCopy get(int i){
-            return new VkBufferImageCopy(getVkMemory(), addressAt(i));
+            return new VkBufferImageCopy(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

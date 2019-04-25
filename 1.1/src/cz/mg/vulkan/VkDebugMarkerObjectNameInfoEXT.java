@@ -21,12 +21,12 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkDebugReportObjectTypeEXT getObjectType() {
-        return new VkDebugReportObjectTypeEXT(getVkMemory(), getObjectType(getVkAddress()));
+        return new VkDebugReportObjectTypeEXT(getVkMemory(), getObjectTypeNative(getVkAddress()));
     }
 
     
     public void setObjectType(VkDebugReportObjectTypeEXT objectType) {
-        setObjectType(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddressNative());
+        setObjectTypeNative(getVkAddress(), objectType != null ? objectType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
         getObjectType().setValue(objectType);
     }
 
-    protected static native long getObjectType(long address);
-    protected static native void setObjectType(long address, long objectType);
+    protected static native long getObjectTypeNative(long address);
+    protected static native void setObjectTypeNative(long address, long objectType);
 
     public VkUInt64 getObject() {
-        return new VkUInt64(getVkMemory(), getObject(getVkAddress()));
+        return new VkUInt64(getVkMemory(), getObjectNative(getVkAddress()));
     }
 
     
     public void setObject(VkUInt64 object) {
-        setObject(getVkAddress(), object != null ? object.getVkAddress() : VkPointer.getNullAddressNative());
+        setObjectNative(getVkAddress(), object != null ? object.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
         getObject().setValue(object);
     }
 
-    protected static native long getObject(long address);
-    protected static native void setObject(long address, long object);
+    protected static native long getObjectNative(long address);
+    protected static native void setObjectNative(long address, long object);
 
     public VkChar getPObjectName() {
-        return new VkChar(getVkMemory(), getPObjectName(getVkAddress()));
+        return new VkChar(getVkMemory(), getPObjectNameNative(getVkAddress()));
     }
 
     private VkObject pObjectName = null;
     public void setPObjectName(VkChar pObjectName) {
-        setPObjectName(getVkAddress(), pObjectName != null ? pObjectName.getVkAddress() : VkPointer.NULL);
+        setPObjectNameNative(getVkAddress(), pObjectName != null ? pObjectName.getVkAddress() : VkPointer.NULL);
         this.pObjectName = pObjectName;
     }
 
@@ -114,8 +114,8 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
         setPObjectName(new VkString(pObjectName));
     }
 
-    protected static native long getPObjectName(long address);
-    protected static native void setPObjectName(long address, long pObjectName);
+    protected static native long getPObjectNameNative(long address);
+    protected static native void setPObjectNameNative(long address, long pObjectName);
 
 
     public static native long sizeof();

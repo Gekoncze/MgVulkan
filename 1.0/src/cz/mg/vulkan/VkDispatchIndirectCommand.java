@@ -20,12 +20,12 @@ public class VkDispatchIndirectCommand extends VkObject {
 
 
     public VkUInt32 getX() {
-        return new VkUInt32(getVkMemory(), getX(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getXNative(getVkAddress()));
     }
 
     
     public void setX(VkUInt32 x) {
-        setX(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
+        setXNative(getVkAddress(), x != null ? x.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkDispatchIndirectCommand extends VkObject {
         getX().setValue(x);
     }
 
-    protected static native long getX(long address);
-    protected static native void setX(long address, long x);
+    protected static native long getXNative(long address);
+    protected static native void setXNative(long address, long x);
 
     public VkUInt32 getY() {
-        return new VkUInt32(getVkMemory(), getY(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getYNative(getVkAddress()));
     }
 
     
     public void setY(VkUInt32 y) {
-        setY(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
+        setYNative(getVkAddress(), y != null ? y.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkDispatchIndirectCommand extends VkObject {
         getY().setValue(y);
     }
 
-    protected static native long getY(long address);
-    protected static native void setY(long address, long y);
+    protected static native long getYNative(long address);
+    protected static native void setYNative(long address, long y);
 
     public VkUInt32 getZ() {
-        return new VkUInt32(getVkMemory(), getZ(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getZNative(getVkAddress()));
     }
 
     
     public void setZ(VkUInt32 z) {
-        setZ(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddressNative());
+        setZNative(getVkAddress(), z != null ? z.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,8 +79,8 @@ public class VkDispatchIndirectCommand extends VkObject {
         getZ().setValue(z);
     }
 
-    protected static native long getZ(long address);
-    protected static native void setZ(long address, long z);
+    protected static native long getZNative(long address);
+    protected static native void setZNative(long address, long z);
 
 
     public static native long sizeof();
@@ -124,10 +124,10 @@ public class VkDispatchIndirectCommand extends VkObject {
 
         @Override
         public VkDispatchIndirectCommand get(int i){
-            return new VkDispatchIndirectCommand(getVkMemory(), addressAt(i));
+            return new VkDispatchIndirectCommand(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

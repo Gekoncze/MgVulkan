@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSpecializationInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSpecializationInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkSpecializationInfo_getMapEntryCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSpecializationInfo_getMapEntryCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSpecializationInfo_getMapEntryCount(JNIEnv* env, jclas
     return jniPointerToLong(&o->mapEntryCount);
 }
 
-void Java_cz_mg_vulkan_VkSpecializationInfo_setMapEntryCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSpecializationInfo_setMapEntryCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSpecializationInfo_setMapEntryCount(JNIEnv* env, jclass
     memcpy(&o->mapEntryCount, valuePointer, sizeof(o->mapEntryCount));
 }
 
-jlong Java_cz_mg_vulkan_VkSpecializationInfo_getPMapEntries(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSpecializationInfo_getPMapEntriesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSpecializationInfo_getPMapEntries(JNIEnv* env, jclass 
     return jniPointerToLong(o->pMapEntries);
 }
 
-void Java_cz_mg_vulkan_VkSpecializationInfo_setPMapEntries(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSpecializationInfo_setPMapEntriesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSpecializationInfo_setPMapEntries(JNIEnv* env, jclass j
     memcpy(&o->pMapEntries, &valuePointer, sizeof(o->pMapEntries));
 }
 
-jlong Java_cz_mg_vulkan_VkSpecializationInfo_getDataSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSpecializationInfo_getDataSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSpecializationInfo_getDataSize(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->dataSize);
 }
 
-void Java_cz_mg_vulkan_VkSpecializationInfo_setDataSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSpecializationInfo_setDataSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkSpecializationInfo_setDataSize(JNIEnv* env, jclass jc, 
     memcpy(&o->dataSize, valuePointer, sizeof(o->dataSize));
 }
 
-jlong Java_cz_mg_vulkan_VkSpecializationInfo_getPData(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSpecializationInfo_getPDataNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkSpecializationInfo_getPData(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(o->pData);
 }
 
-void Java_cz_mg_vulkan_VkSpecializationInfo_setPData(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSpecializationInfo_setPDataNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

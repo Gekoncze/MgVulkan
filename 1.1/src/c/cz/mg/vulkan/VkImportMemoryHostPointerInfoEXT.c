@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_sizeof(JNIEnv* env, jcl
     return sizeof(VkImportMemoryHostPointerInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getSType(JNIEnv* env, j
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setSType(JNIEnv* env, jc
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getPNext(JNIEnv* env, j
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setPNext(JNIEnv* env, jc
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getHandleType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getHandleTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getHandleType(JNIEnv* e
     return jniPointerToLong(&o->handleType);
 }
 
-void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setHandleType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setHandleTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setHandleType(JNIEnv* en
     memcpy(&o->handleType, valuePointer, sizeof(o->handleType));
 }
 
-jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getPHostPointer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getPHostPointerNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_getPHostPointer(JNIEnv*
     return jniPointerToLong(o->pHostPointer);
 }
 
-void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setPHostPointer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportMemoryHostPointerInfoEXT_setPHostPointerNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

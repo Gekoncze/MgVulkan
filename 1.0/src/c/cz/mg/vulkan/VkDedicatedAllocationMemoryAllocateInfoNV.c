@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_sizeof(JNIEnv*
     return sizeof(VkDedicatedAllocationMemoryAllocateInfoNV);
 }
 
-jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getSType(JNIEn
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setSType(JNIEnv
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getPNext(JNIEn
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setPNext(JNIEnv
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getImage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getImageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getImage(JNIEn
     return jniPointerToLong(&o->image);
 }
 
-void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setImage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setImageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setImage(JNIEnv
     memcpy(&o->image, valuePointer, sizeof(o->image));
 }
 
-jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getBufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_getBuffer(JNIE
     return jniPointerToLong(&o->buffer);
 }
 
-void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDedicatedAllocationMemoryAllocateInfoNV_setBufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

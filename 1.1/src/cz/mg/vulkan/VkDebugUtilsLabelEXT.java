@@ -20,12 +20,12 @@ public class VkDebugUtilsLabelEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkDebugUtilsLabelEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkChar getPLabelName() {
-        return new VkChar(getVkMemory(), getPLabelName(getVkAddress()));
+        return new VkChar(getVkMemory(), getPLabelNameNative(getVkAddress()));
     }
 
     private VkObject pLabelName = null;
     public void setPLabelName(VkChar pLabelName) {
-        setPLabelName(getVkAddress(), pLabelName != null ? pLabelName.getVkAddress() : VkPointer.NULL);
+        setPLabelNameNative(getVkAddress(), pLabelName != null ? pLabelName.getVkAddress() : VkPointer.NULL);
         this.pLabelName = pLabelName;
     }
 
@@ -71,21 +71,21 @@ public class VkDebugUtilsLabelEXT extends VkObject {
         setPLabelName(new VkString(pLabelName));
     }
 
-    protected static native long getPLabelName(long address);
-    protected static native void setPLabelName(long address, long pLabelName);
+    protected static native long getPLabelNameNative(long address);
+    protected static native void setPLabelNameNative(long address, long pLabelName);
 
     public VkFloat getColor() {
-        return new VkFloat(getVkMemory(), getColor(getVkAddress()));
+        return new VkFloat(getVkMemory(), getColorNative(getVkAddress()));
     }
 
     
     public void setColor(VkFloat color) {
-        setColor(getVkAddress(), color != null ? color.getVkAddress() : VkPointer.NULL);
+        setColorNative(getVkAddress(), color != null ? color.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getColor(long address);
-    protected static native void setColor(long address, long color);
+    protected static native long getColorNative(long address);
+    protected static native void setColorNative(long address, long color);
 
 
     public static native long sizeof();
@@ -129,10 +129,10 @@ public class VkDebugUtilsLabelEXT extends VkObject {
 
         @Override
         public VkDebugUtilsLabelEXT get(int i){
-            return new VkDebugUtilsLabelEXT(getVkMemory(), addressAt(i));
+            return new VkDebugUtilsLabelEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

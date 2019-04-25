@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkImageResolve_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkImageResolve);
 }
 
-jlong Java_cz_mg_vulkan_VkImageResolve_getSrcSubresource(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageResolve_getSrcSubresourceNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkImageResolve_getSrcSubresource(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->srcSubresource);
 }
 
-void Java_cz_mg_vulkan_VkImageResolve_setSrcSubresource(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageResolve_setSrcSubresourceNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkImageResolve_setSrcSubresource(JNIEnv* env, jclass jc, 
     memcpy(&o->srcSubresource, valuePointer, sizeof(o->srcSubresource));
 }
 
-jlong Java_cz_mg_vulkan_VkImageResolve_getSrcOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageResolve_getSrcOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkImageResolve_getSrcOffset(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(&o->srcOffset);
 }
 
-void Java_cz_mg_vulkan_VkImageResolve_setSrcOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageResolve_setSrcOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkImageResolve_setSrcOffset(JNIEnv* env, jclass jc, jlong
     memcpy(&o->srcOffset, valuePointer, sizeof(o->srcOffset));
 }
 
-jlong Java_cz_mg_vulkan_VkImageResolve_getDstSubresource(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageResolve_getDstSubresourceNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkImageResolve_getDstSubresource(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->dstSubresource);
 }
 
-void Java_cz_mg_vulkan_VkImageResolve_setDstSubresource(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageResolve_setDstSubresourceNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkImageResolve_setDstSubresource(JNIEnv* env, jclass jc, 
     memcpy(&o->dstSubresource, valuePointer, sizeof(o->dstSubresource));
 }
 
-jlong Java_cz_mg_vulkan_VkImageResolve_getDstOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageResolve_getDstOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkImageResolve_getDstOffset(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(&o->dstOffset);
 }
 
-void Java_cz_mg_vulkan_VkImageResolve_setDstOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageResolve_setDstOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkImageResolve_setDstOffset(JNIEnv* env, jclass jc, jlong
     memcpy(&o->dstOffset, valuePointer, sizeof(o->dstOffset));
 }
 
-jlong Java_cz_mg_vulkan_VkImageResolve_getExtent(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageResolve_getExtentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkImageResolve_getExtent(JNIEnv* env, jclass jc, jlong a
     return jniPointerToLong(&o->extent);
 }
 
-void Java_cz_mg_vulkan_VkImageResolve_setExtent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageResolve_setExtentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

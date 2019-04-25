@@ -21,12 +21,12 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineInputAssemblyStateCreateFlags getFlags() {
-        return new VkPipelineInputAssemblyStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineInputAssemblyStateCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineInputAssemblyStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkPrimitiveTopology getTopology() {
-        return new VkPrimitiveTopology(getVkMemory(), getTopology(getVkAddress()));
+        return new VkPrimitiveTopology(getVkMemory(), getTopologyNative(getVkAddress()));
     }
 
     
     public void setTopology(VkPrimitiveTopology topology) {
-        setTopology(getVkAddress(), topology != null ? topology.getVkAddress() : VkPointer.getNullAddressNative());
+        setTopologyNative(getVkAddress(), topology != null ? topology.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
         getTopology().setValue(topology);
     }
 
-    protected static native long getTopology(long address);
-    protected static native void setTopology(long address, long topology);
+    protected static native long getTopologyNative(long address);
+    protected static native void setTopologyNative(long address, long topology);
 
     public VkBool32 getPrimitiveRestartEnable() {
-        return new VkBool32(getVkMemory(), getPrimitiveRestartEnable(getVkAddress()));
+        return new VkBool32(getVkMemory(), getPrimitiveRestartEnableNative(getVkAddress()));
     }
 
     
     public void setPrimitiveRestartEnable(VkBool32 primitiveRestartEnable) {
-        setPrimitiveRestartEnable(getVkAddress(), primitiveRestartEnable != null ? primitiveRestartEnable.getVkAddress() : VkPointer.getNullAddressNative());
+        setPrimitiveRestartEnableNative(getVkAddress(), primitiveRestartEnable != null ? primitiveRestartEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,8 +114,8 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
         getPrimitiveRestartEnable().setValue(primitiveRestartEnable);
     }
 
-    protected static native long getPrimitiveRestartEnable(long address);
-    protected static native void setPrimitiveRestartEnable(long address, long primitiveRestartEnable);
+    protected static native long getPrimitiveRestartEnableNative(long address);
+    protected static native void setPrimitiveRestartEnableNative(long address, long primitiveRestartEnable);
 
 
     public static native long sizeof();

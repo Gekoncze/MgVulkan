@@ -20,43 +20,43 @@ public class VkClearColorValue extends VkObject {
 
 
     public VkFloat getFloat32() {
-        return new VkFloat(getVkMemory(), getFloat32(getVkAddress()));
+        return new VkFloat(getVkMemory(), getFloat32Native(getVkAddress()));
     }
 
     
     public void setFloat32(VkFloat float32) {
-        setFloat32(getVkAddress(), float32 != null ? float32.getVkAddress() : VkPointer.NULL);
+        setFloat32Native(getVkAddress(), float32 != null ? float32.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getFloat32(long address);
-    protected static native void setFloat32(long address, long float32);
+    protected static native long getFloat32Native(long address);
+    protected static native void setFloat32Native(long address, long float32);
 
     public VkInt32 getInt32() {
-        return new VkInt32(getVkMemory(), getInt32(getVkAddress()));
+        return new VkInt32(getVkMemory(), getInt32Native(getVkAddress()));
     }
 
     
     public void setInt32(VkInt32 int32) {
-        setInt32(getVkAddress(), int32 != null ? int32.getVkAddress() : VkPointer.NULL);
+        setInt32Native(getVkAddress(), int32 != null ? int32.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getInt32(long address);
-    protected static native void setInt32(long address, long int32);
+    protected static native long getInt32Native(long address);
+    protected static native void setInt32Native(long address, long int32);
 
     public VkUInt32 getUint32() {
-        return new VkUInt32(getVkMemory(), getUint32(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getUint32Native(getVkAddress()));
     }
 
     
     public void setUint32(VkUInt32 uint32) {
-        setUint32(getVkAddress(), uint32 != null ? uint32.getVkAddress() : VkPointer.NULL);
+        setUint32Native(getVkAddress(), uint32 != null ? uint32.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getUint32(long address);
-    protected static native void setUint32(long address, long uint32);
+    protected static native long getUint32Native(long address);
+    protected static native void setUint32Native(long address, long uint32);
 
 
     public static native long sizeof();
@@ -100,10 +100,10 @@ public class VkClearColorValue extends VkObject {
 
         @Override
         public VkClearColorValue get(int i){
-            return new VkClearColorValue(getVkMemory(), addressAt(i));
+            return new VkClearColorValue(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

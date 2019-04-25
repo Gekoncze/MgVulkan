@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_sizeof(JNIEnv* env, j
     return sizeof(VkRenderPassMultiviewCreateInfoKHX);
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getSType(JNIEnv* env,
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setSType(JNIEnv* env, 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPNext(JNIEnv* env,
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPNext(JNIEnv* env, 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getSubpassCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getSubpassCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getSubpassCount(JNIEn
     return jniPointerToLong(&o->subpassCount);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setSubpassCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setSubpassCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setSubpassCount(JNIEnv
     memcpy(&o->subpassCount, valuePointer, sizeof(o->subpassCount));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPViewMasks(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPViewMasksNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPViewMasks(JNIEnv*
     return jniPointerToLong(o->pViewMasks);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPViewMasks(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPViewMasksNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPViewMasks(JNIEnv* 
     memcpy(&o->pViewMasks, &valuePointer, sizeof(o->pViewMasks));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getDependencyCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getDependencyCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getDependencyCount(JN
     return jniPointerToLong(&o->dependencyCount);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setDependencyCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setDependencyCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setDependencyCount(JNI
     memcpy(&o->dependencyCount, valuePointer, sizeof(o->dependencyCount));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPViewOffsets(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPViewOffsetsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPViewOffsets(JNIEn
     return jniPointerToLong(o->pViewOffsets);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPViewOffsets(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPViewOffsetsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPViewOffsets(JNIEnv
     memcpy(&o->pViewOffsets, &valuePointer, sizeof(o->pViewOffsets));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getCorrelationMaskCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getCorrelationMaskCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getCorrelationMaskCou
     return jniPointerToLong(&o->correlationMaskCount);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setCorrelationMaskCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setCorrelationMaskCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setCorrelationMaskCoun
     memcpy(&o->correlationMaskCount, valuePointer, sizeof(o->correlationMaskCount));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPCorrelationMasks(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPCorrelationMasksNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_getPCorrelationMasks(
     return jniPointerToLong(o->pCorrelationMasks);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPCorrelationMasks(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassMultiviewCreateInfoKHX_setPCorrelationMasksNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

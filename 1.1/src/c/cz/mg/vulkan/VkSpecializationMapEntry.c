@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSpecializationMapEntry);
 }
 
-jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_getConstantID(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_getConstantIDNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_getConstantID(JNIEnv* env, jcla
     return jniPointerToLong(&o->constantID);
 }
 
-void Java_cz_mg_vulkan_VkSpecializationMapEntry_setConstantID(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSpecializationMapEntry_setConstantIDNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSpecializationMapEntry_setConstantID(JNIEnv* env, jclas
     memcpy(&o->constantID, valuePointer, sizeof(o->constantID));
 }
 
-jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_getOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_getOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_getOffset(JNIEnv* env, jclass j
     return jniPointerToLong(&o->offset);
 }
 
-void Java_cz_mg_vulkan_VkSpecializationMapEntry_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSpecializationMapEntry_setOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSpecializationMapEntry_setOffset(JNIEnv* env, jclass jc
     memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
 
-jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_getSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_getSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_getSize(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->size);
 }
 
-void Java_cz_mg_vulkan_VkSpecializationMapEntry_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSpecializationMapEntry_setSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

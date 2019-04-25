@@ -21,12 +21,12 @@ public class VkMemoryAllocateFlagsInfoKHX extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkMemoryAllocateFlagsInfoKHX extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkMemoryAllocateFlagsKHX getFlags() {
-        return new VkMemoryAllocateFlagsKHX(getVkMemory(), getFlags(getVkAddress()));
+        return new VkMemoryAllocateFlagsKHX(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkMemoryAllocateFlagsKHX flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkMemoryAllocateFlagsInfoKHX extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkUInt32 getDeviceMask() {
-        return new VkUInt32(getVkMemory(), getDeviceMask(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDeviceMaskNative(getVkAddress()));
     }
 
     
     public void setDeviceMask(VkUInt32 deviceMask) {
-        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setDeviceMaskNative(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,8 +93,8 @@ public class VkMemoryAllocateFlagsInfoKHX extends VkObject {
         getDeviceMask().setValue(deviceMask);
     }
 
-    protected static native long getDeviceMask(long address);
-    protected static native void setDeviceMask(long address, long deviceMask);
+    protected static native long getDeviceMaskNative(long address);
+    protected static native void setDeviceMaskNative(long address, long deviceMask);
 
 
     public static native long sizeof();

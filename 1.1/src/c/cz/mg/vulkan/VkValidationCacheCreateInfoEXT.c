@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_sizeof(JNIEnv* env, jclas
     return sizeof(VkValidationCacheCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getSType(JNIEnv* env, jcl
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setSType(JNIEnv* env, jcla
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getPNext(JNIEnv* env, jcl
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setPNext(JNIEnv* env, jcla
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getFlags(JNIEnv* env, jcl
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setFlags(JNIEnv* env, jcla
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getInitialDataSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getInitialDataSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getInitialDataSize(JNIEnv
     return jniPointerToLong(&o->initialDataSize);
 }
 
-void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setInitialDataSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setInitialDataSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setInitialDataSize(JNIEnv*
     memcpy(&o->initialDataSize, valuePointer, sizeof(o->initialDataSize));
 }
 
-jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getPInitialData(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getPInitialDataNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getPInitialData(JNIEnv* e
     return jniPointerToLong(o->pInitialData);
 }
 
-void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setPInitialData(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setPInitialDataNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

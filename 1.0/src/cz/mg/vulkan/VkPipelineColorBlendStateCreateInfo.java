@@ -21,12 +21,12 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineColorBlendStateCreateFlags getFlags() {
-        return new VkPipelineColorBlendStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineColorBlendStateCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineColorBlendStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkBool32 getLogicOpEnable() {
-        return new VkBool32(getVkMemory(), getLogicOpEnable(getVkAddress()));
+        return new VkBool32(getVkMemory(), getLogicOpEnableNative(getVkAddress()));
     }
 
     
     public void setLogicOpEnable(VkBool32 logicOpEnable) {
-        setLogicOpEnable(getVkAddress(), logicOpEnable != null ? logicOpEnable.getVkAddress() : VkPointer.getNullAddressNative());
+        setLogicOpEnableNative(getVkAddress(), logicOpEnable != null ? logicOpEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         getLogicOpEnable().setValue(logicOpEnable);
     }
 
-    protected static native long getLogicOpEnable(long address);
-    protected static native void setLogicOpEnable(long address, long logicOpEnable);
+    protected static native long getLogicOpEnableNative(long address);
+    protected static native void setLogicOpEnableNative(long address, long logicOpEnable);
 
     public VkLogicOp getLogicOp() {
-        return new VkLogicOp(getVkMemory(), getLogicOp(getVkAddress()));
+        return new VkLogicOp(getVkMemory(), getLogicOpNative(getVkAddress()));
     }
 
     
     public void setLogicOp(VkLogicOp logicOp) {
-        setLogicOp(getVkAddress(), logicOp != null ? logicOp.getVkAddress() : VkPointer.getNullAddressNative());
+        setLogicOpNative(getVkAddress(), logicOp != null ? logicOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,16 +114,16 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         getLogicOp().setValue(logicOp);
     }
 
-    protected static native long getLogicOp(long address);
-    protected static native void setLogicOp(long address, long logicOp);
+    protected static native long getLogicOpNative(long address);
+    protected static native void setLogicOpNative(long address, long logicOp);
 
     public VkUInt32 getAttachmentCount() {
-        return new VkUInt32(getVkMemory(), getAttachmentCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getAttachmentCountNative(getVkAddress()));
     }
 
     
     public void setAttachmentCount(VkUInt32 attachmentCount) {
-        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setAttachmentCountNative(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -135,34 +135,34 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         getAttachmentCount().setValue(attachmentCount);
     }
 
-    protected static native long getAttachmentCount(long address);
-    protected static native void setAttachmentCount(long address, long attachmentCount);
+    protected static native long getAttachmentCountNative(long address);
+    protected static native void setAttachmentCountNative(long address, long attachmentCount);
 
     public VkPipelineColorBlendAttachmentState getPAttachments() {
-        return new VkPipelineColorBlendAttachmentState(getVkMemory(), getPAttachments(getVkAddress()));
+        return new VkPipelineColorBlendAttachmentState(getVkMemory(), getPAttachmentsNative(getVkAddress()));
     }
 
     private VkObject pAttachments = null;
     public void setPAttachments(VkPipelineColorBlendAttachmentState pAttachments) {
-        setPAttachments(getVkAddress(), pAttachments != null ? pAttachments.getVkAddress() : VkPointer.NULL);
+        setPAttachmentsNative(getVkAddress(), pAttachments != null ? pAttachments.getVkAddress() : VkPointer.NULL);
         this.pAttachments = pAttachments;
     }
 
-    protected static native long getPAttachments(long address);
-    protected static native void setPAttachments(long address, long pAttachments);
+    protected static native long getPAttachmentsNative(long address);
+    protected static native void setPAttachmentsNative(long address, long pAttachments);
 
     public VkFloat getBlendConstants() {
-        return new VkFloat(getVkMemory(), getBlendConstants(getVkAddress()));
+        return new VkFloat(getVkMemory(), getBlendConstantsNative(getVkAddress()));
     }
 
     
     public void setBlendConstants(VkFloat blendConstants) {
-        setBlendConstants(getVkAddress(), blendConstants != null ? blendConstants.getVkAddress() : VkPointer.NULL);
+        setBlendConstantsNative(getVkAddress(), blendConstants != null ? blendConstants.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getBlendConstants(long address);
-    protected static native void setBlendConstants(long address, long blendConstants);
+    protected static native long getBlendConstantsNative(long address);
+    protected static native void setBlendConstantsNative(long address, long blendConstants);
 
 
     public static native long sizeof();

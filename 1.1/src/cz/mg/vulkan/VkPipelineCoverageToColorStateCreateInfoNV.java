@@ -21,12 +21,12 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineCoverageToColorStateCreateFlagsNV getFlags() {
-        return new VkPipelineCoverageToColorStateCreateFlagsNV(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineCoverageToColorStateCreateFlagsNV(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineCoverageToColorStateCreateFlagsNV flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkBool32 getCoverageToColorEnable() {
-        return new VkBool32(getVkMemory(), getCoverageToColorEnable(getVkAddress()));
+        return new VkBool32(getVkMemory(), getCoverageToColorEnableNative(getVkAddress()));
     }
 
     
     public void setCoverageToColorEnable(VkBool32 coverageToColorEnable) {
-        setCoverageToColorEnable(getVkAddress(), coverageToColorEnable != null ? coverageToColorEnable.getVkAddress() : VkPointer.getNullAddressNative());
+        setCoverageToColorEnableNative(getVkAddress(), coverageToColorEnable != null ? coverageToColorEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         getCoverageToColorEnable().setValue(coverageToColorEnable);
     }
 
-    protected static native long getCoverageToColorEnable(long address);
-    protected static native void setCoverageToColorEnable(long address, long coverageToColorEnable);
+    protected static native long getCoverageToColorEnableNative(long address);
+    protected static native void setCoverageToColorEnableNative(long address, long coverageToColorEnable);
 
     public VkUInt32 getCoverageToColorLocation() {
-        return new VkUInt32(getVkMemory(), getCoverageToColorLocation(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getCoverageToColorLocationNative(getVkAddress()));
     }
 
     
     public void setCoverageToColorLocation(VkUInt32 coverageToColorLocation) {
-        setCoverageToColorLocation(getVkAddress(), coverageToColorLocation != null ? coverageToColorLocation.getVkAddress() : VkPointer.getNullAddressNative());
+        setCoverageToColorLocationNative(getVkAddress(), coverageToColorLocation != null ? coverageToColorLocation.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,8 +114,8 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         getCoverageToColorLocation().setValue(coverageToColorLocation);
     }
 
-    protected static native long getCoverageToColorLocation(long address);
-    protected static native void setCoverageToColorLocation(long address, long coverageToColorLocation);
+    protected static native long getCoverageToColorLocationNative(long address);
+    protected static native void setCoverageToColorLocationNative(long address, long coverageToColorLocation);
 
 
     public static native long sizeof();

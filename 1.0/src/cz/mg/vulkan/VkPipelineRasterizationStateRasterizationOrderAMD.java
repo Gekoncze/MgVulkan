@@ -20,12 +20,12 @@ public class VkPipelineRasterizationStateRasterizationOrderAMD extends VkObject 
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPipelineRasterizationStateRasterizationOrderAMD extends VkObject 
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkRasterizationOrderAMD getRasterizationOrder() {
-        return new VkRasterizationOrderAMD(getVkMemory(), getRasterizationOrder(getVkAddress()));
+        return new VkRasterizationOrderAMD(getVkMemory(), getRasterizationOrderNative(getVkAddress()));
     }
 
     
     public void setRasterizationOrder(VkRasterizationOrderAMD rasterizationOrder) {
-        setRasterizationOrder(getVkAddress(), rasterizationOrder != null ? rasterizationOrder.getVkAddress() : VkPointer.getNullAddressNative());
+        setRasterizationOrderNative(getVkAddress(), rasterizationOrder != null ? rasterizationOrder.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,8 +71,8 @@ public class VkPipelineRasterizationStateRasterizationOrderAMD extends VkObject 
         getRasterizationOrder().setValue(rasterizationOrder);
     }
 
-    protected static native long getRasterizationOrder(long address);
-    protected static native void setRasterizationOrder(long address, long rasterizationOrder);
+    protected static native long getRasterizationOrderNative(long address);
+    protected static native void setRasterizationOrderNative(long address, long rasterizationOrder);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkPipelineRasterizationStateRasterizationOrderAMD extends VkObject 
 
         @Override
         public VkPipelineRasterizationStateRasterizationOrderAMD get(int i){
-            return new VkPipelineRasterizationStateRasterizationOrderAMD(getVkMemory(), addressAt(i));
+            return new VkPipelineRasterizationStateRasterizationOrderAMD(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

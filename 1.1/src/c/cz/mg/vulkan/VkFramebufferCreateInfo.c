@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkFramebufferCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getSType(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setSType(JNIEnv* env, jclass jc, 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getPNext(JNIEnv* env, jclass jc,
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setPNext(JNIEnv* env, jclass jc, 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getFlags(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setFlags(JNIEnv* env, jclass jc, 
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getRenderPass(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getRenderPassNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getRenderPass(JNIEnv* env, jclas
     return jniPointerToLong(&o->renderPass);
 }
 
-void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setRenderPass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setRenderPassNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setRenderPass(JNIEnv* env, jclass
     memcpy(&o->renderPass, valuePointer, sizeof(o->renderPass));
 }
 
-jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getAttachmentCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getAttachmentCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getAttachmentCount(JNIEnv* env, 
     return jniPointerToLong(&o->attachmentCount);
 }
 
-void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setAttachmentCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setAttachmentCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setAttachmentCount(JNIEnv* env, j
     memcpy(&o->attachmentCount, valuePointer, sizeof(o->attachmentCount));
 }
 
-jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getPAttachments(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getPAttachmentsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getPAttachments(JNIEnv* env, jcl
     return jniPointerToLong(o->pAttachments);
 }
 
-void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setPAttachments(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setPAttachmentsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setPAttachments(JNIEnv* env, jcla
     memcpy(&o->pAttachments, &valuePointer, sizeof(o->pAttachments));
 }
 
-jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getWidth(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getWidthNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getWidth(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->width);
 }
 
-void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setWidth(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setWidthNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setWidth(JNIEnv* env, jclass jc, 
     memcpy(&o->width, valuePointer, sizeof(o->width));
 }
 
-jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getHeight(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getHeightNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getHeight(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->height);
 }
 
-void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setHeight(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setHeightNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setHeight(JNIEnv* env, jclass jc,
     memcpy(&o->height, valuePointer, sizeof(o->height));
 }
 
-jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getLayers(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getLayersNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkFramebufferCreateInfo_getLayers(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->layers);
 }
 
-void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setLayers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFramebufferCreateInfo_setLayersNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

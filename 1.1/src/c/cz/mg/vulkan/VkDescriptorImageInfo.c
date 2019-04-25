@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkDescriptorImageInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getSampler(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getSamplerNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getSampler(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->sampler);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorImageInfo_setSampler(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorImageInfo_setSamplerNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDescriptorImageInfo_setSampler(JNIEnv* env, jclass jc, 
     memcpy(&o->sampler, valuePointer, sizeof(o->sampler));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getImageView(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getImageViewNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getImageView(JNIEnv* env, jclass j
     return jniPointerToLong(&o->imageView);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorImageInfo_setImageView(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorImageInfo_setImageViewNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDescriptorImageInfo_setImageView(JNIEnv* env, jclass jc
     memcpy(&o->imageView, valuePointer, sizeof(o->imageView));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getImageLayout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getImageLayoutNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorImageInfo_getImageLayout(JNIEnv* env, jclass
     return jniPointerToLong(&o->imageLayout);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorImageInfo_setImageLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorImageInfo_setImageLayoutNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

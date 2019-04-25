@@ -21,12 +21,12 @@ public class VkDeviceGroupRenderPassBeginInfoKHX extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDeviceGroupRenderPassBeginInfoKHX extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getDeviceMask() {
-        return new VkUInt32(getVkMemory(), getDeviceMask(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDeviceMaskNative(getVkAddress()));
     }
 
     
     public void setDeviceMask(VkUInt32 deviceMask) {
-        setDeviceMask(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setDeviceMaskNative(getVkAddress(), deviceMask != null ? deviceMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkDeviceGroupRenderPassBeginInfoKHX extends VkObject {
         getDeviceMask().setValue(deviceMask);
     }
 
-    protected static native long getDeviceMask(long address);
-    protected static native void setDeviceMask(long address, long deviceMask);
+    protected static native long getDeviceMaskNative(long address);
+    protected static native void setDeviceMaskNative(long address, long deviceMask);
 
     public VkUInt32 getDeviceRenderAreaCount() {
-        return new VkUInt32(getVkMemory(), getDeviceRenderAreaCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDeviceRenderAreaCountNative(getVkAddress()));
     }
 
     
     public void setDeviceRenderAreaCount(VkUInt32 deviceRenderAreaCount) {
-        setDeviceRenderAreaCount(getVkAddress(), deviceRenderAreaCount != null ? deviceRenderAreaCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDeviceRenderAreaCountNative(getVkAddress(), deviceRenderAreaCount != null ? deviceRenderAreaCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,21 +93,21 @@ public class VkDeviceGroupRenderPassBeginInfoKHX extends VkObject {
         getDeviceRenderAreaCount().setValue(deviceRenderAreaCount);
     }
 
-    protected static native long getDeviceRenderAreaCount(long address);
-    protected static native void setDeviceRenderAreaCount(long address, long deviceRenderAreaCount);
+    protected static native long getDeviceRenderAreaCountNative(long address);
+    protected static native void setDeviceRenderAreaCountNative(long address, long deviceRenderAreaCount);
 
     public VkRect2D getPDeviceRenderAreas() {
-        return new VkRect2D(getVkMemory(), getPDeviceRenderAreas(getVkAddress()));
+        return new VkRect2D(getVkMemory(), getPDeviceRenderAreasNative(getVkAddress()));
     }
 
     private VkObject pDeviceRenderAreas = null;
     public void setPDeviceRenderAreas(VkRect2D pDeviceRenderAreas) {
-        setPDeviceRenderAreas(getVkAddress(), pDeviceRenderAreas != null ? pDeviceRenderAreas.getVkAddress() : VkPointer.NULL);
+        setPDeviceRenderAreasNative(getVkAddress(), pDeviceRenderAreas != null ? pDeviceRenderAreas.getVkAddress() : VkPointer.NULL);
         this.pDeviceRenderAreas = pDeviceRenderAreas;
     }
 
-    protected static native long getPDeviceRenderAreas(long address);
-    protected static native void setPDeviceRenderAreas(long address, long pDeviceRenderAreas);
+    protected static native long getPDeviceRenderAreasNative(long address);
+    protected static native void setPDeviceRenderAreasNative(long address, long pDeviceRenderAreas);
 
 
     public static native long sizeof();

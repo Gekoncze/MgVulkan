@@ -20,12 +20,12 @@ public class VkSubpassDependency extends VkObject {
 
 
     public VkUInt32 getSrcSubpass() {
-        return new VkUInt32(getVkMemory(), getSrcSubpass(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSrcSubpassNative(getVkAddress()));
     }
 
     
     public void setSrcSubpass(VkUInt32 srcSubpass) {
-        setSrcSubpass(getVkAddress(), srcSubpass != null ? srcSubpass.getVkAddress() : VkPointer.getNullAddressNative());
+        setSrcSubpassNative(getVkAddress(), srcSubpass != null ? srcSubpass.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkSubpassDependency extends VkObject {
         getSrcSubpass().setValue(srcSubpass);
     }
 
-    protected static native long getSrcSubpass(long address);
-    protected static native void setSrcSubpass(long address, long srcSubpass);
+    protected static native long getSrcSubpassNative(long address);
+    protected static native void setSrcSubpassNative(long address, long srcSubpass);
 
     public VkUInt32 getDstSubpass() {
-        return new VkUInt32(getVkMemory(), getDstSubpass(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDstSubpassNative(getVkAddress()));
     }
 
     
     public void setDstSubpass(VkUInt32 dstSubpass) {
-        setDstSubpass(getVkAddress(), dstSubpass != null ? dstSubpass.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstSubpassNative(getVkAddress(), dstSubpass != null ? dstSubpass.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkSubpassDependency extends VkObject {
         getDstSubpass().setValue(dstSubpass);
     }
 
-    protected static native long getDstSubpass(long address);
-    protected static native void setDstSubpass(long address, long dstSubpass);
+    protected static native long getDstSubpassNative(long address);
+    protected static native void setDstSubpassNative(long address, long dstSubpass);
 
     public VkPipelineStageFlags getSrcStageMask() {
-        return new VkPipelineStageFlags(getVkMemory(), getSrcStageMask(getVkAddress()));
+        return new VkPipelineStageFlags(getVkMemory(), getSrcStageMaskNative(getVkAddress()));
     }
 
     
     public void setSrcStageMask(VkPipelineStageFlags srcStageMask) {
-        setSrcStageMask(getVkAddress(), srcStageMask != null ? srcStageMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setSrcStageMaskNative(getVkAddress(), srcStageMask != null ? srcStageMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkSubpassDependency extends VkObject {
         getSrcStageMask().setValue(srcStageMask);
     }
 
-    protected static native long getSrcStageMask(long address);
-    protected static native void setSrcStageMask(long address, long srcStageMask);
+    protected static native long getSrcStageMaskNative(long address);
+    protected static native void setSrcStageMaskNative(long address, long srcStageMask);
 
     public VkPipelineStageFlags getDstStageMask() {
-        return new VkPipelineStageFlags(getVkMemory(), getDstStageMask(getVkAddress()));
+        return new VkPipelineStageFlags(getVkMemory(), getDstStageMaskNative(getVkAddress()));
     }
 
     
     public void setDstStageMask(VkPipelineStageFlags dstStageMask) {
-        setDstStageMask(getVkAddress(), dstStageMask != null ? dstStageMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstStageMaskNative(getVkAddress(), dstStageMask != null ? dstStageMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -100,16 +100,16 @@ public class VkSubpassDependency extends VkObject {
         getDstStageMask().setValue(dstStageMask);
     }
 
-    protected static native long getDstStageMask(long address);
-    protected static native void setDstStageMask(long address, long dstStageMask);
+    protected static native long getDstStageMaskNative(long address);
+    protected static native void setDstStageMaskNative(long address, long dstStageMask);
 
     public VkAccessFlags getSrcAccessMask() {
-        return new VkAccessFlags(getVkMemory(), getSrcAccessMask(getVkAddress()));
+        return new VkAccessFlags(getVkMemory(), getSrcAccessMaskNative(getVkAddress()));
     }
 
     
     public void setSrcAccessMask(VkAccessFlags srcAccessMask) {
-        setSrcAccessMask(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setSrcAccessMaskNative(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -121,16 +121,16 @@ public class VkSubpassDependency extends VkObject {
         getSrcAccessMask().setValue(srcAccessMask);
     }
 
-    protected static native long getSrcAccessMask(long address);
-    protected static native void setSrcAccessMask(long address, long srcAccessMask);
+    protected static native long getSrcAccessMaskNative(long address);
+    protected static native void setSrcAccessMaskNative(long address, long srcAccessMask);
 
     public VkAccessFlags getDstAccessMask() {
-        return new VkAccessFlags(getVkMemory(), getDstAccessMask(getVkAddress()));
+        return new VkAccessFlags(getVkMemory(), getDstAccessMaskNative(getVkAddress()));
     }
 
     
     public void setDstAccessMask(VkAccessFlags dstAccessMask) {
-        setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstAccessMaskNative(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -142,16 +142,16 @@ public class VkSubpassDependency extends VkObject {
         getDstAccessMask().setValue(dstAccessMask);
     }
 
-    protected static native long getDstAccessMask(long address);
-    protected static native void setDstAccessMask(long address, long dstAccessMask);
+    protected static native long getDstAccessMaskNative(long address);
+    protected static native void setDstAccessMaskNative(long address, long dstAccessMask);
 
     public VkDependencyFlags getDependencyFlags() {
-        return new VkDependencyFlags(getVkMemory(), getDependencyFlags(getVkAddress()));
+        return new VkDependencyFlags(getVkMemory(), getDependencyFlagsNative(getVkAddress()));
     }
 
     
     public void setDependencyFlags(VkDependencyFlags dependencyFlags) {
-        setDependencyFlags(getVkAddress(), dependencyFlags != null ? dependencyFlags.getVkAddress() : VkPointer.getNullAddressNative());
+        setDependencyFlagsNative(getVkAddress(), dependencyFlags != null ? dependencyFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -163,8 +163,8 @@ public class VkSubpassDependency extends VkObject {
         getDependencyFlags().setValue(dependencyFlags);
     }
 
-    protected static native long getDependencyFlags(long address);
-    protected static native void setDependencyFlags(long address, long dependencyFlags);
+    protected static native long getDependencyFlagsNative(long address);
+    protected static native void setDependencyFlagsNative(long address, long dependencyFlags);
 
 
     public static native long sizeof();
@@ -208,10 +208,10 @@ public class VkSubpassDependency extends VkObject {
 
         @Override
         public VkSubpassDependency get(int i){
-            return new VkSubpassDependency(getVkMemory(), addressAt(i));
+            return new VkSubpassDependency(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

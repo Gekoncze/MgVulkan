@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPresentRegionKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkPresentRegionKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkPresentRegionKHR_getRectangleCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPresentRegionKHR_getRectangleCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPresentRegionKHR_getRectangleCount(JNIEnv* env, jclass
     return jniPointerToLong(&o->rectangleCount);
 }
 
-void Java_cz_mg_vulkan_VkPresentRegionKHR_setRectangleCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPresentRegionKHR_setRectangleCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPresentRegionKHR_setRectangleCount(JNIEnv* env, jclass 
     memcpy(&o->rectangleCount, valuePointer, sizeof(o->rectangleCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPresentRegionKHR_getPRectangles(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPresentRegionKHR_getPRectanglesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPresentRegionKHR_getPRectangles(JNIEnv* env, jclass jc
     return jniPointerToLong(o->pRectangles);
 }
 
-void Java_cz_mg_vulkan_VkPresentRegionKHR_setPRectangles(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPresentRegionKHR_setPRectanglesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

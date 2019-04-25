@@ -20,12 +20,12 @@ public class VkPhysicalDevicePushDescriptorPropertiesKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPhysicalDevicePushDescriptorPropertiesKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getMaxPushDescriptors() {
-        return new VkUInt32(getVkMemory(), getMaxPushDescriptors(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPushDescriptorsNative(getVkAddress()));
     }
 
     
     public void setMaxPushDescriptors(VkUInt32 maxPushDescriptors) {
-        setMaxPushDescriptors(getVkAddress(), maxPushDescriptors != null ? maxPushDescriptors.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPushDescriptorsNative(getVkAddress(), maxPushDescriptors != null ? maxPushDescriptors.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,8 +71,8 @@ public class VkPhysicalDevicePushDescriptorPropertiesKHR extends VkObject {
         getMaxPushDescriptors().setValue(maxPushDescriptors);
     }
 
-    protected static native long getMaxPushDescriptors(long address);
-    protected static native void setMaxPushDescriptors(long address, long maxPushDescriptors);
+    protected static native long getMaxPushDescriptorsNative(long address);
+    protected static native void setMaxPushDescriptorsNative(long address, long maxPushDescriptors);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkPhysicalDevicePushDescriptorPropertiesKHR extends VkObject {
 
         @Override
         public VkPhysicalDevicePushDescriptorPropertiesKHR get(int i){
-            return new VkPhysicalDevicePushDescriptorPropertiesKHR(getVkMemory(), addressAt(i));
+            return new VkPhysicalDevicePushDescriptorPropertiesKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

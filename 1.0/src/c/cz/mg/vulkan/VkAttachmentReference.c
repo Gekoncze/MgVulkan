@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentReference_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkAttachmentReference);
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentReference_getAttachment(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentReference_getAttachmentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentReference_getAttachment(JNIEnv* env, jclass 
     return jniPointerToLong(&o->attachment);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentReference_setAttachment(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentReference_setAttachmentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkAttachmentReference_setAttachment(JNIEnv* env, jclass j
     memcpy(&o->attachment, valuePointer, sizeof(o->attachment));
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentReference_getLayout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentReference_getLayoutNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentReference_getLayout(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->layout);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentReference_setLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentReference_setLayoutNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

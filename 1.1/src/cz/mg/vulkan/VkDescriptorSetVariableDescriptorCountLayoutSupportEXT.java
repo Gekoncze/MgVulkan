@@ -20,12 +20,12 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getMaxVariableDescriptorCount() {
-        return new VkUInt32(getVkMemory(), getMaxVariableDescriptorCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxVariableDescriptorCountNative(getVkAddress()));
     }
 
     
     public void setMaxVariableDescriptorCount(VkUInt32 maxVariableDescriptorCount) {
-        setMaxVariableDescriptorCount(getVkAddress(), maxVariableDescriptorCount != null ? maxVariableDescriptorCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxVariableDescriptorCountNative(getVkAddress(), maxVariableDescriptorCount != null ? maxVariableDescriptorCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,8 +71,8 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
         getMaxVariableDescriptorCount().setValue(maxVariableDescriptorCount);
     }
 
-    protected static native long getMaxVariableDescriptorCount(long address);
-    protected static native void setMaxVariableDescriptorCount(long address, long maxVariableDescriptorCount);
+    protected static native long getMaxVariableDescriptorCountNative(long address);
+    protected static native void setMaxVariableDescriptorCountNative(long address, long maxVariableDescriptorCount);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
 
         @Override
         public VkDescriptorSetVariableDescriptorCountLayoutSupportEXT get(int i){
-            return new VkDescriptorSetVariableDescriptorCountLayoutSupportEXT(getVkMemory(), addressAt(i));
+            return new VkDescriptorSetVariableDescriptorCountLayoutSupportEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

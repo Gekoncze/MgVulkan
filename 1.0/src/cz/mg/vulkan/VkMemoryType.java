@@ -20,12 +20,12 @@ public class VkMemoryType extends VkObject {
 
 
     public VkMemoryPropertyFlags getPropertyFlags() {
-        return new VkMemoryPropertyFlags(getVkMemory(), getPropertyFlags(getVkAddress()));
+        return new VkMemoryPropertyFlags(getVkMemory(), getPropertyFlagsNative(getVkAddress()));
     }
 
     
     public void setPropertyFlags(VkMemoryPropertyFlags propertyFlags) {
-        setPropertyFlags(getVkAddress(), propertyFlags != null ? propertyFlags.getVkAddress() : VkPointer.getNullAddressNative());
+        setPropertyFlagsNative(getVkAddress(), propertyFlags != null ? propertyFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkMemoryType extends VkObject {
         getPropertyFlags().setValue(propertyFlags);
     }
 
-    protected static native long getPropertyFlags(long address);
-    protected static native void setPropertyFlags(long address, long propertyFlags);
+    protected static native long getPropertyFlagsNative(long address);
+    protected static native void setPropertyFlagsNative(long address, long propertyFlags);
 
     public VkUInt32 getHeapIndex() {
-        return new VkUInt32(getVkMemory(), getHeapIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getHeapIndexNative(getVkAddress()));
     }
 
     
     public void setHeapIndex(VkUInt32 heapIndex) {
-        setHeapIndex(getVkAddress(), heapIndex != null ? heapIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setHeapIndexNative(getVkAddress(), heapIndex != null ? heapIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,8 +58,8 @@ public class VkMemoryType extends VkObject {
         getHeapIndex().setValue(heapIndex);
     }
 
-    protected static native long getHeapIndex(long address);
-    protected static native void setHeapIndex(long address, long heapIndex);
+    protected static native long getHeapIndexNative(long address);
+    protected static native void setHeapIndexNative(long address, long heapIndex);
 
 
     public static native long sizeof();
@@ -103,10 +103,10 @@ public class VkMemoryType extends VkObject {
 
         @Override
         public VkMemoryType get(int i){
-            return new VkMemoryType(getVkMemory(), addressAt(i));
+            return new VkMemoryType(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

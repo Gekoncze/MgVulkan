@@ -20,12 +20,12 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
 
 
     public VkObjectEntryTypeNVX getType() {
-        return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));
+        return new VkObjectEntryTypeNVX(getVkMemory(), getTypeNative(getVkAddress()));
     }
 
     
     public void setType(VkObjectEntryTypeNVX type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddressNative());
+        setTypeNative(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
         getType().setValue(type);
     }
 
-    protected static native long getType(long address);
-    protected static native void setType(long address, long type);
+    protected static native long getTypeNative(long address);
+    protected static native void setTypeNative(long address, long type);
 
     public VkObjectEntryUsageFlagsNVX getFlags() {
-        return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlags(getVkAddress()));
+        return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,21 +58,21 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkPipeline getPipeline() {
-        return new VkPipeline(getVkMemory(), getPipeline(getVkAddress()));
+        return new VkPipeline(getVkMemory(), getPipelineNative(getVkAddress()));
     }
 
     
     public void setPipeline(VkPipeline pipeline) {
-        setPipeline(getVkAddress(), pipeline != null ? pipeline.getVkAddress() : VkPointer.getNullAddressNative());
+        setPipelineNative(getVkAddress(), pipeline != null ? pipeline.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getPipeline(long address);
-    protected static native void setPipeline(long address, long pipeline);
+    protected static native long getPipelineNative(long address);
+    protected static native void setPipelineNative(long address, long pipeline);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
 
         @Override
         public VkObjectTablePipelineEntryNVX get(int i){
-            return new VkObjectTablePipelineEntryNVX(getVkMemory(), addressAt(i));
+            return new VkObjectTablePipelineEntryNVX(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

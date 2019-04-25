@@ -21,12 +21,12 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getDeviceIndexCount() {
-        return new VkUInt32(getVkMemory(), getDeviceIndexCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDeviceIndexCountNative(getVkAddress()));
     }
 
     
     public void setDeviceIndexCount(VkUInt32 deviceIndexCount) {
-        setDeviceIndexCount(getVkAddress(), deviceIndexCount != null ? deviceIndexCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDeviceIndexCountNative(getVkAddress(), deviceIndexCount != null ? deviceIndexCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,29 +72,29 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         getDeviceIndexCount().setValue(deviceIndexCount);
     }
 
-    protected static native long getDeviceIndexCount(long address);
-    protected static native void setDeviceIndexCount(long address, long deviceIndexCount);
+    protected static native long getDeviceIndexCountNative(long address);
+    protected static native void setDeviceIndexCountNative(long address, long deviceIndexCount);
 
     public VkUInt32 getPDeviceIndices() {
-        return new VkUInt32(getVkMemory(), getPDeviceIndices(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPDeviceIndicesNative(getVkAddress()));
     }
 
     private VkObject pDeviceIndices = null;
     public void setPDeviceIndices(VkUInt32 pDeviceIndices) {
-        setPDeviceIndices(getVkAddress(), pDeviceIndices != null ? pDeviceIndices.getVkAddress() : VkPointer.NULL);
+        setPDeviceIndicesNative(getVkAddress(), pDeviceIndices != null ? pDeviceIndices.getVkAddress() : VkPointer.NULL);
         this.pDeviceIndices = pDeviceIndices;
     }
 
-    protected static native long getPDeviceIndices(long address);
-    protected static native void setPDeviceIndices(long address, long pDeviceIndices);
+    protected static native long getPDeviceIndicesNative(long address);
+    protected static native void setPDeviceIndicesNative(long address, long pDeviceIndices);
 
     public VkUInt32 getSplitInstanceBindRegionCount() {
-        return new VkUInt32(getVkMemory(), getSplitInstanceBindRegionCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSplitInstanceBindRegionCountNative(getVkAddress()));
     }
 
     
     public void setSplitInstanceBindRegionCount(VkUInt32 splitInstanceBindRegionCount) {
-        setSplitInstanceBindRegionCount(getVkAddress(), splitInstanceBindRegionCount != null ? splitInstanceBindRegionCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setSplitInstanceBindRegionCountNative(getVkAddress(), splitInstanceBindRegionCount != null ? splitInstanceBindRegionCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,21 +106,21 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         getSplitInstanceBindRegionCount().setValue(splitInstanceBindRegionCount);
     }
 
-    protected static native long getSplitInstanceBindRegionCount(long address);
-    protected static native void setSplitInstanceBindRegionCount(long address, long splitInstanceBindRegionCount);
+    protected static native long getSplitInstanceBindRegionCountNative(long address);
+    protected static native void setSplitInstanceBindRegionCountNative(long address, long splitInstanceBindRegionCount);
 
     public VkRect2D getPSplitInstanceBindRegions() {
-        return new VkRect2D(getVkMemory(), getPSplitInstanceBindRegions(getVkAddress()));
+        return new VkRect2D(getVkMemory(), getPSplitInstanceBindRegionsNative(getVkAddress()));
     }
 
     private VkObject pSplitInstanceBindRegions = null;
     public void setPSplitInstanceBindRegions(VkRect2D pSplitInstanceBindRegions) {
-        setPSplitInstanceBindRegions(getVkAddress(), pSplitInstanceBindRegions != null ? pSplitInstanceBindRegions.getVkAddress() : VkPointer.NULL);
+        setPSplitInstanceBindRegionsNative(getVkAddress(), pSplitInstanceBindRegions != null ? pSplitInstanceBindRegions.getVkAddress() : VkPointer.NULL);
         this.pSplitInstanceBindRegions = pSplitInstanceBindRegions;
     }
 
-    protected static native long getPSplitInstanceBindRegions(long address);
-    protected static native void setPSplitInstanceBindRegions(long address, long pSplitInstanceBindRegions);
+    protected static native long getPSplitInstanceBindRegionsNative(long address);
+    protected static native void setPSplitInstanceBindRegionsNative(long address, long pSplitInstanceBindRegions);
 
 
     public static native long sizeof();

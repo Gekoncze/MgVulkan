@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSurfaceCapabilitiesKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMinImageCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMinImageCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMinImageCount(JNIEnv* env, j
     return jniPointerToLong(&o->minImageCount);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMinImageCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMinImageCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMinImageCount(JNIEnv* env, jc
     memcpy(&o->minImageCount, valuePointer, sizeof(o->minImageCount));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMaxImageCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMaxImageCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMaxImageCount(JNIEnv* env, j
     return jniPointerToLong(&o->maxImageCount);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMaxImageCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMaxImageCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMaxImageCount(JNIEnv* env, jc
     memcpy(&o->maxImageCount, valuePointer, sizeof(o->maxImageCount));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getCurrentExtent(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getCurrentExtentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getCurrentExtent(JNIEnv* env, j
     return jniPointerToLong(&o->currentExtent);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setCurrentExtent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setCurrentExtentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setCurrentExtent(JNIEnv* env, jc
     memcpy(&o->currentExtent, valuePointer, sizeof(o->currentExtent));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMinImageExtent(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMinImageExtentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMinImageExtent(JNIEnv* env, 
     return jniPointerToLong(&o->minImageExtent);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMinImageExtent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMinImageExtentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMinImageExtent(JNIEnv* env, j
     memcpy(&o->minImageExtent, valuePointer, sizeof(o->minImageExtent));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMaxImageExtent(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMaxImageExtentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMaxImageExtent(JNIEnv* env, 
     return jniPointerToLong(&o->maxImageExtent);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMaxImageExtent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMaxImageExtentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMaxImageExtent(JNIEnv* env, j
     memcpy(&o->maxImageExtent, valuePointer, sizeof(o->maxImageExtent));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMaxImageArrayLayers(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMaxImageArrayLayersNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getMaxImageArrayLayers(JNIEnv* 
     return jniPointerToLong(&o->maxImageArrayLayers);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMaxImageArrayLayers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMaxImageArrayLayersNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setMaxImageArrayLayers(JNIEnv* e
     memcpy(&o->maxImageArrayLayers, valuePointer, sizeof(o->maxImageArrayLayers));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getSupportedTransforms(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getSupportedTransformsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getSupportedTransforms(JNIEnv* 
     return jniPointerToLong(&o->supportedTransforms);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setSupportedTransforms(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setSupportedTransformsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setSupportedTransforms(JNIEnv* e
     memcpy(&o->supportedTransforms, valuePointer, sizeof(o->supportedTransforms));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getCurrentTransform(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getCurrentTransformNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getCurrentTransform(JNIEnv* env
     return jniPointerToLong(&o->currentTransform);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setCurrentTransform(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setCurrentTransformNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setCurrentTransform(JNIEnv* env,
     memcpy(&o->currentTransform, valuePointer, sizeof(o->currentTransform));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getSupportedCompositeAlpha(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getSupportedCompositeAlphaNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getSupportedCompositeAlpha(JNIE
     return jniPointerToLong(&o->supportedCompositeAlpha);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setSupportedCompositeAlpha(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setSupportedCompositeAlphaNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setSupportedCompositeAlpha(JNIEn
     memcpy(&o->supportedCompositeAlpha, valuePointer, sizeof(o->supportedCompositeAlpha));
 }
 
-jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getSupportedUsageFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getSupportedUsageFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_getSupportedUsageFlags(JNIEnv* 
     return jniPointerToLong(&o->supportedUsageFlags);
 }
 
-void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setSupportedUsageFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSurfaceCapabilitiesKHR_setSupportedUsageFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

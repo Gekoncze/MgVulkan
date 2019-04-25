@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_sizeof(JNIEnv* env, jclass
     return sizeof(VkExternalBufferPropertiesKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_getSType(JNIEnv* env, jcla
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_setSType(JNIEnv* env, jclas
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_getPNext(JNIEnv* env, jcla
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_setPNext(JNIEnv* env, jclas
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_getExternalMemoryProperties(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_getExternalMemoryPropertiesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_getExternalMemoryPropertie
     return jniPointerToLong(&o->externalMemoryProperties);
 }
 
-void Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_setExternalMemoryProperties(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalBufferPropertiesKHR_setExternalMemoryPropertiesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

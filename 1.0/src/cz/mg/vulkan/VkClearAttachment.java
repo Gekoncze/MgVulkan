@@ -20,12 +20,12 @@ public class VkClearAttachment extends VkObject {
 
 
     public VkImageAspectFlags getAspectMask() {
-        return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));
+        return new VkImageAspectFlags(getVkMemory(), getAspectMaskNative(getVkAddress()));
     }
 
     
     public void setAspectMask(VkImageAspectFlags aspectMask) {
-        setAspectMask(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setAspectMaskNative(getVkAddress(), aspectMask != null ? aspectMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkClearAttachment extends VkObject {
         getAspectMask().setValue(aspectMask);
     }
 
-    protected static native long getAspectMask(long address);
-    protected static native void setAspectMask(long address, long aspectMask);
+    protected static native long getAspectMaskNative(long address);
+    protected static native void setAspectMaskNative(long address, long aspectMask);
 
     public VkUInt32 getColorAttachment() {
-        return new VkUInt32(getVkMemory(), getColorAttachment(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getColorAttachmentNative(getVkAddress()));
     }
 
     
     public void setColorAttachment(VkUInt32 colorAttachment) {
-        setColorAttachment(getVkAddress(), colorAttachment != null ? colorAttachment.getVkAddress() : VkPointer.getNullAddressNative());
+        setColorAttachmentNative(getVkAddress(), colorAttachment != null ? colorAttachment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,21 +58,21 @@ public class VkClearAttachment extends VkObject {
         getColorAttachment().setValue(colorAttachment);
     }
 
-    protected static native long getColorAttachment(long address);
-    protected static native void setColorAttachment(long address, long colorAttachment);
+    protected static native long getColorAttachmentNative(long address);
+    protected static native void setColorAttachmentNative(long address, long colorAttachment);
 
     public VkClearValue getClearValue() {
-        return new VkClearValue(getVkMemory(), getClearValue(getVkAddress()));
+        return new VkClearValue(getVkMemory(), getClearValueNative(getVkAddress()));
     }
 
     
     public void setClearValue(VkClearValue clearValue) {
-        setClearValue(getVkAddress(), clearValue != null ? clearValue.getVkAddress() : VkPointer.getNullAddressNative());
+        setClearValueNative(getVkAddress(), clearValue != null ? clearValue.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getClearValue(long address);
-    protected static native void setClearValue(long address, long clearValue);
+    protected static native long getClearValueNative(long address);
+    protected static native void setClearValueNative(long address, long clearValue);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkClearAttachment extends VkObject {
 
         @Override
         public VkClearAttachment get(int i){
-            return new VkClearAttachment(getVkMemory(), addressAt(i));
+            return new VkClearAttachment(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

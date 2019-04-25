@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_s
     return sizeof(VkDescriptorSetVariableDescriptorCountLayoutSupportEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_g
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_se
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_g
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_se
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_getMaxVariableDescriptorCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_getMaxVariableDescriptorCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_g
     return jniPointerToLong(&o->maxVariableDescriptorCount);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_setMaxVariableDescriptorCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountLayoutSupportEXT_setMaxVariableDescriptorCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

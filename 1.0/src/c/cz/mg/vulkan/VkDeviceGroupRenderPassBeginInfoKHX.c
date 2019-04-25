@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_sizeof(JNIEnv* env, 
     return sizeof(VkDeviceGroupRenderPassBeginInfoKHX);
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getSType(JNIEnv* env
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setSType(JNIEnv* env,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getPNext(JNIEnv* env
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setPNext(JNIEnv* env,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getDeviceMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getDeviceMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getDeviceMask(JNIEnv
     return jniPointerToLong(&o->deviceMask);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setDeviceMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setDeviceMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setDeviceMask(JNIEnv*
     memcpy(&o->deviceMask, valuePointer, sizeof(o->deviceMask));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getDeviceRenderAreaCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getDeviceRenderAreaCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getDeviceRenderAreaC
     return jniPointerToLong(&o->deviceRenderAreaCount);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setDeviceRenderAreaCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setDeviceRenderAreaCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setDeviceRenderAreaCo
     memcpy(&o->deviceRenderAreaCount, valuePointer, sizeof(o->deviceRenderAreaCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getPDeviceRenderAreas(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getPDeviceRenderAreasNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_getPDeviceRenderArea
     return jniPointerToLong(o->pDeviceRenderAreas);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setPDeviceRenderAreas(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupRenderPassBeginInfoKHX_setPDeviceRenderAreasNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

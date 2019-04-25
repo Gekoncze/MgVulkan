@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_sizeof(
     return sizeof(VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getSTyp
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setSType
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getPNex
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setPNext
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getFilterMinmaxSingleComponentFormats(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getFilterMinmaxSingleComponentFormatsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getFilt
     return jniPointerToLong(&o->filterMinmaxSingleComponentFormats);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setFilterMinmaxSingleComponentFormats(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setFilterMinmaxSingleComponentFormatsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setFilte
     memcpy(&o->filterMinmaxSingleComponentFormats, valuePointer, sizeof(o->filterMinmaxSingleComponentFormats));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getFilterMinmaxImageComponentMapping(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getFilterMinmaxImageComponentMappingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_getFilt
     return jniPointerToLong(&o->filterMinmaxImageComponentMapping);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setFilterMinmaxImageComponentMapping(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT_setFilterMinmaxImageComponentMappingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

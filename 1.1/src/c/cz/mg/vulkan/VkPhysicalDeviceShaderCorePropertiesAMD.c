@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_sizeof(JNIEnv* e
     return sizeof(VkPhysicalDeviceShaderCorePropertiesAMD);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSType(JNIEnv*
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSType(JNIEnv* 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getPNext(JNIEnv*
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setPNext(JNIEnv* 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getShaderEngineCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getShaderEngineCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getShaderEngineC
     return jniPointerToLong(&o->shaderEngineCount);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setShaderEngineCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setShaderEngineCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setShaderEngineCo
     memcpy(&o->shaderEngineCount, valuePointer, sizeof(o->shaderEngineCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getShaderArraysPerEngineCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getShaderArraysPerEngineCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getShaderArraysP
     return jniPointerToLong(&o->shaderArraysPerEngineCount);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setShaderArraysPerEngineCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setShaderArraysPerEngineCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setShaderArraysPe
     memcpy(&o->shaderArraysPerEngineCount, valuePointer, sizeof(o->shaderArraysPerEngineCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getComputeUnitsPerShaderArray(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getComputeUnitsPerShaderArrayNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getComputeUnitsP
     return jniPointerToLong(&o->computeUnitsPerShaderArray);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setComputeUnitsPerShaderArray(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setComputeUnitsPerShaderArrayNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setComputeUnitsPe
     memcpy(&o->computeUnitsPerShaderArray, valuePointer, sizeof(o->computeUnitsPerShaderArray));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSimdPerComputeUnit(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSimdPerComputeUnitNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSimdPerComput
     return jniPointerToLong(&o->simdPerComputeUnit);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSimdPerComputeUnit(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSimdPerComputeUnitNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSimdPerCompute
     memcpy(&o->simdPerComputeUnit, valuePointer, sizeof(o->simdPerComputeUnit));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getWavefrontsPerSimd(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getWavefrontsPerSimdNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getWavefrontsPer
     return jniPointerToLong(&o->wavefrontsPerSimd);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setWavefrontsPerSimd(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setWavefrontsPerSimdNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setWavefrontsPerS
     memcpy(&o->wavefrontsPerSimd, valuePointer, sizeof(o->wavefrontsPerSimd));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getWavefrontSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getWavefrontSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getWavefrontSize
     return jniPointerToLong(&o->wavefrontSize);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setWavefrontSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setWavefrontSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setWavefrontSize(
     memcpy(&o->wavefrontSize, valuePointer, sizeof(o->wavefrontSize));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSgprsPerSimd(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSgprsPerSimdNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSgprsPerSimd(
     return jniPointerToLong(&o->sgprsPerSimd);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSgprsPerSimd(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSgprsPerSimdNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -169,7 +169,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSgprsPerSimd(J
     memcpy(&o->sgprsPerSimd, valuePointer, sizeof(o->sgprsPerSimd));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMinSgprAllocation(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMinSgprAllocationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -177,7 +177,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMinSgprAlloca
     return jniPointerToLong(&o->minSgprAllocation);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMinSgprAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMinSgprAllocationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -186,7 +186,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMinSgprAllocat
     memcpy(&o->minSgprAllocation, valuePointer, sizeof(o->minSgprAllocation));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMaxSgprAllocation(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMaxSgprAllocationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -194,7 +194,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMaxSgprAlloca
     return jniPointerToLong(&o->maxSgprAllocation);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMaxSgprAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMaxSgprAllocationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -203,7 +203,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMaxSgprAllocat
     memcpy(&o->maxSgprAllocation, valuePointer, sizeof(o->maxSgprAllocation));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSgprAllocationGranularity(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSgprAllocationGranularityNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -211,7 +211,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getSgprAllocatio
     return jniPointerToLong(&o->sgprAllocationGranularity);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSgprAllocationGranularity(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSgprAllocationGranularityNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -220,7 +220,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setSgprAllocation
     memcpy(&o->sgprAllocationGranularity, valuePointer, sizeof(o->sgprAllocationGranularity));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getVgprsPerSimd(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getVgprsPerSimdNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -228,7 +228,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getVgprsPerSimd(
     return jniPointerToLong(&o->vgprsPerSimd);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setVgprsPerSimd(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setVgprsPerSimdNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -237,7 +237,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setVgprsPerSimd(J
     memcpy(&o->vgprsPerSimd, valuePointer, sizeof(o->vgprsPerSimd));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMinVgprAllocation(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMinVgprAllocationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -245,7 +245,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMinVgprAlloca
     return jniPointerToLong(&o->minVgprAllocation);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMinVgprAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMinVgprAllocationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -254,7 +254,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMinVgprAllocat
     memcpy(&o->minVgprAllocation, valuePointer, sizeof(o->minVgprAllocation));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMaxVgprAllocation(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMaxVgprAllocationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -262,7 +262,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getMaxVgprAlloca
     return jniPointerToLong(&o->maxVgprAllocation);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMaxVgprAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMaxVgprAllocationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -271,7 +271,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setMaxVgprAllocat
     memcpy(&o->maxVgprAllocation, valuePointer, sizeof(o->maxVgprAllocation));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getVgprAllocationGranularity(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getVgprAllocationGranularityNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -279,7 +279,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_getVgprAllocatio
     return jniPointerToLong(&o->vgprAllocationGranularity);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setVgprAllocationGranularity(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceShaderCorePropertiesAMD_setVgprAllocationGranularityNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

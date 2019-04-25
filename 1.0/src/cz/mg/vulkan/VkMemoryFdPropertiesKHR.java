@@ -20,12 +20,12 @@ public class VkMemoryFdPropertiesKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkMemoryFdPropertiesKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getMemoryTypeBits() {
-        return new VkUInt32(getVkMemory(), getMemoryTypeBits(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMemoryTypeBitsNative(getVkAddress()));
     }
 
     
     public void setMemoryTypeBits(VkUInt32 memoryTypeBits) {
-        setMemoryTypeBits(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getNullAddressNative());
+        setMemoryTypeBitsNative(getVkAddress(), memoryTypeBits != null ? memoryTypeBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,8 +71,8 @@ public class VkMemoryFdPropertiesKHR extends VkObject {
         getMemoryTypeBits().setValue(memoryTypeBits);
     }
 
-    protected static native long getMemoryTypeBits(long address);
-    protected static native void setMemoryTypeBits(long address, long memoryTypeBits);
+    protected static native long getMemoryTypeBitsNative(long address);
+    protected static native void setMemoryTypeBitsNative(long address, long memoryTypeBits);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkMemoryFdPropertiesKHR extends VkObject {
 
         @Override
         public VkMemoryFdPropertiesKHR get(int i){
-            return new VkMemoryFdPropertiesKHR(getVkMemory(), addressAt(i));
+            return new VkMemoryFdPropertiesKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

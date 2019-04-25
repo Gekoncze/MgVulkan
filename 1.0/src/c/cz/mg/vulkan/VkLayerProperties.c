@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkLayerProperties_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkLayerProperties);
 }
 
-jlong Java_cz_mg_vulkan_VkLayerProperties_getLayerName(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkLayerProperties_getLayerNameNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkLayerProperties_getLayerName(JNIEnv* env, jclass jc, j
     return jniPointerToLong(o->layerName);
 }
 
-void Java_cz_mg_vulkan_VkLayerProperties_setLayerName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkLayerProperties_setLayerNameNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkLayerProperties_setLayerName(JNIEnv* env, jclass jc, jl
     memcpy(o->layerName, valuePointer, sizeof(o->layerName));
 }
 
-jlong Java_cz_mg_vulkan_VkLayerProperties_getSpecVersion(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkLayerProperties_getSpecVersionNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkLayerProperties_getSpecVersion(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->specVersion);
 }
 
-void Java_cz_mg_vulkan_VkLayerProperties_setSpecVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkLayerProperties_setSpecVersionNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkLayerProperties_setSpecVersion(JNIEnv* env, jclass jc, 
     memcpy(&o->specVersion, valuePointer, sizeof(o->specVersion));
 }
 
-jlong Java_cz_mg_vulkan_VkLayerProperties_getImplementationVersion(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkLayerProperties_getImplementationVersionNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkLayerProperties_getImplementationVersion(JNIEnv* env, 
     return jniPointerToLong(&o->implementationVersion);
 }
 
-void Java_cz_mg_vulkan_VkLayerProperties_setImplementationVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkLayerProperties_setImplementationVersionNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkLayerProperties_setImplementationVersion(JNIEnv* env, j
     memcpy(&o->implementationVersion, valuePointer, sizeof(o->implementationVersion));
 }
 
-jlong Java_cz_mg_vulkan_VkLayerProperties_getDescription(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkLayerProperties_getDescriptionNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkLayerProperties_getDescription(JNIEnv* env, jclass jc,
     return jniPointerToLong(o->description);
 }
 
-void Java_cz_mg_vulkan_VkLayerProperties_setDescription(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkLayerProperties_setDescriptionNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

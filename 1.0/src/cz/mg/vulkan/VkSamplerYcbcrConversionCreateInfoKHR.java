@@ -21,12 +21,12 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkFormat getFormat() {
-        return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
+        return new VkFormat(getVkMemory(), getFormatNative(getVkAddress()));
     }
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
+        setFormatNative(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
         getFormat().setValue(format);
     }
 
-    protected static native long getFormat(long address);
-    protected static native void setFormat(long address, long format);
+    protected static native long getFormatNative(long address);
+    protected static native void setFormatNative(long address, long format);
 
     public VkSamplerYcbcrModelConversionKHR getYcbcrModel() {
-        return new VkSamplerYcbcrModelConversionKHR(getVkMemory(), getYcbcrModel(getVkAddress()));
+        return new VkSamplerYcbcrModelConversionKHR(getVkMemory(), getYcbcrModelNative(getVkAddress()));
     }
 
     
     public void setYcbcrModel(VkSamplerYcbcrModelConversionKHR ycbcrModel) {
-        setYcbcrModel(getVkAddress(), ycbcrModel != null ? ycbcrModel.getVkAddress() : VkPointer.getNullAddressNative());
+        setYcbcrModelNative(getVkAddress(), ycbcrModel != null ? ycbcrModel.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
         getYcbcrModel().setValue(ycbcrModel);
     }
 
-    protected static native long getYcbcrModel(long address);
-    protected static native void setYcbcrModel(long address, long ycbcrModel);
+    protected static native long getYcbcrModelNative(long address);
+    protected static native void setYcbcrModelNative(long address, long ycbcrModel);
 
     public VkSamplerYcbcrRangeKHR getYcbcrRange() {
-        return new VkSamplerYcbcrRangeKHR(getVkMemory(), getYcbcrRange(getVkAddress()));
+        return new VkSamplerYcbcrRangeKHR(getVkMemory(), getYcbcrRangeNative(getVkAddress()));
     }
 
     
     public void setYcbcrRange(VkSamplerYcbcrRangeKHR ycbcrRange) {
-        setYcbcrRange(getVkAddress(), ycbcrRange != null ? ycbcrRange.getVkAddress() : VkPointer.getNullAddressNative());
+        setYcbcrRangeNative(getVkAddress(), ycbcrRange != null ? ycbcrRange.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,29 +114,29 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
         getYcbcrRange().setValue(ycbcrRange);
     }
 
-    protected static native long getYcbcrRange(long address);
-    protected static native void setYcbcrRange(long address, long ycbcrRange);
+    protected static native long getYcbcrRangeNative(long address);
+    protected static native void setYcbcrRangeNative(long address, long ycbcrRange);
 
     public VkComponentMapping getComponents() {
-        return new VkComponentMapping(getVkMemory(), getComponents(getVkAddress()));
+        return new VkComponentMapping(getVkMemory(), getComponentsNative(getVkAddress()));
     }
 
     
     public void setComponents(VkComponentMapping components) {
-        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getNullAddressNative());
+        setComponentsNative(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getComponents(long address);
-    protected static native void setComponents(long address, long components);
+    protected static native long getComponentsNative(long address);
+    protected static native void setComponentsNative(long address, long components);
 
     public VkChromaLocationKHR getXChromaOffset() {
-        return new VkChromaLocationKHR(getVkMemory(), getXChromaOffset(getVkAddress()));
+        return new VkChromaLocationKHR(getVkMemory(), getXChromaOffsetNative(getVkAddress()));
     }
 
     
     public void setXChromaOffset(VkChromaLocationKHR xChromaOffset) {
-        setXChromaOffset(getVkAddress(), xChromaOffset != null ? xChromaOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setXChromaOffsetNative(getVkAddress(), xChromaOffset != null ? xChromaOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -148,16 +148,16 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
         getXChromaOffset().setValue(xChromaOffset);
     }
 
-    protected static native long getXChromaOffset(long address);
-    protected static native void setXChromaOffset(long address, long xChromaOffset);
+    protected static native long getXChromaOffsetNative(long address);
+    protected static native void setXChromaOffsetNative(long address, long xChromaOffset);
 
     public VkChromaLocationKHR getYChromaOffset() {
-        return new VkChromaLocationKHR(getVkMemory(), getYChromaOffset(getVkAddress()));
+        return new VkChromaLocationKHR(getVkMemory(), getYChromaOffsetNative(getVkAddress()));
     }
 
     
     public void setYChromaOffset(VkChromaLocationKHR yChromaOffset) {
-        setYChromaOffset(getVkAddress(), yChromaOffset != null ? yChromaOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setYChromaOffsetNative(getVkAddress(), yChromaOffset != null ? yChromaOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -169,16 +169,16 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
         getYChromaOffset().setValue(yChromaOffset);
     }
 
-    protected static native long getYChromaOffset(long address);
-    protected static native void setYChromaOffset(long address, long yChromaOffset);
+    protected static native long getYChromaOffsetNative(long address);
+    protected static native void setYChromaOffsetNative(long address, long yChromaOffset);
 
     public VkFilter getChromaFilter() {
-        return new VkFilter(getVkMemory(), getChromaFilter(getVkAddress()));
+        return new VkFilter(getVkMemory(), getChromaFilterNative(getVkAddress()));
     }
 
     
     public void setChromaFilter(VkFilter chromaFilter) {
-        setChromaFilter(getVkAddress(), chromaFilter != null ? chromaFilter.getVkAddress() : VkPointer.getNullAddressNative());
+        setChromaFilterNative(getVkAddress(), chromaFilter != null ? chromaFilter.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -190,16 +190,16 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
         getChromaFilter().setValue(chromaFilter);
     }
 
-    protected static native long getChromaFilter(long address);
-    protected static native void setChromaFilter(long address, long chromaFilter);
+    protected static native long getChromaFilterNative(long address);
+    protected static native void setChromaFilterNative(long address, long chromaFilter);
 
     public VkBool32 getForceExplicitReconstruction() {
-        return new VkBool32(getVkMemory(), getForceExplicitReconstruction(getVkAddress()));
+        return new VkBool32(getVkMemory(), getForceExplicitReconstructionNative(getVkAddress()));
     }
 
     
     public void setForceExplicitReconstruction(VkBool32 forceExplicitReconstruction) {
-        setForceExplicitReconstruction(getVkAddress(), forceExplicitReconstruction != null ? forceExplicitReconstruction.getVkAddress() : VkPointer.getNullAddressNative());
+        setForceExplicitReconstructionNative(getVkAddress(), forceExplicitReconstruction != null ? forceExplicitReconstruction.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -211,8 +211,8 @@ public class VkSamplerYcbcrConversionCreateInfoKHR extends VkObject {
         getForceExplicitReconstruction().setValue(forceExplicitReconstruction);
     }
 
-    protected static native long getForceExplicitReconstruction(long address);
-    protected static native void setForceExplicitReconstruction(long address, long forceExplicitReconstruction);
+    protected static native long getForceExplicitReconstructionNative(long address);
+    protected static native void setForceExplicitReconstructionNative(long address, long forceExplicitReconstruction);
 
 
     public static native long sizeof();

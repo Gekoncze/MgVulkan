@@ -20,12 +20,12 @@ public class VkPushConstantRange extends VkObject {
 
 
     public VkShaderStageFlags getStageFlags() {
-        return new VkShaderStageFlags(getVkMemory(), getStageFlags(getVkAddress()));
+        return new VkShaderStageFlags(getVkMemory(), getStageFlagsNative(getVkAddress()));
     }
 
     
     public void setStageFlags(VkShaderStageFlags stageFlags) {
-        setStageFlags(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddressNative());
+        setStageFlagsNative(getVkAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkPushConstantRange extends VkObject {
         getStageFlags().setValue(stageFlags);
     }
 
-    protected static native long getStageFlags(long address);
-    protected static native void setStageFlags(long address, long stageFlags);
+    protected static native long getStageFlagsNative(long address);
+    protected static native void setStageFlagsNative(long address, long stageFlags);
 
     public VkUInt32 getOffset() {
-        return new VkUInt32(getVkMemory(), getOffset(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkPushConstantRange extends VkObject {
         getOffset().setValue(offset);
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
     public VkUInt32 getSize() {
-        return new VkUInt32(getVkMemory(), getSize(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSizeNative(getVkAddress()));
     }
 
     
     public void setSize(VkUInt32 size) {
-        setSize(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
+        setSizeNative(getVkAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,8 +79,8 @@ public class VkPushConstantRange extends VkObject {
         getSize().setValue(size);
     }
 
-    protected static native long getSize(long address);
-    protected static native void setSize(long address, long size);
+    protected static native long getSizeNative(long address);
+    protected static native void setSizeNative(long address, long size);
 
 
     public static native long sizeof();
@@ -124,10 +124,10 @@ public class VkPushConstantRange extends VkObject {
 
         @Override
         public VkPushConstantRange get(int i){
-            return new VkPushConstantRange(getVkMemory(), addressAt(i));
+            return new VkPushConstantRange(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

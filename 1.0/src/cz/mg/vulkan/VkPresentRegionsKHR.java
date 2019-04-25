@@ -20,12 +20,12 @@ public class VkPresentRegionsKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPresentRegionsKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getSwapchainCount() {
-        return new VkUInt32(getVkMemory(), getSwapchainCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSwapchainCountNative(getVkAddress()));
     }
 
     
     public void setSwapchainCount(VkUInt32 swapchainCount) {
-        setSwapchainCount(getVkAddress(), swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setSwapchainCountNative(getVkAddress(), swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,21 +71,21 @@ public class VkPresentRegionsKHR extends VkObject {
         getSwapchainCount().setValue(swapchainCount);
     }
 
-    protected static native long getSwapchainCount(long address);
-    protected static native void setSwapchainCount(long address, long swapchainCount);
+    protected static native long getSwapchainCountNative(long address);
+    protected static native void setSwapchainCountNative(long address, long swapchainCount);
 
     public VkPresentRegionKHR getPRegions() {
-        return new VkPresentRegionKHR(getVkMemory(), getPRegions(getVkAddress()));
+        return new VkPresentRegionKHR(getVkMemory(), getPRegionsNative(getVkAddress()));
     }
 
     private VkObject pRegions = null;
     public void setPRegions(VkPresentRegionKHR pRegions) {
-        setPRegions(getVkAddress(), pRegions != null ? pRegions.getVkAddress() : VkPointer.NULL);
+        setPRegionsNative(getVkAddress(), pRegions != null ? pRegions.getVkAddress() : VkPointer.NULL);
         this.pRegions = pRegions;
     }
 
-    protected static native long getPRegions(long address);
-    protected static native void setPRegions(long address, long pRegions);
+    protected static native long getPRegionsNative(long address);
+    protected static native void setPRegionsNative(long address, long pRegions);
 
 
     public static native long sizeof();
@@ -129,10 +129,10 @@ public class VkPresentRegionsKHR extends VkObject {
 
         @Override
         public VkPresentRegionsKHR get(int i){
-            return new VkPresentRegionsKHR(getVkMemory(), addressAt(i));
+            return new VkPresentRegionsKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_sizeof(JNIEnv* env, jcla
     return sizeof(VkSparseImageMemoryRequirements);
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getFormatProperties(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getFormatPropertiesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getFormatProperties(JNIE
     return jniPointerToLong(&o->formatProperties);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setFormatProperties(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setFormatPropertiesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setFormatProperties(JNIEn
     memcpy(&o->formatProperties, valuePointer, sizeof(o->formatProperties));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailFirstLod(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailFirstLodNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailFirstLod(
     return jniPointerToLong(&o->imageMipTailFirstLod);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailFirstLod(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailFirstLodNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailFirstLod(J
     memcpy(&o->imageMipTailFirstLod, valuePointer, sizeof(o->imageMipTailFirstLod));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailSize(JNIE
     return jniPointerToLong(&o->imageMipTailSize);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailSize(JNIEn
     memcpy(&o->imageMipTailSize, valuePointer, sizeof(o->imageMipTailSize));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailOffset(JN
     return jniPointerToLong(&o->imageMipTailOffset);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailOffset(JNI
     memcpy(&o->imageMipTailOffset, valuePointer, sizeof(o->imageMipTailOffset));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailStride(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailStrideNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_getImageMipTailStride(JN
     return jniPointerToLong(&o->imageMipTailStride);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailStride(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryRequirements_setImageMipTailStrideNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

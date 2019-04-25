@@ -21,12 +21,12 @@ public class VkSamplerYcbcrConversionInfoKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,34 +38,34 @@ public class VkSamplerYcbcrConversionInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkSamplerYcbcrConversionKHR getConversion() {
-        return new VkSamplerYcbcrConversionKHR(getVkMemory(), getConversion(getVkAddress()));
+        return new VkSamplerYcbcrConversionKHR(getVkMemory(), getConversionNative(getVkAddress()));
     }
 
     
     public void setConversion(VkSamplerYcbcrConversionKHR conversion) {
-        setConversion(getVkAddress(), conversion != null ? conversion.getVkAddress() : VkPointer.getNullAddressNative());
+        setConversionNative(getVkAddress(), conversion != null ? conversion.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getConversion(long address);
-    protected static native void setConversion(long address, long conversion);
+    protected static native long getConversionNative(long address);
+    protected static native void setConversionNative(long address, long conversion);
 
 
     public static native long sizeof();

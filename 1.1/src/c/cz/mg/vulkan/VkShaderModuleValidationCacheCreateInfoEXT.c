@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_sizeof(JNIEnv
     return sizeof(VkShaderModuleValidationCacheCreateInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_getSType(JNIE
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_setSType(JNIEn
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_getPNext(JNIE
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_setPNext(JNIEn
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_getValidationCache(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_getValidationCacheNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_getValidation
     return jniPointerToLong(&o->validationCache);
 }
 
-void Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_setValidationCache(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_setValidationCacheNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

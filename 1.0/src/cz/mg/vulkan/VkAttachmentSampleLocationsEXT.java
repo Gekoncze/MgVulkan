@@ -20,12 +20,12 @@ public class VkAttachmentSampleLocationsEXT extends VkObject {
 
 
     public VkUInt32 getAttachmentIndex() {
-        return new VkUInt32(getVkMemory(), getAttachmentIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getAttachmentIndexNative(getVkAddress()));
     }
 
     
     public void setAttachmentIndex(VkUInt32 attachmentIndex) {
-        setAttachmentIndex(getVkAddress(), attachmentIndex != null ? attachmentIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setAttachmentIndexNative(getVkAddress(), attachmentIndex != null ? attachmentIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,21 +37,21 @@ public class VkAttachmentSampleLocationsEXT extends VkObject {
         getAttachmentIndex().setValue(attachmentIndex);
     }
 
-    protected static native long getAttachmentIndex(long address);
-    protected static native void setAttachmentIndex(long address, long attachmentIndex);
+    protected static native long getAttachmentIndexNative(long address);
+    protected static native void setAttachmentIndexNative(long address, long attachmentIndex);
 
     public VkSampleLocationsInfoEXT getSampleLocationsInfo() {
-        return new VkSampleLocationsInfoEXT(getVkMemory(), getSampleLocationsInfo(getVkAddress()));
+        return new VkSampleLocationsInfoEXT(getVkMemory(), getSampleLocationsInfoNative(getVkAddress()));
     }
 
     
     public void setSampleLocationsInfo(VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampleLocationsInfoNative(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSampleLocationsInfo(long address);
-    protected static native void setSampleLocationsInfo(long address, long sampleLocationsInfo);
+    protected static native long getSampleLocationsInfoNative(long address);
+    protected static native void setSampleLocationsInfoNative(long address, long sampleLocationsInfo);
 
 
     public static native long sizeof();
@@ -95,10 +95,10 @@ public class VkAttachmentSampleLocationsEXT extends VkObject {
 
         @Override
         public VkAttachmentSampleLocationsEXT get(int i){
-            return new VkAttachmentSampleLocationsEXT(getVkMemory(), addressAt(i));
+            return new VkAttachmentSampleLocationsEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

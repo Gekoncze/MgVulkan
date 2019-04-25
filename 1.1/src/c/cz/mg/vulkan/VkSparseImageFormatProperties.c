@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageFormatProperties_sizeof(JNIEnv* env, jclass
     return sizeof(VkSparseImageFormatProperties);
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageFormatProperties_getAspectMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageFormatProperties_getAspectMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageFormatProperties_getAspectMask(JNIEnv* env,
     return jniPointerToLong(&o->aspectMask);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageFormatProperties_setAspectMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageFormatProperties_setAspectMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSparseImageFormatProperties_setAspectMask(JNIEnv* env, 
     memcpy(&o->aspectMask, valuePointer, sizeof(o->aspectMask));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageFormatProperties_getImageGranularity(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageFormatProperties_getImageGranularityNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageFormatProperties_getImageGranularity(JNIEnv
     return jniPointerToLong(&o->imageGranularity);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageFormatProperties_setImageGranularity(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageFormatProperties_setImageGranularityNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSparseImageFormatProperties_setImageGranularity(JNIEnv*
     memcpy(&o->imageGranularity, valuePointer, sizeof(o->imageGranularity));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageFormatProperties_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageFormatProperties_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageFormatProperties_getFlags(JNIEnv* env, jcla
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageFormatProperties_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageFormatProperties_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

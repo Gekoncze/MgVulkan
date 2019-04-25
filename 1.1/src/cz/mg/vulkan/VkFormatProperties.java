@@ -20,12 +20,12 @@ public class VkFormatProperties extends VkObject {
 
 
     public VkFormatFeatureFlags getLinearTilingFeatures() {
-        return new VkFormatFeatureFlags(getVkMemory(), getLinearTilingFeatures(getVkAddress()));
+        return new VkFormatFeatureFlags(getVkMemory(), getLinearTilingFeaturesNative(getVkAddress()));
     }
 
     
     public void setLinearTilingFeatures(VkFormatFeatureFlags linearTilingFeatures) {
-        setLinearTilingFeatures(getVkAddress(), linearTilingFeatures != null ? linearTilingFeatures.getVkAddress() : VkPointer.getNullAddressNative());
+        setLinearTilingFeaturesNative(getVkAddress(), linearTilingFeatures != null ? linearTilingFeatures.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkFormatProperties extends VkObject {
         getLinearTilingFeatures().setValue(linearTilingFeatures);
     }
 
-    protected static native long getLinearTilingFeatures(long address);
-    protected static native void setLinearTilingFeatures(long address, long linearTilingFeatures);
+    protected static native long getLinearTilingFeaturesNative(long address);
+    protected static native void setLinearTilingFeaturesNative(long address, long linearTilingFeatures);
 
     public VkFormatFeatureFlags getOptimalTilingFeatures() {
-        return new VkFormatFeatureFlags(getVkMemory(), getOptimalTilingFeatures(getVkAddress()));
+        return new VkFormatFeatureFlags(getVkMemory(), getOptimalTilingFeaturesNative(getVkAddress()));
     }
 
     
     public void setOptimalTilingFeatures(VkFormatFeatureFlags optimalTilingFeatures) {
-        setOptimalTilingFeatures(getVkAddress(), optimalTilingFeatures != null ? optimalTilingFeatures.getVkAddress() : VkPointer.getNullAddressNative());
+        setOptimalTilingFeaturesNative(getVkAddress(), optimalTilingFeatures != null ? optimalTilingFeatures.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkFormatProperties extends VkObject {
         getOptimalTilingFeatures().setValue(optimalTilingFeatures);
     }
 
-    protected static native long getOptimalTilingFeatures(long address);
-    protected static native void setOptimalTilingFeatures(long address, long optimalTilingFeatures);
+    protected static native long getOptimalTilingFeaturesNative(long address);
+    protected static native void setOptimalTilingFeaturesNative(long address, long optimalTilingFeatures);
 
     public VkFormatFeatureFlags getBufferFeatures() {
-        return new VkFormatFeatureFlags(getVkMemory(), getBufferFeatures(getVkAddress()));
+        return new VkFormatFeatureFlags(getVkMemory(), getBufferFeaturesNative(getVkAddress()));
     }
 
     
     public void setBufferFeatures(VkFormatFeatureFlags bufferFeatures) {
-        setBufferFeatures(getVkAddress(), bufferFeatures != null ? bufferFeatures.getVkAddress() : VkPointer.getNullAddressNative());
+        setBufferFeaturesNative(getVkAddress(), bufferFeatures != null ? bufferFeatures.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,8 +79,8 @@ public class VkFormatProperties extends VkObject {
         getBufferFeatures().setValue(bufferFeatures);
     }
 
-    protected static native long getBufferFeatures(long address);
-    protected static native void setBufferFeatures(long address, long bufferFeatures);
+    protected static native long getBufferFeaturesNative(long address);
+    protected static native void setBufferFeaturesNative(long address, long bufferFeatures);
 
 
     public static native long sizeof();
@@ -124,10 +124,10 @@ public class VkFormatProperties extends VkObject {
 
         @Override
         public VkFormatProperties get(int i){
-            return new VkFormatProperties(getVkMemory(), addressAt(i));
+            return new VkFormatProperties(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

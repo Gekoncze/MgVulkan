@@ -20,12 +20,12 @@ public class VkValidationFlagsEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkValidationFlagsEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getDisabledValidationCheckCount() {
-        return new VkUInt32(getVkMemory(), getDisabledValidationCheckCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDisabledValidationCheckCountNative(getVkAddress()));
     }
 
     
     public void setDisabledValidationCheckCount(VkUInt32 disabledValidationCheckCount) {
-        setDisabledValidationCheckCount(getVkAddress(), disabledValidationCheckCount != null ? disabledValidationCheckCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDisabledValidationCheckCountNative(getVkAddress(), disabledValidationCheckCount != null ? disabledValidationCheckCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,21 +71,21 @@ public class VkValidationFlagsEXT extends VkObject {
         getDisabledValidationCheckCount().setValue(disabledValidationCheckCount);
     }
 
-    protected static native long getDisabledValidationCheckCount(long address);
-    protected static native void setDisabledValidationCheckCount(long address, long disabledValidationCheckCount);
+    protected static native long getDisabledValidationCheckCountNative(long address);
+    protected static native void setDisabledValidationCheckCountNative(long address, long disabledValidationCheckCount);
 
     public VkValidationCheckEXT getPDisabledValidationChecks() {
-        return new VkValidationCheckEXT(getVkMemory(), getPDisabledValidationChecks(getVkAddress()));
+        return new VkValidationCheckEXT(getVkMemory(), getPDisabledValidationChecksNative(getVkAddress()));
     }
 
     private VkObject pDisabledValidationChecks = null;
     public void setPDisabledValidationChecks(VkValidationCheckEXT pDisabledValidationChecks) {
-        setPDisabledValidationChecks(getVkAddress(), pDisabledValidationChecks != null ? pDisabledValidationChecks.getVkAddress() : VkPointer.NULL);
+        setPDisabledValidationChecksNative(getVkAddress(), pDisabledValidationChecks != null ? pDisabledValidationChecks.getVkAddress() : VkPointer.NULL);
         this.pDisabledValidationChecks = pDisabledValidationChecks;
     }
 
-    protected static native long getPDisabledValidationChecks(long address);
-    protected static native void setPDisabledValidationChecks(long address, long pDisabledValidationChecks);
+    protected static native long getPDisabledValidationChecksNative(long address);
+    protected static native void setPDisabledValidationChecksNative(long address, long pDisabledValidationChecks);
 
 
     public static native long sizeof();
@@ -129,10 +129,10 @@ public class VkValidationFlagsEXT extends VkObject {
 
         @Override
         public VkValidationFlagsEXT get(int i){
-            return new VkValidationFlagsEXT(getVkMemory(), addressAt(i));
+            return new VkValidationFlagsEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

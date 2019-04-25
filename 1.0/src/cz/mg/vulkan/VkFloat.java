@@ -71,15 +71,15 @@ public class VkFloat extends VkObject {
 
         public Array(float... values){
             this(values.length);
-            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            for(int i = 0; i < values.length; i++) setValue(i, values[i]);
         }
 
-        public float getValueAt(int i){
-            return getValueNative(addressAt(i));
+        public float getValue(int i){
+            return getValueNative(address(i));
         }
 
-        public void setValueAt(int i, float value){
-            setValueNative(addressAt(i), value);
+        public void setValue(int i, float value){
+            setValueNative(address(i), value);
         }
 
 
@@ -91,10 +91,10 @@ public class VkFloat extends VkObject {
 
         @Override
         public VkFloat get(int i){
-            return new VkFloat(getVkMemory(), addressAt(i));
+            return new VkFloat(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

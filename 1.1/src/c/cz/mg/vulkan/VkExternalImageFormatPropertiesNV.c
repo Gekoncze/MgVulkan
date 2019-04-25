@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_sizeof(JNIEnv* env, jc
     return sizeof(VkExternalImageFormatPropertiesNV);
 }
 
-jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getImageFormatProperties(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getImageFormatPropertiesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getImageFormatProperti
     return jniPointerToLong(&o->imageFormatProperties);
 }
 
-void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setImageFormatProperties(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setImageFormatPropertiesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setImageFormatPropertie
     memcpy(&o->imageFormatProperties, valuePointer, sizeof(o->imageFormatProperties));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getExternalMemoryFeatures(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getExternalMemoryFeaturesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getExternalMemoryFeatu
     return jniPointerToLong(&o->externalMemoryFeatures);
 }
 
-void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setExternalMemoryFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setExternalMemoryFeaturesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setExternalMemoryFeatur
     memcpy(&o->externalMemoryFeatures, valuePointer, sizeof(o->externalMemoryFeatures));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getExportFromImportedHandleTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getExportFromImportedH
     return jniPointerToLong(&o->exportFromImportedHandleTypes);
 }
 
-void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setExportFromImportedHandleTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setExportFromImportedHa
     memcpy(&o->exportFromImportedHandleTypes, valuePointer, sizeof(o->exportFromImportedHandleTypes));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getCompatibleHandleTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_getCompatibleHandleTyp
     return jniPointerToLong(&o->compatibleHandleTypes);
 }
 
-void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalImageFormatPropertiesNV_setCompatibleHandleTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

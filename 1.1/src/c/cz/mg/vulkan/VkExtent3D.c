@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkExtent3D_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkExtent3D);
 }
 
-jlong Java_cz_mg_vulkan_VkExtent3D_getWidth(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExtent3D_getWidthNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkExtent3D_getWidth(JNIEnv* env, jclass jc, jlong addres
     return jniPointerToLong(&o->width);
 }
 
-void Java_cz_mg_vulkan_VkExtent3D_setWidth(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExtent3D_setWidthNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkExtent3D_setWidth(JNIEnv* env, jclass jc, jlong address
     memcpy(&o->width, valuePointer, sizeof(o->width));
 }
 
-jlong Java_cz_mg_vulkan_VkExtent3D_getHeight(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExtent3D_getHeightNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkExtent3D_getHeight(JNIEnv* env, jclass jc, jlong addre
     return jniPointerToLong(&o->height);
 }
 
-void Java_cz_mg_vulkan_VkExtent3D_setHeight(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExtent3D_setHeightNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkExtent3D_setHeight(JNIEnv* env, jclass jc, jlong addres
     memcpy(&o->height, valuePointer, sizeof(o->height));
 }
 
-jlong Java_cz_mg_vulkan_VkExtent3D_getDepth(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExtent3D_getDepthNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkExtent3D_getDepth(JNIEnv* env, jclass jc, jlong addres
     return jniPointerToLong(&o->depth);
 }
 
-void Java_cz_mg_vulkan_VkExtent3D_setDepth(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExtent3D_setDepthNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -21,12 +21,12 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineDiscardRectangleStateCreateFlagsEXT getFlags() {
-        return new VkPipelineDiscardRectangleStateCreateFlagsEXT(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineDiscardRectangleStateCreateFlagsEXT(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineDiscardRectangleStateCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkDiscardRectangleModeEXT getDiscardRectangleMode() {
-        return new VkDiscardRectangleModeEXT(getVkMemory(), getDiscardRectangleMode(getVkAddress()));
+        return new VkDiscardRectangleModeEXT(getVkMemory(), getDiscardRectangleModeNative(getVkAddress()));
     }
 
     
     public void setDiscardRectangleMode(VkDiscardRectangleModeEXT discardRectangleMode) {
-        setDiscardRectangleMode(getVkAddress(), discardRectangleMode != null ? discardRectangleMode.getVkAddress() : VkPointer.getNullAddressNative());
+        setDiscardRectangleModeNative(getVkAddress(), discardRectangleMode != null ? discardRectangleMode.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         getDiscardRectangleMode().setValue(discardRectangleMode);
     }
 
-    protected static native long getDiscardRectangleMode(long address);
-    protected static native void setDiscardRectangleMode(long address, long discardRectangleMode);
+    protected static native long getDiscardRectangleModeNative(long address);
+    protected static native void setDiscardRectangleModeNative(long address, long discardRectangleMode);
 
     public VkUInt32 getDiscardRectangleCount() {
-        return new VkUInt32(getVkMemory(), getDiscardRectangleCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDiscardRectangleCountNative(getVkAddress()));
     }
 
     
     public void setDiscardRectangleCount(VkUInt32 discardRectangleCount) {
-        setDiscardRectangleCount(getVkAddress(), discardRectangleCount != null ? discardRectangleCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDiscardRectangleCountNative(getVkAddress(), discardRectangleCount != null ? discardRectangleCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,21 +114,21 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         getDiscardRectangleCount().setValue(discardRectangleCount);
     }
 
-    protected static native long getDiscardRectangleCount(long address);
-    protected static native void setDiscardRectangleCount(long address, long discardRectangleCount);
+    protected static native long getDiscardRectangleCountNative(long address);
+    protected static native void setDiscardRectangleCountNative(long address, long discardRectangleCount);
 
     public VkRect2D getPDiscardRectangles() {
-        return new VkRect2D(getVkMemory(), getPDiscardRectangles(getVkAddress()));
+        return new VkRect2D(getVkMemory(), getPDiscardRectanglesNative(getVkAddress()));
     }
 
     private VkObject pDiscardRectangles = null;
     public void setPDiscardRectangles(VkRect2D pDiscardRectangles) {
-        setPDiscardRectangles(getVkAddress(), pDiscardRectangles != null ? pDiscardRectangles.getVkAddress() : VkPointer.NULL);
+        setPDiscardRectanglesNative(getVkAddress(), pDiscardRectangles != null ? pDiscardRectangles.getVkAddress() : VkPointer.NULL);
         this.pDiscardRectangles = pDiscardRectangles;
     }
 
-    protected static native long getPDiscardRectangles(long address);
-    protected static native void setPDiscardRectangles(long address, long pDiscardRectangles);
+    protected static native long getPDiscardRectanglesNative(long address);
+    protected static native void setPDiscardRectanglesNative(long address, long pDiscardRectangles);
 
 
     public static native long sizeof();

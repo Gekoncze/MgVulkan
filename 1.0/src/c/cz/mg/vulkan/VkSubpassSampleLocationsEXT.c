@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_sizeof(JNIEnv* env, jclass j
     return sizeof(VkSubpassSampleLocationsEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_getSubpassIndex(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_getSubpassIndexNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_getSubpassIndex(JNIEnv* env,
     return jniPointerToLong(&o->subpassIndex);
 }
 
-void Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_setSubpassIndex(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_setSubpassIndexNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_setSubpassIndex(JNIEnv* env, 
     memcpy(&o->subpassIndex, valuePointer, sizeof(o->subpassIndex));
 }
 
-jlong Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_getSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_getSampleLocationsInfoNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_getSampleLocationsInfo(JNIEn
     return jniPointerToLong(&o->sampleLocationsInfo);
 }
 
-void Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_setSampleLocationsInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_setSampleLocationsInfoNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -20,12 +20,12 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getMaxMultiviewViewCount() {
-        return new VkUInt32(getVkMemory(), getMaxMultiviewViewCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxMultiviewViewCountNative(getVkAddress()));
     }
 
     
     public void setMaxMultiviewViewCount(VkUInt32 maxMultiviewViewCount) {
-        setMaxMultiviewViewCount(getVkAddress(), maxMultiviewViewCount != null ? maxMultiviewViewCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxMultiviewViewCountNative(getVkAddress(), maxMultiviewViewCount != null ? maxMultiviewViewCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
         getMaxMultiviewViewCount().setValue(maxMultiviewViewCount);
     }
 
-    protected static native long getMaxMultiviewViewCount(long address);
-    protected static native void setMaxMultiviewViewCount(long address, long maxMultiviewViewCount);
+    protected static native long getMaxMultiviewViewCountNative(long address);
+    protected static native void setMaxMultiviewViewCountNative(long address, long maxMultiviewViewCount);
 
     public VkUInt32 getMaxMultiviewInstanceIndex() {
-        return new VkUInt32(getVkMemory(), getMaxMultiviewInstanceIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxMultiviewInstanceIndexNative(getVkAddress()));
     }
 
     
     public void setMaxMultiviewInstanceIndex(VkUInt32 maxMultiviewInstanceIndex) {
-        setMaxMultiviewInstanceIndex(getVkAddress(), maxMultiviewInstanceIndex != null ? maxMultiviewInstanceIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxMultiviewInstanceIndexNative(getVkAddress(), maxMultiviewInstanceIndex != null ? maxMultiviewInstanceIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,8 +92,8 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
         getMaxMultiviewInstanceIndex().setValue(maxMultiviewInstanceIndex);
     }
 
-    protected static native long getMaxMultiviewInstanceIndex(long address);
-    protected static native void setMaxMultiviewInstanceIndex(long address, long maxMultiviewInstanceIndex);
+    protected static native long getMaxMultiviewInstanceIndexNative(long address);
+    protected static native void setMaxMultiviewInstanceIndexNative(long address, long maxMultiviewInstanceIndex);
 
 
     public static native long sizeof();
@@ -137,10 +137,10 @@ public class VkPhysicalDeviceMultiviewProperties extends VkObject {
 
         @Override
         public VkPhysicalDeviceMultiviewProperties get(int i){
-            return new VkPhysicalDeviceMultiviewProperties(getVkMemory(), addressAt(i));
+            return new VkPhysicalDeviceMultiviewProperties(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_sizeof(JNIEnv* env, jclass
     return sizeof(VkObjectTablePipelineEntryNVX);
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getType(JNIEnv* env, jclas
     return jniPointerToLong(&o->type);
 }
 
-void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setType(JNIEnv* env, jclass
     memcpy(&o->type, valuePointer, sizeof(o->type));
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getFlags(JNIEnv* env, jcla
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setFlags(JNIEnv* env, jclas
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getPipeline(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getPipelineNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_getPipeline(JNIEnv* env, j
     return jniPointerToLong(&o->pipeline);
 }
 
-void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setPipeline(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTablePipelineEntryNVX_setPipelineNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

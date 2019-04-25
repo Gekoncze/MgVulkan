@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkBindBufferMemoryInfoKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getSType(JNIEnv* env, jclass j
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setSType(JNIEnv* env, jclass jc
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getPNext(JNIEnv* env, jclass j
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setPNext(JNIEnv* env, jclass jc
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getBufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getBuffer(JNIEnv* env, jclass 
     return jniPointerToLong(&o->buffer);
 }
 
-void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setBufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setBuffer(JNIEnv* env, jclass j
     memcpy(&o->buffer, valuePointer, sizeof(o->buffer));
 }
 
-jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getMemory(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getMemoryNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getMemory(JNIEnv* env, jclass 
     return jniPointerToLong(&o->memory);
 }
 
-void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setMemory(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setMemoryNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setMemory(JNIEnv* env, jclass j
     memcpy(&o->memory, valuePointer, sizeof(o->memory));
 }
 
-jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getMemoryOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getMemoryOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_getMemoryOffset(JNIEnv* env, j
     return jniPointerToLong(&o->memoryOffset);
 }
 
-void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setMemoryOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBindBufferMemoryInfoKHR_setMemoryOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

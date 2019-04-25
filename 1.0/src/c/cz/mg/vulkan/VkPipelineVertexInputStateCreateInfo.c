@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_sizeof(JNIEnv* env,
     return sizeof(VkPipelineVertexInputStateCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getSType(JNIEnv* en
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setSType(JNIEnv* env
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getPNext(JNIEnv* en
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setPNext(JNIEnv* env
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getFlags(JNIEnv* en
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setFlags(JNIEnv* env
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getVertexBindingDescriptionCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getVertexBindingDescriptionCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getVertexBindingDes
     return jniPointerToLong(&o->vertexBindingDescriptionCount);
 }
 
-void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setVertexBindingDescriptionCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setVertexBindingDescriptionCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setVertexBindingDesc
     memcpy(&o->vertexBindingDescriptionCount, valuePointer, sizeof(o->vertexBindingDescriptionCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getPVertexBindingDescriptions(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getPVertexBindingDescriptionsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getPVertexBindingDe
     return jniPointerToLong(o->pVertexBindingDescriptions);
 }
 
-void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setPVertexBindingDescriptions(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setPVertexBindingDescriptionsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setPVertexBindingDes
     memcpy(&o->pVertexBindingDescriptions, &valuePointer, sizeof(o->pVertexBindingDescriptions));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getVertexAttributeDescriptionCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getVertexAttributeDescriptionCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getVertexAttributeD
     return jniPointerToLong(&o->vertexAttributeDescriptionCount);
 }
 
-void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setVertexAttributeDescriptionCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setVertexAttributeDescriptionCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setVertexAttributeDe
     memcpy(&o->vertexAttributeDescriptionCount, valuePointer, sizeof(o->vertexAttributeDescriptionCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getPVertexAttributeDescriptions(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getPVertexAttributeDescriptionsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_getPVertexAttribute
     return jniPointerToLong(o->pVertexAttributeDescriptions);
 }
 
-void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setPVertexAttributeDescriptions(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineVertexInputStateCreateInfo_setPVertexAttributeDescriptionsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

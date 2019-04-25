@@ -21,12 +21,12 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getAttachmentInitialSampleLocationsCount() {
-        return new VkUInt32(getVkMemory(), getAttachmentInitialSampleLocationsCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getAttachmentInitialSampleLocationsCountNative(getVkAddress()));
     }
 
     
     public void setAttachmentInitialSampleLocationsCount(VkUInt32 attachmentInitialSampleLocationsCount) {
-        setAttachmentInitialSampleLocationsCount(getVkAddress(), attachmentInitialSampleLocationsCount != null ? attachmentInitialSampleLocationsCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setAttachmentInitialSampleLocationsCountNative(getVkAddress(), attachmentInitialSampleLocationsCount != null ? attachmentInitialSampleLocationsCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,29 +72,29 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         getAttachmentInitialSampleLocationsCount().setValue(attachmentInitialSampleLocationsCount);
     }
 
-    protected static native long getAttachmentInitialSampleLocationsCount(long address);
-    protected static native void setAttachmentInitialSampleLocationsCount(long address, long attachmentInitialSampleLocationsCount);
+    protected static native long getAttachmentInitialSampleLocationsCountNative(long address);
+    protected static native void setAttachmentInitialSampleLocationsCountNative(long address, long attachmentInitialSampleLocationsCount);
 
     public VkAttachmentSampleLocationsEXT getPAttachmentInitialSampleLocations() {
-        return new VkAttachmentSampleLocationsEXT(getVkMemory(), getPAttachmentInitialSampleLocations(getVkAddress()));
+        return new VkAttachmentSampleLocationsEXT(getVkMemory(), getPAttachmentInitialSampleLocationsNative(getVkAddress()));
     }
 
     private VkObject pAttachmentInitialSampleLocations = null;
     public void setPAttachmentInitialSampleLocations(VkAttachmentSampleLocationsEXT pAttachmentInitialSampleLocations) {
-        setPAttachmentInitialSampleLocations(getVkAddress(), pAttachmentInitialSampleLocations != null ? pAttachmentInitialSampleLocations.getVkAddress() : VkPointer.NULL);
+        setPAttachmentInitialSampleLocationsNative(getVkAddress(), pAttachmentInitialSampleLocations != null ? pAttachmentInitialSampleLocations.getVkAddress() : VkPointer.NULL);
         this.pAttachmentInitialSampleLocations = pAttachmentInitialSampleLocations;
     }
 
-    protected static native long getPAttachmentInitialSampleLocations(long address);
-    protected static native void setPAttachmentInitialSampleLocations(long address, long pAttachmentInitialSampleLocations);
+    protected static native long getPAttachmentInitialSampleLocationsNative(long address);
+    protected static native void setPAttachmentInitialSampleLocationsNative(long address, long pAttachmentInitialSampleLocations);
 
     public VkUInt32 getPostSubpassSampleLocationsCount() {
-        return new VkUInt32(getVkMemory(), getPostSubpassSampleLocationsCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPostSubpassSampleLocationsCountNative(getVkAddress()));
     }
 
     
     public void setPostSubpassSampleLocationsCount(VkUInt32 postSubpassSampleLocationsCount) {
-        setPostSubpassSampleLocationsCount(getVkAddress(), postSubpassSampleLocationsCount != null ? postSubpassSampleLocationsCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setPostSubpassSampleLocationsCountNative(getVkAddress(), postSubpassSampleLocationsCount != null ? postSubpassSampleLocationsCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,21 +106,21 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         getPostSubpassSampleLocationsCount().setValue(postSubpassSampleLocationsCount);
     }
 
-    protected static native long getPostSubpassSampleLocationsCount(long address);
-    protected static native void setPostSubpassSampleLocationsCount(long address, long postSubpassSampleLocationsCount);
+    protected static native long getPostSubpassSampleLocationsCountNative(long address);
+    protected static native void setPostSubpassSampleLocationsCountNative(long address, long postSubpassSampleLocationsCount);
 
     public VkSubpassSampleLocationsEXT getPPostSubpassSampleLocations() {
-        return new VkSubpassSampleLocationsEXT(getVkMemory(), getPPostSubpassSampleLocations(getVkAddress()));
+        return new VkSubpassSampleLocationsEXT(getVkMemory(), getPPostSubpassSampleLocationsNative(getVkAddress()));
     }
 
     private VkObject pPostSubpassSampleLocations = null;
     public void setPPostSubpassSampleLocations(VkSubpassSampleLocationsEXT pPostSubpassSampleLocations) {
-        setPPostSubpassSampleLocations(getVkAddress(), pPostSubpassSampleLocations != null ? pPostSubpassSampleLocations.getVkAddress() : VkPointer.NULL);
+        setPPostSubpassSampleLocationsNative(getVkAddress(), pPostSubpassSampleLocations != null ? pPostSubpassSampleLocations.getVkAddress() : VkPointer.NULL);
         this.pPostSubpassSampleLocations = pPostSubpassSampleLocations;
     }
 
-    protected static native long getPPostSubpassSampleLocations(long address);
-    protected static native void setPPostSubpassSampleLocations(long address, long pPostSubpassSampleLocations);
+    protected static native long getPPostSubpassSampleLocationsNative(long address);
+    protected static native void setPPostSubpassSampleLocationsNative(long address, long pPostSubpassSampleLocations);
 
 
     public static native long sizeof();

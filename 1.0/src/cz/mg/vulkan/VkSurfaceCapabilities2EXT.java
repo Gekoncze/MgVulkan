@@ -20,12 +20,12 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getMinImageCount() {
-        return new VkUInt32(getVkMemory(), getMinImageCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMinImageCountNative(getVkAddress()));
     }
 
     
     public void setMinImageCount(VkUInt32 minImageCount) {
-        setMinImageCount(getVkAddress(), minImageCount != null ? minImageCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinImageCountNative(getVkAddress(), minImageCount != null ? minImageCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getMinImageCount().setValue(minImageCount);
     }
 
-    protected static native long getMinImageCount(long address);
-    protected static native void setMinImageCount(long address, long minImageCount);
+    protected static native long getMinImageCountNative(long address);
+    protected static native void setMinImageCountNative(long address, long minImageCount);
 
     public VkUInt32 getMaxImageCount() {
-        return new VkUInt32(getVkMemory(), getMaxImageCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxImageCountNative(getVkAddress()));
     }
 
     
     public void setMaxImageCount(VkUInt32 maxImageCount) {
-        setMaxImageCount(getVkAddress(), maxImageCount != null ? maxImageCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxImageCountNative(getVkAddress(), maxImageCount != null ? maxImageCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,55 +92,55 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getMaxImageCount().setValue(maxImageCount);
     }
 
-    protected static native long getMaxImageCount(long address);
-    protected static native void setMaxImageCount(long address, long maxImageCount);
+    protected static native long getMaxImageCountNative(long address);
+    protected static native void setMaxImageCountNative(long address, long maxImageCount);
 
     public VkExtent2D getCurrentExtent() {
-        return new VkExtent2D(getVkMemory(), getCurrentExtent(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getCurrentExtentNative(getVkAddress()));
     }
 
     
     public void setCurrentExtent(VkExtent2D currentExtent) {
-        setCurrentExtent(getVkAddress(), currentExtent != null ? currentExtent.getVkAddress() : VkPointer.getNullAddressNative());
+        setCurrentExtentNative(getVkAddress(), currentExtent != null ? currentExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getCurrentExtent(long address);
-    protected static native void setCurrentExtent(long address, long currentExtent);
+    protected static native long getCurrentExtentNative(long address);
+    protected static native void setCurrentExtentNative(long address, long currentExtent);
 
     public VkExtent2D getMinImageExtent() {
-        return new VkExtent2D(getVkMemory(), getMinImageExtent(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getMinImageExtentNative(getVkAddress()));
     }
 
     
     public void setMinImageExtent(VkExtent2D minImageExtent) {
-        setMinImageExtent(getVkAddress(), minImageExtent != null ? minImageExtent.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinImageExtentNative(getVkAddress(), minImageExtent != null ? minImageExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMinImageExtent(long address);
-    protected static native void setMinImageExtent(long address, long minImageExtent);
+    protected static native long getMinImageExtentNative(long address);
+    protected static native void setMinImageExtentNative(long address, long minImageExtent);
 
     public VkExtent2D getMaxImageExtent() {
-        return new VkExtent2D(getVkMemory(), getMaxImageExtent(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getMaxImageExtentNative(getVkAddress()));
     }
 
     
     public void setMaxImageExtent(VkExtent2D maxImageExtent) {
-        setMaxImageExtent(getVkAddress(), maxImageExtent != null ? maxImageExtent.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxImageExtentNative(getVkAddress(), maxImageExtent != null ? maxImageExtent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMaxImageExtent(long address);
-    protected static native void setMaxImageExtent(long address, long maxImageExtent);
+    protected static native long getMaxImageExtentNative(long address);
+    protected static native void setMaxImageExtentNative(long address, long maxImageExtent);
 
     public VkUInt32 getMaxImageArrayLayers() {
-        return new VkUInt32(getVkMemory(), getMaxImageArrayLayers(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxImageArrayLayersNative(getVkAddress()));
     }
 
     
     public void setMaxImageArrayLayers(VkUInt32 maxImageArrayLayers) {
-        setMaxImageArrayLayers(getVkAddress(), maxImageArrayLayers != null ? maxImageArrayLayers.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxImageArrayLayersNative(getVkAddress(), maxImageArrayLayers != null ? maxImageArrayLayers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -152,16 +152,16 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getMaxImageArrayLayers().setValue(maxImageArrayLayers);
     }
 
-    protected static native long getMaxImageArrayLayers(long address);
-    protected static native void setMaxImageArrayLayers(long address, long maxImageArrayLayers);
+    protected static native long getMaxImageArrayLayersNative(long address);
+    protected static native void setMaxImageArrayLayersNative(long address, long maxImageArrayLayers);
 
     public VkSurfaceTransformFlagsKHR getSupportedTransforms() {
-        return new VkSurfaceTransformFlagsKHR(getVkMemory(), getSupportedTransforms(getVkAddress()));
+        return new VkSurfaceTransformFlagsKHR(getVkMemory(), getSupportedTransformsNative(getVkAddress()));
     }
 
     
     public void setSupportedTransforms(VkSurfaceTransformFlagsKHR supportedTransforms) {
-        setSupportedTransforms(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.getNullAddressNative());
+        setSupportedTransformsNative(getVkAddress(), supportedTransforms != null ? supportedTransforms.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -173,16 +173,16 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getSupportedTransforms().setValue(supportedTransforms);
     }
 
-    protected static native long getSupportedTransforms(long address);
-    protected static native void setSupportedTransforms(long address, long supportedTransforms);
+    protected static native long getSupportedTransformsNative(long address);
+    protected static native void setSupportedTransformsNative(long address, long supportedTransforms);
 
     public VkSurfaceTransformFlagBitsKHR getCurrentTransform() {
-        return new VkSurfaceTransformFlagBitsKHR(getVkMemory(), getCurrentTransform(getVkAddress()));
+        return new VkSurfaceTransformFlagBitsKHR(getVkMemory(), getCurrentTransformNative(getVkAddress()));
     }
 
     
     public void setCurrentTransform(VkSurfaceTransformFlagBitsKHR currentTransform) {
-        setCurrentTransform(getVkAddress(), currentTransform != null ? currentTransform.getVkAddress() : VkPointer.getNullAddressNative());
+        setCurrentTransformNative(getVkAddress(), currentTransform != null ? currentTransform.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -194,16 +194,16 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getCurrentTransform().setValue(currentTransform);
     }
 
-    protected static native long getCurrentTransform(long address);
-    protected static native void setCurrentTransform(long address, long currentTransform);
+    protected static native long getCurrentTransformNative(long address);
+    protected static native void setCurrentTransformNative(long address, long currentTransform);
 
     public VkCompositeAlphaFlagsKHR getSupportedCompositeAlpha() {
-        return new VkCompositeAlphaFlagsKHR(getVkMemory(), getSupportedCompositeAlpha(getVkAddress()));
+        return new VkCompositeAlphaFlagsKHR(getVkMemory(), getSupportedCompositeAlphaNative(getVkAddress()));
     }
 
     
     public void setSupportedCompositeAlpha(VkCompositeAlphaFlagsKHR supportedCompositeAlpha) {
-        setSupportedCompositeAlpha(getVkAddress(), supportedCompositeAlpha != null ? supportedCompositeAlpha.getVkAddress() : VkPointer.getNullAddressNative());
+        setSupportedCompositeAlphaNative(getVkAddress(), supportedCompositeAlpha != null ? supportedCompositeAlpha.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -215,16 +215,16 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getSupportedCompositeAlpha().setValue(supportedCompositeAlpha);
     }
 
-    protected static native long getSupportedCompositeAlpha(long address);
-    protected static native void setSupportedCompositeAlpha(long address, long supportedCompositeAlpha);
+    protected static native long getSupportedCompositeAlphaNative(long address);
+    protected static native void setSupportedCompositeAlphaNative(long address, long supportedCompositeAlpha);
 
     public VkImageUsageFlags getSupportedUsageFlags() {
-        return new VkImageUsageFlags(getVkMemory(), getSupportedUsageFlags(getVkAddress()));
+        return new VkImageUsageFlags(getVkMemory(), getSupportedUsageFlagsNative(getVkAddress()));
     }
 
     
     public void setSupportedUsageFlags(VkImageUsageFlags supportedUsageFlags) {
-        setSupportedUsageFlags(getVkAddress(), supportedUsageFlags != null ? supportedUsageFlags.getVkAddress() : VkPointer.getNullAddressNative());
+        setSupportedUsageFlagsNative(getVkAddress(), supportedUsageFlags != null ? supportedUsageFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -236,16 +236,16 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getSupportedUsageFlags().setValue(supportedUsageFlags);
     }
 
-    protected static native long getSupportedUsageFlags(long address);
-    protected static native void setSupportedUsageFlags(long address, long supportedUsageFlags);
+    protected static native long getSupportedUsageFlagsNative(long address);
+    protected static native void setSupportedUsageFlagsNative(long address, long supportedUsageFlags);
 
     public VkSurfaceCounterFlagsEXT getSupportedSurfaceCounters() {
-        return new VkSurfaceCounterFlagsEXT(getVkMemory(), getSupportedSurfaceCounters(getVkAddress()));
+        return new VkSurfaceCounterFlagsEXT(getVkMemory(), getSupportedSurfaceCountersNative(getVkAddress()));
     }
 
     
     public void setSupportedSurfaceCounters(VkSurfaceCounterFlagsEXT supportedSurfaceCounters) {
-        setSupportedSurfaceCounters(getVkAddress(), supportedSurfaceCounters != null ? supportedSurfaceCounters.getVkAddress() : VkPointer.getNullAddressNative());
+        setSupportedSurfaceCountersNative(getVkAddress(), supportedSurfaceCounters != null ? supportedSurfaceCounters.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -257,8 +257,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getSupportedSurfaceCounters().setValue(supportedSurfaceCounters);
     }
 
-    protected static native long getSupportedSurfaceCounters(long address);
-    protected static native void setSupportedSurfaceCounters(long address, long supportedSurfaceCounters);
+    protected static native long getSupportedSurfaceCountersNative(long address);
+    protected static native void setSupportedSurfaceCountersNative(long address, long supportedSurfaceCounters);
 
 
     public static native long sizeof();
@@ -302,10 +302,10 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
 
         @Override
         public VkSurfaceCapabilities2EXT get(int i){
-            return new VkSurfaceCapabilities2EXT(getVkMemory(), addressAt(i));
+            return new VkSurfaceCapabilities2EXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkRefreshCycleDurationGOOGLE_sizeof(JNIEnv* env, jclass 
     return sizeof(VkRefreshCycleDurationGOOGLE);
 }
 
-jlong Java_cz_mg_vulkan_VkRefreshCycleDurationGOOGLE_getRefreshDuration(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRefreshCycleDurationGOOGLE_getRefreshDurationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkRefreshCycleDurationGOOGLE_getRefreshDuration(JNIEnv* 
     return jniPointerToLong(&o->refreshDuration);
 }
 
-void Java_cz_mg_vulkan_VkRefreshCycleDurationGOOGLE_setRefreshDuration(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRefreshCycleDurationGOOGLE_setRefreshDurationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

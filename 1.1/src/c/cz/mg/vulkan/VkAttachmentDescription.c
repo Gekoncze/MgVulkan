@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkAttachmentDescription);
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentDescription_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentDescription_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_getFlags(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentDescription_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentDescription_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkAttachmentDescription_setFlags(JNIEnv* env, jclass jc, 
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentDescription_getFormat(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentDescription_getFormatNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_getFormat(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->format);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentDescription_setFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentDescription_setFormatNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkAttachmentDescription_setFormat(JNIEnv* env, jclass jc,
     memcpy(&o->format, valuePointer, sizeof(o->format));
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentDescription_getSamples(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentDescription_getSamplesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_getSamples(JNIEnv* env, jclass j
     return jniPointerToLong(&o->samples);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentDescription_setSamples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentDescription_setSamplesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkAttachmentDescription_setSamples(JNIEnv* env, jclass jc
     memcpy(&o->samples, valuePointer, sizeof(o->samples));
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentDescription_getLoadOp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentDescription_getLoadOpNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_getLoadOp(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->loadOp);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentDescription_setLoadOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentDescription_setLoadOpNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkAttachmentDescription_setLoadOp(JNIEnv* env, jclass jc,
     memcpy(&o->loadOp, valuePointer, sizeof(o->loadOp));
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentDescription_getStoreOp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentDescription_getStoreOpNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_getStoreOp(JNIEnv* env, jclass j
     return jniPointerToLong(&o->storeOp);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentDescription_setStoreOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentDescription_setStoreOpNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkAttachmentDescription_setStoreOp(JNIEnv* env, jclass jc
     memcpy(&o->storeOp, valuePointer, sizeof(o->storeOp));
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentDescription_getStencilLoadOp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentDescription_getStencilLoadOpNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_getStencilLoadOp(JNIEnv* env, jc
     return jniPointerToLong(&o->stencilLoadOp);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentDescription_setStencilLoadOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentDescription_setStencilLoadOpNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkAttachmentDescription_setStencilLoadOp(JNIEnv* env, jcl
     memcpy(&o->stencilLoadOp, valuePointer, sizeof(o->stencilLoadOp));
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentDescription_getStencilStoreOp(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentDescription_getStencilStoreOpNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_getStencilStoreOp(JNIEnv* env, j
     return jniPointerToLong(&o->stencilStoreOp);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentDescription_setStencilStoreOp(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentDescription_setStencilStoreOpNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkAttachmentDescription_setStencilStoreOp(JNIEnv* env, jc
     memcpy(&o->stencilStoreOp, valuePointer, sizeof(o->stencilStoreOp));
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentDescription_getInitialLayout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentDescription_getInitialLayoutNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_getInitialLayout(JNIEnv* env, jc
     return jniPointerToLong(&o->initialLayout);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentDescription_setInitialLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentDescription_setInitialLayoutNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -152,7 +152,7 @@ void Java_cz_mg_vulkan_VkAttachmentDescription_setInitialLayout(JNIEnv* env, jcl
     memcpy(&o->initialLayout, valuePointer, sizeof(o->initialLayout));
 }
 
-jlong Java_cz_mg_vulkan_VkAttachmentDescription_getFinalLayout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkAttachmentDescription_getFinalLayoutNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -160,7 +160,7 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_getFinalLayout(JNIEnv* env, jcla
     return jniPointerToLong(&o->finalLayout);
 }
 
-void Java_cz_mg_vulkan_VkAttachmentDescription_setFinalLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkAttachmentDescription_setFinalLayoutNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

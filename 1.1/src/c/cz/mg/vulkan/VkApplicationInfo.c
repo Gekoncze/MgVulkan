@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkApplicationInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkApplicationInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkApplicationInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkApplicationInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkApplicationInfo_getSType(JNIEnv* env, jclass jc, jlong
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkApplicationInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkApplicationInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkApplicationInfo_setSType(JNIEnv* env, jclass jc, jlong 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkApplicationInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkApplicationInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkApplicationInfo_getPNext(JNIEnv* env, jclass jc, jlong
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkApplicationInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkApplicationInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkApplicationInfo_setPNext(JNIEnv* env, jclass jc, jlong 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkApplicationInfo_getPApplicationName(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkApplicationInfo_getPApplicationNameNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkApplicationInfo_getPApplicationName(JNIEnv* env, jclas
     return jniPointerToLong(o->pApplicationName);
 }
 
-void Java_cz_mg_vulkan_VkApplicationInfo_setPApplicationName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkApplicationInfo_setPApplicationNameNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkApplicationInfo_setPApplicationName(JNIEnv* env, jclass
     memcpy(&o->pApplicationName, &valuePointer, sizeof(o->pApplicationName));
 }
 
-jlong Java_cz_mg_vulkan_VkApplicationInfo_getApplicationVersion(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkApplicationInfo_getApplicationVersionNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkApplicationInfo_getApplicationVersion(JNIEnv* env, jcl
     return jniPointerToLong(&o->applicationVersion);
 }
 
-void Java_cz_mg_vulkan_VkApplicationInfo_setApplicationVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkApplicationInfo_setApplicationVersionNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkApplicationInfo_setApplicationVersion(JNIEnv* env, jcla
     memcpy(&o->applicationVersion, valuePointer, sizeof(o->applicationVersion));
 }
 
-jlong Java_cz_mg_vulkan_VkApplicationInfo_getPEngineName(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkApplicationInfo_getPEngineNameNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkApplicationInfo_getPEngineName(JNIEnv* env, jclass jc,
     return jniPointerToLong(o->pEngineName);
 }
 
-void Java_cz_mg_vulkan_VkApplicationInfo_setPEngineName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkApplicationInfo_setPEngineNameNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkApplicationInfo_setPEngineName(JNIEnv* env, jclass jc, 
     memcpy(&o->pEngineName, &valuePointer, sizeof(o->pEngineName));
 }
 
-jlong Java_cz_mg_vulkan_VkApplicationInfo_getEngineVersion(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkApplicationInfo_getEngineVersionNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkApplicationInfo_getEngineVersion(JNIEnv* env, jclass j
     return jniPointerToLong(&o->engineVersion);
 }
 
-void Java_cz_mg_vulkan_VkApplicationInfo_setEngineVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkApplicationInfo_setEngineVersionNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkApplicationInfo_setEngineVersion(JNIEnv* env, jclass jc
     memcpy(&o->engineVersion, valuePointer, sizeof(o->engineVersion));
 }
 
-jlong Java_cz_mg_vulkan_VkApplicationInfo_getApiVersion(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkApplicationInfo_getApiVersionNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkApplicationInfo_getApiVersion(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->apiVersion);
 }
 
-void Java_cz_mg_vulkan_VkApplicationInfo_setApiVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkApplicationInfo_setApiVersionNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

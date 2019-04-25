@@ -21,12 +21,12 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineRasterizationConservativeStateCreateFlagsEXT getFlags() {
-        return new VkPipelineRasterizationConservativeStateCreateFlagsEXT(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineRasterizationConservativeStateCreateFlagsEXT(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineRasterizationConservativeStateCreateFlagsEXT flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkConservativeRasterizationModeEXT getConservativeRasterizationMode() {
-        return new VkConservativeRasterizationModeEXT(getVkMemory(), getConservativeRasterizationMode(getVkAddress()));
+        return new VkConservativeRasterizationModeEXT(getVkMemory(), getConservativeRasterizationModeNative(getVkAddress()));
     }
 
     
     public void setConservativeRasterizationMode(VkConservativeRasterizationModeEXT conservativeRasterizationMode) {
-        setConservativeRasterizationMode(getVkAddress(), conservativeRasterizationMode != null ? conservativeRasterizationMode.getVkAddress() : VkPointer.getNullAddressNative());
+        setConservativeRasterizationModeNative(getVkAddress(), conservativeRasterizationMode != null ? conservativeRasterizationMode.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         getConservativeRasterizationMode().setValue(conservativeRasterizationMode);
     }
 
-    protected static native long getConservativeRasterizationMode(long address);
-    protected static native void setConservativeRasterizationMode(long address, long conservativeRasterizationMode);
+    protected static native long getConservativeRasterizationModeNative(long address);
+    protected static native void setConservativeRasterizationModeNative(long address, long conservativeRasterizationMode);
 
     public VkFloat getExtraPrimitiveOverestimationSize() {
-        return new VkFloat(getVkMemory(), getExtraPrimitiveOverestimationSize(getVkAddress()));
+        return new VkFloat(getVkMemory(), getExtraPrimitiveOverestimationSizeNative(getVkAddress()));
     }
 
     
     public void setExtraPrimitiveOverestimationSize(VkFloat extraPrimitiveOverestimationSize) {
-        setExtraPrimitiveOverestimationSize(getVkAddress(), extraPrimitiveOverestimationSize != null ? extraPrimitiveOverestimationSize.getVkAddress() : VkPointer.getNullAddressNative());
+        setExtraPrimitiveOverestimationSizeNative(getVkAddress(), extraPrimitiveOverestimationSize != null ? extraPrimitiveOverestimationSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,8 +114,8 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
         getExtraPrimitiveOverestimationSize().setValue(extraPrimitiveOverestimationSize);
     }
 
-    protected static native long getExtraPrimitiveOverestimationSize(long address);
-    protected static native void setExtraPrimitiveOverestimationSize(long address, long extraPrimitiveOverestimationSize);
+    protected static native long getExtraPrimitiveOverestimationSizeNative(long address);
+    protected static native void setExtraPrimitiveOverestimationSizeNative(long address, long extraPrimitiveOverestimationSize);
 
 
     public static native long sizeof();

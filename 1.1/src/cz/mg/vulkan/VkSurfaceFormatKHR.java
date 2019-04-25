@@ -20,12 +20,12 @@ public class VkSurfaceFormatKHR extends VkObject {
 
 
     public VkFormat getFormat() {
-        return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
+        return new VkFormat(getVkMemory(), getFormatNative(getVkAddress()));
     }
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
+        setFormatNative(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkSurfaceFormatKHR extends VkObject {
         getFormat().setValue(format);
     }
 
-    protected static native long getFormat(long address);
-    protected static native void setFormat(long address, long format);
+    protected static native long getFormatNative(long address);
+    protected static native void setFormatNative(long address, long format);
 
     public VkColorSpaceKHR getColorSpace() {
-        return new VkColorSpaceKHR(getVkMemory(), getColorSpace(getVkAddress()));
+        return new VkColorSpaceKHR(getVkMemory(), getColorSpaceNative(getVkAddress()));
     }
 
     
     public void setColorSpace(VkColorSpaceKHR colorSpace) {
-        setColorSpace(getVkAddress(), colorSpace != null ? colorSpace.getVkAddress() : VkPointer.getNullAddressNative());
+        setColorSpaceNative(getVkAddress(), colorSpace != null ? colorSpace.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,8 +58,8 @@ public class VkSurfaceFormatKHR extends VkObject {
         getColorSpace().setValue(colorSpace);
     }
 
-    protected static native long getColorSpace(long address);
-    protected static native void setColorSpace(long address, long colorSpace);
+    protected static native long getColorSpaceNative(long address);
+    protected static native void setColorSpaceNative(long address, long colorSpace);
 
 
     public static native long sizeof();
@@ -103,10 +103,10 @@ public class VkSurfaceFormatKHR extends VkObject {
 
         @Override
         public VkSurfaceFormatKHR get(int i){
-            return new VkSurfaceFormatKHR(getVkMemory(), addressAt(i));
+            return new VkSurfaceFormatKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

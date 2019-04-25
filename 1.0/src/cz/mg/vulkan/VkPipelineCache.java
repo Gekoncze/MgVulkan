@@ -61,10 +61,10 @@ public class VkPipelineCache extends VkNonDispatchableHandle {
 
         @Override
         public VkPipelineCache get(int i){
-            return new VkPipelineCache(getVkMemory(), addressAt(i));
+            return new VkPipelineCache(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

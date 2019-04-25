@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_sizeof(JNIEnv* en
     return sizeof(VkDeviceGroupCommandBufferBeginInfoKHX);
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_getSType(JNIEnv* 
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_setSType(JNIEnv* e
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_getPNext(JNIEnv* 
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_setPNext(JNIEnv* e
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_getDeviceMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_getDeviceMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_getDeviceMask(JNI
     return jniPointerToLong(&o->deviceMask);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_setDeviceMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupCommandBufferBeginInfoKHX_setDeviceMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

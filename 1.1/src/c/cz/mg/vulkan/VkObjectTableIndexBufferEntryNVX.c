@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_sizeof(JNIEnv* env, jcl
     return sizeof(VkObjectTableIndexBufferEntryNVX);
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getType(JNIEnv* env, jc
     return jniPointerToLong(&o->type);
 }
 
-void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setType(JNIEnv* env, jcl
     memcpy(&o->type, valuePointer, sizeof(o->type));
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getFlags(JNIEnv* env, j
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setFlags(JNIEnv* env, jc
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getBufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getBuffer(JNIEnv* env, 
     return jniPointerToLong(&o->buffer);
 }
 
-void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setBufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setBuffer(JNIEnv* env, j
     memcpy(&o->buffer, valuePointer, sizeof(o->buffer));
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getIndexType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getIndexTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_getIndexType(JNIEnv* en
     return jniPointerToLong(&o->indexType);
 }
 
-void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setIndexType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTableIndexBufferEntryNVX_setIndexTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

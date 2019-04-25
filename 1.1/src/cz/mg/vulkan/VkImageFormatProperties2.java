@@ -20,12 +20,12 @@ public class VkImageFormatProperties2 extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,34 +37,34 @@ public class VkImageFormatProperties2 extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkImageFormatProperties getImageFormatProperties() {
-        return new VkImageFormatProperties(getVkMemory(), getImageFormatProperties(getVkAddress()));
+        return new VkImageFormatProperties(getVkMemory(), getImageFormatPropertiesNative(getVkAddress()));
     }
 
     
     public void setImageFormatProperties(VkImageFormatProperties imageFormatProperties) {
-        setImageFormatProperties(getVkAddress(), imageFormatProperties != null ? imageFormatProperties.getVkAddress() : VkPointer.getNullAddressNative());
+        setImageFormatPropertiesNative(getVkAddress(), imageFormatProperties != null ? imageFormatProperties.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getImageFormatProperties(long address);
-    protected static native void setImageFormatProperties(long address, long imageFormatProperties);
+    protected static native long getImageFormatPropertiesNative(long address);
+    protected static native void setImageFormatPropertiesNative(long address, long imageFormatProperties);
 
 
     public static native long sizeof();
@@ -108,10 +108,10 @@ public class VkImageFormatProperties2 extends VkObject {
 
         @Override
         public VkImageFormatProperties2 get(int i){
-            return new VkImageFormatProperties2(getVkMemory(), addressAt(i));
+            return new VkImageFormatProperties2(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

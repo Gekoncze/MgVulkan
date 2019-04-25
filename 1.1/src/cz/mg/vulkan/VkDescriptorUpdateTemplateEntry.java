@@ -20,12 +20,12 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
 
 
     public VkUInt32 getDstBinding() {
-        return new VkUInt32(getVkMemory(), getDstBinding(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDstBindingNative(getVkAddress()));
     }
 
     
     public void setDstBinding(VkUInt32 dstBinding) {
-        setDstBinding(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstBindingNative(getVkAddress(), dstBinding != null ? dstBinding.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         getDstBinding().setValue(dstBinding);
     }
 
-    protected static native long getDstBinding(long address);
-    protected static native void setDstBinding(long address, long dstBinding);
+    protected static native long getDstBindingNative(long address);
+    protected static native void setDstBindingNative(long address, long dstBinding);
 
     public VkUInt32 getDstArrayElement() {
-        return new VkUInt32(getVkMemory(), getDstArrayElement(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDstArrayElementNative(getVkAddress()));
     }
 
     
     public void setDstArrayElement(VkUInt32 dstArrayElement) {
-        setDstArrayElement(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstArrayElementNative(getVkAddress(), dstArrayElement != null ? dstArrayElement.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         getDstArrayElement().setValue(dstArrayElement);
     }
 
-    protected static native long getDstArrayElement(long address);
-    protected static native void setDstArrayElement(long address, long dstArrayElement);
+    protected static native long getDstArrayElementNative(long address);
+    protected static native void setDstArrayElementNative(long address, long dstArrayElement);
 
     public VkUInt32 getDescriptorCount() {
-        return new VkUInt32(getVkMemory(), getDescriptorCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDescriptorCountNative(getVkAddress()));
     }
 
     
     public void setDescriptorCount(VkUInt32 descriptorCount) {
-        setDescriptorCount(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDescriptorCountNative(getVkAddress(), descriptorCount != null ? descriptorCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         getDescriptorCount().setValue(descriptorCount);
     }
 
-    protected static native long getDescriptorCount(long address);
-    protected static native void setDescriptorCount(long address, long descriptorCount);
+    protected static native long getDescriptorCountNative(long address);
+    protected static native void setDescriptorCountNative(long address, long descriptorCount);
 
     public VkDescriptorType getDescriptorType() {
-        return new VkDescriptorType(getVkMemory(), getDescriptorType(getVkAddress()));
+        return new VkDescriptorType(getVkMemory(), getDescriptorTypeNative(getVkAddress()));
     }
 
     
     public void setDescriptorType(VkDescriptorType descriptorType) {
-        setDescriptorType(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddressNative());
+        setDescriptorTypeNative(getVkAddress(), descriptorType != null ? descriptorType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -100,16 +100,16 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         getDescriptorType().setValue(descriptorType);
     }
 
-    protected static native long getDescriptorType(long address);
-    protected static native void setDescriptorType(long address, long descriptorType);
+    protected static native long getDescriptorTypeNative(long address);
+    protected static native void setDescriptorTypeNative(long address, long descriptorType);
 
     public VkSize getOffset() {
-        return new VkSize(getVkMemory(), getOffset(getVkAddress()));
+        return new VkSize(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkSize offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -121,16 +121,16 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         getOffset().setValue(offset);
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
     public VkSize getStride() {
-        return new VkSize(getVkMemory(), getStride(getVkAddress()));
+        return new VkSize(getVkMemory(), getStrideNative(getVkAddress()));
     }
 
     
     public void setStride(VkSize stride) {
-        setStride(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddressNative());
+        setStrideNative(getVkAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -142,8 +142,8 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
         getStride().setValue(stride);
     }
 
-    protected static native long getStride(long address);
-    protected static native void setStride(long address, long stride);
+    protected static native long getStrideNative(long address);
+    protected static native void setStrideNative(long address, long stride);
 
 
     public static native long sizeof();
@@ -187,10 +187,10 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
 
         @Override
         public VkDescriptorUpdateTemplateEntry get(int i){
-            return new VkDescriptorUpdateTemplateEntry(getVkMemory(), addressAt(i));
+            return new VkDescriptorUpdateTemplateEntry(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

@@ -20,12 +20,12 @@ public class VkDrawIndirectCommand extends VkObject {
 
 
     public VkUInt32 getVertexCount() {
-        return new VkUInt32(getVkMemory(), getVertexCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getVertexCountNative(getVkAddress()));
     }
 
     
     public void setVertexCount(VkUInt32 vertexCount) {
-        setVertexCount(getVkAddress(), vertexCount != null ? vertexCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setVertexCountNative(getVkAddress(), vertexCount != null ? vertexCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkDrawIndirectCommand extends VkObject {
         getVertexCount().setValue(vertexCount);
     }
 
-    protected static native long getVertexCount(long address);
-    protected static native void setVertexCount(long address, long vertexCount);
+    protected static native long getVertexCountNative(long address);
+    protected static native void setVertexCountNative(long address, long vertexCount);
 
     public VkUInt32 getInstanceCount() {
-        return new VkUInt32(getVkMemory(), getInstanceCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getInstanceCountNative(getVkAddress()));
     }
 
     
     public void setInstanceCount(VkUInt32 instanceCount) {
-        setInstanceCount(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setInstanceCountNative(getVkAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkDrawIndirectCommand extends VkObject {
         getInstanceCount().setValue(instanceCount);
     }
 
-    protected static native long getInstanceCount(long address);
-    protected static native void setInstanceCount(long address, long instanceCount);
+    protected static native long getInstanceCountNative(long address);
+    protected static native void setInstanceCountNative(long address, long instanceCount);
 
     public VkUInt32 getFirstVertex() {
-        return new VkUInt32(getVkMemory(), getFirstVertex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getFirstVertexNative(getVkAddress()));
     }
 
     
     public void setFirstVertex(VkUInt32 firstVertex) {
-        setFirstVertex(getVkAddress(), firstVertex != null ? firstVertex.getVkAddress() : VkPointer.getNullAddressNative());
+        setFirstVertexNative(getVkAddress(), firstVertex != null ? firstVertex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkDrawIndirectCommand extends VkObject {
         getFirstVertex().setValue(firstVertex);
     }
 
-    protected static native long getFirstVertex(long address);
-    protected static native void setFirstVertex(long address, long firstVertex);
+    protected static native long getFirstVertexNative(long address);
+    protected static native void setFirstVertexNative(long address, long firstVertex);
 
     public VkUInt32 getFirstInstance() {
-        return new VkUInt32(getVkMemory(), getFirstInstance(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getFirstInstanceNative(getVkAddress()));
     }
 
     
     public void setFirstInstance(VkUInt32 firstInstance) {
-        setFirstInstance(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddressNative());
+        setFirstInstanceNative(getVkAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -100,8 +100,8 @@ public class VkDrawIndirectCommand extends VkObject {
         getFirstInstance().setValue(firstInstance);
     }
 
-    protected static native long getFirstInstance(long address);
-    protected static native void setFirstInstance(long address, long firstInstance);
+    protected static native long getFirstInstanceNative(long address);
+    protected static native void setFirstInstanceNative(long address, long firstInstance);
 
 
     public static native long sizeof();
@@ -145,10 +145,10 @@ public class VkDrawIndirectCommand extends VkObject {
 
         @Override
         public VkDrawIndirectCommand get(int i){
-            return new VkDrawIndirectCommand(getVkMemory(), addressAt(i));
+            return new VkDrawIndirectCommand(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

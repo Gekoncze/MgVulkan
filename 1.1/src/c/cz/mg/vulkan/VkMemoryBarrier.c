@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkMemoryBarrier_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkMemoryBarrier);
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryBarrier_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryBarrier_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkMemoryBarrier_getSType(JNIEnv* env, jclass jc, jlong a
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkMemoryBarrier_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryBarrier_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkMemoryBarrier_setSType(JNIEnv* env, jclass jc, jlong ad
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryBarrier_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryBarrier_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkMemoryBarrier_getPNext(JNIEnv* env, jclass jc, jlong a
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkMemoryBarrier_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryBarrier_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkMemoryBarrier_setPNext(JNIEnv* env, jclass jc, jlong ad
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryBarrier_getSrcAccessMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryBarrier_getSrcAccessMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkMemoryBarrier_getSrcAccessMask(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->srcAccessMask);
 }
 
-void Java_cz_mg_vulkan_VkMemoryBarrier_setSrcAccessMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryBarrier_setSrcAccessMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkMemoryBarrier_setSrcAccessMask(JNIEnv* env, jclass jc, 
     memcpy(&o->srcAccessMask, valuePointer, sizeof(o->srcAccessMask));
 }
 
-jlong Java_cz_mg_vulkan_VkMemoryBarrier_getDstAccessMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkMemoryBarrier_getDstAccessMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkMemoryBarrier_getDstAccessMask(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->dstAccessMask);
 }
 
-void Java_cz_mg_vulkan_VkMemoryBarrier_setDstAccessMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkMemoryBarrier_setDstAccessMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

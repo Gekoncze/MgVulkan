@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPushConstantRange_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkPushConstantRange);
 }
 
-jlong Java_cz_mg_vulkan_VkPushConstantRange_getStageFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPushConstantRange_getStageFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPushConstantRange_getStageFlags(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->stageFlags);
 }
 
-void Java_cz_mg_vulkan_VkPushConstantRange_setStageFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPushConstantRange_setStageFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPushConstantRange_setStageFlags(JNIEnv* env, jclass jc,
     memcpy(&o->stageFlags, valuePointer, sizeof(o->stageFlags));
 }
 
-jlong Java_cz_mg_vulkan_VkPushConstantRange_getOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPushConstantRange_getOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPushConstantRange_getOffset(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->offset);
 }
 
-void Java_cz_mg_vulkan_VkPushConstantRange_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPushConstantRange_setOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPushConstantRange_setOffset(JNIEnv* env, jclass jc, jlo
     memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
 
-jlong Java_cz_mg_vulkan_VkPushConstantRange_getSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPushConstantRange_getSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPushConstantRange_getSize(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(&o->size);
 }
 
-void Java_cz_mg_vulkan_VkPushConstantRange_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPushConstantRange_setSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

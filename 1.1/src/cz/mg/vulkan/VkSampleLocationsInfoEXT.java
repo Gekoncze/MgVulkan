@@ -21,12 +21,12 @@ public class VkSampleLocationsInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkSampleCountFlagBits getSampleLocationsPerPixel() {
-        return new VkSampleCountFlagBits(getVkMemory(), getSampleLocationsPerPixel(getVkAddress()));
+        return new VkSampleCountFlagBits(getVkMemory(), getSampleLocationsPerPixelNative(getVkAddress()));
     }
 
     
     public void setSampleLocationsPerPixel(VkSampleCountFlagBits sampleLocationsPerPixel) {
-        setSampleLocationsPerPixel(getVkAddress(), sampleLocationsPerPixel != null ? sampleLocationsPerPixel.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampleLocationsPerPixelNative(getVkAddress(), sampleLocationsPerPixel != null ? sampleLocationsPerPixel.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,29 +72,29 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         getSampleLocationsPerPixel().setValue(sampleLocationsPerPixel);
     }
 
-    protected static native long getSampleLocationsPerPixel(long address);
-    protected static native void setSampleLocationsPerPixel(long address, long sampleLocationsPerPixel);
+    protected static native long getSampleLocationsPerPixelNative(long address);
+    protected static native void setSampleLocationsPerPixelNative(long address, long sampleLocationsPerPixel);
 
     public VkExtent2D getSampleLocationGridSize() {
-        return new VkExtent2D(getVkMemory(), getSampleLocationGridSize(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getSampleLocationGridSizeNative(getVkAddress()));
     }
 
     
     public void setSampleLocationGridSize(VkExtent2D sampleLocationGridSize) {
-        setSampleLocationGridSize(getVkAddress(), sampleLocationGridSize != null ? sampleLocationGridSize.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampleLocationGridSizeNative(getVkAddress(), sampleLocationGridSize != null ? sampleLocationGridSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSampleLocationGridSize(long address);
-    protected static native void setSampleLocationGridSize(long address, long sampleLocationGridSize);
+    protected static native long getSampleLocationGridSizeNative(long address);
+    protected static native void setSampleLocationGridSizeNative(long address, long sampleLocationGridSize);
 
     public VkUInt32 getSampleLocationsCount() {
-        return new VkUInt32(getVkMemory(), getSampleLocationsCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSampleLocationsCountNative(getVkAddress()));
     }
 
     
     public void setSampleLocationsCount(VkUInt32 sampleLocationsCount) {
-        setSampleLocationsCount(getVkAddress(), sampleLocationsCount != null ? sampleLocationsCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampleLocationsCountNative(getVkAddress(), sampleLocationsCount != null ? sampleLocationsCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,21 +106,21 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         getSampleLocationsCount().setValue(sampleLocationsCount);
     }
 
-    protected static native long getSampleLocationsCount(long address);
-    protected static native void setSampleLocationsCount(long address, long sampleLocationsCount);
+    protected static native long getSampleLocationsCountNative(long address);
+    protected static native void setSampleLocationsCountNative(long address, long sampleLocationsCount);
 
     public VkSampleLocationEXT getPSampleLocations() {
-        return new VkSampleLocationEXT(getVkMemory(), getPSampleLocations(getVkAddress()));
+        return new VkSampleLocationEXT(getVkMemory(), getPSampleLocationsNative(getVkAddress()));
     }
 
     private VkObject pSampleLocations = null;
     public void setPSampleLocations(VkSampleLocationEXT pSampleLocations) {
-        setPSampleLocations(getVkAddress(), pSampleLocations != null ? pSampleLocations.getVkAddress() : VkPointer.NULL);
+        setPSampleLocationsNative(getVkAddress(), pSampleLocations != null ? pSampleLocations.getVkAddress() : VkPointer.NULL);
         this.pSampleLocations = pSampleLocations;
     }
 
-    protected static native long getPSampleLocations(long address);
-    protected static native void setPSampleLocations(long address, long pSampleLocations);
+    protected static native long getPSampleLocationsNative(long address);
+    protected static native void setPSampleLocationsNative(long address, long pSampleLocations);
 
 
     public static native long sizeof();

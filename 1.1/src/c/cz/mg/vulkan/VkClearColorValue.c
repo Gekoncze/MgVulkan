@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkClearColorValue_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkClearColorValue);
 }
 
-jlong Java_cz_mg_vulkan_VkClearColorValue_getFloat32(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearColorValue_getFloat32Native(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkClearColorValue_getFloat32(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(o->float32);
 }
 
-void Java_cz_mg_vulkan_VkClearColorValue_setFloat32(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearColorValue_setFloat32Native(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkClearColorValue_setFloat32(JNIEnv* env, jclass jc, jlon
     memcpy(o->float32, valuePointer, sizeof(o->float32));
 }
 
-jlong Java_cz_mg_vulkan_VkClearColorValue_getInt32(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearColorValue_getInt32Native(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkClearColorValue_getInt32(JNIEnv* env, jclass jc, jlong
     return jniPointerToLong(o->int32);
 }
 
-void Java_cz_mg_vulkan_VkClearColorValue_setInt32(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearColorValue_setInt32Native(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkClearColorValue_setInt32(JNIEnv* env, jclass jc, jlong 
     memcpy(o->int32, valuePointer, sizeof(o->int32));
 }
 
-jlong Java_cz_mg_vulkan_VkClearColorValue_getUint32(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearColorValue_getUint32Native(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkClearColorValue_getUint32(JNIEnv* env, jclass jc, jlon
     return jniPointerToLong(o->uint32);
 }
 
-void Java_cz_mg_vulkan_VkClearColorValue_setUint32(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearColorValue_setUint32Native(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

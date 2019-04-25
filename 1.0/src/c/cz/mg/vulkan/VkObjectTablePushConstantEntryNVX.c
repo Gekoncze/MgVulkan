@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_sizeof(JNIEnv* env, jc
     return sizeof(VkObjectTablePushConstantEntryNVX);
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getType(JNIEnv* env, j
     return jniPointerToLong(&o->type);
 }
 
-void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setType(JNIEnv* env, jc
     memcpy(&o->type, valuePointer, sizeof(o->type));
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getFlags(JNIEnv* env, 
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setFlags(JNIEnv* env, j
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getPipelineLayout(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getPipelineLayoutNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getPipelineLayout(JNIE
     return jniPointerToLong(&o->pipelineLayout);
 }
 
-void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setPipelineLayout(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setPipelineLayoutNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setPipelineLayout(JNIEn
     memcpy(&o->pipelineLayout, valuePointer, sizeof(o->pipelineLayout));
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getStageFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getStageFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getStageFlags(JNIEnv* 
     return jniPointerToLong(&o->stageFlags);
 }
 
-void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setStageFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setStageFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

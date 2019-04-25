@@ -61,10 +61,10 @@ public class VkValidationCacheEXT extends VkNonDispatchableHandle {
 
         @Override
         public VkValidationCacheEXT get(int i){
-            return new VkValidationCacheEXT(getVkMemory(), addressAt(i));
+            return new VkValidationCacheEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

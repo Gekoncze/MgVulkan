@@ -21,12 +21,12 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineDynamicStateCreateFlags getFlags() {
-        return new VkPipelineDynamicStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineDynamicStateCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineDynamicStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkUInt32 getDynamicStateCount() {
-        return new VkUInt32(getVkMemory(), getDynamicStateCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDynamicStateCountNative(getVkAddress()));
     }
 
     
     public void setDynamicStateCount(VkUInt32 dynamicStateCount) {
-        setDynamicStateCount(getVkAddress(), dynamicStateCount != null ? dynamicStateCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDynamicStateCountNative(getVkAddress(), dynamicStateCount != null ? dynamicStateCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,21 +93,21 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         getDynamicStateCount().setValue(dynamicStateCount);
     }
 
-    protected static native long getDynamicStateCount(long address);
-    protected static native void setDynamicStateCount(long address, long dynamicStateCount);
+    protected static native long getDynamicStateCountNative(long address);
+    protected static native void setDynamicStateCountNative(long address, long dynamicStateCount);
 
     public VkDynamicState getPDynamicStates() {
-        return new VkDynamicState(getVkMemory(), getPDynamicStates(getVkAddress()));
+        return new VkDynamicState(getVkMemory(), getPDynamicStatesNative(getVkAddress()));
     }
 
     private VkObject pDynamicStates = null;
     public void setPDynamicStates(VkDynamicState pDynamicStates) {
-        setPDynamicStates(getVkAddress(), pDynamicStates != null ? pDynamicStates.getVkAddress() : VkPointer.NULL);
+        setPDynamicStatesNative(getVkAddress(), pDynamicStates != null ? pDynamicStates.getVkAddress() : VkPointer.NULL);
         this.pDynamicStates = pDynamicStates;
     }
 
-    protected static native long getPDynamicStates(long address);
-    protected static native void setPDynamicStates(long address, long pDynamicStates);
+    protected static native long getPDynamicStatesNative(long address);
+    protected static native void setPDynamicStatesNative(long address, long pDynamicStates);
 
 
     public static native long sizeof();

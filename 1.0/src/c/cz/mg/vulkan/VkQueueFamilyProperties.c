@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkQueueFamilyProperties);
 }
 
-jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getQueueFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getQueueFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getQueueFlags(JNIEnv* env, jclas
     return jniPointerToLong(&o->queueFlags);
 }
 
-void Java_cz_mg_vulkan_VkQueueFamilyProperties_setQueueFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkQueueFamilyProperties_setQueueFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkQueueFamilyProperties_setQueueFlags(JNIEnv* env, jclass
     memcpy(&o->queueFlags, valuePointer, sizeof(o->queueFlags));
 }
 
-jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getQueueCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getQueueCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getQueueCount(JNIEnv* env, jclas
     return jniPointerToLong(&o->queueCount);
 }
 
-void Java_cz_mg_vulkan_VkQueueFamilyProperties_setQueueCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkQueueFamilyProperties_setQueueCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkQueueFamilyProperties_setQueueCount(JNIEnv* env, jclass
     memcpy(&o->queueCount, valuePointer, sizeof(o->queueCount));
 }
 
-jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getTimestampValidBits(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getTimestampValidBitsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getTimestampValidBits(JNIEnv* en
     return jniPointerToLong(&o->timestampValidBits);
 }
 
-void Java_cz_mg_vulkan_VkQueueFamilyProperties_setTimestampValidBits(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkQueueFamilyProperties_setTimestampValidBitsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkQueueFamilyProperties_setTimestampValidBits(JNIEnv* env
     memcpy(&o->timestampValidBits, valuePointer, sizeof(o->timestampValidBits));
 }
 
-jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getMinImageTransferGranularity(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getMinImageTransferGranularityNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkQueueFamilyProperties_getMinImageTransferGranularity(J
     return jniPointerToLong(&o->minImageTransferGranularity);
 }
 
-void Java_cz_mg_vulkan_VkQueueFamilyProperties_setMinImageTransferGranularity(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkQueueFamilyProperties_setMinImageTransferGranularityNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

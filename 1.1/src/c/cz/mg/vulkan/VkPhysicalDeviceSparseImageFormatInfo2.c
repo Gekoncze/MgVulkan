@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_sizeof(JNIEnv* en
     return sizeof(VkPhysicalDeviceSparseImageFormatInfo2);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getSType(JNIEnv* 
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setSType(JNIEnv* e
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getPNext(JNIEnv* 
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setPNext(JNIEnv* e
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getFormat(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getFormatNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getFormat(JNIEnv*
     return jniPointerToLong(&o->format);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setFormat(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setFormatNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setFormat(JNIEnv* 
     memcpy(&o->format, valuePointer, sizeof(o->format));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getType(JNIEnv* e
     return jniPointerToLong(&o->type);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setType(JNIEnv* en
     memcpy(&o->type, valuePointer, sizeof(o->type));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getSamples(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getSamplesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getSamples(JNIEnv
     return jniPointerToLong(&o->samples);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setSamples(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setSamplesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setSamples(JNIEnv*
     memcpy(&o->samples, valuePointer, sizeof(o->samples));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getUsage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getUsageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getUsage(JNIEnv* 
     return jniPointerToLong(&o->usage);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setUsage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setUsageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setUsage(JNIEnv* e
     memcpy(&o->usage, valuePointer, sizeof(o->usage));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getTiling(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getTilingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getTiling(JNIEnv*
     return jniPointerToLong(&o->tiling);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setTiling(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setTilingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

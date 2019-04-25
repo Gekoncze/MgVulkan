@@ -21,12 +21,12 @@ public class VkRenderPassMultiviewCreateInfoKHX extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkRenderPassMultiviewCreateInfoKHX extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getSubpassCount() {
-        return new VkUInt32(getVkMemory(), getSubpassCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSubpassCountNative(getVkAddress()));
     }
 
     
     public void setSubpassCount(VkUInt32 subpassCount) {
-        setSubpassCount(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setSubpassCountNative(getVkAddress(), subpassCount != null ? subpassCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,29 +72,29 @@ public class VkRenderPassMultiviewCreateInfoKHX extends VkObject {
         getSubpassCount().setValue(subpassCount);
     }
 
-    protected static native long getSubpassCount(long address);
-    protected static native void setSubpassCount(long address, long subpassCount);
+    protected static native long getSubpassCountNative(long address);
+    protected static native void setSubpassCountNative(long address, long subpassCount);
 
     public VkUInt32 getPViewMasks() {
-        return new VkUInt32(getVkMemory(), getPViewMasks(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPViewMasksNative(getVkAddress()));
     }
 
     private VkObject pViewMasks = null;
     public void setPViewMasks(VkUInt32 pViewMasks) {
-        setPViewMasks(getVkAddress(), pViewMasks != null ? pViewMasks.getVkAddress() : VkPointer.NULL);
+        setPViewMasksNative(getVkAddress(), pViewMasks != null ? pViewMasks.getVkAddress() : VkPointer.NULL);
         this.pViewMasks = pViewMasks;
     }
 
-    protected static native long getPViewMasks(long address);
-    protected static native void setPViewMasks(long address, long pViewMasks);
+    protected static native long getPViewMasksNative(long address);
+    protected static native void setPViewMasksNative(long address, long pViewMasks);
 
     public VkUInt32 getDependencyCount() {
-        return new VkUInt32(getVkMemory(), getDependencyCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDependencyCountNative(getVkAddress()));
     }
 
     
     public void setDependencyCount(VkUInt32 dependencyCount) {
-        setDependencyCount(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setDependencyCountNative(getVkAddress(), dependencyCount != null ? dependencyCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,29 +106,29 @@ public class VkRenderPassMultiviewCreateInfoKHX extends VkObject {
         getDependencyCount().setValue(dependencyCount);
     }
 
-    protected static native long getDependencyCount(long address);
-    protected static native void setDependencyCount(long address, long dependencyCount);
+    protected static native long getDependencyCountNative(long address);
+    protected static native void setDependencyCountNative(long address, long dependencyCount);
 
     public VkInt32 getPViewOffsets() {
-        return new VkInt32(getVkMemory(), getPViewOffsets(getVkAddress()));
+        return new VkInt32(getVkMemory(), getPViewOffsetsNative(getVkAddress()));
     }
 
     private VkObject pViewOffsets = null;
     public void setPViewOffsets(VkInt32 pViewOffsets) {
-        setPViewOffsets(getVkAddress(), pViewOffsets != null ? pViewOffsets.getVkAddress() : VkPointer.NULL);
+        setPViewOffsetsNative(getVkAddress(), pViewOffsets != null ? pViewOffsets.getVkAddress() : VkPointer.NULL);
         this.pViewOffsets = pViewOffsets;
     }
 
-    protected static native long getPViewOffsets(long address);
-    protected static native void setPViewOffsets(long address, long pViewOffsets);
+    protected static native long getPViewOffsetsNative(long address);
+    protected static native void setPViewOffsetsNative(long address, long pViewOffsets);
 
     public VkUInt32 getCorrelationMaskCount() {
-        return new VkUInt32(getVkMemory(), getCorrelationMaskCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getCorrelationMaskCountNative(getVkAddress()));
     }
 
     
     public void setCorrelationMaskCount(VkUInt32 correlationMaskCount) {
-        setCorrelationMaskCount(getVkAddress(), correlationMaskCount != null ? correlationMaskCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setCorrelationMaskCountNative(getVkAddress(), correlationMaskCount != null ? correlationMaskCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -140,21 +140,21 @@ public class VkRenderPassMultiviewCreateInfoKHX extends VkObject {
         getCorrelationMaskCount().setValue(correlationMaskCount);
     }
 
-    protected static native long getCorrelationMaskCount(long address);
-    protected static native void setCorrelationMaskCount(long address, long correlationMaskCount);
+    protected static native long getCorrelationMaskCountNative(long address);
+    protected static native void setCorrelationMaskCountNative(long address, long correlationMaskCount);
 
     public VkUInt32 getPCorrelationMasks() {
-        return new VkUInt32(getVkMemory(), getPCorrelationMasks(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPCorrelationMasksNative(getVkAddress()));
     }
 
     private VkObject pCorrelationMasks = null;
     public void setPCorrelationMasks(VkUInt32 pCorrelationMasks) {
-        setPCorrelationMasks(getVkAddress(), pCorrelationMasks != null ? pCorrelationMasks.getVkAddress() : VkPointer.NULL);
+        setPCorrelationMasksNative(getVkAddress(), pCorrelationMasks != null ? pCorrelationMasks.getVkAddress() : VkPointer.NULL);
         this.pCorrelationMasks = pCorrelationMasks;
     }
 
-    protected static native long getPCorrelationMasks(long address);
-    protected static native void setPCorrelationMasks(long address, long pCorrelationMasks);
+    protected static native long getPCorrelationMasksNative(long address);
+    protected static native void setPCorrelationMasksNative(long address, long pCorrelationMasks);
 
 
     public static native long sizeof();

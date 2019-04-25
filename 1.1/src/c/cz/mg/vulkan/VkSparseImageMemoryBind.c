@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSparseImageMemoryBind);
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getSubresource(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getSubresourceNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getSubresource(JNIEnv* env, jcla
     return jniPointerToLong(&o->subresource);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setSubresource(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setSubresourceNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setSubresource(JNIEnv* env, jclas
     memcpy(&o->subresource, valuePointer, sizeof(o->subresource));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getOffset(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->offset);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setOffset(JNIEnv* env, jclass jc,
     memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getExtent(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getExtentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getExtent(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->extent);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setExtent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setExtentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setExtent(JNIEnv* env, jclass jc,
     memcpy(&o->extent, valuePointer, sizeof(o->extent));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getMemory(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getMemoryNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getMemory(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->memory);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setMemory(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setMemoryNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setMemory(JNIEnv* env, jclass jc,
     memcpy(&o->memory, valuePointer, sizeof(o->memory));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getMemoryOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getMemoryOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getMemoryOffset(JNIEnv* env, jcl
     return jniPointerToLong(&o->memoryOffset);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setMemoryOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setMemoryOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setMemoryOffset(JNIEnv* env, jcla
     memcpy(&o->memoryOffset, valuePointer, sizeof(o->memoryOffset));
 }
 
-jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkSparseImageMemoryBind_getFlags(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSparseImageMemoryBind_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

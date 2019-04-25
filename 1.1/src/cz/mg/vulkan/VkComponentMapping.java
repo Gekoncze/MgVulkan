@@ -20,12 +20,12 @@ public class VkComponentMapping extends VkObject {
 
 
     public VkComponentSwizzle getR() {
-        return new VkComponentSwizzle(getVkMemory(), getR(getVkAddress()));
+        return new VkComponentSwizzle(getVkMemory(), getRNative(getVkAddress()));
     }
 
     
     public void setR(VkComponentSwizzle r) {
-        setR(getVkAddress(), r != null ? r.getVkAddress() : VkPointer.getNullAddressNative());
+        setRNative(getVkAddress(), r != null ? r.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkComponentMapping extends VkObject {
         getR().setValue(r);
     }
 
-    protected static native long getR(long address);
-    protected static native void setR(long address, long r);
+    protected static native long getRNative(long address);
+    protected static native void setRNative(long address, long r);
 
     public VkComponentSwizzle getG() {
-        return new VkComponentSwizzle(getVkMemory(), getG(getVkAddress()));
+        return new VkComponentSwizzle(getVkMemory(), getGNative(getVkAddress()));
     }
 
     
     public void setG(VkComponentSwizzle g) {
-        setG(getVkAddress(), g != null ? g.getVkAddress() : VkPointer.getNullAddressNative());
+        setGNative(getVkAddress(), g != null ? g.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkComponentMapping extends VkObject {
         getG().setValue(g);
     }
 
-    protected static native long getG(long address);
-    protected static native void setG(long address, long g);
+    protected static native long getGNative(long address);
+    protected static native void setGNative(long address, long g);
 
     public VkComponentSwizzle getB() {
-        return new VkComponentSwizzle(getVkMemory(), getB(getVkAddress()));
+        return new VkComponentSwizzle(getVkMemory(), getBNative(getVkAddress()));
     }
 
     
     public void setB(VkComponentSwizzle b) {
-        setB(getVkAddress(), b != null ? b.getVkAddress() : VkPointer.getNullAddressNative());
+        setBNative(getVkAddress(), b != null ? b.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkComponentMapping extends VkObject {
         getB().setValue(b);
     }
 
-    protected static native long getB(long address);
-    protected static native void setB(long address, long b);
+    protected static native long getBNative(long address);
+    protected static native void setBNative(long address, long b);
 
     public VkComponentSwizzle getA() {
-        return new VkComponentSwizzle(getVkMemory(), getA(getVkAddress()));
+        return new VkComponentSwizzle(getVkMemory(), getANative(getVkAddress()));
     }
 
     
     public void setA(VkComponentSwizzle a) {
-        setA(getVkAddress(), a != null ? a.getVkAddress() : VkPointer.getNullAddressNative());
+        setANative(getVkAddress(), a != null ? a.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -100,8 +100,8 @@ public class VkComponentMapping extends VkObject {
         getA().setValue(a);
     }
 
-    protected static native long getA(long address);
-    protected static native void setA(long address, long a);
+    protected static native long getANative(long address);
+    protected static native void setANative(long address, long a);
 
 
     public static native long sizeof();
@@ -145,10 +145,10 @@ public class VkComponentMapping extends VkObject {
 
         @Override
         public VkComponentMapping get(int i){
-            return new VkComponentMapping(getVkMemory(), addressAt(i));
+            return new VkComponentMapping(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

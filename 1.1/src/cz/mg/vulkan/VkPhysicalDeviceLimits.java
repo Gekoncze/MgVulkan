@@ -20,12 +20,12 @@ public class VkPhysicalDeviceLimits extends VkObject {
 
 
     public VkUInt32 getMaxImageDimension1D() {
-        return new VkUInt32(getVkMemory(), getMaxImageDimension1D(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxImageDimension1DNative(getVkAddress()));
     }
 
     
     public void setMaxImageDimension1D(VkUInt32 maxImageDimension1D) {
-        setMaxImageDimension1D(getVkAddress(), maxImageDimension1D != null ? maxImageDimension1D.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxImageDimension1DNative(getVkAddress(), maxImageDimension1D != null ? maxImageDimension1D.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxImageDimension1D().setValue(maxImageDimension1D);
     }
 
-    protected static native long getMaxImageDimension1D(long address);
-    protected static native void setMaxImageDimension1D(long address, long maxImageDimension1D);
+    protected static native long getMaxImageDimension1DNative(long address);
+    protected static native void setMaxImageDimension1DNative(long address, long maxImageDimension1D);
 
     public VkUInt32 getMaxImageDimension2D() {
-        return new VkUInt32(getVkMemory(), getMaxImageDimension2D(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxImageDimension2DNative(getVkAddress()));
     }
 
     
     public void setMaxImageDimension2D(VkUInt32 maxImageDimension2D) {
-        setMaxImageDimension2D(getVkAddress(), maxImageDimension2D != null ? maxImageDimension2D.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxImageDimension2DNative(getVkAddress(), maxImageDimension2D != null ? maxImageDimension2D.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxImageDimension2D().setValue(maxImageDimension2D);
     }
 
-    protected static native long getMaxImageDimension2D(long address);
-    protected static native void setMaxImageDimension2D(long address, long maxImageDimension2D);
+    protected static native long getMaxImageDimension2DNative(long address);
+    protected static native void setMaxImageDimension2DNative(long address, long maxImageDimension2D);
 
     public VkUInt32 getMaxImageDimension3D() {
-        return new VkUInt32(getVkMemory(), getMaxImageDimension3D(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxImageDimension3DNative(getVkAddress()));
     }
 
     
     public void setMaxImageDimension3D(VkUInt32 maxImageDimension3D) {
-        setMaxImageDimension3D(getVkAddress(), maxImageDimension3D != null ? maxImageDimension3D.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxImageDimension3DNative(getVkAddress(), maxImageDimension3D != null ? maxImageDimension3D.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxImageDimension3D().setValue(maxImageDimension3D);
     }
 
-    protected static native long getMaxImageDimension3D(long address);
-    protected static native void setMaxImageDimension3D(long address, long maxImageDimension3D);
+    protected static native long getMaxImageDimension3DNative(long address);
+    protected static native void setMaxImageDimension3DNative(long address, long maxImageDimension3D);
 
     public VkUInt32 getMaxImageDimensionCube() {
-        return new VkUInt32(getVkMemory(), getMaxImageDimensionCube(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxImageDimensionCubeNative(getVkAddress()));
     }
 
     
     public void setMaxImageDimensionCube(VkUInt32 maxImageDimensionCube) {
-        setMaxImageDimensionCube(getVkAddress(), maxImageDimensionCube != null ? maxImageDimensionCube.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxImageDimensionCubeNative(getVkAddress(), maxImageDimensionCube != null ? maxImageDimensionCube.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -100,16 +100,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxImageDimensionCube().setValue(maxImageDimensionCube);
     }
 
-    protected static native long getMaxImageDimensionCube(long address);
-    protected static native void setMaxImageDimensionCube(long address, long maxImageDimensionCube);
+    protected static native long getMaxImageDimensionCubeNative(long address);
+    protected static native void setMaxImageDimensionCubeNative(long address, long maxImageDimensionCube);
 
     public VkUInt32 getMaxImageArrayLayers() {
-        return new VkUInt32(getVkMemory(), getMaxImageArrayLayers(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxImageArrayLayersNative(getVkAddress()));
     }
 
     
     public void setMaxImageArrayLayers(VkUInt32 maxImageArrayLayers) {
-        setMaxImageArrayLayers(getVkAddress(), maxImageArrayLayers != null ? maxImageArrayLayers.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxImageArrayLayersNative(getVkAddress(), maxImageArrayLayers != null ? maxImageArrayLayers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -121,16 +121,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxImageArrayLayers().setValue(maxImageArrayLayers);
     }
 
-    protected static native long getMaxImageArrayLayers(long address);
-    protected static native void setMaxImageArrayLayers(long address, long maxImageArrayLayers);
+    protected static native long getMaxImageArrayLayersNative(long address);
+    protected static native void setMaxImageArrayLayersNative(long address, long maxImageArrayLayers);
 
     public VkUInt32 getMaxTexelBufferElements() {
-        return new VkUInt32(getVkMemory(), getMaxTexelBufferElements(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTexelBufferElementsNative(getVkAddress()));
     }
 
     
     public void setMaxTexelBufferElements(VkUInt32 maxTexelBufferElements) {
-        setMaxTexelBufferElements(getVkAddress(), maxTexelBufferElements != null ? maxTexelBufferElements.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTexelBufferElementsNative(getVkAddress(), maxTexelBufferElements != null ? maxTexelBufferElements.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -142,16 +142,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTexelBufferElements().setValue(maxTexelBufferElements);
     }
 
-    protected static native long getMaxTexelBufferElements(long address);
-    protected static native void setMaxTexelBufferElements(long address, long maxTexelBufferElements);
+    protected static native long getMaxTexelBufferElementsNative(long address);
+    protected static native void setMaxTexelBufferElementsNative(long address, long maxTexelBufferElements);
 
     public VkUInt32 getMaxUniformBufferRange() {
-        return new VkUInt32(getVkMemory(), getMaxUniformBufferRange(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxUniformBufferRangeNative(getVkAddress()));
     }
 
     
     public void setMaxUniformBufferRange(VkUInt32 maxUniformBufferRange) {
-        setMaxUniformBufferRange(getVkAddress(), maxUniformBufferRange != null ? maxUniformBufferRange.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxUniformBufferRangeNative(getVkAddress(), maxUniformBufferRange != null ? maxUniformBufferRange.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -163,16 +163,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxUniformBufferRange().setValue(maxUniformBufferRange);
     }
 
-    protected static native long getMaxUniformBufferRange(long address);
-    protected static native void setMaxUniformBufferRange(long address, long maxUniformBufferRange);
+    protected static native long getMaxUniformBufferRangeNative(long address);
+    protected static native void setMaxUniformBufferRangeNative(long address, long maxUniformBufferRange);
 
     public VkUInt32 getMaxStorageBufferRange() {
-        return new VkUInt32(getVkMemory(), getMaxStorageBufferRange(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxStorageBufferRangeNative(getVkAddress()));
     }
 
     
     public void setMaxStorageBufferRange(VkUInt32 maxStorageBufferRange) {
-        setMaxStorageBufferRange(getVkAddress(), maxStorageBufferRange != null ? maxStorageBufferRange.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxStorageBufferRangeNative(getVkAddress(), maxStorageBufferRange != null ? maxStorageBufferRange.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -184,16 +184,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxStorageBufferRange().setValue(maxStorageBufferRange);
     }
 
-    protected static native long getMaxStorageBufferRange(long address);
-    protected static native void setMaxStorageBufferRange(long address, long maxStorageBufferRange);
+    protected static native long getMaxStorageBufferRangeNative(long address);
+    protected static native void setMaxStorageBufferRangeNative(long address, long maxStorageBufferRange);
 
     public VkUInt32 getMaxPushConstantsSize() {
-        return new VkUInt32(getVkMemory(), getMaxPushConstantsSize(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPushConstantsSizeNative(getVkAddress()));
     }
 
     
     public void setMaxPushConstantsSize(VkUInt32 maxPushConstantsSize) {
-        setMaxPushConstantsSize(getVkAddress(), maxPushConstantsSize != null ? maxPushConstantsSize.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPushConstantsSizeNative(getVkAddress(), maxPushConstantsSize != null ? maxPushConstantsSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -205,16 +205,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxPushConstantsSize().setValue(maxPushConstantsSize);
     }
 
-    protected static native long getMaxPushConstantsSize(long address);
-    protected static native void setMaxPushConstantsSize(long address, long maxPushConstantsSize);
+    protected static native long getMaxPushConstantsSizeNative(long address);
+    protected static native void setMaxPushConstantsSizeNative(long address, long maxPushConstantsSize);
 
     public VkUInt32 getMaxMemoryAllocationCount() {
-        return new VkUInt32(getVkMemory(), getMaxMemoryAllocationCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxMemoryAllocationCountNative(getVkAddress()));
     }
 
     
     public void setMaxMemoryAllocationCount(VkUInt32 maxMemoryAllocationCount) {
-        setMaxMemoryAllocationCount(getVkAddress(), maxMemoryAllocationCount != null ? maxMemoryAllocationCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxMemoryAllocationCountNative(getVkAddress(), maxMemoryAllocationCount != null ? maxMemoryAllocationCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -226,16 +226,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxMemoryAllocationCount().setValue(maxMemoryAllocationCount);
     }
 
-    protected static native long getMaxMemoryAllocationCount(long address);
-    protected static native void setMaxMemoryAllocationCount(long address, long maxMemoryAllocationCount);
+    protected static native long getMaxMemoryAllocationCountNative(long address);
+    protected static native void setMaxMemoryAllocationCountNative(long address, long maxMemoryAllocationCount);
 
     public VkUInt32 getMaxSamplerAllocationCount() {
-        return new VkUInt32(getVkMemory(), getMaxSamplerAllocationCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxSamplerAllocationCountNative(getVkAddress()));
     }
 
     
     public void setMaxSamplerAllocationCount(VkUInt32 maxSamplerAllocationCount) {
-        setMaxSamplerAllocationCount(getVkAddress(), maxSamplerAllocationCount != null ? maxSamplerAllocationCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxSamplerAllocationCountNative(getVkAddress(), maxSamplerAllocationCount != null ? maxSamplerAllocationCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -247,16 +247,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxSamplerAllocationCount().setValue(maxSamplerAllocationCount);
     }
 
-    protected static native long getMaxSamplerAllocationCount(long address);
-    protected static native void setMaxSamplerAllocationCount(long address, long maxSamplerAllocationCount);
+    protected static native long getMaxSamplerAllocationCountNative(long address);
+    protected static native void setMaxSamplerAllocationCountNative(long address, long maxSamplerAllocationCount);
 
     public VkDeviceSize getBufferImageGranularity() {
-        return new VkDeviceSize(getVkMemory(), getBufferImageGranularity(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getBufferImageGranularityNative(getVkAddress()));
     }
 
     
     public void setBufferImageGranularity(VkDeviceSize bufferImageGranularity) {
-        setBufferImageGranularity(getVkAddress(), bufferImageGranularity != null ? bufferImageGranularity.getVkAddress() : VkPointer.getNullAddressNative());
+        setBufferImageGranularityNative(getVkAddress(), bufferImageGranularity != null ? bufferImageGranularity.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -268,16 +268,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getBufferImageGranularity().setValue(bufferImageGranularity);
     }
 
-    protected static native long getBufferImageGranularity(long address);
-    protected static native void setBufferImageGranularity(long address, long bufferImageGranularity);
+    protected static native long getBufferImageGranularityNative(long address);
+    protected static native void setBufferImageGranularityNative(long address, long bufferImageGranularity);
 
     public VkDeviceSize getSparseAddressSpaceSize() {
-        return new VkDeviceSize(getVkMemory(), getSparseAddressSpaceSize(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getSparseAddressSpaceSizeNative(getVkAddress()));
     }
 
     
     public void setSparseAddressSpaceSize(VkDeviceSize sparseAddressSpaceSize) {
-        setSparseAddressSpaceSize(getVkAddress(), sparseAddressSpaceSize != null ? sparseAddressSpaceSize.getVkAddress() : VkPointer.getNullAddressNative());
+        setSparseAddressSpaceSizeNative(getVkAddress(), sparseAddressSpaceSize != null ? sparseAddressSpaceSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -289,16 +289,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getSparseAddressSpaceSize().setValue(sparseAddressSpaceSize);
     }
 
-    protected static native long getSparseAddressSpaceSize(long address);
-    protected static native void setSparseAddressSpaceSize(long address, long sparseAddressSpaceSize);
+    protected static native long getSparseAddressSpaceSizeNative(long address);
+    protected static native void setSparseAddressSpaceSizeNative(long address, long sparseAddressSpaceSize);
 
     public VkUInt32 getMaxBoundDescriptorSets() {
-        return new VkUInt32(getVkMemory(), getMaxBoundDescriptorSets(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxBoundDescriptorSetsNative(getVkAddress()));
     }
 
     
     public void setMaxBoundDescriptorSets(VkUInt32 maxBoundDescriptorSets) {
-        setMaxBoundDescriptorSets(getVkAddress(), maxBoundDescriptorSets != null ? maxBoundDescriptorSets.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxBoundDescriptorSetsNative(getVkAddress(), maxBoundDescriptorSets != null ? maxBoundDescriptorSets.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -310,16 +310,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxBoundDescriptorSets().setValue(maxBoundDescriptorSets);
     }
 
-    protected static native long getMaxBoundDescriptorSets(long address);
-    protected static native void setMaxBoundDescriptorSets(long address, long maxBoundDescriptorSets);
+    protected static native long getMaxBoundDescriptorSetsNative(long address);
+    protected static native void setMaxBoundDescriptorSetsNative(long address, long maxBoundDescriptorSets);
 
     public VkUInt32 getMaxPerStageDescriptorSamplers() {
-        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorSamplers(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorSamplersNative(getVkAddress()));
     }
 
     
     public void setMaxPerStageDescriptorSamplers(VkUInt32 maxPerStageDescriptorSamplers) {
-        setMaxPerStageDescriptorSamplers(getVkAddress(), maxPerStageDescriptorSamplers != null ? maxPerStageDescriptorSamplers.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPerStageDescriptorSamplersNative(getVkAddress(), maxPerStageDescriptorSamplers != null ? maxPerStageDescriptorSamplers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -331,16 +331,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxPerStageDescriptorSamplers().setValue(maxPerStageDescriptorSamplers);
     }
 
-    protected static native long getMaxPerStageDescriptorSamplers(long address);
-    protected static native void setMaxPerStageDescriptorSamplers(long address, long maxPerStageDescriptorSamplers);
+    protected static native long getMaxPerStageDescriptorSamplersNative(long address);
+    protected static native void setMaxPerStageDescriptorSamplersNative(long address, long maxPerStageDescriptorSamplers);
 
     public VkUInt32 getMaxPerStageDescriptorUniformBuffers() {
-        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorUniformBuffers(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorUniformBuffersNative(getVkAddress()));
     }
 
     
     public void setMaxPerStageDescriptorUniformBuffers(VkUInt32 maxPerStageDescriptorUniformBuffers) {
-        setMaxPerStageDescriptorUniformBuffers(getVkAddress(), maxPerStageDescriptorUniformBuffers != null ? maxPerStageDescriptorUniformBuffers.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPerStageDescriptorUniformBuffersNative(getVkAddress(), maxPerStageDescriptorUniformBuffers != null ? maxPerStageDescriptorUniformBuffers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -352,16 +352,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxPerStageDescriptorUniformBuffers().setValue(maxPerStageDescriptorUniformBuffers);
     }
 
-    protected static native long getMaxPerStageDescriptorUniformBuffers(long address);
-    protected static native void setMaxPerStageDescriptorUniformBuffers(long address, long maxPerStageDescriptorUniformBuffers);
+    protected static native long getMaxPerStageDescriptorUniformBuffersNative(long address);
+    protected static native void setMaxPerStageDescriptorUniformBuffersNative(long address, long maxPerStageDescriptorUniformBuffers);
 
     public VkUInt32 getMaxPerStageDescriptorStorageBuffers() {
-        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorStorageBuffers(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorStorageBuffersNative(getVkAddress()));
     }
 
     
     public void setMaxPerStageDescriptorStorageBuffers(VkUInt32 maxPerStageDescriptorStorageBuffers) {
-        setMaxPerStageDescriptorStorageBuffers(getVkAddress(), maxPerStageDescriptorStorageBuffers != null ? maxPerStageDescriptorStorageBuffers.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPerStageDescriptorStorageBuffersNative(getVkAddress(), maxPerStageDescriptorStorageBuffers != null ? maxPerStageDescriptorStorageBuffers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -373,16 +373,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxPerStageDescriptorStorageBuffers().setValue(maxPerStageDescriptorStorageBuffers);
     }
 
-    protected static native long getMaxPerStageDescriptorStorageBuffers(long address);
-    protected static native void setMaxPerStageDescriptorStorageBuffers(long address, long maxPerStageDescriptorStorageBuffers);
+    protected static native long getMaxPerStageDescriptorStorageBuffersNative(long address);
+    protected static native void setMaxPerStageDescriptorStorageBuffersNative(long address, long maxPerStageDescriptorStorageBuffers);
 
     public VkUInt32 getMaxPerStageDescriptorSampledImages() {
-        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorSampledImages(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorSampledImagesNative(getVkAddress()));
     }
 
     
     public void setMaxPerStageDescriptorSampledImages(VkUInt32 maxPerStageDescriptorSampledImages) {
-        setMaxPerStageDescriptorSampledImages(getVkAddress(), maxPerStageDescriptorSampledImages != null ? maxPerStageDescriptorSampledImages.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPerStageDescriptorSampledImagesNative(getVkAddress(), maxPerStageDescriptorSampledImages != null ? maxPerStageDescriptorSampledImages.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -394,16 +394,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxPerStageDescriptorSampledImages().setValue(maxPerStageDescriptorSampledImages);
     }
 
-    protected static native long getMaxPerStageDescriptorSampledImages(long address);
-    protected static native void setMaxPerStageDescriptorSampledImages(long address, long maxPerStageDescriptorSampledImages);
+    protected static native long getMaxPerStageDescriptorSampledImagesNative(long address);
+    protected static native void setMaxPerStageDescriptorSampledImagesNative(long address, long maxPerStageDescriptorSampledImages);
 
     public VkUInt32 getMaxPerStageDescriptorStorageImages() {
-        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorStorageImages(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorStorageImagesNative(getVkAddress()));
     }
 
     
     public void setMaxPerStageDescriptorStorageImages(VkUInt32 maxPerStageDescriptorStorageImages) {
-        setMaxPerStageDescriptorStorageImages(getVkAddress(), maxPerStageDescriptorStorageImages != null ? maxPerStageDescriptorStorageImages.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPerStageDescriptorStorageImagesNative(getVkAddress(), maxPerStageDescriptorStorageImages != null ? maxPerStageDescriptorStorageImages.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -415,16 +415,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxPerStageDescriptorStorageImages().setValue(maxPerStageDescriptorStorageImages);
     }
 
-    protected static native long getMaxPerStageDescriptorStorageImages(long address);
-    protected static native void setMaxPerStageDescriptorStorageImages(long address, long maxPerStageDescriptorStorageImages);
+    protected static native long getMaxPerStageDescriptorStorageImagesNative(long address);
+    protected static native void setMaxPerStageDescriptorStorageImagesNative(long address, long maxPerStageDescriptorStorageImages);
 
     public VkUInt32 getMaxPerStageDescriptorInputAttachments() {
-        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorInputAttachments(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorInputAttachmentsNative(getVkAddress()));
     }
 
     
     public void setMaxPerStageDescriptorInputAttachments(VkUInt32 maxPerStageDescriptorInputAttachments) {
-        setMaxPerStageDescriptorInputAttachments(getVkAddress(), maxPerStageDescriptorInputAttachments != null ? maxPerStageDescriptorInputAttachments.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPerStageDescriptorInputAttachmentsNative(getVkAddress(), maxPerStageDescriptorInputAttachments != null ? maxPerStageDescriptorInputAttachments.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -436,16 +436,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxPerStageDescriptorInputAttachments().setValue(maxPerStageDescriptorInputAttachments);
     }
 
-    protected static native long getMaxPerStageDescriptorInputAttachments(long address);
-    protected static native void setMaxPerStageDescriptorInputAttachments(long address, long maxPerStageDescriptorInputAttachments);
+    protected static native long getMaxPerStageDescriptorInputAttachmentsNative(long address);
+    protected static native void setMaxPerStageDescriptorInputAttachmentsNative(long address, long maxPerStageDescriptorInputAttachments);
 
     public VkUInt32 getMaxPerStageResources() {
-        return new VkUInt32(getVkMemory(), getMaxPerStageResources(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxPerStageResourcesNative(getVkAddress()));
     }
 
     
     public void setMaxPerStageResources(VkUInt32 maxPerStageResources) {
-        setMaxPerStageResources(getVkAddress(), maxPerStageResources != null ? maxPerStageResources.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxPerStageResourcesNative(getVkAddress(), maxPerStageResources != null ? maxPerStageResources.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -457,16 +457,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxPerStageResources().setValue(maxPerStageResources);
     }
 
-    protected static native long getMaxPerStageResources(long address);
-    protected static native void setMaxPerStageResources(long address, long maxPerStageResources);
+    protected static native long getMaxPerStageResourcesNative(long address);
+    protected static native void setMaxPerStageResourcesNative(long address, long maxPerStageResources);
 
     public VkUInt32 getMaxDescriptorSetSamplers() {
-        return new VkUInt32(getVkMemory(), getMaxDescriptorSetSamplers(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxDescriptorSetSamplersNative(getVkAddress()));
     }
 
     
     public void setMaxDescriptorSetSamplers(VkUInt32 maxDescriptorSetSamplers) {
-        setMaxDescriptorSetSamplers(getVkAddress(), maxDescriptorSetSamplers != null ? maxDescriptorSetSamplers.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDescriptorSetSamplersNative(getVkAddress(), maxDescriptorSetSamplers != null ? maxDescriptorSetSamplers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -478,16 +478,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxDescriptorSetSamplers().setValue(maxDescriptorSetSamplers);
     }
 
-    protected static native long getMaxDescriptorSetSamplers(long address);
-    protected static native void setMaxDescriptorSetSamplers(long address, long maxDescriptorSetSamplers);
+    protected static native long getMaxDescriptorSetSamplersNative(long address);
+    protected static native void setMaxDescriptorSetSamplersNative(long address, long maxDescriptorSetSamplers);
 
     public VkUInt32 getMaxDescriptorSetUniformBuffers() {
-        return new VkUInt32(getVkMemory(), getMaxDescriptorSetUniformBuffers(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxDescriptorSetUniformBuffersNative(getVkAddress()));
     }
 
     
     public void setMaxDescriptorSetUniformBuffers(VkUInt32 maxDescriptorSetUniformBuffers) {
-        setMaxDescriptorSetUniformBuffers(getVkAddress(), maxDescriptorSetUniformBuffers != null ? maxDescriptorSetUniformBuffers.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDescriptorSetUniformBuffersNative(getVkAddress(), maxDescriptorSetUniformBuffers != null ? maxDescriptorSetUniformBuffers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -499,16 +499,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxDescriptorSetUniformBuffers().setValue(maxDescriptorSetUniformBuffers);
     }
 
-    protected static native long getMaxDescriptorSetUniformBuffers(long address);
-    protected static native void setMaxDescriptorSetUniformBuffers(long address, long maxDescriptorSetUniformBuffers);
+    protected static native long getMaxDescriptorSetUniformBuffersNative(long address);
+    protected static native void setMaxDescriptorSetUniformBuffersNative(long address, long maxDescriptorSetUniformBuffers);
 
     public VkUInt32 getMaxDescriptorSetUniformBuffersDynamic() {
-        return new VkUInt32(getVkMemory(), getMaxDescriptorSetUniformBuffersDynamic(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxDescriptorSetUniformBuffersDynamicNative(getVkAddress()));
     }
 
     
     public void setMaxDescriptorSetUniformBuffersDynamic(VkUInt32 maxDescriptorSetUniformBuffersDynamic) {
-        setMaxDescriptorSetUniformBuffersDynamic(getVkAddress(), maxDescriptorSetUniformBuffersDynamic != null ? maxDescriptorSetUniformBuffersDynamic.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDescriptorSetUniformBuffersDynamicNative(getVkAddress(), maxDescriptorSetUniformBuffersDynamic != null ? maxDescriptorSetUniformBuffersDynamic.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -520,16 +520,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxDescriptorSetUniformBuffersDynamic().setValue(maxDescriptorSetUniformBuffersDynamic);
     }
 
-    protected static native long getMaxDescriptorSetUniformBuffersDynamic(long address);
-    protected static native void setMaxDescriptorSetUniformBuffersDynamic(long address, long maxDescriptorSetUniformBuffersDynamic);
+    protected static native long getMaxDescriptorSetUniformBuffersDynamicNative(long address);
+    protected static native void setMaxDescriptorSetUniformBuffersDynamicNative(long address, long maxDescriptorSetUniformBuffersDynamic);
 
     public VkUInt32 getMaxDescriptorSetStorageBuffers() {
-        return new VkUInt32(getVkMemory(), getMaxDescriptorSetStorageBuffers(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxDescriptorSetStorageBuffersNative(getVkAddress()));
     }
 
     
     public void setMaxDescriptorSetStorageBuffers(VkUInt32 maxDescriptorSetStorageBuffers) {
-        setMaxDescriptorSetStorageBuffers(getVkAddress(), maxDescriptorSetStorageBuffers != null ? maxDescriptorSetStorageBuffers.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDescriptorSetStorageBuffersNative(getVkAddress(), maxDescriptorSetStorageBuffers != null ? maxDescriptorSetStorageBuffers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -541,16 +541,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxDescriptorSetStorageBuffers().setValue(maxDescriptorSetStorageBuffers);
     }
 
-    protected static native long getMaxDescriptorSetStorageBuffers(long address);
-    protected static native void setMaxDescriptorSetStorageBuffers(long address, long maxDescriptorSetStorageBuffers);
+    protected static native long getMaxDescriptorSetStorageBuffersNative(long address);
+    protected static native void setMaxDescriptorSetStorageBuffersNative(long address, long maxDescriptorSetStorageBuffers);
 
     public VkUInt32 getMaxDescriptorSetStorageBuffersDynamic() {
-        return new VkUInt32(getVkMemory(), getMaxDescriptorSetStorageBuffersDynamic(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxDescriptorSetStorageBuffersDynamicNative(getVkAddress()));
     }
 
     
     public void setMaxDescriptorSetStorageBuffersDynamic(VkUInt32 maxDescriptorSetStorageBuffersDynamic) {
-        setMaxDescriptorSetStorageBuffersDynamic(getVkAddress(), maxDescriptorSetStorageBuffersDynamic != null ? maxDescriptorSetStorageBuffersDynamic.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDescriptorSetStorageBuffersDynamicNative(getVkAddress(), maxDescriptorSetStorageBuffersDynamic != null ? maxDescriptorSetStorageBuffersDynamic.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -562,16 +562,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxDescriptorSetStorageBuffersDynamic().setValue(maxDescriptorSetStorageBuffersDynamic);
     }
 
-    protected static native long getMaxDescriptorSetStorageBuffersDynamic(long address);
-    protected static native void setMaxDescriptorSetStorageBuffersDynamic(long address, long maxDescriptorSetStorageBuffersDynamic);
+    protected static native long getMaxDescriptorSetStorageBuffersDynamicNative(long address);
+    protected static native void setMaxDescriptorSetStorageBuffersDynamicNative(long address, long maxDescriptorSetStorageBuffersDynamic);
 
     public VkUInt32 getMaxDescriptorSetSampledImages() {
-        return new VkUInt32(getVkMemory(), getMaxDescriptorSetSampledImages(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxDescriptorSetSampledImagesNative(getVkAddress()));
     }
 
     
     public void setMaxDescriptorSetSampledImages(VkUInt32 maxDescriptorSetSampledImages) {
-        setMaxDescriptorSetSampledImages(getVkAddress(), maxDescriptorSetSampledImages != null ? maxDescriptorSetSampledImages.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDescriptorSetSampledImagesNative(getVkAddress(), maxDescriptorSetSampledImages != null ? maxDescriptorSetSampledImages.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -583,16 +583,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxDescriptorSetSampledImages().setValue(maxDescriptorSetSampledImages);
     }
 
-    protected static native long getMaxDescriptorSetSampledImages(long address);
-    protected static native void setMaxDescriptorSetSampledImages(long address, long maxDescriptorSetSampledImages);
+    protected static native long getMaxDescriptorSetSampledImagesNative(long address);
+    protected static native void setMaxDescriptorSetSampledImagesNative(long address, long maxDescriptorSetSampledImages);
 
     public VkUInt32 getMaxDescriptorSetStorageImages() {
-        return new VkUInt32(getVkMemory(), getMaxDescriptorSetStorageImages(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxDescriptorSetStorageImagesNative(getVkAddress()));
     }
 
     
     public void setMaxDescriptorSetStorageImages(VkUInt32 maxDescriptorSetStorageImages) {
-        setMaxDescriptorSetStorageImages(getVkAddress(), maxDescriptorSetStorageImages != null ? maxDescriptorSetStorageImages.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDescriptorSetStorageImagesNative(getVkAddress(), maxDescriptorSetStorageImages != null ? maxDescriptorSetStorageImages.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -604,16 +604,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxDescriptorSetStorageImages().setValue(maxDescriptorSetStorageImages);
     }
 
-    protected static native long getMaxDescriptorSetStorageImages(long address);
-    protected static native void setMaxDescriptorSetStorageImages(long address, long maxDescriptorSetStorageImages);
+    protected static native long getMaxDescriptorSetStorageImagesNative(long address);
+    protected static native void setMaxDescriptorSetStorageImagesNative(long address, long maxDescriptorSetStorageImages);
 
     public VkUInt32 getMaxDescriptorSetInputAttachments() {
-        return new VkUInt32(getVkMemory(), getMaxDescriptorSetInputAttachments(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxDescriptorSetInputAttachmentsNative(getVkAddress()));
     }
 
     
     public void setMaxDescriptorSetInputAttachments(VkUInt32 maxDescriptorSetInputAttachments) {
-        setMaxDescriptorSetInputAttachments(getVkAddress(), maxDescriptorSetInputAttachments != null ? maxDescriptorSetInputAttachments.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDescriptorSetInputAttachmentsNative(getVkAddress(), maxDescriptorSetInputAttachments != null ? maxDescriptorSetInputAttachments.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -625,16 +625,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxDescriptorSetInputAttachments().setValue(maxDescriptorSetInputAttachments);
     }
 
-    protected static native long getMaxDescriptorSetInputAttachments(long address);
-    protected static native void setMaxDescriptorSetInputAttachments(long address, long maxDescriptorSetInputAttachments);
+    protected static native long getMaxDescriptorSetInputAttachmentsNative(long address);
+    protected static native void setMaxDescriptorSetInputAttachmentsNative(long address, long maxDescriptorSetInputAttachments);
 
     public VkUInt32 getMaxVertexInputAttributes() {
-        return new VkUInt32(getVkMemory(), getMaxVertexInputAttributes(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxVertexInputAttributesNative(getVkAddress()));
     }
 
     
     public void setMaxVertexInputAttributes(VkUInt32 maxVertexInputAttributes) {
-        setMaxVertexInputAttributes(getVkAddress(), maxVertexInputAttributes != null ? maxVertexInputAttributes.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxVertexInputAttributesNative(getVkAddress(), maxVertexInputAttributes != null ? maxVertexInputAttributes.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -646,16 +646,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxVertexInputAttributes().setValue(maxVertexInputAttributes);
     }
 
-    protected static native long getMaxVertexInputAttributes(long address);
-    protected static native void setMaxVertexInputAttributes(long address, long maxVertexInputAttributes);
+    protected static native long getMaxVertexInputAttributesNative(long address);
+    protected static native void setMaxVertexInputAttributesNative(long address, long maxVertexInputAttributes);
 
     public VkUInt32 getMaxVertexInputBindings() {
-        return new VkUInt32(getVkMemory(), getMaxVertexInputBindings(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxVertexInputBindingsNative(getVkAddress()));
     }
 
     
     public void setMaxVertexInputBindings(VkUInt32 maxVertexInputBindings) {
-        setMaxVertexInputBindings(getVkAddress(), maxVertexInputBindings != null ? maxVertexInputBindings.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxVertexInputBindingsNative(getVkAddress(), maxVertexInputBindings != null ? maxVertexInputBindings.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -667,16 +667,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxVertexInputBindings().setValue(maxVertexInputBindings);
     }
 
-    protected static native long getMaxVertexInputBindings(long address);
-    protected static native void setMaxVertexInputBindings(long address, long maxVertexInputBindings);
+    protected static native long getMaxVertexInputBindingsNative(long address);
+    protected static native void setMaxVertexInputBindingsNative(long address, long maxVertexInputBindings);
 
     public VkUInt32 getMaxVertexInputAttributeOffset() {
-        return new VkUInt32(getVkMemory(), getMaxVertexInputAttributeOffset(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxVertexInputAttributeOffsetNative(getVkAddress()));
     }
 
     
     public void setMaxVertexInputAttributeOffset(VkUInt32 maxVertexInputAttributeOffset) {
-        setMaxVertexInputAttributeOffset(getVkAddress(), maxVertexInputAttributeOffset != null ? maxVertexInputAttributeOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxVertexInputAttributeOffsetNative(getVkAddress(), maxVertexInputAttributeOffset != null ? maxVertexInputAttributeOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -688,16 +688,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxVertexInputAttributeOffset().setValue(maxVertexInputAttributeOffset);
     }
 
-    protected static native long getMaxVertexInputAttributeOffset(long address);
-    protected static native void setMaxVertexInputAttributeOffset(long address, long maxVertexInputAttributeOffset);
+    protected static native long getMaxVertexInputAttributeOffsetNative(long address);
+    protected static native void setMaxVertexInputAttributeOffsetNative(long address, long maxVertexInputAttributeOffset);
 
     public VkUInt32 getMaxVertexInputBindingStride() {
-        return new VkUInt32(getVkMemory(), getMaxVertexInputBindingStride(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxVertexInputBindingStrideNative(getVkAddress()));
     }
 
     
     public void setMaxVertexInputBindingStride(VkUInt32 maxVertexInputBindingStride) {
-        setMaxVertexInputBindingStride(getVkAddress(), maxVertexInputBindingStride != null ? maxVertexInputBindingStride.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxVertexInputBindingStrideNative(getVkAddress(), maxVertexInputBindingStride != null ? maxVertexInputBindingStride.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -709,16 +709,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxVertexInputBindingStride().setValue(maxVertexInputBindingStride);
     }
 
-    protected static native long getMaxVertexInputBindingStride(long address);
-    protected static native void setMaxVertexInputBindingStride(long address, long maxVertexInputBindingStride);
+    protected static native long getMaxVertexInputBindingStrideNative(long address);
+    protected static native void setMaxVertexInputBindingStrideNative(long address, long maxVertexInputBindingStride);
 
     public VkUInt32 getMaxVertexOutputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxVertexOutputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxVertexOutputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxVertexOutputComponents(VkUInt32 maxVertexOutputComponents) {
-        setMaxVertexOutputComponents(getVkAddress(), maxVertexOutputComponents != null ? maxVertexOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxVertexOutputComponentsNative(getVkAddress(), maxVertexOutputComponents != null ? maxVertexOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -730,16 +730,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxVertexOutputComponents().setValue(maxVertexOutputComponents);
     }
 
-    protected static native long getMaxVertexOutputComponents(long address);
-    protected static native void setMaxVertexOutputComponents(long address, long maxVertexOutputComponents);
+    protected static native long getMaxVertexOutputComponentsNative(long address);
+    protected static native void setMaxVertexOutputComponentsNative(long address, long maxVertexOutputComponents);
 
     public VkUInt32 getMaxTessellationGenerationLevel() {
-        return new VkUInt32(getVkMemory(), getMaxTessellationGenerationLevel(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTessellationGenerationLevelNative(getVkAddress()));
     }
 
     
     public void setMaxTessellationGenerationLevel(VkUInt32 maxTessellationGenerationLevel) {
-        setMaxTessellationGenerationLevel(getVkAddress(), maxTessellationGenerationLevel != null ? maxTessellationGenerationLevel.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTessellationGenerationLevelNative(getVkAddress(), maxTessellationGenerationLevel != null ? maxTessellationGenerationLevel.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -751,16 +751,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTessellationGenerationLevel().setValue(maxTessellationGenerationLevel);
     }
 
-    protected static native long getMaxTessellationGenerationLevel(long address);
-    protected static native void setMaxTessellationGenerationLevel(long address, long maxTessellationGenerationLevel);
+    protected static native long getMaxTessellationGenerationLevelNative(long address);
+    protected static native void setMaxTessellationGenerationLevelNative(long address, long maxTessellationGenerationLevel);
 
     public VkUInt32 getMaxTessellationPatchSize() {
-        return new VkUInt32(getVkMemory(), getMaxTessellationPatchSize(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTessellationPatchSizeNative(getVkAddress()));
     }
 
     
     public void setMaxTessellationPatchSize(VkUInt32 maxTessellationPatchSize) {
-        setMaxTessellationPatchSize(getVkAddress(), maxTessellationPatchSize != null ? maxTessellationPatchSize.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTessellationPatchSizeNative(getVkAddress(), maxTessellationPatchSize != null ? maxTessellationPatchSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -772,16 +772,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTessellationPatchSize().setValue(maxTessellationPatchSize);
     }
 
-    protected static native long getMaxTessellationPatchSize(long address);
-    protected static native void setMaxTessellationPatchSize(long address, long maxTessellationPatchSize);
+    protected static native long getMaxTessellationPatchSizeNative(long address);
+    protected static native void setMaxTessellationPatchSizeNative(long address, long maxTessellationPatchSize);
 
     public VkUInt32 getMaxTessellationControlPerVertexInputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxTessellationControlPerVertexInputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTessellationControlPerVertexInputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxTessellationControlPerVertexInputComponents(VkUInt32 maxTessellationControlPerVertexInputComponents) {
-        setMaxTessellationControlPerVertexInputComponents(getVkAddress(), maxTessellationControlPerVertexInputComponents != null ? maxTessellationControlPerVertexInputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTessellationControlPerVertexInputComponentsNative(getVkAddress(), maxTessellationControlPerVertexInputComponents != null ? maxTessellationControlPerVertexInputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -793,16 +793,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTessellationControlPerVertexInputComponents().setValue(maxTessellationControlPerVertexInputComponents);
     }
 
-    protected static native long getMaxTessellationControlPerVertexInputComponents(long address);
-    protected static native void setMaxTessellationControlPerVertexInputComponents(long address, long maxTessellationControlPerVertexInputComponents);
+    protected static native long getMaxTessellationControlPerVertexInputComponentsNative(long address);
+    protected static native void setMaxTessellationControlPerVertexInputComponentsNative(long address, long maxTessellationControlPerVertexInputComponents);
 
     public VkUInt32 getMaxTessellationControlPerVertexOutputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxTessellationControlPerVertexOutputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTessellationControlPerVertexOutputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxTessellationControlPerVertexOutputComponents(VkUInt32 maxTessellationControlPerVertexOutputComponents) {
-        setMaxTessellationControlPerVertexOutputComponents(getVkAddress(), maxTessellationControlPerVertexOutputComponents != null ? maxTessellationControlPerVertexOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTessellationControlPerVertexOutputComponentsNative(getVkAddress(), maxTessellationControlPerVertexOutputComponents != null ? maxTessellationControlPerVertexOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -814,16 +814,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTessellationControlPerVertexOutputComponents().setValue(maxTessellationControlPerVertexOutputComponents);
     }
 
-    protected static native long getMaxTessellationControlPerVertexOutputComponents(long address);
-    protected static native void setMaxTessellationControlPerVertexOutputComponents(long address, long maxTessellationControlPerVertexOutputComponents);
+    protected static native long getMaxTessellationControlPerVertexOutputComponentsNative(long address);
+    protected static native void setMaxTessellationControlPerVertexOutputComponentsNative(long address, long maxTessellationControlPerVertexOutputComponents);
 
     public VkUInt32 getMaxTessellationControlPerPatchOutputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxTessellationControlPerPatchOutputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTessellationControlPerPatchOutputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxTessellationControlPerPatchOutputComponents(VkUInt32 maxTessellationControlPerPatchOutputComponents) {
-        setMaxTessellationControlPerPatchOutputComponents(getVkAddress(), maxTessellationControlPerPatchOutputComponents != null ? maxTessellationControlPerPatchOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTessellationControlPerPatchOutputComponentsNative(getVkAddress(), maxTessellationControlPerPatchOutputComponents != null ? maxTessellationControlPerPatchOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -835,16 +835,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTessellationControlPerPatchOutputComponents().setValue(maxTessellationControlPerPatchOutputComponents);
     }
 
-    protected static native long getMaxTessellationControlPerPatchOutputComponents(long address);
-    protected static native void setMaxTessellationControlPerPatchOutputComponents(long address, long maxTessellationControlPerPatchOutputComponents);
+    protected static native long getMaxTessellationControlPerPatchOutputComponentsNative(long address);
+    protected static native void setMaxTessellationControlPerPatchOutputComponentsNative(long address, long maxTessellationControlPerPatchOutputComponents);
 
     public VkUInt32 getMaxTessellationControlTotalOutputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxTessellationControlTotalOutputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTessellationControlTotalOutputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxTessellationControlTotalOutputComponents(VkUInt32 maxTessellationControlTotalOutputComponents) {
-        setMaxTessellationControlTotalOutputComponents(getVkAddress(), maxTessellationControlTotalOutputComponents != null ? maxTessellationControlTotalOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTessellationControlTotalOutputComponentsNative(getVkAddress(), maxTessellationControlTotalOutputComponents != null ? maxTessellationControlTotalOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -856,16 +856,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTessellationControlTotalOutputComponents().setValue(maxTessellationControlTotalOutputComponents);
     }
 
-    protected static native long getMaxTessellationControlTotalOutputComponents(long address);
-    protected static native void setMaxTessellationControlTotalOutputComponents(long address, long maxTessellationControlTotalOutputComponents);
+    protected static native long getMaxTessellationControlTotalOutputComponentsNative(long address);
+    protected static native void setMaxTessellationControlTotalOutputComponentsNative(long address, long maxTessellationControlTotalOutputComponents);
 
     public VkUInt32 getMaxTessellationEvaluationInputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxTessellationEvaluationInputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTessellationEvaluationInputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxTessellationEvaluationInputComponents(VkUInt32 maxTessellationEvaluationInputComponents) {
-        setMaxTessellationEvaluationInputComponents(getVkAddress(), maxTessellationEvaluationInputComponents != null ? maxTessellationEvaluationInputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTessellationEvaluationInputComponentsNative(getVkAddress(), maxTessellationEvaluationInputComponents != null ? maxTessellationEvaluationInputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -877,16 +877,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTessellationEvaluationInputComponents().setValue(maxTessellationEvaluationInputComponents);
     }
 
-    protected static native long getMaxTessellationEvaluationInputComponents(long address);
-    protected static native void setMaxTessellationEvaluationInputComponents(long address, long maxTessellationEvaluationInputComponents);
+    protected static native long getMaxTessellationEvaluationInputComponentsNative(long address);
+    protected static native void setMaxTessellationEvaluationInputComponentsNative(long address, long maxTessellationEvaluationInputComponents);
 
     public VkUInt32 getMaxTessellationEvaluationOutputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxTessellationEvaluationOutputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTessellationEvaluationOutputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxTessellationEvaluationOutputComponents(VkUInt32 maxTessellationEvaluationOutputComponents) {
-        setMaxTessellationEvaluationOutputComponents(getVkAddress(), maxTessellationEvaluationOutputComponents != null ? maxTessellationEvaluationOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTessellationEvaluationOutputComponentsNative(getVkAddress(), maxTessellationEvaluationOutputComponents != null ? maxTessellationEvaluationOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -898,16 +898,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTessellationEvaluationOutputComponents().setValue(maxTessellationEvaluationOutputComponents);
     }
 
-    protected static native long getMaxTessellationEvaluationOutputComponents(long address);
-    protected static native void setMaxTessellationEvaluationOutputComponents(long address, long maxTessellationEvaluationOutputComponents);
+    protected static native long getMaxTessellationEvaluationOutputComponentsNative(long address);
+    protected static native void setMaxTessellationEvaluationOutputComponentsNative(long address, long maxTessellationEvaluationOutputComponents);
 
     public VkUInt32 getMaxGeometryShaderInvocations() {
-        return new VkUInt32(getVkMemory(), getMaxGeometryShaderInvocations(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxGeometryShaderInvocationsNative(getVkAddress()));
     }
 
     
     public void setMaxGeometryShaderInvocations(VkUInt32 maxGeometryShaderInvocations) {
-        setMaxGeometryShaderInvocations(getVkAddress(), maxGeometryShaderInvocations != null ? maxGeometryShaderInvocations.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxGeometryShaderInvocationsNative(getVkAddress(), maxGeometryShaderInvocations != null ? maxGeometryShaderInvocations.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -919,16 +919,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxGeometryShaderInvocations().setValue(maxGeometryShaderInvocations);
     }
 
-    protected static native long getMaxGeometryShaderInvocations(long address);
-    protected static native void setMaxGeometryShaderInvocations(long address, long maxGeometryShaderInvocations);
+    protected static native long getMaxGeometryShaderInvocationsNative(long address);
+    protected static native void setMaxGeometryShaderInvocationsNative(long address, long maxGeometryShaderInvocations);
 
     public VkUInt32 getMaxGeometryInputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxGeometryInputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxGeometryInputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxGeometryInputComponents(VkUInt32 maxGeometryInputComponents) {
-        setMaxGeometryInputComponents(getVkAddress(), maxGeometryInputComponents != null ? maxGeometryInputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxGeometryInputComponentsNative(getVkAddress(), maxGeometryInputComponents != null ? maxGeometryInputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -940,16 +940,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxGeometryInputComponents().setValue(maxGeometryInputComponents);
     }
 
-    protected static native long getMaxGeometryInputComponents(long address);
-    protected static native void setMaxGeometryInputComponents(long address, long maxGeometryInputComponents);
+    protected static native long getMaxGeometryInputComponentsNative(long address);
+    protected static native void setMaxGeometryInputComponentsNative(long address, long maxGeometryInputComponents);
 
     public VkUInt32 getMaxGeometryOutputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxGeometryOutputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxGeometryOutputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxGeometryOutputComponents(VkUInt32 maxGeometryOutputComponents) {
-        setMaxGeometryOutputComponents(getVkAddress(), maxGeometryOutputComponents != null ? maxGeometryOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxGeometryOutputComponentsNative(getVkAddress(), maxGeometryOutputComponents != null ? maxGeometryOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -961,16 +961,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxGeometryOutputComponents().setValue(maxGeometryOutputComponents);
     }
 
-    protected static native long getMaxGeometryOutputComponents(long address);
-    protected static native void setMaxGeometryOutputComponents(long address, long maxGeometryOutputComponents);
+    protected static native long getMaxGeometryOutputComponentsNative(long address);
+    protected static native void setMaxGeometryOutputComponentsNative(long address, long maxGeometryOutputComponents);
 
     public VkUInt32 getMaxGeometryOutputVertices() {
-        return new VkUInt32(getVkMemory(), getMaxGeometryOutputVertices(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxGeometryOutputVerticesNative(getVkAddress()));
     }
 
     
     public void setMaxGeometryOutputVertices(VkUInt32 maxGeometryOutputVertices) {
-        setMaxGeometryOutputVertices(getVkAddress(), maxGeometryOutputVertices != null ? maxGeometryOutputVertices.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxGeometryOutputVerticesNative(getVkAddress(), maxGeometryOutputVertices != null ? maxGeometryOutputVertices.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -982,16 +982,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxGeometryOutputVertices().setValue(maxGeometryOutputVertices);
     }
 
-    protected static native long getMaxGeometryOutputVertices(long address);
-    protected static native void setMaxGeometryOutputVertices(long address, long maxGeometryOutputVertices);
+    protected static native long getMaxGeometryOutputVerticesNative(long address);
+    protected static native void setMaxGeometryOutputVerticesNative(long address, long maxGeometryOutputVertices);
 
     public VkUInt32 getMaxGeometryTotalOutputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxGeometryTotalOutputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxGeometryTotalOutputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxGeometryTotalOutputComponents(VkUInt32 maxGeometryTotalOutputComponents) {
-        setMaxGeometryTotalOutputComponents(getVkAddress(), maxGeometryTotalOutputComponents != null ? maxGeometryTotalOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxGeometryTotalOutputComponentsNative(getVkAddress(), maxGeometryTotalOutputComponents != null ? maxGeometryTotalOutputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1003,16 +1003,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxGeometryTotalOutputComponents().setValue(maxGeometryTotalOutputComponents);
     }
 
-    protected static native long getMaxGeometryTotalOutputComponents(long address);
-    protected static native void setMaxGeometryTotalOutputComponents(long address, long maxGeometryTotalOutputComponents);
+    protected static native long getMaxGeometryTotalOutputComponentsNative(long address);
+    protected static native void setMaxGeometryTotalOutputComponentsNative(long address, long maxGeometryTotalOutputComponents);
 
     public VkUInt32 getMaxFragmentInputComponents() {
-        return new VkUInt32(getVkMemory(), getMaxFragmentInputComponents(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxFragmentInputComponentsNative(getVkAddress()));
     }
 
     
     public void setMaxFragmentInputComponents(VkUInt32 maxFragmentInputComponents) {
-        setMaxFragmentInputComponents(getVkAddress(), maxFragmentInputComponents != null ? maxFragmentInputComponents.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxFragmentInputComponentsNative(getVkAddress(), maxFragmentInputComponents != null ? maxFragmentInputComponents.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1024,16 +1024,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxFragmentInputComponents().setValue(maxFragmentInputComponents);
     }
 
-    protected static native long getMaxFragmentInputComponents(long address);
-    protected static native void setMaxFragmentInputComponents(long address, long maxFragmentInputComponents);
+    protected static native long getMaxFragmentInputComponentsNative(long address);
+    protected static native void setMaxFragmentInputComponentsNative(long address, long maxFragmentInputComponents);
 
     public VkUInt32 getMaxFragmentOutputAttachments() {
-        return new VkUInt32(getVkMemory(), getMaxFragmentOutputAttachments(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxFragmentOutputAttachmentsNative(getVkAddress()));
     }
 
     
     public void setMaxFragmentOutputAttachments(VkUInt32 maxFragmentOutputAttachments) {
-        setMaxFragmentOutputAttachments(getVkAddress(), maxFragmentOutputAttachments != null ? maxFragmentOutputAttachments.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxFragmentOutputAttachmentsNative(getVkAddress(), maxFragmentOutputAttachments != null ? maxFragmentOutputAttachments.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1045,16 +1045,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxFragmentOutputAttachments().setValue(maxFragmentOutputAttachments);
     }
 
-    protected static native long getMaxFragmentOutputAttachments(long address);
-    protected static native void setMaxFragmentOutputAttachments(long address, long maxFragmentOutputAttachments);
+    protected static native long getMaxFragmentOutputAttachmentsNative(long address);
+    protected static native void setMaxFragmentOutputAttachmentsNative(long address, long maxFragmentOutputAttachments);
 
     public VkUInt32 getMaxFragmentDualSrcAttachments() {
-        return new VkUInt32(getVkMemory(), getMaxFragmentDualSrcAttachments(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxFragmentDualSrcAttachmentsNative(getVkAddress()));
     }
 
     
     public void setMaxFragmentDualSrcAttachments(VkUInt32 maxFragmentDualSrcAttachments) {
-        setMaxFragmentDualSrcAttachments(getVkAddress(), maxFragmentDualSrcAttachments != null ? maxFragmentDualSrcAttachments.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxFragmentDualSrcAttachmentsNative(getVkAddress(), maxFragmentDualSrcAttachments != null ? maxFragmentDualSrcAttachments.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1066,16 +1066,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxFragmentDualSrcAttachments().setValue(maxFragmentDualSrcAttachments);
     }
 
-    protected static native long getMaxFragmentDualSrcAttachments(long address);
-    protected static native void setMaxFragmentDualSrcAttachments(long address, long maxFragmentDualSrcAttachments);
+    protected static native long getMaxFragmentDualSrcAttachmentsNative(long address);
+    protected static native void setMaxFragmentDualSrcAttachmentsNative(long address, long maxFragmentDualSrcAttachments);
 
     public VkUInt32 getMaxFragmentCombinedOutputResources() {
-        return new VkUInt32(getVkMemory(), getMaxFragmentCombinedOutputResources(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxFragmentCombinedOutputResourcesNative(getVkAddress()));
     }
 
     
     public void setMaxFragmentCombinedOutputResources(VkUInt32 maxFragmentCombinedOutputResources) {
-        setMaxFragmentCombinedOutputResources(getVkAddress(), maxFragmentCombinedOutputResources != null ? maxFragmentCombinedOutputResources.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxFragmentCombinedOutputResourcesNative(getVkAddress(), maxFragmentCombinedOutputResources != null ? maxFragmentCombinedOutputResources.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1087,16 +1087,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxFragmentCombinedOutputResources().setValue(maxFragmentCombinedOutputResources);
     }
 
-    protected static native long getMaxFragmentCombinedOutputResources(long address);
-    protected static native void setMaxFragmentCombinedOutputResources(long address, long maxFragmentCombinedOutputResources);
+    protected static native long getMaxFragmentCombinedOutputResourcesNative(long address);
+    protected static native void setMaxFragmentCombinedOutputResourcesNative(long address, long maxFragmentCombinedOutputResources);
 
     public VkUInt32 getMaxComputeSharedMemorySize() {
-        return new VkUInt32(getVkMemory(), getMaxComputeSharedMemorySize(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxComputeSharedMemorySizeNative(getVkAddress()));
     }
 
     
     public void setMaxComputeSharedMemorySize(VkUInt32 maxComputeSharedMemorySize) {
-        setMaxComputeSharedMemorySize(getVkAddress(), maxComputeSharedMemorySize != null ? maxComputeSharedMemorySize.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxComputeSharedMemorySizeNative(getVkAddress(), maxComputeSharedMemorySize != null ? maxComputeSharedMemorySize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1108,29 +1108,29 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxComputeSharedMemorySize().setValue(maxComputeSharedMemorySize);
     }
 
-    protected static native long getMaxComputeSharedMemorySize(long address);
-    protected static native void setMaxComputeSharedMemorySize(long address, long maxComputeSharedMemorySize);
+    protected static native long getMaxComputeSharedMemorySizeNative(long address);
+    protected static native void setMaxComputeSharedMemorySizeNative(long address, long maxComputeSharedMemorySize);
 
     public VkUInt32 getMaxComputeWorkGroupCount() {
-        return new VkUInt32(getVkMemory(), getMaxComputeWorkGroupCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxComputeWorkGroupCountNative(getVkAddress()));
     }
 
     
     public void setMaxComputeWorkGroupCount(VkUInt32 maxComputeWorkGroupCount) {
-        setMaxComputeWorkGroupCount(getVkAddress(), maxComputeWorkGroupCount != null ? maxComputeWorkGroupCount.getVkAddress() : VkPointer.NULL);
+        setMaxComputeWorkGroupCountNative(getVkAddress(), maxComputeWorkGroupCount != null ? maxComputeWorkGroupCount.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getMaxComputeWorkGroupCount(long address);
-    protected static native void setMaxComputeWorkGroupCount(long address, long maxComputeWorkGroupCount);
+    protected static native long getMaxComputeWorkGroupCountNative(long address);
+    protected static native void setMaxComputeWorkGroupCountNative(long address, long maxComputeWorkGroupCount);
 
     public VkUInt32 getMaxComputeWorkGroupInvocations() {
-        return new VkUInt32(getVkMemory(), getMaxComputeWorkGroupInvocations(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxComputeWorkGroupInvocationsNative(getVkAddress()));
     }
 
     
     public void setMaxComputeWorkGroupInvocations(VkUInt32 maxComputeWorkGroupInvocations) {
-        setMaxComputeWorkGroupInvocations(getVkAddress(), maxComputeWorkGroupInvocations != null ? maxComputeWorkGroupInvocations.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxComputeWorkGroupInvocationsNative(getVkAddress(), maxComputeWorkGroupInvocations != null ? maxComputeWorkGroupInvocations.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1142,29 +1142,29 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxComputeWorkGroupInvocations().setValue(maxComputeWorkGroupInvocations);
     }
 
-    protected static native long getMaxComputeWorkGroupInvocations(long address);
-    protected static native void setMaxComputeWorkGroupInvocations(long address, long maxComputeWorkGroupInvocations);
+    protected static native long getMaxComputeWorkGroupInvocationsNative(long address);
+    protected static native void setMaxComputeWorkGroupInvocationsNative(long address, long maxComputeWorkGroupInvocations);
 
     public VkUInt32 getMaxComputeWorkGroupSize() {
-        return new VkUInt32(getVkMemory(), getMaxComputeWorkGroupSize(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxComputeWorkGroupSizeNative(getVkAddress()));
     }
 
     
     public void setMaxComputeWorkGroupSize(VkUInt32 maxComputeWorkGroupSize) {
-        setMaxComputeWorkGroupSize(getVkAddress(), maxComputeWorkGroupSize != null ? maxComputeWorkGroupSize.getVkAddress() : VkPointer.NULL);
+        setMaxComputeWorkGroupSizeNative(getVkAddress(), maxComputeWorkGroupSize != null ? maxComputeWorkGroupSize.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getMaxComputeWorkGroupSize(long address);
-    protected static native void setMaxComputeWorkGroupSize(long address, long maxComputeWorkGroupSize);
+    protected static native long getMaxComputeWorkGroupSizeNative(long address);
+    protected static native void setMaxComputeWorkGroupSizeNative(long address, long maxComputeWorkGroupSize);
 
     public VkUInt32 getSubPixelPrecisionBits() {
-        return new VkUInt32(getVkMemory(), getSubPixelPrecisionBits(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSubPixelPrecisionBitsNative(getVkAddress()));
     }
 
     
     public void setSubPixelPrecisionBits(VkUInt32 subPixelPrecisionBits) {
-        setSubPixelPrecisionBits(getVkAddress(), subPixelPrecisionBits != null ? subPixelPrecisionBits.getVkAddress() : VkPointer.getNullAddressNative());
+        setSubPixelPrecisionBitsNative(getVkAddress(), subPixelPrecisionBits != null ? subPixelPrecisionBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1176,16 +1176,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getSubPixelPrecisionBits().setValue(subPixelPrecisionBits);
     }
 
-    protected static native long getSubPixelPrecisionBits(long address);
-    protected static native void setSubPixelPrecisionBits(long address, long subPixelPrecisionBits);
+    protected static native long getSubPixelPrecisionBitsNative(long address);
+    protected static native void setSubPixelPrecisionBitsNative(long address, long subPixelPrecisionBits);
 
     public VkUInt32 getSubTexelPrecisionBits() {
-        return new VkUInt32(getVkMemory(), getSubTexelPrecisionBits(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSubTexelPrecisionBitsNative(getVkAddress()));
     }
 
     
     public void setSubTexelPrecisionBits(VkUInt32 subTexelPrecisionBits) {
-        setSubTexelPrecisionBits(getVkAddress(), subTexelPrecisionBits != null ? subTexelPrecisionBits.getVkAddress() : VkPointer.getNullAddressNative());
+        setSubTexelPrecisionBitsNative(getVkAddress(), subTexelPrecisionBits != null ? subTexelPrecisionBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1197,16 +1197,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getSubTexelPrecisionBits().setValue(subTexelPrecisionBits);
     }
 
-    protected static native long getSubTexelPrecisionBits(long address);
-    protected static native void setSubTexelPrecisionBits(long address, long subTexelPrecisionBits);
+    protected static native long getSubTexelPrecisionBitsNative(long address);
+    protected static native void setSubTexelPrecisionBitsNative(long address, long subTexelPrecisionBits);
 
     public VkUInt32 getMipmapPrecisionBits() {
-        return new VkUInt32(getVkMemory(), getMipmapPrecisionBits(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMipmapPrecisionBitsNative(getVkAddress()));
     }
 
     
     public void setMipmapPrecisionBits(VkUInt32 mipmapPrecisionBits) {
-        setMipmapPrecisionBits(getVkAddress(), mipmapPrecisionBits != null ? mipmapPrecisionBits.getVkAddress() : VkPointer.getNullAddressNative());
+        setMipmapPrecisionBitsNative(getVkAddress(), mipmapPrecisionBits != null ? mipmapPrecisionBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1218,16 +1218,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMipmapPrecisionBits().setValue(mipmapPrecisionBits);
     }
 
-    protected static native long getMipmapPrecisionBits(long address);
-    protected static native void setMipmapPrecisionBits(long address, long mipmapPrecisionBits);
+    protected static native long getMipmapPrecisionBitsNative(long address);
+    protected static native void setMipmapPrecisionBitsNative(long address, long mipmapPrecisionBits);
 
     public VkUInt32 getMaxDrawIndexedIndexValue() {
-        return new VkUInt32(getVkMemory(), getMaxDrawIndexedIndexValue(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxDrawIndexedIndexValueNative(getVkAddress()));
     }
 
     
     public void setMaxDrawIndexedIndexValue(VkUInt32 maxDrawIndexedIndexValue) {
-        setMaxDrawIndexedIndexValue(getVkAddress(), maxDrawIndexedIndexValue != null ? maxDrawIndexedIndexValue.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDrawIndexedIndexValueNative(getVkAddress(), maxDrawIndexedIndexValue != null ? maxDrawIndexedIndexValue.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1239,16 +1239,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxDrawIndexedIndexValue().setValue(maxDrawIndexedIndexValue);
     }
 
-    protected static native long getMaxDrawIndexedIndexValue(long address);
-    protected static native void setMaxDrawIndexedIndexValue(long address, long maxDrawIndexedIndexValue);
+    protected static native long getMaxDrawIndexedIndexValueNative(long address);
+    protected static native void setMaxDrawIndexedIndexValueNative(long address, long maxDrawIndexedIndexValue);
 
     public VkUInt32 getMaxDrawIndirectCount() {
-        return new VkUInt32(getVkMemory(), getMaxDrawIndirectCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxDrawIndirectCountNative(getVkAddress()));
     }
 
     
     public void setMaxDrawIndirectCount(VkUInt32 maxDrawIndirectCount) {
-        setMaxDrawIndirectCount(getVkAddress(), maxDrawIndirectCount != null ? maxDrawIndirectCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxDrawIndirectCountNative(getVkAddress(), maxDrawIndirectCount != null ? maxDrawIndirectCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1260,16 +1260,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxDrawIndirectCount().setValue(maxDrawIndirectCount);
     }
 
-    protected static native long getMaxDrawIndirectCount(long address);
-    protected static native void setMaxDrawIndirectCount(long address, long maxDrawIndirectCount);
+    protected static native long getMaxDrawIndirectCountNative(long address);
+    protected static native void setMaxDrawIndirectCountNative(long address, long maxDrawIndirectCount);
 
     public VkFloat getMaxSamplerLodBias() {
-        return new VkFloat(getVkMemory(), getMaxSamplerLodBias(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMaxSamplerLodBiasNative(getVkAddress()));
     }
 
     
     public void setMaxSamplerLodBias(VkFloat maxSamplerLodBias) {
-        setMaxSamplerLodBias(getVkAddress(), maxSamplerLodBias != null ? maxSamplerLodBias.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxSamplerLodBiasNative(getVkAddress(), maxSamplerLodBias != null ? maxSamplerLodBias.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1281,16 +1281,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxSamplerLodBias().setValue(maxSamplerLodBias);
     }
 
-    protected static native long getMaxSamplerLodBias(long address);
-    protected static native void setMaxSamplerLodBias(long address, long maxSamplerLodBias);
+    protected static native long getMaxSamplerLodBiasNative(long address);
+    protected static native void setMaxSamplerLodBiasNative(long address, long maxSamplerLodBias);
 
     public VkFloat getMaxSamplerAnisotropy() {
-        return new VkFloat(getVkMemory(), getMaxSamplerAnisotropy(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMaxSamplerAnisotropyNative(getVkAddress()));
     }
 
     
     public void setMaxSamplerAnisotropy(VkFloat maxSamplerAnisotropy) {
-        setMaxSamplerAnisotropy(getVkAddress(), maxSamplerAnisotropy != null ? maxSamplerAnisotropy.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxSamplerAnisotropyNative(getVkAddress(), maxSamplerAnisotropy != null ? maxSamplerAnisotropy.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1302,16 +1302,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxSamplerAnisotropy().setValue(maxSamplerAnisotropy);
     }
 
-    protected static native long getMaxSamplerAnisotropy(long address);
-    protected static native void setMaxSamplerAnisotropy(long address, long maxSamplerAnisotropy);
+    protected static native long getMaxSamplerAnisotropyNative(long address);
+    protected static native void setMaxSamplerAnisotropyNative(long address, long maxSamplerAnisotropy);
 
     public VkUInt32 getMaxViewports() {
-        return new VkUInt32(getVkMemory(), getMaxViewports(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxViewportsNative(getVkAddress()));
     }
 
     
     public void setMaxViewports(VkUInt32 maxViewports) {
-        setMaxViewports(getVkAddress(), maxViewports != null ? maxViewports.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxViewportsNative(getVkAddress(), maxViewports != null ? maxViewports.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1323,42 +1323,42 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxViewports().setValue(maxViewports);
     }
 
-    protected static native long getMaxViewports(long address);
-    protected static native void setMaxViewports(long address, long maxViewports);
+    protected static native long getMaxViewportsNative(long address);
+    protected static native void setMaxViewportsNative(long address, long maxViewports);
 
     public VkUInt32 getMaxViewportDimensions() {
-        return new VkUInt32(getVkMemory(), getMaxViewportDimensions(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxViewportDimensionsNative(getVkAddress()));
     }
 
     
     public void setMaxViewportDimensions(VkUInt32 maxViewportDimensions) {
-        setMaxViewportDimensions(getVkAddress(), maxViewportDimensions != null ? maxViewportDimensions.getVkAddress() : VkPointer.NULL);
+        setMaxViewportDimensionsNative(getVkAddress(), maxViewportDimensions != null ? maxViewportDimensions.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getMaxViewportDimensions(long address);
-    protected static native void setMaxViewportDimensions(long address, long maxViewportDimensions);
+    protected static native long getMaxViewportDimensionsNative(long address);
+    protected static native void setMaxViewportDimensionsNative(long address, long maxViewportDimensions);
 
     public VkFloat getViewportBoundsRange() {
-        return new VkFloat(getVkMemory(), getViewportBoundsRange(getVkAddress()));
+        return new VkFloat(getVkMemory(), getViewportBoundsRangeNative(getVkAddress()));
     }
 
     
     public void setViewportBoundsRange(VkFloat viewportBoundsRange) {
-        setViewportBoundsRange(getVkAddress(), viewportBoundsRange != null ? viewportBoundsRange.getVkAddress() : VkPointer.NULL);
+        setViewportBoundsRangeNative(getVkAddress(), viewportBoundsRange != null ? viewportBoundsRange.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getViewportBoundsRange(long address);
-    protected static native void setViewportBoundsRange(long address, long viewportBoundsRange);
+    protected static native long getViewportBoundsRangeNative(long address);
+    protected static native void setViewportBoundsRangeNative(long address, long viewportBoundsRange);
 
     public VkUInt32 getViewportSubPixelBits() {
-        return new VkUInt32(getVkMemory(), getViewportSubPixelBits(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getViewportSubPixelBitsNative(getVkAddress()));
     }
 
     
     public void setViewportSubPixelBits(VkUInt32 viewportSubPixelBits) {
-        setViewportSubPixelBits(getVkAddress(), viewportSubPixelBits != null ? viewportSubPixelBits.getVkAddress() : VkPointer.getNullAddressNative());
+        setViewportSubPixelBitsNative(getVkAddress(), viewportSubPixelBits != null ? viewportSubPixelBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1370,16 +1370,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getViewportSubPixelBits().setValue(viewportSubPixelBits);
     }
 
-    protected static native long getViewportSubPixelBits(long address);
-    protected static native void setViewportSubPixelBits(long address, long viewportSubPixelBits);
+    protected static native long getViewportSubPixelBitsNative(long address);
+    protected static native void setViewportSubPixelBitsNative(long address, long viewportSubPixelBits);
 
     public VkSize getMinMemoryMapAlignment() {
-        return new VkSize(getVkMemory(), getMinMemoryMapAlignment(getVkAddress()));
+        return new VkSize(getVkMemory(), getMinMemoryMapAlignmentNative(getVkAddress()));
     }
 
     
     public void setMinMemoryMapAlignment(VkSize minMemoryMapAlignment) {
-        setMinMemoryMapAlignment(getVkAddress(), minMemoryMapAlignment != null ? minMemoryMapAlignment.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinMemoryMapAlignmentNative(getVkAddress(), minMemoryMapAlignment != null ? minMemoryMapAlignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1391,16 +1391,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMinMemoryMapAlignment().setValue(minMemoryMapAlignment);
     }
 
-    protected static native long getMinMemoryMapAlignment(long address);
-    protected static native void setMinMemoryMapAlignment(long address, long minMemoryMapAlignment);
+    protected static native long getMinMemoryMapAlignmentNative(long address);
+    protected static native void setMinMemoryMapAlignmentNative(long address, long minMemoryMapAlignment);
 
     public VkDeviceSize getMinTexelBufferOffsetAlignment() {
-        return new VkDeviceSize(getVkMemory(), getMinTexelBufferOffsetAlignment(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getMinTexelBufferOffsetAlignmentNative(getVkAddress()));
     }
 
     
     public void setMinTexelBufferOffsetAlignment(VkDeviceSize minTexelBufferOffsetAlignment) {
-        setMinTexelBufferOffsetAlignment(getVkAddress(), minTexelBufferOffsetAlignment != null ? minTexelBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinTexelBufferOffsetAlignmentNative(getVkAddress(), minTexelBufferOffsetAlignment != null ? minTexelBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1412,16 +1412,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMinTexelBufferOffsetAlignment().setValue(minTexelBufferOffsetAlignment);
     }
 
-    protected static native long getMinTexelBufferOffsetAlignment(long address);
-    protected static native void setMinTexelBufferOffsetAlignment(long address, long minTexelBufferOffsetAlignment);
+    protected static native long getMinTexelBufferOffsetAlignmentNative(long address);
+    protected static native void setMinTexelBufferOffsetAlignmentNative(long address, long minTexelBufferOffsetAlignment);
 
     public VkDeviceSize getMinUniformBufferOffsetAlignment() {
-        return new VkDeviceSize(getVkMemory(), getMinUniformBufferOffsetAlignment(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getMinUniformBufferOffsetAlignmentNative(getVkAddress()));
     }
 
     
     public void setMinUniformBufferOffsetAlignment(VkDeviceSize minUniformBufferOffsetAlignment) {
-        setMinUniformBufferOffsetAlignment(getVkAddress(), minUniformBufferOffsetAlignment != null ? minUniformBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinUniformBufferOffsetAlignmentNative(getVkAddress(), minUniformBufferOffsetAlignment != null ? minUniformBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1433,16 +1433,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMinUniformBufferOffsetAlignment().setValue(minUniformBufferOffsetAlignment);
     }
 
-    protected static native long getMinUniformBufferOffsetAlignment(long address);
-    protected static native void setMinUniformBufferOffsetAlignment(long address, long minUniformBufferOffsetAlignment);
+    protected static native long getMinUniformBufferOffsetAlignmentNative(long address);
+    protected static native void setMinUniformBufferOffsetAlignmentNative(long address, long minUniformBufferOffsetAlignment);
 
     public VkDeviceSize getMinStorageBufferOffsetAlignment() {
-        return new VkDeviceSize(getVkMemory(), getMinStorageBufferOffsetAlignment(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getMinStorageBufferOffsetAlignmentNative(getVkAddress()));
     }
 
     
     public void setMinStorageBufferOffsetAlignment(VkDeviceSize minStorageBufferOffsetAlignment) {
-        setMinStorageBufferOffsetAlignment(getVkAddress(), minStorageBufferOffsetAlignment != null ? minStorageBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinStorageBufferOffsetAlignmentNative(getVkAddress(), minStorageBufferOffsetAlignment != null ? minStorageBufferOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1454,16 +1454,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMinStorageBufferOffsetAlignment().setValue(minStorageBufferOffsetAlignment);
     }
 
-    protected static native long getMinStorageBufferOffsetAlignment(long address);
-    protected static native void setMinStorageBufferOffsetAlignment(long address, long minStorageBufferOffsetAlignment);
+    protected static native long getMinStorageBufferOffsetAlignmentNative(long address);
+    protected static native void setMinStorageBufferOffsetAlignmentNative(long address, long minStorageBufferOffsetAlignment);
 
     public VkInt32 getMinTexelOffset() {
-        return new VkInt32(getVkMemory(), getMinTexelOffset(getVkAddress()));
+        return new VkInt32(getVkMemory(), getMinTexelOffsetNative(getVkAddress()));
     }
 
     
     public void setMinTexelOffset(VkInt32 minTexelOffset) {
-        setMinTexelOffset(getVkAddress(), minTexelOffset != null ? minTexelOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinTexelOffsetNative(getVkAddress(), minTexelOffset != null ? minTexelOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1475,16 +1475,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMinTexelOffset().setValue(minTexelOffset);
     }
 
-    protected static native long getMinTexelOffset(long address);
-    protected static native void setMinTexelOffset(long address, long minTexelOffset);
+    protected static native long getMinTexelOffsetNative(long address);
+    protected static native void setMinTexelOffsetNative(long address, long minTexelOffset);
 
     public VkUInt32 getMaxTexelOffset() {
-        return new VkUInt32(getVkMemory(), getMaxTexelOffset(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTexelOffsetNative(getVkAddress()));
     }
 
     
     public void setMaxTexelOffset(VkUInt32 maxTexelOffset) {
-        setMaxTexelOffset(getVkAddress(), maxTexelOffset != null ? maxTexelOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTexelOffsetNative(getVkAddress(), maxTexelOffset != null ? maxTexelOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1496,16 +1496,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTexelOffset().setValue(maxTexelOffset);
     }
 
-    protected static native long getMaxTexelOffset(long address);
-    protected static native void setMaxTexelOffset(long address, long maxTexelOffset);
+    protected static native long getMaxTexelOffsetNative(long address);
+    protected static native void setMaxTexelOffsetNative(long address, long maxTexelOffset);
 
     public VkInt32 getMinTexelGatherOffset() {
-        return new VkInt32(getVkMemory(), getMinTexelGatherOffset(getVkAddress()));
+        return new VkInt32(getVkMemory(), getMinTexelGatherOffsetNative(getVkAddress()));
     }
 
     
     public void setMinTexelGatherOffset(VkInt32 minTexelGatherOffset) {
-        setMinTexelGatherOffset(getVkAddress(), minTexelGatherOffset != null ? minTexelGatherOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinTexelGatherOffsetNative(getVkAddress(), minTexelGatherOffset != null ? minTexelGatherOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1517,16 +1517,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMinTexelGatherOffset().setValue(minTexelGatherOffset);
     }
 
-    protected static native long getMinTexelGatherOffset(long address);
-    protected static native void setMinTexelGatherOffset(long address, long minTexelGatherOffset);
+    protected static native long getMinTexelGatherOffsetNative(long address);
+    protected static native void setMinTexelGatherOffsetNative(long address, long minTexelGatherOffset);
 
     public VkUInt32 getMaxTexelGatherOffset() {
-        return new VkUInt32(getVkMemory(), getMaxTexelGatherOffset(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxTexelGatherOffsetNative(getVkAddress()));
     }
 
     
     public void setMaxTexelGatherOffset(VkUInt32 maxTexelGatherOffset) {
-        setMaxTexelGatherOffset(getVkAddress(), maxTexelGatherOffset != null ? maxTexelGatherOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxTexelGatherOffsetNative(getVkAddress(), maxTexelGatherOffset != null ? maxTexelGatherOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1538,16 +1538,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxTexelGatherOffset().setValue(maxTexelGatherOffset);
     }
 
-    protected static native long getMaxTexelGatherOffset(long address);
-    protected static native void setMaxTexelGatherOffset(long address, long maxTexelGatherOffset);
+    protected static native long getMaxTexelGatherOffsetNative(long address);
+    protected static native void setMaxTexelGatherOffsetNative(long address, long maxTexelGatherOffset);
 
     public VkFloat getMinInterpolationOffset() {
-        return new VkFloat(getVkMemory(), getMinInterpolationOffset(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMinInterpolationOffsetNative(getVkAddress()));
     }
 
     
     public void setMinInterpolationOffset(VkFloat minInterpolationOffset) {
-        setMinInterpolationOffset(getVkAddress(), minInterpolationOffset != null ? minInterpolationOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinInterpolationOffsetNative(getVkAddress(), minInterpolationOffset != null ? minInterpolationOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1559,16 +1559,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMinInterpolationOffset().setValue(minInterpolationOffset);
     }
 
-    protected static native long getMinInterpolationOffset(long address);
-    protected static native void setMinInterpolationOffset(long address, long minInterpolationOffset);
+    protected static native long getMinInterpolationOffsetNative(long address);
+    protected static native void setMinInterpolationOffsetNative(long address, long minInterpolationOffset);
 
     public VkFloat getMaxInterpolationOffset() {
-        return new VkFloat(getVkMemory(), getMaxInterpolationOffset(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMaxInterpolationOffsetNative(getVkAddress()));
     }
 
     
     public void setMaxInterpolationOffset(VkFloat maxInterpolationOffset) {
-        setMaxInterpolationOffset(getVkAddress(), maxInterpolationOffset != null ? maxInterpolationOffset.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxInterpolationOffsetNative(getVkAddress(), maxInterpolationOffset != null ? maxInterpolationOffset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1580,16 +1580,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxInterpolationOffset().setValue(maxInterpolationOffset);
     }
 
-    protected static native long getMaxInterpolationOffset(long address);
-    protected static native void setMaxInterpolationOffset(long address, long maxInterpolationOffset);
+    protected static native long getMaxInterpolationOffsetNative(long address);
+    protected static native void setMaxInterpolationOffsetNative(long address, long maxInterpolationOffset);
 
     public VkUInt32 getSubPixelInterpolationOffsetBits() {
-        return new VkUInt32(getVkMemory(), getSubPixelInterpolationOffsetBits(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSubPixelInterpolationOffsetBitsNative(getVkAddress()));
     }
 
     
     public void setSubPixelInterpolationOffsetBits(VkUInt32 subPixelInterpolationOffsetBits) {
-        setSubPixelInterpolationOffsetBits(getVkAddress(), subPixelInterpolationOffsetBits != null ? subPixelInterpolationOffsetBits.getVkAddress() : VkPointer.getNullAddressNative());
+        setSubPixelInterpolationOffsetBitsNative(getVkAddress(), subPixelInterpolationOffsetBits != null ? subPixelInterpolationOffsetBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1601,16 +1601,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getSubPixelInterpolationOffsetBits().setValue(subPixelInterpolationOffsetBits);
     }
 
-    protected static native long getSubPixelInterpolationOffsetBits(long address);
-    protected static native void setSubPixelInterpolationOffsetBits(long address, long subPixelInterpolationOffsetBits);
+    protected static native long getSubPixelInterpolationOffsetBitsNative(long address);
+    protected static native void setSubPixelInterpolationOffsetBitsNative(long address, long subPixelInterpolationOffsetBits);
 
     public VkUInt32 getMaxFramebufferWidth() {
-        return new VkUInt32(getVkMemory(), getMaxFramebufferWidth(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxFramebufferWidthNative(getVkAddress()));
     }
 
     
     public void setMaxFramebufferWidth(VkUInt32 maxFramebufferWidth) {
-        setMaxFramebufferWidth(getVkAddress(), maxFramebufferWidth != null ? maxFramebufferWidth.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxFramebufferWidthNative(getVkAddress(), maxFramebufferWidth != null ? maxFramebufferWidth.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1622,16 +1622,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxFramebufferWidth().setValue(maxFramebufferWidth);
     }
 
-    protected static native long getMaxFramebufferWidth(long address);
-    protected static native void setMaxFramebufferWidth(long address, long maxFramebufferWidth);
+    protected static native long getMaxFramebufferWidthNative(long address);
+    protected static native void setMaxFramebufferWidthNative(long address, long maxFramebufferWidth);
 
     public VkUInt32 getMaxFramebufferHeight() {
-        return new VkUInt32(getVkMemory(), getMaxFramebufferHeight(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxFramebufferHeightNative(getVkAddress()));
     }
 
     
     public void setMaxFramebufferHeight(VkUInt32 maxFramebufferHeight) {
-        setMaxFramebufferHeight(getVkAddress(), maxFramebufferHeight != null ? maxFramebufferHeight.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxFramebufferHeightNative(getVkAddress(), maxFramebufferHeight != null ? maxFramebufferHeight.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1643,16 +1643,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxFramebufferHeight().setValue(maxFramebufferHeight);
     }
 
-    protected static native long getMaxFramebufferHeight(long address);
-    protected static native void setMaxFramebufferHeight(long address, long maxFramebufferHeight);
+    protected static native long getMaxFramebufferHeightNative(long address);
+    protected static native void setMaxFramebufferHeightNative(long address, long maxFramebufferHeight);
 
     public VkUInt32 getMaxFramebufferLayers() {
-        return new VkUInt32(getVkMemory(), getMaxFramebufferLayers(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxFramebufferLayersNative(getVkAddress()));
     }
 
     
     public void setMaxFramebufferLayers(VkUInt32 maxFramebufferLayers) {
-        setMaxFramebufferLayers(getVkAddress(), maxFramebufferLayers != null ? maxFramebufferLayers.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxFramebufferLayersNative(getVkAddress(), maxFramebufferLayers != null ? maxFramebufferLayers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1664,16 +1664,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxFramebufferLayers().setValue(maxFramebufferLayers);
     }
 
-    protected static native long getMaxFramebufferLayers(long address);
-    protected static native void setMaxFramebufferLayers(long address, long maxFramebufferLayers);
+    protected static native long getMaxFramebufferLayersNative(long address);
+    protected static native void setMaxFramebufferLayersNative(long address, long maxFramebufferLayers);
 
     public VkSampleCountFlags getFramebufferColorSampleCounts() {
-        return new VkSampleCountFlags(getVkMemory(), getFramebufferColorSampleCounts(getVkAddress()));
+        return new VkSampleCountFlags(getVkMemory(), getFramebufferColorSampleCountsNative(getVkAddress()));
     }
 
     
     public void setFramebufferColorSampleCounts(VkSampleCountFlags framebufferColorSampleCounts) {
-        setFramebufferColorSampleCounts(getVkAddress(), framebufferColorSampleCounts != null ? framebufferColorSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
+        setFramebufferColorSampleCountsNative(getVkAddress(), framebufferColorSampleCounts != null ? framebufferColorSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1685,16 +1685,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getFramebufferColorSampleCounts().setValue(framebufferColorSampleCounts);
     }
 
-    protected static native long getFramebufferColorSampleCounts(long address);
-    protected static native void setFramebufferColorSampleCounts(long address, long framebufferColorSampleCounts);
+    protected static native long getFramebufferColorSampleCountsNative(long address);
+    protected static native void setFramebufferColorSampleCountsNative(long address, long framebufferColorSampleCounts);
 
     public VkSampleCountFlags getFramebufferDepthSampleCounts() {
-        return new VkSampleCountFlags(getVkMemory(), getFramebufferDepthSampleCounts(getVkAddress()));
+        return new VkSampleCountFlags(getVkMemory(), getFramebufferDepthSampleCountsNative(getVkAddress()));
     }
 
     
     public void setFramebufferDepthSampleCounts(VkSampleCountFlags framebufferDepthSampleCounts) {
-        setFramebufferDepthSampleCounts(getVkAddress(), framebufferDepthSampleCounts != null ? framebufferDepthSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
+        setFramebufferDepthSampleCountsNative(getVkAddress(), framebufferDepthSampleCounts != null ? framebufferDepthSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1706,16 +1706,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getFramebufferDepthSampleCounts().setValue(framebufferDepthSampleCounts);
     }
 
-    protected static native long getFramebufferDepthSampleCounts(long address);
-    protected static native void setFramebufferDepthSampleCounts(long address, long framebufferDepthSampleCounts);
+    protected static native long getFramebufferDepthSampleCountsNative(long address);
+    protected static native void setFramebufferDepthSampleCountsNative(long address, long framebufferDepthSampleCounts);
 
     public VkSampleCountFlags getFramebufferStencilSampleCounts() {
-        return new VkSampleCountFlags(getVkMemory(), getFramebufferStencilSampleCounts(getVkAddress()));
+        return new VkSampleCountFlags(getVkMemory(), getFramebufferStencilSampleCountsNative(getVkAddress()));
     }
 
     
     public void setFramebufferStencilSampleCounts(VkSampleCountFlags framebufferStencilSampleCounts) {
-        setFramebufferStencilSampleCounts(getVkAddress(), framebufferStencilSampleCounts != null ? framebufferStencilSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
+        setFramebufferStencilSampleCountsNative(getVkAddress(), framebufferStencilSampleCounts != null ? framebufferStencilSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1727,16 +1727,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getFramebufferStencilSampleCounts().setValue(framebufferStencilSampleCounts);
     }
 
-    protected static native long getFramebufferStencilSampleCounts(long address);
-    protected static native void setFramebufferStencilSampleCounts(long address, long framebufferStencilSampleCounts);
+    protected static native long getFramebufferStencilSampleCountsNative(long address);
+    protected static native void setFramebufferStencilSampleCountsNative(long address, long framebufferStencilSampleCounts);
 
     public VkSampleCountFlags getFramebufferNoAttachmentsSampleCounts() {
-        return new VkSampleCountFlags(getVkMemory(), getFramebufferNoAttachmentsSampleCounts(getVkAddress()));
+        return new VkSampleCountFlags(getVkMemory(), getFramebufferNoAttachmentsSampleCountsNative(getVkAddress()));
     }
 
     
     public void setFramebufferNoAttachmentsSampleCounts(VkSampleCountFlags framebufferNoAttachmentsSampleCounts) {
-        setFramebufferNoAttachmentsSampleCounts(getVkAddress(), framebufferNoAttachmentsSampleCounts != null ? framebufferNoAttachmentsSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
+        setFramebufferNoAttachmentsSampleCountsNative(getVkAddress(), framebufferNoAttachmentsSampleCounts != null ? framebufferNoAttachmentsSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1748,16 +1748,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getFramebufferNoAttachmentsSampleCounts().setValue(framebufferNoAttachmentsSampleCounts);
     }
 
-    protected static native long getFramebufferNoAttachmentsSampleCounts(long address);
-    protected static native void setFramebufferNoAttachmentsSampleCounts(long address, long framebufferNoAttachmentsSampleCounts);
+    protected static native long getFramebufferNoAttachmentsSampleCountsNative(long address);
+    protected static native void setFramebufferNoAttachmentsSampleCountsNative(long address, long framebufferNoAttachmentsSampleCounts);
 
     public VkUInt32 getMaxColorAttachments() {
-        return new VkUInt32(getVkMemory(), getMaxColorAttachments(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxColorAttachmentsNative(getVkAddress()));
     }
 
     
     public void setMaxColorAttachments(VkUInt32 maxColorAttachments) {
-        setMaxColorAttachments(getVkAddress(), maxColorAttachments != null ? maxColorAttachments.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxColorAttachmentsNative(getVkAddress(), maxColorAttachments != null ? maxColorAttachments.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1769,16 +1769,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxColorAttachments().setValue(maxColorAttachments);
     }
 
-    protected static native long getMaxColorAttachments(long address);
-    protected static native void setMaxColorAttachments(long address, long maxColorAttachments);
+    protected static native long getMaxColorAttachmentsNative(long address);
+    protected static native void setMaxColorAttachmentsNative(long address, long maxColorAttachments);
 
     public VkSampleCountFlags getSampledImageColorSampleCounts() {
-        return new VkSampleCountFlags(getVkMemory(), getSampledImageColorSampleCounts(getVkAddress()));
+        return new VkSampleCountFlags(getVkMemory(), getSampledImageColorSampleCountsNative(getVkAddress()));
     }
 
     
     public void setSampledImageColorSampleCounts(VkSampleCountFlags sampledImageColorSampleCounts) {
-        setSampledImageColorSampleCounts(getVkAddress(), sampledImageColorSampleCounts != null ? sampledImageColorSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampledImageColorSampleCountsNative(getVkAddress(), sampledImageColorSampleCounts != null ? sampledImageColorSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1790,16 +1790,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getSampledImageColorSampleCounts().setValue(sampledImageColorSampleCounts);
     }
 
-    protected static native long getSampledImageColorSampleCounts(long address);
-    protected static native void setSampledImageColorSampleCounts(long address, long sampledImageColorSampleCounts);
+    protected static native long getSampledImageColorSampleCountsNative(long address);
+    protected static native void setSampledImageColorSampleCountsNative(long address, long sampledImageColorSampleCounts);
 
     public VkSampleCountFlags getSampledImageIntegerSampleCounts() {
-        return new VkSampleCountFlags(getVkMemory(), getSampledImageIntegerSampleCounts(getVkAddress()));
+        return new VkSampleCountFlags(getVkMemory(), getSampledImageIntegerSampleCountsNative(getVkAddress()));
     }
 
     
     public void setSampledImageIntegerSampleCounts(VkSampleCountFlags sampledImageIntegerSampleCounts) {
-        setSampledImageIntegerSampleCounts(getVkAddress(), sampledImageIntegerSampleCounts != null ? sampledImageIntegerSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampledImageIntegerSampleCountsNative(getVkAddress(), sampledImageIntegerSampleCounts != null ? sampledImageIntegerSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1811,16 +1811,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getSampledImageIntegerSampleCounts().setValue(sampledImageIntegerSampleCounts);
     }
 
-    protected static native long getSampledImageIntegerSampleCounts(long address);
-    protected static native void setSampledImageIntegerSampleCounts(long address, long sampledImageIntegerSampleCounts);
+    protected static native long getSampledImageIntegerSampleCountsNative(long address);
+    protected static native void setSampledImageIntegerSampleCountsNative(long address, long sampledImageIntegerSampleCounts);
 
     public VkSampleCountFlags getSampledImageDepthSampleCounts() {
-        return new VkSampleCountFlags(getVkMemory(), getSampledImageDepthSampleCounts(getVkAddress()));
+        return new VkSampleCountFlags(getVkMemory(), getSampledImageDepthSampleCountsNative(getVkAddress()));
     }
 
     
     public void setSampledImageDepthSampleCounts(VkSampleCountFlags sampledImageDepthSampleCounts) {
-        setSampledImageDepthSampleCounts(getVkAddress(), sampledImageDepthSampleCounts != null ? sampledImageDepthSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampledImageDepthSampleCountsNative(getVkAddress(), sampledImageDepthSampleCounts != null ? sampledImageDepthSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1832,16 +1832,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getSampledImageDepthSampleCounts().setValue(sampledImageDepthSampleCounts);
     }
 
-    protected static native long getSampledImageDepthSampleCounts(long address);
-    protected static native void setSampledImageDepthSampleCounts(long address, long sampledImageDepthSampleCounts);
+    protected static native long getSampledImageDepthSampleCountsNative(long address);
+    protected static native void setSampledImageDepthSampleCountsNative(long address, long sampledImageDepthSampleCounts);
 
     public VkSampleCountFlags getSampledImageStencilSampleCounts() {
-        return new VkSampleCountFlags(getVkMemory(), getSampledImageStencilSampleCounts(getVkAddress()));
+        return new VkSampleCountFlags(getVkMemory(), getSampledImageStencilSampleCountsNative(getVkAddress()));
     }
 
     
     public void setSampledImageStencilSampleCounts(VkSampleCountFlags sampledImageStencilSampleCounts) {
-        setSampledImageStencilSampleCounts(getVkAddress(), sampledImageStencilSampleCounts != null ? sampledImageStencilSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampledImageStencilSampleCountsNative(getVkAddress(), sampledImageStencilSampleCounts != null ? sampledImageStencilSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1853,16 +1853,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getSampledImageStencilSampleCounts().setValue(sampledImageStencilSampleCounts);
     }
 
-    protected static native long getSampledImageStencilSampleCounts(long address);
-    protected static native void setSampledImageStencilSampleCounts(long address, long sampledImageStencilSampleCounts);
+    protected static native long getSampledImageStencilSampleCountsNative(long address);
+    protected static native void setSampledImageStencilSampleCountsNative(long address, long sampledImageStencilSampleCounts);
 
     public VkSampleCountFlags getStorageImageSampleCounts() {
-        return new VkSampleCountFlags(getVkMemory(), getStorageImageSampleCounts(getVkAddress()));
+        return new VkSampleCountFlags(getVkMemory(), getStorageImageSampleCountsNative(getVkAddress()));
     }
 
     
     public void setStorageImageSampleCounts(VkSampleCountFlags storageImageSampleCounts) {
-        setStorageImageSampleCounts(getVkAddress(), storageImageSampleCounts != null ? storageImageSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
+        setStorageImageSampleCountsNative(getVkAddress(), storageImageSampleCounts != null ? storageImageSampleCounts.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1874,16 +1874,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getStorageImageSampleCounts().setValue(storageImageSampleCounts);
     }
 
-    protected static native long getStorageImageSampleCounts(long address);
-    protected static native void setStorageImageSampleCounts(long address, long storageImageSampleCounts);
+    protected static native long getStorageImageSampleCountsNative(long address);
+    protected static native void setStorageImageSampleCountsNative(long address, long storageImageSampleCounts);
 
     public VkUInt32 getMaxSampleMaskWords() {
-        return new VkUInt32(getVkMemory(), getMaxSampleMaskWords(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxSampleMaskWordsNative(getVkAddress()));
     }
 
     
     public void setMaxSampleMaskWords(VkUInt32 maxSampleMaskWords) {
-        setMaxSampleMaskWords(getVkAddress(), maxSampleMaskWords != null ? maxSampleMaskWords.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxSampleMaskWordsNative(getVkAddress(), maxSampleMaskWords != null ? maxSampleMaskWords.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1895,16 +1895,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxSampleMaskWords().setValue(maxSampleMaskWords);
     }
 
-    protected static native long getMaxSampleMaskWords(long address);
-    protected static native void setMaxSampleMaskWords(long address, long maxSampleMaskWords);
+    protected static native long getMaxSampleMaskWordsNative(long address);
+    protected static native void setMaxSampleMaskWordsNative(long address, long maxSampleMaskWords);
 
     public VkBool32 getTimestampComputeAndGraphics() {
-        return new VkBool32(getVkMemory(), getTimestampComputeAndGraphics(getVkAddress()));
+        return new VkBool32(getVkMemory(), getTimestampComputeAndGraphicsNative(getVkAddress()));
     }
 
     
     public void setTimestampComputeAndGraphics(VkBool32 timestampComputeAndGraphics) {
-        setTimestampComputeAndGraphics(getVkAddress(), timestampComputeAndGraphics != null ? timestampComputeAndGraphics.getVkAddress() : VkPointer.getNullAddressNative());
+        setTimestampComputeAndGraphicsNative(getVkAddress(), timestampComputeAndGraphics != null ? timestampComputeAndGraphics.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1916,16 +1916,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getTimestampComputeAndGraphics().setValue(timestampComputeAndGraphics);
     }
 
-    protected static native long getTimestampComputeAndGraphics(long address);
-    protected static native void setTimestampComputeAndGraphics(long address, long timestampComputeAndGraphics);
+    protected static native long getTimestampComputeAndGraphicsNative(long address);
+    protected static native void setTimestampComputeAndGraphicsNative(long address, long timestampComputeAndGraphics);
 
     public VkFloat getTimestampPeriod() {
-        return new VkFloat(getVkMemory(), getTimestampPeriod(getVkAddress()));
+        return new VkFloat(getVkMemory(), getTimestampPeriodNative(getVkAddress()));
     }
 
     
     public void setTimestampPeriod(VkFloat timestampPeriod) {
-        setTimestampPeriod(getVkAddress(), timestampPeriod != null ? timestampPeriod.getVkAddress() : VkPointer.getNullAddressNative());
+        setTimestampPeriodNative(getVkAddress(), timestampPeriod != null ? timestampPeriod.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1937,16 +1937,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getTimestampPeriod().setValue(timestampPeriod);
     }
 
-    protected static native long getTimestampPeriod(long address);
-    protected static native void setTimestampPeriod(long address, long timestampPeriod);
+    protected static native long getTimestampPeriodNative(long address);
+    protected static native void setTimestampPeriodNative(long address, long timestampPeriod);
 
     public VkUInt32 getMaxClipDistances() {
-        return new VkUInt32(getVkMemory(), getMaxClipDistances(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxClipDistancesNative(getVkAddress()));
     }
 
     
     public void setMaxClipDistances(VkUInt32 maxClipDistances) {
-        setMaxClipDistances(getVkAddress(), maxClipDistances != null ? maxClipDistances.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxClipDistancesNative(getVkAddress(), maxClipDistances != null ? maxClipDistances.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1958,16 +1958,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxClipDistances().setValue(maxClipDistances);
     }
 
-    protected static native long getMaxClipDistances(long address);
-    protected static native void setMaxClipDistances(long address, long maxClipDistances);
+    protected static native long getMaxClipDistancesNative(long address);
+    protected static native void setMaxClipDistancesNative(long address, long maxClipDistances);
 
     public VkUInt32 getMaxCullDistances() {
-        return new VkUInt32(getVkMemory(), getMaxCullDistances(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxCullDistancesNative(getVkAddress()));
     }
 
     
     public void setMaxCullDistances(VkUInt32 maxCullDistances) {
-        setMaxCullDistances(getVkAddress(), maxCullDistances != null ? maxCullDistances.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxCullDistancesNative(getVkAddress(), maxCullDistances != null ? maxCullDistances.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -1979,16 +1979,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxCullDistances().setValue(maxCullDistances);
     }
 
-    protected static native long getMaxCullDistances(long address);
-    protected static native void setMaxCullDistances(long address, long maxCullDistances);
+    protected static native long getMaxCullDistancesNative(long address);
+    protected static native void setMaxCullDistancesNative(long address, long maxCullDistances);
 
     public VkUInt32 getMaxCombinedClipAndCullDistances() {
-        return new VkUInt32(getVkMemory(), getMaxCombinedClipAndCullDistances(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxCombinedClipAndCullDistancesNative(getVkAddress()));
     }
 
     
     public void setMaxCombinedClipAndCullDistances(VkUInt32 maxCombinedClipAndCullDistances) {
-        setMaxCombinedClipAndCullDistances(getVkAddress(), maxCombinedClipAndCullDistances != null ? maxCombinedClipAndCullDistances.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxCombinedClipAndCullDistancesNative(getVkAddress(), maxCombinedClipAndCullDistances != null ? maxCombinedClipAndCullDistances.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -2000,16 +2000,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getMaxCombinedClipAndCullDistances().setValue(maxCombinedClipAndCullDistances);
     }
 
-    protected static native long getMaxCombinedClipAndCullDistances(long address);
-    protected static native void setMaxCombinedClipAndCullDistances(long address, long maxCombinedClipAndCullDistances);
+    protected static native long getMaxCombinedClipAndCullDistancesNative(long address);
+    protected static native void setMaxCombinedClipAndCullDistancesNative(long address, long maxCombinedClipAndCullDistances);
 
     public VkUInt32 getDiscreteQueuePriorities() {
-        return new VkUInt32(getVkMemory(), getDiscreteQueuePriorities(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDiscreteQueuePrioritiesNative(getVkAddress()));
     }
 
     
     public void setDiscreteQueuePriorities(VkUInt32 discreteQueuePriorities) {
-        setDiscreteQueuePriorities(getVkAddress(), discreteQueuePriorities != null ? discreteQueuePriorities.getVkAddress() : VkPointer.getNullAddressNative());
+        setDiscreteQueuePrioritiesNative(getVkAddress(), discreteQueuePriorities != null ? discreteQueuePriorities.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -2021,42 +2021,42 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getDiscreteQueuePriorities().setValue(discreteQueuePriorities);
     }
 
-    protected static native long getDiscreteQueuePriorities(long address);
-    protected static native void setDiscreteQueuePriorities(long address, long discreteQueuePriorities);
+    protected static native long getDiscreteQueuePrioritiesNative(long address);
+    protected static native void setDiscreteQueuePrioritiesNative(long address, long discreteQueuePriorities);
 
     public VkFloat getPointSizeRange() {
-        return new VkFloat(getVkMemory(), getPointSizeRange(getVkAddress()));
+        return new VkFloat(getVkMemory(), getPointSizeRangeNative(getVkAddress()));
     }
 
     
     public void setPointSizeRange(VkFloat pointSizeRange) {
-        setPointSizeRange(getVkAddress(), pointSizeRange != null ? pointSizeRange.getVkAddress() : VkPointer.NULL);
+        setPointSizeRangeNative(getVkAddress(), pointSizeRange != null ? pointSizeRange.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getPointSizeRange(long address);
-    protected static native void setPointSizeRange(long address, long pointSizeRange);
+    protected static native long getPointSizeRangeNative(long address);
+    protected static native void setPointSizeRangeNative(long address, long pointSizeRange);
 
     public VkFloat getLineWidthRange() {
-        return new VkFloat(getVkMemory(), getLineWidthRange(getVkAddress()));
+        return new VkFloat(getVkMemory(), getLineWidthRangeNative(getVkAddress()));
     }
 
     
     public void setLineWidthRange(VkFloat lineWidthRange) {
-        setLineWidthRange(getVkAddress(), lineWidthRange != null ? lineWidthRange.getVkAddress() : VkPointer.NULL);
+        setLineWidthRangeNative(getVkAddress(), lineWidthRange != null ? lineWidthRange.getVkAddress() : VkPointer.NULL);
         
     }
 
-    protected static native long getLineWidthRange(long address);
-    protected static native void setLineWidthRange(long address, long lineWidthRange);
+    protected static native long getLineWidthRangeNative(long address);
+    protected static native void setLineWidthRangeNative(long address, long lineWidthRange);
 
     public VkFloat getPointSizeGranularity() {
-        return new VkFloat(getVkMemory(), getPointSizeGranularity(getVkAddress()));
+        return new VkFloat(getVkMemory(), getPointSizeGranularityNative(getVkAddress()));
     }
 
     
     public void setPointSizeGranularity(VkFloat pointSizeGranularity) {
-        setPointSizeGranularity(getVkAddress(), pointSizeGranularity != null ? pointSizeGranularity.getVkAddress() : VkPointer.getNullAddressNative());
+        setPointSizeGranularityNative(getVkAddress(), pointSizeGranularity != null ? pointSizeGranularity.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -2068,16 +2068,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getPointSizeGranularity().setValue(pointSizeGranularity);
     }
 
-    protected static native long getPointSizeGranularity(long address);
-    protected static native void setPointSizeGranularity(long address, long pointSizeGranularity);
+    protected static native long getPointSizeGranularityNative(long address);
+    protected static native void setPointSizeGranularityNative(long address, long pointSizeGranularity);
 
     public VkFloat getLineWidthGranularity() {
-        return new VkFloat(getVkMemory(), getLineWidthGranularity(getVkAddress()));
+        return new VkFloat(getVkMemory(), getLineWidthGranularityNative(getVkAddress()));
     }
 
     
     public void setLineWidthGranularity(VkFloat lineWidthGranularity) {
-        setLineWidthGranularity(getVkAddress(), lineWidthGranularity != null ? lineWidthGranularity.getVkAddress() : VkPointer.getNullAddressNative());
+        setLineWidthGranularityNative(getVkAddress(), lineWidthGranularity != null ? lineWidthGranularity.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -2089,16 +2089,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getLineWidthGranularity().setValue(lineWidthGranularity);
     }
 
-    protected static native long getLineWidthGranularity(long address);
-    protected static native void setLineWidthGranularity(long address, long lineWidthGranularity);
+    protected static native long getLineWidthGranularityNative(long address);
+    protected static native void setLineWidthGranularityNative(long address, long lineWidthGranularity);
 
     public VkBool32 getStrictLines() {
-        return new VkBool32(getVkMemory(), getStrictLines(getVkAddress()));
+        return new VkBool32(getVkMemory(), getStrictLinesNative(getVkAddress()));
     }
 
     
     public void setStrictLines(VkBool32 strictLines) {
-        setStrictLines(getVkAddress(), strictLines != null ? strictLines.getVkAddress() : VkPointer.getNullAddressNative());
+        setStrictLinesNative(getVkAddress(), strictLines != null ? strictLines.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -2110,16 +2110,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getStrictLines().setValue(strictLines);
     }
 
-    protected static native long getStrictLines(long address);
-    protected static native void setStrictLines(long address, long strictLines);
+    protected static native long getStrictLinesNative(long address);
+    protected static native void setStrictLinesNative(long address, long strictLines);
 
     public VkBool32 getStandardSampleLocations() {
-        return new VkBool32(getVkMemory(), getStandardSampleLocations(getVkAddress()));
+        return new VkBool32(getVkMemory(), getStandardSampleLocationsNative(getVkAddress()));
     }
 
     
     public void setStandardSampleLocations(VkBool32 standardSampleLocations) {
-        setStandardSampleLocations(getVkAddress(), standardSampleLocations != null ? standardSampleLocations.getVkAddress() : VkPointer.getNullAddressNative());
+        setStandardSampleLocationsNative(getVkAddress(), standardSampleLocations != null ? standardSampleLocations.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -2131,16 +2131,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getStandardSampleLocations().setValue(standardSampleLocations);
     }
 
-    protected static native long getStandardSampleLocations(long address);
-    protected static native void setStandardSampleLocations(long address, long standardSampleLocations);
+    protected static native long getStandardSampleLocationsNative(long address);
+    protected static native void setStandardSampleLocationsNative(long address, long standardSampleLocations);
 
     public VkDeviceSize getOptimalBufferCopyOffsetAlignment() {
-        return new VkDeviceSize(getVkMemory(), getOptimalBufferCopyOffsetAlignment(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getOptimalBufferCopyOffsetAlignmentNative(getVkAddress()));
     }
 
     
     public void setOptimalBufferCopyOffsetAlignment(VkDeviceSize optimalBufferCopyOffsetAlignment) {
-        setOptimalBufferCopyOffsetAlignment(getVkAddress(), optimalBufferCopyOffsetAlignment != null ? optimalBufferCopyOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
+        setOptimalBufferCopyOffsetAlignmentNative(getVkAddress(), optimalBufferCopyOffsetAlignment != null ? optimalBufferCopyOffsetAlignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -2152,16 +2152,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getOptimalBufferCopyOffsetAlignment().setValue(optimalBufferCopyOffsetAlignment);
     }
 
-    protected static native long getOptimalBufferCopyOffsetAlignment(long address);
-    protected static native void setOptimalBufferCopyOffsetAlignment(long address, long optimalBufferCopyOffsetAlignment);
+    protected static native long getOptimalBufferCopyOffsetAlignmentNative(long address);
+    protected static native void setOptimalBufferCopyOffsetAlignmentNative(long address, long optimalBufferCopyOffsetAlignment);
 
     public VkDeviceSize getOptimalBufferCopyRowPitchAlignment() {
-        return new VkDeviceSize(getVkMemory(), getOptimalBufferCopyRowPitchAlignment(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getOptimalBufferCopyRowPitchAlignmentNative(getVkAddress()));
     }
 
     
     public void setOptimalBufferCopyRowPitchAlignment(VkDeviceSize optimalBufferCopyRowPitchAlignment) {
-        setOptimalBufferCopyRowPitchAlignment(getVkAddress(), optimalBufferCopyRowPitchAlignment != null ? optimalBufferCopyRowPitchAlignment.getVkAddress() : VkPointer.getNullAddressNative());
+        setOptimalBufferCopyRowPitchAlignmentNative(getVkAddress(), optimalBufferCopyRowPitchAlignment != null ? optimalBufferCopyRowPitchAlignment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -2173,16 +2173,16 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getOptimalBufferCopyRowPitchAlignment().setValue(optimalBufferCopyRowPitchAlignment);
     }
 
-    protected static native long getOptimalBufferCopyRowPitchAlignment(long address);
-    protected static native void setOptimalBufferCopyRowPitchAlignment(long address, long optimalBufferCopyRowPitchAlignment);
+    protected static native long getOptimalBufferCopyRowPitchAlignmentNative(long address);
+    protected static native void setOptimalBufferCopyRowPitchAlignmentNative(long address, long optimalBufferCopyRowPitchAlignment);
 
     public VkDeviceSize getNonCoherentAtomSize() {
-        return new VkDeviceSize(getVkMemory(), getNonCoherentAtomSize(getVkAddress()));
+        return new VkDeviceSize(getVkMemory(), getNonCoherentAtomSizeNative(getVkAddress()));
     }
 
     
     public void setNonCoherentAtomSize(VkDeviceSize nonCoherentAtomSize) {
-        setNonCoherentAtomSize(getVkAddress(), nonCoherentAtomSize != null ? nonCoherentAtomSize.getVkAddress() : VkPointer.getNullAddressNative());
+        setNonCoherentAtomSizeNative(getVkAddress(), nonCoherentAtomSize != null ? nonCoherentAtomSize.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -2194,8 +2194,8 @@ public class VkPhysicalDeviceLimits extends VkObject {
         getNonCoherentAtomSize().setValue(nonCoherentAtomSize);
     }
 
-    protected static native long getNonCoherentAtomSize(long address);
-    protected static native void setNonCoherentAtomSize(long address, long nonCoherentAtomSize);
+    protected static native long getNonCoherentAtomSizeNative(long address);
+    protected static native void setNonCoherentAtomSizeNative(long address, long nonCoherentAtomSize);
 
 
     public static native long sizeof();
@@ -2239,10 +2239,10 @@ public class VkPhysicalDeviceLimits extends VkObject {
 
         @Override
         public VkPhysicalDeviceLimits get(int i){
-            return new VkPhysicalDeviceLimits(getVkMemory(), addressAt(i));
+            return new VkPhysicalDeviceLimits(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

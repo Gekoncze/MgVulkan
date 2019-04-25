@@ -61,10 +61,10 @@ public class VkImage extends VkNonDispatchableHandle {
 
         @Override
         public VkImage get(int i){
-            return new VkImage(getVkMemory(), addressAt(i));
+            return new VkImage(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

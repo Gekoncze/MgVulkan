@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_sizeof(JNIEnv* env, jcl
     return sizeof(VkPhysicalDeviceSparseProperties);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyStandard2DBlockShape(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyStandard2DBlockShapeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyStandard2DB
     return jniPointerToLong(&o->residencyStandard2DBlockShape);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyStandard2DBlockShape(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyStandard2DBlockShapeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyStandard2DBl
     memcpy(&o->residencyStandard2DBlockShape, valuePointer, sizeof(o->residencyStandard2DBlockShape));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyStandard2DMultisampleBlockShape(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyStandard2DMultisampleBlockShapeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyStandard2DM
     return jniPointerToLong(&o->residencyStandard2DMultisampleBlockShape);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyStandard2DMultisampleBlockShape(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyStandard2DMultisampleBlockShapeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyStandard2DMu
     memcpy(&o->residencyStandard2DMultisampleBlockShape, valuePointer, sizeof(o->residencyStandard2DMultisampleBlockShape));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyStandard3DBlockShape(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyStandard3DBlockShapeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyStandard3DB
     return jniPointerToLong(&o->residencyStandard3DBlockShape);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyStandard3DBlockShape(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyStandard3DBlockShapeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyStandard3DBl
     memcpy(&o->residencyStandard3DBlockShape, valuePointer, sizeof(o->residencyStandard3DBlockShape));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyAlignedMipSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyAlignedMipSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyAlignedMipS
     return jniPointerToLong(&o->residencyAlignedMipSize);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyAlignedMipSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyAlignedMipSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyAlignedMipSi
     memcpy(&o->residencyAlignedMipSize, valuePointer, sizeof(o->residencyAlignedMipSize));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyNonResidentStrict(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyNonResidentStrictNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_getResidencyNonResident
     return jniPointerToLong(&o->residencyNonResidentStrict);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyNonResidentStrict(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseProperties_setResidencyNonResidentStrictNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

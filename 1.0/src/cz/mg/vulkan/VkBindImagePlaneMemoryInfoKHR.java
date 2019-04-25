@@ -21,12 +21,12 @@ public class VkBindImagePlaneMemoryInfoKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkBindImagePlaneMemoryInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkImageAspectFlagBits getPlaneAspect() {
-        return new VkImageAspectFlagBits(getVkMemory(), getPlaneAspect(getVkAddress()));
+        return new VkImageAspectFlagBits(getVkMemory(), getPlaneAspectNative(getVkAddress()));
     }
 
     
     public void setPlaneAspect(VkImageAspectFlagBits planeAspect) {
-        setPlaneAspect(getVkAddress(), planeAspect != null ? planeAspect.getVkAddress() : VkPointer.getNullAddressNative());
+        setPlaneAspectNative(getVkAddress(), planeAspect != null ? planeAspect.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,8 +72,8 @@ public class VkBindImagePlaneMemoryInfoKHR extends VkObject {
         getPlaneAspect().setValue(planeAspect);
     }
 
-    protected static native long getPlaneAspect(long address);
-    protected static native void setPlaneAspect(long address, long planeAspect);
+    protected static native long getPlaneAspectNative(long address);
+    protected static native void setPlaneAspectNative(long address, long planeAspect);
 
 
     public static native long sizeof();

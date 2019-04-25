@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkCommandBufferBeginInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getSType(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setSType(JNIEnv* env, jclass jc,
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getPNext(JNIEnv* env, jclass jc
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setPNext(JNIEnv* env, jclass jc,
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getFlags(JNIEnv* env, jclass jc
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setFlags(JNIEnv* env, jclass jc,
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getPInheritanceInfo(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getPInheritanceInfoNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getPInheritanceInfo(JNIEnv* env
     return jniPointerToLong(o->pInheritanceInfo);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setPInheritanceInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setPInheritanceInfoNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

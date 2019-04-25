@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_sizeof(JNIEnv* env, j
     return sizeof(VkPhysicalDeviceGroupPropertiesKHX);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getSType(JNIEnv* env,
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setSType(JNIEnv* env, 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getPNext(JNIEnv* env,
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setPNext(JNIEnv* env, 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getPhysicalDeviceCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getPhysicalDeviceCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getPhysicalDeviceCoun
     return jniPointerToLong(&o->physicalDeviceCount);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setPhysicalDeviceCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setPhysicalDeviceCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setPhysicalDeviceCount
     memcpy(&o->physicalDeviceCount, valuePointer, sizeof(o->physicalDeviceCount));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getPhysicalDevices(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getPhysicalDevicesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getPhysicalDevices(JN
     return jniPointerToLong(o->physicalDevices);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setPhysicalDevices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setPhysicalDevicesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setPhysicalDevices(JNI
     memcpy(o->physicalDevices, valuePointer, sizeof(o->physicalDevices));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getSubsetAllocation(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getSubsetAllocationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_getSubsetAllocation(J
     return jniPointerToLong(&o->subsetAllocation);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setSubsetAllocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceGroupPropertiesKHX_setSubsetAllocationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

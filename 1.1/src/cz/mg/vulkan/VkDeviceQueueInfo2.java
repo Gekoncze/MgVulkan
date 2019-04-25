@@ -21,12 +21,12 @@ public class VkDeviceQueueInfo2 extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDeviceQueueInfo2 extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkDeviceQueueCreateFlags getFlags() {
-        return new VkDeviceQueueCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkDeviceQueueCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkDeviceQueueCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkDeviceQueueInfo2 extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkUInt32 getQueueFamilyIndex() {
-        return new VkUInt32(getVkMemory(), getQueueFamilyIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getQueueFamilyIndexNative(getVkAddress()));
     }
 
     
     public void setQueueFamilyIndex(VkUInt32 queueFamilyIndex) {
-        setQueueFamilyIndex(getVkAddress(), queueFamilyIndex != null ? queueFamilyIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setQueueFamilyIndexNative(getVkAddress(), queueFamilyIndex != null ? queueFamilyIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkDeviceQueueInfo2 extends VkObject {
         getQueueFamilyIndex().setValue(queueFamilyIndex);
     }
 
-    protected static native long getQueueFamilyIndex(long address);
-    protected static native void setQueueFamilyIndex(long address, long queueFamilyIndex);
+    protected static native long getQueueFamilyIndexNative(long address);
+    protected static native void setQueueFamilyIndexNative(long address, long queueFamilyIndex);
 
     public VkUInt32 getQueueIndex() {
-        return new VkUInt32(getVkMemory(), getQueueIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getQueueIndexNative(getVkAddress()));
     }
 
     
     public void setQueueIndex(VkUInt32 queueIndex) {
-        setQueueIndex(getVkAddress(), queueIndex != null ? queueIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setQueueIndexNative(getVkAddress(), queueIndex != null ? queueIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,8 +114,8 @@ public class VkDeviceQueueInfo2 extends VkObject {
         getQueueIndex().setValue(queueIndex);
     }
 
-    protected static native long getQueueIndex(long address);
-    protected static native void setQueueIndex(long address, long queueIndex);
+    protected static native long getQueueIndexNative(long address);
+    protected static native void setQueueIndexNative(long address, long queueIndex);
 
 
     public static native long sizeof();

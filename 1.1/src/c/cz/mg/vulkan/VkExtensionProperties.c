@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkExtensionProperties_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkExtensionProperties);
 }
 
-jlong Java_cz_mg_vulkan_VkExtensionProperties_getExtensionName(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExtensionProperties_getExtensionNameNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkExtensionProperties_getExtensionName(JNIEnv* env, jcla
     return jniPointerToLong(o->extensionName);
 }
 
-void Java_cz_mg_vulkan_VkExtensionProperties_setExtensionName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExtensionProperties_setExtensionNameNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkExtensionProperties_setExtensionName(JNIEnv* env, jclas
     memcpy(o->extensionName, valuePointer, sizeof(o->extensionName));
 }
 
-jlong Java_cz_mg_vulkan_VkExtensionProperties_getSpecVersion(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExtensionProperties_getSpecVersionNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkExtensionProperties_getSpecVersion(JNIEnv* env, jclass
     return jniPointerToLong(&o->specVersion);
 }
 
-void Java_cz_mg_vulkan_VkExtensionProperties_setSpecVersion(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExtensionProperties_setSpecVersionNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

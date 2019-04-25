@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_sizeof
     return sizeof(VkPipelineRasterizationStateRasterizationOrderAMD);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_getSTy
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_setSTyp
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_getPNe
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_setPNex
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_getRasterizationOrder(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_getRasterizationOrderNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_getRas
     return jniPointerToLong(&o->rasterizationOrder);
 }
 
-void Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_setRasterizationOrder(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineRasterizationStateRasterizationOrderAMD_setRasterizationOrderNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

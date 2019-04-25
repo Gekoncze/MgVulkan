@@ -68,15 +68,15 @@ public class VkSamplerAddressMode extends VkEnum {
 
         public Array(int... values){
             this(values.length);
-            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+            for(int i = 0; i < values.length; i++) setValue(i, values[i]);
         }
 
-        public int getValueAt(int i){
-            return getValueNative(addressAt(i));
+        public int getValue(int i){
+            return getValueNative(address(i));
         }
 
-        public void setValueAt(int i, int value){
-            setValueNative(addressAt(i), value);
+        public void setValue(int i, int value){
+            setValueNative(address(i), value);
         }
 
         @Override
@@ -86,10 +86,10 @@ public class VkSamplerAddressMode extends VkEnum {
 
         @Override
         public VkSamplerAddressMode get(int i){
-            return new VkSamplerAddressMode(getVkMemory(), addressAt(i));
+            return new VkSamplerAddressMode(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

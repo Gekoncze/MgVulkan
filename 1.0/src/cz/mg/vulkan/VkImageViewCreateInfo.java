@@ -21,12 +21,12 @@ public class VkImageViewCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkImageViewCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkImageViewCreateFlags getFlags() {
-        return new VkImageViewCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkImageViewCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkImageViewCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,29 +72,29 @@ public class VkImageViewCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkImage getImage() {
-        return new VkImage(getVkMemory(), getImage(getVkAddress()));
+        return new VkImage(getVkMemory(), getImageNative(getVkAddress()));
     }
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddressNative());
+        setImageNative(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getImage(long address);
-    protected static native void setImage(long address, long image);
+    protected static native long getImageNative(long address);
+    protected static native void setImageNative(long address, long image);
 
     public VkImageViewType getViewType() {
-        return new VkImageViewType(getVkMemory(), getViewType(getVkAddress()));
+        return new VkImageViewType(getVkMemory(), getViewTypeNative(getVkAddress()));
     }
 
     
     public void setViewType(VkImageViewType viewType) {
-        setViewType(getVkAddress(), viewType != null ? viewType.getVkAddress() : VkPointer.getNullAddressNative());
+        setViewTypeNative(getVkAddress(), viewType != null ? viewType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,16 +106,16 @@ public class VkImageViewCreateInfo extends VkObject {
         getViewType().setValue(viewType);
     }
 
-    protected static native long getViewType(long address);
-    protected static native void setViewType(long address, long viewType);
+    protected static native long getViewTypeNative(long address);
+    protected static native void setViewTypeNative(long address, long viewType);
 
     public VkFormat getFormat() {
-        return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
+        return new VkFormat(getVkMemory(), getFormatNative(getVkAddress()));
     }
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
+        setFormatNative(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -127,34 +127,34 @@ public class VkImageViewCreateInfo extends VkObject {
         getFormat().setValue(format);
     }
 
-    protected static native long getFormat(long address);
-    protected static native void setFormat(long address, long format);
+    protected static native long getFormatNative(long address);
+    protected static native void setFormatNative(long address, long format);
 
     public VkComponentMapping getComponents() {
-        return new VkComponentMapping(getVkMemory(), getComponents(getVkAddress()));
+        return new VkComponentMapping(getVkMemory(), getComponentsNative(getVkAddress()));
     }
 
     
     public void setComponents(VkComponentMapping components) {
-        setComponents(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getNullAddressNative());
+        setComponentsNative(getVkAddress(), components != null ? components.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getComponents(long address);
-    protected static native void setComponents(long address, long components);
+    protected static native long getComponentsNative(long address);
+    protected static native void setComponentsNative(long address, long components);
 
     public VkImageSubresourceRange getSubresourceRange() {
-        return new VkImageSubresourceRange(getVkMemory(), getSubresourceRange(getVkAddress()));
+        return new VkImageSubresourceRange(getVkMemory(), getSubresourceRangeNative(getVkAddress()));
     }
 
     
     public void setSubresourceRange(VkImageSubresourceRange subresourceRange) {
-        setSubresourceRange(getVkAddress(), subresourceRange != null ? subresourceRange.getVkAddress() : VkPointer.getNullAddressNative());
+        setSubresourceRangeNative(getVkAddress(), subresourceRange != null ? subresourceRange.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSubresourceRange(long address);
-    protected static native void setSubresourceRange(long address, long subresourceRange);
+    protected static native long getSubresourceRangeNative(long address);
+    protected static native void setSubresourceRangeNative(long address, long subresourceRange);
 
 
     public static native long sizeof();

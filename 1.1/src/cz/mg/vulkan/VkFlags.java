@@ -61,10 +61,10 @@ public class VkFlags extends VkUInt32 {
 
         @Override
         public VkFlags get(int i){
-            return new VkFlags(getVkMemory(), addressAt(i));
+            return new VkFlags(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

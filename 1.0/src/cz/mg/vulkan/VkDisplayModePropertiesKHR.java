@@ -20,30 +20,30 @@ public class VkDisplayModePropertiesKHR extends VkObject {
 
 
     public VkDisplayModeKHR getDisplayMode() {
-        return new VkDisplayModeKHR(getVkMemory(), getDisplayMode(getVkAddress()));
+        return new VkDisplayModeKHR(getVkMemory(), getDisplayModeNative(getVkAddress()));
     }
 
     
     public void setDisplayMode(VkDisplayModeKHR displayMode) {
-        setDisplayMode(getVkAddress(), displayMode != null ? displayMode.getVkAddress() : VkPointer.getNullAddressNative());
+        setDisplayModeNative(getVkAddress(), displayMode != null ? displayMode.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getDisplayMode(long address);
-    protected static native void setDisplayMode(long address, long displayMode);
+    protected static native long getDisplayModeNative(long address);
+    protected static native void setDisplayModeNative(long address, long displayMode);
 
     public VkDisplayModeParametersKHR getParameters() {
-        return new VkDisplayModeParametersKHR(getVkMemory(), getParameters(getVkAddress()));
+        return new VkDisplayModeParametersKHR(getVkMemory(), getParametersNative(getVkAddress()));
     }
 
     
     public void setParameters(VkDisplayModeParametersKHR parameters) {
-        setParameters(getVkAddress(), parameters != null ? parameters.getVkAddress() : VkPointer.getNullAddressNative());
+        setParametersNative(getVkAddress(), parameters != null ? parameters.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getParameters(long address);
-    protected static native void setParameters(long address, long parameters);
+    protected static native long getParametersNative(long address);
+    protected static native void setParametersNative(long address, long parameters);
 
 
     public static native long sizeof();
@@ -87,10 +87,10 @@ public class VkDisplayModePropertiesKHR extends VkObject {
 
         @Override
         public VkDisplayModePropertiesKHR get(int i){
-            return new VkDisplayModePropertiesKHR(getVkMemory(), addressAt(i));
+            return new VkDisplayModePropertiesKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

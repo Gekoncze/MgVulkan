@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkImageSubresource_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkImageSubresource);
 }
 
-jlong Java_cz_mg_vulkan_VkImageSubresource_getAspectMask(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageSubresource_getAspectMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkImageSubresource_getAspectMask(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->aspectMask);
 }
 
-void Java_cz_mg_vulkan_VkImageSubresource_setAspectMask(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageSubresource_setAspectMaskNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkImageSubresource_setAspectMask(JNIEnv* env, jclass jc, 
     memcpy(&o->aspectMask, valuePointer, sizeof(o->aspectMask));
 }
 
-jlong Java_cz_mg_vulkan_VkImageSubresource_getMipLevel(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageSubresource_getMipLevelNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkImageSubresource_getMipLevel(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->mipLevel);
 }
 
-void Java_cz_mg_vulkan_VkImageSubresource_setMipLevel(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageSubresource_setMipLevelNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkImageSubresource_setMipLevel(JNIEnv* env, jclass jc, jl
     memcpy(&o->mipLevel, valuePointer, sizeof(o->mipLevel));
 }
 
-jlong Java_cz_mg_vulkan_VkImageSubresource_getArrayLayer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageSubresource_getArrayLayerNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkImageSubresource_getArrayLayer(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->arrayLayer);
 }
 
-void Java_cz_mg_vulkan_VkImageSubresource_setArrayLayer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageSubresource_setArrayLayerNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkComponentMapping_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkComponentMapping);
 }
 
-jlong Java_cz_mg_vulkan_VkComponentMapping_getR(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkComponentMapping_getRNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkComponentMapping_getR(JNIEnv* env, jclass jc, jlong ad
     return jniPointerToLong(&o->r);
 }
 
-void Java_cz_mg_vulkan_VkComponentMapping_setR(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkComponentMapping_setRNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkComponentMapping_setR(JNIEnv* env, jclass jc, jlong add
     memcpy(&o->r, valuePointer, sizeof(o->r));
 }
 
-jlong Java_cz_mg_vulkan_VkComponentMapping_getG(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkComponentMapping_getGNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkComponentMapping_getG(JNIEnv* env, jclass jc, jlong ad
     return jniPointerToLong(&o->g);
 }
 
-void Java_cz_mg_vulkan_VkComponentMapping_setG(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkComponentMapping_setGNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkComponentMapping_setG(JNIEnv* env, jclass jc, jlong add
     memcpy(&o->g, valuePointer, sizeof(o->g));
 }
 
-jlong Java_cz_mg_vulkan_VkComponentMapping_getB(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkComponentMapping_getBNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkComponentMapping_getB(JNIEnv* env, jclass jc, jlong ad
     return jniPointerToLong(&o->b);
 }
 
-void Java_cz_mg_vulkan_VkComponentMapping_setB(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkComponentMapping_setBNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkComponentMapping_setB(JNIEnv* env, jclass jc, jlong add
     memcpy(&o->b, valuePointer, sizeof(o->b));
 }
 
-jlong Java_cz_mg_vulkan_VkComponentMapping_getA(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkComponentMapping_getANative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkComponentMapping_getA(JNIEnv* env, jclass jc, jlong ad
     return jniPointerToLong(&o->a);
 }
 
-void Java_cz_mg_vulkan_VkComponentMapping_setA(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkComponentMapping_setANative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

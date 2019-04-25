@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorPoolSize_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkDescriptorPoolSize);
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorPoolSize_getType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorPoolSize_getTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorPoolSize_getType(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(&o->type);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorPoolSize_setType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorPoolSize_setTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDescriptorPoolSize_setType(JNIEnv* env, jclass jc, jlon
     memcpy(&o->type, valuePointer, sizeof(o->type));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorPoolSize_getDescriptorCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorPoolSize_getDescriptorCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorPoolSize_getDescriptorCount(JNIEnv* env, jcl
     return jniPointerToLong(&o->descriptorCount);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorPoolSize_setDescriptorCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorPoolSize_setDescriptorCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

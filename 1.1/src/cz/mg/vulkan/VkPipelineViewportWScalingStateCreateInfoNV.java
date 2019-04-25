@@ -21,12 +21,12 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkBool32 getViewportWScalingEnable() {
-        return new VkBool32(getVkMemory(), getViewportWScalingEnable(getVkAddress()));
+        return new VkBool32(getVkMemory(), getViewportWScalingEnableNative(getVkAddress()));
     }
 
     
     public void setViewportWScalingEnable(VkBool32 viewportWScalingEnable) {
-        setViewportWScalingEnable(getVkAddress(), viewportWScalingEnable != null ? viewportWScalingEnable.getVkAddress() : VkPointer.getNullAddressNative());
+        setViewportWScalingEnableNative(getVkAddress(), viewportWScalingEnable != null ? viewportWScalingEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         getViewportWScalingEnable().setValue(viewportWScalingEnable);
     }
 
-    protected static native long getViewportWScalingEnable(long address);
-    protected static native void setViewportWScalingEnable(long address, long viewportWScalingEnable);
+    protected static native long getViewportWScalingEnableNative(long address);
+    protected static native void setViewportWScalingEnableNative(long address, long viewportWScalingEnable);
 
     public VkUInt32 getViewportCount() {
-        return new VkUInt32(getVkMemory(), getViewportCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getViewportCountNative(getVkAddress()));
     }
 
     
     public void setViewportCount(VkUInt32 viewportCount) {
-        setViewportCount(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setViewportCountNative(getVkAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,21 +93,21 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         getViewportCount().setValue(viewportCount);
     }
 
-    protected static native long getViewportCount(long address);
-    protected static native void setViewportCount(long address, long viewportCount);
+    protected static native long getViewportCountNative(long address);
+    protected static native void setViewportCountNative(long address, long viewportCount);
 
     public VkViewportWScalingNV getPViewportWScalings() {
-        return new VkViewportWScalingNV(getVkMemory(), getPViewportWScalings(getVkAddress()));
+        return new VkViewportWScalingNV(getVkMemory(), getPViewportWScalingsNative(getVkAddress()));
     }
 
     private VkObject pViewportWScalings = null;
     public void setPViewportWScalings(VkViewportWScalingNV pViewportWScalings) {
-        setPViewportWScalings(getVkAddress(), pViewportWScalings != null ? pViewportWScalings.getVkAddress() : VkPointer.NULL);
+        setPViewportWScalingsNative(getVkAddress(), pViewportWScalings != null ? pViewportWScalings.getVkAddress() : VkPointer.NULL);
         this.pViewportWScalings = pViewportWScalings;
     }
 
-    protected static native long getPViewportWScalings(long address);
-    protected static native void setPViewportWScalings(long address, long pViewportWScalings);
+    protected static native long getPViewportWScalingsNative(long address);
+    protected static native void setPViewportWScalingsNative(long address, long pViewportWScalings);
 
 
     public static native long sizeof();

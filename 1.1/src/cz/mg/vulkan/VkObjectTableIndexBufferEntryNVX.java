@@ -20,12 +20,12 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
 
 
     public VkObjectEntryTypeNVX getType() {
-        return new VkObjectEntryTypeNVX(getVkMemory(), getType(getVkAddress()));
+        return new VkObjectEntryTypeNVX(getVkMemory(), getTypeNative(getVkAddress()));
     }
 
     
     public void setType(VkObjectEntryTypeNVX type) {
-        setType(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddressNative());
+        setTypeNative(getVkAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         getType().setValue(type);
     }
 
-    protected static native long getType(long address);
-    protected static native void setType(long address, long type);
+    protected static native long getTypeNative(long address);
+    protected static native void setTypeNative(long address, long type);
 
     public VkObjectEntryUsageFlagsNVX getFlags() {
-        return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlags(getVkAddress()));
+        return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkObjectEntryUsageFlagsNVX flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,29 +58,29 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkBuffer getBuffer() {
-        return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
+        return new VkBuffer(getVkMemory(), getBufferNative(getVkAddress()));
     }
 
     
     public void setBuffer(VkBuffer buffer) {
-        setBuffer(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative());
+        setBufferNative(getVkAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getBuffer(long address);
-    protected static native void setBuffer(long address, long buffer);
+    protected static native long getBufferNative(long address);
+    protected static native void setBufferNative(long address, long buffer);
 
     public VkIndexType getIndexType() {
-        return new VkIndexType(getVkMemory(), getIndexType(getVkAddress()));
+        return new VkIndexType(getVkMemory(), getIndexTypeNative(getVkAddress()));
     }
 
     
     public void setIndexType(VkIndexType indexType) {
-        setIndexType(getVkAddress(), indexType != null ? indexType.getVkAddress() : VkPointer.getNullAddressNative());
+        setIndexTypeNative(getVkAddress(), indexType != null ? indexType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,8 +92,8 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         getIndexType().setValue(indexType);
     }
 
-    protected static native long getIndexType(long address);
-    protected static native void setIndexType(long address, long indexType);
+    protected static native long getIndexTypeNative(long address);
+    protected static native void setIndexTypeNative(long address, long indexType);
 
 
     public static native long sizeof();
@@ -137,10 +137,10 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
 
         @Override
         public VkObjectTableIndexBufferEntryNVX get(int i){
-            return new VkObjectTableIndexBufferEntryNVX(getVkMemory(), addressAt(i));
+            return new VkObjectTableIndexBufferEntryNVX(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

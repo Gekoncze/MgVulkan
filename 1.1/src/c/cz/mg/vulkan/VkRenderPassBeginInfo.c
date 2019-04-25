@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkRenderPassBeginInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getSType(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setSType(JNIEnv* env, jclass jc, jl
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getPNext(JNIEnv* env, jclass jc, j
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setPNext(JNIEnv* env, jclass jc, jl
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getRenderPass(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getRenderPassNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getRenderPass(JNIEnv* env, jclass 
     return jniPointerToLong(&o->renderPass);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setRenderPass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setRenderPassNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setRenderPass(JNIEnv* env, jclass j
     memcpy(&o->renderPass, valuePointer, sizeof(o->renderPass));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getFramebuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getFramebufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getFramebuffer(JNIEnv* env, jclass
     return jniPointerToLong(&o->framebuffer);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setFramebuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setFramebufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setFramebuffer(JNIEnv* env, jclass 
     memcpy(&o->framebuffer, valuePointer, sizeof(o->framebuffer));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getRenderArea(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getRenderAreaNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getRenderArea(JNIEnv* env, jclass 
     return jniPointerToLong(&o->renderArea);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setRenderArea(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setRenderAreaNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setRenderArea(JNIEnv* env, jclass j
     memcpy(&o->renderArea, valuePointer, sizeof(o->renderArea));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getClearValueCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getClearValueCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getClearValueCount(JNIEnv* env, jc
     return jniPointerToLong(&o->clearValueCount);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setClearValueCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setClearValueCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setClearValueCount(JNIEnv* env, jcl
     memcpy(&o->clearValueCount, valuePointer, sizeof(o->clearValueCount));
 }
 
-jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getPClearValues(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getPClearValuesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkRenderPassBeginInfo_getPClearValues(JNIEnv* env, jclas
     return jniPointerToLong(o->pClearValues);
 }
 
-void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setPClearValues(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkRenderPassBeginInfo_setPClearValuesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

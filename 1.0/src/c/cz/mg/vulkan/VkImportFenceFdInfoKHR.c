@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkImportFenceFdInfoKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getSType(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setSType(JNIEnv* env, jclass jc, j
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getPNext(JNIEnv* env, jclass jc, 
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setPNext(JNIEnv* env, jclass jc, j
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getFence(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getFenceNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getFence(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->fence);
 }
 
-void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setFence(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setFenceNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setFence(JNIEnv* env, jclass jc, j
     memcpy(&o->fence, valuePointer, sizeof(o->fence));
 }
 
-jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getFlags(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setFlags(JNIEnv* env, jclass jc, j
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getHandleType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getHandleTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getHandleType(JNIEnv* env, jclass
     return jniPointerToLong(&o->handleType);
 }
 
-void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setHandleType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setHandleTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setHandleType(JNIEnv* env, jclass 
     memcpy(&o->handleType, valuePointer, sizeof(o->handleType));
 }
 
-jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getFd(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getFdNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_getFd(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(&o->fd);
 }
 
-void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setFd(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImportFenceFdInfoKHR_setFdNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

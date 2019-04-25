@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDisplayEventInfoEXT_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkDisplayEventInfoEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayEventInfoEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayEventInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDisplayEventInfoEXT_getSType(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDisplayEventInfoEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayEventInfoEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDisplayEventInfoEXT_setSType(JNIEnv* env, jclass jc, jl
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayEventInfoEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayEventInfoEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDisplayEventInfoEXT_getPNext(JNIEnv* env, jclass jc, j
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDisplayEventInfoEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayEventInfoEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDisplayEventInfoEXT_setPNext(JNIEnv* env, jclass jc, jl
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayEventInfoEXT_getDisplayEvent(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayEventInfoEXT_getDisplayEventNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDisplayEventInfoEXT_getDisplayEvent(JNIEnv* env, jclas
     return jniPointerToLong(&o->displayEvent);
 }
 
-void Java_cz_mg_vulkan_VkDisplayEventInfoEXT_setDisplayEvent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayEventInfoEXT_setDisplayEventNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

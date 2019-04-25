@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorBufferInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkDescriptorBufferInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorBufferInfo_getBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorBufferInfo_getBufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorBufferInfo_getBuffer(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->buffer);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorBufferInfo_setBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorBufferInfo_setBufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDescriptorBufferInfo_setBuffer(JNIEnv* env, jclass jc, 
     memcpy(&o->buffer, valuePointer, sizeof(o->buffer));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorBufferInfo_getOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorBufferInfo_getOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorBufferInfo_getOffset(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->offset);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorBufferInfo_setOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorBufferInfo_setOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDescriptorBufferInfo_setOffset(JNIEnv* env, jclass jc, 
     memcpy(&o->offset, valuePointer, sizeof(o->offset));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorBufferInfo_getRange(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorBufferInfo_getRangeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorBufferInfo_getRange(JNIEnv* env, jclass jc, 
     return jniPointerToLong(&o->range);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorBufferInfo_setRange(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorBufferInfo_setRangeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -20,12 +20,12 @@ public class VkMemoryBarrier extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkMemoryBarrier extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkAccessFlags getSrcAccessMask() {
-        return new VkAccessFlags(getVkMemory(), getSrcAccessMask(getVkAddress()));
+        return new VkAccessFlags(getVkMemory(), getSrcAccessMaskNative(getVkAddress()));
     }
 
     
     public void setSrcAccessMask(VkAccessFlags srcAccessMask) {
-        setSrcAccessMask(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setSrcAccessMaskNative(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkMemoryBarrier extends VkObject {
         getSrcAccessMask().setValue(srcAccessMask);
     }
 
-    protected static native long getSrcAccessMask(long address);
-    protected static native void setSrcAccessMask(long address, long srcAccessMask);
+    protected static native long getSrcAccessMaskNative(long address);
+    protected static native void setSrcAccessMaskNative(long address, long srcAccessMask);
 
     public VkAccessFlags getDstAccessMask() {
-        return new VkAccessFlags(getVkMemory(), getDstAccessMask(getVkAddress()));
+        return new VkAccessFlags(getVkMemory(), getDstAccessMaskNative(getVkAddress()));
     }
 
     
     public void setDstAccessMask(VkAccessFlags dstAccessMask) {
-        setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstAccessMaskNative(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,8 +92,8 @@ public class VkMemoryBarrier extends VkObject {
         getDstAccessMask().setValue(dstAccessMask);
     }
 
-    protected static native long getDstAccessMask(long address);
-    protected static native void setDstAccessMask(long address, long dstAccessMask);
+    protected static native long getDstAccessMaskNative(long address);
+    protected static native void setDstAccessMaskNative(long address, long dstAccessMask);
 
 
     public static native long sizeof();
@@ -137,10 +137,10 @@ public class VkMemoryBarrier extends VkObject {
 
         @Override
         public VkMemoryBarrier get(int i){
-            return new VkMemoryBarrier(getVkMemory(), addressAt(i));
+            return new VkMemoryBarrier(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

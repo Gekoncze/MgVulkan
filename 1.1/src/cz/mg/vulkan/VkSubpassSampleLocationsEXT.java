@@ -20,12 +20,12 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
 
 
     public VkUInt32 getSubpassIndex() {
-        return new VkUInt32(getVkMemory(), getSubpassIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSubpassIndexNative(getVkAddress()));
     }
 
     
     public void setSubpassIndex(VkUInt32 subpassIndex) {
-        setSubpassIndex(getVkAddress(), subpassIndex != null ? subpassIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setSubpassIndexNative(getVkAddress(), subpassIndex != null ? subpassIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,21 +37,21 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
         getSubpassIndex().setValue(subpassIndex);
     }
 
-    protected static native long getSubpassIndex(long address);
-    protected static native void setSubpassIndex(long address, long subpassIndex);
+    protected static native long getSubpassIndexNative(long address);
+    protected static native void setSubpassIndexNative(long address, long subpassIndex);
 
     public VkSampleLocationsInfoEXT getSampleLocationsInfo() {
-        return new VkSampleLocationsInfoEXT(getVkMemory(), getSampleLocationsInfo(getVkAddress()));
+        return new VkSampleLocationsInfoEXT(getVkMemory(), getSampleLocationsInfoNative(getVkAddress()));
     }
 
     
     public void setSampleLocationsInfo(VkSampleLocationsInfoEXT sampleLocationsInfo) {
-        setSampleLocationsInfo(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampleLocationsInfoNative(getVkAddress(), sampleLocationsInfo != null ? sampleLocationsInfo.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSampleLocationsInfo(long address);
-    protected static native void setSampleLocationsInfo(long address, long sampleLocationsInfo);
+    protected static native long getSampleLocationsInfoNative(long address);
+    protected static native void setSampleLocationsInfoNative(long address, long sampleLocationsInfo);
 
 
     public static native long sizeof();
@@ -95,10 +95,10 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
 
         @Override
         public VkSubpassSampleLocationsEXT get(int i){
-            return new VkSubpassSampleLocationsEXT(getVkMemory(), addressAt(i));
+            return new VkSubpassSampleLocationsEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

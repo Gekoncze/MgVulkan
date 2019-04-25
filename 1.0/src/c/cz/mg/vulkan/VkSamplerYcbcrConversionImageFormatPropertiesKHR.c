@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_sizeof(
     return sizeof(VkSamplerYcbcrConversionImageFormatPropertiesKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_getSTyp
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_setSType
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_getPNex
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_setPNext
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_getCombinedImageSamplerDescriptorCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_getCombinedImageSamplerDescriptorCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_getComb
     return jniPointerToLong(&o->combinedImageSamplerDescriptorCount);
 }
 
-void Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_setCombinedImageSamplerDescriptorCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkSamplerYcbcrConversionImageFormatPropertiesKHR_setCombinedImageSamplerDescriptorCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

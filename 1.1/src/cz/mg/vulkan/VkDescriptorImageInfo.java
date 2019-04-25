@@ -20,38 +20,38 @@ public class VkDescriptorImageInfo extends VkObject {
 
 
     public VkSampler getSampler() {
-        return new VkSampler(getVkMemory(), getSampler(getVkAddress()));
+        return new VkSampler(getVkMemory(), getSamplerNative(getVkAddress()));
     }
 
     
     public void setSampler(VkSampler sampler) {
-        setSampler(getVkAddress(), sampler != null ? sampler.getVkAddress() : VkPointer.getNullAddressNative());
+        setSamplerNative(getVkAddress(), sampler != null ? sampler.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSampler(long address);
-    protected static native void setSampler(long address, long sampler);
+    protected static native long getSamplerNative(long address);
+    protected static native void setSamplerNative(long address, long sampler);
 
     public VkImageView getImageView() {
-        return new VkImageView(getVkMemory(), getImageView(getVkAddress()));
+        return new VkImageView(getVkMemory(), getImageViewNative(getVkAddress()));
     }
 
     
     public void setImageView(VkImageView imageView) {
-        setImageView(getVkAddress(), imageView != null ? imageView.getVkAddress() : VkPointer.getNullAddressNative());
+        setImageViewNative(getVkAddress(), imageView != null ? imageView.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getImageView(long address);
-    protected static native void setImageView(long address, long imageView);
+    protected static native long getImageViewNative(long address);
+    protected static native void setImageViewNative(long address, long imageView);
 
     public VkImageLayout getImageLayout() {
-        return new VkImageLayout(getVkMemory(), getImageLayout(getVkAddress()));
+        return new VkImageLayout(getVkMemory(), getImageLayoutNative(getVkAddress()));
     }
 
     
     public void setImageLayout(VkImageLayout imageLayout) {
-        setImageLayout(getVkAddress(), imageLayout != null ? imageLayout.getVkAddress() : VkPointer.getNullAddressNative());
+        setImageLayoutNative(getVkAddress(), imageLayout != null ? imageLayout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -63,8 +63,8 @@ public class VkDescriptorImageInfo extends VkObject {
         getImageLayout().setValue(imageLayout);
     }
 
-    protected static native long getImageLayout(long address);
-    protected static native void setImageLayout(long address, long imageLayout);
+    protected static native long getImageLayoutNative(long address);
+    protected static native void setImageLayoutNative(long address, long imageLayout);
 
 
     public static native long sizeof();
@@ -108,10 +108,10 @@ public class VkDescriptorImageInfo extends VkObject {
 
         @Override
         public VkDescriptorImageInfo get(int i){
-            return new VkDescriptorImageInfo(getVkMemory(), addressAt(i));
+            return new VkDescriptorImageInfo(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

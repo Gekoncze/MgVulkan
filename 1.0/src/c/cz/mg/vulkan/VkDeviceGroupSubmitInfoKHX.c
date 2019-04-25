@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_sizeof(JNIEnv* env, jclass jc
     return sizeof(VkDeviceGroupSubmitInfoKHX);
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getSType(JNIEnv* env, jclass 
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setSType(JNIEnv* env, jclass j
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPNext(JNIEnv* env, jclass 
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPNext(JNIEnv* env, jclass j
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getWaitSemaphoreCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getWaitSemaphoreCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getWaitSemaphoreCount(JNIEnv*
     return jniPointerToLong(&o->waitSemaphoreCount);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setWaitSemaphoreCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setWaitSemaphoreCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setWaitSemaphoreCount(JNIEnv* 
     memcpy(&o->waitSemaphoreCount, valuePointer, sizeof(o->waitSemaphoreCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPWaitSemaphoreDeviceIndices(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPWaitSemaphoreDeviceIndicesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPWaitSemaphoreDeviceIndice
     return jniPointerToLong(o->pWaitSemaphoreDeviceIndices);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPWaitSemaphoreDeviceIndices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPWaitSemaphoreDeviceIndicesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPWaitSemaphoreDeviceIndices
     memcpy(&o->pWaitSemaphoreDeviceIndices, &valuePointer, sizeof(o->pWaitSemaphoreDeviceIndices));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getCommandBufferCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getCommandBufferCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getCommandBufferCount(JNIEnv*
     return jniPointerToLong(&o->commandBufferCount);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setCommandBufferCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setCommandBufferCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setCommandBufferCount(JNIEnv* 
     memcpy(&o->commandBufferCount, valuePointer, sizeof(o->commandBufferCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPCommandBufferDeviceMasks(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPCommandBufferDeviceMasksNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPCommandBufferDeviceMasks(
     return jniPointerToLong(o->pCommandBufferDeviceMasks);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPCommandBufferDeviceMasks(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPCommandBufferDeviceMasksNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPCommandBufferDeviceMasks(J
     memcpy(&o->pCommandBufferDeviceMasks, &valuePointer, sizeof(o->pCommandBufferDeviceMasks));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getSignalSemaphoreCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getSignalSemaphoreCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getSignalSemaphoreCount(JNIEn
     return jniPointerToLong(&o->signalSemaphoreCount);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setSignalSemaphoreCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setSignalSemaphoreCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setSignalSemaphoreCount(JNIEnv
     memcpy(&o->signalSemaphoreCount, valuePointer, sizeof(o->signalSemaphoreCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPSignalSemaphoreDeviceIndices(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPSignalSemaphoreDeviceIndicesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_getPSignalSemaphoreDeviceIndi
     return jniPointerToLong(o->pSignalSemaphoreDeviceIndices);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPSignalSemaphoreDeviceIndices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupSubmitInfoKHX_setPSignalSemaphoreDeviceIndicesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

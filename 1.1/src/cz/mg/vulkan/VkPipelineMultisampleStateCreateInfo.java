@@ -21,12 +21,12 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineMultisampleStateCreateFlags getFlags() {
-        return new VkPipelineMultisampleStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineMultisampleStateCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineMultisampleStateCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkSampleCountFlagBits getRasterizationSamples() {
-        return new VkSampleCountFlagBits(getVkMemory(), getRasterizationSamples(getVkAddress()));
+        return new VkSampleCountFlagBits(getVkMemory(), getRasterizationSamplesNative(getVkAddress()));
     }
 
     
     public void setRasterizationSamples(VkSampleCountFlagBits rasterizationSamples) {
-        setRasterizationSamples(getVkAddress(), rasterizationSamples != null ? rasterizationSamples.getVkAddress() : VkPointer.getNullAddressNative());
+        setRasterizationSamplesNative(getVkAddress(), rasterizationSamples != null ? rasterizationSamples.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,16 +93,16 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         getRasterizationSamples().setValue(rasterizationSamples);
     }
 
-    protected static native long getRasterizationSamples(long address);
-    protected static native void setRasterizationSamples(long address, long rasterizationSamples);
+    protected static native long getRasterizationSamplesNative(long address);
+    protected static native void setRasterizationSamplesNative(long address, long rasterizationSamples);
 
     public VkBool32 getSampleShadingEnable() {
-        return new VkBool32(getVkMemory(), getSampleShadingEnable(getVkAddress()));
+        return new VkBool32(getVkMemory(), getSampleShadingEnableNative(getVkAddress()));
     }
 
     
     public void setSampleShadingEnable(VkBool32 sampleShadingEnable) {
-        setSampleShadingEnable(getVkAddress(), sampleShadingEnable != null ? sampleShadingEnable.getVkAddress() : VkPointer.getNullAddressNative());
+        setSampleShadingEnableNative(getVkAddress(), sampleShadingEnable != null ? sampleShadingEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -114,16 +114,16 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         getSampleShadingEnable().setValue(sampleShadingEnable);
     }
 
-    protected static native long getSampleShadingEnable(long address);
-    protected static native void setSampleShadingEnable(long address, long sampleShadingEnable);
+    protected static native long getSampleShadingEnableNative(long address);
+    protected static native void setSampleShadingEnableNative(long address, long sampleShadingEnable);
 
     public VkFloat getMinSampleShading() {
-        return new VkFloat(getVkMemory(), getMinSampleShading(getVkAddress()));
+        return new VkFloat(getVkMemory(), getMinSampleShadingNative(getVkAddress()));
     }
 
     
     public void setMinSampleShading(VkFloat minSampleShading) {
-        setMinSampleShading(getVkAddress(), minSampleShading != null ? minSampleShading.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinSampleShadingNative(getVkAddress(), minSampleShading != null ? minSampleShading.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -135,29 +135,29 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         getMinSampleShading().setValue(minSampleShading);
     }
 
-    protected static native long getMinSampleShading(long address);
-    protected static native void setMinSampleShading(long address, long minSampleShading);
+    protected static native long getMinSampleShadingNative(long address);
+    protected static native void setMinSampleShadingNative(long address, long minSampleShading);
 
     public VkSampleMask getPSampleMask() {
-        return new VkSampleMask(getVkMemory(), getPSampleMask(getVkAddress()));
+        return new VkSampleMask(getVkMemory(), getPSampleMaskNative(getVkAddress()));
     }
 
     private VkObject pSampleMask = null;
     public void setPSampleMask(VkSampleMask pSampleMask) {
-        setPSampleMask(getVkAddress(), pSampleMask != null ? pSampleMask.getVkAddress() : VkPointer.NULL);
+        setPSampleMaskNative(getVkAddress(), pSampleMask != null ? pSampleMask.getVkAddress() : VkPointer.NULL);
         this.pSampleMask = pSampleMask;
     }
 
-    protected static native long getPSampleMask(long address);
-    protected static native void setPSampleMask(long address, long pSampleMask);
+    protected static native long getPSampleMaskNative(long address);
+    protected static native void setPSampleMaskNative(long address, long pSampleMask);
 
     public VkBool32 getAlphaToCoverageEnable() {
-        return new VkBool32(getVkMemory(), getAlphaToCoverageEnable(getVkAddress()));
+        return new VkBool32(getVkMemory(), getAlphaToCoverageEnableNative(getVkAddress()));
     }
 
     
     public void setAlphaToCoverageEnable(VkBool32 alphaToCoverageEnable) {
-        setAlphaToCoverageEnable(getVkAddress(), alphaToCoverageEnable != null ? alphaToCoverageEnable.getVkAddress() : VkPointer.getNullAddressNative());
+        setAlphaToCoverageEnableNative(getVkAddress(), alphaToCoverageEnable != null ? alphaToCoverageEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -169,16 +169,16 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         getAlphaToCoverageEnable().setValue(alphaToCoverageEnable);
     }
 
-    protected static native long getAlphaToCoverageEnable(long address);
-    protected static native void setAlphaToCoverageEnable(long address, long alphaToCoverageEnable);
+    protected static native long getAlphaToCoverageEnableNative(long address);
+    protected static native void setAlphaToCoverageEnableNative(long address, long alphaToCoverageEnable);
 
     public VkBool32 getAlphaToOneEnable() {
-        return new VkBool32(getVkMemory(), getAlphaToOneEnable(getVkAddress()));
+        return new VkBool32(getVkMemory(), getAlphaToOneEnableNative(getVkAddress()));
     }
 
     
     public void setAlphaToOneEnable(VkBool32 alphaToOneEnable) {
-        setAlphaToOneEnable(getVkAddress(), alphaToOneEnable != null ? alphaToOneEnable.getVkAddress() : VkPointer.getNullAddressNative());
+        setAlphaToOneEnableNative(getVkAddress(), alphaToOneEnable != null ? alphaToOneEnable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -190,8 +190,8 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
         getAlphaToOneEnable().setValue(alphaToOneEnable);
     }
 
-    protected static native long getAlphaToOneEnable(long address);
-    protected static native void setAlphaToOneEnable(long address, long alphaToOneEnable);
+    protected static native long getAlphaToOneEnableNative(long address);
+    protected static native void setAlphaToOneEnableNative(long address, long alphaToOneEnable);
 
 
     public static native long sizeof();

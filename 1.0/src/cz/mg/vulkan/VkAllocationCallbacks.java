@@ -20,82 +20,82 @@ public class VkAllocationCallbacks extends VkObject {
 
 
     public VkObject getPUserData() {
-        return new VkObject(getVkMemory(), getPUserData(getVkAddress()));
+        return new VkObject(getVkMemory(), getPUserDataNative(getVkAddress()));
     }
 
     private VkObject pUserData = null;
     public void setPUserData(VkObject pUserData) {
-        setPUserData(getVkAddress(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL);
+        setPUserDataNative(getVkAddress(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL);
         this.pUserData = pUserData;
     }
 
-    protected static native long getPUserData(long address);
-    protected static native void setPUserData(long address, long pUserData);
+    protected static native long getPUserDataNative(long address);
+    protected static native void setPUserDataNative(long address, long pUserData);
 
     public PFNvkAllocationFunction getPfnAllocation() {
-        return new PFNvkAllocationFunction(getVkMemory(), getPfnAllocation(getVkAddress()));
+        return new PFNvkAllocationFunction(getVkMemory(), getPfnAllocationNative(getVkAddress()));
     }
 
     
     public void setPfnAllocation(PFNvkAllocationFunction pfnAllocation) {
-        setPfnAllocation(getVkAddress(), pfnAllocation != null ? pfnAllocation.getVkAddress() : VkPointer.getNullAddressNative());
+        setPfnAllocationNative(getVkAddress(), pfnAllocation != null ? pfnAllocation.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getPfnAllocation(long address);
-    protected static native void setPfnAllocation(long address, long pfnAllocation);
+    protected static native long getPfnAllocationNative(long address);
+    protected static native void setPfnAllocationNative(long address, long pfnAllocation);
 
     public PFNvkReallocationFunction getPfnReallocation() {
-        return new PFNvkReallocationFunction(getVkMemory(), getPfnReallocation(getVkAddress()));
+        return new PFNvkReallocationFunction(getVkMemory(), getPfnReallocationNative(getVkAddress()));
     }
 
     
     public void setPfnReallocation(PFNvkReallocationFunction pfnReallocation) {
-        setPfnReallocation(getVkAddress(), pfnReallocation != null ? pfnReallocation.getVkAddress() : VkPointer.getNullAddressNative());
+        setPfnReallocationNative(getVkAddress(), pfnReallocation != null ? pfnReallocation.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getPfnReallocation(long address);
-    protected static native void setPfnReallocation(long address, long pfnReallocation);
+    protected static native long getPfnReallocationNative(long address);
+    protected static native void setPfnReallocationNative(long address, long pfnReallocation);
 
     public PFNvkFreeFunction getPfnFree() {
-        return new PFNvkFreeFunction(getVkMemory(), getPfnFree(getVkAddress()));
+        return new PFNvkFreeFunction(getVkMemory(), getPfnFreeNative(getVkAddress()));
     }
 
     
     public void setPfnFree(PFNvkFreeFunction pfnFree) {
-        setPfnFree(getVkAddress(), pfnFree != null ? pfnFree.getVkAddress() : VkPointer.getNullAddressNative());
+        setPfnFreeNative(getVkAddress(), pfnFree != null ? pfnFree.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getPfnFree(long address);
-    protected static native void setPfnFree(long address, long pfnFree);
+    protected static native long getPfnFreeNative(long address);
+    protected static native void setPfnFreeNative(long address, long pfnFree);
 
     public PFNvkInternalAllocationNotification getPfnInternalAllocation() {
-        return new PFNvkInternalAllocationNotification(getVkMemory(), getPfnInternalAllocation(getVkAddress()));
+        return new PFNvkInternalAllocationNotification(getVkMemory(), getPfnInternalAllocationNative(getVkAddress()));
     }
 
     
     public void setPfnInternalAllocation(PFNvkInternalAllocationNotification pfnInternalAllocation) {
-        setPfnInternalAllocation(getVkAddress(), pfnInternalAllocation != null ? pfnInternalAllocation.getVkAddress() : VkPointer.getNullAddressNative());
+        setPfnInternalAllocationNative(getVkAddress(), pfnInternalAllocation != null ? pfnInternalAllocation.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getPfnInternalAllocation(long address);
-    protected static native void setPfnInternalAllocation(long address, long pfnInternalAllocation);
+    protected static native long getPfnInternalAllocationNative(long address);
+    protected static native void setPfnInternalAllocationNative(long address, long pfnInternalAllocation);
 
     public PFNvkInternalFreeNotification getPfnInternalFree() {
-        return new PFNvkInternalFreeNotification(getVkMemory(), getPfnInternalFree(getVkAddress()));
+        return new PFNvkInternalFreeNotification(getVkMemory(), getPfnInternalFreeNative(getVkAddress()));
     }
 
     
     public void setPfnInternalFree(PFNvkInternalFreeNotification pfnInternalFree) {
-        setPfnInternalFree(getVkAddress(), pfnInternalFree != null ? pfnInternalFree.getVkAddress() : VkPointer.getNullAddressNative());
+        setPfnInternalFreeNative(getVkAddress(), pfnInternalFree != null ? pfnInternalFree.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getPfnInternalFree(long address);
-    protected static native void setPfnInternalFree(long address, long pfnInternalFree);
+    protected static native long getPfnInternalFreeNative(long address);
+    protected static native void setPfnInternalFreeNative(long address, long pfnInternalFree);
 
 
     public static native long sizeof();
@@ -139,10 +139,10 @@ public class VkAllocationCallbacks extends VkObject {
 
         @Override
         public VkAllocationCallbacks get(int i){
-            return new VkAllocationCallbacks(getVkMemory(), addressAt(i));
+            return new VkAllocationCallbacks(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

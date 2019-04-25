@@ -20,12 +20,12 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkImageUsageFlags getSharedPresentSupportedUsageFlags() {
-        return new VkImageUsageFlags(getVkMemory(), getSharedPresentSupportedUsageFlags(getVkAddress()));
+        return new VkImageUsageFlags(getVkMemory(), getSharedPresentSupportedUsageFlagsNative(getVkAddress()));
     }
 
     
     public void setSharedPresentSupportedUsageFlags(VkImageUsageFlags sharedPresentSupportedUsageFlags) {
-        setSharedPresentSupportedUsageFlags(getVkAddress(), sharedPresentSupportedUsageFlags != null ? sharedPresentSupportedUsageFlags.getVkAddress() : VkPointer.getNullAddressNative());
+        setSharedPresentSupportedUsageFlagsNative(getVkAddress(), sharedPresentSupportedUsageFlags != null ? sharedPresentSupportedUsageFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,8 +71,8 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
         getSharedPresentSupportedUsageFlags().setValue(sharedPresentSupportedUsageFlags);
     }
 
-    protected static native long getSharedPresentSupportedUsageFlags(long address);
-    protected static native void setSharedPresentSupportedUsageFlags(long address, long sharedPresentSupportedUsageFlags);
+    protected static native long getSharedPresentSupportedUsageFlagsNative(long address);
+    protected static native void setSharedPresentSupportedUsageFlagsNative(long address, long sharedPresentSupportedUsageFlags);
 
 
     public static native long sizeof();
@@ -116,10 +116,10 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
 
         @Override
         public VkSharedPresentSurfaceCapabilitiesKHR get(int i){
-            return new VkSharedPresentSurfaceCapabilitiesKHR(getVkMemory(), addressAt(i));
+            return new VkSharedPresentSurfaceCapabilitiesKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

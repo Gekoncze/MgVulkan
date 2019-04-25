@@ -20,12 +20,12 @@ public class VkStencilOpState extends VkObject {
 
 
     public VkStencilOp getFailOp() {
-        return new VkStencilOp(getVkMemory(), getFailOp(getVkAddress()));
+        return new VkStencilOp(getVkMemory(), getFailOpNative(getVkAddress()));
     }
 
     
     public void setFailOp(VkStencilOp failOp) {
-        setFailOp(getVkAddress(), failOp != null ? failOp.getVkAddress() : VkPointer.getNullAddressNative());
+        setFailOpNative(getVkAddress(), failOp != null ? failOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkStencilOpState extends VkObject {
         getFailOp().setValue(failOp);
     }
 
-    protected static native long getFailOp(long address);
-    protected static native void setFailOp(long address, long failOp);
+    protected static native long getFailOpNative(long address);
+    protected static native void setFailOpNative(long address, long failOp);
 
     public VkStencilOp getPassOp() {
-        return new VkStencilOp(getVkMemory(), getPassOp(getVkAddress()));
+        return new VkStencilOp(getVkMemory(), getPassOpNative(getVkAddress()));
     }
 
     
     public void setPassOp(VkStencilOp passOp) {
-        setPassOp(getVkAddress(), passOp != null ? passOp.getVkAddress() : VkPointer.getNullAddressNative());
+        setPassOpNative(getVkAddress(), passOp != null ? passOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkStencilOpState extends VkObject {
         getPassOp().setValue(passOp);
     }
 
-    protected static native long getPassOp(long address);
-    protected static native void setPassOp(long address, long passOp);
+    protected static native long getPassOpNative(long address);
+    protected static native void setPassOpNative(long address, long passOp);
 
     public VkStencilOp getDepthFailOp() {
-        return new VkStencilOp(getVkMemory(), getDepthFailOp(getVkAddress()));
+        return new VkStencilOp(getVkMemory(), getDepthFailOpNative(getVkAddress()));
     }
 
     
     public void setDepthFailOp(VkStencilOp depthFailOp) {
-        setDepthFailOp(getVkAddress(), depthFailOp != null ? depthFailOp.getVkAddress() : VkPointer.getNullAddressNative());
+        setDepthFailOpNative(getVkAddress(), depthFailOp != null ? depthFailOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkStencilOpState extends VkObject {
         getDepthFailOp().setValue(depthFailOp);
     }
 
-    protected static native long getDepthFailOp(long address);
-    protected static native void setDepthFailOp(long address, long depthFailOp);
+    protected static native long getDepthFailOpNative(long address);
+    protected static native void setDepthFailOpNative(long address, long depthFailOp);
 
     public VkCompareOp getCompareOp() {
-        return new VkCompareOp(getVkMemory(), getCompareOp(getVkAddress()));
+        return new VkCompareOp(getVkMemory(), getCompareOpNative(getVkAddress()));
     }
 
     
     public void setCompareOp(VkCompareOp compareOp) {
-        setCompareOp(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddressNative());
+        setCompareOpNative(getVkAddress(), compareOp != null ? compareOp.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -100,16 +100,16 @@ public class VkStencilOpState extends VkObject {
         getCompareOp().setValue(compareOp);
     }
 
-    protected static native long getCompareOp(long address);
-    protected static native void setCompareOp(long address, long compareOp);
+    protected static native long getCompareOpNative(long address);
+    protected static native void setCompareOpNative(long address, long compareOp);
 
     public VkUInt32 getCompareMask() {
-        return new VkUInt32(getVkMemory(), getCompareMask(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getCompareMaskNative(getVkAddress()));
     }
 
     
     public void setCompareMask(VkUInt32 compareMask) {
-        setCompareMask(getVkAddress(), compareMask != null ? compareMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setCompareMaskNative(getVkAddress(), compareMask != null ? compareMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -121,16 +121,16 @@ public class VkStencilOpState extends VkObject {
         getCompareMask().setValue(compareMask);
     }
 
-    protected static native long getCompareMask(long address);
-    protected static native void setCompareMask(long address, long compareMask);
+    protected static native long getCompareMaskNative(long address);
+    protected static native void setCompareMaskNative(long address, long compareMask);
 
     public VkUInt32 getWriteMask() {
-        return new VkUInt32(getVkMemory(), getWriteMask(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getWriteMaskNative(getVkAddress()));
     }
 
     
     public void setWriteMask(VkUInt32 writeMask) {
-        setWriteMask(getVkAddress(), writeMask != null ? writeMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setWriteMaskNative(getVkAddress(), writeMask != null ? writeMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -142,16 +142,16 @@ public class VkStencilOpState extends VkObject {
         getWriteMask().setValue(writeMask);
     }
 
-    protected static native long getWriteMask(long address);
-    protected static native void setWriteMask(long address, long writeMask);
+    protected static native long getWriteMaskNative(long address);
+    protected static native void setWriteMaskNative(long address, long writeMask);
 
     public VkUInt32 getReference() {
-        return new VkUInt32(getVkMemory(), getReference(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getReferenceNative(getVkAddress()));
     }
 
     
     public void setReference(VkUInt32 reference) {
-        setReference(getVkAddress(), reference != null ? reference.getVkAddress() : VkPointer.getNullAddressNative());
+        setReferenceNative(getVkAddress(), reference != null ? reference.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -163,8 +163,8 @@ public class VkStencilOpState extends VkObject {
         getReference().setValue(reference);
     }
 
-    protected static native long getReference(long address);
-    protected static native void setReference(long address, long reference);
+    protected static native long getReferenceNative(long address);
+    protected static native void setReferenceNative(long address, long reference);
 
 
     public static native long sizeof();
@@ -208,10 +208,10 @@ public class VkStencilOpState extends VkObject {
 
         @Override
         public VkStencilOpState get(int i){
-            return new VkStencilOpState(getVkMemory(), addressAt(i));
+            return new VkStencilOpState(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

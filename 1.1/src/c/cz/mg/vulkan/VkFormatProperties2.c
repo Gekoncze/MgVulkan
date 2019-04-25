@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkFormatProperties2_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkFormatProperties2);
 }
 
-jlong Java_cz_mg_vulkan_VkFormatProperties2_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFormatProperties2_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkFormatProperties2_getSType(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkFormatProperties2_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFormatProperties2_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkFormatProperties2_setSType(JNIEnv* env, jclass jc, jlon
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkFormatProperties2_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFormatProperties2_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkFormatProperties2_getPNext(JNIEnv* env, jclass jc, jlo
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkFormatProperties2_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFormatProperties2_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkFormatProperties2_setPNext(JNIEnv* env, jclass jc, jlon
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkFormatProperties2_getFormatProperties(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFormatProperties2_getFormatPropertiesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkFormatProperties2_getFormatProperties(JNIEnv* env, jcl
     return jniPointerToLong(&o->formatProperties);
 }
 
-void Java_cz_mg_vulkan_VkFormatProperties2_setFormatProperties(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFormatProperties2_setFormatPropertiesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

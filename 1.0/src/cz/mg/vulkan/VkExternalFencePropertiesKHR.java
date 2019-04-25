@@ -20,12 +20,12 @@ public class VkExternalFencePropertiesKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkExternalFencePropertiesKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkExternalFenceHandleTypeFlagsKHR getExportFromImportedHandleTypes() {
-        return new VkExternalFenceHandleTypeFlagsKHR(getVkMemory(), getExportFromImportedHandleTypes(getVkAddress()));
+        return new VkExternalFenceHandleTypeFlagsKHR(getVkMemory(), getExportFromImportedHandleTypesNative(getVkAddress()));
     }
 
     
     public void setExportFromImportedHandleTypes(VkExternalFenceHandleTypeFlagsKHR exportFromImportedHandleTypes) {
-        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.getNullAddressNative());
+        setExportFromImportedHandleTypesNative(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkExternalFencePropertiesKHR extends VkObject {
         getExportFromImportedHandleTypes().setValue(exportFromImportedHandleTypes);
     }
 
-    protected static native long getExportFromImportedHandleTypes(long address);
-    protected static native void setExportFromImportedHandleTypes(long address, long exportFromImportedHandleTypes);
+    protected static native long getExportFromImportedHandleTypesNative(long address);
+    protected static native void setExportFromImportedHandleTypesNative(long address, long exportFromImportedHandleTypes);
 
     public VkExternalFenceHandleTypeFlagsKHR getCompatibleHandleTypes() {
-        return new VkExternalFenceHandleTypeFlagsKHR(getVkMemory(), getCompatibleHandleTypes(getVkAddress()));
+        return new VkExternalFenceHandleTypeFlagsKHR(getVkMemory(), getCompatibleHandleTypesNative(getVkAddress()));
     }
 
     
     public void setCompatibleHandleTypes(VkExternalFenceHandleTypeFlagsKHR compatibleHandleTypes) {
-        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getNullAddressNative());
+        setCompatibleHandleTypesNative(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,16 +92,16 @@ public class VkExternalFencePropertiesKHR extends VkObject {
         getCompatibleHandleTypes().setValue(compatibleHandleTypes);
     }
 
-    protected static native long getCompatibleHandleTypes(long address);
-    protected static native void setCompatibleHandleTypes(long address, long compatibleHandleTypes);
+    protected static native long getCompatibleHandleTypesNative(long address);
+    protected static native void setCompatibleHandleTypesNative(long address, long compatibleHandleTypes);
 
     public VkExternalFenceFeatureFlagsKHR getExternalFenceFeatures() {
-        return new VkExternalFenceFeatureFlagsKHR(getVkMemory(), getExternalFenceFeatures(getVkAddress()));
+        return new VkExternalFenceFeatureFlagsKHR(getVkMemory(), getExternalFenceFeaturesNative(getVkAddress()));
     }
 
     
     public void setExternalFenceFeatures(VkExternalFenceFeatureFlagsKHR externalFenceFeatures) {
-        setExternalFenceFeatures(getVkAddress(), externalFenceFeatures != null ? externalFenceFeatures.getVkAddress() : VkPointer.getNullAddressNative());
+        setExternalFenceFeaturesNative(getVkAddress(), externalFenceFeatures != null ? externalFenceFeatures.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -113,8 +113,8 @@ public class VkExternalFencePropertiesKHR extends VkObject {
         getExternalFenceFeatures().setValue(externalFenceFeatures);
     }
 
-    protected static native long getExternalFenceFeatures(long address);
-    protected static native void setExternalFenceFeatures(long address, long externalFenceFeatures);
+    protected static native long getExternalFenceFeaturesNative(long address);
+    protected static native void setExternalFenceFeaturesNative(long address, long externalFenceFeatures);
 
 
     public static native long sizeof();
@@ -158,10 +158,10 @@ public class VkExternalFencePropertiesKHR extends VkObject {
 
         @Override
         public VkExternalFencePropertiesKHR get(int i){
-            return new VkExternalFencePropertiesKHR(getVkMemory(), addressAt(i));
+            return new VkExternalFencePropertiesKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

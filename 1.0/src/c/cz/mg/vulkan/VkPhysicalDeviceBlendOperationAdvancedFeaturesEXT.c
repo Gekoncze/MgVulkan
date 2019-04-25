@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_sizeof
     return sizeof(VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_getSTy
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_setSTyp
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_getPNe
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_setPNex
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_getAdvancedBlendCoherentOperations(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_getAdvancedBlendCoherentOperationsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_getAdv
     return jniPointerToLong(&o->advancedBlendCoherentOperations);
 }
 
-void Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_setAdvancedBlendCoherentOperations(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT_setAdvancedBlendCoherentOperationsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkDisplayPresentInfoKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getSType(JNIEnv* env, jclass jc,
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setSType(JNIEnv* env, jclass jc, 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getPNext(JNIEnv* env, jclass jc,
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setPNext(JNIEnv* env, jclass jc, 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getSrcRect(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getSrcRectNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getSrcRect(JNIEnv* env, jclass j
     return jniPointerToLong(&o->srcRect);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setSrcRect(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setSrcRectNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setSrcRect(JNIEnv* env, jclass jc
     memcpy(&o->srcRect, valuePointer, sizeof(o->srcRect));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getDstRect(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getDstRectNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getDstRect(JNIEnv* env, jclass j
     return jniPointerToLong(&o->dstRect);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setDstRect(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setDstRectNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setDstRect(JNIEnv* env, jclass jc
     memcpy(&o->dstRect, valuePointer, sizeof(o->dstRect));
 }
 
-jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getPersistent(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getPersistentNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_getPersistent(JNIEnv* env, jclas
     return jniPointerToLong(&o->persistent);
 }
 
-void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setPersistent(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDisplayPresentInfoKHR_setPersistentNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

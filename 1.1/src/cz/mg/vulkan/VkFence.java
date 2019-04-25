@@ -61,10 +61,10 @@ public class VkFence extends VkNonDispatchableHandle {
 
         @Override
         public VkFence get(int i){
-            return new VkFence(getVkMemory(), addressAt(i));
+            return new VkFence(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

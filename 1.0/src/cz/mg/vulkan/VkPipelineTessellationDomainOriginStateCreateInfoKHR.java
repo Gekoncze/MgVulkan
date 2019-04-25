@@ -21,12 +21,12 @@ public class VkPipelineTessellationDomainOriginStateCreateInfoKHR extends VkObje
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineTessellationDomainOriginStateCreateInfoKHR extends VkObje
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkTessellationDomainOriginKHR getDomainOrigin() {
-        return new VkTessellationDomainOriginKHR(getVkMemory(), getDomainOrigin(getVkAddress()));
+        return new VkTessellationDomainOriginKHR(getVkMemory(), getDomainOriginNative(getVkAddress()));
     }
 
     
     public void setDomainOrigin(VkTessellationDomainOriginKHR domainOrigin) {
-        setDomainOrigin(getVkAddress(), domainOrigin != null ? domainOrigin.getVkAddress() : VkPointer.getNullAddressNative());
+        setDomainOriginNative(getVkAddress(), domainOrigin != null ? domainOrigin.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,8 +72,8 @@ public class VkPipelineTessellationDomainOriginStateCreateInfoKHR extends VkObje
         getDomainOrigin().setValue(domainOrigin);
     }
 
-    protected static native long getDomainOrigin(long address);
-    protected static native void setDomainOrigin(long address, long domainOrigin);
+    protected static native long getDomainOriginNative(long address);
+    protected static native void setDomainOriginNative(long address, long domainOrigin);
 
 
     public static native long sizeof();

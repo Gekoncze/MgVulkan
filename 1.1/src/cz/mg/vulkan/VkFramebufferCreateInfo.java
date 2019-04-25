@@ -21,12 +21,12 @@ public class VkFramebufferCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkFramebufferCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkFramebufferCreateFlags getFlags() {
-        return new VkFramebufferCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkFramebufferCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkFramebufferCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,29 +72,29 @@ public class VkFramebufferCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkRenderPass getRenderPass() {
-        return new VkRenderPass(getVkMemory(), getRenderPass(getVkAddress()));
+        return new VkRenderPass(getVkMemory(), getRenderPassNative(getVkAddress()));
     }
 
     
     public void setRenderPass(VkRenderPass renderPass) {
-        setRenderPass(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddressNative());
+        setRenderPassNative(getVkAddress(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getRenderPass(long address);
-    protected static native void setRenderPass(long address, long renderPass);
+    protected static native long getRenderPassNative(long address);
+    protected static native void setRenderPassNative(long address, long renderPass);
 
     public VkUInt32 getAttachmentCount() {
-        return new VkUInt32(getVkMemory(), getAttachmentCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getAttachmentCountNative(getVkAddress()));
     }
 
     
     public void setAttachmentCount(VkUInt32 attachmentCount) {
-        setAttachmentCount(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setAttachmentCountNative(getVkAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -106,29 +106,29 @@ public class VkFramebufferCreateInfo extends VkObject {
         getAttachmentCount().setValue(attachmentCount);
     }
 
-    protected static native long getAttachmentCount(long address);
-    protected static native void setAttachmentCount(long address, long attachmentCount);
+    protected static native long getAttachmentCountNative(long address);
+    protected static native void setAttachmentCountNative(long address, long attachmentCount);
 
     public VkImageView getPAttachments() {
-        return new VkImageView(getVkMemory(), getPAttachments(getVkAddress()));
+        return new VkImageView(getVkMemory(), getPAttachmentsNative(getVkAddress()));
     }
 
     private VkObject pAttachments = null;
     public void setPAttachments(VkImageView pAttachments) {
-        setPAttachments(getVkAddress(), pAttachments != null ? pAttachments.getVkAddress() : VkPointer.NULL);
+        setPAttachmentsNative(getVkAddress(), pAttachments != null ? pAttachments.getVkAddress() : VkPointer.NULL);
         this.pAttachments = pAttachments;
     }
 
-    protected static native long getPAttachments(long address);
-    protected static native void setPAttachments(long address, long pAttachments);
+    protected static native long getPAttachmentsNative(long address);
+    protected static native void setPAttachmentsNative(long address, long pAttachments);
 
     public VkUInt32 getWidth() {
-        return new VkUInt32(getVkMemory(), getWidth(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getWidthNative(getVkAddress()));
     }
 
     
     public void setWidth(VkUInt32 width) {
-        setWidth(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getNullAddressNative());
+        setWidthNative(getVkAddress(), width != null ? width.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -140,16 +140,16 @@ public class VkFramebufferCreateInfo extends VkObject {
         getWidth().setValue(width);
     }
 
-    protected static native long getWidth(long address);
-    protected static native void setWidth(long address, long width);
+    protected static native long getWidthNative(long address);
+    protected static native void setWidthNative(long address, long width);
 
     public VkUInt32 getHeight() {
-        return new VkUInt32(getVkMemory(), getHeight(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getHeightNative(getVkAddress()));
     }
 
     
     public void setHeight(VkUInt32 height) {
-        setHeight(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getNullAddressNative());
+        setHeightNative(getVkAddress(), height != null ? height.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -161,16 +161,16 @@ public class VkFramebufferCreateInfo extends VkObject {
         getHeight().setValue(height);
     }
 
-    protected static native long getHeight(long address);
-    protected static native void setHeight(long address, long height);
+    protected static native long getHeightNative(long address);
+    protected static native void setHeightNative(long address, long height);
 
     public VkUInt32 getLayers() {
-        return new VkUInt32(getVkMemory(), getLayers(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getLayersNative(getVkAddress()));
     }
 
     
     public void setLayers(VkUInt32 layers) {
-        setLayers(getVkAddress(), layers != null ? layers.getVkAddress() : VkPointer.getNullAddressNative());
+        setLayersNative(getVkAddress(), layers != null ? layers.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -182,8 +182,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         getLayers().setValue(layers);
     }
 
-    protected static native long getLayers(long address);
-    protected static native void setLayers(long address, long layers);
+    protected static native long getLayersNative(long address);
+    protected static native void setLayersNative(long address, long layers);
 
 
     public static native long sizeof();

@@ -20,12 +20,12 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
 
     public VkUInt32 getLocation() {
-        return new VkUInt32(getVkMemory(), getLocation(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getLocationNative(getVkAddress()));
     }
 
     
     public void setLocation(VkUInt32 location) {
-        setLocation(getVkAddress(), location != null ? location.getVkAddress() : VkPointer.getNullAddressNative());
+        setLocationNative(getVkAddress(), location != null ? location.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkVertexInputAttributeDescription extends VkObject {
         getLocation().setValue(location);
     }
 
-    protected static native long getLocation(long address);
-    protected static native void setLocation(long address, long location);
+    protected static native long getLocationNative(long address);
+    protected static native void setLocationNative(long address, long location);
 
     public VkUInt32 getBinding() {
-        return new VkUInt32(getVkMemory(), getBinding(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getBindingNative(getVkAddress()));
     }
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddressNative());
+        setBindingNative(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkVertexInputAttributeDescription extends VkObject {
         getBinding().setValue(binding);
     }
 
-    protected static native long getBinding(long address);
-    protected static native void setBinding(long address, long binding);
+    protected static native long getBindingNative(long address);
+    protected static native void setBindingNative(long address, long binding);
 
     public VkFormat getFormat() {
-        return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
+        return new VkFormat(getVkMemory(), getFormatNative(getVkAddress()));
     }
 
     
     public void setFormat(VkFormat format) {
-        setFormat(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
+        setFormatNative(getVkAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,16 +79,16 @@ public class VkVertexInputAttributeDescription extends VkObject {
         getFormat().setValue(format);
     }
 
-    protected static native long getFormat(long address);
-    protected static native void setFormat(long address, long format);
+    protected static native long getFormatNative(long address);
+    protected static native void setFormatNative(long address, long format);
 
     public VkUInt32 getOffset() {
-        return new VkUInt32(getVkMemory(), getOffset(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkUInt32 offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -100,8 +100,8 @@ public class VkVertexInputAttributeDescription extends VkObject {
         getOffset().setValue(offset);
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
 
     public static native long sizeof();
@@ -145,10 +145,10 @@ public class VkVertexInputAttributeDescription extends VkObject {
 
         @Override
         public VkVertexInputAttributeDescription get(int i){
-            return new VkVertexInputAttributeDescription(getVkMemory(), addressAt(i));
+            return new VkVertexInputAttributeDescription(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

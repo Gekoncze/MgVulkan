@@ -20,12 +20,12 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkBool32 getFilterMinmaxSingleComponentFormats() {
-        return new VkBool32(getVkMemory(), getFilterMinmaxSingleComponentFormats(getVkAddress()));
+        return new VkBool32(getVkMemory(), getFilterMinmaxSingleComponentFormatsNative(getVkAddress()));
     }
 
     
     public void setFilterMinmaxSingleComponentFormats(VkBool32 filterMinmaxSingleComponentFormats) {
-        setFilterMinmaxSingleComponentFormats(getVkAddress(), filterMinmaxSingleComponentFormats != null ? filterMinmaxSingleComponentFormats.getVkAddress() : VkPointer.getNullAddressNative());
+        setFilterMinmaxSingleComponentFormatsNative(getVkAddress(), filterMinmaxSingleComponentFormats != null ? filterMinmaxSingleComponentFormats.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         getFilterMinmaxSingleComponentFormats().setValue(filterMinmaxSingleComponentFormats);
     }
 
-    protected static native long getFilterMinmaxSingleComponentFormats(long address);
-    protected static native void setFilterMinmaxSingleComponentFormats(long address, long filterMinmaxSingleComponentFormats);
+    protected static native long getFilterMinmaxSingleComponentFormatsNative(long address);
+    protected static native void setFilterMinmaxSingleComponentFormatsNative(long address, long filterMinmaxSingleComponentFormats);
 
     public VkBool32 getFilterMinmaxImageComponentMapping() {
-        return new VkBool32(getVkMemory(), getFilterMinmaxImageComponentMapping(getVkAddress()));
+        return new VkBool32(getVkMemory(), getFilterMinmaxImageComponentMappingNative(getVkAddress()));
     }
 
     
     public void setFilterMinmaxImageComponentMapping(VkBool32 filterMinmaxImageComponentMapping) {
-        setFilterMinmaxImageComponentMapping(getVkAddress(), filterMinmaxImageComponentMapping != null ? filterMinmaxImageComponentMapping.getVkAddress() : VkPointer.getNullAddressNative());
+        setFilterMinmaxImageComponentMappingNative(getVkAddress(), filterMinmaxImageComponentMapping != null ? filterMinmaxImageComponentMapping.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,8 +92,8 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         getFilterMinmaxImageComponentMapping().setValue(filterMinmaxImageComponentMapping);
     }
 
-    protected static native long getFilterMinmaxImageComponentMapping(long address);
-    protected static native void setFilterMinmaxImageComponentMapping(long address, long filterMinmaxImageComponentMapping);
+    protected static native long getFilterMinmaxImageComponentMappingNative(long address);
+    protected static native void setFilterMinmaxImageComponentMappingNative(long address, long filterMinmaxImageComponentMapping);
 
 
     public static native long sizeof();
@@ -137,10 +137,10 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
 
         @Override
         public VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT get(int i){
-            return new VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT(getVkMemory(), addressAt(i));
+            return new VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

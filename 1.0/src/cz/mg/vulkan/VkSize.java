@@ -80,10 +80,10 @@ public class VkSize extends VkObject {
 
         @Override
         public VkSize get(int i){
-            return new VkSize(getVkMemory(), addressAt(i));
+            return new VkSize(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

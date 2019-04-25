@@ -61,10 +61,10 @@ public class VkEnum extends VkInt32 {
 
         @Override
         public VkEnum get(int i){
-            return new VkEnum(getVkMemory(), addressAt(i));
+            return new VkEnum(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

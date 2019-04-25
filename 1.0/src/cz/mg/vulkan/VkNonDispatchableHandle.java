@@ -80,10 +80,10 @@ public class VkNonDispatchableHandle extends VkHandle {
 
         @Override
         public VkNonDispatchableHandle get(int i){
-            return new VkNonDispatchableHandle(getVkMemory(), addressAt(i));
+            return new VkNonDispatchableHandle(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

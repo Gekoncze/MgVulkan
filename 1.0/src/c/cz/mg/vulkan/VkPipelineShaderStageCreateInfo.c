@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_sizeof(JNIEnv* env, jcla
     return sizeof(VkPipelineShaderStageCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getSType(JNIEnv* env, jc
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setSType(JNIEnv* env, jcl
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getPNext(JNIEnv* env, jc
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setPNext(JNIEnv* env, jcl
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getFlags(JNIEnv* env, jc
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setFlags(JNIEnv* env, jcl
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getStage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getStageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getStage(JNIEnv* env, jc
     return jniPointerToLong(&o->stage);
 }
 
-void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setStage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setStageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setStage(JNIEnv* env, jcl
     memcpy(&o->stage, valuePointer, sizeof(o->stage));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getModule(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getModuleNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getModule(JNIEnv* env, j
     return jniPointerToLong(&o->module);
 }
 
-void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setModule(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setModuleNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setModule(JNIEnv* env, jc
     memcpy(&o->module, valuePointer, sizeof(o->module));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getPName(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getPNameNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getPName(JNIEnv* env, jc
     return jniPointerToLong(o->pName);
 }
 
-void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setPName(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setPNameNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setPName(JNIEnv* env, jcl
     memcpy(&o->pName, &valuePointer, sizeof(o->pName));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getPSpecializationInfo(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getPSpecializationInfoNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getPSpecializationInfo(J
     return jniPointerToLong(o->pSpecializationInfo);
 }
 
-void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setPSpecializationInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setPSpecializationInfoNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

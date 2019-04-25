@@ -20,12 +20,12 @@ public class VkAttachmentReference extends VkObject {
 
 
     public VkUInt32 getAttachment() {
-        return new VkUInt32(getVkMemory(), getAttachment(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getAttachmentNative(getVkAddress()));
     }
 
     
     public void setAttachment(VkUInt32 attachment) {
-        setAttachment(getVkAddress(), attachment != null ? attachment.getVkAddress() : VkPointer.getNullAddressNative());
+        setAttachmentNative(getVkAddress(), attachment != null ? attachment.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkAttachmentReference extends VkObject {
         getAttachment().setValue(attachment);
     }
 
-    protected static native long getAttachment(long address);
-    protected static native void setAttachment(long address, long attachment);
+    protected static native long getAttachmentNative(long address);
+    protected static native void setAttachmentNative(long address, long attachment);
 
     public VkImageLayout getLayout() {
-        return new VkImageLayout(getVkMemory(), getLayout(getVkAddress()));
+        return new VkImageLayout(getVkMemory(), getLayoutNative(getVkAddress()));
     }
 
     
     public void setLayout(VkImageLayout layout) {
-        setLayout(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddressNative());
+        setLayoutNative(getVkAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,8 +58,8 @@ public class VkAttachmentReference extends VkObject {
         getLayout().setValue(layout);
     }
 
-    protected static native long getLayout(long address);
-    protected static native void setLayout(long address, long layout);
+    protected static native long getLayoutNative(long address);
+    protected static native void setLayoutNative(long address, long layout);
 
 
     public static native long sizeof();
@@ -103,10 +103,10 @@ public class VkAttachmentReference extends VkObject {
 
         @Override
         public VkAttachmentReference get(int i){
-            return new VkAttachmentReference(getVkMemory(), addressAt(i));
+            return new VkAttachmentReference(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

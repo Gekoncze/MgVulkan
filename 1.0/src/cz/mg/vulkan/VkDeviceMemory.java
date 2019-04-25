@@ -61,10 +61,10 @@ public class VkDeviceMemory extends VkNonDispatchableHandle {
 
         @Override
         public VkDeviceMemory get(int i){
-            return new VkDeviceMemory(getVkMemory(), addressAt(i));
+            return new VkDeviceMemory(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

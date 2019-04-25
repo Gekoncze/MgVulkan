@@ -20,12 +20,12 @@ public class VkMemoryDedicatedRequirements extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkBool32 getPrefersDedicatedAllocation() {
-        return new VkBool32(getVkMemory(), getPrefersDedicatedAllocation(getVkAddress()));
+        return new VkBool32(getVkMemory(), getPrefersDedicatedAllocationNative(getVkAddress()));
     }
 
     
     public void setPrefersDedicatedAllocation(VkBool32 prefersDedicatedAllocation) {
-        setPrefersDedicatedAllocation(getVkAddress(), prefersDedicatedAllocation != null ? prefersDedicatedAllocation.getVkAddress() : VkPointer.getNullAddressNative());
+        setPrefersDedicatedAllocationNative(getVkAddress(), prefersDedicatedAllocation != null ? prefersDedicatedAllocation.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         getPrefersDedicatedAllocation().setValue(prefersDedicatedAllocation);
     }
 
-    protected static native long getPrefersDedicatedAllocation(long address);
-    protected static native void setPrefersDedicatedAllocation(long address, long prefersDedicatedAllocation);
+    protected static native long getPrefersDedicatedAllocationNative(long address);
+    protected static native void setPrefersDedicatedAllocationNative(long address, long prefersDedicatedAllocation);
 
     public VkBool32 getRequiresDedicatedAllocation() {
-        return new VkBool32(getVkMemory(), getRequiresDedicatedAllocation(getVkAddress()));
+        return new VkBool32(getVkMemory(), getRequiresDedicatedAllocationNative(getVkAddress()));
     }
 
     
     public void setRequiresDedicatedAllocation(VkBool32 requiresDedicatedAllocation) {
-        setRequiresDedicatedAllocation(getVkAddress(), requiresDedicatedAllocation != null ? requiresDedicatedAllocation.getVkAddress() : VkPointer.getNullAddressNative());
+        setRequiresDedicatedAllocationNative(getVkAddress(), requiresDedicatedAllocation != null ? requiresDedicatedAllocation.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,8 +92,8 @@ public class VkMemoryDedicatedRequirements extends VkObject {
         getRequiresDedicatedAllocation().setValue(requiresDedicatedAllocation);
     }
 
-    protected static native long getRequiresDedicatedAllocation(long address);
-    protected static native void setRequiresDedicatedAllocation(long address, long requiresDedicatedAllocation);
+    protected static native long getRequiresDedicatedAllocationNative(long address);
+    protected static native void setRequiresDedicatedAllocationNative(long address, long requiresDedicatedAllocation);
 
 
     public static native long sizeof();
@@ -137,10 +137,10 @@ public class VkMemoryDedicatedRequirements extends VkObject {
 
         @Override
         public VkMemoryDedicatedRequirements get(int i){
-            return new VkMemoryDedicatedRequirements(getVkMemory(), addressAt(i));
+            return new VkMemoryDedicatedRequirements(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

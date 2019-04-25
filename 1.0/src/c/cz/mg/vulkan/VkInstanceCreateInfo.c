@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkInstanceCreateInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getSType(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkInstanceCreateInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInstanceCreateInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkInstanceCreateInfo_setSType(JNIEnv* env, jclass jc, jlo
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPNext(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPNext(JNIEnv* env, jclass jc, jlo
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getFlags(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkInstanceCreateInfo_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInstanceCreateInfo_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkInstanceCreateInfo_setFlags(JNIEnv* env, jclass jc, jlo
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPApplicationInfo(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPApplicationInfoNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPApplicationInfo(JNIEnv* env, jc
     return jniPointerToLong(o->pApplicationInfo);
 }
 
-void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPApplicationInfo(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPApplicationInfoNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPApplicationInfo(JNIEnv* env, jcl
     memcpy(&o->pApplicationInfo, &valuePointer, sizeof(o->pApplicationInfo));
 }
 
-jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getEnabledLayerCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getEnabledLayerCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getEnabledLayerCount(JNIEnv* env, j
     return jniPointerToLong(&o->enabledLayerCount);
 }
 
-void Java_cz_mg_vulkan_VkInstanceCreateInfo_setEnabledLayerCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInstanceCreateInfo_setEnabledLayerCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkInstanceCreateInfo_setEnabledLayerCount(JNIEnv* env, jc
     memcpy(&o->enabledLayerCount, valuePointer, sizeof(o->enabledLayerCount));
 }
 
-jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPpEnabledLayerNames(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPpEnabledLayerNamesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPpEnabledLayerNames(JNIEnv* env,
     return jniPointerToLong(o->ppEnabledLayerNames);
 }
 
-void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPpEnabledLayerNames(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPpEnabledLayerNamesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPpEnabledLayerNames(JNIEnv* env, 
     memcpy(&o->ppEnabledLayerNames, &valuePointer, sizeof(o->ppEnabledLayerNames));
 }
 
-jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getEnabledExtensionCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getEnabledExtensionCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getEnabledExtensionCount(JNIEnv* en
     return jniPointerToLong(&o->enabledExtensionCount);
 }
 
-void Java_cz_mg_vulkan_VkInstanceCreateInfo_setEnabledExtensionCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInstanceCreateInfo_setEnabledExtensionCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkInstanceCreateInfo_setEnabledExtensionCount(JNIEnv* env
     memcpy(&o->enabledExtensionCount, valuePointer, sizeof(o->enabledExtensionCount));
 }
 
-jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPpEnabledExtensionNames(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPpEnabledExtensionNamesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkInstanceCreateInfo_getPpEnabledExtensionNames(JNIEnv* 
     return jniPointerToLong(o->ppEnabledExtensionNames);
 }
 
-void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPpEnabledExtensionNames(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkInstanceCreateInfo_setPpEnabledExtensionNamesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

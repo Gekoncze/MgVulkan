@@ -20,12 +20,12 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkBool32 getStorageBuffer16BitAccess() {
-        return new VkBool32(getVkMemory(), getStorageBuffer16BitAccess(getVkAddress()));
+        return new VkBool32(getVkMemory(), getStorageBuffer16BitAccessNative(getVkAddress()));
     }
 
     
     public void setStorageBuffer16BitAccess(VkBool32 storageBuffer16BitAccess) {
-        setStorageBuffer16BitAccess(getVkAddress(), storageBuffer16BitAccess != null ? storageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddressNative());
+        setStorageBuffer16BitAccessNative(getVkAddress(), storageBuffer16BitAccess != null ? storageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         getStorageBuffer16BitAccess().setValue(storageBuffer16BitAccess);
     }
 
-    protected static native long getStorageBuffer16BitAccess(long address);
-    protected static native void setStorageBuffer16BitAccess(long address, long storageBuffer16BitAccess);
+    protected static native long getStorageBuffer16BitAccessNative(long address);
+    protected static native void setStorageBuffer16BitAccessNative(long address, long storageBuffer16BitAccess);
 
     public VkBool32 getUniformAndStorageBuffer16BitAccess() {
-        return new VkBool32(getVkMemory(), getUniformAndStorageBuffer16BitAccess(getVkAddress()));
+        return new VkBool32(getVkMemory(), getUniformAndStorageBuffer16BitAccessNative(getVkAddress()));
     }
 
     
     public void setUniformAndStorageBuffer16BitAccess(VkBool32 uniformAndStorageBuffer16BitAccess) {
-        setUniformAndStorageBuffer16BitAccess(getVkAddress(), uniformAndStorageBuffer16BitAccess != null ? uniformAndStorageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddressNative());
+        setUniformAndStorageBuffer16BitAccessNative(getVkAddress(), uniformAndStorageBuffer16BitAccess != null ? uniformAndStorageBuffer16BitAccess.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,16 +92,16 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         getUniformAndStorageBuffer16BitAccess().setValue(uniformAndStorageBuffer16BitAccess);
     }
 
-    protected static native long getUniformAndStorageBuffer16BitAccess(long address);
-    protected static native void setUniformAndStorageBuffer16BitAccess(long address, long uniformAndStorageBuffer16BitAccess);
+    protected static native long getUniformAndStorageBuffer16BitAccessNative(long address);
+    protected static native void setUniformAndStorageBuffer16BitAccessNative(long address, long uniformAndStorageBuffer16BitAccess);
 
     public VkBool32 getStoragePushConstant16() {
-        return new VkBool32(getVkMemory(), getStoragePushConstant16(getVkAddress()));
+        return new VkBool32(getVkMemory(), getStoragePushConstant16Native(getVkAddress()));
     }
 
     
     public void setStoragePushConstant16(VkBool32 storagePushConstant16) {
-        setStoragePushConstant16(getVkAddress(), storagePushConstant16 != null ? storagePushConstant16.getVkAddress() : VkPointer.getNullAddressNative());
+        setStoragePushConstant16Native(getVkAddress(), storagePushConstant16 != null ? storagePushConstant16.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -113,16 +113,16 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         getStoragePushConstant16().setValue(storagePushConstant16);
     }
 
-    protected static native long getStoragePushConstant16(long address);
-    protected static native void setStoragePushConstant16(long address, long storagePushConstant16);
+    protected static native long getStoragePushConstant16Native(long address);
+    protected static native void setStoragePushConstant16Native(long address, long storagePushConstant16);
 
     public VkBool32 getStorageInputOutput16() {
-        return new VkBool32(getVkMemory(), getStorageInputOutput16(getVkAddress()));
+        return new VkBool32(getVkMemory(), getStorageInputOutput16Native(getVkAddress()));
     }
 
     
     public void setStorageInputOutput16(VkBool32 storageInputOutput16) {
-        setStorageInputOutput16(getVkAddress(), storageInputOutput16 != null ? storageInputOutput16.getVkAddress() : VkPointer.getNullAddressNative());
+        setStorageInputOutput16Native(getVkAddress(), storageInputOutput16 != null ? storageInputOutput16.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -134,8 +134,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         getStorageInputOutput16().setValue(storageInputOutput16);
     }
 
-    protected static native long getStorageInputOutput16(long address);
-    protected static native void setStorageInputOutput16(long address, long storageInputOutput16);
+    protected static native long getStorageInputOutput16Native(long address);
+    protected static native void setStorageInputOutput16Native(long address, long storageInputOutput16);
 
 
     public static native long sizeof();
@@ -179,10 +179,10 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
 
         @Override
         public VkPhysicalDevice16BitStorageFeatures get(int i){
-            return new VkPhysicalDevice16BitStorageFeatures(getVkMemory(), addressAt(i));
+            return new VkPhysicalDevice16BitStorageFeatures(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

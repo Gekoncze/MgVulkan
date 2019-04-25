@@ -21,12 +21,12 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkPipelineLayoutCreateFlags getFlags() {
-        return new VkPipelineLayoutCreateFlags(getVkMemory(), getFlags(getVkAddress()));
+        return new VkPipelineLayoutCreateFlags(getVkMemory(), getFlagsNative(getVkAddress()));
     }
 
     
     public void setFlags(VkPipelineLayoutCreateFlags flags) {
-        setFlags(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
+        setFlagsNative(getVkAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,16 +72,16 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    protected static native long getFlags(long address);
-    protected static native void setFlags(long address, long flags);
+    protected static native long getFlagsNative(long address);
+    protected static native void setFlagsNative(long address, long flags);
 
     public VkUInt32 getSetLayoutCount() {
-        return new VkUInt32(getVkMemory(), getSetLayoutCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSetLayoutCountNative(getVkAddress()));
     }
 
     
     public void setSetLayoutCount(VkUInt32 setLayoutCount) {
-        setSetLayoutCount(getVkAddress(), setLayoutCount != null ? setLayoutCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setSetLayoutCountNative(getVkAddress(), setLayoutCount != null ? setLayoutCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -93,29 +93,29 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
         getSetLayoutCount().setValue(setLayoutCount);
     }
 
-    protected static native long getSetLayoutCount(long address);
-    protected static native void setSetLayoutCount(long address, long setLayoutCount);
+    protected static native long getSetLayoutCountNative(long address);
+    protected static native void setSetLayoutCountNative(long address, long setLayoutCount);
 
     public VkDescriptorSetLayout getPSetLayouts() {
-        return new VkDescriptorSetLayout(getVkMemory(), getPSetLayouts(getVkAddress()));
+        return new VkDescriptorSetLayout(getVkMemory(), getPSetLayoutsNative(getVkAddress()));
     }
 
     private VkObject pSetLayouts = null;
     public void setPSetLayouts(VkDescriptorSetLayout pSetLayouts) {
-        setPSetLayouts(getVkAddress(), pSetLayouts != null ? pSetLayouts.getVkAddress() : VkPointer.NULL);
+        setPSetLayoutsNative(getVkAddress(), pSetLayouts != null ? pSetLayouts.getVkAddress() : VkPointer.NULL);
         this.pSetLayouts = pSetLayouts;
     }
 
-    protected static native long getPSetLayouts(long address);
-    protected static native void setPSetLayouts(long address, long pSetLayouts);
+    protected static native long getPSetLayoutsNative(long address);
+    protected static native void setPSetLayoutsNative(long address, long pSetLayouts);
 
     public VkUInt32 getPushConstantRangeCount() {
-        return new VkUInt32(getVkMemory(), getPushConstantRangeCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getPushConstantRangeCountNative(getVkAddress()));
     }
 
     
     public void setPushConstantRangeCount(VkUInt32 pushConstantRangeCount) {
-        setPushConstantRangeCount(getVkAddress(), pushConstantRangeCount != null ? pushConstantRangeCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setPushConstantRangeCountNative(getVkAddress(), pushConstantRangeCount != null ? pushConstantRangeCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -127,21 +127,21 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
         getPushConstantRangeCount().setValue(pushConstantRangeCount);
     }
 
-    protected static native long getPushConstantRangeCount(long address);
-    protected static native void setPushConstantRangeCount(long address, long pushConstantRangeCount);
+    protected static native long getPushConstantRangeCountNative(long address);
+    protected static native void setPushConstantRangeCountNative(long address, long pushConstantRangeCount);
 
     public VkPushConstantRange getPPushConstantRanges() {
-        return new VkPushConstantRange(getVkMemory(), getPPushConstantRanges(getVkAddress()));
+        return new VkPushConstantRange(getVkMemory(), getPPushConstantRangesNative(getVkAddress()));
     }
 
     private VkObject pPushConstantRanges = null;
     public void setPPushConstantRanges(VkPushConstantRange pPushConstantRanges) {
-        setPPushConstantRanges(getVkAddress(), pPushConstantRanges != null ? pPushConstantRanges.getVkAddress() : VkPointer.NULL);
+        setPPushConstantRangesNative(getVkAddress(), pPushConstantRanges != null ? pPushConstantRanges.getVkAddress() : VkPointer.NULL);
         this.pPushConstantRanges = pPushConstantRanges;
     }
 
-    protected static native long getPPushConstantRanges(long address);
-    protected static native void setPPushConstantRanges(long address, long pPushConstantRanges);
+    protected static native long getPPushConstantRangesNative(long address);
+    protected static native void setPPushConstantRangesNative(long address, long pPushConstantRanges);
 
 
     public static native long sizeof();

@@ -20,12 +20,12 @@ public class VkImageMemoryBarrier extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkImageMemoryBarrier extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkAccessFlags getSrcAccessMask() {
-        return new VkAccessFlags(getVkMemory(), getSrcAccessMask(getVkAddress()));
+        return new VkAccessFlags(getVkMemory(), getSrcAccessMaskNative(getVkAddress()));
     }
 
     
     public void setSrcAccessMask(VkAccessFlags srcAccessMask) {
-        setSrcAccessMask(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setSrcAccessMaskNative(getVkAddress(), srcAccessMask != null ? srcAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkImageMemoryBarrier extends VkObject {
         getSrcAccessMask().setValue(srcAccessMask);
     }
 
-    protected static native long getSrcAccessMask(long address);
-    protected static native void setSrcAccessMask(long address, long srcAccessMask);
+    protected static native long getSrcAccessMaskNative(long address);
+    protected static native void setSrcAccessMaskNative(long address, long srcAccessMask);
 
     public VkAccessFlags getDstAccessMask() {
-        return new VkAccessFlags(getVkMemory(), getDstAccessMask(getVkAddress()));
+        return new VkAccessFlags(getVkMemory(), getDstAccessMaskNative(getVkAddress()));
     }
 
     
     public void setDstAccessMask(VkAccessFlags dstAccessMask) {
-        setDstAccessMask(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstAccessMaskNative(getVkAddress(), dstAccessMask != null ? dstAccessMask.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,16 +92,16 @@ public class VkImageMemoryBarrier extends VkObject {
         getDstAccessMask().setValue(dstAccessMask);
     }
 
-    protected static native long getDstAccessMask(long address);
-    protected static native void setDstAccessMask(long address, long dstAccessMask);
+    protected static native long getDstAccessMaskNative(long address);
+    protected static native void setDstAccessMaskNative(long address, long dstAccessMask);
 
     public VkImageLayout getOldLayout() {
-        return new VkImageLayout(getVkMemory(), getOldLayout(getVkAddress()));
+        return new VkImageLayout(getVkMemory(), getOldLayoutNative(getVkAddress()));
     }
 
     
     public void setOldLayout(VkImageLayout oldLayout) {
-        setOldLayout(getVkAddress(), oldLayout != null ? oldLayout.getVkAddress() : VkPointer.getNullAddressNative());
+        setOldLayoutNative(getVkAddress(), oldLayout != null ? oldLayout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -113,16 +113,16 @@ public class VkImageMemoryBarrier extends VkObject {
         getOldLayout().setValue(oldLayout);
     }
 
-    protected static native long getOldLayout(long address);
-    protected static native void setOldLayout(long address, long oldLayout);
+    protected static native long getOldLayoutNative(long address);
+    protected static native void setOldLayoutNative(long address, long oldLayout);
 
     public VkImageLayout getNewLayout() {
-        return new VkImageLayout(getVkMemory(), getNewLayout(getVkAddress()));
+        return new VkImageLayout(getVkMemory(), getNewLayoutNative(getVkAddress()));
     }
 
     
     public void setNewLayout(VkImageLayout newLayout) {
-        setNewLayout(getVkAddress(), newLayout != null ? newLayout.getVkAddress() : VkPointer.getNullAddressNative());
+        setNewLayoutNative(getVkAddress(), newLayout != null ? newLayout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -134,16 +134,16 @@ public class VkImageMemoryBarrier extends VkObject {
         getNewLayout().setValue(newLayout);
     }
 
-    protected static native long getNewLayout(long address);
-    protected static native void setNewLayout(long address, long newLayout);
+    protected static native long getNewLayoutNative(long address);
+    protected static native void setNewLayoutNative(long address, long newLayout);
 
     public VkUInt32 getSrcQueueFamilyIndex() {
-        return new VkUInt32(getVkMemory(), getSrcQueueFamilyIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getSrcQueueFamilyIndexNative(getVkAddress()));
     }
 
     
     public void setSrcQueueFamilyIndex(VkUInt32 srcQueueFamilyIndex) {
-        setSrcQueueFamilyIndex(getVkAddress(), srcQueueFamilyIndex != null ? srcQueueFamilyIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setSrcQueueFamilyIndexNative(getVkAddress(), srcQueueFamilyIndex != null ? srcQueueFamilyIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -155,16 +155,16 @@ public class VkImageMemoryBarrier extends VkObject {
         getSrcQueueFamilyIndex().setValue(srcQueueFamilyIndex);
     }
 
-    protected static native long getSrcQueueFamilyIndex(long address);
-    protected static native void setSrcQueueFamilyIndex(long address, long srcQueueFamilyIndex);
+    protected static native long getSrcQueueFamilyIndexNative(long address);
+    protected static native void setSrcQueueFamilyIndexNative(long address, long srcQueueFamilyIndex);
 
     public VkUInt32 getDstQueueFamilyIndex() {
-        return new VkUInt32(getVkMemory(), getDstQueueFamilyIndex(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDstQueueFamilyIndexNative(getVkAddress()));
     }
 
     
     public void setDstQueueFamilyIndex(VkUInt32 dstQueueFamilyIndex) {
-        setDstQueueFamilyIndex(getVkAddress(), dstQueueFamilyIndex != null ? dstQueueFamilyIndex.getVkAddress() : VkPointer.getNullAddressNative());
+        setDstQueueFamilyIndexNative(getVkAddress(), dstQueueFamilyIndex != null ? dstQueueFamilyIndex.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -176,34 +176,34 @@ public class VkImageMemoryBarrier extends VkObject {
         getDstQueueFamilyIndex().setValue(dstQueueFamilyIndex);
     }
 
-    protected static native long getDstQueueFamilyIndex(long address);
-    protected static native void setDstQueueFamilyIndex(long address, long dstQueueFamilyIndex);
+    protected static native long getDstQueueFamilyIndexNative(long address);
+    protected static native void setDstQueueFamilyIndexNative(long address, long dstQueueFamilyIndex);
 
     public VkImage getImage() {
-        return new VkImage(getVkMemory(), getImage(getVkAddress()));
+        return new VkImage(getVkMemory(), getImageNative(getVkAddress()));
     }
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddressNative());
+        setImageNative(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getImage(long address);
-    protected static native void setImage(long address, long image);
+    protected static native long getImageNative(long address);
+    protected static native void setImageNative(long address, long image);
 
     public VkImageSubresourceRange getSubresourceRange() {
-        return new VkImageSubresourceRange(getVkMemory(), getSubresourceRange(getVkAddress()));
+        return new VkImageSubresourceRange(getVkMemory(), getSubresourceRangeNative(getVkAddress()));
     }
 
     
     public void setSubresourceRange(VkImageSubresourceRange subresourceRange) {
-        setSubresourceRange(getVkAddress(), subresourceRange != null ? subresourceRange.getVkAddress() : VkPointer.getNullAddressNative());
+        setSubresourceRangeNative(getVkAddress(), subresourceRange != null ? subresourceRange.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getSubresourceRange(long address);
-    protected static native void setSubresourceRange(long address, long subresourceRange);
+    protected static native long getSubresourceRangeNative(long address);
+    protected static native void setSubresourceRangeNative(long address, long subresourceRange);
 
 
     public static native long sizeof();
@@ -247,10 +247,10 @@ public class VkImageMemoryBarrier extends VkObject {
 
         @Override
         public VkImageMemoryBarrier get(int i){
-            return new VkImageMemoryBarrier(getVkMemory(), addressAt(i));
+            return new VkImageMemoryBarrier(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

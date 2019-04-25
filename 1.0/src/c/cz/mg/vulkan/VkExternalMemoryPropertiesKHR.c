@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_sizeof(JNIEnv* env, jclass
     return sizeof(VkExternalMemoryPropertiesKHR);
 }
 
-jlong Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_getExternalMemoryFeatures(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_getExternalMemoryFeaturesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_getExternalMemoryFeatures(
     return jniPointerToLong(&o->externalMemoryFeatures);
 }
 
-void Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_setExternalMemoryFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_setExternalMemoryFeaturesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_setExternalMemoryFeatures(J
     memcpy(&o->externalMemoryFeatures, valuePointer, sizeof(o->externalMemoryFeatures));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_getExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_getExportFromImportedHandleTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_getExportFromImportedHandl
     return jniPointerToLong(&o->exportFromImportedHandleTypes);
 }
 
-void Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_setExportFromImportedHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_setExportFromImportedHandleTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_setExportFromImportedHandle
     memcpy(&o->exportFromImportedHandleTypes, valuePointer, sizeof(o->exportFromImportedHandleTypes));
 }
 
-jlong Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_getCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_getCompatibleHandleTypesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_getCompatibleHandleTypes(J
     return jniPointerToLong(&o->compatibleHandleTypes);
 }
 
-void Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_setCompatibleHandleTypes(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkExternalMemoryPropertiesKHR_setCompatibleHandleTypesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

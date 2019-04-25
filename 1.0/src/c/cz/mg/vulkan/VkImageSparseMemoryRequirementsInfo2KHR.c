@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_sizeof(JNIEnv* e
     return sizeof(VkImageSparseMemoryRequirementsInfo2KHR);
 }
 
-jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_getSType(JNIEnv*
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_setSType(JNIEnv* 
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_getPNext(JNIEnv*
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_setPNext(JNIEnv* 
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_getImage(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_getImageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_getImage(JNIEnv*
     return jniPointerToLong(&o->image);
 }
 
-void Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_setImage(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2KHR_setImageNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

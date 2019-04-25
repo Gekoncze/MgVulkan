@@ -21,12 +21,12 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,55 +38,55 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkObjectTableNVX getObjectTable() {
-        return new VkObjectTableNVX(getVkMemory(), getObjectTable(getVkAddress()));
+        return new VkObjectTableNVX(getVkMemory(), getObjectTableNative(getVkAddress()));
     }
 
     
     public void setObjectTable(VkObjectTableNVX objectTable) {
-        setObjectTable(getVkAddress(), objectTable != null ? objectTable.getVkAddress() : VkPointer.getNullAddressNative());
+        setObjectTableNative(getVkAddress(), objectTable != null ? objectTable.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getObjectTable(long address);
-    protected static native void setObjectTable(long address, long objectTable);
+    protected static native long getObjectTableNative(long address);
+    protected static native void setObjectTableNative(long address, long objectTable);
 
     public VkIndirectCommandsLayoutNVX getIndirectCommandsLayout() {
-        return new VkIndirectCommandsLayoutNVX(getVkMemory(), getIndirectCommandsLayout(getVkAddress()));
+        return new VkIndirectCommandsLayoutNVX(getVkMemory(), getIndirectCommandsLayoutNative(getVkAddress()));
     }
 
     
     public void setIndirectCommandsLayout(VkIndirectCommandsLayoutNVX indirectCommandsLayout) {
-        setIndirectCommandsLayout(getVkAddress(), indirectCommandsLayout != null ? indirectCommandsLayout.getVkAddress() : VkPointer.getNullAddressNative());
+        setIndirectCommandsLayoutNative(getVkAddress(), indirectCommandsLayout != null ? indirectCommandsLayout.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getIndirectCommandsLayout(long address);
-    protected static native void setIndirectCommandsLayout(long address, long indirectCommandsLayout);
+    protected static native long getIndirectCommandsLayoutNative(long address);
+    protected static native void setIndirectCommandsLayoutNative(long address, long indirectCommandsLayout);
 
     public VkUInt32 getMaxSequencesCount() {
-        return new VkUInt32(getVkMemory(), getMaxSequencesCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getMaxSequencesCountNative(getVkAddress()));
     }
 
     
     public void setMaxSequencesCount(VkUInt32 maxSequencesCount) {
-        setMaxSequencesCount(getVkAddress(), maxSequencesCount != null ? maxSequencesCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setMaxSequencesCountNative(getVkAddress(), maxSequencesCount != null ? maxSequencesCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -98,8 +98,8 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         getMaxSequencesCount().setValue(maxSequencesCount);
     }
 
-    protected static native long getMaxSequencesCount(long address);
-    protected static native void setMaxSequencesCount(long address, long maxSequencesCount);
+    protected static native long getMaxSequencesCountNative(long address);
+    protected static native void setMaxSequencesCountNative(long address, long maxSequencesCount);
 
 
     public static native long sizeof();

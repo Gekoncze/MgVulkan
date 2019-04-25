@@ -20,12 +20,12 @@ public class VkExternalSemaphorePropertiesKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,29 +37,29 @@ public class VkExternalSemaphorePropertiesKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkExternalSemaphoreHandleTypeFlagsKHR getExportFromImportedHandleTypes() {
-        return new VkExternalSemaphoreHandleTypeFlagsKHR(getVkMemory(), getExportFromImportedHandleTypes(getVkAddress()));
+        return new VkExternalSemaphoreHandleTypeFlagsKHR(getVkMemory(), getExportFromImportedHandleTypesNative(getVkAddress()));
     }
 
     
     public void setExportFromImportedHandleTypes(VkExternalSemaphoreHandleTypeFlagsKHR exportFromImportedHandleTypes) {
-        setExportFromImportedHandleTypes(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.getNullAddressNative());
+        setExportFromImportedHandleTypesNative(getVkAddress(), exportFromImportedHandleTypes != null ? exportFromImportedHandleTypes.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -71,16 +71,16 @@ public class VkExternalSemaphorePropertiesKHR extends VkObject {
         getExportFromImportedHandleTypes().setValue(exportFromImportedHandleTypes);
     }
 
-    protected static native long getExportFromImportedHandleTypes(long address);
-    protected static native void setExportFromImportedHandleTypes(long address, long exportFromImportedHandleTypes);
+    protected static native long getExportFromImportedHandleTypesNative(long address);
+    protected static native void setExportFromImportedHandleTypesNative(long address, long exportFromImportedHandleTypes);
 
     public VkExternalSemaphoreHandleTypeFlagsKHR getCompatibleHandleTypes() {
-        return new VkExternalSemaphoreHandleTypeFlagsKHR(getVkMemory(), getCompatibleHandleTypes(getVkAddress()));
+        return new VkExternalSemaphoreHandleTypeFlagsKHR(getVkMemory(), getCompatibleHandleTypesNative(getVkAddress()));
     }
 
     
     public void setCompatibleHandleTypes(VkExternalSemaphoreHandleTypeFlagsKHR compatibleHandleTypes) {
-        setCompatibleHandleTypes(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getNullAddressNative());
+        setCompatibleHandleTypesNative(getVkAddress(), compatibleHandleTypes != null ? compatibleHandleTypes.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -92,16 +92,16 @@ public class VkExternalSemaphorePropertiesKHR extends VkObject {
         getCompatibleHandleTypes().setValue(compatibleHandleTypes);
     }
 
-    protected static native long getCompatibleHandleTypes(long address);
-    protected static native void setCompatibleHandleTypes(long address, long compatibleHandleTypes);
+    protected static native long getCompatibleHandleTypesNative(long address);
+    protected static native void setCompatibleHandleTypesNative(long address, long compatibleHandleTypes);
 
     public VkExternalSemaphoreFeatureFlagsKHR getExternalSemaphoreFeatures() {
-        return new VkExternalSemaphoreFeatureFlagsKHR(getVkMemory(), getExternalSemaphoreFeatures(getVkAddress()));
+        return new VkExternalSemaphoreFeatureFlagsKHR(getVkMemory(), getExternalSemaphoreFeaturesNative(getVkAddress()));
     }
 
     
     public void setExternalSemaphoreFeatures(VkExternalSemaphoreFeatureFlagsKHR externalSemaphoreFeatures) {
-        setExternalSemaphoreFeatures(getVkAddress(), externalSemaphoreFeatures != null ? externalSemaphoreFeatures.getVkAddress() : VkPointer.getNullAddressNative());
+        setExternalSemaphoreFeaturesNative(getVkAddress(), externalSemaphoreFeatures != null ? externalSemaphoreFeatures.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -113,8 +113,8 @@ public class VkExternalSemaphorePropertiesKHR extends VkObject {
         getExternalSemaphoreFeatures().setValue(externalSemaphoreFeatures);
     }
 
-    protected static native long getExternalSemaphoreFeatures(long address);
-    protected static native void setExternalSemaphoreFeatures(long address, long externalSemaphoreFeatures);
+    protected static native long getExternalSemaphoreFeaturesNative(long address);
+    protected static native void setExternalSemaphoreFeaturesNative(long address, long externalSemaphoreFeatures);
 
 
     public static native long sizeof();
@@ -158,10 +158,10 @@ public class VkExternalSemaphorePropertiesKHR extends VkObject {
 
         @Override
         public VkExternalSemaphorePropertiesKHR get(int i){
-            return new VkExternalSemaphorePropertiesKHR(getVkMemory(), addressAt(i));
+            return new VkExternalSemaphorePropertiesKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

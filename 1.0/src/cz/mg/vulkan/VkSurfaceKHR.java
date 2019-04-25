@@ -61,10 +61,10 @@ public class VkSurfaceKHR extends VkNonDispatchableHandle {
 
         @Override
         public VkSurfaceKHR get(int i){
-            return new VkSurfaceKHR(getVkMemory(), addressAt(i));
+            return new VkSurfaceKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

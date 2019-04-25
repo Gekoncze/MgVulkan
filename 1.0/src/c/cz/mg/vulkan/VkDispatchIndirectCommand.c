@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDispatchIndirectCommand_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkDispatchIndirectCommand);
 }
 
-jlong Java_cz_mg_vulkan_VkDispatchIndirectCommand_getX(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDispatchIndirectCommand_getXNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDispatchIndirectCommand_getX(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->x);
 }
 
-void Java_cz_mg_vulkan_VkDispatchIndirectCommand_setX(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDispatchIndirectCommand_setXNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDispatchIndirectCommand_setX(JNIEnv* env, jclass jc, jl
     memcpy(&o->x, valuePointer, sizeof(o->x));
 }
 
-jlong Java_cz_mg_vulkan_VkDispatchIndirectCommand_getY(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDispatchIndirectCommand_getYNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDispatchIndirectCommand_getY(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->y);
 }
 
-void Java_cz_mg_vulkan_VkDispatchIndirectCommand_setY(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDispatchIndirectCommand_setYNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDispatchIndirectCommand_setY(JNIEnv* env, jclass jc, jl
     memcpy(&o->y, valuePointer, sizeof(o->y));
 }
 
-jlong Java_cz_mg_vulkan_VkDispatchIndirectCommand_getZ(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDispatchIndirectCommand_getZNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDispatchIndirectCommand_getZ(JNIEnv* env, jclass jc, j
     return jniPointerToLong(&o->z);
 }
 
-void Java_cz_mg_vulkan_VkDispatchIndirectCommand_setZ(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDispatchIndirectCommand_setZNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

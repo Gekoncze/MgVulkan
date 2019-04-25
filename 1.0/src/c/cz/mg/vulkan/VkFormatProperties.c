@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkFormatProperties_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkFormatProperties);
 }
 
-jlong Java_cz_mg_vulkan_VkFormatProperties_getLinearTilingFeatures(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFormatProperties_getLinearTilingFeaturesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkFormatProperties_getLinearTilingFeatures(JNIEnv* env, 
     return jniPointerToLong(&o->linearTilingFeatures);
 }
 
-void Java_cz_mg_vulkan_VkFormatProperties_setLinearTilingFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFormatProperties_setLinearTilingFeaturesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkFormatProperties_setLinearTilingFeatures(JNIEnv* env, j
     memcpy(&o->linearTilingFeatures, valuePointer, sizeof(o->linearTilingFeatures));
 }
 
-jlong Java_cz_mg_vulkan_VkFormatProperties_getOptimalTilingFeatures(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFormatProperties_getOptimalTilingFeaturesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkFormatProperties_getOptimalTilingFeatures(JNIEnv* env,
     return jniPointerToLong(&o->optimalTilingFeatures);
 }
 
-void Java_cz_mg_vulkan_VkFormatProperties_setOptimalTilingFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFormatProperties_setOptimalTilingFeaturesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkFormatProperties_setOptimalTilingFeatures(JNIEnv* env, 
     memcpy(&o->optimalTilingFeatures, valuePointer, sizeof(o->optimalTilingFeatures));
 }
 
-jlong Java_cz_mg_vulkan_VkFormatProperties_getBufferFeatures(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkFormatProperties_getBufferFeaturesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkFormatProperties_getBufferFeatures(JNIEnv* env, jclass
     return jniPointerToLong(&o->bufferFeatures);
 }
 
-void Java_cz_mg_vulkan_VkFormatProperties_setBufferFeatures(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkFormatProperties_setBufferFeaturesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

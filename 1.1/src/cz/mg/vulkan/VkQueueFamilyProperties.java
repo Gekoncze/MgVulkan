@@ -20,12 +20,12 @@ public class VkQueueFamilyProperties extends VkObject {
 
 
     public VkQueueFlags getQueueFlags() {
-        return new VkQueueFlags(getVkMemory(), getQueueFlags(getVkAddress()));
+        return new VkQueueFlags(getVkMemory(), getQueueFlagsNative(getVkAddress()));
     }
 
     
     public void setQueueFlags(VkQueueFlags queueFlags) {
-        setQueueFlags(getVkAddress(), queueFlags != null ? queueFlags.getVkAddress() : VkPointer.getNullAddressNative());
+        setQueueFlagsNative(getVkAddress(), queueFlags != null ? queueFlags.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkQueueFamilyProperties extends VkObject {
         getQueueFlags().setValue(queueFlags);
     }
 
-    protected static native long getQueueFlags(long address);
-    protected static native void setQueueFlags(long address, long queueFlags);
+    protected static native long getQueueFlagsNative(long address);
+    protected static native void setQueueFlagsNative(long address, long queueFlags);
 
     public VkUInt32 getQueueCount() {
-        return new VkUInt32(getVkMemory(), getQueueCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getQueueCountNative(getVkAddress()));
     }
 
     
     public void setQueueCount(VkUInt32 queueCount) {
-        setQueueCount(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setQueueCountNative(getVkAddress(), queueCount != null ? queueCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,16 +58,16 @@ public class VkQueueFamilyProperties extends VkObject {
         getQueueCount().setValue(queueCount);
     }
 
-    protected static native long getQueueCount(long address);
-    protected static native void setQueueCount(long address, long queueCount);
+    protected static native long getQueueCountNative(long address);
+    protected static native void setQueueCountNative(long address, long queueCount);
 
     public VkUInt32 getTimestampValidBits() {
-        return new VkUInt32(getVkMemory(), getTimestampValidBits(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getTimestampValidBitsNative(getVkAddress()));
     }
 
     
     public void setTimestampValidBits(VkUInt32 timestampValidBits) {
-        setTimestampValidBits(getVkAddress(), timestampValidBits != null ? timestampValidBits.getVkAddress() : VkPointer.getNullAddressNative());
+        setTimestampValidBitsNative(getVkAddress(), timestampValidBits != null ? timestampValidBits.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -79,21 +79,21 @@ public class VkQueueFamilyProperties extends VkObject {
         getTimestampValidBits().setValue(timestampValidBits);
     }
 
-    protected static native long getTimestampValidBits(long address);
-    protected static native void setTimestampValidBits(long address, long timestampValidBits);
+    protected static native long getTimestampValidBitsNative(long address);
+    protected static native void setTimestampValidBitsNative(long address, long timestampValidBits);
 
     public VkExtent3D getMinImageTransferGranularity() {
-        return new VkExtent3D(getVkMemory(), getMinImageTransferGranularity(getVkAddress()));
+        return new VkExtent3D(getVkMemory(), getMinImageTransferGranularityNative(getVkAddress()));
     }
 
     
     public void setMinImageTransferGranularity(VkExtent3D minImageTransferGranularity) {
-        setMinImageTransferGranularity(getVkAddress(), minImageTransferGranularity != null ? minImageTransferGranularity.getVkAddress() : VkPointer.getNullAddressNative());
+        setMinImageTransferGranularityNative(getVkAddress(), minImageTransferGranularity != null ? minImageTransferGranularity.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getMinImageTransferGranularity(long address);
-    protected static native void setMinImageTransferGranularity(long address, long minImageTransferGranularity);
+    protected static native long getMinImageTransferGranularityNative(long address);
+    protected static native void setMinImageTransferGranularityNative(long address, long minImageTransferGranularity);
 
 
     public static native long sizeof();
@@ -137,10 +137,10 @@ public class VkQueueFamilyProperties extends VkObject {
 
         @Override
         public VkQueueFamilyProperties get(int i){
-            return new VkQueueFamilyProperties(getVkMemory(), addressAt(i));
+            return new VkQueueFamilyProperties(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

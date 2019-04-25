@@ -21,12 +21,12 @@ public class VkExternalMemoryBufferCreateInfoKHR extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkExternalMemoryBufferCreateInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkExternalMemoryHandleTypeFlagsKHR getHandleTypes() {
-        return new VkExternalMemoryHandleTypeFlagsKHR(getVkMemory(), getHandleTypes(getVkAddress()));
+        return new VkExternalMemoryHandleTypeFlagsKHR(getVkMemory(), getHandleTypesNative(getVkAddress()));
     }
 
     
     public void setHandleTypes(VkExternalMemoryHandleTypeFlagsKHR handleTypes) {
-        setHandleTypes(getVkAddress(), handleTypes != null ? handleTypes.getVkAddress() : VkPointer.getNullAddressNative());
+        setHandleTypesNative(getVkAddress(), handleTypes != null ? handleTypes.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,8 +72,8 @@ public class VkExternalMemoryBufferCreateInfoKHR extends VkObject {
         getHandleTypes().setValue(handleTypes);
     }
 
-    protected static native long getHandleTypes(long address);
-    protected static native void setHandleTypes(long address, long handleTypes);
+    protected static native long getHandleTypesNative(long address);
+    protected static native void setHandleTypesNative(long address, long handleTypes);
 
 
     public static native long sizeof();

@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_sizeof(JNIEnv* env, jclas
     return sizeof(VkCommandBufferInheritanceInfo);
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getSType(JNIEnv* env, jcl
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setSType(JNIEnv* env, jcla
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getPNext(JNIEnv* env, jcl
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setPNext(JNIEnv* env, jcla
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getRenderPass(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getRenderPassNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getRenderPass(JNIEnv* env
     return jniPointerToLong(&o->renderPass);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setRenderPass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setRenderPassNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setRenderPass(JNIEnv* env,
     memcpy(&o->renderPass, valuePointer, sizeof(o->renderPass));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getSubpass(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getSubpassNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getSubpass(JNIEnv* env, j
     return jniPointerToLong(&o->subpass);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setSubpass(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setSubpassNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setSubpass(JNIEnv* env, jc
     memcpy(&o->subpass, valuePointer, sizeof(o->subpass));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getFramebuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getFramebufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getFramebuffer(JNIEnv* en
     return jniPointerToLong(&o->framebuffer);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setFramebuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setFramebufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -101,7 +101,7 @@ void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setFramebuffer(JNIEnv* env
     memcpy(&o->framebuffer, valuePointer, sizeof(o->framebuffer));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getOcclusionQueryEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getOcclusionQueryEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -109,7 +109,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getOcclusionQueryEnable(J
     return jniPointerToLong(&o->occlusionQueryEnable);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setOcclusionQueryEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setOcclusionQueryEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -118,7 +118,7 @@ void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setOcclusionQueryEnable(JN
     memcpy(&o->occlusionQueryEnable, valuePointer, sizeof(o->occlusionQueryEnable));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getQueryFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getQueryFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -126,7 +126,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getQueryFlags(JNIEnv* env
     return jniPointerToLong(&o->queryFlags);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setQueryFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setQueryFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -135,7 +135,7 @@ void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setQueryFlags(JNIEnv* env,
     memcpy(&o->queryFlags, valuePointer, sizeof(o->queryFlags));
 }
 
-jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getPipelineStatistics(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getPipelineStatisticsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -143,7 +143,7 @@ jlong Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_getPipelineStatistics(JNI
     return jniPointerToLong(&o->pipelineStatistics);
 }
 
-void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setPipelineStatistics(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkCommandBufferInheritanceInfo_setPipelineStatisticsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

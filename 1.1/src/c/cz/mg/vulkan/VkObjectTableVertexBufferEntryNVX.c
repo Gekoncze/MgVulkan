@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_sizeof(JNIEnv* env, jc
     return sizeof(VkObjectTableVertexBufferEntryNVX);
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_getType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_getTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_getType(JNIEnv* env, j
     return jniPointerToLong(&o->type);
 }
 
-void Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_setType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_setTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_setType(JNIEnv* env, jc
     memcpy(&o->type, valuePointer, sizeof(o->type));
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_getFlags(JNIEnv* env, 
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_setFlags(JNIEnv* env, j
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_getBuffer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_getBufferNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_getBuffer(JNIEnv* env,
     return jniPointerToLong(&o->buffer);
 }
 
-void Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_setBuffer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_setBufferNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

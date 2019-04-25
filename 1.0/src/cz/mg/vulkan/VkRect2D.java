@@ -26,30 +26,30 @@ public class VkRect2D extends VkObject {
     }
 
     public VkOffset2D getOffset() {
-        return new VkOffset2D(getVkMemory(), getOffset(getVkAddress()));
+        return new VkOffset2D(getVkMemory(), getOffsetNative(getVkAddress()));
     }
 
     
     public void setOffset(VkOffset2D offset) {
-        setOffset(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        setOffsetNative(getVkAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getOffset(long address);
-    protected static native void setOffset(long address, long offset);
+    protected static native long getOffsetNative(long address);
+    protected static native void setOffsetNative(long address, long offset);
 
     public VkExtent2D getExtent() {
-        return new VkExtent2D(getVkMemory(), getExtent(getVkAddress()));
+        return new VkExtent2D(getVkMemory(), getExtentNative(getVkAddress()));
     }
 
     
     public void setExtent(VkExtent2D extent) {
-        setExtent(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddressNative());
+        setExtentNative(getVkAddress(), extent != null ? extent.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getExtent(long address);
-    protected static native void setExtent(long address, long extent);
+    protected static native long getExtentNative(long address);
+    protected static native void setExtentNative(long address, long extent);
 
 
     public static native long sizeof();
@@ -93,10 +93,10 @@ public class VkRect2D extends VkObject {
 
         @Override
         public VkRect2D get(int i){
-            return new VkRect2D(getVkMemory(), addressAt(i));
+            return new VkRect2D(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

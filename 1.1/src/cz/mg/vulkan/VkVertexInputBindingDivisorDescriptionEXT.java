@@ -20,12 +20,12 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
 
 
     public VkUInt32 getBinding() {
-        return new VkUInt32(getVkMemory(), getBinding(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getBindingNative(getVkAddress()));
     }
 
     
     public void setBinding(VkUInt32 binding) {
-        setBinding(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddressNative());
+        setBindingNative(getVkAddress(), binding != null ? binding.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -37,16 +37,16 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
         getBinding().setValue(binding);
     }
 
-    protected static native long getBinding(long address);
-    protected static native void setBinding(long address, long binding);
+    protected static native long getBindingNative(long address);
+    protected static native void setBindingNative(long address, long binding);
 
     public VkUInt32 getDivisor() {
-        return new VkUInt32(getVkMemory(), getDivisor(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getDivisorNative(getVkAddress()));
     }
 
     
     public void setDivisor(VkUInt32 divisor) {
-        setDivisor(getVkAddress(), divisor != null ? divisor.getVkAddress() : VkPointer.getNullAddressNative());
+        setDivisorNative(getVkAddress(), divisor != null ? divisor.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -58,8 +58,8 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
         getDivisor().setValue(divisor);
     }
 
-    protected static native long getDivisor(long address);
-    protected static native void setDivisor(long address, long divisor);
+    protected static native long getDivisorNative(long address);
+    protected static native void setDivisorNative(long address, long divisor);
 
 
     public static native long sizeof();
@@ -103,10 +103,10 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
 
         @Override
         public VkVertexInputBindingDivisorDescriptionEXT get(int i){
-            return new VkVertexInputBindingDivisorDescriptionEXT(getVkMemory(), addressAt(i));
+            return new VkVertexInputBindingDivisorDescriptionEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

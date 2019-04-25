@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkValidationFlagsEXT);
 }
 
-jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getSType(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkValidationFlagsEXT_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkValidationFlagsEXT_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkValidationFlagsEXT_setSType(JNIEnv* env, jclass jc, jlo
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getPNext(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkValidationFlagsEXT_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkValidationFlagsEXT_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkValidationFlagsEXT_setPNext(JNIEnv* env, jclass jc, jlo
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getDisabledValidationCheckCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getDisabledValidationCheckCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getDisabledValidationCheckCount(JNI
     return jniPointerToLong(&o->disabledValidationCheckCount);
 }
 
-void Java_cz_mg_vulkan_VkValidationFlagsEXT_setDisabledValidationCheckCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkValidationFlagsEXT_setDisabledValidationCheckCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkValidationFlagsEXT_setDisabledValidationCheckCount(JNIE
     memcpy(&o->disabledValidationCheckCount, valuePointer, sizeof(o->disabledValidationCheckCount));
 }
 
-jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getPDisabledValidationChecks(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getPDisabledValidationChecksNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkValidationFlagsEXT_getPDisabledValidationChecks(JNIEnv
     return jniPointerToLong(o->pDisabledValidationChecks);
 }
 
-void Java_cz_mg_vulkan_VkValidationFlagsEXT_setPDisabledValidationChecks(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkValidationFlagsEXT_setPDisabledValidationChecksNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

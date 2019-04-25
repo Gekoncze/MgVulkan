@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_sizeof(JNIEnv
     return sizeof(VkPipelineCoverageToColorStateCreateInfoNV);
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getSType(JNIE
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setSType(JNIEn
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getPNext(JNIE
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setPNext(JNIEn
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getFlags(JNIE
     return jniPointerToLong(&o->flags);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setFlags(JNIEn
     memcpy(&o->flags, valuePointer, sizeof(o->flags));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getCoverageToColorEnable(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getCoverageToColorEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getCoverageTo
     return jniPointerToLong(&o->coverageToColorEnable);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setCoverageToColorEnable(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setCoverageToColorEnableNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setCoverageToC
     memcpy(&o->coverageToColorEnable, valuePointer, sizeof(o->coverageToColorEnable));
 }
 
-jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getCoverageToColorLocation(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getCoverageToColorLocationNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getCoverageTo
     return jniPointerToLong(&o->coverageToColorLocation);
 }
 
-void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setCoverageToColorLocation(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setCoverageToColorLocationNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

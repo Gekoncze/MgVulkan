@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkClearRect_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkClearRect);
 }
 
-jlong Java_cz_mg_vulkan_VkClearRect_getRect(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearRect_getRectNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkClearRect_getRect(JNIEnv* env, jclass jc, jlong addres
     return jniPointerToLong(&o->rect);
 }
 
-void Java_cz_mg_vulkan_VkClearRect_setRect(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearRect_setRectNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkClearRect_setRect(JNIEnv* env, jclass jc, jlong address
     memcpy(&o->rect, valuePointer, sizeof(o->rect));
 }
 
-jlong Java_cz_mg_vulkan_VkClearRect_getBaseArrayLayer(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearRect_getBaseArrayLayerNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkClearRect_getBaseArrayLayer(JNIEnv* env, jclass jc, jl
     return jniPointerToLong(&o->baseArrayLayer);
 }
 
-void Java_cz_mg_vulkan_VkClearRect_setBaseArrayLayer(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearRect_setBaseArrayLayerNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkClearRect_setBaseArrayLayer(JNIEnv* env, jclass jc, jlo
     memcpy(&o->baseArrayLayer, valuePointer, sizeof(o->baseArrayLayer));
 }
 
-jlong Java_cz_mg_vulkan_VkClearRect_getLayerCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkClearRect_getLayerCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkClearRect_getLayerCount(JNIEnv* env, jclass jc, jlong 
     return jniPointerToLong(&o->layerCount);
 }
 
-void Java_cz_mg_vulkan_VkClearRect_setLayerCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkClearRect_setLayerCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

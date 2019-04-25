@@ -21,12 +21,12 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
 
 
     public VkStructureType getSType() {
-        return new VkStructureType(getVkMemory(), getSType(getVkAddress()));
+        return new VkStructureType(getVkMemory(), getSTypeNative(getVkAddress()));
     }
 
     
     public void setSType(VkStructureType sType) {
-        setSType(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
+        setSTypeNative(getVkAddress(), sType != null ? sType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -38,29 +38,29 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    protected static native long getSType(long address);
-    protected static native void setSType(long address, long sType);
+    protected static native long getSTypeNative(long address);
+    protected static native void setSTypeNative(long address, long sType);
 
     public VkObject getPNext() {
-        return new VkObject(getVkMemory(), getPNext(getVkAddress()));
+        return new VkObject(getVkMemory(), getPNextNative(getVkAddress()));
     }
 
     private VkObject pNext = null;
     public void setPNext(VkObject pNext) {
-        setPNext(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
+        setPNextNative(getVkAddress(), pNext != null ? pNext.getVkAddress() : VkPointer.NULL);
         this.pNext = pNext;
     }
 
-    protected static native long getPNext(long address);
-    protected static native void setPNext(long address, long pNext);
+    protected static native long getPNextNative(long address);
+    protected static native void setPNextNative(long address, long pNext);
 
     public VkUInt32 getBindingCount() {
-        return new VkUInt32(getVkMemory(), getBindingCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getBindingCountNative(getVkAddress()));
     }
 
     
     public void setBindingCount(VkUInt32 bindingCount) {
-        setBindingCount(getVkAddress(), bindingCount != null ? bindingCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setBindingCountNative(getVkAddress(), bindingCount != null ? bindingCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -72,21 +72,21 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
         getBindingCount().setValue(bindingCount);
     }
 
-    protected static native long getBindingCount(long address);
-    protected static native void setBindingCount(long address, long bindingCount);
+    protected static native long getBindingCountNative(long address);
+    protected static native void setBindingCountNative(long address, long bindingCount);
 
     public VkDescriptorBindingFlagsEXT getPBindingFlags() {
-        return new VkDescriptorBindingFlagsEXT(getVkMemory(), getPBindingFlags(getVkAddress()));
+        return new VkDescriptorBindingFlagsEXT(getVkMemory(), getPBindingFlagsNative(getVkAddress()));
     }
 
     private VkObject pBindingFlags = null;
     public void setPBindingFlags(VkDescriptorBindingFlagsEXT pBindingFlags) {
-        setPBindingFlags(getVkAddress(), pBindingFlags != null ? pBindingFlags.getVkAddress() : VkPointer.NULL);
+        setPBindingFlagsNative(getVkAddress(), pBindingFlags != null ? pBindingFlags.getVkAddress() : VkPointer.NULL);
         this.pBindingFlags = pBindingFlags;
     }
 
-    protected static native long getPBindingFlags(long address);
-    protected static native void setPBindingFlags(long address, long pBindingFlags);
+    protected static native long getPBindingFlagsNative(long address);
+    protected static native void setPBindingFlagsNative(long address, long pBindingFlags);
 
 
     public static native long sizeof();

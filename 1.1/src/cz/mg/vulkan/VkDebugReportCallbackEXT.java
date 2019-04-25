@@ -61,10 +61,10 @@ public class VkDebugReportCallbackEXT extends VkNonDispatchableHandle {
 
         @Override
         public VkDebugReportCallbackEXT get(int i){
-            return new VkDebugReportCallbackEXT(getVkMemory(), addressAt(i));
+            return new VkDebugReportCallbackEXT(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

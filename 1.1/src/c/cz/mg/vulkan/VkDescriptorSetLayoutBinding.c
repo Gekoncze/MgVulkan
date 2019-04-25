@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_sizeof(JNIEnv* env, jclass 
     return sizeof(VkDescriptorSetLayoutBinding);
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getBinding(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getBindingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getBinding(JNIEnv* env, jcl
     return jniPointerToLong(&o->binding);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setBinding(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setBindingNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setBinding(JNIEnv* env, jcla
     memcpy(&o->binding, valuePointer, sizeof(o->binding));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getDescriptorType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getDescriptorTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getDescriptorType(JNIEnv* e
     return jniPointerToLong(&o->descriptorType);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setDescriptorType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setDescriptorTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setDescriptorType(JNIEnv* en
     memcpy(&o->descriptorType, valuePointer, sizeof(o->descriptorType));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getDescriptorCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getDescriptorCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getDescriptorCount(JNIEnv* 
     return jniPointerToLong(&o->descriptorCount);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setDescriptorCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setDescriptorCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setDescriptorCount(JNIEnv* e
     memcpy(&o->descriptorCount, valuePointer, sizeof(o->descriptorCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getStageFlags(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getStageFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getStageFlags(JNIEnv* env, 
     return jniPointerToLong(&o->stageFlags);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setStageFlags(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setStageFlagsNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -84,7 +84,7 @@ void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setStageFlags(JNIEnv* env, j
     memcpy(&o->stageFlags, valuePointer, sizeof(o->stageFlags));
 }
 
-jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getPImmutableSamplers(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getPImmutableSamplersNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -92,7 +92,7 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getPImmutableSamplers(JNIEn
     return jniPointerToLong(o->pImmutableSamplers);
 }
 
-void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setPImmutableSamplers(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setPImmutableSamplersNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

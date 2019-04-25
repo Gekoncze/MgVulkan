@@ -61,10 +61,10 @@ public class VkSampler extends VkNonDispatchableHandle {
 
         @Override
         public VkSampler get(int i){
-            return new VkSampler(getVkMemory(), addressAt(i));
+            return new VkSampler(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

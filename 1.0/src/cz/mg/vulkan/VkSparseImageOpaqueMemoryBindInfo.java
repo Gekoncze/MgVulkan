@@ -20,25 +20,25 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
 
 
     public VkImage getImage() {
-        return new VkImage(getVkMemory(), getImage(getVkAddress()));
+        return new VkImage(getVkMemory(), getImageNative(getVkAddress()));
     }
 
     
     public void setImage(VkImage image) {
-        setImage(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddressNative());
+        setImageNative(getVkAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
-    protected static native long getImage(long address);
-    protected static native void setImage(long address, long image);
+    protected static native long getImageNative(long address);
+    protected static native void setImageNative(long address, long image);
 
     public VkUInt32 getBindCount() {
-        return new VkUInt32(getVkMemory(), getBindCount(getVkAddress()));
+        return new VkUInt32(getVkMemory(), getBindCountNative(getVkAddress()));
     }
 
     
     public void setBindCount(VkUInt32 bindCount) {
-        setBindCount(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.getNullAddressNative());
+        setBindCountNative(getVkAddress(), bindCount != null ? bindCount.getVkAddress() : VkPointer.getNullAddressNative());
         
     }
 
@@ -50,21 +50,21 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
         getBindCount().setValue(bindCount);
     }
 
-    protected static native long getBindCount(long address);
-    protected static native void setBindCount(long address, long bindCount);
+    protected static native long getBindCountNative(long address);
+    protected static native void setBindCountNative(long address, long bindCount);
 
     public VkSparseMemoryBind getPBinds() {
-        return new VkSparseMemoryBind(getVkMemory(), getPBinds(getVkAddress()));
+        return new VkSparseMemoryBind(getVkMemory(), getPBindsNative(getVkAddress()));
     }
 
     private VkObject pBinds = null;
     public void setPBinds(VkSparseMemoryBind pBinds) {
-        setPBinds(getVkAddress(), pBinds != null ? pBinds.getVkAddress() : VkPointer.NULL);
+        setPBindsNative(getVkAddress(), pBinds != null ? pBinds.getVkAddress() : VkPointer.NULL);
         this.pBinds = pBinds;
     }
 
-    protected static native long getPBinds(long address);
-    protected static native void setPBinds(long address, long pBinds);
+    protected static native long getPBindsNative(long address);
+    protected static native void setPBindsNative(long address, long pBinds);
 
 
     public static native long sizeof();
@@ -108,10 +108,10 @@ public class VkSparseImageOpaqueMemoryBindInfo extends VkObject {
 
         @Override
         public VkSparseImageOpaqueMemoryBindInfo get(int i){
-            return new VkSparseImageOpaqueMemoryBindInfo(getVkMemory(), addressAt(i));
+            return new VkSparseImageOpaqueMemoryBindInfo(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 

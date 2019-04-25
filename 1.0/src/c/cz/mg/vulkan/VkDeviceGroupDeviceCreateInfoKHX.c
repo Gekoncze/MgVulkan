@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_sizeof(JNIEnv* env, jcl
     return sizeof(VkDeviceGroupDeviceCreateInfoKHX);
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getSType(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getSType(JNIEnv* env, j
     return jniPointerToLong(&o->sType);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setSType(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setSTypeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setSType(JNIEnv* env, jc
     memcpy(&o->sType, valuePointer, sizeof(o->sType));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getPNext(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getPNextNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getPNext(JNIEnv* env, j
     return jniPointerToLong(o->pNext);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setPNext(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setPNextNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setPNext(JNIEnv* env, jc
     memcpy(&o->pNext, &valuePointer, sizeof(o->pNext));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getPhysicalDeviceCount(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getPhysicalDeviceCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getPhysicalDeviceCount(
     return jniPointerToLong(&o->physicalDeviceCount);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setPhysicalDeviceCount(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setPhysicalDeviceCountNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -67,7 +67,7 @@ void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setPhysicalDeviceCount(J
     memcpy(&o->physicalDeviceCount, valuePointer, sizeof(o->physicalDeviceCount));
 }
 
-jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getPPhysicalDevices(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getPPhysicalDevicesNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -75,7 +75,7 @@ jlong Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_getPPhysicalDevices(JNI
     return jniPointerToLong(o->pPhysicalDevices);
 }
 
-void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setPPhysicalDevices(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkDeviceGroupDeviceCreateInfoKHX_setPPhysicalDevicesNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

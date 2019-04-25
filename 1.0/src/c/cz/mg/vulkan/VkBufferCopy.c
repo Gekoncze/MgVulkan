@@ -16,7 +16,7 @@ jlong Java_cz_mg_vulkan_VkBufferCopy_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkBufferCopy);
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCopy_getSrcOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCopy_getSrcOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -24,7 +24,7 @@ jlong Java_cz_mg_vulkan_VkBufferCopy_getSrcOffset(JNIEnv* env, jclass jc, jlong 
     return jniPointerToLong(&o->srcOffset);
 }
 
-void Java_cz_mg_vulkan_VkBufferCopy_setSrcOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCopy_setSrcOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -33,7 +33,7 @@ void Java_cz_mg_vulkan_VkBufferCopy_setSrcOffset(JNIEnv* env, jclass jc, jlong a
     memcpy(&o->srcOffset, valuePointer, sizeof(o->srcOffset));
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCopy_getDstOffset(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCopy_getDstOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -41,7 +41,7 @@ jlong Java_cz_mg_vulkan_VkBufferCopy_getDstOffset(JNIEnv* env, jclass jc, jlong 
     return jniPointerToLong(&o->dstOffset);
 }
 
-void Java_cz_mg_vulkan_VkBufferCopy_setDstOffset(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCopy_setDstOffsetNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;
@@ -50,7 +50,7 @@ void Java_cz_mg_vulkan_VkBufferCopy_setDstOffset(JNIEnv* env, jclass jc, jlong a
     memcpy(&o->dstOffset, valuePointer, sizeof(o->dstOffset));
 }
 
-jlong Java_cz_mg_vulkan_VkBufferCopy_getSize(JNIEnv* env, jclass jc, jlong address)
+jlong Java_cz_mg_vulkan_VkBufferCopy_getSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;
     (void)jc;
@@ -58,7 +58,7 @@ jlong Java_cz_mg_vulkan_VkBufferCopy_getSize(JNIEnv* env, jclass jc, jlong addre
     return jniPointerToLong(&o->size);
 }
 
-void Java_cz_mg_vulkan_VkBufferCopy_setSize(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
+void Java_cz_mg_vulkan_VkBufferCopy_setSizeNative(JNIEnv* env, jclass jc, jlong address, jlong valueAddress)
 {
     (void)env;
     (void)jc;

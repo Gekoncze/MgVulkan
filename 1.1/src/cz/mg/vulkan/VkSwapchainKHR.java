@@ -61,10 +61,10 @@ public class VkSwapchainKHR extends VkNonDispatchableHandle {
 
         @Override
         public VkSwapchainKHR get(int i){
-            return new VkSwapchainKHR(getVkMemory(), addressAt(i));
+            return new VkSwapchainKHR(getVkMemory(), address(i));
         }
 
-        protected long addressAt(int i){
+        protected long address(int i){
             return VkPointer.plus(getVkAddress(), sizeof()*i);
         }
 
