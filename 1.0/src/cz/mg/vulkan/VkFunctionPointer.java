@@ -43,46 +43,4 @@ public class VkFunctionPointer extends VkObject {
     public String toString() {
         return "0x" + Long.toHexString(getValue());
     }
-
-    public static class Array extends VkFunctionPointer implements cz.mg.collections.array.ReadonlyArray<VkFunctionPointer> {
-        private final int count;
-
-        public Array(int count) {
-            super(new VkMemory(count*VkFunctionPointer.sizeof()));
-            this.count = count;
-        }
-
-        public Array(int count, VkFunctionPointer o){
-            super(o.getVkMemory(), o.getVkAddress());
-            this.count = count;
-        }
-
-        public Array(VkMemory vkmemory, int count) {
-            super(vkmemory);
-            this.count = count;
-        }
-
-        public Array(VkMemory vkmemory, long vkaddress, int count) {
-            super(vkmemory, vkaddress);
-            this.count = count;
-        }
-
-
-
-
-
-        @Override
-        public int count(){
-            return count;
-        }
-
-        @Override
-        public VkFunctionPointer get(int i){
-            return new VkFunctionPointer(getVkMemory(), addressAt(i));
-        }
-
-        protected long addressAt(int i){
-            return VkPointer.plus(getVkAddress(), sizeof()*i);
-        }
-    }
 }
