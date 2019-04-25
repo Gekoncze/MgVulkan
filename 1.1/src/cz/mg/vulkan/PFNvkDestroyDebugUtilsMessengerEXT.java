@@ -26,5 +26,5 @@ public class PFNvkDestroyDebugUtilsMessengerEXT extends VkFunctionPointer {
         call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddress(), messenger != null ? messenger.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long instance, long messenger, long pAllocator);
+    protected static native void call(long vkaddress, long instance, long messenger, long pAllocator);
 }

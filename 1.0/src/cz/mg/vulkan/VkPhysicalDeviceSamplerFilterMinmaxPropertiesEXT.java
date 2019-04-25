@@ -33,8 +33,8 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getFilterMinmaxSingleComponentFormats() {
         return new VkBool32(getVkMemory(), getFilterMinmaxSingleComponentFormats(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         getFilterMinmaxSingleComponentFormats().setValue(filterMinmaxSingleComponentFormats);
     }
 
-    private static native long getFilterMinmaxSingleComponentFormats(long address);
-    private static native void setFilterMinmaxSingleComponentFormats(long address, long filterMinmaxSingleComponentFormats);
+    protected static native long getFilterMinmaxSingleComponentFormats(long address);
+    protected static native void setFilterMinmaxSingleComponentFormats(long address, long filterMinmaxSingleComponentFormats);
 
     public VkBool32 getFilterMinmaxImageComponentMapping() {
         return new VkBool32(getVkMemory(), getFilterMinmaxImageComponentMapping(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
         getFilterMinmaxImageComponentMapping().setValue(filterMinmaxImageComponentMapping);
     }
 
-    private static native long getFilterMinmaxImageComponentMapping(long address);
-    private static native void setFilterMinmaxImageComponentMapping(long address, long filterMinmaxImageComponentMapping);
+    protected static native long getFilterMinmaxImageComponentMapping(long address);
+    protected static native void setFilterMinmaxImageComponentMapping(long address, long filterMinmaxImageComponentMapping);
 
 
     public static native long sizeof();

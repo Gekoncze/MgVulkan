@@ -26,5 +26,5 @@ public class PFNvkCmdSetScissor extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), firstScissor != null ? firstScissor.getVkAddress() : VkPointer.getNullAddress(), scissorCount != null ? scissorCount.getVkAddress() : VkPointer.getNullAddress(), pScissors != null ? pScissors.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long firstScissor, long scissorCount, long pScissors);
+    protected static native void call(long vkaddress, long commandBuffer, long firstScissor, long scissorCount, long pScissors);
 }

@@ -34,8 +34,8 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDescriptorUpdateTemplateCreateFlagsKHR getFlags() {
         return new VkDescriptorUpdateTemplateCreateFlagsKHR(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkUInt32 getDescriptorUpdateEntryCount() {
         return new VkUInt32(getVkMemory(), getDescriptorUpdateEntryCount(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         getDescriptorUpdateEntryCount().setValue(descriptorUpdateEntryCount);
     }
 
-    private static native long getDescriptorUpdateEntryCount(long address);
-    private static native void setDescriptorUpdateEntryCount(long address, long descriptorUpdateEntryCount);
+    protected static native long getDescriptorUpdateEntryCount(long address);
+    protected static native void setDescriptorUpdateEntryCount(long address, long descriptorUpdateEntryCount);
 
     public VkDescriptorUpdateTemplateEntryKHR getPDescriptorUpdateEntries() {
         return new VkDescriptorUpdateTemplateEntryKHR(getVkMemory(), getPDescriptorUpdateEntries(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         this.pDescriptorUpdateEntries = pDescriptorUpdateEntries;
     }
 
-    private static native long getPDescriptorUpdateEntries(long address);
-    private static native void setPDescriptorUpdateEntries(long address, long pDescriptorUpdateEntries);
+    protected static native long getPDescriptorUpdateEntries(long address);
+    protected static native void setPDescriptorUpdateEntries(long address, long pDescriptorUpdateEntries);
 
     public VkDescriptorUpdateTemplateTypeKHR getTemplateType() {
         return new VkDescriptorUpdateTemplateTypeKHR(getVkMemory(), getTemplateType(getVkAddress()));
@@ -123,8 +123,8 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         getTemplateType().setValue(templateType);
     }
 
-    private static native long getTemplateType(long address);
-    private static native void setTemplateType(long address, long templateType);
+    protected static native long getTemplateType(long address);
+    protected static native void setTemplateType(long address, long templateType);
 
     public VkDescriptorSetLayout getDescriptorSetLayout() {
         return new VkDescriptorSetLayout(getVkMemory(), getDescriptorSetLayout(getVkAddress()));
@@ -136,8 +136,8 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         
     }
 
-    private static native long getDescriptorSetLayout(long address);
-    private static native void setDescriptorSetLayout(long address, long descriptorSetLayout);
+    protected static native long getDescriptorSetLayout(long address);
+    protected static native void setDescriptorSetLayout(long address, long descriptorSetLayout);
 
     public VkPipelineBindPoint getPipelineBindPoint() {
         return new VkPipelineBindPoint(getVkMemory(), getPipelineBindPoint(getVkAddress()));
@@ -157,8 +157,8 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         getPipelineBindPoint().setValue(pipelineBindPoint);
     }
 
-    private static native long getPipelineBindPoint(long address);
-    private static native void setPipelineBindPoint(long address, long pipelineBindPoint);
+    protected static native long getPipelineBindPoint(long address);
+    protected static native void setPipelineBindPoint(long address, long pipelineBindPoint);
 
     public VkPipelineLayout getPipelineLayout() {
         return new VkPipelineLayout(getVkMemory(), getPipelineLayout(getVkAddress()));
@@ -170,8 +170,8 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         
     }
 
-    private static native long getPipelineLayout(long address);
-    private static native void setPipelineLayout(long address, long pipelineLayout);
+    protected static native long getPipelineLayout(long address);
+    protected static native void setPipelineLayout(long address, long pipelineLayout);
 
     public VkUInt32 getSet() {
         return new VkUInt32(getVkMemory(), getSet(getVkAddress()));
@@ -191,8 +191,8 @@ public class VkDescriptorUpdateTemplateCreateInfoKHR extends VkObject {
         getSet().setValue(set);
     }
 
-    private static native long getSet(long address);
-    private static native void setSet(long address, long set);
+    protected static native long getSet(long address);
+    protected static native void setSet(long address, long set);
 
 
     public static native long sizeof();

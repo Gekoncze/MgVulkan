@@ -34,8 +34,8 @@ public class VkExportFenceCreateInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkExportFenceCreateInfoKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkExternalFenceHandleTypeFlagsKHR getHandleTypes() {
         return new VkExternalFenceHandleTypeFlagsKHR(getVkMemory(), getHandleTypes(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkExportFenceCreateInfoKHR extends VkObject {
         getHandleTypes().setValue(handleTypes);
     }
 
-    private static native long getHandleTypes(long address);
-    private static native void setHandleTypes(long address, long handleTypes);
+    protected static native long getHandleTypes(long address);
+    protected static native void setHandleTypes(long address, long handleTypes);
 
 
     public static native long sizeof();

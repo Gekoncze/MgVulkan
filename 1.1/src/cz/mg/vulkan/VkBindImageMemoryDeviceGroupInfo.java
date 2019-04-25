@@ -34,8 +34,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getDeviceIndexCount() {
         return new VkUInt32(getVkMemory(), getDeviceIndexCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         getDeviceIndexCount().setValue(deviceIndexCount);
     }
 
-    private static native long getDeviceIndexCount(long address);
-    private static native void setDeviceIndexCount(long address, long deviceIndexCount);
+    protected static native long getDeviceIndexCount(long address);
+    protected static native void setDeviceIndexCount(long address, long deviceIndexCount);
 
     public VkUInt32 getPDeviceIndices() {
         return new VkUInt32(getVkMemory(), getPDeviceIndices(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         this.pDeviceIndices = pDeviceIndices;
     }
 
-    private static native long getPDeviceIndices(long address);
-    private static native void setPDeviceIndices(long address, long pDeviceIndices);
+    protected static native long getPDeviceIndices(long address);
+    protected static native void setPDeviceIndices(long address, long pDeviceIndices);
 
     public VkUInt32 getSplitInstanceBindRegionCount() {
         return new VkUInt32(getVkMemory(), getSplitInstanceBindRegionCount(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         getSplitInstanceBindRegionCount().setValue(splitInstanceBindRegionCount);
     }
 
-    private static native long getSplitInstanceBindRegionCount(long address);
-    private static native void setSplitInstanceBindRegionCount(long address, long splitInstanceBindRegionCount);
+    protected static native long getSplitInstanceBindRegionCount(long address);
+    protected static native void setSplitInstanceBindRegionCount(long address, long splitInstanceBindRegionCount);
 
     public VkRect2D getPSplitInstanceBindRegions() {
         return new VkRect2D(getVkMemory(), getPSplitInstanceBindRegions(getVkAddress()));
@@ -115,8 +115,8 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
         this.pSplitInstanceBindRegions = pSplitInstanceBindRegions;
     }
 
-    private static native long getPSplitInstanceBindRegions(long address);
-    private static native void setPSplitInstanceBindRegions(long address, long pSplitInstanceBindRegions);
+    protected static native long getPSplitInstanceBindRegions(long address);
+    protected static native void setPSplitInstanceBindRegions(long address, long pSplitInstanceBindRegions);
 
 
     public static native long sizeof();

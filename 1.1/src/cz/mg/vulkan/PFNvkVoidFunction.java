@@ -22,5 +22,5 @@ public class PFNvkVoidFunction extends VkFunctionPointer {
         call(getValue());
     }
 
-    private static native void call(long vkaddress);
+    protected static native void call(long vkaddress);
 }

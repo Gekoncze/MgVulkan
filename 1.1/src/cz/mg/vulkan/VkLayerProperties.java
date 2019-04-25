@@ -33,8 +33,8 @@ public class VkLayerProperties extends VkObject {
         setLayerName(new VkString(layerName));
     }
 
-    private static native long getLayerName(long address);
-    private static native void setLayerName(long address, long layerName);
+    protected static native long getLayerName(long address);
+    protected static native void setLayerName(long address, long layerName);
 
     public VkUInt32 getSpecVersion() {
         return new VkUInt32(getVkMemory(), getSpecVersion(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkLayerProperties extends VkObject {
         getSpecVersion().setValue(specVersion);
     }
 
-    private static native long getSpecVersion(long address);
-    private static native void setSpecVersion(long address, long specVersion);
+    protected static native long getSpecVersion(long address);
+    protected static native void setSpecVersion(long address, long specVersion);
 
     public VkUInt32 getImplementationVersion() {
         return new VkUInt32(getVkMemory(), getImplementationVersion(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkLayerProperties extends VkObject {
         getImplementationVersion().setValue(implementationVersion);
     }
 
-    private static native long getImplementationVersion(long address);
-    private static native void setImplementationVersion(long address, long implementationVersion);
+    protected static native long getImplementationVersion(long address);
+    protected static native void setImplementationVersion(long address, long implementationVersion);
 
     public VkChar getDescription() {
         return new VkChar(getVkMemory(), getDescription(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkLayerProperties extends VkObject {
         setDescription(new VkString(description));
     }
 
-    private static native long getDescription(long address);
-    private static native void setDescription(long address, long description);
+    protected static native long getDescription(long address);
+    protected static native void setDescription(long address, long description);
 
 
     public static native long sizeof();

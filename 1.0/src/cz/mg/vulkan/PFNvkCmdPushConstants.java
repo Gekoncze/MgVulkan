@@ -26,5 +26,5 @@ public class PFNvkCmdPushConstants extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddress(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress(), size != null ? size.getVkAddress() : VkPointer.getNullAddress(), pValues != null ? pValues.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long layout, long stageFlags, long offset, long size, long pValues);
+    protected static native void call(long vkaddress, long commandBuffer, long layout, long stageFlags, long offset, long size, long pValues);
 }

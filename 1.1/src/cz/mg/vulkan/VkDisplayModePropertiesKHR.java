@@ -25,8 +25,8 @@ public class VkDisplayModePropertiesKHR extends VkObject {
         
     }
 
-    private static native long getDisplayMode(long address);
-    private static native void setDisplayMode(long address, long displayMode);
+    protected static native long getDisplayMode(long address);
+    protected static native void setDisplayMode(long address, long displayMode);
 
     public VkDisplayModeParametersKHR getParameters() {
         return new VkDisplayModeParametersKHR(getVkMemory(), getParameters(getVkAddress()));
@@ -38,8 +38,8 @@ public class VkDisplayModePropertiesKHR extends VkObject {
         
     }
 
-    private static native long getParameters(long address);
-    private static native void setParameters(long address, long parameters);
+    protected static native long getParameters(long address);
+    protected static native void setParameters(long address, long parameters);
 
 
     public static native long sizeof();

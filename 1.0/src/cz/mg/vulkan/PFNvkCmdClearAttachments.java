@@ -26,5 +26,5 @@ public class PFNvkCmdClearAttachments extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), attachmentCount != null ? attachmentCount.getVkAddress() : VkPointer.getNullAddress(), pAttachments != null ? pAttachments.getVkAddress() : VkPointer.NULL, rectCount != null ? rectCount.getVkAddress() : VkPointer.getNullAddress(), pRects != null ? pRects.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long attachmentCount, long pAttachments, long rectCount, long pRects);
+    protected static native void call(long vkaddress, long commandBuffer, long attachmentCount, long pAttachments, long rectCount, long pRects);
 }

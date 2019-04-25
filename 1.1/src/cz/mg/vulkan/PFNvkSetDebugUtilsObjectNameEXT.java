@@ -26,5 +26,5 @@ public class PFNvkSetDebugUtilsObjectNameEXT extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pNameInfo != null ? pNameInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long pNameInfo, long rval);
+    protected static native void call(long vkaddress, long device, long pNameInfo, long rval);
 }

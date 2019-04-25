@@ -26,5 +26,5 @@ public class PFNvkCreateSharedSwapchainsKHR extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), swapchainCount != null ? swapchainCount.getVkAddress() : VkPointer.getNullAddress(), pCreateInfos != null ? pCreateInfos.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pSwapchains != null ? pSwapchains.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long swapchainCount, long pCreateInfos, long pAllocator, long pSwapchains, long rval);
+    protected static native void call(long vkaddress, long device, long swapchainCount, long pCreateInfos, long pAllocator, long pSwapchains, long rval);
 }

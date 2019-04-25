@@ -33,8 +33,8 @@ public class VkImageMemoryBarrier extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkImageMemoryBarrier extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkAccessFlags getSrcAccessMask() {
         return new VkAccessFlags(getVkMemory(), getSrcAccessMask(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkImageMemoryBarrier extends VkObject {
         getSrcAccessMask().setValue(srcAccessMask);
     }
 
-    private static native long getSrcAccessMask(long address);
-    private static native void setSrcAccessMask(long address, long srcAccessMask);
+    protected static native long getSrcAccessMask(long address);
+    protected static native void setSrcAccessMask(long address, long srcAccessMask);
 
     public VkAccessFlags getDstAccessMask() {
         return new VkAccessFlags(getVkMemory(), getDstAccessMask(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkImageMemoryBarrier extends VkObject {
         getDstAccessMask().setValue(dstAccessMask);
     }
 
-    private static native long getDstAccessMask(long address);
-    private static native void setDstAccessMask(long address, long dstAccessMask);
+    protected static native long getDstAccessMask(long address);
+    protected static native void setDstAccessMask(long address, long dstAccessMask);
 
     public VkImageLayout getOldLayout() {
         return new VkImageLayout(getVkMemory(), getOldLayout(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkImageMemoryBarrier extends VkObject {
         getOldLayout().setValue(oldLayout);
     }
 
-    private static native long getOldLayout(long address);
-    private static native void setOldLayout(long address, long oldLayout);
+    protected static native long getOldLayout(long address);
+    protected static native void setOldLayout(long address, long oldLayout);
 
     public VkImageLayout getNewLayout() {
         return new VkImageLayout(getVkMemory(), getNewLayout(getVkAddress()));
@@ -130,8 +130,8 @@ public class VkImageMemoryBarrier extends VkObject {
         getNewLayout().setValue(newLayout);
     }
 
-    private static native long getNewLayout(long address);
-    private static native void setNewLayout(long address, long newLayout);
+    protected static native long getNewLayout(long address);
+    protected static native void setNewLayout(long address, long newLayout);
 
     public VkUInt32 getSrcQueueFamilyIndex() {
         return new VkUInt32(getVkMemory(), getSrcQueueFamilyIndex(getVkAddress()));
@@ -151,8 +151,8 @@ public class VkImageMemoryBarrier extends VkObject {
         getSrcQueueFamilyIndex().setValue(srcQueueFamilyIndex);
     }
 
-    private static native long getSrcQueueFamilyIndex(long address);
-    private static native void setSrcQueueFamilyIndex(long address, long srcQueueFamilyIndex);
+    protected static native long getSrcQueueFamilyIndex(long address);
+    protected static native void setSrcQueueFamilyIndex(long address, long srcQueueFamilyIndex);
 
     public VkUInt32 getDstQueueFamilyIndex() {
         return new VkUInt32(getVkMemory(), getDstQueueFamilyIndex(getVkAddress()));
@@ -172,8 +172,8 @@ public class VkImageMemoryBarrier extends VkObject {
         getDstQueueFamilyIndex().setValue(dstQueueFamilyIndex);
     }
 
-    private static native long getDstQueueFamilyIndex(long address);
-    private static native void setDstQueueFamilyIndex(long address, long dstQueueFamilyIndex);
+    protected static native long getDstQueueFamilyIndex(long address);
+    protected static native void setDstQueueFamilyIndex(long address, long dstQueueFamilyIndex);
 
     public VkImage getImage() {
         return new VkImage(getVkMemory(), getImage(getVkAddress()));
@@ -185,8 +185,8 @@ public class VkImageMemoryBarrier extends VkObject {
         
     }
 
-    private static native long getImage(long address);
-    private static native void setImage(long address, long image);
+    protected static native long getImage(long address);
+    protected static native void setImage(long address, long image);
 
     public VkImageSubresourceRange getSubresourceRange() {
         return new VkImageSubresourceRange(getVkMemory(), getSubresourceRange(getVkAddress()));
@@ -198,8 +198,8 @@ public class VkImageMemoryBarrier extends VkObject {
         
     }
 
-    private static native long getSubresourceRange(long address);
-    private static native void setSubresourceRange(long address, long subresourceRange);
+    protected static native long getSubresourceRange(long address);
+    protected static native void setSubresourceRange(long address, long subresourceRange);
 
 
     public static native long sizeof();

@@ -33,8 +33,8 @@ public class VkAttachmentDescription extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkFormat getFormat() {
         return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkAttachmentDescription extends VkObject {
         getFormat().setValue(format);
     }
 
-    private static native long getFormat(long address);
-    private static native void setFormat(long address, long format);
+    protected static native long getFormat(long address);
+    protected static native void setFormat(long address, long format);
 
     public VkSampleCountFlagBits getSamples() {
         return new VkSampleCountFlagBits(getVkMemory(), getSamples(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkAttachmentDescription extends VkObject {
         getSamples().setValue(samples);
     }
 
-    private static native long getSamples(long address);
-    private static native void setSamples(long address, long samples);
+    protected static native long getSamples(long address);
+    protected static native void setSamples(long address, long samples);
 
     public VkAttachmentLoadOp getLoadOp() {
         return new VkAttachmentLoadOp(getVkMemory(), getLoadOp(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkAttachmentDescription extends VkObject {
         getLoadOp().setValue(loadOp);
     }
 
-    private static native long getLoadOp(long address);
-    private static native void setLoadOp(long address, long loadOp);
+    protected static native long getLoadOp(long address);
+    protected static native void setLoadOp(long address, long loadOp);
 
     public VkAttachmentStoreOp getStoreOp() {
         return new VkAttachmentStoreOp(getVkMemory(), getStoreOp(getVkAddress()));
@@ -117,8 +117,8 @@ public class VkAttachmentDescription extends VkObject {
         getStoreOp().setValue(storeOp);
     }
 
-    private static native long getStoreOp(long address);
-    private static native void setStoreOp(long address, long storeOp);
+    protected static native long getStoreOp(long address);
+    protected static native void setStoreOp(long address, long storeOp);
 
     public VkAttachmentLoadOp getStencilLoadOp() {
         return new VkAttachmentLoadOp(getVkMemory(), getStencilLoadOp(getVkAddress()));
@@ -138,8 +138,8 @@ public class VkAttachmentDescription extends VkObject {
         getStencilLoadOp().setValue(stencilLoadOp);
     }
 
-    private static native long getStencilLoadOp(long address);
-    private static native void setStencilLoadOp(long address, long stencilLoadOp);
+    protected static native long getStencilLoadOp(long address);
+    protected static native void setStencilLoadOp(long address, long stencilLoadOp);
 
     public VkAttachmentStoreOp getStencilStoreOp() {
         return new VkAttachmentStoreOp(getVkMemory(), getStencilStoreOp(getVkAddress()));
@@ -159,8 +159,8 @@ public class VkAttachmentDescription extends VkObject {
         getStencilStoreOp().setValue(stencilStoreOp);
     }
 
-    private static native long getStencilStoreOp(long address);
-    private static native void setStencilStoreOp(long address, long stencilStoreOp);
+    protected static native long getStencilStoreOp(long address);
+    protected static native void setStencilStoreOp(long address, long stencilStoreOp);
 
     public VkImageLayout getInitialLayout() {
         return new VkImageLayout(getVkMemory(), getInitialLayout(getVkAddress()));
@@ -180,8 +180,8 @@ public class VkAttachmentDescription extends VkObject {
         getInitialLayout().setValue(initialLayout);
     }
 
-    private static native long getInitialLayout(long address);
-    private static native void setInitialLayout(long address, long initialLayout);
+    protected static native long getInitialLayout(long address);
+    protected static native void setInitialLayout(long address, long initialLayout);
 
     public VkImageLayout getFinalLayout() {
         return new VkImageLayout(getVkMemory(), getFinalLayout(getVkAddress()));
@@ -201,8 +201,8 @@ public class VkAttachmentDescription extends VkObject {
         getFinalLayout().setValue(finalLayout);
     }
 
-    private static native long getFinalLayout(long address);
-    private static native void setFinalLayout(long address, long finalLayout);
+    protected static native long getFinalLayout(long address);
+    protected static native void setFinalLayout(long address, long finalLayout);
 
 
     public static native long sizeof();

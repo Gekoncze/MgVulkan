@@ -34,8 +34,8 @@ public class VkDeviceGroupBindSparseInfoKHX extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDeviceGroupBindSparseInfoKHX extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getResourceDeviceIndex() {
         return new VkUInt32(getVkMemory(), getResourceDeviceIndex(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDeviceGroupBindSparseInfoKHX extends VkObject {
         getResourceDeviceIndex().setValue(resourceDeviceIndex);
     }
 
-    private static native long getResourceDeviceIndex(long address);
-    private static native void setResourceDeviceIndex(long address, long resourceDeviceIndex);
+    protected static native long getResourceDeviceIndex(long address);
+    protected static native void setResourceDeviceIndex(long address, long resourceDeviceIndex);
 
     public VkUInt32 getMemoryDeviceIndex() {
         return new VkUInt32(getVkMemory(), getMemoryDeviceIndex(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkDeviceGroupBindSparseInfoKHX extends VkObject {
         getMemoryDeviceIndex().setValue(memoryDeviceIndex);
     }
 
-    private static native long getMemoryDeviceIndex(long address);
-    private static native void setMemoryDeviceIndex(long address, long memoryDeviceIndex);
+    protected static native long getMemoryDeviceIndex(long address);
+    protected static native void setMemoryDeviceIndex(long address, long memoryDeviceIndex);
 
 
     public static native long sizeof();

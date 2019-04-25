@@ -26,5 +26,5 @@ public class PFNvkTrimCommandPool extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getNullAddress(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long device, long commandPool, long flags);
+    protected static native void call(long vkaddress, long device, long commandPool, long flags);
 }

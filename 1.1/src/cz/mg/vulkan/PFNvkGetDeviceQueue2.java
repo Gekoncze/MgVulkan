@@ -26,5 +26,5 @@ public class PFNvkGetDeviceQueue2 extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pQueueInfo != null ? pQueueInfo.getVkAddress() : VkPointer.NULL, pQueue != null ? pQueue.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long device, long pQueueInfo, long pQueue);
+    protected static native void call(long vkaddress, long device, long pQueueInfo, long pQueue);
 }

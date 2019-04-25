@@ -34,8 +34,8 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkPipelineShaderStageCreateFlags getFlags() {
         return new VkPipelineShaderStageCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkShaderStageFlagBits getStage() {
         return new VkShaderStageFlagBits(getVkMemory(), getStage(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         getStage().setValue(stage);
     }
 
-    private static native long getStage(long address);
-    private static native void setStage(long address, long stage);
+    protected static native long getStage(long address);
+    protected static native void setStage(long address, long stage);
 
     public VkShaderModule getModule() {
         return new VkShaderModule(getVkMemory(), getModule(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         
     }
 
-    private static native long getModule(long address);
-    private static native void setModule(long address, long module);
+    protected static native long getModule(long address);
+    protected static native void setModule(long address, long module);
 
     public VkChar getPName() {
         return new VkChar(getVkMemory(), getPName(getVkAddress()));
@@ -123,8 +123,8 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         setPName(new VkString(pName));
     }
 
-    private static native long getPName(long address);
-    private static native void setPName(long address, long pName);
+    protected static native long getPName(long address);
+    protected static native void setPName(long address, long pName);
 
     public VkSpecializationInfo getPSpecializationInfo() {
         return new VkSpecializationInfo(getVkMemory(), getPSpecializationInfo(getVkAddress()));
@@ -136,8 +136,8 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
         this.pSpecializationInfo = pSpecializationInfo;
     }
 
-    private static native long getPSpecializationInfo(long address);
-    private static native void setPSpecializationInfo(long address, long pSpecializationInfo);
+    protected static native long getPSpecializationInfo(long address);
+    protected static native void setPSpecializationInfo(long address, long pSpecializationInfo);
 
 
     public static native long sizeof();

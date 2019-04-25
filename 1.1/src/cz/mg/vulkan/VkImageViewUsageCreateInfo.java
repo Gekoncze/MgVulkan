@@ -34,8 +34,8 @@ public class VkImageViewUsageCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkImageViewUsageCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkImageUsageFlags getUsage() {
         return new VkImageUsageFlags(getVkMemory(), getUsage(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkImageViewUsageCreateInfo extends VkObject {
         getUsage().setValue(usage);
     }
 
-    private static native long getUsage(long address);
-    private static native void setUsage(long address, long usage);
+    protected static native long getUsage(long address);
+    protected static native void setUsage(long address, long usage);
 
 
     public static native long sizeof();

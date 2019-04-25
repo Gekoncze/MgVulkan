@@ -33,8 +33,8 @@ public class VkMemoryDedicatedRequirementsKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkMemoryDedicatedRequirementsKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getPrefersDedicatedAllocation() {
         return new VkBool32(getVkMemory(), getPrefersDedicatedAllocation(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkMemoryDedicatedRequirementsKHR extends VkObject {
         getPrefersDedicatedAllocation().setValue(prefersDedicatedAllocation);
     }
 
-    private static native long getPrefersDedicatedAllocation(long address);
-    private static native void setPrefersDedicatedAllocation(long address, long prefersDedicatedAllocation);
+    protected static native long getPrefersDedicatedAllocation(long address);
+    protected static native void setPrefersDedicatedAllocation(long address, long prefersDedicatedAllocation);
 
     public VkBool32 getRequiresDedicatedAllocation() {
         return new VkBool32(getVkMemory(), getRequiresDedicatedAllocation(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkMemoryDedicatedRequirementsKHR extends VkObject {
         getRequiresDedicatedAllocation().setValue(requiresDedicatedAllocation);
     }
 
-    private static native long getRequiresDedicatedAllocation(long address);
-    private static native void setRequiresDedicatedAllocation(long address, long requiresDedicatedAllocation);
+    protected static native long getRequiresDedicatedAllocation(long address);
+    protected static native void setRequiresDedicatedAllocation(long address, long requiresDedicatedAllocation);
 
 
     public static native long sizeof();

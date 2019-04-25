@@ -26,5 +26,5 @@ public class PFNvkCmdSetDiscardRectangleEXT extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), firstDiscardRectangle != null ? firstDiscardRectangle.getVkAddress() : VkPointer.getNullAddress(), discardRectangleCount != null ? discardRectangleCount.getVkAddress() : VkPointer.getNullAddress(), pDiscardRectangles != null ? pDiscardRectangles.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long firstDiscardRectangle, long discardRectangleCount, long pDiscardRectangles);
+    protected static native void call(long vkaddress, long commandBuffer, long firstDiscardRectangle, long discardRectangleCount, long pDiscardRectangles);
 }

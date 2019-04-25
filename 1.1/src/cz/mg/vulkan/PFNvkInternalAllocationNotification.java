@@ -22,5 +22,5 @@ public class PFNvkInternalAllocationNotification extends VkFunctionPointer {
         call(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, size != null ? size.getVkAddress() : VkPointer.getNullAddress(), allocationType != null ? allocationType.getVkAddress() : VkPointer.getNullAddress(), allocationScope != null ? allocationScope.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long pUserData, long size, long allocationType, long allocationScope);
+    protected static native void call(long vkaddress, long pUserData, long size, long allocationType, long allocationScope);
 }

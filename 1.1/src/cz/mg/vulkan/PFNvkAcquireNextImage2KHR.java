@@ -26,5 +26,5 @@ public class PFNvkAcquireNextImage2KHR extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pAcquireInfo != null ? pAcquireInfo.getVkAddress() : VkPointer.NULL, pImageIndex != null ? pImageIndex.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long pAcquireInfo, long pImageIndex, long rval);
+    protected static native void call(long vkaddress, long device, long pAcquireInfo, long pImageIndex, long rval);
 }

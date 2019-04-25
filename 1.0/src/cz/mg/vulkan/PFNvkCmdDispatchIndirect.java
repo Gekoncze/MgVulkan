@@ -26,5 +26,5 @@ public class PFNvkCmdDispatchIndirect extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long buffer, long offset);
+    protected static native void call(long vkaddress, long commandBuffer, long buffer, long offset);
 }

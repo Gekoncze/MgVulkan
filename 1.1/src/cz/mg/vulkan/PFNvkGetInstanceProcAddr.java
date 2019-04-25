@@ -26,5 +26,5 @@ public class PFNvkGetInstanceProcAddr extends VkFunctionPointer {
         call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddress(), pName != null ? pName.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long instance, long pName, long rval);
+    protected static native void call(long vkaddress, long instance, long pName, long rval);
 }

@@ -33,8 +33,8 @@ public class VkExtensionProperties extends VkObject {
         setExtensionName(new VkString(extensionName));
     }
 
-    private static native long getExtensionName(long address);
-    private static native void setExtensionName(long address, long extensionName);
+    protected static native long getExtensionName(long address);
+    protected static native void setExtensionName(long address, long extensionName);
 
     public VkUInt32 getSpecVersion() {
         return new VkUInt32(getVkMemory(), getSpecVersion(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkExtensionProperties extends VkObject {
         getSpecVersion().setValue(specVersion);
     }
 
-    private static native long getSpecVersion(long address);
-    private static native void setSpecVersion(long address, long specVersion);
+    protected static native long getSpecVersion(long address);
+    protected static native void setSpecVersion(long address, long specVersion);
 
 
     public static native long sizeof();

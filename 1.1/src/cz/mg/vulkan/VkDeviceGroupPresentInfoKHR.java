@@ -34,8 +34,8 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getSwapchainCount() {
         return new VkUInt32(getVkMemory(), getSwapchainCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         getSwapchainCount().setValue(swapchainCount);
     }
 
-    private static native long getSwapchainCount(long address);
-    private static native void setSwapchainCount(long address, long swapchainCount);
+    protected static native long getSwapchainCount(long address);
+    protected static native void setSwapchainCount(long address, long swapchainCount);
 
     public VkUInt32 getPDeviceMasks() {
         return new VkUInt32(getVkMemory(), getPDeviceMasks(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         this.pDeviceMasks = pDeviceMasks;
     }
 
-    private static native long getPDeviceMasks(long address);
-    private static native void setPDeviceMasks(long address, long pDeviceMasks);
+    protected static native long getPDeviceMasks(long address);
+    protected static native void setPDeviceMasks(long address, long pDeviceMasks);
 
     public VkDeviceGroupPresentModeFlagBitsKHR getMode() {
         return new VkDeviceGroupPresentModeFlagBitsKHR(getVkMemory(), getMode(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         getMode().setValue(mode);
     }
 
-    private static native long getMode(long address);
-    private static native void setMode(long address, long mode);
+    protected static native long getMode(long address);
+    protected static native void setMode(long address, long mode);
 
 
     public static native long sizeof();

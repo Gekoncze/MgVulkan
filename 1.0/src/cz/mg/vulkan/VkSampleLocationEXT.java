@@ -33,8 +33,8 @@ public class VkSampleLocationEXT extends VkObject {
         getX().setValue(x);
     }
 
-    private static native long getX(long address);
-    private static native void setX(long address, long x);
+    protected static native long getX(long address);
+    protected static native void setX(long address, long x);
 
     public VkFloat getY() {
         return new VkFloat(getVkMemory(), getY(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkSampleLocationEXT extends VkObject {
         getY().setValue(y);
     }
 
-    private static native long getY(long address);
-    private static native void setY(long address, long y);
+    protected static native long getY(long address);
+    protected static native void setY(long address, long y);
 
 
     public static native long sizeof();

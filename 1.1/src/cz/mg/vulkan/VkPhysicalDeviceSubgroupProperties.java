@@ -33,8 +33,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getSubgroupSize() {
         return new VkUInt32(getVkMemory(), getSubgroupSize(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         getSubgroupSize().setValue(subgroupSize);
     }
 
-    private static native long getSubgroupSize(long address);
-    private static native void setSubgroupSize(long address, long subgroupSize);
+    protected static native long getSubgroupSize(long address);
+    protected static native void setSubgroupSize(long address, long subgroupSize);
 
     public VkShaderStageFlags getSupportedStages() {
         return new VkShaderStageFlags(getVkMemory(), getSupportedStages(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         getSupportedStages().setValue(supportedStages);
     }
 
-    private static native long getSupportedStages(long address);
-    private static native void setSupportedStages(long address, long supportedStages);
+    protected static native long getSupportedStages(long address);
+    protected static native void setSupportedStages(long address, long supportedStages);
 
     public VkSubgroupFeatureFlags getSupportedOperations() {
         return new VkSubgroupFeatureFlags(getVkMemory(), getSupportedOperations(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         getSupportedOperations().setValue(supportedOperations);
     }
 
-    private static native long getSupportedOperations(long address);
-    private static native void setSupportedOperations(long address, long supportedOperations);
+    protected static native long getSupportedOperations(long address);
+    protected static native void setSupportedOperations(long address, long supportedOperations);
 
     public VkBool32 getQuadOperationsInAllStages() {
         return new VkBool32(getVkMemory(), getQuadOperationsInAllStages(getVkAddress()));
@@ -130,8 +130,8 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
         getQuadOperationsInAllStages().setValue(quadOperationsInAllStages);
     }
 
-    private static native long getQuadOperationsInAllStages(long address);
-    private static native void setQuadOperationsInAllStages(long address, long quadOperationsInAllStages);
+    protected static native long getQuadOperationsInAllStages(long address);
+    protected static native void setQuadOperationsInAllStages(long address, long quadOperationsInAllStages);
 
 
     public static native long sizeof();

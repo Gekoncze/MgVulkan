@@ -33,8 +33,8 @@ public class VkPushConstantRange extends VkObject {
         getStageFlags().setValue(stageFlags);
     }
 
-    private static native long getStageFlags(long address);
-    private static native void setStageFlags(long address, long stageFlags);
+    protected static native long getStageFlags(long address);
+    protected static native void setStageFlags(long address, long stageFlags);
 
     public VkUInt32 getOffset() {
         return new VkUInt32(getVkMemory(), getOffset(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkPushConstantRange extends VkObject {
         getOffset().setValue(offset);
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
     public VkUInt32 getSize() {
         return new VkUInt32(getVkMemory(), getSize(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkPushConstantRange extends VkObject {
         getSize().setValue(size);
     }
 
-    private static native long getSize(long address);
-    private static native void setSize(long address, long size);
+    protected static native long getSize(long address);
+    protected static native void setSize(long address, long size);
 
 
     public static native long sizeof();

@@ -26,5 +26,5 @@ public class PFNvkFreeDescriptorSets extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), descriptorPool != null ? descriptorPool.getVkAddress() : VkPointer.getNullAddress(), descriptorSetCount != null ? descriptorSetCount.getVkAddress() : VkPointer.getNullAddress(), pDescriptorSets != null ? pDescriptorSets.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long descriptorPool, long descriptorSetCount, long pDescriptorSets, long rval);
+    protected static native void call(long vkaddress, long device, long descriptorPool, long descriptorSetCount, long pDescriptorSets, long rval);
 }

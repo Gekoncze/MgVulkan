@@ -33,8 +33,8 @@ public class VkPhysicalDeviceSamplerYcbcrConversionFeatures extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceSamplerYcbcrConversionFeatures extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getSamplerYcbcrConversion() {
         return new VkBool32(getVkMemory(), getSamplerYcbcrConversion(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceSamplerYcbcrConversionFeatures extends VkObject {
         getSamplerYcbcrConversion().setValue(samplerYcbcrConversion);
     }
 
-    private static native long getSamplerYcbcrConversion(long address);
-    private static native void setSamplerYcbcrConversion(long address, long samplerYcbcrConversion);
+    protected static native long getSamplerYcbcrConversion(long address);
+    protected static native void setSamplerYcbcrConversion(long address, long samplerYcbcrConversion);
 
 
     public static native long sizeof();

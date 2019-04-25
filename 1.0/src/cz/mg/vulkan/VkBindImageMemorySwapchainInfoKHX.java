@@ -34,8 +34,8 @@ public class VkBindImageMemorySwapchainInfoKHX extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkBindImageMemorySwapchainInfoKHX extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkSwapchainKHR getSwapchain() {
         return new VkSwapchainKHR(getVkMemory(), getSwapchain(getVkAddress()));
@@ -60,8 +60,8 @@ public class VkBindImageMemorySwapchainInfoKHX extends VkObject {
         
     }
 
-    private static native long getSwapchain(long address);
-    private static native void setSwapchain(long address, long swapchain);
+    protected static native long getSwapchain(long address);
+    protected static native void setSwapchain(long address, long swapchain);
 
     public VkUInt32 getImageIndex() {
         return new VkUInt32(getVkMemory(), getImageIndex(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkBindImageMemorySwapchainInfoKHX extends VkObject {
         getImageIndex().setValue(imageIndex);
     }
 
-    private static native long getImageIndex(long address);
-    private static native void setImageIndex(long address, long imageIndex);
+    protected static native long getImageIndex(long address);
+    protected static native void setImageIndex(long address, long imageIndex);
 
 
     public static native long sizeof();

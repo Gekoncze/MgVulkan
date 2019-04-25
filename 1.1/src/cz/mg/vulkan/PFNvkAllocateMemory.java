@@ -26,5 +26,5 @@ public class PFNvkAllocateMemory extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pAllocateInfo != null ? pAllocateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pMemory != null ? pMemory.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long pAllocateInfo, long pAllocator, long pMemory, long rval);
+    protected static native void call(long vkaddress, long device, long pAllocateInfo, long pAllocator, long pMemory, long rval);
 }

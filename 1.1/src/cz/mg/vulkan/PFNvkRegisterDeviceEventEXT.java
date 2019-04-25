@@ -26,5 +26,5 @@ public class PFNvkRegisterDeviceEventEXT extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pDeviceEventInfo != null ? pDeviceEventInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pFence != null ? pFence.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long pDeviceEventInfo, long pAllocator, long pFence, long rval);
+    protected static native void call(long vkaddress, long device, long pDeviceEventInfo, long pAllocator, long pFence, long rval);
 }

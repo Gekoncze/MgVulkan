@@ -33,8 +33,8 @@ public class VkQueueFamilyProperties extends VkObject {
         getQueueFlags().setValue(queueFlags);
     }
 
-    private static native long getQueueFlags(long address);
-    private static native void setQueueFlags(long address, long queueFlags);
+    protected static native long getQueueFlags(long address);
+    protected static native void setQueueFlags(long address, long queueFlags);
 
     public VkUInt32 getQueueCount() {
         return new VkUInt32(getVkMemory(), getQueueCount(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkQueueFamilyProperties extends VkObject {
         getQueueCount().setValue(queueCount);
     }
 
-    private static native long getQueueCount(long address);
-    private static native void setQueueCount(long address, long queueCount);
+    protected static native long getQueueCount(long address);
+    protected static native void setQueueCount(long address, long queueCount);
 
     public VkUInt32 getTimestampValidBits() {
         return new VkUInt32(getVkMemory(), getTimestampValidBits(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkQueueFamilyProperties extends VkObject {
         getTimestampValidBits().setValue(timestampValidBits);
     }
 
-    private static native long getTimestampValidBits(long address);
-    private static native void setTimestampValidBits(long address, long timestampValidBits);
+    protected static native long getTimestampValidBits(long address);
+    protected static native void setTimestampValidBits(long address, long timestampValidBits);
 
     public VkExtent3D getMinImageTransferGranularity() {
         return new VkExtent3D(getVkMemory(), getMinImageTransferGranularity(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkQueueFamilyProperties extends VkObject {
         
     }
 
-    private static native long getMinImageTransferGranularity(long address);
-    private static native void setMinImageTransferGranularity(long address, long minImageTransferGranularity);
+    protected static native long getMinImageTransferGranularity(long address);
+    protected static native void setMinImageTransferGranularity(long address, long minImageTransferGranularity);
 
 
     public static native long sizeof();

@@ -33,8 +33,8 @@ public class VkExternalFencePropertiesKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkExternalFencePropertiesKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkExternalFenceHandleTypeFlagsKHR getExportFromImportedHandleTypes() {
         return new VkExternalFenceHandleTypeFlagsKHR(getVkMemory(), getExportFromImportedHandleTypes(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkExternalFencePropertiesKHR extends VkObject {
         getExportFromImportedHandleTypes().setValue(exportFromImportedHandleTypes);
     }
 
-    private static native long getExportFromImportedHandleTypes(long address);
-    private static native void setExportFromImportedHandleTypes(long address, long exportFromImportedHandleTypes);
+    protected static native long getExportFromImportedHandleTypes(long address);
+    protected static native void setExportFromImportedHandleTypes(long address, long exportFromImportedHandleTypes);
 
     public VkExternalFenceHandleTypeFlagsKHR getCompatibleHandleTypes() {
         return new VkExternalFenceHandleTypeFlagsKHR(getVkMemory(), getCompatibleHandleTypes(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkExternalFencePropertiesKHR extends VkObject {
         getCompatibleHandleTypes().setValue(compatibleHandleTypes);
     }
 
-    private static native long getCompatibleHandleTypes(long address);
-    private static native void setCompatibleHandleTypes(long address, long compatibleHandleTypes);
+    protected static native long getCompatibleHandleTypes(long address);
+    protected static native void setCompatibleHandleTypes(long address, long compatibleHandleTypes);
 
     public VkExternalFenceFeatureFlagsKHR getExternalFenceFeatures() {
         return new VkExternalFenceFeatureFlagsKHR(getVkMemory(), getExternalFenceFeatures(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkExternalFencePropertiesKHR extends VkObject {
         getExternalFenceFeatures().setValue(externalFenceFeatures);
     }
 
-    private static native long getExternalFenceFeatures(long address);
-    private static native void setExternalFenceFeatures(long address, long externalFenceFeatures);
+    protected static native long getExternalFenceFeatures(long address);
+    protected static native void setExternalFenceFeatures(long address, long externalFenceFeatures);
 
 
     public static native long sizeof();

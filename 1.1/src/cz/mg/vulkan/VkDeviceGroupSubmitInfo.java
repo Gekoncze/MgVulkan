@@ -34,8 +34,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getWaitSemaphoreCount() {
         return new VkUInt32(getVkMemory(), getWaitSemaphoreCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         getWaitSemaphoreCount().setValue(waitSemaphoreCount);
     }
 
-    private static native long getWaitSemaphoreCount(long address);
-    private static native void setWaitSemaphoreCount(long address, long waitSemaphoreCount);
+    protected static native long getWaitSemaphoreCount(long address);
+    protected static native void setWaitSemaphoreCount(long address, long waitSemaphoreCount);
 
     public VkUInt32 getPWaitSemaphoreDeviceIndices() {
         return new VkUInt32(getVkMemory(), getPWaitSemaphoreDeviceIndices(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         this.pWaitSemaphoreDeviceIndices = pWaitSemaphoreDeviceIndices;
     }
 
-    private static native long getPWaitSemaphoreDeviceIndices(long address);
-    private static native void setPWaitSemaphoreDeviceIndices(long address, long pWaitSemaphoreDeviceIndices);
+    protected static native long getPWaitSemaphoreDeviceIndices(long address);
+    protected static native void setPWaitSemaphoreDeviceIndices(long address, long pWaitSemaphoreDeviceIndices);
 
     public VkUInt32 getCommandBufferCount() {
         return new VkUInt32(getVkMemory(), getCommandBufferCount(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         getCommandBufferCount().setValue(commandBufferCount);
     }
 
-    private static native long getCommandBufferCount(long address);
-    private static native void setCommandBufferCount(long address, long commandBufferCount);
+    protected static native long getCommandBufferCount(long address);
+    protected static native void setCommandBufferCount(long address, long commandBufferCount);
 
     public VkUInt32 getPCommandBufferDeviceMasks() {
         return new VkUInt32(getVkMemory(), getPCommandBufferDeviceMasks(getVkAddress()));
@@ -115,8 +115,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         this.pCommandBufferDeviceMasks = pCommandBufferDeviceMasks;
     }
 
-    private static native long getPCommandBufferDeviceMasks(long address);
-    private static native void setPCommandBufferDeviceMasks(long address, long pCommandBufferDeviceMasks);
+    protected static native long getPCommandBufferDeviceMasks(long address);
+    protected static native void setPCommandBufferDeviceMasks(long address, long pCommandBufferDeviceMasks);
 
     public VkUInt32 getSignalSemaphoreCount() {
         return new VkUInt32(getVkMemory(), getSignalSemaphoreCount(getVkAddress()));
@@ -136,8 +136,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         getSignalSemaphoreCount().setValue(signalSemaphoreCount);
     }
 
-    private static native long getSignalSemaphoreCount(long address);
-    private static native void setSignalSemaphoreCount(long address, long signalSemaphoreCount);
+    protected static native long getSignalSemaphoreCount(long address);
+    protected static native void setSignalSemaphoreCount(long address, long signalSemaphoreCount);
 
     public VkUInt32 getPSignalSemaphoreDeviceIndices() {
         return new VkUInt32(getVkMemory(), getPSignalSemaphoreDeviceIndices(getVkAddress()));
@@ -149,8 +149,8 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         this.pSignalSemaphoreDeviceIndices = pSignalSemaphoreDeviceIndices;
     }
 
-    private static native long getPSignalSemaphoreDeviceIndices(long address);
-    private static native void setPSignalSemaphoreDeviceIndices(long address, long pSignalSemaphoreDeviceIndices);
+    protected static native long getPSignalSemaphoreDeviceIndices(long address);
+    protected static native void setPSignalSemaphoreDeviceIndices(long address, long pSignalSemaphoreDeviceIndices);
 
 
     public static native long sizeof();

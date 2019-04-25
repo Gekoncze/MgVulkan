@@ -33,8 +33,8 @@ public class VkSparseImageFormatProperties extends VkObject {
         getAspectMask().setValue(aspectMask);
     }
 
-    private static native long getAspectMask(long address);
-    private static native void setAspectMask(long address, long aspectMask);
+    protected static native long getAspectMask(long address);
+    protected static native void setAspectMask(long address, long aspectMask);
 
     public VkExtent3D getImageGranularity() {
         return new VkExtent3D(getVkMemory(), getImageGranularity(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkSparseImageFormatProperties extends VkObject {
         
     }
 
-    private static native long getImageGranularity(long address);
-    private static native void setImageGranularity(long address, long imageGranularity);
+    protected static native long getImageGranularity(long address);
+    protected static native void setImageGranularity(long address, long imageGranularity);
 
     public VkSparseImageFormatFlags getFlags() {
         return new VkSparseImageFormatFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkSparseImageFormatProperties extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
 
     public static native long sizeof();

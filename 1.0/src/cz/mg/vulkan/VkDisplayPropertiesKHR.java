@@ -25,8 +25,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
         
     }
 
-    private static native long getDisplay(long address);
-    private static native void setDisplay(long address, long display);
+    protected static native long getDisplay(long address);
+    protected static native void setDisplay(long address, long display);
 
     public VkChar getDisplayName() {
         return new VkChar(getVkMemory(), getDisplayName(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
         setDisplayName(new VkString(displayName));
     }
 
-    private static native long getDisplayName(long address);
-    private static native void setDisplayName(long address, long displayName);
+    protected static native long getDisplayName(long address);
+    protected static native void setDisplayName(long address, long displayName);
 
     public VkExtent2D getPhysicalDimensions() {
         return new VkExtent2D(getVkMemory(), getPhysicalDimensions(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
         
     }
 
-    private static native long getPhysicalDimensions(long address);
-    private static native void setPhysicalDimensions(long address, long physicalDimensions);
+    protected static native long getPhysicalDimensions(long address);
+    protected static native void setPhysicalDimensions(long address, long physicalDimensions);
 
     public VkExtent2D getPhysicalResolution() {
         return new VkExtent2D(getVkMemory(), getPhysicalResolution(getVkAddress()));
@@ -72,8 +72,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
         
     }
 
-    private static native long getPhysicalResolution(long address);
-    private static native void setPhysicalResolution(long address, long physicalResolution);
+    protected static native long getPhysicalResolution(long address);
+    protected static native void setPhysicalResolution(long address, long physicalResolution);
 
     public VkSurfaceTransformFlagsKHR getSupportedTransforms() {
         return new VkSurfaceTransformFlagsKHR(getVkMemory(), getSupportedTransforms(getVkAddress()));
@@ -93,8 +93,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
         getSupportedTransforms().setValue(supportedTransforms);
     }
 
-    private static native long getSupportedTransforms(long address);
-    private static native void setSupportedTransforms(long address, long supportedTransforms);
+    protected static native long getSupportedTransforms(long address);
+    protected static native void setSupportedTransforms(long address, long supportedTransforms);
 
     public VkBool32 getPlaneReorderPossible() {
         return new VkBool32(getVkMemory(), getPlaneReorderPossible(getVkAddress()));
@@ -114,8 +114,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
         getPlaneReorderPossible().setValue(planeReorderPossible);
     }
 
-    private static native long getPlaneReorderPossible(long address);
-    private static native void setPlaneReorderPossible(long address, long planeReorderPossible);
+    protected static native long getPlaneReorderPossible(long address);
+    protected static native void setPlaneReorderPossible(long address, long planeReorderPossible);
 
     public VkBool32 getPersistentContent() {
         return new VkBool32(getVkMemory(), getPersistentContent(getVkAddress()));
@@ -135,8 +135,8 @@ public class VkDisplayPropertiesKHR extends VkObject {
         getPersistentContent().setValue(persistentContent);
     }
 
-    private static native long getPersistentContent(long address);
-    private static native void setPersistentContent(long address, long persistentContent);
+    protected static native long getPersistentContent(long address);
+    protected static native void setPersistentContent(long address, long persistentContent);
 
 
     public static native long sizeof();

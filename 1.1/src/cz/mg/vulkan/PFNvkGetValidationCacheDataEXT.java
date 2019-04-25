@@ -26,5 +26,5 @@ public class PFNvkGetValidationCacheDataEXT extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), validationCache != null ? validationCache.getVkAddress() : VkPointer.getNullAddress(), pDataSize != null ? pDataSize.getVkAddress() : VkPointer.NULL, pData != null ? pData.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long validationCache, long pDataSize, long pData, long rval);
+    protected static native void call(long vkaddress, long device, long validationCache, long pDataSize, long pData, long rval);
 }

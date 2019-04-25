@@ -34,8 +34,8 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getAttachmentInitialSampleLocationsCount() {
         return new VkUInt32(getVkMemory(), getAttachmentInitialSampleLocationsCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         getAttachmentInitialSampleLocationsCount().setValue(attachmentInitialSampleLocationsCount);
     }
 
-    private static native long getAttachmentInitialSampleLocationsCount(long address);
-    private static native void setAttachmentInitialSampleLocationsCount(long address, long attachmentInitialSampleLocationsCount);
+    protected static native long getAttachmentInitialSampleLocationsCount(long address);
+    protected static native void setAttachmentInitialSampleLocationsCount(long address, long attachmentInitialSampleLocationsCount);
 
     public VkAttachmentSampleLocationsEXT getPAttachmentInitialSampleLocations() {
         return new VkAttachmentSampleLocationsEXT(getVkMemory(), getPAttachmentInitialSampleLocations(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         this.pAttachmentInitialSampleLocations = pAttachmentInitialSampleLocations;
     }
 
-    private static native long getPAttachmentInitialSampleLocations(long address);
-    private static native void setPAttachmentInitialSampleLocations(long address, long pAttachmentInitialSampleLocations);
+    protected static native long getPAttachmentInitialSampleLocations(long address);
+    protected static native void setPAttachmentInitialSampleLocations(long address, long pAttachmentInitialSampleLocations);
 
     public VkUInt32 getPostSubpassSampleLocationsCount() {
         return new VkUInt32(getVkMemory(), getPostSubpassSampleLocationsCount(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         getPostSubpassSampleLocationsCount().setValue(postSubpassSampleLocationsCount);
     }
 
-    private static native long getPostSubpassSampleLocationsCount(long address);
-    private static native void setPostSubpassSampleLocationsCount(long address, long postSubpassSampleLocationsCount);
+    protected static native long getPostSubpassSampleLocationsCount(long address);
+    protected static native void setPostSubpassSampleLocationsCount(long address, long postSubpassSampleLocationsCount);
 
     public VkSubpassSampleLocationsEXT getPSubpassSampleLocations() {
         return new VkSubpassSampleLocationsEXT(getVkMemory(), getPSubpassSampleLocations(getVkAddress()));
@@ -115,8 +115,8 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         this.pSubpassSampleLocations = pSubpassSampleLocations;
     }
 
-    private static native long getPSubpassSampleLocations(long address);
-    private static native void setPSubpassSampleLocations(long address, long pSubpassSampleLocations);
+    protected static native long getPSubpassSampleLocations(long address);
+    protected static native void setPSubpassSampleLocations(long address, long pSubpassSampleLocations);
 
 
     public static native long sizeof();

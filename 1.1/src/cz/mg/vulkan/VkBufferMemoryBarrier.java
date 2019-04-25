@@ -33,8 +33,8 @@ public class VkBufferMemoryBarrier extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkBufferMemoryBarrier extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkAccessFlags getSrcAccessMask() {
         return new VkAccessFlags(getVkMemory(), getSrcAccessMask(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkBufferMemoryBarrier extends VkObject {
         getSrcAccessMask().setValue(srcAccessMask);
     }
 
-    private static native long getSrcAccessMask(long address);
-    private static native void setSrcAccessMask(long address, long srcAccessMask);
+    protected static native long getSrcAccessMask(long address);
+    protected static native void setSrcAccessMask(long address, long srcAccessMask);
 
     public VkAccessFlags getDstAccessMask() {
         return new VkAccessFlags(getVkMemory(), getDstAccessMask(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkBufferMemoryBarrier extends VkObject {
         getDstAccessMask().setValue(dstAccessMask);
     }
 
-    private static native long getDstAccessMask(long address);
-    private static native void setDstAccessMask(long address, long dstAccessMask);
+    protected static native long getDstAccessMask(long address);
+    protected static native void setDstAccessMask(long address, long dstAccessMask);
 
     public VkUInt32 getSrcQueueFamilyIndex() {
         return new VkUInt32(getVkMemory(), getSrcQueueFamilyIndex(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkBufferMemoryBarrier extends VkObject {
         getSrcQueueFamilyIndex().setValue(srcQueueFamilyIndex);
     }
 
-    private static native long getSrcQueueFamilyIndex(long address);
-    private static native void setSrcQueueFamilyIndex(long address, long srcQueueFamilyIndex);
+    protected static native long getSrcQueueFamilyIndex(long address);
+    protected static native void setSrcQueueFamilyIndex(long address, long srcQueueFamilyIndex);
 
     public VkUInt32 getDstQueueFamilyIndex() {
         return new VkUInt32(getVkMemory(), getDstQueueFamilyIndex(getVkAddress()));
@@ -130,8 +130,8 @@ public class VkBufferMemoryBarrier extends VkObject {
         getDstQueueFamilyIndex().setValue(dstQueueFamilyIndex);
     }
 
-    private static native long getDstQueueFamilyIndex(long address);
-    private static native void setDstQueueFamilyIndex(long address, long dstQueueFamilyIndex);
+    protected static native long getDstQueueFamilyIndex(long address);
+    protected static native void setDstQueueFamilyIndex(long address, long dstQueueFamilyIndex);
 
     public VkBuffer getBuffer() {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
@@ -143,8 +143,8 @@ public class VkBufferMemoryBarrier extends VkObject {
         
     }
 
-    private static native long getBuffer(long address);
-    private static native void setBuffer(long address, long buffer);
+    protected static native long getBuffer(long address);
+    protected static native void setBuffer(long address, long buffer);
 
     public VkDeviceSize getOffset() {
         return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
@@ -164,8 +164,8 @@ public class VkBufferMemoryBarrier extends VkObject {
         getOffset().setValue(offset);
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
     public VkDeviceSize getSize() {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
@@ -185,8 +185,8 @@ public class VkBufferMemoryBarrier extends VkObject {
         getSize().setValue(size);
     }
 
-    private static native long getSize(long address);
-    private static native void setSize(long address, long size);
+    protected static native long getSize(long address);
+    protected static native void setSize(long address, long size);
 
 
     public static native long sizeof();

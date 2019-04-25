@@ -26,5 +26,5 @@ public class PFNvkImportFenceFdKHR extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pImportFenceFdInfo != null ? pImportFenceFdInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long pImportFenceFdInfo, long rval);
+    protected static native void call(long vkaddress, long device, long pImportFenceFdInfo, long rval);
 }

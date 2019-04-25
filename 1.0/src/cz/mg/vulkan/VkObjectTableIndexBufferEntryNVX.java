@@ -33,8 +33,8 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         getType().setValue(type);
     }
 
-    private static native long getType(long address);
-    private static native void setType(long address, long type);
+    protected static native long getType(long address);
+    protected static native void setType(long address, long type);
 
     public VkObjectEntryUsageFlagsNVX getFlags() {
         return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlags(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkBuffer getBuffer() {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         
     }
 
-    private static native long getBuffer(long address);
-    private static native void setBuffer(long address, long buffer);
+    protected static native long getBuffer(long address);
+    protected static native void setBuffer(long address, long buffer);
 
     public VkIndexType getIndexType() {
         return new VkIndexType(getVkMemory(), getIndexType(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
         getIndexType().setValue(indexType);
     }
 
-    private static native long getIndexType(long address);
-    private static native void setIndexType(long address, long indexType);
+    protected static native long getIndexType(long address);
+    protected static native void setIndexType(long address, long indexType);
 
 
     public static native long sizeof();

@@ -34,8 +34,8 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkPipelineVertexInputStateCreateFlags getFlags() {
         return new VkPipelineVertexInputStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkUInt32 getVertexBindingDescriptionCount() {
         return new VkUInt32(getVkMemory(), getVertexBindingDescriptionCount(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         getVertexBindingDescriptionCount().setValue(vertexBindingDescriptionCount);
     }
 
-    private static native long getVertexBindingDescriptionCount(long address);
-    private static native void setVertexBindingDescriptionCount(long address, long vertexBindingDescriptionCount);
+    protected static native long getVertexBindingDescriptionCount(long address);
+    protected static native void setVertexBindingDescriptionCount(long address, long vertexBindingDescriptionCount);
 
     public VkVertexInputBindingDescription getPVertexBindingDescriptions() {
         return new VkVertexInputBindingDescription(getVkMemory(), getPVertexBindingDescriptions(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         this.pVertexBindingDescriptions = pVertexBindingDescriptions;
     }
 
-    private static native long getPVertexBindingDescriptions(long address);
-    private static native void setPVertexBindingDescriptions(long address, long pVertexBindingDescriptions);
+    protected static native long getPVertexBindingDescriptions(long address);
+    protected static native void setPVertexBindingDescriptions(long address, long pVertexBindingDescriptions);
 
     public VkUInt32 getVertexAttributeDescriptionCount() {
         return new VkUInt32(getVkMemory(), getVertexAttributeDescriptionCount(getVkAddress()));
@@ -123,8 +123,8 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         getVertexAttributeDescriptionCount().setValue(vertexAttributeDescriptionCount);
     }
 
-    private static native long getVertexAttributeDescriptionCount(long address);
-    private static native void setVertexAttributeDescriptionCount(long address, long vertexAttributeDescriptionCount);
+    protected static native long getVertexAttributeDescriptionCount(long address);
+    protected static native void setVertexAttributeDescriptionCount(long address, long vertexAttributeDescriptionCount);
 
     public VkVertexInputAttributeDescription getPVertexAttributeDescriptions() {
         return new VkVertexInputAttributeDescription(getVkMemory(), getPVertexAttributeDescriptions(getVkAddress()));
@@ -136,8 +136,8 @@ public class VkPipelineVertexInputStateCreateInfo extends VkObject {
         this.pVertexAttributeDescriptions = pVertexAttributeDescriptions;
     }
 
-    private static native long getPVertexAttributeDescriptions(long address);
-    private static native void setPVertexAttributeDescriptions(long address, long pVertexAttributeDescriptions);
+    protected static native long getPVertexAttributeDescriptions(long address);
+    protected static native void setPVertexAttributeDescriptions(long address, long pVertexAttributeDescriptions);
 
 
     public static native long sizeof();

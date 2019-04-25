@@ -34,8 +34,8 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getSrcPremultiplied() {
         return new VkBool32(getVkMemory(), getSrcPremultiplied(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         getSrcPremultiplied().setValue(srcPremultiplied);
     }
 
-    private static native long getSrcPremultiplied(long address);
-    private static native void setSrcPremultiplied(long address, long srcPremultiplied);
+    protected static native long getSrcPremultiplied(long address);
+    protected static native void setSrcPremultiplied(long address, long srcPremultiplied);
 
     public VkBool32 getDstPremultiplied() {
         return new VkBool32(getVkMemory(), getDstPremultiplied(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         getDstPremultiplied().setValue(dstPremultiplied);
     }
 
-    private static native long getDstPremultiplied(long address);
-    private static native void setDstPremultiplied(long address, long dstPremultiplied);
+    protected static native long getDstPremultiplied(long address);
+    protected static native void setDstPremultiplied(long address, long dstPremultiplied);
 
     public VkBlendOverlapEXT getBlendOverlap() {
         return new VkBlendOverlapEXT(getVkMemory(), getBlendOverlap(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
         getBlendOverlap().setValue(blendOverlap);
     }
 
-    private static native long getBlendOverlap(long address);
-    private static native void setBlendOverlap(long address, long blendOverlap);
+    protected static native long getBlendOverlap(long address);
+    protected static native void setBlendOverlap(long address, long blendOverlap);
 
 
     public static native long sizeof();

@@ -33,8 +33,8 @@ public class VkVertexInputAttributeDescription extends VkObject {
         getLocation().setValue(location);
     }
 
-    private static native long getLocation(long address);
-    private static native void setLocation(long address, long location);
+    protected static native long getLocation(long address);
+    protected static native void setLocation(long address, long location);
 
     public VkUInt32 getBinding() {
         return new VkUInt32(getVkMemory(), getBinding(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkVertexInputAttributeDescription extends VkObject {
         getBinding().setValue(binding);
     }
 
-    private static native long getBinding(long address);
-    private static native void setBinding(long address, long binding);
+    protected static native long getBinding(long address);
+    protected static native void setBinding(long address, long binding);
 
     public VkFormat getFormat() {
         return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkVertexInputAttributeDescription extends VkObject {
         getFormat().setValue(format);
     }
 
-    private static native long getFormat(long address);
-    private static native void setFormat(long address, long format);
+    protected static native long getFormat(long address);
+    protected static native void setFormat(long address, long format);
 
     public VkUInt32 getOffset() {
         return new VkUInt32(getVkMemory(), getOffset(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkVertexInputAttributeDescription extends VkObject {
         getOffset().setValue(offset);
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
 
     public static native long sizeof();

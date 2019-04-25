@@ -33,8 +33,8 @@ public class VkExternalImageFormatProperties extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkExternalImageFormatProperties extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkExternalMemoryProperties getExternalMemoryProperties() {
         return new VkExternalMemoryProperties(getVkMemory(), getExternalMemoryProperties(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkExternalImageFormatProperties extends VkObject {
         
     }
 
-    private static native long getExternalMemoryProperties(long address);
-    private static native void setExternalMemoryProperties(long address, long externalMemoryProperties);
+    protected static native long getExternalMemoryProperties(long address);
+    protected static native void setExternalMemoryProperties(long address, long externalMemoryProperties);
 
 
     public static native long sizeof();

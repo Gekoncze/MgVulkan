@@ -34,8 +34,8 @@ public class VkSubmitInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkSubmitInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getWaitSemaphoreCount() {
         return new VkUInt32(getVkMemory(), getWaitSemaphoreCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkSubmitInfo extends VkObject {
         getWaitSemaphoreCount().setValue(waitSemaphoreCount);
     }
 
-    private static native long getWaitSemaphoreCount(long address);
-    private static native void setWaitSemaphoreCount(long address, long waitSemaphoreCount);
+    protected static native long getWaitSemaphoreCount(long address);
+    protected static native void setWaitSemaphoreCount(long address, long waitSemaphoreCount);
 
     public VkSemaphore getPWaitSemaphores() {
         return new VkSemaphore(getVkMemory(), getPWaitSemaphores(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkSubmitInfo extends VkObject {
         this.pWaitSemaphores = pWaitSemaphores;
     }
 
-    private static native long getPWaitSemaphores(long address);
-    private static native void setPWaitSemaphores(long address, long pWaitSemaphores);
+    protected static native long getPWaitSemaphores(long address);
+    protected static native void setPWaitSemaphores(long address, long pWaitSemaphores);
 
     public VkPipelineStageFlags getPWaitDstStageMask() {
         return new VkPipelineStageFlags(getVkMemory(), getPWaitDstStageMask(getVkAddress()));
@@ -94,8 +94,8 @@ public class VkSubmitInfo extends VkObject {
         this.pWaitDstStageMask = pWaitDstStageMask;
     }
 
-    private static native long getPWaitDstStageMask(long address);
-    private static native void setPWaitDstStageMask(long address, long pWaitDstStageMask);
+    protected static native long getPWaitDstStageMask(long address);
+    protected static native void setPWaitDstStageMask(long address, long pWaitDstStageMask);
 
     public VkUInt32 getCommandBufferCount() {
         return new VkUInt32(getVkMemory(), getCommandBufferCount(getVkAddress()));
@@ -115,8 +115,8 @@ public class VkSubmitInfo extends VkObject {
         getCommandBufferCount().setValue(commandBufferCount);
     }
 
-    private static native long getCommandBufferCount(long address);
-    private static native void setCommandBufferCount(long address, long commandBufferCount);
+    protected static native long getCommandBufferCount(long address);
+    protected static native void setCommandBufferCount(long address, long commandBufferCount);
 
     public VkCommandBuffer getPCommandBuffers() {
         return new VkCommandBuffer(getVkMemory(), getPCommandBuffers(getVkAddress()));
@@ -128,8 +128,8 @@ public class VkSubmitInfo extends VkObject {
         this.pCommandBuffers = pCommandBuffers;
     }
 
-    private static native long getPCommandBuffers(long address);
-    private static native void setPCommandBuffers(long address, long pCommandBuffers);
+    protected static native long getPCommandBuffers(long address);
+    protected static native void setPCommandBuffers(long address, long pCommandBuffers);
 
     public VkUInt32 getSignalSemaphoreCount() {
         return new VkUInt32(getVkMemory(), getSignalSemaphoreCount(getVkAddress()));
@@ -149,8 +149,8 @@ public class VkSubmitInfo extends VkObject {
         getSignalSemaphoreCount().setValue(signalSemaphoreCount);
     }
 
-    private static native long getSignalSemaphoreCount(long address);
-    private static native void setSignalSemaphoreCount(long address, long signalSemaphoreCount);
+    protected static native long getSignalSemaphoreCount(long address);
+    protected static native void setSignalSemaphoreCount(long address, long signalSemaphoreCount);
 
     public VkSemaphore getPSignalSemaphores() {
         return new VkSemaphore(getVkMemory(), getPSignalSemaphores(getVkAddress()));
@@ -162,8 +162,8 @@ public class VkSubmitInfo extends VkObject {
         this.pSignalSemaphores = pSignalSemaphores;
     }
 
-    private static native long getPSignalSemaphores(long address);
-    private static native void setPSignalSemaphores(long address, long pSignalSemaphores);
+    protected static native long getPSignalSemaphores(long address);
+    protected static native void setPSignalSemaphores(long address, long pSignalSemaphores);
 
 
     public static native long sizeof();

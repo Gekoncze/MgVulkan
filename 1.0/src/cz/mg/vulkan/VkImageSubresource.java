@@ -33,8 +33,8 @@ public class VkImageSubresource extends VkObject {
         getAspectMask().setValue(aspectMask);
     }
 
-    private static native long getAspectMask(long address);
-    private static native void setAspectMask(long address, long aspectMask);
+    protected static native long getAspectMask(long address);
+    protected static native void setAspectMask(long address, long aspectMask);
 
     public VkUInt32 getMipLevel() {
         return new VkUInt32(getVkMemory(), getMipLevel(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkImageSubresource extends VkObject {
         getMipLevel().setValue(mipLevel);
     }
 
-    private static native long getMipLevel(long address);
-    private static native void setMipLevel(long address, long mipLevel);
+    protected static native long getMipLevel(long address);
+    protected static native void setMipLevel(long address, long mipLevel);
 
     public VkUInt32 getArrayLayer() {
         return new VkUInt32(getVkMemory(), getArrayLayer(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkImageSubresource extends VkObject {
         getArrayLayer().setValue(arrayLayer);
     }
 
-    private static native long getArrayLayer(long address);
-    private static native void setArrayLayer(long address, long arrayLayer);
+    protected static native long getArrayLayer(long address);
+    protected static native void setArrayLayer(long address, long arrayLayer);
 
 
     public static native long sizeof();

@@ -22,5 +22,5 @@ public class PFNvkFreeFunction extends VkFunctionPointer {
         call(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, pMemory != null ? pMemory.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long pUserData, long pMemory);
+    protected static native void call(long vkaddress, long pUserData, long pMemory);
 }

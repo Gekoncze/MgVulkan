@@ -34,8 +34,8 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkSampleCountFlagBits getSampleLocationsPerPixel() {
         return new VkSampleCountFlagBits(getVkMemory(), getSampleLocationsPerPixel(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         getSampleLocationsPerPixel().setValue(sampleLocationsPerPixel);
     }
 
-    private static native long getSampleLocationsPerPixel(long address);
-    private static native void setSampleLocationsPerPixel(long address, long sampleLocationsPerPixel);
+    protected static native long getSampleLocationsPerPixel(long address);
+    protected static native void setSampleLocationsPerPixel(long address, long sampleLocationsPerPixel);
 
     public VkExtent2D getSampleLocationGridSize() {
         return new VkExtent2D(getVkMemory(), getSampleLocationGridSize(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         
     }
 
-    private static native long getSampleLocationGridSize(long address);
-    private static native void setSampleLocationGridSize(long address, long sampleLocationGridSize);
+    protected static native long getSampleLocationGridSize(long address);
+    protected static native void setSampleLocationGridSize(long address, long sampleLocationGridSize);
 
     public VkUInt32 getSampleLocationsCount() {
         return new VkUInt32(getVkMemory(), getSampleLocationsCount(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         getSampleLocationsCount().setValue(sampleLocationsCount);
     }
 
-    private static native long getSampleLocationsCount(long address);
-    private static native void setSampleLocationsCount(long address, long sampleLocationsCount);
+    protected static native long getSampleLocationsCount(long address);
+    protected static native void setSampleLocationsCount(long address, long sampleLocationsCount);
 
     public VkSampleLocationEXT getPSampleLocations() {
         return new VkSampleLocationEXT(getVkMemory(), getPSampleLocations(getVkAddress()));
@@ -115,8 +115,8 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         this.pSampleLocations = pSampleLocations;
     }
 
-    private static native long getPSampleLocations(long address);
-    private static native void setPSampleLocations(long address, long pSampleLocations);
+    protected static native long getPSampleLocations(long address);
+    protected static native void setPSampleLocations(long address, long pSampleLocations);
 
 
     public static native long sizeof();

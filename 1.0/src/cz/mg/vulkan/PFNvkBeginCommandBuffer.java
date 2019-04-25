@@ -26,5 +26,5 @@ public class PFNvkBeginCommandBuffer extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), pBeginInfo != null ? pBeginInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long pBeginInfo, long rval);
+    protected static native void call(long vkaddress, long commandBuffer, long pBeginInfo, long rval);
 }

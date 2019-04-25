@@ -33,8 +33,8 @@ public class VkMemoryHeap extends VkObject {
         getSize().setValue(size);
     }
 
-    private static native long getSize(long address);
-    private static native void setSize(long address, long size);
+    protected static native long getSize(long address);
+    protected static native void setSize(long address, long size);
 
     public VkMemoryHeapFlags getFlags() {
         return new VkMemoryHeapFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkMemoryHeap extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
 
     public static native long sizeof();

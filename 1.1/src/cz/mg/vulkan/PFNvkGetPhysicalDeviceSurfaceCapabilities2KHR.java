@@ -26,5 +26,5 @@ public class PFNvkGetPhysicalDeviceSurfaceCapabilities2KHR extends VkFunctionPoi
         call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), pSurfaceInfo != null ? pSurfaceInfo.getVkAddress() : VkPointer.NULL, pSurfaceCapabilities != null ? pSurfaceCapabilities.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long physicalDevice, long pSurfaceInfo, long pSurfaceCapabilities, long rval);
+    protected static native void call(long vkaddress, long physicalDevice, long pSurfaceInfo, long pSurfaceCapabilities, long rval);
 }

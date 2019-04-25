@@ -34,8 +34,8 @@ public class VkCommandBufferBeginInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkCommandBufferBeginInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkCommandBufferUsageFlags getFlags() {
         return new VkCommandBufferUsageFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkCommandBufferBeginInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkCommandBufferInheritanceInfo getPInheritanceInfo() {
         return new VkCommandBufferInheritanceInfo(getVkMemory(), getPInheritanceInfo(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkCommandBufferBeginInfo extends VkObject {
         this.pInheritanceInfo = pInheritanceInfo;
     }
 
-    private static native long getPInheritanceInfo(long address);
-    private static native void setPInheritanceInfo(long address, long pInheritanceInfo);
+    protected static native long getPInheritanceInfo(long address);
+    protected static native void setPInheritanceInfo(long address, long pInheritanceInfo);
 
 
     public static native long sizeof();

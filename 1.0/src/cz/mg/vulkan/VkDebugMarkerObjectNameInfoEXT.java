@@ -34,8 +34,8 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDebugReportObjectTypeEXT getObjectType() {
         return new VkDebugReportObjectTypeEXT(getVkMemory(), getObjectType(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
         getObjectType().setValue(objectType);
     }
 
-    private static native long getObjectType(long address);
-    private static native void setObjectType(long address, long objectType);
+    protected static native long getObjectType(long address);
+    protected static native void setObjectType(long address, long objectType);
 
     public VkUInt64 getObject() {
         return new VkUInt64(getVkMemory(), getObject(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
         getObject().setValue(object);
     }
 
-    private static native long getObject(long address);
-    private static native void setObject(long address, long object);
+    protected static native long getObject(long address);
+    protected static native void setObject(long address, long object);
 
     public VkChar getPObjectName() {
         return new VkChar(getVkMemory(), getPObjectName(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
         setPObjectName(new VkString(pObjectName));
     }
 
-    private static native long getPObjectName(long address);
-    private static native void setPObjectName(long address, long pObjectName);
+    protected static native long getPObjectName(long address);
+    protected static native void setPObjectName(long address, long pObjectName);
 
 
     public static native long sizeof();

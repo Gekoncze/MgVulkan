@@ -33,8 +33,8 @@ public class VkViewportWScalingNV extends VkObject {
         getXcoeff().setValue(xcoeff);
     }
 
-    private static native long getXcoeff(long address);
-    private static native void setXcoeff(long address, long xcoeff);
+    protected static native long getXcoeff(long address);
+    protected static native void setXcoeff(long address, long xcoeff);
 
     public VkFloat getYcoeff() {
         return new VkFloat(getVkMemory(), getYcoeff(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkViewportWScalingNV extends VkObject {
         getYcoeff().setValue(ycoeff);
     }
 
-    private static native long getYcoeff(long address);
-    private static native void setYcoeff(long address, long ycoeff);
+    protected static native long getYcoeff(long address);
+    protected static native void setYcoeff(long address, long ycoeff);
 
 
     public static native long sizeof();

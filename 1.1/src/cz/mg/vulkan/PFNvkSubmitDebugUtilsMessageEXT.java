@@ -26,5 +26,5 @@ public class PFNvkSubmitDebugUtilsMessageEXT extends VkFunctionPointer {
         call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddress(), messageSeverity != null ? messageSeverity.getVkAddress() : VkPointer.getNullAddress(), messageTypes != null ? messageTypes.getVkAddress() : VkPointer.getNullAddress(), pCallbackData != null ? pCallbackData.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long instance, long messageSeverity, long messageTypes, long pCallbackData);
+    protected static native void call(long vkaddress, long instance, long messageSeverity, long messageTypes, long pCallbackData);
 }

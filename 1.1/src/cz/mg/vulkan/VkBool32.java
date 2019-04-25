@@ -50,12 +50,28 @@ public class VkBool32 extends VkUInt32 {
 
         public Array(int... values){
             this(values.length);
-            for(int i = 0; i < values.length; i++) get(i).setValue(values[i]);
+            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
         }
 
         public Array(boolean... values){
             this(values.length);
-            for(int i = 0; i < values.length; i++) get(i).setValue(values[i] == false ? Vk.VK_FALSE : Vk.VK_TRUE);
+            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+        }
+
+        public int getValueAt(int i){
+            return getValue(getVkAddress() + sizeof()*i);
+        }
+
+        public void setValueAt(int i, int value){
+            setValue(getVkAddress() + sizeof()*i, value);
+        }
+
+        public boolean getValueAtQ(int i){
+            return getValue(getVkAddress() + sizeof()*i) == Vk.VK_FALSE ? false : true;
+        }
+
+        public void setValueAt(int i, boolean value){
+            setValue(getVkAddress() + sizeof()*i, value == false ? Vk.VK_FALSE : Vk.VK_TRUE);
         }
 
 

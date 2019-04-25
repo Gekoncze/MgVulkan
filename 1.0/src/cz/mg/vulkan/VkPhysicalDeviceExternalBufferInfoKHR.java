@@ -34,8 +34,8 @@ public class VkPhysicalDeviceExternalBufferInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPhysicalDeviceExternalBufferInfoKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBufferCreateFlags getFlags() {
         return new VkBufferCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPhysicalDeviceExternalBufferInfoKHR extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkBufferUsageFlags getUsage() {
         return new VkBufferUsageFlags(getVkMemory(), getUsage(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPhysicalDeviceExternalBufferInfoKHR extends VkObject {
         getUsage().setValue(usage);
     }
 
-    private static native long getUsage(long address);
-    private static native void setUsage(long address, long usage);
+    protected static native long getUsage(long address);
+    protected static native void setUsage(long address, long usage);
 
     public VkExternalMemoryHandleTypeFlagBitsKHR getHandleType() {
         return new VkExternalMemoryHandleTypeFlagBitsKHR(getVkMemory(), getHandleType(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkPhysicalDeviceExternalBufferInfoKHR extends VkObject {
         getHandleType().setValue(handleType);
     }
 
-    private static native long getHandleType(long address);
-    private static native void setHandleType(long address, long handleType);
+    protected static native long getHandleType(long address);
+    protected static native void setHandleType(long address, long handleType);
 
 
     public static native long sizeof();

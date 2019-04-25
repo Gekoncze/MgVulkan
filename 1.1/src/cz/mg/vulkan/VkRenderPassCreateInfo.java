@@ -34,8 +34,8 @@ public class VkRenderPassCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkRenderPassCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkRenderPassCreateFlags getFlags() {
         return new VkRenderPassCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkRenderPassCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkUInt32 getAttachmentCount() {
         return new VkUInt32(getVkMemory(), getAttachmentCount(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkRenderPassCreateInfo extends VkObject {
         getAttachmentCount().setValue(attachmentCount);
     }
 
-    private static native long getAttachmentCount(long address);
-    private static native void setAttachmentCount(long address, long attachmentCount);
+    protected static native long getAttachmentCount(long address);
+    protected static native void setAttachmentCount(long address, long attachmentCount);
 
     public VkAttachmentDescription getPAttachments() {
         return new VkAttachmentDescription(getVkMemory(), getPAttachments(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkRenderPassCreateInfo extends VkObject {
         this.pAttachments = pAttachments;
     }
 
-    private static native long getPAttachments(long address);
-    private static native void setPAttachments(long address, long pAttachments);
+    protected static native long getPAttachments(long address);
+    protected static native void setPAttachments(long address, long pAttachments);
 
     public VkUInt32 getSubpassCount() {
         return new VkUInt32(getVkMemory(), getSubpassCount(getVkAddress()));
@@ -123,8 +123,8 @@ public class VkRenderPassCreateInfo extends VkObject {
         getSubpassCount().setValue(subpassCount);
     }
 
-    private static native long getSubpassCount(long address);
-    private static native void setSubpassCount(long address, long subpassCount);
+    protected static native long getSubpassCount(long address);
+    protected static native void setSubpassCount(long address, long subpassCount);
 
     public VkSubpassDescription getPSubpasses() {
         return new VkSubpassDescription(getVkMemory(), getPSubpasses(getVkAddress()));
@@ -136,8 +136,8 @@ public class VkRenderPassCreateInfo extends VkObject {
         this.pSubpasses = pSubpasses;
     }
 
-    private static native long getPSubpasses(long address);
-    private static native void setPSubpasses(long address, long pSubpasses);
+    protected static native long getPSubpasses(long address);
+    protected static native void setPSubpasses(long address, long pSubpasses);
 
     public VkUInt32 getDependencyCount() {
         return new VkUInt32(getVkMemory(), getDependencyCount(getVkAddress()));
@@ -157,8 +157,8 @@ public class VkRenderPassCreateInfo extends VkObject {
         getDependencyCount().setValue(dependencyCount);
     }
 
-    private static native long getDependencyCount(long address);
-    private static native void setDependencyCount(long address, long dependencyCount);
+    protected static native long getDependencyCount(long address);
+    protected static native void setDependencyCount(long address, long dependencyCount);
 
     public VkSubpassDependency getPDependencies() {
         return new VkSubpassDependency(getVkMemory(), getPDependencies(getVkAddress()));
@@ -170,8 +170,8 @@ public class VkRenderPassCreateInfo extends VkObject {
         this.pDependencies = pDependencies;
     }
 
-    private static native long getPDependencies(long address);
-    private static native void setPDependencies(long address, long pDependencies);
+    protected static native long getPDependencies(long address);
+    protected static native void setPDependencies(long address, long pDependencies);
 
 
     public static native long sizeof();

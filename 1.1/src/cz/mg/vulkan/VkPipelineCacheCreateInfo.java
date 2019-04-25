@@ -34,8 +34,8 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkPipelineCacheCreateFlags getFlags() {
         return new VkPipelineCacheCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkSize getInitialDataSize() {
         return new VkSize(getVkMemory(), getInitialDataSize(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         getInitialDataSize().setValue(initialDataSize);
     }
 
-    private static native long getInitialDataSize(long address);
-    private static native void setInitialDataSize(long address, long initialDataSize);
+    protected static native long getInitialDataSize(long address);
+    protected static native void setInitialDataSize(long address, long initialDataSize);
 
     public VkObject getPInitialData() {
         return new VkObject(getVkMemory(), getPInitialData(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkPipelineCacheCreateInfo extends VkObject {
         this.pInitialData = pInitialData;
     }
 
-    private static native long getPInitialData(long address);
-    private static native void setPInitialData(long address, long pInitialData);
+    protected static native long getPInitialData(long address);
+    protected static native void setPInitialData(long address, long pInitialData);
 
 
     public static native long sizeof();

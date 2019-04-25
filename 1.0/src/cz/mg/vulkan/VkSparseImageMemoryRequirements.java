@@ -25,8 +25,8 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         
     }
 
-    private static native long getFormatProperties(long address);
-    private static native void setFormatProperties(long address, long formatProperties);
+    protected static native long getFormatProperties(long address);
+    protected static native void setFormatProperties(long address, long formatProperties);
 
     public VkUInt32 getImageMipTailFirstLod() {
         return new VkUInt32(getVkMemory(), getImageMipTailFirstLod(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         getImageMipTailFirstLod().setValue(imageMipTailFirstLod);
     }
 
-    private static native long getImageMipTailFirstLod(long address);
-    private static native void setImageMipTailFirstLod(long address, long imageMipTailFirstLod);
+    protected static native long getImageMipTailFirstLod(long address);
+    protected static native void setImageMipTailFirstLod(long address, long imageMipTailFirstLod);
 
     public VkDeviceSize getImageMipTailSize() {
         return new VkDeviceSize(getVkMemory(), getImageMipTailSize(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         getImageMipTailSize().setValue(imageMipTailSize);
     }
 
-    private static native long getImageMipTailSize(long address);
-    private static native void setImageMipTailSize(long address, long imageMipTailSize);
+    protected static native long getImageMipTailSize(long address);
+    protected static native void setImageMipTailSize(long address, long imageMipTailSize);
 
     public VkDeviceSize getImageMipTailOffset() {
         return new VkDeviceSize(getVkMemory(), getImageMipTailOffset(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         getImageMipTailOffset().setValue(imageMipTailOffset);
     }
 
-    private static native long getImageMipTailOffset(long address);
-    private static native void setImageMipTailOffset(long address, long imageMipTailOffset);
+    protected static native long getImageMipTailOffset(long address);
+    protected static native void setImageMipTailOffset(long address, long imageMipTailOffset);
 
     public VkDeviceSize getImageMipTailStride() {
         return new VkDeviceSize(getVkMemory(), getImageMipTailStride(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkSparseImageMemoryRequirements extends VkObject {
         getImageMipTailStride().setValue(imageMipTailStride);
     }
 
-    private static native long getImageMipTailStride(long address);
-    private static native void setImageMipTailStride(long address, long imageMipTailStride);
+    protected static native long getImageMipTailStride(long address);
+    protected static native void setImageMipTailStride(long address, long imageMipTailStride);
 
 
     public static native long sizeof();

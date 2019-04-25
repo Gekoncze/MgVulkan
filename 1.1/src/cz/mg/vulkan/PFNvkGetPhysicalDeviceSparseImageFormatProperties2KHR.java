@@ -26,5 +26,5 @@ public class PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR extends VkFun
         call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), pFormatInfo != null ? pFormatInfo.getVkAddress() : VkPointer.NULL, pPropertyCount != null ? pPropertyCount.getVkAddress() : VkPointer.NULL, pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long physicalDevice, long pFormatInfo, long pPropertyCount, long pProperties);
+    protected static native void call(long vkaddress, long physicalDevice, long pFormatInfo, long pPropertyCount, long pProperties);
 }

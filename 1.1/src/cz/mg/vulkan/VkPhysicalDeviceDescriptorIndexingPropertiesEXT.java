@@ -33,8 +33,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getMaxUpdateAfterBindDescriptorsInAllPools() {
         return new VkUInt32(getVkMemory(), getMaxUpdateAfterBindDescriptorsInAllPools(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxUpdateAfterBindDescriptorsInAllPools().setValue(maxUpdateAfterBindDescriptorsInAllPools);
     }
 
-    private static native long getMaxUpdateAfterBindDescriptorsInAllPools(long address);
-    private static native void setMaxUpdateAfterBindDescriptorsInAllPools(long address, long maxUpdateAfterBindDescriptorsInAllPools);
+    protected static native long getMaxUpdateAfterBindDescriptorsInAllPools(long address);
+    protected static native void setMaxUpdateAfterBindDescriptorsInAllPools(long address, long maxUpdateAfterBindDescriptorsInAllPools);
 
     public VkBool32 getShaderUniformBufferArrayNonUniformIndexingNative() {
         return new VkBool32(getVkMemory(), getShaderUniformBufferArrayNonUniformIndexingNative(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getShaderUniformBufferArrayNonUniformIndexingNative().setValue(shaderUniformBufferArrayNonUniformIndexingNative);
     }
 
-    private static native long getShaderUniformBufferArrayNonUniformIndexingNative(long address);
-    private static native void setShaderUniformBufferArrayNonUniformIndexingNative(long address, long shaderUniformBufferArrayNonUniformIndexingNative);
+    protected static native long getShaderUniformBufferArrayNonUniformIndexingNative(long address);
+    protected static native void setShaderUniformBufferArrayNonUniformIndexingNative(long address, long shaderUniformBufferArrayNonUniformIndexingNative);
 
     public VkBool32 getShaderSampledImageArrayNonUniformIndexingNative() {
         return new VkBool32(getVkMemory(), getShaderSampledImageArrayNonUniformIndexingNative(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getShaderSampledImageArrayNonUniformIndexingNative().setValue(shaderSampledImageArrayNonUniformIndexingNative);
     }
 
-    private static native long getShaderSampledImageArrayNonUniformIndexingNative(long address);
-    private static native void setShaderSampledImageArrayNonUniformIndexingNative(long address, long shaderSampledImageArrayNonUniformIndexingNative);
+    protected static native long getShaderSampledImageArrayNonUniformIndexingNative(long address);
+    protected static native void setShaderSampledImageArrayNonUniformIndexingNative(long address, long shaderSampledImageArrayNonUniformIndexingNative);
 
     public VkBool32 getShaderStorageBufferArrayNonUniformIndexingNative() {
         return new VkBool32(getVkMemory(), getShaderStorageBufferArrayNonUniformIndexingNative(getVkAddress()));
@@ -130,8 +130,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getShaderStorageBufferArrayNonUniformIndexingNative().setValue(shaderStorageBufferArrayNonUniformIndexingNative);
     }
 
-    private static native long getShaderStorageBufferArrayNonUniformIndexingNative(long address);
-    private static native void setShaderStorageBufferArrayNonUniformIndexingNative(long address, long shaderStorageBufferArrayNonUniformIndexingNative);
+    protected static native long getShaderStorageBufferArrayNonUniformIndexingNative(long address);
+    protected static native void setShaderStorageBufferArrayNonUniformIndexingNative(long address, long shaderStorageBufferArrayNonUniformIndexingNative);
 
     public VkBool32 getShaderStorageImageArrayNonUniformIndexingNative() {
         return new VkBool32(getVkMemory(), getShaderStorageImageArrayNonUniformIndexingNative(getVkAddress()));
@@ -151,8 +151,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getShaderStorageImageArrayNonUniformIndexingNative().setValue(shaderStorageImageArrayNonUniformIndexingNative);
     }
 
-    private static native long getShaderStorageImageArrayNonUniformIndexingNative(long address);
-    private static native void setShaderStorageImageArrayNonUniformIndexingNative(long address, long shaderStorageImageArrayNonUniformIndexingNative);
+    protected static native long getShaderStorageImageArrayNonUniformIndexingNative(long address);
+    protected static native void setShaderStorageImageArrayNonUniformIndexingNative(long address, long shaderStorageImageArrayNonUniformIndexingNative);
 
     public VkBool32 getShaderInputAttachmentArrayNonUniformIndexingNative() {
         return new VkBool32(getVkMemory(), getShaderInputAttachmentArrayNonUniformIndexingNative(getVkAddress()));
@@ -172,8 +172,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getShaderInputAttachmentArrayNonUniformIndexingNative().setValue(shaderInputAttachmentArrayNonUniformIndexingNative);
     }
 
-    private static native long getShaderInputAttachmentArrayNonUniformIndexingNative(long address);
-    private static native void setShaderInputAttachmentArrayNonUniformIndexingNative(long address, long shaderInputAttachmentArrayNonUniformIndexingNative);
+    protected static native long getShaderInputAttachmentArrayNonUniformIndexingNative(long address);
+    protected static native void setShaderInputAttachmentArrayNonUniformIndexingNative(long address, long shaderInputAttachmentArrayNonUniformIndexingNative);
 
     public VkBool32 getRobustBufferAccessUpdateAfterBind() {
         return new VkBool32(getVkMemory(), getRobustBufferAccessUpdateAfterBind(getVkAddress()));
@@ -193,8 +193,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getRobustBufferAccessUpdateAfterBind().setValue(robustBufferAccessUpdateAfterBind);
     }
 
-    private static native long getRobustBufferAccessUpdateAfterBind(long address);
-    private static native void setRobustBufferAccessUpdateAfterBind(long address, long robustBufferAccessUpdateAfterBind);
+    protected static native long getRobustBufferAccessUpdateAfterBind(long address);
+    protected static native void setRobustBufferAccessUpdateAfterBind(long address, long robustBufferAccessUpdateAfterBind);
 
     public VkBool32 getQuadDivergentImplicitLod() {
         return new VkBool32(getVkMemory(), getQuadDivergentImplicitLod(getVkAddress()));
@@ -214,8 +214,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getQuadDivergentImplicitLod().setValue(quadDivergentImplicitLod);
     }
 
-    private static native long getQuadDivergentImplicitLod(long address);
-    private static native void setQuadDivergentImplicitLod(long address, long quadDivergentImplicitLod);
+    protected static native long getQuadDivergentImplicitLod(long address);
+    protected static native void setQuadDivergentImplicitLod(long address, long quadDivergentImplicitLod);
 
     public VkUInt32 getMaxPerStageDescriptorUpdateAfterBindSamplers() {
         return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorUpdateAfterBindSamplers(getVkAddress()));
@@ -235,8 +235,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxPerStageDescriptorUpdateAfterBindSamplers().setValue(maxPerStageDescriptorUpdateAfterBindSamplers);
     }
 
-    private static native long getMaxPerStageDescriptorUpdateAfterBindSamplers(long address);
-    private static native void setMaxPerStageDescriptorUpdateAfterBindSamplers(long address, long maxPerStageDescriptorUpdateAfterBindSamplers);
+    protected static native long getMaxPerStageDescriptorUpdateAfterBindSamplers(long address);
+    protected static native void setMaxPerStageDescriptorUpdateAfterBindSamplers(long address, long maxPerStageDescriptorUpdateAfterBindSamplers);
 
     public VkUInt32 getMaxPerStageDescriptorUpdateAfterBindUniformBuffers() {
         return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorUpdateAfterBindUniformBuffers(getVkAddress()));
@@ -256,8 +256,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxPerStageDescriptorUpdateAfterBindUniformBuffers().setValue(maxPerStageDescriptorUpdateAfterBindUniformBuffers);
     }
 
-    private static native long getMaxPerStageDescriptorUpdateAfterBindUniformBuffers(long address);
-    private static native void setMaxPerStageDescriptorUpdateAfterBindUniformBuffers(long address, long maxPerStageDescriptorUpdateAfterBindUniformBuffers);
+    protected static native long getMaxPerStageDescriptorUpdateAfterBindUniformBuffers(long address);
+    protected static native void setMaxPerStageDescriptorUpdateAfterBindUniformBuffers(long address, long maxPerStageDescriptorUpdateAfterBindUniformBuffers);
 
     public VkUInt32 getMaxPerStageDescriptorUpdateAfterBindStorageBuffers() {
         return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorUpdateAfterBindStorageBuffers(getVkAddress()));
@@ -277,8 +277,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxPerStageDescriptorUpdateAfterBindStorageBuffers().setValue(maxPerStageDescriptorUpdateAfterBindStorageBuffers);
     }
 
-    private static native long getMaxPerStageDescriptorUpdateAfterBindStorageBuffers(long address);
-    private static native void setMaxPerStageDescriptorUpdateAfterBindStorageBuffers(long address, long maxPerStageDescriptorUpdateAfterBindStorageBuffers);
+    protected static native long getMaxPerStageDescriptorUpdateAfterBindStorageBuffers(long address);
+    protected static native void setMaxPerStageDescriptorUpdateAfterBindStorageBuffers(long address, long maxPerStageDescriptorUpdateAfterBindStorageBuffers);
 
     public VkUInt32 getMaxPerStageDescriptorUpdateAfterBindSampledImages() {
         return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorUpdateAfterBindSampledImages(getVkAddress()));
@@ -298,8 +298,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxPerStageDescriptorUpdateAfterBindSampledImages().setValue(maxPerStageDescriptorUpdateAfterBindSampledImages);
     }
 
-    private static native long getMaxPerStageDescriptorUpdateAfterBindSampledImages(long address);
-    private static native void setMaxPerStageDescriptorUpdateAfterBindSampledImages(long address, long maxPerStageDescriptorUpdateAfterBindSampledImages);
+    protected static native long getMaxPerStageDescriptorUpdateAfterBindSampledImages(long address);
+    protected static native void setMaxPerStageDescriptorUpdateAfterBindSampledImages(long address, long maxPerStageDescriptorUpdateAfterBindSampledImages);
 
     public VkUInt32 getMaxPerStageDescriptorUpdateAfterBindStorageImages() {
         return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorUpdateAfterBindStorageImages(getVkAddress()));
@@ -319,8 +319,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxPerStageDescriptorUpdateAfterBindStorageImages().setValue(maxPerStageDescriptorUpdateAfterBindStorageImages);
     }
 
-    private static native long getMaxPerStageDescriptorUpdateAfterBindStorageImages(long address);
-    private static native void setMaxPerStageDescriptorUpdateAfterBindStorageImages(long address, long maxPerStageDescriptorUpdateAfterBindStorageImages);
+    protected static native long getMaxPerStageDescriptorUpdateAfterBindStorageImages(long address);
+    protected static native void setMaxPerStageDescriptorUpdateAfterBindStorageImages(long address, long maxPerStageDescriptorUpdateAfterBindStorageImages);
 
     public VkUInt32 getMaxPerStageDescriptorUpdateAfterBindInputAttachments() {
         return new VkUInt32(getVkMemory(), getMaxPerStageDescriptorUpdateAfterBindInputAttachments(getVkAddress()));
@@ -340,8 +340,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxPerStageDescriptorUpdateAfterBindInputAttachments().setValue(maxPerStageDescriptorUpdateAfterBindInputAttachments);
     }
 
-    private static native long getMaxPerStageDescriptorUpdateAfterBindInputAttachments(long address);
-    private static native void setMaxPerStageDescriptorUpdateAfterBindInputAttachments(long address, long maxPerStageDescriptorUpdateAfterBindInputAttachments);
+    protected static native long getMaxPerStageDescriptorUpdateAfterBindInputAttachments(long address);
+    protected static native void setMaxPerStageDescriptorUpdateAfterBindInputAttachments(long address, long maxPerStageDescriptorUpdateAfterBindInputAttachments);
 
     public VkUInt32 getMaxPerStageUpdateAfterBindResources() {
         return new VkUInt32(getVkMemory(), getMaxPerStageUpdateAfterBindResources(getVkAddress()));
@@ -361,8 +361,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxPerStageUpdateAfterBindResources().setValue(maxPerStageUpdateAfterBindResources);
     }
 
-    private static native long getMaxPerStageUpdateAfterBindResources(long address);
-    private static native void setMaxPerStageUpdateAfterBindResources(long address, long maxPerStageUpdateAfterBindResources);
+    protected static native long getMaxPerStageUpdateAfterBindResources(long address);
+    protected static native void setMaxPerStageUpdateAfterBindResources(long address, long maxPerStageUpdateAfterBindResources);
 
     public VkUInt32 getMaxDescriptorSetUpdateAfterBindSamplers() {
         return new VkUInt32(getVkMemory(), getMaxDescriptorSetUpdateAfterBindSamplers(getVkAddress()));
@@ -382,8 +382,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxDescriptorSetUpdateAfterBindSamplers().setValue(maxDescriptorSetUpdateAfterBindSamplers);
     }
 
-    private static native long getMaxDescriptorSetUpdateAfterBindSamplers(long address);
-    private static native void setMaxDescriptorSetUpdateAfterBindSamplers(long address, long maxDescriptorSetUpdateAfterBindSamplers);
+    protected static native long getMaxDescriptorSetUpdateAfterBindSamplers(long address);
+    protected static native void setMaxDescriptorSetUpdateAfterBindSamplers(long address, long maxDescriptorSetUpdateAfterBindSamplers);
 
     public VkUInt32 getMaxDescriptorSetUpdateAfterBindUniformBuffers() {
         return new VkUInt32(getVkMemory(), getMaxDescriptorSetUpdateAfterBindUniformBuffers(getVkAddress()));
@@ -403,8 +403,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxDescriptorSetUpdateAfterBindUniformBuffers().setValue(maxDescriptorSetUpdateAfterBindUniformBuffers);
     }
 
-    private static native long getMaxDescriptorSetUpdateAfterBindUniformBuffers(long address);
-    private static native void setMaxDescriptorSetUpdateAfterBindUniformBuffers(long address, long maxDescriptorSetUpdateAfterBindUniformBuffers);
+    protected static native long getMaxDescriptorSetUpdateAfterBindUniformBuffers(long address);
+    protected static native void setMaxDescriptorSetUpdateAfterBindUniformBuffers(long address, long maxDescriptorSetUpdateAfterBindUniformBuffers);
 
     public VkUInt32 getMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic() {
         return new VkUInt32(getVkMemory(), getMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(getVkAddress()));
@@ -424,8 +424,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic().setValue(maxDescriptorSetUpdateAfterBindUniformBuffersDynamic);
     }
 
-    private static native long getMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(long address);
-    private static native void setMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(long address, long maxDescriptorSetUpdateAfterBindUniformBuffersDynamic);
+    protected static native long getMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(long address);
+    protected static native void setMaxDescriptorSetUpdateAfterBindUniformBuffersDynamic(long address, long maxDescriptorSetUpdateAfterBindUniformBuffersDynamic);
 
     public VkUInt32 getMaxDescriptorSetUpdateAfterBindStorageBuffers() {
         return new VkUInt32(getVkMemory(), getMaxDescriptorSetUpdateAfterBindStorageBuffers(getVkAddress()));
@@ -445,8 +445,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxDescriptorSetUpdateAfterBindStorageBuffers().setValue(maxDescriptorSetUpdateAfterBindStorageBuffers);
     }
 
-    private static native long getMaxDescriptorSetUpdateAfterBindStorageBuffers(long address);
-    private static native void setMaxDescriptorSetUpdateAfterBindStorageBuffers(long address, long maxDescriptorSetUpdateAfterBindStorageBuffers);
+    protected static native long getMaxDescriptorSetUpdateAfterBindStorageBuffers(long address);
+    protected static native void setMaxDescriptorSetUpdateAfterBindStorageBuffers(long address, long maxDescriptorSetUpdateAfterBindStorageBuffers);
 
     public VkUInt32 getMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic() {
         return new VkUInt32(getVkMemory(), getMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(getVkAddress()));
@@ -466,8 +466,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic().setValue(maxDescriptorSetUpdateAfterBindStorageBuffersDynamic);
     }
 
-    private static native long getMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(long address);
-    private static native void setMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(long address, long maxDescriptorSetUpdateAfterBindStorageBuffersDynamic);
+    protected static native long getMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(long address);
+    protected static native void setMaxDescriptorSetUpdateAfterBindStorageBuffersDynamic(long address, long maxDescriptorSetUpdateAfterBindStorageBuffersDynamic);
 
     public VkUInt32 getMaxDescriptorSetUpdateAfterBindSampledImages() {
         return new VkUInt32(getVkMemory(), getMaxDescriptorSetUpdateAfterBindSampledImages(getVkAddress()));
@@ -487,8 +487,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxDescriptorSetUpdateAfterBindSampledImages().setValue(maxDescriptorSetUpdateAfterBindSampledImages);
     }
 
-    private static native long getMaxDescriptorSetUpdateAfterBindSampledImages(long address);
-    private static native void setMaxDescriptorSetUpdateAfterBindSampledImages(long address, long maxDescriptorSetUpdateAfterBindSampledImages);
+    protected static native long getMaxDescriptorSetUpdateAfterBindSampledImages(long address);
+    protected static native void setMaxDescriptorSetUpdateAfterBindSampledImages(long address, long maxDescriptorSetUpdateAfterBindSampledImages);
 
     public VkUInt32 getMaxDescriptorSetUpdateAfterBindStorageImages() {
         return new VkUInt32(getVkMemory(), getMaxDescriptorSetUpdateAfterBindStorageImages(getVkAddress()));
@@ -508,8 +508,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxDescriptorSetUpdateAfterBindStorageImages().setValue(maxDescriptorSetUpdateAfterBindStorageImages);
     }
 
-    private static native long getMaxDescriptorSetUpdateAfterBindStorageImages(long address);
-    private static native void setMaxDescriptorSetUpdateAfterBindStorageImages(long address, long maxDescriptorSetUpdateAfterBindStorageImages);
+    protected static native long getMaxDescriptorSetUpdateAfterBindStorageImages(long address);
+    protected static native void setMaxDescriptorSetUpdateAfterBindStorageImages(long address, long maxDescriptorSetUpdateAfterBindStorageImages);
 
     public VkUInt32 getMaxDescriptorSetUpdateAfterBindInputAttachments() {
         return new VkUInt32(getVkMemory(), getMaxDescriptorSetUpdateAfterBindInputAttachments(getVkAddress()));
@@ -529,8 +529,8 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
         getMaxDescriptorSetUpdateAfterBindInputAttachments().setValue(maxDescriptorSetUpdateAfterBindInputAttachments);
     }
 
-    private static native long getMaxDescriptorSetUpdateAfterBindInputAttachments(long address);
-    private static native void setMaxDescriptorSetUpdateAfterBindInputAttachments(long address, long maxDescriptorSetUpdateAfterBindInputAttachments);
+    protected static native long getMaxDescriptorSetUpdateAfterBindInputAttachments(long address);
+    protected static native void setMaxDescriptorSetUpdateAfterBindInputAttachments(long address, long maxDescriptorSetUpdateAfterBindInputAttachments);
 
 
     public static native long sizeof();

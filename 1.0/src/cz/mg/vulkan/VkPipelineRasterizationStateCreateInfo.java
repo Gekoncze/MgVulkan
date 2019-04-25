@@ -34,8 +34,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkPipelineRasterizationStateCreateFlags getFlags() {
         return new VkPipelineRasterizationStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkBool32 getDepthClampEnable() {
         return new VkBool32(getVkMemory(), getDepthClampEnable(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getDepthClampEnable().setValue(depthClampEnable);
     }
 
-    private static native long getDepthClampEnable(long address);
-    private static native void setDepthClampEnable(long address, long depthClampEnable);
+    protected static native long getDepthClampEnable(long address);
+    protected static native void setDepthClampEnable(long address, long depthClampEnable);
 
     public VkBool32 getRasterizerDiscardEnable() {
         return new VkBool32(getVkMemory(), getRasterizerDiscardEnable(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getRasterizerDiscardEnable().setValue(rasterizerDiscardEnable);
     }
 
-    private static native long getRasterizerDiscardEnable(long address);
-    private static native void setRasterizerDiscardEnable(long address, long rasterizerDiscardEnable);
+    protected static native long getRasterizerDiscardEnable(long address);
+    protected static native void setRasterizerDiscardEnable(long address, long rasterizerDiscardEnable);
 
     public VkPolygonMode getPolygonMode() {
         return new VkPolygonMode(getVkMemory(), getPolygonMode(getVkAddress()));
@@ -131,8 +131,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getPolygonMode().setValue(polygonMode);
     }
 
-    private static native long getPolygonMode(long address);
-    private static native void setPolygonMode(long address, long polygonMode);
+    protected static native long getPolygonMode(long address);
+    protected static native void setPolygonMode(long address, long polygonMode);
 
     public VkCullModeFlags getCullMode() {
         return new VkCullModeFlags(getVkMemory(), getCullMode(getVkAddress()));
@@ -152,8 +152,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getCullMode().setValue(cullMode);
     }
 
-    private static native long getCullMode(long address);
-    private static native void setCullMode(long address, long cullMode);
+    protected static native long getCullMode(long address);
+    protected static native void setCullMode(long address, long cullMode);
 
     public VkFrontFace getFrontFace() {
         return new VkFrontFace(getVkMemory(), getFrontFace(getVkAddress()));
@@ -173,8 +173,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getFrontFace().setValue(frontFace);
     }
 
-    private static native long getFrontFace(long address);
-    private static native void setFrontFace(long address, long frontFace);
+    protected static native long getFrontFace(long address);
+    protected static native void setFrontFace(long address, long frontFace);
 
     public VkBool32 getDepthBiasEnable() {
         return new VkBool32(getVkMemory(), getDepthBiasEnable(getVkAddress()));
@@ -194,8 +194,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getDepthBiasEnable().setValue(depthBiasEnable);
     }
 
-    private static native long getDepthBiasEnable(long address);
-    private static native void setDepthBiasEnable(long address, long depthBiasEnable);
+    protected static native long getDepthBiasEnable(long address);
+    protected static native void setDepthBiasEnable(long address, long depthBiasEnable);
 
     public VkFloat getDepthBiasConstantFactor() {
         return new VkFloat(getVkMemory(), getDepthBiasConstantFactor(getVkAddress()));
@@ -215,8 +215,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getDepthBiasConstantFactor().setValue(depthBiasConstantFactor);
     }
 
-    private static native long getDepthBiasConstantFactor(long address);
-    private static native void setDepthBiasConstantFactor(long address, long depthBiasConstantFactor);
+    protected static native long getDepthBiasConstantFactor(long address);
+    protected static native void setDepthBiasConstantFactor(long address, long depthBiasConstantFactor);
 
     public VkFloat getDepthBiasClamp() {
         return new VkFloat(getVkMemory(), getDepthBiasClamp(getVkAddress()));
@@ -236,8 +236,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getDepthBiasClamp().setValue(depthBiasClamp);
     }
 
-    private static native long getDepthBiasClamp(long address);
-    private static native void setDepthBiasClamp(long address, long depthBiasClamp);
+    protected static native long getDepthBiasClamp(long address);
+    protected static native void setDepthBiasClamp(long address, long depthBiasClamp);
 
     public VkFloat getDepthBiasSlopeFactor() {
         return new VkFloat(getVkMemory(), getDepthBiasSlopeFactor(getVkAddress()));
@@ -257,8 +257,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getDepthBiasSlopeFactor().setValue(depthBiasSlopeFactor);
     }
 
-    private static native long getDepthBiasSlopeFactor(long address);
-    private static native void setDepthBiasSlopeFactor(long address, long depthBiasSlopeFactor);
+    protected static native long getDepthBiasSlopeFactor(long address);
+    protected static native void setDepthBiasSlopeFactor(long address, long depthBiasSlopeFactor);
 
     public VkFloat getLineWidth() {
         return new VkFloat(getVkMemory(), getLineWidth(getVkAddress()));
@@ -278,8 +278,8 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
         getLineWidth().setValue(lineWidth);
     }
 
-    private static native long getLineWidth(long address);
-    private static native void setLineWidth(long address, long lineWidth);
+    protected static native long getLineWidth(long address);
+    protected static native void setLineWidth(long address, long lineWidth);
 
 
     public static native long sizeof();

@@ -26,5 +26,5 @@ public class PFNvkCmdReserveSpaceForCommandsNVX extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), pReserveSpaceInfo != null ? pReserveSpaceInfo.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long pReserveSpaceInfo);
+    protected static native void call(long vkaddress, long commandBuffer, long pReserveSpaceInfo);
 }

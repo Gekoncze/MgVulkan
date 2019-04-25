@@ -33,8 +33,8 @@ public class VkSubresourceLayout extends VkObject {
         getOffset().setValue(offset);
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
     public VkDeviceSize getSize() {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkSubresourceLayout extends VkObject {
         getSize().setValue(size);
     }
 
-    private static native long getSize(long address);
-    private static native void setSize(long address, long size);
+    protected static native long getSize(long address);
+    protected static native void setSize(long address, long size);
 
     public VkDeviceSize getRowPitch() {
         return new VkDeviceSize(getVkMemory(), getRowPitch(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkSubresourceLayout extends VkObject {
         getRowPitch().setValue(rowPitch);
     }
 
-    private static native long getRowPitch(long address);
-    private static native void setRowPitch(long address, long rowPitch);
+    protected static native long getRowPitch(long address);
+    protected static native void setRowPitch(long address, long rowPitch);
 
     public VkDeviceSize getArrayPitch() {
         return new VkDeviceSize(getVkMemory(), getArrayPitch(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkSubresourceLayout extends VkObject {
         getArrayPitch().setValue(arrayPitch);
     }
 
-    private static native long getArrayPitch(long address);
-    private static native void setArrayPitch(long address, long arrayPitch);
+    protected static native long getArrayPitch(long address);
+    protected static native void setArrayPitch(long address, long arrayPitch);
 
     public VkDeviceSize getDepthPitch() {
         return new VkDeviceSize(getVkMemory(), getDepthPitch(getVkAddress()));
@@ -117,8 +117,8 @@ public class VkSubresourceLayout extends VkObject {
         getDepthPitch().setValue(depthPitch);
     }
 
-    private static native long getDepthPitch(long address);
-    private static native void setDepthPitch(long address, long depthPitch);
+    protected static native long getDepthPitch(long address);
+    protected static native void setDepthPitch(long address, long depthPitch);
 
 
     public static native long sizeof();

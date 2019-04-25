@@ -26,5 +26,5 @@ public class PFNvkGetPhysicalDeviceSurfacePresentModesKHR extends VkFunctionPoin
         call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), surface != null ? surface.getVkAddress() : VkPointer.getNullAddress(), pPresentModeCount != null ? pPresentModeCount.getVkAddress() : VkPointer.NULL, pPresentModes != null ? pPresentModes.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long physicalDevice, long surface, long pPresentModeCount, long pPresentModes, long rval);
+    protected static native void call(long vkaddress, long physicalDevice, long surface, long pPresentModeCount, long pPresentModes, long rval);
 }

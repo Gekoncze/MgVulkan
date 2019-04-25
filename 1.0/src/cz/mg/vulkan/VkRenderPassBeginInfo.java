@@ -34,8 +34,8 @@ public class VkRenderPassBeginInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkRenderPassBeginInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkRenderPass getRenderPass() {
         return new VkRenderPass(getVkMemory(), getRenderPass(getVkAddress()));
@@ -60,8 +60,8 @@ public class VkRenderPassBeginInfo extends VkObject {
         
     }
 
-    private static native long getRenderPass(long address);
-    private static native void setRenderPass(long address, long renderPass);
+    protected static native long getRenderPass(long address);
+    protected static native void setRenderPass(long address, long renderPass);
 
     public VkFramebuffer getFramebuffer() {
         return new VkFramebuffer(getVkMemory(), getFramebuffer(getVkAddress()));
@@ -73,8 +73,8 @@ public class VkRenderPassBeginInfo extends VkObject {
         
     }
 
-    private static native long getFramebuffer(long address);
-    private static native void setFramebuffer(long address, long framebuffer);
+    protected static native long getFramebuffer(long address);
+    protected static native void setFramebuffer(long address, long framebuffer);
 
     public VkRect2D getRenderArea() {
         return new VkRect2D(getVkMemory(), getRenderArea(getVkAddress()));
@@ -86,8 +86,8 @@ public class VkRenderPassBeginInfo extends VkObject {
         
     }
 
-    private static native long getRenderArea(long address);
-    private static native void setRenderArea(long address, long renderArea);
+    protected static native long getRenderArea(long address);
+    protected static native void setRenderArea(long address, long renderArea);
 
     public VkUInt32 getClearValueCount() {
         return new VkUInt32(getVkMemory(), getClearValueCount(getVkAddress()));
@@ -107,8 +107,8 @@ public class VkRenderPassBeginInfo extends VkObject {
         getClearValueCount().setValue(clearValueCount);
     }
 
-    private static native long getClearValueCount(long address);
-    private static native void setClearValueCount(long address, long clearValueCount);
+    protected static native long getClearValueCount(long address);
+    protected static native void setClearValueCount(long address, long clearValueCount);
 
     public VkClearValue getPClearValues() {
         return new VkClearValue(getVkMemory(), getPClearValues(getVkAddress()));
@@ -120,8 +120,8 @@ public class VkRenderPassBeginInfo extends VkObject {
         this.pClearValues = pClearValues;
     }
 
-    private static native long getPClearValues(long address);
-    private static native void setPClearValues(long address, long pClearValues);
+    protected static native long getPClearValues(long address);
+    protected static native void setPClearValues(long address, long pClearValues);
 
 
     public static native long sizeof();

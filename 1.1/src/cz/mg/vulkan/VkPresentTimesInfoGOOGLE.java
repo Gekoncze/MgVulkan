@@ -34,8 +34,8 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getSwapchainCount() {
         return new VkUInt32(getVkMemory(), getSwapchainCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         getSwapchainCount().setValue(swapchainCount);
     }
 
-    private static native long getSwapchainCount(long address);
-    private static native void setSwapchainCount(long address, long swapchainCount);
+    protected static native long getSwapchainCount(long address);
+    protected static native void setSwapchainCount(long address, long swapchainCount);
 
     public VkPresentTimeGOOGLE getPTimes() {
         return new VkPresentTimeGOOGLE(getVkMemory(), getPTimes(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         this.pTimes = pTimes;
     }
 
-    private static native long getPTimes(long address);
-    private static native void setPTimes(long address, long pTimes);
+    protected static native long getPTimes(long address);
+    protected static native void setPTimes(long address, long pTimes);
 
 
     public static native long sizeof();

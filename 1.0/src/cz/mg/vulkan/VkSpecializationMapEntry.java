@@ -33,8 +33,8 @@ public class VkSpecializationMapEntry extends VkObject {
         getConstantID().setValue(constantID);
     }
 
-    private static native long getConstantID(long address);
-    private static native void setConstantID(long address, long constantID);
+    protected static native long getConstantID(long address);
+    protected static native void setConstantID(long address, long constantID);
 
     public VkUInt32 getOffset() {
         return new VkUInt32(getVkMemory(), getOffset(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkSpecializationMapEntry extends VkObject {
         getOffset().setValue(offset);
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
     public VkSize getSize() {
         return new VkSize(getVkMemory(), getSize(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkSpecializationMapEntry extends VkObject {
         getSize().setValue(size);
     }
 
-    private static native long getSize(long address);
-    private static native void setSize(long address, long size);
+    protected static native long getSize(long address);
+    protected static native void setSize(long address, long size);
 
 
     public static native long sizeof();

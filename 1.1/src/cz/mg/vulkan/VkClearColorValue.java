@@ -25,8 +25,8 @@ public class VkClearColorValue extends VkObject {
         
     }
 
-    private static native long getFloat32(long address);
-    private static native void setFloat32(long address, long float32);
+    protected static native long getFloat32(long address);
+    protected static native void setFloat32(long address, long float32);
 
     public VkInt32 getInt32() {
         return new VkInt32(getVkMemory(), getInt32(getVkAddress()));
@@ -38,8 +38,8 @@ public class VkClearColorValue extends VkObject {
         
     }
 
-    private static native long getInt32(long address);
-    private static native void setInt32(long address, long int32);
+    protected static native long getInt32(long address);
+    protected static native void setInt32(long address, long int32);
 
     public VkUInt32 getUint32() {
         return new VkUInt32(getVkMemory(), getUint32(getVkAddress()));
@@ -51,8 +51,8 @@ public class VkClearColorValue extends VkObject {
         
     }
 
-    private static native long getUint32(long address);
-    private static native void setUint32(long address, long uint32);
+    protected static native long getUint32(long address);
+    protected static native void setUint32(long address, long uint32);
 
 
     public static native long sizeof();

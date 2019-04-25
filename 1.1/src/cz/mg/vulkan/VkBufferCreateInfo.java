@@ -34,8 +34,8 @@ public class VkBufferCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkBufferCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBufferCreateFlags getFlags() {
         return new VkBufferCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkBufferCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkDeviceSize getSize() {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkBufferCreateInfo extends VkObject {
         getSize().setValue(size);
     }
 
-    private static native long getSize(long address);
-    private static native void setSize(long address, long size);
+    protected static native long getSize(long address);
+    protected static native void setSize(long address, long size);
 
     public VkBufferUsageFlags getUsage() {
         return new VkBufferUsageFlags(getVkMemory(), getUsage(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkBufferCreateInfo extends VkObject {
         getUsage().setValue(usage);
     }
 
-    private static native long getUsage(long address);
-    private static native void setUsage(long address, long usage);
+    protected static native long getUsage(long address);
+    protected static native void setUsage(long address, long usage);
 
     public VkSharingMode getSharingMode() {
         return new VkSharingMode(getVkMemory(), getSharingMode(getVkAddress()));
@@ -131,8 +131,8 @@ public class VkBufferCreateInfo extends VkObject {
         getSharingMode().setValue(sharingMode);
     }
 
-    private static native long getSharingMode(long address);
-    private static native void setSharingMode(long address, long sharingMode);
+    protected static native long getSharingMode(long address);
+    protected static native void setSharingMode(long address, long sharingMode);
 
     public VkUInt32 getQueueFamilyIndexCount() {
         return new VkUInt32(getVkMemory(), getQueueFamilyIndexCount(getVkAddress()));
@@ -152,8 +152,8 @@ public class VkBufferCreateInfo extends VkObject {
         getQueueFamilyIndexCount().setValue(queueFamilyIndexCount);
     }
 
-    private static native long getQueueFamilyIndexCount(long address);
-    private static native void setQueueFamilyIndexCount(long address, long queueFamilyIndexCount);
+    protected static native long getQueueFamilyIndexCount(long address);
+    protected static native void setQueueFamilyIndexCount(long address, long queueFamilyIndexCount);
 
     public VkUInt32 getPQueueFamilyIndices() {
         return new VkUInt32(getVkMemory(), getPQueueFamilyIndices(getVkAddress()));
@@ -165,8 +165,8 @@ public class VkBufferCreateInfo extends VkObject {
         this.pQueueFamilyIndices = pQueueFamilyIndices;
     }
 
-    private static native long getPQueueFamilyIndices(long address);
-    private static native void setPQueueFamilyIndices(long address, long pQueueFamilyIndices);
+    protected static native long getPQueueFamilyIndices(long address);
+    protected static native void setPQueueFamilyIndices(long address, long pQueueFamilyIndices);
 
 
     public static native long sizeof();

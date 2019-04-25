@@ -33,8 +33,8 @@ public class VkSpecializationInfo extends VkObject {
         getMapEntryCount().setValue(mapEntryCount);
     }
 
-    private static native long getMapEntryCount(long address);
-    private static native void setMapEntryCount(long address, long mapEntryCount);
+    protected static native long getMapEntryCount(long address);
+    protected static native void setMapEntryCount(long address, long mapEntryCount);
 
     public VkSpecializationMapEntry getPMapEntries() {
         return new VkSpecializationMapEntry(getVkMemory(), getPMapEntries(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkSpecializationInfo extends VkObject {
         this.pMapEntries = pMapEntries;
     }
 
-    private static native long getPMapEntries(long address);
-    private static native void setPMapEntries(long address, long pMapEntries);
+    protected static native long getPMapEntries(long address);
+    protected static native void setPMapEntries(long address, long pMapEntries);
 
     public VkSize getDataSize() {
         return new VkSize(getVkMemory(), getDataSize(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkSpecializationInfo extends VkObject {
         getDataSize().setValue(dataSize);
     }
 
-    private static native long getDataSize(long address);
-    private static native void setDataSize(long address, long dataSize);
+    protected static native long getDataSize(long address);
+    protected static native void setDataSize(long address, long dataSize);
 
     public VkObject getPData() {
         return new VkObject(getVkMemory(), getPData(getVkAddress()));
@@ -80,8 +80,8 @@ public class VkSpecializationInfo extends VkObject {
         this.pData = pData;
     }
 
-    private static native long getPData(long address);
-    private static native void setPData(long address, long pData);
+    protected static native long getPData(long address);
+    protected static native void setPData(long address, long pData);
 
 
     public static native long sizeof();

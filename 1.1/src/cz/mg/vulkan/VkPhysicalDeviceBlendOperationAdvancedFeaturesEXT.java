@@ -33,8 +33,8 @@ public class VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT extends VkObject 
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT extends VkObject 
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getAdvancedBlendCoherentOperations() {
         return new VkBool32(getVkMemory(), getAdvancedBlendCoherentOperations(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT extends VkObject 
         getAdvancedBlendCoherentOperations().setValue(advancedBlendCoherentOperations);
     }
 
-    private static native long getAdvancedBlendCoherentOperations(long address);
-    private static native void setAdvancedBlendCoherentOperations(long address, long advancedBlendCoherentOperations);
+    protected static native long getAdvancedBlendCoherentOperations(long address);
+    protected static native void setAdvancedBlendCoherentOperations(long address, long advancedBlendCoherentOperations);
 
 
     public static native long sizeof();

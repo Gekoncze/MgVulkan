@@ -33,8 +33,8 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
         getTokenType().setValue(tokenType);
     }
 
-    private static native long getTokenType(long address);
-    private static native void setTokenType(long address, long tokenType);
+    protected static native long getTokenType(long address);
+    protected static native void setTokenType(long address, long tokenType);
 
     public VkBuffer getBuffer() {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
         
     }
 
-    private static native long getBuffer(long address);
-    private static native void setBuffer(long address, long buffer);
+    protected static native long getBuffer(long address);
+    protected static native void setBuffer(long address, long buffer);
 
     public VkDeviceSize getOffset() {
         return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkIndirectCommandsTokenNVX extends VkObject {
         getOffset().setValue(offset);
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
 
     public static native long sizeof();

@@ -34,8 +34,8 @@ public class VkShaderModuleValidationCacheCreateInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkShaderModuleValidationCacheCreateInfoEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkValidationCacheEXT getValidationCache() {
         return new VkValidationCacheEXT(getVkMemory(), getValidationCache(getVkAddress()));
@@ -60,8 +60,8 @@ public class VkShaderModuleValidationCacheCreateInfoEXT extends VkObject {
         
     }
 
-    private static native long getValidationCache(long address);
-    private static native void setValidationCache(long address, long validationCache);
+    protected static native long getValidationCache(long address);
+    protected static native void setValidationCache(long address, long validationCache);
 
 
     public static native long sizeof();

@@ -33,8 +33,8 @@ public class VkSubpassDescription extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkPipelineBindPoint getPipelineBindPoint() {
         return new VkPipelineBindPoint(getVkMemory(), getPipelineBindPoint(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkSubpassDescription extends VkObject {
         getPipelineBindPoint().setValue(pipelineBindPoint);
     }
 
-    private static native long getPipelineBindPoint(long address);
-    private static native void setPipelineBindPoint(long address, long pipelineBindPoint);
+    protected static native long getPipelineBindPoint(long address);
+    protected static native void setPipelineBindPoint(long address, long pipelineBindPoint);
 
     public VkUInt32 getInputAttachmentCount() {
         return new VkUInt32(getVkMemory(), getInputAttachmentCount(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkSubpassDescription extends VkObject {
         getInputAttachmentCount().setValue(inputAttachmentCount);
     }
 
-    private static native long getInputAttachmentCount(long address);
-    private static native void setInputAttachmentCount(long address, long inputAttachmentCount);
+    protected static native long getInputAttachmentCount(long address);
+    protected static native void setInputAttachmentCount(long address, long inputAttachmentCount);
 
     public VkAttachmentReference getPInputAttachments() {
         return new VkAttachmentReference(getVkMemory(), getPInputAttachments(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkSubpassDescription extends VkObject {
         this.pInputAttachments = pInputAttachments;
     }
 
-    private static native long getPInputAttachments(long address);
-    private static native void setPInputAttachments(long address, long pInputAttachments);
+    protected static native long getPInputAttachments(long address);
+    protected static native void setPInputAttachments(long address, long pInputAttachments);
 
     public VkUInt32 getColorAttachmentCount() {
         return new VkUInt32(getVkMemory(), getColorAttachmentCount(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkSubpassDescription extends VkObject {
         getColorAttachmentCount().setValue(colorAttachmentCount);
     }
 
-    private static native long getColorAttachmentCount(long address);
-    private static native void setColorAttachmentCount(long address, long colorAttachmentCount);
+    protected static native long getColorAttachmentCount(long address);
+    protected static native void setColorAttachmentCount(long address, long colorAttachmentCount);
 
     public VkAttachmentReference getPColorAttachments() {
         return new VkAttachmentReference(getVkMemory(), getPColorAttachments(getVkAddress()));
@@ -122,8 +122,8 @@ public class VkSubpassDescription extends VkObject {
         this.pColorAttachments = pColorAttachments;
     }
 
-    private static native long getPColorAttachments(long address);
-    private static native void setPColorAttachments(long address, long pColorAttachments);
+    protected static native long getPColorAttachments(long address);
+    protected static native void setPColorAttachments(long address, long pColorAttachments);
 
     public VkAttachmentReference getPResolveAttachments() {
         return new VkAttachmentReference(getVkMemory(), getPResolveAttachments(getVkAddress()));
@@ -135,8 +135,8 @@ public class VkSubpassDescription extends VkObject {
         this.pResolveAttachments = pResolveAttachments;
     }
 
-    private static native long getPResolveAttachments(long address);
-    private static native void setPResolveAttachments(long address, long pResolveAttachments);
+    protected static native long getPResolveAttachments(long address);
+    protected static native void setPResolveAttachments(long address, long pResolveAttachments);
 
     public VkAttachmentReference getPDepthStencilAttachment() {
         return new VkAttachmentReference(getVkMemory(), getPDepthStencilAttachment(getVkAddress()));
@@ -148,8 +148,8 @@ public class VkSubpassDescription extends VkObject {
         this.pDepthStencilAttachment = pDepthStencilAttachment;
     }
 
-    private static native long getPDepthStencilAttachment(long address);
-    private static native void setPDepthStencilAttachment(long address, long pDepthStencilAttachment);
+    protected static native long getPDepthStencilAttachment(long address);
+    protected static native void setPDepthStencilAttachment(long address, long pDepthStencilAttachment);
 
     public VkUInt32 getPreserveAttachmentCount() {
         return new VkUInt32(getVkMemory(), getPreserveAttachmentCount(getVkAddress()));
@@ -169,8 +169,8 @@ public class VkSubpassDescription extends VkObject {
         getPreserveAttachmentCount().setValue(preserveAttachmentCount);
     }
 
-    private static native long getPreserveAttachmentCount(long address);
-    private static native void setPreserveAttachmentCount(long address, long preserveAttachmentCount);
+    protected static native long getPreserveAttachmentCount(long address);
+    protected static native void setPreserveAttachmentCount(long address, long preserveAttachmentCount);
 
     public VkUInt32 getPPreserveAttachments() {
         return new VkUInt32(getVkMemory(), getPPreserveAttachments(getVkAddress()));
@@ -182,8 +182,8 @@ public class VkSubpassDescription extends VkObject {
         this.pPreserveAttachments = pPreserveAttachments;
     }
 
-    private static native long getPPreserveAttachments(long address);
-    private static native void setPPreserveAttachments(long address, long pPreserveAttachments);
+    protected static native long getPPreserveAttachments(long address);
+    protected static native void setPPreserveAttachments(long address, long pPreserveAttachments);
 
 
     public static native long sizeof();

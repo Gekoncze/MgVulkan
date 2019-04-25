@@ -34,8 +34,8 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getVertexBindingDivisorCount() {
         return new VkUInt32(getVkMemory(), getVertexBindingDivisorCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
         getVertexBindingDivisorCount().setValue(vertexBindingDivisorCount);
     }
 
-    private static native long getVertexBindingDivisorCount(long address);
-    private static native void setVertexBindingDivisorCount(long address, long vertexBindingDivisorCount);
+    protected static native long getVertexBindingDivisorCount(long address);
+    protected static native void setVertexBindingDivisorCount(long address, long vertexBindingDivisorCount);
 
     public VkVertexInputBindingDivisorDescriptionEXT getPVertexBindingDivisors() {
         return new VkVertexInputBindingDivisorDescriptionEXT(getVkMemory(), getPVertexBindingDivisors(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
         this.pVertexBindingDivisors = pVertexBindingDivisors;
     }
 
-    private static native long getPVertexBindingDivisors(long address);
-    private static native void setPVertexBindingDivisors(long address, long pVertexBindingDivisors);
+    protected static native long getPVertexBindingDivisors(long address);
+    protected static native void setPVertexBindingDivisors(long address, long pVertexBindingDivisors);
 
 
     public static native long sizeof();

@@ -34,8 +34,8 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkRenderPass getRenderPass() {
         return new VkRenderPass(getVkMemory(), getRenderPass(getVkAddress()));
@@ -60,8 +60,8 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         
     }
 
-    private static native long getRenderPass(long address);
-    private static native void setRenderPass(long address, long renderPass);
+    protected static native long getRenderPass(long address);
+    protected static native void setRenderPass(long address, long renderPass);
 
     public VkUInt32 getSubpass() {
         return new VkUInt32(getVkMemory(), getSubpass(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         getSubpass().setValue(subpass);
     }
 
-    private static native long getSubpass(long address);
-    private static native void setSubpass(long address, long subpass);
+    protected static native long getSubpass(long address);
+    protected static native void setSubpass(long address, long subpass);
 
     public VkFramebuffer getFramebuffer() {
         return new VkFramebuffer(getVkMemory(), getFramebuffer(getVkAddress()));
@@ -94,8 +94,8 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         
     }
 
-    private static native long getFramebuffer(long address);
-    private static native void setFramebuffer(long address, long framebuffer);
+    protected static native long getFramebuffer(long address);
+    protected static native void setFramebuffer(long address, long framebuffer);
 
     public VkBool32 getOcclusionQueryEnable() {
         return new VkBool32(getVkMemory(), getOcclusionQueryEnable(getVkAddress()));
@@ -115,8 +115,8 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         getOcclusionQueryEnable().setValue(occlusionQueryEnable);
     }
 
-    private static native long getOcclusionQueryEnable(long address);
-    private static native void setOcclusionQueryEnable(long address, long occlusionQueryEnable);
+    protected static native long getOcclusionQueryEnable(long address);
+    protected static native void setOcclusionQueryEnable(long address, long occlusionQueryEnable);
 
     public VkQueryControlFlags getQueryFlags() {
         return new VkQueryControlFlags(getVkMemory(), getQueryFlags(getVkAddress()));
@@ -136,8 +136,8 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         getQueryFlags().setValue(queryFlags);
     }
 
-    private static native long getQueryFlags(long address);
-    private static native void setQueryFlags(long address, long queryFlags);
+    protected static native long getQueryFlags(long address);
+    protected static native void setQueryFlags(long address, long queryFlags);
 
     public VkQueryPipelineStatisticFlags getPipelineStatistics() {
         return new VkQueryPipelineStatisticFlags(getVkMemory(), getPipelineStatistics(getVkAddress()));
@@ -157,8 +157,8 @@ public class VkCommandBufferInheritanceInfo extends VkObject {
         getPipelineStatistics().setValue(pipelineStatistics);
     }
 
-    private static native long getPipelineStatistics(long address);
-    private static native void setPipelineStatistics(long address, long pipelineStatistics);
+    protected static native long getPipelineStatistics(long address);
+    protected static native void setPipelineStatistics(long address, long pipelineStatistics);
 
 
     public static native long sizeof();

@@ -26,5 +26,5 @@ public class PFNvkCmdBindPipeline extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), pipelineBindPoint != null ? pipelineBindPoint.getVkAddress() : VkPointer.getNullAddress(), pipeline != null ? pipeline.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long pipelineBindPoint, long pipeline);
+    protected static native void call(long vkaddress, long commandBuffer, long pipelineBindPoint, long pipeline);
 }

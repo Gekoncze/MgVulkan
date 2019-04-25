@@ -33,8 +33,8 @@ public class VkComponentMapping extends VkObject {
         getR().setValue(r);
     }
 
-    private static native long getR(long address);
-    private static native void setR(long address, long r);
+    protected static native long getR(long address);
+    protected static native void setR(long address, long r);
 
     public VkComponentSwizzle getG() {
         return new VkComponentSwizzle(getVkMemory(), getG(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkComponentMapping extends VkObject {
         getG().setValue(g);
     }
 
-    private static native long getG(long address);
-    private static native void setG(long address, long g);
+    protected static native long getG(long address);
+    protected static native void setG(long address, long g);
 
     public VkComponentSwizzle getB() {
         return new VkComponentSwizzle(getVkMemory(), getB(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkComponentMapping extends VkObject {
         getB().setValue(b);
     }
 
-    private static native long getB(long address);
-    private static native void setB(long address, long b);
+    protected static native long getB(long address);
+    protected static native void setB(long address, long b);
 
     public VkComponentSwizzle getA() {
         return new VkComponentSwizzle(getVkMemory(), getA(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkComponentMapping extends VkObject {
         getA().setValue(a);
     }
 
-    private static native long getA(long address);
-    private static native void setA(long address, long a);
+    protected static native long getA(long address);
+    protected static native void setA(long address, long a);
 
 
     public static native long sizeof();

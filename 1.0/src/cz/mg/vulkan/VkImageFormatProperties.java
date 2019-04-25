@@ -25,8 +25,8 @@ public class VkImageFormatProperties extends VkObject {
         
     }
 
-    private static native long getMaxExtent(long address);
-    private static native void setMaxExtent(long address, long maxExtent);
+    protected static native long getMaxExtent(long address);
+    protected static native void setMaxExtent(long address, long maxExtent);
 
     public VkUInt32 getMaxMipLevels() {
         return new VkUInt32(getVkMemory(), getMaxMipLevels(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkImageFormatProperties extends VkObject {
         getMaxMipLevels().setValue(maxMipLevels);
     }
 
-    private static native long getMaxMipLevels(long address);
-    private static native void setMaxMipLevels(long address, long maxMipLevels);
+    protected static native long getMaxMipLevels(long address);
+    protected static native void setMaxMipLevels(long address, long maxMipLevels);
 
     public VkUInt32 getMaxArrayLayers() {
         return new VkUInt32(getVkMemory(), getMaxArrayLayers(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkImageFormatProperties extends VkObject {
         getMaxArrayLayers().setValue(maxArrayLayers);
     }
 
-    private static native long getMaxArrayLayers(long address);
-    private static native void setMaxArrayLayers(long address, long maxArrayLayers);
+    protected static native long getMaxArrayLayers(long address);
+    protected static native void setMaxArrayLayers(long address, long maxArrayLayers);
 
     public VkSampleCountFlags getSampleCounts() {
         return new VkSampleCountFlags(getVkMemory(), getSampleCounts(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkImageFormatProperties extends VkObject {
         getSampleCounts().setValue(sampleCounts);
     }
 
-    private static native long getSampleCounts(long address);
-    private static native void setSampleCounts(long address, long sampleCounts);
+    protected static native long getSampleCounts(long address);
+    protected static native void setSampleCounts(long address, long sampleCounts);
 
     public VkDeviceSize getMaxResourceSize() {
         return new VkDeviceSize(getVkMemory(), getMaxResourceSize(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkImageFormatProperties extends VkObject {
         getMaxResourceSize().setValue(maxResourceSize);
     }
 
-    private static native long getMaxResourceSize(long address);
-    private static native void setMaxResourceSize(long address, long maxResourceSize);
+    protected static native long getMaxResourceSize(long address);
+    protected static native void setMaxResourceSize(long address, long maxResourceSize);
 
 
     public static native long sizeof();

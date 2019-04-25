@@ -25,8 +25,8 @@ public class VkDescriptorImageInfo extends VkObject {
         
     }
 
-    private static native long getSampler(long address);
-    private static native void setSampler(long address, long sampler);
+    protected static native long getSampler(long address);
+    protected static native void setSampler(long address, long sampler);
 
     public VkImageView getImageView() {
         return new VkImageView(getVkMemory(), getImageView(getVkAddress()));
@@ -38,8 +38,8 @@ public class VkDescriptorImageInfo extends VkObject {
         
     }
 
-    private static native long getImageView(long address);
-    private static native void setImageView(long address, long imageView);
+    protected static native long getImageView(long address);
+    protected static native void setImageView(long address, long imageView);
 
     public VkImageLayout getImageLayout() {
         return new VkImageLayout(getVkMemory(), getImageLayout(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkDescriptorImageInfo extends VkObject {
         getImageLayout().setValue(imageLayout);
     }
 
-    private static native long getImageLayout(long address);
-    private static native void setImageLayout(long address, long imageLayout);
+    protected static native long getImageLayout(long address);
+    protected static native void setImageLayout(long address, long imageLayout);
 
 
     public static native long sizeof();

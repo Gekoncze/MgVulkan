@@ -26,5 +26,5 @@ public class PFNvkResetFences extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), fenceCount != null ? fenceCount.getVkAddress() : VkPointer.getNullAddress(), pFences != null ? pFences.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long fenceCount, long pFences, long rval);
+    protected static native void call(long vkaddress, long device, long fenceCount, long pFences, long rval);
 }

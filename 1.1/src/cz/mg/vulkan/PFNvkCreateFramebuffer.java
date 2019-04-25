@@ -26,5 +26,5 @@ public class PFNvkCreateFramebuffer extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pCreateInfo != null ? pCreateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pFramebuffer != null ? pFramebuffer.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long pCreateInfo, long pAllocator, long pFramebuffer, long rval);
+    protected static native void call(long vkaddress, long device, long pCreateInfo, long pAllocator, long pFramebuffer, long rval);
 }

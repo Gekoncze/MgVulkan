@@ -33,8 +33,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDebugUtilsMessengerCallbackDataFlagsEXT getFlags() {
         return new VkDebugUtilsMessengerCallbackDataFlagsEXT(getVkMemory(), getFlags(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkChar getPMessageIdName() {
         return new VkChar(getVkMemory(), getPMessageIdName(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         setPMessageIdName(new VkString(pMessageIdName));
     }
 
-    private static native long getPMessageIdName(long address);
-    private static native void setPMessageIdName(long address, long pMessageIdName);
+    protected static native long getPMessageIdName(long address);
+    protected static native void setPMessageIdName(long address, long pMessageIdName);
 
     public VkInt32 getMessageIdNumber() {
         return new VkInt32(getVkMemory(), getMessageIdNumber(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         getMessageIdNumber().setValue(messageIdNumber);
     }
 
-    private static native long getMessageIdNumber(long address);
-    private static native void setMessageIdNumber(long address, long messageIdNumber);
+    protected static native long getMessageIdNumber(long address);
+    protected static native void setMessageIdNumber(long address, long messageIdNumber);
 
     public VkChar getPMessage() {
         return new VkChar(getVkMemory(), getPMessage(getVkAddress()));
@@ -130,8 +130,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         setPMessage(new VkString(pMessage));
     }
 
-    private static native long getPMessage(long address);
-    private static native void setPMessage(long address, long pMessage);
+    protected static native long getPMessage(long address);
+    protected static native void setPMessage(long address, long pMessage);
 
     public VkUInt32 getQueueLabelCount() {
         return new VkUInt32(getVkMemory(), getQueueLabelCount(getVkAddress()));
@@ -151,8 +151,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         getQueueLabelCount().setValue(queueLabelCount);
     }
 
-    private static native long getQueueLabelCount(long address);
-    private static native void setQueueLabelCount(long address, long queueLabelCount);
+    protected static native long getQueueLabelCount(long address);
+    protected static native void setQueueLabelCount(long address, long queueLabelCount);
 
     public VkDebugUtilsLabelEXT getPQueueLabels() {
         return new VkDebugUtilsLabelEXT(getVkMemory(), getPQueueLabels(getVkAddress()));
@@ -164,8 +164,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         this.pQueueLabels = pQueueLabels;
     }
 
-    private static native long getPQueueLabels(long address);
-    private static native void setPQueueLabels(long address, long pQueueLabels);
+    protected static native long getPQueueLabels(long address);
+    protected static native void setPQueueLabels(long address, long pQueueLabels);
 
     public VkUInt32 getCmdBufLabelCount() {
         return new VkUInt32(getVkMemory(), getCmdBufLabelCount(getVkAddress()));
@@ -185,8 +185,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         getCmdBufLabelCount().setValue(cmdBufLabelCount);
     }
 
-    private static native long getCmdBufLabelCount(long address);
-    private static native void setCmdBufLabelCount(long address, long cmdBufLabelCount);
+    protected static native long getCmdBufLabelCount(long address);
+    protected static native void setCmdBufLabelCount(long address, long cmdBufLabelCount);
 
     public VkDebugUtilsLabelEXT getPCmdBufLabels() {
         return new VkDebugUtilsLabelEXT(getVkMemory(), getPCmdBufLabels(getVkAddress()));
@@ -198,8 +198,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         this.pCmdBufLabels = pCmdBufLabels;
     }
 
-    private static native long getPCmdBufLabels(long address);
-    private static native void setPCmdBufLabels(long address, long pCmdBufLabels);
+    protected static native long getPCmdBufLabels(long address);
+    protected static native void setPCmdBufLabels(long address, long pCmdBufLabels);
 
     public VkUInt32 getObjectCount() {
         return new VkUInt32(getVkMemory(), getObjectCount(getVkAddress()));
@@ -219,8 +219,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         getObjectCount().setValue(objectCount);
     }
 
-    private static native long getObjectCount(long address);
-    private static native void setObjectCount(long address, long objectCount);
+    protected static native long getObjectCount(long address);
+    protected static native void setObjectCount(long address, long objectCount);
 
     public VkDebugUtilsObjectNameInfoEXT getPObjects() {
         return new VkDebugUtilsObjectNameInfoEXT(getVkMemory(), getPObjects(getVkAddress()));
@@ -232,8 +232,8 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         this.pObjects = pObjects;
     }
 
-    private static native long getPObjects(long address);
-    private static native void setPObjects(long address, long pObjects);
+    protected static native long getPObjects(long address);
+    protected static native void setPObjects(long address, long pObjects);
 
 
     public static native long sizeof();

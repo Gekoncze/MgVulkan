@@ -25,8 +25,8 @@ public class VkImageBlit extends VkObject {
         
     }
 
-    private static native long getSrcSubresource(long address);
-    private static native void setSrcSubresource(long address, long srcSubresource);
+    protected static native long getSrcSubresource(long address);
+    protected static native void setSrcSubresource(long address, long srcSubresource);
 
     public VkOffset3D getSrcOffsets() {
         return new VkOffset3D(getVkMemory(), getSrcOffsets(getVkAddress()));
@@ -38,8 +38,8 @@ public class VkImageBlit extends VkObject {
         
     }
 
-    private static native long getSrcOffsets(long address);
-    private static native void setSrcOffsets(long address, long srcOffsets);
+    protected static native long getSrcOffsets(long address);
+    protected static native void setSrcOffsets(long address, long srcOffsets);
 
     public VkImageSubresourceLayers getDstSubresource() {
         return new VkImageSubresourceLayers(getVkMemory(), getDstSubresource(getVkAddress()));
@@ -51,8 +51,8 @@ public class VkImageBlit extends VkObject {
         
     }
 
-    private static native long getDstSubresource(long address);
-    private static native void setDstSubresource(long address, long dstSubresource);
+    protected static native long getDstSubresource(long address);
+    protected static native void setDstSubresource(long address, long dstSubresource);
 
     public VkOffset3D getDstOffsets() {
         return new VkOffset3D(getVkMemory(), getDstOffsets(getVkAddress()));
@@ -64,8 +64,8 @@ public class VkImageBlit extends VkObject {
         
     }
 
-    private static native long getDstOffsets(long address);
-    private static native void setDstOffsets(long address, long dstOffsets);
+    protected static native long getDstOffsets(long address);
+    protected static native void setDstOffsets(long address, long dstOffsets);
 
 
     public static native long sizeof();

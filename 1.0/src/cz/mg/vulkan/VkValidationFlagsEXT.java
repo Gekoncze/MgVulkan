@@ -33,8 +33,8 @@ public class VkValidationFlagsEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkValidationFlagsEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getDisabledValidationCheckCount() {
         return new VkUInt32(getVkMemory(), getDisabledValidationCheckCount(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkValidationFlagsEXT extends VkObject {
         getDisabledValidationCheckCount().setValue(disabledValidationCheckCount);
     }
 
-    private static native long getDisabledValidationCheckCount(long address);
-    private static native void setDisabledValidationCheckCount(long address, long disabledValidationCheckCount);
+    protected static native long getDisabledValidationCheckCount(long address);
+    protected static native void setDisabledValidationCheckCount(long address, long disabledValidationCheckCount);
 
     public VkValidationCheckEXT getPDisabledValidationChecks() {
         return new VkValidationCheckEXT(getVkMemory(), getPDisabledValidationChecks(getVkAddress()));
@@ -80,8 +80,8 @@ public class VkValidationFlagsEXT extends VkObject {
         this.pDisabledValidationChecks = pDisabledValidationChecks;
     }
 
-    private static native long getPDisabledValidationChecks(long address);
-    private static native void setPDisabledValidationChecks(long address, long pDisabledValidationChecks);
+    protected static native long getPDisabledValidationChecks(long address);
+    protected static native void setPDisabledValidationChecks(long address, long pDisabledValidationChecks);
 
 
     public static native long sizeof();

@@ -26,5 +26,5 @@ public class PFNvkCmdDrawIndexedIndirect extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress(), drawCount != null ? drawCount.getVkAddress() : VkPointer.getNullAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long buffer, long offset, long drawCount, long stride);
+    protected static native void call(long vkaddress, long commandBuffer, long buffer, long offset, long drawCount, long stride);
 }

@@ -33,8 +33,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getStorageBuffer16BitAccess() {
         return new VkBool32(getVkMemory(), getStorageBuffer16BitAccess(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         getStorageBuffer16BitAccess().setValue(storageBuffer16BitAccess);
     }
 
-    private static native long getStorageBuffer16BitAccess(long address);
-    private static native void setStorageBuffer16BitAccess(long address, long storageBuffer16BitAccess);
+    protected static native long getStorageBuffer16BitAccess(long address);
+    protected static native void setStorageBuffer16BitAccess(long address, long storageBuffer16BitAccess);
 
     public VkBool32 getUniformAndStorageBuffer16BitAccess() {
         return new VkBool32(getVkMemory(), getUniformAndStorageBuffer16BitAccess(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         getUniformAndStorageBuffer16BitAccess().setValue(uniformAndStorageBuffer16BitAccess);
     }
 
-    private static native long getUniformAndStorageBuffer16BitAccess(long address);
-    private static native void setUniformAndStorageBuffer16BitAccess(long address, long uniformAndStorageBuffer16BitAccess);
+    protected static native long getUniformAndStorageBuffer16BitAccess(long address);
+    protected static native void setUniformAndStorageBuffer16BitAccess(long address, long uniformAndStorageBuffer16BitAccess);
 
     public VkBool32 getStoragePushConstant16() {
         return new VkBool32(getVkMemory(), getStoragePushConstant16(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         getStoragePushConstant16().setValue(storagePushConstant16);
     }
 
-    private static native long getStoragePushConstant16(long address);
-    private static native void setStoragePushConstant16(long address, long storagePushConstant16);
+    protected static native long getStoragePushConstant16(long address);
+    protected static native void setStoragePushConstant16(long address, long storagePushConstant16);
 
     public VkBool32 getStorageInputOutput16() {
         return new VkBool32(getVkMemory(), getStorageInputOutput16(getVkAddress()));
@@ -130,8 +130,8 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
         getStorageInputOutput16().setValue(storageInputOutput16);
     }
 
-    private static native long getStorageInputOutput16(long address);
-    private static native void setStorageInputOutput16(long address, long storageInputOutput16);
+    protected static native long getStorageInputOutput16(long address);
+    protected static native void setStorageInputOutput16(long address, long storageInputOutput16);
 
 
     public static native long sizeof();

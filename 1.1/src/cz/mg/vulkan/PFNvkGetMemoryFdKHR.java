@@ -26,5 +26,5 @@ public class PFNvkGetMemoryFdKHR extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pGetFdInfo != null ? pGetFdInfo.getVkAddress() : VkPointer.NULL, pFd != null ? pFd.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long pGetFdInfo, long pFd, long rval);
+    protected static native void call(long vkaddress, long device, long pGetFdInfo, long pFd, long rval);
 }

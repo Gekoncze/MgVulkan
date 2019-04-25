@@ -31,8 +31,8 @@ public class VkRect2D extends VkObject {
         
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
     public VkExtent2D getExtent() {
         return new VkExtent2D(getVkMemory(), getExtent(getVkAddress()));
@@ -44,8 +44,8 @@ public class VkRect2D extends VkObject {
         
     }
 
-    private static native long getExtent(long address);
-    private static native void setExtent(long address, long extent);
+    protected static native long getExtent(long address);
+    protected static native void setExtent(long address, long extent);
 
 
     public static native long sizeof();

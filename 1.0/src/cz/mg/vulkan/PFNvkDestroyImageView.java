@@ -26,5 +26,5 @@ public class PFNvkDestroyImageView extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), imageView != null ? imageView.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long device, long imageView, long pAllocator);
+    protected static native void call(long vkaddress, long device, long imageView, long pAllocator);
 }

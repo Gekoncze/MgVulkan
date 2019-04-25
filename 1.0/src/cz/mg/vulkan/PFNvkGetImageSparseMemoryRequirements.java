@@ -26,5 +26,5 @@ public class PFNvkGetImageSparseMemoryRequirements extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress(), pSparseMemoryRequirementCount != null ? pSparseMemoryRequirementCount.getVkAddress() : VkPointer.NULL, pSparseMemoryRequirements != null ? pSparseMemoryRequirements.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long device, long image, long pSparseMemoryRequirementCount, long pSparseMemoryRequirements);
+    protected static native void call(long vkaddress, long device, long image, long pSparseMemoryRequirementCount, long pSparseMemoryRequirements);
 }

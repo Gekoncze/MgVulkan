@@ -26,5 +26,5 @@ public class PFNvkCmdClearColorImage extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), image != null ? image.getVkAddress() : VkPointer.getNullAddress(), imageLayout != null ? imageLayout.getVkAddress() : VkPointer.getNullAddress(), pColor != null ? pColor.getVkAddress() : VkPointer.NULL, rangeCount != null ? rangeCount.getVkAddress() : VkPointer.getNullAddress(), pRanges != null ? pRanges.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long image, long imageLayout, long pColor, long rangeCount, long pRanges);
+    protected static native void call(long vkaddress, long commandBuffer, long image, long imageLayout, long pColor, long rangeCount, long pRanges);
 }

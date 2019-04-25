@@ -33,8 +33,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         getSupportedAlpha().setValue(supportedAlpha);
     }
 
-    private static native long getSupportedAlpha(long address);
-    private static native void setSupportedAlpha(long address, long supportedAlpha);
+    protected static native long getSupportedAlpha(long address);
+    protected static native void setSupportedAlpha(long address, long supportedAlpha);
 
     public VkOffset2D getMinSrcPosition() {
         return new VkOffset2D(getVkMemory(), getMinSrcPosition(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         
     }
 
-    private static native long getMinSrcPosition(long address);
-    private static native void setMinSrcPosition(long address, long minSrcPosition);
+    protected static native long getMinSrcPosition(long address);
+    protected static native void setMinSrcPosition(long address, long minSrcPosition);
 
     public VkOffset2D getMaxSrcPosition() {
         return new VkOffset2D(getVkMemory(), getMaxSrcPosition(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         
     }
 
-    private static native long getMaxSrcPosition(long address);
-    private static native void setMaxSrcPosition(long address, long maxSrcPosition);
+    protected static native long getMaxSrcPosition(long address);
+    protected static native void setMaxSrcPosition(long address, long maxSrcPosition);
 
     public VkExtent2D getMinSrcExtent() {
         return new VkExtent2D(getVkMemory(), getMinSrcExtent(getVkAddress()));
@@ -72,8 +72,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         
     }
 
-    private static native long getMinSrcExtent(long address);
-    private static native void setMinSrcExtent(long address, long minSrcExtent);
+    protected static native long getMinSrcExtent(long address);
+    protected static native void setMinSrcExtent(long address, long minSrcExtent);
 
     public VkExtent2D getMaxSrcExtent() {
         return new VkExtent2D(getVkMemory(), getMaxSrcExtent(getVkAddress()));
@@ -85,8 +85,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         
     }
 
-    private static native long getMaxSrcExtent(long address);
-    private static native void setMaxSrcExtent(long address, long maxSrcExtent);
+    protected static native long getMaxSrcExtent(long address);
+    protected static native void setMaxSrcExtent(long address, long maxSrcExtent);
 
     public VkOffset2D getMinDstPosition() {
         return new VkOffset2D(getVkMemory(), getMinDstPosition(getVkAddress()));
@@ -98,8 +98,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         
     }
 
-    private static native long getMinDstPosition(long address);
-    private static native void setMinDstPosition(long address, long minDstPosition);
+    protected static native long getMinDstPosition(long address);
+    protected static native void setMinDstPosition(long address, long minDstPosition);
 
     public VkOffset2D getMaxDstPosition() {
         return new VkOffset2D(getVkMemory(), getMaxDstPosition(getVkAddress()));
@@ -111,8 +111,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         
     }
 
-    private static native long getMaxDstPosition(long address);
-    private static native void setMaxDstPosition(long address, long maxDstPosition);
+    protected static native long getMaxDstPosition(long address);
+    protected static native void setMaxDstPosition(long address, long maxDstPosition);
 
     public VkExtent2D getMinDstExtent() {
         return new VkExtent2D(getVkMemory(), getMinDstExtent(getVkAddress()));
@@ -124,8 +124,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         
     }
 
-    private static native long getMinDstExtent(long address);
-    private static native void setMinDstExtent(long address, long minDstExtent);
+    protected static native long getMinDstExtent(long address);
+    protected static native void setMinDstExtent(long address, long minDstExtent);
 
     public VkExtent2D getMaxDstExtent() {
         return new VkExtent2D(getVkMemory(), getMaxDstExtent(getVkAddress()));
@@ -137,8 +137,8 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
         
     }
 
-    private static native long getMaxDstExtent(long address);
-    private static native void setMaxDstExtent(long address, long maxDstExtent);
+    protected static native long getMaxDstExtent(long address);
+    protected static native void setMaxDstExtent(long address, long maxDstExtent);
 
 
     public static native long sizeof();

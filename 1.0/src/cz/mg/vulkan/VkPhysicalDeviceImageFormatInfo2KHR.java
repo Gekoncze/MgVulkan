@@ -34,8 +34,8 @@ public class VkPhysicalDeviceImageFormatInfo2KHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPhysicalDeviceImageFormatInfo2KHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkFormat getFormat() {
         return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPhysicalDeviceImageFormatInfo2KHR extends VkObject {
         getFormat().setValue(format);
     }
 
-    private static native long getFormat(long address);
-    private static native void setFormat(long address, long format);
+    protected static native long getFormat(long address);
+    protected static native void setFormat(long address, long format);
 
     public VkImageType getType() {
         return new VkImageType(getVkMemory(), getType(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPhysicalDeviceImageFormatInfo2KHR extends VkObject {
         getType().setValue(type);
     }
 
-    private static native long getType(long address);
-    private static native void setType(long address, long type);
+    protected static native long getType(long address);
+    protected static native void setType(long address, long type);
 
     public VkImageTiling getTiling() {
         return new VkImageTiling(getVkMemory(), getTiling(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkPhysicalDeviceImageFormatInfo2KHR extends VkObject {
         getTiling().setValue(tiling);
     }
 
-    private static native long getTiling(long address);
-    private static native void setTiling(long address, long tiling);
+    protected static native long getTiling(long address);
+    protected static native void setTiling(long address, long tiling);
 
     public VkImageUsageFlags getUsage() {
         return new VkImageUsageFlags(getVkMemory(), getUsage(getVkAddress()));
@@ -131,8 +131,8 @@ public class VkPhysicalDeviceImageFormatInfo2KHR extends VkObject {
         getUsage().setValue(usage);
     }
 
-    private static native long getUsage(long address);
-    private static native void setUsage(long address, long usage);
+    protected static native long getUsage(long address);
+    protected static native void setUsage(long address, long usage);
 
     public VkImageCreateFlags getFlags() {
         return new VkImageCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -152,8 +152,8 @@ public class VkPhysicalDeviceImageFormatInfo2KHR extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
 
     public static native long sizeof();

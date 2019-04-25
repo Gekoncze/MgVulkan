@@ -33,8 +33,8 @@ public class VkPhysicalDeviceIDPropertiesKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceIDPropertiesKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt8 getDeviceUUID() {
         return new VkUInt8(getVkMemory(), getDeviceUUID(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkPhysicalDeviceIDPropertiesKHR extends VkObject {
         
     }
 
-    private static native long getDeviceUUID(long address);
-    private static native void setDeviceUUID(long address, long deviceUUID);
+    protected static native long getDeviceUUID(long address);
+    protected static native void setDeviceUUID(long address, long deviceUUID);
 
     public VkUInt8 getDriverUUID() {
         return new VkUInt8(getVkMemory(), getDriverUUID(getVkAddress()));
@@ -72,8 +72,8 @@ public class VkPhysicalDeviceIDPropertiesKHR extends VkObject {
         
     }
 
-    private static native long getDriverUUID(long address);
-    private static native void setDriverUUID(long address, long driverUUID);
+    protected static native long getDriverUUID(long address);
+    protected static native void setDriverUUID(long address, long driverUUID);
 
     public VkUInt8 getDeviceLUID() {
         return new VkUInt8(getVkMemory(), getDeviceLUID(getVkAddress()));
@@ -85,8 +85,8 @@ public class VkPhysicalDeviceIDPropertiesKHR extends VkObject {
         
     }
 
-    private static native long getDeviceLUID(long address);
-    private static native void setDeviceLUID(long address, long deviceLUID);
+    protected static native long getDeviceLUID(long address);
+    protected static native void setDeviceLUID(long address, long deviceLUID);
 
     public VkUInt32 getDeviceNodeMask() {
         return new VkUInt32(getVkMemory(), getDeviceNodeMask(getVkAddress()));
@@ -106,8 +106,8 @@ public class VkPhysicalDeviceIDPropertiesKHR extends VkObject {
         getDeviceNodeMask().setValue(deviceNodeMask);
     }
 
-    private static native long getDeviceNodeMask(long address);
-    private static native void setDeviceNodeMask(long address, long deviceNodeMask);
+    protected static native long getDeviceNodeMask(long address);
+    protected static native void setDeviceNodeMask(long address, long deviceNodeMask);
 
     public VkBool32 getDeviceLUIDValid() {
         return new VkBool32(getVkMemory(), getDeviceLUIDValid(getVkAddress()));
@@ -127,8 +127,8 @@ public class VkPhysicalDeviceIDPropertiesKHR extends VkObject {
         getDeviceLUIDValid().setValue(deviceLUIDValid);
     }
 
-    private static native long getDeviceLUIDValid(long address);
-    private static native void setDeviceLUIDValid(long address, long deviceLUIDValid);
+    protected static native long getDeviceLUIDValid(long address);
+    protected static native void setDeviceLUIDValid(long address, long deviceLUIDValid);
 
 
     public static native long sizeof();

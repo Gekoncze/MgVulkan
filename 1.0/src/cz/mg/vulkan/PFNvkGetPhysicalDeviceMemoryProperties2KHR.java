@@ -26,5 +26,5 @@ public class PFNvkGetPhysicalDeviceMemoryProperties2KHR extends VkFunctionPointe
         call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), pMemoryProperties != null ? pMemoryProperties.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long physicalDevice, long pMemoryProperties);
+    protected static native void call(long vkaddress, long physicalDevice, long pMemoryProperties);
 }

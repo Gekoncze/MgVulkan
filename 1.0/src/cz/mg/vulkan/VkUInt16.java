@@ -62,7 +62,15 @@ public class VkUInt16 extends VkObject {
 
         public Array(short... values){
             this(values.length);
-            for(int i = 0; i < values.length; i++) get(i).setValue(values[i]);
+            for(int i = 0; i < values.length; i++) setValueAt(i, values[i]);
+        }
+
+        public short getValueAt(int i){
+            return getValue(getVkAddress() + sizeof()*i);
+        }
+
+        public void setValueAt(int i, short value){
+            setValue(getVkAddress() + sizeof()*i, value);
         }
 
 

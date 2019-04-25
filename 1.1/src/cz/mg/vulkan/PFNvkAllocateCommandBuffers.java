@@ -26,5 +26,5 @@ public class PFNvkAllocateCommandBuffers extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pAllocateInfo != null ? pAllocateInfo.getVkAddress() : VkPointer.NULL, pCommandBuffers != null ? pCommandBuffers.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long pAllocateInfo, long pCommandBuffers, long rval);
+    protected static native void call(long vkaddress, long device, long pAllocateInfo, long pCommandBuffers, long rval);
 }

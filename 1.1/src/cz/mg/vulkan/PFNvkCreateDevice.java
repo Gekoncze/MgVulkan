@@ -26,5 +26,5 @@ public class PFNvkCreateDevice extends VkFunctionPointer {
         call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), pCreateInfo != null ? pCreateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pDevice != null ? pDevice.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long physicalDevice, long pCreateInfo, long pAllocator, long pDevice, long rval);
+    protected static native void call(long vkaddress, long physicalDevice, long pCreateInfo, long pAllocator, long pDevice, long rval);
 }

@@ -34,8 +34,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getObjectCount() {
         return new VkUInt32(getVkMemory(), getObjectCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getObjectCount().setValue(objectCount);
     }
 
-    private static native long getObjectCount(long address);
-    private static native void setObjectCount(long address, long objectCount);
+    protected static native long getObjectCount(long address);
+    protected static native void setObjectCount(long address, long objectCount);
 
     public VkObjectEntryTypeNVX getPObjectEntryTypes() {
         return new VkObjectEntryTypeNVX(getVkMemory(), getPObjectEntryTypes(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         this.pObjectEntryTypes = pObjectEntryTypes;
     }
 
-    private static native long getPObjectEntryTypes(long address);
-    private static native void setPObjectEntryTypes(long address, long pObjectEntryTypes);
+    protected static native long getPObjectEntryTypes(long address);
+    protected static native void setPObjectEntryTypes(long address, long pObjectEntryTypes);
 
     public VkUInt32 getPObjectEntryCounts() {
         return new VkUInt32(getVkMemory(), getPObjectEntryCounts(getVkAddress()));
@@ -94,8 +94,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         this.pObjectEntryCounts = pObjectEntryCounts;
     }
 
-    private static native long getPObjectEntryCounts(long address);
-    private static native void setPObjectEntryCounts(long address, long pObjectEntryCounts);
+    protected static native long getPObjectEntryCounts(long address);
+    protected static native void setPObjectEntryCounts(long address, long pObjectEntryCounts);
 
     public VkObjectEntryUsageFlagsNVX getPObjectEntryUsageFlags() {
         return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getPObjectEntryUsageFlags(getVkAddress()));
@@ -107,8 +107,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         this.pObjectEntryUsageFlags = pObjectEntryUsageFlags;
     }
 
-    private static native long getPObjectEntryUsageFlags(long address);
-    private static native void setPObjectEntryUsageFlags(long address, long pObjectEntryUsageFlags);
+    protected static native long getPObjectEntryUsageFlags(long address);
+    protected static native void setPObjectEntryUsageFlags(long address, long pObjectEntryUsageFlags);
 
     public VkUInt32 getMaxUniformBuffersPerDescriptor() {
         return new VkUInt32(getVkMemory(), getMaxUniformBuffersPerDescriptor(getVkAddress()));
@@ -128,8 +128,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getMaxUniformBuffersPerDescriptor().setValue(maxUniformBuffersPerDescriptor);
     }
 
-    private static native long getMaxUniformBuffersPerDescriptor(long address);
-    private static native void setMaxUniformBuffersPerDescriptor(long address, long maxUniformBuffersPerDescriptor);
+    protected static native long getMaxUniformBuffersPerDescriptor(long address);
+    protected static native void setMaxUniformBuffersPerDescriptor(long address, long maxUniformBuffersPerDescriptor);
 
     public VkUInt32 getMaxStorageBuffersPerDescriptor() {
         return new VkUInt32(getVkMemory(), getMaxStorageBuffersPerDescriptor(getVkAddress()));
@@ -149,8 +149,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getMaxStorageBuffersPerDescriptor().setValue(maxStorageBuffersPerDescriptor);
     }
 
-    private static native long getMaxStorageBuffersPerDescriptor(long address);
-    private static native void setMaxStorageBuffersPerDescriptor(long address, long maxStorageBuffersPerDescriptor);
+    protected static native long getMaxStorageBuffersPerDescriptor(long address);
+    protected static native void setMaxStorageBuffersPerDescriptor(long address, long maxStorageBuffersPerDescriptor);
 
     public VkUInt32 getMaxStorageImagesPerDescriptor() {
         return new VkUInt32(getVkMemory(), getMaxStorageImagesPerDescriptor(getVkAddress()));
@@ -170,8 +170,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getMaxStorageImagesPerDescriptor().setValue(maxStorageImagesPerDescriptor);
     }
 
-    private static native long getMaxStorageImagesPerDescriptor(long address);
-    private static native void setMaxStorageImagesPerDescriptor(long address, long maxStorageImagesPerDescriptor);
+    protected static native long getMaxStorageImagesPerDescriptor(long address);
+    protected static native void setMaxStorageImagesPerDescriptor(long address, long maxStorageImagesPerDescriptor);
 
     public VkUInt32 getMaxSampledImagesPerDescriptor() {
         return new VkUInt32(getVkMemory(), getMaxSampledImagesPerDescriptor(getVkAddress()));
@@ -191,8 +191,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getMaxSampledImagesPerDescriptor().setValue(maxSampledImagesPerDescriptor);
     }
 
-    private static native long getMaxSampledImagesPerDescriptor(long address);
-    private static native void setMaxSampledImagesPerDescriptor(long address, long maxSampledImagesPerDescriptor);
+    protected static native long getMaxSampledImagesPerDescriptor(long address);
+    protected static native void setMaxSampledImagesPerDescriptor(long address, long maxSampledImagesPerDescriptor);
 
     public VkUInt32 getMaxPipelineLayouts() {
         return new VkUInt32(getVkMemory(), getMaxPipelineLayouts(getVkAddress()));
@@ -212,8 +212,8 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         getMaxPipelineLayouts().setValue(maxPipelineLayouts);
     }
 
-    private static native long getMaxPipelineLayouts(long address);
-    private static native void setMaxPipelineLayouts(long address, long maxPipelineLayouts);
+    protected static native long getMaxPipelineLayouts(long address);
+    protected static native void setMaxPipelineLayouts(long address, long maxPipelineLayouts);
 
 
     public static native long sizeof();

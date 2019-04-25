@@ -34,8 +34,8 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getViewportWScalingEnable() {
         return new VkBool32(getVkMemory(), getViewportWScalingEnable(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         getViewportWScalingEnable().setValue(viewportWScalingEnable);
     }
 
-    private static native long getViewportWScalingEnable(long address);
-    private static native void setViewportWScalingEnable(long address, long viewportWScalingEnable);
+    protected static native long getViewportWScalingEnable(long address);
+    protected static native void setViewportWScalingEnable(long address, long viewportWScalingEnable);
 
     public VkUInt32 getViewportCount() {
         return new VkUInt32(getVkMemory(), getViewportCount(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         getViewportCount().setValue(viewportCount);
     }
 
-    private static native long getViewportCount(long address);
-    private static native void setViewportCount(long address, long viewportCount);
+    protected static native long getViewportCount(long address);
+    protected static native void setViewportCount(long address, long viewportCount);
 
     public VkViewportWScalingNV getPViewportWScalings() {
         return new VkViewportWScalingNV(getVkMemory(), getPViewportWScalings(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         this.pViewportWScalings = pViewportWScalings;
     }
 
-    private static native long getPViewportWScalings(long address);
-    private static native void setPViewportWScalings(long address, long pViewportWScalings);
+    protected static native long getPViewportWScalings(long address);
+    protected static native void setPViewportWScalings(long address, long pViewportWScalings);
 
 
     public static native long sizeof();

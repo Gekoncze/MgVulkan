@@ -33,8 +33,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getMaxIndirectCommandsLayoutTokenCount() {
         return new VkUInt32(getVkMemory(), getMaxIndirectCommandsLayoutTokenCount(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         getMaxIndirectCommandsLayoutTokenCount().setValue(maxIndirectCommandsLayoutTokenCount);
     }
 
-    private static native long getMaxIndirectCommandsLayoutTokenCount(long address);
-    private static native void setMaxIndirectCommandsLayoutTokenCount(long address, long maxIndirectCommandsLayoutTokenCount);
+    protected static native long getMaxIndirectCommandsLayoutTokenCount(long address);
+    protected static native void setMaxIndirectCommandsLayoutTokenCount(long address, long maxIndirectCommandsLayoutTokenCount);
 
     public VkUInt32 getMaxObjectEntryCounts() {
         return new VkUInt32(getVkMemory(), getMaxObjectEntryCounts(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         getMaxObjectEntryCounts().setValue(maxObjectEntryCounts);
     }
 
-    private static native long getMaxObjectEntryCounts(long address);
-    private static native void setMaxObjectEntryCounts(long address, long maxObjectEntryCounts);
+    protected static native long getMaxObjectEntryCounts(long address);
+    protected static native void setMaxObjectEntryCounts(long address, long maxObjectEntryCounts);
 
     public VkUInt32 getMinSequenceCountBufferOffsetAlignment() {
         return new VkUInt32(getVkMemory(), getMinSequenceCountBufferOffsetAlignment(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         getMinSequenceCountBufferOffsetAlignment().setValue(minSequenceCountBufferOffsetAlignment);
     }
 
-    private static native long getMinSequenceCountBufferOffsetAlignment(long address);
-    private static native void setMinSequenceCountBufferOffsetAlignment(long address, long minSequenceCountBufferOffsetAlignment);
+    protected static native long getMinSequenceCountBufferOffsetAlignment(long address);
+    protected static native void setMinSequenceCountBufferOffsetAlignment(long address, long minSequenceCountBufferOffsetAlignment);
 
     public VkUInt32 getMinSequenceIndexBufferOffsetAlignment() {
         return new VkUInt32(getVkMemory(), getMinSequenceIndexBufferOffsetAlignment(getVkAddress()));
@@ -130,8 +130,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         getMinSequenceIndexBufferOffsetAlignment().setValue(minSequenceIndexBufferOffsetAlignment);
     }
 
-    private static native long getMinSequenceIndexBufferOffsetAlignment(long address);
-    private static native void setMinSequenceIndexBufferOffsetAlignment(long address, long minSequenceIndexBufferOffsetAlignment);
+    protected static native long getMinSequenceIndexBufferOffsetAlignment(long address);
+    protected static native void setMinSequenceIndexBufferOffsetAlignment(long address, long minSequenceIndexBufferOffsetAlignment);
 
     public VkUInt32 getMinCommandsTokenBufferOffsetAlignment() {
         return new VkUInt32(getVkMemory(), getMinCommandsTokenBufferOffsetAlignment(getVkAddress()));
@@ -151,8 +151,8 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
         getMinCommandsTokenBufferOffsetAlignment().setValue(minCommandsTokenBufferOffsetAlignment);
     }
 
-    private static native long getMinCommandsTokenBufferOffsetAlignment(long address);
-    private static native void setMinCommandsTokenBufferOffsetAlignment(long address, long minCommandsTokenBufferOffsetAlignment);
+    protected static native long getMinCommandsTokenBufferOffsetAlignment(long address);
+    protected static native void setMinCommandsTokenBufferOffsetAlignment(long address, long minCommandsTokenBufferOffsetAlignment);
 
 
     public static native long sizeof();

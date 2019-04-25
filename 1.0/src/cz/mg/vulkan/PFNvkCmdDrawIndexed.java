@@ -26,5 +26,5 @@ public class PFNvkCmdDrawIndexed extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), indexCount != null ? indexCount.getVkAddress() : VkPointer.getNullAddress(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddress(), firstIndex != null ? firstIndex.getVkAddress() : VkPointer.getNullAddress(), vertexOffset != null ? vertexOffset.getVkAddress() : VkPointer.getNullAddress(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long indexCount, long instanceCount, long firstIndex, long vertexOffset, long firstInstance);
+    protected static native void call(long vkaddress, long commandBuffer, long indexCount, long instanceCount, long firstIndex, long vertexOffset, long firstInstance);
 }

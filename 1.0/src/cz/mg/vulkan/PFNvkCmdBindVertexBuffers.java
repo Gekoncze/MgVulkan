@@ -26,5 +26,5 @@ public class PFNvkCmdBindVertexBuffers extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), firstBinding != null ? firstBinding.getVkAddress() : VkPointer.getNullAddress(), bindingCount != null ? bindingCount.getVkAddress() : VkPointer.getNullAddress(), pBuffers != null ? pBuffers.getVkAddress() : VkPointer.NULL, pOffsets != null ? pOffsets.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long firstBinding, long bindingCount, long pBuffers, long pOffsets);
+    protected static native void call(long vkaddress, long commandBuffer, long firstBinding, long bindingCount, long pBuffers, long pOffsets);
 }

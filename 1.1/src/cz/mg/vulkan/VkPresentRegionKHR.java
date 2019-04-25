@@ -33,8 +33,8 @@ public class VkPresentRegionKHR extends VkObject {
         getRectangleCount().setValue(rectangleCount);
     }
 
-    private static native long getRectangleCount(long address);
-    private static native void setRectangleCount(long address, long rectangleCount);
+    protected static native long getRectangleCount(long address);
+    protected static native void setRectangleCount(long address, long rectangleCount);
 
     public VkRectLayerKHR getPRectangles() {
         return new VkRectLayerKHR(getVkMemory(), getPRectangles(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPresentRegionKHR extends VkObject {
         this.pRectangles = pRectangles;
     }
 
-    private static native long getPRectangles(long address);
-    private static native void setPRectangles(long address, long pRectangles);
+    protected static native long getPRectangles(long address);
+    protected static native void setPRectangles(long address, long pRectangles);
 
 
     public static native long sizeof();

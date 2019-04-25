@@ -26,5 +26,5 @@ public class PFNvkDestroySurfaceKHR extends VkFunctionPointer {
         call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddress(), surface != null ? surface.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long instance, long surface, long pAllocator);
+    protected static native void call(long vkaddress, long instance, long surface, long pAllocator);
 }

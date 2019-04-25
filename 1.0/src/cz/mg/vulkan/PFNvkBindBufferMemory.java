@@ -26,5 +26,5 @@ public class PFNvkBindBufferMemory extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress(), memory != null ? memory.getVkAddress() : VkPointer.getNullAddress(), memoryOffset != null ? memoryOffset.getVkAddress() : VkPointer.getNullAddress(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long buffer, long memory, long memoryOffset, long rval);
+    protected static native void call(long vkaddress, long device, long buffer, long memory, long memoryOffset, long rval);
 }

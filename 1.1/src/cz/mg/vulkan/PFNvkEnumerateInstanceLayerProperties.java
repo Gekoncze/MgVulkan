@@ -26,5 +26,5 @@ public class PFNvkEnumerateInstanceLayerProperties extends VkFunctionPointer {
         call(getValue(), pPropertyCount != null ? pPropertyCount.getVkAddress() : VkPointer.NULL, pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long pPropertyCount, long pProperties, long rval);
+    protected static native void call(long vkaddress, long pPropertyCount, long pProperties, long rval);
 }

@@ -34,8 +34,8 @@ public class VkDisplayEventInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDisplayEventInfoEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDisplayEventTypeEXT getDisplayEvent() {
         return new VkDisplayEventTypeEXT(getVkMemory(), getDisplayEvent(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDisplayEventInfoEXT extends VkObject {
         getDisplayEvent().setValue(displayEvent);
     }
 
-    private static native long getDisplayEvent(long address);
-    private static native void setDisplayEvent(long address, long displayEvent);
+    protected static native long getDisplayEvent(long address);
+    protected static native void setDisplayEvent(long address, long displayEvent);
 
 
     public static native long sizeof();

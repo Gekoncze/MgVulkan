@@ -26,5 +26,5 @@ public class PFNvkUpdateDescriptorSets extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), descriptorWriteCount != null ? descriptorWriteCount.getVkAddress() : VkPointer.getNullAddress(), pDescriptorWrites != null ? pDescriptorWrites.getVkAddress() : VkPointer.NULL, descriptorCopyCount != null ? descriptorCopyCount.getVkAddress() : VkPointer.getNullAddress(), pDescriptorCopies != null ? pDescriptorCopies.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long device, long descriptorWriteCount, long pDescriptorWrites, long descriptorCopyCount, long pDescriptorCopies);
+    protected static native void call(long vkaddress, long device, long descriptorWriteCount, long pDescriptorWrites, long descriptorCopyCount, long pDescriptorCopies);
 }

@@ -33,8 +33,8 @@ public class VkPhysicalDeviceMultiviewPropertiesKHX extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceMultiviewPropertiesKHX extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getMaxMultiviewViewCount() {
         return new VkUInt32(getVkMemory(), getMaxMultiviewViewCount(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceMultiviewPropertiesKHX extends VkObject {
         getMaxMultiviewViewCount().setValue(maxMultiviewViewCount);
     }
 
-    private static native long getMaxMultiviewViewCount(long address);
-    private static native void setMaxMultiviewViewCount(long address, long maxMultiviewViewCount);
+    protected static native long getMaxMultiviewViewCount(long address);
+    protected static native void setMaxMultiviewViewCount(long address, long maxMultiviewViewCount);
 
     public VkUInt32 getMaxMultiviewInstanceIndex() {
         return new VkUInt32(getVkMemory(), getMaxMultiviewInstanceIndex(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkPhysicalDeviceMultiviewPropertiesKHX extends VkObject {
         getMaxMultiviewInstanceIndex().setValue(maxMultiviewInstanceIndex);
     }
 
-    private static native long getMaxMultiviewInstanceIndex(long address);
-    private static native void setMaxMultiviewInstanceIndex(long address, long maxMultiviewInstanceIndex);
+    protected static native long getMaxMultiviewInstanceIndex(long address);
+    protected static native void setMaxMultiviewInstanceIndex(long address, long maxMultiviewInstanceIndex);
 
 
     public static native long sizeof();

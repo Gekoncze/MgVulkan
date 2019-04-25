@@ -34,8 +34,8 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getSampleLocationsEnable() {
         return new VkBool32(getVkMemory(), getSampleLocationsEnable(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
         getSampleLocationsEnable().setValue(sampleLocationsEnable);
     }
 
-    private static native long getSampleLocationsEnable(long address);
-    private static native void setSampleLocationsEnable(long address, long sampleLocationsEnable);
+    protected static native long getSampleLocationsEnable(long address);
+    protected static native void setSampleLocationsEnable(long address, long sampleLocationsEnable);
 
     public VkSampleLocationsInfoEXT getSampleLocationsInfo() {
         return new VkSampleLocationsInfoEXT(getVkMemory(), getSampleLocationsInfo(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkPipelineSampleLocationsStateCreateInfoEXT extends VkObject {
         
     }
 
-    private static native long getSampleLocationsInfo(long address);
-    private static native void setSampleLocationsInfo(long address, long sampleLocationsInfo);
+    protected static native long getSampleLocationsInfo(long address);
+    protected static native void setSampleLocationsInfo(long address, long sampleLocationsInfo);
 
 
     public static native long sizeof();

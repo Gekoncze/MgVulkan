@@ -25,8 +25,8 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         
     }
 
-    private static native long getImageFormatProperties(long address);
-    private static native void setImageFormatProperties(long address, long imageFormatProperties);
+    protected static native long getImageFormatProperties(long address);
+    protected static native void setImageFormatProperties(long address, long imageFormatProperties);
 
     public VkExternalMemoryFeatureFlagsNV getExternalMemoryFeatures() {
         return new VkExternalMemoryFeatureFlagsNV(getVkMemory(), getExternalMemoryFeatures(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         getExternalMemoryFeatures().setValue(externalMemoryFeatures);
     }
 
-    private static native long getExternalMemoryFeatures(long address);
-    private static native void setExternalMemoryFeatures(long address, long externalMemoryFeatures);
+    protected static native long getExternalMemoryFeatures(long address);
+    protected static native void setExternalMemoryFeatures(long address, long externalMemoryFeatures);
 
     public VkExternalMemoryHandleTypeFlagsNV getExportFromImportedHandleTypes() {
         return new VkExternalMemoryHandleTypeFlagsNV(getVkMemory(), getExportFromImportedHandleTypes(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         getExportFromImportedHandleTypes().setValue(exportFromImportedHandleTypes);
     }
 
-    private static native long getExportFromImportedHandleTypes(long address);
-    private static native void setExportFromImportedHandleTypes(long address, long exportFromImportedHandleTypes);
+    protected static native long getExportFromImportedHandleTypes(long address);
+    protected static native void setExportFromImportedHandleTypes(long address, long exportFromImportedHandleTypes);
 
     public VkExternalMemoryHandleTypeFlagsNV getCompatibleHandleTypes() {
         return new VkExternalMemoryHandleTypeFlagsNV(getVkMemory(), getCompatibleHandleTypes(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkExternalImageFormatPropertiesNV extends VkObject {
         getCompatibleHandleTypes().setValue(compatibleHandleTypes);
     }
 
-    private static native long getCompatibleHandleTypes(long address);
-    private static native void setCompatibleHandleTypes(long address, long compatibleHandleTypes);
+    protected static native long getCompatibleHandleTypes(long address);
+    protected static native void setCompatibleHandleTypes(long address, long compatibleHandleTypes);
 
 
     public static native long sizeof();

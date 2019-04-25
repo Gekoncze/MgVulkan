@@ -33,8 +33,8 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
         getTokenType().setValue(tokenType);
     }
 
-    private static native long getTokenType(long address);
-    private static native void setTokenType(long address, long tokenType);
+    protected static native long getTokenType(long address);
+    protected static native void setTokenType(long address, long tokenType);
 
     public VkUInt32 getBindingUnit() {
         return new VkUInt32(getVkMemory(), getBindingUnit(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
         getBindingUnit().setValue(bindingUnit);
     }
 
-    private static native long getBindingUnit(long address);
-    private static native void setBindingUnit(long address, long bindingUnit);
+    protected static native long getBindingUnit(long address);
+    protected static native void setBindingUnit(long address, long bindingUnit);
 
     public VkUInt32 getDynamicCount() {
         return new VkUInt32(getVkMemory(), getDynamicCount(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
         getDynamicCount().setValue(dynamicCount);
     }
 
-    private static native long getDynamicCount(long address);
-    private static native void setDynamicCount(long address, long dynamicCount);
+    protected static native long getDynamicCount(long address);
+    protected static native void setDynamicCount(long address, long dynamicCount);
 
     public VkUInt32 getDivisor() {
         return new VkUInt32(getVkMemory(), getDivisor(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
         getDivisor().setValue(divisor);
     }
 
-    private static native long getDivisor(long address);
-    private static native void setDivisor(long address, long divisor);
+    protected static native long getDivisor(long address);
+    protected static native void setDivisor(long address, long divisor);
 
 
     public static native long sizeof();

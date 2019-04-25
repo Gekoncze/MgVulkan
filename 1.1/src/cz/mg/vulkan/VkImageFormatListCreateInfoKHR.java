@@ -34,8 +34,8 @@ public class VkImageFormatListCreateInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkImageFormatListCreateInfoKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getViewFormatCount() {
         return new VkUInt32(getVkMemory(), getViewFormatCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkImageFormatListCreateInfoKHR extends VkObject {
         getViewFormatCount().setValue(viewFormatCount);
     }
 
-    private static native long getViewFormatCount(long address);
-    private static native void setViewFormatCount(long address, long viewFormatCount);
+    protected static native long getViewFormatCount(long address);
+    protected static native void setViewFormatCount(long address, long viewFormatCount);
 
     public VkFormat getPViewFormats() {
         return new VkFormat(getVkMemory(), getPViewFormats(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkImageFormatListCreateInfoKHR extends VkObject {
         this.pViewFormats = pViewFormats;
     }
 
-    private static native long getPViewFormats(long address);
-    private static native void setPViewFormats(long address, long pViewFormats);
+    protected static native long getPViewFormats(long address);
+    protected static native void setPViewFormats(long address, long pViewFormats);
 
 
     public static native long sizeof();

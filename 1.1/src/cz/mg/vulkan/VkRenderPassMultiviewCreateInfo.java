@@ -34,8 +34,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getSubpassCount() {
         return new VkUInt32(getVkMemory(), getSubpassCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         getSubpassCount().setValue(subpassCount);
     }
 
-    private static native long getSubpassCount(long address);
-    private static native void setSubpassCount(long address, long subpassCount);
+    protected static native long getSubpassCount(long address);
+    protected static native void setSubpassCount(long address, long subpassCount);
 
     public VkUInt32 getPViewMasks() {
         return new VkUInt32(getVkMemory(), getPViewMasks(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         this.pViewMasks = pViewMasks;
     }
 
-    private static native long getPViewMasks(long address);
-    private static native void setPViewMasks(long address, long pViewMasks);
+    protected static native long getPViewMasks(long address);
+    protected static native void setPViewMasks(long address, long pViewMasks);
 
     public VkUInt32 getDependencyCount() {
         return new VkUInt32(getVkMemory(), getDependencyCount(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         getDependencyCount().setValue(dependencyCount);
     }
 
-    private static native long getDependencyCount(long address);
-    private static native void setDependencyCount(long address, long dependencyCount);
+    protected static native long getDependencyCount(long address);
+    protected static native void setDependencyCount(long address, long dependencyCount);
 
     public VkInt32 getPViewOffsets() {
         return new VkInt32(getVkMemory(), getPViewOffsets(getVkAddress()));
@@ -115,8 +115,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         this.pViewOffsets = pViewOffsets;
     }
 
-    private static native long getPViewOffsets(long address);
-    private static native void setPViewOffsets(long address, long pViewOffsets);
+    protected static native long getPViewOffsets(long address);
+    protected static native void setPViewOffsets(long address, long pViewOffsets);
 
     public VkUInt32 getCorrelationMaskCount() {
         return new VkUInt32(getVkMemory(), getCorrelationMaskCount(getVkAddress()));
@@ -136,8 +136,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         getCorrelationMaskCount().setValue(correlationMaskCount);
     }
 
-    private static native long getCorrelationMaskCount(long address);
-    private static native void setCorrelationMaskCount(long address, long correlationMaskCount);
+    protected static native long getCorrelationMaskCount(long address);
+    protected static native void setCorrelationMaskCount(long address, long correlationMaskCount);
 
     public VkUInt32 getPCorrelationMasks() {
         return new VkUInt32(getVkMemory(), getPCorrelationMasks(getVkAddress()));
@@ -149,8 +149,8 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         this.pCorrelationMasks = pCorrelationMasks;
     }
 
-    private static native long getPCorrelationMasks(long address);
-    private static native void setPCorrelationMasks(long address, long pCorrelationMasks);
+    protected static native long getPCorrelationMasks(long address);
+    protected static native void setPCorrelationMasks(long address, long pCorrelationMasks);
 
 
     public static native long sizeof();

@@ -33,8 +33,8 @@ public class VkMultisamplePropertiesEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkMultisamplePropertiesEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkExtent2D getMaxSampleLocationGridSize() {
         return new VkExtent2D(getVkMemory(), getMaxSampleLocationGridSize(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkMultisamplePropertiesEXT extends VkObject {
         
     }
 
-    private static native long getMaxSampleLocationGridSize(long address);
-    private static native void setMaxSampleLocationGridSize(long address, long maxSampleLocationGridSize);
+    protected static native long getMaxSampleLocationGridSize(long address);
+    protected static native void setMaxSampleLocationGridSize(long address, long maxSampleLocationGridSize);
 
 
     public static native long sizeof();

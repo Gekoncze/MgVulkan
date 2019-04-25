@@ -26,5 +26,5 @@ public class PFNvkGetShaderInfoAMD extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pipeline != null ? pipeline.getVkAddress() : VkPointer.getNullAddress(), shaderStage != null ? shaderStage.getVkAddress() : VkPointer.getNullAddress(), infoType != null ? infoType.getVkAddress() : VkPointer.getNullAddress(), pInfoSize != null ? pInfoSize.getVkAddress() : VkPointer.NULL, pInfo != null ? pInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long pipeline, long shaderStage, long infoType, long pInfoSize, long pInfo, long rval);
+    protected static native void call(long vkaddress, long device, long pipeline, long shaderStage, long infoType, long pInfoSize, long pInfo, long rval);
 }

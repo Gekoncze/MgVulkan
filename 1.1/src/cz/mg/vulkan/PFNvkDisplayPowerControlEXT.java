@@ -26,5 +26,5 @@ public class PFNvkDisplayPowerControlEXT extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), display != null ? display.getVkAddress() : VkPointer.getNullAddress(), pDisplayPowerInfo != null ? pDisplayPowerInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long display, long pDisplayPowerInfo, long rval);
+    protected static native void call(long vkaddress, long device, long display, long pDisplayPowerInfo, long rval);
 }

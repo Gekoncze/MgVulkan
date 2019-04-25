@@ -34,8 +34,8 @@ public class VkBufferViewCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkBufferViewCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBufferViewCreateFlags getFlags() {
         return new VkBufferViewCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkBufferViewCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkBuffer getBuffer() {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkBufferViewCreateInfo extends VkObject {
         
     }
 
-    private static native long getBuffer(long address);
-    private static native void setBuffer(long address, long buffer);
+    protected static native long getBuffer(long address);
+    protected static native void setBuffer(long address, long buffer);
 
     public VkFormat getFormat() {
         return new VkFormat(getVkMemory(), getFormat(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkBufferViewCreateInfo extends VkObject {
         getFormat().setValue(format);
     }
 
-    private static native long getFormat(long address);
-    private static native void setFormat(long address, long format);
+    protected static native long getFormat(long address);
+    protected static native void setFormat(long address, long format);
 
     public VkDeviceSize getOffset() {
         return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
@@ -123,8 +123,8 @@ public class VkBufferViewCreateInfo extends VkObject {
         getOffset().setValue(offset);
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
     public VkDeviceSize getRange() {
         return new VkDeviceSize(getVkMemory(), getRange(getVkAddress()));
@@ -144,8 +144,8 @@ public class VkBufferViewCreateInfo extends VkObject {
         getRange().setValue(range);
     }
 
-    private static native long getRange(long address);
-    private static native void setRange(long address, long range);
+    protected static native long getRange(long address);
+    protected static native void setRange(long address, long range);
 
 
     public static native long sizeof();

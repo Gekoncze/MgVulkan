@@ -34,8 +34,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkQueryPoolCreateFlags getFlags() {
         return new VkQueryPoolCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkQueryType getQueryType() {
         return new VkQueryType(getVkMemory(), getQueryType(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
         getQueryType().setValue(queryType);
     }
 
-    private static native long getQueryType(long address);
-    private static native void setQueryType(long address, long queryType);
+    protected static native long getQueryType(long address);
+    protected static native void setQueryType(long address, long queryType);
 
     public VkUInt32 getQueryCount() {
         return new VkUInt32(getVkMemory(), getQueryCount(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
         getQueryCount().setValue(queryCount);
     }
 
-    private static native long getQueryCount(long address);
-    private static native void setQueryCount(long address, long queryCount);
+    protected static native long getQueryCount(long address);
+    protected static native void setQueryCount(long address, long queryCount);
 
     public VkQueryPipelineStatisticFlags getPipelineStatistics() {
         return new VkQueryPipelineStatisticFlags(getVkMemory(), getPipelineStatistics(getVkAddress()));
@@ -131,8 +131,8 @@ public class VkQueryPoolCreateInfo extends VkObject {
         getPipelineStatistics().setValue(pipelineStatistics);
     }
 
-    private static native long getPipelineStatistics(long address);
-    private static native void setPipelineStatistics(long address, long pipelineStatistics);
+    protected static native long getPipelineStatistics(long address);
+    protected static native void setPipelineStatistics(long address, long pipelineStatistics);
 
 
     public static native long sizeof();

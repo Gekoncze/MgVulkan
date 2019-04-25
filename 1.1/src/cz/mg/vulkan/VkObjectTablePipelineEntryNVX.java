@@ -33,8 +33,8 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
         getType().setValue(type);
     }
 
-    private static native long getType(long address);
-    private static native void setType(long address, long type);
+    protected static native long getType(long address);
+    protected static native void setType(long address, long type);
 
     public VkObjectEntryUsageFlagsNVX getFlags() {
         return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlags(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkPipeline getPipeline() {
         return new VkPipeline(getVkMemory(), getPipeline(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkObjectTablePipelineEntryNVX extends VkObject {
         
     }
 
-    private static native long getPipeline(long address);
-    private static native void setPipeline(long address, long pipeline);
+    protected static native long getPipeline(long address);
+    protected static native void setPipeline(long address, long pipeline);
 
 
     public static native long sizeof();

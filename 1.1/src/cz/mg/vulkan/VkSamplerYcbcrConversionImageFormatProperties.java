@@ -33,8 +33,8 @@ public class VkSamplerYcbcrConversionImageFormatProperties extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkSamplerYcbcrConversionImageFormatProperties extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getCombinedImageSamplerDescriptorCount() {
         return new VkUInt32(getVkMemory(), getCombinedImageSamplerDescriptorCount(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkSamplerYcbcrConversionImageFormatProperties extends VkObject {
         getCombinedImageSamplerDescriptorCount().setValue(combinedImageSamplerDescriptorCount);
     }
 
-    private static native long getCombinedImageSamplerDescriptorCount(long address);
-    private static native void setCombinedImageSamplerDescriptorCount(long address, long combinedImageSamplerDescriptorCount);
+    protected static native long getCombinedImageSamplerDescriptorCount(long address);
+    protected static native void setCombinedImageSamplerDescriptorCount(long address, long combinedImageSamplerDescriptorCount);
 
 
     public static native long sizeof();

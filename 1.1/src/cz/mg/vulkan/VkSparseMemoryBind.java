@@ -33,8 +33,8 @@ public class VkSparseMemoryBind extends VkObject {
         getResourceOffset().setValue(resourceOffset);
     }
 
-    private static native long getResourceOffset(long address);
-    private static native void setResourceOffset(long address, long resourceOffset);
+    protected static native long getResourceOffset(long address);
+    protected static native void setResourceOffset(long address, long resourceOffset);
 
     public VkDeviceSize getSize() {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkSparseMemoryBind extends VkObject {
         getSize().setValue(size);
     }
 
-    private static native long getSize(long address);
-    private static native void setSize(long address, long size);
+    protected static native long getSize(long address);
+    protected static native void setSize(long address, long size);
 
     public VkDeviceMemory getMemory() {
         return new VkDeviceMemory(getVkMemory(), getMemory(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkSparseMemoryBind extends VkObject {
         
     }
 
-    private static native long getMemory(long address);
-    private static native void setMemory(long address, long memory);
+    protected static native long getMemory(long address);
+    protected static native void setMemory(long address, long memory);
 
     public VkDeviceSize getMemoryOffset() {
         return new VkDeviceSize(getVkMemory(), getMemoryOffset(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkSparseMemoryBind extends VkObject {
         getMemoryOffset().setValue(memoryOffset);
     }
 
-    private static native long getMemoryOffset(long address);
-    private static native void setMemoryOffset(long address, long memoryOffset);
+    protected static native long getMemoryOffset(long address);
+    protected static native void setMemoryOffset(long address, long memoryOffset);
 
     public VkSparseMemoryBindFlags getFlags() {
         return new VkSparseMemoryBindFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkSparseMemoryBind extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
 
     public static native long sizeof();

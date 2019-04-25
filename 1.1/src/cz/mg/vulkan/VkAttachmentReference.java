@@ -33,8 +33,8 @@ public class VkAttachmentReference extends VkObject {
         getAttachment().setValue(attachment);
     }
 
-    private static native long getAttachment(long address);
-    private static native void setAttachment(long address, long attachment);
+    protected static native long getAttachment(long address);
+    protected static native void setAttachment(long address, long attachment);
 
     public VkImageLayout getLayout() {
         return new VkImageLayout(getVkMemory(), getLayout(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkAttachmentReference extends VkObject {
         getLayout().setValue(layout);
     }
 
-    private static native long getLayout(long address);
-    private static native void setLayout(long address, long layout);
+    protected static native long getLayout(long address);
+    protected static native void setLayout(long address, long layout);
 
 
     public static native long sizeof();

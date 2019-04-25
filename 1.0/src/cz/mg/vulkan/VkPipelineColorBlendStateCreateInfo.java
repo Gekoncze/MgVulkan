@@ -34,8 +34,8 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkPipelineColorBlendStateCreateFlags getFlags() {
         return new VkPipelineColorBlendStateCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkBool32 getLogicOpEnable() {
         return new VkBool32(getVkMemory(), getLogicOpEnable(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         getLogicOpEnable().setValue(logicOpEnable);
     }
 
-    private static native long getLogicOpEnable(long address);
-    private static native void setLogicOpEnable(long address, long logicOpEnable);
+    protected static native long getLogicOpEnable(long address);
+    protected static native void setLogicOpEnable(long address, long logicOpEnable);
 
     public VkLogicOp getLogicOp() {
         return new VkLogicOp(getVkMemory(), getLogicOp(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         getLogicOp().setValue(logicOp);
     }
 
-    private static native long getLogicOp(long address);
-    private static native void setLogicOp(long address, long logicOp);
+    protected static native long getLogicOp(long address);
+    protected static native void setLogicOp(long address, long logicOp);
 
     public VkUInt32 getAttachmentCount() {
         return new VkUInt32(getVkMemory(), getAttachmentCount(getVkAddress()));
@@ -131,8 +131,8 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         getAttachmentCount().setValue(attachmentCount);
     }
 
-    private static native long getAttachmentCount(long address);
-    private static native void setAttachmentCount(long address, long attachmentCount);
+    protected static native long getAttachmentCount(long address);
+    protected static native void setAttachmentCount(long address, long attachmentCount);
 
     public VkPipelineColorBlendAttachmentState getPAttachments() {
         return new VkPipelineColorBlendAttachmentState(getVkMemory(), getPAttachments(getVkAddress()));
@@ -144,8 +144,8 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         this.pAttachments = pAttachments;
     }
 
-    private static native long getPAttachments(long address);
-    private static native void setPAttachments(long address, long pAttachments);
+    protected static native long getPAttachments(long address);
+    protected static native void setPAttachments(long address, long pAttachments);
 
     public VkFloat getBlendConstants() {
         return new VkFloat(getVkMemory(), getBlendConstants(getVkAddress()));
@@ -157,8 +157,8 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         
     }
 
-    private static native long getBlendConstants(long address);
-    private static native void setBlendConstants(long address, long blendConstants);
+    protected static native long getBlendConstants(long address);
+    protected static native void setBlendConstants(long address, long blendConstants);
 
 
     public static native long sizeof();

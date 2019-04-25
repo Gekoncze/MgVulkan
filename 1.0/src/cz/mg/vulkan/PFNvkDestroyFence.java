@@ -26,5 +26,5 @@ public class PFNvkDestroyFence extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), fence != null ? fence.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long device, long fence, long pAllocator);
+    protected static native void call(long vkaddress, long device, long fence, long pAllocator);
 }

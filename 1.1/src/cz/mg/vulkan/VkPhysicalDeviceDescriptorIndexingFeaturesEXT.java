@@ -33,8 +33,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getShaderInputAttachmentArrayDynamicIndexing() {
         return new VkBool32(getVkMemory(), getShaderInputAttachmentArrayDynamicIndexing(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getShaderInputAttachmentArrayDynamicIndexing().setValue(shaderInputAttachmentArrayDynamicIndexing);
     }
 
-    private static native long getShaderInputAttachmentArrayDynamicIndexing(long address);
-    private static native void setShaderInputAttachmentArrayDynamicIndexing(long address, long shaderInputAttachmentArrayDynamicIndexing);
+    protected static native long getShaderInputAttachmentArrayDynamicIndexing(long address);
+    protected static native void setShaderInputAttachmentArrayDynamicIndexing(long address, long shaderInputAttachmentArrayDynamicIndexing);
 
     public VkBool32 getShaderUniformTexelBufferArrayDynamicIndexing() {
         return new VkBool32(getVkMemory(), getShaderUniformTexelBufferArrayDynamicIndexing(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getShaderUniformTexelBufferArrayDynamicIndexing().setValue(shaderUniformTexelBufferArrayDynamicIndexing);
     }
 
-    private static native long getShaderUniformTexelBufferArrayDynamicIndexing(long address);
-    private static native void setShaderUniformTexelBufferArrayDynamicIndexing(long address, long shaderUniformTexelBufferArrayDynamicIndexing);
+    protected static native long getShaderUniformTexelBufferArrayDynamicIndexing(long address);
+    protected static native void setShaderUniformTexelBufferArrayDynamicIndexing(long address, long shaderUniformTexelBufferArrayDynamicIndexing);
 
     public VkBool32 getShaderStorageTexelBufferArrayDynamicIndexing() {
         return new VkBool32(getVkMemory(), getShaderStorageTexelBufferArrayDynamicIndexing(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getShaderStorageTexelBufferArrayDynamicIndexing().setValue(shaderStorageTexelBufferArrayDynamicIndexing);
     }
 
-    private static native long getShaderStorageTexelBufferArrayDynamicIndexing(long address);
-    private static native void setShaderStorageTexelBufferArrayDynamicIndexing(long address, long shaderStorageTexelBufferArrayDynamicIndexing);
+    protected static native long getShaderStorageTexelBufferArrayDynamicIndexing(long address);
+    protected static native void setShaderStorageTexelBufferArrayDynamicIndexing(long address, long shaderStorageTexelBufferArrayDynamicIndexing);
 
     public VkBool32 getShaderUniformBufferArrayNonUniformIndexing() {
         return new VkBool32(getVkMemory(), getShaderUniformBufferArrayNonUniformIndexing(getVkAddress()));
@@ -130,8 +130,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getShaderUniformBufferArrayNonUniformIndexing().setValue(shaderUniformBufferArrayNonUniformIndexing);
     }
 
-    private static native long getShaderUniformBufferArrayNonUniformIndexing(long address);
-    private static native void setShaderUniformBufferArrayNonUniformIndexing(long address, long shaderUniformBufferArrayNonUniformIndexing);
+    protected static native long getShaderUniformBufferArrayNonUniformIndexing(long address);
+    protected static native void setShaderUniformBufferArrayNonUniformIndexing(long address, long shaderUniformBufferArrayNonUniformIndexing);
 
     public VkBool32 getShaderSampledImageArrayNonUniformIndexing() {
         return new VkBool32(getVkMemory(), getShaderSampledImageArrayNonUniformIndexing(getVkAddress()));
@@ -151,8 +151,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getShaderSampledImageArrayNonUniformIndexing().setValue(shaderSampledImageArrayNonUniformIndexing);
     }
 
-    private static native long getShaderSampledImageArrayNonUniformIndexing(long address);
-    private static native void setShaderSampledImageArrayNonUniformIndexing(long address, long shaderSampledImageArrayNonUniformIndexing);
+    protected static native long getShaderSampledImageArrayNonUniformIndexing(long address);
+    protected static native void setShaderSampledImageArrayNonUniformIndexing(long address, long shaderSampledImageArrayNonUniformIndexing);
 
     public VkBool32 getShaderStorageBufferArrayNonUniformIndexing() {
         return new VkBool32(getVkMemory(), getShaderStorageBufferArrayNonUniformIndexing(getVkAddress()));
@@ -172,8 +172,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getShaderStorageBufferArrayNonUniformIndexing().setValue(shaderStorageBufferArrayNonUniformIndexing);
     }
 
-    private static native long getShaderStorageBufferArrayNonUniformIndexing(long address);
-    private static native void setShaderStorageBufferArrayNonUniformIndexing(long address, long shaderStorageBufferArrayNonUniformIndexing);
+    protected static native long getShaderStorageBufferArrayNonUniformIndexing(long address);
+    protected static native void setShaderStorageBufferArrayNonUniformIndexing(long address, long shaderStorageBufferArrayNonUniformIndexing);
 
     public VkBool32 getShaderStorageImageArrayNonUniformIndexing() {
         return new VkBool32(getVkMemory(), getShaderStorageImageArrayNonUniformIndexing(getVkAddress()));
@@ -193,8 +193,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getShaderStorageImageArrayNonUniformIndexing().setValue(shaderStorageImageArrayNonUniformIndexing);
     }
 
-    private static native long getShaderStorageImageArrayNonUniformIndexing(long address);
-    private static native void setShaderStorageImageArrayNonUniformIndexing(long address, long shaderStorageImageArrayNonUniformIndexing);
+    protected static native long getShaderStorageImageArrayNonUniformIndexing(long address);
+    protected static native void setShaderStorageImageArrayNonUniformIndexing(long address, long shaderStorageImageArrayNonUniformIndexing);
 
     public VkBool32 getShaderInputAttachmentArrayNonUniformIndexing() {
         return new VkBool32(getVkMemory(), getShaderInputAttachmentArrayNonUniformIndexing(getVkAddress()));
@@ -214,8 +214,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getShaderInputAttachmentArrayNonUniformIndexing().setValue(shaderInputAttachmentArrayNonUniformIndexing);
     }
 
-    private static native long getShaderInputAttachmentArrayNonUniformIndexing(long address);
-    private static native void setShaderInputAttachmentArrayNonUniformIndexing(long address, long shaderInputAttachmentArrayNonUniformIndexing);
+    protected static native long getShaderInputAttachmentArrayNonUniformIndexing(long address);
+    protected static native void setShaderInputAttachmentArrayNonUniformIndexing(long address, long shaderInputAttachmentArrayNonUniformIndexing);
 
     public VkBool32 getShaderUniformTexelBufferArrayNonUniformIndexing() {
         return new VkBool32(getVkMemory(), getShaderUniformTexelBufferArrayNonUniformIndexing(getVkAddress()));
@@ -235,8 +235,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getShaderUniformTexelBufferArrayNonUniformIndexing().setValue(shaderUniformTexelBufferArrayNonUniformIndexing);
     }
 
-    private static native long getShaderUniformTexelBufferArrayNonUniformIndexing(long address);
-    private static native void setShaderUniformTexelBufferArrayNonUniformIndexing(long address, long shaderUniformTexelBufferArrayNonUniformIndexing);
+    protected static native long getShaderUniformTexelBufferArrayNonUniformIndexing(long address);
+    protected static native void setShaderUniformTexelBufferArrayNonUniformIndexing(long address, long shaderUniformTexelBufferArrayNonUniformIndexing);
 
     public VkBool32 getShaderStorageTexelBufferArrayNonUniformIndexing() {
         return new VkBool32(getVkMemory(), getShaderStorageTexelBufferArrayNonUniformIndexing(getVkAddress()));
@@ -256,8 +256,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getShaderStorageTexelBufferArrayNonUniformIndexing().setValue(shaderStorageTexelBufferArrayNonUniformIndexing);
     }
 
-    private static native long getShaderStorageTexelBufferArrayNonUniformIndexing(long address);
-    private static native void setShaderStorageTexelBufferArrayNonUniformIndexing(long address, long shaderStorageTexelBufferArrayNonUniformIndexing);
+    protected static native long getShaderStorageTexelBufferArrayNonUniformIndexing(long address);
+    protected static native void setShaderStorageTexelBufferArrayNonUniformIndexing(long address, long shaderStorageTexelBufferArrayNonUniformIndexing);
 
     public VkBool32 getDescriptorBindingUniformBufferUpdateAfterBind() {
         return new VkBool32(getVkMemory(), getDescriptorBindingUniformBufferUpdateAfterBind(getVkAddress()));
@@ -277,8 +277,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getDescriptorBindingUniformBufferUpdateAfterBind().setValue(descriptorBindingUniformBufferUpdateAfterBind);
     }
 
-    private static native long getDescriptorBindingUniformBufferUpdateAfterBind(long address);
-    private static native void setDescriptorBindingUniformBufferUpdateAfterBind(long address, long descriptorBindingUniformBufferUpdateAfterBind);
+    protected static native long getDescriptorBindingUniformBufferUpdateAfterBind(long address);
+    protected static native void setDescriptorBindingUniformBufferUpdateAfterBind(long address, long descriptorBindingUniformBufferUpdateAfterBind);
 
     public VkBool32 getDescriptorBindingSampledImageUpdateAfterBind() {
         return new VkBool32(getVkMemory(), getDescriptorBindingSampledImageUpdateAfterBind(getVkAddress()));
@@ -298,8 +298,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getDescriptorBindingSampledImageUpdateAfterBind().setValue(descriptorBindingSampledImageUpdateAfterBind);
     }
 
-    private static native long getDescriptorBindingSampledImageUpdateAfterBind(long address);
-    private static native void setDescriptorBindingSampledImageUpdateAfterBind(long address, long descriptorBindingSampledImageUpdateAfterBind);
+    protected static native long getDescriptorBindingSampledImageUpdateAfterBind(long address);
+    protected static native void setDescriptorBindingSampledImageUpdateAfterBind(long address, long descriptorBindingSampledImageUpdateAfterBind);
 
     public VkBool32 getDescriptorBindingStorageImageUpdateAfterBind() {
         return new VkBool32(getVkMemory(), getDescriptorBindingStorageImageUpdateAfterBind(getVkAddress()));
@@ -319,8 +319,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getDescriptorBindingStorageImageUpdateAfterBind().setValue(descriptorBindingStorageImageUpdateAfterBind);
     }
 
-    private static native long getDescriptorBindingStorageImageUpdateAfterBind(long address);
-    private static native void setDescriptorBindingStorageImageUpdateAfterBind(long address, long descriptorBindingStorageImageUpdateAfterBind);
+    protected static native long getDescriptorBindingStorageImageUpdateAfterBind(long address);
+    protected static native void setDescriptorBindingStorageImageUpdateAfterBind(long address, long descriptorBindingStorageImageUpdateAfterBind);
 
     public VkBool32 getDescriptorBindingStorageBufferUpdateAfterBind() {
         return new VkBool32(getVkMemory(), getDescriptorBindingStorageBufferUpdateAfterBind(getVkAddress()));
@@ -340,8 +340,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getDescriptorBindingStorageBufferUpdateAfterBind().setValue(descriptorBindingStorageBufferUpdateAfterBind);
     }
 
-    private static native long getDescriptorBindingStorageBufferUpdateAfterBind(long address);
-    private static native void setDescriptorBindingStorageBufferUpdateAfterBind(long address, long descriptorBindingStorageBufferUpdateAfterBind);
+    protected static native long getDescriptorBindingStorageBufferUpdateAfterBind(long address);
+    protected static native void setDescriptorBindingStorageBufferUpdateAfterBind(long address, long descriptorBindingStorageBufferUpdateAfterBind);
 
     public VkBool32 getDescriptorBindingUniformTexelBufferUpdateAfterBind() {
         return new VkBool32(getVkMemory(), getDescriptorBindingUniformTexelBufferUpdateAfterBind(getVkAddress()));
@@ -361,8 +361,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getDescriptorBindingUniformTexelBufferUpdateAfterBind().setValue(descriptorBindingUniformTexelBufferUpdateAfterBind);
     }
 
-    private static native long getDescriptorBindingUniformTexelBufferUpdateAfterBind(long address);
-    private static native void setDescriptorBindingUniformTexelBufferUpdateAfterBind(long address, long descriptorBindingUniformTexelBufferUpdateAfterBind);
+    protected static native long getDescriptorBindingUniformTexelBufferUpdateAfterBind(long address);
+    protected static native void setDescriptorBindingUniformTexelBufferUpdateAfterBind(long address, long descriptorBindingUniformTexelBufferUpdateAfterBind);
 
     public VkBool32 getDescriptorBindingStorageTexelBufferUpdateAfterBind() {
         return new VkBool32(getVkMemory(), getDescriptorBindingStorageTexelBufferUpdateAfterBind(getVkAddress()));
@@ -382,8 +382,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getDescriptorBindingStorageTexelBufferUpdateAfterBind().setValue(descriptorBindingStorageTexelBufferUpdateAfterBind);
     }
 
-    private static native long getDescriptorBindingStorageTexelBufferUpdateAfterBind(long address);
-    private static native void setDescriptorBindingStorageTexelBufferUpdateAfterBind(long address, long descriptorBindingStorageTexelBufferUpdateAfterBind);
+    protected static native long getDescriptorBindingStorageTexelBufferUpdateAfterBind(long address);
+    protected static native void setDescriptorBindingStorageTexelBufferUpdateAfterBind(long address, long descriptorBindingStorageTexelBufferUpdateAfterBind);
 
     public VkBool32 getDescriptorBindingUpdateUnusedWhilePending() {
         return new VkBool32(getVkMemory(), getDescriptorBindingUpdateUnusedWhilePending(getVkAddress()));
@@ -403,8 +403,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getDescriptorBindingUpdateUnusedWhilePending().setValue(descriptorBindingUpdateUnusedWhilePending);
     }
 
-    private static native long getDescriptorBindingUpdateUnusedWhilePending(long address);
-    private static native void setDescriptorBindingUpdateUnusedWhilePending(long address, long descriptorBindingUpdateUnusedWhilePending);
+    protected static native long getDescriptorBindingUpdateUnusedWhilePending(long address);
+    protected static native void setDescriptorBindingUpdateUnusedWhilePending(long address, long descriptorBindingUpdateUnusedWhilePending);
 
     public VkBool32 getDescriptorBindingPartiallyBound() {
         return new VkBool32(getVkMemory(), getDescriptorBindingPartiallyBound(getVkAddress()));
@@ -424,8 +424,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getDescriptorBindingPartiallyBound().setValue(descriptorBindingPartiallyBound);
     }
 
-    private static native long getDescriptorBindingPartiallyBound(long address);
-    private static native void setDescriptorBindingPartiallyBound(long address, long descriptorBindingPartiallyBound);
+    protected static native long getDescriptorBindingPartiallyBound(long address);
+    protected static native void setDescriptorBindingPartiallyBound(long address, long descriptorBindingPartiallyBound);
 
     public VkBool32 getDescriptorBindingVariableDescriptorCount() {
         return new VkBool32(getVkMemory(), getDescriptorBindingVariableDescriptorCount(getVkAddress()));
@@ -445,8 +445,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getDescriptorBindingVariableDescriptorCount().setValue(descriptorBindingVariableDescriptorCount);
     }
 
-    private static native long getDescriptorBindingVariableDescriptorCount(long address);
-    private static native void setDescriptorBindingVariableDescriptorCount(long address, long descriptorBindingVariableDescriptorCount);
+    protected static native long getDescriptorBindingVariableDescriptorCount(long address);
+    protected static native void setDescriptorBindingVariableDescriptorCount(long address, long descriptorBindingVariableDescriptorCount);
 
     public VkBool32 getRuntimeDescriptorArray() {
         return new VkBool32(getVkMemory(), getRuntimeDescriptorArray(getVkAddress()));
@@ -466,8 +466,8 @@ public class VkPhysicalDeviceDescriptorIndexingFeaturesEXT extends VkObject {
         getRuntimeDescriptorArray().setValue(runtimeDescriptorArray);
     }
 
-    private static native long getRuntimeDescriptorArray(long address);
-    private static native void setRuntimeDescriptorArray(long address, long runtimeDescriptorArray);
+    protected static native long getRuntimeDescriptorArray(long address);
+    protected static native void setRuntimeDescriptorArray(long address, long runtimeDescriptorArray);
 
 
     public static native long sizeof();

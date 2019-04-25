@@ -26,5 +26,5 @@ public class PFNvkCmdBeginRenderPass extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), pRenderPassBegin != null ? pRenderPassBegin.getVkAddress() : VkPointer.NULL, contents != null ? contents.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long pRenderPassBegin, long contents);
+    protected static native void call(long vkaddress, long commandBuffer, long pRenderPassBegin, long contents);
 }

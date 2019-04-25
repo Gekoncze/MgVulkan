@@ -26,5 +26,5 @@ public class PFNvkGetDeviceProcAddr extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), pName != null ? pName.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long pName, long rval);
+    protected static native void call(long vkaddress, long device, long pName, long rval);
 }

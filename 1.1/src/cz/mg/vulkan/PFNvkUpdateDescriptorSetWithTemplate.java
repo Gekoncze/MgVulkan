@@ -26,5 +26,5 @@ public class PFNvkUpdateDescriptorSetWithTemplate extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), descriptorSet != null ? descriptorSet.getVkAddress() : VkPointer.getNullAddress(), descriptorUpdateTemplate != null ? descriptorUpdateTemplate.getVkAddress() : VkPointer.getNullAddress(), pData != null ? pData.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long device, long descriptorSet, long descriptorUpdateTemplate, long pData);
+    protected static native void call(long vkaddress, long device, long descriptorSet, long descriptorUpdateTemplate, long pData);
 }

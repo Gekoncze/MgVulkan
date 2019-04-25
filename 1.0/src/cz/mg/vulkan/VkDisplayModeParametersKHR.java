@@ -25,8 +25,8 @@ public class VkDisplayModeParametersKHR extends VkObject {
         
     }
 
-    private static native long getVisibleRegion(long address);
-    private static native void setVisibleRegion(long address, long visibleRegion);
+    protected static native long getVisibleRegion(long address);
+    protected static native void setVisibleRegion(long address, long visibleRegion);
 
     public VkUInt32 getRefreshRate() {
         return new VkUInt32(getVkMemory(), getRefreshRate(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkDisplayModeParametersKHR extends VkObject {
         getRefreshRate().setValue(refreshRate);
     }
 
-    private static native long getRefreshRate(long address);
-    private static native void setRefreshRate(long address, long refreshRate);
+    protected static native long getRefreshRate(long address);
+    protected static native void setRefreshRate(long address, long refreshRate);
 
 
     public static native long sizeof();

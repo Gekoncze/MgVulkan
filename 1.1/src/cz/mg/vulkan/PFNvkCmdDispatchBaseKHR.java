@@ -26,5 +26,5 @@ public class PFNvkCmdDispatchBaseKHR extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), baseGroupX != null ? baseGroupX.getVkAddress() : VkPointer.getNullAddress(), baseGroupY != null ? baseGroupY.getVkAddress() : VkPointer.getNullAddress(), baseGroupZ != null ? baseGroupZ.getVkAddress() : VkPointer.getNullAddress(), groupCountX != null ? groupCountX.getVkAddress() : VkPointer.getNullAddress(), groupCountY != null ? groupCountY.getVkAddress() : VkPointer.getNullAddress(), groupCountZ != null ? groupCountZ.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long baseGroupX, long baseGroupY, long baseGroupZ, long groupCountX, long groupCountY, long groupCountZ);
+    protected static native void call(long vkaddress, long commandBuffer, long baseGroupX, long baseGroupY, long baseGroupZ, long groupCountX, long groupCountY, long groupCountZ);
 }

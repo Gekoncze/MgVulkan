@@ -26,5 +26,5 @@ public class PFNvkDestroyObjectTableNVX extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), objectTable != null ? objectTable.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long device, long objectTable, long pAllocator);
+    protected static native void call(long vkaddress, long device, long objectTable, long pAllocator);
 }

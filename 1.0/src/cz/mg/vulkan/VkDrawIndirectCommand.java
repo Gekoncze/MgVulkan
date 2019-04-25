@@ -33,8 +33,8 @@ public class VkDrawIndirectCommand extends VkObject {
         getVertexCount().setValue(vertexCount);
     }
 
-    private static native long getVertexCount(long address);
-    private static native void setVertexCount(long address, long vertexCount);
+    protected static native long getVertexCount(long address);
+    protected static native void setVertexCount(long address, long vertexCount);
 
     public VkUInt32 getInstanceCount() {
         return new VkUInt32(getVkMemory(), getInstanceCount(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkDrawIndirectCommand extends VkObject {
         getInstanceCount().setValue(instanceCount);
     }
 
-    private static native long getInstanceCount(long address);
-    private static native void setInstanceCount(long address, long instanceCount);
+    protected static native long getInstanceCount(long address);
+    protected static native void setInstanceCount(long address, long instanceCount);
 
     public VkUInt32 getFirstVertex() {
         return new VkUInt32(getVkMemory(), getFirstVertex(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkDrawIndirectCommand extends VkObject {
         getFirstVertex().setValue(firstVertex);
     }
 
-    private static native long getFirstVertex(long address);
-    private static native void setFirstVertex(long address, long firstVertex);
+    protected static native long getFirstVertex(long address);
+    protected static native void setFirstVertex(long address, long firstVertex);
 
     public VkUInt32 getFirstInstance() {
         return new VkUInt32(getVkMemory(), getFirstInstance(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkDrawIndirectCommand extends VkObject {
         getFirstInstance().setValue(firstInstance);
     }
 
-    private static native long getFirstInstance(long address);
-    private static native void setFirstInstance(long address, long firstInstance);
+    protected static native long getFirstInstance(long address);
+    protected static native void setFirstInstance(long address, long firstInstance);
 
 
     public static native long sizeof();

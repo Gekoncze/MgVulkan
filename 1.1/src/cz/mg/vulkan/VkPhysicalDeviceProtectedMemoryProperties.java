@@ -33,8 +33,8 @@ public class VkPhysicalDeviceProtectedMemoryProperties extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceProtectedMemoryProperties extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getProtectedNoFault() {
         return new VkBool32(getVkMemory(), getProtectedNoFault(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceProtectedMemoryProperties extends VkObject {
         getProtectedNoFault().setValue(protectedNoFault);
     }
 
-    private static native long getProtectedNoFault(long address);
-    private static native void setProtectedNoFault(long address, long protectedNoFault);
+    protected static native long getProtectedNoFault(long address);
+    protected static native void setProtectedNoFault(long address, long protectedNoFault);
 
 
     public static native long sizeof();

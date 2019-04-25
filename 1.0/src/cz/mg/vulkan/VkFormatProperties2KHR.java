@@ -33,8 +33,8 @@ public class VkFormatProperties2KHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkFormatProperties2KHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkFormatProperties getFormatProperties() {
         return new VkFormatProperties(getVkMemory(), getFormatProperties(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkFormatProperties2KHR extends VkObject {
         
     }
 
-    private static native long getFormatProperties(long address);
-    private static native void setFormatProperties(long address, long formatProperties);
+    protected static native long getFormatProperties(long address);
+    protected static native void setFormatProperties(long address, long formatProperties);
 
 
     public static native long sizeof();

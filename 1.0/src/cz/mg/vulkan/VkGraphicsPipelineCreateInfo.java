@@ -34,8 +34,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkPipelineCreateFlags getFlags() {
         return new VkPipelineCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkUInt32 getStageCount() {
         return new VkUInt32(getVkMemory(), getStageCount(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         getStageCount().setValue(stageCount);
     }
 
-    private static native long getStageCount(long address);
-    private static native void setStageCount(long address, long stageCount);
+    protected static native long getStageCount(long address);
+    protected static native void setStageCount(long address, long stageCount);
 
     public VkPipelineShaderStageCreateInfo getPStages() {
         return new VkPipelineShaderStageCreateInfo(getVkMemory(), getPStages(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pStages = pStages;
     }
 
-    private static native long getPStages(long address);
-    private static native void setPStages(long address, long pStages);
+    protected static native long getPStages(long address);
+    protected static native void setPStages(long address, long pStages);
 
     public VkPipelineVertexInputStateCreateInfo getPVertexInputState() {
         return new VkPipelineVertexInputStateCreateInfo(getVkMemory(), getPVertexInputState(getVkAddress()));
@@ -115,8 +115,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pVertexInputState = pVertexInputState;
     }
 
-    private static native long getPVertexInputState(long address);
-    private static native void setPVertexInputState(long address, long pVertexInputState);
+    protected static native long getPVertexInputState(long address);
+    protected static native void setPVertexInputState(long address, long pVertexInputState);
 
     public VkPipelineInputAssemblyStateCreateInfo getPInputAssemblyState() {
         return new VkPipelineInputAssemblyStateCreateInfo(getVkMemory(), getPInputAssemblyState(getVkAddress()));
@@ -128,8 +128,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pInputAssemblyState = pInputAssemblyState;
     }
 
-    private static native long getPInputAssemblyState(long address);
-    private static native void setPInputAssemblyState(long address, long pInputAssemblyState);
+    protected static native long getPInputAssemblyState(long address);
+    protected static native void setPInputAssemblyState(long address, long pInputAssemblyState);
 
     public VkPipelineTessellationStateCreateInfo getPTessellationState() {
         return new VkPipelineTessellationStateCreateInfo(getVkMemory(), getPTessellationState(getVkAddress()));
@@ -141,8 +141,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pTessellationState = pTessellationState;
     }
 
-    private static native long getPTessellationState(long address);
-    private static native void setPTessellationState(long address, long pTessellationState);
+    protected static native long getPTessellationState(long address);
+    protected static native void setPTessellationState(long address, long pTessellationState);
 
     public VkPipelineViewportStateCreateInfo getPViewportState() {
         return new VkPipelineViewportStateCreateInfo(getVkMemory(), getPViewportState(getVkAddress()));
@@ -154,8 +154,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pViewportState = pViewportState;
     }
 
-    private static native long getPViewportState(long address);
-    private static native void setPViewportState(long address, long pViewportState);
+    protected static native long getPViewportState(long address);
+    protected static native void setPViewportState(long address, long pViewportState);
 
     public VkPipelineRasterizationStateCreateInfo getPRasterizationState() {
         return new VkPipelineRasterizationStateCreateInfo(getVkMemory(), getPRasterizationState(getVkAddress()));
@@ -167,8 +167,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pRasterizationState = pRasterizationState;
     }
 
-    private static native long getPRasterizationState(long address);
-    private static native void setPRasterizationState(long address, long pRasterizationState);
+    protected static native long getPRasterizationState(long address);
+    protected static native void setPRasterizationState(long address, long pRasterizationState);
 
     public VkPipelineMultisampleStateCreateInfo getPMultisampleState() {
         return new VkPipelineMultisampleStateCreateInfo(getVkMemory(), getPMultisampleState(getVkAddress()));
@@ -180,8 +180,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pMultisampleState = pMultisampleState;
     }
 
-    private static native long getPMultisampleState(long address);
-    private static native void setPMultisampleState(long address, long pMultisampleState);
+    protected static native long getPMultisampleState(long address);
+    protected static native void setPMultisampleState(long address, long pMultisampleState);
 
     public VkPipelineDepthStencilStateCreateInfo getPDepthStencilState() {
         return new VkPipelineDepthStencilStateCreateInfo(getVkMemory(), getPDepthStencilState(getVkAddress()));
@@ -193,8 +193,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pDepthStencilState = pDepthStencilState;
     }
 
-    private static native long getPDepthStencilState(long address);
-    private static native void setPDepthStencilState(long address, long pDepthStencilState);
+    protected static native long getPDepthStencilState(long address);
+    protected static native void setPDepthStencilState(long address, long pDepthStencilState);
 
     public VkPipelineColorBlendStateCreateInfo getPColorBlendState() {
         return new VkPipelineColorBlendStateCreateInfo(getVkMemory(), getPColorBlendState(getVkAddress()));
@@ -206,8 +206,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pColorBlendState = pColorBlendState;
     }
 
-    private static native long getPColorBlendState(long address);
-    private static native void setPColorBlendState(long address, long pColorBlendState);
+    protected static native long getPColorBlendState(long address);
+    protected static native void setPColorBlendState(long address, long pColorBlendState);
 
     public VkPipelineDynamicStateCreateInfo getPDynamicState() {
         return new VkPipelineDynamicStateCreateInfo(getVkMemory(), getPDynamicState(getVkAddress()));
@@ -219,8 +219,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pDynamicState = pDynamicState;
     }
 
-    private static native long getPDynamicState(long address);
-    private static native void setPDynamicState(long address, long pDynamicState);
+    protected static native long getPDynamicState(long address);
+    protected static native void setPDynamicState(long address, long pDynamicState);
 
     public VkPipelineLayout getLayout() {
         return new VkPipelineLayout(getVkMemory(), getLayout(getVkAddress()));
@@ -232,8 +232,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         
     }
 
-    private static native long getLayout(long address);
-    private static native void setLayout(long address, long layout);
+    protected static native long getLayout(long address);
+    protected static native void setLayout(long address, long layout);
 
     public VkRenderPass getRenderPass() {
         return new VkRenderPass(getVkMemory(), getRenderPass(getVkAddress()));
@@ -245,8 +245,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         
     }
 
-    private static native long getRenderPass(long address);
-    private static native void setRenderPass(long address, long renderPass);
+    protected static native long getRenderPass(long address);
+    protected static native void setRenderPass(long address, long renderPass);
 
     public VkUInt32 getSubpass() {
         return new VkUInt32(getVkMemory(), getSubpass(getVkAddress()));
@@ -266,8 +266,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         getSubpass().setValue(subpass);
     }
 
-    private static native long getSubpass(long address);
-    private static native void setSubpass(long address, long subpass);
+    protected static native long getSubpass(long address);
+    protected static native void setSubpass(long address, long subpass);
 
     public VkPipeline getBasePipelineHandle() {
         return new VkPipeline(getVkMemory(), getBasePipelineHandle(getVkAddress()));
@@ -279,8 +279,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         
     }
 
-    private static native long getBasePipelineHandle(long address);
-    private static native void setBasePipelineHandle(long address, long basePipelineHandle);
+    protected static native long getBasePipelineHandle(long address);
+    protected static native void setBasePipelineHandle(long address, long basePipelineHandle);
 
     public VkInt32 getBasePipelineIndex() {
         return new VkInt32(getVkMemory(), getBasePipelineIndex(getVkAddress()));
@@ -300,8 +300,8 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         getBasePipelineIndex().setValue(basePipelineIndex);
     }
 
-    private static native long getBasePipelineIndex(long address);
-    private static native void setBasePipelineIndex(long address, long basePipelineIndex);
+    protected static native long getBasePipelineIndex(long address);
+    protected static native void setBasePipelineIndex(long address, long basePipelineIndex);
 
 
     public static native long sizeof();

@@ -25,8 +25,8 @@ public class VkSparseImageMemoryBindInfo extends VkObject {
         
     }
 
-    private static native long getImage(long address);
-    private static native void setImage(long address, long image);
+    protected static native long getImage(long address);
+    protected static native void setImage(long address, long image);
 
     public VkUInt32 getBindCount() {
         return new VkUInt32(getVkMemory(), getBindCount(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkSparseImageMemoryBindInfo extends VkObject {
         getBindCount().setValue(bindCount);
     }
 
-    private static native long getBindCount(long address);
-    private static native void setBindCount(long address, long bindCount);
+    protected static native long getBindCount(long address);
+    protected static native void setBindCount(long address, long bindCount);
 
     public VkSparseImageMemoryBind getPBinds() {
         return new VkSparseImageMemoryBind(getVkMemory(), getPBinds(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkSparseImageMemoryBindInfo extends VkObject {
         this.pBinds = pBinds;
     }
 
-    private static native long getPBinds(long address);
-    private static native void setPBinds(long address, long pBinds);
+    protected static native long getPBinds(long address);
+    protected static native void setPBinds(long address, long pBinds);
 
 
     public static native long sizeof();

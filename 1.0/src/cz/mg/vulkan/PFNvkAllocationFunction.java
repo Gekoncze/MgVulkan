@@ -22,5 +22,5 @@ public class PFNvkAllocationFunction extends VkFunctionPointer {
         call(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, size != null ? size.getVkAddress() : VkPointer.getNullAddress(), alignment != null ? alignment.getVkAddress() : VkPointer.getNullAddress(), allocationScope != null ? allocationScope.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long pUserData, long size, long alignment, long allocationScope);
+    protected static native void call(long vkaddress, long pUserData, long size, long alignment, long allocationScope);
 }

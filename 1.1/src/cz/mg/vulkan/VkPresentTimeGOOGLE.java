@@ -33,8 +33,8 @@ public class VkPresentTimeGOOGLE extends VkObject {
         getPresentID().setValue(presentID);
     }
 
-    private static native long getPresentID(long address);
-    private static native void setPresentID(long address, long presentID);
+    protected static native long getPresentID(long address);
+    protected static native void setPresentID(long address, long presentID);
 
     public VkUInt64 getDesiredPresentTime() {
         return new VkUInt64(getVkMemory(), getDesiredPresentTime(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkPresentTimeGOOGLE extends VkObject {
         getDesiredPresentTime().setValue(desiredPresentTime);
     }
 
-    private static native long getDesiredPresentTime(long address);
-    private static native void setDesiredPresentTime(long address, long desiredPresentTime);
+    protected static native long getDesiredPresentTime(long address);
+    protected static native void setDesiredPresentTime(long address, long desiredPresentTime);
 
 
     public static native long sizeof();

@@ -34,8 +34,8 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getDescriptorSetCount() {
         return new VkUInt32(getVkMemory(), getDescriptorSetCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         getDescriptorSetCount().setValue(descriptorSetCount);
     }
 
-    private static native long getDescriptorSetCount(long address);
-    private static native void setDescriptorSetCount(long address, long descriptorSetCount);
+    protected static native long getDescriptorSetCount(long address);
+    protected static native void setDescriptorSetCount(long address, long descriptorSetCount);
 
     public VkUInt32 getPDescriptorCounts() {
         return new VkUInt32(getVkMemory(), getPDescriptorCounts(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         this.pDescriptorCounts = pDescriptorCounts;
     }
 
-    private static native long getPDescriptorCounts(long address);
-    private static native void setPDescriptorCounts(long address, long pDescriptorCounts);
+    protected static native long getPDescriptorCounts(long address);
+    protected static native void setPDescriptorCounts(long address, long pDescriptorCounts);
 
 
     public static native long sizeof();

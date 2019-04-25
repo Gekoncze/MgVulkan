@@ -34,8 +34,8 @@ public class VkPhysicalDeviceExternalSemaphoreInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPhysicalDeviceExternalSemaphoreInfoKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkExternalSemaphoreHandleTypeFlagBitsKHR getHandleType() {
         return new VkExternalSemaphoreHandleTypeFlagBitsKHR(getVkMemory(), getHandleType(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPhysicalDeviceExternalSemaphoreInfoKHR extends VkObject {
         getHandleType().setValue(handleType);
     }
 
-    private static native long getHandleType(long address);
-    private static native void setHandleType(long address, long handleType);
+    protected static native long getHandleType(long address);
+    protected static native void setHandleType(long address, long handleType);
 
 
     public static native long sizeof();

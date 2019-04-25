@@ -34,8 +34,8 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkObjectTableNVX getObjectTable() {
         return new VkObjectTableNVX(getVkMemory(), getObjectTable(getVkAddress()));
@@ -60,8 +60,8 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         
     }
 
-    private static native long getObjectTable(long address);
-    private static native void setObjectTable(long address, long objectTable);
+    protected static native long getObjectTable(long address);
+    protected static native void setObjectTable(long address, long objectTable);
 
     public VkIndirectCommandsLayoutNVX getIndirectCommandsLayout() {
         return new VkIndirectCommandsLayoutNVX(getVkMemory(), getIndirectCommandsLayout(getVkAddress()));
@@ -73,8 +73,8 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         
     }
 
-    private static native long getIndirectCommandsLayout(long address);
-    private static native void setIndirectCommandsLayout(long address, long indirectCommandsLayout);
+    protected static native long getIndirectCommandsLayout(long address);
+    protected static native void setIndirectCommandsLayout(long address, long indirectCommandsLayout);
 
     public VkUInt32 getMaxSequencesCount() {
         return new VkUInt32(getVkMemory(), getMaxSequencesCount(getVkAddress()));
@@ -94,8 +94,8 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
         getMaxSequencesCount().setValue(maxSequencesCount);
     }
 
-    private static native long getMaxSequencesCount(long address);
-    private static native void setMaxSequencesCount(long address, long maxSequencesCount);
+    protected static native long getMaxSequencesCount(long address);
+    protected static native void setMaxSequencesCount(long address, long maxSequencesCount);
 
 
     public static native long sizeof();

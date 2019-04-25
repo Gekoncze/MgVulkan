@@ -34,8 +34,8 @@ public class VkPipelineTessellationDomainOriginStateCreateInfo extends VkObject 
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineTessellationDomainOriginStateCreateInfo extends VkObject 
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkTessellationDomainOrigin getDomainOrigin() {
         return new VkTessellationDomainOrigin(getVkMemory(), getDomainOrigin(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineTessellationDomainOriginStateCreateInfo extends VkObject 
         getDomainOrigin().setValue(domainOrigin);
     }
 
-    private static native long getDomainOrigin(long address);
-    private static native void setDomainOrigin(long address, long domainOrigin);
+    protected static native long getDomainOrigin(long address);
+    protected static native void setDomainOrigin(long address, long domainOrigin);
 
 
     public static native long sizeof();

@@ -26,5 +26,5 @@ public class PFNvkDestroyValidationCacheEXT extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), validationCache != null ? validationCache.getVkAddress() : VkPointer.getNullAddress(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long device, long validationCache, long pAllocator);
+    protected static native void call(long vkaddress, long device, long validationCache, long pAllocator);
 }

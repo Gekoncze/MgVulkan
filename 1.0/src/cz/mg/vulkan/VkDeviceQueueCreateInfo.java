@@ -34,8 +34,8 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDeviceQueueCreateFlags getFlags() {
         return new VkDeviceQueueCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkUInt32 getQueueFamilyIndex() {
         return new VkUInt32(getVkMemory(), getQueueFamilyIndex(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         getQueueFamilyIndex().setValue(queueFamilyIndex);
     }
 
-    private static native long getQueueFamilyIndex(long address);
-    private static native void setQueueFamilyIndex(long address, long queueFamilyIndex);
+    protected static native long getQueueFamilyIndex(long address);
+    protected static native void setQueueFamilyIndex(long address, long queueFamilyIndex);
 
     public VkUInt32 getQueueCount() {
         return new VkUInt32(getVkMemory(), getQueueCount(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         getQueueCount().setValue(queueCount);
     }
 
-    private static native long getQueueCount(long address);
-    private static native void setQueueCount(long address, long queueCount);
+    protected static native long getQueueCount(long address);
+    protected static native void setQueueCount(long address, long queueCount);
 
     public VkFloat getPQueuePriorities() {
         return new VkFloat(getVkMemory(), getPQueuePriorities(getVkAddress()));
@@ -123,8 +123,8 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         this.pQueuePriorities = pQueuePriorities;
     }
 
-    private static native long getPQueuePriorities(long address);
-    private static native void setPQueuePriorities(long address, long pQueuePriorities);
+    protected static native long getPQueuePriorities(long address);
+    protected static native void setPQueuePriorities(long address, long pQueuePriorities);
 
 
     public static native long sizeof();

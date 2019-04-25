@@ -33,8 +33,8 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkSampleCountFlags getSampleLocationSampleCounts() {
         return new VkSampleCountFlags(getVkMemory(), getSampleLocationSampleCounts(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         getSampleLocationSampleCounts().setValue(sampleLocationSampleCounts);
     }
 
-    private static native long getSampleLocationSampleCounts(long address);
-    private static native void setSampleLocationSampleCounts(long address, long sampleLocationSampleCounts);
+    protected static native long getSampleLocationSampleCounts(long address);
+    protected static native void setSampleLocationSampleCounts(long address, long sampleLocationSampleCounts);
 
     public VkExtent2D getMaxSampleLocationGridSize() {
         return new VkExtent2D(getVkMemory(), getMaxSampleLocationGridSize(getVkAddress()));
@@ -80,8 +80,8 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         
     }
 
-    private static native long getMaxSampleLocationGridSize(long address);
-    private static native void setMaxSampleLocationGridSize(long address, long maxSampleLocationGridSize);
+    protected static native long getMaxSampleLocationGridSize(long address);
+    protected static native void setMaxSampleLocationGridSize(long address, long maxSampleLocationGridSize);
 
     public VkFloat getSampleLocationCoordinateRange() {
         return new VkFloat(getVkMemory(), getSampleLocationCoordinateRange(getVkAddress()));
@@ -93,8 +93,8 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         
     }
 
-    private static native long getSampleLocationCoordinateRange(long address);
-    private static native void setSampleLocationCoordinateRange(long address, long sampleLocationCoordinateRange);
+    protected static native long getSampleLocationCoordinateRange(long address);
+    protected static native void setSampleLocationCoordinateRange(long address, long sampleLocationCoordinateRange);
 
     public VkUInt32 getSampleLocationSubPixelBits() {
         return new VkUInt32(getVkMemory(), getSampleLocationSubPixelBits(getVkAddress()));
@@ -114,8 +114,8 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         getSampleLocationSubPixelBits().setValue(sampleLocationSubPixelBits);
     }
 
-    private static native long getSampleLocationSubPixelBits(long address);
-    private static native void setSampleLocationSubPixelBits(long address, long sampleLocationSubPixelBits);
+    protected static native long getSampleLocationSubPixelBits(long address);
+    protected static native void setSampleLocationSubPixelBits(long address, long sampleLocationSubPixelBits);
 
     public VkBool32 getVariableSampleLocations() {
         return new VkBool32(getVkMemory(), getVariableSampleLocations(getVkAddress()));
@@ -135,8 +135,8 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
         getVariableSampleLocations().setValue(variableSampleLocations);
     }
 
-    private static native long getVariableSampleLocations(long address);
-    private static native void setVariableSampleLocations(long address, long variableSampleLocations);
+    protected static native long getVariableSampleLocations(long address);
+    protected static native void setVariableSampleLocations(long address, long variableSampleLocations);
 
 
     public static native long sizeof();

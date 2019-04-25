@@ -33,8 +33,8 @@ public class VkStencilOpState extends VkObject {
         getFailOp().setValue(failOp);
     }
 
-    private static native long getFailOp(long address);
-    private static native void setFailOp(long address, long failOp);
+    protected static native long getFailOp(long address);
+    protected static native void setFailOp(long address, long failOp);
 
     public VkStencilOp getPassOp() {
         return new VkStencilOp(getVkMemory(), getPassOp(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkStencilOpState extends VkObject {
         getPassOp().setValue(passOp);
     }
 
-    private static native long getPassOp(long address);
-    private static native void setPassOp(long address, long passOp);
+    protected static native long getPassOp(long address);
+    protected static native void setPassOp(long address, long passOp);
 
     public VkStencilOp getDepthFailOp() {
         return new VkStencilOp(getVkMemory(), getDepthFailOp(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkStencilOpState extends VkObject {
         getDepthFailOp().setValue(depthFailOp);
     }
 
-    private static native long getDepthFailOp(long address);
-    private static native void setDepthFailOp(long address, long depthFailOp);
+    protected static native long getDepthFailOp(long address);
+    protected static native void setDepthFailOp(long address, long depthFailOp);
 
     public VkCompareOp getCompareOp() {
         return new VkCompareOp(getVkMemory(), getCompareOp(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkStencilOpState extends VkObject {
         getCompareOp().setValue(compareOp);
     }
 
-    private static native long getCompareOp(long address);
-    private static native void setCompareOp(long address, long compareOp);
+    protected static native long getCompareOp(long address);
+    protected static native void setCompareOp(long address, long compareOp);
 
     public VkUInt32 getCompareMask() {
         return new VkUInt32(getVkMemory(), getCompareMask(getVkAddress()));
@@ -117,8 +117,8 @@ public class VkStencilOpState extends VkObject {
         getCompareMask().setValue(compareMask);
     }
 
-    private static native long getCompareMask(long address);
-    private static native void setCompareMask(long address, long compareMask);
+    protected static native long getCompareMask(long address);
+    protected static native void setCompareMask(long address, long compareMask);
 
     public VkUInt32 getWriteMask() {
         return new VkUInt32(getVkMemory(), getWriteMask(getVkAddress()));
@@ -138,8 +138,8 @@ public class VkStencilOpState extends VkObject {
         getWriteMask().setValue(writeMask);
     }
 
-    private static native long getWriteMask(long address);
-    private static native void setWriteMask(long address, long writeMask);
+    protected static native long getWriteMask(long address);
+    protected static native void setWriteMask(long address, long writeMask);
 
     public VkUInt32 getReference() {
         return new VkUInt32(getVkMemory(), getReference(getVkAddress()));
@@ -159,8 +159,8 @@ public class VkStencilOpState extends VkObject {
         getReference().setValue(reference);
     }
 
-    private static native long getReference(long address);
-    private static native void setReference(long address, long reference);
+    protected static native long getReference(long address);
+    protected static native void setReference(long address, long reference);
 
 
     public static native long sizeof();

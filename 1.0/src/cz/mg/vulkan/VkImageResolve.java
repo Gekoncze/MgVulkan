@@ -25,8 +25,8 @@ public class VkImageResolve extends VkObject {
         
     }
 
-    private static native long getSrcSubresource(long address);
-    private static native void setSrcSubresource(long address, long srcSubresource);
+    protected static native long getSrcSubresource(long address);
+    protected static native void setSrcSubresource(long address, long srcSubresource);
 
     public VkOffset3D getSrcOffset() {
         return new VkOffset3D(getVkMemory(), getSrcOffset(getVkAddress()));
@@ -38,8 +38,8 @@ public class VkImageResolve extends VkObject {
         
     }
 
-    private static native long getSrcOffset(long address);
-    private static native void setSrcOffset(long address, long srcOffset);
+    protected static native long getSrcOffset(long address);
+    protected static native void setSrcOffset(long address, long srcOffset);
 
     public VkImageSubresourceLayers getDstSubresource() {
         return new VkImageSubresourceLayers(getVkMemory(), getDstSubresource(getVkAddress()));
@@ -51,8 +51,8 @@ public class VkImageResolve extends VkObject {
         
     }
 
-    private static native long getDstSubresource(long address);
-    private static native void setDstSubresource(long address, long dstSubresource);
+    protected static native long getDstSubresource(long address);
+    protected static native void setDstSubresource(long address, long dstSubresource);
 
     public VkOffset3D getDstOffset() {
         return new VkOffset3D(getVkMemory(), getDstOffset(getVkAddress()));
@@ -64,8 +64,8 @@ public class VkImageResolve extends VkObject {
         
     }
 
-    private static native long getDstOffset(long address);
-    private static native void setDstOffset(long address, long dstOffset);
+    protected static native long getDstOffset(long address);
+    protected static native void setDstOffset(long address, long dstOffset);
 
     public VkExtent3D getExtent() {
         return new VkExtent3D(getVkMemory(), getExtent(getVkAddress()));
@@ -77,8 +77,8 @@ public class VkImageResolve extends VkObject {
         
     }
 
-    private static native long getExtent(long address);
-    private static native void setExtent(long address, long extent);
+    protected static native long getExtent(long address);
+    protected static native void setExtent(long address, long extent);
 
 
     public static native long sizeof();

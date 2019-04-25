@@ -33,8 +33,8 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         getMemoryTypeCount().setValue(memoryTypeCount);
     }
 
-    private static native long getMemoryTypeCount(long address);
-    private static native void setMemoryTypeCount(long address, long memoryTypeCount);
+    protected static native long getMemoryTypeCount(long address);
+    protected static native void setMemoryTypeCount(long address, long memoryTypeCount);
 
     public VkMemoryType getMemoryTypes() {
         return new VkMemoryType(getVkMemory(), getMemoryTypes(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         
     }
 
-    private static native long getMemoryTypes(long address);
-    private static native void setMemoryTypes(long address, long memoryTypes);
+    protected static native long getMemoryTypes(long address);
+    protected static native void setMemoryTypes(long address, long memoryTypes);
 
     public VkUInt32 getMemoryHeapCount() {
         return new VkUInt32(getVkMemory(), getMemoryHeapCount(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         getMemoryHeapCount().setValue(memoryHeapCount);
     }
 
-    private static native long getMemoryHeapCount(long address);
-    private static native void setMemoryHeapCount(long address, long memoryHeapCount);
+    protected static native long getMemoryHeapCount(long address);
+    protected static native void setMemoryHeapCount(long address, long memoryHeapCount);
 
     public VkMemoryHeap getMemoryHeaps() {
         return new VkMemoryHeap(getVkMemory(), getMemoryHeaps(getVkAddress()));
@@ -80,8 +80,8 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         
     }
 
-    private static native long getMemoryHeaps(long address);
-    private static native void setMemoryHeaps(long address, long memoryHeaps);
+    protected static native long getMemoryHeaps(long address);
+    protected static native void setMemoryHeaps(long address, long memoryHeaps);
 
 
     public static native long sizeof();

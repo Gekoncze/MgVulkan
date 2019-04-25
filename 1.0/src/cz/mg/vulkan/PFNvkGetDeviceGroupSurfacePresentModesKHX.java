@@ -26,5 +26,5 @@ public class PFNvkGetDeviceGroupSurfacePresentModesKHX extends VkFunctionPointer
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), surface != null ? surface.getVkAddress() : VkPointer.getNullAddress(), pModes != null ? pModes.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long surface, long pModes, long rval);
+    protected static native void call(long vkaddress, long device, long surface, long pModes, long rval);
 }

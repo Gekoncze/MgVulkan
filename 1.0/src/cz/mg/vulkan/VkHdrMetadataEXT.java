@@ -33,8 +33,8 @@ public class VkHdrMetadataEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkHdrMetadataEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkXYColorEXT getDisplayPrimaryRed() {
         return new VkXYColorEXT(getVkMemory(), getDisplayPrimaryRed(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkHdrMetadataEXT extends VkObject {
         
     }
 
-    private static native long getDisplayPrimaryRed(long address);
-    private static native void setDisplayPrimaryRed(long address, long displayPrimaryRed);
+    protected static native long getDisplayPrimaryRed(long address);
+    protected static native void setDisplayPrimaryRed(long address, long displayPrimaryRed);
 
     public VkXYColorEXT getDisplayPrimaryGreen() {
         return new VkXYColorEXT(getVkMemory(), getDisplayPrimaryGreen(getVkAddress()));
@@ -72,8 +72,8 @@ public class VkHdrMetadataEXT extends VkObject {
         
     }
 
-    private static native long getDisplayPrimaryGreen(long address);
-    private static native void setDisplayPrimaryGreen(long address, long displayPrimaryGreen);
+    protected static native long getDisplayPrimaryGreen(long address);
+    protected static native void setDisplayPrimaryGreen(long address, long displayPrimaryGreen);
 
     public VkXYColorEXT getDisplayPrimaryBlue() {
         return new VkXYColorEXT(getVkMemory(), getDisplayPrimaryBlue(getVkAddress()));
@@ -85,8 +85,8 @@ public class VkHdrMetadataEXT extends VkObject {
         
     }
 
-    private static native long getDisplayPrimaryBlue(long address);
-    private static native void setDisplayPrimaryBlue(long address, long displayPrimaryBlue);
+    protected static native long getDisplayPrimaryBlue(long address);
+    protected static native void setDisplayPrimaryBlue(long address, long displayPrimaryBlue);
 
     public VkXYColorEXT getWhitePoint() {
         return new VkXYColorEXT(getVkMemory(), getWhitePoint(getVkAddress()));
@@ -98,8 +98,8 @@ public class VkHdrMetadataEXT extends VkObject {
         
     }
 
-    private static native long getWhitePoint(long address);
-    private static native void setWhitePoint(long address, long whitePoint);
+    protected static native long getWhitePoint(long address);
+    protected static native void setWhitePoint(long address, long whitePoint);
 
     public VkFloat getMaxLuminance() {
         return new VkFloat(getVkMemory(), getMaxLuminance(getVkAddress()));
@@ -119,8 +119,8 @@ public class VkHdrMetadataEXT extends VkObject {
         getMaxLuminance().setValue(maxLuminance);
     }
 
-    private static native long getMaxLuminance(long address);
-    private static native void setMaxLuminance(long address, long maxLuminance);
+    protected static native long getMaxLuminance(long address);
+    protected static native void setMaxLuminance(long address, long maxLuminance);
 
     public VkFloat getMinLuminance() {
         return new VkFloat(getVkMemory(), getMinLuminance(getVkAddress()));
@@ -140,8 +140,8 @@ public class VkHdrMetadataEXT extends VkObject {
         getMinLuminance().setValue(minLuminance);
     }
 
-    private static native long getMinLuminance(long address);
-    private static native void setMinLuminance(long address, long minLuminance);
+    protected static native long getMinLuminance(long address);
+    protected static native void setMinLuminance(long address, long minLuminance);
 
     public VkFloat getMaxContentLightLevel() {
         return new VkFloat(getVkMemory(), getMaxContentLightLevel(getVkAddress()));
@@ -161,8 +161,8 @@ public class VkHdrMetadataEXT extends VkObject {
         getMaxContentLightLevel().setValue(maxContentLightLevel);
     }
 
-    private static native long getMaxContentLightLevel(long address);
-    private static native void setMaxContentLightLevel(long address, long maxContentLightLevel);
+    protected static native long getMaxContentLightLevel(long address);
+    protected static native void setMaxContentLightLevel(long address, long maxContentLightLevel);
 
     public VkFloat getMaxFrameAverageLightLevel() {
         return new VkFloat(getVkMemory(), getMaxFrameAverageLightLevel(getVkAddress()));
@@ -182,8 +182,8 @@ public class VkHdrMetadataEXT extends VkObject {
         getMaxFrameAverageLightLevel().setValue(maxFrameAverageLightLevel);
     }
 
-    private static native long getMaxFrameAverageLightLevel(long address);
-    private static native void setMaxFrameAverageLightLevel(long address, long maxFrameAverageLightLevel);
+    protected static native long getMaxFrameAverageLightLevel(long address);
+    protected static native void setMaxFrameAverageLightLevel(long address, long maxFrameAverageLightLevel);
 
 
     public static native long sizeof();

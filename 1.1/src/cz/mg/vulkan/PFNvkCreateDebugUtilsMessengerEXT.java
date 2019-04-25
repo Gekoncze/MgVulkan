@@ -26,5 +26,5 @@ public class PFNvkCreateDebugUtilsMessengerEXT extends VkFunctionPointer {
         call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddress(), pCreateInfo != null ? pCreateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pMessenger != null ? pMessenger.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long instance, long pCreateInfo, long pAllocator, long pMessenger, long rval);
+    protected static native void call(long vkaddress, long instance, long pCreateInfo, long pAllocator, long pMessenger, long rval);
 }

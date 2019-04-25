@@ -26,5 +26,5 @@ public class PFNvkBindImageMemory2 extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), bindInfoCount != null ? bindInfoCount.getVkAddress() : VkPointer.getNullAddress(), pBindInfos != null ? pBindInfos.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long bindInfoCount, long pBindInfos, long rval);
+    protected static native void call(long vkaddress, long device, long bindInfoCount, long pBindInfos, long rval);
 }

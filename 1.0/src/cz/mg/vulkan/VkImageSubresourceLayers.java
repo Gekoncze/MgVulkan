@@ -33,8 +33,8 @@ public class VkImageSubresourceLayers extends VkObject {
         getAspectMask().setValue(aspectMask);
     }
 
-    private static native long getAspectMask(long address);
-    private static native void setAspectMask(long address, long aspectMask);
+    protected static native long getAspectMask(long address);
+    protected static native void setAspectMask(long address, long aspectMask);
 
     public VkUInt32 getMipLevel() {
         return new VkUInt32(getVkMemory(), getMipLevel(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkImageSubresourceLayers extends VkObject {
         getMipLevel().setValue(mipLevel);
     }
 
-    private static native long getMipLevel(long address);
-    private static native void setMipLevel(long address, long mipLevel);
+    protected static native long getMipLevel(long address);
+    protected static native void setMipLevel(long address, long mipLevel);
 
     public VkUInt32 getBaseArrayLayer() {
         return new VkUInt32(getVkMemory(), getBaseArrayLayer(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkImageSubresourceLayers extends VkObject {
         getBaseArrayLayer().setValue(baseArrayLayer);
     }
 
-    private static native long getBaseArrayLayer(long address);
-    private static native void setBaseArrayLayer(long address, long baseArrayLayer);
+    protected static native long getBaseArrayLayer(long address);
+    protected static native void setBaseArrayLayer(long address, long baseArrayLayer);
 
     public VkUInt32 getLayerCount() {
         return new VkUInt32(getVkMemory(), getLayerCount(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkImageSubresourceLayers extends VkObject {
         getLayerCount().setValue(layerCount);
     }
 
-    private static native long getLayerCount(long address);
-    private static native void setLayerCount(long address, long layerCount);
+    protected static native long getLayerCount(long address);
+    protected static native void setLayerCount(long address, long layerCount);
 
 
     public static native long sizeof();

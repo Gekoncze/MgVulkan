@@ -33,8 +33,8 @@ public class VkPhysicalDeviceShaderDrawParameterFeatures extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceShaderDrawParameterFeatures extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkBool32 getShaderDrawParameters() {
         return new VkBool32(getVkMemory(), getShaderDrawParameters(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceShaderDrawParameterFeatures extends VkObject {
         getShaderDrawParameters().setValue(shaderDrawParameters);
     }
 
-    private static native long getShaderDrawParameters(long address);
-    private static native void setShaderDrawParameters(long address, long shaderDrawParameters);
+    protected static native long getShaderDrawParameters(long address);
+    protected static native void setShaderDrawParameters(long address, long shaderDrawParameters);
 
 
     public static native long sizeof();

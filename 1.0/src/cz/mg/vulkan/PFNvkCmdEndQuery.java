@@ -26,5 +26,5 @@ public class PFNvkCmdEndQuery extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), queryPool != null ? queryPool.getVkAddress() : VkPointer.getNullAddress(), query != null ? query.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long queryPool, long query);
+    protected static native void call(long vkaddress, long commandBuffer, long queryPool, long query);
 }

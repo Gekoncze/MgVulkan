@@ -33,8 +33,8 @@ public class VkMappedMemoryRange extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkMappedMemoryRange extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDeviceMemory getMemory() {
         return new VkDeviceMemory(getVkMemory(), getMemory(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkMappedMemoryRange extends VkObject {
         
     }
 
-    private static native long getMemory(long address);
-    private static native void setMemory(long address, long memory);
+    protected static native long getMemory(long address);
+    protected static native void setMemory(long address, long memory);
 
     public VkDeviceSize getOffset() {
         return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
@@ -80,8 +80,8 @@ public class VkMappedMemoryRange extends VkObject {
         getOffset().setValue(offset);
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
     public VkDeviceSize getSize() {
         return new VkDeviceSize(getVkMemory(), getSize(getVkAddress()));
@@ -101,8 +101,8 @@ public class VkMappedMemoryRange extends VkObject {
         getSize().setValue(size);
     }
 
-    private static native long getSize(long address);
-    private static native void setSize(long address, long size);
+    protected static native long getSize(long address);
+    protected static native void setSize(long address, long size);
 
 
     public static native long sizeof();

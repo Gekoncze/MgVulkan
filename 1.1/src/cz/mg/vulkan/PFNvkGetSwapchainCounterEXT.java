@@ -26,5 +26,5 @@ public class PFNvkGetSwapchainCounterEXT extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddress(), counter != null ? counter.getVkAddress() : VkPointer.getNullAddress(), pCounterValue != null ? pCounterValue.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long swapchain, long counter, long pCounterValue, long rval);
+    protected static native void call(long vkaddress, long device, long swapchain, long counter, long pCounterValue, long rval);
 }

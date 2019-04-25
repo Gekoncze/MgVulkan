@@ -34,8 +34,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkSwapchainKHR getSwapchain() {
         return new VkSwapchainKHR(getVkMemory(), getSwapchain(getVkAddress()));
@@ -60,8 +60,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         
     }
 
-    private static native long getSwapchain(long address);
-    private static native void setSwapchain(long address, long swapchain);
+    protected static native long getSwapchain(long address);
+    protected static native void setSwapchain(long address, long swapchain);
 
     public VkUInt64 getTimeout() {
         return new VkUInt64(getVkMemory(), getTimeout(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         getTimeout().setValue(timeout);
     }
 
-    private static native long getTimeout(long address);
-    private static native void setTimeout(long address, long timeout);
+    protected static native long getTimeout(long address);
+    protected static native void setTimeout(long address, long timeout);
 
     public VkSemaphore getSemaphore() {
         return new VkSemaphore(getVkMemory(), getSemaphore(getVkAddress()));
@@ -94,8 +94,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         
     }
 
-    private static native long getSemaphore(long address);
-    private static native void setSemaphore(long address, long semaphore);
+    protected static native long getSemaphore(long address);
+    protected static native void setSemaphore(long address, long semaphore);
 
     public VkFence getFence() {
         return new VkFence(getVkMemory(), getFence(getVkAddress()));
@@ -107,8 +107,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         
     }
 
-    private static native long getFence(long address);
-    private static native void setFence(long address, long fence);
+    protected static native long getFence(long address);
+    protected static native void setFence(long address, long fence);
 
     public VkUInt32 getDeviceMask() {
         return new VkUInt32(getVkMemory(), getDeviceMask(getVkAddress()));
@@ -128,8 +128,8 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
         getDeviceMask().setValue(deviceMask);
     }
 
-    private static native long getDeviceMask(long address);
-    private static native void setDeviceMask(long address, long deviceMask);
+    protected static native long getDeviceMask(long address);
+    protected static native void setDeviceMask(long address, long deviceMask);
 
 
     public static native long sizeof();

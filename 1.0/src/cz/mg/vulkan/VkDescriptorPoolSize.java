@@ -33,8 +33,8 @@ public class VkDescriptorPoolSize extends VkObject {
         getType().setValue(type);
     }
 
-    private static native long getType(long address);
-    private static native void setType(long address, long type);
+    protected static native long getType(long address);
+    protected static native void setType(long address, long type);
 
     public VkUInt32 getDescriptorCount() {
         return new VkUInt32(getVkMemory(), getDescriptorCount(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkDescriptorPoolSize extends VkObject {
         getDescriptorCount().setValue(descriptorCount);
     }
 
-    private static native long getDescriptorCount(long address);
-    private static native void setDescriptorCount(long address, long descriptorCount);
+    protected static native long getDescriptorCount(long address);
+    protected static native void setDescriptorCount(long address, long descriptorCount);
 
 
     public static native long sizeof();

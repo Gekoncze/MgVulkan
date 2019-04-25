@@ -25,8 +25,8 @@ public class VkClearRect extends VkObject {
         
     }
 
-    private static native long getRect(long address);
-    private static native void setRect(long address, long rect);
+    protected static native long getRect(long address);
+    protected static native void setRect(long address, long rect);
 
     public VkUInt32 getBaseArrayLayer() {
         return new VkUInt32(getVkMemory(), getBaseArrayLayer(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkClearRect extends VkObject {
         getBaseArrayLayer().setValue(baseArrayLayer);
     }
 
-    private static native long getBaseArrayLayer(long address);
-    private static native void setBaseArrayLayer(long address, long baseArrayLayer);
+    protected static native long getBaseArrayLayer(long address);
+    protected static native void setBaseArrayLayer(long address, long baseArrayLayer);
 
     public VkUInt32 getLayerCount() {
         return new VkUInt32(getVkMemory(), getLayerCount(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkClearRect extends VkObject {
         getLayerCount().setValue(layerCount);
     }
 
-    private static native long getLayerCount(long address);
-    private static native void setLayerCount(long address, long layerCount);
+    protected static native long getLayerCount(long address);
+    protected static native void setLayerCount(long address, long layerCount);
 
 
     public static native long sizeof();

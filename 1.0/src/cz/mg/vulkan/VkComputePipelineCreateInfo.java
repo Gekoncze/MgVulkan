@@ -34,8 +34,8 @@ public class VkComputePipelineCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkComputePipelineCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkPipelineCreateFlags getFlags() {
         return new VkPipelineCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkComputePipelineCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkPipelineShaderStageCreateInfo getStage() {
         return new VkPipelineShaderStageCreateInfo(getVkMemory(), getStage(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkComputePipelineCreateInfo extends VkObject {
         
     }
 
-    private static native long getStage(long address);
-    private static native void setStage(long address, long stage);
+    protected static native long getStage(long address);
+    protected static native void setStage(long address, long stage);
 
     public VkPipelineLayout getLayout() {
         return new VkPipelineLayout(getVkMemory(), getLayout(getVkAddress()));
@@ -94,8 +94,8 @@ public class VkComputePipelineCreateInfo extends VkObject {
         
     }
 
-    private static native long getLayout(long address);
-    private static native void setLayout(long address, long layout);
+    protected static native long getLayout(long address);
+    protected static native void setLayout(long address, long layout);
 
     public VkPipeline getBasePipelineHandle() {
         return new VkPipeline(getVkMemory(), getBasePipelineHandle(getVkAddress()));
@@ -107,8 +107,8 @@ public class VkComputePipelineCreateInfo extends VkObject {
         
     }
 
-    private static native long getBasePipelineHandle(long address);
-    private static native void setBasePipelineHandle(long address, long basePipelineHandle);
+    protected static native long getBasePipelineHandle(long address);
+    protected static native void setBasePipelineHandle(long address, long basePipelineHandle);
 
     public VkInt32 getBasePipelineIndex() {
         return new VkInt32(getVkMemory(), getBasePipelineIndex(getVkAddress()));
@@ -128,8 +128,8 @@ public class VkComputePipelineCreateInfo extends VkObject {
         getBasePipelineIndex().setValue(basePipelineIndex);
     }
 
-    private static native long getBasePipelineIndex(long address);
-    private static native void setBasePipelineIndex(long address, long basePipelineIndex);
+    protected static native long getBasePipelineIndex(long address);
+    protected static native void setBasePipelineIndex(long address, long basePipelineIndex);
 
 
     public static native long sizeof();

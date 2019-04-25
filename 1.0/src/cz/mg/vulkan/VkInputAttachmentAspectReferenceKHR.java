@@ -33,8 +33,8 @@ public class VkInputAttachmentAspectReferenceKHR extends VkObject {
         getSubpass().setValue(subpass);
     }
 
-    private static native long getSubpass(long address);
-    private static native void setSubpass(long address, long subpass);
+    protected static native long getSubpass(long address);
+    protected static native void setSubpass(long address, long subpass);
 
     public VkUInt32 getInputAttachmentIndex() {
         return new VkUInt32(getVkMemory(), getInputAttachmentIndex(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkInputAttachmentAspectReferenceKHR extends VkObject {
         getInputAttachmentIndex().setValue(inputAttachmentIndex);
     }
 
-    private static native long getInputAttachmentIndex(long address);
-    private static native void setInputAttachmentIndex(long address, long inputAttachmentIndex);
+    protected static native long getInputAttachmentIndex(long address);
+    protected static native void setInputAttachmentIndex(long address, long inputAttachmentIndex);
 
     public VkImageAspectFlags getAspectMask() {
         return new VkImageAspectFlags(getVkMemory(), getAspectMask(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkInputAttachmentAspectReferenceKHR extends VkObject {
         getAspectMask().setValue(aspectMask);
     }
 
-    private static native long getAspectMask(long address);
-    private static native void setAspectMask(long address, long aspectMask);
+    protected static native long getAspectMask(long address);
+    protected static native void setAspectMask(long address, long aspectMask);
 
 
     public static native long sizeof();

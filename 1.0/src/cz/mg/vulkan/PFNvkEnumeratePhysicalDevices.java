@@ -26,5 +26,5 @@ public class PFNvkEnumeratePhysicalDevices extends VkFunctionPointer {
         call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddress(), pPhysicalDeviceCount != null ? pPhysicalDeviceCount.getVkAddress() : VkPointer.NULL, pPhysicalDevices != null ? pPhysicalDevices.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long instance, long pPhysicalDeviceCount, long pPhysicalDevices, long rval);
+    protected static native void call(long vkaddress, long instance, long pPhysicalDeviceCount, long pPhysicalDevices, long rval);
 }

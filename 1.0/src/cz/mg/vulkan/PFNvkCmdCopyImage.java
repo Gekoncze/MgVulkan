@@ -26,5 +26,5 @@ public class PFNvkCmdCopyImage extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), srcImage != null ? srcImage.getVkAddress() : VkPointer.getNullAddress(), srcImageLayout != null ? srcImageLayout.getVkAddress() : VkPointer.getNullAddress(), dstImage != null ? dstImage.getVkAddress() : VkPointer.getNullAddress(), dstImageLayout != null ? dstImageLayout.getVkAddress() : VkPointer.getNullAddress(), regionCount != null ? regionCount.getVkAddress() : VkPointer.getNullAddress(), pRegions != null ? pRegions.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long srcImage, long srcImageLayout, long dstImage, long dstImageLayout, long regionCount, long pRegions);
+    protected static native void call(long vkaddress, long commandBuffer, long srcImage, long srcImageLayout, long dstImage, long dstImageLayout, long regionCount, long pRegions);
 }

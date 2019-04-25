@@ -33,8 +33,8 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
         getType().setValue(type);
     }
 
-    private static native long getType(long address);
-    private static native void setType(long address, long type);
+    protected static native long getType(long address);
+    protected static native void setType(long address, long type);
 
     public VkObjectEntryUsageFlagsNVX getFlags() {
         return new VkObjectEntryUsageFlagsNVX(getVkMemory(), getFlags(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkPipelineLayout getPipelineLayout() {
         return new VkPipelineLayout(getVkMemory(), getPipelineLayout(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
         
     }
 
-    private static native long getPipelineLayout(long address);
-    private static native void setPipelineLayout(long address, long pipelineLayout);
+    protected static native long getPipelineLayout(long address);
+    protected static native void setPipelineLayout(long address, long pipelineLayout);
 
     public VkShaderStageFlags getStageFlags() {
         return new VkShaderStageFlags(getVkMemory(), getStageFlags(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkObjectTablePushConstantEntryNVX extends VkObject {
         getStageFlags().setValue(stageFlags);
     }
 
-    private static native long getStageFlags(long address);
-    private static native void setStageFlags(long address, long stageFlags);
+    protected static native long getStageFlags(long address);
+    protected static native void setStageFlags(long address, long stageFlags);
 
 
     public static native long sizeof();

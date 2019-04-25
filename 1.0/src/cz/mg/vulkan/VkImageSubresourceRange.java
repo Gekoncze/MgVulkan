@@ -33,8 +33,8 @@ public class VkImageSubresourceRange extends VkObject {
         getAspectMask().setValue(aspectMask);
     }
 
-    private static native long getAspectMask(long address);
-    private static native void setAspectMask(long address, long aspectMask);
+    protected static native long getAspectMask(long address);
+    protected static native void setAspectMask(long address, long aspectMask);
 
     public VkUInt32 getBaseMipLevel() {
         return new VkUInt32(getVkMemory(), getBaseMipLevel(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkImageSubresourceRange extends VkObject {
         getBaseMipLevel().setValue(baseMipLevel);
     }
 
-    private static native long getBaseMipLevel(long address);
-    private static native void setBaseMipLevel(long address, long baseMipLevel);
+    protected static native long getBaseMipLevel(long address);
+    protected static native void setBaseMipLevel(long address, long baseMipLevel);
 
     public VkUInt32 getLevelCount() {
         return new VkUInt32(getVkMemory(), getLevelCount(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkImageSubresourceRange extends VkObject {
         getLevelCount().setValue(levelCount);
     }
 
-    private static native long getLevelCount(long address);
-    private static native void setLevelCount(long address, long levelCount);
+    protected static native long getLevelCount(long address);
+    protected static native void setLevelCount(long address, long levelCount);
 
     public VkUInt32 getBaseArrayLayer() {
         return new VkUInt32(getVkMemory(), getBaseArrayLayer(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkImageSubresourceRange extends VkObject {
         getBaseArrayLayer().setValue(baseArrayLayer);
     }
 
-    private static native long getBaseArrayLayer(long address);
-    private static native void setBaseArrayLayer(long address, long baseArrayLayer);
+    protected static native long getBaseArrayLayer(long address);
+    protected static native void setBaseArrayLayer(long address, long baseArrayLayer);
 
     public VkUInt32 getLayerCount() {
         return new VkUInt32(getVkMemory(), getLayerCount(getVkAddress()));
@@ -117,8 +117,8 @@ public class VkImageSubresourceRange extends VkObject {
         getLayerCount().setValue(layerCount);
     }
 
-    private static native long getLayerCount(long address);
-    private static native void setLayerCount(long address, long layerCount);
+    protected static native long getLayerCount(long address);
+    protected static native void setLayerCount(long address, long layerCount);
 
 
     public static native long sizeof();

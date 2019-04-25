@@ -34,8 +34,8 @@ public class VkDisplayPowerInfoEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDisplayPowerInfoEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDisplayPowerStateEXT getPowerState() {
         return new VkDisplayPowerStateEXT(getVkMemory(), getPowerState(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDisplayPowerInfoEXT extends VkObject {
         getPowerState().setValue(powerState);
     }
 
-    private static native long getPowerState(long address);
-    private static native void setPowerState(long address, long powerState);
+    protected static native long getPowerState(long address);
+    protected static native void setPowerState(long address, long powerState);
 
 
     public static native long sizeof();

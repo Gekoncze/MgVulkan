@@ -26,5 +26,5 @@ public class PFNvkGetEventStatus extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), event != null ? event.getVkAddress() : VkPointer.getNullAddress(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long event, long rval);
+    protected static native void call(long vkaddress, long device, long event, long rval);
 }

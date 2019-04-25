@@ -33,8 +33,8 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkImageUsageFlags getSharedPresentSupportedUsageFlags() {
         return new VkImageUsageFlags(getVkMemory(), getSharedPresentSupportedUsageFlags(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
         getSharedPresentSupportedUsageFlags().setValue(sharedPresentSupportedUsageFlags);
     }
 
-    private static native long getSharedPresentSupportedUsageFlags(long address);
-    private static native void setSharedPresentSupportedUsageFlags(long address, long sharedPresentSupportedUsageFlags);
+    protected static native long getSharedPresentSupportedUsageFlags(long address);
+    protected static native void setSharedPresentSupportedUsageFlags(long address, long sharedPresentSupportedUsageFlags);
 
 
     public static native long sizeof();

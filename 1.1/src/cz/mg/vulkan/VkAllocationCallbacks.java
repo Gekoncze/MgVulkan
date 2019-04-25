@@ -25,8 +25,8 @@ public class VkAllocationCallbacks extends VkObject {
         this.pUserData = pUserData;
     }
 
-    private static native long getPUserData(long address);
-    private static native void setPUserData(long address, long pUserData);
+    protected static native long getPUserData(long address);
+    protected static native void setPUserData(long address, long pUserData);
 
     public PFNvkAllocationFunction getPfnAllocation() {
         return new PFNvkAllocationFunction(getVkMemory(), getPfnAllocation(getVkAddress()));
@@ -38,8 +38,8 @@ public class VkAllocationCallbacks extends VkObject {
         
     }
 
-    private static native long getPfnAllocation(long address);
-    private static native void setPfnAllocation(long address, long pfnAllocation);
+    protected static native long getPfnAllocation(long address);
+    protected static native void setPfnAllocation(long address, long pfnAllocation);
 
     public PFNvkReallocationFunction getPfnReallocation() {
         return new PFNvkReallocationFunction(getVkMemory(), getPfnReallocation(getVkAddress()));
@@ -51,8 +51,8 @@ public class VkAllocationCallbacks extends VkObject {
         
     }
 
-    private static native long getPfnReallocation(long address);
-    private static native void setPfnReallocation(long address, long pfnReallocation);
+    protected static native long getPfnReallocation(long address);
+    protected static native void setPfnReallocation(long address, long pfnReallocation);
 
     public PFNvkFreeFunction getPfnFree() {
         return new PFNvkFreeFunction(getVkMemory(), getPfnFree(getVkAddress()));
@@ -64,8 +64,8 @@ public class VkAllocationCallbacks extends VkObject {
         
     }
 
-    private static native long getPfnFree(long address);
-    private static native void setPfnFree(long address, long pfnFree);
+    protected static native long getPfnFree(long address);
+    protected static native void setPfnFree(long address, long pfnFree);
 
     public PFNvkInternalAllocationNotification getPfnInternalAllocation() {
         return new PFNvkInternalAllocationNotification(getVkMemory(), getPfnInternalAllocation(getVkAddress()));
@@ -77,8 +77,8 @@ public class VkAllocationCallbacks extends VkObject {
         
     }
 
-    private static native long getPfnInternalAllocation(long address);
-    private static native void setPfnInternalAllocation(long address, long pfnInternalAllocation);
+    protected static native long getPfnInternalAllocation(long address);
+    protected static native void setPfnInternalAllocation(long address, long pfnInternalAllocation);
 
     public PFNvkInternalFreeNotification getPfnInternalFree() {
         return new PFNvkInternalFreeNotification(getVkMemory(), getPfnInternalFree(getVkAddress()));
@@ -90,8 +90,8 @@ public class VkAllocationCallbacks extends VkObject {
         
     }
 
-    private static native long getPfnInternalFree(long address);
-    private static native void setPfnInternalFree(long address, long pfnInternalFree);
+    protected static native long getPfnInternalFree(long address);
+    protected static native void setPfnInternalFree(long address, long pfnInternalFree);
 
 
     public static native long sizeof();

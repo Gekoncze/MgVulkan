@@ -38,8 +38,8 @@ public class VkClearValue extends VkObject {
         
     }
 
-    private static native long getColor(long address);
-    private static native void setColor(long address, long color);
+    protected static native long getColor(long address);
+    protected static native void setColor(long address, long color);
 
     public VkClearDepthStencilValue getDepthStencil() {
         return new VkClearDepthStencilValue(getVkMemory(), getDepthStencil(getVkAddress()));
@@ -51,8 +51,8 @@ public class VkClearValue extends VkObject {
         
     }
 
-    private static native long getDepthStencil(long address);
-    private static native void setDepthStencil(long address, long depthStencil);
+    protected static native long getDepthStencil(long address);
+    protected static native void setDepthStencil(long address, long depthStencil);
 
 
     public static native long sizeof();

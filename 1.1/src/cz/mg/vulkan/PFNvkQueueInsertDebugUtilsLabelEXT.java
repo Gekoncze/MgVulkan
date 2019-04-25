@@ -26,5 +26,5 @@ public class PFNvkQueueInsertDebugUtilsLabelEXT extends VkFunctionPointer {
         call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.getNullAddress(), pLabelInfo != null ? pLabelInfo.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long queue, long pLabelInfo);
+    protected static native void call(long vkaddress, long queue, long pLabelInfo);
 }

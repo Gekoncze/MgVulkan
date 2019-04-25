@@ -34,8 +34,8 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkPipelineCoverageToColorStateCreateFlagsNV getFlags() {
         return new VkPipelineCoverageToColorStateCreateFlagsNV(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkBool32 getCoverageToColorEnable() {
         return new VkBool32(getVkMemory(), getCoverageToColorEnable(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         getCoverageToColorEnable().setValue(coverageToColorEnable);
     }
 
-    private static native long getCoverageToColorEnable(long address);
-    private static native void setCoverageToColorEnable(long address, long coverageToColorEnable);
+    protected static native long getCoverageToColorEnable(long address);
+    protected static native void setCoverageToColorEnable(long address, long coverageToColorEnable);
 
     public VkUInt32 getCoverageToColorLocation() {
         return new VkUInt32(getVkMemory(), getCoverageToColorLocation(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
         getCoverageToColorLocation().setValue(coverageToColorLocation);
     }
 
-    private static native long getCoverageToColorLocation(long address);
-    private static native void setCoverageToColorLocation(long address, long coverageToColorLocation);
+    protected static native long getCoverageToColorLocation(long address);
+    protected static native void setCoverageToColorLocation(long address, long coverageToColorLocation);
 
 
     public static native long sizeof();

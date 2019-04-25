@@ -26,5 +26,5 @@ public class PFNvkCmdSetViewport extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), firstViewport != null ? firstViewport.getVkAddress() : VkPointer.getNullAddress(), viewportCount != null ? viewportCount.getVkAddress() : VkPointer.getNullAddress(), pViewports != null ? pViewports.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long firstViewport, long viewportCount, long pViewports);
+    protected static native void call(long vkaddress, long commandBuffer, long firstViewport, long viewportCount, long pViewports);
 }

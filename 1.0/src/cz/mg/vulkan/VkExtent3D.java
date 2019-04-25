@@ -38,8 +38,8 @@ public class VkExtent3D extends VkObject {
         getWidth().setValue(width);
     }
 
-    private static native long getWidth(long address);
-    private static native void setWidth(long address, long width);
+    protected static native long getWidth(long address);
+    protected static native void setWidth(long address, long width);
 
     public VkUInt32 getHeight() {
         return new VkUInt32(getVkMemory(), getHeight(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkExtent3D extends VkObject {
         getHeight().setValue(height);
     }
 
-    private static native long getHeight(long address);
-    private static native void setHeight(long address, long height);
+    protected static native long getHeight(long address);
+    protected static native void setHeight(long address, long height);
 
     public VkUInt32 getDepth() {
         return new VkUInt32(getVkMemory(), getDepth(getVkAddress()));
@@ -80,8 +80,8 @@ public class VkExtent3D extends VkObject {
         getDepth().setValue(depth);
     }
 
-    private static native long getDepth(long address);
-    private static native void setDepth(long address, long depth);
+    protected static native long getDepth(long address);
+    protected static native void setDepth(long address, long depth);
 
 
     public static native long sizeof();

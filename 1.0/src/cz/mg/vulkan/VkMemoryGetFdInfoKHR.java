@@ -34,8 +34,8 @@ public class VkMemoryGetFdInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkMemoryGetFdInfoKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDeviceMemory getMemory() {
         return new VkDeviceMemory(getVkMemory(), getMemory(getVkAddress()));
@@ -60,8 +60,8 @@ public class VkMemoryGetFdInfoKHR extends VkObject {
         
     }
 
-    private static native long getMemory(long address);
-    private static native void setMemory(long address, long memory);
+    protected static native long getMemory(long address);
+    protected static native void setMemory(long address, long memory);
 
     public VkExternalMemoryHandleTypeFlagBitsKHR getHandleType() {
         return new VkExternalMemoryHandleTypeFlagBitsKHR(getVkMemory(), getHandleType(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkMemoryGetFdInfoKHR extends VkObject {
         getHandleType().setValue(handleType);
     }
 
-    private static native long getHandleType(long address);
-    private static native void setHandleType(long address, long handleType);
+    protected static native long getHandleType(long address);
+    protected static native void setHandleType(long address, long handleType);
 
 
     public static native long sizeof();

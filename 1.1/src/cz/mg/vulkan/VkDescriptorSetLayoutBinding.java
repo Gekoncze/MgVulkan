@@ -33,8 +33,8 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         getBinding().setValue(binding);
     }
 
-    private static native long getBinding(long address);
-    private static native void setBinding(long address, long binding);
+    protected static native long getBinding(long address);
+    protected static native void setBinding(long address, long binding);
 
     public VkDescriptorType getDescriptorType() {
         return new VkDescriptorType(getVkMemory(), getDescriptorType(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         getDescriptorType().setValue(descriptorType);
     }
 
-    private static native long getDescriptorType(long address);
-    private static native void setDescriptorType(long address, long descriptorType);
+    protected static native long getDescriptorType(long address);
+    protected static native void setDescriptorType(long address, long descriptorType);
 
     public VkUInt32 getDescriptorCount() {
         return new VkUInt32(getVkMemory(), getDescriptorCount(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         getDescriptorCount().setValue(descriptorCount);
     }
 
-    private static native long getDescriptorCount(long address);
-    private static native void setDescriptorCount(long address, long descriptorCount);
+    protected static native long getDescriptorCount(long address);
+    protected static native void setDescriptorCount(long address, long descriptorCount);
 
     public VkShaderStageFlags getStageFlags() {
         return new VkShaderStageFlags(getVkMemory(), getStageFlags(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         getStageFlags().setValue(stageFlags);
     }
 
-    private static native long getStageFlags(long address);
-    private static native void setStageFlags(long address, long stageFlags);
+    protected static native long getStageFlags(long address);
+    protected static native void setStageFlags(long address, long stageFlags);
 
     public VkSampler getPImmutableSamplers() {
         return new VkSampler(getVkMemory(), getPImmutableSamplers(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkDescriptorSetLayoutBinding extends VkObject {
         this.pImmutableSamplers = pImmutableSamplers;
     }
 
-    private static native long getPImmutableSamplers(long address);
-    private static native void setPImmutableSamplers(long address, long pImmutableSamplers);
+    protected static native long getPImmutableSamplers(long address);
+    protected static native void setPImmutableSamplers(long address, long pImmutableSamplers);
 
 
     public static native long sizeof();

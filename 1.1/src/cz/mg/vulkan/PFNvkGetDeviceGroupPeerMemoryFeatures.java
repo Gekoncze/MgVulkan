@@ -26,5 +26,5 @@ public class PFNvkGetDeviceGroupPeerMemoryFeatures extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), heapIndex != null ? heapIndex.getVkAddress() : VkPointer.getNullAddress(), localDeviceIndex != null ? localDeviceIndex.getVkAddress() : VkPointer.getNullAddress(), remoteDeviceIndex != null ? remoteDeviceIndex.getVkAddress() : VkPointer.getNullAddress(), pPeerMemoryFeatures != null ? pPeerMemoryFeatures.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long device, long heapIndex, long localDeviceIndex, long remoteDeviceIndex, long pPeerMemoryFeatures);
+    protected static native void call(long vkaddress, long device, long heapIndex, long localDeviceIndex, long remoteDeviceIndex, long pPeerMemoryFeatures);
 }

@@ -25,8 +25,8 @@ public class VkDescriptorBufferInfo extends VkObject {
         
     }
 
-    private static native long getBuffer(long address);
-    private static native void setBuffer(long address, long buffer);
+    protected static native long getBuffer(long address);
+    protected static native void setBuffer(long address, long buffer);
 
     public VkDeviceSize getOffset() {
         return new VkDeviceSize(getVkMemory(), getOffset(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkDescriptorBufferInfo extends VkObject {
         getOffset().setValue(offset);
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
     public VkDeviceSize getRange() {
         return new VkDeviceSize(getVkMemory(), getRange(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkDescriptorBufferInfo extends VkObject {
         getRange().setValue(range);
     }
 
-    private static native long getRange(long address);
-    private static native void setRange(long address, long range);
+    protected static native long getRange(long address);
+    protected static native void setRange(long address, long range);
 
 
     public static native long sizeof();

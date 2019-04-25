@@ -26,5 +26,5 @@ public class PFNvkGetDisplayPlaneCapabilitiesKHR extends VkFunctionPointer {
         call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), mode != null ? mode.getVkAddress() : VkPointer.getNullAddress(), planeIndex != null ? planeIndex.getVkAddress() : VkPointer.getNullAddress(), pCapabilities != null ? pCapabilities.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long physicalDevice, long mode, long planeIndex, long pCapabilities, long rval);
+    protected static native void call(long vkaddress, long physicalDevice, long mode, long planeIndex, long pCapabilities, long rval);
 }

@@ -33,8 +33,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
         getApiVersion().setValue(apiVersion);
     }
 
-    private static native long getApiVersion(long address);
-    private static native void setApiVersion(long address, long apiVersion);
+    protected static native long getApiVersion(long address);
+    protected static native void setApiVersion(long address, long apiVersion);
 
     public VkUInt32 getDriverVersion() {
         return new VkUInt32(getVkMemory(), getDriverVersion(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
         getDriverVersion().setValue(driverVersion);
     }
 
-    private static native long getDriverVersion(long address);
-    private static native void setDriverVersion(long address, long driverVersion);
+    protected static native long getDriverVersion(long address);
+    protected static native void setDriverVersion(long address, long driverVersion);
 
     public VkUInt32 getVendorID() {
         return new VkUInt32(getVkMemory(), getVendorID(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
         getVendorID().setValue(vendorID);
     }
 
-    private static native long getVendorID(long address);
-    private static native void setVendorID(long address, long vendorID);
+    protected static native long getVendorID(long address);
+    protected static native void setVendorID(long address, long vendorID);
 
     public VkUInt32 getDeviceID() {
         return new VkUInt32(getVkMemory(), getDeviceID(getVkAddress()));
@@ -96,8 +96,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
         getDeviceID().setValue(deviceID);
     }
 
-    private static native long getDeviceID(long address);
-    private static native void setDeviceID(long address, long deviceID);
+    protected static native long getDeviceID(long address);
+    protected static native void setDeviceID(long address, long deviceID);
 
     public VkPhysicalDeviceType getDeviceType() {
         return new VkPhysicalDeviceType(getVkMemory(), getDeviceType(getVkAddress()));
@@ -117,8 +117,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
         getDeviceType().setValue(deviceType);
     }
 
-    private static native long getDeviceType(long address);
-    private static native void setDeviceType(long address, long deviceType);
+    protected static native long getDeviceType(long address);
+    protected static native void setDeviceType(long address, long deviceType);
 
     public VkChar getDeviceName() {
         return new VkChar(getVkMemory(), getDeviceName(getVkAddress()));
@@ -138,8 +138,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
         setDeviceName(new VkString(deviceName));
     }
 
-    private static native long getDeviceName(long address);
-    private static native void setDeviceName(long address, long deviceName);
+    protected static native long getDeviceName(long address);
+    protected static native void setDeviceName(long address, long deviceName);
 
     public VkUInt8 getPipelineCacheUUID() {
         return new VkUInt8(getVkMemory(), getPipelineCacheUUID(getVkAddress()));
@@ -151,8 +151,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
         
     }
 
-    private static native long getPipelineCacheUUID(long address);
-    private static native void setPipelineCacheUUID(long address, long pipelineCacheUUID);
+    protected static native long getPipelineCacheUUID(long address);
+    protected static native void setPipelineCacheUUID(long address, long pipelineCacheUUID);
 
     public VkPhysicalDeviceLimits getLimits() {
         return new VkPhysicalDeviceLimits(getVkMemory(), getLimits(getVkAddress()));
@@ -164,8 +164,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
         
     }
 
-    private static native long getLimits(long address);
-    private static native void setLimits(long address, long limits);
+    protected static native long getLimits(long address);
+    protected static native void setLimits(long address, long limits);
 
     public VkPhysicalDeviceSparseProperties getSparseProperties() {
         return new VkPhysicalDeviceSparseProperties(getVkMemory(), getSparseProperties(getVkAddress()));
@@ -177,8 +177,8 @@ public class VkPhysicalDeviceProperties extends VkObject {
         
     }
 
-    private static native long getSparseProperties(long address);
-    private static native void setSparseProperties(long address, long sparseProperties);
+    protected static native long getSparseProperties(long address);
+    protected static native void setSparseProperties(long address, long sparseProperties);
 
 
     public static native long sizeof();

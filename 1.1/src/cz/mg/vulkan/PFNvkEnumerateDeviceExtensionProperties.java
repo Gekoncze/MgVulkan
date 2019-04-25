@@ -26,5 +26,5 @@ public class PFNvkEnumerateDeviceExtensionProperties extends VkFunctionPointer {
         call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), pLayerName != null ? pLayerName.getVkAddress() : VkPointer.NULL, pPropertyCount != null ? pPropertyCount.getVkAddress() : VkPointer.NULL, pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long physicalDevice, long pLayerName, long pPropertyCount, long pProperties, long rval);
+    protected static native void call(long vkaddress, long physicalDevice, long pLayerName, long pPropertyCount, long pProperties, long rval);
 }

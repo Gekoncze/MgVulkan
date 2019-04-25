@@ -26,5 +26,5 @@ public class PFNvkGetPhysicalDeviceSparseImageFormatProperties extends VkFunctio
         call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), format != null ? format.getVkAddress() : VkPointer.getNullAddress(), type != null ? type.getVkAddress() : VkPointer.getNullAddress(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddress(), usage != null ? usage.getVkAddress() : VkPointer.getNullAddress(), tiling != null ? tiling.getVkAddress() : VkPointer.getNullAddress(), pPropertyCount != null ? pPropertyCount.getVkAddress() : VkPointer.NULL, pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long physicalDevice, long format, long type, long samples, long usage, long tiling, long pPropertyCount, long pProperties);
+    protected static native void call(long vkaddress, long physicalDevice, long format, long type, long samples, long usage, long tiling, long pPropertyCount, long pProperties);
 }

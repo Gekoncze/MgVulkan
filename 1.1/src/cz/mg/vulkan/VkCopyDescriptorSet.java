@@ -33,8 +33,8 @@ public class VkCopyDescriptorSet extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkCopyDescriptorSet extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDescriptorSet getSrcSet() {
         return new VkDescriptorSet(getVkMemory(), getSrcSet(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkCopyDescriptorSet extends VkObject {
         
     }
 
-    private static native long getSrcSet(long address);
-    private static native void setSrcSet(long address, long srcSet);
+    protected static native long getSrcSet(long address);
+    protected static native void setSrcSet(long address, long srcSet);
 
     public VkUInt32 getSrcBinding() {
         return new VkUInt32(getVkMemory(), getSrcBinding(getVkAddress()));
@@ -80,8 +80,8 @@ public class VkCopyDescriptorSet extends VkObject {
         getSrcBinding().setValue(srcBinding);
     }
 
-    private static native long getSrcBinding(long address);
-    private static native void setSrcBinding(long address, long srcBinding);
+    protected static native long getSrcBinding(long address);
+    protected static native void setSrcBinding(long address, long srcBinding);
 
     public VkUInt32 getSrcArrayElement() {
         return new VkUInt32(getVkMemory(), getSrcArrayElement(getVkAddress()));
@@ -101,8 +101,8 @@ public class VkCopyDescriptorSet extends VkObject {
         getSrcArrayElement().setValue(srcArrayElement);
     }
 
-    private static native long getSrcArrayElement(long address);
-    private static native void setSrcArrayElement(long address, long srcArrayElement);
+    protected static native long getSrcArrayElement(long address);
+    protected static native void setSrcArrayElement(long address, long srcArrayElement);
 
     public VkDescriptorSet getDstSet() {
         return new VkDescriptorSet(getVkMemory(), getDstSet(getVkAddress()));
@@ -114,8 +114,8 @@ public class VkCopyDescriptorSet extends VkObject {
         
     }
 
-    private static native long getDstSet(long address);
-    private static native void setDstSet(long address, long dstSet);
+    protected static native long getDstSet(long address);
+    protected static native void setDstSet(long address, long dstSet);
 
     public VkUInt32 getDstBinding() {
         return new VkUInt32(getVkMemory(), getDstBinding(getVkAddress()));
@@ -135,8 +135,8 @@ public class VkCopyDescriptorSet extends VkObject {
         getDstBinding().setValue(dstBinding);
     }
 
-    private static native long getDstBinding(long address);
-    private static native void setDstBinding(long address, long dstBinding);
+    protected static native long getDstBinding(long address);
+    protected static native void setDstBinding(long address, long dstBinding);
 
     public VkUInt32 getDstArrayElement() {
         return new VkUInt32(getVkMemory(), getDstArrayElement(getVkAddress()));
@@ -156,8 +156,8 @@ public class VkCopyDescriptorSet extends VkObject {
         getDstArrayElement().setValue(dstArrayElement);
     }
 
-    private static native long getDstArrayElement(long address);
-    private static native void setDstArrayElement(long address, long dstArrayElement);
+    protected static native long getDstArrayElement(long address);
+    protected static native void setDstArrayElement(long address, long dstArrayElement);
 
     public VkUInt32 getDescriptorCount() {
         return new VkUInt32(getVkMemory(), getDescriptorCount(getVkAddress()));
@@ -177,8 +177,8 @@ public class VkCopyDescriptorSet extends VkObject {
         getDescriptorCount().setValue(descriptorCount);
     }
 
-    private static native long getDescriptorCount(long address);
-    private static native void setDescriptorCount(long address, long descriptorCount);
+    protected static native long getDescriptorCount(long address);
+    protected static native void setDescriptorCount(long address, long descriptorCount);
 
 
     public static native long sizeof();

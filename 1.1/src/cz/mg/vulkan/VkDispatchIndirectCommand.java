@@ -33,8 +33,8 @@ public class VkDispatchIndirectCommand extends VkObject {
         getX().setValue(x);
     }
 
-    private static native long getX(long address);
-    private static native void setX(long address, long x);
+    protected static native long getX(long address);
+    protected static native void setX(long address, long x);
 
     public VkUInt32 getY() {
         return new VkUInt32(getVkMemory(), getY(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkDispatchIndirectCommand extends VkObject {
         getY().setValue(y);
     }
 
-    private static native long getY(long address);
-    private static native void setY(long address, long y);
+    protected static native long getY(long address);
+    protected static native void setY(long address, long y);
 
     public VkUInt32 getZ() {
         return new VkUInt32(getVkMemory(), getZ(getVkAddress()));
@@ -75,8 +75,8 @@ public class VkDispatchIndirectCommand extends VkObject {
         getZ().setValue(z);
     }
 
-    private static native long getZ(long address);
-    private static native void setZ(long address, long z);
+    protected static native long getZ(long address);
+    protected static native void setZ(long address, long z);
 
 
     public static native long sizeof();

@@ -33,8 +33,8 @@ public class VkClearAttachment extends VkObject {
         getAspectMask().setValue(aspectMask);
     }
 
-    private static native long getAspectMask(long address);
-    private static native void setAspectMask(long address, long aspectMask);
+    protected static native long getAspectMask(long address);
+    protected static native void setAspectMask(long address, long aspectMask);
 
     public VkUInt32 getColorAttachment() {
         return new VkUInt32(getVkMemory(), getColorAttachment(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkClearAttachment extends VkObject {
         getColorAttachment().setValue(colorAttachment);
     }
 
-    private static native long getColorAttachment(long address);
-    private static native void setColorAttachment(long address, long colorAttachment);
+    protected static native long getColorAttachment(long address);
+    protected static native void setColorAttachment(long address, long colorAttachment);
 
     public VkClearValue getClearValue() {
         return new VkClearValue(getVkMemory(), getClearValue(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkClearAttachment extends VkObject {
         
     }
 
-    private static native long getClearValue(long address);
-    private static native void setClearValue(long address, long clearValue);
+    protected static native long getClearValue(long address);
+    protected static native void setClearValue(long address, long clearValue);
 
 
     public static native long sizeof();

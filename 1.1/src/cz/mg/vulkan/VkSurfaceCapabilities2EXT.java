@@ -33,8 +33,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getMinImageCount() {
         return new VkUInt32(getVkMemory(), getMinImageCount(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getMinImageCount().setValue(minImageCount);
     }
 
-    private static native long getMinImageCount(long address);
-    private static native void setMinImageCount(long address, long minImageCount);
+    protected static native long getMinImageCount(long address);
+    protected static native void setMinImageCount(long address, long minImageCount);
 
     public VkUInt32 getMaxImageCount() {
         return new VkUInt32(getVkMemory(), getMaxImageCount(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getMaxImageCount().setValue(maxImageCount);
     }
 
-    private static native long getMaxImageCount(long address);
-    private static native void setMaxImageCount(long address, long maxImageCount);
+    protected static native long getMaxImageCount(long address);
+    protected static native void setMaxImageCount(long address, long maxImageCount);
 
     public VkExtent2D getCurrentExtent() {
         return new VkExtent2D(getVkMemory(), getCurrentExtent(getVkAddress()));
@@ -101,8 +101,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         
     }
 
-    private static native long getCurrentExtent(long address);
-    private static native void setCurrentExtent(long address, long currentExtent);
+    protected static native long getCurrentExtent(long address);
+    protected static native void setCurrentExtent(long address, long currentExtent);
 
     public VkExtent2D getMinImageExtent() {
         return new VkExtent2D(getVkMemory(), getMinImageExtent(getVkAddress()));
@@ -114,8 +114,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         
     }
 
-    private static native long getMinImageExtent(long address);
-    private static native void setMinImageExtent(long address, long minImageExtent);
+    protected static native long getMinImageExtent(long address);
+    protected static native void setMinImageExtent(long address, long minImageExtent);
 
     public VkExtent2D getMaxImageExtent() {
         return new VkExtent2D(getVkMemory(), getMaxImageExtent(getVkAddress()));
@@ -127,8 +127,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         
     }
 
-    private static native long getMaxImageExtent(long address);
-    private static native void setMaxImageExtent(long address, long maxImageExtent);
+    protected static native long getMaxImageExtent(long address);
+    protected static native void setMaxImageExtent(long address, long maxImageExtent);
 
     public VkUInt32 getMaxImageArrayLayers() {
         return new VkUInt32(getVkMemory(), getMaxImageArrayLayers(getVkAddress()));
@@ -148,8 +148,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getMaxImageArrayLayers().setValue(maxImageArrayLayers);
     }
 
-    private static native long getMaxImageArrayLayers(long address);
-    private static native void setMaxImageArrayLayers(long address, long maxImageArrayLayers);
+    protected static native long getMaxImageArrayLayers(long address);
+    protected static native void setMaxImageArrayLayers(long address, long maxImageArrayLayers);
 
     public VkSurfaceTransformFlagsKHR getSupportedTransforms() {
         return new VkSurfaceTransformFlagsKHR(getVkMemory(), getSupportedTransforms(getVkAddress()));
@@ -169,8 +169,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getSupportedTransforms().setValue(supportedTransforms);
     }
 
-    private static native long getSupportedTransforms(long address);
-    private static native void setSupportedTransforms(long address, long supportedTransforms);
+    protected static native long getSupportedTransforms(long address);
+    protected static native void setSupportedTransforms(long address, long supportedTransforms);
 
     public VkSurfaceTransformFlagBitsKHR getCurrentTransform() {
         return new VkSurfaceTransformFlagBitsKHR(getVkMemory(), getCurrentTransform(getVkAddress()));
@@ -190,8 +190,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getCurrentTransform().setValue(currentTransform);
     }
 
-    private static native long getCurrentTransform(long address);
-    private static native void setCurrentTransform(long address, long currentTransform);
+    protected static native long getCurrentTransform(long address);
+    protected static native void setCurrentTransform(long address, long currentTransform);
 
     public VkCompositeAlphaFlagsKHR getSupportedCompositeAlpha() {
         return new VkCompositeAlphaFlagsKHR(getVkMemory(), getSupportedCompositeAlpha(getVkAddress()));
@@ -211,8 +211,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getSupportedCompositeAlpha().setValue(supportedCompositeAlpha);
     }
 
-    private static native long getSupportedCompositeAlpha(long address);
-    private static native void setSupportedCompositeAlpha(long address, long supportedCompositeAlpha);
+    protected static native long getSupportedCompositeAlpha(long address);
+    protected static native void setSupportedCompositeAlpha(long address, long supportedCompositeAlpha);
 
     public VkImageUsageFlags getSupportedUsageFlags() {
         return new VkImageUsageFlags(getVkMemory(), getSupportedUsageFlags(getVkAddress()));
@@ -232,8 +232,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getSupportedUsageFlags().setValue(supportedUsageFlags);
     }
 
-    private static native long getSupportedUsageFlags(long address);
-    private static native void setSupportedUsageFlags(long address, long supportedUsageFlags);
+    protected static native long getSupportedUsageFlags(long address);
+    protected static native void setSupportedUsageFlags(long address, long supportedUsageFlags);
 
     public VkSurfaceCounterFlagsEXT getSupportedSurfaceCounters() {
         return new VkSurfaceCounterFlagsEXT(getVkMemory(), getSupportedSurfaceCounters(getVkAddress()));
@@ -253,8 +253,8 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
         getSupportedSurfaceCounters().setValue(supportedSurfaceCounters);
     }
 
-    private static native long getSupportedSurfaceCounters(long address);
-    private static native void setSupportedSurfaceCounters(long address, long supportedSurfaceCounters);
+    protected static native long getSupportedSurfaceCounters(long address);
+    protected static native void setSupportedSurfaceCounters(long address, long supportedSurfaceCounters);
 
 
     public static native long sizeof();

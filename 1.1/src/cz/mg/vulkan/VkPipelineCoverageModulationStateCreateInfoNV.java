@@ -34,8 +34,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkPipelineCoverageModulationStateCreateFlagsNV getFlags() {
         return new VkPipelineCoverageModulationStateCreateFlagsNV(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkCoverageModulationModeNV getCoverageModulationMode() {
         return new VkCoverageModulationModeNV(getVkMemory(), getCoverageModulationMode(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         getCoverageModulationMode().setValue(coverageModulationMode);
     }
 
-    private static native long getCoverageModulationMode(long address);
-    private static native void setCoverageModulationMode(long address, long coverageModulationMode);
+    protected static native long getCoverageModulationMode(long address);
+    protected static native void setCoverageModulationMode(long address, long coverageModulationMode);
 
     public VkBool32 getCoverageModulationTableEnable() {
         return new VkBool32(getVkMemory(), getCoverageModulationTableEnable(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         getCoverageModulationTableEnable().setValue(coverageModulationTableEnable);
     }
 
-    private static native long getCoverageModulationTableEnable(long address);
-    private static native void setCoverageModulationTableEnable(long address, long coverageModulationTableEnable);
+    protected static native long getCoverageModulationTableEnable(long address);
+    protected static native void setCoverageModulationTableEnable(long address, long coverageModulationTableEnable);
 
     public VkUInt32 getCoverageModulationTableCount() {
         return new VkUInt32(getVkMemory(), getCoverageModulationTableCount(getVkAddress()));
@@ -131,8 +131,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         getCoverageModulationTableCount().setValue(coverageModulationTableCount);
     }
 
-    private static native long getCoverageModulationTableCount(long address);
-    private static native void setCoverageModulationTableCount(long address, long coverageModulationTableCount);
+    protected static native long getCoverageModulationTableCount(long address);
+    protected static native void setCoverageModulationTableCount(long address, long coverageModulationTableCount);
 
     public VkFloat getPCoverageModulationTable() {
         return new VkFloat(getVkMemory(), getPCoverageModulationTable(getVkAddress()));
@@ -144,8 +144,8 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         this.pCoverageModulationTable = pCoverageModulationTable;
     }
 
-    private static native long getPCoverageModulationTable(long address);
-    private static native void setPCoverageModulationTable(long address, long pCoverageModulationTable);
+    protected static native long getPCoverageModulationTable(long address);
+    protected static native void setPCoverageModulationTable(long address, long pCoverageModulationTable);
 
 
     public static native long sizeof();

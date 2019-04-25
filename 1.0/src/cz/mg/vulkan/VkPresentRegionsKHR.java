@@ -33,8 +33,8 @@ public class VkPresentRegionsKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPresentRegionsKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getSwapchainCount() {
         return new VkUInt32(getVkMemory(), getSwapchainCount(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPresentRegionsKHR extends VkObject {
         getSwapchainCount().setValue(swapchainCount);
     }
 
-    private static native long getSwapchainCount(long address);
-    private static native void setSwapchainCount(long address, long swapchainCount);
+    protected static native long getSwapchainCount(long address);
+    protected static native void setSwapchainCount(long address, long swapchainCount);
 
     public VkPresentRegionKHR getPRegions() {
         return new VkPresentRegionKHR(getVkMemory(), getPRegions(getVkAddress()));
@@ -80,8 +80,8 @@ public class VkPresentRegionsKHR extends VkObject {
         this.pRegions = pRegions;
     }
 
-    private static native long getPRegions(long address);
-    private static native void setPRegions(long address, long pRegions);
+    protected static native long getPRegions(long address);
+    protected static native void setPRegions(long address, long pRegions);
 
 
     public static native long sizeof();

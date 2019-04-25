@@ -33,8 +33,8 @@ public class VkMemoryHostPointerPropertiesEXT extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkMemoryHostPointerPropertiesEXT extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getMemoryTypeBits() {
         return new VkUInt32(getVkMemory(), getMemoryTypeBits(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkMemoryHostPointerPropertiesEXT extends VkObject {
         getMemoryTypeBits().setValue(memoryTypeBits);
     }
 
-    private static native long getMemoryTypeBits(long address);
-    private static native void setMemoryTypeBits(long address, long memoryTypeBits);
+    protected static native long getMemoryTypeBits(long address);
+    protected static native void setMemoryTypeBits(long address, long memoryTypeBits);
 
 
     public static native long sizeof();

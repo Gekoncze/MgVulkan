@@ -34,8 +34,8 @@ public class VkDeviceGroupDeviceCreateInfoKHX extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDeviceGroupDeviceCreateInfoKHX extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getPhysicalDeviceCount() {
         return new VkUInt32(getVkMemory(), getPhysicalDeviceCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDeviceGroupDeviceCreateInfoKHX extends VkObject {
         getPhysicalDeviceCount().setValue(physicalDeviceCount);
     }
 
-    private static native long getPhysicalDeviceCount(long address);
-    private static native void setPhysicalDeviceCount(long address, long physicalDeviceCount);
+    protected static native long getPhysicalDeviceCount(long address);
+    protected static native void setPhysicalDeviceCount(long address, long physicalDeviceCount);
 
     public VkPhysicalDevice getPPhysicalDevices() {
         return new VkPhysicalDevice(getVkMemory(), getPPhysicalDevices(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkDeviceGroupDeviceCreateInfoKHX extends VkObject {
         this.pPhysicalDevices = pPhysicalDevices;
     }
 
-    private static native long getPPhysicalDevices(long address);
-    private static native void setPPhysicalDevices(long address, long pPhysicalDevices);
+    protected static native long getPPhysicalDevices(long address);
+    protected static native void setPPhysicalDevices(long address, long pPhysicalDevices);
 
 
     public static native long sizeof();

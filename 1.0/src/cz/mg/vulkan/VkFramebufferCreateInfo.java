@@ -34,8 +34,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkFramebufferCreateFlags getFlags() {
         return new VkFramebufferCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkRenderPass getRenderPass() {
         return new VkRenderPass(getVkMemory(), getRenderPass(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         
     }
 
-    private static native long getRenderPass(long address);
-    private static native void setRenderPass(long address, long renderPass);
+    protected static native long getRenderPass(long address);
+    protected static native void setRenderPass(long address, long renderPass);
 
     public VkUInt32 getAttachmentCount() {
         return new VkUInt32(getVkMemory(), getAttachmentCount(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         getAttachmentCount().setValue(attachmentCount);
     }
 
-    private static native long getAttachmentCount(long address);
-    private static native void setAttachmentCount(long address, long attachmentCount);
+    protected static native long getAttachmentCount(long address);
+    protected static native void setAttachmentCount(long address, long attachmentCount);
 
     public VkImageView getPAttachments() {
         return new VkImageView(getVkMemory(), getPAttachments(getVkAddress()));
@@ -115,8 +115,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         this.pAttachments = pAttachments;
     }
 
-    private static native long getPAttachments(long address);
-    private static native void setPAttachments(long address, long pAttachments);
+    protected static native long getPAttachments(long address);
+    protected static native void setPAttachments(long address, long pAttachments);
 
     public VkUInt32 getWidth() {
         return new VkUInt32(getVkMemory(), getWidth(getVkAddress()));
@@ -136,8 +136,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         getWidth().setValue(width);
     }
 
-    private static native long getWidth(long address);
-    private static native void setWidth(long address, long width);
+    protected static native long getWidth(long address);
+    protected static native void setWidth(long address, long width);
 
     public VkUInt32 getHeight() {
         return new VkUInt32(getVkMemory(), getHeight(getVkAddress()));
@@ -157,8 +157,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         getHeight().setValue(height);
     }
 
-    private static native long getHeight(long address);
-    private static native void setHeight(long address, long height);
+    protected static native long getHeight(long address);
+    protected static native void setHeight(long address, long height);
 
     public VkUInt32 getLayers() {
         return new VkUInt32(getVkMemory(), getLayers(getVkAddress()));
@@ -178,8 +178,8 @@ public class VkFramebufferCreateInfo extends VkObject {
         getLayers().setValue(layers);
     }
 
-    private static native long getLayers(long address);
-    private static native void setLayers(long address, long layers);
+    protected static native long getLayers(long address);
+    protected static native void setLayers(long address, long layers);
 
 
     public static native long sizeof();

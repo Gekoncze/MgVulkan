@@ -34,8 +34,8 @@ public class VkMemoryAllocateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkMemoryAllocateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDeviceSize getAllocationSize() {
         return new VkDeviceSize(getVkMemory(), getAllocationSize(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkMemoryAllocateInfo extends VkObject {
         getAllocationSize().setValue(allocationSize);
     }
 
-    private static native long getAllocationSize(long address);
-    private static native void setAllocationSize(long address, long allocationSize);
+    protected static native long getAllocationSize(long address);
+    protected static native void setAllocationSize(long address, long allocationSize);
 
     public VkUInt32 getMemoryTypeIndex() {
         return new VkUInt32(getVkMemory(), getMemoryTypeIndex(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkMemoryAllocateInfo extends VkObject {
         getMemoryTypeIndex().setValue(memoryTypeIndex);
     }
 
-    private static native long getMemoryTypeIndex(long address);
-    private static native void setMemoryTypeIndex(long address, long memoryTypeIndex);
+    protected static native long getMemoryTypeIndex(long address);
+    protected static native void setMemoryTypeIndex(long address, long memoryTypeIndex);
 
 
     public static native long sizeof();

@@ -26,5 +26,5 @@ public class PFNvkCmdSetDepthBounds extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), minDepthBounds != null ? minDepthBounds.getVkAddress() : VkPointer.getNullAddress(), maxDepthBounds != null ? maxDepthBounds.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long minDepthBounds, long maxDepthBounds);
+    protected static native void call(long vkaddress, long commandBuffer, long minDepthBounds, long maxDepthBounds);
 }

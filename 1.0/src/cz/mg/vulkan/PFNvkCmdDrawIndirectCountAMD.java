@@ -26,5 +26,5 @@ public class PFNvkCmdDrawIndirectCountAMD extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddress(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddress(), countBuffer != null ? countBuffer.getVkAddress() : VkPointer.getNullAddress(), countBufferOffset != null ? countBufferOffset.getVkAddress() : VkPointer.getNullAddress(), maxDrawCount != null ? maxDrawCount.getVkAddress() : VkPointer.getNullAddress(), stride != null ? stride.getVkAddress() : VkPointer.getNullAddress());
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long buffer, long offset, long countBuffer, long countBufferOffset, long maxDrawCount, long stride);
+    protected static native void call(long vkaddress, long commandBuffer, long buffer, long offset, long countBuffer, long countBufferOffset, long maxDrawCount, long stride);
 }

@@ -26,5 +26,5 @@ public class PFNvkCreateInstance extends VkFunctionPointer {
         call(getValue(), pCreateInfo != null ? pCreateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pInstance != null ? pInstance.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long pCreateInfo, long pAllocator, long pInstance, long rval);
+    protected static native void call(long vkaddress, long pCreateInfo, long pAllocator, long pInstance, long rval);
 }

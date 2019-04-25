@@ -33,8 +33,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getShaderEngineCount() {
         return new VkUInt32(getVkMemory(), getShaderEngineCount(getVkAddress()));
@@ -67,8 +67,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getShaderEngineCount().setValue(shaderEngineCount);
     }
 
-    private static native long getShaderEngineCount(long address);
-    private static native void setShaderEngineCount(long address, long shaderEngineCount);
+    protected static native long getShaderEngineCount(long address);
+    protected static native void setShaderEngineCount(long address, long shaderEngineCount);
 
     public VkUInt32 getShaderArraysPerEngineCount() {
         return new VkUInt32(getVkMemory(), getShaderArraysPerEngineCount(getVkAddress()));
@@ -88,8 +88,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getShaderArraysPerEngineCount().setValue(shaderArraysPerEngineCount);
     }
 
-    private static native long getShaderArraysPerEngineCount(long address);
-    private static native void setShaderArraysPerEngineCount(long address, long shaderArraysPerEngineCount);
+    protected static native long getShaderArraysPerEngineCount(long address);
+    protected static native void setShaderArraysPerEngineCount(long address, long shaderArraysPerEngineCount);
 
     public VkUInt32 getComputeUnitsPerShaderArray() {
         return new VkUInt32(getVkMemory(), getComputeUnitsPerShaderArray(getVkAddress()));
@@ -109,8 +109,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getComputeUnitsPerShaderArray().setValue(computeUnitsPerShaderArray);
     }
 
-    private static native long getComputeUnitsPerShaderArray(long address);
-    private static native void setComputeUnitsPerShaderArray(long address, long computeUnitsPerShaderArray);
+    protected static native long getComputeUnitsPerShaderArray(long address);
+    protected static native void setComputeUnitsPerShaderArray(long address, long computeUnitsPerShaderArray);
 
     public VkUInt32 getSimdPerComputeUnit() {
         return new VkUInt32(getVkMemory(), getSimdPerComputeUnit(getVkAddress()));
@@ -130,8 +130,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getSimdPerComputeUnit().setValue(simdPerComputeUnit);
     }
 
-    private static native long getSimdPerComputeUnit(long address);
-    private static native void setSimdPerComputeUnit(long address, long simdPerComputeUnit);
+    protected static native long getSimdPerComputeUnit(long address);
+    protected static native void setSimdPerComputeUnit(long address, long simdPerComputeUnit);
 
     public VkUInt32 getWavefrontsPerSimd() {
         return new VkUInt32(getVkMemory(), getWavefrontsPerSimd(getVkAddress()));
@@ -151,8 +151,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getWavefrontsPerSimd().setValue(wavefrontsPerSimd);
     }
 
-    private static native long getWavefrontsPerSimd(long address);
-    private static native void setWavefrontsPerSimd(long address, long wavefrontsPerSimd);
+    protected static native long getWavefrontsPerSimd(long address);
+    protected static native void setWavefrontsPerSimd(long address, long wavefrontsPerSimd);
 
     public VkUInt32 getWavefrontSize() {
         return new VkUInt32(getVkMemory(), getWavefrontSize(getVkAddress()));
@@ -172,8 +172,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getWavefrontSize().setValue(wavefrontSize);
     }
 
-    private static native long getWavefrontSize(long address);
-    private static native void setWavefrontSize(long address, long wavefrontSize);
+    protected static native long getWavefrontSize(long address);
+    protected static native void setWavefrontSize(long address, long wavefrontSize);
 
     public VkUInt32 getSgprsPerSimd() {
         return new VkUInt32(getVkMemory(), getSgprsPerSimd(getVkAddress()));
@@ -193,8 +193,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getSgprsPerSimd().setValue(sgprsPerSimd);
     }
 
-    private static native long getSgprsPerSimd(long address);
-    private static native void setSgprsPerSimd(long address, long sgprsPerSimd);
+    protected static native long getSgprsPerSimd(long address);
+    protected static native void setSgprsPerSimd(long address, long sgprsPerSimd);
 
     public VkUInt32 getMinSgprAllocation() {
         return new VkUInt32(getVkMemory(), getMinSgprAllocation(getVkAddress()));
@@ -214,8 +214,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getMinSgprAllocation().setValue(minSgprAllocation);
     }
 
-    private static native long getMinSgprAllocation(long address);
-    private static native void setMinSgprAllocation(long address, long minSgprAllocation);
+    protected static native long getMinSgprAllocation(long address);
+    protected static native void setMinSgprAllocation(long address, long minSgprAllocation);
 
     public VkUInt32 getMaxSgprAllocation() {
         return new VkUInt32(getVkMemory(), getMaxSgprAllocation(getVkAddress()));
@@ -235,8 +235,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getMaxSgprAllocation().setValue(maxSgprAllocation);
     }
 
-    private static native long getMaxSgprAllocation(long address);
-    private static native void setMaxSgprAllocation(long address, long maxSgprAllocation);
+    protected static native long getMaxSgprAllocation(long address);
+    protected static native void setMaxSgprAllocation(long address, long maxSgprAllocation);
 
     public VkUInt32 getSgprAllocationGranularity() {
         return new VkUInt32(getVkMemory(), getSgprAllocationGranularity(getVkAddress()));
@@ -256,8 +256,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getSgprAllocationGranularity().setValue(sgprAllocationGranularity);
     }
 
-    private static native long getSgprAllocationGranularity(long address);
-    private static native void setSgprAllocationGranularity(long address, long sgprAllocationGranularity);
+    protected static native long getSgprAllocationGranularity(long address);
+    protected static native void setSgprAllocationGranularity(long address, long sgprAllocationGranularity);
 
     public VkUInt32 getVgprsPerSimd() {
         return new VkUInt32(getVkMemory(), getVgprsPerSimd(getVkAddress()));
@@ -277,8 +277,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getVgprsPerSimd().setValue(vgprsPerSimd);
     }
 
-    private static native long getVgprsPerSimd(long address);
-    private static native void setVgprsPerSimd(long address, long vgprsPerSimd);
+    protected static native long getVgprsPerSimd(long address);
+    protected static native void setVgprsPerSimd(long address, long vgprsPerSimd);
 
     public VkUInt32 getMinVgprAllocation() {
         return new VkUInt32(getVkMemory(), getMinVgprAllocation(getVkAddress()));
@@ -298,8 +298,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getMinVgprAllocation().setValue(minVgprAllocation);
     }
 
-    private static native long getMinVgprAllocation(long address);
-    private static native void setMinVgprAllocation(long address, long minVgprAllocation);
+    protected static native long getMinVgprAllocation(long address);
+    protected static native void setMinVgprAllocation(long address, long minVgprAllocation);
 
     public VkUInt32 getMaxVgprAllocation() {
         return new VkUInt32(getVkMemory(), getMaxVgprAllocation(getVkAddress()));
@@ -319,8 +319,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getMaxVgprAllocation().setValue(maxVgprAllocation);
     }
 
-    private static native long getMaxVgprAllocation(long address);
-    private static native void setMaxVgprAllocation(long address, long maxVgprAllocation);
+    protected static native long getMaxVgprAllocation(long address);
+    protected static native void setMaxVgprAllocation(long address, long maxVgprAllocation);
 
     public VkUInt32 getVgprAllocationGranularity() {
         return new VkUInt32(getVkMemory(), getVgprAllocationGranularity(getVkAddress()));
@@ -340,8 +340,8 @@ public class VkPhysicalDeviceShaderCorePropertiesAMD extends VkObject {
         getVgprAllocationGranularity().setValue(vgprAllocationGranularity);
     }
 
-    private static native long getVgprAllocationGranularity(long address);
-    private static native void setVgprAllocationGranularity(long address, long vgprAllocationGranularity);
+    protected static native long getVgprAllocationGranularity(long address);
+    protected static native void setVgprAllocationGranularity(long address, long vgprAllocationGranularity);
 
 
     public static native long sizeof();

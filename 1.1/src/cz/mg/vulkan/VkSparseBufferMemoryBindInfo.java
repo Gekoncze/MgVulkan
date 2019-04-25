@@ -25,8 +25,8 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
         
     }
 
-    private static native long getBuffer(long address);
-    private static native void setBuffer(long address, long buffer);
+    protected static native long getBuffer(long address);
+    protected static native void setBuffer(long address, long buffer);
 
     public VkUInt32 getBindCount() {
         return new VkUInt32(getVkMemory(), getBindCount(getVkAddress()));
@@ -46,8 +46,8 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
         getBindCount().setValue(bindCount);
     }
 
-    private static native long getBindCount(long address);
-    private static native void setBindCount(long address, long bindCount);
+    protected static native long getBindCount(long address);
+    protected static native void setBindCount(long address, long bindCount);
 
     public VkSparseMemoryBind getPBinds() {
         return new VkSparseMemoryBind(getVkMemory(), getPBinds(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
         this.pBinds = pBinds;
     }
 
-    private static native long getPBinds(long address);
-    private static native void setPBinds(long address, long pBinds);
+    protected static native long getPBinds(long address);
+    protected static native void setPBinds(long address, long pBinds);
 
 
     public static native long sizeof();

@@ -26,5 +26,5 @@ public class PFNvkGetPhysicalDeviceMultisamplePropertiesEXT extends VkFunctionPo
         call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddress(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddress(), pMultisampleProperties != null ? pMultisampleProperties.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long physicalDevice, long samples, long pMultisampleProperties);
+    protected static native void call(long vkaddress, long physicalDevice, long samples, long pMultisampleProperties);
 }

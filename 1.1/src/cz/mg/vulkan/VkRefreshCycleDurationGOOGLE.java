@@ -33,8 +33,8 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
         getRefreshDuration().setValue(refreshDuration);
     }
 
-    private static native long getRefreshDuration(long address);
-    private static native void setRefreshDuration(long address, long refreshDuration);
+    protected static native long getRefreshDuration(long address);
+    protected static native void setRefreshDuration(long address, long refreshDuration);
 
 
     public static native long sizeof();

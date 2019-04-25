@@ -34,8 +34,8 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkDescriptorPoolCreateFlags getFlags() {
         return new VkDescriptorPoolCreateFlags(getVkMemory(), getFlags(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         getFlags().setValue(flags);
     }
 
-    private static native long getFlags(long address);
-    private static native void setFlags(long address, long flags);
+    protected static native long getFlags(long address);
+    protected static native void setFlags(long address, long flags);
 
     public VkUInt32 getMaxSets() {
         return new VkUInt32(getVkMemory(), getMaxSets(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         getMaxSets().setValue(maxSets);
     }
 
-    private static native long getMaxSets(long address);
-    private static native void setMaxSets(long address, long maxSets);
+    protected static native long getMaxSets(long address);
+    protected static native void setMaxSets(long address, long maxSets);
 
     public VkUInt32 getPoolSizeCount() {
         return new VkUInt32(getVkMemory(), getPoolSizeCount(getVkAddress()));
@@ -110,8 +110,8 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         getPoolSizeCount().setValue(poolSizeCount);
     }
 
-    private static native long getPoolSizeCount(long address);
-    private static native void setPoolSizeCount(long address, long poolSizeCount);
+    protected static native long getPoolSizeCount(long address);
+    protected static native void setPoolSizeCount(long address, long poolSizeCount);
 
     public VkDescriptorPoolSize getPPoolSizes() {
         return new VkDescriptorPoolSize(getVkMemory(), getPPoolSizes(getVkAddress()));
@@ -123,8 +123,8 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         this.pPoolSizes = pPoolSizes;
     }
 
-    private static native long getPPoolSizes(long address);
-    private static native void setPPoolSizes(long address, long pPoolSizes);
+    protected static native long getPPoolSizes(long address);
+    protected static native void setPPoolSizes(long address, long pPoolSizes);
 
 
     public static native long sizeof();

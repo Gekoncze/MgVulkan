@@ -25,8 +25,8 @@ public class VkRectLayerKHR extends VkObject {
         
     }
 
-    private static native long getOffset(long address);
-    private static native void setOffset(long address, long offset);
+    protected static native long getOffset(long address);
+    protected static native void setOffset(long address, long offset);
 
     public VkExtent2D getExtent() {
         return new VkExtent2D(getVkMemory(), getExtent(getVkAddress()));
@@ -38,8 +38,8 @@ public class VkRectLayerKHR extends VkObject {
         
     }
 
-    private static native long getExtent(long address);
-    private static native void setExtent(long address, long extent);
+    protected static native long getExtent(long address);
+    protected static native void setExtent(long address, long extent);
 
     public VkUInt32 getLayer() {
         return new VkUInt32(getVkMemory(), getLayer(getVkAddress()));
@@ -59,8 +59,8 @@ public class VkRectLayerKHR extends VkObject {
         getLayer().setValue(layer);
     }
 
-    private static native long getLayer(long address);
-    private static native void setLayer(long address, long layer);
+    protected static native long getLayer(long address);
+    protected static native void setLayer(long address, long layer);
 
 
     public static native long sizeof();

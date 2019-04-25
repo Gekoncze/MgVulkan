@@ -26,5 +26,5 @@ public class PFNvkGetSwapchainImagesKHR extends VkFunctionPointer {
         call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddress(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddress(), pSwapchainImageCount != null ? pSwapchainImageCount.getVkAddress() : VkPointer.NULL, pSwapchainImages != null ? pSwapchainImages.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long device, long swapchain, long pSwapchainImageCount, long pSwapchainImages, long rval);
+    protected static native void call(long vkaddress, long device, long swapchain, long pSwapchainImageCount, long pSwapchainImages, long rval);
 }

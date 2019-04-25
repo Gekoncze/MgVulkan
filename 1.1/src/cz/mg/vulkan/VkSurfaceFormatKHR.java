@@ -33,8 +33,8 @@ public class VkSurfaceFormatKHR extends VkObject {
         getFormat().setValue(format);
     }
 
-    private static native long getFormat(long address);
-    private static native void setFormat(long address, long format);
+    protected static native long getFormat(long address);
+    protected static native void setFormat(long address, long format);
 
     public VkColorSpaceKHR getColorSpace() {
         return new VkColorSpaceKHR(getVkMemory(), getColorSpace(getVkAddress()));
@@ -54,8 +54,8 @@ public class VkSurfaceFormatKHR extends VkObject {
         getColorSpace().setValue(colorSpace);
     }
 
-    private static native long getColorSpace(long address);
-    private static native void setColorSpace(long address, long colorSpace);
+    protected static native long getColorSpace(long address);
+    protected static native void setColorSpace(long address, long colorSpace);
 
 
     public static native long sizeof();

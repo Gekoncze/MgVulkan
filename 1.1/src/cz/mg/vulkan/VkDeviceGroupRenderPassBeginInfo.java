@@ -34,8 +34,8 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getDeviceMask() {
         return new VkUInt32(getVkMemory(), getDeviceMask(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         getDeviceMask().setValue(deviceMask);
     }
 
-    private static native long getDeviceMask(long address);
-    private static native void setDeviceMask(long address, long deviceMask);
+    protected static native long getDeviceMask(long address);
+    protected static native void setDeviceMask(long address, long deviceMask);
 
     public VkUInt32 getDeviceRenderAreaCount() {
         return new VkUInt32(getVkMemory(), getDeviceRenderAreaCount(getVkAddress()));
@@ -89,8 +89,8 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         getDeviceRenderAreaCount().setValue(deviceRenderAreaCount);
     }
 
-    private static native long getDeviceRenderAreaCount(long address);
-    private static native void setDeviceRenderAreaCount(long address, long deviceRenderAreaCount);
+    protected static native long getDeviceRenderAreaCount(long address);
+    protected static native void setDeviceRenderAreaCount(long address, long deviceRenderAreaCount);
 
     public VkRect2D getPDeviceRenderAreas() {
         return new VkRect2D(getVkMemory(), getPDeviceRenderAreas(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         this.pDeviceRenderAreas = pDeviceRenderAreas;
     }
 
-    private static native long getPDeviceRenderAreas(long address);
-    private static native void setPDeviceRenderAreas(long address, long pDeviceRenderAreas);
+    protected static native long getPDeviceRenderAreas(long address);
+    protected static native void setPDeviceRenderAreas(long address, long pDeviceRenderAreas);
 
 
     public static native long sizeof();

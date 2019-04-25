@@ -34,8 +34,8 @@ public class VkMemoryDedicatedAllocateInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkMemoryDedicatedAllocateInfoKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkImage getImage() {
         return new VkImage(getVkMemory(), getImage(getVkAddress()));
@@ -60,8 +60,8 @@ public class VkMemoryDedicatedAllocateInfoKHR extends VkObject {
         
     }
 
-    private static native long getImage(long address);
-    private static native void setImage(long address, long image);
+    protected static native long getImage(long address);
+    protected static native void setImage(long address, long image);
 
     public VkBuffer getBuffer() {
         return new VkBuffer(getVkMemory(), getBuffer(getVkAddress()));
@@ -73,8 +73,8 @@ public class VkMemoryDedicatedAllocateInfoKHR extends VkObject {
         
     }
 
-    private static native long getBuffer(long address);
-    private static native void setBuffer(long address, long buffer);
+    protected static native long getBuffer(long address);
+    protected static native void setBuffer(long address, long buffer);
 
 
     public static native long sizeof();

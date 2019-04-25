@@ -34,8 +34,8 @@ public class VkPresentInfoKHR extends VkObject {
         getSType().setValue(sType);
     }
 
-    private static native long getSType(long address);
-    private static native void setSType(long address, long sType);
+    protected static native long getSType(long address);
+    protected static native void setSType(long address, long sType);
 
     public VkObject getPNext() {
         return new VkObject(getVkMemory(), getPNext(getVkAddress()));
@@ -47,8 +47,8 @@ public class VkPresentInfoKHR extends VkObject {
         this.pNext = pNext;
     }
 
-    private static native long getPNext(long address);
-    private static native void setPNext(long address, long pNext);
+    protected static native long getPNext(long address);
+    protected static native void setPNext(long address, long pNext);
 
     public VkUInt32 getWaitSemaphoreCount() {
         return new VkUInt32(getVkMemory(), getWaitSemaphoreCount(getVkAddress()));
@@ -68,8 +68,8 @@ public class VkPresentInfoKHR extends VkObject {
         getWaitSemaphoreCount().setValue(waitSemaphoreCount);
     }
 
-    private static native long getWaitSemaphoreCount(long address);
-    private static native void setWaitSemaphoreCount(long address, long waitSemaphoreCount);
+    protected static native long getWaitSemaphoreCount(long address);
+    protected static native void setWaitSemaphoreCount(long address, long waitSemaphoreCount);
 
     public VkSemaphore getPWaitSemaphores() {
         return new VkSemaphore(getVkMemory(), getPWaitSemaphores(getVkAddress()));
@@ -81,8 +81,8 @@ public class VkPresentInfoKHR extends VkObject {
         this.pWaitSemaphores = pWaitSemaphores;
     }
 
-    private static native long getPWaitSemaphores(long address);
-    private static native void setPWaitSemaphores(long address, long pWaitSemaphores);
+    protected static native long getPWaitSemaphores(long address);
+    protected static native void setPWaitSemaphores(long address, long pWaitSemaphores);
 
     public VkUInt32 getSwapchainCount() {
         return new VkUInt32(getVkMemory(), getSwapchainCount(getVkAddress()));
@@ -102,8 +102,8 @@ public class VkPresentInfoKHR extends VkObject {
         getSwapchainCount().setValue(swapchainCount);
     }
 
-    private static native long getSwapchainCount(long address);
-    private static native void setSwapchainCount(long address, long swapchainCount);
+    protected static native long getSwapchainCount(long address);
+    protected static native void setSwapchainCount(long address, long swapchainCount);
 
     public VkSwapchainKHR getPSwapchains() {
         return new VkSwapchainKHR(getVkMemory(), getPSwapchains(getVkAddress()));
@@ -115,8 +115,8 @@ public class VkPresentInfoKHR extends VkObject {
         this.pSwapchains = pSwapchains;
     }
 
-    private static native long getPSwapchains(long address);
-    private static native void setPSwapchains(long address, long pSwapchains);
+    protected static native long getPSwapchains(long address);
+    protected static native void setPSwapchains(long address, long pSwapchains);
 
     public VkUInt32 getPImageIndices() {
         return new VkUInt32(getVkMemory(), getPImageIndices(getVkAddress()));
@@ -128,8 +128,8 @@ public class VkPresentInfoKHR extends VkObject {
         this.pImageIndices = pImageIndices;
     }
 
-    private static native long getPImageIndices(long address);
-    private static native void setPImageIndices(long address, long pImageIndices);
+    protected static native long getPImageIndices(long address);
+    protected static native void setPImageIndices(long address, long pImageIndices);
 
     public VkResult getPResults() {
         return new VkResult(getVkMemory(), getPResults(getVkAddress()));
@@ -141,8 +141,8 @@ public class VkPresentInfoKHR extends VkObject {
         this.pResults = pResults;
     }
 
-    private static native long getPResults(long address);
-    private static native void setPResults(long address, long pResults);
+    protected static native long getPResults(long address);
+    protected static native void setPResults(long address, long pResults);
 
 
     public static native long sizeof();

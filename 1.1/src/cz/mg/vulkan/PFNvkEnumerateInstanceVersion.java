@@ -26,5 +26,5 @@ public class PFNvkEnumerateInstanceVersion extends VkFunctionPointer {
         call(getValue(), pApiVersion != null ? pApiVersion.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddress());
     }
 
-    private static native void call(long vkaddress, long pApiVersion, long rval);
+    protected static native void call(long vkaddress, long pApiVersion, long rval);
 }

@@ -26,5 +26,5 @@ public class PFNvkCmdExecuteCommands extends VkFunctionPointer {
         call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddress(), commandBufferCount != null ? commandBufferCount.getVkAddress() : VkPointer.getNullAddress(), pCommandBuffers != null ? pCommandBuffers.getVkAddress() : VkPointer.NULL);
     }
 
-    private static native void call(long vkaddress, long commandBuffer, long commandBufferCount, long pCommandBuffers);
+    protected static native void call(long vkaddress, long commandBuffer, long commandBufferCount, long pCommandBuffers);
 }

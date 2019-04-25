@@ -41,8 +41,8 @@ public class VkViewport extends VkObject {
         getX().setValue(x);
     }
 
-    private static native long getX(long address);
-    private static native void setX(long address, long x);
+    protected static native long getX(long address);
+    protected static native void setX(long address, long x);
 
     public VkFloat getY() {
         return new VkFloat(getVkMemory(), getY(getVkAddress()));
@@ -62,8 +62,8 @@ public class VkViewport extends VkObject {
         getY().setValue(y);
     }
 
-    private static native long getY(long address);
-    private static native void setY(long address, long y);
+    protected static native long getY(long address);
+    protected static native void setY(long address, long y);
 
     public VkFloat getWidth() {
         return new VkFloat(getVkMemory(), getWidth(getVkAddress()));
@@ -83,8 +83,8 @@ public class VkViewport extends VkObject {
         getWidth().setValue(width);
     }
 
-    private static native long getWidth(long address);
-    private static native void setWidth(long address, long width);
+    protected static native long getWidth(long address);
+    protected static native void setWidth(long address, long width);
 
     public VkFloat getHeight() {
         return new VkFloat(getVkMemory(), getHeight(getVkAddress()));
@@ -104,8 +104,8 @@ public class VkViewport extends VkObject {
         getHeight().setValue(height);
     }
 
-    private static native long getHeight(long address);
-    private static native void setHeight(long address, long height);
+    protected static native long getHeight(long address);
+    protected static native void setHeight(long address, long height);
 
     public VkFloat getMinDepth() {
         return new VkFloat(getVkMemory(), getMinDepth(getVkAddress()));
@@ -125,8 +125,8 @@ public class VkViewport extends VkObject {
         getMinDepth().setValue(minDepth);
     }
 
-    private static native long getMinDepth(long address);
-    private static native void setMinDepth(long address, long minDepth);
+    protected static native long getMinDepth(long address);
+    protected static native void setMinDepth(long address, long minDepth);
 
     public VkFloat getMaxDepth() {
         return new VkFloat(getVkMemory(), getMaxDepth(getVkAddress()));
@@ -146,8 +146,8 @@ public class VkViewport extends VkObject {
         getMaxDepth().setValue(maxDepth);
     }
 
-    private static native long getMaxDepth(long address);
-    private static native void setMaxDepth(long address, long maxDepth);
+    protected static native long getMaxDepth(long address);
+    protected static native void setMaxDepth(long address, long maxDepth);
 
 
     public static native long sizeof();
