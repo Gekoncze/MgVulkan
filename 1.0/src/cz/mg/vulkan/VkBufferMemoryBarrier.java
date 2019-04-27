@@ -3,13 +3,14 @@ package cz.mg.vulkan;
 public class VkBufferMemoryBarrier extends VkObject {
     public VkBufferMemoryBarrier() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BUFFER_MEMORY_BARRIER));
     }
 
-    protected VkBufferMemoryBarrier(VkMemory vkmemory) {
+    public VkBufferMemoryBarrier(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    protected VkBufferMemoryBarrier(VkMemory vkmemory, long vkaddress) {
+    public VkBufferMemoryBarrier(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 
@@ -201,24 +202,20 @@ public class VkBufferMemoryBarrier extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkBufferMemoryBarrier.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BUFFER_MEMORY_BARRIER));;
         }
 
-        public Array(VkBufferMemoryBarrier o, int count){
+        public Array(int count, VkBufferMemoryBarrier o){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkPointer pointer, int count){
-            super(pointer);
-            this.count = count;
-        }
-
-        protected Array(VkMemory vkmemory, int count) {
+        public Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        protected Array(VkMemory vkmemory, long vkaddress, int count) {
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -234,25 +231,8 @@ public class VkBufferMemoryBarrier extends VkObject {
 
         @Override
         public VkBufferMemoryBarrier get(int i){
-            return new VkBufferMemoryBarrier(getVkMemory(), address(i));
-        }
-
-        protected long address(int i){
-            return VkPointer.plus(getVkAddress(), sizeof()*i);
-        }
-
-        public static class Array2 extends VkPointer.Array {
-            public Array2(int count) {
-                super(count);
-            }
-
-            protected Array2(VkMemory vkmemory, int count) {
-                super(vkmemory, count);
-            }
-
-            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
-                super(vkmemory, vkaddress, count);
-            }
+            return new VkBufferMemoryBarrier(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 }

@@ -3,13 +3,14 @@ package cz.mg.vulkan;
 public class VkWriteDescriptorSet extends VkObject {
     public VkWriteDescriptorSet() {
         super(sizeof());
+        setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET));
     }
 
-    protected VkWriteDescriptorSet(VkMemory vkmemory) {
+    public VkWriteDescriptorSet(VkMemory vkmemory) {
         super(vkmemory);
     }
 
-    protected VkWriteDescriptorSet(VkMemory vkmemory, long vkaddress) {
+    public VkWriteDescriptorSet(VkMemory vkmemory, long vkaddress) {
         super(vkmemory, vkaddress);
     }
 
@@ -198,24 +199,20 @@ public class VkWriteDescriptorSet extends VkObject {
         public Array(int count) {
             super(new VkMemory(count*VkWriteDescriptorSet.sizeof()));
             this.count = count;
+            for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET));;
         }
 
-        public Array(VkWriteDescriptorSet o, int count){
+        public Array(int count, VkWriteDescriptorSet o){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
 
-        public Array(VkPointer pointer, int count){
-            super(pointer);
-            this.count = count;
-        }
-
-        protected Array(VkMemory vkmemory, int count) {
+        public Array(VkMemory vkmemory, int count) {
             super(vkmemory);
             this.count = count;
         }
 
-        protected Array(VkMemory vkmemory, long vkaddress, int count) {
+        public Array(VkMemory vkmemory, long vkaddress, int count) {
             super(vkmemory, vkaddress);
             this.count = count;
         }
@@ -231,25 +228,8 @@ public class VkWriteDescriptorSet extends VkObject {
 
         @Override
         public VkWriteDescriptorSet get(int i){
-            return new VkWriteDescriptorSet(getVkMemory(), address(i));
-        }
-
-        protected long address(int i){
-            return VkPointer.plus(getVkAddress(), sizeof()*i);
-        }
-
-        public static class Array2 extends VkPointer.Array {
-            public Array2(int count) {
-                super(count);
-            }
-
-            protected Array2(VkMemory vkmemory, int count) {
-                super(vkmemory, count);
-            }
-
-            protected Array2(VkMemory vkmemory, long vkaddress, int count) {
-                super(vkmemory, vkaddress, count);
-            }
+            return new VkWriteDescriptorSet(getVkMemory(), getVkAddress() + sizeof()*i);
         }
     }
+
 }
