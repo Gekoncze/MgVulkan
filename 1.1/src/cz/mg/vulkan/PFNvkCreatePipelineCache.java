@@ -22,17 +22,10 @@ public class PFNvkCreatePipelineCache extends VkFunctionPointer {
         super(instance, new VkString("vkCreatePipelineCache"));
     }
 
-    public void call(VkDevice device, VkPipelineCacheCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkPipelineCache pPipelineCache, VkResult rval){
-        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pCreateInfo != null ? pCreateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pPipelineCache != null ? pPipelineCache.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long device, long pCreateInfo, long pAllocator, long pPipelineCache, long rval);
-
-
     public int call(VkDevice device, VkPipelineCacheCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkPipelineCache pPipelineCache){
-        return callSimplifiedNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pCreateInfo != null ? pCreateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pPipelineCache != null ? pPipelineCache.getVkAddress() : VkPointer.NULL);
+        return callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pCreateInfo != null ? pCreateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pPipelineCache != null ? pPipelineCache.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native int callSimplifiedNative(long vkaddress, long device, long pCreateInfo, long pAllocator, long pPipelineCache);
+    protected static native int callNative(long vkaddress, long device, long pCreateInfo, long pAllocator, long pPipelineCache);
 
 }

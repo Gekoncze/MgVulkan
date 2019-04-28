@@ -22,17 +22,10 @@ public class PFNvkGetPhysicalDeviceDisplayPropertiesKHR extends VkFunctionPointe
         super(instance, new VkString("vkGetPhysicalDeviceDisplayPropertiesKHR"));
     }
 
-    public void call(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkDisplayPropertiesKHR pProperties, VkResult rval){
-        callNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), pPropertyCount != null ? pPropertyCount.getVkAddress() : VkPointer.NULL, pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long physicalDevice, long pPropertyCount, long pProperties, long rval);
-
-
     public int call(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkDisplayPropertiesKHR pProperties){
-        return callSimplifiedNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), pPropertyCount != null ? pPropertyCount.getVkAddress() : VkPointer.NULL, pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL);
+        return callNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), pPropertyCount != null ? pPropertyCount.getVkAddress() : VkPointer.NULL, pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native int callSimplifiedNative(long vkaddress, long physicalDevice, long pPropertyCount, long pProperties);
+    protected static native int callNative(long vkaddress, long physicalDevice, long pPropertyCount, long pProperties);
 
 }

@@ -20,5 +20,3 @@ void Java_cz_mg_vulkan_PFNvkDestroyFramebuffer_callNative(JNIEnv* env, jclass jc
     );
 }
 
-
-

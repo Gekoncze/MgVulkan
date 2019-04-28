@@ -22,17 +22,10 @@ public class PFNvkCmdWriteTimestamp extends VkFunctionPointer {
         super(instance, new VkString("vkCmdWriteTimestamp"));
     }
 
-    public void call(VkCommandBuffer commandBuffer, VkPipelineStageFlagBits pipelineStage, VkQueryPool queryPool, VkUInt32 query){
-        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), pipelineStage != null ? pipelineStage.getVkAddress() : VkPointer.getNullAddressNative(), queryPool != null ? queryPool.getVkAddress() : VkPointer.getNullAddressNative(), query != null ? query.getVkAddress() : VkPointer.getNullAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long commandBuffer, long pipelineStage, long queryPool, long query);
-
-
     public void call(VkCommandBuffer commandBuffer, int pipelineStage, VkQueryPool queryPool, int query){
-        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), pipelineStage, queryPool != null ? queryPool.getVkAddress() : VkPointer.getNullAddressNative(), query);
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), pipelineStage, queryPool != null ? queryPool.getVkAddress() : VkPointer.getNullAddressNative(), query);
     }
 
-    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, int pipelineStage, long queryPool, int query);
+    protected static native void callNative(long vkaddress, long commandBuffer, int pipelineStage, long queryPool, int query);
 
 }

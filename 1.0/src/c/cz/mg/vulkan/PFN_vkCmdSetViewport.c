@@ -9,20 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdSetViewport_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong firstViewport, jlong viewportCount, jlong pViewports){
-    (void)env;
-    (void)jc;
-    PFN_vkCmdSetViewport f = (PFN_vkCmdSetViewport)jniLongToFunctionPointer(address);
-    f(
-        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
-        *((uint32_t*)jniLongToPointer(firstViewport)),
-        *((uint32_t*)jniLongToPointer(viewportCount)),
-        ((VkViewport*)jniLongToPointer(pViewports))
-    );
-}
-
-
-void Java_cz_mg_vulkan_PFNvkCmdSetViewport_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jint firstViewport, jint viewportCount, jlong pViewports){
+void Java_cz_mg_vulkan_PFNvkCmdSetViewport_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jint firstViewport, jint viewportCount, jlong pViewports){
     (void)env;
     (void)jc;
     PFN_vkCmdSetViewport f = (PFN_vkCmdSetViewport)jniLongToFunctionPointer(address);

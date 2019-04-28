@@ -22,17 +22,10 @@ public class PFNvkCmdUpdateBuffer extends VkFunctionPointer {
         super(instance, new VkString("vkCmdUpdateBuffer"));
     }
 
-    public void call(VkCommandBuffer commandBuffer, VkBuffer dstBuffer, VkDeviceSize dstOffset, VkDeviceSize dataSize, VkObject pData){
-        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), dstBuffer != null ? dstBuffer.getVkAddress() : VkPointer.getNullAddressNative(), dstOffset != null ? dstOffset.getVkAddress() : VkPointer.getNullAddressNative(), dataSize != null ? dataSize.getVkAddress() : VkPointer.getNullAddressNative(), pData != null ? pData.getVkAddress() : VkPointer.NULL);
+    public void call(VkCommandBuffer commandBuffer, VkBuffer dstBuffer, long dstOffset, long dataSize, VkObject pData){
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), dstBuffer != null ? dstBuffer.getVkAddress() : VkPointer.getNullAddressNative(), dstOffset, dataSize, pData != null ? pData.getVkAddress() : VkPointer.NULL);
     }
 
     protected static native void callNative(long vkaddress, long commandBuffer, long dstBuffer, long dstOffset, long dataSize, long pData);
-
-
-    public void call(VkCommandBuffer commandBuffer, VkBuffer dstBuffer, long dstOffset, long dataSize, VkObject pData){
-        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), dstBuffer != null ? dstBuffer.getVkAddress() : VkPointer.getNullAddressNative(), dstOffset, dataSize, pData != null ? pData.getVkAddress() : VkPointer.NULL);
-    }
-
-    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, long dstBuffer, long dstOffset, long dataSize, long pData);
 
 }

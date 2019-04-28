@@ -20,5 +20,3 @@ void Java_cz_mg_vulkan_PFNvkDestroyImageView_callNative(JNIEnv* env, jclass jc, 
     );
 }
 
-
-

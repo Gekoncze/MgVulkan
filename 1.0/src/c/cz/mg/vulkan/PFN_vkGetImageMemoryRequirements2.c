@@ -20,5 +20,3 @@ void Java_cz_mg_vulkan_PFNvkGetImageMemoryRequirements2_callNative(JNIEnv* env, 
     );
 }
 
-
-

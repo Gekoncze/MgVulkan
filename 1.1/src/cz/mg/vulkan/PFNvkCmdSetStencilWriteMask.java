@@ -22,17 +22,10 @@ public class PFNvkCmdSetStencilWriteMask extends VkFunctionPointer {
         super(instance, new VkString("vkCmdSetStencilWriteMask"));
     }
 
-    public void call(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, VkUInt32 writeMask){
-        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), faceMask != null ? faceMask.getVkAddress() : VkPointer.getNullAddressNative(), writeMask != null ? writeMask.getVkAddress() : VkPointer.getNullAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long commandBuffer, long faceMask, long writeMask);
-
-
     public void call(VkCommandBuffer commandBuffer, int faceMask, int writeMask){
-        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), faceMask, writeMask);
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), faceMask, writeMask);
     }
 
-    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, int faceMask, int writeMask);
+    protected static native void callNative(long vkaddress, long commandBuffer, int faceMask, int writeMask);
 
 }

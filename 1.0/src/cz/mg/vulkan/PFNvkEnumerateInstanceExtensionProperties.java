@@ -22,17 +22,10 @@ public class PFNvkEnumerateInstanceExtensionProperties extends VkFunctionPointer
         super(instance, new VkString("vkEnumerateInstanceExtensionProperties"));
     }
 
-    public void call(VkChar pLayerName, VkUInt32 pPropertyCount, VkExtensionProperties pProperties, VkResult rval){
-        callNative(getValue(), pLayerName != null ? pLayerName.getVkAddress() : VkPointer.NULL, pPropertyCount != null ? pPropertyCount.getVkAddress() : VkPointer.NULL, pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long pLayerName, long pPropertyCount, long pProperties, long rval);
-
-
     public int call(VkChar pLayerName, VkUInt32 pPropertyCount, VkExtensionProperties pProperties){
-        return callSimplifiedNative(getValue(), pLayerName != null ? pLayerName.getVkAddress() : VkPointer.NULL, pPropertyCount != null ? pPropertyCount.getVkAddress() : VkPointer.NULL, pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL);
+        return callNative(getValue(), pLayerName != null ? pLayerName.getVkAddress() : VkPointer.NULL, pPropertyCount != null ? pPropertyCount.getVkAddress() : VkPointer.NULL, pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native int callSimplifiedNative(long vkaddress, long pLayerName, long pPropertyCount, long pProperties);
+    protected static native int callNative(long vkaddress, long pLayerName, long pPropertyCount, long pProperties);
 
 }

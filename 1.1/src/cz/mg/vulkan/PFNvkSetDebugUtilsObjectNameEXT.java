@@ -22,17 +22,10 @@ public class PFNvkSetDebugUtilsObjectNameEXT extends VkFunctionPointer {
         super(instance, new VkString("vkSetDebugUtilsObjectNameEXT"));
     }
 
-    public void call(VkDevice device, VkDebugUtilsObjectNameInfoEXT pNameInfo, VkResult rval){
-        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pNameInfo != null ? pNameInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long device, long pNameInfo, long rval);
-
-
     public int call(VkDevice device, VkDebugUtilsObjectNameInfoEXT pNameInfo){
-        return callSimplifiedNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pNameInfo != null ? pNameInfo.getVkAddress() : VkPointer.NULL);
+        return callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pNameInfo != null ? pNameInfo.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native int callSimplifiedNative(long vkaddress, long device, long pNameInfo);
+    protected static native int callNative(long vkaddress, long device, long pNameInfo);
 
 }

@@ -28,6 +28,4 @@ public class PFNvkGetImageMemoryRequirements extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long image, long pMemoryRequirements);
 
-
-
 }

@@ -9,19 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceFormatProperties2_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong format, jlong pFormatProperties){
-    (void)env;
-    (void)jc;
-    PFN_vkGetPhysicalDeviceFormatProperties2 f = (PFN_vkGetPhysicalDeviceFormatProperties2)jniLongToFunctionPointer(address);
-    f(
-        *((VkPhysicalDevice*)jniLongToPointer(physicalDevice)),
-        *((VkFormat*)jniLongToPointer(format)),
-        ((VkFormatProperties2*)jniLongToPointer(pFormatProperties))
-    );
-}
-
-
-void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceFormatProperties2_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jint format, jlong pFormatProperties){
+void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceFormatProperties2_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jint format, jlong pFormatProperties){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceFormatProperties2 f = (PFN_vkGetPhysicalDeviceFormatProperties2)jniLongToFunctionPointer(address);

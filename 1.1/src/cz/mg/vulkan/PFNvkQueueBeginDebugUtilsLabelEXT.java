@@ -28,6 +28,4 @@ public class PFNvkQueueBeginDebugUtilsLabelEXT extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long queue, long pLabelInfo);
 
-
-
 }

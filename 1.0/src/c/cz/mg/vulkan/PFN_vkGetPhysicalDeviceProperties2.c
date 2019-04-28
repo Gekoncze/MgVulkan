@@ -19,5 +19,3 @@ void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceProperties2_callNative(JNIEnv* env,
     );
 }
 
-
-

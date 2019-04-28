@@ -28,6 +28,4 @@ public class PFNvkGetDescriptorSetLayoutSupportKHR extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long pCreateInfo, long pSupport);
 
-
-
 }

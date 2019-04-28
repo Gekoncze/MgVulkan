@@ -28,6 +28,4 @@ public class PFNvkDestroyValidationCacheEXT extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long validationCache, long pAllocator);
 
-
-
 }

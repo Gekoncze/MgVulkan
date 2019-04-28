@@ -16,18 +16,6 @@ void Java_cz_mg_vulkan_PFNvkCmdDispatchIndirect_callNative(JNIEnv* env, jclass j
     f(
         *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
         *((VkBuffer*)jniLongToPointer(buffer)),
-        *((VkDeviceSize*)jniLongToPointer(offset))
-    );
-}
-
-
-void Java_cz_mg_vulkan_PFNvkCmdDispatchIndirect_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong buffer, jlong offset){
-    (void)env;
-    (void)jc;
-    PFN_vkCmdDispatchIndirect f = (PFN_vkCmdDispatchIndirect)jniLongToFunctionPointer(address);
-    f(
-        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
-        *((VkBuffer*)jniLongToPointer(buffer)),
         (VkDeviceSize)offset
     );
 }

@@ -21,5 +21,3 @@ void Java_cz_mg_vulkan_PFNvkGetImageSubresourceLayout_callNative(JNIEnv* env, jc
     );
 }
 
-
-

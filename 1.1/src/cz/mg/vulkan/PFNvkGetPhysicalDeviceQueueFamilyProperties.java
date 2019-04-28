@@ -28,6 +28,4 @@ public class PFNvkGetPhysicalDeviceQueueFamilyProperties extends VkFunctionPoint
 
     protected static native void callNative(long vkaddress, long physicalDevice, long pQueueFamilyPropertyCount, long pQueueFamilyProperties);
 
-
-
 }

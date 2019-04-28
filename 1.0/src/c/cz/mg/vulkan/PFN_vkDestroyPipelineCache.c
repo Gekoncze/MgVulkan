@@ -20,5 +20,3 @@ void Java_cz_mg_vulkan_PFNvkDestroyPipelineCache_callNative(JNIEnv* env, jclass 
     );
 }
 
-
-

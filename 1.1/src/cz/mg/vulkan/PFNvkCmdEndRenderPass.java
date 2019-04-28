@@ -28,6 +28,4 @@ public class PFNvkCmdEndRenderPass extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long commandBuffer);
 
-
-
 }

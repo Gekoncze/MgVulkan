@@ -18,5 +18,3 @@ void Java_cz_mg_vulkan_PFNvkVoidFunction_callNative(JNIEnv* env, jclass jc, jlon
     );
 }
 
-
-

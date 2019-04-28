@@ -9,21 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetDeviceGroupPeerMemoryFeatures_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong heapIndex, jlong localDeviceIndex, jlong remoteDeviceIndex, jlong pPeerMemoryFeatures){
-    (void)env;
-    (void)jc;
-    PFN_vkGetDeviceGroupPeerMemoryFeatures f = (PFN_vkGetDeviceGroupPeerMemoryFeatures)jniLongToFunctionPointer(address);
-    f(
-        *((VkDevice*)jniLongToPointer(device)),
-        *((uint32_t*)jniLongToPointer(heapIndex)),
-        *((uint32_t*)jniLongToPointer(localDeviceIndex)),
-        *((uint32_t*)jniLongToPointer(remoteDeviceIndex)),
-        ((VkPeerMemoryFeatureFlags*)jniLongToPointer(pPeerMemoryFeatures))
-    );
-}
-
-
-void Java_cz_mg_vulkan_PFNvkGetDeviceGroupPeerMemoryFeatures_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jint heapIndex, jint localDeviceIndex, jint remoteDeviceIndex, jlong pPeerMemoryFeatures){
+void Java_cz_mg_vulkan_PFNvkGetDeviceGroupPeerMemoryFeatures_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jint heapIndex, jint localDeviceIndex, jint remoteDeviceIndex, jlong pPeerMemoryFeatures){
     (void)env;
     (void)jc;
     PFN_vkGetDeviceGroupPeerMemoryFeatures f = (PFN_vkGetDeviceGroupPeerMemoryFeatures)jniLongToFunctionPointer(address);

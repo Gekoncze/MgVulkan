@@ -20,5 +20,3 @@ void Java_cz_mg_vulkan_PFNvkGetBufferMemoryRequirements2KHR_callNative(JNIEnv* e
     );
 }
 
-
-

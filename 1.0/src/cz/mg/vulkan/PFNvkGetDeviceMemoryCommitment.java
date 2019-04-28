@@ -28,6 +28,4 @@ public class PFNvkGetDeviceMemoryCommitment extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long memory, long pCommittedMemoryInBytes);
 
-
-
 }

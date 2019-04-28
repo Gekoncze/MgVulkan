@@ -9,19 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkTrimCommandPool_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong commandPool, jlong flags){
-    (void)env;
-    (void)jc;
-    PFN_vkTrimCommandPool f = (PFN_vkTrimCommandPool)jniLongToFunctionPointer(address);
-    f(
-        *((VkDevice*)jniLongToPointer(device)),
-        *((VkCommandPool*)jniLongToPointer(commandPool)),
-        *((VkCommandPoolTrimFlags*)jniLongToPointer(flags))
-    );
-}
-
-
-void Java_cz_mg_vulkan_PFNvkTrimCommandPool_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong commandPool, jint flags){
+void Java_cz_mg_vulkan_PFNvkTrimCommandPool_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong commandPool, jint flags){
     (void)env;
     (void)jc;
     PFN_vkTrimCommandPool f = (PFN_vkTrimCommandPool)jniLongToFunctionPointer(address);

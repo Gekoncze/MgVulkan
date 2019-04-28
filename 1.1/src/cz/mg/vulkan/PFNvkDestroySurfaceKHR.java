@@ -28,6 +28,4 @@ public class PFNvkDestroySurfaceKHR extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long instance, long surface, long pAllocator);
 
-
-
 }

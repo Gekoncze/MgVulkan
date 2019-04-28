@@ -9,21 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCreateSamplerYcbcrConversion_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pYcbcrConversion, jlong rval){
-    (void)env;
-    (void)jc;
-    PFN_vkCreateSamplerYcbcrConversion f = (PFN_vkCreateSamplerYcbcrConversion)jniLongToFunctionPointer(address);
-    VkResult* rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
-        *((VkDevice*)jniLongToPointer(device)),
-        ((VkSamplerYcbcrConversionCreateInfo*)jniLongToPointer(pCreateInfo)),
-        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
-        ((VkSamplerYcbcrConversion*)jniLongToPointer(pYcbcrConversion))
-    );
-}
-
-
-jint Java_cz_mg_vulkan_PFNvkCreateSamplerYcbcrConversion_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pYcbcrConversion){
+jint Java_cz_mg_vulkan_PFNvkCreateSamplerYcbcrConversion_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pYcbcrConversion){
     (void)env;
     (void)jc;
     PFN_vkCreateSamplerYcbcrConversion f = (PFN_vkCreateSamplerYcbcrConversion)jniLongToFunctionPointer(address);

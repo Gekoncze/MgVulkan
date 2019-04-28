@@ -9,21 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdCopyBuffer_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong srcBuffer, jlong dstBuffer, jlong regionCount, jlong pRegions){
-    (void)env;
-    (void)jc;
-    PFN_vkCmdCopyBuffer f = (PFN_vkCmdCopyBuffer)jniLongToFunctionPointer(address);
-    f(
-        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
-        *((VkBuffer*)jniLongToPointer(srcBuffer)),
-        *((VkBuffer*)jniLongToPointer(dstBuffer)),
-        *((uint32_t*)jniLongToPointer(regionCount)),
-        ((VkBufferCopy*)jniLongToPointer(pRegions))
-    );
-}
-
-
-void Java_cz_mg_vulkan_PFNvkCmdCopyBuffer_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong srcBuffer, jlong dstBuffer, jint regionCount, jlong pRegions){
+void Java_cz_mg_vulkan_PFNvkCmdCopyBuffer_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong srcBuffer, jlong dstBuffer, jint regionCount, jlong pRegions){
     (void)env;
     (void)jc;
     PFN_vkCmdCopyBuffer f = (PFN_vkCmdCopyBuffer)jniLongToFunctionPointer(address);

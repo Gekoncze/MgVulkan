@@ -28,6 +28,4 @@ public class PFNvkGetPhysicalDeviceQueueFamilyProperties2 extends VkFunctionPoin
 
     protected static native void callNative(long vkaddress, long physicalDevice, long pQueueFamilyPropertyCount, long pQueueFamilyProperties);
 
-
-
 }

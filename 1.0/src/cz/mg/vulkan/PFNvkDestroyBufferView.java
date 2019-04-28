@@ -28,6 +28,4 @@ public class PFNvkDestroyBufferView extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long bufferView, long pAllocator);
 
-
-
 }

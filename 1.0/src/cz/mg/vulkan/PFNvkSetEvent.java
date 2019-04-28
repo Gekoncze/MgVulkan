@@ -22,17 +22,10 @@ public class PFNvkSetEvent extends VkFunctionPointer {
         super(instance, new VkString("vkSetEvent"));
     }
 
-    public void call(VkDevice device, VkEvent event, VkResult rval){
-        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), event != null ? event.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long device, long event, long rval);
-
-
     public int call(VkDevice device, VkEvent event){
-        return callSimplifiedNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), event != null ? event.getVkAddress() : VkPointer.getNullAddressNative());
+        return callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), event != null ? event.getVkAddress() : VkPointer.getNullAddressNative());
     }
 
-    protected static native int callSimplifiedNative(long vkaddress, long device, long event);
+    protected static native int callNative(long vkaddress, long device, long event);
 
 }

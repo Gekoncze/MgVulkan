@@ -22,17 +22,10 @@ public class PFNvkInternalFreeNotification extends VkFunctionPointer {
         super(instance, new VkString("vkInternalFreeNotification"));
     }
 
-    public void call(VkObject pUserData, VkSize size, VkInternalAllocationType allocationType, VkSystemAllocationScope allocationScope){
-        callNative(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, size != null ? size.getVkAddress() : VkPointer.getNullAddressNative(), allocationType != null ? allocationType.getVkAddress() : VkPointer.getNullAddressNative(), allocationScope != null ? allocationScope.getVkAddress() : VkPointer.getNullAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long pUserData, long size, long allocationType, long allocationScope);
-
-
     public void call(VkObject pUserData, long size, int allocationType, int allocationScope){
-        callSimplifiedNative(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, size, allocationType, allocationScope);
+        callNative(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, size, allocationType, allocationScope);
     }
 
-    protected static native void callSimplifiedNative(long vkaddress, long pUserData, long size, int allocationType, int allocationScope);
+    protected static native void callNative(long vkaddress, long pUserData, long size, int allocationType, int allocationScope);
 
 }

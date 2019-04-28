@@ -9,23 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCreateComputePipelines_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pipelineCache, jlong createInfoCount, jlong pCreateInfos, jlong pAllocator, jlong pPipelines, jlong rval){
-    (void)env;
-    (void)jc;
-    PFN_vkCreateComputePipelines f = (PFN_vkCreateComputePipelines)jniLongToFunctionPointer(address);
-    VkResult* rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
-        *((VkDevice*)jniLongToPointer(device)),
-        *((VkPipelineCache*)jniLongToPointer(pipelineCache)),
-        *((uint32_t*)jniLongToPointer(createInfoCount)),
-        ((VkComputePipelineCreateInfo*)jniLongToPointer(pCreateInfos)),
-        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
-        ((VkPipeline*)jniLongToPointer(pPipelines))
-    );
-}
-
-
-jint Java_cz_mg_vulkan_PFNvkCreateComputePipelines_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pipelineCache, jint createInfoCount, jlong pCreateInfos, jlong pAllocator, jlong pPipelines){
+jint Java_cz_mg_vulkan_PFNvkCreateComputePipelines_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pipelineCache, jint createInfoCount, jlong pCreateInfos, jlong pAllocator, jlong pPipelines){
     (void)env;
     (void)jc;
     PFN_vkCreateComputePipelines f = (PFN_vkCreateComputePipelines)jniLongToFunctionPointer(address);

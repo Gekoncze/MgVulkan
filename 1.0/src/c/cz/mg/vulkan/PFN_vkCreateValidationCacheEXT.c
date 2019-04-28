@@ -9,21 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCreateValidationCacheEXT_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pValidationCache, jlong rval){
-    (void)env;
-    (void)jc;
-    PFN_vkCreateValidationCacheEXT f = (PFN_vkCreateValidationCacheEXT)jniLongToFunctionPointer(address);
-    VkResult* rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
-        *((VkDevice*)jniLongToPointer(device)),
-        ((VkValidationCacheCreateInfoEXT*)jniLongToPointer(pCreateInfo)),
-        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
-        ((VkValidationCacheEXT*)jniLongToPointer(pValidationCache))
-    );
-}
-
-
-jint Java_cz_mg_vulkan_PFNvkCreateValidationCacheEXT_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pValidationCache){
+jint Java_cz_mg_vulkan_PFNvkCreateValidationCacheEXT_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pValidationCache){
     (void)env;
     (void)jc;
     PFN_vkCreateValidationCacheEXT f = (PFN_vkCreateValidationCacheEXT)jniLongToFunctionPointer(address);

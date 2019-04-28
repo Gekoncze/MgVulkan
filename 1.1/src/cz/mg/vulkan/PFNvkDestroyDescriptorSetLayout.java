@@ -28,6 +28,4 @@ public class PFNvkDestroyDescriptorSetLayout extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long descriptorSetLayout, long pAllocator);
 
-
-
 }

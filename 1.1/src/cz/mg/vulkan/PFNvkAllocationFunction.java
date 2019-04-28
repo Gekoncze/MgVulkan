@@ -22,12 +22,10 @@ public class PFNvkAllocationFunction extends VkFunctionPointer {
         super(instance, new VkString("vkAllocationFunction"));
     }
 
-    public void call(VkObject pUserData, VkSize size, VkSize alignment, VkSystemAllocationScope allocationScope, VkObject rval){
-        callNative(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, size != null ? size.getVkAddress() : VkPointer.getNullAddressNative(), alignment != null ? alignment.getVkAddress() : VkPointer.getNullAddressNative(), allocationScope != null ? allocationScope.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.NULL);
+    public long call(VkObject pUserData, long size, long alignment, int allocationScope){
+        return callNative(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, size, alignment, allocationScope);
     }
 
-    protected static native void callNative(long vkaddress, long pUserData, long size, long alignment, long allocationScope, long rval);
-
-
+    protected static native long callNative(long vkaddress, long pUserData, long size, long alignment, int allocationScope);
 
 }

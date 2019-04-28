@@ -28,6 +28,4 @@ public class PFNvkGetPhysicalDeviceExternalFencePropertiesKHR extends VkFunction
 
     protected static native void callNative(long vkaddress, long physicalDevice, long pExternalFenceInfo, long pExternalFenceProperties);
 
-
-
 }

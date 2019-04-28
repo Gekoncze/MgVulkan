@@ -22,17 +22,10 @@ public class PFNvkGetSwapchainStatusKHR extends VkFunctionPointer {
         super(instance, new VkString("vkGetSwapchainStatusKHR"));
     }
 
-    public void call(VkDevice device, VkSwapchainKHR swapchain, VkResult rval){
-        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long device, long swapchain, long rval);
-
-
     public int call(VkDevice device, VkSwapchainKHR swapchain){
-        return callSimplifiedNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddressNative());
+        return callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), swapchain != null ? swapchain.getVkAddress() : VkPointer.getNullAddressNative());
     }
 
-    protected static native int callSimplifiedNative(long vkaddress, long device, long swapchain);
+    protected static native int callNative(long vkaddress, long device, long swapchain);
 
 }

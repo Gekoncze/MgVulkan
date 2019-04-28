@@ -22,17 +22,10 @@ public class PFNvkCmdPushConstants extends VkFunctionPointer {
         super(instance, new VkString("vkCmdPushConstants"));
     }
 
-    public void call(VkCommandBuffer commandBuffer, VkPipelineLayout layout, VkShaderStageFlags stageFlags, VkUInt32 offset, VkUInt32 size, VkObject pValues){
-        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddressNative(), stageFlags != null ? stageFlags.getVkAddress() : VkPointer.getNullAddressNative(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative(), size != null ? size.getVkAddress() : VkPointer.getNullAddressNative(), pValues != null ? pValues.getVkAddress() : VkPointer.NULL);
-    }
-
-    protected static native void callNative(long vkaddress, long commandBuffer, long layout, long stageFlags, long offset, long size, long pValues);
-
-
     public void call(VkCommandBuffer commandBuffer, VkPipelineLayout layout, int stageFlags, int offset, int size, VkObject pValues){
-        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddressNative(), stageFlags, offset, size, pValues != null ? pValues.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), layout != null ? layout.getVkAddress() : VkPointer.getNullAddressNative(), stageFlags, offset, size, pValues != null ? pValues.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, long layout, int stageFlags, int offset, int size, long pValues);
+    protected static native void callNative(long vkaddress, long commandBuffer, long layout, int stageFlags, int offset, int size, long pValues);
 
 }

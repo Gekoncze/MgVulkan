@@ -28,6 +28,4 @@ public class PFNvkDestroyRenderPass extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long renderPass, long pAllocator);
 
-
-
 }

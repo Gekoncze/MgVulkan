@@ -9,20 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetDeviceGroupSurfacePresentModesKHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong surface, jlong pModes, jlong rval){
-    (void)env;
-    (void)jc;
-    PFN_vkGetDeviceGroupSurfacePresentModesKHR f = (PFN_vkGetDeviceGroupSurfacePresentModesKHR)jniLongToFunctionPointer(address);
-    VkResult* rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
-        *((VkDevice*)jniLongToPointer(device)),
-        *((VkSurfaceKHR*)jniLongToPointer(surface)),
-        ((VkDeviceGroupPresentModeFlagsKHR*)jniLongToPointer(pModes))
-    );
-}
-
-
-jint Java_cz_mg_vulkan_PFNvkGetDeviceGroupSurfacePresentModesKHR_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong surface, jlong pModes){
+jint Java_cz_mg_vulkan_PFNvkGetDeviceGroupSurfacePresentModesKHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong surface, jlong pModes){
     (void)env;
     (void)jc;
     PFN_vkGetDeviceGroupSurfacePresentModesKHR f = (PFN_vkGetDeviceGroupSurfacePresentModesKHR)jniLongToFunctionPointer(address);

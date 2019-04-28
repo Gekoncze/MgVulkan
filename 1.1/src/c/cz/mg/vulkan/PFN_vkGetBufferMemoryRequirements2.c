@@ -20,5 +20,3 @@ void Java_cz_mg_vulkan_PFNvkGetBufferMemoryRequirements2_callNative(JNIEnv* env,
     );
 }
 
-
-

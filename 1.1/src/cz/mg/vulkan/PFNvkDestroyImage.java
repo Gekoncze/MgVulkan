@@ -28,6 +28,4 @@ public class PFNvkDestroyImage extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long image, long pAllocator);
 
-
-
 }

@@ -28,6 +28,4 @@ public class PFNvkDestroySampler extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long sampler, long pAllocator);
 
-
-
 }

@@ -9,20 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceImageFormatProperties2KHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pImageFormatInfo, jlong pImageFormatProperties, jlong rval){
-    (void)env;
-    (void)jc;
-    PFN_vkGetPhysicalDeviceImageFormatProperties2KHR f = (PFN_vkGetPhysicalDeviceImageFormatProperties2KHR)jniLongToFunctionPointer(address);
-    VkResult* rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
-        *((VkPhysicalDevice*)jniLongToPointer(physicalDevice)),
-        ((VkPhysicalDeviceImageFormatInfo2*)jniLongToPointer(pImageFormatInfo)),
-        ((VkImageFormatProperties2*)jniLongToPointer(pImageFormatProperties))
-    );
-}
-
-
-jint Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceImageFormatProperties2KHR_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pImageFormatInfo, jlong pImageFormatProperties){
+jint Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceImageFormatProperties2KHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pImageFormatInfo, jlong pImageFormatProperties){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceImageFormatProperties2KHR f = (PFN_vkGetPhysicalDeviceImageFormatProperties2KHR)jniLongToFunctionPointer(address);

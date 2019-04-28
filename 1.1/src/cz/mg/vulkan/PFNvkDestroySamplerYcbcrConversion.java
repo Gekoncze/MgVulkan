@@ -28,6 +28,4 @@ public class PFNvkDestroySamplerYcbcrConversion extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long ycbcrConversion, long pAllocator);
 
-
-
 }

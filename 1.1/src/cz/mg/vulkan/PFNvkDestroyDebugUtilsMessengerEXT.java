@@ -28,6 +28,4 @@ public class PFNvkDestroyDebugUtilsMessengerEXT extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long instance, long messenger, long pAllocator);
 
-
-
 }

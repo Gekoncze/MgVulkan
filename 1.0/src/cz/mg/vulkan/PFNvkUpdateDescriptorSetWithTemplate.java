@@ -28,6 +28,4 @@ public class PFNvkUpdateDescriptorSetWithTemplate extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long descriptorSet, long descriptorUpdateTemplate, long pData);
 
-
-
 }

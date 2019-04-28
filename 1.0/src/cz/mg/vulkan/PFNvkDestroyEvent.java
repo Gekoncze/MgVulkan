@@ -28,6 +28,4 @@ public class PFNvkDestroyEvent extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long event, long pAllocator);
 
-
-
 }

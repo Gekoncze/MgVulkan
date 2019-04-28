@@ -22,17 +22,10 @@ public class PFNvkCmdSetDiscardRectangleEXT extends VkFunctionPointer {
         super(instance, new VkString("vkCmdSetDiscardRectangleEXT"));
     }
 
-    public void call(VkCommandBuffer commandBuffer, VkUInt32 firstDiscardRectangle, VkUInt32 discardRectangleCount, VkRect2D pDiscardRectangles){
-        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), firstDiscardRectangle != null ? firstDiscardRectangle.getVkAddress() : VkPointer.getNullAddressNative(), discardRectangleCount != null ? discardRectangleCount.getVkAddress() : VkPointer.getNullAddressNative(), pDiscardRectangles != null ? pDiscardRectangles.getVkAddress() : VkPointer.NULL);
-    }
-
-    protected static native void callNative(long vkaddress, long commandBuffer, long firstDiscardRectangle, long discardRectangleCount, long pDiscardRectangles);
-
-
     public void call(VkCommandBuffer commandBuffer, int firstDiscardRectangle, int discardRectangleCount, VkRect2D pDiscardRectangles){
-        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), firstDiscardRectangle, discardRectangleCount, pDiscardRectangles != null ? pDiscardRectangles.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), firstDiscardRectangle, discardRectangleCount, pDiscardRectangles != null ? pDiscardRectangles.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, int firstDiscardRectangle, int discardRectangleCount, long pDiscardRectangles);
+    protected static native void callNative(long vkaddress, long commandBuffer, int firstDiscardRectangle, int discardRectangleCount, long pDiscardRectangles);
 
 }

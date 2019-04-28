@@ -22,17 +22,10 @@ public class PFNvkCmdDispatch extends VkFunctionPointer {
         super(instance, new VkString("vkCmdDispatch"));
     }
 
-    public void call(VkCommandBuffer commandBuffer, VkUInt32 groupCountX, VkUInt32 groupCountY, VkUInt32 groupCountZ){
-        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), groupCountX != null ? groupCountX.getVkAddress() : VkPointer.getNullAddressNative(), groupCountY != null ? groupCountY.getVkAddress() : VkPointer.getNullAddressNative(), groupCountZ != null ? groupCountZ.getVkAddress() : VkPointer.getNullAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long commandBuffer, long groupCountX, long groupCountY, long groupCountZ);
-
-
     public void call(VkCommandBuffer commandBuffer, int groupCountX, int groupCountY, int groupCountZ){
-        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), groupCountX, groupCountY, groupCountZ);
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), groupCountX, groupCountY, groupCountZ);
     }
 
-    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, int groupCountX, int groupCountY, int groupCountZ);
+    protected static native void callNative(long vkaddress, long commandBuffer, int groupCountX, int groupCountY, int groupCountZ);
 
 }

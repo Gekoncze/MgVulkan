@@ -9,19 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkEnumerateInstanceLayerProperties_callNative(JNIEnv* env, jclass jc, jlong address, jlong pPropertyCount, jlong pProperties, jlong rval){
-    (void)env;
-    (void)jc;
-    PFN_vkEnumerateInstanceLayerProperties f = (PFN_vkEnumerateInstanceLayerProperties)jniLongToFunctionPointer(address);
-    VkResult* rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
-        ((uint32_t*)jniLongToPointer(pPropertyCount)),
-        ((VkLayerProperties*)jniLongToPointer(pProperties))
-    );
-}
-
-
-jint Java_cz_mg_vulkan_PFNvkEnumerateInstanceLayerProperties_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong pPropertyCount, jlong pProperties){
+jint Java_cz_mg_vulkan_PFNvkEnumerateInstanceLayerProperties_callNative(JNIEnv* env, jclass jc, jlong address, jlong pPropertyCount, jlong pProperties){
     (void)env;
     (void)jc;
     PFN_vkEnumerateInstanceLayerProperties f = (PFN_vkEnumerateInstanceLayerProperties)jniLongToFunctionPointer(address);

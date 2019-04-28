@@ -9,23 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdCopyImage_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong srcImage, jlong srcImageLayout, jlong dstImage, jlong dstImageLayout, jlong regionCount, jlong pRegions){
-    (void)env;
-    (void)jc;
-    PFN_vkCmdCopyImage f = (PFN_vkCmdCopyImage)jniLongToFunctionPointer(address);
-    f(
-        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
-        *((VkImage*)jniLongToPointer(srcImage)),
-        *((VkImageLayout*)jniLongToPointer(srcImageLayout)),
-        *((VkImage*)jniLongToPointer(dstImage)),
-        *((VkImageLayout*)jniLongToPointer(dstImageLayout)),
-        *((uint32_t*)jniLongToPointer(regionCount)),
-        ((VkImageCopy*)jniLongToPointer(pRegions))
-    );
-}
-
-
-void Java_cz_mg_vulkan_PFNvkCmdCopyImage_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong srcImage, jint srcImageLayout, jlong dstImage, jint dstImageLayout, jint regionCount, jlong pRegions){
+void Java_cz_mg_vulkan_PFNvkCmdCopyImage_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong srcImage, jint srcImageLayout, jlong dstImage, jint dstImageLayout, jint regionCount, jlong pRegions){
     (void)env;
     (void)jc;
     PFN_vkCmdCopyImage f = (PFN_vkCmdCopyImage)jniLongToFunctionPointer(address);

@@ -22,17 +22,10 @@ public class PFNvkGetValidationCacheDataEXT extends VkFunctionPointer {
         super(instance, new VkString("vkGetValidationCacheDataEXT"));
     }
 
-    public void call(VkDevice device, VkValidationCacheEXT validationCache, VkSize pDataSize, VkObject pData, VkResult rval){
-        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), validationCache != null ? validationCache.getVkAddress() : VkPointer.getNullAddressNative(), pDataSize != null ? pDataSize.getVkAddress() : VkPointer.NULL, pData != null ? pData.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long device, long validationCache, long pDataSize, long pData, long rval);
-
-
     public int call(VkDevice device, VkValidationCacheEXT validationCache, VkSize pDataSize, VkObject pData){
-        return callSimplifiedNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), validationCache != null ? validationCache.getVkAddress() : VkPointer.getNullAddressNative(), pDataSize != null ? pDataSize.getVkAddress() : VkPointer.NULL, pData != null ? pData.getVkAddress() : VkPointer.NULL);
+        return callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), validationCache != null ? validationCache.getVkAddress() : VkPointer.getNullAddressNative(), pDataSize != null ? pDataSize.getVkAddress() : VkPointer.NULL, pData != null ? pData.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native int callSimplifiedNative(long vkaddress, long device, long validationCache, long pDataSize, long pData);
+    protected static native int callNative(long vkaddress, long device, long validationCache, long pDataSize, long pData);
 
 }

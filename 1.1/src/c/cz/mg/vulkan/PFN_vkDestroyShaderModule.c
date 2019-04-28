@@ -20,5 +20,3 @@ void Java_cz_mg_vulkan_PFNvkDestroyShaderModule_callNative(JNIEnv* env, jclass j
     );
 }
 
-
-

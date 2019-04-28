@@ -22,17 +22,10 @@ public class PFNvkCmdNextSubpass extends VkFunctionPointer {
         super(instance, new VkString("vkCmdNextSubpass"));
     }
 
-    public void call(VkCommandBuffer commandBuffer, VkSubpassContents contents){
-        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), contents != null ? contents.getVkAddress() : VkPointer.getNullAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long commandBuffer, long contents);
-
-
     public void call(VkCommandBuffer commandBuffer, int contents){
-        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), contents);
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), contents);
     }
 
-    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, int contents);
+    protected static native void callNative(long vkaddress, long commandBuffer, int contents);
 
 }

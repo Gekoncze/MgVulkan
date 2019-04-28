@@ -28,6 +28,4 @@ public class PFNvkDestroySemaphore extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long semaphore, long pAllocator);
 
-
-
 }

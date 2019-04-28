@@ -9,21 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkRegisterDeviceEventEXT_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pDeviceEventInfo, jlong pAllocator, jlong pFence, jlong rval){
-    (void)env;
-    (void)jc;
-    PFN_vkRegisterDeviceEventEXT f = (PFN_vkRegisterDeviceEventEXT)jniLongToFunctionPointer(address);
-    VkResult* rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
-        *((VkDevice*)jniLongToPointer(device)),
-        ((VkDeviceEventInfoEXT*)jniLongToPointer(pDeviceEventInfo)),
-        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
-        ((VkFence*)jniLongToPointer(pFence))
-    );
-}
-
-
-jint Java_cz_mg_vulkan_PFNvkRegisterDeviceEventEXT_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pDeviceEventInfo, jlong pAllocator, jlong pFence){
+jint Java_cz_mg_vulkan_PFNvkRegisterDeviceEventEXT_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pDeviceEventInfo, jlong pAllocator, jlong pFence){
     (void)env;
     (void)jc;
     PFN_vkRegisterDeviceEventEXT f = (PFN_vkRegisterDeviceEventEXT)jniLongToFunctionPointer(address);

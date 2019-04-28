@@ -28,6 +28,4 @@ public class PFNvkGetBufferMemoryRequirements extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long buffer, long pMemoryRequirements);
 
-
-
 }

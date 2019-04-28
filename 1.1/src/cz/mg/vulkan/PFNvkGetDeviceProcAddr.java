@@ -22,12 +22,10 @@ public class PFNvkGetDeviceProcAddr extends VkFunctionPointer {
         super(instance, new VkString("vkGetDeviceProcAddr"));
     }
 
-    public void call(VkDevice device, VkChar pName, PFNvkVoidFunction rval){
-        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pName != null ? pName.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
+    public long call(VkDevice device, VkChar pName){
+        return callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pName != null ? pName.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void callNative(long vkaddress, long device, long pName, long rval);
-
-
+    protected static native long callNative(long vkaddress, long device, long pName);
 
 }

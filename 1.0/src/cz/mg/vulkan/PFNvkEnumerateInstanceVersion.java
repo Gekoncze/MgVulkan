@@ -22,17 +22,10 @@ public class PFNvkEnumerateInstanceVersion extends VkFunctionPointer {
         super(instance, new VkString("vkEnumerateInstanceVersion"));
     }
 
-    public void call(VkUInt32 pApiVersion, VkResult rval){
-        callNative(getValue(), pApiVersion != null ? pApiVersion.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long pApiVersion, long rval);
-
-
     public int call(VkUInt32 pApiVersion){
-        return callSimplifiedNative(getValue(), pApiVersion != null ? pApiVersion.getVkAddress() : VkPointer.NULL);
+        return callNative(getValue(), pApiVersion != null ? pApiVersion.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native int callSimplifiedNative(long vkaddress, long pApiVersion);
+    protected static native int callNative(long vkaddress, long pApiVersion);
 
 }

@@ -22,12 +22,10 @@ public class PFNvkGetInstanceProcAddr extends VkFunctionPointer {
         super(instance, new VkString("vkGetInstanceProcAddr"));
     }
 
-    public void call(VkInstance instance, VkChar pName, PFNvkVoidFunction rval){
-        callNative(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddressNative(), pName != null ? pName.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
+    public long call(VkInstance instance, VkChar pName){
+        return callNative(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddressNative(), pName != null ? pName.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void callNative(long vkaddress, long instance, long pName, long rval);
-
-
+    protected static native long callNative(long vkaddress, long instance, long pName);
 
 }

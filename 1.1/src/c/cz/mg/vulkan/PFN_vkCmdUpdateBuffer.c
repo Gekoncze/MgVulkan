@@ -16,20 +16,6 @@ void Java_cz_mg_vulkan_PFNvkCmdUpdateBuffer_callNative(JNIEnv* env, jclass jc, j
     f(
         *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
         *((VkBuffer*)jniLongToPointer(dstBuffer)),
-        *((VkDeviceSize*)jniLongToPointer(dstOffset)),
-        *((VkDeviceSize*)jniLongToPointer(dataSize)),
-        ((void*)jniLongToPointer(pData))
-    );
-}
-
-
-void Java_cz_mg_vulkan_PFNvkCmdUpdateBuffer_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong dstBuffer, jlong dstOffset, jlong dataSize, jlong pData){
-    (void)env;
-    (void)jc;
-    PFN_vkCmdUpdateBuffer f = (PFN_vkCmdUpdateBuffer)jniLongToFunctionPointer(address);
-    f(
-        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
-        *((VkBuffer*)jniLongToPointer(dstBuffer)),
         (VkDeviceSize)dstOffset,
         (VkDeviceSize)dataSize,
         ((void*)jniLongToPointer(pData))

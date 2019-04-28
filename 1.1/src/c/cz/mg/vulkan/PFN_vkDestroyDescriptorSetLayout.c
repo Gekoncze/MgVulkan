@@ -20,5 +20,3 @@ void Java_cz_mg_vulkan_PFNvkDestroyDescriptorSetLayout_callNative(JNIEnv* env, j
     );
 }
 
-
-

@@ -9,22 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdClearDepthStencilImage_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong image, jlong imageLayout, jlong pDepthStencil, jlong rangeCount, jlong pRanges){
-    (void)env;
-    (void)jc;
-    PFN_vkCmdClearDepthStencilImage f = (PFN_vkCmdClearDepthStencilImage)jniLongToFunctionPointer(address);
-    f(
-        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
-        *((VkImage*)jniLongToPointer(image)),
-        *((VkImageLayout*)jniLongToPointer(imageLayout)),
-        ((VkClearDepthStencilValue*)jniLongToPointer(pDepthStencil)),
-        *((uint32_t*)jniLongToPointer(rangeCount)),
-        ((VkImageSubresourceRange*)jniLongToPointer(pRanges))
-    );
-}
-
-
-void Java_cz_mg_vulkan_PFNvkCmdClearDepthStencilImage_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong image, jint imageLayout, jlong pDepthStencil, jint rangeCount, jlong pRanges){
+void Java_cz_mg_vulkan_PFNvkCmdClearDepthStencilImage_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong image, jint imageLayout, jlong pDepthStencil, jint rangeCount, jlong pRanges){
     (void)env;
     (void)jc;
     PFN_vkCmdClearDepthStencilImage f = (PFN_vkCmdClearDepthStencilImage)jniLongToFunctionPointer(address);

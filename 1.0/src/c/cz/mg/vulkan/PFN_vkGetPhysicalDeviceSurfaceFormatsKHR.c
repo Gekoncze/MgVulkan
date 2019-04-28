@@ -9,21 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceSurfaceFormatsKHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong surface, jlong pSurfaceFormatCount, jlong pSurfaceFormats, jlong rval){
-    (void)env;
-    (void)jc;
-    PFN_vkGetPhysicalDeviceSurfaceFormatsKHR f = (PFN_vkGetPhysicalDeviceSurfaceFormatsKHR)jniLongToFunctionPointer(address);
-    VkResult* rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
-        *((VkPhysicalDevice*)jniLongToPointer(physicalDevice)),
-        *((VkSurfaceKHR*)jniLongToPointer(surface)),
-        ((uint32_t*)jniLongToPointer(pSurfaceFormatCount)),
-        ((VkSurfaceFormatKHR*)jniLongToPointer(pSurfaceFormats))
-    );
-}
-
-
-jint Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceSurfaceFormatsKHR_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong surface, jlong pSurfaceFormatCount, jlong pSurfaceFormats){
+jint Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceSurfaceFormatsKHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong surface, jlong pSurfaceFormatCount, jlong pSurfaceFormats){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceSurfaceFormatsKHR f = (PFN_vkGetPhysicalDeviceSurfaceFormatsKHR)jniLongToFunctionPointer(address);

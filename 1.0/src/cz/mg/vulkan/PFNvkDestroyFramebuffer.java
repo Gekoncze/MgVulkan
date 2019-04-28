@@ -28,6 +28,4 @@ public class PFNvkDestroyFramebuffer extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long framebuffer, long pAllocator);
 
-
-
 }

@@ -28,6 +28,4 @@ public class PFNvkGetPhysicalDeviceExternalSemaphoreProperties extends VkFunctio
 
     protected static native void callNative(long vkaddress, long physicalDevice, long pExternalSemaphoreInfo, long pExternalSemaphoreProperties);
 
-
-
 }

@@ -9,16 +9,13 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetInstanceProcAddr_callNative(JNIEnv* env, jclass jc, jlong address, jlong instance, jlong pName, jlong rval){
+jlong Java_cz_mg_vulkan_PFNvkGetInstanceProcAddr_callNative(JNIEnv* env, jclass jc, jlong address, jlong instance, jlong pName){
     (void)env;
     (void)jc;
     PFN_vkGetInstanceProcAddr f = (PFN_vkGetInstanceProcAddr)jniLongToFunctionPointer(address);
-    PFN_vkVoidFunction* rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
+    return jniFunctionPointerToLong(f(
         *((VkInstance*)jniLongToPointer(instance)),
         ((char*)jniLongToPointer(pName))
-    );
+    ));
 }
-
-
 

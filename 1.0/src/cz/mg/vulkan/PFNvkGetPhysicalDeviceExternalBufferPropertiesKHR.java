@@ -28,6 +28,4 @@ public class PFNvkGetPhysicalDeviceExternalBufferPropertiesKHR extends VkFunctio
 
     protected static native void callNative(long vkaddress, long physicalDevice, long pExternalBufferInfo, long pExternalBufferProperties);
 
-
-
 }

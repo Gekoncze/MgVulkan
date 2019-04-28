@@ -28,6 +28,4 @@ public class PFNvkDestroyFence extends VkFunctionPointer {
 
     protected static native void callNative(long vkaddress, long device, long fence, long pAllocator);
 
-
-
 }

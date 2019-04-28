@@ -28,6 +28,4 @@ public class PFNvkGetPhysicalDeviceGeneratedCommandsPropertiesNVX extends VkFunc
 
     protected static native void callNative(long vkaddress, long physicalDevice, long pFeatures, long pLimits);
 
-
-
 }

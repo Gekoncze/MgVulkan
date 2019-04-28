@@ -22,17 +22,10 @@ public class PFNvkCmdBindIndexBuffer extends VkFunctionPointer {
         super(instance, new VkString("vkCmdBindIndexBuffer"));
     }
 
-    public void call(VkCommandBuffer commandBuffer, VkBuffer buffer, VkDeviceSize offset, VkIndexType indexType){
-        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative(), indexType != null ? indexType.getVkAddress() : VkPointer.getNullAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long commandBuffer, long buffer, long offset, long indexType);
-
-
     public void call(VkCommandBuffer commandBuffer, VkBuffer buffer, long offset, int indexType){
-        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative(), offset, indexType);
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative(), offset, indexType);
     }
 
-    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, long buffer, long offset, int indexType);
+    protected static native void callNative(long vkaddress, long commandBuffer, long buffer, long offset, int indexType);
 
 }

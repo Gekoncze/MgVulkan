@@ -18,5 +18,3 @@ void Java_cz_mg_vulkan_PFNvkCmdDebugMarkerEndEXT_callNative(JNIEnv* env, jclass 
     );
 }
 
-
-

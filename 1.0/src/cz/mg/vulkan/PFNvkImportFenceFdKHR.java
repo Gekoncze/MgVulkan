@@ -22,17 +22,10 @@ public class PFNvkImportFenceFdKHR extends VkFunctionPointer {
         super(instance, new VkString("vkImportFenceFdKHR"));
     }
 
-    public void call(VkDevice device, VkImportFenceFdInfoKHR pImportFenceFdInfo, VkResult rval){
-        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pImportFenceFdInfo != null ? pImportFenceFdInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
-    }
-
-    protected static native void callNative(long vkaddress, long device, long pImportFenceFdInfo, long rval);
-
-
     public int call(VkDevice device, VkImportFenceFdInfoKHR pImportFenceFdInfo){
-        return callSimplifiedNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pImportFenceFdInfo != null ? pImportFenceFdInfo.getVkAddress() : VkPointer.NULL);
+        return callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pImportFenceFdInfo != null ? pImportFenceFdInfo.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native int callSimplifiedNative(long vkaddress, long device, long pImportFenceFdInfo);
+    protected static native int callNative(long vkaddress, long device, long pImportFenceFdInfo);
 
 }

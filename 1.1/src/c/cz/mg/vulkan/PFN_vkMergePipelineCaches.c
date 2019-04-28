@@ -9,21 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkMergePipelineCaches_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong dstCache, jlong srcCacheCount, jlong pSrcCaches, jlong rval){
-    (void)env;
-    (void)jc;
-    PFN_vkMergePipelineCaches f = (PFN_vkMergePipelineCaches)jniLongToFunctionPointer(address);
-    VkResult* rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
-        *((VkDevice*)jniLongToPointer(device)),
-        *((VkPipelineCache*)jniLongToPointer(dstCache)),
-        *((uint32_t*)jniLongToPointer(srcCacheCount)),
-        ((VkPipelineCache*)jniLongToPointer(pSrcCaches))
-    );
-}
-
-
-jint Java_cz_mg_vulkan_PFNvkMergePipelineCaches_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong dstCache, jint srcCacheCount, jlong pSrcCaches){
+jint Java_cz_mg_vulkan_PFNvkMergePipelineCaches_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong dstCache, jint srcCacheCount, jlong pSrcCaches){
     (void)env;
     (void)jc;
     PFN_vkMergePipelineCaches f = (PFN_vkMergePipelineCaches)jniLongToFunctionPointer(address);

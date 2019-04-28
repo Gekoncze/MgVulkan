@@ -9,19 +9,16 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkReallocationFunction_callNative(JNIEnv* env, jclass jc, jlong address, jlong pUserData, jlong pOriginal, jlong size, jlong alignment, jlong allocationScope, jlong rval){
+jlong Java_cz_mg_vulkan_PFNvkReallocationFunction_callNative(JNIEnv* env, jclass jc, jlong address, jlong pUserData, jlong pOriginal, jlong size, jlong alignment, jint allocationScope){
     (void)env;
     (void)jc;
     PFN_vkReallocationFunction f = (PFN_vkReallocationFunction)jniLongToFunctionPointer(address);
-    void** rvalAddress = jniLongToPointer(rval);
-    *rvalAddress = f(
+    return jniPointerToLong(f(
         ((void*)jniLongToPointer(pUserData)),
         ((void*)jniLongToPointer(pOriginal)),
-        *((size_t*)jniLongToPointer(size)),
-        *((size_t*)jniLongToPointer(alignment)),
-        *((VkSystemAllocationScope*)jniLongToPointer(allocationScope))
-    );
+        (size_t)size,
+        (size_t)alignment,
+        (VkSystemAllocationScope)allocationScope
+    ));
 }
-
-
 

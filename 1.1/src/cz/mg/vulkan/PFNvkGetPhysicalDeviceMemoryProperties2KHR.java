@@ -28,6 +28,4 @@ public class PFNvkGetPhysicalDeviceMemoryProperties2KHR extends VkFunctionPointe
 
     protected static native void callNative(long vkaddress, long physicalDevice, long pMemoryProperties);
 
-
-
 }

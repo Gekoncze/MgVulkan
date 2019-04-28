@@ -28,6 +28,4 @@ public class PFNvkGetPhysicalDeviceSparseImageFormatProperties2KHR extends VkFun
 
     protected static native void callNative(long vkaddress, long physicalDevice, long pFormatInfo, long pPropertyCount, long pProperties);
 
-
-
 }

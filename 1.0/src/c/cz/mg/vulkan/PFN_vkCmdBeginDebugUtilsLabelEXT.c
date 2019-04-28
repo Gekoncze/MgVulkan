@@ -19,5 +19,3 @@ void Java_cz_mg_vulkan_PFNvkCmdBeginDebugUtilsLabelEXT_callNative(JNIEnv* env, j
     );
 }
 
-
-
