@@ -23,8 +23,16 @@ public class PFNvkCmdSetStencilReference extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, VkUInt32 reference){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), faceMask != null ? faceMask.getVkAddress() : VkPointer.getNullAddressNative(), reference != null ? reference.getVkAddress() : VkPointer.getNullAddressNative());
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), faceMask != null ? faceMask.getVkAddress() : VkPointer.getNullAddressNative(), reference != null ? reference.getVkAddress() : VkPointer.getNullAddressNative());
     }
 
-    protected static native void call(long vkaddress, long commandBuffer, long faceMask, long reference);
+    protected static native void callNative(long vkaddress, long commandBuffer, long faceMask, long reference);
+
+
+    public void call(VkCommandBuffer commandBuffer, int faceMask, int reference){
+        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), faceMask, reference);
+    }
+
+    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, int faceMask, int reference);
+
 }

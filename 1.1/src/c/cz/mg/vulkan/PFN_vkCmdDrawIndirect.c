@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdDrawIndirect_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong buffer, jlong offset, jlong drawCount, jlong stride){
+void Java_cz_mg_vulkan_PFNvkCmdDrawIndirect_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong buffer, jlong offset, jlong drawCount, jlong stride){
     (void)env;
     (void)jc;
     PFN_vkCmdDrawIndirect f = (PFN_vkCmdDrawIndirect)jniLongToFunctionPointer(address);
@@ -21,3 +21,18 @@ void Java_cz_mg_vulkan_PFNvkCmdDrawIndirect_call(JNIEnv* env, jclass jc, jlong a
         *((uint32_t*)jniLongToPointer(stride))
     );
 }
+
+
+void Java_cz_mg_vulkan_PFNvkCmdDrawIndirect_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong buffer, jlong offset, jint drawCount, jint stride){
+    (void)env;
+    (void)jc;
+    PFN_vkCmdDrawIndirect f = (PFN_vkCmdDrawIndirect)jniLongToFunctionPointer(address);
+    f(
+        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
+        *((VkBuffer*)jniLongToPointer(buffer)),
+        (VkDeviceSize)offset,
+        (uint32_t)drawCount,
+        (uint32_t)stride
+    );
+}
+

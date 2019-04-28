@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCreateQueryPool_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pQueryPool, jlong rval){
+void Java_cz_mg_vulkan_PFNvkCreateQueryPool_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pQueryPool, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkCreateQueryPool f = (PFN_vkCreateQueryPool)jniLongToFunctionPointer(address);
@@ -21,3 +21,17 @@ void Java_cz_mg_vulkan_PFNvkCreateQueryPool_call(JNIEnv* env, jclass jc, jlong a
         ((VkQueryPool*)jniLongToPointer(pQueryPool))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkCreateQueryPool_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pQueryPool){
+    (void)env;
+    (void)jc;
+    PFN_vkCreateQueryPool f = (PFN_vkCreateQueryPool)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        ((VkQueryPoolCreateInfo*)jniLongToPointer(pCreateInfo)),
+        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
+        ((VkQueryPool*)jniLongToPointer(pQueryPool))
+    );
+}
+

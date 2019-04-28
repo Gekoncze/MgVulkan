@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdProcessCommandsNVX_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong pProcessCommandsInfo){
+void Java_cz_mg_vulkan_PFNvkCmdProcessCommandsNVX_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong pProcessCommandsInfo){
     (void)env;
     (void)jc;
     PFN_vkCmdProcessCommandsNVX f = (PFN_vkCmdProcessCommandsNVX)jniLongToFunctionPointer(address);
@@ -18,3 +18,6 @@ void Java_cz_mg_vulkan_PFNvkCmdProcessCommandsNVX_call(JNIEnv* env, jclass jc, j
         ((VkCmdProcessCommandsInfoNVX*)jniLongToPointer(pProcessCommandsInfo))
     );
 }
+
+
+

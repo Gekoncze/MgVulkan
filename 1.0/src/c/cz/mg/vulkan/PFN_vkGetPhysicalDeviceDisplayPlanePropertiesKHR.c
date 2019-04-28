@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pPropertyCount, jlong pProperties, jlong rval){
+void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pPropertyCount, jlong pProperties, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR f = (PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR)jniLongToFunctionPointer(address);
@@ -20,3 +20,16 @@ void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR_call(JNIE
         ((VkDisplayPlanePropertiesKHR*)jniLongToPointer(pProperties))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pPropertyCount, jlong pProperties){
+    (void)env;
+    (void)jc;
+    PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR f = (PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR)jniLongToFunctionPointer(address);
+    return f(
+        *((VkPhysicalDevice*)jniLongToPointer(physicalDevice)),
+        ((uint32_t*)jniLongToPointer(pPropertyCount)),
+        ((VkDisplayPlanePropertiesKHR*)jniLongToPointer(pProperties))
+    );
+}
+

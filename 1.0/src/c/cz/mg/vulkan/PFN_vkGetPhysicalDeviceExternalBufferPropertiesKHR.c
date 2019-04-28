@@ -9,13 +9,16 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceExternalBufferPropertiesKHR_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pExternalBufferInfo, jlong pExternalBufferProperties){
+void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceExternalBufferPropertiesKHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pExternalBufferInfo, jlong pExternalBufferProperties){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR f = (PFN_vkGetPhysicalDeviceExternalBufferPropertiesKHR)jniLongToFunctionPointer(address);
     f(
         *((VkPhysicalDevice*)jniLongToPointer(physicalDevice)),
-        ((VkPhysicalDeviceExternalBufferInfoKHR*)jniLongToPointer(pExternalBufferInfo)),
-        ((VkExternalBufferPropertiesKHR*)jniLongToPointer(pExternalBufferProperties))
+        ((VkPhysicalDeviceExternalBufferInfo*)jniLongToPointer(pExternalBufferInfo)),
+        ((VkExternalBufferProperties*)jniLongToPointer(pExternalBufferProperties))
     );
 }
+
+
+

@@ -23,8 +23,11 @@ public class PFNvkGetRenderAreaGranularity extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkRenderPass renderPass, VkExtent2D pGranularity){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddressNative(), pGranularity != null ? pGranularity.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), renderPass != null ? renderPass.getVkAddress() : VkPointer.getNullAddressNative(), pGranularity != null ? pGranularity.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long device, long renderPass, long pGranularity);
+    protected static native void callNative(long vkaddress, long device, long renderPass, long pGranularity);
+
+
+
 }

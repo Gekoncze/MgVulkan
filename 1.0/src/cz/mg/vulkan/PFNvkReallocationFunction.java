@@ -12,13 +12,22 @@ public class PFNvkReallocationFunction extends VkFunctionPointer {
         super(vkmemory, vkaddress);
     }
 
+
+
     public PFNvkReallocationFunction(long value) {
         setValue(value);
     }
 
-    public void call(VkObject pUserData, VkObject pOriginal, VkSize size, VkSize alignment, VkSystemAllocationScope allocationScope){
-        call(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, pOriginal != null ? pOriginal.getVkAddress() : VkPointer.NULL, size != null ? size.getVkAddress() : VkPointer.getNullAddressNative(), alignment != null ? alignment.getVkAddress() : VkPointer.getNullAddressNative(), allocationScope != null ? allocationScope.getVkAddress() : VkPointer.getNullAddressNative());
+    public PFNvkReallocationFunction(VkInstance instance) {
+        super(instance, new VkString("vkReallocationFunction"));
     }
 
-    protected static native void call(long vkaddress, long pUserData, long pOriginal, long size, long alignment, long allocationScope);
+    public void call(VkObject pUserData, VkObject pOriginal, VkSize size, VkSize alignment, VkSystemAllocationScope allocationScope, VkObject rval){
+        callNative(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, pOriginal != null ? pOriginal.getVkAddress() : VkPointer.NULL, size != null ? size.getVkAddress() : VkPointer.getNullAddressNative(), alignment != null ? alignment.getVkAddress() : VkPointer.getNullAddressNative(), allocationScope != null ? allocationScope.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.NULL);
+    }
+
+    protected static native void callNative(long vkaddress, long pUserData, long pOriginal, long size, long alignment, long allocationScope, long rval);
+
+
+
 }

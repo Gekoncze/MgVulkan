@@ -23,8 +23,11 @@ public class PFNvkCmdProcessCommandsNVX extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkCmdProcessCommandsInfoNVX pProcessCommandsInfo){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), pProcessCommandsInfo != null ? pProcessCommandsInfo.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), pProcessCommandsInfo != null ? pProcessCommandsInfo.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long commandBuffer, long pProcessCommandsInfo);
+    protected static native void callNative(long vkaddress, long commandBuffer, long pProcessCommandsInfo);
+
+
+
 }

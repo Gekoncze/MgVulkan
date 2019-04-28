@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdResetEvent_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong event, jlong stageMask){
+void Java_cz_mg_vulkan_PFNvkCmdResetEvent_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong event, jlong stageMask){
     (void)env;
     (void)jc;
     PFN_vkCmdResetEvent f = (PFN_vkCmdResetEvent)jniLongToFunctionPointer(address);
@@ -19,3 +19,16 @@ void Java_cz_mg_vulkan_PFNvkCmdResetEvent_call(JNIEnv* env, jclass jc, jlong add
         *((VkPipelineStageFlags*)jniLongToPointer(stageMask))
     );
 }
+
+
+void Java_cz_mg_vulkan_PFNvkCmdResetEvent_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong event, jint stageMask){
+    (void)env;
+    (void)jc;
+    PFN_vkCmdResetEvent f = (PFN_vkCmdResetEvent)jniLongToFunctionPointer(address);
+    f(
+        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
+        *((VkEvent*)jniLongToPointer(event)),
+        (VkPipelineStageFlags)stageMask
+    );
+}
+

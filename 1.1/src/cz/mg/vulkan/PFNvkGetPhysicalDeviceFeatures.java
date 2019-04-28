@@ -23,8 +23,11 @@ public class PFNvkGetPhysicalDeviceFeatures extends VkFunctionPointer {
     }
 
     public void call(VkPhysicalDevice physicalDevice, VkPhysicalDeviceFeatures pFeatures){
-        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), pFeatures != null ? pFeatures.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), pFeatures != null ? pFeatures.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long physicalDevice, long pFeatures);
+    protected static native void callNative(long vkaddress, long physicalDevice, long pFeatures);
+
+
+
 }

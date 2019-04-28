@@ -9,13 +9,16 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceExternalSemaphorePropertiesKHR_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pExternalSemaphoreInfo, jlong pExternalSemaphoreProperties){
+void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceExternalSemaphorePropertiesKHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pExternalSemaphoreInfo, jlong pExternalSemaphoreProperties){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR f = (PFN_vkGetPhysicalDeviceExternalSemaphorePropertiesKHR)jniLongToFunctionPointer(address);
     f(
         *((VkPhysicalDevice*)jniLongToPointer(physicalDevice)),
-        ((VkPhysicalDeviceExternalSemaphoreInfoKHR*)jniLongToPointer(pExternalSemaphoreInfo)),
-        ((VkExternalSemaphorePropertiesKHR*)jniLongToPointer(pExternalSemaphoreProperties))
+        ((VkPhysicalDeviceExternalSemaphoreInfo*)jniLongToPointer(pExternalSemaphoreInfo)),
+        ((VkExternalSemaphoreProperties*)jniLongToPointer(pExternalSemaphoreProperties))
     );
 }
+
+
+

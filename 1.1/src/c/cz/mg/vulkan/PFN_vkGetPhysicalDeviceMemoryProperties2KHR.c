@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceMemoryProperties2KHR_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pMemoryProperties){
+void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceMemoryProperties2KHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pMemoryProperties){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceMemoryProperties2KHR f = (PFN_vkGetPhysicalDeviceMemoryProperties2KHR)jniLongToFunctionPointer(address);
@@ -18,3 +18,6 @@ void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceMemoryProperties2KHR_call(JNIEnv* e
         ((VkPhysicalDeviceMemoryProperties2*)jniLongToPointer(pMemoryProperties))
     );
 }
+
+
+

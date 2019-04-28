@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkDestroyValidationCacheEXT_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong validationCache, jlong pAllocator){
+void Java_cz_mg_vulkan_PFNvkDestroyValidationCacheEXT_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong validationCache, jlong pAllocator){
     (void)env;
     (void)jc;
     PFN_vkDestroyValidationCacheEXT f = (PFN_vkDestroyValidationCacheEXT)jniLongToFunctionPointer(address);
@@ -19,3 +19,6 @@ void Java_cz_mg_vulkan_PFNvkDestroyValidationCacheEXT_call(JNIEnv* env, jclass j
         ((VkAllocationCallbacks*)jniLongToPointer(pAllocator))
     );
 }
+
+
+

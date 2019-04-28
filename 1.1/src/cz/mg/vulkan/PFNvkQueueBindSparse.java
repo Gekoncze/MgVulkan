@@ -23,8 +23,16 @@ public class PFNvkQueueBindSparse extends VkFunctionPointer {
     }
 
     public void call(VkQueue queue, VkUInt32 bindInfoCount, VkBindSparseInfo pBindInfo, VkFence fence, VkResult rval){
-        call(getValue(), queue != null ? queue.getVkAddress() : VkPointer.getNullAddressNative(), bindInfoCount != null ? bindInfoCount.getVkAddress() : VkPointer.getNullAddressNative(), pBindInfo != null ? pBindInfo.getVkAddress() : VkPointer.NULL, fence != null ? fence.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
+        callNative(getValue(), queue != null ? queue.getVkAddress() : VkPointer.getNullAddressNative(), bindInfoCount != null ? bindInfoCount.getVkAddress() : VkPointer.getNullAddressNative(), pBindInfo != null ? pBindInfo.getVkAddress() : VkPointer.NULL, fence != null ? fence.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
-    protected static native void call(long vkaddress, long queue, long bindInfoCount, long pBindInfo, long fence, long rval);
+    protected static native void callNative(long vkaddress, long queue, long bindInfoCount, long pBindInfo, long fence, long rval);
+
+
+    public int call(VkQueue queue, int bindInfoCount, VkBindSparseInfo pBindInfo, VkFence fence){
+        return callSimplifiedNative(getValue(), queue != null ? queue.getVkAddress() : VkPointer.getNullAddressNative(), bindInfoCount, pBindInfo != null ? pBindInfo.getVkAddress() : VkPointer.NULL, fence != null ? fence.getVkAddress() : VkPointer.getNullAddressNative());
+    }
+
+    protected static native int callSimplifiedNative(long vkaddress, long queue, int bindInfoCount, long pBindInfo, long fence);
+
 }

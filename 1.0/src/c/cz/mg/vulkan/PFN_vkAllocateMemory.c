@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkAllocateMemory_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pAllocateInfo, jlong pAllocator, jlong pMemory, jlong rval){
+void Java_cz_mg_vulkan_PFNvkAllocateMemory_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pAllocateInfo, jlong pAllocator, jlong pMemory, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkAllocateMemory f = (PFN_vkAllocateMemory)jniLongToFunctionPointer(address);
@@ -21,3 +21,17 @@ void Java_cz_mg_vulkan_PFNvkAllocateMemory_call(JNIEnv* env, jclass jc, jlong ad
         ((VkDeviceMemory*)jniLongToPointer(pMemory))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkAllocateMemory_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pAllocateInfo, jlong pAllocator, jlong pMemory){
+    (void)env;
+    (void)jc;
+    PFN_vkAllocateMemory f = (PFN_vkAllocateMemory)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        ((VkMemoryAllocateInfo*)jniLongToPointer(pAllocateInfo)),
+        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
+        ((VkDeviceMemory*)jniLongToPointer(pMemory))
+    );
+}
+

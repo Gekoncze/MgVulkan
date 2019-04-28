@@ -23,8 +23,11 @@ public class PFNvkDestroyIndirectCommandsLayoutNVX extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkIndirectCommandsLayoutNVX indirectCommandsLayout, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), indirectCommandsLayout != null ? indirectCommandsLayout.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), indirectCommandsLayout != null ? indirectCommandsLayout.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long device, long indirectCommandsLayout, long pAllocator);
+    protected static native void callNative(long vkaddress, long device, long indirectCommandsLayout, long pAllocator);
+
+
+
 }

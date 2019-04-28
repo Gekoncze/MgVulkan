@@ -12,13 +12,22 @@ public class PFNvkVoidFunction extends VkFunctionPointer {
         super(vkmemory, vkaddress);
     }
 
+
+
     public PFNvkVoidFunction(long value) {
         setValue(value);
     }
 
-    public void call(){
-        call(getValue());
+    public PFNvkVoidFunction(VkInstance instance) {
+        super(instance, new VkString("vkVoidFunction"));
     }
 
-    protected static native void call(long vkaddress);
+    public void call(){
+        callNative(getValue());
+    }
+
+    protected static native void callNative(long vkaddress);
+
+
+
 }

@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCreateSharedSwapchainsKHR_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong swapchainCount, jlong pCreateInfos, jlong pAllocator, jlong pSwapchains, jlong rval){
+void Java_cz_mg_vulkan_PFNvkCreateSharedSwapchainsKHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong swapchainCount, jlong pCreateInfos, jlong pAllocator, jlong pSwapchains, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkCreateSharedSwapchainsKHR f = (PFN_vkCreateSharedSwapchainsKHR)jniLongToFunctionPointer(address);
@@ -22,3 +22,18 @@ void Java_cz_mg_vulkan_PFNvkCreateSharedSwapchainsKHR_call(JNIEnv* env, jclass j
         ((VkSwapchainKHR*)jniLongToPointer(pSwapchains))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkCreateSharedSwapchainsKHR_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jint swapchainCount, jlong pCreateInfos, jlong pAllocator, jlong pSwapchains){
+    (void)env;
+    (void)jc;
+    PFN_vkCreateSharedSwapchainsKHR f = (PFN_vkCreateSharedSwapchainsKHR)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        (uint32_t)swapchainCount,
+        ((VkSwapchainCreateInfoKHR*)jniLongToPointer(pCreateInfos)),
+        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
+        ((VkSwapchainKHR*)jniLongToPointer(pSwapchains))
+    );
+}
+

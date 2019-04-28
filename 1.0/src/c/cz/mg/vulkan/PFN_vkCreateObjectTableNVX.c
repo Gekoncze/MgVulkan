@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCreateObjectTableNVX_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pObjectTable, jlong rval){
+void Java_cz_mg_vulkan_PFNvkCreateObjectTableNVX_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pObjectTable, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkCreateObjectTableNVX f = (PFN_vkCreateObjectTableNVX)jniLongToFunctionPointer(address);
@@ -21,3 +21,17 @@ void Java_cz_mg_vulkan_PFNvkCreateObjectTableNVX_call(JNIEnv* env, jclass jc, jl
         ((VkObjectTableNVX*)jniLongToPointer(pObjectTable))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkCreateObjectTableNVX_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pObjectTable){
+    (void)env;
+    (void)jc;
+    PFN_vkCreateObjectTableNVX f = (PFN_vkCreateObjectTableNVX)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        ((VkObjectTableCreateInfoNVX*)jniLongToPointer(pCreateInfo)),
+        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
+        ((VkObjectTableNVX*)jniLongToPointer(pObjectTable))
+    );
+}
+

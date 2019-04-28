@@ -3,7 +3,8 @@ package cz.mg.vulkan;
 import cz.mg.collections.list.chainlist.ChainList;
 
 public class VkSwapchainCreateFlagBitsKHR extends VkFlagBits {
-    public static final int VK_SWAPCHAIN_CREATE_BIND_SFR_BIT_KHX = 0x00000001;
+    public static final int VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR = 0x00000001;
+    public static final int VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR = 0x00000002;
 
     public VkSwapchainCreateFlagBitsKHR() {
     }
@@ -33,7 +34,8 @@ public class VkSwapchainCreateFlagBitsKHR extends VkFlagBits {
     @Override
     public String toString() {
         ChainList<String> s = new ChainList<>();
-        if((getValue() & VK_SWAPCHAIN_CREATE_BIND_SFR_BIT_KHX) != 0) s.addLast("VK_SWAPCHAIN_CREATE_BIND_SFR_BIT_KHX");
+        if((getValue() & VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR) != 0) s.addLast("VK_SWAPCHAIN_CREATE_SPLIT_INSTANCE_BIND_REGIONS_BIT_KHR");
+        if((getValue() & VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR) != 0) s.addLast("VK_SWAPCHAIN_CREATE_PROTECTED_BIT_KHR");
         return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

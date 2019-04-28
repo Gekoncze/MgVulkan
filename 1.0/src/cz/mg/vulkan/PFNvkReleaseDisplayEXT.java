@@ -23,8 +23,16 @@ public class PFNvkReleaseDisplayEXT extends VkFunctionPointer {
     }
 
     public void call(VkPhysicalDevice physicalDevice, VkDisplayKHR display, VkResult rval){
-        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), display != null ? display.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
+        callNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), display != null ? display.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
-    protected static native void call(long vkaddress, long physicalDevice, long display, long rval);
+    protected static native void callNative(long vkaddress, long physicalDevice, long display, long rval);
+
+
+    public int call(VkPhysicalDevice physicalDevice, VkDisplayKHR display){
+        return callSimplifiedNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), display != null ? display.getVkAddress() : VkPointer.getNullAddressNative());
+    }
+
+    protected static native int callSimplifiedNative(long vkaddress, long physicalDevice, long display);
+
 }

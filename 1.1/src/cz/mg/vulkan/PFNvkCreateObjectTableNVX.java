@@ -23,8 +23,16 @@ public class PFNvkCreateObjectTableNVX extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkObjectTableCreateInfoNVX pCreateInfo, VkAllocationCallbacks pAllocator, VkObjectTableNVX pObjectTable, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pCreateInfo != null ? pCreateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pObjectTable != null ? pObjectTable.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
+        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pCreateInfo != null ? pCreateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pObjectTable != null ? pObjectTable.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
-    protected static native void call(long vkaddress, long device, long pCreateInfo, long pAllocator, long pObjectTable, long rval);
+    protected static native void callNative(long vkaddress, long device, long pCreateInfo, long pAllocator, long pObjectTable, long rval);
+
+
+    public int call(VkDevice device, VkObjectTableCreateInfoNVX pCreateInfo, VkAllocationCallbacks pAllocator, VkObjectTableNVX pObjectTable){
+        return callSimplifiedNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pCreateInfo != null ? pCreateInfo.getVkAddress() : VkPointer.NULL, pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL, pObjectTable != null ? pObjectTable.getVkAddress() : VkPointer.NULL);
+    }
+
+    protected static native int callSimplifiedNative(long vkaddress, long device, long pCreateInfo, long pAllocator, long pObjectTable);
+
 }

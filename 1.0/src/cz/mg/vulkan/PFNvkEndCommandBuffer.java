@@ -23,8 +23,16 @@ public class PFNvkEndCommandBuffer extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkResult rval){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
-    protected static native void call(long vkaddress, long commandBuffer, long rval);
+    protected static native void callNative(long vkaddress, long commandBuffer, long rval);
+
+
+    public int call(VkCommandBuffer commandBuffer){
+        return callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative());
+    }
+
+    protected static native int callSimplifiedNative(long vkaddress, long commandBuffer);
+
 }

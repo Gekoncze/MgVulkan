@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCreateSampler_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pSampler, jlong rval){
+void Java_cz_mg_vulkan_PFNvkCreateSampler_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pSampler, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkCreateSampler f = (PFN_vkCreateSampler)jniLongToFunctionPointer(address);
@@ -21,3 +21,17 @@ void Java_cz_mg_vulkan_PFNvkCreateSampler_call(JNIEnv* env, jclass jc, jlong add
         ((VkSampler*)jniLongToPointer(pSampler))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkCreateSampler_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pSampler){
+    (void)env;
+    (void)jc;
+    PFN_vkCreateSampler f = (PFN_vkCreateSampler)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        ((VkSamplerCreateInfo*)jniLongToPointer(pCreateInfo)),
+        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
+        ((VkSampler*)jniLongToPointer(pSampler))
+    );
+}
+

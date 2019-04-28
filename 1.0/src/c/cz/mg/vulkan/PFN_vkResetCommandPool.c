@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkResetCommandPool_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong commandPool, jlong flags, jlong rval){
+void Java_cz_mg_vulkan_PFNvkResetCommandPool_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong commandPool, jlong flags, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkResetCommandPool f = (PFN_vkResetCommandPool)jniLongToFunctionPointer(address);
@@ -20,3 +20,16 @@ void Java_cz_mg_vulkan_PFNvkResetCommandPool_call(JNIEnv* env, jclass jc, jlong 
         *((VkCommandPoolResetFlags*)jniLongToPointer(flags))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkResetCommandPool_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong commandPool, jint flags){
+    (void)env;
+    (void)jc;
+    PFN_vkResetCommandPool f = (PFN_vkResetCommandPool)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        *((VkCommandPool*)jniLongToPointer(commandPool)),
+        (VkCommandPoolResetFlags)flags
+    );
+}
+

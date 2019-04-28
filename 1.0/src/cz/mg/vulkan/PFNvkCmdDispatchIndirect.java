@@ -23,8 +23,16 @@ public class PFNvkCmdDispatchIndirect extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkBuffer buffer, VkDeviceSize offset){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative(), offset != null ? offset.getVkAddress() : VkPointer.getNullAddressNative());
     }
 
-    protected static native void call(long vkaddress, long commandBuffer, long buffer, long offset);
+    protected static native void callNative(long vkaddress, long commandBuffer, long buffer, long offset);
+
+
+    public void call(VkCommandBuffer commandBuffer, VkBuffer buffer, long offset){
+        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative(), offset);
+    }
+
+    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, long buffer, long offset);
+
 }

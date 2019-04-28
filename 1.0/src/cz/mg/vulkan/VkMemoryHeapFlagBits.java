@@ -4,7 +4,8 @@ import cz.mg.collections.list.chainlist.ChainList;
 
 public class VkMemoryHeapFlagBits extends VkFlagBits {
     public static final int VK_MEMORY_HEAP_DEVICE_LOCAL_BIT = 0x00000001;
-    public static final int VK_MEMORY_HEAP_MULTI_INSTANCE_BIT_KHX = 0x00000002;
+    public static final int VK_MEMORY_HEAP_MULTI_INSTANCE_BIT = 0x00000002;
+    public static final int VK_MEMORY_HEAP_MULTI_INSTANCE_BIT_KHR = VK_MEMORY_HEAP_MULTI_INSTANCE_BIT;
 
     public VkMemoryHeapFlagBits() {
     }
@@ -35,7 +36,8 @@ public class VkMemoryHeapFlagBits extends VkFlagBits {
     public String toString() {
         ChainList<String> s = new ChainList<>();
         if((getValue() & VK_MEMORY_HEAP_DEVICE_LOCAL_BIT) != 0) s.addLast("VK_MEMORY_HEAP_DEVICE_LOCAL_BIT");
-        if((getValue() & VK_MEMORY_HEAP_MULTI_INSTANCE_BIT_KHX) != 0) s.addLast("VK_MEMORY_HEAP_MULTI_INSTANCE_BIT_KHX");
+        if((getValue() & VK_MEMORY_HEAP_MULTI_INSTANCE_BIT) != 0) s.addLast("VK_MEMORY_HEAP_MULTI_INSTANCE_BIT");
+        if((getValue() & VK_MEMORY_HEAP_MULTI_INSTANCE_BIT_KHR) != 0) s.addLast("VK_MEMORY_HEAP_MULTI_INSTANCE_BIT_KHR");
         return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

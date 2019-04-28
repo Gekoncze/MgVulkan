@@ -23,8 +23,11 @@ public class PFNvkDestroyCommandPool extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkCommandPool commandPool, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), commandPool != null ? commandPool.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long device, long commandPool, long pAllocator);
+    protected static native void callNative(long vkaddress, long device, long commandPool, long pAllocator);
+
+
+
 }

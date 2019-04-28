@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkAllocateDescriptorSets_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pAllocateInfo, jlong pDescriptorSets, jlong rval){
+void Java_cz_mg_vulkan_PFNvkAllocateDescriptorSets_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pAllocateInfo, jlong pDescriptorSets, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkAllocateDescriptorSets f = (PFN_vkAllocateDescriptorSets)jniLongToFunctionPointer(address);
@@ -20,3 +20,16 @@ void Java_cz_mg_vulkan_PFNvkAllocateDescriptorSets_call(JNIEnv* env, jclass jc, 
         ((VkDescriptorSet*)jniLongToPointer(pDescriptorSets))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkAllocateDescriptorSets_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pAllocateInfo, jlong pDescriptorSets){
+    (void)env;
+    (void)jc;
+    PFN_vkAllocateDescriptorSets f = (PFN_vkAllocateDescriptorSets)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        ((VkDescriptorSetAllocateInfo*)jniLongToPointer(pAllocateInfo)),
+        ((VkDescriptorSet*)jniLongToPointer(pDescriptorSets))
+    );
+}
+

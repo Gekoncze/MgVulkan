@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkFreeFunction_call(JNIEnv* env, jclass jc, jlong address, jlong pUserData, jlong pMemory){
+void Java_cz_mg_vulkan_PFNvkFreeFunction_callNative(JNIEnv* env, jclass jc, jlong address, jlong pUserData, jlong pMemory){
     (void)env;
     (void)jc;
     PFN_vkFreeFunction f = (PFN_vkFreeFunction)jniLongToFunctionPointer(address);
@@ -18,3 +18,6 @@ void Java_cz_mg_vulkan_PFNvkFreeFunction_call(JNIEnv* env, jclass jc, jlong addr
         ((void*)jniLongToPointer(pMemory))
     );
 }
+
+
+

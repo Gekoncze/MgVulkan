@@ -23,8 +23,11 @@ public class PFNvkDestroyBuffer extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkBuffer buffer, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), buffer != null ? buffer.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long device, long buffer, long pAllocator);
+    protected static native void callNative(long vkaddress, long device, long buffer, long pAllocator);
+
+
+
 }

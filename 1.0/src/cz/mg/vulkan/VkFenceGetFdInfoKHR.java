@@ -67,12 +67,12 @@ public class VkFenceGetFdInfoKHR extends VkObject {
     protected static native long getFenceNative(long address);
     protected static native void setFenceNative(long address, long fence);
 
-    public VkExternalFenceHandleTypeFlagBitsKHR getHandleType() {
-        return new VkExternalFenceHandleTypeFlagBitsKHR(getVkMemory(), getHandleTypeNative(getVkAddress()));
+    public VkExternalFenceHandleTypeFlagBits getHandleType() {
+        return new VkExternalFenceHandleTypeFlagBits(getVkMemory(), getHandleTypeNative(getVkAddress()));
     }
 
     
-    public void setHandleType(VkExternalFenceHandleTypeFlagBitsKHR handleType) {
+    public void setHandleType(VkExternalFenceHandleTypeFlagBits handleType) {
         setHandleTypeNative(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }

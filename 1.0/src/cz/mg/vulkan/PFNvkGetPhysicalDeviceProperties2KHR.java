@@ -22,9 +22,12 @@ public class PFNvkGetPhysicalDeviceProperties2KHR extends VkFunctionPointer {
         super(instance, new VkString("vkGetPhysicalDeviceProperties2KHR"));
     }
 
-    public void call(VkPhysicalDevice physicalDevice, VkPhysicalDeviceProperties2KHR pProperties){
-        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL);
+    public void call(VkPhysicalDevice physicalDevice, VkPhysicalDeviceProperties2 pProperties){
+        callNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), pProperties != null ? pProperties.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long physicalDevice, long pProperties);
+    protected static native void callNative(long vkaddress, long physicalDevice, long pProperties);
+
+
+
 }

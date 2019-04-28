@@ -23,8 +23,11 @@ public class PFNvkCmdEndRenderPass extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative());
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative());
     }
 
-    protected static native void call(long vkaddress, long commandBuffer);
+    protected static native void callNative(long vkaddress, long commandBuffer);
+
+
+
 }

@@ -23,8 +23,16 @@ public class PFNvkResetCommandBuffer extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkCommandBufferResetFlags flags, VkResult rval){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), flags != null ? flags.getVkAddress() : VkPointer.getNullAddressNative(), rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
-    protected static native void call(long vkaddress, long commandBuffer, long flags, long rval);
+    protected static native void callNative(long vkaddress, long commandBuffer, long flags, long rval);
+
+
+    public int call(VkCommandBuffer commandBuffer, int flags){
+        return callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), flags);
+    }
+
+    protected static native int callSimplifiedNative(long vkaddress, long commandBuffer, int flags);
+
 }

@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkAcquireNextImageKHR_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong swapchain, jlong timeout, jlong semaphore, jlong fence, jlong pImageIndex, jlong rval){
+void Java_cz_mg_vulkan_PFNvkAcquireNextImageKHR_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong swapchain, jlong timeout, jlong semaphore, jlong fence, jlong pImageIndex, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkAcquireNextImageKHR f = (PFN_vkAcquireNextImageKHR)jniLongToFunctionPointer(address);
@@ -23,3 +23,19 @@ void Java_cz_mg_vulkan_PFNvkAcquireNextImageKHR_call(JNIEnv* env, jclass jc, jlo
         ((uint32_t*)jniLongToPointer(pImageIndex))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkAcquireNextImageKHR_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong swapchain, jlong timeout, jlong semaphore, jlong fence, jlong pImageIndex){
+    (void)env;
+    (void)jc;
+    PFN_vkAcquireNextImageKHR f = (PFN_vkAcquireNextImageKHR)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        *((VkSwapchainKHR*)jniLongToPointer(swapchain)),
+        (uint64_t)timeout,
+        *((VkSemaphore*)jniLongToPointer(semaphore)),
+        *((VkFence*)jniLongToPointer(fence)),
+        ((uint32_t*)jniLongToPointer(pImageIndex))
+    );
+}
+

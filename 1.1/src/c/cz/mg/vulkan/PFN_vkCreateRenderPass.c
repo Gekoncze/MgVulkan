@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCreateRenderPass_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pRenderPass, jlong rval){
+void Java_cz_mg_vulkan_PFNvkCreateRenderPass_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pRenderPass, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkCreateRenderPass f = (PFN_vkCreateRenderPass)jniLongToFunctionPointer(address);
@@ -21,3 +21,17 @@ void Java_cz_mg_vulkan_PFNvkCreateRenderPass_call(JNIEnv* env, jclass jc, jlong 
         ((VkRenderPass*)jniLongToPointer(pRenderPass))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkCreateRenderPass_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pRenderPass){
+    (void)env;
+    (void)jc;
+    PFN_vkCreateRenderPass f = (PFN_vkCreateRenderPass)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        ((VkRenderPassCreateInfo*)jniLongToPointer(pCreateInfo)),
+        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
+        ((VkRenderPass*)jniLongToPointer(pRenderPass))
+    );
+}
+

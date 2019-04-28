@@ -54,12 +54,12 @@ public class VkImportMemoryFdInfoKHR extends VkObject {
     protected static native long getPNextNative(long address);
     protected static native void setPNextNative(long address, long pNext);
 
-    public VkExternalMemoryHandleTypeFlagBitsKHR getHandleType() {
-        return new VkExternalMemoryHandleTypeFlagBitsKHR(getVkMemory(), getHandleTypeNative(getVkAddress()));
+    public VkExternalMemoryHandleTypeFlagBits getHandleType() {
+        return new VkExternalMemoryHandleTypeFlagBits(getVkMemory(), getHandleTypeNative(getVkAddress()));
     }
 
     
-    public void setHandleType(VkExternalMemoryHandleTypeFlagBitsKHR handleType) {
+    public void setHandleType(VkExternalMemoryHandleTypeFlagBits handleType) {
         setHandleTypeNative(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }

@@ -19,6 +19,8 @@ public class VkResult extends VkEnum {
     public static final int VK_ERROR_TOO_MANY_OBJECTS = -10;
     public static final int VK_ERROR_FORMAT_NOT_SUPPORTED = -11;
     public static final int VK_ERROR_FRAGMENTED_POOL = -12;
+    public static final int VK_ERROR_OUT_OF_POOL_MEMORY = -1000069000;
+    public static final int VK_ERROR_INVALID_EXTERNAL_HANDLE = -1000072003;
     public static final int VK_ERROR_SURFACE_LOST_KHR = -1000000000;
     public static final int VK_ERROR_NATIVE_WINDOW_IN_USE_KHR = -1000000001;
     public static final int VK_SUBOPTIMAL_KHR = 1000001003;
@@ -26,8 +28,9 @@ public class VkResult extends VkEnum {
     public static final int VK_ERROR_INCOMPATIBLE_DISPLAY_KHR = -1000003001;
     public static final int VK_ERROR_VALIDATION_FAILED_EXT = -1000011001;
     public static final int VK_ERROR_INVALID_SHADER_NV = -1000012000;
-    public static final int VK_ERROR_OUT_OF_POOL_MEMORY_KHR = -1000069000;
-    public static final int VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR = -1000072003;
+    public static final int VK_ERROR_NOT_PERMITTED_EXT = -1000174001;
+    public static final int VK_ERROR_OUT_OF_POOL_MEMORY_KHR = VK_ERROR_OUT_OF_POOL_MEMORY;
+    public static final int VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR = VK_ERROR_INVALID_EXTERNAL_HANDLE;
 
     public VkResult() {
     }
@@ -68,6 +71,8 @@ public class VkResult extends VkEnum {
         if(getValue() == VK_ERROR_TOO_MANY_OBJECTS) return "VK_ERROR_TOO_MANY_OBJECTS";
         if(getValue() == VK_ERROR_FORMAT_NOT_SUPPORTED) return "VK_ERROR_FORMAT_NOT_SUPPORTED";
         if(getValue() == VK_ERROR_FRAGMENTED_POOL) return "VK_ERROR_FRAGMENTED_POOL";
+        if(getValue() == VK_ERROR_OUT_OF_POOL_MEMORY) return "VK_ERROR_OUT_OF_POOL_MEMORY";
+        if(getValue() == VK_ERROR_INVALID_EXTERNAL_HANDLE) return "VK_ERROR_INVALID_EXTERNAL_HANDLE";
         if(getValue() == VK_ERROR_SURFACE_LOST_KHR) return "VK_ERROR_SURFACE_LOST_KHR";
         if(getValue() == VK_ERROR_NATIVE_WINDOW_IN_USE_KHR) return "VK_ERROR_NATIVE_WINDOW_IN_USE_KHR";
         if(getValue() == VK_SUBOPTIMAL_KHR) return "VK_SUBOPTIMAL_KHR";
@@ -75,6 +80,7 @@ public class VkResult extends VkEnum {
         if(getValue() == VK_ERROR_INCOMPATIBLE_DISPLAY_KHR) return "VK_ERROR_INCOMPATIBLE_DISPLAY_KHR";
         if(getValue() == VK_ERROR_VALIDATION_FAILED_EXT) return "VK_ERROR_VALIDATION_FAILED_EXT";
         if(getValue() == VK_ERROR_INVALID_SHADER_NV) return "VK_ERROR_INVALID_SHADER_NV";
+        if(getValue() == VK_ERROR_NOT_PERMITTED_EXT) return "VK_ERROR_NOT_PERMITTED_EXT";
         if(getValue() == VK_ERROR_OUT_OF_POOL_MEMORY_KHR) return "VK_ERROR_OUT_OF_POOL_MEMORY_KHR";
         if(getValue() == VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR) return "VK_ERROR_INVALID_EXTERNAL_HANDLE_KHR";
         return "UNKNOWN";

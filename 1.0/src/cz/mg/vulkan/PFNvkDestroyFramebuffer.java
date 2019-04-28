@@ -23,8 +23,11 @@ public class PFNvkDestroyFramebuffer extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkFramebuffer framebuffer, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), framebuffer != null ? framebuffer.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long device, long framebuffer, long pAllocator);
+    protected static native void callNative(long vkaddress, long device, long framebuffer, long pAllocator);
+
+
+
 }

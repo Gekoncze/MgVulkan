@@ -23,8 +23,16 @@ public class PFNvkCmdSetDepthBounds extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkFloat minDepthBounds, VkFloat maxDepthBounds){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), minDepthBounds != null ? minDepthBounds.getVkAddress() : VkPointer.getNullAddressNative(), maxDepthBounds != null ? maxDepthBounds.getVkAddress() : VkPointer.getNullAddressNative());
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), minDepthBounds != null ? minDepthBounds.getVkAddress() : VkPointer.getNullAddressNative(), maxDepthBounds != null ? maxDepthBounds.getVkAddress() : VkPointer.getNullAddressNative());
     }
 
-    protected static native void call(long vkaddress, long commandBuffer, long minDepthBounds, long maxDepthBounds);
+    protected static native void callNative(long vkaddress, long commandBuffer, long minDepthBounds, long maxDepthBounds);
+
+
+    public void call(VkCommandBuffer commandBuffer, float minDepthBounds, float maxDepthBounds){
+        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), minDepthBounds, maxDepthBounds);
+    }
+
+    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, float minDepthBounds, float maxDepthBounds);
+
 }

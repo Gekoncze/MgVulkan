@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCreateDevice_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pCreateInfo, jlong pAllocator, jlong pDevice, jlong rval){
+void Java_cz_mg_vulkan_PFNvkCreateDevice_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pCreateInfo, jlong pAllocator, jlong pDevice, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkCreateDevice f = (PFN_vkCreateDevice)jniLongToFunctionPointer(address);
@@ -21,3 +21,17 @@ void Java_cz_mg_vulkan_PFNvkCreateDevice_call(JNIEnv* env, jclass jc, jlong addr
         ((VkDevice*)jniLongToPointer(pDevice))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkCreateDevice_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong pCreateInfo, jlong pAllocator, jlong pDevice){
+    (void)env;
+    (void)jc;
+    PFN_vkCreateDevice f = (PFN_vkCreateDevice)jniLongToFunctionPointer(address);
+    return f(
+        *((VkPhysicalDevice*)jniLongToPointer(physicalDevice)),
+        ((VkDeviceCreateInfo*)jniLongToPointer(pCreateInfo)),
+        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
+        ((VkDevice*)jniLongToPointer(pDevice))
+    );
+}
+

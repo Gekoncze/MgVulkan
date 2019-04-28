@@ -23,8 +23,16 @@ public class PFNvkDebugMarkerSetObjectTagEXT extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkDebugMarkerObjectTagInfoEXT pTagInfo, VkResult rval){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pTagInfo != null ? pTagInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
+        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pTagInfo != null ? pTagInfo.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
-    protected static native void call(long vkaddress, long device, long pTagInfo, long rval);
+    protected static native void callNative(long vkaddress, long device, long pTagInfo, long rval);
+
+
+    public int call(VkDevice device, VkDebugMarkerObjectTagInfoEXT pTagInfo){
+        return callSimplifiedNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pTagInfo != null ? pTagInfo.getVkAddress() : VkPointer.NULL);
+    }
+
+    protected static native int callSimplifiedNative(long vkaddress, long device, long pTagInfo);
+
 }

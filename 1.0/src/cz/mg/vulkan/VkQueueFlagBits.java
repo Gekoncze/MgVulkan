@@ -7,6 +7,7 @@ public class VkQueueFlagBits extends VkFlagBits {
     public static final int VK_QUEUE_COMPUTE_BIT = 0x00000002;
     public static final int VK_QUEUE_TRANSFER_BIT = 0x00000004;
     public static final int VK_QUEUE_SPARSE_BINDING_BIT = 0x00000008;
+    public static final int VK_QUEUE_PROTECTED_BIT = 0x00000010;
 
     public VkQueueFlagBits() {
     }
@@ -40,6 +41,7 @@ public class VkQueueFlagBits extends VkFlagBits {
         if((getValue() & VK_QUEUE_COMPUTE_BIT) != 0) s.addLast("VK_QUEUE_COMPUTE_BIT");
         if((getValue() & VK_QUEUE_TRANSFER_BIT) != 0) s.addLast("VK_QUEUE_TRANSFER_BIT");
         if((getValue() & VK_QUEUE_SPARSE_BINDING_BIT) != 0) s.addLast("VK_QUEUE_SPARSE_BINDING_BIT");
+        if((getValue() & VK_QUEUE_PROTECTED_BIT) != 0) s.addLast("VK_QUEUE_PROTECTED_BIT");
         return s.toString(", ") + (s.count() > 0 ? " " : "") + "(0x" + Integer.toHexString(getValue()) + ")";
     }
 }

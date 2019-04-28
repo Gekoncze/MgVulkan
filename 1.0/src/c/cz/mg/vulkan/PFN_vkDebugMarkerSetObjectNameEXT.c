@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkDebugMarkerSetObjectNameEXT_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pNameInfo, jlong rval){
+void Java_cz_mg_vulkan_PFNvkDebugMarkerSetObjectNameEXT_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pNameInfo, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkDebugMarkerSetObjectNameEXT f = (PFN_vkDebugMarkerSetObjectNameEXT)jniLongToFunctionPointer(address);
@@ -19,3 +19,15 @@ void Java_cz_mg_vulkan_PFNvkDebugMarkerSetObjectNameEXT_call(JNIEnv* env, jclass
         ((VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(pNameInfo))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkDebugMarkerSetObjectNameEXT_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pNameInfo){
+    (void)env;
+    (void)jc;
+    PFN_vkDebugMarkerSetObjectNameEXT f = (PFN_vkDebugMarkerSetObjectNameEXT)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        ((VkDebugMarkerObjectNameInfoEXT*)jniLongToPointer(pNameInfo))
+    );
+}
+

@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCreateDescriptorPool_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pDescriptorPool, jlong rval){
+void Java_cz_mg_vulkan_PFNvkCreateDescriptorPool_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pDescriptorPool, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkCreateDescriptorPool f = (PFN_vkCreateDescriptorPool)jniLongToFunctionPointer(address);
@@ -21,3 +21,17 @@ void Java_cz_mg_vulkan_PFNvkCreateDescriptorPool_call(JNIEnv* env, jclass jc, jl
         ((VkDescriptorPool*)jniLongToPointer(pDescriptorPool))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkCreateDescriptorPool_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pCreateInfo, jlong pAllocator, jlong pDescriptorPool){
+    (void)env;
+    (void)jc;
+    PFN_vkCreateDescriptorPool f = (PFN_vkCreateDescriptorPool)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        ((VkDescriptorPoolCreateInfo*)jniLongToPointer(pCreateInfo)),
+        ((VkAllocationCallbacks*)jniLongToPointer(pAllocator)),
+        ((VkDescriptorPool*)jniLongToPointer(pDescriptorPool))
+    );
+}
+

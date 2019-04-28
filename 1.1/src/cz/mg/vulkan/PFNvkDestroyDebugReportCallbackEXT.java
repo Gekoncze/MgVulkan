@@ -23,8 +23,11 @@ public class PFNvkDestroyDebugReportCallbackEXT extends VkFunctionPointer {
     }
 
     public void call(VkInstance instance, VkDebugReportCallbackEXT callback, VkAllocationCallbacks pAllocator){
-        call(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddressNative(), callback != null ? callback.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), instance != null ? instance.getVkAddress() : VkPointer.getNullAddressNative(), callback != null ? callback.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long instance, long callback, long pAllocator);
+    protected static native void callNative(long vkaddress, long instance, long callback, long pAllocator);
+
+
+
 }

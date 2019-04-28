@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkDebugMarkerSetObjectTagEXT_call(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pTagInfo, jlong rval){
+void Java_cz_mg_vulkan_PFNvkDebugMarkerSetObjectTagEXT_callNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pTagInfo, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkDebugMarkerSetObjectTagEXT f = (PFN_vkDebugMarkerSetObjectTagEXT)jniLongToFunctionPointer(address);
@@ -19,3 +19,15 @@ void Java_cz_mg_vulkan_PFNvkDebugMarkerSetObjectTagEXT_call(JNIEnv* env, jclass 
         ((VkDebugMarkerObjectTagInfoEXT*)jniLongToPointer(pTagInfo))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkDebugMarkerSetObjectTagEXT_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong device, jlong pTagInfo){
+    (void)env;
+    (void)jc;
+    PFN_vkDebugMarkerSetObjectTagEXT f = (PFN_vkDebugMarkerSetObjectTagEXT)jniLongToFunctionPointer(address);
+    return f(
+        *((VkDevice*)jniLongToPointer(device)),
+        ((VkDebugMarkerObjectTagInfoEXT*)jniLongToPointer(pTagInfo))
+    );
+}
+

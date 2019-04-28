@@ -23,8 +23,16 @@ public class PFNvkGetPhysicalDeviceSurfaceSupportKHR extends VkFunctionPointer {
     }
 
     public void call(VkPhysicalDevice physicalDevice, VkUInt32 queueFamilyIndex, VkSurfaceKHR surface, VkBool32 pSupported, VkResult rval){
-        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), queueFamilyIndex != null ? queueFamilyIndex.getVkAddress() : VkPointer.getNullAddressNative(), surface != null ? surface.getVkAddress() : VkPointer.getNullAddressNative(), pSupported != null ? pSupported.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
+        callNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), queueFamilyIndex != null ? queueFamilyIndex.getVkAddress() : VkPointer.getNullAddressNative(), surface != null ? surface.getVkAddress() : VkPointer.getNullAddressNative(), pSupported != null ? pSupported.getVkAddress() : VkPointer.NULL, rval != null ? rval.getVkAddress() : VkPointer.getSinkAddressNative());
     }
 
-    protected static native void call(long vkaddress, long physicalDevice, long queueFamilyIndex, long surface, long pSupported, long rval);
+    protected static native void callNative(long vkaddress, long physicalDevice, long queueFamilyIndex, long surface, long pSupported, long rval);
+
+
+    public int call(VkPhysicalDevice physicalDevice, int queueFamilyIndex, VkSurfaceKHR surface, VkBool32 pSupported){
+        return callSimplifiedNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), queueFamilyIndex, surface != null ? surface.getVkAddress() : VkPointer.getNullAddressNative(), pSupported != null ? pSupported.getVkAddress() : VkPointer.NULL);
+    }
+
+    protected static native int callSimplifiedNative(long vkaddress, long physicalDevice, int queueFamilyIndex, long surface, long pSupported);
+
 }

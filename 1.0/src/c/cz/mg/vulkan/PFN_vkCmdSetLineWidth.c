@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdSetLineWidth_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong lineWidth){
+void Java_cz_mg_vulkan_PFNvkCmdSetLineWidth_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong lineWidth){
     (void)env;
     (void)jc;
     PFN_vkCmdSetLineWidth f = (PFN_vkCmdSetLineWidth)jniLongToFunctionPointer(address);
@@ -18,3 +18,15 @@ void Java_cz_mg_vulkan_PFNvkCmdSetLineWidth_call(JNIEnv* env, jclass jc, jlong a
         *((float*)jniLongToPointer(lineWidth))
     );
 }
+
+
+void Java_cz_mg_vulkan_PFNvkCmdSetLineWidth_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jfloat lineWidth){
+    (void)env;
+    (void)jc;
+    PFN_vkCmdSetLineWidth f = (PFN_vkCmdSetLineWidth)jniLongToFunctionPointer(address);
+    f(
+        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
+        (float)lineWidth
+    );
+}
+

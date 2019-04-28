@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdClearColorImage_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong image, jlong imageLayout, jlong pColor, jlong rangeCount, jlong pRanges){
+void Java_cz_mg_vulkan_PFNvkCmdClearColorImage_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong image, jlong imageLayout, jlong pColor, jlong rangeCount, jlong pRanges){
     (void)env;
     (void)jc;
     PFN_vkCmdClearColorImage f = (PFN_vkCmdClearColorImage)jniLongToFunctionPointer(address);
@@ -22,3 +22,19 @@ void Java_cz_mg_vulkan_PFNvkCmdClearColorImage_call(JNIEnv* env, jclass jc, jlon
         ((VkImageSubresourceRange*)jniLongToPointer(pRanges))
     );
 }
+
+
+void Java_cz_mg_vulkan_PFNvkCmdClearColorImage_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong image, jint imageLayout, jlong pColor, jint rangeCount, jlong pRanges){
+    (void)env;
+    (void)jc;
+    PFN_vkCmdClearColorImage f = (PFN_vkCmdClearColorImage)jniLongToFunctionPointer(address);
+    f(
+        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
+        *((VkImage*)jniLongToPointer(image)),
+        (VkImageLayout)imageLayout,
+        ((VkClearColorValue*)jniLongToPointer(pColor)),
+        (uint32_t)rangeCount,
+        ((VkImageSubresourceRange*)jniLongToPointer(pRanges))
+    );
+}
+

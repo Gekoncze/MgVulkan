@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdSetDepthBounds_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong minDepthBounds, jlong maxDepthBounds){
+void Java_cz_mg_vulkan_PFNvkCmdSetDepthBounds_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong minDepthBounds, jlong maxDepthBounds){
     (void)env;
     (void)jc;
     PFN_vkCmdSetDepthBounds f = (PFN_vkCmdSetDepthBounds)jniLongToFunctionPointer(address);
@@ -19,3 +19,16 @@ void Java_cz_mg_vulkan_PFNvkCmdSetDepthBounds_call(JNIEnv* env, jclass jc, jlong
         *((float*)jniLongToPointer(maxDepthBounds))
     );
 }
+
+
+void Java_cz_mg_vulkan_PFNvkCmdSetDepthBounds_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jfloat minDepthBounds, jfloat maxDepthBounds){
+    (void)env;
+    (void)jc;
+    PFN_vkCmdSetDepthBounds f = (PFN_vkCmdSetDepthBounds)jniLongToFunctionPointer(address);
+    f(
+        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
+        (float)minDepthBounds,
+        (float)maxDepthBounds
+    );
+}
+

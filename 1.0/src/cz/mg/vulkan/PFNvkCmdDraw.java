@@ -23,8 +23,16 @@ public class PFNvkCmdDraw extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkUInt32 vertexCount, VkUInt32 instanceCount, VkUInt32 firstVertex, VkUInt32 firstInstance){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), vertexCount != null ? vertexCount.getVkAddress() : VkPointer.getNullAddressNative(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddressNative(), firstVertex != null ? firstVertex.getVkAddress() : VkPointer.getNullAddressNative(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddressNative());
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), vertexCount != null ? vertexCount.getVkAddress() : VkPointer.getNullAddressNative(), instanceCount != null ? instanceCount.getVkAddress() : VkPointer.getNullAddressNative(), firstVertex != null ? firstVertex.getVkAddress() : VkPointer.getNullAddressNative(), firstInstance != null ? firstInstance.getVkAddress() : VkPointer.getNullAddressNative());
     }
 
-    protected static native void call(long vkaddress, long commandBuffer, long vertexCount, long instanceCount, long firstVertex, long firstInstance);
+    protected static native void callNative(long vkaddress, long commandBuffer, long vertexCount, long instanceCount, long firstVertex, long firstInstance);
+
+
+    public void call(VkCommandBuffer commandBuffer, int vertexCount, int instanceCount, int firstVertex, int firstInstance){
+        callSimplifiedNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), vertexCount, instanceCount, firstVertex, firstInstance);
+    }
+
+    protected static native void callSimplifiedNative(long vkaddress, long commandBuffer, int vertexCount, int instanceCount, int firstVertex, int firstInstance);
+
 }

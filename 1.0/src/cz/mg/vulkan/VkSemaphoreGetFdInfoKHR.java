@@ -67,12 +67,12 @@ public class VkSemaphoreGetFdInfoKHR extends VkObject {
     protected static native long getSemaphoreNative(long address);
     protected static native void setSemaphoreNative(long address, long semaphore);
 
-    public VkExternalSemaphoreHandleTypeFlagBitsKHR getHandleType() {
-        return new VkExternalSemaphoreHandleTypeFlagBitsKHR(getVkMemory(), getHandleTypeNative(getVkAddress()));
+    public VkExternalSemaphoreHandleTypeFlagBits getHandleType() {
+        return new VkExternalSemaphoreHandleTypeFlagBits(getVkMemory(), getHandleTypeNative(getVkAddress()));
     }
 
     
-    public void setHandleType(VkExternalSemaphoreHandleTypeFlagBitsKHR handleType) {
+    public void setHandleType(VkExternalSemaphoreHandleTypeFlagBits handleType) {
         setHandleTypeNative(getVkAddress(), handleType != null ? handleType.getVkAddress() : VkPointer.getNullAddressNative());
         
     }

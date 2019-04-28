@@ -22,9 +22,12 @@ public class PFNvkGetImageMemoryRequirements2KHR extends VkFunctionPointer {
         super(instance, new VkString("vkGetImageMemoryRequirements2KHR"));
     }
 
-    public void call(VkDevice device, VkImageMemoryRequirementsInfo2KHR pInfo, VkMemoryRequirements2KHR pMemoryRequirements){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pInfo != null ? pInfo.getVkAddress() : VkPointer.NULL, pMemoryRequirements != null ? pMemoryRequirements.getVkAddress() : VkPointer.NULL);
+    public void call(VkDevice device, VkImageMemoryRequirementsInfo2 pInfo, VkMemoryRequirements2 pMemoryRequirements){
+        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), pInfo != null ? pInfo.getVkAddress() : VkPointer.NULL, pMemoryRequirements != null ? pMemoryRequirements.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long device, long pInfo, long pMemoryRequirements);
+    protected static native void callNative(long vkaddress, long device, long pInfo, long pMemoryRequirements);
+
+
+
 }

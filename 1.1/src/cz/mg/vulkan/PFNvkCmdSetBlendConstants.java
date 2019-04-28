@@ -23,8 +23,11 @@ public class PFNvkCmdSetBlendConstants extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkFloat blendConstants){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), blendConstants != null ? blendConstants.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), blendConstants != null ? blendConstants.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long commandBuffer, long blendConstants);
+    protected static native void callNative(long vkaddress, long commandBuffer, long blendConstants);
+
+
+
 }

@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdDrawIndexedIndirectCountAMD_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong buffer, jlong offset, jlong countBuffer, jlong countBufferOffset, jlong maxDrawCount, jlong stride){
+void Java_cz_mg_vulkan_PFNvkCmdDrawIndexedIndirectCountAMD_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong buffer, jlong offset, jlong countBuffer, jlong countBufferOffset, jlong maxDrawCount, jlong stride){
     (void)env;
     (void)jc;
     PFN_vkCmdDrawIndexedIndirectCountAMD f = (PFN_vkCmdDrawIndexedIndirectCountAMD)jniLongToFunctionPointer(address);
@@ -23,3 +23,20 @@ void Java_cz_mg_vulkan_PFNvkCmdDrawIndexedIndirectCountAMD_call(JNIEnv* env, jcl
         *((uint32_t*)jniLongToPointer(stride))
     );
 }
+
+
+void Java_cz_mg_vulkan_PFNvkCmdDrawIndexedIndirectCountAMD_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong buffer, jlong offset, jlong countBuffer, jlong countBufferOffset, jint maxDrawCount, jint stride){
+    (void)env;
+    (void)jc;
+    PFN_vkCmdDrawIndexedIndirectCountAMD f = (PFN_vkCmdDrawIndexedIndirectCountAMD)jniLongToFunctionPointer(address);
+    f(
+        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
+        *((VkBuffer*)jniLongToPointer(buffer)),
+        (VkDeviceSize)offset,
+        *((VkBuffer*)jniLongToPointer(countBuffer)),
+        (VkDeviceSize)countBufferOffset,
+        (uint32_t)maxDrawCount,
+        (uint32_t)stride
+    );
+}
+

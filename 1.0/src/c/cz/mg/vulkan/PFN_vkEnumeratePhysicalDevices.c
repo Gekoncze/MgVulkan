@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkEnumeratePhysicalDevices_call(JNIEnv* env, jclass jc, jlong address, jlong instance, jlong pPhysicalDeviceCount, jlong pPhysicalDevices, jlong rval){
+void Java_cz_mg_vulkan_PFNvkEnumeratePhysicalDevices_callNative(JNIEnv* env, jclass jc, jlong address, jlong instance, jlong pPhysicalDeviceCount, jlong pPhysicalDevices, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkEnumeratePhysicalDevices f = (PFN_vkEnumeratePhysicalDevices)jniLongToFunctionPointer(address);
@@ -20,3 +20,16 @@ void Java_cz_mg_vulkan_PFNvkEnumeratePhysicalDevices_call(JNIEnv* env, jclass jc
         ((VkPhysicalDevice*)jniLongToPointer(pPhysicalDevices))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkEnumeratePhysicalDevices_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong instance, jlong pPhysicalDeviceCount, jlong pPhysicalDevices){
+    (void)env;
+    (void)jc;
+    PFN_vkEnumeratePhysicalDevices f = (PFN_vkEnumeratePhysicalDevices)jniLongToFunctionPointer(address);
+    return f(
+        *((VkInstance*)jniLongToPointer(instance)),
+        ((uint32_t*)jniLongToPointer(pPhysicalDeviceCount)),
+        ((VkPhysicalDevice*)jniLongToPointer(pPhysicalDevices))
+    );
+}
+

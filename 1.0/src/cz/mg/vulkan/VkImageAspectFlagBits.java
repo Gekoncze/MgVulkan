@@ -7,9 +7,12 @@ public class VkImageAspectFlagBits extends VkFlagBits {
     public static final int VK_IMAGE_ASPECT_DEPTH_BIT = 0x00000002;
     public static final int VK_IMAGE_ASPECT_STENCIL_BIT = 0x00000004;
     public static final int VK_IMAGE_ASPECT_METADATA_BIT = 0x00000008;
-    public static final int VK_IMAGE_ASPECT_PLANE_0_BIT_KHR = 0x00000010;
-    public static final int VK_IMAGE_ASPECT_PLANE_1_BIT_KHR = 0x00000020;
-    public static final int VK_IMAGE_ASPECT_PLANE_2_BIT_KHR = 0x00000040;
+    public static final int VK_IMAGE_ASPECT_PLANE_0_BIT = 0x00000010;
+    public static final int VK_IMAGE_ASPECT_PLANE_1_BIT = 0x00000020;
+    public static final int VK_IMAGE_ASPECT_PLANE_2_BIT = 0x00000040;
+    public static final int VK_IMAGE_ASPECT_PLANE_0_BIT_KHR = VK_IMAGE_ASPECT_PLANE_0_BIT;
+    public static final int VK_IMAGE_ASPECT_PLANE_1_BIT_KHR = VK_IMAGE_ASPECT_PLANE_1_BIT;
+    public static final int VK_IMAGE_ASPECT_PLANE_2_BIT_KHR = VK_IMAGE_ASPECT_PLANE_2_BIT;
 
     public VkImageAspectFlagBits() {
     }
@@ -43,6 +46,9 @@ public class VkImageAspectFlagBits extends VkFlagBits {
         if((getValue() & VK_IMAGE_ASPECT_DEPTH_BIT) != 0) s.addLast("VK_IMAGE_ASPECT_DEPTH_BIT");
         if((getValue() & VK_IMAGE_ASPECT_STENCIL_BIT) != 0) s.addLast("VK_IMAGE_ASPECT_STENCIL_BIT");
         if((getValue() & VK_IMAGE_ASPECT_METADATA_BIT) != 0) s.addLast("VK_IMAGE_ASPECT_METADATA_BIT");
+        if((getValue() & VK_IMAGE_ASPECT_PLANE_0_BIT) != 0) s.addLast("VK_IMAGE_ASPECT_PLANE_0_BIT");
+        if((getValue() & VK_IMAGE_ASPECT_PLANE_1_BIT) != 0) s.addLast("VK_IMAGE_ASPECT_PLANE_1_BIT");
+        if((getValue() & VK_IMAGE_ASPECT_PLANE_2_BIT) != 0) s.addLast("VK_IMAGE_ASPECT_PLANE_2_BIT");
         if((getValue() & VK_IMAGE_ASPECT_PLANE_0_BIT_KHR) != 0) s.addLast("VK_IMAGE_ASPECT_PLANE_0_BIT_KHR");
         if((getValue() & VK_IMAGE_ASPECT_PLANE_1_BIT_KHR) != 0) s.addLast("VK_IMAGE_ASPECT_PLANE_1_BIT_KHR");
         if((getValue() & VK_IMAGE_ASPECT_PLANE_2_BIT_KHR) != 0) s.addLast("VK_IMAGE_ASPECT_PLANE_2_BIT_KHR");

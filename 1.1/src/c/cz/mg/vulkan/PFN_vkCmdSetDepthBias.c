@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdSetDepthBias_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong depthBiasConstantFactor, jlong depthBiasClamp, jlong depthBiasSlopeFactor){
+void Java_cz_mg_vulkan_PFNvkCmdSetDepthBias_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong depthBiasConstantFactor, jlong depthBiasClamp, jlong depthBiasSlopeFactor){
     (void)env;
     (void)jc;
     PFN_vkCmdSetDepthBias f = (PFN_vkCmdSetDepthBias)jniLongToFunctionPointer(address);
@@ -20,3 +20,17 @@ void Java_cz_mg_vulkan_PFNvkCmdSetDepthBias_call(JNIEnv* env, jclass jc, jlong a
         *((float*)jniLongToPointer(depthBiasSlopeFactor))
     );
 }
+
+
+void Java_cz_mg_vulkan_PFNvkCmdSetDepthBias_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jfloat depthBiasConstantFactor, jfloat depthBiasClamp, jfloat depthBiasSlopeFactor){
+    (void)env;
+    (void)jc;
+    PFN_vkCmdSetDepthBias f = (PFN_vkCmdSetDepthBias)jniLongToFunctionPointer(address);
+    f(
+        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
+        (float)depthBiasConstantFactor,
+        (float)depthBiasClamp,
+        (float)depthBiasSlopeFactor
+    );
+}
+

@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceMultisamplePropertiesEXT_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong samples, jlong pMultisampleProperties){
+void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceMultisamplePropertiesEXT_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong samples, jlong pMultisampleProperties){
     (void)env;
     (void)jc;
     PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT f = (PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT)jniLongToFunctionPointer(address);
@@ -19,3 +19,16 @@ void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceMultisamplePropertiesEXT_call(JNIEn
         ((VkMultisamplePropertiesEXT*)jniLongToPointer(pMultisampleProperties))
     );
 }
+
+
+void Java_cz_mg_vulkan_PFNvkGetPhysicalDeviceMultisamplePropertiesEXT_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jint samples, jlong pMultisampleProperties){
+    (void)env;
+    (void)jc;
+    PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT f = (PFN_vkGetPhysicalDeviceMultisamplePropertiesEXT)jniLongToFunctionPointer(address);
+    f(
+        *((VkPhysicalDevice*)jniLongToPointer(physicalDevice)),
+        (VkSampleCountFlagBits)samples,
+        ((VkMultisamplePropertiesEXT*)jniLongToPointer(pMultisampleProperties))
+    );
+}
+

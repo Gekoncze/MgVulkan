@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdPushConstants_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong layout, jlong stageFlags, jlong offset, jlong size, jlong pValues){
+void Java_cz_mg_vulkan_PFNvkCmdPushConstants_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong layout, jlong stageFlags, jlong offset, jlong size, jlong pValues){
     (void)env;
     (void)jc;
     PFN_vkCmdPushConstants f = (PFN_vkCmdPushConstants)jniLongToFunctionPointer(address);
@@ -22,3 +22,19 @@ void Java_cz_mg_vulkan_PFNvkCmdPushConstants_call(JNIEnv* env, jclass jc, jlong 
         ((void*)jniLongToPointer(pValues))
     );
 }
+
+
+void Java_cz_mg_vulkan_PFNvkCmdPushConstants_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong layout, jint stageFlags, jint offset, jint size, jlong pValues){
+    (void)env;
+    (void)jc;
+    PFN_vkCmdPushConstants f = (PFN_vkCmdPushConstants)jniLongToFunctionPointer(address);
+    f(
+        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
+        *((VkPipelineLayout*)jniLongToPointer(layout)),
+        (VkShaderStageFlags)stageFlags,
+        (uint32_t)offset,
+        (uint32_t)size,
+        ((void*)jniLongToPointer(pValues))
+    );
+}
+

@@ -12,13 +12,22 @@ public class PFNvkFreeFunction extends VkFunctionPointer {
         super(vkmemory, vkaddress);
     }
 
+
+
     public PFNvkFreeFunction(long value) {
         setValue(value);
     }
 
-    public void call(VkObject pUserData, VkObject pMemory){
-        call(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, pMemory != null ? pMemory.getVkAddress() : VkPointer.NULL);
+    public PFNvkFreeFunction(VkInstance instance) {
+        super(instance, new VkString("vkFreeFunction"));
     }
 
-    protected static native void call(long vkaddress, long pUserData, long pMemory);
+    public void call(VkObject pUserData, VkObject pMemory){
+        callNative(getValue(), pUserData != null ? pUserData.getVkAddress() : VkPointer.NULL, pMemory != null ? pMemory.getVkAddress() : VkPointer.NULL);
+    }
+
+    protected static native void callNative(long vkaddress, long pUserData, long pMemory);
+
+
+
 }

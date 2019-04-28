@@ -23,8 +23,16 @@ public class PFNvkGetPhysicalDeviceMultisamplePropertiesEXT extends VkFunctionPo
     }
 
     public void call(VkPhysicalDevice physicalDevice, VkSampleCountFlagBits samples, VkMultisamplePropertiesEXT pMultisampleProperties){
-        call(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddressNative(), pMultisampleProperties != null ? pMultisampleProperties.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), samples != null ? samples.getVkAddress() : VkPointer.getNullAddressNative(), pMultisampleProperties != null ? pMultisampleProperties.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long physicalDevice, long samples, long pMultisampleProperties);
+    protected static native void callNative(long vkaddress, long physicalDevice, long samples, long pMultisampleProperties);
+
+
+    public void call(VkPhysicalDevice physicalDevice, int samples, VkMultisamplePropertiesEXT pMultisampleProperties){
+        callSimplifiedNative(getValue(), physicalDevice != null ? physicalDevice.getVkAddress() : VkPointer.getNullAddressNative(), samples, pMultisampleProperties != null ? pMultisampleProperties.getVkAddress() : VkPointer.NULL);
+    }
+
+    protected static native void callSimplifiedNative(long vkaddress, long physicalDevice, int samples, long pMultisampleProperties);
+
 }

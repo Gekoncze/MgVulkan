@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkReleaseDisplayEXT_call(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong display, jlong rval){
+void Java_cz_mg_vulkan_PFNvkReleaseDisplayEXT_callNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong display, jlong rval){
     (void)env;
     (void)jc;
     PFN_vkReleaseDisplayEXT f = (PFN_vkReleaseDisplayEXT)jniLongToFunctionPointer(address);
@@ -19,3 +19,15 @@ void Java_cz_mg_vulkan_PFNvkReleaseDisplayEXT_call(JNIEnv* env, jclass jc, jlong
         *((VkDisplayKHR*)jniLongToPointer(display))
     );
 }
+
+
+jint Java_cz_mg_vulkan_PFNvkReleaseDisplayEXT_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong physicalDevice, jlong display){
+    (void)env;
+    (void)jc;
+    PFN_vkReleaseDisplayEXT f = (PFN_vkReleaseDisplayEXT)jniLongToFunctionPointer(address);
+    return f(
+        *((VkPhysicalDevice*)jniLongToPointer(physicalDevice)),
+        *((VkDisplayKHR*)jniLongToPointer(display))
+    );
+}
+

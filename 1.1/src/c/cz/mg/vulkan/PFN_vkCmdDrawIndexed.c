@@ -9,7 +9,7 @@ jlong jniFunctionPointerToLong(PFN_vkVoidFunction p);
 PFN_vkVoidFunction jniLongToFunctionPointer(jlong l);
 void jniThrowException(JNIEnv* env, const char* message);
 
-void Java_cz_mg_vulkan_PFNvkCmdDrawIndexed_call(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong indexCount, jlong instanceCount, jlong firstIndex, jlong vertexOffset, jlong firstInstance){
+void Java_cz_mg_vulkan_PFNvkCmdDrawIndexed_callNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jlong indexCount, jlong instanceCount, jlong firstIndex, jlong vertexOffset, jlong firstInstance){
     (void)env;
     (void)jc;
     PFN_vkCmdDrawIndexed f = (PFN_vkCmdDrawIndexed)jniLongToFunctionPointer(address);
@@ -22,3 +22,19 @@ void Java_cz_mg_vulkan_PFNvkCmdDrawIndexed_call(JNIEnv* env, jclass jc, jlong ad
         *((uint32_t*)jniLongToPointer(firstInstance))
     );
 }
+
+
+void Java_cz_mg_vulkan_PFNvkCmdDrawIndexed_callSimplifiedNative(JNIEnv* env, jclass jc, jlong address, jlong commandBuffer, jint indexCount, jint instanceCount, jint firstIndex, jint vertexOffset, jint firstInstance){
+    (void)env;
+    (void)jc;
+    PFN_vkCmdDrawIndexed f = (PFN_vkCmdDrawIndexed)jniLongToFunctionPointer(address);
+    f(
+        *((VkCommandBuffer*)jniLongToPointer(commandBuffer)),
+        (uint32_t)indexCount,
+        (uint32_t)instanceCount,
+        (uint32_t)firstIndex,
+        (int32_t)vertexOffset,
+        (uint32_t)firstInstance
+    );
+}
+

@@ -23,8 +23,11 @@ public class PFNvkDestroyBufferView extends VkFunctionPointer {
     }
 
     public void call(VkDevice device, VkBufferView bufferView, VkAllocationCallbacks pAllocator){
-        call(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), bufferView != null ? bufferView.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), device != null ? device.getVkAddress() : VkPointer.getNullAddressNative(), bufferView != null ? bufferView.getVkAddress() : VkPointer.getNullAddressNative(), pAllocator != null ? pAllocator.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long device, long bufferView, long pAllocator);
+    protected static native void callNative(long vkaddress, long device, long bufferView, long pAllocator);
+
+
+
 }

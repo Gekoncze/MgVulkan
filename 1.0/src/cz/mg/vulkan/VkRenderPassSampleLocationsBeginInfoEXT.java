@@ -109,18 +109,18 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
     protected static native long getPostSubpassSampleLocationsCountNative(long address);
     protected static native void setPostSubpassSampleLocationsCountNative(long address, long postSubpassSampleLocationsCount);
 
-    public VkSubpassSampleLocationsEXT getPSubpassSampleLocations() {
-        return new VkSubpassSampleLocationsEXT(getVkMemory(), getPSubpassSampleLocationsNative(getVkAddress()));
+    public VkSubpassSampleLocationsEXT getPPostSubpassSampleLocations() {
+        return new VkSubpassSampleLocationsEXT(getVkMemory(), getPPostSubpassSampleLocationsNative(getVkAddress()));
     }
 
-    private VkObject pSubpassSampleLocations = null;
-    public void setPSubpassSampleLocations(VkSubpassSampleLocationsEXT pSubpassSampleLocations) {
-        setPSubpassSampleLocationsNative(getVkAddress(), pSubpassSampleLocations != null ? pSubpassSampleLocations.getVkAddress() : VkPointer.NULL);
-        this.pSubpassSampleLocations = pSubpassSampleLocations;
+    private VkObject pPostSubpassSampleLocations = null;
+    public void setPPostSubpassSampleLocations(VkSubpassSampleLocationsEXT pPostSubpassSampleLocations) {
+        setPPostSubpassSampleLocationsNative(getVkAddress(), pPostSubpassSampleLocations != null ? pPostSubpassSampleLocations.getVkAddress() : VkPointer.NULL);
+        this.pPostSubpassSampleLocations = pPostSubpassSampleLocations;
     }
 
-    protected static native long getPSubpassSampleLocationsNative(long address);
-    protected static native void setPSubpassSampleLocationsNative(long address, long pSubpassSampleLocations);
+    protected static native long getPPostSubpassSampleLocationsNative(long address);
+    protected static native void setPPostSubpassSampleLocationsNative(long address, long pPostSubpassSampleLocations);
 
 
     public static native long sizeof();

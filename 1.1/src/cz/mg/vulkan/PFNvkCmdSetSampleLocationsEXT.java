@@ -23,8 +23,11 @@ public class PFNvkCmdSetSampleLocationsEXT extends VkFunctionPointer {
     }
 
     public void call(VkCommandBuffer commandBuffer, VkSampleLocationsInfoEXT pSampleLocationsInfo){
-        call(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), pSampleLocationsInfo != null ? pSampleLocationsInfo.getVkAddress() : VkPointer.NULL);
+        callNative(getValue(), commandBuffer != null ? commandBuffer.getVkAddress() : VkPointer.getNullAddressNative(), pSampleLocationsInfo != null ? pSampleLocationsInfo.getVkAddress() : VkPointer.NULL);
     }
 
-    protected static native void call(long vkaddress, long commandBuffer, long pSampleLocationsInfo);
+    protected static native void callNative(long vkaddress, long commandBuffer, long pSampleLocationsInfo);
+
+
+
 }
