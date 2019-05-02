@@ -323,7 +323,7 @@ public class Vk {
     public void vkCreateInstanceP(VkInstanceCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkInstance pInstance){
         if(PFN_vkCreateInstance_f == null) PFN_vkCreateInstance_f = new PFNvkCreateInstance(instance);
         int result = PFN_vkCreateInstance_f.call(pCreateInfo, pAllocator, pInstance);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateInstanceP");
     }
 
 
@@ -342,7 +342,7 @@ public class Vk {
     public void vkEnumeratePhysicalDevicesP(VkInstance instance, VkUInt32 pPhysicalDeviceCount, VkPhysicalDevice pPhysicalDevices){
         if(PFN_vkEnumeratePhysicalDevices_f == null) PFN_vkEnumeratePhysicalDevices_f = new PFNvkEnumeratePhysicalDevices(instance);
         int result = PFN_vkEnumeratePhysicalDevices_f.call(instance, pPhysicalDeviceCount, pPhysicalDevices);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkEnumeratePhysicalDevicesP");
     }
 
 
@@ -367,7 +367,7 @@ public class Vk {
     public void vkGetPhysicalDeviceImageFormatPropertiesP(VkPhysicalDevice physicalDevice, int format, int type, int tiling, int usage, int flags, VkImageFormatProperties pImageFormatProperties){
         if(PFN_vkGetPhysicalDeviceImageFormatProperties_f == null) PFN_vkGetPhysicalDeviceImageFormatProperties_f = new PFNvkGetPhysicalDeviceImageFormatProperties(instance);
         int result = PFN_vkGetPhysicalDeviceImageFormatProperties_f.call(physicalDevice, format, type, tiling, usage, flags, pImageFormatProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceImageFormatPropertiesP");
     }
 
 
@@ -410,7 +410,7 @@ public class Vk {
     public void vkCreateDeviceP(VkPhysicalDevice physicalDevice, VkDeviceCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDevice pDevice){
         if(PFN_vkCreateDevice_f == null) PFN_vkCreateDevice_f = new PFNvkCreateDevice(instance);
         int result = PFN_vkCreateDevice_f.call(physicalDevice, pCreateInfo, pAllocator, pDevice);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateDeviceP");
     }
 
 
@@ -429,7 +429,7 @@ public class Vk {
     public void vkEnumerateInstanceExtensionPropertiesP(VkChar pLayerName, VkUInt32 pPropertyCount, VkExtensionProperties pProperties){
         if(PFN_vkEnumerateInstanceExtensionProperties_f == null) PFN_vkEnumerateInstanceExtensionProperties_f = new PFNvkEnumerateInstanceExtensionProperties(instance);
         int result = PFN_vkEnumerateInstanceExtensionProperties_f.call(pLayerName, pPropertyCount, pProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkEnumerateInstanceExtensionPropertiesP");
     }
 
 
@@ -442,7 +442,7 @@ public class Vk {
     public void vkEnumerateDeviceExtensionPropertiesP(VkPhysicalDevice physicalDevice, VkChar pLayerName, VkUInt32 pPropertyCount, VkExtensionProperties pProperties){
         if(PFN_vkEnumerateDeviceExtensionProperties_f == null) PFN_vkEnumerateDeviceExtensionProperties_f = new PFNvkEnumerateDeviceExtensionProperties(instance);
         int result = PFN_vkEnumerateDeviceExtensionProperties_f.call(physicalDevice, pLayerName, pPropertyCount, pProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkEnumerateDeviceExtensionPropertiesP");
     }
 
 
@@ -455,7 +455,7 @@ public class Vk {
     public void vkEnumerateInstanceLayerPropertiesP(VkUInt32 pPropertyCount, VkLayerProperties pProperties){
         if(PFN_vkEnumerateInstanceLayerProperties_f == null) PFN_vkEnumerateInstanceLayerProperties_f = new PFNvkEnumerateInstanceLayerProperties(instance);
         int result = PFN_vkEnumerateInstanceLayerProperties_f.call(pPropertyCount, pProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkEnumerateInstanceLayerPropertiesP");
     }
 
 
@@ -468,7 +468,7 @@ public class Vk {
     public void vkEnumerateDeviceLayerPropertiesP(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkLayerProperties pProperties){
         if(PFN_vkEnumerateDeviceLayerProperties_f == null) PFN_vkEnumerateDeviceLayerProperties_f = new PFNvkEnumerateDeviceLayerProperties(instance);
         int result = PFN_vkEnumerateDeviceLayerProperties_f.call(physicalDevice, pPropertyCount, pProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkEnumerateDeviceLayerPropertiesP");
     }
 
 
@@ -487,7 +487,7 @@ public class Vk {
     public void vkQueueSubmitP(VkQueue queue, int submitCount, VkSubmitInfo pSubmits, VkFence fence){
         if(PFN_vkQueueSubmit_f == null) PFN_vkQueueSubmit_f = new PFNvkQueueSubmit(instance);
         int result = PFN_vkQueueSubmit_f.call(queue, submitCount, pSubmits, fence);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkQueueSubmitP");
     }
 
 
@@ -500,7 +500,7 @@ public class Vk {
     public void vkQueueWaitIdleP(VkQueue queue){
         if(PFN_vkQueueWaitIdle_f == null) PFN_vkQueueWaitIdle_f = new PFNvkQueueWaitIdle(instance);
         int result = PFN_vkQueueWaitIdle_f.call(queue);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkQueueWaitIdleP");
     }
 
 
@@ -513,7 +513,7 @@ public class Vk {
     public void vkDeviceWaitIdleP(VkDevice device){
         if(PFN_vkDeviceWaitIdle_f == null) PFN_vkDeviceWaitIdle_f = new PFNvkDeviceWaitIdle(instance);
         int result = PFN_vkDeviceWaitIdle_f.call(device);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkDeviceWaitIdleP");
     }
 
 
@@ -526,7 +526,7 @@ public class Vk {
     public void vkAllocateMemoryP(VkDevice device, VkMemoryAllocateInfo pAllocateInfo, VkAllocationCallbacks pAllocator, VkDeviceMemory pMemory){
         if(PFN_vkAllocateMemory_f == null) PFN_vkAllocateMemory_f = new PFNvkAllocateMemory(instance);
         int result = PFN_vkAllocateMemory_f.call(device, pAllocateInfo, pAllocator, pMemory);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkAllocateMemoryP");
     }
 
 
@@ -545,7 +545,7 @@ public class Vk {
     public void vkMapMemoryP(VkDevice device, VkDeviceMemory memory, long offset, long size, int flags, VkObject ppData){
         if(PFN_vkMapMemory_f == null) PFN_vkMapMemory_f = new PFNvkMapMemory(instance);
         int result = PFN_vkMapMemory_f.call(device, memory, offset, size, flags, ppData);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkMapMemoryP");
     }
 
 
@@ -564,7 +564,7 @@ public class Vk {
     public void vkFlushMappedMemoryRangesP(VkDevice device, int memoryRangeCount, VkMappedMemoryRange pMemoryRanges){
         if(PFN_vkFlushMappedMemoryRanges_f == null) PFN_vkFlushMappedMemoryRanges_f = new PFNvkFlushMappedMemoryRanges(instance);
         int result = PFN_vkFlushMappedMemoryRanges_f.call(device, memoryRangeCount, pMemoryRanges);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkFlushMappedMemoryRangesP");
     }
 
 
@@ -577,7 +577,7 @@ public class Vk {
     public void vkInvalidateMappedMemoryRangesP(VkDevice device, int memoryRangeCount, VkMappedMemoryRange pMemoryRanges){
         if(PFN_vkInvalidateMappedMemoryRanges_f == null) PFN_vkInvalidateMappedMemoryRanges_f = new PFNvkInvalidateMappedMemoryRanges(instance);
         int result = PFN_vkInvalidateMappedMemoryRanges_f.call(device, memoryRangeCount, pMemoryRanges);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkInvalidateMappedMemoryRangesP");
     }
 
 
@@ -596,7 +596,7 @@ public class Vk {
     public void vkBindBufferMemoryP(VkDevice device, VkBuffer buffer, VkDeviceMemory memory, long memoryOffset){
         if(PFN_vkBindBufferMemory_f == null) PFN_vkBindBufferMemory_f = new PFNvkBindBufferMemory(instance);
         int result = PFN_vkBindBufferMemory_f.call(device, buffer, memory, memoryOffset);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkBindBufferMemoryP");
     }
 
 
@@ -609,7 +609,7 @@ public class Vk {
     public void vkBindImageMemoryP(VkDevice device, VkImage image, VkDeviceMemory memory, long memoryOffset){
         if(PFN_vkBindImageMemory_f == null) PFN_vkBindImageMemory_f = new PFNvkBindImageMemory(instance);
         int result = PFN_vkBindImageMemory_f.call(device, image, memory, memoryOffset);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkBindImageMemoryP");
     }
 
 
@@ -646,7 +646,7 @@ public class Vk {
     public void vkQueueBindSparseP(VkQueue queue, int bindInfoCount, VkBindSparseInfo pBindInfo, VkFence fence){
         if(PFN_vkQueueBindSparse_f == null) PFN_vkQueueBindSparse_f = new PFNvkQueueBindSparse(instance);
         int result = PFN_vkQueueBindSparse_f.call(queue, bindInfoCount, pBindInfo, fence);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkQueueBindSparseP");
     }
 
 
@@ -659,7 +659,7 @@ public class Vk {
     public void vkCreateFenceP(VkDevice device, VkFenceCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkFence pFence){
         if(PFN_vkCreateFence_f == null) PFN_vkCreateFence_f = new PFNvkCreateFence(instance);
         int result = PFN_vkCreateFence_f.call(device, pCreateInfo, pAllocator, pFence);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateFenceP");
     }
 
 
@@ -678,7 +678,7 @@ public class Vk {
     public void vkResetFencesP(VkDevice device, int fenceCount, VkFence pFences){
         if(PFN_vkResetFences_f == null) PFN_vkResetFences_f = new PFNvkResetFences(instance);
         int result = PFN_vkResetFences_f.call(device, fenceCount, pFences);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkResetFencesP");
     }
 
 
@@ -697,7 +697,7 @@ public class Vk {
     public void vkWaitForFencesP(VkDevice device, int fenceCount, VkFence pFences, int waitAll, long timeout){
         if(PFN_vkWaitForFences_f == null) PFN_vkWaitForFences_f = new PFNvkWaitForFences(instance);
         int result = PFN_vkWaitForFences_f.call(device, fenceCount, pFences, waitAll, timeout);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkWaitForFencesP");
     }
 
 
@@ -710,7 +710,7 @@ public class Vk {
     public void vkCreateSemaphoreP(VkDevice device, VkSemaphoreCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSemaphore pSemaphore){
         if(PFN_vkCreateSemaphore_f == null) PFN_vkCreateSemaphore_f = new PFNvkCreateSemaphore(instance);
         int result = PFN_vkCreateSemaphore_f.call(device, pCreateInfo, pAllocator, pSemaphore);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateSemaphoreP");
     }
 
 
@@ -729,7 +729,7 @@ public class Vk {
     public void vkCreateEventP(VkDevice device, VkEventCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkEvent pEvent){
         if(PFN_vkCreateEvent_f == null) PFN_vkCreateEvent_f = new PFNvkCreateEvent(instance);
         int result = PFN_vkCreateEvent_f.call(device, pCreateInfo, pAllocator, pEvent);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateEventP");
     }
 
 
@@ -754,7 +754,7 @@ public class Vk {
     public void vkSetEventP(VkDevice device, VkEvent event){
         if(PFN_vkSetEvent_f == null) PFN_vkSetEvent_f = new PFNvkSetEvent(instance);
         int result = PFN_vkSetEvent_f.call(device, event);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkSetEventP");
     }
 
 
@@ -767,7 +767,7 @@ public class Vk {
     public void vkResetEventP(VkDevice device, VkEvent event){
         if(PFN_vkResetEvent_f == null) PFN_vkResetEvent_f = new PFNvkResetEvent(instance);
         int result = PFN_vkResetEvent_f.call(device, event);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkResetEventP");
     }
 
 
@@ -780,7 +780,7 @@ public class Vk {
     public void vkCreateQueryPoolP(VkDevice device, VkQueryPoolCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkQueryPool pQueryPool){
         if(PFN_vkCreateQueryPool_f == null) PFN_vkCreateQueryPool_f = new PFNvkCreateQueryPool(instance);
         int result = PFN_vkCreateQueryPool_f.call(device, pCreateInfo, pAllocator, pQueryPool);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateQueryPoolP");
     }
 
 
@@ -799,7 +799,7 @@ public class Vk {
     public void vkGetQueryPoolResultsP(VkDevice device, VkQueryPool queryPool, int firstQuery, int queryCount, long dataSize, VkObject pData, long stride, int flags){
         if(PFN_vkGetQueryPoolResults_f == null) PFN_vkGetQueryPoolResults_f = new PFNvkGetQueryPoolResults(instance);
         int result = PFN_vkGetQueryPoolResults_f.call(device, queryPool, firstQuery, queryCount, dataSize, pData, stride, flags);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetQueryPoolResultsP");
     }
 
 
@@ -812,7 +812,7 @@ public class Vk {
     public void vkCreateBufferP(VkDevice device, VkBufferCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkBuffer pBuffer){
         if(PFN_vkCreateBuffer_f == null) PFN_vkCreateBuffer_f = new PFNvkCreateBuffer(instance);
         int result = PFN_vkCreateBuffer_f.call(device, pCreateInfo, pAllocator, pBuffer);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateBufferP");
     }
 
 
@@ -831,7 +831,7 @@ public class Vk {
     public void vkCreateBufferViewP(VkDevice device, VkBufferViewCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkBufferView pView){
         if(PFN_vkCreateBufferView_f == null) PFN_vkCreateBufferView_f = new PFNvkCreateBufferView(instance);
         int result = PFN_vkCreateBufferView_f.call(device, pCreateInfo, pAllocator, pView);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateBufferViewP");
     }
 
 
@@ -850,7 +850,7 @@ public class Vk {
     public void vkCreateImageP(VkDevice device, VkImageCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkImage pImage){
         if(PFN_vkCreateImage_f == null) PFN_vkCreateImage_f = new PFNvkCreateImage(instance);
         int result = PFN_vkCreateImage_f.call(device, pCreateInfo, pAllocator, pImage);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateImageP");
     }
 
 
@@ -875,7 +875,7 @@ public class Vk {
     public void vkCreateImageViewP(VkDevice device, VkImageViewCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkImageView pView){
         if(PFN_vkCreateImageView_f == null) PFN_vkCreateImageView_f = new PFNvkCreateImageView(instance);
         int result = PFN_vkCreateImageView_f.call(device, pCreateInfo, pAllocator, pView);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateImageViewP");
     }
 
 
@@ -894,7 +894,7 @@ public class Vk {
     public void vkCreateShaderModuleP(VkDevice device, VkShaderModuleCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkShaderModule pShaderModule){
         if(PFN_vkCreateShaderModule_f == null) PFN_vkCreateShaderModule_f = new PFNvkCreateShaderModule(instance);
         int result = PFN_vkCreateShaderModule_f.call(device, pCreateInfo, pAllocator, pShaderModule);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateShaderModuleP");
     }
 
 
@@ -913,7 +913,7 @@ public class Vk {
     public void vkCreatePipelineCacheP(VkDevice device, VkPipelineCacheCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkPipelineCache pPipelineCache){
         if(PFN_vkCreatePipelineCache_f == null) PFN_vkCreatePipelineCache_f = new PFNvkCreatePipelineCache(instance);
         int result = PFN_vkCreatePipelineCache_f.call(device, pCreateInfo, pAllocator, pPipelineCache);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreatePipelineCacheP");
     }
 
 
@@ -932,7 +932,7 @@ public class Vk {
     public void vkGetPipelineCacheDataP(VkDevice device, VkPipelineCache pipelineCache, VkSize pDataSize, VkObject pData){
         if(PFN_vkGetPipelineCacheData_f == null) PFN_vkGetPipelineCacheData_f = new PFNvkGetPipelineCacheData(instance);
         int result = PFN_vkGetPipelineCacheData_f.call(device, pipelineCache, pDataSize, pData);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPipelineCacheDataP");
     }
 
 
@@ -945,7 +945,7 @@ public class Vk {
     public void vkMergePipelineCachesP(VkDevice device, VkPipelineCache dstCache, int srcCacheCount, VkPipelineCache pSrcCaches){
         if(PFN_vkMergePipelineCaches_f == null) PFN_vkMergePipelineCaches_f = new PFNvkMergePipelineCaches(instance);
         int result = PFN_vkMergePipelineCaches_f.call(device, dstCache, srcCacheCount, pSrcCaches);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkMergePipelineCachesP");
     }
 
 
@@ -958,7 +958,7 @@ public class Vk {
     public void vkCreateGraphicsPipelinesP(VkDevice device, VkPipelineCache pipelineCache, int createInfoCount, VkGraphicsPipelineCreateInfo pCreateInfos, VkAllocationCallbacks pAllocator, VkPipeline pPipelines){
         if(PFN_vkCreateGraphicsPipelines_f == null) PFN_vkCreateGraphicsPipelines_f = new PFNvkCreateGraphicsPipelines(instance);
         int result = PFN_vkCreateGraphicsPipelines_f.call(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, pPipelines);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateGraphicsPipelinesP");
     }
 
 
@@ -971,7 +971,7 @@ public class Vk {
     public void vkCreateComputePipelinesP(VkDevice device, VkPipelineCache pipelineCache, int createInfoCount, VkComputePipelineCreateInfo pCreateInfos, VkAllocationCallbacks pAllocator, VkPipeline pPipelines){
         if(PFN_vkCreateComputePipelines_f == null) PFN_vkCreateComputePipelines_f = new PFNvkCreateComputePipelines(instance);
         int result = PFN_vkCreateComputePipelines_f.call(device, pipelineCache, createInfoCount, pCreateInfos, pAllocator, pPipelines);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateComputePipelinesP");
     }
 
 
@@ -990,7 +990,7 @@ public class Vk {
     public void vkCreatePipelineLayoutP(VkDevice device, VkPipelineLayoutCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkPipelineLayout pPipelineLayout){
         if(PFN_vkCreatePipelineLayout_f == null) PFN_vkCreatePipelineLayout_f = new PFNvkCreatePipelineLayout(instance);
         int result = PFN_vkCreatePipelineLayout_f.call(device, pCreateInfo, pAllocator, pPipelineLayout);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreatePipelineLayoutP");
     }
 
 
@@ -1009,7 +1009,7 @@ public class Vk {
     public void vkCreateSamplerP(VkDevice device, VkSamplerCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSampler pSampler){
         if(PFN_vkCreateSampler_f == null) PFN_vkCreateSampler_f = new PFNvkCreateSampler(instance);
         int result = PFN_vkCreateSampler_f.call(device, pCreateInfo, pAllocator, pSampler);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateSamplerP");
     }
 
 
@@ -1028,7 +1028,7 @@ public class Vk {
     public void vkCreateDescriptorSetLayoutP(VkDevice device, VkDescriptorSetLayoutCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorSetLayout pSetLayout){
         if(PFN_vkCreateDescriptorSetLayout_f == null) PFN_vkCreateDescriptorSetLayout_f = new PFNvkCreateDescriptorSetLayout(instance);
         int result = PFN_vkCreateDescriptorSetLayout_f.call(device, pCreateInfo, pAllocator, pSetLayout);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateDescriptorSetLayoutP");
     }
 
 
@@ -1047,7 +1047,7 @@ public class Vk {
     public void vkCreateDescriptorPoolP(VkDevice device, VkDescriptorPoolCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorPool pDescriptorPool){
         if(PFN_vkCreateDescriptorPool_f == null) PFN_vkCreateDescriptorPool_f = new PFNvkCreateDescriptorPool(instance);
         int result = PFN_vkCreateDescriptorPool_f.call(device, pCreateInfo, pAllocator, pDescriptorPool);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateDescriptorPoolP");
     }
 
 
@@ -1066,7 +1066,7 @@ public class Vk {
     public void vkResetDescriptorPoolP(VkDevice device, VkDescriptorPool descriptorPool, int flags){
         if(PFN_vkResetDescriptorPool_f == null) PFN_vkResetDescriptorPool_f = new PFNvkResetDescriptorPool(instance);
         int result = PFN_vkResetDescriptorPool_f.call(device, descriptorPool, flags);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkResetDescriptorPoolP");
     }
 
 
@@ -1079,7 +1079,7 @@ public class Vk {
     public void vkAllocateDescriptorSetsP(VkDevice device, VkDescriptorSetAllocateInfo pAllocateInfo, VkDescriptorSet pDescriptorSets){
         if(PFN_vkAllocateDescriptorSets_f == null) PFN_vkAllocateDescriptorSets_f = new PFNvkAllocateDescriptorSets(instance);
         int result = PFN_vkAllocateDescriptorSets_f.call(device, pAllocateInfo, pDescriptorSets);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkAllocateDescriptorSetsP");
     }
 
 
@@ -1092,7 +1092,7 @@ public class Vk {
     public void vkFreeDescriptorSetsP(VkDevice device, VkDescriptorPool descriptorPool, int descriptorSetCount, VkDescriptorSet pDescriptorSets){
         if(PFN_vkFreeDescriptorSets_f == null) PFN_vkFreeDescriptorSets_f = new PFNvkFreeDescriptorSets(instance);
         int result = PFN_vkFreeDescriptorSets_f.call(device, descriptorPool, descriptorSetCount, pDescriptorSets);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkFreeDescriptorSetsP");
     }
 
 
@@ -1111,7 +1111,7 @@ public class Vk {
     public void vkCreateFramebufferP(VkDevice device, VkFramebufferCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkFramebuffer pFramebuffer){
         if(PFN_vkCreateFramebuffer_f == null) PFN_vkCreateFramebuffer_f = new PFNvkCreateFramebuffer(instance);
         int result = PFN_vkCreateFramebuffer_f.call(device, pCreateInfo, pAllocator, pFramebuffer);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateFramebufferP");
     }
 
 
@@ -1130,7 +1130,7 @@ public class Vk {
     public void vkCreateRenderPassP(VkDevice device, VkRenderPassCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkRenderPass pRenderPass){
         if(PFN_vkCreateRenderPass_f == null) PFN_vkCreateRenderPass_f = new PFNvkCreateRenderPass(instance);
         int result = PFN_vkCreateRenderPass_f.call(device, pCreateInfo, pAllocator, pRenderPass);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateRenderPassP");
     }
 
 
@@ -1155,7 +1155,7 @@ public class Vk {
     public void vkCreateCommandPoolP(VkDevice device, VkCommandPoolCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkCommandPool pCommandPool){
         if(PFN_vkCreateCommandPool_f == null) PFN_vkCreateCommandPool_f = new PFNvkCreateCommandPool(instance);
         int result = PFN_vkCreateCommandPool_f.call(device, pCreateInfo, pAllocator, pCommandPool);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateCommandPoolP");
     }
 
 
@@ -1174,7 +1174,7 @@ public class Vk {
     public void vkResetCommandPoolP(VkDevice device, VkCommandPool commandPool, int flags){
         if(PFN_vkResetCommandPool_f == null) PFN_vkResetCommandPool_f = new PFNvkResetCommandPool(instance);
         int result = PFN_vkResetCommandPool_f.call(device, commandPool, flags);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkResetCommandPoolP");
     }
 
 
@@ -1187,7 +1187,7 @@ public class Vk {
     public void vkAllocateCommandBuffersP(VkDevice device, VkCommandBufferAllocateInfo pAllocateInfo, VkCommandBuffer pCommandBuffers){
         if(PFN_vkAllocateCommandBuffers_f == null) PFN_vkAllocateCommandBuffers_f = new PFNvkAllocateCommandBuffers(instance);
         int result = PFN_vkAllocateCommandBuffers_f.call(device, pAllocateInfo, pCommandBuffers);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkAllocateCommandBuffersP");
     }
 
 
@@ -1206,7 +1206,7 @@ public class Vk {
     public void vkBeginCommandBufferP(VkCommandBuffer commandBuffer, VkCommandBufferBeginInfo pBeginInfo){
         if(PFN_vkBeginCommandBuffer_f == null) PFN_vkBeginCommandBuffer_f = new PFNvkBeginCommandBuffer(instance);
         int result = PFN_vkBeginCommandBuffer_f.call(commandBuffer, pBeginInfo);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkBeginCommandBufferP");
     }
 
 
@@ -1219,7 +1219,7 @@ public class Vk {
     public void vkEndCommandBufferP(VkCommandBuffer commandBuffer){
         if(PFN_vkEndCommandBuffer_f == null) PFN_vkEndCommandBuffer_f = new PFNvkEndCommandBuffer(instance);
         int result = PFN_vkEndCommandBuffer_f.call(commandBuffer);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkEndCommandBufferP");
     }
 
 
@@ -1232,7 +1232,7 @@ public class Vk {
     public void vkResetCommandBufferP(VkCommandBuffer commandBuffer, int flags){
         if(PFN_vkResetCommandBuffer_f == null) PFN_vkResetCommandBuffer_f = new PFNvkResetCommandBuffer(instance);
         int result = PFN_vkResetCommandBuffer_f.call(commandBuffer, flags);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkResetCommandBufferP");
     }
 
 
@@ -1509,7 +1509,7 @@ public class Vk {
     public void vkEnumerateInstanceVersionP(VkUInt32 pApiVersion){
         if(PFN_vkEnumerateInstanceVersion_f == null) PFN_vkEnumerateInstanceVersion_f = new PFNvkEnumerateInstanceVersion(instance);
         int result = PFN_vkEnumerateInstanceVersion_f.call(pApiVersion);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkEnumerateInstanceVersionP");
     }
 
 
@@ -1522,7 +1522,7 @@ public class Vk {
     public void vkBindBufferMemory2P(VkDevice device, int bindInfoCount, VkBindBufferMemoryInfo pBindInfos){
         if(PFN_vkBindBufferMemory2_f == null) PFN_vkBindBufferMemory2_f = new PFNvkBindBufferMemory2(instance);
         int result = PFN_vkBindBufferMemory2_f.call(device, bindInfoCount, pBindInfos);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkBindBufferMemory2P");
     }
 
 
@@ -1535,7 +1535,7 @@ public class Vk {
     public void vkBindImageMemory2P(VkDevice device, int bindInfoCount, VkBindImageMemoryInfo pBindInfos){
         if(PFN_vkBindImageMemory2_f == null) PFN_vkBindImageMemory2_f = new PFNvkBindImageMemory2(instance);
         int result = PFN_vkBindImageMemory2_f.call(device, bindInfoCount, pBindInfos);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkBindImageMemory2P");
     }
 
 
@@ -1566,7 +1566,7 @@ public class Vk {
     public void vkEnumeratePhysicalDeviceGroupsP(VkInstance instance, VkUInt32 pPhysicalDeviceGroupCount, VkPhysicalDeviceGroupProperties pPhysicalDeviceGroupProperties){
         if(PFN_vkEnumeratePhysicalDeviceGroups_f == null) PFN_vkEnumeratePhysicalDeviceGroups_f = new PFNvkEnumeratePhysicalDeviceGroups(instance);
         int result = PFN_vkEnumeratePhysicalDeviceGroups_f.call(instance, pPhysicalDeviceGroupCount, pPhysicalDeviceGroupProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkEnumeratePhysicalDeviceGroupsP");
     }
 
 
@@ -1615,7 +1615,7 @@ public class Vk {
     public void vkGetPhysicalDeviceImageFormatProperties2P(VkPhysicalDevice physicalDevice, VkPhysicalDeviceImageFormatInfo2 pImageFormatInfo, VkImageFormatProperties2 pImageFormatProperties){
         if(PFN_vkGetPhysicalDeviceImageFormatProperties2_f == null) PFN_vkGetPhysicalDeviceImageFormatProperties2_f = new PFNvkGetPhysicalDeviceImageFormatProperties2(instance);
         int result = PFN_vkGetPhysicalDeviceImageFormatProperties2_f.call(physicalDevice, pImageFormatInfo, pImageFormatProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceImageFormatProperties2P");
     }
 
 
@@ -1658,7 +1658,7 @@ public class Vk {
     public void vkCreateSamplerYcbcrConversionP(VkDevice device, VkSamplerYcbcrConversionCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSamplerYcbcrConversion pYcbcrConversion){
         if(PFN_vkCreateSamplerYcbcrConversion_f == null) PFN_vkCreateSamplerYcbcrConversion_f = new PFNvkCreateSamplerYcbcrConversion(instance);
         int result = PFN_vkCreateSamplerYcbcrConversion_f.call(device, pCreateInfo, pAllocator, pYcbcrConversion);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateSamplerYcbcrConversionP");
     }
 
 
@@ -1677,7 +1677,7 @@ public class Vk {
     public void vkCreateDescriptorUpdateTemplateP(VkDevice device, VkDescriptorUpdateTemplateCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorUpdateTemplate pDescriptorUpdateTemplate){
         if(PFN_vkCreateDescriptorUpdateTemplate_f == null) PFN_vkCreateDescriptorUpdateTemplate_f = new PFNvkCreateDescriptorUpdateTemplate(instance);
         int result = PFN_vkCreateDescriptorUpdateTemplate_f.call(device, pCreateInfo, pAllocator, pDescriptorUpdateTemplate);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateDescriptorUpdateTemplateP");
     }
 
 
@@ -1732,7 +1732,7 @@ public class Vk {
     public void vkGetPhysicalDeviceSurfaceSupportKHRP(VkPhysicalDevice physicalDevice, int queueFamilyIndex, VkSurfaceKHR surface, VkBool32 pSupported){
         if(PFN_vkGetPhysicalDeviceSurfaceSupportKHR_f == null) PFN_vkGetPhysicalDeviceSurfaceSupportKHR_f = new PFNvkGetPhysicalDeviceSurfaceSupportKHR(instance);
         int result = PFN_vkGetPhysicalDeviceSurfaceSupportKHR_f.call(physicalDevice, queueFamilyIndex, surface, pSupported);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceSurfaceSupportKHRP");
     }
 
 
@@ -1745,7 +1745,7 @@ public class Vk {
     public void vkGetPhysicalDeviceSurfaceCapabilitiesKHRP(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkSurfaceCapabilitiesKHR pSurfaceCapabilities){
         if(PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR_f == null) PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR_f = new PFNvkGetPhysicalDeviceSurfaceCapabilitiesKHR(instance);
         int result = PFN_vkGetPhysicalDeviceSurfaceCapabilitiesKHR_f.call(physicalDevice, surface, pSurfaceCapabilities);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceSurfaceCapabilitiesKHRP");
     }
 
 
@@ -1758,7 +1758,7 @@ public class Vk {
     public void vkGetPhysicalDeviceSurfaceFormatsKHRP(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkUInt32 pSurfaceFormatCount, VkSurfaceFormatKHR pSurfaceFormats){
         if(PFN_vkGetPhysicalDeviceSurfaceFormatsKHR_f == null) PFN_vkGetPhysicalDeviceSurfaceFormatsKHR_f = new PFNvkGetPhysicalDeviceSurfaceFormatsKHR(instance);
         int result = PFN_vkGetPhysicalDeviceSurfaceFormatsKHR_f.call(physicalDevice, surface, pSurfaceFormatCount, pSurfaceFormats);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceSurfaceFormatsKHRP");
     }
 
 
@@ -1771,7 +1771,7 @@ public class Vk {
     public void vkGetPhysicalDeviceSurfacePresentModesKHRP(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkUInt32 pPresentModeCount, VkPresentModeKHR pPresentModes){
         if(PFN_vkGetPhysicalDeviceSurfacePresentModesKHR_f == null) PFN_vkGetPhysicalDeviceSurfacePresentModesKHR_f = new PFNvkGetPhysicalDeviceSurfacePresentModesKHR(instance);
         int result = PFN_vkGetPhysicalDeviceSurfacePresentModesKHR_f.call(physicalDevice, surface, pPresentModeCount, pPresentModes);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceSurfacePresentModesKHRP");
     }
 
 
@@ -1784,7 +1784,7 @@ public class Vk {
     public void vkCreateSwapchainKHRP(VkDevice device, VkSwapchainCreateInfoKHR pCreateInfo, VkAllocationCallbacks pAllocator, VkSwapchainKHR pSwapchain){
         if(PFN_vkCreateSwapchainKHR_f == null) PFN_vkCreateSwapchainKHR_f = new PFNvkCreateSwapchainKHR(instance);
         int result = PFN_vkCreateSwapchainKHR_f.call(device, pCreateInfo, pAllocator, pSwapchain);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateSwapchainKHRP");
     }
 
 
@@ -1803,7 +1803,7 @@ public class Vk {
     public void vkGetSwapchainImagesKHRP(VkDevice device, VkSwapchainKHR swapchain, VkUInt32 pSwapchainImageCount, VkImage pSwapchainImages){
         if(PFN_vkGetSwapchainImagesKHR_f == null) PFN_vkGetSwapchainImagesKHR_f = new PFNvkGetSwapchainImagesKHR(instance);
         int result = PFN_vkGetSwapchainImagesKHR_f.call(device, swapchain, pSwapchainImageCount, pSwapchainImages);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetSwapchainImagesKHRP");
     }
 
 
@@ -1816,7 +1816,7 @@ public class Vk {
     public void vkAcquireNextImageKHRP(VkDevice device, VkSwapchainKHR swapchain, long timeout, VkSemaphore semaphore, VkFence fence, VkUInt32 pImageIndex){
         if(PFN_vkAcquireNextImageKHR_f == null) PFN_vkAcquireNextImageKHR_f = new PFNvkAcquireNextImageKHR(instance);
         int result = PFN_vkAcquireNextImageKHR_f.call(device, swapchain, timeout, semaphore, fence, pImageIndex);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkAcquireNextImageKHRP");
     }
 
 
@@ -1829,7 +1829,7 @@ public class Vk {
     public void vkQueuePresentKHRP(VkQueue queue, VkPresentInfoKHR pPresentInfo){
         if(PFN_vkQueuePresentKHR_f == null) PFN_vkQueuePresentKHR_f = new PFNvkQueuePresentKHR(instance);
         int result = PFN_vkQueuePresentKHR_f.call(queue, pPresentInfo);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkQueuePresentKHRP");
     }
 
 
@@ -1842,7 +1842,7 @@ public class Vk {
     public void vkGetDeviceGroupPresentCapabilitiesKHRP(VkDevice device, VkDeviceGroupPresentCapabilitiesKHR pDeviceGroupPresentCapabilities){
         if(PFN_vkGetDeviceGroupPresentCapabilitiesKHR_f == null) PFN_vkGetDeviceGroupPresentCapabilitiesKHR_f = new PFNvkGetDeviceGroupPresentCapabilitiesKHR(instance);
         int result = PFN_vkGetDeviceGroupPresentCapabilitiesKHR_f.call(device, pDeviceGroupPresentCapabilities);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetDeviceGroupPresentCapabilitiesKHRP");
     }
 
 
@@ -1855,7 +1855,7 @@ public class Vk {
     public void vkGetDeviceGroupSurfacePresentModesKHRP(VkDevice device, VkSurfaceKHR surface, VkDeviceGroupPresentModeFlagsKHR pModes){
         if(PFN_vkGetDeviceGroupSurfacePresentModesKHR_f == null) PFN_vkGetDeviceGroupSurfacePresentModesKHR_f = new PFNvkGetDeviceGroupSurfacePresentModesKHR(instance);
         int result = PFN_vkGetDeviceGroupSurfacePresentModesKHR_f.call(device, surface, pModes);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetDeviceGroupSurfacePresentModesKHRP");
     }
 
 
@@ -1868,7 +1868,7 @@ public class Vk {
     public void vkGetPhysicalDevicePresentRectanglesKHRP(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkUInt32 pRectCount, VkRect2D pRects){
         if(PFN_vkGetPhysicalDevicePresentRectanglesKHR_f == null) PFN_vkGetPhysicalDevicePresentRectanglesKHR_f = new PFNvkGetPhysicalDevicePresentRectanglesKHR(instance);
         int result = PFN_vkGetPhysicalDevicePresentRectanglesKHR_f.call(physicalDevice, surface, pRectCount, pRects);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDevicePresentRectanglesKHRP");
     }
 
 
@@ -1881,7 +1881,7 @@ public class Vk {
     public void vkAcquireNextImage2KHRP(VkDevice device, VkAcquireNextImageInfoKHR pAcquireInfo, VkUInt32 pImageIndex){
         if(PFN_vkAcquireNextImage2KHR_f == null) PFN_vkAcquireNextImage2KHR_f = new PFNvkAcquireNextImage2KHR(instance);
         int result = PFN_vkAcquireNextImage2KHR_f.call(device, pAcquireInfo, pImageIndex);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkAcquireNextImage2KHRP");
     }
 
 
@@ -1894,7 +1894,7 @@ public class Vk {
     public void vkGetPhysicalDeviceDisplayPropertiesKHRP(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkDisplayPropertiesKHR pProperties){
         if(PFN_vkGetPhysicalDeviceDisplayPropertiesKHR_f == null) PFN_vkGetPhysicalDeviceDisplayPropertiesKHR_f = new PFNvkGetPhysicalDeviceDisplayPropertiesKHR(instance);
         int result = PFN_vkGetPhysicalDeviceDisplayPropertiesKHR_f.call(physicalDevice, pPropertyCount, pProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceDisplayPropertiesKHRP");
     }
 
 
@@ -1907,7 +1907,7 @@ public class Vk {
     public void vkGetPhysicalDeviceDisplayPlanePropertiesKHRP(VkPhysicalDevice physicalDevice, VkUInt32 pPropertyCount, VkDisplayPlanePropertiesKHR pProperties){
         if(PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR_f == null) PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR_f = new PFNvkGetPhysicalDeviceDisplayPlanePropertiesKHR(instance);
         int result = PFN_vkGetPhysicalDeviceDisplayPlanePropertiesKHR_f.call(physicalDevice, pPropertyCount, pProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceDisplayPlanePropertiesKHRP");
     }
 
 
@@ -1920,7 +1920,7 @@ public class Vk {
     public void vkGetDisplayPlaneSupportedDisplaysKHRP(VkPhysicalDevice physicalDevice, int planeIndex, VkUInt32 pDisplayCount, VkDisplayKHR pDisplays){
         if(PFN_vkGetDisplayPlaneSupportedDisplaysKHR_f == null) PFN_vkGetDisplayPlaneSupportedDisplaysKHR_f = new PFNvkGetDisplayPlaneSupportedDisplaysKHR(instance);
         int result = PFN_vkGetDisplayPlaneSupportedDisplaysKHR_f.call(physicalDevice, planeIndex, pDisplayCount, pDisplays);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetDisplayPlaneSupportedDisplaysKHRP");
     }
 
 
@@ -1933,7 +1933,7 @@ public class Vk {
     public void vkGetDisplayModePropertiesKHRP(VkPhysicalDevice physicalDevice, VkDisplayKHR display, VkUInt32 pPropertyCount, VkDisplayModePropertiesKHR pProperties){
         if(PFN_vkGetDisplayModePropertiesKHR_f == null) PFN_vkGetDisplayModePropertiesKHR_f = new PFNvkGetDisplayModePropertiesKHR(instance);
         int result = PFN_vkGetDisplayModePropertiesKHR_f.call(physicalDevice, display, pPropertyCount, pProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetDisplayModePropertiesKHRP");
     }
 
 
@@ -1946,7 +1946,7 @@ public class Vk {
     public void vkCreateDisplayModeKHRP(VkPhysicalDevice physicalDevice, VkDisplayKHR display, VkDisplayModeCreateInfoKHR pCreateInfo, VkAllocationCallbacks pAllocator, VkDisplayModeKHR pMode){
         if(PFN_vkCreateDisplayModeKHR_f == null) PFN_vkCreateDisplayModeKHR_f = new PFNvkCreateDisplayModeKHR(instance);
         int result = PFN_vkCreateDisplayModeKHR_f.call(physicalDevice, display, pCreateInfo, pAllocator, pMode);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateDisplayModeKHRP");
     }
 
 
@@ -1959,7 +1959,7 @@ public class Vk {
     public void vkGetDisplayPlaneCapabilitiesKHRP(VkPhysicalDevice physicalDevice, VkDisplayModeKHR mode, int planeIndex, VkDisplayPlaneCapabilitiesKHR pCapabilities){
         if(PFN_vkGetDisplayPlaneCapabilitiesKHR_f == null) PFN_vkGetDisplayPlaneCapabilitiesKHR_f = new PFNvkGetDisplayPlaneCapabilitiesKHR(instance);
         int result = PFN_vkGetDisplayPlaneCapabilitiesKHR_f.call(physicalDevice, mode, planeIndex, pCapabilities);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetDisplayPlaneCapabilitiesKHRP");
     }
 
 
@@ -1972,7 +1972,7 @@ public class Vk {
     public void vkCreateDisplayPlaneSurfaceKHRP(VkInstance instance, VkDisplaySurfaceCreateInfoKHR pCreateInfo, VkAllocationCallbacks pAllocator, VkSurfaceKHR pSurface){
         if(PFN_vkCreateDisplayPlaneSurfaceKHR_f == null) PFN_vkCreateDisplayPlaneSurfaceKHR_f = new PFNvkCreateDisplayPlaneSurfaceKHR(instance);
         int result = PFN_vkCreateDisplayPlaneSurfaceKHR_f.call(instance, pCreateInfo, pAllocator, pSurface);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateDisplayPlaneSurfaceKHRP");
     }
 
 
@@ -1985,7 +1985,7 @@ public class Vk {
     public void vkCreateSharedSwapchainsKHRP(VkDevice device, int swapchainCount, VkSwapchainCreateInfoKHR pCreateInfos, VkAllocationCallbacks pAllocator, VkSwapchainKHR pSwapchains){
         if(PFN_vkCreateSharedSwapchainsKHR_f == null) PFN_vkCreateSharedSwapchainsKHR_f = new PFNvkCreateSharedSwapchainsKHR(instance);
         int result = PFN_vkCreateSharedSwapchainsKHR_f.call(device, swapchainCount, pCreateInfos, pAllocator, pSwapchains);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateSharedSwapchainsKHRP");
     }
 
 
@@ -2016,7 +2016,7 @@ public class Vk {
     public void vkGetPhysicalDeviceImageFormatProperties2KHRP(VkPhysicalDevice physicalDevice, VkPhysicalDeviceImageFormatInfo2 pImageFormatInfo, VkImageFormatProperties2 pImageFormatProperties){
         if(PFN_vkGetPhysicalDeviceImageFormatProperties2KHR_f == null) PFN_vkGetPhysicalDeviceImageFormatProperties2KHR_f = new PFNvkGetPhysicalDeviceImageFormatProperties2KHR(instance);
         int result = PFN_vkGetPhysicalDeviceImageFormatProperties2KHR_f.call(physicalDevice, pImageFormatInfo, pImageFormatProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceImageFormatProperties2KHRP");
     }
 
 
@@ -2071,7 +2071,7 @@ public class Vk {
     public void vkEnumeratePhysicalDeviceGroupsKHRP(VkInstance instance, VkUInt32 pPhysicalDeviceGroupCount, VkPhysicalDeviceGroupProperties pPhysicalDeviceGroupProperties){
         if(PFN_vkEnumeratePhysicalDeviceGroupsKHR_f == null) PFN_vkEnumeratePhysicalDeviceGroupsKHR_f = new PFNvkEnumeratePhysicalDeviceGroupsKHR(instance);
         int result = PFN_vkEnumeratePhysicalDeviceGroupsKHR_f.call(instance, pPhysicalDeviceGroupCount, pPhysicalDeviceGroupProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkEnumeratePhysicalDeviceGroupsKHRP");
     }
 
 
@@ -2090,7 +2090,7 @@ public class Vk {
     public void vkGetMemoryFdKHRP(VkDevice device, VkMemoryGetFdInfoKHR pGetFdInfo, VkInt pFd){
         if(PFN_vkGetMemoryFdKHR_f == null) PFN_vkGetMemoryFdKHR_f = new PFNvkGetMemoryFdKHR(instance);
         int result = PFN_vkGetMemoryFdKHR_f.call(device, pGetFdInfo, pFd);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetMemoryFdKHRP");
     }
 
 
@@ -2103,7 +2103,7 @@ public class Vk {
     public void vkGetMemoryFdPropertiesKHRP(VkDevice device, int handleType, int fd, VkMemoryFdPropertiesKHR pMemoryFdProperties){
         if(PFN_vkGetMemoryFdPropertiesKHR_f == null) PFN_vkGetMemoryFdPropertiesKHR_f = new PFNvkGetMemoryFdPropertiesKHR(instance);
         int result = PFN_vkGetMemoryFdPropertiesKHR_f.call(device, handleType, fd, pMemoryFdProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetMemoryFdPropertiesKHRP");
     }
 
 
@@ -2122,7 +2122,7 @@ public class Vk {
     public void vkImportSemaphoreFdKHRP(VkDevice device, VkImportSemaphoreFdInfoKHR pImportSemaphoreFdInfo){
         if(PFN_vkImportSemaphoreFdKHR_f == null) PFN_vkImportSemaphoreFdKHR_f = new PFNvkImportSemaphoreFdKHR(instance);
         int result = PFN_vkImportSemaphoreFdKHR_f.call(device, pImportSemaphoreFdInfo);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkImportSemaphoreFdKHRP");
     }
 
 
@@ -2135,7 +2135,7 @@ public class Vk {
     public void vkGetSemaphoreFdKHRP(VkDevice device, VkSemaphoreGetFdInfoKHR pGetFdInfo, VkInt pFd){
         if(PFN_vkGetSemaphoreFdKHR_f == null) PFN_vkGetSemaphoreFdKHR_f = new PFNvkGetSemaphoreFdKHR(instance);
         int result = PFN_vkGetSemaphoreFdKHR_f.call(device, pGetFdInfo, pFd);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetSemaphoreFdKHRP");
     }
 
 
@@ -2160,7 +2160,7 @@ public class Vk {
     public void vkCreateDescriptorUpdateTemplateKHRP(VkDevice device, VkDescriptorUpdateTemplateCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkDescriptorUpdateTemplate pDescriptorUpdateTemplate){
         if(PFN_vkCreateDescriptorUpdateTemplateKHR_f == null) PFN_vkCreateDescriptorUpdateTemplateKHR_f = new PFNvkCreateDescriptorUpdateTemplateKHR(instance);
         int result = PFN_vkCreateDescriptorUpdateTemplateKHR_f.call(device, pCreateInfo, pAllocator, pDescriptorUpdateTemplate);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateDescriptorUpdateTemplateKHRP");
     }
 
 
@@ -2197,7 +2197,7 @@ public class Vk {
     public void vkImportFenceFdKHRP(VkDevice device, VkImportFenceFdInfoKHR pImportFenceFdInfo){
         if(PFN_vkImportFenceFdKHR_f == null) PFN_vkImportFenceFdKHR_f = new PFNvkImportFenceFdKHR(instance);
         int result = PFN_vkImportFenceFdKHR_f.call(device, pImportFenceFdInfo);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkImportFenceFdKHRP");
     }
 
 
@@ -2210,7 +2210,7 @@ public class Vk {
     public void vkGetFenceFdKHRP(VkDevice device, VkFenceGetFdInfoKHR pGetFdInfo, VkInt pFd){
         if(PFN_vkGetFenceFdKHR_f == null) PFN_vkGetFenceFdKHR_f = new PFNvkGetFenceFdKHR(instance);
         int result = PFN_vkGetFenceFdKHR_f.call(device, pGetFdInfo, pFd);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetFenceFdKHRP");
     }
 
 
@@ -2223,7 +2223,7 @@ public class Vk {
     public void vkGetPhysicalDeviceSurfaceCapabilities2KHRP(VkPhysicalDevice physicalDevice, VkPhysicalDeviceSurfaceInfo2KHR pSurfaceInfo, VkSurfaceCapabilities2KHR pSurfaceCapabilities){
         if(PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR_f == null) PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR_f = new PFNvkGetPhysicalDeviceSurfaceCapabilities2KHR(instance);
         int result = PFN_vkGetPhysicalDeviceSurfaceCapabilities2KHR_f.call(physicalDevice, pSurfaceInfo, pSurfaceCapabilities);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceSurfaceCapabilities2KHRP");
     }
 
 
@@ -2236,7 +2236,7 @@ public class Vk {
     public void vkGetPhysicalDeviceSurfaceFormats2KHRP(VkPhysicalDevice physicalDevice, VkPhysicalDeviceSurfaceInfo2KHR pSurfaceInfo, VkUInt32 pSurfaceFormatCount, VkSurfaceFormat2KHR pSurfaceFormats){
         if(PFN_vkGetPhysicalDeviceSurfaceFormats2KHR_f == null) PFN_vkGetPhysicalDeviceSurfaceFormats2KHR_f = new PFNvkGetPhysicalDeviceSurfaceFormats2KHR(instance);
         int result = PFN_vkGetPhysicalDeviceSurfaceFormats2KHR_f.call(physicalDevice, pSurfaceInfo, pSurfaceFormatCount, pSurfaceFormats);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceSurfaceFormats2KHRP");
     }
 
 
@@ -2267,7 +2267,7 @@ public class Vk {
     public void vkCreateSamplerYcbcrConversionKHRP(VkDevice device, VkSamplerYcbcrConversionCreateInfo pCreateInfo, VkAllocationCallbacks pAllocator, VkSamplerYcbcrConversion pYcbcrConversion){
         if(PFN_vkCreateSamplerYcbcrConversionKHR_f == null) PFN_vkCreateSamplerYcbcrConversionKHR_f = new PFNvkCreateSamplerYcbcrConversionKHR(instance);
         int result = PFN_vkCreateSamplerYcbcrConversionKHR_f.call(device, pCreateInfo, pAllocator, pYcbcrConversion);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateSamplerYcbcrConversionKHRP");
     }
 
 
@@ -2286,7 +2286,7 @@ public class Vk {
     public void vkBindBufferMemory2KHRP(VkDevice device, int bindInfoCount, VkBindBufferMemoryInfo pBindInfos){
         if(PFN_vkBindBufferMemory2KHR_f == null) PFN_vkBindBufferMemory2KHR_f = new PFNvkBindBufferMemory2KHR(instance);
         int result = PFN_vkBindBufferMemory2KHR_f.call(device, bindInfoCount, pBindInfos);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkBindBufferMemory2KHRP");
     }
 
 
@@ -2299,7 +2299,7 @@ public class Vk {
     public void vkBindImageMemory2KHRP(VkDevice device, int bindInfoCount, VkBindImageMemoryInfo pBindInfos){
         if(PFN_vkBindImageMemory2KHR_f == null) PFN_vkBindImageMemory2KHR_f = new PFNvkBindImageMemory2KHR(instance);
         int result = PFN_vkBindImageMemory2KHR_f.call(device, bindInfoCount, pBindInfos);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkBindImageMemory2KHRP");
     }
 
 
@@ -2318,7 +2318,7 @@ public class Vk {
     public void vkCreateDebugReportCallbackEXTP(VkInstance instance, VkDebugReportCallbackCreateInfoEXT pCreateInfo, VkAllocationCallbacks pAllocator, VkDebugReportCallbackEXT pCallback){
         if(PFN_vkCreateDebugReportCallbackEXT_f == null) PFN_vkCreateDebugReportCallbackEXT_f = new PFNvkCreateDebugReportCallbackEXT(instance);
         int result = PFN_vkCreateDebugReportCallbackEXT_f.call(instance, pCreateInfo, pAllocator, pCallback);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateDebugReportCallbackEXTP");
     }
 
 
@@ -2343,7 +2343,7 @@ public class Vk {
     public void vkDebugMarkerSetObjectTagEXTP(VkDevice device, VkDebugMarkerObjectTagInfoEXT pTagInfo){
         if(PFN_vkDebugMarkerSetObjectTagEXT_f == null) PFN_vkDebugMarkerSetObjectTagEXT_f = new PFNvkDebugMarkerSetObjectTagEXT(instance);
         int result = PFN_vkDebugMarkerSetObjectTagEXT_f.call(device, pTagInfo);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkDebugMarkerSetObjectTagEXTP");
     }
 
 
@@ -2356,7 +2356,7 @@ public class Vk {
     public void vkDebugMarkerSetObjectNameEXTP(VkDevice device, VkDebugMarkerObjectNameInfoEXT pNameInfo){
         if(PFN_vkDebugMarkerSetObjectNameEXT_f == null) PFN_vkDebugMarkerSetObjectNameEXT_f = new PFNvkDebugMarkerSetObjectNameEXT(instance);
         int result = PFN_vkDebugMarkerSetObjectNameEXT_f.call(device, pNameInfo);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkDebugMarkerSetObjectNameEXTP");
     }
 
 
@@ -2399,7 +2399,7 @@ public class Vk {
     public void vkGetShaderInfoAMDP(VkDevice device, VkPipeline pipeline, int shaderStage, int infoType, VkSize pInfoSize, VkObject pInfo){
         if(PFN_vkGetShaderInfoAMD_f == null) PFN_vkGetShaderInfoAMD_f = new PFNvkGetShaderInfoAMD(instance);
         int result = PFN_vkGetShaderInfoAMD_f.call(device, pipeline, shaderStage, infoType, pInfoSize, pInfo);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetShaderInfoAMDP");
     }
 
 
@@ -2412,7 +2412,7 @@ public class Vk {
     public void vkGetPhysicalDeviceExternalImageFormatPropertiesNVP(VkPhysicalDevice physicalDevice, int format, int type, int tiling, int usage, int flags, int externalHandleType, VkExternalImageFormatPropertiesNV pExternalImageFormatProperties){
         if(PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV_f == null) PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV_f = new PFNvkGetPhysicalDeviceExternalImageFormatPropertiesNV(instance);
         int result = PFN_vkGetPhysicalDeviceExternalImageFormatPropertiesNV_f.call(physicalDevice, format, type, tiling, usage, flags, externalHandleType, pExternalImageFormatProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceExternalImageFormatPropertiesNVP");
     }
 
 
@@ -2437,7 +2437,7 @@ public class Vk {
     public void vkCreateIndirectCommandsLayoutNVXP(VkDevice device, VkIndirectCommandsLayoutCreateInfoNVX pCreateInfo, VkAllocationCallbacks pAllocator, VkIndirectCommandsLayoutNVX pIndirectCommandsLayout){
         if(PFN_vkCreateIndirectCommandsLayoutNVX_f == null) PFN_vkCreateIndirectCommandsLayoutNVX_f = new PFNvkCreateIndirectCommandsLayoutNVX(instance);
         int result = PFN_vkCreateIndirectCommandsLayoutNVX_f.call(device, pCreateInfo, pAllocator, pIndirectCommandsLayout);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateIndirectCommandsLayoutNVXP");
     }
 
 
@@ -2456,7 +2456,7 @@ public class Vk {
     public void vkCreateObjectTableNVXP(VkDevice device, VkObjectTableCreateInfoNVX pCreateInfo, VkAllocationCallbacks pAllocator, VkObjectTableNVX pObjectTable){
         if(PFN_vkCreateObjectTableNVX_f == null) PFN_vkCreateObjectTableNVX_f = new PFNvkCreateObjectTableNVX(instance);
         int result = PFN_vkCreateObjectTableNVX_f.call(device, pCreateInfo, pAllocator, pObjectTable);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateObjectTableNVXP");
     }
 
 
@@ -2475,7 +2475,7 @@ public class Vk {
     public void vkRegisterObjectsNVXP(VkDevice device, VkObjectTableNVX objectTable, int objectCount, VkObject ppObjectTableEntries, VkUInt32 pObjectIndices){
         if(PFN_vkRegisterObjectsNVX_f == null) PFN_vkRegisterObjectsNVX_f = new PFNvkRegisterObjectsNVX(instance);
         int result = PFN_vkRegisterObjectsNVX_f.call(device, objectTable, objectCount, ppObjectTableEntries, pObjectIndices);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkRegisterObjectsNVXP");
     }
 
 
@@ -2488,7 +2488,7 @@ public class Vk {
     public void vkUnregisterObjectsNVXP(VkDevice device, VkObjectTableNVX objectTable, int objectCount, VkObjectEntryTypeNVX pObjectEntryTypes, VkUInt32 pObjectIndices){
         if(PFN_vkUnregisterObjectsNVX_f == null) PFN_vkUnregisterObjectsNVX_f = new PFNvkUnregisterObjectsNVX(instance);
         int result = PFN_vkUnregisterObjectsNVX_f.call(device, objectTable, objectCount, pObjectEntryTypes, pObjectIndices);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkUnregisterObjectsNVXP");
     }
 
 
@@ -2513,7 +2513,7 @@ public class Vk {
     public void vkReleaseDisplayEXTP(VkPhysicalDevice physicalDevice, VkDisplayKHR display){
         if(PFN_vkReleaseDisplayEXT_f == null) PFN_vkReleaseDisplayEXT_f = new PFNvkReleaseDisplayEXT(instance);
         int result = PFN_vkReleaseDisplayEXT_f.call(physicalDevice, display);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkReleaseDisplayEXTP");
     }
 
 
@@ -2526,7 +2526,7 @@ public class Vk {
     public void vkGetPhysicalDeviceSurfaceCapabilities2EXTP(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkSurfaceCapabilities2EXT pSurfaceCapabilities){
         if(PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT_f == null) PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT_f = new PFNvkGetPhysicalDeviceSurfaceCapabilities2EXT(instance);
         int result = PFN_vkGetPhysicalDeviceSurfaceCapabilities2EXT_f.call(physicalDevice, surface, pSurfaceCapabilities);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPhysicalDeviceSurfaceCapabilities2EXTP");
     }
 
 
@@ -2539,7 +2539,7 @@ public class Vk {
     public void vkDisplayPowerControlEXTP(VkDevice device, VkDisplayKHR display, VkDisplayPowerInfoEXT pDisplayPowerInfo){
         if(PFN_vkDisplayPowerControlEXT_f == null) PFN_vkDisplayPowerControlEXT_f = new PFNvkDisplayPowerControlEXT(instance);
         int result = PFN_vkDisplayPowerControlEXT_f.call(device, display, pDisplayPowerInfo);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkDisplayPowerControlEXTP");
     }
 
 
@@ -2552,7 +2552,7 @@ public class Vk {
     public void vkRegisterDeviceEventEXTP(VkDevice device, VkDeviceEventInfoEXT pDeviceEventInfo, VkAllocationCallbacks pAllocator, VkFence pFence){
         if(PFN_vkRegisterDeviceEventEXT_f == null) PFN_vkRegisterDeviceEventEXT_f = new PFNvkRegisterDeviceEventEXT(instance);
         int result = PFN_vkRegisterDeviceEventEXT_f.call(device, pDeviceEventInfo, pAllocator, pFence);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkRegisterDeviceEventEXTP");
     }
 
 
@@ -2565,7 +2565,7 @@ public class Vk {
     public void vkRegisterDisplayEventEXTP(VkDevice device, VkDisplayKHR display, VkDisplayEventInfoEXT pDisplayEventInfo, VkAllocationCallbacks pAllocator, VkFence pFence){
         if(PFN_vkRegisterDisplayEventEXT_f == null) PFN_vkRegisterDisplayEventEXT_f = new PFNvkRegisterDisplayEventEXT(instance);
         int result = PFN_vkRegisterDisplayEventEXT_f.call(device, display, pDisplayEventInfo, pAllocator, pFence);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkRegisterDisplayEventEXTP");
     }
 
 
@@ -2578,7 +2578,7 @@ public class Vk {
     public void vkGetSwapchainCounterEXTP(VkDevice device, VkSwapchainKHR swapchain, int counter, VkUInt64 pCounterValue){
         if(PFN_vkGetSwapchainCounterEXT_f == null) PFN_vkGetSwapchainCounterEXT_f = new PFNvkGetSwapchainCounterEXT(instance);
         int result = PFN_vkGetSwapchainCounterEXT_f.call(device, swapchain, counter, pCounterValue);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetSwapchainCounterEXTP");
     }
 
 
@@ -2591,7 +2591,7 @@ public class Vk {
     public void vkGetRefreshCycleDurationGOOGLEP(VkDevice device, VkSwapchainKHR swapchain, VkRefreshCycleDurationGOOGLE pDisplayTimingProperties){
         if(PFN_vkGetRefreshCycleDurationGOOGLE_f == null) PFN_vkGetRefreshCycleDurationGOOGLE_f = new PFNvkGetRefreshCycleDurationGOOGLE(instance);
         int result = PFN_vkGetRefreshCycleDurationGOOGLE_f.call(device, swapchain, pDisplayTimingProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetRefreshCycleDurationGOOGLEP");
     }
 
 
@@ -2604,7 +2604,7 @@ public class Vk {
     public void vkGetPastPresentationTimingGOOGLEP(VkDevice device, VkSwapchainKHR swapchain, VkUInt32 pPresentationTimingCount, VkPastPresentationTimingGOOGLE pPresentationTimings){
         if(PFN_vkGetPastPresentationTimingGOOGLE_f == null) PFN_vkGetPastPresentationTimingGOOGLE_f = new PFNvkGetPastPresentationTimingGOOGLE(instance);
         int result = PFN_vkGetPastPresentationTimingGOOGLE_f.call(device, swapchain, pPresentationTimingCount, pPresentationTimings);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetPastPresentationTimingGOOGLEP");
     }
 
 
@@ -2629,7 +2629,7 @@ public class Vk {
     public void vkSetDebugUtilsObjectNameEXTP(VkDevice device, VkDebugUtilsObjectNameInfoEXT pNameInfo){
         if(PFN_vkSetDebugUtilsObjectNameEXT_f == null) PFN_vkSetDebugUtilsObjectNameEXT_f = new PFNvkSetDebugUtilsObjectNameEXT(instance);
         int result = PFN_vkSetDebugUtilsObjectNameEXT_f.call(device, pNameInfo);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkSetDebugUtilsObjectNameEXTP");
     }
 
 
@@ -2642,7 +2642,7 @@ public class Vk {
     public void vkSetDebugUtilsObjectTagEXTP(VkDevice device, VkDebugUtilsObjectTagInfoEXT pTagInfo){
         if(PFN_vkSetDebugUtilsObjectTagEXT_f == null) PFN_vkSetDebugUtilsObjectTagEXT_f = new PFNvkSetDebugUtilsObjectTagEXT(instance);
         int result = PFN_vkSetDebugUtilsObjectTagEXT_f.call(device, pTagInfo);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkSetDebugUtilsObjectTagEXTP");
     }
 
 
@@ -2691,7 +2691,7 @@ public class Vk {
     public void vkCreateDebugUtilsMessengerEXTP(VkInstance instance, VkDebugUtilsMessengerCreateInfoEXT pCreateInfo, VkAllocationCallbacks pAllocator, VkDebugUtilsMessengerEXT pMessenger){
         if(PFN_vkCreateDebugUtilsMessengerEXT_f == null) PFN_vkCreateDebugUtilsMessengerEXT_f = new PFNvkCreateDebugUtilsMessengerEXT(instance);
         int result = PFN_vkCreateDebugUtilsMessengerEXT_f.call(instance, pCreateInfo, pAllocator, pMessenger);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateDebugUtilsMessengerEXTP");
     }
 
 
@@ -2728,7 +2728,7 @@ public class Vk {
     public void vkCreateValidationCacheEXTP(VkDevice device, VkValidationCacheCreateInfoEXT pCreateInfo, VkAllocationCallbacks pAllocator, VkValidationCacheEXT pValidationCache){
         if(PFN_vkCreateValidationCacheEXT_f == null) PFN_vkCreateValidationCacheEXT_f = new PFNvkCreateValidationCacheEXT(instance);
         int result = PFN_vkCreateValidationCacheEXT_f.call(device, pCreateInfo, pAllocator, pValidationCache);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkCreateValidationCacheEXTP");
     }
 
 
@@ -2747,7 +2747,7 @@ public class Vk {
     public void vkMergeValidationCachesEXTP(VkDevice device, VkValidationCacheEXT dstCache, int srcCacheCount, VkValidationCacheEXT pSrcCaches){
         if(PFN_vkMergeValidationCachesEXT_f == null) PFN_vkMergeValidationCachesEXT_f = new PFNvkMergeValidationCachesEXT(instance);
         int result = PFN_vkMergeValidationCachesEXT_f.call(device, dstCache, srcCacheCount, pSrcCaches);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkMergeValidationCachesEXTP");
     }
 
 
@@ -2760,7 +2760,7 @@ public class Vk {
     public void vkGetValidationCacheDataEXTP(VkDevice device, VkValidationCacheEXT validationCache, VkSize pDataSize, VkObject pData){
         if(PFN_vkGetValidationCacheDataEXT_f == null) PFN_vkGetValidationCacheDataEXT_f = new PFNvkGetValidationCacheDataEXT(instance);
         int result = PFN_vkGetValidationCacheDataEXT_f.call(device, validationCache, pDataSize, pData);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetValidationCacheDataEXTP");
     }
 
 
@@ -2773,7 +2773,7 @@ public class Vk {
     public void vkGetMemoryHostPointerPropertiesEXTP(VkDevice device, int handleType, VkObject pHostPointer, VkMemoryHostPointerPropertiesEXT pMemoryHostPointerProperties){
         if(PFN_vkGetMemoryHostPointerPropertiesEXT_f == null) PFN_vkGetMemoryHostPointerPropertiesEXT_f = new PFNvkGetMemoryHostPointerPropertiesEXT(instance);
         int result = PFN_vkGetMemoryHostPointerPropertiesEXT_f.call(device, handleType, pHostPointer, pMemoryHostPointerProperties);
-        if(result != VK_SUCCESS) throw new VkException(result, "%VKFUNCTIONNAME%");
+        if(result != VK_SUCCESS) throw new VkException(result, "vkGetMemoryHostPointerPropertiesEXTP");
     }
 
 
