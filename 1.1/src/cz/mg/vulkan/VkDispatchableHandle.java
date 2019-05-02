@@ -38,7 +38,7 @@ public class VkDispatchableHandle extends VkHandle {
 
     @Override
     public String toString() {
-        return "" + getValue();
+        return "0x" + Long.toHexString(getValue());
     }
 
     public static class Array extends VkDispatchableHandle implements cz.mg.collections.array.ReadonlyArray<VkDispatchableHandle> {
