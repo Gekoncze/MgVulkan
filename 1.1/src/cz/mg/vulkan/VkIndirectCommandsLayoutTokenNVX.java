@@ -104,7 +104,12 @@ public class VkIndirectCommandsLayoutTokenNVX extends VkObject {
     protected static native void setDivisorNative(long address, long divisor);
 
 
+    public void set(VkIndirectCommandsLayoutTokenNVX o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkIndirectCommandsLayoutTokenNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsLayoutTokenNVX> {
         private final int count;

@@ -88,7 +88,12 @@ public class VkValidationFlagsEXT extends VkObject {
     protected static native void setPDisabledValidationChecksNative(long address, long pDisabledValidationChecks);
 
 
+    public void set(VkValidationFlagsEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkValidationFlagsEXT implements cz.mg.collections.array.ReadonlyArray<VkValidationFlagsEXT> {
         private final int count;

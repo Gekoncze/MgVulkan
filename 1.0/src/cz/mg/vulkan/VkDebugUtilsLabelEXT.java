@@ -88,7 +88,12 @@ public class VkDebugUtilsLabelEXT extends VkObject {
     protected static native void setColorNative(long address, long color);
 
 
+    public void set(VkDebugUtilsLabelEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDebugUtilsLabelEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsLabelEXT> {
         private final int count;

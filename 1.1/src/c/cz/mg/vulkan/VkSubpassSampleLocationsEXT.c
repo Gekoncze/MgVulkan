@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_sizeof(JNIEnv* env, jclass j
     return sizeof(VkSubpassSampleLocationsEXT);
 }
 
+void Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkSubpassSampleLocationsEXT));
+}
+
 jlong Java_cz_mg_vulkan_VkSubpassSampleLocationsEXT_getSubpassIndexNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

@@ -75,7 +75,12 @@ public class VkDescriptorBufferInfo extends VkObject {
     protected static native void setRangeNative(long address, long range);
 
 
+    public void set(VkDescriptorBufferInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDescriptorBufferInfo implements cz.mg.collections.array.ReadonlyArray<VkDescriptorBufferInfo> {
         private final int count;

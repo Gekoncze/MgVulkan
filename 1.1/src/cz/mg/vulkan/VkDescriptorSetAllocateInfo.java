@@ -102,7 +102,12 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
     protected static native void setPSetLayoutsNative(long address, long pSetLayouts);
 
 
+    public void set(VkDescriptorSetAllocateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDescriptorSetAllocateInfo implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetAllocateInfo> {
         private final int count;

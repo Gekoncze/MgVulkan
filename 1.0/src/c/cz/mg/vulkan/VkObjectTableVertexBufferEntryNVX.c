@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_sizeof(JNIEnv* env, jc
     return sizeof(VkObjectTableVertexBufferEntryNVX);
 }
 
+void Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkObjectTableVertexBufferEntryNVX));
+}
+
 jlong Java_cz_mg_vulkan_VkObjectTableVertexBufferEntryNVX_getTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

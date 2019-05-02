@@ -62,7 +62,12 @@ public class VkObjectTableEntryNVX extends VkObject {
     protected static native void setFlagsNative(long address, long flags);
 
 
+    public void set(VkObjectTableEntryNVX o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkObjectTableEntryNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableEntryNVX> {
         private final int count;

@@ -75,7 +75,12 @@ public class VkPipelineRasterizationStateRasterizationOrderAMD extends VkObject 
     protected static native void setRasterizationOrderNative(long address, long rasterizationOrder);
 
 
+    public void set(VkPipelineRasterizationStateRasterizationOrderAMD o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineRasterizationStateRasterizationOrderAMD implements cz.mg.collections.array.ReadonlyArray<VkPipelineRasterizationStateRasterizationOrderAMD> {
         private final int count;

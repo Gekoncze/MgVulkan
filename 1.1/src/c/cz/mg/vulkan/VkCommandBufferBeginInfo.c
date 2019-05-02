@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkCommandBufferBeginInfo);
 }
 
+void Java_cz_mg_vulkan_VkCommandBufferBeginInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkCommandBufferBeginInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkCommandBufferBeginInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

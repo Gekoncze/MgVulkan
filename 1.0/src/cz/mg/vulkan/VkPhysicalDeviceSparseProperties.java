@@ -125,7 +125,12 @@ public class VkPhysicalDeviceSparseProperties extends VkObject {
     protected static native void setResidencyNonResidentStrictNative(long address, long residencyNonResidentStrict);
 
 
+    public void set(VkPhysicalDeviceSparseProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceSparseProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSparseProperties> {
         private final int count;

@@ -391,7 +391,12 @@ public class VkSamplerCreateInfo extends VkObject {
     protected static native void setUnnormalizedCoordinatesNative(long address, long unnormalizedCoordinates);
 
 
+    public void set(VkSamplerCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSamplerCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkSamplerCreateInfo> {
         private final int count;

@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkAttachmentSampleLocationsEXT_sizeof(JNIEnv* env, jclas
     return sizeof(VkAttachmentSampleLocationsEXT);
 }
 
+void Java_cz_mg_vulkan_VkAttachmentSampleLocationsEXT_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkAttachmentSampleLocationsEXT));
+}
+
 jlong Java_cz_mg_vulkan_VkAttachmentSampleLocationsEXT_getAttachmentIndexNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

@@ -75,7 +75,12 @@ public class VkSparseImageFormatProperties extends VkObject {
     protected static native void setFlagsNative(long address, long flags);
 
 
+    public void set(VkSparseImageFormatProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSparseImageFormatProperties implements cz.mg.collections.array.ReadonlyArray<VkSparseImageFormatProperties> {
         private final int count;

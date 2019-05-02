@@ -118,7 +118,12 @@ public class VkPipelineInputAssemblyStateCreateInfo extends VkObject {
     protected static native void setPrimitiveRestartEnableNative(long address, long primitiveRestartEnable);
 
 
+    public void set(VkPipelineInputAssemblyStateCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineInputAssemblyStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineInputAssemblyStateCreateInfo> {
         private final int count;

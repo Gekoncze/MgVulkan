@@ -138,7 +138,12 @@ public class VkPhysicalDeviceSubgroupProperties extends VkObject {
     protected static native void setQuadOperationsInAllStagesNative(long address, long quadOperationsInAllStages);
 
 
+    public void set(VkPhysicalDeviceSubgroupProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceSubgroupProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSubgroupProperties> {
         private final int count;

@@ -75,7 +75,12 @@ public class VkClearRect extends VkObject {
     protected static native void setLayerCountNative(long address, long layerCount);
 
 
+    public void set(VkClearRect o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkClearRect implements cz.mg.collections.array.ReadonlyArray<VkClearRect> {
         private final int count;

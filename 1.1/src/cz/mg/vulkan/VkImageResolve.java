@@ -85,7 +85,12 @@ public class VkImageResolve extends VkObject {
     protected static native void setExtentNative(long address, long extent);
 
 
+    public void set(VkImageResolve o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkImageResolve implements cz.mg.collections.array.ReadonlyArray<VkImageResolve> {
         private final int count;

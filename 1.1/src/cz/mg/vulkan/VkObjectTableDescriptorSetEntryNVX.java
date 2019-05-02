@@ -88,7 +88,12 @@ public class VkObjectTableDescriptorSetEntryNVX extends VkObject {
     protected static native void setDescriptorSetNative(long address, long descriptorSet);
 
 
+    public void set(VkObjectTableDescriptorSetEntryNVX o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkObjectTableDescriptorSetEntryNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableDescriptorSetEntryNVX> {
         private final int count;

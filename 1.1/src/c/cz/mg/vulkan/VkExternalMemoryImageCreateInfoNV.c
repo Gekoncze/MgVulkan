@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkExternalMemoryImageCreateInfoNV_sizeof(JNIEnv* env, jc
     return sizeof(VkExternalMemoryImageCreateInfoNV);
 }
 
+void Java_cz_mg_vulkan_VkExternalMemoryImageCreateInfoNV_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkExternalMemoryImageCreateInfoNV));
+}
+
 jlong Java_cz_mg_vulkan_VkExternalMemoryImageCreateInfoNV_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

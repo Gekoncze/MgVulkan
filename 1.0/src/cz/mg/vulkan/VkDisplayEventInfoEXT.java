@@ -76,7 +76,12 @@ public class VkDisplayEventInfoEXT extends VkObject {
     protected static native void setDisplayEventNative(long address, long displayEvent);
 
 
+    public void set(VkDisplayEventInfoEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDisplayEventInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDisplayEventInfoEXT> {
         private final int count;

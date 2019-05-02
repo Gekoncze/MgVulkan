@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkSampleLocationEXT_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSampleLocationEXT);
 }
 
+void Java_cz_mg_vulkan_VkSampleLocationEXT_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkSampleLocationEXT));
+}
+
 jlong Java_cz_mg_vulkan_VkSampleLocationEXT_getXNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

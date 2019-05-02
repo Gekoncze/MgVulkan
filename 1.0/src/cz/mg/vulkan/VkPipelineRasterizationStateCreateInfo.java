@@ -286,7 +286,12 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
     protected static native void setLineWidthNative(long address, long lineWidth);
 
 
+    public void set(VkPipelineRasterizationStateCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineRasterizationStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineRasterizationStateCreateInfo> {
         private final int count;

@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPipelineTessellationDomainOriginStateCreateInfo_sizeof
     return sizeof(VkPipelineTessellationDomainOriginStateCreateInfo);
 }
 
+void Java_cz_mg_vulkan_VkPipelineTessellationDomainOriginStateCreateInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPipelineTessellationDomainOriginStateCreateInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkPipelineTessellationDomainOriginStateCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

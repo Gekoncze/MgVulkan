@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkImagePlaneMemoryRequirementsInfo_sizeof(JNIEnv* env, j
     return sizeof(VkImagePlaneMemoryRequirementsInfo);
 }
 
+void Java_cz_mg_vulkan_VkImagePlaneMemoryRequirementsInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkImagePlaneMemoryRequirementsInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkImagePlaneMemoryRequirementsInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

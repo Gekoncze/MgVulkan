@@ -118,7 +118,12 @@ public class VkPipelineColorBlendAdvancedStateCreateInfoEXT extends VkObject {
     protected static native void setBlendOverlapNative(long address, long blendOverlap);
 
 
+    public void set(VkPipelineColorBlendAdvancedStateCreateInfoEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineColorBlendAdvancedStateCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkPipelineColorBlendAdvancedStateCreateInfoEXT> {
         private final int count;

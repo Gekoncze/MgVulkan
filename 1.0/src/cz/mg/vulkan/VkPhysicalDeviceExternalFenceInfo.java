@@ -76,7 +76,12 @@ public class VkPhysicalDeviceExternalFenceInfo extends VkObject {
     protected static native void setHandleTypeNative(long address, long handleType);
 
 
+    public void set(VkPhysicalDeviceExternalFenceInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceExternalFenceInfo implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceExternalFenceInfo> {
         private final int count;

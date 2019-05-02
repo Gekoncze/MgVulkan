@@ -157,7 +157,12 @@ public class VkInstanceCreateInfo extends VkObject {
     protected static native void setPpEnabledExtensionNamesNative(long address, long ppEnabledExtensionNames);
 
 
+    public void set(VkInstanceCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkInstanceCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkInstanceCreateInfo> {
         private final int count;

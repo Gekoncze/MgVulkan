@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkImageSubresource_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkImageSubresource);
 }
 
+void Java_cz_mg_vulkan_VkImageSubresource_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkImageSubresource));
+}
+
 jlong Java_cz_mg_vulkan_VkImageSubresource_getAspectMaskNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

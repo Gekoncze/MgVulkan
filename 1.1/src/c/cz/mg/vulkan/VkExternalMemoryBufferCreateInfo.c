@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkExternalMemoryBufferCreateInfo_sizeof(JNIEnv* env, jcl
     return sizeof(VkExternalMemoryBufferCreateInfo);
 }
 
+void Java_cz_mg_vulkan_VkExternalMemoryBufferCreateInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkExternalMemoryBufferCreateInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkExternalMemoryBufferCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

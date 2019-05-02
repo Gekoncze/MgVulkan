@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeatures_sizeof(JNIEnv* env,
     return sizeof(VkPhysicalDevice16BitStorageFeatures);
 }
 
+void Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeatures_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPhysicalDevice16BitStorageFeatures));
+}
+
 jlong Java_cz_mg_vulkan_VkPhysicalDevice16BitStorageFeatures_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkBindImageMemoryInfo);
 }
 
+void Java_cz_mg_vulkan_VkBindImageMemoryInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkBindImageMemoryInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkBindImageMemoryInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

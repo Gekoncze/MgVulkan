@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_sizeof(JNIEnv
     return sizeof(VkShaderModuleValidationCacheCreateInfoEXT);
 }
 
+void Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkShaderModuleValidationCacheCreateInfoEXT));
+}
+
 jlong Java_cz_mg_vulkan_VkShaderModuleValidationCacheCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

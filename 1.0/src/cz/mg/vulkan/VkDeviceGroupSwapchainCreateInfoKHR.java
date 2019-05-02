@@ -76,7 +76,12 @@ public class VkDeviceGroupSwapchainCreateInfoKHR extends VkObject {
     protected static native void setModesNative(long address, long modes);
 
 
+    public void set(VkDeviceGroupSwapchainCreateInfoKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDeviceGroupSwapchainCreateInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupSwapchainCreateInfoKHR> {
         private final int count;

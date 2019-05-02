@@ -144,7 +144,12 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
     protected static native void setPPushConstantRangesNative(long address, long pPushConstantRanges);
 
 
+    public void set(VkPipelineLayoutCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineLayoutCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineLayoutCreateInfo> {
         private final int count;

@@ -159,7 +159,12 @@ public class VkDeviceGeneratedCommandsLimitsNVX extends VkObject {
     protected static native void setMinCommandsTokenBufferOffsetAlignmentNative(long address, long minCommandsTokenBufferOffsetAlignment);
 
 
+    public void set(VkDeviceGeneratedCommandsLimitsNVX o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDeviceGeneratedCommandsLimitsNVX implements cz.mg.collections.array.ReadonlyArray<VkDeviceGeneratedCommandsLimitsNVX> {
         private final int count;

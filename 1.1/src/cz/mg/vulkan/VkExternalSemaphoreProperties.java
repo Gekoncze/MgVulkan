@@ -117,7 +117,12 @@ public class VkExternalSemaphoreProperties extends VkObject {
     protected static native void setExternalSemaphoreFeaturesNative(long address, long externalSemaphoreFeatures);
 
 
+    public void set(VkExternalSemaphoreProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkExternalSemaphoreProperties implements cz.mg.collections.array.ReadonlyArray<VkExternalSemaphoreProperties> {
         private final int count;

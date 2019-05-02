@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkExtent2D_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkExtent2D);
 }
 
+void Java_cz_mg_vulkan_VkExtent2D_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkExtent2D));
+}
+
 jlong Java_cz_mg_vulkan_VkExtent2D_getWidthNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

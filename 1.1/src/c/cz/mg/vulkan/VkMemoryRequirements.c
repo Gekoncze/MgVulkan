@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkMemoryRequirements_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkMemoryRequirements);
 }
 
+void Java_cz_mg_vulkan_VkMemoryRequirements_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkMemoryRequirements));
+}
+
 jlong Java_cz_mg_vulkan_VkMemoryRequirements_getSizeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

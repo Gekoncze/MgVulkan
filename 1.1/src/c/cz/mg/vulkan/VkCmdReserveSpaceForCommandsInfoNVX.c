@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_sizeof(JNIEnv* env, 
     return sizeof(VkCmdReserveSpaceForCommandsInfoNVX);
 }
 
+void Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkCmdReserveSpaceForCommandsInfoNVX));
+}
+
 jlong Java_cz_mg_vulkan_VkCmdReserveSpaceForCommandsInfoNVX_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

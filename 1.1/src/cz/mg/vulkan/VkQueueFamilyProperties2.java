@@ -67,7 +67,12 @@ public class VkQueueFamilyProperties2 extends VkObject {
     protected static native void setQueueFamilyPropertiesNative(long address, long queueFamilyProperties);
 
 
+    public void set(VkQueueFamilyProperties2 o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkQueueFamilyProperties2 implements cz.mg.collections.array.ReadonlyArray<VkQueueFamilyProperties2> {
         private final int count;

@@ -67,7 +67,12 @@ public class VkPhysicalDeviceProperties2 extends VkObject {
     protected static native void setPropertiesNative(long address, long properties);
 
 
+    public void set(VkPhysicalDeviceProperties2 o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceProperties2 implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceProperties2> {
         private final int count;

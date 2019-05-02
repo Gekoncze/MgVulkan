@@ -75,7 +75,12 @@ public class VkSharedPresentSurfaceCapabilitiesKHR extends VkObject {
     protected static native void setSharedPresentSupportedUsageFlagsNative(long address, long sharedPresentSupportedUsageFlags);
 
 
+    public void set(VkSharedPresentSurfaceCapabilitiesKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSharedPresentSurfaceCapabilitiesKHR implements cz.mg.collections.array.ReadonlyArray<VkSharedPresentSurfaceCapabilitiesKHR> {
         private final int count;

@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_sizeof(JNIEnv* env, jclass 
     return sizeof(VkDescriptorSetLayoutBinding);
 }
 
+void Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkDescriptorSetLayoutBinding));
+}
+
 jlong Java_cz_mg_vulkan_VkDescriptorSetLayoutBinding_getBindingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

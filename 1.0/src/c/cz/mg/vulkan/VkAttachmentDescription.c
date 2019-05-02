@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkAttachmentDescription_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkAttachmentDescription);
 }
 
+void Java_cz_mg_vulkan_VkAttachmentDescription_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkAttachmentDescription));
+}
+
 jlong Java_cz_mg_vulkan_VkAttachmentDescription_getFlagsNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

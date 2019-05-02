@@ -76,7 +76,12 @@ public class VkPipelineTessellationDomainOriginStateCreateInfo extends VkObject 
     protected static native void setDomainOriginNative(long address, long domainOrigin);
 
 
+    public void set(VkPipelineTessellationDomainOriginStateCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineTessellationDomainOriginStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineTessellationDomainOriginStateCreateInfo> {
         private final int count;

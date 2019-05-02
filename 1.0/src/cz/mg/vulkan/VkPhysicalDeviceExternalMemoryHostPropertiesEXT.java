@@ -75,7 +75,12 @@ public class VkPhysicalDeviceExternalMemoryHostPropertiesEXT extends VkObject {
     protected static native void setMinImportedHostPointerAlignmentNative(long address, long minImportedHostPointerAlignment);
 
 
+    public void set(VkPhysicalDeviceExternalMemoryHostPropertiesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceExternalMemoryHostPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceExternalMemoryHostPropertiesEXT> {
         private final int count;

@@ -117,7 +117,12 @@ public class VkExternalFenceProperties extends VkObject {
     protected static native void setExternalFenceFeaturesNative(long address, long externalFenceFeatures);
 
 
+    public void set(VkExternalFenceProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkExternalFenceProperties implements cz.mg.collections.array.ReadonlyArray<VkExternalFenceProperties> {
         private final int count;

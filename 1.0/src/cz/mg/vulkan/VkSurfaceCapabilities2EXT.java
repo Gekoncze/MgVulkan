@@ -261,7 +261,12 @@ public class VkSurfaceCapabilities2EXT extends VkObject {
     protected static native void setSupportedSurfaceCountersNative(long address, long supportedSurfaceCounters);
 
 
+    public void set(VkSurfaceCapabilities2EXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSurfaceCapabilities2EXT implements cz.mg.collections.array.ReadonlyArray<VkSurfaceCapabilities2EXT> {
         private final int count;

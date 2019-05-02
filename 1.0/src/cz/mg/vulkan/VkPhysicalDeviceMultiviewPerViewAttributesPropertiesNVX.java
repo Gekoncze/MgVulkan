@@ -75,7 +75,12 @@ public class VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX extends VkO
     protected static native void setPerViewPositionAllComponentsNative(long address, long perViewPositionAllComponents);
 
 
+    public void set(VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> {
         private final int count;

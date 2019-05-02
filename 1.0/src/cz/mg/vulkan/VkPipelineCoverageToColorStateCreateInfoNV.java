@@ -118,7 +118,12 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
     protected static native void setCoverageToColorLocationNative(long address, long coverageToColorLocation);
 
 
+    public void set(VkPipelineCoverageToColorStateCreateInfoNV o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineCoverageToColorStateCreateInfoNV implements cz.mg.collections.array.ReadonlyArray<VkPipelineCoverageToColorStateCreateInfoNV> {
         private final int count;

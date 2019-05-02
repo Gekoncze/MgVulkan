@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkInt32_sizeof(JNIEnv* env, jclass jc)
     return sizeof(int32_t);
 }
 
+void Java_cz_mg_vulkan_VkInt32_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(int32_t));
+}
+
 jint Java_cz_mg_vulkan_VkInt32_getValueNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

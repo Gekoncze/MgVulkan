@@ -97,7 +97,12 @@ public class VkMemoryAllocateFlagsInfo extends VkObject {
     protected static native void setDeviceMaskNative(long address, long deviceMask);
 
 
+    public void set(VkMemoryAllocateFlagsInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkMemoryAllocateFlagsInfo implements cz.mg.collections.array.ReadonlyArray<VkMemoryAllocateFlagsInfo> {
         private final int count;

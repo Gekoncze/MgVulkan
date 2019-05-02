@@ -122,7 +122,12 @@ public class VkBufferImageCopy extends VkObject {
     protected static native void setImageExtentNative(long address, long imageExtent);
 
 
+    public void set(VkBufferImageCopy o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkBufferImageCopy implements cz.mg.collections.array.ReadonlyArray<VkBufferImageCopy> {
         private final int count;

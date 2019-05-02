@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkViewport_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkViewport);
 }
 
+void Java_cz_mg_vulkan_VkViewport_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkViewport));
+}
+
 jlong Java_cz_mg_vulkan_VkViewport_getXNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

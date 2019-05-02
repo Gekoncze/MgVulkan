@@ -243,7 +243,12 @@ public class VkPhysicalDeviceConservativeRasterizationPropertiesEXT extends VkOb
     protected static native void setConservativeRasterizationPostDepthCoverageNative(long address, long conservativeRasterizationPostDepthCoverage);
 
 
+    public void set(VkPhysicalDeviceConservativeRasterizationPropertiesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceConservativeRasterizationPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceConservativeRasterizationPropertiesEXT> {
         private final int count;

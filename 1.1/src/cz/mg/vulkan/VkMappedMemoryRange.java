@@ -109,7 +109,12 @@ public class VkMappedMemoryRange extends VkObject {
     protected static native void setSizeNative(long address, long size);
 
 
+    public void set(VkMappedMemoryRange o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkMappedMemoryRange implements cz.mg.collections.array.ReadonlyArray<VkMappedMemoryRange> {
         private final int count;

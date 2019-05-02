@@ -75,7 +75,12 @@ public class VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT extends VkObjec
     protected static native void setMaxVertexAttribDivisorNative(long address, long maxVertexAttribDivisor);
 
 
+    public void set(VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT> {
         private final int count;

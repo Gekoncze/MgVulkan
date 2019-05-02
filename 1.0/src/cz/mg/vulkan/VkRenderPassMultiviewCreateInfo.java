@@ -157,7 +157,12 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
     protected static native void setPCorrelationMasksNative(long address, long pCorrelationMasks);
 
 
+    public void set(VkRenderPassMultiviewCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkRenderPassMultiviewCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkRenderPassMultiviewCreateInfo> {
         private final int count;

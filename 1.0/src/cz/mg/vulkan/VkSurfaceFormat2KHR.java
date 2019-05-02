@@ -67,7 +67,12 @@ public class VkSurfaceFormat2KHR extends VkObject {
     protected static native void setSurfaceFormatNative(long address, long surfaceFormat);
 
 
+    public void set(VkSurfaceFormat2KHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSurfaceFormat2KHR implements cz.mg.collections.array.ReadonlyArray<VkSurfaceFormat2KHR> {
         private final int count;

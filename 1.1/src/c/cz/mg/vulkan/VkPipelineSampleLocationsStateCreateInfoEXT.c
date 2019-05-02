@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_sizeof(JNIEn
     return sizeof(VkPipelineSampleLocationsStateCreateInfoEXT);
 }
 
+void Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPipelineSampleLocationsStateCreateInfoEXT));
+}
+
 jlong Java_cz_mg_vulkan_VkPipelineSampleLocationsStateCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

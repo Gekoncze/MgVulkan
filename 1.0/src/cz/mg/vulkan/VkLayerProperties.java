@@ -104,7 +104,12 @@ public class VkLayerProperties extends VkObject {
     protected static native void setDescriptionNative(long address, long description);
 
 
+    public void set(VkLayerProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkLayerProperties implements cz.mg.collections.array.ReadonlyArray<VkLayerProperties> {
         private final int count;

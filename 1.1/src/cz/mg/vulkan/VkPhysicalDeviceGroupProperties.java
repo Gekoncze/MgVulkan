@@ -109,7 +109,12 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
     protected static native void setSubsetAllocationNative(long address, long subsetAllocation);
 
 
+    public void set(VkPhysicalDeviceGroupProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceGroupProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceGroupProperties> {
         private final int count;

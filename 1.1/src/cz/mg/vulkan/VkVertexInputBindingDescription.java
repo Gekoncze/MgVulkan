@@ -83,7 +83,12 @@ public class VkVertexInputBindingDescription extends VkObject {
     protected static native void setInputRateNative(long address, long inputRate);
 
 
+    public void set(VkVertexInputBindingDescription o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkVertexInputBindingDescription implements cz.mg.collections.array.ReadonlyArray<VkVertexInputBindingDescription> {
         private final int count;

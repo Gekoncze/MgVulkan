@@ -104,7 +104,12 @@ public class VkViewportSwizzleNV extends VkObject {
     protected static native void setWNative(long address, long w);
 
 
+    public void set(VkViewportSwizzleNV o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkViewportSwizzleNV implements cz.mg.collections.array.ReadonlyArray<VkViewportSwizzleNV> {
         private final int count;

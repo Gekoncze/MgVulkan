@@ -89,7 +89,12 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
     protected static native void setPTimesNative(long address, long pTimes);
 
 
+    public void set(VkPresentTimesInfoGOOGLE o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPresentTimesInfoGOOGLE implements cz.mg.collections.array.ReadonlyArray<VkPresentTimesInfoGOOGLE> {
         private final int count;

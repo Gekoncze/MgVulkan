@@ -206,7 +206,12 @@ public class VkSurfaceCapabilitiesKHR extends VkObject {
     protected static native void setSupportedUsageFlagsNative(long address, long supportedUsageFlags);
 
 
+    public void set(VkSurfaceCapabilitiesKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSurfaceCapabilitiesKHR implements cz.mg.collections.array.ReadonlyArray<VkSurfaceCapabilitiesKHR> {
         private final int count;

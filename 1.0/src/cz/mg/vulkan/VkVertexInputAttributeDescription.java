@@ -104,7 +104,12 @@ public class VkVertexInputAttributeDescription extends VkObject {
     protected static native void setOffsetNative(long address, long offset);
 
 
+    public void set(VkVertexInputAttributeDescription o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkVertexInputAttributeDescription implements cz.mg.collections.array.ReadonlyArray<VkVertexInputAttributeDescription> {
         private final int count;

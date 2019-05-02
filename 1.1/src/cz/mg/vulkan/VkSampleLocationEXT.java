@@ -62,7 +62,12 @@ public class VkSampleLocationEXT extends VkObject {
     protected static native void setYNative(long address, long y);
 
 
+    public void set(VkSampleLocationEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSampleLocationEXT implements cz.mg.collections.array.ReadonlyArray<VkSampleLocationEXT> {
         private final int count;

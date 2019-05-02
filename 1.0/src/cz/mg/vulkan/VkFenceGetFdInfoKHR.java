@@ -89,7 +89,12 @@ public class VkFenceGetFdInfoKHR extends VkObject {
     protected static native void setHandleTypeNative(long address, long handleType);
 
 
+    public void set(VkFenceGetFdInfoKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkFenceGetFdInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkFenceGetFdInfoKHR> {
         private final int count;

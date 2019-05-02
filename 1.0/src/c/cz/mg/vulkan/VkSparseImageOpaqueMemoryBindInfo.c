@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkSparseImageOpaqueMemoryBindInfo_sizeof(JNIEnv* env, jc
     return sizeof(VkSparseImageOpaqueMemoryBindInfo);
 }
 
+void Java_cz_mg_vulkan_VkSparseImageOpaqueMemoryBindInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkSparseImageOpaqueMemoryBindInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkSparseImageOpaqueMemoryBindInfo_getImageNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

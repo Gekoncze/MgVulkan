@@ -240,7 +240,12 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
     protected static native void setPObjectsNative(long address, long pObjects);
 
 
+    public void set(VkDebugUtilsMessengerCallbackDataEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDebugUtilsMessengerCallbackDataEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugUtilsMessengerCallbackDataEXT> {
         private final int count;

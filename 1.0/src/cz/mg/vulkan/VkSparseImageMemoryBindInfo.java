@@ -67,7 +67,12 @@ public class VkSparseImageMemoryBindInfo extends VkObject {
     protected static native void setPBindsNative(long address, long pBinds);
 
 
+    public void set(VkSparseImageMemoryBindInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSparseImageMemoryBindInfo implements cz.mg.collections.array.ReadonlyArray<VkSparseImageMemoryBindInfo> {
         private final int count;

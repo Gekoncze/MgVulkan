@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkChar_sizeof(JNIEnv* env, jclass jc)
     return sizeof(char);
 }
 
+void Java_cz_mg_vulkan_VkChar_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(char));
+}
+
 jbyte Java_cz_mg_vulkan_VkChar_getValueNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

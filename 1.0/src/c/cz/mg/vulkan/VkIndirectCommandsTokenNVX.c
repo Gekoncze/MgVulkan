@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkIndirectCommandsTokenNVX_sizeof(JNIEnv* env, jclass jc
     return sizeof(VkIndirectCommandsTokenNVX);
 }
 
+void Java_cz_mg_vulkan_VkIndirectCommandsTokenNVX_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkIndirectCommandsTokenNVX));
+}
+
 jlong Java_cz_mg_vulkan_VkIndirectCommandsTokenNVX_getTokenTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

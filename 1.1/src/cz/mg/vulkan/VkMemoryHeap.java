@@ -62,7 +62,12 @@ public class VkMemoryHeap extends VkObject {
     protected static native void setFlagsNative(long address, long flags);
 
 
+    public void set(VkMemoryHeap o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkMemoryHeap implements cz.mg.collections.array.ReadonlyArray<VkMemoryHeap> {
         private final int count;

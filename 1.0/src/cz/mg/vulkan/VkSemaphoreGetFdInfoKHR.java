@@ -89,7 +89,12 @@ public class VkSemaphoreGetFdInfoKHR extends VkObject {
     protected static native void setHandleTypeNative(long address, long handleType);
 
 
+    public void set(VkSemaphoreGetFdInfoKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSemaphoreGetFdInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkSemaphoreGetFdInfoKHR> {
         private final int count;

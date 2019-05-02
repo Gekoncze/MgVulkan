@@ -68,7 +68,12 @@ public class VkBufferMemoryRequirementsInfo2 extends VkObject {
     protected static native void setBufferNative(long address, long buffer);
 
 
+    public void set(VkBufferMemoryRequirementsInfo2 o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkBufferMemoryRequirementsInfo2 implements cz.mg.collections.array.ReadonlyArray<VkBufferMemoryRequirementsInfo2> {
         private final int count;

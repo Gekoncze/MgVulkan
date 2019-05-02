@@ -76,7 +76,12 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
     protected static native void setDedicatedAllocationNative(long address, long dedicatedAllocation);
 
 
+    public void set(VkDedicatedAllocationImageCreateInfoNV o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDedicatedAllocationImageCreateInfoNV implements cz.mg.collections.array.ReadonlyArray<VkDedicatedAllocationImageCreateInfoNV> {
         private final int count;

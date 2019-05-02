@@ -97,7 +97,12 @@ public class VkDeviceGroupBindSparseInfo extends VkObject {
     protected static native void setMemoryDeviceIndexNative(long address, long memoryDeviceIndex);
 
 
+    public void set(VkDeviceGroupBindSparseInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDeviceGroupBindSparseInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupBindSparseInfo> {
         private final int count;

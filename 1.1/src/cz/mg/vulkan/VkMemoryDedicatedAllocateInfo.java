@@ -81,7 +81,12 @@ public class VkMemoryDedicatedAllocateInfo extends VkObject {
     protected static native void setBufferNative(long address, long buffer);
 
 
+    public void set(VkMemoryDedicatedAllocateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkMemoryDedicatedAllocateInfo implements cz.mg.collections.array.ReadonlyArray<VkMemoryDedicatedAllocateInfo> {
         private final int count;

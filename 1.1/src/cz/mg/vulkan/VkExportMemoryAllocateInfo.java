@@ -76,7 +76,12 @@ public class VkExportMemoryAllocateInfo extends VkObject {
     protected static native void setHandleTypesNative(long address, long handleTypes);
 
 
+    public void set(VkExportMemoryAllocateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkExportMemoryAllocateInfo implements cz.mg.collections.array.ReadonlyArray<VkExportMemoryAllocateInfo> {
         private final int count;

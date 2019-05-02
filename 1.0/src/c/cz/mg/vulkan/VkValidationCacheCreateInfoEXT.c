@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_sizeof(JNIEnv* env, jclas
     return sizeof(VkValidationCacheCreateInfoEXT);
 }
 
+void Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkValidationCacheCreateInfoEXT));
+}
+
 jlong Java_cz_mg_vulkan_VkValidationCacheCreateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

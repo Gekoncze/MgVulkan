@@ -97,7 +97,12 @@ public class VkMemoryBarrier extends VkObject {
     protected static native void setDstAccessMaskNative(long address, long dstAccessMask);
 
 
+    public void set(VkMemoryBarrier o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkMemoryBarrier implements cz.mg.collections.array.ReadonlyArray<VkMemoryBarrier> {
         private final int count;

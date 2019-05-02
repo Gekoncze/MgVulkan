@@ -151,7 +151,12 @@ public class VkShaderStatisticsInfoAMD extends VkObject {
     protected static native void setComputeWorkGroupSizeNative(long address, long computeWorkGroupSize);
 
 
+    public void set(VkShaderStatisticsInfoAMD o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkShaderStatisticsInfoAMD implements cz.mg.collections.array.ReadonlyArray<VkShaderStatisticsInfoAMD> {
         private final int count;

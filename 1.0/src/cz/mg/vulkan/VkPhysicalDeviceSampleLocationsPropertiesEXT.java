@@ -143,7 +143,12 @@ public class VkPhysicalDeviceSampleLocationsPropertiesEXT extends VkObject {
     protected static native void setVariableSampleLocationsNative(long address, long variableSampleLocations);
 
 
+    public void set(VkPhysicalDeviceSampleLocationsPropertiesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceSampleLocationsPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSampleLocationsPropertiesEXT> {
         private final int count;

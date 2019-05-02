@@ -96,7 +96,12 @@ public class VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT extends VkObject {
     protected static native void setFilterMinmaxImageComponentMappingNative(long address, long filterMinmaxImageComponentMapping);
 
 
+    public void set(VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSamplerFilterMinmaxPropertiesEXT> {
         private final int count;

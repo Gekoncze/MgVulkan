@@ -75,7 +75,12 @@ public class VkDescriptorSetVariableDescriptorCountLayoutSupportEXT extends VkOb
     protected static native void setMaxVariableDescriptorCountNative(long address, long maxVariableDescriptorCount);
 
 
+    public void set(VkDescriptorSetVariableDescriptorCountLayoutSupportEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDescriptorSetVariableDescriptorCountLayoutSupportEXT implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetVariableDescriptorCountLayoutSupportEXT> {
         private final int count;

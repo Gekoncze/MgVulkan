@@ -62,7 +62,12 @@ public class VkAttachmentReference extends VkObject {
     protected static native void setLayoutNative(long address, long layout);
 
 
+    public void set(VkAttachmentReference o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkAttachmentReference implements cz.mg.collections.array.ReadonlyArray<VkAttachmentReference> {
         private final int count;

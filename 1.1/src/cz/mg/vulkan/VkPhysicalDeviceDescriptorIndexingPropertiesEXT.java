@@ -537,7 +537,12 @@ public class VkPhysicalDeviceDescriptorIndexingPropertiesEXT extends VkObject {
     protected static native void setMaxDescriptorSetUpdateAfterBindInputAttachmentsNative(long address, long maxDescriptorSetUpdateAfterBindInputAttachments);
 
 
+    public void set(VkPhysicalDeviceDescriptorIndexingPropertiesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceDescriptorIndexingPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceDescriptorIndexingPropertiesEXT> {
         private final int count;

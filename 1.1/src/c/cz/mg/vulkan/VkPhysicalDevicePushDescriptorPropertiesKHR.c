@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPhysicalDevicePushDescriptorPropertiesKHR_sizeof(JNIEn
     return sizeof(VkPhysicalDevicePushDescriptorPropertiesKHR);
 }
 
+void Java_cz_mg_vulkan_VkPhysicalDevicePushDescriptorPropertiesKHR_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPhysicalDevicePushDescriptorPropertiesKHR));
+}
+
 jlong Java_cz_mg_vulkan_VkPhysicalDevicePushDescriptorPropertiesKHR_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

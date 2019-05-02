@@ -190,7 +190,12 @@ public class VkSubpassDescription extends VkObject {
     protected static native void setPPreserveAttachmentsNative(long address, long pPreserveAttachments);
 
 
+    public void set(VkSubpassDescription o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSubpassDescription implements cz.mg.collections.array.ReadonlyArray<VkSubpassDescription> {
         private final int count;

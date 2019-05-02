@@ -157,7 +157,12 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
     protected static native void setPSignalSemaphoreDeviceIndicesNative(long address, long pSignalSemaphoreDeviceIndices);
 
 
+    public void set(VkDeviceGroupSubmitInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDeviceGroupSubmitInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupSubmitInfo> {
         private final int count;

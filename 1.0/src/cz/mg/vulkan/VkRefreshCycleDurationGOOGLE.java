@@ -41,7 +41,12 @@ public class VkRefreshCycleDurationGOOGLE extends VkObject {
     protected static native void setRefreshDurationNative(long address, long refreshDuration);
 
 
+    public void set(VkRefreshCycleDurationGOOGLE o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkRefreshCycleDurationGOOGLE implements cz.mg.collections.array.ReadonlyArray<VkRefreshCycleDurationGOOGLE> {
         private final int count;

@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_sizeof(JNIEnv* env, jcla
     return sizeof(VkPipelineShaderStageCreateInfo);
 }
 
+void Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPipelineShaderStageCreateInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkPipelineShaderStageCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

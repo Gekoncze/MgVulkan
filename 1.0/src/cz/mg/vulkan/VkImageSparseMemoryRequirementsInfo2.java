@@ -68,7 +68,12 @@ public class VkImageSparseMemoryRequirementsInfo2 extends VkObject {
     protected static native void setImageNative(long address, long image);
 
 
+    public void set(VkImageSparseMemoryRequirementsInfo2 o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkImageSparseMemoryRequirementsInfo2 implements cz.mg.collections.array.ReadonlyArray<VkImageSparseMemoryRequirementsInfo2> {
         private final int count;

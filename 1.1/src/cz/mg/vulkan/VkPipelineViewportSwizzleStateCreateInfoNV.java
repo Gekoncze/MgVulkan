@@ -110,7 +110,12 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
     protected static native void setPViewportSwizzlesNative(long address, long pViewportSwizzles);
 
 
+    public void set(VkPipelineViewportSwizzleStateCreateInfoNV o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineViewportSwizzleStateCreateInfoNV implements cz.mg.collections.array.ReadonlyArray<VkPipelineViewportSwizzleStateCreateInfoNV> {
         private final int count;

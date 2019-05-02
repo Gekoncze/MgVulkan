@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkGraphicsPipelineCreateInfo_sizeof(JNIEnv* env, jclass 
     return sizeof(VkGraphicsPipelineCreateInfo);
 }
 
+void Java_cz_mg_vulkan_VkGraphicsPipelineCreateInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkGraphicsPipelineCreateInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkGraphicsPipelineCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

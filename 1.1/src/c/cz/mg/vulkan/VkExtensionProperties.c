@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkExtensionProperties_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkExtensionProperties);
 }
 
+void Java_cz_mg_vulkan_VkExtensionProperties_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkExtensionProperties));
+}
+
 jlong Java_cz_mg_vulkan_VkExtensionProperties_getExtensionNameNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSpecializationMapEntry);
 }
 
+void Java_cz_mg_vulkan_VkSpecializationMapEntry_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkSpecializationMapEntry));
+}
+
 jlong Java_cz_mg_vulkan_VkSpecializationMapEntry_getConstantIDNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

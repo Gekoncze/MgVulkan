@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkExternalImageFormatProperties_sizeof(JNIEnv* env, jcla
     return sizeof(VkExternalImageFormatProperties);
 }
 
+void Java_cz_mg_vulkan_VkExternalImageFormatProperties_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkExternalImageFormatProperties));
+}
+
 jlong Java_cz_mg_vulkan_VkExternalImageFormatProperties_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

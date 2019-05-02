@@ -131,7 +131,12 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
     protected static native void setPTokensNative(long address, long pTokens);
 
 
+    public void set(VkIndirectCommandsLayoutCreateInfoNVX o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkIndirectCommandsLayoutCreateInfoNVX implements cz.mg.collections.array.ReadonlyArray<VkIndirectCommandsLayoutCreateInfoNVX> {
         private final int count;

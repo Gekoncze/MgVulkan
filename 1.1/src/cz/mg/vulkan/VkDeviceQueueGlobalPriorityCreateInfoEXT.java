@@ -76,7 +76,12 @@ public class VkDeviceQueueGlobalPriorityCreateInfoEXT extends VkObject {
     protected static native void setGlobalPriorityNative(long address, long globalPriority);
 
 
+    public void set(VkDeviceQueueGlobalPriorityCreateInfoEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDeviceQueueGlobalPriorityCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDeviceQueueGlobalPriorityCreateInfoEXT> {
         private final int count;

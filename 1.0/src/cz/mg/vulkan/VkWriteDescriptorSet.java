@@ -191,7 +191,12 @@ public class VkWriteDescriptorSet extends VkObject {
     protected static native void setPTexelBufferViewNative(long address, long pTexelBufferView);
 
 
+    public void set(VkWriteDescriptorSet o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkWriteDescriptorSet implements cz.mg.collections.array.ReadonlyArray<VkWriteDescriptorSet> {
         private final int count;

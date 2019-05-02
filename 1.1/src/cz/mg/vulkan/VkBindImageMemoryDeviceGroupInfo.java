@@ -123,7 +123,12 @@ public class VkBindImageMemoryDeviceGroupInfo extends VkObject {
     protected static native void setPSplitInstanceBindRegionsNative(long address, long pSplitInstanceBindRegions);
 
 
+    public void set(VkBindImageMemoryDeviceGroupInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkBindImageMemoryDeviceGroupInfo implements cz.mg.collections.array.ReadonlyArray<VkBindImageMemoryDeviceGroupInfo> {
         private final int count;

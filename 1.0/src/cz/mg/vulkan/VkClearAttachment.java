@@ -75,7 +75,12 @@ public class VkClearAttachment extends VkObject {
     protected static native void setClearValueNative(long address, long clearValue);
 
 
+    public void set(VkClearAttachment o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkClearAttachment implements cz.mg.collections.array.ReadonlyArray<VkClearAttachment> {
         private final int count;

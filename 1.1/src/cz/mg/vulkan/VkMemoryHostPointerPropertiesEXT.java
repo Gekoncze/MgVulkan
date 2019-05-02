@@ -75,7 +75,12 @@ public class VkMemoryHostPointerPropertiesEXT extends VkObject {
     protected static native void setMemoryTypeBitsNative(long address, long memoryTypeBits);
 
 
+    public void set(VkMemoryHostPointerPropertiesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkMemoryHostPointerPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkMemoryHostPointerPropertiesEXT> {
         private final int count;

@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_si
     return sizeof(VkDescriptorSetVariableDescriptorCountAllocateInfoEXT);
 }
 
+void Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkDescriptorSetVariableDescriptorCountAllocateInfoEXT));
+}
+
 jlong Java_cz_mg_vulkan_VkDescriptorSetVariableDescriptorCountAllocateInfoEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

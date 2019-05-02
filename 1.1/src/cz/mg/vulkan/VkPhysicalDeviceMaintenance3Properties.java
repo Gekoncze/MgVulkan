@@ -96,7 +96,12 @@ public class VkPhysicalDeviceMaintenance3Properties extends VkObject {
     protected static native void setMaxMemoryAllocationSizeNative(long address, long maxMemoryAllocationSize);
 
 
+    public void set(VkPhysicalDeviceMaintenance3Properties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceMaintenance3Properties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMaintenance3Properties> {
         private final int count;

@@ -19,6 +19,10 @@ public class VkViewport extends VkObject {
 
     public VkViewport(float x, float y, float width, float height, float minDepth, float maxDepth) {
         super(sizeof());
+        set(x, y, width, height, minDepth, maxDepth);
+    }
+
+    public void set(float x, float y, float width, float height, float minDepth, float maxDepth){
         setX(x);
         setY(y);
         setWidth(width);
@@ -154,7 +158,12 @@ public class VkViewport extends VkObject {
     protected static native void setMaxDepthNative(long address, long maxDepth);
 
 
+    public void set(VkViewport o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkViewport implements cz.mg.collections.array.ReadonlyArray<VkViewport> {
         private final int count;

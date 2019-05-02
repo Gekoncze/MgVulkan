@@ -160,7 +160,12 @@ public class VkPhysicalDeviceSparseImageFormatInfo2 extends VkObject {
     protected static native void setTilingNative(long address, long tiling);
 
 
+    public void set(VkPhysicalDeviceSparseImageFormatInfo2 o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceSparseImageFormatInfo2 implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceSparseImageFormatInfo2> {
         private final int count;

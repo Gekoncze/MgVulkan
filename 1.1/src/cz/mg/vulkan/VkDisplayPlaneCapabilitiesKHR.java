@@ -145,7 +145,12 @@ public class VkDisplayPlaneCapabilitiesKHR extends VkObject {
     protected static native void setMaxDstExtentNative(long address, long maxDstExtent);
 
 
+    public void set(VkDisplayPlaneCapabilitiesKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDisplayPlaneCapabilitiesKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayPlaneCapabilitiesKHR> {
         private final int count;

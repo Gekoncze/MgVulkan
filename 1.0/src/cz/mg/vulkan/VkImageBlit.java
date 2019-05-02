@@ -72,7 +72,12 @@ public class VkImageBlit extends VkObject {
     protected static native void setDstOffsetsNative(long address, long dstOffsets);
 
 
+    public void set(VkImageBlit o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkImageBlit implements cz.mg.collections.array.ReadonlyArray<VkImageBlit> {
         private final int count;

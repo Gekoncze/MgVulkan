@@ -125,7 +125,12 @@ public class VkDrawIndexedIndirectCommand extends VkObject {
     protected static native void setFirstInstanceNative(long address, long firstInstance);
 
 
+    public void set(VkDrawIndexedIndirectCommand o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDrawIndexedIndirectCommand implements cz.mg.collections.array.ReadonlyArray<VkDrawIndexedIndirectCommand> {
         private final int count;

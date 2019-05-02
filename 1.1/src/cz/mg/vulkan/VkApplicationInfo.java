@@ -160,7 +160,12 @@ public class VkApplicationInfo extends VkObject {
     protected static native void setApiVersionNative(long address, long apiVersion);
 
 
+    public void set(VkApplicationInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkApplicationInfo implements cz.mg.collections.array.ReadonlyArray<VkApplicationInfo> {
         private final int count;

@@ -62,7 +62,12 @@ public class VkDescriptorPoolSize extends VkObject {
     protected static native void setDescriptorCountNative(long address, long descriptorCount);
 
 
+    public void set(VkDescriptorPoolSize o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDescriptorPoolSize implements cz.mg.collections.array.ReadonlyArray<VkDescriptorPoolSize> {
         private final int count;

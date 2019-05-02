@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPresentRegionKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkPresentRegionKHR);
 }
 
+void Java_cz_mg_vulkan_VkPresentRegionKHR_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPresentRegionKHR));
+}
+
 jlong Java_cz_mg_vulkan_VkPresentRegionKHR_getRectangleCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

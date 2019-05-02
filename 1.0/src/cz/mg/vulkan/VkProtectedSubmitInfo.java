@@ -76,7 +76,12 @@ public class VkProtectedSubmitInfo extends VkObject {
     protected static native void setProtectedSubmitNative(long address, long protectedSubmit);
 
 
+    public void set(VkProtectedSubmitInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkProtectedSubmitInfo implements cz.mg.collections.array.ReadonlyArray<VkProtectedSubmitInfo> {
         private final int count;

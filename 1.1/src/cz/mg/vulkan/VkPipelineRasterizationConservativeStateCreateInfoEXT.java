@@ -118,7 +118,12 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
     protected static native void setExtraPrimitiveOverestimationSizeNative(long address, long extraPrimitiveOverestimationSize);
 
 
+    public void set(VkPipelineRasterizationConservativeStateCreateInfoEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineRasterizationConservativeStateCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkPipelineRasterizationConservativeStateCreateInfoEXT> {
         private final int count;

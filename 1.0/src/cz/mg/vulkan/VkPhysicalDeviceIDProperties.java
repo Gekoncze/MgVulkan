@@ -135,7 +135,12 @@ public class VkPhysicalDeviceIDProperties extends VkObject {
     protected static native void setDeviceLUIDValidNative(long address, long deviceLUIDValid);
 
 
+    public void set(VkPhysicalDeviceIDProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceIDProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceIDProperties> {
         private final int count;

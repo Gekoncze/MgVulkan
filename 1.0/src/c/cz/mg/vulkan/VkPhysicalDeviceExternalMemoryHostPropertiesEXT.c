@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_sizeof(J
     return sizeof(VkPhysicalDeviceExternalMemoryHostPropertiesEXT);
 }
 
+void Java_cz_mg_vulkan_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPhysicalDeviceExternalMemoryHostPropertiesEXT));
+}
+
 jlong Java_cz_mg_vulkan_VkPhysicalDeviceExternalMemoryHostPropertiesEXT_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

@@ -225,7 +225,12 @@ public class VkBindSparseInfo extends VkObject {
     protected static native void setPSignalSemaphoresNative(long address, long pSignalSemaphores);
 
 
+    public void set(VkBindSparseInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkBindSparseInfo implements cz.mg.collections.array.ReadonlyArray<VkBindSparseInfo> {
         private final int count;

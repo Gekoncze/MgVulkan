@@ -75,7 +75,12 @@ public class VkDeviceGeneratedCommandsFeaturesNVX extends VkObject {
     protected static native void setComputeBindingPointSupportNative(long address, long computeBindingPointSupport);
 
 
+    public void set(VkDeviceGeneratedCommandsFeaturesNVX o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDeviceGeneratedCommandsFeaturesNVX implements cz.mg.collections.array.ReadonlyArray<VkDeviceGeneratedCommandsFeaturesNVX> {
         private final int count;

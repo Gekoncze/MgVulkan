@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2_sizeof(JNIEnv* env,
     return sizeof(VkImageSparseMemoryRequirementsInfo2);
 }
 
+void Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkImageSparseMemoryRequirementsInfo2));
+}
+
 jlong Java_cz_mg_vulkan_VkImageSparseMemoryRequirementsInfo2_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

@@ -83,7 +83,12 @@ public class VkPushConstantRange extends VkObject {
     protected static native void setSizeNative(long address, long size);
 
 
+    public void set(VkPushConstantRange o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPushConstantRange implements cz.mg.collections.array.ReadonlyArray<VkPushConstantRange> {
         private final int count;

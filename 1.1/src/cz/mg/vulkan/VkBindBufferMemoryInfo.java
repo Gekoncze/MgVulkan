@@ -102,7 +102,12 @@ public class VkBindBufferMemoryInfo extends VkObject {
     protected static native void setMemoryOffsetNative(long address, long memoryOffset);
 
 
+    public void set(VkBindBufferMemoryInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkBindBufferMemoryInfo implements cz.mg.collections.array.ReadonlyArray<VkBindBufferMemoryInfo> {
         private final int count;

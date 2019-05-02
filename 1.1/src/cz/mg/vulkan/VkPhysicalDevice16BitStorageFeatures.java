@@ -138,7 +138,12 @@ public class VkPhysicalDevice16BitStorageFeatures extends VkObject {
     protected static native void setStorageInputOutput16Native(long address, long storageInputOutput16);
 
 
+    public void set(VkPhysicalDevice16BitStorageFeatures o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDevice16BitStorageFeatures implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDevice16BitStorageFeatures> {
         private final int count;

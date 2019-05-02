@@ -160,7 +160,12 @@ public class VkPhysicalDeviceImageFormatInfo2 extends VkObject {
     protected static native void setFlagsNative(long address, long flags);
 
 
+    public void set(VkPhysicalDeviceImageFormatInfo2 o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceImageFormatInfo2 implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceImageFormatInfo2> {
         private final int count;

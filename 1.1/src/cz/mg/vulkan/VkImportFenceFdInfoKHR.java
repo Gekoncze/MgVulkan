@@ -131,7 +131,12 @@ public class VkImportFenceFdInfoKHR extends VkObject {
     protected static native void setFdNative(long address, long fd);
 
 
+    public void set(VkImportFenceFdInfoKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkImportFenceFdInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkImportFenceFdInfoKHR> {
         private final int count;

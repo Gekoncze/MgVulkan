@@ -19,6 +19,15 @@ public class VkClearValue extends VkObject {
 
     public VkClearValue(float r, float g, float b, float a) {
         super(sizeof());
+        set(r, g, b, a);
+    }
+
+    public VkClearValue(float d, int s) {
+        super(sizeof());
+        set(d, s);
+    }
+
+    public void set(float r, float g, float b, float a){
         VkFloat.Array floats = new VkFloat.Array(getColor().getFloat32(), 4);
         floats.get(0).setValue(r);
         floats.get(1).setValue(g);
@@ -26,8 +35,7 @@ public class VkClearValue extends VkObject {
         floats.get(3).setValue(a);
     }
 
-    public VkClearValue(float d, int s) {
-        super(sizeof());
+    public void set(float d, int s){
         getDepthStencil().setDepth(d);
         getDepthStencil().setStencil(s);
     }
@@ -59,7 +67,12 @@ public class VkClearValue extends VkObject {
     protected static native void setDepthStencilNative(long address, long depthStencil);
 
 
+    public void set(VkClearValue o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkClearValue implements cz.mg.collections.array.ReadonlyArray<VkClearValue> {
         private final int count;

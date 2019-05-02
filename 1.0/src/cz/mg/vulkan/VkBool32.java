@@ -16,10 +16,6 @@ public class VkBool32 extends VkUInt32 {
         super(pointer);
     }
 
-    public VkBool32(boolean value){
-        this(value == false ? Vk.VK_FALSE : Vk.VK_TRUE);
-    }
-
     @Override
     public String toString(){
         return getValue() == Vk.VK_FALSE ? "VK_FALSE" : "VK_TRUE";

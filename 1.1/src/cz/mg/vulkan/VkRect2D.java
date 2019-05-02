@@ -19,6 +19,10 @@ public class VkRect2D extends VkObject {
 
     public VkRect2D(int x, int y, int width, int height) {
         super(sizeof());
+        set(x, y, width, height);
+    }
+
+    public void set(int x, int y, int width, int height){
         getOffset().getX().setValue(x);
         getOffset().getY().setValue(y);
         getExtent().getWidth().setValue(width);
@@ -52,7 +56,12 @@ public class VkRect2D extends VkObject {
     protected static native void setExtentNative(long address, long extent);
 
 
+    public void set(VkRect2D o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkRect2D implements cz.mg.collections.array.ReadonlyArray<VkRect2D> {
         private final int count;

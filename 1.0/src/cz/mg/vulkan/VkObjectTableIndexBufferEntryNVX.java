@@ -96,7 +96,12 @@ public class VkObjectTableIndexBufferEntryNVX extends VkObject {
     protected static native void setIndexTypeNative(long address, long indexType);
 
 
+    public void set(VkObjectTableIndexBufferEntryNVX o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkObjectTableIndexBufferEntryNVX implements cz.mg.collections.array.ReadonlyArray<VkObjectTableIndexBufferEntryNVX> {
         private final int count;

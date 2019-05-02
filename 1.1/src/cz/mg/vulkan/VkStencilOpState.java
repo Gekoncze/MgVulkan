@@ -167,7 +167,12 @@ public class VkStencilOpState extends VkObject {
     protected static native void setReferenceNative(long address, long reference);
 
 
+    public void set(VkStencilOpState o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkStencilOpState implements cz.mg.collections.array.ReadonlyArray<VkStencilOpState> {
         private final int count;

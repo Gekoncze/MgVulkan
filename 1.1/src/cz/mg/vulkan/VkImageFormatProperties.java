@@ -117,7 +117,12 @@ public class VkImageFormatProperties extends VkObject {
     protected static native void setMaxResourceSizeNative(long address, long maxResourceSize);
 
 
+    public void set(VkImageFormatProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkImageFormatProperties implements cz.mg.collections.array.ReadonlyArray<VkImageFormatProperties> {
         private final int count;

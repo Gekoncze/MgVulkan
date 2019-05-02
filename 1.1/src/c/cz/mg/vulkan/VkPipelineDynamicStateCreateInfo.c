@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_sizeof(JNIEnv* env, jcl
     return sizeof(VkPipelineDynamicStateCreateInfo);
 }
 
+void Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPipelineDynamicStateCreateInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkPipelineDynamicStateCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

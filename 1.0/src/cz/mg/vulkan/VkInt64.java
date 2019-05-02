@@ -32,7 +32,12 @@ public class VkInt64 extends VkObject {
         setValueNative(getVkAddress(), value);
     }
 
+    public void set(VkInt64 o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
     protected static native long getValueNative(long vkaddress);
     protected static native void setValueNative(long vkaddress, long value);
 

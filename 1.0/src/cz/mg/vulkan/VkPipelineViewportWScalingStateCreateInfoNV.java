@@ -110,7 +110,12 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
     protected static native void setPViewportWScalingsNative(long address, long pViewportWScalings);
 
 
+    public void set(VkPipelineViewportWScalingStateCreateInfoNV o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineViewportWScalingStateCreateInfoNV implements cz.mg.collections.array.ReadonlyArray<VkPipelineViewportWScalingStateCreateInfoNV> {
         private final int count;

@@ -104,7 +104,12 @@ public class VkComponentMapping extends VkObject {
     protected static native void setANative(long address, long a);
 
 
+    public void set(VkComponentMapping o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkComponentMapping implements cz.mg.collections.array.ReadonlyArray<VkComponentMapping> {
         private final int count;

@@ -149,7 +149,12 @@ public class VkPresentInfoKHR extends VkObject {
     protected static native void setPResultsNative(long address, long pResults);
 
 
+    public void set(VkPresentInfoKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPresentInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkPresentInfoKHR> {
         private final int count;

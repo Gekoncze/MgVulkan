@@ -54,7 +54,12 @@ public class VkPresentRegionKHR extends VkObject {
     protected static native void setPRectanglesNative(long address, long pRectangles);
 
 
+    public void set(VkPresentRegionKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPresentRegionKHR implements cz.mg.collections.array.ReadonlyArray<VkPresentRegionKHR> {
         private final int count;

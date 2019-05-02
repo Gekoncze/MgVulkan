@@ -68,7 +68,12 @@ public class VkShaderModuleValidationCacheCreateInfoEXT extends VkObject {
     protected static native void setValidationCacheNative(long address, long validationCache);
 
 
+    public void set(VkShaderModuleValidationCacheCreateInfoEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkShaderModuleValidationCacheCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkShaderModuleValidationCacheCreateInfoEXT> {
         private final int count;

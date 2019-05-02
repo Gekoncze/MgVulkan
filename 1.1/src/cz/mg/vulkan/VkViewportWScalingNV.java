@@ -62,7 +62,12 @@ public class VkViewportWScalingNV extends VkObject {
     protected static native void setYcoeffNative(long address, long ycoeff);
 
 
+    public void set(VkViewportWScalingNV o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkViewportWScalingNV implements cz.mg.collections.array.ReadonlyArray<VkViewportWScalingNV> {
         private final int count;

@@ -67,7 +67,12 @@ public class VkMemoryRequirements2 extends VkObject {
     protected static native void setMemoryRequirementsNative(long address, long memoryRequirements);
 
 
+    public void set(VkMemoryRequirements2 o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkMemoryRequirements2 implements cz.mg.collections.array.ReadonlyArray<VkMemoryRequirements2> {
         private final int count;

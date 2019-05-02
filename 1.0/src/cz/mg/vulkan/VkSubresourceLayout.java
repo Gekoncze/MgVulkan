@@ -125,7 +125,12 @@ public class VkSubresourceLayout extends VkObject {
     protected static native void setDepthPitchNative(long address, long depthPitch);
 
 
+    public void set(VkSubresourceLayout o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSubresourceLayout implements cz.mg.collections.array.ReadonlyArray<VkSubresourceLayout> {
         private final int count;

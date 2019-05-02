@@ -191,7 +191,12 @@ public class VkDeviceCreateInfo extends VkObject {
     protected static native void setPEnabledFeaturesNative(long address, long pEnabledFeatures);
 
 
+    public void set(VkDeviceCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDeviceCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceCreateInfo> {
         private final int count;

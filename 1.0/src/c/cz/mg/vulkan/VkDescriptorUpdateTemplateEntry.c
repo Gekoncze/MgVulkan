@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntry_sizeof(JNIEnv* env, jcla
     return sizeof(VkDescriptorUpdateTemplateEntry);
 }
 
+void Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntry_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkDescriptorUpdateTemplateEntry));
+}
+
 jlong Java_cz_mg_vulkan_VkDescriptorUpdateTemplateEntry_getDstBindingNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

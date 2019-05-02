@@ -62,7 +62,12 @@ public class VkVertexInputBindingDivisorDescriptionEXT extends VkObject {
     protected static native void setDivisorNative(long address, long divisor);
 
 
+    public void set(VkVertexInputBindingDivisorDescriptionEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkVertexInputBindingDivisorDescriptionEXT implements cz.mg.collections.array.ReadonlyArray<VkVertexInputBindingDivisorDescriptionEXT> {
         private final int count;

@@ -89,7 +89,12 @@ public class VkDisplayModeCreateInfoKHR extends VkObject {
     protected static native void setParametersNative(long address, long parameters);
 
 
+    public void set(VkDisplayModeCreateInfoKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDisplayModeCreateInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayModeCreateInfoKHR> {
         private final int count;

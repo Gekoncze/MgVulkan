@@ -152,7 +152,12 @@ public class VkDebugMarkerObjectTagInfoEXT extends VkObject {
     protected static native void setPTagNative(long address, long pTag);
 
 
+    public void set(VkDebugMarkerObjectTagInfoEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDebugMarkerObjectTagInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugMarkerObjectTagInfoEXT> {
         private final int count;

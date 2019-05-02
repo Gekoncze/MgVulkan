@@ -194,7 +194,12 @@ public class VkPipelineMultisampleStateCreateInfo extends VkObject {
     protected static native void setAlphaToOneEnableNative(long address, long alphaToOneEnable);
 
 
+    public void set(VkPipelineMultisampleStateCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineMultisampleStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineMultisampleStateCreateInfo> {
         private final int count;

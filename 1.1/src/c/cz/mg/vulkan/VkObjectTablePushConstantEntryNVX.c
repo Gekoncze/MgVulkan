@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_sizeof(JNIEnv* env, jc
     return sizeof(VkObjectTablePushConstantEntryNVX);
 }
 
+void Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkObjectTablePushConstantEntryNVX));
+}
+
 jlong Java_cz_mg_vulkan_VkObjectTablePushConstantEntryNVX_getTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

@@ -180,7 +180,12 @@ public class VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT extends VkObjec
     protected static native void setAdvancedBlendAllOperationsNative(long address, long advancedBlendAllOperations);
 
 
+    public void set(VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT> {
         private final int count;

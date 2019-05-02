@@ -75,7 +75,12 @@ public class VkPhysicalDevicePushDescriptorPropertiesKHR extends VkObject {
     protected static native void setMaxPushDescriptorsNative(long address, long maxPushDescriptors);
 
 
+    public void set(VkPhysicalDevicePushDescriptorPropertiesKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDevicePushDescriptorPropertiesKHR implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDevicePushDescriptorPropertiesKHR> {
         private final int count;

@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_sizeof(JNIEnv* en
     return sizeof(VkPipelineInputAssemblyStateCreateInfo);
 }
 
+void Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPipelineInputAssemblyStateCreateInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkPipelineInputAssemblyStateCreateInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

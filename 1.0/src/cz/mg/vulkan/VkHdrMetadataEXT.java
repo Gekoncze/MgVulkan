@@ -190,7 +190,12 @@ public class VkHdrMetadataEXT extends VkObject {
     protected static native void setMaxFrameAverageLightLevelNative(long address, long maxFrameAverageLightLevel);
 
 
+    public void set(VkHdrMetadataEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkHdrMetadataEXT implements cz.mg.collections.array.ReadonlyArray<VkHdrMetadataEXT> {
         private final int count;

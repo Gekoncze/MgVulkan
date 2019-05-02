@@ -110,7 +110,12 @@ public class VkCommandBufferAllocateInfo extends VkObject {
     protected static native void setCommandBufferCountNative(long address, long commandBufferCount);
 
 
+    public void set(VkCommandBufferAllocateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkCommandBufferAllocateInfo implements cz.mg.collections.array.ReadonlyArray<VkCommandBufferAllocateInfo> {
         private final int count;

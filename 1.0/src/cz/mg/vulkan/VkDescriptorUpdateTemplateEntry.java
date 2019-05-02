@@ -146,7 +146,12 @@ public class VkDescriptorUpdateTemplateEntry extends VkObject {
     protected static native void setStrideNative(long address, long stride);
 
 
+    public void set(VkDescriptorUpdateTemplateEntry o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDescriptorUpdateTemplateEntry implements cz.mg.collections.array.ReadonlyArray<VkDescriptorUpdateTemplateEntry> {
         private final int count;

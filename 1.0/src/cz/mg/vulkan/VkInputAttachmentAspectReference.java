@@ -83,7 +83,12 @@ public class VkInputAttachmentAspectReference extends VkObject {
     protected static native void setAspectMaskNative(long address, long aspectMask);
 
 
+    public void set(VkInputAttachmentAspectReference o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkInputAttachmentAspectReference implements cz.mg.collections.array.ReadonlyArray<VkInputAttachmentAspectReference> {
         private final int count;

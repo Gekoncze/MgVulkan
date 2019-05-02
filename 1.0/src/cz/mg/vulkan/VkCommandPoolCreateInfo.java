@@ -97,7 +97,12 @@ public class VkCommandPoolCreateInfo extends VkObject {
     protected static native void setQueueFamilyIndexNative(long address, long queueFamilyIndex);
 
 
+    public void set(VkCommandPoolCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkCommandPoolCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkCommandPoolCreateInfo> {
         private final int count;

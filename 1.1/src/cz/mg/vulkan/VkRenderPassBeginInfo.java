@@ -128,7 +128,12 @@ public class VkRenderPassBeginInfo extends VkObject {
     protected static native void setPClearValuesNative(long address, long pClearValues);
 
 
+    public void set(VkRenderPassBeginInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkRenderPassBeginInfo implements cz.mg.collections.array.ReadonlyArray<VkRenderPassBeginInfo> {
         private final int count;

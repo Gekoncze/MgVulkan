@@ -54,7 +54,12 @@ public class VkSubpassSampleLocationsEXT extends VkObject {
     protected static native void setSampleLocationsInfoNative(long address, long sampleLocationsInfo);
 
 
+    public void set(VkSubpassSampleLocationsEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSubpassSampleLocationsEXT implements cz.mg.collections.array.ReadonlyArray<VkSubpassSampleLocationsEXT> {
         private final int count;

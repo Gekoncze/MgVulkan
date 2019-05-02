@@ -59,7 +59,12 @@ public class VkClearColorValue extends VkObject {
     protected static native void setUint32Native(long address, long uint32);
 
 
+    public void set(VkClearColorValue o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkClearColorValue implements cz.mg.collections.array.ReadonlyArray<VkClearColorValue> {
         private final int count;

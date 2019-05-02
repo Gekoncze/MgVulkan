@@ -110,7 +110,12 @@ public class VkPipelineCacheCreateInfo extends VkObject {
     protected static native void setPInitialDataNative(long address, long pInitialData);
 
 
+    public void set(VkPipelineCacheCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineCacheCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineCacheCreateInfo> {
         private final int count;

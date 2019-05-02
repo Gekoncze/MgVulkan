@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_sizeof(JNIEnv* en
     return sizeof(VkPhysicalDeviceSparseImageFormatInfo2);
 }
 
+void Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPhysicalDeviceSparseImageFormatInfo2));
+}
+
 jlong Java_cz_mg_vulkan_VkPhysicalDeviceSparseImageFormatInfo2_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

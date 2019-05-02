@@ -215,7 +215,12 @@ public class VkSamplerYcbcrConversionCreateInfo extends VkObject {
     protected static native void setForceExplicitReconstructionNative(long address, long forceExplicitReconstruction);
 
 
+    public void set(VkSamplerYcbcrConversionCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSamplerYcbcrConversionCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkSamplerYcbcrConversionCreateInfo> {
         private final int count;

@@ -76,7 +76,12 @@ public class VkBindImagePlaneMemoryInfo extends VkObject {
     protected static native void setPlaneAspectNative(long address, long planeAspect);
 
 
+    public void set(VkBindImagePlaneMemoryInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkBindImagePlaneMemoryInfo implements cz.mg.collections.array.ReadonlyArray<VkBindImagePlaneMemoryInfo> {
         private final int count;

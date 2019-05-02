@@ -19,6 +19,10 @@ public class VkExtent3D extends VkObject {
 
     public VkExtent3D(int width, int height, int depth) {
         super(sizeof());
+        set(width, height, depth);
+    }
+
+    public void set(int width, int height, int depth){
         getWidth().setValue(width);
         getHeight().setValue(height);
         getDepth().setValue(depth);
@@ -88,7 +92,12 @@ public class VkExtent3D extends VkObject {
     protected static native void setDepthNative(long address, long depth);
 
 
+    public void set(VkExtent3D o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkExtent3D implements cz.mg.collections.array.ReadonlyArray<VkExtent3D> {
         private final int count;

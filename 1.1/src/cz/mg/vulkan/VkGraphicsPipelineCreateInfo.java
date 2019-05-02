@@ -308,7 +308,12 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
     protected static native void setBasePipelineIndexNative(long address, long basePipelineIndex);
 
 
+    public void set(VkGraphicsPipelineCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkGraphicsPipelineCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkGraphicsPipelineCreateInfo> {
         private final int count;

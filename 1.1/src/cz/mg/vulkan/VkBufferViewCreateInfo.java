@@ -152,7 +152,12 @@ public class VkBufferViewCreateInfo extends VkObject {
     protected static native void setRangeNative(long address, long range);
 
 
+    public void set(VkBufferViewCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkBufferViewCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkBufferViewCreateInfo> {
         private final int count;

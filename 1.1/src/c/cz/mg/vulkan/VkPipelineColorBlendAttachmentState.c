@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPipelineColorBlendAttachmentState_sizeof(JNIEnv* env, 
     return sizeof(VkPipelineColorBlendAttachmentState);
 }
 
+void Java_cz_mg_vulkan_VkPipelineColorBlendAttachmentState_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPipelineColorBlendAttachmentState));
+}
+
 jlong Java_cz_mg_vulkan_VkPipelineColorBlendAttachmentState_getBlendEnableNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

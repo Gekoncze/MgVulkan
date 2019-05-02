@@ -19,6 +19,10 @@ public class VkExtent2D extends VkObject {
 
     public VkExtent2D(int width, int height) {
         super(sizeof());
+        set(width, height);
+    }
+
+    public void set(int width, int height){
         getWidth().setValue(width);
         getHeight().setValue(height);
     }
@@ -66,7 +70,12 @@ public class VkExtent2D extends VkObject {
     protected static native void setHeightNative(long address, long height);
 
 
+    public void set(VkExtent2D o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkExtent2D implements cz.mg.collections.array.ReadonlyArray<VkExtent2D> {
         private final int count;

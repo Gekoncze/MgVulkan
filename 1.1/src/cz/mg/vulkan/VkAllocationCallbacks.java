@@ -98,7 +98,12 @@ public class VkAllocationCallbacks extends VkObject {
     protected static native void setPfnInternalFreeNative(long address, long pfnInternalFree);
 
 
+    public void set(VkAllocationCallbacks o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkAllocationCallbacks implements cz.mg.collections.array.ReadonlyArray<VkAllocationCallbacks> {
         private final int count;

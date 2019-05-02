@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkSurfaceFormatKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSurfaceFormatKHR);
 }
 
+void Java_cz_mg_vulkan_VkSurfaceFormatKHR_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkSurfaceFormatKHR));
+}
+
 jlong Java_cz_mg_vulkan_VkSurfaceFormatKHR_getFormatNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

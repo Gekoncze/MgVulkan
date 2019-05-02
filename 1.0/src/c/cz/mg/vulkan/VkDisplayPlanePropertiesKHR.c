@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_sizeof(JNIEnv* env, jclass j
     return sizeof(VkDisplayPlanePropertiesKHR);
 }
 
+void Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkDisplayPlanePropertiesKHR));
+}
+
 jlong Java_cz_mg_vulkan_VkDisplayPlanePropertiesKHR_getCurrentDisplayNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

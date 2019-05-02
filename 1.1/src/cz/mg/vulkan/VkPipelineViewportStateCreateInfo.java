@@ -144,7 +144,12 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
     protected static native void setPScissorsNative(long address, long pScissors);
 
 
+    public void set(VkPipelineViewportStateCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineViewportStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineViewportStateCreateInfo> {
         private final int count;

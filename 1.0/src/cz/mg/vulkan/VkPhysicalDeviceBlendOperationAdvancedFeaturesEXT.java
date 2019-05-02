@@ -75,7 +75,12 @@ public class VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT extends VkObject 
     protected static native void setAdvancedBlendCoherentOperationsNative(long address, long advancedBlendCoherentOperations);
 
 
+    public void set(VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT> {
         private final int count;

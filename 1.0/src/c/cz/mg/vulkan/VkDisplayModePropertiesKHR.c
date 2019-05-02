@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkDisplayModePropertiesKHR_sizeof(JNIEnv* env, jclass jc
     return sizeof(VkDisplayModePropertiesKHR);
 }
 
+void Java_cz_mg_vulkan_VkDisplayModePropertiesKHR_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkDisplayModePropertiesKHR));
+}
+
 jlong Java_cz_mg_vulkan_VkDisplayModePropertiesKHR_getDisplayModeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

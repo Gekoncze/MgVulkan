@@ -170,7 +170,12 @@ public class VkSubmitInfo extends VkObject {
     protected static native void setPSignalSemaphoresNative(long address, long pSignalSemaphores);
 
 
+    public void set(VkSubmitInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSubmitInfo implements cz.mg.collections.array.ReadonlyArray<VkSubmitInfo> {
         private final int count;

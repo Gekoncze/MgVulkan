@@ -102,7 +102,12 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
     protected static native void setMaxSequencesCountNative(long address, long maxSequencesCount);
 
 
+    public void set(VkCmdReserveSpaceForCommandsInfoNVX o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkCmdReserveSpaceForCommandsInfoNVX implements cz.mg.collections.array.ReadonlyArray<VkCmdReserveSpaceForCommandsInfoNVX> {
         private final int count;

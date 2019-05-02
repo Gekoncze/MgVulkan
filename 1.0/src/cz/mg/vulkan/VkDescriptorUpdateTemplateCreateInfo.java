@@ -199,7 +199,12 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
     protected static native void setSetNative(long address, long set);
 
 
+    public void set(VkDescriptorUpdateTemplateCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDescriptorUpdateTemplateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDescriptorUpdateTemplateCreateInfo> {
         private final int count;

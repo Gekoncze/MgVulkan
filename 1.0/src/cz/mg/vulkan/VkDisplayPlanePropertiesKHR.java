@@ -54,7 +54,12 @@ public class VkDisplayPlanePropertiesKHR extends VkObject {
     protected static native void setCurrentStackIndexNative(long address, long currentStackIndex);
 
 
+    public void set(VkDisplayPlanePropertiesKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDisplayPlanePropertiesKHR implements cz.mg.collections.array.ReadonlyArray<VkDisplayPlanePropertiesKHR> {
         private final int count;

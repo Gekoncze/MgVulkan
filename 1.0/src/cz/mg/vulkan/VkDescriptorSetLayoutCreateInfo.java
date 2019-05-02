@@ -110,7 +110,12 @@ public class VkDescriptorSetLayoutCreateInfo extends VkObject {
     protected static native void setPBindingsNative(long address, long pBindings);
 
 
+    public void set(VkDescriptorSetLayoutCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDescriptorSetLayoutCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkDescriptorSetLayoutCreateInfo> {
         private final int count;

@@ -144,7 +144,12 @@ public class VkPipelineShaderStageCreateInfo extends VkObject {
     protected static native void setPSpecializationInfoNative(long address, long pSpecializationInfo);
 
 
+    public void set(VkPipelineShaderStageCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineShaderStageCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineShaderStageCreateInfo> {
         private final int count;

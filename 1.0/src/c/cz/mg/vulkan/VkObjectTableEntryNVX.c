@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkObjectTableEntryNVX_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkObjectTableEntryNVX);
 }
 
+void Java_cz_mg_vulkan_VkObjectTableEntryNVX_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkObjectTableEntryNVX));
+}
+
 jlong Java_cz_mg_vulkan_VkObjectTableEntryNVX_getTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

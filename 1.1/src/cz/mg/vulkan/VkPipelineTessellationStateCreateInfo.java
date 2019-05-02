@@ -97,7 +97,12 @@ public class VkPipelineTessellationStateCreateInfo extends VkObject {
     protected static native void setPatchControlPointsNative(long address, long patchControlPoints);
 
 
+    public void set(VkPipelineTessellationStateCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPipelineTessellationStateCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkPipelineTessellationStateCreateInfo> {
         private final int count;

@@ -110,7 +110,12 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
     protected static native void setPDeviceRenderAreasNative(long address, long pDeviceRenderAreas);
 
 
+    public void set(VkDeviceGroupRenderPassBeginInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDeviceGroupRenderPassBeginInfo implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupRenderPassBeginInfo> {
         private final int count;

@@ -185,7 +185,12 @@ public class VkPhysicalDeviceProperties extends VkObject {
     protected static native void setSparsePropertiesNative(long address, long sparseProperties);
 
 
+    public void set(VkPhysicalDeviceProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceProperties> {
         private final int count;

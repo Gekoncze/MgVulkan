@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_sizeof(JNIEnv* env, 
     return sizeof(VkPhysicalDeviceMultiviewProperties);
 }
 
+void Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPhysicalDeviceMultiviewProperties));
+}
+
 jlong Java_cz_mg_vulkan_VkPhysicalDeviceMultiviewProperties_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

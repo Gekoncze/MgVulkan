@@ -157,7 +157,12 @@ public class VkImageViewCreateInfo extends VkObject {
     protected static native void setSubresourceRangeNative(long address, long subresourceRange);
 
 
+    public void set(VkImageViewCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkImageViewCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkImageViewCreateInfo> {
         private final int count;

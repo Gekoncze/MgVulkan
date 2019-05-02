@@ -83,7 +83,12 @@ public class VkFormatProperties extends VkObject {
     protected static native void setBufferFeaturesNative(long address, long bufferFeatures);
 
 
+    public void set(VkFormatProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkFormatProperties implements cz.mg.collections.array.ReadonlyArray<VkFormatProperties> {
         private final int count;

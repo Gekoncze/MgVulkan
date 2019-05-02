@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkRectLayerKHR_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkRectLayerKHR);
 }
 
+void Java_cz_mg_vulkan_VkRectLayerKHR_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkRectLayerKHR));
+}
+
 jlong Java_cz_mg_vulkan_VkRectLayerKHR_getOffsetNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

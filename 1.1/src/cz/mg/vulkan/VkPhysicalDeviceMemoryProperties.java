@@ -88,7 +88,12 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
     protected static native void setMemoryHeapsNative(long address, long memoryHeaps);
 
 
+    public void set(VkPhysicalDeviceMemoryProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceMemoryProperties implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceMemoryProperties> {
         private final int count;

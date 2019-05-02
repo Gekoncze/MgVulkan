@@ -67,7 +67,12 @@ public class VkMultisamplePropertiesEXT extends VkObject {
     protected static native void setMaxSampleLocationGridSizeNative(long address, long maxSampleLocationGridSize);
 
 
+    public void set(VkMultisamplePropertiesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkMultisamplePropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkMultisamplePropertiesEXT> {
         private final int count;

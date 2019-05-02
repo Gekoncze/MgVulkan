@@ -19,6 +19,10 @@ public class VkOffset2D extends VkObject {
 
     public VkOffset2D(int x, int y){
         super(sizeof());
+        set(x, y);
+    }
+
+    public void set(int x, int y){
         getX().setValue(x);
         getY().setValue(y);
     }
@@ -66,7 +70,12 @@ public class VkOffset2D extends VkObject {
     protected static native void setYNative(long address, long y);
 
 
+    public void set(VkOffset2D o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkOffset2D implements cz.mg.collections.array.ReadonlyArray<VkOffset2D> {
         private final int count;

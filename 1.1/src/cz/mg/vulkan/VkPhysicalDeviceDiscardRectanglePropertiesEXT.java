@@ -75,7 +75,12 @@ public class VkPhysicalDeviceDiscardRectanglePropertiesEXT extends VkObject {
     protected static native void setMaxDiscardRectanglesNative(long address, long maxDiscardRectangles);
 
 
+    public void set(VkPhysicalDeviceDiscardRectanglePropertiesEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkPhysicalDeviceDiscardRectanglePropertiesEXT implements cz.mg.collections.array.ReadonlyArray<VkPhysicalDeviceDiscardRectanglePropertiesEXT> {
         private final int count;

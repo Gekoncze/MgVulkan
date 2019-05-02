@@ -89,7 +89,12 @@ public class VkBindImageMemorySwapchainInfoKHR extends VkObject {
     protected static native void setImageIndexNative(long address, long imageIndex);
 
 
+    public void set(VkBindImageMemorySwapchainInfoKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkBindImageMemorySwapchainInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkBindImageMemorySwapchainInfoKHR> {
         private final int count;

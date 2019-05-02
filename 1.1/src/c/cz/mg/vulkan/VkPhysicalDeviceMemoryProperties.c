@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_sizeof(JNIEnv* env, jcl
     return sizeof(VkPhysicalDeviceMemoryProperties);
 }
 
+void Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPhysicalDeviceMemoryProperties));
+}
+
 jlong Java_cz_mg_vulkan_VkPhysicalDeviceMemoryProperties_getMemoryTypeCountNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

@@ -88,7 +88,12 @@ public class VkDeviceGroupPresentCapabilitiesKHR extends VkObject {
     protected static native void setModesNative(long address, long modes);
 
 
+    public void set(VkDeviceGroupPresentCapabilitiesKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDeviceGroupPresentCapabilitiesKHR implements cz.mg.collections.array.ReadonlyArray<VkDeviceGroupPresentCapabilitiesKHR> {
         private final int count;

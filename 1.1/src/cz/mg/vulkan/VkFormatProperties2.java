@@ -67,7 +67,12 @@ public class VkFormatProperties2 extends VkObject {
     protected static native void setFormatPropertiesNative(long address, long formatProperties);
 
 
+    public void set(VkFormatProperties2 o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkFormatProperties2 implements cz.mg.collections.array.ReadonlyArray<VkFormatProperties2> {
         private final int count;

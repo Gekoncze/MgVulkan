@@ -83,7 +83,12 @@ public class VkBufferCopy extends VkObject {
     protected static native void setSizeNative(long address, long size);
 
 
+    public void set(VkBufferCopy o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkBufferCopy implements cz.mg.collections.array.ReadonlyArray<VkBufferCopy> {
         private final int count;

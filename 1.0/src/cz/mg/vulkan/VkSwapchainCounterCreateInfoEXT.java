@@ -76,7 +76,12 @@ public class VkSwapchainCounterCreateInfoEXT extends VkObject {
     protected static native void setSurfaceCountersNative(long address, long surfaceCounters);
 
 
+    public void set(VkSwapchainCounterCreateInfoEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkSwapchainCounterCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkSwapchainCounterCreateInfoEXT> {
         private final int count;

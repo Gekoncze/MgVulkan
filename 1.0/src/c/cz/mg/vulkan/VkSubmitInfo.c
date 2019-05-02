@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkSubmitInfo_sizeof(JNIEnv* env, jclass jc)
     return sizeof(VkSubmitInfo);
 }
 
+void Java_cz_mg_vulkan_VkSubmitInfo_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkSubmitInfo));
+}
+
 jlong Java_cz_mg_vulkan_VkSubmitInfo_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

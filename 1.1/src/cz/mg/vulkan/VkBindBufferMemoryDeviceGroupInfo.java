@@ -89,7 +89,12 @@ public class VkBindBufferMemoryDeviceGroupInfo extends VkObject {
     protected static native void setPDeviceIndicesNative(long address, long pDeviceIndices);
 
 
+    public void set(VkBindBufferMemoryDeviceGroupInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkBindBufferMemoryDeviceGroupInfo implements cz.mg.collections.array.ReadonlyArray<VkBindBufferMemoryDeviceGroupInfo> {
         private final int count;

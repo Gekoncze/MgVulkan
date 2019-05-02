@@ -89,7 +89,12 @@ public class VkMemoryGetFdInfoKHR extends VkObject {
     protected static native void setHandleTypeNative(long address, long handleType);
 
 
+    public void set(VkMemoryGetFdInfoKHR o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkMemoryGetFdInfoKHR implements cz.mg.collections.array.ReadonlyArray<VkMemoryGetFdInfoKHR> {
         private final int count;

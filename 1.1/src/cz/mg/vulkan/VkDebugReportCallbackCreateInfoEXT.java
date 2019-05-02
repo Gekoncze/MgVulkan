@@ -102,7 +102,12 @@ public class VkDebugReportCallbackCreateInfoEXT extends VkObject {
     protected static native void setPUserDataNative(long address, long pUserData);
 
 
+    public void set(VkDebugReportCallbackCreateInfoEXT o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDebugReportCallbackCreateInfoEXT implements cz.mg.collections.array.ReadonlyArray<VkDebugReportCallbackCreateInfoEXT> {
         private final int count;

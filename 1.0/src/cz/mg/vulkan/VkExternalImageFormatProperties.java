@@ -67,7 +67,12 @@ public class VkExternalImageFormatProperties extends VkObject {
     protected static native void setExternalMemoryPropertiesNative(long address, long externalMemoryProperties);
 
 
+    public void set(VkExternalImageFormatProperties o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkExternalImageFormatProperties implements cz.mg.collections.array.ReadonlyArray<VkExternalImageFormatProperties> {
         private final int count;

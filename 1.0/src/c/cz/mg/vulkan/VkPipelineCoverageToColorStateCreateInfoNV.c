@@ -16,6 +16,13 @@ jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_sizeof(JNIEnv
     return sizeof(VkPipelineCoverageToColorStateCreateInfoNV);
 }
 
+void Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_setNative(JNIEnv* env, jclass jc, jlong o1, jlong o2)
+{
+    (void)env;
+    (void)jc;
+    memcpy(jniLongToPointer(o1), jniLongToPointer(o2), sizeof(VkPipelineCoverageToColorStateCreateInfoNV));
+}
+
 jlong Java_cz_mg_vulkan_VkPipelineCoverageToColorStateCreateInfoNV_getSTypeNative(JNIEnv* env, jclass jc, jlong address)
 {
     (void)env;

@@ -89,7 +89,12 @@ public class VkRenderPassInputAttachmentAspectCreateInfo extends VkObject {
     protected static native void setPAspectReferencesNative(long address, long pAspectReferences);
 
 
+    public void set(VkRenderPassInputAttachmentAspectCreateInfo o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkRenderPassInputAttachmentAspectCreateInfo implements cz.mg.collections.array.ReadonlyArray<VkRenderPassInputAttachmentAspectCreateInfo> {
         private final int count;

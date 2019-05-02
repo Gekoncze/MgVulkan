@@ -83,7 +83,12 @@ public class VkDispatchIndirectCommand extends VkObject {
     protected static native void setZNative(long address, long z);
 
 
+    public void set(VkDispatchIndirectCommand o){
+        setNative(getVkAddress(), o.getVkAddress());
+    }
+
     public static native long sizeof();
+    protected static native void setNative(long o1, long o2);
 
     public static class Array extends VkDispatchIndirectCommand implements cz.mg.collections.array.ReadonlyArray<VkDispatchIndirectCommand> {
         private final int count;
