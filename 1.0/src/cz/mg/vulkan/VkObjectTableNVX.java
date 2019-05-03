@@ -52,7 +52,10 @@ public class VkObjectTableNVX extends VkNonDispatchableHandle {
 
 
 
-
+        public Array(VkObjectTableNVX... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) get(i).setValue(values[i].getValue());
+        }
 
         @Override
         public int count(){

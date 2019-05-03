@@ -52,7 +52,10 @@ public class VkShaderModule extends VkNonDispatchableHandle {
 
 
 
-
+        public Array(VkShaderModule... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) get(i).setValue(values[i].getValue());
+        }
 
         @Override
         public int count(){

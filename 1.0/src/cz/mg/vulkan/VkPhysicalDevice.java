@@ -52,7 +52,10 @@ public class VkPhysicalDevice extends VkDispatchableHandle {
 
 
 
-
+        public Array(VkPhysicalDevice... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) get(i).setValue(values[i].getValue());
+        }
 
         @Override
         public int count(){

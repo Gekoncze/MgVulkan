@@ -52,7 +52,10 @@ public class VkDescriptorPool extends VkNonDispatchableHandle {
 
 
 
-
+        public Array(VkDescriptorPool... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) get(i).setValue(values[i].getValue());
+        }
 
         @Override
         public int count(){

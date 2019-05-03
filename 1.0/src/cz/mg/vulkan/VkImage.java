@@ -52,7 +52,10 @@ public class VkImage extends VkNonDispatchableHandle {
 
 
 
-
+        public Array(VkImage... values){
+            this(values.length);
+            for(int i = 0; i < values.length; i++) get(i).setValue(values[i].getValue());
+        }
 
         @Override
         public int count(){
