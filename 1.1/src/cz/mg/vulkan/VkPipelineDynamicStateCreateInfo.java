@@ -106,6 +106,10 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
         this.pDynamicStates = pDynamicStates;
     }
 
+    public VkDynamicState.Array getPDynamicStatesQ() {
+        return new VkDynamicState.Array(getPDynamicStates(), getDynamicStateCountQ());
+    }
+
     protected static native long getPDynamicStatesNative(long address);
     protected static native void setPDynamicStatesNative(long address, long pDynamicStates);
 
@@ -126,7 +130,7 @@ public class VkPipelineDynamicStateCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO));;
         }
 
-        public Array(int count, VkPipelineDynamicStateCreateInfo o){
+        public Array(VkPipelineDynamicStateCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

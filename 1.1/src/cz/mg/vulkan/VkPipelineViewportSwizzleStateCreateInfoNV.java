@@ -106,6 +106,10 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
         this.pViewportSwizzles = pViewportSwizzles;
     }
 
+    public VkViewportSwizzleNV.Array getPViewportSwizzlesQ() {
+        return new VkViewportSwizzleNV.Array(getPViewportSwizzles(), getViewportCountQ());
+    }
+
     protected static native long getPViewportSwizzlesNative(long address);
     protected static native void setPViewportSwizzlesNative(long address, long pViewportSwizzles);
 
@@ -126,7 +130,7 @@ public class VkPipelineViewportSwizzleStateCreateInfoNV extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_SWIZZLE_STATE_CREATE_INFO_NV));;
         }
 
-        public Array(int count, VkPipelineViewportSwizzleStateCreateInfoNV o){
+        public Array(VkPipelineViewportSwizzleStateCreateInfoNV o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

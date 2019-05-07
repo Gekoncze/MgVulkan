@@ -148,6 +148,10 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
         this.pCoverageModulationTable = pCoverageModulationTable;
     }
 
+    public VkFloat.Array getPCoverageModulationTableQ() {
+        return new VkFloat.Array(getPCoverageModulationTable(), getCoverageModulationTableCountQ());
+    }
+
     protected static native long getPCoverageModulationTableNative(long address);
     protected static native void setPCoverageModulationTableNative(long address, long pCoverageModulationTable);
 
@@ -168,7 +172,7 @@ public class VkPipelineCoverageModulationStateCreateInfoNV extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COVERAGE_MODULATION_STATE_CREATE_INFO_NV));;
         }
 
-        public Array(int count, VkPipelineCoverageModulationStateCreateInfoNV o){
+        public Array(VkPipelineCoverageModulationStateCreateInfoNV o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

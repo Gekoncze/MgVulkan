@@ -127,6 +127,10 @@ public class VkDeviceQueueCreateInfo extends VkObject {
         this.pQueuePriorities = pQueuePriorities;
     }
 
+    public VkFloat.Array getPQueuePrioritiesQ() {
+        return new VkFloat.Array(getPQueuePriorities(), getQueueCountQ());
+    }
+
     protected static native long getPQueuePrioritiesNative(long address);
     protected static native void setPQueuePrioritiesNative(long address, long pQueuePriorities);
 
@@ -147,7 +151,7 @@ public class VkDeviceQueueCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO));;
         }
 
-        public Array(int count, VkDeviceQueueCreateInfo o){
+        public Array(VkDeviceQueueCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

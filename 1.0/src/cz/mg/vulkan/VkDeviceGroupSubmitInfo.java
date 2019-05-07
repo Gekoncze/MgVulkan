@@ -85,6 +85,10 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         this.pWaitSemaphoreDeviceIndices = pWaitSemaphoreDeviceIndices;
     }
 
+    public VkUInt32.Array getPWaitSemaphoreDeviceIndicesQ() {
+        return new VkUInt32.Array(getPWaitSemaphoreDeviceIndices(), getWaitSemaphoreCountQ());
+    }
+
     protected static native long getPWaitSemaphoreDeviceIndicesNative(long address);
     protected static native void setPWaitSemaphoreDeviceIndicesNative(long address, long pWaitSemaphoreDeviceIndices);
 
@@ -117,6 +121,10 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
     public void setPCommandBufferDeviceMasks(VkUInt32 pCommandBufferDeviceMasks) {
         setPCommandBufferDeviceMasksNative(getVkAddress(), pCommandBufferDeviceMasks != null ? pCommandBufferDeviceMasks.getVkAddress() : VkPointer.NULL);
         this.pCommandBufferDeviceMasks = pCommandBufferDeviceMasks;
+    }
+
+    public VkUInt32.Array getPCommandBufferDeviceMasksQ() {
+        return new VkUInt32.Array(getPCommandBufferDeviceMasks(), getCommandBufferCountQ());
     }
 
     protected static native long getPCommandBufferDeviceMasksNative(long address);
@@ -153,6 +161,10 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
         this.pSignalSemaphoreDeviceIndices = pSignalSemaphoreDeviceIndices;
     }
 
+    public VkUInt32.Array getPSignalSemaphoreDeviceIndicesQ() {
+        return new VkUInt32.Array(getPSignalSemaphoreDeviceIndices(), getSignalSemaphoreCountQ());
+    }
+
     protected static native long getPSignalSemaphoreDeviceIndicesNative(long address);
     protected static native void setPSignalSemaphoreDeviceIndicesNative(long address, long pSignalSemaphoreDeviceIndices);
 
@@ -173,7 +185,7 @@ public class VkDeviceGroupSubmitInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_SUBMIT_INFO));;
         }
 
-        public Array(int count, VkDeviceGroupSubmitInfo o){
+        public Array(VkDeviceGroupSubmitInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

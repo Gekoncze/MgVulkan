@@ -134,7 +134,7 @@ public class VkPipelineRasterizationConservativeStateCreateInfoEXT extends VkObj
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_CONSERVATIVE_STATE_CREATE_INFO_EXT));;
         }
 
-        public Array(int count, VkPipelineRasterizationConservativeStateCreateInfoEXT o){
+        public Array(VkPipelineRasterizationConservativeStateCreateInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

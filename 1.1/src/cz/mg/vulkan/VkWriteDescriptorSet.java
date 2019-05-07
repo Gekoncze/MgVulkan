@@ -207,7 +207,7 @@ public class VkWriteDescriptorSet extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET));;
         }
 
-        public Array(int count, VkWriteDescriptorSet o){
+        public Array(VkWriteDescriptorSet o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

@@ -84,6 +84,10 @@ public class VkPhysicalDeviceGroupProperties extends VkObject {
         
     }
 
+    public VkPhysicalDevice.Array getPhysicalDevicesQ() {
+        return new VkPhysicalDevice.Array(getPhysicalDevices(), getPhysicalDeviceCountQ());
+    }
+
     protected static native long getPhysicalDevicesNative(long address);
     protected static native void setPhysicalDevicesNative(long address, long physicalDevices);
 

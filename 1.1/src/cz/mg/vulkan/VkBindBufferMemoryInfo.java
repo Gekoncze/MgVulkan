@@ -118,7 +118,7 @@ public class VkBindBufferMemoryInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_BUFFER_MEMORY_INFO));;
         }
 
-        public Array(int count, VkBindBufferMemoryInfo o){
+        public Array(VkBindBufferMemoryInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

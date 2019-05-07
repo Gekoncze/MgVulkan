@@ -155,7 +155,7 @@ public class VkQueryPoolCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_QUERY_POOL_CREATE_INFO));;
         }
 
-        public Array(int count, VkQueryPoolCreateInfo o){
+        public Array(VkQueryPoolCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

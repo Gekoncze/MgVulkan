@@ -50,6 +50,10 @@ public class VkSpecializationInfo extends VkObject {
         this.pMapEntries = pMapEntries;
     }
 
+    public VkSpecializationMapEntry.Array getPMapEntriesQ() {
+        return new VkSpecializationMapEntry.Array(getPMapEntries(), getMapEntryCountQ());
+    }
+
     protected static native long getPMapEntriesNative(long address);
     protected static native void setPMapEntriesNative(long address, long pMapEntries);
 

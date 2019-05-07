@@ -126,7 +126,7 @@ public class VkPipelineCacheCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_CACHE_CREATE_INFO));;
         }
 
-        public Array(int count, VkPipelineCacheCreateInfo o){
+        public Array(VkPipelineCacheCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

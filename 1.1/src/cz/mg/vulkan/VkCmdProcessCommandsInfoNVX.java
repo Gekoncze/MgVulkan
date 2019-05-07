@@ -111,6 +111,10 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
         this.pIndirectCommandsTokens = pIndirectCommandsTokens;
     }
 
+    public VkIndirectCommandsTokenNVX.Array getPIndirectCommandsTokensQ() {
+        return new VkIndirectCommandsTokenNVX.Array(getPIndirectCommandsTokens(), getIndirectCommandsTokenCountQ());
+    }
+
     protected static native long getPIndirectCommandsTokensNative(long address);
     protected static native void setPIndirectCommandsTokensNative(long address, long pIndirectCommandsTokens);
 
@@ -233,7 +237,7 @@ public class VkCmdProcessCommandsInfoNVX extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_CMD_PROCESS_COMMANDS_INFO_NVX));;
         }
 
-        public Array(int count, VkCmdProcessCommandsInfoNVX o){
+        public Array(VkCmdProcessCommandsInfoNVX o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

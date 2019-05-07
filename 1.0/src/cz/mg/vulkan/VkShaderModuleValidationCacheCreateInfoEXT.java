@@ -84,7 +84,7 @@ public class VkShaderModuleValidationCacheCreateInfoEXT extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SHADER_MODULE_VALIDATION_CACHE_CREATE_INFO_EXT));;
         }
 
-        public Array(int count, VkShaderModuleValidationCacheCreateInfoEXT o){
+        public Array(VkShaderModuleValidationCacheCreateInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

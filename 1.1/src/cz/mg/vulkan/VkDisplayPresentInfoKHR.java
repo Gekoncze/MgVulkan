@@ -118,7 +118,7 @@ public class VkDisplayPresentInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DISPLAY_PRESENT_INFO_KHR));;
         }
 
-        public Array(int count, VkDisplayPresentInfoKHR o){
+        public Array(VkDisplayPresentInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

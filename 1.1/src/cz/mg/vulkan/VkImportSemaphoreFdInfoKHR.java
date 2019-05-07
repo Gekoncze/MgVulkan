@@ -147,7 +147,7 @@ public class VkImportSemaphoreFdInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMPORT_SEMAPHORE_FD_INFO_KHR));;
         }
 
-        public Array(int count, VkImportSemaphoreFdInfoKHR o){
+        public Array(VkImportSemaphoreFdInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

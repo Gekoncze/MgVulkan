@@ -92,7 +92,7 @@ public class VkSemaphoreCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SEMAPHORE_CREATE_INFO));;
         }
 
-        public Array(int count, VkSemaphoreCreateInfo o){
+        public Array(VkSemaphoreCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

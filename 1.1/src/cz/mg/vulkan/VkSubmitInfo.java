@@ -85,6 +85,10 @@ public class VkSubmitInfo extends VkObject {
         this.pWaitSemaphores = pWaitSemaphores;
     }
 
+    public VkSemaphore.Array getPWaitSemaphoresQ() {
+        return new VkSemaphore.Array(getPWaitSemaphores(), getWaitSemaphoreCountQ());
+    }
+
     protected static native long getPWaitSemaphoresNative(long address);
     protected static native void setPWaitSemaphoresNative(long address, long pWaitSemaphores);
 
@@ -132,6 +136,10 @@ public class VkSubmitInfo extends VkObject {
         this.pCommandBuffers = pCommandBuffers;
     }
 
+    public VkCommandBuffer.Array getPCommandBuffersQ() {
+        return new VkCommandBuffer.Array(getPCommandBuffers(), getCommandBufferCountQ());
+    }
+
     protected static native long getPCommandBuffersNative(long address);
     protected static native void setPCommandBuffersNative(long address, long pCommandBuffers);
 
@@ -166,6 +174,10 @@ public class VkSubmitInfo extends VkObject {
         this.pSignalSemaphores = pSignalSemaphores;
     }
 
+    public VkSemaphore.Array getPSignalSemaphoresQ() {
+        return new VkSemaphore.Array(getPSignalSemaphores(), getSignalSemaphoreCountQ());
+    }
+
     protected static native long getPSignalSemaphoresNative(long address);
     protected static native void setPSignalSemaphoresNative(long address, long pSignalSemaphores);
 
@@ -186,7 +198,7 @@ public class VkSubmitInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SUBMIT_INFO));;
         }
 
-        public Array(int count, VkSubmitInfo o){
+        public Array(VkSubmitInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

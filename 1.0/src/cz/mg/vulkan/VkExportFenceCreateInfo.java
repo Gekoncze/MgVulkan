@@ -92,7 +92,7 @@ public class VkExportFenceCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXPORT_FENCE_CREATE_INFO));;
         }
 
-        public Array(int count, VkExportFenceCreateInfo o){
+        public Array(VkExportFenceCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

@@ -106,6 +106,10 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         this.pViewports = pViewports;
     }
 
+    public VkViewport.Array getPViewportsQ() {
+        return new VkViewport.Array(getPViewports(), getViewportCountQ());
+    }
+
     protected static native long getPViewportsNative(long address);
     protected static native void setPViewportsNative(long address, long pViewports);
 
@@ -140,6 +144,10 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
         this.pScissors = pScissors;
     }
 
+    public VkRect2D.Array getPScissorsQ() {
+        return new VkRect2D.Array(getPScissors(), getScissorCountQ());
+    }
+
     protected static native long getPScissorsNative(long address);
     protected static native void setPScissorsNative(long address, long pScissors);
 
@@ -160,7 +168,7 @@ public class VkPipelineViewportStateCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO));;
         }
 
-        public Array(int count, VkPipelineViewportStateCreateInfo o){
+        public Array(VkPipelineViewportStateCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

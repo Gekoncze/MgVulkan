@@ -85,6 +85,10 @@ public class VkBindSparseInfo extends VkObject {
         this.pWaitSemaphores = pWaitSemaphores;
     }
 
+    public VkSemaphore.Array getPWaitSemaphoresQ() {
+        return new VkSemaphore.Array(getPWaitSemaphores(), getWaitSemaphoreCountQ());
+    }
+
     protected static native long getPWaitSemaphoresNative(long address);
     protected static native void setPWaitSemaphoresNative(long address, long pWaitSemaphores);
 
@@ -117,6 +121,10 @@ public class VkBindSparseInfo extends VkObject {
     public void setPBufferBinds(VkSparseBufferMemoryBindInfo pBufferBinds) {
         setPBufferBindsNative(getVkAddress(), pBufferBinds != null ? pBufferBinds.getVkAddress() : VkPointer.NULL);
         this.pBufferBinds = pBufferBinds;
+    }
+
+    public VkSparseBufferMemoryBindInfo.Array getPBufferBindsQ() {
+        return new VkSparseBufferMemoryBindInfo.Array(getPBufferBinds(), getBufferBindCountQ());
     }
 
     protected static native long getPBufferBindsNative(long address);
@@ -153,6 +161,10 @@ public class VkBindSparseInfo extends VkObject {
         this.pImageOpaqueBinds = pImageOpaqueBinds;
     }
 
+    public VkSparseImageOpaqueMemoryBindInfo.Array getPImageOpaqueBindsQ() {
+        return new VkSparseImageOpaqueMemoryBindInfo.Array(getPImageOpaqueBinds(), getImageOpaqueBindCountQ());
+    }
+
     protected static native long getPImageOpaqueBindsNative(long address);
     protected static native void setPImageOpaqueBindsNative(long address, long pImageOpaqueBinds);
 
@@ -185,6 +197,10 @@ public class VkBindSparseInfo extends VkObject {
     public void setPImageBinds(VkSparseImageMemoryBindInfo pImageBinds) {
         setPImageBindsNative(getVkAddress(), pImageBinds != null ? pImageBinds.getVkAddress() : VkPointer.NULL);
         this.pImageBinds = pImageBinds;
+    }
+
+    public VkSparseImageMemoryBindInfo.Array getPImageBindsQ() {
+        return new VkSparseImageMemoryBindInfo.Array(getPImageBinds(), getImageBindCountQ());
     }
 
     protected static native long getPImageBindsNative(long address);
@@ -221,6 +237,10 @@ public class VkBindSparseInfo extends VkObject {
         this.pSignalSemaphores = pSignalSemaphores;
     }
 
+    public VkSemaphore.Array getPSignalSemaphoresQ() {
+        return new VkSemaphore.Array(getPSignalSemaphores(), getSignalSemaphoreCountQ());
+    }
+
     protected static native long getPSignalSemaphoresNative(long address);
     protected static native void setPSignalSemaphoresNative(long address, long pSignalSemaphores);
 
@@ -241,7 +261,7 @@ public class VkBindSparseInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_SPARSE_INFO));;
         }
 
-        public Array(int count, VkBindSparseInfo o){
+        public Array(VkBindSparseInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

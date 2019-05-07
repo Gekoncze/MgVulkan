@@ -118,7 +118,7 @@ public class VkCmdReserveSpaceForCommandsInfoNVX extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_CMD_RESERVE_SPACE_FOR_COMMANDS_INFO_NVX));;
         }
 
-        public Array(int count, VkCmdReserveSpaceForCommandsInfoNVX o){
+        public Array(VkCmdReserveSpaceForCommandsInfoNVX o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

@@ -92,7 +92,7 @@ public class VkImagePlaneMemoryRequirementsInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_PLANE_MEMORY_REQUIREMENTS_INFO));;
         }
 
-        public Array(int count, VkImagePlaneMemoryRequirementsInfo o){
+        public Array(VkImagePlaneMemoryRequirementsInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

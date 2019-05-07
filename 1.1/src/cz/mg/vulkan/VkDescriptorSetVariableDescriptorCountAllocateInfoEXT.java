@@ -85,6 +85,10 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
         this.pDescriptorCounts = pDescriptorCounts;
     }
 
+    public VkUInt32.Array getPDescriptorCountsQ() {
+        return new VkUInt32.Array(getPDescriptorCounts(), getDescriptorSetCountQ());
+    }
+
     protected static native long getPDescriptorCountsNative(long address);
     protected static native void setPDescriptorCountsNative(long address, long pDescriptorCounts);
 
@@ -105,7 +109,7 @@ public class VkDescriptorSetVariableDescriptorCountAllocateInfoEXT extends VkObj
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_VARIABLE_DESCRIPTOR_COUNT_ALLOCATE_INFO_EXT));;
         }
 
-        public Array(int count, VkDescriptorSetVariableDescriptorCountAllocateInfoEXT o){
+        public Array(VkDescriptorSetVariableDescriptorCountAllocateInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

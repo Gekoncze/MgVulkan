@@ -85,6 +85,10 @@ public class VkPresentInfoKHR extends VkObject {
         this.pWaitSemaphores = pWaitSemaphores;
     }
 
+    public VkSemaphore.Array getPWaitSemaphoresQ() {
+        return new VkSemaphore.Array(getPWaitSemaphores(), getWaitSemaphoreCountQ());
+    }
+
     protected static native long getPWaitSemaphoresNative(long address);
     protected static native void setPWaitSemaphoresNative(long address, long pWaitSemaphores);
 
@@ -117,6 +121,10 @@ public class VkPresentInfoKHR extends VkObject {
     public void setPSwapchains(VkSwapchainKHR pSwapchains) {
         setPSwapchainsNative(getVkAddress(), pSwapchains != null ? pSwapchains.getVkAddress() : VkPointer.NULL);
         this.pSwapchains = pSwapchains;
+    }
+
+    public VkSwapchainKHR.Array getPSwapchainsQ() {
+        return new VkSwapchainKHR.Array(getPSwapchains(), getSwapchainCountQ());
     }
 
     protected static native long getPSwapchainsNative(long address);
@@ -165,7 +173,7 @@ public class VkPresentInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PRESENT_INFO_KHR));;
         }
 
-        public Array(int count, VkPresentInfoKHR o){
+        public Array(VkPresentInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

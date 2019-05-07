@@ -134,7 +134,7 @@ public class VkDebugMarkerObjectNameInfoEXT extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEBUG_MARKER_OBJECT_NAME_INFO_EXT));;
         }
 
-        public Array(int count, VkDebugMarkerObjectNameInfoEXT o){
+        public Array(VkDebugMarkerObjectNameInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

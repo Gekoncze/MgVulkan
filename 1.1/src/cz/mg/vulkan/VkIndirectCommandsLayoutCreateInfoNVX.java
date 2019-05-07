@@ -127,6 +127,10 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
         this.pTokens = pTokens;
     }
 
+    public VkIndirectCommandsLayoutTokenNVX.Array getPTokensQ() {
+        return new VkIndirectCommandsLayoutTokenNVX.Array(getPTokens(), getTokenCountQ());
+    }
+
     protected static native long getPTokensNative(long address);
     protected static native void setPTokensNative(long address, long pTokens);
 
@@ -147,7 +151,7 @@ public class VkIndirectCommandsLayoutCreateInfoNVX extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_INDIRECT_COMMANDS_LAYOUT_CREATE_INFO_NVX));;
         }
 
-        public Array(int count, VkIndirectCommandsLayoutCreateInfoNVX o){
+        public Array(VkIndirectCommandsLayoutCreateInfoNVX o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

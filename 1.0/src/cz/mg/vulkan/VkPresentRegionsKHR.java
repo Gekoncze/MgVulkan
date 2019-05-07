@@ -84,6 +84,10 @@ public class VkPresentRegionsKHR extends VkObject {
         this.pRegions = pRegions;
     }
 
+    public VkPresentRegionKHR.Array getPRegionsQ() {
+        return new VkPresentRegionKHR.Array(getPRegions(), getSwapchainCountQ());
+    }
+
     protected static native long getPRegionsNative(long address);
     protected static native void setPRegionsNative(long address, long pRegions);
 

@@ -118,7 +118,7 @@ public class VkBindImageMemoryInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_IMAGE_MEMORY_INFO));;
         }
 
-        public Array(int count, VkBindImageMemoryInfo o){
+        public Array(VkBindImageMemoryInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

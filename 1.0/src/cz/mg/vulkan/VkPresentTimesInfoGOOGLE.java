@@ -85,6 +85,10 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
         this.pTimes = pTimes;
     }
 
+    public VkPresentTimeGOOGLE.Array getPTimesQ() {
+        return new VkPresentTimeGOOGLE.Array(getPTimes(), getSwapchainCountQ());
+    }
+
     protected static native long getPTimesNative(long address);
     protected static native void setPTimesNative(long address, long pTimes);
 
@@ -105,7 +109,7 @@ public class VkPresentTimesInfoGOOGLE extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PRESENT_TIMES_INFO_GOOGLE));;
         }
 
-        public Array(int count, VkPresentTimesInfoGOOGLE o){
+        public Array(VkPresentTimesInfoGOOGLE o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

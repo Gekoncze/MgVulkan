@@ -105,7 +105,7 @@ public class VkImportMemoryHostPointerInfoEXT extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMPORT_MEMORY_HOST_POINTER_INFO_EXT));;
         }
 
-        public Array(int count, VkImportMemoryHostPointerInfoEXT o){
+        public Array(VkImportMemoryHostPointerInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

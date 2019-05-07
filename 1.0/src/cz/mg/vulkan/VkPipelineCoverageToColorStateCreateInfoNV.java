@@ -134,7 +134,7 @@ public class VkPipelineCoverageToColorStateCreateInfoNV extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COVERAGE_TO_COLOR_STATE_CREATE_INFO_NV));;
         }
 
-        public Array(int count, VkPipelineCoverageToColorStateCreateInfoNV o){
+        public Array(VkPipelineCoverageToColorStateCreateInfoNV o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

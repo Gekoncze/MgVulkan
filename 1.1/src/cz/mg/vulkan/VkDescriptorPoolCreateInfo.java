@@ -127,6 +127,10 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
         this.pPoolSizes = pPoolSizes;
     }
 
+    public VkDescriptorPoolSize.Array getPPoolSizesQ() {
+        return new VkDescriptorPoolSize.Array(getPPoolSizes(), getPoolSizeCountQ());
+    }
+
     protected static native long getPPoolSizesNative(long address);
     protected static native void setPPoolSizesNative(long address, long pPoolSizes);
 
@@ -147,7 +151,7 @@ public class VkDescriptorPoolCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO));;
         }
 
-        public Array(int count, VkDescriptorPoolCreateInfo o){
+        public Array(VkDescriptorPoolCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

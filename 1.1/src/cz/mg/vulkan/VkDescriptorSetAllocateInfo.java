@@ -98,6 +98,10 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
         this.pSetLayouts = pSetLayouts;
     }
 
+    public VkDescriptorSetLayout.Array getPSetLayoutsQ() {
+        return new VkDescriptorSetLayout.Array(getPSetLayouts(), getDescriptorSetCountQ());
+    }
+
     protected static native long getPSetLayoutsNative(long address);
     protected static native void setPSetLayoutsNative(long address, long pSetLayouts);
 
@@ -118,7 +122,7 @@ public class VkDescriptorSetAllocateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_ALLOCATE_INFO));;
         }
 
-        public Array(int count, VkDescriptorSetAllocateInfo o){
+        public Array(VkDescriptorSetAllocateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

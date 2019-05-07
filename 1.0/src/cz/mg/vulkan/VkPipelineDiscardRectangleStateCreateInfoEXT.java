@@ -127,6 +127,10 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
         this.pDiscardRectangles = pDiscardRectangles;
     }
 
+    public VkRect2D.Array getPDiscardRectanglesQ() {
+        return new VkRect2D.Array(getPDiscardRectangles(), getDiscardRectangleCountQ());
+    }
+
     protected static native long getPDiscardRectanglesNative(long address);
     protected static native void setPDiscardRectanglesNative(long address, long pDiscardRectangles);
 
@@ -147,7 +151,7 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_DISCARD_RECTANGLE_STATE_CREATE_INFO_EXT));;
         }
 
-        public Array(int count, VkPipelineDiscardRectangleStateCreateInfoEXT o){
+        public Array(VkPipelineDiscardRectangleStateCreateInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

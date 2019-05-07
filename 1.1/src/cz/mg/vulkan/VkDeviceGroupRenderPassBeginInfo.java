@@ -106,6 +106,10 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
         this.pDeviceRenderAreas = pDeviceRenderAreas;
     }
 
+    public VkRect2D.Array getPDeviceRenderAreasQ() {
+        return new VkRect2D.Array(getPDeviceRenderAreas(), getDeviceRenderAreaCountQ());
+    }
+
     protected static native long getPDeviceRenderAreasNative(long address);
     protected static native void setPDeviceRenderAreasNative(long address, long pDeviceRenderAreas);
 
@@ -126,7 +130,7 @@ public class VkDeviceGroupRenderPassBeginInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_RENDER_PASS_BEGIN_INFO));;
         }
 
-        public Array(int count, VkDeviceGroupRenderPassBeginInfo o){
+        public Array(VkDeviceGroupRenderPassBeginInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

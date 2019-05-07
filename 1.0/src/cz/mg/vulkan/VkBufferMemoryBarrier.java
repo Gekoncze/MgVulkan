@@ -210,7 +210,7 @@ public class VkBufferMemoryBarrier extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BUFFER_MEMORY_BARRIER));;
         }
 
-        public Array(int count, VkBufferMemoryBarrier o){
+        public Array(VkBufferMemoryBarrier o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

@@ -126,7 +126,7 @@ public class VkCommandBufferAllocateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO));;
         }
 
-        public Array(int count, VkCommandBufferAllocateInfo o){
+        public Array(VkCommandBufferAllocateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

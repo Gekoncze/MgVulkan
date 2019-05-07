@@ -85,6 +85,10 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         this.pViewMasks = pViewMasks;
     }
 
+    public VkUInt32.Array getPViewMasksQ() {
+        return new VkUInt32.Array(getPViewMasks(), getSubpassCountQ());
+    }
+
     protected static native long getPViewMasksNative(long address);
     protected static native void setPViewMasksNative(long address, long pViewMasks);
 
@@ -117,6 +121,10 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
     public void setPViewOffsets(VkInt32 pViewOffsets) {
         setPViewOffsetsNative(getVkAddress(), pViewOffsets != null ? pViewOffsets.getVkAddress() : VkPointer.NULL);
         this.pViewOffsets = pViewOffsets;
+    }
+
+    public VkInt32.Array getPViewOffsetsQ() {
+        return new VkInt32.Array(getPViewOffsets(), getDependencyCountQ());
     }
 
     protected static native long getPViewOffsetsNative(long address);
@@ -153,6 +161,10 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
         this.pCorrelationMasks = pCorrelationMasks;
     }
 
+    public VkUInt32.Array getPCorrelationMasksQ() {
+        return new VkUInt32.Array(getPCorrelationMasks(), getCorrelationMaskCountQ());
+    }
+
     protected static native long getPCorrelationMasksNative(long address);
     protected static native void setPCorrelationMasksNative(long address, long pCorrelationMasks);
 
@@ -173,7 +185,7 @@ public class VkRenderPassMultiviewCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_MULTIVIEW_CREATE_INFO));;
         }
 
-        public Array(int count, VkRenderPassMultiviewCreateInfo o){
+        public Array(VkRenderPassMultiviewCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

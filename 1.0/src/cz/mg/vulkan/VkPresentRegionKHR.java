@@ -50,6 +50,10 @@ public class VkPresentRegionKHR extends VkObject {
         this.pRectangles = pRectangles;
     }
 
+    public VkRectLayerKHR.Array getPRectanglesQ() {
+        return new VkRectLayerKHR.Array(getPRectangles(), getRectangleCountQ());
+    }
+
     protected static native long getPRectanglesNative(long address);
     protected static native void setPRectanglesNative(long address, long pRectangles);
 

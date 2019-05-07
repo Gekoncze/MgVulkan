@@ -85,6 +85,10 @@ public class VkBindBufferMemoryDeviceGroupInfo extends VkObject {
         this.pDeviceIndices = pDeviceIndices;
     }
 
+    public VkUInt32.Array getPDeviceIndicesQ() {
+        return new VkUInt32.Array(getPDeviceIndices(), getDeviceIndexCountQ());
+    }
+
     protected static native long getPDeviceIndicesNative(long address);
     protected static native void setPDeviceIndicesNative(long address, long pDeviceIndices);
 
@@ -105,7 +109,7 @@ public class VkBindBufferMemoryDeviceGroupInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BIND_BUFFER_MEMORY_DEVICE_GROUP_INFO));;
         }
 
-        public Array(int count, VkBindBufferMemoryDeviceGroupInfo o){
+        public Array(VkBindBufferMemoryDeviceGroupInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

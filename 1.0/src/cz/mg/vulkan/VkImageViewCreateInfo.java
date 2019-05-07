@@ -173,7 +173,7 @@ public class VkImageViewCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO));;
         }
 
-        public Array(int count, VkImageViewCreateInfo o){
+        public Array(VkImageViewCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

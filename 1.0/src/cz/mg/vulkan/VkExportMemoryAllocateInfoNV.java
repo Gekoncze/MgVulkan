@@ -92,7 +92,7 @@ public class VkExportMemoryAllocateInfoNV extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXPORT_MEMORY_ALLOCATE_INFO_NV));;
         }
 
-        public Array(int count, VkExportMemoryAllocateInfoNV o){
+        public Array(VkExportMemoryAllocateInfoNV o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

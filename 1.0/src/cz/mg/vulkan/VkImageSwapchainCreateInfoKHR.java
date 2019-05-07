@@ -84,7 +84,7 @@ public class VkImageSwapchainCreateInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_SWAPCHAIN_CREATE_INFO_KHR));;
         }
 
-        public Array(int count, VkImageSwapchainCreateInfoKHR o){
+        public Array(VkImageSwapchainCreateInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

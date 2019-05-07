@@ -85,6 +85,10 @@ public class VkImageFormatListCreateInfoKHR extends VkObject {
         this.pViewFormats = pViewFormats;
     }
 
+    public VkFormat.Array getPViewFormatsQ() {
+        return new VkFormat.Array(getPViewFormats(), getViewFormatCountQ());
+    }
+
     protected static native long getPViewFormatsNative(long address);
     protected static native void setPViewFormatsNative(long address, long pViewFormats);
 
@@ -105,7 +109,7 @@ public class VkImageFormatListCreateInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_FORMAT_LIST_CREATE_INFO_KHR));;
         }
 
-        public Array(int count, VkImageFormatListCreateInfoKHR o){
+        public Array(VkImageFormatListCreateInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

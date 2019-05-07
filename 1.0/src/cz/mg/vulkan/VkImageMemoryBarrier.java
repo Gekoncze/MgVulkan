@@ -223,7 +223,7 @@ public class VkImageMemoryBarrier extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER));;
         }
 
-        public Array(int count, VkImageMemoryBarrier o){
+        public Array(VkImageMemoryBarrier o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

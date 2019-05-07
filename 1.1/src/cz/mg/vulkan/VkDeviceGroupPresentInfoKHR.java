@@ -85,6 +85,10 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
         this.pDeviceMasks = pDeviceMasks;
     }
 
+    public VkUInt32.Array getPDeviceMasksQ() {
+        return new VkUInt32.Array(getPDeviceMasks(), getSwapchainCountQ());
+    }
+
     protected static native long getPDeviceMasksNative(long address);
     protected static native void setPDeviceMasksNative(long address, long pDeviceMasks);
 
@@ -126,7 +130,7 @@ public class VkDeviceGroupPresentInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_PRESENT_INFO_KHR));;
         }
 
-        public Array(int count, VkDeviceGroupPresentInfoKHR o){
+        public Array(VkDeviceGroupPresentInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

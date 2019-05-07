@@ -119,6 +119,10 @@ public class VkSampleLocationsInfoEXT extends VkObject {
         this.pSampleLocations = pSampleLocations;
     }
 
+    public VkSampleLocationEXT.Array getPSampleLocationsQ() {
+        return new VkSampleLocationEXT.Array(getPSampleLocations(), getSampleLocationsCountQ());
+    }
+
     protected static native long getPSampleLocationsNative(long address);
     protected static native void setPSampleLocationsNative(long address, long pSampleLocations);
 
@@ -139,7 +143,7 @@ public class VkSampleLocationsInfoEXT extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLE_LOCATIONS_INFO_EXT));;
         }
 
-        public Array(int count, VkSampleLocationsInfoEXT o){
+        public Array(VkSampleLocationsInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

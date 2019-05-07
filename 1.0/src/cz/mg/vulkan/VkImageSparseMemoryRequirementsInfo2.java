@@ -84,7 +84,7 @@ public class VkImageSparseMemoryRequirementsInfo2 extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_IMAGE_SPARSE_MEMORY_REQUIREMENTS_INFO_2));;
         }
 
-        public Array(int count, VkImageSparseMemoryRequirementsInfo2 o){
+        public Array(VkImageSparseMemoryRequirementsInfo2 o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

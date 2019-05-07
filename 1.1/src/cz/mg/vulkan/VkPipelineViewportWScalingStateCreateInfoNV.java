@@ -106,6 +106,10 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
         this.pViewportWScalings = pViewportWScalings;
     }
 
+    public VkViewportWScalingNV.Array getPViewportWScalingsQ() {
+        return new VkViewportWScalingNV.Array(getPViewportWScalings(), getViewportCountQ());
+    }
+
     protected static native long getPViewportWScalingsNative(long address);
     protected static native void setPViewportWScalingsNative(long address, long pViewportWScalings);
 
@@ -126,7 +130,7 @@ public class VkPipelineViewportWScalingStateCreateInfoNV extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_W_SCALING_STATE_CREATE_INFO_NV));;
         }
 
-        public Array(int count, VkPipelineViewportWScalingStateCreateInfoNV o){
+        public Array(VkPipelineViewportWScalingStateCreateInfoNV o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

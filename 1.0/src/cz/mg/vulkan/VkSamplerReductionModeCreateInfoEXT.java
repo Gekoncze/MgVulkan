@@ -92,7 +92,7 @@ public class VkSamplerReductionModeCreateInfoEXT extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SAMPLER_REDUCTION_MODE_CREATE_INFO_EXT));;
         }
 
-        public Array(int count, VkSamplerReductionModeCreateInfoEXT o){
+        public Array(VkSamplerReductionModeCreateInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

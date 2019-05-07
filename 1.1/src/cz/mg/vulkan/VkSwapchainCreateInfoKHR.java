@@ -258,6 +258,10 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
         this.pQueueFamilyIndices = pQueueFamilyIndices;
     }
 
+    public VkUInt32.Array getPQueueFamilyIndicesQ() {
+        return new VkUInt32.Array(getPQueueFamilyIndices(), getQueueFamilyIndexCountQ());
+    }
+
     protected static native long getPQueueFamilyIndicesNative(long address);
     protected static native void setPQueueFamilyIndicesNative(long address, long pQueueFamilyIndices);
 
@@ -375,7 +379,7 @@ public class VkSwapchainCreateInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR));;
         }
 
-        public Array(int count, VkSwapchainCreateInfoKHR o){
+        public Array(VkSwapchainCreateInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

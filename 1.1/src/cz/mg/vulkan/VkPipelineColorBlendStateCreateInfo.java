@@ -148,6 +148,10 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
         this.pAttachments = pAttachments;
     }
 
+    public VkPipelineColorBlendAttachmentState.Array getPAttachmentsQ() {
+        return new VkPipelineColorBlendAttachmentState.Array(getPAttachments(), getAttachmentCountQ());
+    }
+
     protected static native long getPAttachmentsNative(long address);
     protected static native void setPAttachmentsNative(long address, long pAttachments);
 
@@ -181,7 +185,7 @@ public class VkPipelineColorBlendStateCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO));;
         }
 
-        public Array(int count, VkPipelineColorBlendStateCreateInfo o){
+        public Array(VkPipelineColorBlendStateCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

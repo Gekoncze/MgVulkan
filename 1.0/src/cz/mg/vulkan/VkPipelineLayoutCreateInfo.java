@@ -106,6 +106,10 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
         this.pSetLayouts = pSetLayouts;
     }
 
+    public VkDescriptorSetLayout.Array getPSetLayoutsQ() {
+        return new VkDescriptorSetLayout.Array(getPSetLayouts(), getSetLayoutCountQ());
+    }
+
     protected static native long getPSetLayoutsNative(long address);
     protected static native void setPSetLayoutsNative(long address, long pSetLayouts);
 
@@ -140,6 +144,10 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
         this.pPushConstantRanges = pPushConstantRanges;
     }
 
+    public VkPushConstantRange.Array getPPushConstantRangesQ() {
+        return new VkPushConstantRange.Array(getPPushConstantRanges(), getPushConstantRangeCountQ());
+    }
+
     protected static native long getPPushConstantRangesNative(long address);
     protected static native void setPPushConstantRangesNative(long address, long pPushConstantRanges);
 
@@ -160,7 +168,7 @@ public class VkPipelineLayoutCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO));;
         }
 
-        public Array(int count, VkPipelineLayoutCreateInfo o){
+        public Array(VkPipelineLayoutCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

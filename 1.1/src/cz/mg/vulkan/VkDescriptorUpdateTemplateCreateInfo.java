@@ -106,6 +106,10 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
         this.pDescriptorUpdateEntries = pDescriptorUpdateEntries;
     }
 
+    public VkDescriptorUpdateTemplateEntry.Array getPDescriptorUpdateEntriesQ() {
+        return new VkDescriptorUpdateTemplateEntry.Array(getPDescriptorUpdateEntries(), getDescriptorUpdateEntryCountQ());
+    }
+
     protected static native long getPDescriptorUpdateEntriesNative(long address);
     protected static native void setPDescriptorUpdateEntriesNative(long address, long pDescriptorUpdateEntries);
 
@@ -215,7 +219,7 @@ public class VkDescriptorUpdateTemplateCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_UPDATE_TEMPLATE_CREATE_INFO));;
         }
 
-        public Array(int count, VkDescriptorUpdateTemplateCreateInfo o){
+        public Array(VkDescriptorUpdateTemplateCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

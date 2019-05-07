@@ -92,6 +92,10 @@ public class VkSubpassDescription extends VkObject {
         this.pInputAttachments = pInputAttachments;
     }
 
+    public VkAttachmentReference.Array getPInputAttachmentsQ() {
+        return new VkAttachmentReference.Array(getPInputAttachments(), getInputAttachmentCountQ());
+    }
+
     protected static native long getPInputAttachmentsNative(long address);
     protected static native void setPInputAttachmentsNative(long address, long pInputAttachments);
 
@@ -124,6 +128,10 @@ public class VkSubpassDescription extends VkObject {
     public void setPColorAttachments(VkAttachmentReference pColorAttachments) {
         setPColorAttachmentsNative(getVkAddress(), pColorAttachments != null ? pColorAttachments.getVkAddress() : VkPointer.NULL);
         this.pColorAttachments = pColorAttachments;
+    }
+
+    public VkAttachmentReference.Array getPColorAttachmentsQ() {
+        return new VkAttachmentReference.Array(getPColorAttachments(), getColorAttachmentCountQ());
     }
 
     protected static native long getPColorAttachmentsNative(long address);
@@ -184,6 +192,10 @@ public class VkSubpassDescription extends VkObject {
     public void setPPreserveAttachments(VkUInt32 pPreserveAttachments) {
         setPPreserveAttachmentsNative(getVkAddress(), pPreserveAttachments != null ? pPreserveAttachments.getVkAddress() : VkPointer.NULL);
         this.pPreserveAttachments = pPreserveAttachments;
+    }
+
+    public VkUInt32.Array getPPreserveAttachmentsQ() {
+        return new VkUInt32.Array(getPPreserveAttachments(), getPreserveAttachmentCountQ());
     }
 
     protected static native long getPPreserveAttachmentsNative(long address);

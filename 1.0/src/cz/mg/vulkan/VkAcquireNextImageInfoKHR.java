@@ -152,7 +152,7 @@ public class VkAcquireNextImageInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_ACQUIRE_NEXT_IMAGE_INFO_KHR));;
         }
 
-        public Array(int count, VkAcquireNextImageInfoKHR o){
+        public Array(VkAcquireNextImageInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

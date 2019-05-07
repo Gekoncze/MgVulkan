@@ -223,7 +223,7 @@ public class VkDisplaySurfaceCreateInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DISPLAY_SURFACE_CREATE_INFO_KHR));;
         }
 
-        public Array(int count, VkDisplaySurfaceCreateInfoKHR o){
+        public Array(VkDisplaySurfaceCreateInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

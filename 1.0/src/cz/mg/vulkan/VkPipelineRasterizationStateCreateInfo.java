@@ -302,7 +302,7 @@ public class VkPipelineRasterizationStateCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO));;
         }
 
-        public Array(int count, VkPipelineRasterizationStateCreateInfo o){
+        public Array(VkPipelineRasterizationStateCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

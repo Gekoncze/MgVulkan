@@ -92,7 +92,7 @@ public class VkDedicatedAllocationImageCreateInfoNV extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEDICATED_ALLOCATION_IMAGE_CREATE_INFO_NV));;
         }
 
-        public Array(int count, VkDedicatedAllocationImageCreateInfoNV o){
+        public Array(VkDedicatedAllocationImageCreateInfoNV o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

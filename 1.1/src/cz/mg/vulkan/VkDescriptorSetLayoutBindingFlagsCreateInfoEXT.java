@@ -85,6 +85,10 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
         this.pBindingFlags = pBindingFlags;
     }
 
+    public VkDescriptorBindingFlagsEXT.Array getPBindingFlagsQ() {
+        return new VkDescriptorBindingFlagsEXT.Array(getPBindingFlags(), getBindingCountQ());
+    }
+
     protected static native long getPBindingFlagsNative(long address);
     protected static native void setPBindingFlagsNative(long address, long pBindingFlags);
 
@@ -105,7 +109,7 @@ public class VkDescriptorSetLayoutBindingFlagsCreateInfoEXT extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_BINDING_FLAGS_CREATE_INFO_EXT));;
         }
 
-        public Array(int count, VkDescriptorSetLayoutBindingFlagsCreateInfoEXT o){
+        public Array(VkDescriptorSetLayoutBindingFlagsCreateInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

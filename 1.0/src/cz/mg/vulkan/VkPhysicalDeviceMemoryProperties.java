@@ -50,6 +50,10 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
         
     }
 
+    public VkMemoryType.Array getMemoryTypesQ() {
+        return new VkMemoryType.Array(getMemoryTypes(), getMemoryTypeCountQ());
+    }
+
     protected static native long getMemoryTypesNative(long address);
     protected static native void setMemoryTypesNative(long address, long memoryTypes);
 
@@ -82,6 +86,10 @@ public class VkPhysicalDeviceMemoryProperties extends VkObject {
     public void setMemoryHeaps(VkMemoryHeap memoryHeaps) {
         setMemoryHeapsNative(getVkAddress(), memoryHeaps != null ? memoryHeaps.getVkAddress() : VkPointer.NULL);
         
+    }
+
+    public VkMemoryHeap.Array getMemoryHeapsQ() {
+        return new VkMemoryHeap.Array(getMemoryHeaps(), getMemoryHeapCountQ());
     }
 
     protected static native long getMemoryHeapsNative(long address);

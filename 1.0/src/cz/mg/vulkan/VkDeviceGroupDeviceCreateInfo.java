@@ -85,6 +85,10 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
         this.pPhysicalDevices = pPhysicalDevices;
     }
 
+    public VkPhysicalDevice.Array getPPhysicalDevicesQ() {
+        return new VkPhysicalDevice.Array(getPPhysicalDevices(), getPhysicalDeviceCountQ());
+    }
+
     protected static native long getPPhysicalDevicesNative(long address);
     protected static native void setPPhysicalDevicesNative(long address, long pPhysicalDevices);
 
@@ -105,7 +109,7 @@ public class VkDeviceGroupDeviceCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_DEVICE_CREATE_INFO));;
         }
 
-        public Array(int count, VkDeviceGroupDeviceCreateInfo o){
+        public Array(VkDeviceGroupDeviceCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

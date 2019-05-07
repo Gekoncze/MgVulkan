@@ -176,7 +176,7 @@ public class VkPhysicalDeviceImageFormatInfo2 extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_IMAGE_FORMAT_INFO_2));;
         }
 
-        public Array(int count, VkPhysicalDeviceImageFormatInfo2 o){
+        public Array(VkPhysicalDeviceImageFormatInfo2 o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

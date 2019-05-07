@@ -84,6 +84,10 @@ public class VkValidationFlagsEXT extends VkObject {
         this.pDisabledValidationChecks = pDisabledValidationChecks;
     }
 
+    public VkValidationCheckEXT.Array getPDisabledValidationChecksQ() {
+        return new VkValidationCheckEXT.Array(getPDisabledValidationChecks(), getDisabledValidationCheckCountQ());
+    }
+
     protected static native long getPDisabledValidationChecksNative(long address);
     protected static native void setPDisabledValidationChecksNative(long address, long pDisabledValidationChecks);
 

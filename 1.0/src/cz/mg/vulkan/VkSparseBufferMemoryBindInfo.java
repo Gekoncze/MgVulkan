@@ -63,6 +63,10 @@ public class VkSparseBufferMemoryBindInfo extends VkObject {
         this.pBinds = pBinds;
     }
 
+    public VkSparseMemoryBind.Array getPBindsQ() {
+        return new VkSparseMemoryBind.Array(getPBinds(), getBindCountQ());
+    }
+
     protected static native long getPBindsNative(long address);
     protected static native void setPBindsNative(long address, long pBinds);
 

@@ -92,7 +92,7 @@ public class VkDeviceEventInfoEXT extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_EVENT_INFO_EXT));;
         }
 
-        public Array(int count, VkDeviceEventInfoEXT o){
+        public Array(VkDeviceEventInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

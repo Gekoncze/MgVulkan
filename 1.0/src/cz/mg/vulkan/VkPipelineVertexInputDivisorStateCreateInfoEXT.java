@@ -85,6 +85,10 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
         this.pVertexBindingDivisors = pVertexBindingDivisors;
     }
 
+    public VkVertexInputBindingDivisorDescriptionEXT.Array getPVertexBindingDivisorsQ() {
+        return new VkVertexInputBindingDivisorDescriptionEXT.Array(getPVertexBindingDivisors(), getVertexBindingDivisorCountQ());
+    }
+
     protected static native long getPVertexBindingDivisorsNative(long address);
     protected static native void setPVertexBindingDivisorsNative(long address, long pVertexBindingDivisors);
 
@@ -105,7 +109,7 @@ public class VkPipelineVertexInputDivisorStateCreateInfoEXT extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_DIVISOR_STATE_CREATE_INFO_EXT));;
         }
 
-        public Array(int count, VkPipelineVertexInputDivisorStateCreateInfoEXT o){
+        public Array(VkPipelineVertexInputDivisorStateCreateInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

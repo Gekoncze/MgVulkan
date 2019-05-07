@@ -106,6 +106,10 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
         this.pStages = pStages;
     }
 
+    public VkPipelineShaderStageCreateInfo.Array getPStagesQ() {
+        return new VkPipelineShaderStageCreateInfo.Array(getPStages(), getStageCountQ());
+    }
+
     protected static native long getPStagesNative(long address);
     protected static native void setPStagesNative(long address, long pStages);
 
@@ -324,7 +328,7 @@ public class VkGraphicsPipelineCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO));;
         }
 
-        public Array(int count, VkGraphicsPipelineCreateInfo o){
+        public Array(VkGraphicsPipelineCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

@@ -92,7 +92,7 @@ public class VkDeviceGroupSwapchainCreateInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_GROUP_SWAPCHAIN_CREATE_INFO_KHR));;
         }
 
-        public Array(int count, VkDeviceGroupSwapchainCreateInfoKHR o){
+        public Array(VkDeviceGroupSwapchainCreateInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

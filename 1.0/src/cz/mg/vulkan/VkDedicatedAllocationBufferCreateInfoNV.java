@@ -92,7 +92,7 @@ public class VkDedicatedAllocationBufferCreateInfoNV extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEDICATED_ALLOCATION_BUFFER_CREATE_INFO_NV));;
         }
 
-        public Array(int count, VkDedicatedAllocationBufferCreateInfoNV o){
+        public Array(VkDedicatedAllocationBufferCreateInfoNV o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

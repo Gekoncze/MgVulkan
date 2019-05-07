@@ -169,6 +169,10 @@ public class VkBufferCreateInfo extends VkObject {
         this.pQueueFamilyIndices = pQueueFamilyIndices;
     }
 
+    public VkUInt32.Array getPQueueFamilyIndicesQ() {
+        return new VkUInt32.Array(getPQueueFamilyIndices(), getQueueFamilyIndexCountQ());
+    }
+
     protected static native long getPQueueFamilyIndicesNative(long address);
     protected static native void setPQueueFamilyIndicesNative(long address, long pQueueFamilyIndices);
 
@@ -189,7 +193,7 @@ public class VkBufferCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO));;
         }
 
-        public Array(int count, VkBufferCreateInfo o){
+        public Array(VkBufferCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

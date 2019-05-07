@@ -134,7 +134,7 @@ public class VkDeviceQueueInfo2 extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_DEVICE_QUEUE_INFO_2));;
         }
 
-        public Array(int count, VkDeviceQueueInfo2 o){
+        public Array(VkDeviceQueueInfo2 o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

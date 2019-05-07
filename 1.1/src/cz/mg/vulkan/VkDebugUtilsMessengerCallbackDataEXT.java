@@ -168,6 +168,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         this.pQueueLabels = pQueueLabels;
     }
 
+    public VkDebugUtilsLabelEXT.Array getPQueueLabelsQ() {
+        return new VkDebugUtilsLabelEXT.Array(getPQueueLabels(), getQueueLabelCountQ());
+    }
+
     protected static native long getPQueueLabelsNative(long address);
     protected static native void setPQueueLabelsNative(long address, long pQueueLabels);
 
@@ -202,6 +206,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
         this.pCmdBufLabels = pCmdBufLabels;
     }
 
+    public VkDebugUtilsLabelEXT.Array getPCmdBufLabelsQ() {
+        return new VkDebugUtilsLabelEXT.Array(getPCmdBufLabels(), getCmdBufLabelCountQ());
+    }
+
     protected static native long getPCmdBufLabelsNative(long address);
     protected static native void setPCmdBufLabelsNative(long address, long pCmdBufLabels);
 
@@ -234,6 +242,10 @@ public class VkDebugUtilsMessengerCallbackDataEXT extends VkObject {
     public void setPObjects(VkDebugUtilsObjectNameInfoEXT pObjects) {
         setPObjectsNative(getVkAddress(), pObjects != null ? pObjects.getVkAddress() : VkPointer.NULL);
         this.pObjects = pObjects;
+    }
+
+    public VkDebugUtilsObjectNameInfoEXT.Array getPObjectsQ() {
+        return new VkDebugUtilsObjectNameInfoEXT.Array(getPObjects(), getObjectCountQ());
     }
 
     protected static native long getPObjectsNative(long address);

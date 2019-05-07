@@ -92,7 +92,7 @@ public class VkExternalMemoryBufferCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_EXTERNAL_MEMORY_BUFFER_CREATE_INFO));;
         }
 
-        public Array(int count, VkExternalMemoryBufferCreateInfo o){
+        public Array(VkExternalMemoryBufferCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

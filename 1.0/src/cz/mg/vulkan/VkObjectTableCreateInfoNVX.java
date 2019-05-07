@@ -85,6 +85,10 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
         this.pObjectEntryTypes = pObjectEntryTypes;
     }
 
+    public VkObjectEntryTypeNVX.Array getPObjectEntryTypesQ() {
+        return new VkObjectEntryTypeNVX.Array(getPObjectEntryTypes(), getObjectCountQ());
+    }
+
     protected static native long getPObjectEntryTypesNative(long address);
     protected static native void setPObjectEntryTypesNative(long address, long pObjectEntryTypes);
 
@@ -236,7 +240,7 @@ public class VkObjectTableCreateInfoNVX extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_OBJECT_TABLE_CREATE_INFO_NVX));;
         }
 
-        public Array(int count, VkObjectTableCreateInfoNVX o){
+        public Array(VkObjectTableCreateInfoNVX o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

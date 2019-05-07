@@ -85,6 +85,10 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         this.pAttachmentInitialSampleLocations = pAttachmentInitialSampleLocations;
     }
 
+    public VkAttachmentSampleLocationsEXT.Array getPAttachmentInitialSampleLocationsQ() {
+        return new VkAttachmentSampleLocationsEXT.Array(getPAttachmentInitialSampleLocations(), getAttachmentInitialSampleLocationsCountQ());
+    }
+
     protected static native long getPAttachmentInitialSampleLocationsNative(long address);
     protected static native void setPAttachmentInitialSampleLocationsNative(long address, long pAttachmentInitialSampleLocations);
 
@@ -119,6 +123,10 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
         this.pPostSubpassSampleLocations = pPostSubpassSampleLocations;
     }
 
+    public VkSubpassSampleLocationsEXT.Array getPPostSubpassSampleLocationsQ() {
+        return new VkSubpassSampleLocationsEXT.Array(getPPostSubpassSampleLocations(), getPostSubpassSampleLocationsCountQ());
+    }
+
     protected static native long getPPostSubpassSampleLocationsNative(long address);
     protected static native void setPPostSubpassSampleLocationsNative(long address, long pPostSubpassSampleLocations);
 
@@ -139,7 +147,7 @@ public class VkRenderPassSampleLocationsBeginInfoEXT extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_SAMPLE_LOCATIONS_BEGIN_INFO_EXT));;
         }
 
-        public Array(int count, VkRenderPassSampleLocationsBeginInfoEXT o){
+        public Array(VkRenderPassSampleLocationsBeginInfoEXT o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

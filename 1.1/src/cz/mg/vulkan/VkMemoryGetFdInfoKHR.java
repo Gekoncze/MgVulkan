@@ -105,7 +105,7 @@ public class VkMemoryGetFdInfoKHR extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_MEMORY_GET_FD_INFO_KHR));;
         }
 
-        public Array(int count, VkMemoryGetFdInfoKHR o){
+        public Array(VkMemoryGetFdInfoKHR o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }

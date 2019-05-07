@@ -106,6 +106,10 @@ public class VkRenderPassCreateInfo extends VkObject {
         this.pAttachments = pAttachments;
     }
 
+    public VkAttachmentDescription.Array getPAttachmentsQ() {
+        return new VkAttachmentDescription.Array(getPAttachments(), getAttachmentCountQ());
+    }
+
     protected static native long getPAttachmentsNative(long address);
     protected static native void setPAttachmentsNative(long address, long pAttachments);
 
@@ -138,6 +142,10 @@ public class VkRenderPassCreateInfo extends VkObject {
     public void setPSubpasses(VkSubpassDescription pSubpasses) {
         setPSubpassesNative(getVkAddress(), pSubpasses != null ? pSubpasses.getVkAddress() : VkPointer.NULL);
         this.pSubpasses = pSubpasses;
+    }
+
+    public VkSubpassDescription.Array getPSubpassesQ() {
+        return new VkSubpassDescription.Array(getPSubpasses(), getSubpassCountQ());
     }
 
     protected static native long getPSubpassesNative(long address);
@@ -174,6 +182,10 @@ public class VkRenderPassCreateInfo extends VkObject {
         this.pDependencies = pDependencies;
     }
 
+    public VkSubpassDependency.Array getPDependenciesQ() {
+        return new VkSubpassDependency.Array(getPDependencies(), getDependencyCountQ());
+    }
+
     protected static native long getPDependenciesNative(long address);
     protected static native void setPDependenciesNative(long address, long pDependencies);
 
@@ -194,7 +206,7 @@ public class VkRenderPassCreateInfo extends VkObject {
             for(int i = 0; i < count; i++) get(i).setSType(new VkStructureType(VkStructureType.VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO));;
         }
 
-        public Array(int count, VkRenderPassCreateInfo o){
+        public Array(VkRenderPassCreateInfo o, int count){
             super(o.getVkMemory(), o.getVkAddress());
             this.count = count;
         }
